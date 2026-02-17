@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "f5cf0b10ab3c485e6334101f5784f1f3",
-  "translation_date": "2025-12-19T16:33:11+00:00",
-  "source_file": "00-course-setup/02-setup-local.md",
-  "language_code": "sw"
-}
--->
 # Usanidi wa Mitaa 🖥️
 
 **Tumia mwongozo huu ikiwa unapendelea kuendesha kila kitu kwenye kompyuta yako binafsi.**  

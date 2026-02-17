@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6b7629b8ee4d7d874a27213e903d86a7",
-  "translation_date": "2025-10-18T01:57:25+00:00",
-  "source_file": "02-exploring-and-comparing-different-llms/README.md",
-  "language_code": "my"
-}
--->
 # LLM များကိုလေ့လာခြင်းနှင့် နှိုင်းယှဉ်ခြင်း
 
 [![LLM များကိုလေ့လာခြင်းနှင့် နှိုင်းယှဉ်ခြင်း](../../../translated_images/my/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)

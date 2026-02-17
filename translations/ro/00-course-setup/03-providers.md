@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T17:00:38+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "ro"
-}
--->
 # Alegerea și configurarea unui furnizor LLM 🔑
 
 Temele **pot** fi configurate să funcționeze cu una sau mai multe implementări de modele mari de limbaj (LLM) printr-un furnizor de servicii suportat, cum ar fi OpenAI, Azure sau Hugging Face. Acestea oferă un _endpoint găzduit_ (API) la care putem accesa programatic cu acreditările corecte (cheie API sau token). În acest curs, discutăm despre acești furnizori:

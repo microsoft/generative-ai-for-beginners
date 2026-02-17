@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T14:50:07+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "pl"
-}
--->
 # Wybór i konfiguracja dostawcy LLM 🔑
 
 Zadania **mogą** być również skonfigurowane do pracy z jednym lub kilkoma wdrożeniami dużych modeli językowych (LLM) za pośrednictwem obsługiwanego dostawcy usług, takiego jak OpenAI, Azure lub Hugging Face. Zapewniają one _hostowany punkt końcowy_ (API), do którego możemy uzyskać dostęp programowo za pomocą odpowiednich poświadczeń (klucz API lub token). W tym kursie omawiamy następujących dostawców:

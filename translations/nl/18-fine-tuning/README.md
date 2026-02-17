@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T18:28:52+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "nl"
-}
--->
-[![Open Source Models](../../../../../translated_images/nl/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/nl/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Je LLM fijn afstemmen
 
@@ -32,7 +23,7 @@ Klaar? Laten we beginnen.
 
 Wil je eerst het grote geheel zien van wat we zullen behandelen voordat we erin duiken? Bekijk deze geïllustreerde gids die de leerreis voor deze les beschrijft – van het leren van de kernconcepten en motivatie voor fine-tuning tot het begrijpen van het proces en best practices voor het uitvoeren van de fine-tuning taak. Dit is een fascinerend onderwerp om te verkennen, dus vergeet niet de [Bronnen](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) pagina te bekijken voor extra links ter ondersteuning van je zelfgestuurde leertraject!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/nl/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/nl/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Wat is fine-tuning voor taalmodellen?
 

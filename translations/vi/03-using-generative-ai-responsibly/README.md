@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4d57fad773cbeb69c5dd62e65c34200d",
-  "translation_date": "2025-10-17T20:33:23+00:00",
-  "source_file": "03-using-generative-ai-responsibly/README.md",
-  "language_code": "vi"
-}
--->
 # Sử dụng AI Tạo Nội Dung một cách Có Trách Nhiệm
 
 [![Sử dụng AI Tạo Nội Dung một cách Có Trách Nhiệm](../../../translated_images/vi/03-lesson-banner.1ed56067a452d977.webp)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)

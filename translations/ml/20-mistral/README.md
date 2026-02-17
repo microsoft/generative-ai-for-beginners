@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-12-19T18:53:05+00:00",
-  "source_file": "20-mistral/README.md",
-  "language_code": "ml"
-}
--->
 # മിസ്ട്രാൽ മോഡലുകളുമായി നിർമ്മാണം
 
 ## പരിചയം

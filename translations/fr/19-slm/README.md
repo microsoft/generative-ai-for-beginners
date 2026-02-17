@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-07-09T18:12:06+00:00",
-  "source_file": "19-slm/README.md",
-  "language_code": "fr"
-}
--->
 # Introduction aux petits modèles de langage pour l’IA générative pour débutants  
 L’IA générative est un domaine fascinant de l’intelligence artificielle qui se concentre sur la création de systèmes capables de générer du contenu nouveau. Ce contenu peut aller du texte et des images à la musique, voire à des environnements virtuels entiers. L’une des applications les plus passionnantes de l’IA générative se trouve dans le domaine des modèles de langage.
 

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-08-25T12:44:55+00:00",
-  "source_file": "19-slm/README.md",
-  "language_code": "lt"
-}
--->
 # Įvadas į mažus kalbos modelius generatyviajai AI pradedantiesiems
 Generatyvioji AI – tai įdomi dirbtinio intelekto sritis, kuri orientuojasi į sistemas, gebančias kurti naują turinį. Šis turinys gali būti tekstas, vaizdai, muzika ar net ištisos virtualios aplinkos. Viena iš labiausiai intriguojančių generatyviosios AI taikymo sričių – kalbos modeliai.
 

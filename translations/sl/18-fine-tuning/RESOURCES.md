@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c2f423d1402f71ca3869ec135bb77d16",
-  "translation_date": "2025-07-09T18:10:11+00:00",
-  "source_file": "18-fine-tuning/RESOURCES.md",
-  "language_code": "sl"
-}
--->
 # Viri za samostojno učenje
 
 Lekcija je bila zgrajena z uporabo več ključnih virov iz OpenAI in Azure OpenAI kot referenc za terminologijo in vodiče. Tukaj je nepopoln seznam za vaše samostojne učne poti.

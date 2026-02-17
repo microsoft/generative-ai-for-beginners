@@ -32,10 +32,10 @@ In this lesson, we hope to introduce the knowledge of SLM and combine it with Mi
 
 By the end of this lesson, you should be able to answer the following questions:
 
-- What is SLM
-- What is the difference about SLM and LLM
-- What is Microsoft Phi-3/3.5 Family
-- How to inference Microsoft Phi-3/3.5 Family
+- What is SLM?
+- What is the difference between SLM and LLM?
+- What is the Microsoft Phi-3/3.5 Family?
+- How to run inference with the Microsoft Phi-3/3.5 Family?
 
 Ready? Let's get started.
 
@@ -74,7 +74,7 @@ The reduced size of SLMs affords them a significant advantage in terms of infere
 
 In summary, while both LLMs and SLMs share a foundational basis in machine learning, they differ significantly in terms of model size, resource requirements, contextual understanding, susceptibility to bias, and inference speed. These distinctions reflect their respective suitability for different use cases, with LLMs being more versatile but resource-heavy, and SLMs offering more domain-specific efficiency with reduced computational demands.
 
-***Note：In this chapter, we will introduce SLM using Microsoft Phi-3 / 3.5 as an example.***
+***Note: In this lesson, we will introduce SLM using Microsoft Phi-3 / 3.5 as an example.***
 
 ## Introduce Phi-3 / Phi-3.5 Family
 
@@ -86,7 +86,7 @@ Mainly for text generation, chat completion, and content information extraction,
 
 **Phi-3-mini**
 
-The 3.8B language model is available on Microsoft Azure AI Studio, Hugging Face, and Ollama. Phi-3 models significantly outperform language models of equal and larger sizes on key benchmarks (see benchmark numbers below, higher numbers are better). Phi-3-mini outperforms models twice its size, while Phi-3-small and Phi-3-medium outperform larger models, including GPT-3.5
+The 3.8B language model is available on Microsoft Azure AI Studio, Hugging Face, and Ollama. Phi-3 models significantly outperform language models of equal and larger sizes on key benchmarks (see benchmark numbers below, higher numbers are better). Phi-3-mini outperforms models twice its size, while Phi-3-small and Phi-3-medium outperform larger models, including GPT-3.5.
 
 **Phi-3-small & medium**
 
@@ -96,8 +96,7 @@ The Phi-3-medium with 14B parameters continues this trend and outperforms the Ge
 
 **Phi-3.5-mini**
 
-We can think of it as an upgrade of Phi-3-mini. While the parameters remain unchanged, it improves the ability to support multiple languages(
-Support 20+ languages:Arabic, Chinese, Czech, Danish, Dutch, English, Finnish, French, German, Hebrew, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, Ukrainian) ​​and adds stronger support for long context.
+We can think of it as an upgrade of Phi-3-mini. While the parameters remain unchanged, it improves the ability to support multiple languages (support 20+ languages: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish, French, German, Hebrew, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, Ukrainian) ​​and adds stronger support for long context.
 
 Phi-3.5-mini with 3.8B parameters outperforms language models of the same size and is on par with models twice its size.
 
@@ -115,14 +114,14 @@ Phi-3-vision, with only 4.2B parameters, continues this trend and outperforms la
 
 Phi-3.5-Vision is also an upgrade of Phi-3-Vision, adding support for multiple images. You can think of it as an improvement in vision, not only can you see pictures, but also videos.
 
-Phi-3.5-vision outperforms larger models such as Claude-3.5 Sonnet and Gemini 1.5 Flash across OCR, table and chart understanding tasks and on par on general visual knowledge reasoning tasks.Support multi-frame input, i.e., perform reasoning on multiple input images
+Phi-3.5-vision outperforms larger models such as Claude-3.5 Sonnet and Gemini 1.5 Flash across OCR, table and chart understanding tasks and on par on general visual knowledge reasoning tasks. Support multi-frame input, i.e., perform reasoning on multiple input images
 
 
 ### Phi-3.5-MoE
 
 ***Mixture of Experts(MoE)*** enables models to be pretrained with far less compute, which means you can dramatically scale up the model or dataset size with the same compute budget as a dense model. In particular, a MoE model should achieve the same quality as its dense counterpart much faster during pretraining.
 
-Phi-3.5-MoE comprises 16x3.8B expert modules.Phi-3.5-MoE with only 6.6B active parameters achieves a similar level of reasoning, language understanding, and math as much larger models
+Phi-3.5-MoE comprises 16x3.8B expert modules. Phi-3.5-MoE with only 6.6B active parameters achieves a similar level of reasoning, language understanding, and math as much larger models
 
 We can use the Phi-3/3.5 Family model based on different scenarios. Unlike LLM, you can deploy Phi-3/3.5-mini or Phi-3/3.5-Vision on edge devices.
 
@@ -133,13 +132,13 @@ We hope to use Phi-3/3.5 in different scenarios. Next, we will use Phi-3/3.5 bas
 
 ![phi3](./img/phi3.png?WT.mc_id=academic-105485-koreyst)
 
-### Inference difference Cloud's API
+### Inference via Cloud APIs
 
 **GitHub Models**
 
 GitHub Models is the most direct way. You can quickly access the Phi-3/3.5-Instruct model through GitHub Models. Combined with the Azure AI Inference SDK / OpenAI SDK, you can access the API through code to complete the Phi-3/3.5-Instruct call. You can also test different effects through Playground.
 
-- Demo:Comparison of the effects of Phi-3-mini and Phi-3.5-mini in Chinese scenarios
+- Demo: Comparison of the effects of Phi-3-mini and Phi-3.5-mini in Chinese scenarios
 
 ![phi3](./img/gh1.png?WT.mc_id=academic-105485-koreyst)
 
@@ -153,7 +152,7 @@ Or if we want to use the vision and MoE models, you can use Azure AI Studio to c
 
 **NVIDIA NIM**
 
-In addition to the cloud-based Model Catalog solutions provided by Azure and GitHub, you can also use [Nivida NIM](https://developer.nvidia.com/nim?WT.mc_id=academic-105485-koreyst) to complete related calls. You can visit NIVIDA NIM to complete the API calls of the Phi-3/3.5 Family. NVIDIA NIM (NVIDIA Inference Microservices) is a set of accelerated inference microservices designed to help developers deploy AI models efficiently across various environments, including clouds, data centers, and workstations.
+In addition to the cloud-based Model Catalog solutions provided by Azure and GitHub, you can also use [NVIDIA NIM](https://developer.nvidia.com/nim?WT.mc_id=academic-105485-koreyst) to complete related calls. You can visit NVIDIA NIM to complete the API calls of the Phi-3/3.5 Family. NVIDIA NIM (NVIDIA Inference Microservices) is a set of accelerated inference microservices designed to help developers deploy AI models efficiently across various environments, including clouds, data centers, and workstations.
 
 Here are some key features of NVIDIA NIM:
 
@@ -165,10 +164,10 @@ Here are some key features of NVIDIA NIM:
 
 NIM is part of NVIDIA AI Enterprise, which aims to simplify the deployment and operationalization of AI models, ensuring they run efficiently on NVIDIA GPUs.
 
-- Demo: Using Nividia NIM to call Phi-3.5-Vision-API  [[Click this link](./python/Phi-3-Vision-Nividia-NIM.ipynb?WT.mc_id=academic-105485-koreyst)]
+- Demo: Using NVIDIA NIM to call Phi-3.5-Vision-API  [[Click this link](./python/Phi-3-Vision-Nividia-NIM.ipynb?WT.mc_id=academic-105485-koreyst)]
 
 
-### Inference Phi-3/3.5 in local env
+### Running Phi-3/3.5 Locally
 Inference in relation to Phi-3, or any language model like GPT-3, refers to the process of generating responses or predictions based on the input it receives. When you provide a prompt or question to Phi-3, it uses its trained neural network to infer the most likely and relevant response by analyzing patterns and relationships in the data it was trained on.
 
 **Hugging Face Transformer**
@@ -185,17 +184,17 @@ Hugging Face Transformers is a powerful library designed for natural language pr
 5. **Community and Resources**: Hugging Face has a vibrant community and extensive documentation, tutorials, and guides to help users get started and make the most of the library.
 [official documentation](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) or their [GitHub repository](https://github.com/huggingface/transformers?WT.mc_id=academic-105485-koreyst).
 
-This is the most commonly used method, but it also requires GPU acceleration. After all, scenes such as Vision and MoE require a lot of calculations, which will be very limited in the CPU if they are not quantized.
+This is the most commonly used method, but it also requires GPU acceleration. After all, scenarios such as Vision and MoE require a lot of calculations, which will be very slow on CPU if they are not quantized.
 
 
-- Demo:Using Transformer to call Phi-3.5-Instuct [Click this link](./python/phi35-instruct-demo.ipynb?WT.mc_id=academic-105485-koreyst)
+- Demo: Using Transformer to call Phi-3.5-Instruct [Click this link](./python/phi35-instruct-demo.ipynb?WT.mc_id=academic-105485-koreyst)
 
-- Demo:Using Transformer to call Phi-3.5-Vision[Click this link](./python/phi35-vision-demo.ipynb?WT.mc_id=academic-105485-koreyst)
+- Demo: Using Transformer to call Phi-3.5-Vision [Click this link](./python/phi35-vision-demo.ipynb?WT.mc_id=academic-105485-koreyst)
 
-- Demo:Using Transformer to call Phi-3.5-MoE[Click this link](./python/phi35_moe_demo.ipynb?WT.mc_id=academic-105485-koreyst)
+- Demo: Using Transformer to call Phi-3.5-MoE [Click this link](./python/phi35_moe_demo.ipynb?WT.mc_id=academic-105485-koreyst)
 
 **Ollama**
-[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) is a platform designed to make it easier to run large language models (LLMs) locally on your machine. It supports various models like Llama 3.1, Phi 3, Mistral, and Gemma 2, among others. The platform simplifies the process by bundling model weights, configuration, and data into a single package, making it more accessible for users to customize and create their own models. Ollama is available for macOS, Linux, and Windows. It’s a great tool if you’re looking to experiment with or deploy LLMs without relying on cloud services. Ollama is the most direct way, you just need to execute the following statement.
+[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) is a platform designed to make it easier to run large language models (LLMs) locally on your machine. It supports various models like Llama 3.1, Phi 3, Mistral, and Gemma 2, among others. The platform simplifies the process by bundling model weights, configuration, and data into a single package, making it more accessible for users to customize and create their own models. Ollama is available for macOS, Linux, and Windows. It’s a great tool if you’re looking to experiment with or deploy LLMs without relying on cloud services. Ollama is the most direct way, you just need to execute the following command.
 
 
 ```bash
@@ -210,7 +209,7 @@ ollama run phi3.5
 [ONNX Runtime](https://github.com/microsoft/onnxruntime-genai?WT.mc_id=academic-105485-koreyst) is a cross-platform inference and training machine-learning accelerator. ONNX Runtime for Generative AI (GENAI) is a powerful tool that helps you run generative AI models efficiently across various platforms. 
 
 ## What is ONNX Runtime?
-ONNX Runtime is an open-source project that enables high-performance inference of machine learning models. It supports models in the Open Neural Network Exchange (ONNX) format, which is a standard for representing machine learning models.ONNX Runtime inference can enable faster customer experiences and lower costs, supporting models from deep learning frameworks such as PyTorch and TensorFlow/Keras as well as classical machine learning libraries such as scikit-learn, LightGBM, XGBoost, etc. ONNX Runtime is compatible with different hardware, drivers, and operating systems, and provides optimal performance by leveraging hardware accelerators where applicable alongside graph optimizations and transforms
+ONNX Runtime is an open-source project that enables high-performance inference of machine learning models. It supports models in the Open Neural Network Exchange (ONNX) format, which is a standard for representing machine learning models.ONNX Runtime inference can enable faster customer experiences and lower costs, supporting models from deep learning frameworks such as PyTorch and TensorFlow/Keras as well as classical machine learning libraries such as scikit-learn, LightGBM, XGBoost, etc. ONNX Runtime is compatible with different hardware, drivers, and operating systems, and provides optimal performance by leveraging hardware accelerators where applicable alongside graph optimizations and transforms.
 
 ## What is Generative AI?
 Generative AI refers to AI systems that can generate new content, such as text, images, or music, based on the data they have been trained on. Examples include language models like GPT-3 and image generation models like Stable Diffusion. ONNX Runtime for GenAI library provides the generative AI loop for ONNX models, including inference with ONNX Runtime, logits processing, search and sampling, and KV cache management.
@@ -302,7 +301,7 @@ while not generator.is_done():
 
     new_token = generator.get_next_tokens()[0]
     
-    code += tokenizer_stream.decode(new_token)
+    output = tokenizer_stream.decode(new_token)
     
     print(tokenizer_stream.decode(new_token), end='', flush=True)
 

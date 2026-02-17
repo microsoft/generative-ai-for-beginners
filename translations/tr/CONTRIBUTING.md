@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-07-09T06:06:38+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "tr"
-}
--->
 # Katkıda Bulunma
 
 Bu proje katkılara ve önerilere açıktır. Çoğu katkı için, katkınızı kullanma haklarını bize verdiğinizi beyan eden bir Katkıda Bulunan Lisans Sözleşmesi'ni (CLA) kabul etmeniz gerekir. Detaylar için <https://cla.microsoft.com> adresini ziyaret edin.

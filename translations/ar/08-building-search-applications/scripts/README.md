@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-07-09T13:06:54+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "ar"
-}
--->
 # تحضير بيانات النسخ
 
 تقوم سكريبتات تحضير بيانات النسخ بتنزيل نصوص فيديوهات YouTube وتجهيزها للاستخدام مع نموذج البحث الدلالي باستخدام OpenAI Embeddings والوظائف.

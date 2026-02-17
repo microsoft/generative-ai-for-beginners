@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T18:49:24+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "sw"
-}
--->
-[![Mfano za Chanzo Huria](../../../../../translated_images/sw/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Mfano za Chanzo Huria](../../../translated_images/sw/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Kurekebisha LLM Yako kwa Ufasaha
 
@@ -32,7 +23,7 @@ Tayari? Tuanze.
 
 Unataka kupata picha kubwa ya kile tutakachozungumzia kabla ya kuingia ndani? Angalia mwongozo huu uliopigwa mchoro unaoelezea safari ya kujifunza kwa somo hili - kutoka kujifunza dhana za msingi na motisha ya kurekebisha kwa ufasaha, hadi kuelewa mchakato na mbinu bora za kutekeleza kazi ya kurekebisha. Ni mada ya kuvutia kuchunguza, kwa hiyo usisahau kutembelea ukurasa wa [Rasilimali](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) kwa viungo vya ziada kusaidia safari yako ya kujifunza kwa njia ya kujitambua!
 
-![Mwongozo Uliopigwa Mchoro wa Kurekebisha Mifano ya Lugha](../../../../../translated_images/sw/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Mwongozo Uliopigwa Mchoro wa Kurekebisha Mifano ya Lugha](../../../translated_images/sw/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Kurekebisha Kwa Ufasaha ni nini kwa mifano ya lugha?
 

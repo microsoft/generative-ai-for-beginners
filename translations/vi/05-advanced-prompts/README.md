@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
-  "translation_date": "2025-10-17T20:30:19+00:00",
-  "source_file": "05-advanced-prompts/README.md",
-  "language_code": "vi"
-}
--->
 # Tạo các lời nhắc nâng cao
 
 [![Tạo các lời nhắc nâng cao](../../../translated_images/vi/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)

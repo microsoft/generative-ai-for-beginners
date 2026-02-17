@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T12:26:56+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "en"
-}
--->
 # Choosing & Configuring an LLM Provider 🔑
 
 Assignments **may** also be set up to work against one or more Large Language Model (LLM) deployments through a supported service provider like OpenAI, Azure or Hugging Face. These provide a _hosted endpoint_ (API) that we can access programmatically with the right credentials (API key or token). In this course, we discuss these providers:

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "846ac8e3b7dcfb697d3309fec05f0fea",
-  "translation_date": "2025-10-18T01:33:04+00:00",
-  "source_file": "10-building-low-code-ai-applications/README.md",
-  "language_code": "hr"
-}
--->
 # Izrada AI aplikacija s malo koda
 
 [![Izrada AI aplikacija s malo koda](../../../translated_images/hr/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)

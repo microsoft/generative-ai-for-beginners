@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "f5cf0b10ab3c485e6334101f5784f1f3",
-  "translation_date": "2025-12-19T16:54:39+00:00",
-  "source_file": "00-course-setup/02-setup-local.md",
-  "language_code": "sk"
-}
--->
 # Lokálne nastavenie 🖥️
 
 **Použite tento návod, ak uprednostňujete spúšťať všetko na vlastnom notebooku.**  

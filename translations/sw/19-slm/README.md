@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-07-09T18:43:46+00:00",
-  "source_file": "19-slm/README.md",
-  "language_code": "sw"
-}
--->
 # Utangulizi wa Modeli Ndogo za Lugha kwa AI ya Kizazi kwa Waanzilishi  
 AI ya Kizazi ni eneo la kuvutia la akili bandia linalolenga kuunda mifumo inayoweza kuzalisha maudhui mapya. Maudhui haya yanaweza kuwa maandishi, picha, muziki, au hata mazingira ya kidijitali. Mojawapo ya matumizi ya kusisimua ya AI ya kizazi ni katika sekta ya modeli za lugha.  
 

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0135e6c271f3ece8699050d4debbce88",
-  "translation_date": "2025-10-18T02:45:41+00:00",
-  "source_file": "04-prompt-engineering-fundamentals/README.md",
-  "language_code": "ta"
-}
--->
 # ப்ராம்ப்ட் இன்ஜினியரிங் அடிப்படைகள்
 
 [![ப்ராம்ப்ட் இன்ஜினியரிங் அடிப்படைகள்](../../../translated_images/ta/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)

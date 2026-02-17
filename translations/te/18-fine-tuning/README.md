@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T19:46:52+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "te"
-}
--->
-[![Open Source Models](../../../../../translated_images/te/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/te/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # మీ LLM ని ఫైన్-ట్యూన్ చేయడం
 
@@ -32,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 మేము ఏమి కవర్ చేయబోతున్నామో ముందుగా పెద్ద చిత్రాన్ని తెలుసుకోదలచారా? ఈ చిత్రపట గైడ్‌ను చూడండి, ఇది ఫైన్-ట్యూనింగ్ కోసం ప్రాథమిక భావనలు మరియు ప్రేరణ నుండి, ఫైన్-ట్యూనింగ్ ప్రక్రియ మరియు ఉత్తమ ఉపయోగాల దిశగా మీరు నివాసంగా ప్రయాణం ఎలా చేస్తారో వివరిస్తుంది. ఈ విభాగం అన్వేషించడానికి ఆసక్తికరమైనది, అందుకే మీ స్వీయ-నిర్దేశిత నేర్చుకునే ప్రయాణానికి మద్దతు ఇవ్వడానికి అదనపు సంబంధిత లింకులు పొందడానికి [సాధనాలు](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) పేజీని చూడండి!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/te/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/te/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## భాషా మోడల్స్ కోసం ఫైన్-ట్యూనింగ్ అంటే ఏమిటి?
 

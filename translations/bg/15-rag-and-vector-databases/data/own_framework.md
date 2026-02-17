@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df98b2c59f87d8543135301e87969f70",
-  "translation_date": "2025-07-09T16:51:21+00:00",
-  "source_file": "15-rag-and-vector-databases/data/own_framework.md",
-  "language_code": "bg"
-}
--->
 # Въведение в невронните мрежи. Многослоен перцептрон
 
 В предишния раздел научихте за най-простия модел на невронна мрежа - еднослоен перцептрон, линеен модел за двукласова класификация.

@@ -1,19 +1,10 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-07-09T17:01:52+00:00",
-  "source_file": "15-rag-and-vector-databases/data/perceptron.md",
-  "language_code": "sl"
-}
--->
 # Uvod v nevronske mreže: Perceptron
 
 Eden prvih poskusov implementacije nečesa podobnega sodobni nevronski mreži je leta 1957 izvedel Frank Rosenblatt iz Cornell Aeronautical Laboratory. Šlo je za strojno implementacijo z imenom "Mark-1", zasnovano za prepoznavanje osnovnih geometrijskih likov, kot so trikotniki, kvadrati in krogi.
 
 |      |      |
 |--------------|-----------|
-|<img src='images/Rosenblatt-wikipedia.jpg' alt='Frank Rosenblatt'/> | <img src='images/Mark_I_perceptron_wikipedia.jpg' alt='The Mark 1 Perceptron' />|
+|<img src='../../../../translated_images/sl/Rosenblatt-wikipedia.1d205667acda28c0.webp' alt='Frank Rosenblatt'/> | <img src='../../../../translated_images/sl/Mark_I_perceptron_wikipedia.434e46ca39e2be80.webp' alt='The Mark 1 Perceptron' />|
 
 > Slike iz Wikipedije
 

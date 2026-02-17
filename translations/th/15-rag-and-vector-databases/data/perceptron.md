@@ -1,19 +1,10 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-07-09T16:58:02+00:00",
-  "source_file": "15-rag-and-vector-databases/data/perceptron.md",
-  "language_code": "th"
-}
--->
 # บทนำสู่โครงข่ายประสาทเทียม: Perceptron
 
 หนึ่งในความพยายามครั้งแรกในการสร้างสิ่งที่คล้ายกับโครงข่ายประสาทเทียมสมัยใหม่เกิดขึ้นโดย Frank Rosenblatt จาก Cornell Aeronautical Laboratory ในปี 1957 ซึ่งเป็นการสร้างฮาร์ดแวร์ที่เรียกว่า "Mark-1" ออกแบบมาเพื่อจดจำรูปทรงเรขาคณิตพื้นฐาน เช่น สามเหลี่ยม สี่เหลี่ยม และวงกลม
 
 |      |      |
 |--------------|-----------|
-|<img src='images/Rosenblatt-wikipedia.jpg' alt='Frank Rosenblatt'/> | <img src='images/Mark_I_perceptron_wikipedia.jpg' alt='The Mark 1 Perceptron' />|
+|<img src='../../../../translated_images/th/Rosenblatt-wikipedia.1d205667acda28c0.webp' alt='Frank Rosenblatt'/> | <img src='../../../../translated_images/th/Mark_I_perceptron_wikipedia.434e46ca39e2be80.webp' alt='The Mark 1 Perceptron' />|
 
 > รูปภาพจาก Wikipedia
 

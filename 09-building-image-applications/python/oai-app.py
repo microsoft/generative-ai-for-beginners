@@ -1,13 +1,19 @@
-from openai import OpenAI
+from openai import OpenAI, OpenAIError
 import os
 import requests
+from requests.exceptions import RequestException
 from PIL import Image
-import dotenv
+from dotenv import load_dotenv
 
-# import dotenv
-dotenv.load_dotenv()
- 
-client = OpenAI()
+# Load environment variables from .env file
+load_dotenv()
+
+# SECURITY: Validate API key is present
+api_key = os.getenv('OPENAI_API_KEY')
+if not api_key:
+    raise ValueError("OPENAI_API_KEY environment variable is required. Please set it in your .env file.")
+
+client = OpenAI(api_key=api_key)
 
 
 try:
@@ -31,8 +37,17 @@ try:
     # Retrieve the generated image
     print(generation_response)
 
-    image_url = generation_response.data[0].url # extract image URL from response
-    generated_image = requests.get(image_url).content  # download the image
+    image_url = generation_response.data[0].url  # extract image URL from response
+
+    # SECURITY: Add timeout and error handling for HTTP request
+    try:
+        response = requests.get(image_url, timeout=30)
+        response.raise_for_status()  # Raise exception for HTTP errors
+        generated_image = response.content
+    except RequestException as req_err:
+        print(f"Failed to download generated image: {req_err}")
+        raise
+
     with open(image_path, "wb") as image_file:
         image_file.write(generated_image)
 
@@ -40,9 +55,9 @@ try:
     image = Image.open(image_path)
     image.show()
 
-# catch exceptions
-except openai.InvalidRequestError as err:
-    print(err)
+# SECURITY: Catch specific OpenAI exceptions
+except OpenAIError as err:
+    print(f"OpenAI API error: {err}")
 
 # ---creating variation below---
 

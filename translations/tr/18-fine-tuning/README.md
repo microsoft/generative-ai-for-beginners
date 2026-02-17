@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T18:14:52+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "tr"
-}
--->
-[![Open Source Models](../../../../../translated_images/tr/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/tr/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # LLM’inizi İnce Ayarlama
 
@@ -32,7 +23,7 @@ Hazır mısınız? Başlayalım.
 
 İnce ayarın temel kavramlarını ve motivasyonunu öğrenmekten, ince ayar süreci ve en iyi uygulamaları anlamaya kadar öğrenme yolculuğumuzu anlatan bu çizimli rehbere bir göz atmak ister misiniz? Keşif için büyüleyici bir konu, bu yüzden kendi kendinize öğrenme yolculuğunuzu destekleyecek ek bağlantılar için [Kaynaklar](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) sayfasını unutmayın!
 
-![İnce Ayar için Dil Modelleri Çizimli Rehberi](../../../../../translated_images/tr/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![İnce Ayar için Dil Modelleri Çizimli Rehberi](../../../translated_images/tr/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Dil modelleri için ince ayar nedir?
 

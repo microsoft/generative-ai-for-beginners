@@ -1,0 +1,230 @@
+{
+  "00-course-setup/01-setup-cloud.md": {
+    "original_hash": "be9cef0460b3696ed5d8f6f8d2f64d45",
+    "translation_date": "2025-08-26T19:03:24+00:00",
+    "source_file": "00-course-setup/01-setup-cloud.md",
+    "language_code": "sk"
+  },
+  "00-course-setup/02-setup-local.md": {
+    "original_hash": "f5cf0b10ab3c485e6334101f5784f1f3",
+    "translation_date": "2025-12-19T16:54:39+00:00",
+    "source_file": "00-course-setup/02-setup-local.md",
+    "language_code": "sk"
+  },
+  "00-course-setup/03-providers.md": {
+    "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
+    "translation_date": "2025-12-19T16:53:29+00:00",
+    "source_file": "00-course-setup/03-providers.md",
+    "language_code": "sk"
+  },
+  "00-course-setup/README.md": {
+    "original_hash": "8749a347f1cfbacbe836070025a76f7f",
+    "translation_date": "2026-02-06T22:55:11+00:00",
+    "source_file": "00-course-setup/README.md",
+    "language_code": "sk"
+  },
+  "01-introduction-to-genai/README.md": {
+    "original_hash": "bfb7901bdbece1ba3e9f35c400ca33e8",
+    "translation_date": "2025-10-17T21:59:58+00:00",
+    "source_file": "01-introduction-to-genai/README.md",
+    "language_code": "sk"
+  },
+  "02-exploring-and-comparing-different-llms/README.md": {
+    "original_hash": "6b7629b8ee4d7d874a27213e903d86a7",
+    "translation_date": "2025-10-17T21:56:46+00:00",
+    "source_file": "02-exploring-and-comparing-different-llms/README.md",
+    "language_code": "sk"
+  },
+  "03-using-generative-ai-responsibly/README.md": {
+    "original_hash": "4d57fad773cbeb69c5dd62e65c34200d",
+    "translation_date": "2025-10-17T21:55:24+00:00",
+    "source_file": "03-using-generative-ai-responsibly/README.md",
+    "language_code": "sk"
+  },
+  "04-prompt-engineering-fundamentals/README.md": {
+    "original_hash": "0135e6c271f3ece8699050d4debbce88",
+    "translation_date": "2025-10-17T22:00:31+00:00",
+    "source_file": "04-prompt-engineering-fundamentals/README.md",
+    "language_code": "sk"
+  },
+  "05-advanced-prompts/README.md": {
+    "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
+    "translation_date": "2025-10-17T21:52:11+00:00",
+    "source_file": "05-advanced-prompts/README.md",
+    "language_code": "sk"
+  },
+  "06-text-generation-apps/README.md": {
+    "original_hash": "df027997f1448323d6159b78a1b669bf",
+    "translation_date": "2025-10-17T21:52:48+00:00",
+    "source_file": "06-text-generation-apps/README.md",
+    "language_code": "sk"
+  },
+  "07-building-chat-applications/README.md": {
+    "original_hash": "a5308963a56cfbad2d73b0fa99fe84b3",
+    "translation_date": "2025-10-17T21:59:22+00:00",
+    "source_file": "07-building-chat-applications/README.md",
+    "language_code": "sk"
+  },
+  "08-building-search-applications/README.md": {
+    "original_hash": "58953c08b8ba7073b836d4270ea0fe86",
+    "translation_date": "2025-10-17T21:53:49+00:00",
+    "source_file": "08-building-search-applications/README.md",
+    "language_code": "sk"
+  },
+  "08-building-search-applications/scripts/README.md": {
+    "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
+    "translation_date": "2025-07-09T13:12:40+00:00",
+    "source_file": "08-building-search-applications/scripts/README.md",
+    "language_code": "sk"
+  },
+  "09-building-image-applications/README.md": {
+    "original_hash": "238cde5c90363d70ecc939569378da51",
+    "translation_date": "2025-10-17T21:58:16+00:00",
+    "source_file": "09-building-image-applications/README.md",
+    "language_code": "sk"
+  },
+  "10-building-low-code-ai-applications/README.md": {
+    "original_hash": "846ac8e3b7dcfb697d3309fec05f0fea",
+    "translation_date": "2025-10-17T21:57:29+00:00",
+    "source_file": "10-building-low-code-ai-applications/README.md",
+    "language_code": "sk"
+  },
+  "10-building-low-code-ai-applications/assignment.md": {
+    "original_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "translation_date": "2026-01-29T16:34:50+00:00",
+    "source_file": "10-building-low-code-ai-applications/assignment.md",
+    "language_code": "sk"
+  },
+  "11-integrating-with-function-calling/README.md": {
+    "original_hash": "f6f84f9ef2d066cd25850cab93580a50",
+    "translation_date": "2025-10-17T21:54:12+00:00",
+    "source_file": "11-integrating-with-function-calling/README.md",
+    "language_code": "sk"
+  },
+  "12-designing-ux-for-ai-applications/README.md": {
+    "original_hash": "78bbeed50fd4dc9fdee931f5daf98cb3",
+    "translation_date": "2025-10-17T21:53:22+00:00",
+    "source_file": "12-designing-ux-for-ai-applications/README.md",
+    "language_code": "sk"
+  },
+  "13-securing-ai-applications/README.md": {
+    "original_hash": "a2faf8ee7a0b851efa647a19788f1e5b",
+    "translation_date": "2025-10-17T21:54:43+00:00",
+    "source_file": "13-securing-ai-applications/README.md",
+    "language_code": "sk"
+  },
+  "14-the-generative-ai-application-lifecycle/README.md": {
+    "original_hash": "df44972d5575ea8cef3c52ee31696d04",
+    "translation_date": "2025-12-19T16:52:25+00:00",
+    "source_file": "14-the-generative-ai-application-lifecycle/README.md",
+    "language_code": "sk"
+  },
+  "15-rag-and-vector-databases/README.md": {
+    "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
+    "translation_date": "2026-01-18T19:02:22+00:00",
+    "source_file": "15-rag-and-vector-databases/README.md",
+    "language_code": "sk"
+  },
+  "15-rag-and-vector-databases/data/frameworks.md": {
+    "original_hash": "b5466bcedc3c75aa35476270362f626a",
+    "translation_date": "2025-07-09T16:36:47+00:00",
+    "source_file": "15-rag-and-vector-databases/data/frameworks.md",
+    "language_code": "sk"
+  },
+  "15-rag-and-vector-databases/data/own_framework.md": {
+    "original_hash": "df98b2c59f87d8543135301e87969f70",
+    "translation_date": "2025-07-09T16:50:50+00:00",
+    "source_file": "15-rag-and-vector-databases/data/own_framework.md",
+    "language_code": "sk"
+  },
+  "15-rag-and-vector-databases/data/perceptron.md": {
+    "original_hash": "59021c5f419d3feda19075910a74280a",
+    "translation_date": "2025-07-09T17:00:50+00:00",
+    "source_file": "15-rag-and-vector-databases/data/perceptron.md",
+    "language_code": "sk"
+  },
+  "16-open-source-models/README.md": {
+    "original_hash": "85b754d4dc980f270f264d17116d9a5f",
+    "translation_date": "2025-12-19T16:51:20+00:00",
+    "source_file": "16-open-source-models/README.md",
+    "language_code": "sk"
+  },
+  "17-ai-agents/README.md": {
+    "original_hash": "8e8d1f6a63da606af7176a87ff8e92b6",
+    "translation_date": "2025-10-17T22:01:55+00:00",
+    "source_file": "17-ai-agents/README.md",
+    "language_code": "sk"
+  },
+  "18-fine-tuning/README.md": {
+    "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
+    "translation_date": "2026-01-18T19:00:47+00:00",
+    "source_file": "18-fine-tuning/README.md",
+    "language_code": "sk"
+  },
+  "18-fine-tuning/RESOURCES.md": {
+    "original_hash": "c2f423d1402f71ca3869ec135bb77d16",
+    "translation_date": "2025-07-09T18:08:12+00:00",
+    "source_file": "18-fine-tuning/RESOURCES.md",
+    "language_code": "sk"
+  },
+  "19-slm/README.md": {
+    "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
+    "translation_date": "2025-07-09T18:47:14+00:00",
+    "source_file": "19-slm/README.md",
+    "language_code": "sk"
+  },
+  "20-mistral/README.md": {
+    "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
+    "translation_date": "2025-07-09T19:03:26+00:00",
+    "source_file": "20-mistral/README.md",
+    "language_code": "sk"
+  },
+  "21-meta/README.md": {
+    "original_hash": "4c2a0b0c738b649ef049fb99a23be661",
+    "translation_date": "2025-07-09T19:12:59+00:00",
+    "source_file": "21-meta/README.md",
+    "language_code": "sk"
+  },
+  "AGENTS.md": {
+    "original_hash": "19b8d432e5ed3ab209641dd8dad643fb",
+    "translation_date": "2025-10-03T11:10:41+00:00",
+    "source_file": "AGENTS.md",
+    "language_code": "sk"
+  },
+  "CODE_OF_CONDUCT.md": {
+    "original_hash": "c06b12caf3c901eb3156e3dd5b0aea56",
+    "translation_date": "2025-07-09T05:46:27+00:00",
+    "source_file": "CODE_OF_CONDUCT.md",
+    "language_code": "sk"
+  },
+  "CONTRIBUTING.md": {
+    "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
+    "translation_date": "2025-07-09T06:12:06+00:00",
+    "source_file": "CONTRIBUTING.md",
+    "language_code": "sk"
+  },
+  "README.md": {
+    "original_hash": "8fe7a518d51ad5107520e67b2e23560e",
+    "translation_date": "2026-02-06T08:56:33+00:00",
+    "source_file": "README.md",
+    "language_code": "sk"
+  },
+  "SECURITY.md": {
+    "original_hash": "2d33a71bed73d6daee78e2d473ece975",
+    "translation_date": "2025-07-09T06:55:54+00:00",
+    "source_file": "SECURITY.md",
+    "language_code": "sk"
+  },
+  "docs/_navbar.md": {
+    "original_hash": "55168a94c75ef46d671743c607f8f9ff",
+    "translation_date": "2025-07-09T19:17:30+00:00",
+    "source_file": "docs/_navbar.md",
+    "language_code": "sk"
+  },
+  "docs/_sidebar.md": {
+    "original_hash": "4d1335b77a62c821d972c35ef82c586a",
+    "translation_date": "2025-07-09T19:20:49+00:00",
+    "source_file": "docs/_sidebar.md",
+    "language_code": "sk"
+  }
+}

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
-  "translation_date": "2025-10-18T00:25:03+00:00",
-  "source_file": "05-advanced-prompts/README.md",
-  "language_code": "mr"
-}
--->
 # प्रगत प्रॉम्प्ट तयार करणे
 
 [![प्रगत प्रॉम्प्ट तयार करणे](../../../translated_images/mr/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)

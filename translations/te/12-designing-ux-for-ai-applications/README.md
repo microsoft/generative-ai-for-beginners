@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "78bbeed50fd4dc9fdee931f5daf98cb3",
-  "translation_date": "2025-12-19T18:59:17+00:00",
-  "source_file": "12-designing-ux-for-ai-applications/README.md",
-  "language_code": "te"
-}
--->
 # AI అనువర్తనాల కోసం UX డిజైన్ చేయడం
 
 [![AI అనువర్తనాల కోసం UX డిజైన్ చేయడం](../../../translated_images/te/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)

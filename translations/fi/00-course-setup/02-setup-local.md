@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "f5cf0b10ab3c485e6334101f5784f1f3",
-  "translation_date": "2025-12-19T15:42:45+00:00",
-  "source_file": "00-course-setup/02-setup-local.md",
-  "language_code": "fi"
-}
--->
 # Paikallinen asennus 🖥️
 
 **Käytä tätä opasta, jos haluat ajaa kaiken omalla kannettavallasi.**  

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfb7901bdbece1ba3e9f35c400ca33e8",
-  "translation_date": "2025-10-17T14:57:33+00:00",
-  "source_file": "01-introduction-to-genai/README.md",
-  "language_code": "bn"
-}
--->
 # জেনারেটিভ এআই এবং বড় ভাষার মডেলের পরিচিতি
 
 [![জেনারেটিভ এআই এবং বড় ভাষার মডেলের পরিচিতি](../../../translated_images/bn/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)

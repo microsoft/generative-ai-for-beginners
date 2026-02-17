@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
-  "translation_date": "2025-10-18T01:37:47+00:00",
-  "source_file": "05-advanced-prompts/README.md",
-  "language_code": "sl"
-}
--->
 # Ustvarjanje naprednih pozivov
 
 [![Ustvarjanje naprednih pozivov](../../../translated_images/sl/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)

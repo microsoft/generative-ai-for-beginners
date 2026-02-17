@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T16:09:57+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "id"
-}
--->
 # Memilih & Mengonfigurasi Penyedia LLM 🔑
 
 Tugas **dapat** juga diatur untuk bekerja dengan satu atau lebih penyebaran Large Language Model (LLM) melalui penyedia layanan yang didukung seperti OpenAI, Azure, atau Hugging Face. Mereka menyediakan _hosted endpoint_ (API) yang dapat kita akses secara programatis dengan kredensial yang tepat (kunci API atau token). Dalam kursus ini, kami membahas penyedia berikut:

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df98b2c59f87d8543135301e87969f70",
-  "translation_date": "2025-08-25T12:47:28+00:00",
-  "source_file": "15-rag-and-vector-databases/data/own_framework.md",
-  "language_code": "lt"
-}
--->
 # Įvadas į neuroninius tinklus. Daugiasluoksnis perceptronas
 
 Ankstesniame skyriuje susipažinote su pačiu paprasčiausiu neuroninio tinklo modeliu – vieno sluoksnio perceptronu, kuris yra linijinis dviejų klasių klasifikatorius.

@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
-  "translation_date": "2026-01-18T19:26:44+00:00",
-  "source_file": "15-rag-and-vector-databases/README.md",
-  "language_code": "my"
-}
--->
 # Retrieval Augmented Generation (RAG) and Vector Databases
 
-[![Retrieval Augmented Generation (RAG) and Vector Databases](../../../../../translated_images/my/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) and Vector Databases](../../../translated_images/my/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 ရှာဖွေရေးအက်ပလီကေးရှင်းများ သင်ခန်းစာတွင်၊ သင်၏ကိုယ်ပိုင်ဒေတာများအား ကြီးမားသော ဘာသာစကား မော်ဒယ်များ (LLMs) ထဲတွင် ပေါင်းစည်းခြင်းကို ကောက်နုတ်လေ့လာခဲ့သည်။ ဒီသင်ခန်းစာတွင် ကျွန်တော်တို့ LLM အက်ပလီကေးရှင်းတွင် ဒေတာအခြေခံခြင်း၊ ဒီလုပ်ငန်းစဉ်၏ စက်နစ်များနှင့် ဒေတာသိုလှောင်မှု နည်းလမ်းများကို embedding နှင့် စာသားနှစ်မျိုးစလုံး အပါအဝင် နက်ရှိုင်းစွာ လေ့လာသွားမည် ဖြစ်ပါသည်။
 
@@ -51,7 +42,7 @@ LLM ဖြင့် လှမ်း၍ တည်ဆောက်ထားသည�
 
 ### RAG (Retrieval Augmented Generation) များ ဘယ်လို လည်ပတ်သလဲ
 
-![drawing showing how RAGs work](../../../../../translated_images/my/how-rag-works.f5d0ff63942bd3a6.webp)
+![drawing showing how RAGs work](../../../translated_images/my/how-rag-works.f5d0ff63942bd3a6.webp)
 
 သင်၏ မှတ်စုများမှ မေးခွန်းများဖန်တီးသော chatbot တစ်ခု တည်ဆောက်လိုပါက ပညာအခြေခံ ကွန်ရက်တွင် ချိတ်ဆက်မှုပြုရမည်။ ဒီအပိုင်းမှာ RAG သည် အကူအညီပေးသည်။ RAG များသည် အောက်ပါအတိုင်း လုပ်ဆောင်ပါသည်-
 
@@ -63,7 +54,7 @@ LLM ဖြင့် လှမ်း၍ တည်ဆောက်ထားသည�
 
 - **တိုးမြှင့်ဖန်တီးမှု:** LLM သည် ရရှိသော ဒေတာအပေါ် အခြေခံ၍ တုံ့ပြန်ချက်များ တိုးမြှင့်ပေးသည်။ ထိုနည်းဖြင့် train ပြီးသား ဒေတာ သာမက ပေါင်းထည့်ထားသော ဒေတာ အချက်အလက်များမှလည်း တုံ့ပြန်နိုင်သည်။ ထိုသော အချက်အလက်များသည် LLM ၏ တုံ့ပြန်ချက်များကို တိုးမြှင့်စေသည်။ LLM သည် အသုံးပြုသူ၏ မေးခွန်းအတွက် ဖြေကြားချက် ပြန်လည် ပေးပို့သည်။
 
-![drawing showing how RAGs architecture](../../../../../translated_images/my/encoder-decode.f2658c25d0eadee2.webp)
+![drawing showing how RAGs architecture](../../../translated_images/my/encoder-decode.f2658c25d0eadee2.webp)
 
 RAG များ၏ စလစ်ပုံစံမှာ transformer မော်ဒယ် နှစ်ခုဖြစ်သော encoder နှင့် decoder ပါဝင်သည်။ ဥပမာ အသုံးပြုသူမေးခွန်း မေးလျှင် စာသားကို စကားလုံးများ၏ အဓိပ္ပာယ် တိကျမှုတို့ကို ဖမ်းယူရန် vector များသို့ 'encode' လုပ်ပြီး၊ ထို vectors များကို 'decode' လုပ်ကာ စာရွက်အညွှန်းနှင့် အသုံးပြုသူမေးခွန်းအခြေခံ၍ စာသားအသစ် ဖန်တီးပေးသည်။ LLM သည် encoder-decoder မော်ဒယ်နှစ်ခုကို လက်တွေ့ အသုံးပြုသည်။
 
@@ -131,7 +122,7 @@ def split_text(text, max_length, min_length):
 
 OpenAI ၏ `text-embedding-ada-002` မော်ဒယ်ဖြင့် ဖန်တီးထားသောစာသား embedding ၏ ဥပမာ-
 
-![an embedding of the word cat](../../../../../translated_images/my/cat.74cbd7946bc9ca38.webp)
+![an embedding of the word cat](../../../translated_images/my/cat.74cbd7946bc9ca38.webp)
 
 ## ရှာဖွေရေးနှင့် Vector ရှာဖွေရေး
 

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "f6f84f9ef2d066cd25850cab93580a50",
-  "translation_date": "2025-10-17T19:18:53+00:00",
-  "source_file": "11-integrating-with-function-calling/README.md",
-  "language_code": "no"
-}
--->
 # Integrering med funksjonskall
 
 [![Integrering med funksjonskall](../../../translated_images/no/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)

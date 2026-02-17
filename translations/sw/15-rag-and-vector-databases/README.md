@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
-  "translation_date": "2026-01-18T18:51:10+00:00",
-  "source_file": "15-rag-and-vector-databases/README.md",
-  "language_code": "sw"
-}
--->
 # Kuzalishwa kwa Uboreshaji wa Upataji (RAG) na Hifadhidata za Vector
 
-[![Kuzalishwa kwa Uboreshaji wa Upataji (RAG) na Hifadhidata za Vector](../../../../../translated_images/sw/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Kuzalishwa kwa Uboreshaji wa Upataji (RAG) na Hifadhidata za Vector](../../../translated_images/sw/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 Katika somo la matumizi ya utafutaji, tulijifunza kwa kifupi jinsi ya kuingiza data yako mwenyewe ndani ya Mifano Mikubwa ya Lugha (LLMs). Katika somo hili, tutaangazia zaidi dhana za kuimarisha data yako katika programu yako ya LLM, jinsi mchakato unavyofanya kazi na mbinu za kuhifadhi data, ikijumuisha embeddings na maandishi.
 
@@ -53,7 +44,7 @@ Chatbot inayotumia LLM huchakata maagizo ya mtumiaji ili kuzalisha majibu. Imesa
 
 ### Jinsi RAG (Kuzalishwa kwa Uboreshaji wa Upataji) hufanya kazi
 
-![mchoro unaoonyesha jinsi RAG hufanya kazi](../../../../../translated_images/sw/how-rag-works.f5d0ff63942bd3a6.webp)
+![mchoro unaoonyesha jinsi RAG hufanya kazi](../../../translated_images/sw/how-rag-works.f5d0ff63942bd3a6.webp)
 
 Tuseme unataka kuweka chatbot inayounda maswali kutoka maelezo yako, utahitaji kiungo na msingi wa maarifa. Hapa ndipo RAG inakuja kusaidia. RAG hufanya kazi kama ifuatavyo:
 
@@ -65,7 +56,7 @@ Tuseme unataka kuweka chatbot inayounda maswali kutoka maelezo yako, utahitaji k
 
 - **Kuzalisha Uboreshaji:** LLM huongeza jibu lake kulingana na data iliyopatikana. Hii inaruhusu jibu linalozalishwa si tu kutoka kwa data iliyofunzwa awali bali pia taarifa muhimu kutoka kwa muktadha uliowekwa. Data iliyorekodiwa hutumiwa kuboresha majibu ya LLM. LLM kisha hurudisha jibu la swali la mtumiaji.
 
-![mchoro unaoonyesha usanifu wa RAG](../../../../../translated_images/sw/encoder-decode.f2658c25d0eadee2.webp)
+![mchoro unaoonyesha usanifu wa RAG](../../../translated_images/sw/encoder-decode.f2658c25d0eadee2.webp)
 
 Usanifu wa RAG umejengwa kwa kutumia transformers zinazojumuisha sehemu mbili: encoder na decoder. Kwa mfano, mtumiaji akiuliza swali, maandishi ya kuingilia 'hulishwa' kuwa vectors zinazoshikilia maana ya maneno na vector hizo 'hutafsiriwa' kwenye faharasa ya nyaraka na kuzalisha maandishi mapya kulingana na swali la mtumiaji. LLM hutumia modeli ya encoder-decoder kuzalisha matokeo.
 
@@ -128,7 +119,7 @@ def split_text(text, max_length, min_length):
 Baada ya kugawanya, tunaweza kisha kuweka maandishi yetu kwa kutumia modeli tofauti za embedding. Baadhi ya modeli unaweza kutumia ni: word2vec, ada-002 na OpenAI, Azure Computer Vision na zingine nyingi. Kuchagua modeli kutategemea lugha unazozitumia, aina ya maudhui yaliyo encoded (maandishi/picha/sauti), ukubwa wa ingizo unaoweza kuweka encoded na urefu wa output ya embedding.
 
 Mfano wa maandishi yaliyo embedded kwa kutumia modeli ya OpenAI `text-embedding-ada-002` ni:
-![embedding ya neno paka](../../../../../translated_images/sw/cat.74cbd7946bc9ca38.webp)
+![embedding ya neno paka](../../../translated_images/sw/cat.74cbd7946bc9ca38.webp)
 
 ## Upataji na Utafutaji wa Vector
 

@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T17:30:05+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "bn"
-}
--->
-[![Open Source Models](../../../../../translated_images/bn/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/bn/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # আপনার LLM ফাইন-টিউনিং
 
@@ -32,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 আপনি কি জানাতে চান আজকের পাঠে আমরা কী আলোচনা করব তার বড় ছবি? এই চিত্রায়িত নির্দেশিকাটি দেখুন যা শেখার যাত্রাকে বর্ণনা করে—ফাইন-টিউনিংয়ের মূল ধারণা এবং অনুপ্রেরণা থেকে শুরু করে প্রক্রিয়া ও সেরাপ্রয়োগের পদ্ধতি পর্যন্ত। এটি অনুসন্ধানের জন্য একটি মনোমুগ্ধকর বিষয়, অতএব নিজের শেখার যাত্রাকে সাহায্য করার জন্য অতিরিক্ত লিঙ্কের জন্য [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) পৃষ্ঠাটি দেখতে ভুলবেন না!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/bn/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/bn/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## ভাষার মডেলের জন্য ফাইন-টিউনিং কী?
 

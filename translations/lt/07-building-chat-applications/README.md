@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a5308963a56cfbad2d73b0fa99fe84b3",
-  "translation_date": "2025-10-18T02:29:08+00:00",
-  "source_file": "07-building-chat-applications/README.md",
-  "language_code": "lt"
-}
--->
 # Generatyviosios AI technologijos pagrindu sukurtų pokalbių programų kūrimas
 
 [![Generatyviosios AI technologijos pagrindu sukurtų pokalbių programų kūrimas](../../../translated_images/lt/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)

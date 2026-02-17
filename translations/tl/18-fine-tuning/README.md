@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T18:44:52+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "tl"
-}
--->
-[![Open Source Models](../../../../../translated_images/tl/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/tl/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Fine-Tuning ng Iyong LLM
 
@@ -32,7 +23,7 @@ Handa ka na ba? Magsimula na tayo.
 
 Gusto mo bang makita ang kabuuang larawan ng mga pag-uusapan natin bago tayo sumabak? Tingnan ang ilustradong gabay na ito na naglalarawan ng paglalakbay sa pagkatuto para sa leksyon na ito - mula sa pag-aaral ng mga pangunahing konsepto at motibasyon para sa fine-tuning, hanggang sa pag-unawa sa proseso at pinakamahuhusay na gawain para sa pagpapatupad ng gawain ng fine-tuning. Isang kapanapanabik na paksa ito para sa paggalugad, kaya huwag kalimutang bisitahin ang [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) na pahina para sa karagdagang mga link na susuporta sa iyong sariling paglalakbay sa pagkatuto!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/tl/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/tl/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Ano ang fine-tuning para sa mga modelo ng wika?
 

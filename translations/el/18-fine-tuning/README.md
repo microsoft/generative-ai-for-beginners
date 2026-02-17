@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T17:52:57+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "el"
-}
--->
-[![Open Source Models](../../../../../translated_images/el/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/el/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Βελτιστοποίηση του LLM σας
 
@@ -32,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Θέλετε να πάρετε μια συνολική εικόνα αυτού που θα καλύψουμε πριν εμβαθύνουμε; Δείτε αυτόν τον εικονογραφημένο οδηγό που περιγράφει την μαθησιακή διαδρομή για αυτό το μάθημα - από την εκμάθηση των βασικών εννοιών και το κίνητρο για βελτιστοποίηση, μέχρι την κατανόηση της διαδικασίας και των βέλτιστων πρακτικών για την εκτέλεση της εργασίας βελτιστοποίησης. Αυτό είναι ένα συναρπαστικό θέμα για εξερεύνηση, οπότε μην ξεχάσετε να ελέγξετε τη σελίδα [Πόροι](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) για πρόσθετους συνδέσμους που υποστηρίζουν την αυτοκαθοδηγούμενη μαθησιακή σας διαδρομή!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/el/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/el/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Τι είναι η βελτιστοποίηση για γλωσσικά μοντέλα;
 

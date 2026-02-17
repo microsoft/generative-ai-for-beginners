@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T16:02:42+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "vi"
-}
--->
 # Lựa chọn & Cấu hình nhà cung cấp LLM 🔑
 
 Các bài tập **có thể** được thiết lập để làm việc với một hoặc nhiều triển khai Mô hình Ngôn ngữ Lớn (LLM) thông qua nhà cung cấp dịch vụ được hỗ trợ như OpenAI, Azure hoặc Hugging Face. Những nhà cung cấp này cung cấp một _điểm cuối được lưu trữ_ (API) mà chúng ta có thể truy cập lập trình với các thông tin xác thực phù hợp (khóa API hoặc token). Trong khóa học này, chúng ta thảo luận về các nhà cung cấp sau:

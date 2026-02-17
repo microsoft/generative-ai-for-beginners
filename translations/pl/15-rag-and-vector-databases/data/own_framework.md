@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df98b2c59f87d8543135301e87969f70",
-  "translation_date": "2025-07-09T16:45:59+00:00",
-  "source_file": "15-rag-and-vector-databases/data/own_framework.md",
-  "language_code": "pl"
-}
--->
 # Wprowadzenie do sieci neuronowych. Wielowarstwowy perceptron
 
 W poprzedniej części poznaliście najprostszy model sieci neuronowej – jednowarstwowy perceptron, liniowy model klasyfikacji dwuklasowej.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-10-11T11:10:25+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "et"
-}
--->
 # Kaastöö
 
 See projekt ootab kaastööd ja ettepanekuid. Enamik kaastöid nõuab, et nõustuksite Kaastöö Litsentsilepinguga (CLA), mis kinnitab, et teil on õigus anda meile õigused teie panuse kasutamiseks. Lisateabe saamiseks külastage <https://cla.microsoft.com>.

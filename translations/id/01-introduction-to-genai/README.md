@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfb7901bdbece1ba3e9f35c400ca33e8",
-  "translation_date": "2025-10-17T20:47:58+00:00",
-  "source_file": "01-introduction-to-genai/README.md",
-  "language_code": "id"
-}
--->
 # Pengantar AI Generatif dan Model Bahasa Besar
 
 [![Pengantar AI Generatif dan Model Bahasa Besar](../../../translated_images/id/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)

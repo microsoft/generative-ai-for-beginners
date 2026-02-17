@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T15:55:46+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "he"
-}
--->
 # בחירה והגדרת ספק LLM 🔑
 
 המשימות **יכולות** להיות מוגדרות גם לעבודה מול פריסות של מודל שפה גדול (LLM) דרך ספק שירות נתמך כמו OpenAI, Azure או Hugging Face. אלה מספקים _נקודת קצה מתארחת_ (API) אליה ניתן לגשת באופן תכנותי עם האישורים הנכונים (מפתח API או טוקן). בקורס זה נדון בספקים הבאים:

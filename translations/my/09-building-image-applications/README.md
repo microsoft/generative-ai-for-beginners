@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "238cde5c90363d70ecc939569378da51",
-  "translation_date": "2025-10-18T02:01:02+00:00",
-  "source_file": "09-building-image-applications/README.md",
-  "language_code": "my"
-}
--->
 # ပုံဖန်တီးမှုအက်ပလီကေးရှင်းများ တည်ဆောက်ခြင်း
 
 [![ပုံဖန်တီးမှုအက်ပလီကေးရှင်းများ တည်ဆောက်ခြင်း](../../../translated_images/my/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)

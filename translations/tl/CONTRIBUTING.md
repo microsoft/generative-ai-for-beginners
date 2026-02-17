@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-07-09T06:10:37+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "tl"
-}
--->
 # Contributing
 
 Malugod na tinatanggap ng proyektong ito ang mga kontribusyon at suhestiyon. Karamihan sa mga kontribusyon ay nangangailangan na sumang-ayon ka sa isang Contributor License Agreement (CLA) na nagsasaad na may karapatan ka, at talagang binibigyan mo kami ng karapatan na gamitin ang iyong kontribusyon. Para sa mga detalye, bisitahin ang <https://cla.microsoft.com>.

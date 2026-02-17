@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "f5cf0b10ab3c485e6334101f5784f1f3",
-  "translation_date": "2025-12-19T13:50:38+00:00",
-  "source_file": "00-course-setup/02-setup-local.md",
-  "language_code": "ko"
-}
--->
 # 로컬 설정 🖥️
 
 **모든 것을 자신의 노트북에서 실행하고 싶다면 이 가이드를 사용하세요.**  

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-07-09T13:07:03+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "fa"
-}
--->
 # آماده‌سازی داده‌های رونویسی
 
 اسکریپت‌های آماده‌سازی داده‌های رونویسی، متن‌های ویدیوهای یوتیوب را دانلود کرده و برای استفاده در نمونه جستجوی معنایی با OpenAI Embeddings و Functions آماده می‌کنند.

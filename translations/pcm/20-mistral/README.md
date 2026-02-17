@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-11-12T08:54:14+00:00",
-  "source_file": "20-mistral/README.md",
-  "language_code": "pcm"
-}
--->
 # How to Build wit Mistral Models
 
 ## Introduction

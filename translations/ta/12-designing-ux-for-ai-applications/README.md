@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "78bbeed50fd4dc9fdee931f5daf98cb3",
-  "translation_date": "2025-10-18T02:35:49+00:00",
-  "source_file": "12-designing-ux-for-ai-applications/README.md",
-  "language_code": "ta"
-}
--->
 # AI பயன்பாடுகளுக்கான UX வடிவமைப்பு
 
 [![AI பயன்பாடுகளுக்கான UX வடிவமைப்பு](../../../translated_images/ta/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)

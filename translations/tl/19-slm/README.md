@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-07-09T18:43:00+00:00",
-  "source_file": "19-slm/README.md",
-  "language_code": "tl"
-}
--->
 # Panimula sa Maliit na Language Models para sa Generative AI para sa mga Baguhan
 Ang Generative AI ay isang kahanga-hangang larangan ng artificial intelligence na nakatuon sa paglikha ng mga sistema na kayang bumuo ng bagong nilalaman. Ang nilalamang ito ay maaaring mula sa teksto at mga larawan hanggang sa musika at maging buong virtual na kapaligiran. Isa sa mga pinaka-kapana-panabik na aplikasyon ng generative AI ay sa larangan ng mga language model.
 

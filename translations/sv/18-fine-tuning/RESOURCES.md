@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c2f423d1402f71ca3869ec135bb77d16",
-  "translation_date": "2025-07-09T18:03:05+00:00",
-  "source_file": "18-fine-tuning/RESOURCES.md",
-  "language_code": "sv"
-}
--->
 # Resurser för Självstyrt Lärande
 
 Lektionerna är byggda med hjälp av flera kärnresurser från OpenAI och Azure OpenAI som referenser för terminologi och handledningar. Här är en icke uttömmande lista för din egen självstyrda läranderesa.

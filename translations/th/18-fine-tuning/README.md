@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T17:57:27+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "th"
-}
--->
-[![Open Source Models](../../../../../translated_images/th/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/th/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # การปรับแต่งโมเดล LLM ของคุณ
 
@@ -32,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ต้องการเข้าใจภาพรวมของหัวข้อที่จะเรียนก่อนลงลึกใช่ไหม? ชมคู่มือภาพประกอบนี้ที่อธิบายการเดินทางการเรียนรู้สำหรับบทเรียนนี้ — ตั้งแต่การเรียนรู้แนวคิดหลักและแรงจูงใจในการปรับแต่งแบบละเอียด ไปจนถึงเข้าใจกระบวนการและแนวทางปฏิบัติที่ดีที่สุดสำหรับการดำเนินงานปรับแต่งแบบละเอียด หัวข้อนี้น่าสนใจมากสำหรับการสำรวจ อย่าลืมตรวจสอบหน้าทรัพยากร [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) เพื่อดูลิงก์เสริมที่ช่วยสนับสนุนการเรียนรู้ด้วยตนเองของคุณ!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/th/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/th/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## การปรับแต่งแบบละเอียดสำหรับโมเดลภาษา คืออะไร?
 

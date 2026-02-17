@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-  "translation_date": "2025-07-09T19:04:49+00:00",
-  "source_file": "20-mistral/README.md",
-  "language_code": "my"
-}
--->
 # Mistral မော်ဒယ်များဖြင့် ဆောက်လုပ်ခြင်း
 
 ## နိဒါန်း

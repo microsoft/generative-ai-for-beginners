@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfb7901bdbece1ba3e9f35c400ca33e8",
-  "translation_date": "2025-10-17T16:22:49+00:00",
-  "source_file": "01-introduction-to-genai/README.md",
-  "language_code": "tr"
-}
--->
 # Üretken Yapay Zeka ve Büyük Dil Modellerine Giriş
 
 [![Üretken Yapay Zeka ve Büyük Dil Modellerine Giriş](../../../translated_images/tr/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)

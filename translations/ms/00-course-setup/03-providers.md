@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T16:17:03+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "ms"
-}
--->
 # Memilih & Mengkonfigurasi Penyedia LLM 🔑
 
 Tugasan **boleh** juga disediakan untuk berfungsi dengan satu atau lebih penempatan Large Language Model (LLM) melalui penyedia perkhidmatan yang disokong seperti OpenAI, Azure atau Hugging Face. Ini menyediakan _titik akhir yang dihoskan_ (API) yang boleh kita akses secara programatik dengan kelayakan yang betul (kunci API atau token). Dalam kursus ini, kami membincangkan penyedia ini:

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c2f423d1402f71ca3869ec135bb77d16",
-  "translation_date": "2025-07-09T18:09:23+00:00",
-  "source_file": "18-fine-tuning/RESOURCES.md",
-  "language_code": "sr"
-}
--->
 # Ресурси за самостално учење
 
 Овај час је направљен користећи низ кључних ресурса из OpenAI и Azure OpenAI као референце за терминологију и туторијале. Ево непотпуног списка за ваше самостално учење.

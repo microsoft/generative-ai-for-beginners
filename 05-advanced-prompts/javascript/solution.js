@@ -78,13 +78,30 @@ app.get('/', [
 });
 
 // Use HTTPS instead of HTTP
-const options = {
-  key: fs.readFileSync('server.key'),
-  cert: fs.readFileSync('server.cert')
-};
+// SECURITY: Use absolute paths and proper error handling for certificates
+const path = await import('path');
+const certDir = process.env.CERT_DIR || process.cwd();
+
+// SECURITY: Validate certificate directory is within allowed path
+const resolvedCertDir = path.resolve(certDir);
+if (!resolvedCertDir.startsWith(process.cwd())) {
+  throw new Error('Certificate directory must be within the application directory');
+}
+
+let options;
+try {
+  options = {
+    key: fs.readFileSync(path.join(resolvedCertDir, 'server.key')),
+    cert: fs.readFileSync(path.join(resolvedCertDir, 'server.cert'))
+  };
+} catch (error) {
+  console.error('Failed to load SSL certificates:', error.message);
+  console.error('Please ensure server.key and server.cert files exist in the certificate directory');
+  process.exit(1);
+}
 
 https.createServer(options, app).listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running securely on port ${PORT}`);
 });
 
 /*

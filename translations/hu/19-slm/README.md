@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-07-09T18:44:38+00:00",
-  "source_file": "19-slm/README.md",
-  "language_code": "hu"
-}
--->
 # Bevezetés a kis nyelvi modellekbe a generatív MI kezdőknek
 A generatív MI az a mesterséges intelligencia izgalmas területe, amely olyan rendszerek létrehozására fókuszál, amelyek képesek új tartalmak generálására. Ezek a tartalmak lehetnek szövegek, képek, zene vagy akár teljes virtuális környezetek is. A generatív MI egyik legizgalmasabb alkalmazási területe a nyelvi modellek világa.
 

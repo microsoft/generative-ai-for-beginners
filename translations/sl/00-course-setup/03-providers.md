@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T17:30:46+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "sl"
-}
--->
 # Izbira in konfiguracija ponudnika LLM 🔑
 
 Naloge **lahko** nastavite tudi za delo z enim ali več razporeditvami velikih jezikovnih modelov (LLM) prek podprtega ponudnika storitev, kot so OpenAI, Azure ali Hugging Face. Ti zagotavljajo _gostujočo končno točko_ (API), do katere lahko dostopamo programsko z ustreznimi poverilnicami (API ključ ali žeton). V tem tečaju obravnavamo te ponudnike:

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bfb7901bdbece1ba3e9f35c400ca33e8",
-  "translation_date": "2025-10-18T02:18:26+00:00",
-  "source_file": "01-introduction-to-genai/README.md",
-  "language_code": "uk"
-}
--->
 # Вступ до генеративного штучного інтелекту та великих мовних моделей
 
 [![Вступ до генеративного штучного інтелекту та великих мовних моделей](../../../translated_images/uk/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)

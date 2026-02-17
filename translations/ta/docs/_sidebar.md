@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4d1335b77a62c821d972c35ef82c586a",
-  "translation_date": "2025-10-11T11:26:17+00:00",
-  "source_file": "docs/_sidebar.md",
-  "language_code": "ta"
-}
--->
 - தொடங்குவது எப்படி  
   - [ஜெனரேட்டிவ் ஏஐ அறிமுகம்](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)
 

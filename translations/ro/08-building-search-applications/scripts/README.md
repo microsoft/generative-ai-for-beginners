@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-07-09T13:12:51+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "ro"
-}
--->
 # Pregătirea datelor de transcriere
 
 Scripturile pentru pregătirea datelor de transcriere descarcă transcrierile videoclipurilor YouTube și le pregătesc pentru utilizare cu exemplul Semantic Search cu OpenAI Embeddings și Functions.

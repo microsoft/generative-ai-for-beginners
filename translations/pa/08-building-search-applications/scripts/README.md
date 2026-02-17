@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-07-09T13:09:01+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "pa"
-}
--->
 # ਟ੍ਰਾਂਸਕ੍ਰਿਪਸ਼ਨ ਡੇਟਾ ਤਿਆਰੀ
 
 ਟ੍ਰਾਂਸਕ੍ਰਿਪਸ਼ਨ ਡੇਟਾ ਤਿਆਰੀ ਸਕ੍ਰਿਪਟ ਯੂਟਿਊਬ ਵੀਡੀਓ ਟ੍ਰਾਂਸਕ੍ਰਿਪਟ ਡਾਊਨਲੋਡ ਕਰਦੀਆਂ ਹਨ ਅਤੇ Semantic Search with OpenAI Embeddings and Functions ਸੈਂਪਲ ਨਾਲ ਵਰਤੋਂ ਲਈ ਤਿਆਰ ਕਰਦੀਆਂ ਹਨ।

@@ -1,13 +1,4 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-  "translation_date": "2026-01-18T16:48:07+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "ru"
-}
--->
-[![Open Source Models](../../../../../translated_images/ru/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/ru/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
 # Тонкая настройка вашего LLM
 
@@ -32,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Хотите получить общую картину того, что мы рассмотрим, прежде чем углубляться? Ознакомьтесь с этим иллюстрированным руководством, описывающим путь обучения в этом уроке — от изучения основных концепций и мотивации для тонкой настройки до понимания процесса и лучших практик выполнения задачи тонкой настройки. Это увлекательная тема для изучения, не забудьте также посетить страницу [Ресурсы](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) для дополнительных ссылок, которые поддержат ваше самостоятельное обучение!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../../../translated_images/ru/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/ru/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Что такое тонкая настройка языковых моделей?
 

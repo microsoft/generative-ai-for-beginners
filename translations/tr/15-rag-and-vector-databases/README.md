@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
-  "translation_date": "2026-01-18T18:16:20+00:00",
-  "source_file": "15-rag-and-vector-databases/README.md",
-  "language_code": "tr"
-}
--->
 # Retrieval Augmented Generation (RAG) ve Vektör Veritabanları
 
-[![Retrieval Augmented Generation (RAG) ve Vektör Veritabanları](../../../../../translated_images/tr/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) ve Vektör Veritabanları](../../../translated_images/tr/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
 Arama uygulamaları dersinde, kendi verilerinizi Büyük Dil Modellerine (LLM'ler) nasıl entegre edeceğinizi kısaca öğrendik. Bu derste, LLM uygulamanızda verilerinizi temel alma kavramına, sürecin mekaniklerine ve hem gömme hem de metin verilerinin depolanma yöntemlerine daha derinlemesine bakacağız.
 
@@ -53,7 +44,7 @@ LLM destekli bir sohbet botu, kullanıcı istemlerini işleyerek yanıtlar oluş
 
 ### RAG'lar (Retrieval Augmented Generation) nasıl çalışır?
 
-![RAG'ların nasıl çalıştığını gösteren çizim](../../../../../translated_images/tr/how-rag-works.f5d0ff63942bd3a6.webp)
+![RAG'ların nasıl çalıştığını gösteren çizim](../../../translated_images/tr/how-rag-works.f5d0ff63942bd3a6.webp)
 
 Diyelim ki notlarınızdan quizler oluşturan bir sohbet botu dağıtmak istiyorsunuz; bilgi tabanına bağlantıya ihtiyacınız olacak. İşte burada RAG devreye girer. RAG'lar şu şekilde çalışır:
 
@@ -65,7 +56,7 @@ Diyelim ki notlarınızdan quizler oluşturan bir sohbet botu dağıtmak istiyor
 
 - **Geliştirilmiş Üretim:** LLM, alınan verilere dayanarak yanıtını geliştirir. Bu, oluşturulan yanıtın sadece önceden eğitilmiş verilere değil, eklenen bağlamdan alınan ilgili bilgilere dayanmasını sağlar. Erişilen veriler, LLM yanıtlarını geliştirmek için kullanılır. Sonra LLM, kullanıcının sorusuna cevap verir.
 
-![RAG'ların mimarisini gösteren çizim](../../../../../translated_images/tr/encoder-decode.f2658c25d0eadee2.webp)
+![RAG'ların mimarisini gösteren çizim](../../../translated_images/tr/encoder-decode.f2658c25d0eadee2.webp)
 
 RAG mimarisi iki bölümden oluşan transformer kullanılarak uygulanır: bir kodlayıcı (encoder) ve bir çözücü (decoder). Örneğin, kullanıcı bir soru sorduğunda, giriş metni kelimelerin anlamını yakalayan vektörlere 'kodlanır' ve bu vektörler belgesi dizinine 'çözümlenir' ve kullanıcı sorgusuna göre yeni metin oluşturulur. LLM, çıktıyı üretmek için hem kodlayıcı-çözücü modelini kullanır.
 
@@ -128,7 +119,7 @@ def split_text(text, max_length, min_length):
 Bölümlendikten sonra, metnimizi çeşitli gömme modelleri ile gömebiliriz. Kullanabileceğiniz modeller arasında word2vec, OpenAI tarafından ada-002, Azure Computer Vision ve daha fazlası vardır. Kullanılacak model, kullandığınız diller, kodlanan içerik türü (metin/görsel/ses), kodlanabilecek giriş boyutu ve gömme çıktısının uzunluğuna bağlıdır.
 
 OpenAI'nin `text-embedding-ada-002` modeli ile oluşturulmuş gömülü metne bir örnek:
-![cat kelimesinin gömmesi](../../../../../translated_images/tr/cat.74cbd7946bc9ca38.webp)
+![cat kelimesinin gömmesi](../../../translated_images/tr/cat.74cbd7946bc9ca38.webp)
 
 ## Erişim ve Vektör Arama
 

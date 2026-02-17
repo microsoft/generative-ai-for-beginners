@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c06b12caf3c901eb3156e3dd5b0aea56",
-  "translation_date": "2025-07-09T05:45:47+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "nl"
-}
--->
 # Microsoft Open Source Gedragscode
 
 Dit project heeft de [Microsoft Open Source Gedragscode](https://opensource.microsoft.com/codeofconduct/) aangenomen.

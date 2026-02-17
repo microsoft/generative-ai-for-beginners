@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "be9cef0460b3696ed5d8f6f8d2f64d45",
-  "translation_date": "2025-12-19T19:46:47+00:00",
-  "source_file": "00-course-setup/01-setup-cloud.md",
-  "language_code": "kn"
-}
--->
 # Cloud Setup ☁️ – GitHub Codespaces
 
 **ನೀವು ಸ್ಥಳೀಯವಾಗಿ ಏನನ್ನೂ ಸ್ಥಾಪಿಸಲು ಇಚ್ಛಿಸದಿದ್ದರೆ ಈ ಮಾರ್ಗದರ್ಶಿಯನ್ನು ಬಳಸಿ.**  

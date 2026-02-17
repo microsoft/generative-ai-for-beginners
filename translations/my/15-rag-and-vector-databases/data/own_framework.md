@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df98b2c59f87d8543135301e87969f70",
-  "translation_date": "2025-07-09T16:52:27+00:00",
-  "source_file": "15-rag-and-vector-databases/data/own_framework.md",
-  "language_code": "my"
-}
--->
 # Neural Networks အကြောင်း မိတ်ဆက်ခြင်း။ Multi-Layered Perceptron
 
 ယခင်အပိုင်းတွင် သင်သည် အလွယ်တကူနားလည်နိုင်သော neural network မော်ဒယ်ဖြစ်သော တစ်လွှာ perceptron၊ လိုင်းနီယာ နှစ်အုပ်စုခွဲခြားမှု မော်ဒယ်အကြောင်း သင်ယူခဲ့ပါသည်။

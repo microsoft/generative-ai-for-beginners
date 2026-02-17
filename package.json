@@ -22,12 +22,12 @@
 	},
 	"homepage": "https://github.com/microsoft/generative-ai-for-beginners#readme",
 	"devDependencies": {
-		"@types/node": "^25.0.10",
+		"@types/node": "^25.2.3",
 		"docsify-to-pdf": "0.0.5"
 	},
 	"dependencies": {
 		"@azure-rest/ai-inference": "^1.0.0-beta.2",
 		"@azure/core-auth": "^1.10.1",
-		"openai": "^6.16.0"
+		"openai": "^6.22.0"
 	}
 }

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-  "translation_date": "2025-07-09T18:50:41+00:00",
-  "source_file": "19-slm/README.md",
-  "language_code": "hr"
-}
--->
 # Uvod u Male Jezične Modele za Generativnu AI za Početnike
 Generativna AI je fascinantno područje umjetne inteligencije koje se fokusira na stvaranje sustava sposobnih generirati novi sadržaj. Taj sadržaj može biti tekst, slike, glazba pa čak i cijeli virtualni svjetovi. Jedna od najuzbudljivijih primjena generativne AI je u području jezičnih modela.
 

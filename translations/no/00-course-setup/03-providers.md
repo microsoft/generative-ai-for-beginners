@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
-  "translation_date": "2025-12-19T15:35:17+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "no"
-}
--->
 # Valg og konfigurasjon av LLM-leverandør 🔑
 
 Oppgaver **kan** også settes opp til å fungere mot en eller flere distribusjoner av store språkmodeller (LLM) gjennom en støttet tjenesteleverandør som OpenAI, Azure eller Hugging Face. Disse tilbyr et _hostet endepunkt_ (API) som vi kan få tilgang til programmessig med riktige legitimasjoner (API-nøkkel eller token). I dette kurset diskuterer vi disse leverandørene:
