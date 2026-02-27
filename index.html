@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>7YA.IO x STARTON | הצעה אסטרטגית לשיתוף פעולה</title>
+    <meta name="description" content="7YA.IO x STARTON - מהלך אסטרטגי לחיבור בין חשיפה דיגיטלית עצומה, הכשרת נוער בסיכון ותוכנית האצה יזמית מקצועית.">
+    <meta name="keywords" content="7YA.IO, StartOn, נוער בסיכון, יזמות, AI, הכשרה טכנולוגית">
+    <meta name="author" content="Igor Vepretski">
+    <link rel="canonical" href="https://7ya.io/">
+    <meta property="og:title" content="7YA.IO x STARTON | מסלול המראה לנוער בסיכון">
+    <meta property="og:description" content="מודל שיתוף פעולה מעשי שמחבר Reach חברתי עם הכשרה מנטלית-טכנולוגית ויזמות.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://7ya.io/">
+    <meta property="og:locale" content="he_IL">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -29,6 +38,12 @@
 
         .fade-in { animation: fadeIn 0.6s ease-out forwards; opacity: 0; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        @media (prefers-reduced-motion: reduce) {
+            .fade-in { animation: none; opacity: 1; }
+            .force-card,
+            .force-card:hover { transition: none; transform: none; }
+        }
 
         .force-card {
             transition: all 0.3s ease;
@@ -93,6 +108,10 @@
             <p class="text-xl text-stone-500 font-medium max-w-2xl mx-auto">
                 חיבור בין Reach חברתי (310M) לתשתית יזמות מקצועית
             </p>
+            <div class="mt-6 flex flex-wrap justify-center gap-3 text-sm">
+                <a href="https://7ya.io" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full bg-orange-50 text-orange-700 font-bold border border-orange-200 hover:bg-orange-100 transition-colors">7YA.IO</a>
+                <a href="https://igor-vepretski-7-ya.replit.app/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full bg-blue-50 text-blue-700 font-bold border border-blue-200 hover:bg-blue-100 transition-colors">Replit App</a>
+            </div>
         </header>
 
         <!-- Main Content Grid -->
@@ -143,7 +162,7 @@
                                 הכשרה מקדימה לבניית חוסן מנטלי ומשמעת עצמית, המכינה את הנוער לתוכניות של סטארט-און.
                             </p>
                             <div class="mt-auto chart-container" style="height: 140px; width: 140px;">
-                                <canvas id="resilienceChart"></canvas>
+                                <canvas id="resilienceChart" role="img" aria-label="תרשים דונאט המציג חלוקה בין חוסן מנטלי לכישורים טכניים"></canvas>
                             </div>
                         </div>
                     </div>
@@ -232,7 +251,7 @@
                         </div>
                     </div>
                     <div class="w-full md:w-7/12 chart-container">
-                        <canvas id="funnelChart"></canvas>
+                        <canvas id="funnelChart" role="img" aria-label="תרשים משפך המציג מעבר מחשיפה המונית לבוגרים איכותיים"></canvas>
                     </div>
                 </div>
             </section>
@@ -243,10 +262,13 @@
         <footer class="mt-20 border-t border-stone-200 pt-10 text-center fade-in" style="animation-delay: 0.6s;">
             <h3 class="text-3xl font-black text-stone-900 mb-3">בואו נהפוך את הכוח של המדיה לכוח של שינוי.</h3>
             <p class="text-stone-500 mb-8 font-medium">אנחנו לא מחפשים רק "מימון", אלא שותפות לדרך.</p>
-            <div class="inline-flex gap-4">
-                <button class="bg-stone-900 text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:bg-orange-600 transition-all transform hover:-translate-y-1">
+            <div class="inline-flex flex-wrap justify-center gap-4">
+                <a href="mailto:hello@7ya.io?subject=%D7%A9%D7%99%D7%AA%D7%95%D7%A3%20%D7%A4%D7%A2%D7%95%D7%9C%D7%94%207YA.IO%20x%20STARTON" class="bg-stone-900 text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:bg-orange-600 transition-all transform hover:-translate-y-1">
                     תיאום פגישת היכרות
-                </button>
+                </a>
+                <a href="https://igor-vepretski-7-ya.replit.app/" target="_blank" rel="noopener noreferrer" class="bg-white text-stone-900 px-8 py-4 rounded-xl font-bold shadow-sm border border-stone-200 hover:border-blue-500 hover:text-blue-700 transition-all">
+                    צפייה בגרסה החיה
+                </a>
             </div>
             <p class="mt-12 text-stone-400 text-sm">© 2026 איגור ופרצקי | 7YA.IO</p>
         </footer>
@@ -258,8 +280,10 @@
         // Chart.js Configuration
         
         // 1. Resilience Doughnut Chart (Small visual for the card)
-        const ctxResilience = document.getElementById('resilienceChart').getContext('2d');
-        new Chart(ctxResilience, {
+        const resilienceCanvas = document.getElementById('resilienceChart');
+        if (resilienceCanvas) {
+            const ctxResilience = resilienceCanvas.getContext('2d');
+            new Chart(ctxResilience, {
             type: 'doughnut',
             data: {
                 labels: ['חוסן מנטלי', 'כישורים טכניים'],
@@ -280,13 +304,13 @@
                 cutout: '75%'
             }
         });
+        }
 
         // 2. Funnel Bar Chart (Main visual)
-        const ctxFunnel = document.getElementById('funnelChart').getContext('2d');
+        const funnelCanvas = document.getElementById('funnelChart');
+        if (funnelCanvas) {
+        const ctxFunnel = funnelCanvas.getContext('2d');
         
-        // Helper to handle long labels if necessary (standard chart.js practice)
-        const formatLabel = (str) => str.split(' ');
-
         new Chart(ctxFunnel, {
             type: 'bar',
             data: {
@@ -338,6 +362,7 @@
                 }
             }
         });
+        }
     </script>
 </body>
 </html>
