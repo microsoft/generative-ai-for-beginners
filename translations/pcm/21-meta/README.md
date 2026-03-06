@@ -1,58 +1,59 @@
-# How to Build Wit Meta Family Models
+# Building Wit di Meta Family Models 
 
-## Introduction
+## Introduction 
 
-Dis lesson go cover:
+Dis lesson go cover: 
 
-- How to sabi di two main Meta family models - Llama 3.1 and Llama 3.2
-- How to understand di use-cases and di kind work wey each model fit do
-- Code sample wey go show di special features wey each model get
+- Explorin di two main Meta family models - Llama 3.1 an Llama 3.2 
+- Understanding di use-cases an scenarios for each model 
+- Code sample to show di unique features of each model 
 
-## Di Meta Family of Models
 
-For dis lesson, we go look two models from di Meta family or "Llama Herd" - Llama 3.1 and Llama 3.2.
+## Di Meta Family of Models 
 
-Dis models get different types and dem dey available for GitHub Model marketplace. You fit find more info about how to use GitHub Models to [prototype wit AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+For dis lesson, we go explore 2 models from di Meta family or "Llama Herd" - Llama 3.1 an Llama 3.2.
 
-Model Variants:
-- Llama 3.1 - 70B Instruct
-- Llama 3.1 - 405B Instruct
-- Llama 3.2 - 11B Vision Instruct
-- Llama 3.2 - 90B Vision Instruct
+Dem models dey come in different variants an dey available on top di GitHub Model marketplace. Here na more details on how to use GitHub Models to [prototype wit AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
-*Note: Llama 3 dey available for GitHub Models too but we no go talk about am for dis lesson.*
+Model Variants: 
+- Llama 3.1 - 70B Instruct 
+- Llama 3.1 - 405B Instruct 
+- Llama 3.2 - 11B Vision Instruct 
+- Llama 3.2 - 90B Vision Instruct 
 
-## Llama 3.1
+*Note: Llama 3 still dey available for GitHub Models but we no go cover am for dis lesson*
 
-Wit 405 Billion Parameters, Llama 3.1 dey inside di open source LLM category.
+## Llama 3.1 
 
-Dis model na upgrade to di earlier release Llama 3, e dey offer:
+Wit 405 Billion Parameters, Llama 3.1 dey fit inside di open source LLM category. 
 
-- Bigger context window - 128k tokens instead of 8k tokens
-- Bigger Max Output Tokens - 4096 instead of 2048
-- Better Multilingual Support - because e get more training tokens
+Di model na upgrade to di earlier release Llama 3 by offering: 
 
-Dis things make Llama 3.1 fit handle more complex work when you dey build GenAI applications like:
-- Native Function Calling - di ability to call external tools and functions outside di LLM workflow
-- Better RAG Performance - because e get higher context window
-- Synthetic Data Generation - di ability to create better data for tasks like fine-tuning
+- Bigger context window - 128k tokens against 8k tokens 
+- Bigger Max Output Tokens - 4096 against 2048 
+- Better Multilingual Support - because di training tokens dem increase 
 
-### Native Function Calling
+Dis ones make Llama 3.1 fit handle more complex use cases when you dey build GenAI applications like: 
+- Native Function Calling - di ability to call external tools an functions outside di LLM workflow
+- Better RAG Performance - because of di higher context window 
+- Synthetic Data Generation - di ability to create better data for tasks like fine-tuning 
 
-Llama 3.1 don dey fine-tuned to sabi well well how to make function or tool calls. E get two built-in tools wey di model fit recognize say e need to use based on wetin di user talk. Di tools na:
+### Native Function Calling 
 
-- **Brave Search** - Fit help you find up-to-date info like weather by doing web search
-- **Wolfram Alpha** - Fit help you do complex mathematical calculations so you no need to write your own functions.
+Llama 3.1 don dey fine-tuned to dey more effective when e come to making function or tool calls. E get two built-in tools wey di model fit sabi sey e need to use based on wetin di user talk. Dem tools be: 
 
-You fit also create your own custom tools wey di LLM fit call.
+- **Brave Search** - Fit use am to get up-to-date information like di weather by doing web search 
+- **Wolfram Alpha** - Fit use am for complex maths calculations so you no need to write your own functions. 
 
-For di code example below:
+You fit create your own custom tools wey di LLM fit call too. 
 
-- We go define di tools wey dey available (brave_search, wolfram_alpha) for di system prompt.
-- Send user prompt wey dey ask about di weather for one city.
-- Di LLM go reply wit tool call to di Brave Search tool wey go look like dis `<|python_tag|>brave_search.call(query="Stockholm weather")`
+For di code example wey dey below: 
 
-*Note: Dis example na only di tool call e go make, if you wan get di results, you go need create free account for di Brave API page and define di function itself.*
+- We define di available tools (brave_search, wolfram_alpha) for di system prompt. 
+- Send user prompt wey ask about di weather for one particular city. 
+- Di LLM go respond with tool call to di Brave Search tool wey go look like dis `<|python_tag|>brave_search.call(query="Stockholm weather")` 
+
+*Note: Dis example just dey make di tool call, if you want get di results, you go need create free account for di Brave API page an define di function itself.
 
 ```python 
 import os
@@ -92,15 +93,16 @@ response = client.complete(messages=messages, model=model_name)
 print(response.choices[0].message.content)
 ```
 
-## Llama 3.2
+## Llama 3.2 
 
-Even though Llama 3.1 na LLM, one wahala wey e get na say e no sabi multimodality. Dat one mean say e no fit use different types of input like images as prompts and give response. Dis ability na one of di main features wey Llama 3.2 get. Di features include:
+Even though e be LLM, one limitation of Llama 3.1 na say e no fit do multimodality. Meaning e no fit use different types of input like images as prompts and gimme responses. Dis ability na one of di main features of Llama 3.2. Dem features include: 
 
-- Multimodality - e fit check both text and image prompts
-- Small to Medium size variations (11B and 90B) - dis one dey give flexible deployment options
-- Text-only variations (1B and 3B) - dis one dey make di model fit deploy for edge/mobile devices and e dey fast
+- Multimodality - fit evaluate both text and image prompts 
+- Small to Medium size variations (11B and 90B) - dis one give flexible deployment options, 
+- Text-only variations (1B and 3B) - dis one make e possible to deploy di model for edge / mobile devices and e give low latency 
 
-Di multimodal support na big step for di world of open source models. Di code example below go use both image and text prompt to get analysis of di image from Llama 3.2 90B.
+Di multimodal support na big step for di world of open source models. Di code example wey dey below go take both image and text prompt to get analysis of di image from Llama 3.2 90B. 
+
 
 ### Multimodal Support wit Llama 3.2
 
@@ -149,13 +151,13 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Learning no dey end here, continue di Journey
+## Learning no stop for here, continue di journey
 
-After you don finish dis lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue to sabi more about Generative AI!
+After you don finish dis lesson, make you check our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue to dey level up your Generative AI knowledge!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:  
-Dis dokyument don use AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator) do di translation. Even as we dey try make am accurate, abeg make you sabi say machine translation fit get mistake or no dey correct well. Di original dokyument wey dey for im native language na di one wey you go take as di correct source. For important information, e good make you use professional human translation. We no go fit take blame for any misunderstanding or wrong interpretation wey fit happen because you use dis translation.
+**Disclaimer**:
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we try make e correct, abeg sabi say automated translation fit get error or no too correct. The original document wey e dey come from na di correct source. For important tin dem, e better make human professional translate am. We no go take responsibility for any wrong understanding or wahala wey fit come from using dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

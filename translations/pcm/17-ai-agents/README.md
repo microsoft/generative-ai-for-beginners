@@ -2,61 +2,61 @@
 
 ## Introduction
 
-AI Agents na one kain beta development wey dey happen for Generative AI, wey dey make Large Language Models (LLMs) move from just dey assist to dey act like agents wey fit take action. AI Agent frameworks dey help developers build apps wey go give LLMs access to tools and state management. E still dey make am easy for users and developers to see wetin LLMs dey plan to do, so e go help improve how people dey use am.
+AI Agents na one kain better development for Generative AI, wey dey enable Large Language Models (LLMs) to comot from just being assistants go become agents wey fit take action. AI Agent frameworks dey help developers build apps wey go give LLM dem access to tools and state management. These frameworks go also improve how people fit see wetin LLMs plan to do, so e go help better experience management.
 
-Dis lesson go cover dis tori:
+For this lesson, we go cover dis areas:
 
-- Understand wetin AI Agent be - Wetin AI Agent really mean?
-- Look four different AI Agent Frameworks - Wetin make dem special?
-- Use dis AI Agents for different situations - When we go fit use AI Agents?
+- Understand wetin AI Agent be - Wetin exactly be AI Agent?
+- Check four different AI Agent Frameworks - Wetin make dem different?
+- Use these AI Agents for different work dem dey do - When we suppose use AI Agents?
 
 ## Learning goals
 
-After you don learn dis lesson, you go sabi:
+After you finish dis lesson, you go fit:
 
-- Explain wetin AI Agents be and how person fit use dem.
-- Understand di difference between some popular AI Agent Frameworks and how dem dey different.
-- Sabi how AI Agents dey work so you fit use dem build apps.
+- Explain wetin AI Agents be and how we fit take use dem.
+- Understand the difference between some of the popular AI Agent Frameworks, and how dem different.
+- Know how AI Agents dey work so you fit build apps with dem.
 
 ## Wetin Be AI Agents?
 
-AI Agents na one interesting area for Generative AI. But sometimes, di excitement dey bring confusion about di terms and how dem dey work. To make am simple and cover most tools wey dey call demself AI Agents, we go use dis definition:
+AI Agents na one kind kontri wey dey very interesting for Generative AI world. With this kind interest, sometimes e fit cause confusion about the terms and how dem take use am. To make am simple and cover most tools wey dey call AI Agents, we go use this definition:
 
-AI Agents dey allow Large Language Models (LLMs) do tasks by giving dem access to **state** and **tools**.
+AI Agents dey allow Large Language Models (LLMs) to do work by giving dem access to **state** and **tools**.
 
 ![Agent Model](../../../translated_images/pcm/what-agent.21f2893bdfd01e6a.webp)
 
-Make we explain di terms:
+Make we explain these words:
 
-**Large Language Models** - Na di models wey we dey talk about for dis course like GPT-3.5, GPT-4, Llama-2, etc.
+**Large Language Models** - Dem be the models wey we dey talk about for dis course like GPT-3.5, GPT-4, Llama-2, and others.
 
-**State** - Na di context wey di LLM dey work with. Di LLM dey use di context of wetin e don do before and di current situation to guide wetin e go do next. AI Agent Frameworks dey make am easy for developers to manage dis context.
+**State** - E mean the context wey the LLM dey work inside. The LLM go use the context of wetin e don do before plus the current context to help am decide wetin to do next. AI Agent Frameworks dey help developers to keep this context easy.
 
-**Tools** - To finish di task wey user ask and wey di LLM don plan, di LLM need tools. Example of tools fit be database, API, external app or even another LLM!
+**Tools** - To finish the work wey user don ask and the plan wey LLM don make, the LLM need tools. Tools fit be like database, API, external app or even another LLM!
 
-Dis explanation go help you understand as we dey look how dem dey work. Make we check some AI Agent frameworks:
+Dis definitions go help you understand better as we take look how dem dey work. Make we see some different AI Agent frameworks:
 
 ## LangChain Agents
 
-[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) na one way wey dem dey implement di definition wey we don talk.
+[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) na how dem take do the things we explain above.
 
-To manage di **state**, e dey use one function wey dem call `AgentExecutor`. Dis one dey take di `agent` wey you don define and di `tools` wey e fit use.
+To manage **state**, e dey use one function wey e get inside called `AgentExecutor`. E dey accept the `agent` and the `tools` wey e fit use.
 
-Di `AgentExecutor` dey also keep di chat history to give di context of di chat.
+The `Agent Executor` go also keep the chat history make e provide the context of the chat.
 
 ![Langchain Agents](../../../translated_images/pcm/langchain-agents.edcc55b5d5c43716.webp)
 
-LangChain get one [catalog of tools](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) wey you fit add to your app so di LLM go fit use dem. Di tools na di community and LangChain team dey create am.
+LangChain get [catalog of tools](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) wey you fit add for your app so LLM fit access am. Dem tools na community and LangChain team make dem.
 
-You fit define di tools and give dem to di `AgentExecutor`.
+You fit define these tools and pass dem go the `Agent Executor`.
 
-Visibility na another important thing for AI Agents. E dey important make app developers sabi which tool di LLM dey use and why. For dis reason, LangChain team don create LangSmith.
+Visibility na another important thing when we dey talk about AI Agents. E important make app developers sabi which tool LLM dey use and why. Because of that, LangChain team make LangSmith.
 
 ## AutoGen
 
-Di next AI Agent framework wey we go talk about na [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). Di main focus of AutoGen na conversation. Agents dey both **conversable** and **customizable**.
+The next AI Agent framework we go talk about na [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). The main tins AutoGen dey focus on na conversations. Agents dey both **conversable** and **customizable**.
 
-**Conversable -** LLMs fit start and continue conversation with another LLM to finish task. Dem dey do dis by creating `AssistantAgents` and giving dem specific system message.
+**Conversable -** LLM fit start and continue conversation with another LLM to complete work. Dem dey do am by creating `AssistantAgents` and give dem special system message.
 
 ```python
 
@@ -64,7 +64,7 @@ autogen.AssistantAgent( name="Coder", llm_config=llm_config, ) pm = autogen.Assi
 
 ```
 
-**Customizable** - Agents no dey only be LLMs, dem fit be user or tool. As developer, you fit define `UserProxyAgent` wey go dey interact with di user to get feedback to finish task. Dis feedback fit continue di task or stop am.
+**Customizable** - Agents fit no only be LLMs but fit be user or tool too. As developer, you fit define `UserProxyAgent` wey dey interact with user for feedback to finish work. This feedback fit make the work continue or make e stop.
 
 ```python
 user_proxy = UserProxyAgent(name="user_proxy")
@@ -72,9 +72,9 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 ### State and Tools
 
-To change and manage state, Assistant Agent dey generate Python code to finish di task.
+To change and manage state, Assistant Agent go generate Python code to finish the work.
 
-Example of how e dey work:
+Here na example of the process:
 
 ![AutoGen](../../../translated_images/pcm/autogen.dee9a25a45fde584.webp)
 
@@ -84,18 +84,18 @@ Example of how e dey work:
 system_message="For weather related tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done."
 ```
 
-Dis system message dey tell dis LLM which functions dey important for di task. Remember, for AutoGen, you fit get many AssistantAgents wey get different system messages.
+Dis system message dey direct this one LLM to know which functions good for im work. Remember, with AutoGen you fit get many AssistantAgents wey different with different system messages.
 
-#### Chat is Initiated by User
+#### Chat Start by User
 
 ```python
 user_proxy.initiate_chat( chatbot, message="I am planning a trip to NYC next week, can you help me pick out what to wear? ", )
 
 ```
 
-Dis message from di user_proxy (Human) na wetin go start di process for di Agent to check di functions wey e suppose run.
+Dis message from the user_proxy (Human) na wetin go start the Agent to check which function e suppose run.
 
-#### Function is Executed
+#### Function Run
 
 ```bash
 chatbot (to user_proxy):
@@ -106,63 +106,63 @@ chatbot (to user_proxy):
 
 ```
 
-After di first chat, di Agent go suggest di tool wey e go call. For dis case, na function wey dem call `get_weather`. Depending on how you set am, dis function fit run automatically or e go wait for user input.
+After initial chat don process, Agent go send the suggested tool to call. For here, na function wey dem call `get_weather`. Depending on how you set am, the function fit automatically run and Agent go read am or e fit run based on user input.
 
-You fit check [AutoGen code samples](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) to learn more about how to start.
+You fit see list of [AutoGen code samples](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) to learn more how to start building.
 
 ## Taskweaver
 
-Di next agent framework wey we go talk about na [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). Dem dey call am "code-first" agent because e no dey work only with `strings`, e fit work with DataFrames for Python. Dis one dey useful for data analysis and generation tasks like creating graphs, charts or random numbers.
+The next agent framework we go check na [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). E sabi be "code-first" agent because instead of just work strictly with `strings`, e fit work with DataFrames in Python. This one dey very useful for data analysis and generation work like making graphs, charts or generating random numbers.
 
 ### State and Tools
 
-To manage di state of di conversation, TaskWeaver dey use one thing wey dem call `Planner`. Di `Planner` na LLM wey dey take di user request and plan di tasks wey dem need to finish di request.
+To manage state of the conversation, TaskWeaver dey use something called `Planner`. The `Planner` na LLM wey go take user request and map out the tasks wey need to finish to fulfill the request.
 
-To finish di tasks, di `Planner` dey use tools wey dem call `Plugins`. Dis fit be Python classes or general code interpreter. Di plugins dey store as embeddings so di LLM fit search for di correct plugin.
+To finish the tasks, the `Planner` dey use collection of tools wey dem dey call `Plugins`. These fit be Python classes or general code interpreter. The plugins dem dey store as embeddings so that LLM fit search correct plugin well well.
 
 ![Taskweaver](../../../translated_images/pcm/taskweaver.da8559999267715a.webp)
 
-Example of plugin for anomaly detection:
+Here na example of plugin wey fit handle anomaly detection:
 
 ```python
 class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_col_name: str, value_col_name: str):
 ```
 
-Di code dey verify before e go run. Another way wey Taskweaver dey manage context na `experience`. Experience dey allow di context of conversation to dey save for long time inside YAML file. Dis one fit dey set so di LLM go dey improve over time for certain tasks wey e don see before.
+The code go verify am before e run. Another way to manage context for Taskweaver na `experience`. Experience dey allow context of conversation to stay for long term inside one YAML file. You fit set am make LLM get better over time on certain work as e go dey exposed to past conversations.
 
 ## JARVIS
 
-Di last agent framework wey we go talk about na [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Wetin make JARVIS special na say e dey use LLM to manage di `state` of di conversation and di `tools` na other AI models. Each AI model dey specialize for certain tasks like object detection, transcription or image captioning.
+The last agent framework we go look at na [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file&WT.mc_id=academic-105485-koreyst). The thing wey make JARVIS special be say e dey use LLM to manage the `state` of the conversation and the `tools` na other AI models. Every AI model na special model wey fit do certain work like object detection, transcription or image captioning.
 
 ![JARVIS](../../../translated_images/pcm/jarvis.762ddbadbd1a3a33.webp)
 
-Di LLM, wey be general purpose model, dey take di user request, identify di specific task and di data wey e need to finish di task.
+The LLM, wey be general purpose model, go receive request from user and identify the specific work and any arguments/data wey e need to finish the work.
 
 ```python
 [{"task": "object-detection", "id": 0, "dep": [-1], "args": {"image": "e1.jpg" }}]
 ```
 
-Di LLM go format di request so di specialized AI model fit understand am, like JSON. When di AI model don finish di task, e go send di result back to di LLM.
+The LLM go then arrange the request so the special AI model fit understand am, like JSON. After the AI model don send back im prediction based on the work, the LLM go receive the response.
 
-If di task need many models, di LLM go join di response from di models before e give di final answer to di user.
+If multiple models need finish the work, e go interpret response from all those models before e join them together to form the final response to user.
 
-Example of how e dey work when user dey ask for description and count of objects for picture:
+This example below show how e go work if user dey request description and count of objects for one picture:
 
 ## Assignment
 
-To continue your learning about AI Agents, you fit build with AutoGen:
+To carry on your learning of AI Agents, you fit build with AutoGen:
 
-- One app wey go simulate business meeting with different departments for education startup.
-- Create system messages wey go help LLMs understand different people and wetin dem dey prioritize, and make user fit present new product idea.
-- Di LLM go then generate follow-up questions from each department to refine di pitch and di product idea.
+- App wey go simulate business meeting with different departments for one education startup.
+- Create system messages wey go guide LLMs to understand different personas and priorities, so user fit pitch new product idea.
+- The LLM go then generate follow-up questions from each department to make the pitch and the product idea better.
 
-## Learning no dey stop for here, continue di Journey
+## Learning no stop here, continue the Journey
 
-After you don finish dis lesson, check our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue to sabi more about Generative AI!
+After you finish this lesson, make you check [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue to upgrade your knowledge for Generative AI!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:  
-Dis document don dey translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we dey try make am accurate, abeg sabi say automated translations fit get mistake or no correct well. Di original document for im native language na di main correct source. For important information, e better make una use professional human translation. We no go fit take blame for any misunderstanding or wrong interpretation wey fit happen because of dis translation.
+**Disclaimer**:
+Dis dokumant don translate use AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we try make e correct, abeg sabi say automated translation fit get some mistakes or no too correct. Di original dokumant wey dem write for im own language na di correct one. If na serious info, better make person wey sabi human translation do am. We no go take responsibility if pesin no understand well or misunderstand because of dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

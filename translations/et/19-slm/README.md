@@ -1,140 +1,140 @@
-# Sissejuhatus väikestesse keelemudelitesse generatiivse tehisintellekti jaoks algajatele
-Generatiivne tehisintellekt on põnev tehisintellekti valdkond, mis keskendub süsteemide loomisele, mis suudavad genereerida uut sisu. See sisu võib ulatuda tekstist ja piltidest muusika ning isegi tervete virtuaalsete keskkondadeni. Üks põnevamaid generatiivse tehisintellekti rakendusi on keelemudelite valdkonnas.
+# Sissejuhatus väikestesse keelemudelitesse generatiivses tehisintellektis algajatele
+Generatiivne tehisintellekt on põnev tehisintellekti valdkond, mis keskendub süsteemide loomisele, mis suudavad genereerida uut sisu. See sisu võib ulatuda tekstist ja piltidest muusika ja isegi täielike virtuaalkeskkondadeni. Üks põnevamaid generatiivse tehisintellekti rakendusi on keelemudelite valdkond.
 
-## Mis on väikesed keelemudelid?
+## Mis on väiksed keelemudelid?
 
-Väike keelemudel (SLM) esindab suure keelemudeli (LLM) vähendatud varianti, kasutades paljusid LLM-i arhitektuurilisi põhimõtteid ja tehnikaid, kuid oluliselt väiksema arvutusvõimsuse nõudega.
+Väike keelemudel (SLM) on suures keelemudelis (LLM) põhinev vähendatud variant, mis kasutab paljusid LLM-ide arhitektuurilisi põhimõtteid ja tehnikaid, kuid näitab oluliselt väiksemat arvutusjälge.
 
-SLM-id on keelemudelite alamhulk, mis on loodud inimlaadse teksti genereerimiseks. Erinevalt suurematest mudelitest, nagu GPT-4, on SLM-id kompaktsemad ja tõhusamad, muutes need ideaalseks rakendusteks, kus arvutusressursid on piiratud. Vaatamata väiksemale suurusele suudavad nad siiski täita mitmesuguseid ülesandeid. Tavaliselt luuakse SLM-id LLM-ide tihendamise või destilleerimise teel, püüdes säilitada suure osa algse mudeli funktsionaalsusest ja keelelistest võimetest. Mudeli suuruse vähendamine vähendab üldist keerukust, muutes SLM-id tõhusamaks nii mälukasutuse kui ka arvutusnõuete osas. Vaatamata nendele optimeerimistele suudavad SLM-id täita mitmesuguseid loomuliku keele töötlemise (NLP) ülesandeid:
+SLMid on keelemudelite alamkomplekt, mis on loodud inimkeelse sarnase teksti genereerimiseks. Erinevalt suurematest mudelitest, nagu GPT-4, on SLMid kompaktsemad ja tõhusamad, mis teeb need ideaalseks rakendusteks, kus arvutusressursid on piiratud. Hoolimata oma väiksemast suurusest võivad nad ikkagi täita mitmesuguseid ülesandeid. Tavaliselt ehitatakse SLMid läbi LLM-ide kokkusurumise või destilleerimise, eesmärgiga säilitada märkimisväärne osa algse mudeli funktsionaalsusest ja keelelistest võimetest. Selle mudeli suuruse vähendamine vähendab üldist keerukust, muutes SLMid mälukasutuse ja arvutusnõuete poolest tõhusamaks. Hoolimata neist optimeerimistest suudavad SLMid endiselt täita mitmesuguseid loomuliku keele töötlemise (NLP) ülesandeid:
 
-- Teksti genereerimine: Loogiliste ja konteksti arvestavate lausete või lõikude loomine.
-- Teksti lõpetamine: Lausete ennustamine ja lõpetamine antud sisendi põhjal.
-- Tõlkimine: Teksti tõlkimine ühest keelest teise.
-- Kokkuvõtete loomine: Pikkade tekstide lühendamine ja lihtsamaks muutmine.
+- Tekstigeneratsioon: sidusate ja kontekstuaalselt asjakohaste lause- või lõikude loomine.
+- Teksti lõpetamine: lausete ennustamine ja lõpetamine antud vihje põhjal.
+- Tõlge: teksti teisendamine ühest keelest teise.
+- Kokkuvõte: pikema teksti lühendamine arusaadavamateks kokkuvõteteks.
 
-Kuigi nende jõudlus või arusaamise sügavus võib olla mõnevõrra piiratud võrreldes suuremate mudelitega.
+Kuigi mõningate kompromissidega soorituses või mõistmise sügavuses võrreldes suuremate mudelitega.
 
-## Kuidas väikesed keelemudelid töötavad?
-SLM-e treenitakse tohutul hulgal tekstandmetel. Treeningu käigus õpivad nad keele mustreid ja struktuure, mis võimaldab neil genereerida grammatikaliselt korrektset ja konteksti arvestavat teksti. Treeningprotsess hõlmab:
+## Kuidas väiksed keelemudelid töötavad?
+SLMid on treenitud tohutul hulgal tekstandmetel. Treeningu käigus õpivad nad keele mustreid ja struktuure, võimaldades neil genereerida teksti, mis on nii grammatiliselt korrektne kui ka kontekstuaalselt sobiv. Treeninguprotsess hõlmab:
 
-- Andmete kogumine: Suurte tekstikogumite kogumine erinevatest allikatest.
-- Eeltöötlus: Andmete puhastamine ja organiseerimine, et need sobiksid treenimiseks.
-- Treenimine: Masinõppe algoritmide kasutamine mudeli õpetamiseks, kuidas teksti mõista ja genereerida.
-- Peenhäälestus: Mudeli kohandamine, et parandada selle jõudlust konkreetsetes ülesannetes.
+- Andmete kogumine: suurte tekstikogumite kogumine erinevatest allikatest.
+- Eeltöötlus: andmete puhastamine ja organiseerimine, et muuta need sobivaks treenimiseks.
+- Treening: masinõppe algoritmide kasutamine, et õpetada mudelit teksti mõistma ja genereerima.
+- Täpsustamine: mudeli kohandamine, et parandada selle sooritust konkreetsetel ülesannetel.
 
-SLM-ide arendamine vastab kasvavale vajadusele mudelite järele, mida saab kasutada piiratud ressurssidega keskkondades, nagu mobiilseadmed või serva arvutusplatvormid, kus täismahus LLM-id võivad olla ebapraktilised nende suurte ressursinõuete tõttu. Tõhususele keskendudes tasakaalustavad SLM-id jõudlust ja kättesaadavust, võimaldades laiemat rakendust erinevates valdkondades.
+SLMide väljatöötamine on kooskõlas kasvava vajadusega mudelite järele, mida saab juurutada ressursipiiratud keskkondades, näiteks mobiilseadmetes või äärelt arvutamise platvormidel, kus täissuuruses LLMid võivad olla praktiliselt liiga ressursimahukad. Keskendudes tõhususele, tasakaalustavad SLMid soorituse ja juurdepääsetavuse, võimaldades laiemat kasutust erinevates valdkondades.
 
 ![slm](../../../translated_images/et/slm.4058842744d0444a.webp)
 
 ## Õpieesmärgid
 
-Selles õppetükis loodame tutvustada SLM-ide teadmisi ja kombineerida neid Microsoft Phi-3-ga, et õppida erinevaid tekstisisu, visiooni ja MoE (ekspertide segu) stsenaariume.
+Selles õppetükis loodame tutvustada SLM teadmisi ning kombineerida neid Microsoft Phi-3-ga, et õppida erinevaid stsenaariume tekstisisu, nägemise ja MoE osas.
 
-Õppetüki lõpuks peaksite olema võimeline vastama järgmistele küsimustele:
+Selle õppetüki lõpuks peaksid saama vastata järgmistele küsimustele:
 
-- Mis on SLM
-- Mis on erinevus SLM-i ja LLM-i vahel
-- Mis on Microsoft Phi-3/3.5 perekond
-- Kuidas kasutada Microsoft Phi-3/3.5 perekonda
+- Mis on SLM?
+- Mis vahe on SLM-il ja LLM-il?
+- Mis on Microsoft Phi-3/3.5 perekond?
+- Kuidas teha järeldusi Microsoft Phi-3/3.5 perekonnaga?
 
 Valmis? Alustame.
 
-## Suurte keelemudelite (LLM) ja väikeste keelemudelite (SLM) erinevused
+## Suured keelemudelid (LLMid) ja väikesed keelemudelid (SLMid) – erinevused
 
-Nii LLM-id kui ka SLM-id põhinevad tõenäosusliku masinõppe alustel, järgides sarnaseid lähenemisviise arhitektuuri kujunduses, treenimismeetodites, andmete genereerimisprotsessides ja mudelite hindamistehnikates. Siiski eristavad mitmed olulised tegurid neid kahte tüüpi mudeleid.
+Nii LLMid kui ka SLMid põhinevad tõenäosusliku masinõppe alustel, järgides sarnaseid lähenemisi arhitektuuris, treeningmetoodikates, andmete genereerimise protsessides ja mudeli hindamises. Kuid mitu olulist tegurit eristavad neid kahte mudelitüüpi.
 
 ## Väikeste keelemudelite rakendused
 
-SLM-idel on lai valik rakendusi, sealhulgas:
+SLMid leiavad laialdast kasutust, sealhulgas:
 
-- Vestlusrobotid: Klienditoe pakkumine ja kasutajatega vestlemine.
-- Sisuloome: Kirjanike abistamine ideede genereerimisel või isegi tervete artiklite koostamisel.
-- Haridus: Õpilaste aitamine kirjutamisülesannete või uute keelte õppimisel.
-- Juurdepääsetavus: Tööriistade loomine puuetega inimestele, näiteks teksti kõneks muundamise süsteemid.
+- Vestlusrobotid: klienditoe pakkumine ja kasutajatega vestluse pidamine.
+- Sisuloomine: kirjutajate abistamine ideede genereerimisel või isegi terve artikli koostamisel.
+- Haridus: õpilaste toetamine kirjutamisülesannete ja uute keelte õppimisel.
+- Juurdepääsetavus: tööriistade loomine erivajadustega inimestele, näiteks teksti kõneks süsteemid.
 
 **Suurus**
 
-LLM-ide ja SLM-ide peamine erinevus seisneb mudelite mastaabis. LLM-id, nagu ChatGPT (GPT-4), võivad sisaldada hinnanguliselt 1,76 triljonit parameetrit, samas kui avatud lähtekoodiga SLM-id, nagu Mistral 7B, on loodud oluliselt väiksema parameetrite arvuga – umbes 7 miljardit. See erinevus tuleneb peamiselt mudeli arhitektuuri ja treenimisprotsesside erinevustest. Näiteks kasutab ChatGPT kodeerija-dekodeerija raamistiku sees enesekeskendumise mehhanismi, samas kui Mistral 7B kasutab libiseva akna keskendumist, mis võimaldab tõhusamat treenimist ainult dekodeerija mudelis. See arhitektuuriline erinevus avaldab sügavat mõju nende mudelite keerukusele ja jõudlusele.
+Peamine erinevus LLMide ja SLMide vahel on mudelite suuruses. LLMid nagu ChatGPT (GPT-4) võivad koosneda hinnanguliselt 1,76 triljonist parameetrist, samas kui avatud lähtekoodiga SLMid nagu Mistral 7B on loodud oluliselt vähemate parameetritega—ligikaudu 7 miljardit. See erinevus tuleneb peamiselt mudeli arhitektuuri ja treeninguprotsesside erinevustest. Näiteks kasutab ChatGPT encoder-decoder raamistikus iseteenindavat tähelepanumehhanismi, kuid Mistral 7B kasutab liugklaasi tähelepanu, mis võimaldab tõhusamat treeningut decoder-only mudelis. See arhitektuuriline erinevus mõjutab oluliselt mudelite keerukust ja jõudlust.
 
-**Arusaamine**
+**Mõistmine**
 
-SLM-id on tavaliselt optimeeritud konkreetsete valdkondade jõudluse jaoks, muutes need väga spetsialiseeritud, kuid potentsiaalselt piiratud võimega pakkuda laialdast konteksti mõistmist mitmesugustes teadmiste valdkondades. Vastupidiselt sellele püüavad LLM-id simuleerida inimlaadset intelligentsust laiemal tasemel. Treenitud tohututel ja mitmekesistel andmekogumitel, on LLM-id loodud hästi toimima mitmesugustes valdkondades, pakkudes suuremat mitmekülgsust ja kohanemisvõimet. Seetõttu sobivad LLM-id paremini laiemaks valikuks järelülesannetes, nagu loomuliku keele töötlemine ja programmeerimine.
+SLMid on tavaliselt optimeeritud tööks kindlates valdkondades, muutes need väga spetsialiseerituks, kuid potentsiaalselt piiratud nende võimega pakkuda laiahaardelist kontekstuaalset mõistmist. Vastupidiselt püüdlevad LLMid inimesele sarnase intelligentsuse simuleerimise poole laiemal tasemel. Treenitud tohututel ja mitmekesistel andmestikel, on LLMid mõeldud hästi toimima erinevates valdkondades, pakkudes suuremat mitmekülgsust ja kohanemisvõimet. Seetõttu sobivad LLMid paremini laiemale hulgale ülesannetele, nagu loomuliku keele töötlemine ja programmeerimine.
 
-**Arvutusvõimsus**
+**Arvutus**
 
-LLM-ide treenimine ja kasutamine on ressursimahukad protsessid, mis nõuavad sageli märkimisväärset arvutustaristut, sealhulgas suuremahulisi GPU-klastreid. Näiteks mudeli nagu ChatGPT nullist treenimine võib nõuda tuhandeid GPU-sid pikema aja jooksul. Vastupidiselt sellele on SLM-id, millel on väiksem parameetrite arv, arvutusressursside osas kättesaadavamad. Mudelid nagu Mistral 7B saab treenida ja käitada kohalikel masinatel, millel on mõõdukas GPU võimekus, kuigi treenimine nõuab endiselt mitme GPU-ga mitmeid tunde.
+LLMide treening ja juurutamine on ressursimahukad protsessid, mis sageli nõuavad märkimisväärset arvutusinfrastruktuuri, sealhulgas suurte GPU klastrite kasutamist. Näiteks mudeli nagu ChatGPT nullist treenimiseks võib vaja minna tuhandeid GPU-sid pikaaegseteks perioodideks. Vastupidiselt on SLMid oma väiksema parameetritearvuga arvutusressursside poolest paremini kättesaadavad. Mudelid nagu Mistral 7B saab treenida ja käivitada lokaalses masinas, millel on mõõdukas GPU võimekus, kuigi treening nõuab ikka mitmetunnist tööd mitme GPU vahel.
 
-**Eelarvamused**
+**Eelarvamus**
 
-Eelarvamused on LLM-ide teadaolev probleem, peamiselt treeningandmete olemuse tõttu. Need mudelid tuginevad sageli internetist saadud toorandmetele, mis võivad teatud rühmi alahinnata või valesti esitada, sisaldada ekslikke märgistusi või kajastada keelelisi eelarvamusi, mida mõjutavad murded, geograafilised variatsioonid ja grammatikareeglid. Lisaks võib LLM-ide arhitektuuride keerukus tahtmatult süvendada eelarvamusi, mis võivad jääda märkamatuks ilma hoolika peenhäälestuseta. Teisest küljest, SLM-id, mis on treenitud piiratud ja valdkonnaspetsiifilistel andmekogumitel, on loomulikult vähem vastuvõtlikud sellistele eelarvamustele, kuigi nad pole neist täiesti vabad.
+LLMidel on tuntud probleem eelarvamusega, mis tuleneb suuresti treeningandmete olemusest. Need mudelid baseeruvad sageli veebist saadud avatud ja töötlemata andmetel, mis võivad alatähtsustada või moonutada mõningaid gruppe, lisada vale märgistusi või peegeldada keelelisi eelarvamusi, mis mõjutavad dialekti, geograafilisi variatsioone ja grammatikareegleid. Lisaks võib keeruline LLMide arhitektuur tahtmatult eelarvamust tugevamaks muuta, mis võib jääda tähelepanuta ilma hoolika täpsustamiseta. SLMid, mis on treenitud piiratumate ja valdkonnapõhiste andmestikega, on loomupäraselt vähem eelarvamustele vastuvõtlikud, kuigi sellest hoolimata pole nad neist täiesti vabastatud.
 
 **Järeldamine**
 
-SLM-ide väiksem suurus annab neile märkimisväärse eelise järeldamise kiiruse osas, võimaldades neil tõhusalt genereerida väljundeid kohalikul riistvaral ilma ulatusliku paralleelse töötlemise vajaduseta. Vastupidiselt sellele vajavad LLM-id, nende suuruse ja keerukuse tõttu, sageli märkimisväärseid paralleelseid arvutusressursse, et saavutada vastuvõetavad järeldamise ajad. Mitme samaaegse kasutaja olemasolu aeglustab LLM-ide vastuseaegu veelgi, eriti kui neid kasutatakse suurel skaalal.
+SLMide vähendatud suurus annab neile olulise eelise järeldamiskiiruses, võimaldades neil toodangut efektiivselt genereerida lokaalsel riistvaral ilma laialdase paralleelprotsessita. LLMid nõuavad oma suuruse ja keerukuse tõttu sageli märkimisväärseid paralleelse arvutuse ressursse vastuvõetavate järeldamisaja saavutamiseks. Paljude samaaegsete kasutajate olemasolu aeglustab LLMide reageerimisaegu veelgi, eriti kui neid töödeldakse suurel skaalal.
 
-Kokkuvõttes, kuigi nii LLM-id kui ka SLM-id jagavad masinõppe alust, erinevad nad märkimisväärselt mudeli suuruse, ressursinõuete, konteksti mõistmise, eelarvamuste vastuvõtlikkuse ja järeldamise kiiruse osas. Need erinevused kajastavad nende sobivust erinevateks kasutusjuhtudeks, kus LLM-id on mitmekülgsemad, kuid ressursimahukad, ja SLM-id pakuvad valdkonnaspetsiifilist tõhusust väiksemate arvutusnõuetega.
+Kokkuvõttes, kuigi nii LLMid kui ka SLMid jagavad masinõppe alustel, erinevad need oluliselt mudeli suuruse, ressursside nõuete, kontekstuaalse mõistmise, eelarvamuste esinemise ja järeldamiskiiruse poolest. Need erinevused kajastavad nende sobivust erinevateks kasutusteks, kus LLMid on mitmekülgsemad kuid ressursimahukamad ning SLMid pakuvad spetsiifilisemat tõhusust vähendatud arvutusnõuetega.
 
-***Märkus: Selles peatükis tutvustame SLM-i, kasutades Microsoft Phi-3 / 3.5 näitena.***
+***Märkus: selles õppetükis tutvustame SLMi Microsoft Phi-3 / 3.5 näitel.***
 
 ## Phi-3 / Phi-3.5 perekonna tutvustus
 
-Phi-3 / 3.5 perekond keskendub peamiselt teksti, visiooni ja agentide (MoE) rakendusstsenaariumidele:
+Phi-3 / 3.5 perekond keskendub peamiselt tekstile, nägemisele ja Agent (MoE) rakendusstsenaariumidele:
 
-### Phi-3 / 3.5 Instruct
+### Phi-3 / 3.5 juhendamine
 
-Peamiselt teksti genereerimiseks, vestluste lõpetamiseks ja sisuteabe eraldamiseks jne.
+Peamiselt teksti genereerimiseks, vestluste lõpetamiseks ja sisulise teabe väljavõtmiseks jne.
 
 **Phi-3-mini**
 
-3,8B keelemudel on saadaval Microsoft Azure AI Studios, Hugging Face'is ja Ollamas. Phi-3 mudelid ületavad oluliselt samas suuruses ja suuremaid keelemudeleid olulistel võrdlusnäitajatel (vt allpool võrdlusnäitajaid, suuremad numbrid on paremad). Phi-3-mini ületab kaks korda suuremaid mudeleid, samas kui Phi-3-small ja Phi-3-medium ületavad suuremaid mudeleid, sealhulgas GPT-3.5.
+3.8 miljardi parameetriga keelemudel on saadaval Microsoft Azure AI Studios, Hugging Face’is ja Ollamas. Phi-3 mudelid ületavad oluliselt võrdse või suurema suurusega keelemudeleid peamistes võrdlustestides (vt allpool tulemuste numbreid, suuremad on paremad). Phi-3-mini ületab poolteist korda suuremaid mudeleid, samas kui Phi-3-small ja Phi-3-medium ületavad suuremaid mudeleid, sealhulgas GPT-3.5.
 
 **Phi-3-small & medium**
 
-Vaid 7B parameetritega Phi-3-small ületab GPT-3.5T mitmesugustel keele, loogika, kodeerimise ja matemaatika võrdlusnäitajatel.
+Vaid 7 miljardi parameetriga lööb Phi-3-small GPT-3.5T mitmetes keele, arutluse, kodeerimise ja matemaatika võrdlustes.
 
-Phi-3-medium, millel on 14B parameetrit, jätkab seda trendi ja ületab Gemini 1.0 Pro mudelit.
+Phi-3-medium, 14 miljardi parameetriga, jätkab seda trende ja ületab Gemini 1.0 Pro mudeli.
 
 **Phi-3.5-mini**
 
-Seda võib pidada Phi-3-mini täienduseks. Kuigi parameetrite arv jääb samaks, parandab see mitme keele toetamise võimet (toetab 20+ keelt: araabia, hiina, tšehhi, taani, hollandi, inglise, soome, prantsuse, saksa, heebrea, ungari, itaalia, jaapani, korea, norra, poola, portugali, vene, hispaania, rootsi, tai, türgi, ukraina) ja lisab tugevama pika konteksti toetuse.
+Võib vaadelda kui Phi-3-mini uuendust. Kuigi parameetrite arv jääb samaks, paraneb võimekus toetada mitut keelt (toetab 20+ keelt: araabia, hiina, tšehhi, taani, hollandi, inglise, soome, prantsuse, saksa, heebrea, ungari, itaalia, jaapani, korea, norra, poola, portugali, vene, hispaania, rootsi, tai, türgi, ukraina) ning lisandub tugevam tugi pikale kontekstile.
 
-Phi-3.5-mini, millel on 3,8B parameetrit, ületab samas suuruses keelemudeleid ja on võrdne kaks korda suuremate mudelitega.
+Phi-3.5-mini 3.8 miljardil parameetril ületab sama suurusega keelemudeleid ja on võrreldav mudelitega, mis on poolteist korda suuremad.
 
-### Phi-3 / 3.5 Vision
+### Phi-3 / 3.5 nägemine
 
-Phi-3/3.5 Instruct mudelit võib pidada Phi võimeks mõista, samas kui Vision annab Phile silmad maailma mõistmiseks.
+Võime mõelda, et Phi-3/3.5 juhendatud mudel näitab Phi võimet mõista ning Vision annab Phile silmad maailma mõistmiseks.
 
 **Phi-3-Vision**
 
-Phi-3-vision, millel on vaid 4,2B parameetrit, jätkab seda trendi ja ületab suuremaid mudeleid, nagu Claude-3 Haiku ja Gemini 1.0 Pro V, üldistes visuaalse loogika ülesannetes, OCR-is ning tabelite ja diagrammide mõistmise ülesannetes.
+Phi-3-vision, millel on vaid 4.2 miljardit parameetrit, jätkab edu ja ületab suuremaid mudeleid nagu Claude-3 Haiku ja Gemini 1.0 Pro V üldiste visuaalsete arutlusülesannete, OCRi ning tabelite ja diagrammide mõistmise ülesannetes.
 
 **Phi-3.5-Vision**
 
-Phi-3.5-Vision on samuti Phi-3-Visioni täienduseks, lisades mitme pildi toetuse. Seda võib pidada visiooni täiustuseks, mis võimaldab näha mitte ainult pilte, vaid ka videoid.
+Phi-3.5-Vision on samuti uuendus Phi-3-Vision'ist, lisades toetuse mitmele pildile. Seda võib vaadelda kui nägemise täiustamist — nüüd suudab näha lisaks piltidele ka videoid.
 
-Phi-3.5-vision ületab suuremaid mudeleid, nagu Claude-3.5 Sonnet ja Gemini 1.5 Flash, OCR-i, tabelite ja diagrammide mõistmise ülesannetes ning on võrdne üldistes visuaalse teadmise loogika ülesannetes. Toetab mitme kaadri sisendit, st suudab teha loogikat mitme sisendpildi põhjal.
+Phi-3.5-vision ületab suuremaid mudeleid nagu Claude-3.5 Sonnet ja Gemini 1.5 Flash OCR-i, tabelite ja diagrammide mõistmise ülesannetes ning on võrdne üldiste visuaalsete teadmiste arutlusülesannetes. Toetab mitme kaadri sisendit, st mitme sisendpildi arutlusi.
 
 ### Phi-3.5-MoE
 
-***Ekspertide segu (MoE)*** võimaldab mudeleid treenida palju väiksema arvutusvõimsusega, mis tähendab, et saate mudeli või andmekogumi suurust dramaatiliselt suurendada sama arvutusressursi eelarvega kui tiheda mudeli puhul. Eelkõige peaks MoE mudel saavutama sama kvaliteedi kui selle tihe vaste palju kiiremini treenimise ajal.
+***Ekspertide segu (MoE)*** võimaldab mudelitel eeltreenida palju väiksema arvutusmahuga, mis tähendab, et mudelit või andmestikku saab samal arvutusressursside eelarvel oluliselt suuremaks skaleerida. Täpsemalt peaks MoE mudel saavutama sama kvaliteedi kui selle tihe vaste palju kiiremini eeltreeningu jooksul.
 
-Phi-3.5-MoE koosneb 16x3.8B eksperdimoodulist. Phi-3.5-MoE, millel on vaid 6,6B aktiivset parameetrit, saavutab sarnase taseme loogikas, keele mõistmises ja matemaatikas kui palju suuremad mudelid.
+Phi-3.5-MoE koosneb 16x3.8B ekspertmoduulist. Phi-3.5-MoE, millel on vaid 6.6 miljardit aktiivset parameetrit, saavutab sarnase taseme arutluses, keele mõistmises ja matemaatikas nagu palju suuremad mudelid.
 
-Me saame kasutada Phi-3/3.5 perekonna mudeleid erinevate stsenaariumide põhjal. Erinevalt LLM-ist saate Phi-3/3.5-mini või Phi-3/3.5-Visioni juurutada servaseadmetes.
+Saame kasutada Phi-3/3.5 perekonna mudeleid erinevate stsenaariumite põhjal. Erinevalt LLM-st saab Phi-3/3.5-mini või Phi-3/3.5-Vision kasutada ääreseadmetel.
 
 ## Kuidas kasutada Phi-3/3.5 perekonna mudeleid
 
-Me loodame kasutada Phi-3/3.5 erinevates stsenaariumides. Järgmisena kasutame Phi-3/3.5 erinevate stsenaariumide põhjal.
+Loodame kasutada Phi-3/3.5 erinevates stsenaariumites. Järgmisena kasutame Phi-3/3.5 erinevatel juhtudel.
 
 ![phi3](../../../translated_images/et/phi3.655208c3186ae381.webp)
 
-### Järeldamise erinevus pilve API-de vahel
+### Järeldamine pilve API-de kaudu
 
-**GitHubi mudelid**
+**GitHub Mudelid**
 
-GitHubi mudelid on kõige otsesem viis. Saate kiiresti juurde pääseda Phi-3/3.5-Instruct mudelile GitHubi mudelite kaudu. Kombineerides Azure AI Inference SDK / OpenAI SDK-ga, saate API-le koodi kaudu juurde pääseda, et täita Phi-3/3.5-Instructi päring. Samuti saate testida erinevaid efekte Playgroundi kaudu.
+GitHub Mudelid on kõige otsesem viis. Saate kiiresti juurde pääseda Phi-3/3.5-Juhendatud mudelile GitHubi kaudu. Koos Azure AI Järeldamise SDK / OpenAI SDK-ga saate API-le juurdepääsu läbi koodi, et teha Phi-3/3.5-Juhendatud mudeli päringuid. Samuti saate proovida erinevaid tulemusi Playgroundi kaudu.
 
-- Demo: Phi-3-mini ja Phi-3.5-mini efektide võrdlus hiina keele stsenaariumides
+- Demo: Phi-3-mini ja Phi-3.5-mini võrdlus hiina keele stsenaariumites
 
 ![phi3](../../../translated_images/et/gh1.126c6139713b622b.webp)
 
@@ -142,53 +142,53 @@ GitHubi mudelid on kõige otsesem viis. Saate kiiresti juurde pääseda Phi-3/3.
 
 **Azure AI Studio**
 
-Kui soovime kasutada visiooni ja MoE mudeleid, saate kasutada Azure AI Studiot, et päringut täita. Kui olete huvitatud, saate lugeda Phi-3 Cookbooki, et õppida, kuidas kasutada Phi-3/3.5 Instruct, Vision, MoE Azure AI Studio kaudu [Klõpsake seda linki](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst)
+Kui soovite kasutada nägemise ja MoE mudeleid, saate kasutada Azure AI Studio’t päringute tegemiseks. Kui olete huvitatud, võite lugeda Phi-3 Retsepti, et õppida, kuidas kutsuda Phi-3/3.5 Juhendatud, Vision, MoE mudeleid Azure AI Studio kaudu [Klõpsa siin](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst)
 
 **NVIDIA NIM**
 
-Lisaks pilvepõhistele mudelikataloogi lahendustele, mida pakuvad Azure ja GitHub, saate kasutada ka [NVIDIA NIM-i](https://developer.nvidia.com/nim?WT.mc_id=academic-105485-koreyst), et täita seotud päringuid. Saate külastada NVIDIA NIM-i, et täita Phi-3/3.5 perekonna API päringuid. NVIDIA NIM (NVIDIA Inference Microservices) on kiirendatud järeldamise mikroteenuste komplekt, mis on loodud aitama arendajatel AI-mudeleid tõhusalt juurutada erinevates keskkondades, sealhulgas pilvedes, andmekeskustes ja tööjaamades.
+Lisaks pilvepõhistele Mudelikataloogide lahendustele, mida pakuvad Azure ja GitHub, saate kasutada ka [NVIDIA NIM](https://developer.nvidia.com/nim?WT.mc_id=academic-105485-koreyst) seotud päringute tegemiseks. Külastage NVIDIA NIM-i, et teha Phi-3/3.5 perekonna API päringuid. NVIDIA NIM (NVIDIA Järelduste Mikroteenused) on kiirendatud järeldusmikroteenuste komplekt, mis aitab arendajatel tõhusalt AI mudeleid eri keskkondades nagu pilvedes, andmekeskustes ja töölaual juurutada.
 
 Siin on mõned NVIDIA NIM-i peamised omadused:
+- **Paigaldamise lihtsus:** NIM võimaldab AI mudelite paigaldamist ühe käsuga, mis teeb selle lihtsaks olemasolevatesse töövoogudesse integreerimiseks.  
+- **Optimeeritud jõudlus:** Kasutab NVIDIA eeloptimeeritud järeldusmootoreid, nagu TensorRT ja TensorRT-LLM, et tagada madal latentsusaeg ja kõrge läbilaskevõime.  
+- **Skaalautuvus:** NIM toetab Kubernetesel automaatne skaaleerimist, võimaldades tõhusalt toime tulla erinevate töökoormustega.  
+- **Turvalisus ja kontroll:** Organisatsioonid saavad hoida oma andmeid ja rakendusi kontrolli all, majutades NIM mikroteenuseid oma hallatud infrastruktuuris.  
+- **Standard API-d:** NIM pakub tööstusharu standardseid API-sid, muutes AI rakenduste nagu juturobotite, AI abistajate jms ehitamise ja integreerimise lihtsaks.
 
-- **Lihtne juurutamine:** NIM võimaldab AI-mudelite juurutamist ühe käsuga, muutes selle integreerimise olemasolevatesse töövoogudesse lihtsaks.
-- **Optimeeritud jõudlus:** See kasutab NVIDIA eeloptimeeritud järeldusmootoreid, nagu TensorRT ja TensorRT-LLM, et tagada madal latentsus ja kõrge läbilaskevõime.
-- **Mastaapsus:** NIM toetab Kubernetesil põhinevat automaatset mastaapsust, võimaldades tõhusalt toime tulla erine
-- **Turvalisus ja kontroll:** Organisatsioonid saavad hoida oma andmete ja rakenduste üle kontrolli, majutades NIM mikroteenuseid oma hallataval infrastruktuuril.
-- **Standardiseeritud API-d:** NIM pakub tööstusstandardi API-sid, mis muudavad AI-rakenduste, nagu vestlusrobotid, AI-assistendid ja palju muud, loomise ja integreerimise lihtsaks.
+NIM on osa NVIDIA AI Enterprisest, mille eesmärk on lihtsustada AI mudelite paigaldamist ja kasutuselevõttu, tagades nende tõhusa töö NVIDIA GPUdel.
 
-NIM on osa NVIDIA AI Enterprise'ist, mille eesmärk on lihtsustada AI mudelite juurutamist ja operatsionaliseerimist, tagades nende tõhusa toimimise NVIDIA GPU-del.
-
-- Demo: Nividia NIM-i kasutamine Phi-3.5-Vision-API kutsumiseks [[Klõpsa siia lingile](./python/Phi-3-Vision-Nividia-NIM.ipynb?WT.mc_id=academic-105485-koreyst)]
-
-
-### Phi-3/3.5 järeldamine kohalikus keskkonnas
-Järeldamine Phi-3 või mis tahes keelemudeli, nagu GPT-3, puhul viitab protsessile, kus mudel genereerib vastuseid või ennustusi saadud sisendi põhjal. Kui esitate Phi-3-le küsimuse või juhise, kasutab see oma treenitud närvivõrku, et tuvastada kõige tõenäolisem ja asjakohasem vastus, analüüsides treeningandmetes esinevaid mustreid ja seoseid.
-
-**Hugging Face Transformer**
-Hugging Face Transformers on võimas teek, mis on loodud loomuliku keele töötlemiseks (NLP) ja muude masinõppe ülesannete jaoks. Siin on mõned olulised punktid selle kohta:
-
-1. **Eeltreenitud mudelid**: Teek pakub tuhandeid eeltreenitud mudeleid, mida saab kasutada erinevate ülesannete jaoks, nagu teksti klassifitseerimine, nimede tuvastamine, küsimustele vastamine, kokkuvõtete loomine, tõlkimine ja teksti genereerimine.
-
-2. **Raamistike ühilduvus**: Teek toetab mitmeid süvaõppe raamistikke, sealhulgas PyTorch, TensorFlow ja JAX. See võimaldab treenida mudelit ühes raamistikus ja kasutada seda teises.
-
-3. **Multimodaalsed võimalused**: Lisaks NLP-le toetab Hugging Face Transformers ka ülesandeid arvutinägemises (nt pildiklassifikatsioon, objektide tuvastamine) ja helitöötluses (nt kõnetuvastus, heliklassifikatsioon).
-
-4. **Lihtne kasutada**: Teek pakub API-sid ja tööriistu mudelite hõlpsaks allalaadimiseks ja peenhäälestamiseks, muutes selle kättesaadavaks nii algajatele kui ka ekspertidele.
-
-5. **Kogukond ja ressursid**: Hugging Face'il on elav kogukond ning ulatuslik dokumentatsioon, õpetused ja juhendid, mis aitavad kasutajatel alustada ja teeki maksimaalselt ära kasutada.
-[ametlik dokumentatsioon](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) või nende [GitHubi repositoorium](https://github.com/huggingface/transformers?WT.mc_id=academic-105485-koreyst).
-
-See on kõige sagedamini kasutatav meetod, kuid see nõuab ka GPU kiirendust. Nägemise ja MoE (Mixture of Experts) stseenid vajavad palju arvutusi, mis CPU-l oleksid väga piiratud, kui neid ei kvantiseerita.
+- Demo: NVIDIA NIM kasutamine Phi-3.5-Vision-API kutsumiseks [[Klikka siia](./python/Phi-3-Vision-Nividia-NIM.ipynb?WT.mc_id=academic-105485-koreyst)]
 
 
-- Demo: Transformeri kasutamine Phi-3.5-Instucti kutsumiseks [Klõpsa siia lingile](./python/phi35-instruct-demo.ipynb?WT.mc_id=academic-105485-koreyst)
+### Phi-3/3.5 lokaalne käitamine
+Järeldus (inference) seoses Phi-3 või mõne muu keeltemudeliga nagu GPT-3 tähendab vastuste või ennustuste genereerimise protsessi sisendi põhjal. Kui esitate Phi-3-le käsu või küsimuse, kasutab ta oma treenitud närvivõrku kõige tõenäolisema ja asjakohasema vastuse järeldamiseks, analüüsides treeningandmetes esinevaid mustreid ja seoseid.
 
-- Demo: Transformeri kasutamine Phi-3.5-Visioni kutsumiseks [Klõpsa siia lingile](./python/phi35-vision-demo.ipynb?WT.mc_id=academic-105485-koreyst)
+**Hugging Face Transformer**  
+Hugging Face Transformers on võimas teek loomuliku keele töötlemiseks (NLP) ja muude masinõppe ülesannete jaoks. Siin on mõned olulisemad punktid:
 
-- Demo: Transformeri kasutamine Phi-3.5-MoE kutsumiseks [Klõpsa siia lingile](./python/phi35_moe_demo.ipynb?WT.mc_id=academic-105485-koreyst)
+1. **Eeltreenitud mudelid:** Pakub tuhandeid eeltreenitud mudeleid eri ülesannete jaoks nagu teksti klassifitseerimine, nimetatud üksuste tuvastamine, küsimustele vastamine, kokkuvõtete tegemine, tõlkimine ja teksti genereerimine.
 
-**Ollama**
-[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) on platvorm, mis on loodud selleks, et lihtsustada suurte keelemudelite (LLM) lokaalset käitamist teie arvutis. See toetab erinevaid mudeleid, nagu Llama 3.1, Phi 3, Mistral ja Gemma 2, teiste hulgas. Platvorm lihtsustab protsessi, koondades mudeli kaalud, konfiguratsiooni ja andmed ühte paketti, muutes kasutajatele lihtsamaks mudelite kohandamise ja loomise. Ollama on saadaval macOS-i, Linuxi ja Windowsi jaoks. See on suurepärane tööriist, kui soovite katsetada või juurutada LLM-e ilma pilveteenuseid kasutamata. Ollama on kõige otsem tee – peate lihtsalt täitma järgmise käsu.
+2. **Raamistike ühilduvus:** Toetab mitut süvaõppe raamistiku, näiteks PyTorchi, TensorFlow ja JAXi. See võimaldab mudelit treenida ühes raamistikus ja kasutada teises.
+
+3. **Multimodaalsed võimed:** Lisaks NLP-le toetab ka pilditöötluse ülesandeid (nt pildi klassifitseerimine, objektituvastus) ja heli töötlemist (nt kõnetuvastus, heli klassifitseerimine).
+
+4. **Lihtne kasutamine:** Pakub API-sid ja tööriistu mudelite allalaadimiseks ja häälestamiseks, muutes selle nii algajatele kui ka ekspertidele ligipääsetavaks.
+
+5. **Kogukond ja ressursid:** Hugging Face’l on aktiivne kogukond ning ulatuslik dokumentatsioon, juhendid ja õppevahendid, mis aitavad kasutajatel teeki kasutada.
+
+[ametlik dokumentatsioon](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) või nende [GitHubi hoidla](https://github.com/huggingface/transformers?WT.mc_id=academic-105485-koreyst).
+
+See on kõige sagedamini kasutatav meetod, kuid tähendab samuti GPU kiirendust. Näiteks Vision ja MoE stsenaariumid nõuavad palju arvutusi, mis CPU peal, kui neid ei ole kvantiseeritud, on väga aeglased.
+
+- Demo: Transformeriga Phi-3.5-Instruct kutsumine [Klikka siia](./python/phi35-instruct-demo.ipynb?WT.mc_id=academic-105485-koreyst)
+
+- Demo: Transformeriga Phi-3.5-Vision kutsumine [Klikka siia](./python/phi35-vision-demo.ipynb?WT.mc_id=academic-105485-koreyst)
+
+- Demo: Transformeriga Phi-3.5-MoE kutsumine [Klikka siia](./python/phi35_moe_demo.ipynb?WT.mc_id=academic-105485-koreyst)
+
+**Ollama**  
+[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) on platvorm, mis teeb lihtsamaks suurte keeltemudelite (LLM) lokaalset käivitamist sinu masinas. Toetab mitmeid mudeleid nagu Llama 3.1, Phi 3, Mistral ja Gemma 2 teiste hulgas. Platvorm lihtsustab protsessi koondades mudeli kaalud, konfiguratsiooni ja andmed ühte paketti, muutes kasutajatel oma mudelite kohandamise ja loomise lihtsamaks. Ollama on saadaval macOS, Linuxi ja Windowsi jaoks. See on suurepärane tööriist, kui soovid eksperimenteerida või LLM-e käivitada ilma pilveteenusteta. Ollama on kõige otsesem viis, vaja on lihtsalt käivitada järgmine käsklus.
+
 
 ```bash
 
@@ -197,39 +197,40 @@ ollama run phi3.5
 ```
 
 
-**ONNX Runtime for GenAI**
+**ONNX Runtime GenAI jaoks**
 
-[ONNX Runtime](https://github.com/microsoft/onnxruntime-genai?WT.mc_id=academic-105485-koreyst) on platvormidevaheline masinõppe kiirendi, mis toetab nii järeldamist kui ka treenimist. ONNX Runtime for Generative AI (GENAI) on võimas tööriist, mis aitab generatiivseid AI-mudeleid tõhusalt käitada erinevatel platvormidel. 
+[ONNX Runtime](https://github.com/microsoft/onnxruntime-genai?WT.mc_id=academic-105485-koreyst) on platvormideülene järeldus- ja treeningkiirendi masinõppele. ONNX Runtime Generative AI-le (GENAI) on võimas tööriist, mis aitab efektiivselt jooksvat generatiivset AI mudelit erinevatel platvormidel.
 
-## Mis on ONNX Runtime?
-ONNX Runtime on avatud lähtekoodiga projekt, mis võimaldab masinõppe mudelite kõrge jõudlusega järeldamist. See toetab Open Neural Network Exchange (ONNX) formaadis mudeleid, mis on standard masinõppe mudelite esitamiseks. ONNX Runtime'i järeldamine võimaldab kiiremaid kliendikogemusi ja madalamaid kulusid, toetades mudeleid süvaõppe raamistikest nagu PyTorch ja TensorFlow/Keras ning klassikalistest masinõppe teekidest nagu scikit-learn, LightGBM, XGBoost jne. ONNX Runtime ühildub erinevate riistvara, draiverite ja operatsioonisüsteemidega ning pakub optimaalset jõudlust, kasutades riistvarakiirendeid seal, kus see on võimalik, koos graafiku optimeerimiste ja teisendustega.
+## Mis on ONNX Runtime?  
+ONNX Runtime on avatud lähtekoodiga projekt, mis võimaldab masinõppemudelite kõrge jõudlusega järeldust. See toetab mudeleid Open Neural Network Exchange (ONNX) formaadis, mis on standard masinõppemudelite esindamiseks. ONNX Runtime järeldus võimaldab kiirem kliendikogemus ja madalamad kulud, toetades mudeleid süvaõppe raamistikest nagu PyTorch ja TensorFlow/Keras ning klassikalistest masinõppe teekidest nagu scikit-learn, LightGBM, XGBoost jpt. ONNX Runtime on ühilduv erinevate riistvarade, draiverite ja operatsioonisüsteemidega ning tagab optimaalse jõudluse, kasutades riistvara kiirendust kui võimalik, koos graafiku optimeerimiste ja teisendustega.
 
-## Mis on generatiivne AI?
-Generatiivne AI viitab AI-süsteemidele, mis suudavad luua uut sisu, nagu tekst, pildid või muusika, tuginedes andmetele, millel nad on treenitud. Näited hõlmavad keelemudeleid nagu GPT-3 ja pildigeneratsiooni mudeleid nagu Stable Diffusion. ONNX Runtime for GenAI teek pakub generatiivse AI tsüklit ONNX-mudelite jaoks, sealhulgas järeldamist ONNX Runtime'iga, logitite töötlemist, otsingut ja proovivõtmist ning KV vahemälu haldamist.
+## Mis on generatiivne AI?  
+Generatiivne AI viitab AI süsteemidele, mis suudavad genereerida uut sisu, nagu tekst, pildid või muusika, lähtudes treeningandmetest. Näideteks on keelemudelid nagu GPT-3 ja pildigeneratsioonimudelid nagu Stable Diffusion. ONNX Runtime GenAI raamatukogu pakub generatiivse AI tsüklit ONNX mudelitele, sh järeldust ONNX Runtime abil, logits töötlemist, otsingut ja proovimist, ning KV vahemälu haldust.
 
-## ONNX Runtime for GENAI
-ONNX Runtime for GENAI laiendab ONNX Runtime'i võimalusi, et toetada generatiivseid AI-mudeleid. Siin on mõned olulised omadused:
+## ONNX Runtime GENAI jaoks  
+ONNX Runtime GENAI laiendab ONNX Runtime võimalusi generatiivsete AI mudelite toetuseks. Peamised omadused:
 
-- **Lai platvormi tugi:** See töötab erinevatel platvormidel, sealhulgas Windows, Linux, macOS, Android ja iOS.
-- **Mudelite tugi:** See toetab paljusid populaarseid generatiivseid AI-mudeleid, nagu LLaMA, GPT-Neo, BLOOM ja teised.
-- **Jõudluse optimeerimine:** See sisaldab optimeerimisi erinevate riistvarakiirendite jaoks, nagu NVIDIA GPU-d, AMD GPU-d ja teised.
-- **Lihtne kasutada:** See pakub API-sid rakendustesse hõlpsaks integreerimiseks, võimaldades teksti, piltide ja muu sisu genereerimist minimaalse koodiga.
-- Kasutajad saavad kutsuda kõrgetasemelist generate() meetodit või käitada mudeli iga iteratsiooni tsüklis, genereerides ühe tokeni korraga ja vajadusel tsükli sees genereerimisparameetreid uuendades.
-- ONNX Runtime toetab ka ahne/kiire otsingut ja TopP, TopK proovivõtmist tokenite järjestuste genereerimiseks ning sisseehitatud logitite töötlemist, nagu korduse karistused. Samuti saate hõlpsalt lisada kohandatud hindamist.
+- **Lai platvormitugi:** Töötab mitmel platvormil, sealhulgas Windows, Linux, macOS, Android ja iOS.  
+- **Mudelite tugi:** Toetab mitmeid populaarseid generatiivseid AI mudeleid nagu LLaMA, GPT-Neo, BLOOM jm.  
+- **Jõudluse optimeerimine:** Sisaldab optimeeringuid erinevatele riistvara kiirendajatele nagu NVIDIA GPUd, AMD GPUd ja muud.  
+- **Lihtne kasutus:** Pakub API-sid rakendustesse lihtsaks integreerimiseks, võimaldades genereerida teksti, pilte ja muud sisu minimaalse koodiga.  
+- Kasutajad saavad kutsuda kõrgetasemelist generate() meetodit või käivitada mudeli iga iteratsiooni tsüklina, genereerides ühe märgi korraga ning vajadusel uuendades genereerimisparameetreid tsükli sees.  
+- ONNX runtime toetab ka ahnet/kiire otsingu ja TopP, TopK proovimist märgijadade genereerimiseks ning sisseehitatud logits töötlemist, näiteks korduste karistusi. Samuti on mugav lisada kohandatud hindamine.
 
-## Alustamine
-ONNX Runtime for GENAI kasutamise alustamiseks saate järgida järgmisi samme:
+## Alustamine  
+ONNX Runtime GENAI kasutuselevõtuks toimige järgmiselt:
 
-### Installige ONNX Runtime:
+### Paigalda ONNX Runtime:  
 ```Python
 pip install onnxruntime
 ```
-### Installige generatiivse AI laiendused:
+  
+### Paigalda generatiivse AI laiendused:  
 ```Python
 pip install onnxruntime-genai
 ```
-
-### Käivitage mudel: Siin on lihtne näide Pythonis:
+  
+### Käivita mudel: Lihtne näide Pythonis:  
 ```Python
 import onnxruntime_genai as og
 
@@ -247,7 +248,9 @@ output_text = tokenizer.decode(output_tokens)
 
 print(output_text) 
 ```
-### Demo: ONNX Runtime GenAI kasutamine Phi-3.5-Visioni kutsumiseks
+  
+### Demo: ONNX Runtime GenAI kasutamine Phi-3.5-Vision kutsumiseks  
+
 
 ```python
 
@@ -293,23 +296,25 @@ while not generator.is_done():
 
     new_token = generator.get_next_tokens()[0]
     
-    code += tokenizer_stream.decode(new_token)
+    output = tokenizer_stream.decode(new_token)
     
     print(tokenizer_stream.decode(new_token), end='', flush=True)
 
 ```
 
 
-**Muud meetodid**
+**Muud**
 
-Lisaks ONNX Runtime'ile ja Ollama viitemeetoditele saame viidata kvantitatiivsetele mudelitele, kasutades erinevate tootjate pakutud mudelite viitemeetodeid. Näiteks Apple MLX raamistik Apple Metaliga, Qualcomm QNN NPU-ga, Intel OpenVINO CPU/GPU-ga jne. Rohkem sisu leiate [Phi-3 Cookbookist](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst).
+Lisaks ONNX Runtime ja Ollama viitmeetoditele saame ka täita kvantitatiivsete mudelite viited erinevate tootjate mudeliviidete põhjal. Näiteks Apple MLX raamistik Apple Metali, Qualcomm QNN NPU, Intel OpenVINO CPU/GPU jaoks jne. Rohkem sisu võid saada ka [Phi-3 Cookbookist](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst).
 
 
 ## Rohkem
 
-Oleme õppinud Phi-3/3.5 perekonna põhialuseid, kuid SLM-i (suure keelemudeli) kohta rohkem teada saamiseks vajame täiendavaid teadmisi. Vastused leiate Phi-3 Cookbookist. Kui soovite rohkem teada saada, külastage [Phi-3 Cookbooki](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst).
+Oleme õppinud Phi-3/3.5 perekonna põhialuseid, kuid SLM kohta õppimiseks vajame rohkem teadmisi. Vastuseid leiab Phi-3 Cookbookist. Kui soovid rohkem teada saada, külasta palun [Phi-3 Cookbooki](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst).
 
 ---
 
-**Lahtiütlus**:  
-See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti tõlgenduste eest.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Lahtiütlus**:
+See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi me püüame tagada täpsust, palun arvestage, et automatiseeritud tõlgetes võib esineda vigu või ebatäpsusi. Originaaldokument selle algkeeles tuleks pidada autoriteetseks allikaks. Olulise info puhul soovitatakse kasutada professionaalse inimese tõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti mõistmiste eest.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,40 +1,40 @@
-# How to Build wit Mistral Models
+# Building wit Mistral Models 
 
-## Introduction
+## Introduction 
 
-Dis lesson go cover:
-- How to sabi di different Mistral Models
-- Di kain work wey each model fit do and di situations wey dem dey useful
-- Code samples wey go show di special features of each model.
+Dis lesson go cover: 
+- Exploring di different Mistral Models 
+- Understanding di use-cases an scenarios for each model 
+- Exploring code samples wey show di unique features of each model. 
 
-## Di Mistral Models
+## Di Mistral Models 
 
-For dis lesson, we go look three different Mistral models:
-**Mistral Large**, **Mistral Small**, and **Mistral Nemo**.
+For dis lesson, we go explore 3 different Mistral models: 
+**Mistral Large**, **Mistral Small** an **Mistral Nemo**. 
 
-All dis models dey free for Github Model marketplace. Di code wey dey dis notebook go use dis models to run di code. You fit find more info about how to use Github Models to [prototype wit AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Each of dese models dey available free for di GitHub Model marketplace. Di code for dis notebook go dey use dese models to run di code. Here na more details on how to use GitHub Models to [prototype wit AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst). 
+
 
 ## Mistral Large 2 (2407)
+Mistral Large 2 na di current flagship model from Mistral an e dey designed for enterprise use. 
 
-Mistral Large 2 na di main model wey Mistral get now and dem design am for big companies.
+Di model na upgrade to di original Mistral Large by offering 
+-  Larger Context Window - 128k vs 32k 
+-  Better performance on Math an Coding Tasks - 76.9% average accuracy vs 60.4% 
+-  Increased multilingual performance - languages include: English, French, German, Spanish, Italian, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Arabic, an Hindi.
 
-Dis model na upgrade to di original Mistral Large and e dey offer:
-- Bigger Context Window - 128k instead of 32k
-- Better performance for Math and Coding Tasks - 76.9% average accuracy instead of 60.4%
-- Better performance for plenty languages - di languages include: English, French, German, Spanish, Italian, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Arabic, and Hindi.
+Wit dese features, Mistral Large sabi wella for 
+- *Retrieval Augmented Generation (RAG)* - because of di larger context window
+- *Function Calling* - dis model get native function calling wey allow integration wit external tools an APIs. Dem calls fit be made both in parallel or one after di other in a sequential order. 
+- *Code Generation* - dis model sabi well for Python, Java, TypeScript an C++ generation. 
 
-Wit all dis features, Mistral Large dey good for:
-- *Retrieval Augmented Generation (RAG)* - because e get bigger context window
-- *Function Calling* - dis model sabi call functions wey fit connect wit external tools and APIs. Di calls fit happen at di same time or one after di other.
-- *Code Generation* - dis model sabi generate code for Python, Java, TypeScript, and C++.
+### RAG Example wit Mistral Large 2 
 
-### RAG Example wit Mistral Large 2
+For dis example, we dey use Mistral Large 2 run a RAG pattern over text document. Di question write for Korean an e dey ask about wetin di author do before college. 
 
-For dis example, we dey use Mistral Large 2 to run RAG pattern for one text document. Di question dey write for Korean and e dey ask about wetin di author do before e enter college.
+E use Cohere Embeddings Model to create embeddings of di text document as well as di question. For dis sample, e use di faiss Python package as vector store. 
 
-E dey use Cohere Embeddings Model to create embeddings for di text document and di question. For dis sample, e dey use di faiss Python package as vector store.
-
-Di prompt wey dem send to di Mistral model get di question and di chunks wey resemble di question. Di model go then give natural language answer.
+Di prompt wey dem send go di Mistral model get both di question an di retrieved chunks wey resemble di question. Di Model then go give natural language response. 
 
 ```python 
 pip install faiss-cpu
@@ -92,7 +92,7 @@ d = text_embeddings.shape[1]
 index = faiss.IndexFlatL2(d)
 index.add(text_embeddings)
 
-question = "저자가 대학에 오기 전에 주로 했던 두 가지 일은 무엇이었나요?？"
+question = "저자가 대학에 오기 전에 주로 했던 두 가지 일은 무엇이었나요?"
 
 question_embedding = embed_client.embed(
     input=[question],
@@ -130,24 +130,23 @@ chat_response = client.complete(
 print(chat_response.choices[0].message.content)
 ```
 
+## Mistral Small 
+Mistral Small na another model for di Mistral family under di premier/enterprise category. As di name talk, dis model na Small Language Model (SLM). Di advantages of using Mistral Small na: 
+- E dey save cost compared to Mistral LLMs like Mistral Large an NeMo - 80% price drop
+- Low latency - e dey faster for response compared to Mistral's LLMs
+- Flexible - fit deploy for different environments wit less restrictions on wetin resources e need. 
 
-## Mistral Small
 
-Mistral Small na another model for di Mistral family of models wey dey under di premier/enterprise category. As di name talk, dis model na Small Language Model (SLM). Di benefits of using Mistral Small na:
-- E dey save money compared to Mistral LLMs like Mistral Large and NeMo - 80% price drop
-- E dey fast - e dey respond quicker compared to Mistral's LLMs
-- E dey flexible - e fit work for different environments wit less wahala for resources.
+Mistral Small dey good for: 
+- Text based tasks like summarization, sentiment analysis an translation. 
+- Applications wey dem dey ask question many times because e dey cost effective 
+- Low latency code tasks like review an code suggestions 
 
-Mistral Small dey good for:
-- Text-based work like summarization, sentiment analysis, and translation.
-- Apps wey dey make plenty requests because e dey cheap.
-- Low latency code work like review and code suggestions.
+## Comparing Mistral Small an Mistral Large 
 
-## How Mistral Small and Mistral Large take compare
+To show difference for latency between Mistral Small an Large, run di cells wey dey below. 
 
-To show di difference for latency between Mistral Small and Large, run di cells wey dey below.
-
-You go see di difference for response time wey dey between 3-5 seconds. Also check di response length and style for di same prompt.
+You go see difference for response times witin 3-5 seconds. Also check di response lengths an style on top di same prompt.  
 
 ```python 
 
@@ -207,33 +206,33 @@ print(response.choices[0].message.content)
 
 ```
 
-
 ## Mistral NeMo
 
-Compared to di other two models wey we don talk about for dis lesson, Mistral NeMo na di only free model wey get Apache2 License.
+Compared to di oda two models wey we talk about for dis lesson, Mistral NeMo na di only free model wey get Apache2 License. 
 
-People dey see am as upgrade to di earlier open-source LLM from Mistral, Mistral 7B.
+E dey seen as upgrade to di earlier open source LLM from Mistral, Mistral 7B. 
 
-Some other features wey NeMo model get na:
+Some oda features of di NeMo model na: 
 
-- *Better tokenization:* Dis model dey use Tekken tokenizer instead of di common tiktoken. Dis one dey make am perform better for plenty languages and code.
+- *More efficient tokenization:* Dis model dey use di Tekken tokenizer over di more common tiktoken. Dis one dey allow better performance across more languages an code. 
 
-- *Finetuning:* Di base model dey available for finetuning. Dis one dey make am flexible for situations wey need finetuning.
+- *Finetuning:* Di base model dey available for finetuning. Dis one go allow more flexibility for use-cases wey need finetuning. 
 
-- *Native Function Calling* - Like Mistral Large, dis model don train for function calling. Dis one make am special as e be one of di first open-source models wey sabi do dis.
+- *Native Function Calling* - Like Mistral Large, dis model don train on function calling. Dis one make am unique as e be one of di first open source models to do am. 
 
-### How Tokenizers take compare
 
-For dis sample, we go look how Mistral NeMo dey handle tokenization compared to Mistral Large.
+### Comparing Tokenizers 
 
-Both samples go use di same prompt but you go see say NeMo go return less tokens compared to Mistral Large.
+For dis sample, we go look how Mistral NeMo dey handle tokenization compared to Mistral Large. 
+
+Both samples go take di same prompt but you go see say NeMo dey return fewer tokens than Mistral Large. 
 
 ```bash
 pip install mistral-common
 ```
 
 ```python 
-# Import needed packages:
+# Bring in di packages wey we need:
 from mistral_common.protocol.instruct.messages import (
     UserMessage,
 )
@@ -246,11 +245,11 @@ from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
 # Load Mistral tokenizer
 
-model_name = "open-mistral-nemo	"
+model_name = "open-mistral-nemo"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Tokenize a list of messages
+# Break list of messages into tokens
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -268,7 +267,7 @@ tokenized = tokenizer.encode_chat_completion(
                             "format": {
                                 "type": "string",
                                 "enum": ["celsius", "fahrenheit"],
-                                "description": "The temperature unit to use. Infer this from the users location.",
+                                "description": "The temperature unit to use. Infer this from the user's location.",
                             },
                         },
                         "required": ["location", "format"],
@@ -284,12 +283,12 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# Count the number of tokens
+# Count how many tokens dey
 print(len(tokens))
 ```
 
 ```python
-# Import needed packages:
+# Bring in di packages wey we need:
 from mistral_common.protocol.instruct.messages import (
     UserMessage,
 )
@@ -306,7 +305,7 @@ model_name = "mistral-large-latest"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Tokenize a list of messages
+# Tokenize list of messages dem
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -324,7 +323,7 @@ tokenized = tokenizer.encode_chat_completion(
                             "format": {
                                 "type": "string",
                                 "enum": ["celsius", "fahrenheit"],
-                                "description": "The temperature unit to use. Infer this from the users location.",
+                                "description": "The temperature unit to use. Infer this from the user's location.",
                             },
                         },
                         "required": ["location", "format"],
@@ -340,18 +339,17 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# Count the number of tokens
+# Count how many tokens dey
 print(len(tokens))
 ```
 
+## Learning no stop for here, continue di journey
 
-## Learning no dey finish here, continue di Journey
-
-After you don finish dis lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue to sabi more about Generative AI!
+After you don finish dis lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue to level up your Generative AI knowledge!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:  
-Dis dokyument don use AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator) do di translation. Even as we dey try make sure say e correct, abeg make you sabi say machine translation fit get mistake or no dey accurate well. Di original dokyument wey dey for im native language na di one wey you go take as di correct source. For important information, e better make professional human translator check am. We no go fit take blame for any misunderstanding or wrong interpretation wey fit happen because you use dis translation.
+Dis document dem don translate am wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even tho we dey try make am correct, abeg note say automated translation fit get mistakes or no too correct. The original document wey e dey for im own language na im be the correct source. If na serious matter, e better make human professional do the translation. We no go take responsibility if person no understand well or if person misunderstand because of dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
