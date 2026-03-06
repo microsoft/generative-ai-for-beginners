@@ -109,6 +109,61 @@ Special thanks to [**John Aziz**](https://www.linkedin.com/in/john0isaac/) for c
 
 This fork is maintained by [Igor Vepretski](https://7ya.io) - Empowering the next generation of AI builders. Learn more at [7YA.IO](https://7ya.io)
 
+## 📁 Project Structure
+
+This repository is organised so that beginners can find everything they need quickly.
+
+```
+generative-ai-for-beginners/
+├── src/
+│   └── main.py          # Starter script – run this to verify your setup
+├── docs/
+│   └── setup.md         # Detailed environment setup guide
+├── tests/
+│   └── test_main.py     # Unit tests (run with: pytest tests/)
+├── 00-course-setup/     # Lesson 0: setting up your development environment
+├── 01-introduction-to-genai/ … 21-meta/   # Course lessons
+├── .gitignore           # Ignores Python, Node.js, and OS artefacts
+└── README.md            # You are here
+```
+
+### ✨ Features
+
+- **21 structured lessons** covering all core Generative AI topics, from fundamentals to advanced techniques.
+- **Dual-language code samples** – every Build lesson includes both **Python** and **TypeScript** examples.
+- **Multiple LLM provider support** – Azure OpenAI, GitHub Marketplace Models, and the OpenAI API all work out of the box.
+- **Hands-on projects** – chat apps, image generators, RAG pipelines, AI agents, and more.
+- **Beginner-friendly layout** – each lesson is self-contained with a README, code samples, and extra-learning links.
+
+### 🛠️ Quick Setup
+
+1. **Clone** the repo and create a virtual environment:
+
+   ```bash
+   git clone https://github.com/microsoft/generative-ai-for-beginners.git
+   cd generative-ai-for-beginners
+   python -m venv .venv && source .venv/bin/activate  # Windows: .venv\Scripts\Activate.ps1
+   pip install -r requirements.txt
+   ```
+
+2. **Configure** your LLM provider by copying `.env.copy` to `.env` inside the lesson folder and filling in your API key.
+
+3. **Verify** the setup by running the starter script:
+
+   ```bash
+   python src/main.py
+   ```
+
+4. **Run the tests** to make sure everything is working:
+
+   ```bash
+   pytest tests/
+   ```
+
+> 📖 For full details see [docs/setup.md](./docs/setup.md).
+
+---
+
 ## 🎒 Other Courses
 
 Our team produces other courses! Check out:

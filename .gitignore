@@ -159,9 +159,38 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+# Node.js
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.npm
+.yarn/
+dist/
+.next/
+out/
+.nuxt/
+.cache/
+.parcel-cache/
 
+# OS artifacts – macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# OS artifacts – Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# OS artifacts – Linux
+*~
 
 # downloaded stuff for 08-building-search-applications
 08-building-search-applications/scripts/transcripts_the_ai_show/
