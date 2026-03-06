@@ -27,7 +27,7 @@ Notice that in LLMOps, we are more focused on the App Developers, using integrat
 
 - Quality: Response quality
 - Harm: Responsible AI
-- Honesty: Response groundedness (Makes sense? It is correct?)
+- Honesty: Response groundedness (Makes sense? Is it correct?)
 - Cost: Solution Budget
 - Latency: Avg. time for token response
 
@@ -37,7 +37,7 @@ First, to understand the lifecycle and the modifications, let's note the next in
 
 ![LLMOps infographic](../../../translated_images/en/02-llmops.70a942ead05a7645.webp)
 
-As you may note, this is different from the usual Lifecycles from MLOps. LLMs have many new requirements, as Prompting, different techniques to improve quality (Fine-Tuning, RAG, Meta-Prompts), different assessment and responsibility with responsible AI, lastly, new evaluation metrics (Quality, Harm, Honesty, Cost and Latency).
+As you may note, this is different from the usual Lifecycles from MLOps. LLMs have many new requirements, such as Prompting, different techniques to improve quality (Fine-Tuning, RAG, Meta-Prompts), different assessment and responsibility with responsible AI, lastly, new evaluation metrics (Quality, Harm, Honesty, Cost and Latency).
 
 For instance, take a look at how we ideate. Using prompt engineering to experiment with various LLMs to explore possibilities to test if their Hypothesis could be correct.
 
@@ -47,27 +47,27 @@ How could we explore those steps? Let's step into detail in how could we build a
 
 ![LLMOps Workflow](../../../translated_images/en/03-llm-stage-flows.3a1e1c401235a6cf.webp)
 
-This may look a bit complicated, lets focus on the three big steps first.
+This may look a bit complicated, let's focus on the three big steps first.
 
-1. Ideating/Exploring: Exploration, here we can explore according to our business needs. Prototyping, creating a [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst) and test if is efficient enough for our Hypothesis.
-1. Building/Augmenting: Implementation, now, we start to evaluate for bigger datasets implement techniques, like Fine-tuning and RAG, to check the robustness of our solution. If it does not, re-implementing it, adding new steps in our flow or restructuring the data, might help. After testing our flow and our scale, if it works and check our Metrics, it is ready for the next step.
+1. Ideating/Exploring: Exploration, here we can explore according to our business needs. Prototyping, creating a [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst) and test if it is efficient enough for our Hypothesis.
+1. Building/Augmenting: Implementation, now, we start to evaluate for bigger datasets, implement techniques like Fine-tuning and RAG, to check the robustness of our solution. If it does not, re-implementing it, adding new steps in our flow or restructuring the data, might help. After testing our flow and our scale, if it works and checks our Metrics, it is ready for the next step.
 1. Operationalizing: Integration, now adding Monitoring and Alerts Systems to our system, deployment and application integration to our Application.
 
 Then, we have the overarching cycle of Management, focusing on security, compliance and governance.
 
-Congratulations, now you have your AI App ready to go and operational. For a hands on experience, take a look on the [Contoso Chat Demo.](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreys)
+Congratulations, now you have your AI App ready to go and operational. For a hands-on experience, take a look at the [Contoso Chat Demo.](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst)
 
 Now, what tools could we use?
 
 ## Lifecycle Tooling
 
-For Tooling, Microsoft provides the [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) and [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst) facilitate and make your cycle easy to implement and ready to go.
+For Tooling, Microsoft provides the [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreyst) and [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst) to facilitate and make your cycle easy to implement and ready to go.
 
-The [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys), allows you to use [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio is a web portal allows you to Explore models, samples and tools. Managing your resources, UI development flows and SDK/CLI options for Code-First development.
+The [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreyst) allows you to use [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst). AI Studio is a web portal that allows you to explore models, samples and tools. Managing your resources, UI development flows and SDK/CLI options for Code-First development.
 
 ![Azure AI possibilities](../../../translated_images/en/04-azure-ai-platform.80203baf03a12fa8.webp)
 
-Azure AI, allows you to use multiple resources, to manage your operations, services, projects, vector search and databases needs.
+Azure AI allows you to use multiple resources to manage your operations, services, projects, vector search, and database needs.
 
 ![LLMOps with Azure AI](../../../translated_images/en/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp)
 
@@ -90,5 +90,5 @@ Now, check Lesson 15, to understand how [Retrieval Augmented Generation and Vect
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please note that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
