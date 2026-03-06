@@ -1,58 +1,58 @@
-# Paggawa gamit ang Meta Family Models
+# Pagtatayo Gamit ang Mga Modelo ng Pamilyang Meta
 
 ## Panimula
 
-Saklaw ng araling ito ang:
+Tatalakayin sa araling ito:
 
-- Pagsusuri sa dalawang pangunahing Meta family models - Llama 3.1 at Llama 3.2
-- Pag-unawa sa mga gamit at sitwasyon para sa bawat modelo
-- Halimbawa ng code upang ipakita ang natatanging katangian ng bawat modelo
+- Pagsusuri sa dalawang pangunahing modelo ng pamilyang Meta - Llama 3.1 at Llama 3.2
+- Pag-unawa sa mga gamit at senaryo para sa bawat modelo
+- Halimbawang kodigo upang ipakita ang mga natatanging katangian ng bawat modelo
 
-## Ang Meta Family ng mga Modelo
+## Ang Pamilyang Meta ng Mga Modelo
 
-Sa araling ito, tatalakayin natin ang 2 modelo mula sa Meta family o "Llama Herd" - Llama 3.1 at Llama 3.2
+Sa araling ito, susuriin natin ang 2 modelo mula sa pamilyang Meta o "Llama Herd" - Llama 3.1 at Llama 3.2.
 
-Ang mga modelong ito ay may iba't ibang variant at makukuha sa GitHub Model marketplace. Narito ang karagdagang detalye sa paggamit ng GitHub Models para sa [prototyping gamit ang AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Ang mga modelong ito ay may iba't ibang bersyon at makukuha sa GitHub Model marketplace. Narito ang karagdagang detalye sa paggamit ng GitHub Models para sa [pagsubok gamit ang mga AI model](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
-Mga Variant ng Modelo:
+Mga Bersyon ng Modelo:
 - Llama 3.1 - 70B Instruct
 - Llama 3.1 - 405B Instruct
 - Llama 3.2 - 11B Vision Instruct
 - Llama 3.2 - 90B Vision Instruct
 
-*Note: Available din ang Llama 3 sa GitHub Models pero hindi ito tatalakayin sa araling ito*
+*Paalala: Ang Llama 3 ay available rin sa GitHub Models ngunit hindi tatalakayin sa araling ito*
 
 ## Llama 3.1
 
-Sa 405 Bilyong Parameters, ang Llama 3.1 ay kabilang sa open source LLM category.
+Sa 405 Bilyong Parameter, ang Llama 3.1 ay kabilang sa kategorya ng open source LLM.
 
-Ang modelong ito ay isang upgrade mula sa naunang Llama 3 sa pamamagitan ng:
+Ang modelo ay isang upgrade mula sa naunang Llama 3 sa pamamagitan ng pag-aalok ng:
 
 - Mas malaking context window - 128k tokens kumpara sa 8k tokens
 - Mas malaking Max Output Tokens - 4096 kumpara sa 2048
-- Mas mahusay na Multilingual Support - dahil sa pagdami ng training tokens
+- Mas mahusay na Multilingual Support - dahil sa pagtaas ng training tokens
 
-Dahil dito, kaya ng Llama 3.1 na hawakan ang mas kumplikadong mga kaso ng paggamit sa paggawa ng GenAI applications kabilang ang:
-- Native Function Calling - kakayahang tumawag ng mga external na tools at functions sa labas ng LLM workflow
-- Mas mahusay na RAG Performance - dahil sa mas malaking context window
-- Synthetic Data Generation - kakayahang gumawa ng epektibong data para sa mga gawain tulad ng fine-tuning
+Pinapayagan nito ang Llama 3.1 na hawakan ang mas kumplikadong mga gamit sa paggawa ng GenAI applications kabilang ang:
+- Native Function Calling - ang kakayahang tumawag sa mga external na kasangkapan at function na hiwalay sa LLM workflow
+- Mas mahusay na RAG Performance - dahil sa mas mataas na context window
+- Synthetic Data Generation - ang kakayahang lumikha ng epektibong data para sa mga gawain tulad ng fine-tuning
 
 ### Native Function Calling
 
-Ang Llama 3.1 ay na-fine-tune upang maging mas epektibo sa pagtawag ng mga function o tool. Mayroon din itong dalawang built-in na tools na kayang tukuyin ng modelo na kailangang gamitin base sa prompt ng user. Ang mga tools na ito ay:
+Ang Llama 3.1 ay na-fine tune upang maging mas epektibo sa paggawa ng function o tool calls. Mayroon din itong dalawang built-in na kasangkapan na maaaring tuklasin ng modelo na kailangang gamitin batay sa prompt ng gumagamit. Ang mga kasangkapang ito ay:
 
-- **Brave Search** - Maaaring gamitin para makakuha ng pinakabagong impormasyon tulad ng lagay ng panahon sa pamamagitan ng web search
-- **Wolfram Alpha** - Maaaring gamitin para sa mas kumplikadong mga kalkulasyon sa matematika kaya hindi na kailangang magsulat ng sariling mga function
+- **Brave Search** - Maaaring gamitin upang makuha ang napapanahong impormasyon tulad ng panahon sa pamamagitan ng web search
+- **Wolfram Alpha** - Maaaring gamitin para sa mas komplikadong kalkulasyon sa matematika kaya hindi na kailangang magsulat ng sarili mong mga function.
 
-Maaari ka ring gumawa ng sarili mong custom tools na maaaring tawagin ng LLM.
+Maaari ka ring gumawa ng sarili mong custom na mga kasangkapan na maaaring tawagin ng LLM.
 
-Sa halimbawa ng code sa ibaba:
+Sa halimbawang kodigo sa ibaba:
 
-- Ipinapahayag natin ang mga available na tools (brave_search, wolfram_alpha) sa system prompt.
-- Nagpapadala ng user prompt na nagtatanong tungkol sa lagay ng panahon sa isang partikular na lungsod.
-- Sasagot ang LLM gamit ang tool call sa Brave Search tool na magmumukhang ganito `<|python_tag|>brave_search.call(query="Stockholm weather")`
+- Dinideklara namin ang mga available na kasangkapan (brave_search, wolfram_alpha) sa system prompt.
+- Nagpapadala ng user prompt na nagtatanong tungkol sa panahon sa isang lungsod.
+- Tutugon ang LLM gamit ang tool call sa Brave Search tool na magiging ganito `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*Note: Ang halimbawang ito ay gumagawa lamang ng tool call, kung nais mong makuha ang resulta, kailangan mong gumawa ng libreng account sa Brave API page at idefine ang function mismo*
+*Paalala: Ang halimbawang ito ay gumagawa lamang ng tool call, kung nais mong makuha ang mga resulta, kailangan mong gumawa ng libreng account sa Brave API page at ideklara ang mismong function.
 
 ```python 
 import os
@@ -94,15 +94,15 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-Bagamat isang LLM, may limitasyon ang Llama 3.1 sa multimodality. Ibig sabihin, ang kakayahang gumamit ng iba't ibang uri ng input tulad ng mga larawan bilang prompt at magbigay ng tugon. Isa ito sa mga pangunahing katangian ng Llama 3.2. Kasama rin sa mga katangiang ito ang:
+Sa kabila ng pagiging LLM, isang limitasyon ng Llama 3.1 ay ang kakulangan nito sa multimodality. Ibig sabihin, hindi nito magamit ang iba't ibang uri ng input tulad ng mga larawan bilang mga prompt at magbigay ng tugon. Ang kakayahang ito ay isa sa mga pangunahing tampok ng Llama 3.2. Kasama sa mga tampok na ito:
 
-- Multimodality - may kakayahang suriin ang parehong text at image prompts
-- Maliit hanggang Katamtamang laki na mga variant (11B at 90B) - nagbibigay ito ng flexible na mga opsyon sa deployment
-- Text-only na mga variant (1B at 3B) - nagbibigay-daan ito para ma-deploy ang modelo sa edge / mobile devices at nagbibigay ng mababang latency
+- Multimodality - may kakayahang magsuri ng parehong text at image prompts
+- Maliit hanggang katamtamang laki ng mga bersyon (11B at 90B) - nagbibigay ito ng flexible na mga pagpipilian sa deployment,
+- Mga text-only na bersyon (1B at 3B) - nagbibigay-daan ito sa modelo na mai-deploy sa mga edge/mobile devices at may mababang latency
 
-Ang suporta sa multimodal ay isang malaking hakbang sa mundo ng open source models. Ang halimbawa ng code sa ibaba ay tumatanggap ng parehong larawan at text prompt upang makakuha ng pagsusuri ng larawan mula sa Llama 3.2 90B.
+Ang suporta sa multimodal ay isang malaking hakbang sa mundo ng mga open source na modelo. Ang halimbawang kodigo sa ibaba ay tumatanggap ng parehong larawan at text prompt upang makakuha ng pagsusuri ng larawan mula sa Llama 3.2 90B.
 
-### Multimodal Support gamit ang Llama 3.2
+### Multimodal Support sa Llama 3.2
 
 ```python 
 import os
@@ -149,9 +149,13 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Hindi dito nagtatapos ang pag-aaral, ipagpatuloy ang paglalakbay
+## Hindi dito nagtatapos ang pag-aaral, ipagpatuloy ang iyong paglalakbay
 
-Pagkatapos matapos ang araling ito, tingnan ang aming [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) upang ipagpatuloy ang pagpapalawak ng iyong kaalaman sa Generative AI!
+Pagkatapos makumpleto ang araling ito, tingnan ang aming [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) upang ipagpatuloy ang pagpapalawak ng iyong kaalaman sa Generative AI!
 
-**Paalala**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat nagsusumikap kami para sa katumpakan, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o di-tumpak na impormasyon. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na pangunahing sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Paunawa**:
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat pinagsisikapan naming maging tumpak ang salin, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga mali o hindi pagkakatugma. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na opisyal na sanggunian. Para sa mga mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na nagmula sa paggamit ng salin na ito.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
