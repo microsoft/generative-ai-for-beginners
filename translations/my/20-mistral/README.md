@@ -1,40 +1,40 @@
-# Mistral မော်ဒယ်များဖြင့် ဆောက်လုပ်ခြင်း
+# Mistral မော်ဒယ်များဖြင့် ဆောက်ခြင်း
 
 ## နိဒါန်း
 
-ဒီသင်ခန်းစာမှာ ဖော်ပြမယ့်အကြောင်းအရာများမှာ -  
-- Mistral မော်ဒယ်အမျိုးအစားများကို ရှာဖွေခြင်း  
-- မော်ဒယ်တိုင်းအတွက် အသုံးပြုမှုနှင့် အခြေအနေများကို နားလည်ခြင်း  
-- မော်ဒယ်တိုင်းရဲ့ ထူးခြားချက်များကို ပြသသည့် ကုဒ်နမူနာများ  
+ဤသင်ခန်းစာတွင် ဖော်ပြမည့်အကြောင်းအရာများမှာ-
+- Mistral မော်ဒယ်များအမျိုးမျိုးကို စူးစမ်းလေ့လာခြင်း
+- မော်ဒယ်တိုင်း၏ အသုံးချမှုများနှင့် ဖြစ်ပေါ်နိုင်သော အခြေအနေများကို နားလည်ခြင်း
+- မော်ဒယ်တိုင်း၏ ထူးခြားချက်များကို ပြသထားသည့် ကုဒ်နမူနာများကို စူးစမ်းလေ့လာခြင်း ဖြစ်သည်။
 
 ## Mistral မော်ဒယ်များ
 
-ဒီသင်ခန်းစာမှာ Mistral မော်ဒယ် ၃ မျိုးကို ရှာဖွေကြမယ် -  
-**Mistral Large**, **Mistral Small** နဲ့ **Mistral Nemo**။
+ဤသင်ခန်းစာတွင် Mistral မော်ဒယ် ၃ မျိုးကို စူးစမ်းလေ့လာမည်။
+**Mistral Large**, **Mistral Small** နှင့် **Mistral Nemo** ဖြစ်ပါသည်။
 
-မော်ဒယ်တွေကို Github Model marketplace မှာ အခမဲ့ရနိုင်ပါတယ်။ ဒီ notebook ထဲက ကုဒ်တွေမှာ ဒီမော်ဒယ်တွေကို အသုံးပြုထားပါတယ်။ Github Models ကို [AI မော်ဒယ်တွေနဲ့ prototype ပြုလုပ်ခြင်း](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst) အကြောင်း ပိုမိုသိရှိနိုင်ပါတယ်။
+မော်ဒယ်တိုင်းသည် GitHub Model စျေးကွက်တွင် အခမဲ့ရရှိနိုင်သည်။ ဤ notebook တွင် သုံးသောကုဒ်များမှာ မော်ဒယ်များကို အသုံးပြု၍ ကိုယ့်ရဲ့ကုဒ်များကို လည်ပတ်စေသည်။ GitHub Models သုံး၍ [AI မော်ဒယ်များဖြင့် prototype ပြုလုပ်ခြင်း](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst) သတင်းအချက်အလက်ပိုများကို ဒီမှာ ဖတ်နိုင်ပါသည်။
 
 ## Mistral Large 2 (2407)
 
-Mistral Large 2 သည် Mistral ရဲ့ အဓိက flagship မော်ဒယ်ဖြစ်ပြီး စီးပွားရေးအသုံးပြုမှုအတွက် ဒီဇိုင်းထုတ်ထားသည်။
+Mistral Large 2 သည် ယခုအချိန်တွင် Mistral ၏ ဦးဆောင်မော်ဒယ်ဖြစ်ပြီး စီးပွားရေးအသုံးပြုမှုအတွက် တီထွင်ထားသည်။
 
-မူလ Mistral Large ကို အဆင့်မြှင့်တင်ထားပြီး  
-- ပိုကြီးမားသော Context Window - 128k နှင့် 32k  
-- သင်္ချာနှင့် ကုဒ်ရေးခြင်းလုပ်ငန်းများတွင် ပိုမိုကောင်းမွန်သော စွမ်းဆောင်ရည် - 76.9% ပျမ်းမျှတိကျမှု နှင့် 60.4%  
-- ဘာသာစကားစုံလင်မှု တိုးတက်မှု - အင်္ဂလိပ်၊ ပြင်သစ်၊ ဂျာမန်၊ စပိန်၊ အီတလီ၊ ပေါ်တူဂီ၊ ဒတ်ချ်၊ ရုရှား၊ တရုတ်၊ ဂျပန်၊ ကိုရီးယား၊ အာရပ်၊ ဟိန္ဒီ စသည့် ဘာသာစကားများပါဝင်သည်။
+ဤမော်ဒယ်သည် မူလ Mistral Large ကို အဆင့်မြှင့်တင်ထားပြီး-
+- မြင့်မားသော Context Window - 128k နှင့် 32k
+- သင်္ချာနှင့် ကုဒ်ရေးဆွဲရေး လုပ်ငန်းစဉ်များတွင် ပိုမိုကောင်းမွန်သော အောင်မြင်မှု - 76.9% ပျမ်းမျှတိကျမှုနှင့် 60.4%
+- ဘာသာစကားများအတွက် ပိုမိုကောင်းမွန်သောစွမ်းဆောင်ရည် - အင်္ဂလိပ်၊ ပြင်သစ်၊ ဂျာမန်၊ စပါိန်၊ အီတလီ၊ ပေါ်တူဂီ၊ ဒတ်ချ်၊ ရုရှား၊ တရုတ်၊ ဂျပန်၊ ကိုရီးယား၊ အာရဘီ နှင့် ဟိန္ဒီတို့ ပါဝင်သည်။
 
-ဒီအင်္ဂါရပ်များကြောင့် Mistral Large သည်  
-- *Retrieval Augmented Generation (RAG)* - ပိုကြီးမားသော context window ကြောင့် ထူးခြားသည်  
-- *Function Calling* - ဒီမော်ဒယ်မှာ native function calling ပါဝင်ပြီး အပြင်ကိရိယာများနှင့် API များနှင့် ပေါင်းစည်းနိုင်သည်။ အဲဒီ function call များကို တပြိုင်နက်တည်း သို့မဟုတ် တစ်ခုချင်းစီ အဆက်မပြတ် ချိတ်ဆက်နိုင်သည်။  
-- *Code Generation* - Python, Java, TypeScript နဲ့ C++ ကုဒ်များ ဖန်တီးရာတွင် ထူးခြားသည်။
+ဤအင်္ဂါရပ်များဖြင့် Mistral Large သည်-
+- *Retrieval Augmented Generation (RAG)* - ကြီးမားသော context window ကြောင့် ထူးခြားသည်။
+- *Function Calling* - ဤမော်ဒယ်တွင် function calling ကိုဇာတိရှိပြီး အပြင် tools နှင့် API များနှင့် ထည့်သွင်းအသုံးပြုနိုင်သည်။ ၎င်း function call များကို 병렬သို့မဟုတ် တန်းစီစွာ ခလုတ်တိုက်ခိုက်နိုင်သည်။
+- *Code Generation* - Python, Java, TypeScript နှင့် C++ စသည်ဖြင့် ကုဒ်ဖန်တီးရာတွင် ထူးခြားသည်။
 
 ### Mistral Large 2 ဖြင့် RAG ဥပမာ
 
-ဒီဥပမာမှာ Mistral Large 2 ကို အသုံးပြုပြီး စာရွက်စာတမ်းတစ်ခုအပေါ် RAG ပုံစံကို လည်ပတ်နေသည်။ မေးခွန်းကို ကိုရီးယားဘာသာဖြင့်ရေးထားပြီး စာရေးသူ၏ တက္ကသိုလ်မတက်ခင် လုပ်ဆောင်ချက်များကို မေးမြန်းထားသည်။
+ဤဥပမာတွင် Mistral Large 2 ကို အသုံးပြု၍ စာသားစာတမ်းတစ်ခုအပေါ် RAG ပုံစံကို ပြုလုပ်ပါသည်။ မေးခွန်းကို ကိုရီးယားဘာသာဖြင့်ရေးထားပြီး ယူနီဗာစတီဝင်မတိုင်မီ စာရေးသူ၏ လုပ်ဆောင်ချက်များအကြောင်း ဆွေးနွေးထားသည်။
 
-Cohere Embeddings Model ကို စာရွက်စာတမ်းနှင့် မေးခွန်း၏ embedding များ ဖန်တီးရန် အသုံးပြုသည်။ ဤနမူနာတွင် faiss Python package ကို vector store အဖြစ် အသုံးပြုထားသည်။
+စာသားစာတမ်းနှင့် မေးခွန်းတို့၏ embedding များကို ဖန်တီးရန် Cohere Embeddings Model ကို အသုံးပြုသည်။ ဤနမူနာတွင် faiss Python package ကို vector store အဖြစ် အသုံးပြုသည်။
 
-Mistral မော်ဒယ်ထံ ပို့သော prompt တွင် မေးခွန်းများနှင့် မေးခွန်းနှင့် ဆင်တူသော ရယူထားသော အပိုင်းများ ပါဝင်သည်။ မော်ဒယ်က သဘာဝဘာသာဖြင့် တုံ့ပြန်ချက် ပေးသည်။
+Mistral မော်ဒယ်သို့ ပို့သော prompt တွင် မေးခွန်းများနှင့် မေးခွန်းနှင့် အလားတူသော ရယူထားသော chunks များပါဝင်သည်။ မော်ဒယ်က ထို့နောက် သဘာဝဘာသာဖြင့်အဖြေ ပေးသည်။
 
 ```python 
 pip install faiss-cpu
@@ -92,7 +92,7 @@ d = text_embeddings.shape[1]
 index = faiss.IndexFlatL2(d)
 index.add(text_embeddings)
 
-question = "저자가 대학에 오기 전에 주로 했던 두 가지 일은 무엇이었나요?？"
+question = "저자가 대학에 오기 전에 주로 했던 두 가지 일은 무엇이었나요?"
 
 question_embedding = embed_client.embed(
     input=[question],
@@ -102,7 +102,7 @@ question_embedding = embed_client.embed(
 question_embeddings = np.array(question_embedding.data[0].embedding)
 
 
-D, I = index.search(question_embeddings.reshape(1, -1), k=2) # distance, index
+D, I = index.search(question_embeddings.reshape(1, -1), k=2) # အကွာအဝေး၊ အညွှန်း
 retrieved_chunks = [chunks[i] for i in I.tolist()[0]]
 
 prompt = f"""
@@ -132,21 +132,21 @@ print(chat_response.choices[0].message.content)
 
 ## Mistral Small
 
-Mistral Small သည် Mistral မော်ဒယ် မျိုးစုံအတွင်း premier/enterprise category အောက်ရှိ မော်ဒယ်တစ်ခုဖြစ်သည်။ အမည်အရ Mistral Small သည် Small Language Model (SLM) ဖြစ်သည်။ Mistral Small ကို အသုံးပြုခြင်း၏ အားသာချက်များမှာ -  
-- Mistral Large နဲ့ NeMo ကဲ့သို့သော Mistral LLM များနှင့် နှိုင်းယှဉ်လျှင် စျေးနှုန်းသက်သာမှု - ၈၀% လျော့နည်းခြင်း  
-- Latency နည်းခြင်း - Mistral LLM များထက် တုံ့ပြန်မှု မြန်ဆန်ခြင်း  
-- ပိုမိုလွယ်ကူသော အသုံးပြုမှု - လိုအပ်သော အရင်းအမြစ်များအပေါ် ကန့်သတ်ချက်နည်းပြီး မတူညီသော ပတ်ဝန်းကျင်များတွင် တပ်ဆင်နိုင်ခြင်း  
+Mistral Small သည် Mistral မော်ဒယ် များအတွင်း premier/enterprise အမျိုးအစား၏ နောက်တစ်ခုဖြစ်သည်။ အမည်အရ၊ ဤမော်ဒယ်မှာ Small Language Model (SLM) ဖြစ်သည်။ Mistral Small ကို အသုံးပြုခြင်း၏ အားသာချက်များမှာ-
+- Mistral Large နှင့် NeMo ကဲ့သို့သော Mistral LLM များနှင့် နှိုင်းယှဉ်နိုင်သော စျေးနှုန်းသက်သာမှု - ၈၀% စျေးလျော့
+- Latency နည်း - Mistral LLM များထက် မြန်ဆန်သော တုံ့ပြန်မှု
+- တတ်နိုင်သမျှ စူးစမ်းနိုင်မှု - လိုအပ်သည့် အရင်းအမြစ်များကို ပိုမိုလျော့နည်းစေပြီး မတူညီသော ပတ်ဝန်းကျင်များတွင် တပ်ဆင်နိုင်သည်။
 
-Mistral Small သည် အထူးသင့်တော်သည် -  
-- စာသားအခြေပြု လုပ်ငန်းများဖြစ်သော အကျဉ်းချုပ်ခြင်း၊ စိတ်ခံစားချက်ခွဲခြမ်းစိတ်ဖြာခြင်းနှင့် ဘာသာပြန်ခြင်း  
-- စျေးနှုန်းသက်သာမှုကြောင့် မကြာခဏ တောင်းဆိုမှုများရှိသော အပလီကေးရှင်းများ  
-- Latency နည်းသော ကုဒ်လုပ်ငန်းများဖြစ်သော ပြန်လည်သုံးသပ်ခြင်းနှင့် ကုဒ်အကြံပြုချက်များ  
+Mistral Small သည်-
+- စာသားအခြေပြု လုပ်ငန်းများ (အကျဉ်းချုပ်၊ စိတ်ထားခွဲခြမ်းစိတ်ဖြာခြင်း နှင့် ဘာသာပြန်ခြင်း) အတွက် အထူးသင့်တော်သည်။
+- အလွယ်တကူ တုံ့ပြန်ရမည့် လျှောက်လွှာများအတွက် အသုံးချဖို့ သက်သာသော ဈေးနှုန်းကြောင့် ကောင်းမွန်သည်။
+- Latency နည်းသော ကုဒ်လုပ်ငန်းများ (ပြုပြင်မှုနှင့် ကုဒ် အကြံပြုခြင်း) အတွက် သင့်တော်သည်။
 
 ## Mistral Small နှင့် Mistral Large နှိုင်းယှဉ်ခြင်း
 
-Mistral Small နဲ့ Large တို့၏ latency ကွာခြားမှုကို ပြသရန် အောက်ပါ ကုဒ်များကို လည်ပတ်ပါ။
+Mistral Small နှင့် Large တို့သည် တုံ့ပြန်မှုအချိန်မှာ ကွာခြားမှုရှိကြောင်းပြသရန်အတွက် အောက်ပါကြဲပြားချက်များကို အကောင်အထည်ဖော်ပါ။
 
-တုံ့ပြန်ချိန်ကွာခြားမှု ၃-၅ စက္ကန့်ရှိကြောင်း တွေ့ရမည်။ ထို့အပြင် တူညီသော prompt အပေါ် တုံ့ပြန်ချက်၏ အရှည်နှင့် စတိုင်ကိုလည်း သတိပြုပါ။
+တုံ့ပြန်ချိန်မှာ ၃ မှ ၅ စက္ကန့်ကွာခြားမှုကို ကြည့်နိုင်မည်ဖြစ်သည်။ ထို့ပြင် တုံ့ပြန်မှု၏ အရှည်နှင့်စတိုင်ကိုလည်း တူညီသော prompt ပေါ်တွင် မှတ်သားကြည့်ပါ။
 
 ```python 
 
@@ -208,30 +208,30 @@ print(response.choices[0].message.content)
 
 ## Mistral NeMo
 
-ဒီသင်ခန်းစာမှာ ဆွေးနွေးထားသော မော်ဒယ်နှစ်ခုနှင့် နှိုင်းယှဉ်လျှင် Mistral NeMo သည် Apache2 License ဖြင့် အခမဲ့ရရှိနိုင်သည့် တစ်ခုတည်းသော မော်ဒယ်ဖြစ်သည်။
+ဤသင်ခန်းစာ၌ ပြောသော မော်ဒယ်နှစ်ခုနှင့် နှိုင်းယှဉ်ပါက Mistral NeMo သည် Apache2 လိုင်စင်ဖြင့် ရရှိနိုင်သည့် တစ်ခုတည်းသော အခမဲ့မော်ဒယ်ဖြစ်သည်။
 
-Mistral ရဲ့ ယခင် open source LLM ဖြစ်သော Mistral 7B ကို အဆင့်မြှင့်တင်ထားသည့် မော်ဒယ်အဖြစ် တွေ့ရှိရသည်။
+ဤသည်သည် Mistral 7B မှာရှိသည့် ရင်းမြစ်ဖွင့် LLM အား အဆင့်မြှင့်တင်ထားသည်ဟု ဖော်ပြသည်။
 
-NeMo မော်ဒယ်၏ အခြားအင်္ဂါရပ်များမှာ -  
+NeMo မော်ဒယ်၏ အခြားထူးခြားချက်များမှာ -
 
-- *ပိုမိုထိရောက်သော tokenization:* ဒီမော်ဒယ်မှာ tiktoken ထက် ပိုမိုအသုံးများသော Tekken tokenizer ကို အသုံးပြုသည်။ ဒါကြောင့် ဘာသာစကားများနှင့် ကုဒ်များအပေါ် ပိုမိုကောင်းမွန်သော စွမ်းဆောင်ရည် ရရှိသည်။  
+- *ပိုမိုထိရောက်သော tokenization* - ဤမော်ဒယ်သည် ပိုမိုအသုံးပြုကြသော tiktoken ထက် Tekken tokenizer ကို အသုံးပြုသည်။ ဤကိစ္စက ဘာသာစကားများနှင့် ကုဒ်အမျိုးမျိုးတွင် ပိုမိုကောင်းမွန်သော စွမ်းဆောင်ရည် ရရှိစေသည်။
 
-- *Finetuning:* အခြေခံမော်ဒယ်ကို finetuning အတွက် ရရှိနိုင်သည်။ ဒါက finetuning လိုအပ်သော အသုံးပြုမှုများအတွက် ပိုမိုလွယ်ကူမှု ပေးသည်။  
+- *Finetuning* - အခြေခံမော်ဒယ်ကို finetuning အတွက် ရနိုင်သည်။ ဤနေရာက finetuning လိုအပ်ချက်ရှိသော အသုံးပြုမှုအတွက် ပိုမိုလွယ်ကူသော မော်ဒယ် ဖြစ်စေသည်။
 
-- *Native Function Calling* - Mistral Large ကဲ့သို့ ဒီမော်ဒယ်မှာ function calling အတွက် သင်ကြားပေးထားသည်။ ဒါကြောင့် ပထမဆုံး open source မော်ဒယ်များထဲမှ တစ်ခုအဖြစ် ထူးခြားသည်။  
+- *Native Function Calling* - Mistral Large ကဲ့သို့ ဤမော်ဒယ်တွင် function calling သင်ကြားပေးထားသည်။ ၎င်းသည် အများဆုံး ရင်းမြစ်ဖွင့်မော်ဒယ်များထဲမှ ပထမဆုံးဖြစ်စဉ်တစ်ခုအနေဖြင့် ထူးခြားသော မော်ဒယ်တစ်ခု ဖြစ်စေသည်။
 
-### Tokenizer များနှိုင်းယှဉ်ခြင်း
+### Tokenizers နှိုင်းယှဉ်ခြင်း
 
-ဒီနမူနာမှာ Mistral NeMo က tokenization ကို Mistral Large နှင့် နှိုင်းယှဉ်ကြည့်မယ်။
+ဤနမူနာတွင် Mistral NeMo က Mistral Large နှင့် နှိုင်းယှဉ်၍ tokenization ကို မည်သို့ ကိုင်တွယ်သည်ကို ကြည့်မည်။
 
-နမူနာနှစ်ခုလုံးမှာ တူညီသော prompt ကို အသုံးပြုသော်လည်း NeMo မှ token အရေအတွက်နည်းပြီး Mistral Large ထက် နည်းပါးသည်ကို တွေ့ရမည်။
+နမူနာနှစ်ခုသည် တူညီသော prompt ကို ယူထားပြီး NeMo သည် Mistral Large ထက် token ပမာဏနည်းကြောင်း တွေ့ရမည်။
 
 ```bash
 pip install mistral-common
 ```
 
 ```python 
-# Import needed packages:
+# လိုအပ်သော package များတင်သွင်းပါ:
 from mistral_common.protocol.instruct.messages import (
     UserMessage,
 )
@@ -242,13 +242,13 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Load Mistral tokenizer
+# Mistral tokenizer ကို load လုပ်ပါ
 
-model_name = "open-mistral-nemo	"
+model_name = "open-mistral-nemo"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Tokenize a list of messages
+# စာတိုများစာရင်းကို token များဖြင့်ခွဲပါ
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -266,7 +266,7 @@ tokenized = tokenizer.encode_chat_completion(
                             "format": {
                                 "type": "string",
                                 "enum": ["celsius", "fahrenheit"],
-                                "description": "The temperature unit to use. Infer this from the users location.",
+                                "description": "The temperature unit to use. Infer this from the user's location.",
                             },
                         },
                         "required": ["location", "format"],
@@ -282,12 +282,12 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# Count the number of tokens
+# token အရေအတွက်ကိုတွက်ပါ
 print(len(tokens))
 ```
 
 ```python
-# Import needed packages:
+# လိုအပ်သော package များကို Import လုပ်ပါ။
 from mistral_common.protocol.instruct.messages import (
     UserMessage,
 )
@@ -298,13 +298,13 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Load Mistral tokenizer
+# Mistral tokenizer ကို Load လုပ်ပါ။
 
 model_name = "mistral-large-latest"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Tokenize a list of messages
+# စာတိုများစာရင်းကို Tokenize လုပ်ပါ။
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -322,7 +322,7 @@ tokenized = tokenizer.encode_chat_completion(
                             "format": {
                                 "type": "string",
                                 "enum": ["celsius", "fahrenheit"],
-                                "description": "The temperature unit to use. Infer this from the users location.",
+                                "description": "The temperature unit to use. Infer this from the user's location.",
                             },
                         },
                         "required": ["location", "format"],
@@ -338,13 +338,17 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# Count the number of tokens
+# token အရေအတွက်ကိုတွက်ပါ။
 print(len(tokens))
 ```
 
-## သင်ယူခြင်းသည် ဒီမှာ မရပ်နားပါ၊ ခရီးကို ဆက်လက်သွားပါ
+## သင်ယူမှုသည် ဤနေရာတွင် မရပ်တန့်ပေ၊ ခရီးဆက်မည်
 
-ဒီသင်ခန်းစာပြီးဆုံးပြီးနောက် ကျွန်ုပ်တို့ရဲ့ [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ကို ကြည့်ရှု၍ သင်၏ Generative AI အသိပညာကို ပိုမိုမြှင့်တင်ပါ!
+ဤသင်ခန်းစာပြီးစီးပြီးနောက်၊ [Generative AI သင်ယူမှု စုစည်းမှု](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ကို ကြည့်ရှု၍ သင်၏ Generative AI အသိပညာအား ဆက်လက်တိုးမြှင့်ပါ။
 
-**အကြောင်းကြားချက်**  
-ဤစာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ဖြင့် ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှန်ကန်မှုအတွက် ကြိုးစားသော်လည်း အလိုအလျောက် ဘာသာပြန်ခြင်းတွင် အမှားများ သို့မဟုတ် မှားယွင်းချက်များ ပါဝင်နိုင်ကြောင်း သတိပြုပါရန် မေတ္တာရပ်ခံအပ်ပါသည်။ မူရင်းစာတမ်းကို မိမိဘာသာစကားဖြင့်သာ တရားဝင်အရင်းအမြစ်အဖြစ် ယူဆသင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်မှ ဘာသာပြန်ခြင်းကို အကြံပြုပါသည်။ ဤဘာသာပြန်ချက်ကို အသုံးပြုရာမှ ဖြစ်ပေါ်လာနိုင်သည့် နားလည်မှုမှားယွင်းမှုများအတွက် ကျွန်ုပ်တို့ တာဝန်မယူပါ။
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**ဂရုပြုချက်**  
+ဤစာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှုဖြစ်သော [Co-op Translator](https://github.com/Azure/co-op-translator) အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် မှန်ကန်မှုကို ကြိုးပမ်းထားပေမယ့် စက်ဘားသာပြန်ခြင်းများတွင် အမှားများ သို့မဟုတ် မှားယွင်းချက်များ ပါဝင်နိုင်ကြောင်း သတိပြုပါ။ မူရင်းစာတမ်းကို သဘာဝဘာသာဖြင့်သာ အတည်ပြုရင်းအရင်းအမြစ်အဖြစ် သတ်မှတ်ရန် လိုအပ်ပါသည်။ အရေးကြီးသောအချက်အလက်များအတွက် လုပ်ငန်းအတတ်ပညာရှင်များ၏ လူ့ဘာသာပြန်ခြင်းကို အကြံပြုပါသည်။ ဤဘာသာပြန်ချက်ကို အသုံးပြုမှုကြောင့်ဖြစ်ပေါ်လာသော နားလည်မှုမှားယွင်းမှုများ သို့မဟုတ် အဓိပ္ပါယ်ဖယောင်းဖျောမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
