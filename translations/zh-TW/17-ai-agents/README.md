@@ -1,62 +1,62 @@
-[![開源模型](../../../translated_images/zh-TW/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Open Source Models](../../../translated_images/zh-TW/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## 介紹
 
-AI代理是生成式AI的一項令人興奮的發展，它使大型語言模型（LLMs）從助理進化為能夠採取行動的代理。AI代理框架使開發者能夠創建應用程式，讓LLMs能夠使用工具並進行狀態管理。這些框架還提高了可見性，讓使用者和開發者能夠監控LLMs計劃的行動，從而改善使用體驗管理。
+AI 代理（AI Agents）代表生成式 AI 的一項令人振奮的發展，使大型語言模型（LLMs）能從助理進化為可執行操作的代理。AI 代理框架讓開發者得以創建讓 LLM 存取工具和狀態管理的應用程式。這些框架還提升了可見性，使用者和開發者可以監控 LLM 計劃的操作，從而改善體驗管理。
 
 本課程將涵蓋以下內容：
 
-- 了解什麼是AI代理 - AI代理究竟是什麼？
-- 探索四種不同的AI代理框架 - 它們有什麼獨特之處？
-- 將這些AI代理應用於不同的使用案例 - 什麼時候應該使用AI代理？
+- 了解什麼是 AI 代理——究竟什麼是 AI 代理？
+- 探索四種不同的 AI 代理框架——它們有何獨特之處？
+- 將這些 AI 代理應用於不同使用案例——在哪些情況下應使用 AI 代理？
 
 ## 學習目標
 
-完成本課程後，您將能夠：
+完成本課後，您將能：
 
-- 解釋什麼是AI代理以及如何使用它們。
-- 了解一些流行的AI代理框架之間的差異，以及它們的不同之處。
-- 理解AI代理的運作方式，以便使用它們構建應用程式。
+- 解釋什麼是 AI 代理以及它們如何被使用。
+- 了解一些流行的 AI 代理框架之間的差異及其不同之處。
+- 理解 AI 代理的運作原理，並基於此建構應用程式。
 
-## 什麼是AI代理？
+## 什麼是 AI 代理？
 
-AI代理是生成式AI領域中非常令人興奮的一部分。隨著這種興奮，有時也會出現術語和應用上的混淆。為了簡化並涵蓋大多數提到AI代理的工具，我們將使用以下定義：
+AI 代理是生成式 AI 世界中一個令人振奮的領域。隨著興奮同時也帶來了術語和應用上的混淆。為了保持簡單且包容大多數自稱 AI 代理的工具，我們將使用以下定義：
 
-AI代理允許大型語言模型（LLMs）通過提供**狀態**和**工具**來執行任務。
+AI 代理允許大型語言模型（LLMs）透過給予它們存取**狀態**和**工具**來執行任務。
 
-![代理模型](../../../translated_images/zh-TW/what-agent.21f2893bdfd01e6a.webp)
+![Agent Model](../../../translated_images/zh-TW/what-agent.21f2893bdfd01e6a.webp)
 
 讓我們定義這些術語：
 
-**大型語言模型** - 這些是本課程中提到的模型，例如GPT-3.5、GPT-4、Llama-2等。
+**大型語言模型** — 指本課程中提及的模型，如 GPT-3.5、GPT-4、Llama-2 等。
 
-**狀態** - 這指的是LLM正在處理的上下文。LLM使用其過去行動的上下文和當前上下文，指導其後續行動的決策。AI代理框架使開發者更容易維護這些上下文。
+**狀態** — 指 LLM 正在運作的上下文。LLM 利用過去操作的上下文以及當前狀態，來指導其後續行動的決策。AI 代理框架讓開發者更容易維護這些上下文。
 
-**工具** - 為了完成使用者請求的任務以及LLM計劃的任務，LLM需要使用工具。一些工具的例子包括資料庫、API、外部應用程式甚至是另一個LLM！
+**工具** — 為完成用戶請求且 LLM 已規劃的任務，LLM 需要存取工具。工具的例子可能是資料庫、API、外部應用甚至另一個 LLM！
 
-這些定義希望能為您提供良好的基礎，接下來我們將探討它們的實現方式。讓我們來看看幾個不同的AI代理框架：
+這些定義希望能為您後續了解它們的實現提供良好基礎。現在讓我們來探索幾種不同的 AI 代理框架：
 
-## LangChain代理
+## LangChain 代理
 
-[LangChain代理](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst)是我們上述定義的一種實現。
+[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) 是基於上述定義的實作。
 
-為了管理**狀態**，它使用了一個內建函數`AgentExecutor`。這個函數接受定義的`agent`以及可用的`tools`。
+它使用內建函式 `AgentExecutor` 來管理**狀態**。此函式接收已定義的 `agent` 與可用的 `tools`。
 
-`AgentExecutor`還存儲聊天記錄，以提供聊天的上下文。
+`Agent Executor` 還會儲存聊天紀錄，以提供對話的上下文。
 
-![Langchain代理](../../../translated_images/zh-TW/langchain-agents.edcc55b5d5c43716.webp)
+![Langchain Agents](../../../translated_images/zh-TW/langchain-agents.edcc55b5d5c43716.webp)
 
-LangChain提供了一個[工具目錄](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst)，可以導入到您的應用程式中，讓LLM能夠使用這些工具。這些工具由社群和LangChain團隊製作。
+LangChain 提供一個[工具目錄](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst)，可匯入應用程式，讓 LLM 存取。這些工具由社群及 LangChain 團隊製作。
 
-您可以定義這些工具並將它們傳遞給`AgentExecutor`。
+您可以定義這些工具並傳給 `Agent Executor`。
 
-在討論AI代理時，另一個重要方面是可見性。對於應用程式開發者來說，了解LLM正在使用哪個工具以及原因非常重要。為此，LangChain團隊開發了LangSmith。
+可見性是談論 AI 代理時另一重要面向。對應用開發者來說，了解 LLM 使用的是何種工具以及原因非常重要。為此，LangChain 團隊開發了 LangSmith。
 
 ## AutoGen
 
-接下來我們要討論的AI代理框架是[AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst)。AutoGen的主要重點是對話。代理既可以**進行對話**，也可以**自定義**。
+下一個我們將介紹的 AI 代理框架是 [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst)。AutoGen 主要聚焦於對話。代理既是**可對話**又是**可定製**的。
 
-**進行對話 -** LLM可以開始並繼續與另一個LLM進行對話，以完成任務。這是通過創建`AssistantAgents`並為其提供特定的系統消息來完成的。
+**可對話 —** LLM 可以與另一個 LLM 開始並持續對話來完成任務。這是透過建立 `AssistantAgents` 並給予它們特定的系統訊息實現的。
 
 ```python
 
@@ -64,38 +64,38 @@ autogen.AssistantAgent( name="Coder", llm_config=llm_config, ) pm = autogen.Assi
 
 ```
 
-**自定義** - 代理不僅可以定義為LLM，還可以定義為使用者或工具。作為開發者，您可以定義一個`UserProxyAgent`，負責與使用者互動以獲取完成任務的反饋。這些反饋可以用來繼續執行任務或停止執行。
+**可定製** — 代理不僅可以定義為 LLM，也可以是用戶或工具。作為開發者，您可以定義一個負責與用戶互動以取得反饋以完成任務的 `UserProxyAgent`。該反饋可以用來繼續執行任務或終止任務。
 
 ```python
 user_proxy = UserProxyAgent(name="user_proxy")
 ```
 
-### 狀態和工具
+### 狀態與工具
 
-為了更改和管理狀態，AssistantAgent生成Python代碼來完成任務。
+為了改變及管理狀態，輔助代理會生成 Python 程式碼來完成任務。
 
-以下是過程的示例：
+下面是一個流程範例：
 
 ![AutoGen](../../../translated_images/zh-TW/autogen.dee9a25a45fde584.webp)
 
-#### 使用系統消息定義LLM
+#### 使用系統訊息定義 LLM
 
 ```python
 system_message="For weather related tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done."
 ```
 
-這些系統消息指導特定的LLM了解哪些功能與其任務相關。請記住，使用AutoGen，您可以定義多個具有不同系統消息的AssistantAgents。
+此系統訊息指示特定 LLM 哪些功能與其任務相關。請記得，在 AutoGen 中，您可以定義多個擁有不同系統訊息的 AssistantAgents。
 
-#### 使用者啟動聊天
+#### 對話由用戶發起
 
 ```python
 user_proxy.initiate_chat( chatbot, message="I am planning a trip to NYC next week, can you help me pick out what to wear? ", )
 
 ```
 
-來自user_proxy（人類）的消息將啟動代理探索應執行的可能功能的過程。
+來自 user_proxy（人類）的此訊息會啟動代理探索應該執行的可能函數過程。
 
-#### 執行功能
+#### 執行函數
 
 ```bash
 chatbot (to user_proxy):
@@ -106,61 +106,63 @@ chatbot (to user_proxy):
 
 ```
 
-一旦初始聊天被處理，代理將建議調用的工具。在這種情況下，它是一個名為`get_weather`的功能。根據您的配置，該功能可以由代理自動執行並讀取，或者根據使用者輸入執行。
+初始對話處理完後，代理會送出建議要呼叫的工具。在此例中，是名為 `get_weather` 的函數。根據您的設定，此函數可以自動執行並由代理讀取，或是根據用戶輸入執行。
 
-您可以在[AutoGen代碼示例](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst)中找到更多示例，進一步探索如何開始構建。
+您可以參考一份[AutoGen 程式碼範例清單](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst)，深入探索如何開始建置。
 
 ## Taskweaver
 
-接下來我們要探討的代理框架是[Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst)。它被稱為“以代碼為主”的代理，因為它不是僅僅處理`字串`，而是可以處理Python中的DataFrames。這在數據分析和生成任務中非常有用，例如創建圖表或生成隨機數。
+接著我們探索的代理框架是 [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst)。它被稱為「程式碼優先」的代理，因為它不只處理 `strings`，還能操作 Python 的 DataFrame。這對於資料分析與生成任務非常有用，像是製作圖表或產生隨機數。
 
-### 狀態和工具
+### 狀態與工具
 
-為了管理對話的狀態，TaskWeaver使用了`Planner`的概念。`Planner`是一個LLM，它接收使用者的請求並規劃需要完成的任務。
+TaskWeaver 透過 `Planner` 概念管理對話狀態。`Planner` 是一個 LLM，接收用戶請求並規劃出需完成的任務。
 
-為了完成任務，`Planner`可以使用一組稱為`Plugins`的工具。這些工具可以是Python類或通用代碼解釋器。這些插件以嵌入的形式存儲，讓LLM能夠更好地搜索正確的插件。
+為了執行任務，`Planner` 可使用稱為 `Plugins` 的工具集合。這些可以是 Python 類別或通用程式碼解譯器。插件以嵌入向量形式存儲，以便 LLM 更佳地搜尋正確的插件。
 
 ![Taskweaver](../../../translated_images/zh-TW/taskweaver.da8559999267715a.webp)
 
-以下是一個處理異常檢測的插件示例：
+以下是一個用於異常檢測的插件範例：
 
 ```python
 class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_col_name: str, value_col_name: str):
 ```
 
-代碼在執行之前會被驗證。Taskweaver管理上下文的另一個功能是`experience`。`experience`允許對話的上下文長期存儲在YAML文件中。這可以配置，使LLM在某些任務上隨著暴露於先前的對話而逐漸改進。
+程式碼會先經過驗證再執行。Taskweaver 中另一個管理上下文的功能是 `experience`。Experience 允許將對話上下文長期保存於 YAML 檔案中。可設定讓 LLM 隨時間透過先前對話而持續改進某些任務。
 
 ## JARVIS
 
-最後我們要探討的代理框架是[JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst)。JARVIS的獨特之處在於它使用LLM來管理對話的`狀態`，而`工具`則是其他AI模型。每個AI模型都是專門的模型，用於執行某些任務，例如物體檢測、轉錄或圖像描述。
+最後一個我們探討的代理框架是 [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file&WT.mc_id=academic-105485-koreyst)。JARVIS 的特色在於它使用 LLM 來管理對話的 `state`，而其 `tools` 是其他 AI 模型。這些 AI 模型是專門處理某些任務的專用模型，如物件偵測、轉錄或影像說明。
 
 ![JARVIS](../../../translated_images/zh-TW/jarvis.762ddbadbd1a3a33.webp)
 
-LLM作為通用模型，接收使用者的請求並識別完成任務所需的具體任務及任何參數/數據。
+作為通用模型的 LLM 接收用戶請求，識別具體任務和完成該任務所需的參數/資料。
 
 ```python
 [{"task": "object-detection", "id": 0, "dep": [-1], "args": {"image": "e1.jpg" }}]
 ```
 
-LLM然後以專門的AI模型可以解讀的格式（例如JSON）來格式化請求。一旦AI模型根據任務返回其預測，LLM就會接收響應。
+接著，LLM 會將請求格式化成專門 AI 模型能理解的格式，如 JSON。完成任務後，AI 模型返回預測結果給 LLM。
 
-如果需要多個模型來完成任務，LLM還會解讀這些模型的響應，然後將它們整合起來生成給使用者的響應。
+若任務需多個模型合作，LLM 也會解讀這些模型的回應，然後整合以生成對用戶的最終回應。
 
-以下示例展示了當使用者請求圖片中的物體描述和數量時，這將如何運作：
+以下範例展示用戶請求描述及計算圖片中物件數量的運作流程：
 
 ## 作業
 
-為了繼續學習AI代理，您可以使用AutoGen構建：
+為持續學習 AI 代理，您可以嘗試使用 AutoGen 建立：
 
-- 一個模擬教育初創公司不同部門商務會議的應用程式。
-- 創建系統消息，指導LLMs理解不同的角色和優先事項，並讓使用者推銷一個新產品的想法。
-- LLM應生成每個部門的後續問題，以改進和完善推銷和產品想法。
+- 一個模擬教育新創公司不同部門商業會議的應用程式。
+- 創建系統訊息，引導 LLM 理解不同角色與優先事項，並讓用戶提案新產品想法。
+- LLM 接著應從各部門生成追問問題，進一步精煉與改良提案及產品想法。
 
-## 學習不止於此，繼續您的旅程
+## 學習不止於此，繼續旅程
 
-完成本課程後，請查看我們的[生成式AI學習合集](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，繼續提升您的生成式AI知識！
+完成本課後，請參閱我們的[生成式 AI 學習合集](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，持續提升您的生成式 AI 知識！
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **免責聲明**：  
-本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們努力確保翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵信息，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或誤釋不承擔責任。
+本文件係使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件以其母語版本為唯一權威來源。對於關鍵資訊，建議使用專業人工翻譯。對於因使用本翻譯而產生的任何誤解或錯誤詮釋，我們不承擔任何責任。
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
