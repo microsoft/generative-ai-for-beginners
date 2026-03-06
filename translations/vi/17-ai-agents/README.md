@@ -1,62 +1,62 @@
-[![Mô hình mã nguồn mở](../../../translated_images/vi/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Open Source Models](../../../translated_images/vi/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Giới thiệu
 
-Các Tác nhân AI (AI Agents) đại diện cho một bước phát triển thú vị trong lĩnh vực AI Tạo sinh, cho phép các Mô hình Ngôn ngữ Lớn (LLMs) tiến hóa từ vai trò trợ lý thành các tác nhân có khả năng thực hiện hành động. Các khung làm việc của Tác nhân AI cho phép các nhà phát triển tạo ra các ứng dụng giúp LLMs truy cập vào các công cụ và quản lý trạng thái. Những khung làm việc này cũng tăng cường khả năng hiển thị, cho phép người dùng và nhà phát triển theo dõi các hành động mà LLMs dự định thực hiện, từ đó cải thiện việc quản lý trải nghiệm.
+Các Đại lý AI đại diện cho một bước phát triển thú vị trong AI Tạo sinh, cho phép Các Mô hình Ngôn ngữ Lớn (LLMs) tiến hóa từ trợ lý thành các đại lý có khả năng thực hiện các hành động. Các khung Đại lý AI cho phép các nhà phát triển tạo ra các ứng dụng giúp LLM truy cập công cụ và quản lý trạng thái. Các khung này cũng tăng khả năng hiển thị, cho phép người dùng và nhà phát triển theo dõi các hành động do LLM lên kế hoạch, từ đó cải thiện việc quản lý trải nghiệm.
 
-Bài học này sẽ bao gồm các nội dung sau:
+Bài học sẽ bao gồm các lĩnh vực sau:
 
-- Hiểu Tác nhân AI là gì - Tác nhân AI thực sự là gì?
-- Khám phá bốn khung làm việc Tác nhân AI khác nhau - Điều gì làm cho chúng trở nên độc đáo?
-- Áp dụng các Tác nhân AI này vào các trường hợp sử dụng khác nhau - Khi nào nên sử dụng Tác nhân AI?
+- Hiểu Đại lý AI là gì - Đại lý AI thực sự là gì?
+- Khám phá bốn Khung Đại lý AI khác nhau - Điều gì làm cho chúng độc đáo?
+- Áp dụng các Đại lý AI này vào các trường hợp sử dụng khác nhau - Khi nào nên sử dụng Đại lý AI?
 
 ## Mục tiêu học tập
 
 Sau khi hoàn thành bài học này, bạn sẽ có thể:
 
-- Giải thích Tác nhân AI là gì và cách chúng có thể được sử dụng.
-- Hiểu sự khác biệt giữa một số khung làm việc Tác nhân AI phổ biến và cách chúng khác nhau.
-- Hiểu cách Tác nhân AI hoạt động để xây dựng các ứng dụng với chúng.
+- Giải thích Đại lý AI là gì và cách chúng có thể được sử dụng.
+- Hiểu được sự khác biệt giữa một số Khung Đại lý AI phổ biến, và cách chúng khác nhau.
+- Hiểu cách Đại lý AI hoạt động để xây dựng ứng dụng với chúng.
 
-## Tác nhân AI là gì?
+## Đại lý AI là gì?
 
-Tác nhân AI là một lĩnh vực rất thú vị trong thế giới AI Tạo sinh. Với sự thú vị này, đôi khi cũng có sự nhầm lẫn về thuật ngữ và cách áp dụng chúng. Để giữ mọi thứ đơn giản và bao gồm hầu hết các công cụ liên quan đến Tác nhân AI, chúng ta sẽ sử dụng định nghĩa sau:
+Đại lý AI là một lĩnh vực rất thú vị trong thế giới AI Tạo sinh. Với sự phấn khích này đôi khi lại gây ra sự nhầm lẫn về thuật ngữ và cách ứng dụng của chúng. Để giữ cho mọi thứ đơn giản và bao gồm hầu hết các công cụ được gọi là Đại lý AI, chúng ta sẽ sử dụng định nghĩa sau:
 
-Tác nhân AI cho phép Mô hình Ngôn ngữ Lớn (LLMs) thực hiện các nhiệm vụ bằng cách cung cấp cho chúng quyền truy cập vào **trạng thái** và **công cụ**.
+Đại lý AI cho phép Các Mô hình Ngôn ngữ Lớn (LLMs) thực hiện các nhiệm vụ bằng cách cho chúng truy cập vào **trạng thái** và **công cụ**.
 
-![Mô hình Tác nhân](../../../translated_images/vi/what-agent.21f2893bdfd01e6a.webp)
+![Agent Model](../../../translated_images/vi/what-agent.21f2893bdfd01e6a.webp)
 
 Hãy định nghĩa các thuật ngữ này:
 
-**Mô hình Ngôn ngữ Lớn** - Đây là các mô hình được đề cập trong suốt khóa học này như GPT-3.5, GPT-4, Llama-2, v.v.
+**Các Mô hình Ngôn ngữ Lớn** - Đây là các mô hình được nhắc đến trong suốt khóa học như GPT-3.5, GPT-4, Llama-2, v.v.
 
-**Trạng thái** - Đây là ngữ cảnh mà LLM đang làm việc. LLM sử dụng ngữ cảnh của các hành động trước đó và ngữ cảnh hiện tại để hướng dẫn việc ra quyết định cho các hành động tiếp theo. Các khung làm việc Tác nhân AI cho phép các nhà phát triển duy trì ngữ cảnh này dễ dàng hơn.
+**Trạng thái** - Đây là ngữ cảnh mà LLM đang làm việc. LLM sử dụng ngữ cảnh của các hành động trong quá khứ và ngữ cảnh hiện tại để hướng dẫn quyết định cho các hành động tiếp theo. Các Khung Đại lý AI cho phép nhà phát triển duy trì ngữ cảnh này dễ dàng hơn.
 
-**Công cụ** - Để hoàn thành nhiệm vụ mà người dùng yêu cầu và LLM đã lên kế hoạch, LLM cần quyền truy cập vào các công cụ. Một số ví dụ về công cụ có thể là cơ sở dữ liệu, API, ứng dụng bên ngoài hoặc thậm chí là một LLM khác!
+**Công cụ** - Để hoàn thành nhiệm vụ mà người dùng yêu cầu và LLM đã lên kế hoạch, LLM cần truy cập vào công cụ. Một số ví dụ về công cụ có thể là cơ sở dữ liệu, API, ứng dụng bên ngoài hoặc thậm chí một LLM khác!
 
-Những định nghĩa này hy vọng sẽ cung cấp cho bạn một nền tảng tốt để tiếp tục khám phá cách chúng được triển khai. Hãy cùng tìm hiểu một số khung làm việc Tác nhân AI khác nhau:
+Những định nghĩa này hy vọng sẽ giúp bạn có nền tảng tốt để tiếp tục khi chúng ta xem xét cách chúng được triển khai. Hãy cùng khám phá một vài khung Đại lý AI khác nhau:
 
-## LangChain Agents
+## Đại lý LangChain
 
-[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) là một triển khai của các định nghĩa mà chúng ta đã cung cấp ở trên.
+[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) là một triển khai của các định nghĩa được cung cấp ở trên.
 
-Để quản lý **trạng thái**, nó sử dụng một chức năng tích hợp gọi là `AgentExecutor`. Chức năng này chấp nhận `agent` đã được định nghĩa và các `tools` có sẵn cho nó.
+Để quản lý **trạng thái**, nó sử dụng một hàm tích hợp gọi là `AgentExecutor`. Hàm này nhận `agent` đã được định nghĩa và các `tools` có sẵn cho nó.
 
-`AgentExecutor` cũng lưu trữ lịch sử trò chuyện để cung cấp ngữ cảnh của cuộc trò chuyện.
+`Agent Executor` cũng lưu lịch sử trò chuyện để cung cấp ngữ cảnh của cuộc trò chuyện.
 
 ![Langchain Agents](../../../translated_images/vi/langchain-agents.edcc55b5d5c43716.webp)
 
-LangChain cung cấp một [danh mục công cụ](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) có thể được nhập vào ứng dụng của bạn để LLM có thể truy cập. Những công cụ này được tạo bởi cộng đồng và đội ngũ LangChain.
+LangChain cung cấp một [danh mục công cụ](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) có thể được nhập vào ứng dụng của bạn mà LLM có thể truy cập. Các công cụ này được tạo bởi cộng đồng và đội ngũ LangChain.
 
-Bạn có thể định nghĩa các công cụ này và truyền chúng vào `AgentExecutor`.
+Bạn có thể định nghĩa những công cụ này và truyền chúng cho `Agent Executor`.
 
-Khả năng hiển thị là một khía cạnh quan trọng khác khi nói về Tác nhân AI. Điều quan trọng đối với các nhà phát triển ứng dụng là hiểu công cụ nào LLM đang sử dụng và lý do. Để làm điều đó, đội ngũ tại LangChain đã phát triển LangSmith.
+Khả năng hiển thị là một khía cạnh quan trọng khác khi nói về Đại lý AI. Rất quan trọng để nhà phát triển ứng dụng hiểu công cụ nào LLM đang sử dụng và vì sao. Vì lý do đó, nhóm tại LangChain đã phát triển LangSmith.
 
 ## AutoGen
 
-Khung làm việc Tác nhân AI tiếp theo mà chúng ta sẽ thảo luận là [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). Trọng tâm chính của AutoGen là các cuộc trò chuyện. Các tác nhân vừa **có thể trò chuyện** vừa **có thể tùy chỉnh**.
+Khung Đại lý AI tiếp theo chúng ta sẽ thảo luận là [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). Mục tiêu chính của AutoGen là các cuộc hội thoại. Đại lý vừa **có thể hội thoại** vừa **có thể tùy chỉnh**.
 
-**Có thể trò chuyện -** LLMs có thể bắt đầu và tiếp tục một cuộc trò chuyện với một LLM khác để hoàn thành nhiệm vụ. Điều này được thực hiện bằng cách tạo `AssistantAgents` và cung cấp cho chúng một thông điệp hệ thống cụ thể.
+**Có thể hội thoại** - LLM có thể bắt đầu và tiếp tục một cuộc hội thoại với LLM khác để hoàn thành một nhiệm vụ. Điều này được thực hiện bằng cách tạo `AssistantAgents` và cung cấp cho chúng một thông điệp hệ thống cụ thể.
 
 ```python
 
@@ -64,7 +64,7 @@ autogen.AssistantAgent( name="Coder", llm_config=llm_config, ) pm = autogen.Assi
 
 ```
 
-**Có thể tùy chỉnh** - Các tác nhân không chỉ được định nghĩa là LLMs mà còn có thể là người dùng hoặc công cụ. Là một nhà phát triển, bạn có thể định nghĩa một `UserProxyAgent` chịu trách nhiệm tương tác với người dùng để nhận phản hồi trong việc hoàn thành nhiệm vụ. Phản hồi này có thể tiếp tục thực hiện nhiệm vụ hoặc dừng lại.
+**Có thể tùy chỉnh** - Đại lý có thể được định nghĩa không chỉ là LLM mà còn là người dùng hoặc công cụ. Là nhà phát triển, bạn có thể định nghĩa một `UserProxyAgent` chịu trách nhiệm tương tác với người dùng để lấy phản hồi trong việc hoàn thành nhiệm vụ. Phản hồi này có thể tiếp tục thực thi nhiệm vụ hoặc dừng lại.
 
 ```python
 user_proxy = UserProxyAgent(name="user_proxy")
@@ -72,30 +72,30 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 ### Trạng thái và Công cụ
 
-Để thay đổi và quản lý trạng thái, một Assistant Agent tạo mã Python để hoàn thành nhiệm vụ.
+Để thay đổi và quản lý trạng thái, một Đại lý trợ lý tạo ra mã Python để hoàn thành nhiệm vụ.
 
-Dưới đây là một ví dụ về quy trình:
+Dưới đây là một ví dụ về quá trình:
 
 ![AutoGen](../../../translated_images/vi/autogen.dee9a25a45fde584.webp)
 
-#### LLM được định nghĩa với một thông điệp hệ thống
+#### LLM được Định nghĩa với Thông điệp Hệ thống
 
 ```python
 system_message="For weather related tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done."
 ```
 
-Thông điệp hệ thống này hướng dẫn LLM cụ thể này về các chức năng nào liên quan đến nhiệm vụ của nó. Hãy nhớ rằng, với AutoGen bạn có thể có nhiều AssistantAgents được định nghĩa với các thông điệp hệ thống khác nhau.
+Thông điệp hệ thống này hướng dẫn LLM cụ thể này các hàm nào là phù hợp cho nhiệm vụ của nó. Hãy nhớ rằng, với AutoGen bạn có thể có nhiều AssistantAgents được định nghĩa với các thông điệp hệ thống khác nhau.
 
-#### Cuộc trò chuyện được khởi tạo bởi người dùng
+#### Cuộc hội thoại được Khởi tạo bởi Người dùng
 
 ```python
 user_proxy.initiate_chat( chatbot, message="I am planning a trip to NYC next week, can you help me pick out what to wear? ", )
 
 ```
 
-Thông điệp này từ user_proxy (Người) là điều sẽ bắt đầu quá trình của Tác nhân để khám phá các chức năng có thể thực hiện.
+Thông điệp này từ user_proxy (con người) sẽ bắt đầu quá trình Đại lý khám phá các hàm khả thi mà nó nên thực thi.
 
-#### Chức năng được thực thi
+#### Hàm được Thực thi
 
 ```bash
 chatbot (to user_proxy):
@@ -106,61 +106,63 @@ chatbot (to user_proxy):
 
 ```
 
-Khi cuộc trò chuyện ban đầu được xử lý, Tác nhân sẽ gửi công cụ được đề xuất để gọi. Trong trường hợp này, đó là một chức năng gọi là `get_weather`. Tùy thuộc vào cấu hình của bạn, chức năng này có thể được thực thi tự động và đọc bởi Tác nhân hoặc có thể được thực thi dựa trên đầu vào của người dùng.
+Khi cuộc trò chuyện ban đầu được xử lý, Đại lý sẽ gửi đề xuất công cụ để gọi. Trong trường hợp này, đó là hàm gọi là `get_weather`. Tùy vào cấu hình của bạn, hàm này có thể được tự động thực thi và đọc bởi Đại lý hoặc có thể thực thi dựa trên đầu vào của người dùng.
 
-Bạn có thể tìm thấy danh sách [mẫu mã AutoGen](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) để khám phá thêm cách bắt đầu xây dựng.
+Bạn có thể tìm danh sách các [ví dụ mã AutoGen](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) để khám phá thêm cách bắt đầu xây dựng.
 
 ## Taskweaver
 
-Khung làm việc tác nhân tiếp theo mà chúng ta sẽ khám phá là [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). Nó được biết đến như một tác nhân "ưu tiên mã" vì thay vì làm việc nghiêm ngặt với `chuỗi`, nó có thể làm việc với DataFrames trong Python. Điều này trở nên cực kỳ hữu ích cho các nhiệm vụ phân tích và tạo dữ liệu. Điều này có thể bao gồm việc tạo biểu đồ và đồ thị hoặc tạo số ngẫu nhiên.
+Khung đại lý tiếp theo chúng ta sẽ khám phá là [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). Nó được biết đến là một đại lý "code-first" vì thay vì làm việc chỉ với `chuỗi ký tự`, nó có thể làm việc với DataFrames trong Python. Điều này trở nên cực kỳ hữu ích cho các nhiệm vụ phân tích và tạo dữ liệu. Đây có thể là các công việc như tạo biểu đồ và đồ thị hoặc tạo các số ngẫu nhiên.
 
 ### Trạng thái và Công cụ
 
-Để quản lý trạng thái của cuộc trò chuyện, TaskWeaver sử dụng khái niệm `Planner`. `Planner` là một LLM nhận yêu cầu từ người dùng và lập bản đồ các nhiệm vụ cần hoàn thành để đáp ứng yêu cầu này.
+Để quản lý trạng thái của cuộc trò chuyện, TaskWeaver sử dụng khái niệm `Planner`. `Planner` là một LLM nhận yêu cầu từ người dùng và phác thảo các nhiệm vụ cần hoàn thành để thực hiện yêu cầu đó.
 
-Để hoàn thành các nhiệm vụ, `Planner` được tiếp xúc với một tập hợp các công cụ gọi là `Plugins`. Đây có thể là các lớp Python hoặc một trình thông dịch mã chung. Các plugin này được lưu trữ dưới dạng embeddings để LLM có thể tìm kiếm plugin phù hợp tốt hơn.
+Để hoàn thành nhiệm vụ, `Planner` được tiếp xúc với bộ công cụ gọi là `Plugins`. Đây có thể là các lớp Python hoặc một trình thông dịch mã chung. Các plugin này được lưu trữ dưới dạng embeddings để LLM có thể tìm kiếm plugin phù hợp tốt hơn.
 
 ![Taskweaver](../../../translated_images/vi/taskweaver.da8559999267715a.webp)
 
-Dưới đây là một ví dụ về plugin để xử lý phát hiện bất thường:
+Dưới đây là một ví dụ về plugin xử lý phát hiện bất thường:
 
 ```python
 class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_col_name: str, value_col_name: str):
 ```
 
-Mã được xác minh trước khi thực thi. Một tính năng khác để quản lý ngữ cảnh trong Taskweaver là `experience`. Experience cho phép ngữ cảnh của một cuộc trò chuyện được lưu trữ lâu dài trong một tệp YAML. Điều này có thể được cấu hình để LLM cải thiện theo thời gian trên các nhiệm vụ nhất định khi nó được tiếp xúc với các cuộc trò chuyện trước đó.
+Mã được kiểm tra trước khi thực thi. Một tính năng khác để quản lý ngữ cảnh trong Taskweaver là `experience`. Experience cho phép ngữ cảnh của cuộc trò chuyện được lưu trữ lâu dài trong một file YAML. Điều này có thể được cấu hình sao cho LLM cải thiện theo thời gian trên các nhiệm vụ nhất định với điều kiện được tiếp xúc với các cuộc trò chuyện trước đó.
 
 ## JARVIS
 
-Khung làm việc tác nhân cuối cùng mà chúng ta sẽ khám phá là [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). Điều làm cho JARVIS trở nên độc đáo là nó sử dụng một LLM để quản lý `trạng thái` của cuộc trò chuyện và các `công cụ` là các mô hình AI khác. Mỗi mô hình AI là các mô hình chuyên biệt thực hiện các nhiệm vụ cụ thể như nhận diện đối tượng, chuyển đổi giọng nói thành văn bản hoặc chú thích hình ảnh.
+Khung đại lý cuối cùng chúng ta sẽ khám phá là [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file&WT.mc_id=academic-105485-koreyst). Điều làm cho JARVIS khác biệt là nó sử dụng một LLM để quản lý `trạng thái` của cuộc trò chuyện và các `công cụ` là các mô hình AI khác. Mỗi mô hình AI là mô hình chuyên biệt thực hiện các nhiệm vụ nhất định như phát hiện đối tượng, phiên âm hoặc chú thích hình ảnh.
 
 ![JARVIS](../../../translated_images/vi/jarvis.762ddbadbd1a3a33.webp)
 
-LLM, là một mô hình đa năng, nhận yêu cầu từ người dùng và xác định nhiệm vụ cụ thể cũng như bất kỳ tham số/dữ liệu nào cần thiết để hoàn thành nhiệm vụ.
+LLM, là một mô hình mục đích chung, nhận yêu cầu từ người dùng và xác định nhiệm vụ cụ thể cùng bất kỳ đối số/dữ liệu nào cần thiết để hoàn thành nhiệm vụ.
 
 ```python
 [{"task": "object-detection", "id": 0, "dep": [-1], "args": {"image": "e1.jpg" }}]
 ```
 
-LLM sau đó định dạng yêu cầu theo cách mà mô hình AI chuyên biệt có thể hiểu, chẳng hạn như JSON. Khi mô hình AI đã trả về dự đoán dựa trên nhiệm vụ, LLM nhận phản hồi.
+LLM sau đó định dạng yêu cầu theo cách mà mô hình AI chuyên biệt có thể hiểu được, như JSON. Khi mô hình AI trả về dự đoán dựa trên nhiệm vụ, LLM nhận phản hồi.
 
-Nếu cần nhiều mô hình để hoàn thành nhiệm vụ, nó cũng sẽ diễn giải phản hồi từ các mô hình đó trước khi kết hợp chúng lại để tạo ra phản hồi cho người dùng.
+Nếu cần nhiều mô hình để hoàn thành nhiệm vụ, nó cũng sẽ giải thích phản hồi từ các mô hình đó trước khi tổng hợp để tạo ra phản hồi cho người dùng.
 
-Ví dụ dưới đây cho thấy cách điều này hoạt động khi người dùng yêu cầu mô tả và số lượng các đối tượng trong một bức ảnh:
+Ví dụ bên dưới cho thấy cách này hoạt động khi người dùng yêu cầu mô tả và đếm các đối tượng trong một bức ảnh:
 
 ## Bài tập
 
-Để tiếp tục học về Tác nhân AI, bạn có thể xây dựng với AutoGen:
+Để tiếp tục học về Đại lý AI bạn có thể xây dựng với AutoGen:
 
 - Một ứng dụng mô phỏng một cuộc họp kinh doanh với các phòng ban khác nhau của một startup giáo dục.
-- Tạo các thông điệp hệ thống hướng dẫn LLMs hiểu các nhân vật và ưu tiên khác nhau, và cho phép người dùng trình bày ý tưởng sản phẩm mới.
-- Sau đó, LLM sẽ tạo ra các câu hỏi tiếp theo từ mỗi phòng ban để tinh chỉnh và cải thiện ý tưởng sản phẩm.
+- Tạo các thông điệp hệ thống hướng dẫn LLM hiểu các nhân vật và ưu tiên khác nhau, và cho phép người dùng trình bày một ý tưởng sản phẩm mới.
+- Sau đó, LLM sẽ tạo các câu hỏi tiếp theo từ mỗi phòng ban để tinh chỉnh và cải thiện bài thuyết trình và ý tưởng sản phẩm.
 
-## Học tập không dừng lại ở đây, tiếp tục hành trình
+## Học tập không dừng lại ở đây, tiếp tục Hành trình
 
-Sau khi hoàn thành bài học này, hãy xem bộ sưu tập [Học tập AI Tạo sinh](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) của chúng tôi để tiếp tục nâng cao kiến thức về AI Tạo sinh!
+Sau khi hoàn thành bài học này, hãy xem bộ sưu tập [Học tập AI Tạo sinh](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) của chúng tôi để tiếp tục nâng cao kiến thức AI Tạo sinh của bạn!
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Tuyên bố miễn trừ trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc sai sót. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn chính xác và đáng tin cậy. Đối với thông tin quan trọng, khuyến nghị nên sử dụng dịch vụ dịch thuật chuyên nghiệp do con người thực hiện. Chúng tôi không chịu trách nhiệm đối với bất kỳ sự hiểu nhầm hay giải thích sai nào phát sinh từ việc sử dụng bản dịch này.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
