@@ -114,8 +114,8 @@
     "language_code": "mr"
   },
   "14-the-generative-ai-application-lifecycle/README.md": {
-    "original_hash": "df44972d5575ea8cef3c52ee31696d04",
-    "translation_date": "2025-12-19T14:09:03+00:00",
+    "original_hash": "d853d54eb56fbe34325e0e709b407e99",
+    "translation_date": "2026-03-06T12:18:45+00:00",
     "source_file": "14-the-generative-ai-application-lifecycle/README.md",
     "language_code": "mr"
   },
@@ -150,14 +150,14 @@
     "language_code": "mr"
   },
   "17-ai-agents/README.md": {
-    "original_hash": "8e8d1f6a63da606af7176a87ff8e92b6",
-    "translation_date": "2025-10-17T13:46:17+00:00",
+    "original_hash": "6a781629bbce965e50459abd737d1e9e",
+    "translation_date": "2026-03-06T12:21:24+00:00",
     "source_file": "17-ai-agents/README.md",
     "language_code": "mr"
   },
   "18-fine-tuning/README.md": {
-    "original_hash": "3772dcd23a98e2010f53ce8b9c583631",
-    "translation_date": "2026-01-18T17:34:31+00:00",
+    "original_hash": "7b9bd5188b2474f88c3a51405e61cc86",
+    "translation_date": "2026-03-06T12:22:05+00:00",
     "source_file": "18-fine-tuning/README.md",
     "language_code": "mr"
   },
@@ -168,20 +168,20 @@
     "language_code": "mr"
   },
   "19-slm/README.md": {
-    "original_hash": "124ad36cfe96f74038811b6e2bb93e9d",
-    "translation_date": "2025-07-09T18:26:14+00:00",
+    "original_hash": "7d849075d63853cef4b12a1d4e334da6",
+    "translation_date": "2026-03-06T12:20:52+00:00",
     "source_file": "19-slm/README.md",
     "language_code": "mr"
   },
   "20-mistral/README.md": {
-    "original_hash": "4bd0fafda5d66cd9d60f1ebc7820415e",
-    "translation_date": "2025-07-09T18:58:16+00:00",
+    "original_hash": "fec8c0070389f47e413e3d423562f071",
+    "translation_date": "2026-03-06T12:19:33+00:00",
     "source_file": "20-mistral/README.md",
     "language_code": "mr"
   },
   "21-meta/README.md": {
-    "original_hash": "4c2a0b0c738b649ef049fb99a23be661",
-    "translation_date": "2025-07-09T19:08:22+00:00",
+    "original_hash": "6e58be903fd4744170b3b5d71fa6404c",
+    "translation_date": "2026-03-06T12:19:05+00:00",
     "source_file": "21-meta/README.md",
     "language_code": "mr"
   },

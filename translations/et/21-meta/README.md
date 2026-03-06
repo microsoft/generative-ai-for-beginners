@@ -1,58 +1,58 @@
-# Meta perekonna mudelitega töötamine
+# Meta perekonna mudelitega ehitamine
 
 ## Sissejuhatus
 
 Selles õppetükis käsitletakse:
 
-- Kahe peamise Meta perekonna mudeli - Llama 3.1 ja Llama 3.2 - uurimist
-- Iga mudeli kasutusjuhtude ja stsenaariumide mõistmist
-- Koodinäidet, mis näitab iga mudeli unikaalseid omadusi
+- Kaht peamist Meta perekonna mudelit - Llama 3.1 ja Llama 3.2
+- Iga mudeli kasutusjuhtumite ja stsenaariumide mõistmist
+- Koodi näidist, mis demonstreerib iga mudeli unikaalseid omadusi
 
 ## Meta perekonna mudelid
 
-Selles õppetükis uurime kahte Meta perekonna mudelit ehk "Llama karja" - Llama 3.1 ja Llama 3.2.
+Selles õppetükis uurime kahte Meta perekonna ehk "Llama karja" mudelit - Llama 3.1 ja Llama 3.2.
 
-Need mudelid on saadaval erinevates variantides ja leitavad GitHub Modelsi turul. Siin on rohkem teavet GitHub Models platvormi kasutamise kohta [AI mudelite prototüüpimiseks](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Need mudelid on saadaval erinevates variatsioonides ja on kättesaadavad GitHub Modeli turul. Siit leiad lisateavet GitHubi mudelite kasutamise kohta [AI mudelite prototüüpimiseks](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
-Mudelivariandid:
+Mudeli variandid:
 - Llama 3.1 - 70B Instruct
 - Llama 3.1 - 405B Instruct
 - Llama 3.2 - 11B Vision Instruct
 - Llama 3.2 - 90B Vision Instruct
 
-*NB! Llama 3 on samuti saadaval GitHub Models platvormil, kuid seda selles õppetükis ei käsitleta.*
+*Märkus: Llama 3 on samuti saadaval GitHub Models, kuid seda õppetükis ei käsitleta*
 
 ## Llama 3.1
 
-405 miljardi parameetriga Llama 3.1 kuulub avatud lähtekoodiga LLM-i kategooriasse.
+405 miljardi parameetriga on Llama 3.1 avatud lähtekoodiga LLM kategoorias.
 
-See mudel on täiendus varasemale Llama 3 versioonile, pakkudes:
+Mudelit on uuendatud võrreldes varasema Llama 3 versiooniga ning see pakub:
 
-- Suuremat kontekstiakent - 128k tokenit vs 8k tokenit
-- Suuremat maksimaalset väljundtokenite arvu - 4096 vs 2048
-- Paremat mitmekeelset tuge - tänu treeningtokenite arvu suurenemisele
+- Suuremat kontekstiakent - 128k märki võrreldes 8k märgiga
+- Suuremat maksimaalset väljundmärki - 4096 vs 2048
+- Parem-mitmekeelsus - tänu treeningmärksõnade arvu suurenemisele
 
-Need omadused võimaldavad Llama 3.1-l käsitleda keerukamaid kasutusjuhtumeid GenAI rakenduste loomisel, sealhulgas:
-- Natiivne funktsioonikutsumine - võimalus kutsuda väliseid tööriistu ja funktsioone väljaspool LLM-i töövoogu
-- Parem RAG jõudlus - tänu suuremale kontekstiaknale
-- Sünteetiliste andmete genereerimine - võime luua tõhusaid andmeid näiteks peenhäälestuseks
+Need võimaldavad Llama 3.1-l käsitleda keerukamaid kasutusjuhtumeid GenAI rakenduste loomisel, sealhulgas:
+- Natiivne funktsioonikõne - võime kutsuda väliseid tööriistu ja funktsioone väljaspool LLM-i töövoogu
+- Parem RAG tulemuslikkus - tänu suuremale kontekstiaknale
+- Sünteetilise andmete genereerimine - võime luua efektiivseid andmeid ülesannete nagu peenhäälestuse jaoks
 
-### Natiivne funktsioonikutsumine
+### Natiivne funktsioonikõne
 
-Llama 3.1 on peenhäälestatud, et olla tõhusam funktsioonide või tööriistade kutsumisel. Sellel on ka kaks sisseehitatud tööriista, mida mudel suudab kasutaja sisendi põhjal ära tunda ja kasutada. Need tööriistad on:
+Llama 3.1 on peenhäälestatud, et olla efektiivsem funktsioonide või tööriistade kutsmisel. Mudelil on ka kaks sisseehitatud tööriista, mida mudel võib identifitseerida vastavalt kasutaja promptile. Need tööriistad on:
 
-- **Brave Search** - saab kasutada ajakohase teabe, näiteks ilma, hankimiseks veebist otsides
-- **Wolfram Alpha** - saab kasutada keerukamate matemaatiliste arvutuste tegemiseks, nii et oma funktsioonide kirjutamine pole vajalik
+- **Brave Search** - saab kasutada värske info saamiseks näiteks ilma kohta, tehes veebipäringu
+- **Wolfram Alpha** - saab kasutada keerukamate matemaatiliste arvutuste tegemiseks, seega pole oma funktsioonide kirjutamine vajalik
 
-Samuti saate luua oma kohandatud tööriistu, mida LLM saab kutsuda.
+Sa võid ka luua oma kohandatud tööriistu, mida LLM saab kutsuda.
 
-Allolevas koodinäites:
+Järgmises koodi näites:
 
-- Määratleme süsteemi sisendis saadaval olevad tööriistad (brave_search, wolfram_alpha).
-- Saadame kasutaja sisendi, mis küsib ilma kohta teatud linnas.
-- LLM vastab tööriistakutsega Brave Search tööriistale, mis näeb välja selline: `<|python_tag|>brave_search.call(query="Stockholmi ilm")`
+- Määratleme süsteempromptis saadaval olevad tööriistad (brave_search, wolfram_alpha).
+- Saadame kasutajaprompti, kus küsitakse ilmateadet kindlast linnast.
+- LLM vastab tööriistakutsega Brave Search tööriista, mis näeb välja selline `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*NB! See näide teeb ainult tööriistakutse. Kui soovite tulemusi saada, peate looma tasuta konto Brave API lehel ja määratlema funktsiooni.*
+*Märkus: See näide kutsub ainult tööriista, kui soovid tulemusi saada, pead looma tasuta konto Brave API lehel ja määratlema funktsiooni ise.*
 
 ```python 
 import os
@@ -92,16 +92,15 @@ response = client.complete(messages=messages, model=model_name)
 print(response.choices[0].message.content)
 ```
 
-
 ## Llama 3.2
 
-Kuigi Llama 3.1 on LLM, on sellel üks piirang - multimodaalsus. See tähendab, et erinevat tüüpi sisendite, näiteks piltide, kasutamine koos tekstiga ja vastuste andmine pole võimalik. See võimekus on üks Llama 3.2 peamisi omadusi. Lisaks sisaldab see mudel järgmisi funktsioone:
+Kuigi Llama 3.1 on LLM, on selleks piiranguks multimodaalsuse puudumine. See tähendab, et mudel ei saa kasutada erinevat tüüpi sisendit nagu pildid promptidena ega anda vastuseid. See võimekus on üks peamisi Llama 3.2 omadusi. Need omadused hõlmavad ka:
 
-- Multimodaalsus - suudab hinnata nii teksti- kui ka pildisisendeid
-- Väikesed ja keskmise suurusega variandid (11B ja 90B) - pakuvad paindlikke juurutusvõimalusi
-- Ainult tekstivariandid (1B ja 3B) - võimaldavad mudelit juurutada serva-/mobiilseadmetes ja tagavad madala latentsuse
+- Multimodaalsus - suudab töödelda nii teksti kui ka piltide promte
+- Väikesed kuni keskmise suurusega variandid (11B ja 90B) - pakuvad paindlikke juurutamisvõimalusi
+- Ainult tekstipõhised variandid (1B ja 3B) - võimaldavad mudelit juurutada serva- ja mobiilseadmetes ning tagavad madala latentsuse
 
-Multimodaalne tugi on suur samm avatud lähtekoodiga mudelite maailmas. Allolev koodinäide kasutab nii pilti kui ka tekstisisendit, et saada Llama 3.2 90B mudelilt pildi analüüs.
+Multimodaalne tugi tähistab suurt sammu avatud lähtekoodiga mudelite maailmas. Järgmine koodi näide võtab sisendiks nii pildi kui teksti prompti, et saada Llama 3.2 90B mudelilt pildi analüüs.
 
 ### Multimodaalne tugi Llama 3.2-ga
 
@@ -150,12 +149,13 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
+## Õppimine siin ei peatu, jätka teekonda
 
-## Õppimine ei lõpe siin – jätka teekonda
-
-Pärast selle õppetüki läbimist tutvu meie [Generatiivse tehisintellekti õppekollektsiooniga](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata oma teadmiste arendamist generatiivse tehisintellekti vallas!
+Pärast selle õppetüki lõpetamist vaata meie [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata oma Generative AI teadmiste täiendamist!
 
 ---
 
-**Lahtiütlus**:  
-See dokument on tõlgitud tehisintellekti tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsuse, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks lugeda autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valede tõlgenduste eest.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Lahtiütlus**:
+See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palun arvestage, et automatiseeritud tõlked võivad sisaldada vigu või ebatäpsusi. Originaaldokument selle emakeeles peaks olema autoriteetne allikas. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti mõistmiste eest.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

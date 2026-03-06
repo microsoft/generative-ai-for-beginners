@@ -1,44 +1,44 @@
-# การสร้างด้วย Mistral Models
+# การสร้างด้วยโมเดล Mistral
 
 ## บทนำ
 
 บทเรียนนี้จะครอบคลุม:  
-- การสำรวจ Mistral Models ที่แตกต่างกัน  
-- การเข้าใจกรณีการใช้งานและสถานการณ์สำหรับแต่ละโมเดล  
-- ตัวอย่างโค้ดที่แสดงคุณสมบัติเฉพาะของแต่ละโมเดล  
+- การสำรวจโมเดล Mistral ที่แตกต่างกัน  
+- ความเข้าใจในกรณีการใช้งานและสถานการณ์ของแต่ละโมเดล  
+- การสำรวจตัวอย่างโค้ดที่แสดงคุณสมบัติเฉพาะของแต่ละโมเดล  
 
-## Mistral Models
+## โมเดล Mistral
 
-ในบทเรียนนี้ เราจะสำรวจ 3 โมเดล Mistral ที่แตกต่างกัน:  
+ในบทเรียนนี้ เราจะสำรวจโมเดล Mistral 3 ตัว ได้แก่  
 **Mistral Large**, **Mistral Small** และ **Mistral Nemo**
 
-โมเดลเหล่านี้ทั้งหมดสามารถใช้งานได้ฟรีบน Github Model marketplace โค้ดในโน้ตบุ๊กนี้จะใช้โมเดลเหล่านี้ในการรันโค้ด รายละเอียดเพิ่มเติมเกี่ยวกับการใช้ Github Models เพื่อ [สร้างต้นแบบด้วย AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst)
+โมเดลแต่ละตัวนี้มีให้ใช้งานฟรีในตลาดโมเดล GitHub โค้ดในโน้ตบุ๊กนี้จะใช้โมเดลเหล่านี้ในการรันโค้ด รายละเอียดเพิ่มเติมเกี่ยวกับการใช้โมเดล GitHub เพื่อ [สร้างต้นแบบด้วยโมเดล AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst)
 
 ## Mistral Large 2 (2407)  
-Mistral Large 2 เป็นโมเดลเรือธงจาก Mistral ที่ออกแบบมาเพื่อการใช้งานในองค์กร
+Mistral Large 2 เป็นโมเดลหลักของ Mistral ในขณะนี้และออกแบบมาสำหรับการใช้งานในองค์กร
 
-โมเดลนี้เป็นการอัปเกรดจาก Mistral Large รุ่นแรก โดยมี  
-- ขนาดหน้าต่างบริบทที่ใหญ่ขึ้น - 128k เทียบกับ 32k  
-- ประสิทธิภาพที่ดีขึ้นในงานคณิตศาสตร์และการเขียนโค้ด - ความแม่นยำเฉลี่ย 76.9% เทียบกับ 60.4%  
-- ประสิทธิภาพหลายภาษาเพิ่มขึ้น - รองรับภาษาอังกฤษ ฝรั่งเศส เยอรมัน สเปน อิตาลี โปรตุเกส ดัตช์ รัสเซีย จีน ญี่ปุ่น เกาหลี อาหรับ และฮินดี
+โมเดลนี้เป็นการอัปเกรดจาก Mistral Large ดั้งเดิม โดยมี  
+- หน้าต่างบริบทขนาดใหญ่ขึ้น - 128k เทียบกับ 32k  
+- ประสิทธิภาพที่ดีกว่าในงานคณิตศาสตร์และการเขียนโค้ด - ความแม่นยำเฉลี่ย 76.9% เทียบกับ 60.4%  
+- ประสิทธิภาพหลายภาษาเพิ่มขึ้น - รองรับภาษาต่าง ๆ ได้แก่ อังกฤษ ฝรั่งเศส เยอรมัน สเปน อิตาเลียน โปรตุเกส ดัตช์ รัสเซีย จีน ญี่ปุ่น เกาหลี อาหรับ และฮินดี
 
-ด้วยคุณสมบัติเหล่านี้ Mistral Large โดดเด่นในด้าน  
-- *Retrieval Augmented Generation (RAG)* - เนื่องจากมีหน้าต่างบริบทที่ใหญ่ขึ้น  
-- *Function Calling* - โมเดลนี้รองรับการเรียกฟังก์ชันโดยตรง ทำให้สามารถเชื่อมต่อกับเครื่องมือและ API ภายนอกได้ การเรียกฟังก์ชันสามารถทำได้ทั้งแบบขนานหรือเรียงลำดับทีละคำสั่ง  
-- *Code Generation* - โมเดลนี้โดดเด่นในการสร้างโค้ด Python, Java, TypeScript และ C++
+ด้วยคุณสมบัติเหล่านี้ Mistral Large ทำงานได้ดีใน  
+- *การสร้างด้วยการเสริมการดึงข้อมูล (RAG)* - ด้วยหน้าต่างบริบทที่ใหญ่ขึ้น  
+- *การเรียกใช้งานฟังก์ชัน* - โมเดลนี้รองรับการเรียกใช้งานฟังก์ชันในตัวซึ่งช่วยให้การผสานรวมกับเครื่องมือและ API ภายนอกเป็นไปได้ การเรียกใช้งานเหล่านี้สามารถทำพร้อมกันหรือทำทีละคำสั่งตามลำดับ  
+- *การสร้างโค้ด* - โมเดลนี้โดดเด่นในการสร้างโค้ด Python, Java, TypeScript และ C++
 
-### ตัวอย่าง RAG โดยใช้ Mistral Large 2
+### ตัวอย่าง RAG โดยใช้ Mistral Large 2  
 
-ในตัวอย่างนี้ เราใช้ Mistral Large 2 เพื่อรันรูปแบบ RAG บนเอกสารข้อความ คำถามถูกเขียนเป็นภาษาเกาหลีและถามเกี่ยวกับกิจกรรมของผู้เขียนก่อนเข้ามหาวิทยาลัย
+ในตัวอย่างนี้ เราใช้ Mistral Large 2 เพื่อรันรูปแบบ RAG กับเอกสารข้อความ คำถามถูกเขียนเป็นภาษาเกาหลีและถามเกี่ยวกับกิจกรรมของผู้เขียนก่อนเข้ามหาวิทยาลัย
 
-โมเดลใช้ Cohere Embeddings Model เพื่อสร้าง embeddings ของเอกสารและคำถาม สำหรับตัวอย่างนี้ใช้แพ็กเกจ faiss ของ Python เป็นที่เก็บเวกเตอร์
+โมเดลใช้ Cohere Embeddings ในการสร้าง embedding ของเอกสารข้อความและคำถาม สำหรับตัวอย่างนี้ใช้แพ็กเกจ faiss ของ Python เป็นฐานข้อมูลเวกเตอร์
 
-คำสั่งที่ส่งไปยังโมเดล Mistral รวมทั้งคำถามและส่วนที่ถูกดึงมา (retrieved chunks) ที่มีความคล้ายคลึงกับคำถาม โมเดลจึงให้คำตอบในรูปแบบภาษาธรรมชาติ
+พรอมท์ที่ส่งไปยังโมเดล Mistral รวมคำถามและส่วนที่ดึงมาที่คล้ายกับคำถาม โมเดลจึงให้คำตอบในรูปแบบภาษาธรรมชาติ
 
 ```python 
 pip install faiss-cpu
 ```
-
+  
 ```python 
 import requests
 import numpy as np
@@ -91,7 +91,7 @@ d = text_embeddings.shape[1]
 index = faiss.IndexFlatL2(d)
 index.add(text_embeddings)
 
-question = "저자가 대학에 오기 전에 주로 했던 두 가지 일은 무엇이었나요?？"
+question = "저자가 대학에 오기 전에 주로 했던 두 가지 일은 무엇이었나요?"
 
 question_embedding = embed_client.embed(
     input=[question],
@@ -101,7 +101,7 @@ question_embedding = embed_client.embed(
 question_embeddings = np.array(question_embedding.data[0].embedding)
 
 
-D, I = index.search(question_embeddings.reshape(1, -1), k=2) # distance, index
+D, I = index.search(question_embeddings.reshape(1, -1), k=2) # ระยะทาง, ดัชนี
 retrieved_chunks = [chunks[i] for i in I.tolist()[0]]
 
 prompt = f"""
@@ -128,23 +128,23 @@ chat_response = client.complete(
 
 print(chat_response.choices[0].message.content)
 ```
-
+  
 ## Mistral Small  
-Mistral Small เป็นอีกหนึ่งโมเดลในตระกูล Mistral ที่อยู่ในกลุ่ม premier/enterprise ตามชื่อ โมเดลนี้เป็น Small Language Model (SLM) ข้อดีของการใช้ Mistral Small คือ  
-- ประหยัดค่าใช้จ่ายเมื่อเทียบกับ Mistral LLMs เช่น Mistral Large และ NeMo - ลดราคาลง 80%  
-- ความหน่วงต่ำ - ตอบสนองได้เร็วกว่า LLMs ของ Mistral  
-- ยืดหยุ่น - สามารถติดตั้งในสภาพแวดล้อมต่าง ๆ ได้ง่ายขึ้นโดยมีข้อจำกัดด้านทรัพยากรน้อยกว่า
+Mistral Small เป็นอีกโมเดลหนึ่งในตระกูล Mistral ภายใต้หมวดหมู่พรีเมียม/องค์กร ตามชื่อที่บ่งบอก โมเดลนี้เป็น Small Language Model (SLM) ข้อดีของการใช้ Mistral Small คือ  
+- ประหยัดค่าใช้จ่ายเมื่อเทียบกับ Mistral LLM เช่น Mistral Large และ NeMo - ลดราคาถึง 80%  
+- ความหน่วงต่ำ - ตอบสนองได้เร็วกว่า LLM ของ Mistral  
+- ยืดหยุ่น - สามารถปรับใช้งานในสภาพแวดล้อมต่าง ๆ ได้ง่ายโดยมีข้อจำกัดทรัพยากรน้อยกว่า
 
 Mistral Small เหมาะสำหรับ:  
-- งานที่ใช้ข้อความ เช่น การสรุปความ วิเคราะห์ความรู้สึก และการแปลภาษา  
-- แอปพลิเคชันที่มีการร้องขอบ่อย ๆ เนื่องจากประหยัดค่าใช้จ่าย  
-- งานโค้ดที่ต้องการความหน่วงต่ำ เช่น การตรวจสอบและแนะนำโค้ด
+- งานเกี่ยวกับข้อความ เช่น การสรุป ความคิดเห็นเชิงบวก/ลบ และการแปล  
+- แอปพลิเคชันที่ต้องการคำขอบ่อย ๆ เนื่องจากมีค่าใช้จ่ายประหยัด  
+- งานโค้ดที่ต้องการความหน่วงต่ำ เช่น การตรวจสอบและข้อเสนอแนะโค้ด
 
-## การเปรียบเทียบ Mistral Small และ Mistral Large
+## การเปรียบเทียบ Mistral Small และ Mistral Large  
 
-เพื่อแสดงความแตกต่างของความหน่วงระหว่าง Mistral Small และ Large ให้รันเซลล์ด้านล่าง
+เพื่อแสดงความแตกต่างของความหน่วงระหว่าง Mistral Small และ Mistral Large ให้รันโค้ดในเซลล์ด้านล่าง
 
-คุณจะเห็นความแตกต่างของเวลาตอบสนองประมาณ 3-5 วินาที และสังเกตความยาวและสไตล์ของคำตอบจากคำสั่งเดียวกัน
+คุณจะเห็นความแตกต่างในเวลาตอบสนองประมาณ 3-5 วินาที และสังเกตความยาวและสไตล์ของคำตอบกับพรอมท์เดียวกัน
 
 ```python 
 
@@ -172,7 +172,7 @@ response = client.complete(
 print(response.choices[0].message.content)
 
 ```
-
+  
 ```python 
 
 import os
@@ -203,33 +203,33 @@ response = client.complete(
 print(response.choices[0].message.content)
 
 ```
-
+  
 ## Mistral NeMo
 
-เมื่อเทียบกับสองโมเดลที่กล่าวถึงในบทเรียนนี้ Mistral NeMo เป็นโมเดลเดียวที่ฟรีและมีใบอนุญาต Apache2
+เมื่อเทียบกับสองโมเดลที่กล่าวมา Mistral NeMo เป็นโมเดลฟรีตัวเดียวที่ใช้ใบอนุญาต Apache2
 
-โมเดลนี้ถือเป็นการอัปเกรดจาก LLM โอเพนซอร์สรุ่นก่อนของ Mistral คือ Mistral 7B
+โมเดลนี้ถือเป็นการอัปเกรดจาก LLM โอเพนซอร์สก่อนหน้าของ Mistral, Mistral 7B
 
 คุณสมบัติอื่น ๆ ของโมเดล NeMo ได้แก่
 
-- *การตัดคำที่มีประสิทธิภาพมากขึ้น:* โมเดลนี้ใช้ Tekken tokenizer แทน tiktoken ที่ใช้กันทั่วไป ซึ่งช่วยให้ทำงานได้ดีขึ้นกับหลายภาษาและโค้ด
+- *การตัดคำที่มีประสิทธิภาพมากขึ้น:* โมเดลนี้ใช้ตัวตัดคำ Tekken แทนที่ตัวตัดคำ tiktoken ที่นิยมใช้กันทั่วไป ซึ่งช่วยให้ทำงานได้ดีขึ้นกับหลายภาษาและโค้ด
 
-- *การปรับแต่งเพิ่มเติม (Finetuning):* โมเดลฐานพร้อมให้ปรับแต่งเพิ่มเติมได้ ซึ่งเพิ่มความยืดหยุ่นสำหรับกรณีการใช้งานที่ต้องการการปรับแต่ง
+- *ปรับแต่งเพิ่มเติม:* โมเดลฐานมีให้สำหรับการปรับแต่งเพิ่มเติม ซึ่งช่วยให้ความยืดหยุ่นเมื่อต้องการปรับแต่งแบบจำเพาะ
 
-- *Native Function Calling* - เช่นเดียวกับ Mistral Large โมเดลนี้ได้รับการฝึกฝนให้รองรับการเรียกฟังก์ชันโดยตรง ซึ่งทำให้เป็นหนึ่งในโมเดลโอเพนซอร์สรุ่นแรกที่มีฟีเจอร์นี้
+- *การเรียกใช้ฟังก์ชันในตัว* - เช่นเดียวกับ Mistral Large โมเดลนี้ได้รับการฝึกฝนให้รองรับการเรียกใช้ฟังก์ชัน ซึ่งทำให้เป็นหนึ่งในโมเดลโอเพนซอร์สรุ่นแรกที่มีคุณสมบัตินี้
 
-### การเปรียบเทียบ Tokenizers
+### การเปรียบเทียบตัวตัดคำ
 
 ในตัวอย่างนี้ เราจะดูว่า Mistral NeMo จัดการการตัดคำอย่างไรเมื่อเทียบกับ Mistral Large
 
-ตัวอย่างทั้งสองใช้คำสั่งเดียวกัน แต่คุณจะเห็นว่า NeMo คืน token น้อยกว่า Mistral Large
+ทั้งสองตัวอย่างใช้พรอมท์เดียวกัน แต่คุณจะเห็นว่า NeMo คืนค่าจำนวนน้อยกว่าของโทเค็นเมื่อเทียบกับ Mistral Large
 
 ```bash
 pip install mistral-common
 ```
-
+  
 ```python 
-# Import needed packages:
+# นำเข้าแพ็กเกจที่จำเป็น:
 from mistral_common.protocol.instruct.messages import (
     UserMessage,
 )
@@ -240,13 +240,13 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Load Mistral tokenizer
+# โหลดตัวตัดคำ Mistral
 
-model_name = "open-mistral-nemo	"
+model_name = "open-mistral-nemo"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Tokenize a list of messages
+# ตัดคำข้อความในรายการข้อความ
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -264,7 +264,7 @@ tokenized = tokenizer.encode_chat_completion(
                             "format": {
                                 "type": "string",
                                 "enum": ["celsius", "fahrenheit"],
-                                "description": "The temperature unit to use. Infer this from the users location.",
+                                "description": "The temperature unit to use. Infer this from the user's location.",
                             },
                         },
                         "required": ["location", "format"],
@@ -280,12 +280,12 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# Count the number of tokens
+# นับจำนวนโทเค็น
 print(len(tokens))
 ```
-
+  
 ```python
-# Import needed packages:
+# นำเข้าชุดแพ็คเกจที่จำเป็น:
 from mistral_common.protocol.instruct.messages import (
     UserMessage,
 )
@@ -296,13 +296,13 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Load Mistral tokenizer
+# โหลดตัวแปลงโทเคน Mistral
 
 model_name = "mistral-large-latest"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Tokenize a list of messages
+# แปลงรายการข้อความเป็นโทเคน
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -320,7 +320,7 @@ tokenized = tokenizer.encode_chat_completion(
                             "format": {
                                 "type": "string",
                                 "enum": ["celsius", "fahrenheit"],
-                                "description": "The temperature unit to use. Infer this from the users location.",
+                                "description": "The temperature unit to use. Infer this from the user's location.",
                             },
                         },
                         "required": ["location", "format"],
@@ -336,13 +336,17 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# Count the number of tokens
+# นับจำนวนโทเคน
 print(len(tokens))
 ```
+  
+## การเรียนรู้ไม่หยุดเพียงเท่านี้ ต่อเส้นทางของคุณต่อไป
 
-## การเรียนรู้ไม่ได้หยุดเพียงเท่านี้ ต่อเนื่องการเดินทางของคุณ
+หลังจากทำบทเรียนนี้เสร็จแล้ว ให้ตรวจสอบ [คอลเลกชันการเรียนรู้ Generative AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ของเราเพื่อพัฒนาความรู้ Generative AI ของคุณต่อไป!
 
-หลังจากจบบทเรียนนี้แล้ว ลองดู [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) เพื่อพัฒนาความรู้ด้าน Generative AI ของคุณให้ก้าวหน้าต่อไป!
+---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **ข้อจำกัดความรับผิดชอบ**:  
-เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษาอัตโนมัติ [Co-op Translator](https://github.com/Azure/co-op-translator) แม้เราจะพยายามให้ความถูกต้องสูงสุด แต่โปรดทราบว่าการแปลอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาต้นทางถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลโดยผู้เชี่ยวชาญมนุษย์ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความผิดใด ๆ ที่เกิดจากการใช้การแปลนี้
+เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษาอัตโนมัติ [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้อง แต่โปรดทราบว่าการแปลโดยอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่แม่นยำ เอกสารต้นฉบับในภาษาต้นทางถือเป็นแหล่งข้อมูลที่เชื่อถือได้ ในกรณีที่ข้อมูลมีความสำคัญสูง แนะนำให้ใช้บริการแปลโดยผู้เชี่ยวชาญมนุษย์อย่างมืออาชีพ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความที่ผิดพลาดที่เกิดจากการใช้การแปลนี้
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

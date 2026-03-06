@@ -1,40 +1,39 @@
-# Építés Mistral modellekkel
+# Építés a Mistral Modellekkel
 
 ## Bevezetés
 
-Ebben a leckében a következőkről lesz szó:  
-- A különböző Mistral modellek felfedezése  
-- Az egyes modellek használati eseteinek és helyzeteinek megértése  
-- Kódpéldák, amelyek bemutatják az egyes modellek egyedi jellemzőit.
+Ez a lecke a következőket fogja lefedni:
+- A különböző Mistral modellek felfedezése
+- Az egyes modellek használati eseteinek és szcenárióinak megértése
+- Kódminták vizsgálata, amelyek bemutatják az egyes modellek egyedi jellemzőit.
 
-## A Mistral modellek
+## A Mistral Modellek
 
-Ebben a leckében három különböző Mistral modellt ismerünk meg:  
+Ebben a leckében három különböző Mistral modellt fogunk felfedezni:
 **Mistral Large**, **Mistral Small** és **Mistral Nemo**.
 
-Ezek a modellek ingyenesen elérhetők a Github Model piacterén. A jegyzetfüzetben található kód ezekkel a modellekkel fog futni. További részletek a Github Modellek használatáról az [AI modellekkel való prototípus készítéshez](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Ezek a modellek ingyenesen elérhetők a GitHub Model piactéren. A jegyzetfüzet kódja ezen modellek használatával futtatja a kódot. Itt további részletek találhatók a GitHub Modellek AI modellekkel való [prototípus készítéséhez](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 ## Mistral Large 2 (2407)
+A Mistral Large 2 jelenleg a Mistral zászlóshajó modellje, és vállalati használatra tervezték.
 
-A Mistral Large 2 jelenleg a Mistral zászlóshajó modellje, amely vállalati használatra készült.
+A modell az eredeti Mistral Large továbbfejlesztése az alábbiakkal:
+- Nagyobb kontextusablak – 128k kontra 32k
+- Jobb teljesítmény matematika és kódolási feladatokban – 76,9% átlagos pontosság kontra 60,4%
+- Fokozott többnyelvű teljesítmény – a nyelvek között szerepel: angol, francia, német, spanyol, olasz, portugál, holland, orosz, kínai, japán, koreai, arab és hindi.
 
-Ez a modell az eredeti Mistral Large továbbfejlesztett változata, amely  
-- Nagyobb kontextusablakot kínál – 128k vs 32k  
-- Jobb teljesítményt nyújt matematikai és kódolási feladatokban – 76,9% átlagos pontosság vs 60,4%  
-- Javított többnyelvű teljesítményt – a támogatott nyelvek között szerepel az angol, francia, német, spanyol, olasz, portugál, holland, orosz, kínai, japán, koreai, arab és hindi.
+Ezekkel a funkciókkal a Mistral Large kiváló:
+- *Retrieval Augmented Generation (RAG)* – a nagyobb kontextusablak miatt
+- *Funkcióhívás* – ennek a modellnek natív funkcióhívása van, ami lehetővé teszi külső eszközökkel és API-kkal való integrációt. Ezeket a hívásokat párhuzamosan vagy egymás után, szekvenciálisan is végre lehet hajtani.
+- *Kódgenerálás* – ez a modell kiemelkedő a Python, Java, TypeScript és C++ generálásában.
 
-Ezekkel a tulajdonságokkal a Mistral Large kiválóan alkalmas  
-- *Retrieval Augmented Generation (RAG)* feladatokra – a nagyobb kontextusablak miatt  
-- *Funkcióhívásra* – a modell natív funkcióhívást támogat, ami lehetővé teszi külső eszközök és API-k integrációját. Ezek a hívások párhuzamosan vagy egymás után, sorosan is végrehajthatók.  
-- *Kódgenerálásra* – különösen jól teljesít Python, Java, TypeScript és C++ generálásban.
+### RAG példa a Mistral Large 2 használatával
 
-### RAG példa Mistral Large 2-vel
+Ebben a példában a Mistral Large 2 modellt használjuk egy RAG mintázat futtatására egy szöveges dokumentum felett. A kérdés koreai nyelven íródott és az író főiskola előtti tevékenységeiről kérdez.
 
-Ebben a példában a Mistral Large 2 modellt használjuk egy RAG mintázat futtatására egy szöveges dokumentumon. A kérdés koreai nyelven íródott, és az író egyetemi előtti tevékenységeiről érdeklődik.
+A Cohere Embeddings Modelt használja a szöveges dokumentum és a kérdés embeddingjeinek létrehozásához. Ehhez a mintához a faiss Python csomagot alkalmazza vektoráruházként.
 
-A Cohere Embeddings modellt használja a szöveges dokumentum és a kérdés beágyazásainak létrehozásához. Ehhez a mintához a faiss Python csomagot használja vektortárolóként.
-
-A Mistral modellhez küldött prompt tartalmazza a kérdéseket és a kérdéshez hasonlóan visszakeresett szövegrészeket. A modell ezután természetes nyelvű választ ad.
+A Mistral modellnek küldött prompt tartalmazza mind a kérdéseket, mind a kérdéshez hasonlóan lekért részleteket. A modell ezután természetes nyelvi választ ad.
 
 ```python 
 pip install faiss-cpu
@@ -92,7 +91,7 @@ d = text_embeddings.shape[1]
 index = faiss.IndexFlatL2(d)
 index.add(text_embeddings)
 
-question = "저자가 대학에 오기 전에 주로 했던 두 가지 일은 무엇이었나요?？"
+question = "저자가 대학에 오기 전에 주로 했던 두 가지 일은 무엇이었나요?"
 
 question_embedding = embed_client.embed(
     input=[question],
@@ -102,7 +101,7 @@ question_embedding = embed_client.embed(
 question_embeddings = np.array(question_embedding.data[0].embedding)
 
 
-D, I = index.search(question_embeddings.reshape(1, -1), k=2) # distance, index
+D, I = index.search(question_embeddings.reshape(1, -1), k=2) # távolság, index
 retrieved_chunks = [chunks[i] for i in I.tolist()[0]]
 
 prompt = f"""
@@ -131,22 +130,21 @@ print(chat_response.choices[0].message.content)
 ```
 
 ## Mistral Small
+A Mistral Small egy másik modell a Mistral család premier/vállalati kategóriájában. A névnek megfelelően ez egy kicsi nyelvi modell (SLM). A Mistral Small használatának előnyei:
+- Költségmegtakarítás a Mistral nagyobb LLM-jeihez képest, például Mistral Large és NeMo – 80% árcsökkenés
+- Alacsony válaszidő – gyorsabb válasz a Mistral LLM-jeihez képest
+- Rugalmasság – különböző környezetekben telepíthető kevesebb erőforrás-korlátozással.
 
-A Mistral Small a Mistral család egy másik modellje, amely a prémium/vállalati kategóriába tartozik. Ahogy a neve is mutatja, ez egy kis méretű nyelvi modell (SLM). A Mistral Small használatának előnyei:  
-- Költséghatékonyabb a Mistral nagyobb LLM-jeihez, mint a Mistral Large és NeMo képest – 80%-os árcsökkenés  
-- Alacsony késleltetés – gyorsabb válaszidő a Mistral LLM-ekhez képest  
-- Rugalmas – különböző környezetekben telepíthető, kevesebb erőforrás-korlátozással.
+A Mistral Small nagyszerű:
+- Szövegalapú feladatokra, például összefoglalásra, érzelemfelismerésre és fordításra.
+- Alkalmazásokhoz, ahol gyakori lekérések vannak, a költséghatékonysága miatt
+- Alacsony késleltetésű kódolási feladatokra, mint a kód átnézése és javaslatok
 
-A Mistral Small kiválóan alkalmas:  
-- Szöveges feladatokra, mint például összefoglalás, érzelemelemzés és fordítás  
-- Olyan alkalmazásokhoz, ahol gyakori lekérések vannak a költséghatékonyság miatt  
-- Alacsony késleltetésű kódolási feladatokra, például kódáttekintésre és javaslatokra
+## A Mistral Small és Mistral Large összehasonlítása
 
-## Mistral Small és Mistral Large összehasonlítása
+A válaszidők közötti különbség bemutatásához futtassa le az alábbi cellákat.
 
-A késleltetésbeli különbségek bemutatásához a Mistral Small és Large között futtassa le az alábbi cellákat.
-
-3-5 másodperces válaszidő-különbséget kell tapasztalnia. Figyelje meg a válaszok hosszát és stílusát ugyanazon prompt esetén.
+Az elvárt különbség a válaszidőben 3–5 másodperc között van. Érdemes megfigyelni a válasz hosszt és stílust ugyanazon prompt esetén.
 
 ```python 
 
@@ -208,30 +206,30 @@ print(response.choices[0].message.content)
 
 ## Mistral NeMo
 
-A leckében tárgyalt két másik modellhez képest a Mistral NeMo az egyetlen ingyenes modell Apache2 licenccel.
+A két előző modellhez képest a Mistral NeMo az egyetlen ingyenes modell Apache2 licenccel.
 
-Ez a modell a korábbi, nyílt forráskódú Mistral 7B modell továbbfejlesztett változatának tekinthető.
+Az előző, nyílt forráskódú Mistral LLM-hez, a Mistral 7B-hez képest ezt az upgrade-nek tekintik.
 
-A NeMo modell további jellemzői:  
+A NeMo modell más jellemzői:
 
-- *Hatékonyabb tokenizálás:* Ez a modell a Tekken tokenizálót használja a gyakrabban használt tiktoken helyett. Ez jobb teljesítményt tesz lehetővé több nyelven és kód esetén.
+- *Hatékonyabb tokenizáció:* Ez a modell a Tekken tokenizert használja a gyakrabban használt tiktoken helyett. Ez jobb teljesítményt tesz lehetővé több nyelv és kód esetében.
 
-- *Finomhangolás:* Az alapmodell elérhető finomhangolásra, ami nagyobb rugalmasságot biztosít olyan esetekben, ahol finomhangolásra lehet szükség.
+- *Finomhangolás:* Az alapmodell elérhető finomhangolásra. Ez nagyobb rugalmasságot ad olyan esetekben, amikor finomhangolásra lehet szükség.
 
-- *Natív funkcióhívás* – A Mistral Large-hoz hasonlóan ez a modell is funkcióhívásra lett betanítva. Ez egyedivé teszi, mivel az elsők között van a nyílt forráskódú modellek között, amelyek ezt támogatják.
+- *Natív funkcióhívás* – A Mistral Large-hez hasonlóan ezt a modellt is funkcióhívásra képezték ki. Ez egyedülállóvá teszi, mint az egyik első nyílt forráskódú modell, amely így működik.
 
-### Tokenizálók összehasonlítása
+### Tokenizerek összehasonlítása
 
-Ebben a példában megnézzük, hogyan kezeli a Mistral NeMo a tokenizálást a Mistral Large-hoz képest.
+Ebben a mintában megnézzük, hogyan kezeli a Mistral NeMo a tokenizációt a Mistral Large-hoz képest.
 
-Mindkét minta ugyanazt a promptot használja, de látható, hogy a NeMo kevesebb tokent ad vissza, mint a Mistral Large.
+Mindkét minta ugyanazt a promptot veszi, de látható, hogy NeMo kevesebb tokennel tér vissza, mint a Mistral Large.
 
 ```bash
 pip install mistral-common
 ```
 
 ```python 
-# Import needed packages:
+# Szükséges csomagok importálása:
 from mistral_common.protocol.instruct.messages import (
     UserMessage,
 )
@@ -242,13 +240,13 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Load Mistral tokenizer
+# Mistral tokenizáló betöltése
 
-model_name = "open-mistral-nemo	"
+model_name = "open-mistral-nemo"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Tokenize a list of messages
+# Üzenetek listájának tokenizálása
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -266,7 +264,7 @@ tokenized = tokenizer.encode_chat_completion(
                             "format": {
                                 "type": "string",
                                 "enum": ["celsius", "fahrenheit"],
-                                "description": "The temperature unit to use. Infer this from the users location.",
+                                "description": "The temperature unit to use. Infer this from the user's location.",
                             },
                         },
                         "required": ["location", "format"],
@@ -282,12 +280,12 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# Count the number of tokens
+# A tokenek számának megszámlálása
 print(len(tokens))
 ```
 
 ```python
-# Import needed packages:
+# Szükséges csomagok importálása:
 from mistral_common.protocol.instruct.messages import (
     UserMessage,
 )
@@ -298,13 +296,13 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Load Mistral tokenizer
+# Mistral tokenizáló betöltése
 
 model_name = "mistral-large-latest"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Tokenize a list of messages
+# Üzenetek listájának tokenizálása
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -322,7 +320,7 @@ tokenized = tokenizer.encode_chat_completion(
                             "format": {
                                 "type": "string",
                                 "enum": ["celsius", "fahrenheit"],
-                                "description": "The temperature unit to use. Infer this from the users location.",
+                                "description": "The temperature unit to use. Infer this from the user's location.",
                             },
                         },
                         "required": ["location", "format"],
@@ -338,13 +336,17 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# Count the number of tokens
+# A tokenek számának megszámlálása
 print(len(tokens))
 ```
 
-## A tanulás itt nem ér véget, folytasd az utazást
+## A tanulás itt nem áll meg, folytasd az utazást
 
-A lecke elvégzése után nézd meg a [Generatív AI tanulási gyűjteményünket](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy tovább fejleszd generatív AI ismereteidet!
+A lecke befejezése után tekintsd meg a [Generatív AI Oktatás gyűjteményünket](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy tovább fejleszd Generatív AI ismereteidet!
 
-**Jogi nyilatkozat**:  
-Ez a dokumentum az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén szakmai, emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Jogi nyilatkozat**:
+Ezt a dokumentumot az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével fordítottuk. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén professzionális emberi fordítást javaslunk. Nem vállalunk felelősséget semmilyen félreértésért vagy félreértelmezésért, amely ezen fordítás használatából ered.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -2,57 +2,57 @@
 
 ## Wprowadzenie
 
-W tej lekcji omówimy:
+Ta lekcja obejmie:
 
-- Przegląd dwóch głównych modeli rodziny Meta – Llama 3.1 i Llama 3.2  
-- Zrozumienie zastosowań i scenariuszy dla każdego modelu  
-- Przykład kodu pokazujący unikalne cechy każdego modelu  
+- Eksplorację dwóch głównych modeli rodziny Meta - Llama 3.1 i Llama 3.2
+- Zrozumienie zastosowań i scenariuszy dla każdego modelu
+- Przykład kodu pokazujący unikalne cechy każdego modelu
 
 ## Rodzina modeli Meta
 
-W tej lekcji przyjrzymy się dwóm modelom z rodziny Meta, zwanej też „Llama Herd” – Llama 3.1 i Llama 3.2
+W tej lekcji zapoznamy się z 2 modelami z rodziny Meta lub "stada Llama" - Llama 3.1 i Llama 3.2.
 
-Modele te występują w różnych wariantach i są dostępne na GitHub Model marketplace. Więcej informacji o korzystaniu z GitHub Models do [prototypowania z modelami AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Modele te dostępne są w różnych wariantach i można je znaleźć na rynku modeli GitHub. Oto więcej szczegółów na temat korzystania z modeli GitHub, aby [prototypować z modelami AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
-Warianty modeli:  
-- Llama 3.1 - 70B Instruct  
-- Llama 3.1 - 405B Instruct  
-- Llama 3.2 - 11B Vision Instruct  
-- Llama 3.2 - 90B Vision Instruct  
+Warianty modeli:
+- Llama 3.1 - 70B Instruct
+- Llama 3.1 - 405B Instruct
+- Llama 3.2 - 11B Vision Instruct
+- Llama 3.2 - 90B Vision Instruct
 
-*Uwaga: Llama 3 jest również dostępna na GitHub Models, ale nie będzie omawiana w tej lekcji*
+*Uwaga: Llama 3 jest również dostępna w modelach GitHub, ale nie będzie omawiana w tej lekcji*
 
 ## Llama 3.1
 
-Z 405 miliardami parametrów, Llama 3.1 należy do kategorii otwartych modeli LLM.
+Przy 405 miliardach parametrów, Llama 3.1 mieści się w kategorii otwartych modeli LLM.
 
-Model ten jest ulepszeniem wcześniejszej wersji Llama 3, oferując:
+Model jest ulepszeniem wcześniejszej wersji Llama 3, oferując:
 
-- Większe okno kontekstu – 128k tokenów zamiast 8k tokenów  
-- Większą maksymalną liczbę tokenów wyjściowych – 4096 zamiast 2048  
-- Lepsze wsparcie wielojęzyczne – dzięki zwiększonej liczbie tokenów treningowych  
+- Większe okno kontekstowe - 128k tokenów vs 8k tokenów
+- Większą maksymalną liczbę tokenów wyjściowych - 4096 vs 2048
+- Lepsze wsparcie wielojęzyczne - dzięki zwiększonej liczbie tokenów treningowych
 
-Dzięki temu Llama 3.1 radzi sobie z bardziej złożonymi zastosowaniami podczas tworzenia aplikacji GenAI, w tym:  
-- Native Function Calling – możliwość wywoływania zewnętrznych narzędzi i funkcji poza przepływem pracy LLM  
-- Lepsza wydajność RAG – dzięki większemu oknu kontekstu  
-- Generowanie danych syntetycznych – możliwość tworzenia skutecznych danych do zadań takich jak fine-tuning  
+To pozwala Llama 3.1 radzić sobie z bardziej złożonymi przypadkami użycia podczas budowy aplikacji GenAI, w tym:
+- Natywne wywoływanie funkcji - możliwość wywoływania zewnętrznych narzędzi i funkcji poza przepływem LLM
+- Lepsza wydajność RAG - dzięki większemu oknu kontekstowemu
+- Generowanie danych syntetycznych - możliwość tworzenia efektywnych danych do zadań takich jak fine-tuning
 
-### Native Function Calling
+### Natywne wywoływanie funkcji
 
-Llama 3.1 została dopracowana, aby skuteczniej wywoływać funkcje lub narzędzia. Model ma też dwa wbudowane narzędzia, które potrafi rozpoznać i użyć na podstawie zapytania użytkownika. Są to:
+Llama 3.1 została dostrojona tak, aby efektywniej wykonywać wywołania funkcji lub narzędzi. Posiada również dwa wbudowane narzędzia, które model potrafi rozpoznać jako konieczne do użycia na podstawie zapytania użytkownika. Narzędzia te to:
 
-- **Brave Search** – może być używany do uzyskiwania aktualnych informacji, np. o pogodzie, poprzez wyszukiwanie w sieci  
-- **Wolfram Alpha** – służy do bardziej złożonych obliczeń matematycznych, dzięki czemu nie trzeba pisać własnych funkcji  
+- **Brave Search** - może być używane do pobierania aktualnych informacji, takich jak pogoda, wykonując wyszukiwanie w sieci
+- **Wolfram Alpha** - może być używane do bardziej zaawansowanych obliczeń matematycznych, więc nie jest wymagane pisanie własnych funkcji.
 
 Możesz także tworzyć własne niestandardowe narzędzia, które LLM może wywoływać.
 
-W poniższym przykładzie kodu:
+W przykładzie kodu poniżej:
 
-- Definiujemy dostępne narzędzia (brave_search, wolfram_alpha) w systemowym promptcie.  
-- Wysyłamy zapytanie użytkownika dotyczące pogody w konkretnym mieście.  
-- LLM odpowie wywołaniem narzędzia Brave Search, które będzie wyglądać tak: `<|python_tag|>brave_search.call(query="Stockholm weather")`  
+- Definiujemy dostępne narzędzia (brave_search, wolfram_alpha) w podpowiedzi systemowej.
+- Wysyłamy zapytanie użytkownika dotyczące pogody w określonym mieście.
+- LLM odpowie wywołaniem narzędzia Brave Search, które będzie wyglądać tak: `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*Uwaga: Ten przykład tylko wywołuje narzędzie, jeśli chcesz otrzymać wyniki, musisz założyć darmowe konto na stronie Brave API i zdefiniować samą funkcję*  
+*Uwaga: Ten przykład wykonuje tylko wywołanie narzędzia, jeśli chcesz uzyskać wyniki, musisz założyć darmowe konto na stronie Brave API i samodzielnie zdefiniować funkcję.
 
 ```python 
 import os
@@ -94,15 +94,15 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-Mimo że jest to model LLM, Llama 3.1 ma ograniczenie w postaci braku multimodalności, czyli możliwości korzystania z różnych typów danych wejściowych, takich jak obrazy, oraz udzielania na nie odpowiedzi. Ta funkcja jest jedną z głównych cech Llama 3.2. Inne cechy to:
+Pomimo bycia modelem LLM, jedną z ograniczeń Llama 3.1 jest brak multimodalności. To znaczy, brak możliwości używania różnych rodzajów danych wejściowych, takich jak obrazy, jako podpowiedzi oraz udzielania na nie odpowiedzi. Ta funkcja jest jedną z głównych cech Llama 3.2. Inne cechy obejmują:
 
-- Multimodalność – potrafi analizować zarówno tekst, jak i obrazy  
-- Warianty o małej i średniej wielkości (11B i 90B) – zapewniają elastyczne opcje wdrożenia  
-- Warianty tylko tekstowe (1B i 3B) – pozwalają na wdrożenie na urządzeniach brzegowych/mobilnych i oferują niskie opóźnienia  
+- Multimodalność - zdolność do oceny zarówno tekstowych, jak i obrazowych podpowiedzi
+- Warianty o rozmiarach od małych do średnich (11B i 90B) - zapewniają elastyczne opcje wdrożeniowe,
+- Warianty tylko tekstowe (1B i 3B) - pozwalają na wdrożenie modelu na urządzeniach edge / mobilnych i zapewniają niskie opóźnienia
 
-Wsparcie multimodalne to duży krok naprzód w świecie otwartych modeli. Poniższy przykład kodu wykorzystuje zarówno obraz, jak i tekst, aby uzyskać analizę obrazu z Llama 3.2 90B.
+Wsparcie multimodalne to duży krok naprzód w świecie otwartych modeli. Przykład kodu poniżej bierze zarówno obraz, jak i podpowiedź tekstową, aby uzyskać analizę obrazu z Llama 3.2 90B.
 
-### Wsparcie multimodalne w Llama 3.2
+### Wsparcie multimodalne z Llama 3.2
 
 ```python 
 import os
@@ -151,7 +151,11 @@ print(response.choices[0].message.content)
 
 ## Nauka nie kończy się tutaj, kontynuuj podróż
 
-Po ukończeniu tej lekcji sprawdź naszą [kolekcję nauki Generative AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby dalej rozwijać swoją wiedzę o Generative AI!
+Po ukończeniu tej lekcji sprawdź naszą [kolekcję nauki Generatywnej AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby dalej rozwijać swoją wiedzę na temat Generatywnej AI!
 
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Zastrzeżenie**:  
-Niniejszy dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mimo że dążymy do jak największej dokładności, prosimy mieć na uwadze, że tłumaczenia automatyczne mogą zawierać błędy lub nieścisłości. Oryginalny dokument w języku źródłowym powinien być uznawany za źródło autorytatywne. W przypadku informacji o kluczowym znaczeniu zalecane jest skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.
+Niniejszy dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mimo że dokładamy starań, aby tłumaczenie było jak najbardziej precyzyjne, należy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w języku źródłowym powinien być uznawany za wiarygodne źródło. W przypadku informacji krytycznych zalecane jest skorzystanie z profesjonalnego tłumaczenia wykonywanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

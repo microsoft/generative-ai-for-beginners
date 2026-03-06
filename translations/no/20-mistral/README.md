@@ -1,39 +1,40 @@
-# Bygging med Mistral-modeller
+# Bygge med Mistral-modeller
 
 ## Introduksjon
 
-Denne leksjonen vil dekke:  
-- Utforske de forskjellige Mistral-modellene  
-- Forstå bruksområder og scenarier for hver modell  
-- Kodeeksempler som viser de unike funksjonene til hver modell.
+Denne leksjonen vil dekke:
+- Utforske de forskjellige Mistral-modellene
+- Forstå bruksområdene og scenariene for hver modell
+- Utforske kodeeksempler som viser de unike egenskapene til hver modell.
 
 ## Mistral-modellene
 
-I denne leksjonen skal vi utforske 3 forskjellige Mistral-modeller:  
+I denne leksjonen skal vi utforske 3 forskjellige Mistral-modeller:
 **Mistral Large**, **Mistral Small** og **Mistral Nemo**.
 
-Hver av disse modellene er tilgjengelige gratis på Github Model marketplace. Koden i denne notatboken vil bruke disse modellene for å kjøre koden. Her er mer informasjon om bruk av Github Models for å [prototype med AI-modeller](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Hver av disse modellene er tilgjengelige gratis på GitHub Model-markedet. Koden i denne notatboken vil bruke disse modellene for å kjøre koden. Her er mer informasjon om bruk av GitHub-modeller for å [prototype med AI-modeller](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
-## Mistral Large 2 (2407)  
+## Mistral Large 2 (2407)
+
 Mistral Large 2 er for øyeblikket flaggskipmodellen fra Mistral og er designet for bedriftsbruk.
 
-Modellen er en oppgradering av den originale Mistral Large ved å tilby  
-- Større kontekstvindu – 128k vs 32k  
-- Bedre ytelse på matte- og kodeoppgaver – 76,9 % gjennomsnittlig nøyaktighet vs 60,4 %  
-- Økt flerspråklig ytelse – språk inkluderer: engelsk, fransk, tysk, spansk, italiensk, portugisisk, nederlandsk, russisk, kinesisk, japansk, koreansk, arabisk og hindi.
+Modellen er en oppgradering av den opprinnelige Mistral Large ved å tilby
+- Større kontekstvindu - 128k vs 32k
+- Bedre ytelse på matte- og kodingsoppgaver - 76,9 % gjennomsnittlig nøyaktighet vs 60,4 %
+- Økt flerspråklig ytelse - språk inkluderer: engelsk, fransk, tysk, spansk, italiensk, portugisisk, nederlandsk, russisk, kinesisk, japansk, koreansk, arabisk og hindi.
 
-Med disse funksjonene utmerker Mistral Large seg på  
-- *Retrieval Augmented Generation (RAG)* – takket være det større kontekstvinduet  
-- *Function Calling* – denne modellen har innebygd funksjonskalling som gjør det mulig å integrere med eksterne verktøy og API-er. Disse kallene kan gjøres både parallelt eller sekvensielt.  
-- *Kodegenerering* – denne modellen er spesielt god på generering av Python, Java, TypeScript og C++.
+Med disse funksjonene utmerker Mistral Large seg på
+- *Retrieval Augmented Generation (RAG)* - på grunn av det større kontekstvinduet
+- *Funksjonskalling* - denne modellen har innebygd funksjonskalling som tillater integrasjon med eksterne verktøy og APIer. Disse kallene kan gjøres både parallelt eller ett etter ett i en sekvensiell rekkefølge.
+- *Kodegenerering* - denne modellen er utmerket på generering av Python, Java, TypeScript og C++.
 
 ### RAG-eksempel med Mistral Large 2
 
-I dette eksempelet bruker vi Mistral Large 2 for å kjøre et RAG-mønster over et tekst-dokument. Spørsmålet er skrevet på koreansk og handler om forfatterens aktiviteter før college.
+I dette eksempelet bruker vi Mistral Large 2 for å kjøre et RAG-mønster over et tekstdokument. Spørsmålet er skrevet på koreansk og handler om forfatterens aktiviteter før college.
 
-Det bruker Cohere Embeddings Model for å lage embeddings av tekst-dokumentet samt spørsmålet. For dette eksempelet brukes faiss Python-pakken som en vektor-lagring.
+Den bruker Cohere Embeddings Model for å lage embeddings av både tekstdokumentet og spørsmålet. For dette eksempelet bruker den faiss Python-pakken som en vektorlagring.
 
-Prompten som sendes til Mistral-modellen inkluderer både spørsmålene og de hentede tekstbitene som ligner på spørsmålet. Modellen gir deretter et svar på naturlig språk.
+Prompten som sendes til Mistral-modellen inkluderer både spørsmålene og de hentede delene som er lignende spørsmålene. Modellen gir deretter et svar på naturlig språk.
 
 ```python 
 pip install faiss-cpu
@@ -91,7 +92,7 @@ d = text_embeddings.shape[1]
 index = faiss.IndexFlatL2(d)
 index.add(text_embeddings)
 
-question = "저자가 대학에 오기 전에 주로 했던 두 가지 일은 무엇이었나요?？"
+question = "저자가 대학에 오기 전에 주로 했던 두 가지 일은 무엇이었나요?"
 
 question_embedding = embed_client.embed(
     input=[question],
@@ -101,7 +102,7 @@ question_embedding = embed_client.embed(
 question_embeddings = np.array(question_embedding.data[0].embedding)
 
 
-D, I = index.search(question_embeddings.reshape(1, -1), k=2) # distance, index
+D, I = index.search(question_embeddings.reshape(1, -1), k=2) # avstand, indeks
 retrieved_chunks = [chunks[i] for i in I.tolist()[0]]
 
 prompt = f"""
@@ -129,22 +130,24 @@ chat_response = client.complete(
 print(chat_response.choices[0].message.content)
 ```
 
-## Mistral Small  
-Mistral Small er en annen modell i Mistral-familien under premier/enterprise-kategorien. Som navnet antyder, er dette en Small Language Model (SLM). Fordelene med å bruke Mistral Small er at den er:  
-- Kostnadsbesparende sammenlignet med Mistral LLM-er som Mistral Large og NeMo – 80 % prisreduksjon  
-- Lav ventetid – raskere respons sammenlignet med Mistral sine LLM-er  
-- Fleksibel – kan distribueres i ulike miljøer med færre begrensninger på nødvendige ressurser.
 
-Mistral Small passer godt til:  
-- Tekstbaserte oppgaver som oppsummering, sentimentanalyse og oversettelse.  
-- Applikasjoner med hyppige forespørsler på grunn av kostnadseffektiviteten  
+## Mistral Small
+
+Mistral Small er en annen modell i Mistral-familien innen premier/enterprise-kategorien. Som navnet antyder, er denne modellen en Small Language Model (SLM). Fordelene ved å bruke Mistral Small er at den er:
+- Kostnadsbesparende sammenlignet med Mistral LLM-er som Mistral Large og NeMo - 80 % prisreduksjon
+- Lav ventetid - raskere respons sammenlignet med Mistral sine LLM-er
+- Fleksibel - kan distribueres på tvers av forskjellige miljøer med færre restriksjoner på nødvendige ressurser.
+
+Mistral Small er utmerket for:
+- Tekstbaserte oppgaver som oppsummering, sentimentanalyse og oversettelse.
+- Applikasjoner der det gjøres hyppige forespørsler på grunn av kostnadseffektiviteten
 - Kodeoppgaver med lav ventetid som gjennomgang og kodeforslag
 
 ## Sammenligning av Mistral Small og Mistral Large
 
-For å vise forskjeller i ventetid mellom Mistral Small og Large, kjør cellene nedenfor.
+For å vise forskjeller i ventetid mellom Mistral Small og Large, kjør cellene under.
 
-Du bør se en forskjell i responstid på 3–5 sekunder. Legg også merke til forskjeller i responslengde og stil på samme prompt.
+Du skal kunne se en forskjell i responstider på mellom 3-5 sekunder. Legg også merke til responstlengdene og stilen over samme prompt.
 
 ```python 
 
@@ -204,32 +207,33 @@ print(response.choices[0].message.content)
 
 ```
 
+
 ## Mistral NeMo
 
-Sammenlignet med de to andre modellene som er diskutert i denne leksjonen, er Mistral NeMo den eneste gratismodellen med Apache2-lisens.
+Sammenlignet med de to andre modellene diskutert i denne leksjonen, er Mistral NeMo den eneste gratis modellen med en Apache2-lisens.
 
-Den regnes som en oppgradering av den tidligere open source-LLM-en fra Mistral, Mistral 7B.
+Den anses som en oppgradering av den tidligere åpen kildekode LLM fra Mistral, Mistral 7B.
 
 Noen andre funksjoner ved NeMo-modellen er:
 
-- *Mer effektiv tokenisering:* Denne modellen bruker Tekken-tokenizer i stedet for den mer brukte tiktoken. Dette gir bedre ytelse på flere språk og kode.
+- *Mer effektiv tokenisering:* Denne modellen bruker Tekken-tokenizeren i stedet for den mer brukte tiktoken. Dette gir bedre ytelse på flere språk og kode.
 
 - *Finjustering:* Basismodellen er tilgjengelig for finjustering. Dette gir større fleksibilitet for brukstilfeller hvor finjustering kan være nødvendig.
 
-- *Native Function Calling* – Som Mistral Large er denne modellen trent på funksjonskalling. Dette gjør den unik som en av de første open source-modellene med denne funksjonaliteten.
+- *Innebygd funksjonskalling* - Som Mistral Large har denne modellen blitt trent på funksjonskalling. Dette gjør den unik som en av de første åpne kildekode-modellene til å gjøre det.
 
 ### Sammenligning av tokenizere
 
-I dette eksempelet ser vi på hvordan Mistral NeMo håndterer tokenisering sammenlignet med Mistral Large.
+I dette eksempelet vil vi se på hvordan Mistral NeMo håndterer tokenisering sammenlignet med Mistral Large.
 
-Begge eksemplene bruker samme prompt, men du vil se at NeMo returnerer færre tokens enn Mistral Large.
+Begge eksemplene tar samme prompt, men du skal se at NeMo returnerer færre tokens enn Mistral Large.
 
 ```bash
 pip install mistral-common
 ```
 
 ```python 
-# Import needed packages:
+# Importer nødvendige pakker:
 from mistral_common.protocol.instruct.messages import (
     UserMessage,
 )
@@ -240,13 +244,13 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Load Mistral tokenizer
+# Last inn Mistral-tokenizer
 
-model_name = "open-mistral-nemo	"
+model_name = "open-mistral-nemo"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Tokenize a list of messages
+# Tokeniser en liste med meldinger
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -264,7 +268,7 @@ tokenized = tokenizer.encode_chat_completion(
                             "format": {
                                 "type": "string",
                                 "enum": ["celsius", "fahrenheit"],
-                                "description": "The temperature unit to use. Infer this from the users location.",
+                                "description": "The temperature unit to use. Infer this from the user's location.",
                             },
                         },
                         "required": ["location", "format"],
@@ -280,12 +284,12 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# Count the number of tokens
+# Tell antall tokens
 print(len(tokens))
 ```
 
 ```python
-# Import needed packages:
+# Importer nødvendige pakker:
 from mistral_common.protocol.instruct.messages import (
     UserMessage,
 )
@@ -296,13 +300,13 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Load Mistral tokenizer
+# Last inn Mistral-tokenizer
 
 model_name = "mistral-large-latest"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Tokenize a list of messages
+# Tokeniser en liste med meldinger
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -320,7 +324,7 @@ tokenized = tokenizer.encode_chat_completion(
                             "format": {
                                 "type": "string",
                                 "enum": ["celsius", "fahrenheit"],
-                                "description": "The temperature unit to use. Infer this from the users location.",
+                                "description": "The temperature unit to use. Infer this from the user's location.",
                             },
                         },
                         "required": ["location", "format"],
@@ -336,13 +340,18 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# Count the number of tokens
+# Tell antall tokens
 print(len(tokens))
 ```
 
-## Læringen stopper ikke her, fortsett reisen
 
-Etter å ha fullført denne leksjonen, sjekk ut vår [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) for å fortsette å utvikle din kunnskap om Generativ AI!
+## Læring stopper ikke her, fortsett reisen
 
-**Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vennligst vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det opprinnelige dokumentet på originalspråket skal anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Etter å ha fullført denne leksjonen, sjekk ut vår [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) for å fortsette å heve din kunnskap om Generativ AI!
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Ansvarsfraskrivelse**:
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vennligst vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på dets opprinnelige språk skal anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

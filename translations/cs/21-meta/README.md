@@ -1,58 +1,58 @@
-# Tvorba s modely rodiny Meta
+# Stavba s modely Meta Family
 
 ## Úvod
 
 Tato lekce pokryje:
 
-- Prozkoumání dvou hlavních modelů rodiny Meta – Llama 3.1 a Llama 3.2
-- Pochopení použití a scénářů pro každý model
-- Ukázkový kód, který demonstruje jedinečné vlastnosti každého modelu
+- Prozkoumání dvou hlavních modelů rodiny Meta - Llama 3.1 a Llama 3.2
+- Porozumění případům použití a scénářům pro každý model
+- Ukázku kódu, která ukazuje jedinečné vlastnosti každého modelu
 
 ## Rodina modelů Meta
 
-V této lekci prozkoumáme 2 modely z rodiny Meta neboli „Llama Herd“ – Llama 3.1 a Llama 3.2
+V této lekci prozkoumáme 2 modely z rodiny Meta nebo "Llama Herd" - Llama 3.1 a Llama 3.2.
 
-Tyto modely jsou dostupné v různých variantách a najdete je na GitHub Model marketplace. Více informací o používání GitHub Models k [prototypování s AI modely](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Tyto modely jsou k dispozici v různých variantách a jsou dostupné na GitHub Model marketplace. Zde jsou další podrobnosti o používání GitHub Modelů pro [prototypování s AI modely](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
-Varianty modelů:
-- Llama 3.1 – 70B Instruct
-- Llama 3.1 – 405B Instruct
-- Llama 3.2 – 11B Vision Instruct
-- Llama 3.2 – 90B Vision Instruct
+Varianty modelů: 
+- Llama 3.1 - 70B Instruct
+- Llama 3.1 - 405B Instruct
+- Llama 3.2 - 11B Vision Instruct
+- Llama 3.2 - 90B Vision Instruct
 
-*Poznámka: Llama 3 je také dostupná na GitHub Models, ale v této lekci ji nebudeme pokrývat*
+*Poznámka: Llama 3 je také dostupný na GitHub Models, ale v této lekci není pokryt*
 
 ## Llama 3.1
 
 S 405 miliardami parametrů spadá Llama 3.1 do kategorie open source LLM.
 
-Model je vylepšením předchozí verze Llama 3 a nabízí:
+Model je vylepšením předchozího vydání Llama 3 tím, že nabízí:
 
-- Větší kontextové okno – 128k tokenů oproti 8k tokenům
-- Větší maximální počet výstupních tokenů – 4096 oproti 2048
-- Lepší vícejazyčnou podporu – díky zvýšenému počtu tréninkových tokenů
+- Větší kontextové okno – 128k tokenů vs 8k tokenů
+- Větší maximální počet výstupních tokenů – 4096 vs 2048
+- Lepší vícejazyčnou podporu – díky většímu množství tréninkových tokenů
 
-Díky tomu dokáže Llama 3.1 zvládat složitější scénáře při tvorbě GenAI aplikací, včetně:
-- Nativního volání funkcí – schopnost volat externí nástroje a funkce mimo workflow LLM
-- Lepšího výkonu RAG – díky většímu kontextovému oknu
-- Generování syntetických dat – schopnost vytvářet efektivní data pro úkoly jako je doladění modelu
+To umožňuje Llama 3.1 zvládat složitější případy použití při tvorbě GenAI aplikací, včetně: 
+- Nativní volání funkcí – schopnost volat externí nástroje a funkce mimo pracovní tok LLM
+- Lepší výkon RAG – díky většímu kontextovému oknu
+- Generování syntetických dat – schopnost vytvářet efektivní data pro úlohy jako doladění
 
 ### Nativní volání funkcí
 
-Llama 3.1 byla doladěna tak, aby efektivněji volala funkce nebo nástroje. Má také dva vestavěné nástroje, které model dokáže rozpoznat a použít na základě uživatelského promptu. Tyto nástroje jsou:
+Llama 3.1 byl doladěn tak, aby byl efektivnější při volání funkcí nebo nástrojů. Má také dva vestavěné nástroje, které model rozpozná jako potřebné k použití na základě uživatelského promptu. Tyto nástroje jsou:
 
-- **Brave Search** – lze použít k získání aktuálních informací, například počasí, pomocí webového vyhledávání
-- **Wolfram Alpha** – slouží pro složitější matematické výpočty, takže není potřeba psát vlastní funkce
+- **Brave Search** – Lze použít k získání aktuálních informací, jako je počasí, pomocí webového vyhledávání
+- **Wolfram Alpha** – Lze použít k složitějším matematickým výpočtům, takže není třeba psát vlastní funkce.
 
-Můžete si také vytvořit vlastní nástroje, které může LLM volat.
+Také můžete vytvořit své vlastní nástroje, které může LLM volat.
 
-V níže uvedeném příkladu kódu:
+V ukázce kódu níže:
 
 - Definujeme dostupné nástroje (brave_search, wolfram_alpha) v systémovém promptu.
-- Odesíláme uživatelský prompt, který se ptá na počasí v určitém městě.
+- Pošleme uživatelský prompt, který se ptá na počasí v určitém městě.
 - LLM odpoví voláním nástroje Brave Search, které bude vypadat takto `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*Poznámka: Tento příklad pouze volá nástroj, pokud chcete získat výsledky, musíte si vytvořit bezplatný účet na stránce Brave API a definovat samotnou funkci*
+*Poznámka: Tento příklad pouze volá nástroj, pokud chcete získat výsledky, musíte si vytvořit bezplatný účet na stránce Brave API a definovat samotnou funkci.
 
 ```python 
 import os
@@ -94,13 +94,13 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-Přestože je Llama 3.1 LLM, jednou z jejích omezení je multimodalita, tedy schopnost používat různé typy vstupů, například obrázky jako prompt a poskytovat odpovědi. Tato schopnost je jednou z hlavních vlastností Llama 3.2. Mezi další vlastnosti patří:
+Přestože je Llama 3.1 LLM, jeho omezením je nedostatek multimodality. To znamená, že nemůže používat různé typy vstupů, jako jsou obrázky jako prompt a poskytovat odpovědi. Tuto schopnost představuje jedna z hlavních funkcí Llama 3.2. Mezi další vlastnosti patří:
 
-- Multimodalita – schopnost zpracovávat textové i obrazové prompty
-- Varianty malých až středních velikostí (11B a 90B) – poskytují flexibilní možnosti nasazení
-- Textové varianty (1B a 3B) – umožňují nasazení na edge / mobilních zařízeních s nízkou latencí
+- Multimodalita – schopnost hodnotit jak textové, tak obrazové prompty
+- Variace malých až středních velikostí (11B a 90B) – poskytují flexibilní možnosti nasazení
+- Textové varianty (1B a 3B) – umožňují nasazení modelu na okrajová / mobilní zařízení a poskytují nízkou latenci
 
-Podpora multimodality představuje velký krok ve světě open source modelů. Níže uvedený příklad kódu využívá jak obrazový, tak textový prompt k analýze obrázku modelem Llama 3.2 90B.
+Podpora multimodality představuje významný krok ve světě open source modelů. Ukázka kódu níže používá jak obraz, tak textový prompt pro získání analýzy obrázku z Llama 3.2 90B.
 
 ### Multimodální podpora s Llama 3.2
 
@@ -149,9 +149,13 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Učení zde nekončí, pokračujte na své cestě
+## Učení zde nekončí, pokračujte v cestě
 
-Po dokončení této lekce si prohlédněte naši [kolekci Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) a pokračujte v rozšiřování svých znalostí o Generative AI!
+Po dokončení této lekce si prohlédněte naši [sbírku Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), abyste pokračovali v prohlubování svých znalostí o Generativní AI!
 
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Prohlášení o vyloučení odpovědnosti**:  
-Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). Přestože usilujeme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho mateřském jazyce by měl být považován za závazný zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za jakékoliv nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.
+Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). I když usilujeme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Originální dokument v jeho mateřském jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Nejsme odpovědni za žádné nedorozumění nebo nesprávné interpretace vzniklé použitím tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Esta lição irá abordar:
+Esta lição irá cobrir:
 
 - Exploração dos dois principais modelos da família Meta - Llama 3.1 e Llama 3.2
 - Compreensão dos casos de uso e cenários para cada modelo
@@ -10,9 +10,9 @@ Esta lição irá abordar:
 
 ## A Família de Modelos Meta
 
-Nesta lição, vamos explorar 2 modelos da família Meta ou "Llama Herd" - Llama 3.1 e Llama 3.2
+Nesta lição, exploraremos 2 modelos da família Meta ou "Llama Herd" - Llama 3.1 e Llama 3.2.
 
-Estes modelos estão disponíveis em diferentes variantes e podem ser encontrados no GitHub Model marketplace. Aqui estão mais detalhes sobre como usar os GitHub Models para [prototipar com modelos de IA](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Estes modelos vêm em diferentes variantes e estão disponíveis no mercado de modelos do GitHub. Aqui estão mais detalhes sobre o uso dos Modelos GitHub para [protótipos com modelos de IA](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
 Variantes do Modelo:  
 - Llama 3.1 - 70B Instruct  
@@ -20,39 +20,39 @@ Variantes do Modelo:
 - Llama 3.2 - 11B Vision Instruct  
 - Llama 3.2 - 90B Vision Instruct  
 
-*Nota: Llama 3 também está disponível nos GitHub Models, mas não será abordado nesta lição*
+*Nota: Llama 3 também está disponível nos Modelos GitHub, mas não será abordado nesta lição*
 
 ## Llama 3.1
 
-Com 405 mil milhões de parâmetros, o Llama 3.1 enquadra-se na categoria de LLM open source.
+Com 405 Mil Milhões de Parâmetros, o Llama 3.1 encaixa-se na categoria de LLMs de código aberto.
 
-Este modelo é uma atualização do lançamento anterior Llama 3, oferecendo:
+O modelo é uma atualização do lançamento anterior Llama 3, oferecendo:
 
-- Janela de contexto maior - 128k tokens vs 8k tokens  
-- Máximo de tokens de saída maior - 4096 vs 2048  
-- Melhor suporte multilingue - devido ao aumento dos tokens de treino  
+- Janela de contexto maior - 128k tokens vs 8k tokens
+- Máximo de Tokens de Saída maior - 4096 vs 2048
+- Melhor Suporte Multilingue - devido ao aumento dos tokens de treino
 
-Estas melhorias permitem ao Llama 3.1 lidar com casos de uso mais complexos na construção de aplicações GenAI, incluindo:  
-- Native Function Calling - a capacidade de chamar ferramentas e funções externas fora do fluxo de trabalho do LLM  
-- Melhor desempenho RAG - devido à maior janela de contexto  
-- Geração de dados sintéticos - a capacidade de criar dados eficazes para tarefas como fine-tuning  
+Estas características permitem ao Llama 3.1 lidar com casos de uso mais complexos ao construir aplicações GenAI, incluindo:  
+- Chamada Nativa de Funções - a capacidade de chamar ferramentas e funções externas fora do fluxo de trabalho do LLM  
+- Melhor Performance em RAG - devido à maior janela de contexto  
+- Geração de Dados Sintéticos - a capacidade de criar dados eficazes para tarefas como o fine-tuning  
 
-### Native Function Calling
+### Chamada Nativa de Funções
 
-O Llama 3.1 foi afinado para ser mais eficaz na realização de chamadas a funções ou ferramentas. Também inclui duas ferramentas integradas que o modelo pode identificar como necessárias com base no prompt do utilizador. Estas ferramentas são:
+O Llama 3.1 foi ajustado para ser mais eficaz ao fazer chamadas de funções ou ferramentas. Também possui duas ferramentas incorporadas que o modelo pode identificar como necessárias com base no prompt do utilizador. Essas ferramentas são:
 
-- **Brave Search** - Pode ser usada para obter informações atualizadas, como o tempo, realizando uma pesquisa na web  
-- **Wolfram Alpha** - Pode ser usada para cálculos matemáticos mais complexos, evitando a necessidade de escrever as suas próprias funções  
+- **Brave Search** - Pode ser usada para obter informações atualizadas como o tempo, realizando uma pesquisa na web
+- **Wolfram Alpha** - Pode ser usada para cálculos matemáticos mais complexos, assim não é necessário escrever suas próprias funções.
 
 Também pode criar as suas próprias ferramentas personalizadas que o LLM pode chamar.
 
 No exemplo de código abaixo:
 
-- Definimos as ferramentas disponíveis (brave_search, wolfram_alpha) no prompt do sistema.  
-- Enviamos um prompt do utilizador que pergunta sobre o tempo numa determinada cidade.  
-- O LLM responderá com uma chamada à ferramenta Brave Search, que terá este aspeto `<|python_tag|>brave_search.call(query="Stockholm weather")`  
+- Definimos as ferramentas disponíveis (brave_search, wolfram_alpha) no prompt do sistema.
+- Enviamos um prompt do utilizador a perguntar sobre o tempo numa determinada cidade.
+- O LLM responderá com uma chamada de ferramenta para o Brave Search, que ficará assim `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*Nota: Este exemplo apenas faz a chamada à ferramenta; se quiser obter os resultados, terá de criar uma conta gratuita na página da API Brave e definir a função propriamente dita*
+*Nota: Este exemplo apenas realiza a chamada à ferramenta; se quiser obter os resultados, precisará de criar uma conta gratuita na página da API Brave e definir a função propriamente dita.*
 
 ```python 
 import os
@@ -92,15 +92,16 @@ response = client.complete(messages=messages, model=model_name)
 print(response.choices[0].message.content)
 ```
 
+
 ## Llama 3.2
 
-Apesar de ser um LLM, uma limitação do Llama 3.1 é a multimodalidade. Ou seja, a capacidade de usar diferentes tipos de input, como imagens, como prompts e fornecer respostas. Esta capacidade é uma das principais características do Llama 3.2. Outras características incluem:
+Apesar de ser um LLM, uma limitação do Llama 3.1 é a ausência de multimodalidade. Ou seja, a incapacidade de usar diferentes tipos de entrada como imagens como prompts e fornecer respostas. Esta capacidade é uma das principais características do Llama 3.2. Estas características também incluem:
 
-- Multimodalidade - capacidade de avaliar prompts de texto e imagem  
-- Variações de tamanho pequeno a médio (11B e 90B) - que oferecem opções flexíveis de implementação  
-- Variações só de texto (1B e 3B) - que permitem a implementação em dispositivos edge / móveis e proporcionam baixa latência  
+- Multimodalidade - capacidade de avaliar tanto prompts de texto como de imagem
+- Variações de tamanho pequeno a médio (11B e 90B) - fornece opções flexíveis de implantação,
+- Variações só de texto (1B e 3B) - permite que o modelo seja implantado em dispositivos edge/móveis e oferece baixa latência
 
-O suporte multimodal representa um grande avanço no mundo dos modelos open source. O exemplo de código abaixo utiliza tanto uma imagem como um prompt de texto para obter uma análise da imagem pelo Llama 3.2 90B.
+O suporte multimodal representa um grande avanço no mundo dos modelos de código aberto. O exemplo de código abaixo utiliza tanto uma imagem como um prompt de texto para obter uma análise da imagem do Llama 3.2 90B.
 
 ### Suporte Multimodal com Llama 3.2
 
@@ -149,9 +150,14 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## A aprendizagem não termina aqui, continua a jornada
 
-Depois de completar esta lição, consulte a nossa [coleção de Aprendizagem em IA Generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para continuar a aprimorar os seus conhecimentos em IA Generativa!
+## A aprendizagem não termina aqui, continue a viagem
 
+Após concluir esta lição, consulte a nossa [coleção de Aprendizagem de IA Generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para continuar a aprimorar os seus conhecimentos em IA Generativa!
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução automática [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, por favor tenha em conta que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução automática [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos por garantir a precisão, por favor esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte oficial. Para informações críticas, recomenda-se a tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações erradas decorrentes do uso desta tradução.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

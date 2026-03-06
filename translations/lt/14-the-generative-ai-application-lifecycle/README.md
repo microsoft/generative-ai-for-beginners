@@ -1,93 +1,94 @@
 [![Integracija su funkcijų kvietimu](../../../translated_images/lt/14-lesson-banner.066d74a31727ac12.webp)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
-# Generatyviosios DI programos gyvavimo ciklas
+# Generatyvinės DI taikymo ciklas
 
-Svarbus klausimas visoms DI programoms yra DI funkcijų aktualumas, nes DI yra sparčiai besivystanti sritis, norint užtikrinti, kad jūsų programa išliktų aktuali, patikima ir tvirta, ją reikia nuolat stebėti, vertinti ir tobulinti. Čia į pagalbą ateina generatyviosios DI gyvavimo ciklas.
+Svarbus klausimas visoms DI programoms – DI funkcijų aktualumas, kadangi DI yra greitai besivystanti sritis, siekiant užtikrinti, kad jūsų programa išliktų aktuali, patikima ir tvirta, ją reikia nuolat stebėti, vertinti ir tobulinti. Čia ir įsijungia generatyvinio DI ciklas.
 
-Generatyviosios DI gyvavimo ciklas yra sistema, kuri jus veda per generatyviosios DI programos kūrimo, diegimo ir palaikymo etapus. Ji padeda apibrėžti jūsų tikslus, matuoti našumą, identifikuoti iššūkius ir įgyvendinti sprendimus. Taip pat padeda suderinti jūsų programą su etiniais ir teisės standartais jūsų srityje ir suinteresuotųjų šalių lūkesčiais. Vadovaudamiesi generatyviosios DI gyvavimo ciklu, galite užtikrinti, kad jūsų programa visada teiktų vertę ir patenkintų vartotojus.
+Generatyvinio DI ciklas yra sistema, kuri nukreipia jus per generatyvinės DI programos kūrimo, diegimo ir palaikymo etapus. Ji padeda apibrėžti jūsų tikslus, matuoti našumą, identifikuoti iššūkius ir įgyvendinti sprendimus. Taip pat padeda suderinti jūsų programą su etikos ir teisės standartais jūsų srityje bei suinteresuotosiomis šalimis. Sekdami generatyvinio DI ciklą, galite užtikrinti, kad jūsų programa visuomet teiks vertę ir tenkins vartotojus.
 
 ## Įvadas
 
 Šiame skyriuje jūs:
 
-- Suprasite perėjimą nuo MLOps prie LLMOps
-- Susipažinsite su LLM gyvavimo ciklu
-- Sužinosite apie gyvavimo ciklo įrankius
-- Suprasite gyvavimo ciklo metriką ir vertinimą
+- Suprasite paradigmų pasikeitimą nuo MLOps iki LLMOps
+- Sužinosite apie LLM ciklą
+- Išmoksite apie įrankius ciklui valdyti
+- Susipažinsite su ciklo metrika ir vertinimu
 
-## Suprasti perėjimą nuo MLOps prie LLMOps
+## Paradigmos pasikeitimo nuo MLOps iki LLMOps supratimas
 
-LLM yra naujas įrankis dirbtinio intelekto arsenale, jie yra nepaprastai galingi analizės ir generavimo užduotyse programoms, tačiau ši galia turi tam tikrų pasekmių, kaip mes optimizuojame DI ir klasikinio mašininio mokymosi užduotis.
+LLM yra naujas dirbtinio intelekto arsenalas įrankis, jie yra neįtikėtinai galingi analizės ir generavimo užduotims programose, tačiau ši galia turi pasekmių tam, kaip optimizuojame DI ir tradicinio mašininio mokymosi užduotis.
 
-Dėl to mums reikia naujo paradigma, kad šį įrankį pritaikytume dinamiškai, su tinkamomis paskatomis. Galime senesnes DI programas vadinti „ML programomis“, o naujesnes DI programas – „GenAI programomis“ arba tiesiog „DI programomis“, atspindinčiomis tuo metu naudojamą pagrindinę technologiją ir metodus. Tai keičia mūsų pasakojimą keliais būdais, pažvelkite į šį palyginimą.
+Dėl to mums reikia naujos paradigmos, kad šį įrankį pritaikytume dinamiškai, su tinkamomis paskatomis. Galime senesnes DI programas vadinti „ML programomis“, o naujesnes – „GenDI programomis“ arba tiesiog „DI programomis“, atspindinčiomis tuo metu naudojamas pagrindines technologijas ir metodus. Tai keičia mūsų naratyvą keliais aspektais, pažvelkite į šį palyginimą.
 
-![LLMOps ir MLOps palyginimas](../../../translated_images/lt/01-llmops-shift.29bc933cb3bb0080.webp)
+![LLMOps vs. MLOps palyginimas](../../../translated_images/lt/01-llmops-shift.29bc933cb3bb0080.webp)
 
-Atkreipkite dėmesį, kad LLMOps mes labiau orientuojamės į programų kūrėjus, naudojame integracijas kaip pagrindinį tašką, naudojame „Modelius kaip paslaugą“ ir galvojame apie šiuos metrikų aspektus.
+Pastebėkite, jog LLMOps esame labiau fokusuoti į programų kūrėjus, naudodami integracijas kaip pagrindinį tašką, naudojame „Modelius kaip paslaugą“ ir mąstome šiais pagrindiniais metrikų aspektais.
 
 - Kokybė: atsakymo kokybė
 - Žala: atsakingas DI
-- Sąžiningumas: atsakymo pagrįstumas (Ar tai prasminga? Ar tai teisinga?)
+- Sąžiningumas: atsakymo pagrįstumas (Ar prasminga? Ar teisinga?)
 - Kaina: sprendimo biudžetas
-- Vėlavimas: vidutinis laikas atsakymui į tokeną
+- Vėlavimas: vidutinis žodžių atsako laikas
 
-## LLM gyvavimo ciklas
+## LLM ciklas
 
-Pirmiausia, norint suprasti gyvavimo ciklą ir jo pakeitimus, pažvelkime į šią infografiką.
+Pirmiausia, norint suprasti ciklą ir pakeitimus, pažvelkime į kitą infografiką.
 
 ![LLMOps infografika](../../../translated_images/lt/02-llmops.70a942ead05a7645.webp)
 
-Kaip matote, tai skiriasi nuo įprastų MLOps gyvavimo ciklų. LLM turi daug naujų reikalavimų, tokių kaip užklausų kūrimas, įvairios kokybės gerinimo technikos (Fine-Tuning, RAG, Meta-Prompts), skirtingas vertinimas ir atsakomybė su atsakingu DI, galiausiai naujos vertinimo metrikos (kokybė, žala, sąžiningumas, kaina ir vėlavimas).
+Kaip matote, tai skiriasi nuo įprastinių MLOps ciklų. LLM turi daug naujų reikalavimų, tokių kaip prašymų konstravimas, įvairios kokybės gerinimo technikos (tikslinis tobulinimas, RAG, meta-prašymai), kitoks atsakingo DI įvertinimas, galiausiai naujos vertinimo metrikos (kokybė, žala, sąžiningumas, kaina ir vėlavimas).
 
-Pavyzdžiui, pažvelkite, kaip mes generuojame idėjas. Naudojame užklausų inžineriją, kad eksperimentuotume su įvairiais LLM ir ištirtume galimybes patikrinti, ar jų hipotezė gali būti teisinga.
+Pavyzdžiui, pažvelkite, kaip mes generuojame idėjas. Naudojant prašymų inžineriją eksperimentuoti su įvairiomis LLM, siekiant ištirti galimybes ir patikrinti, ar jų hipotezė gali būti teisinga.
 
-Atkreipkite dėmesį, kad tai nėra linijinis procesas, o integruoti ciklai, iteratyvūs ir su bendru ciklu.
+Atkreipkite dėmesį, jog tai nėra linijinis procesas, o integruoti ciklai, cikliškas ir turintis bendrą ciklą.
 
-Kaip galėtume išnagrinėti šiuos žingsnius? Pažvelkime detaliau, kaip galėtume sukurti gyvavimo ciklą.
+Kaip galėtume nagrinėti šiuos etapus? Pažvelkime į detales, kaip sudaryti ciklą.
 
 ![LLMOps darbo eiga](../../../translated_images/lt/03-llm-stage-flows.3a1e1c401235a6cf.webp)
 
-Tai gali atrodyti šiek tiek sudėtinga, pirmiausia sutelkime dėmesį į tris didelius žingsnius.
+Tai gali atrodyti šiek tiek komplikuota, pradėkime nuo trijų didelių etapų.
 
-1. Idėjų generavimas / tyrinėjimas: Tyrinėjimas, čia galime tirti pagal mūsų verslo poreikius. Prototipavimas, kuriame kuriame [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst) ir tikriname, ar jis pakankamai efektyvus mūsų hipotezei.
-1. Kūrimas / papildymas: Įgyvendinimas, dabar pradedame vertinti didesnius duomenų rinkinius, taikyti technikas, tokias kaip Fine-tuning ir RAG, kad patikrintume mūsų sprendimo tvirtumą. Jei ne, pakartotinai įgyvendinti, pridėti naujų žingsnių į mūsų srautą arba pertvarkyti duomenis gali padėti. Išbandę mūsų srautą ir mastelį, jei viskas veikia ir metrikos atitinka, esame pasiruošę kitam žingsniui.
-1. Operacionalizavimas: Integracija, dabar pridedame stebėjimo ir įspėjimų sistemas, diegiame ir integruojame programą į mūsų sistemą.
+1. Idėjų generavimas/tyrimasis: Tyrinėjimas, čia galime tirti pagal verslo poreikius. Prototipavimas, kuriame kuriame [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst) ir testuojame, ar jis pakankamai efektyvus mūsų hipotezei.
+1. Kūrimas/praplėtimas: Įgyvendinimas, dabar pradedame vertinti didesnius duomenų rinkinius ir taikyti technikas, tokias kaip tikslingas tobulinimas ir RAG, kad patikrintume sprendimo patvarumą. Jei ne, perdaryti, pridėjus naujų žingsnių ar pertvarkius duomenis, gali padėti. Išbandę srautą ir mastą, jei tai veikia ir metrikos teigiamos, jis pasiruošęs kitam žingsniui.
+1. Operavimo fazė: Integracija, dabar pridedame stebėjimo ir įspėjimų sistemas, diegiame ir sujungiame su programa.
 
-Tada turime bendrą valdymo ciklą, orientuotą į saugumą, atitiktį ir valdymą.
+Tada turime bendrą valdymo ciklą, kuris sutelkia dėmesį į saugumą, atitiktį ir valdymą.
 
-Sveikiname, dabar jūsų DI programa paruošta veikti ir yra operatyvi. Norėdami praktiškai išbandyti, pažvelkite į [Contoso Chat demonstraciją.](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreys)
+Sveikiname, dabar jūsų DI programa paruošta veikti ir eksploatuoti. Norint praktiškai patirti, pažvelkite į [Contoso pokalbių demonstraciją.](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst)
 
 O kokius įrankius galime naudoti?
 
-## Gyvavimo ciklo įrankiai
+## Ciklo įrankiai
 
-Įrankiams Microsoft siūlo [Azure AI platformą](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) ir [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst), kurie palengvina ir leidžia lengvai įgyvendinti jūsų ciklą.
+Įrankiams Microsoft siūlo [Azure DI platformą](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreyst) ir [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst), kurie palengvina ir leidžia lengvai įgyvendinti savo ciklą.
 
-[Azure AI platforma](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) leidžia naudoti [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio yra internetinis portalas, leidžiantis tyrinėti modelius, pavyzdžius ir įrankius. Valdyti savo išteklius, kurti vartotojo sąsajos srautus ir naudoti SDK/CLI parinktis kodui kurti.
+[Azure DI Platforma](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreyst) leidžia naudotis [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst). AI Studio yra internetinė portalas, leidžiantis tyrinėti modelius, pavyzdžius ir įrankius. Valdyti išteklius, kūrimo srautus bei SDK/CLI parinktis programavimui pirmiausia kodo kalba.
 
-![Azure AI galimybės](../../../translated_images/lt/04-azure-ai-platform.80203baf03a12fa8.webp)
+![Azure DI galimybės](../../../translated_images/lt/04-azure-ai-platform.80203baf03a12fa8.webp)
 
-Azure AI leidžia naudoti daugybę išteklių, valdyti savo operacijas, paslaugas, projektus, vektorinę paiešką ir duomenų bazes.
+Azure DI leidžia naudotis įvairiais ištekliais, valdyti operacijas, paslaugas, projektus, vektorinės paieškos ir duomenų bazių poreikius.
 
-![LLMOps su Azure AI](../../../translated_images/lt/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp)
+![LLMOps su Azure DI](../../../translated_images/lt/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp)
 
-Kurkite nuo Proof-of-Concept (POC) iki didelio masto programų su PromptFlow:
+Kurkite nuo koncepcijos patvirtinimo (POC) iki didelės apimties programų su PromptFlow:
 
-- Kurkite ir projektuokite programas iš VS Code, naudodami vizualius ir funkcinius įrankius
-- Testuokite ir tobulinkite savo programas, kad pasiektumėte kokybišką DI, lengvai.
-- Naudokite Azure AI Studio integracijai ir iteracijai su debesija, greitam diegimui ir integracijai.
+- Kurkite ir projektuokite programas VS Code aplinkoje, su vizualiniais ir funkciniais įrankiais
+- Testuokite ir tikslinkite savo programas, kad gautumėte kokybišką DI, paprastai
+- Naudokite Azure AI Studio integracijai ir iteracijoms su debesija, greitam diegimui ir prijungimui
 
 ![LLMOps su PromptFlow](../../../translated_images/lt/06-llm-promptflow.a183eba07a3a7fdf.webp)
 
 ## Puiku! Tęskite mokymąsi!
 
-Nuostabu, dabar sužinokite daugiau apie tai, kaip struktūruojame programą, kad naudotumėte šias sąvokas su [Contoso Chat programa](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst), kad pamatytumėte, kaip Cloud Advocacy pritaiko šias sąvokas demonstracijose. Daugiau turinio rasite mūsų [Ignite pranešime!](https://www.youtube.com/watch?v=DdOylyrTOWg)
+Nuostabu, dabar sužinokite daugiau apie tai, kaip struktūruojame programą, kad panaudotume koncepcijas su [Contoso pokalbių programa](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst), patikrinkite, kaip Cloud Advocacy pristato šias koncepcijas demonstracijose. Daugiau turinio rasite mūsų [Ignite pristatyme!
+](https://www.youtube.com/watch?v=DdOylyrTOWg)
 
-Dabar peržiūrėkite 15 pamoką, kad suprastumėte, kaip [Retrieval Augmented Generation ir vektorinės duomenų bazės](../15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst) veikia generatyviąją DI ir kaip kurti patrauklesnes programas!
+Dabar pereikite prie 15-os pamokos, kad suprastumėte, kaip [Retrieval Augmented Generation ir vektorinės duomenų bazės](../15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst) veikia generatyvinį DI ir kaip kurti dar patrauklesnes programas!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Atsakomybės apribojimas**:
-Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojamas profesionalus žmogaus vertimas. Mes neatsakome už bet kokius nesusipratimus ar neteisingus aiškinimus, kilusius dėl šio vertimo naudojimo.
+**Atsakomybės apribojimas**:  
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, atkreipkite dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojama naudoti profesionalų žmogaus atliktą vertimą. Mes neatsakome už jokius nesusipratimus ar klaidingus interpretavimus, kylančius dėl šio vertimo naudojimo.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
