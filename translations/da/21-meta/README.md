@@ -1,58 +1,58 @@
-# Byg med Meta Family-modellerne
+# Bygning med Meta-familie modellerne
 
 ## Introduktion
 
 Denne lektion vil dække:
 
-- Gennemgang af de to hovedmodeller i Meta-familien - Llama 3.1 og Llama 3.2  
-- Forståelse af anvendelsestilfælde og scenarier for hver model  
-- Kodeeksempel, der viser de unikke funktioner i hver model  
+- Udforskning af de to hoved Meta-familie modeller - Llama 3.1 og Llama 3.2
+- Forståelse af brugsscenarier og situationer for hver model
+- Kodeeksempel til at vise de unikke funktioner i hver model
 
-## Meta-familien af modeller
+## Meta-familien af Modeller
 
-I denne lektion vil vi udforske 2 modeller fra Meta-familien eller "Llama Herd" - Llama 3.1 og Llama 3.2
+I denne lektion vil vi udforske 2 modeller fra Meta-familien eller "Llama Herd" - Llama 3.1 og Llama 3.2.
 
-Disse modeller findes i forskellige varianter og er tilgængelige på GitHub Model-markedspladsen. Her er flere detaljer om brugen af GitHub Models til at [prototype med AI-modeller](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Disse modeller findes i forskellige varianter og er tilgængelige på GitHub Model-markedspladsen. Her er flere detaljer om brug af GitHub Models til at [prototype med AI-modeller](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
-Modelvarianter:  
-- Llama 3.1 - 70B Instruct  
-- Llama 3.1 - 405B Instruct  
-- Llama 3.2 - 11B Vision Instruct  
-- Llama 3.2 - 90B Vision Instruct  
+Model Varianter:
+- Llama 3.1 - 70B Instruct
+- Llama 3.1 - 405B Instruct
+- Llama 3.2 - 11B Vision Instruct
+- Llama 3.2 - 90B Vision Instruct
 
 *Bemærk: Llama 3 er også tilgængelig på GitHub Models, men vil ikke blive dækket i denne lektion*
 
 ## Llama 3.1
 
-Med 405 milliarder parametre hører Llama 3.1 til i kategorien open source LLM.
+Med 405 milliarder parametre passer Llama 3.1 ind i kategorien open source LLM.
 
-Modellen er en opgradering af den tidligere udgave Llama 3 og tilbyder:
+Modellen er en opgradering af den tidligere version Llama 3 ved at tilbyde:
 
-- Større kontekstvindue - 128k tokens mod 8k tokens  
-- Større maks. output tokens - 4096 mod 2048  
-- Bedre flersproget support - takket være flere træningstokens  
+- Større kontekstvindue - 128k tokens mod 8k tokens
+- Større Maks Output Tokens - 4096 mod 2048
+- Bedre Multisproglig Support - på grund af større mængde træningsdata
 
-Disse forbedringer gør Llama 3.1 i stand til at håndtere mere komplekse anvendelsestilfælde, når man bygger GenAI-applikationer, herunder:  
-- Native Function Calling - evnen til at kalde eksterne værktøjer og funktioner uden for LLM-arbejdsgangen  
-- Bedre RAG-ydeevne - takket være det større kontekstvindue  
-- Syntetisk datagenerering - evnen til at skabe effektiv data til opgaver som finjustering  
+Disse egenskaber gør det muligt for Llama 3.1 at håndtere mere komplekse brugssituationer ved opbygning af GenAI-applikationer, herunder:
+- Native Function Calling - evnen til at kalde eksterne værktøjer og funktioner uden for LLM-arbejdsgangen
+- Bedre RAG Ydeevne - på grund af det større kontekstvindue
+- Syntetisk Datagenerering - evnen til at skabe effektiv data til opgaver som finjustering
 
 ### Native Function Calling
 
-Llama 3.1 er finjusteret til at være mere effektiv til at foretage funktions- eller værktøjskald. Den har også to indbyggede værktøjer, som modellen kan identificere som nødvendige at bruge baseret på brugerens prompt. Disse værktøjer er:
+Llama 3.1 er finjusteret for bedre at kunne foretage funktions- eller værktøjskald. Den har også to indbyggede værktøjer, som modellen kan identificere behovet for at bruge baseret på brugerens prompt. Disse værktøjer er:
 
-- **Brave Search** - Kan bruges til at hente opdaterede oplysninger som vejret ved at udføre en web-søgning  
-- **Wolfram Alpha** - Kan bruges til mere komplekse matematiske beregninger, så du ikke behøver at skrive dine egne funktioner  
+- **Brave Search** - Kan bruges til at få opdaterede oplysninger som vejret ved at lave en websøgeforespørgsel
+- **Wolfram Alpha** - Kan bruges til mere komplekse matematiske beregninger, så det ikke er nødvendigt at skrive egne funktioner.
 
 Du kan også oprette dine egne brugerdefinerede værktøjer, som LLM kan kalde.
 
 I kodeeksemplet nedenfor:
 
-- Definerer vi de tilgængelige værktøjer (brave_search, wolfram_alpha) i systemprompten.  
-- Sender en brugerprompt, der spørger om vejret i en bestemt by.  
-- LLM vil svare med et værktøjskald til Brave Search-værktøjet, som vil se sådan ud `<|python_tag|>brave_search.call(query="Stockholm weather")`  
+- Definerer vi de tilgængelige værktøjer (brave_search, wolfram_alpha) i systemprompten.
+- Sender en brugerprompt, som spørger om vejret i en bestemt by.
+- LLM vil svare med et værktøjskald til Brave Search-værktøjet, som vil se sådan ud `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*Bemærk: Dette eksempel foretager kun værktøjskaldet. Hvis du vil have resultaterne, skal du oprette en gratis konto på Brave API-siden og definere funktionen selv*  
+*Bemærk: Dette eksempel foretager kun værktøjskaldet, hvis du vil have resultaterne, skal du oprette en gratis konto på Brave API-siden og definere funktionen selv.
 
 ```python 
 import os
@@ -94,15 +94,15 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-Selvom Llama 3.1 er en LLM, har den en begrænsning i forhold til multimodalitet. Det vil sige evnen til at bruge forskellige typer input som billeder som prompts og give svar. Denne evne er en af hovedfunktionerne i Llama 3.2. Disse funktioner inkluderer også:
+Selvom det er en LLM, er en begrænsning ved Llama 3.1 dets mangel på multimodalitet. Det vil sige manglende evne til at bruge forskellige inputtyper som billeder som prompts og give svar. Denne evne er en af hovedfunktionerne i Llama 3.2. Disse funktioner inkluderer også:
 
-- Multimodalitet - evnen til at evaluere både tekst- og billedprompter  
-- Små til mellemstore varianter (11B og 90B) - giver fleksible implementeringsmuligheder  
-- Tekst-only varianter (1B og 3B) - gør det muligt at implementere modellen på edge-/mobilenheder med lav latenstid  
+- Multimodalitet - har evnen til at evaluere både tekst- og billedprompter
+- Små til mellemstore variationer (11B og 90B) - giver fleksible implementeringsmuligheder
+- Tekst-only variationer (1B og 3B) - gør det muligt at implementere modellen på edge / mobile enheder og giver lav latenstid
 
-Den multimodale support repræsenterer et stort skridt i open source-modellernes verden. Kodeeksemplet nedenfor tager både et billede og en tekstprompt for at få en analyse af billedet fra Llama 3.2 90B.
+Den multimodale understøttelse repræsenterer et stort skridt i open source modellernes verden. Kodeeksemplet nedenfor tager både et billede og en tekstprompt for at få en analyse af billedet fra Llama 3.2 90B.
 
-### Multimodal support med Llama 3.2
+### Multimodal Support med Llama 3.2
 
 ```python 
 import os
@@ -149,9 +149,13 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Læringen stopper ikke her, fortsæt rejsen
+## Læring stopper ikke her, fortsæt rejsen
 
-Efter at have gennemført denne lektion, kan du tjekke vores [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) for at fortsætte med at udvikle din viden om Generative AI!
+Efter at have gennemført denne lektion, tag et kig på vores [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) for at fortsætte med at forbedre din Generative AI-viden!
 
-**Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, bedes du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det oprindelige dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Ansvarsfraskrivelse**:
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, bedes du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets modersmål bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der måtte opstå ved brug af denne oversættelse.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
