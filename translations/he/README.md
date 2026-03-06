@@ -1,6 +1,6 @@
-![בינה יוצרת למתחילים](../../translated_images/he/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
+![AI יוצרת למתחילים](../../translated_images/he/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
-### 21 שיעורים המלמדים את כל מה שצריך לדעת כדי להתחיל לבנות יישומי בינה יוצרת
+### 21 שיעורים המלמדים את כל מה שצריך לדעת כדי להתחיל לבנות יישומי AI יוצרים
 
 [![GitHub license](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)
 [![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
@@ -14,112 +14,122 @@
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-### 🌐 תמיכה ברב-שפות
+### 🌐 תמיכה בריבוי שפות
 
-#### נתמך באמצעות GitHub Action (מוטמע ומעודכן תמיד)
+#### נתמך באמצעות GitHub Action (מֻטָּמֵט ומתעדכן תמיד)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[ערבית](../ar/README.md) | [בנגלית](../bn/README.md) | [בולגרית](../bg/README.md) | [בורמזית (מיאנמר)](../my/README.md) | [סינית (מפושטת)](../zh-CN/README.md) | [סינית (מסורתית, הונג קונג)](../zh-HK/README.md) | [סינית (מסורתית, מקאו)](../zh-MO/README.md) | [סינית (מסורתית, טאיוואן)](../zh-TW/README.md) | [קרואטית](../hr/README.md) | [צ'כית](../cs/README.md) | [דנית](../da/README.md) | [הולנדית](../nl/README.md) | [אסטונית](../et/README.md) | [פינית](../fi/README.md) | [צרפתית](../fr/README.md) | [גרמנית](../de/README.md) | [יוונית](../el/README.md) | [עברית](./README.md) | [הינדי](../hi/README.md) | [הונגרית](../hu/README.md) | [אינדונזית](../id/README.md) | [איטלקית](../it/README.md) | [יפנית](../ja/README.md) | [קאנדה](../kn/README.md) | [קוריאנית](../ko/README.md) | [ליטאית](../lt/README.md) | [מלאית](../ms/README.md) | [מליאלאם](../ml/README.md) | [מרטהית](../mr/README.md) | [נפאלית](../ne/README.md) | [ניגרית פידג'ין](../pcm/README.md) | [נורווגית](../no/README.md) | [פרסית (פרסית)](../fa/README.md) | [פולנית](../pl/README.md) | [פורטוגזית (ברזיל)](../pt-BR/README.md) | [פורטוגזית (פורטוגל)](../pt-PT/README.md) | [פנג'אבי (ג'ורמוכי)](../pa/README.md) | [רומנית](../ro/README.md) | [רוסית](../ru/README.md) | [סרבית (קירילית)](../sr/README.md) | [סלובקית](../sk/README.md) | [סלובנית](../sl/README.md) | [ספרדית](../es/README.md) | [סווהילי](../sw/README.md) | [שבדית](../sv/README.md) | [טגלוג (פיליפינית)](../tl/README.md) | [טמילית](../ta/README.md) | [טלוגו](../te/README.md) | [תאית](../th/README.md) | [טורקית](../tr/README.md) | [אוקראינית](../uk/README.md) | [אורדו](../ur/README.md) | [ווייטנאמית](../vi/README.md)
+[ערבית](../ar/README.md) | [בנגלית](../bn/README.md) | [בולגרית](../bg/README.md) | [בורמזית (מיאנמר)](../my/README.md) | [סינית (מפושטת)](../zh-CN/README.md) | [סינית (מסורתית, הונג קונג)](../zh-HK/README.md) | [סינית (מסורתית, מקאו)](../zh-MO/README.md) | [סינית (מסורתית, טאיוואן)](../zh-TW/README.md) | [קרואטית](../hr/README.md) | [צ׳כית](../cs/README.md) | [דנית](../da/README.md) | [הולנדית](../nl/README.md) | [אסטונית](../et/README.md) | [פינית](../fi/README.md) | [צרפתית](../fr/README.md) | [גרמנית](../de/README.md) | [יוונית](../el/README.md) | [עברית](./README.md) | [הינדי](../hi/README.md) | [הונגרית](../hu/README.md) | [אינדונזית](../id/README.md) | [איטלקית](../it/README.md) | [יפנית](../ja/README.md) | [קנדה](../kn/README.md) | [קוריאנית](../ko/README.md) | [ליטאית](../lt/README.md) | [מלאית](../ms/README.md) | [מאליאלאם](../ml/README.md) | [מרטהית](../mr/README.md) | [נפאלית](../ne/README.md) | [פידג׳ין ניגרי](../pcm/README.md) | [נורבגית](../no/README.md) | [פרסית (פארסית)](../fa/README.md) | [פולנית](../pl/README.md) | [פורטוגזית (ברזיל)](../pt-BR/README.md) | [פורטוגזית (פורטוגל)](../pt-PT/README.md) | [פנג׳אבית (גורמוקי)](../pa/README.md) | [רומנית](../ro/README.md) | [רוסית](../ru/README.md) | [סרבית (קירילי)](../sr/README.md) | [סלובקית](../sk/README.md) | [סלובנית](../sl/README.md) | [ספרדית](../es/README.md) | [סוואהילי](../sw/README.md) | [שוודית](../sv/README.md) | [תגאלוג (פיליפינית)](../tl/README.md) | [טמילית](../ta/README.md) | [טלוגו](../te/README.md) | [תאית](../th/README.md) | [טורקית](../tr/README.md) | [אוקריאנית](../uk/README.md) | [אורדו](../ur/README.md) | [וייטנאמית](../vi/README.md)
 
 > **מעדיפים לשכפל מקומית?**
-
-> מאגר זה כולל למעלה מ-50 תרגומים של שפות שמגדילים משמעותית את גודל ההורדה. כדי לשכפל ללא תרגומים, השתמשו בספרס צ'קאאוט:
+>
+> מאגר זה כולל יותר מ-50 תרגומים בשפות שונות המשפרים משמעותית את גודל ההורדה. לשכפל ללא תרגומים, השתמשו ב-sparse checkout:
+>
+> **Bash / macOS / Linux:**
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/generative-ai-for-beginners.git
 > cd generative-ai-for-beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> זה נותן לכם את כל מה שצריך כדי להשלים את הקורס עם הורדה הרבה יותר מהירה.
+>
+> **CMD (Windows):**
+> ```cmd
+> git clone --filter=blob:none --sparse https://github.com/microsoft/generative-ai-for-beginners.git
+> cd generative-ai-for-beginners
+> git sparse-checkout set --no-cone "/*" "!translations" "!translated_images"
+> ```
+>
+> זה נותן לכם את כל מה שצריך כדי להשלים את הקורס במהירות הורדה גבוהה בהרבה.
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-# בינה יוצרת למתחילים (גרסה 3) - קורס
+# AI יוצרת למתחילים (גרסה 3) - קורס
 
-למדו את היסודות של בניית יישומי בינה יוצרת עם קורס מקיף בן 21 שיעורים על ידי Microsoft Cloud Advocates.
+למדו את היסודות של בניית יישומי AI יוצרים עם קורס מקיף של 21 שיעורים מבית Microsoft Cloud Advocates.
 
-## 🌱 איך להתחיל
+## 🌱 התחלנו
 
-לקורס זה יש 21 שיעורים. כל שיעור מכסה נושא משלו אז התחילו מאיפה שתרצו!
+לקורס יש 21 שיעורים. כל שיעור מקיף נושא משלו, כך שתוכלו להתחיל מכל מקום שתרצו!
 
-השיעורים מתויגים כ-"למדו" המסבירים מושג בבינה יוצרת או "בנו" המסבירים מושג ודוגמאות קוד בשתי **Python** ו-**TypeScript** כאשר אפשרי.
+השיעורים מלווים בתווית "למידה" המסבירה מושג ב-AI יוצרת, או "בניית" המסבירים מושג ודוגמאות קוד ב-**Python** ו-**TypeScript** כשאפשר.
 
-למפתחי .NET בדקו את [בינה יוצרת למתחילים (מהדורת .NET)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
+למפתחים בפלטפורמת .NET מומלץ לבדוק את [AI יוצרת למתחילים (.NET Edition)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
 
-בכל שיעור יש גם חלק "להמשיך ללמוד" עם כלים נוספים ללמידה.
+כל שיעור כולל גם מדור "המשך ללמוד" עם כלים נוספים ללמידה.
 
-## מה אתם צריכים
-### כדי להריץ את הקוד של הקורס ניתן להשתמש באחד מהבאים:
+## מה אתה צריך
+### כדי להריץ את קוד הקורס, ניתן להשתמש באחד מ:
  - [שירות Azure OpenAI](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **שיעורים:** "aoai-assignment"
- - [קטלוג דגמי GitHub Marketplace](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **שיעורים:** "githubmodels"
- - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **שיעורים:** "oai-assignment" 
+ - [קטלוג מודלים של GitHub Marketplace](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **שיעורים:** "githubmodels"
+ - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **שיעורים:** "oai-assignment"
    
-- ידע בסיסי ב-Python או TypeScript מועיל - \*למתחילים מוחלטים בדקו את הקורסים האלו ב-[Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) ו-[TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst)
-- חשבון GitHub כדי [למפצל את כל המאגר הזה](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) לחשבון ה-GitHub האישי שלכם
+- ידע בסיסי ב-Python או TypeScript מועיל - \*למלאי הידע המוחלטים מומלץ להתחיל בקורסים אלה של [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) ו-[TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst)
+- חשבון GitHub ל-[להעניק fork לכל המאגר הזה](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) אל חשבון ה-GitHub האישי שלך
 
-יצרנו שיעור **[הגדרת קורס](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** שיעזור לכם בהגדרת סביבת הפיתוח שלכם.
+יצרנו שיעור **[הגדרת קורס](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** שיעזור לך בהגדרת סביבת הפיתוח שלך.
 
-אל תשכחו [להדליק (🌟) למאגר הזה](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) כדי למצוא אותו בקלות בהמשך.
+אל תשכח [לסמן בכוכב (🌟) את המאגר](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) כדי למצוא אותו בקלות מאוחר יותר.
 
-## 🧠 מוכנים להתפרסם?
+## 🧠 מוכן לפרוס?
 
-אם אתם מחפשים דוגמאות קוד מתקדמות יותר, בדקו את [אוסף דוגמאות קוד בינה יוצרת](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) שלנו בשתי **Python** ו-**TypeScript**.
+אם אתם מחפשים דוגמאות קוד מתקדמות יותר, בדקו את [אוסף דוגמאות קוד ל-AI יוצרת](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) שלנו בשפות **Python** ו-**TypeScript**.
 
-## 🗣️ פגשו לומדים אחרים, קבלו תמיכה
+## 🗣️ פגוש לומדים אחרים, קבל תמיכה
 
-הצטרפו לשרת ה- Discord הרשמי של Azure AI Foundry ב-[כאן](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) כדי לפגוש וליצור קשר עם לומדים אחרים הקורס הזה ולקבל תמיכה.
+הצטרף לשרת Discord הרשמי של Azure AI Foundry בכתובת [https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) כדי לפגוש ולקשר עם לומדים אחרים בקורס ולקבל תמיכה.
 
-שאלו שאלות או שתפו משוב על מוצר בפורום המפתחים שלנו של Azure AI Foundry ב-[Github](https://aka.ms/azureaifoundry/forum).
+שאל שאלות או שתף משוב על המוצר בפורום המפתחים שלנו [Azure AI Foundry Developer Forum](https://aka.ms/azureaifoundry/forum) ב-Github.
 
-## 🚀 בונים סטארטאפ?
+## 🚀 בונה סטארטאפ?
 
-בקרו ב-[Microsoft for Startups](https://www.microsoft.com/startups) כדי לגלות איך להתחיל לבנות עם קרדיטים של Azure כבר היום.
+בקר ב-[Microsoft for Startups](https://www.microsoft.com/startups) כדי לגלות איך להתחיל לבנות עם קרדיט של Azure כבר היום.
 
-## 🙏 רוצים לעזור?
+## 🙏 רוצה לעזור?
 
-יש לכם הצעות או מצאתם שגיאות איות או קוד? [צרו תקלה](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) או [צרו משיכה](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
+יש לך הצעות או מצאת טעויות כתיב או קוד? [פתח Issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) או [צור בקשת Pull](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
 
 ## 📂 כל שיעור כולל:
 
-- הקדמה קצרה בנושא בווידאו
+- הקדמה בווידאו קצר לנושא
 - שיעור כתוב ב-README
-- דוגמאות קוד בפייתון וב-TypeScript התומכות ב-Azure OpenAI ו-OpenAI API
-- קישורים למשאבים נוספים להמשך הלמידה שלכם
+- דוגמאות קוד בפייתון ו-TypeScript התומכות ב-Azure OpenAI ו-OpenAI API
+- קישורים למשאבים נוספים להמשך הלמידה
 
 ## 🗃️ שיעורים
 
-| #   | **קישור לשיעור**                                                                                                                              | **תיאור**                                                                                 | **וידאו**                                                                   | **למידה נוספת**                                                             |
-| --- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 00  | [הגדרת קורס](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                 | **למדו:** איך להגדיר את סביבת הפיתוח שלכם                                            | וידאו יגיע בקרוב                                                                 | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 01  | [הקדמה לבינה יוצרת ול-LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **למדו:** הבנת מהי בינה יוצרת ואיך מודלים לשוניים גדולים (LLMs) עובדים       | [וידאו](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 02  | [חקירת והשוואת מודלים לשוניים גדולים שונים](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)             | **למדו:** איך לבחור את המודל הנכון למקרה השימוש שלכם                                      | [וידאו](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 03  | [שימוש בבינה יוצרת באחריות](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                           | **למדו:** איך לבנות יישומי בינה יוצרת באחריות                                  | [וידאו](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 04  | [הבנת יסודות הנדסת הפרומפטים](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **למד:** שיטות פרקטיות מובילות בהנדסת פרומפטים                                           | [וידאו](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 05  | [יצירת פרומפטים מתקדמים](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **למד:** כיצד ליישם טכניקות הנדסת פרומפטים שמשפרות את התוצאה של הפרומפטים שלך. | [וידאו](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| #   | **קישור לשיעור**                                                                                                                             | **תיאור**                                                                                       | **ווידאו**                                                                   | **למידה נוספת**                                                              |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| 00  | [הגדרת קורס](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                   | **למידה:** כיצד להגדיר את סביבת הפיתוח שלך                                                    | וידאו יגיע בקרוב                                                              | [למד עוד](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 01  | [הקדמה ל-AI יוצרת ולמודלים גדולי שפה (LLMs)](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                          | **למידה:** להבין מהו AI יוצרת וכיצד פועלים מודלים גדולי שפה (LLMs)                             | [וידאו](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [למד עוד](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 02  | [חקירת והשוואת מודלים גדולי שפה שונים](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)               | **למידה:** כיצד לבחור את המודל המתאים למקרה השימוש שלך                                        | [וידאו](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [למד עוד](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 03  | [שימוש אחראי ב-AI יוצרת](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                                     | **למידה:** כיצד לבנות יישומי AI יוצרים באחריות                                               | [וידאו](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [למד עוד](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 04  | [הבנת יסודות הנדסת הפרומפטים](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **למד:** שיטות עבודה מומלצות בהנדסת פרומפטים באמצעות התנסות מעשית                                           | [וידאו](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 05  | [יצירת פרומפטים מתקדמים](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **למד:** כיצד ליישם טכניקות הנדסת פרומפטים שמשפרות את תוצאות הפרומפטים שלך. | [וידאו](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 06  | [בניית יישומי יצירת טקסט](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **בנה:** אפליקציית יצירת טקסט באמצעות Azure OpenAI / OpenAI API                                | [וידאו](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 07  | [בניית יישומי שיחה](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **בנה:** טכניקות לבניית ואינטגרציה יעילה של יישומי שיחה.               | [וידאו](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 08  | [בניית יישומי חיפוש ומסדי נתונים וקטוריים](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **בנה:** אפליקציית חיפוש המשתמשת בהטמעות לחיפוש מידע.                        | [וידאו](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 07  | [בניית יישומי צ'אט](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **בנה:** טכניקות לבניית ואינטגרציה יעילה של יישומי צ'אט.               | [וידאו](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 08  | [בניית יישומי חיפוש ומסדי נתונים וקטוריים](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **בנה:** אפליקציית חיפוש המשתמשת בהטמעות לצורך חיפוש נתונים.                        | [וידאו](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 | 09  | [בניית יישומי יצירת תמונות](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **בנה:** אפליקציית יצירת תמונות                                                       | [וידאו](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 10  | [בניית יישומי AI בקוד נמוך](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **בנה:** אפליקציית AI גנרטיבית המשתמשת בכלי קוד נמוך                                     | [וידאו](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 11  | [אינטגרציה של יישומים חיצוניים עם קריאת פונקציות](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **בנה:** מהי קריאת פונקציות ושימושיה ביישומים                          | [וידאו](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 12  | [עיצוב חוויית משתמש ליישומי AI](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **למד:** כיצד ליישם עקרונות עיצוב UX בפיתוח יישומי AI גנרטיביים         | [וידאו](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 13  | [הבטחת יישומי AI גנרטיביים](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **למד:** האיומים והסיכונים למערכות AI ודרכים לאבטח מערכות אלו.             | [וידאו](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 14  | [מחזור חיי יישומי AI גנרטיביים](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)           | **למד:** הכלים והמדדים לניהול מחזור החיים של LLM ו-LLMOps                         | [וידאו](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 15  | [יצירת תוכן מגובה בשחזור (RAG) ומסדי נתונים וקטוריים](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **בנה:** אפליקציה המשתמשת במסגרת RAG לשחזור הטמעות ממסדי נתונים וקטוריים  | [וידאו](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 16  | [מודלים פתוחים וקהל Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **בנה:** אפליקציה המשתמשת במודלים פתוחים הזמינים ב-Hugging Face                    | [וידאו](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 17  | [סוכני AI](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **בנה:** אפליקציה המשתמשת במסגרת סוכן AI                                           | [וידאו](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 18  | [כיוונון עדין של מודלי שפה גדולים (LLMs)](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **למד:** מהו, למה ואיך לבצע כיוונון עדין של LLMים                                            | [וידאו](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 19  | [בניית יישומים עם מודלי שפה קטנים (SLMs)](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **למד:** היתרונות של בנייה עם מודלי שפה קטנים                                            | וידאו בקרוב | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 20  | [בניית יישומים עם מודלי Mistral](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **למד:** התכונות וההבדלים של משפחת מודלי Mistral                                           | וידאו בקרוב | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 21  | [בניית יישומים עם מודלי Meta](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **למד:** התכונות וההבדלים של משפחת מודלי Meta                                           | וידאו בקרוב | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 10  | [בניית יישומי בינה מלאכותית בקוד נמוך](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **בנה:** אפליקציית בינה מלאכותית יוצרת באמצעות כלים בקוד נמוך                                     | [וידאו](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 11  | [אינטגרציה של אפליקציות חיצוניות באמצעות קריאות פונקציה](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **בנה:** מהי קריאת פונקציה ומקרי השימוש שלה לאפליקציות                          | [וידאו](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 12  | [עיצוב חוויית משתמש ליישומי בינה מלאכותית](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **למד:** כיצד ליישם עקרונות עיצוב חוויית משתמש בפיתוח יישומי בינה מלאכותית יוצרת         | [וידאו](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 13  | [הגנה על יישומי הבינה המלאכותית שלך](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **למד:** האיומים והסיכונים למערכות AI והשיטות לאבטחת מערכות אלו.             | [וידאו](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 14  | [מחזור החיים של יישומי בינה מלאכותית יוצרת](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)           | **למד:** הכלים והמדדים לניהול מחזור החיים של LLM והפעלת LLMOps                         | [וידאו](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 15  | [Retrieval Augmented Generation (RAG) ומסדי נתונים וקטוריים](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **בנה:** אפליקציה המשתמשת במסגרת RAG לאחזור הטמעות ממסדי נתונים וקטוריים  | [וידאו](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 16  | [מודלים בקוד פתוח ו-Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **בנה:** אפליקציה המשתמשת במודלים בקוד פתוח זמינים ב-Hugging Face                    | [וידאו](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 17  | [סוכני בינה מלאכותית](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **בנה:** אפליקציה המשתמשת במסגרת סוכן בינה מלאכותית                                           | [וידאו](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 18  | [כיוונון עדין של LLMs](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **למד:** מה זה, למה ואיך מכווננים עדין LLMs                                            | [וידאו](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 19  | [בנייה עם מודלים קטנים (SLMs)](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **למד:** היתרונות של בנייה עם מודלים קטנים                                            | וידאו בקרוב | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 20  | [בנייה עם מודלי מיסטרל](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **למד:** התכונות וההבדלים של מודלי משפחת מיסטרל                                           | וידאו בקרוב | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 21  | [בנייה עם מודלים של Meta](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **למד:** התכונות וההבדלים של מודלי משפחת Meta                                           | וידאו בקרוב | [למידע נוסף](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 
-### 🌟 תודה מיוחדת
+### 🌟 תודות מיוחדות
 
-תודה מיוחדת ל[**ג'ון עזיז**](https://www.linkedin.com/in/john0isaac/) על יצירת כל פעולות ה-GitHub וזרימות העבודה
+תודות מיוחדות ל[**ג'ון עזיז**](https://www.linkedin.com/in/john0isaac/) על יצירת כל פעולות וזרמי העבודה ב-GitHub
 
-[**ברנהרד מרקל**](https://www.linkedin.com/in/bernhard-merkle-738b73/) על תרומות מפתח לכל שיעור לשיפור חוויית הלמידה והקוד. 
+ל[**ברנהרד מרקלה**](https://www.linkedin.com/in/bernhard-merkle-738b73/) על תרומות מפתח בכל שיעור לשיפור חוויית הלמידה והקוד. 
 
-## 🎒 קורסים נוספים
+## 🎒 קורסים אחרים
 
-הצוות שלנו מייצר קורסים נוספים! בדקו את:
+הצוות שלנו מייצר קורסים אחרים! הסתכלו על:
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -135,12 +145,12 @@
 [![סוכני AI למתחילים](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
-
-### סדרת AI גנרטיבי
-[![AI גנרטיבי למתחילים](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![AI גנרטיבי (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
-[![AI גנרטיבי (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
-[![AI גנרטיבי (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
+ 
+### סדרת בינה מלאכותית יוצרת
+[![בינה מלאכותית יוצרת למתחילים](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![בינה מלאכותית יוצרת (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
+[![בינה מלאכותית יוצרת (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
+[![בינה מלאכותית גנרטיבית (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
 
 ---
  
@@ -148,26 +158,26 @@
 [![למידת מכונה למתחילים](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![מדע נתונים למתחילים](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![בינה מלאכותית למתחילים](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
-[![אבטחת סייבר למתחילים](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
+[![סייברסקיוריטי למתחילים](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![פיתוח ווב למתחילים](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT למתחילים](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
 [![פיתוח XR למתחילים](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### סדרת Copilot
-[![Copilot לתכנות זוגי בינה מלאכותית](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot עבור C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![הרפתקת Copilot](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+### סדרת קופיילוט
+[![קופיילוט לתכנות משותף עם בינה מלאכותית](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![קופיילוט ל-C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![הרפתקאות קופיילוט](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
-## לקבלת עזרה
+## קבלת עזרה
 
-אם אתה נתקע או יש לך שאלות לגבי בניית אפליקציות בינה מלאכותית. הצטרף ללומדים אחרים ולמפתחים מנוסים בדיונים על MCP. זו קהילה תומכת שבה שאלות מתקבלות בברכה והידע משותף בחופשיות.
+אם אתה נתקל בקושי או יש לך שאלות לגבי בניית אפליקציות AI. הצטרף ללומדים ולמפתחים מנוסים בדיונים על MCP. זו קהילה תומכת שבה שאלות מתקבלות בברכה והידע משותף בחופשיות.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-אם יש לך משוב על המוצר או שגיאות בזמן הבנייה, בקר ב:
+אם יש לך משוב על מוצר או שגיאות בזמן הבנייה בקר ב:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -175,5 +185,5 @@
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **כתב ויתור**:  
-מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון כי תרגומים אוטומטיים עלולים להכיל שגיאות או אי-דיוקים. המסמך המקורי בשפת המקור מהווה את המקור המוסמך. למידע קריטי, מומלץ לבצע תרגום מקצועי בידי אדם. אנו לא אחראים לכל אי-הבנה או פרשנות שגויה הנובעים משימוש בתרגום זה.
+מסמך זה תורגם באמצעות שירות תרגום בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון כי תרגומים אוטומטיים עלולים לכלול שגיאות או אי-דיוקים. המסמך המקורי בשפתו המקורית הוא המקור המוסמך. למידע קריטי מומלץ להיעזר בתרגום מקצועי על ידי אדם. איננו נושאים באחריות על כל אי הבנה או פרשנות שגויה הנובעת משימוש בתרגום זה.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
