@@ -77,11 +77,11 @@ If you are looking for more advanced code samples, check out our [collection of 
 
 Join our [official Azure AI Foundry Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) to meet and network with other learners taking this course and get support.
 
-Ask questions or share product feedback in our [Azure AI Foundry Developer Forum](https://aka.ms/azureaifoundry/forum) on Github.
+Ask questions or share product feedback in our [Azure AI Foundry Developer Forum](https://aka.ms/azureaifoundry/forum?WT.mc_id=academic-105485-koreyst) on Github.
 
 ## 🚀 Building a Startup?
 
-Visit [Microsoft for Startups](https://www.microsoft.com/startups) to find out how to get started building with Azure credits today.
+Visit [Microsoft for Startups](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst) to find out how to get started building with Azure credits today.
 
 ## 🙏 Want to help?
 
@@ -133,7 +133,7 @@ Our team produces other courses! Check out:
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
-[![LangChain4j for Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
+[![LangChain4j for Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![LangChain.js for Beginners](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
 [![LangChain for Beginners](https://img.shields.io/badge/LangChain%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://github.com/microsoft/langchain-for-beginners?WT.mc_id=m365-94501-dwahlin)
 ---
@@ -179,4 +179,4 @@ If you get stuck or have any questions about building AI apps. Join fellow learn
 
 If you have product feedback or errors while building visit:
 
-[![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum?WT.mc_id=academic-105485-koreyst)

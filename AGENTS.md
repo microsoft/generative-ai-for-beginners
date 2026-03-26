@@ -295,9 +295,9 @@ npm run convert
 ## Additional Resources
 
 - [Course Setup Guide](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
-- [Contributing Guidelines](./CONTRIBUTING.md)
-- [Code of Conduct](./CODE_OF_CONDUCT.md)
-- [Security Policy](./SECURITY.md)
+- [Contributing Guidelines](./CONTRIBUTING.md?WT.mc_id=academic-105485-koreyst)
+- [Code of Conduct](./CODE_OF_CONDUCT.md?WT.mc_id=academic-105485-koreyst)
+- [Security Policy](./SECURITY.md?WT.mc_id=academic-105485-koreyst)
 - [Azure AI Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 - [Collection of Advanced Code Samples](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
 
