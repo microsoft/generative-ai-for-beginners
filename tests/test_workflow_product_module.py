@@ -59,3 +59,24 @@ def test_dashboard_contains_kpi_labels():
     html = module.dashboard_html()
     assert "Avg decision accuracy" in html
     assert "Avg cost / task" in html
+
+
+def test_igor_assistant_brief_contains_execution_protocol_and_identity_core():
+    module = WorkflowProductModule()
+    module.run_lead_qualification_agent(
+        {
+            "lead_id": "lead-3",
+            "budget_usd": 6000,
+            "decision_authority": "owner",
+            "need_score": 9,
+            "timeline_days": 14,
+        }
+    )
+
+    brief = module.build_igor_assistant_brief(risk_level="elevated", strategic_goal="stabilize_churn")
+
+    assert brief["identity_core"]["operating_mode"] == "single_source_ai_integration"
+    assert brief["identity_core"]["risk_level"] == "elevated"
+    assert brief["identity_core"]["strategic_goal"] == "stabilize_churn"
+    assert "context_design" in brief["execution_protocol"]
+    assert len(brief["priority_queue"]) == 3

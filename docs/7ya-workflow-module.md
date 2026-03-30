@@ -55,6 +55,7 @@
 - `POST /api/run/lead-qualification`
 - `POST /api/run/content-repurposing`
 - `GET /api/metrics`
+- `POST /api/igor/brief` (builds a strategic single-agent execution brief)
 - `GET /dashboard`
 
 להרצה:
@@ -64,3 +65,19 @@ python -m src.workflow_product_module
 ```
 
 כך ניתן לספק רישוי כמוצר מודולרי ולא רק שירות ידני.
+
+
+## Igor Assistant Brief Output
+
+`POST /api/igor/brief` converts live module KPIs into a compact operating brief for a single-source AI execution model.
+
+Request body fields:
+- `risk_level`: `normal` | `elevated` | `crisis`
+- `strategic_goal`: free-text strategy target (example: `increase_mrr`, `stabilize_churn`)
+
+Response includes:
+- `identity_core`
+- `kpi_snapshot`
+- `alerts`
+- `priority_queue`
+- `execution_protocol`

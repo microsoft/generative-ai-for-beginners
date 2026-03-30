@@ -205,6 +205,71 @@ class WorkflowProductModule:
             )
         )
 
+    def build_igor_assistant_brief(
+        self,
+        *,
+        risk_level: str = "normal",
+        strategic_goal: str = "increase_mrr",
+    ) -> dict[str, Any]:
+        """Build a compact management brief for a single-agent operating model.
+
+        The brief turns current KPI and SOP state into an execution agenda that can be
+        handed to an always-on assistant ("Igor Assistant OS" style) without extra
+        interpretation.
+        """
+        metrics = self.get_metrics()
+        risk = risk_level.lower().strip()
+
+        if risk not in {"normal", "elevated", "crisis"}:
+            risk = "normal"
+
+        kpi_alerts: list[str] = []
+        if metrics["total_tasks"] == 0:
+            kpi_alerts.append("No workflow runs recorded yet; instrumentation validation required.")
+        if metrics["avg_decision_accuracy"] and metrics["avg_decision_accuracy"] < 0.9:
+            kpi_alerts.append("Decision accuracy below 0.90; retrain SOP logic and tighten rules.")
+        if metrics["avg_cost_usd"] and metrics["avg_cost_usd"] > 0.05:
+            kpi_alerts.append("Cost per task above target ($0.05); optimize model/tool usage.")
+
+        priority_by_risk = {
+            "normal": [
+                "Ship one conversion-focused experiment this week.",
+                "Automate the highest-frequency manual SOP.",
+                "Publish one authority-building content asset.",
+            ],
+            "elevated": [
+                "Freeze low-ROI initiatives and focus on revenue retention.",
+                "Run churn-prevention outreach for at-risk members.",
+                "Open a 7-day KPI recovery sprint with a single accountable owner.",
+            ],
+            "crisis": [
+                "Switch to cash-preservation mode and halt non-critical spend.",
+                "Activate incident communication plan across all stakeholder channels.",
+                "Run 24/7 assistant monitoring with 4-hour status updates.",
+            ],
+        }
+
+        return {
+            "identity_core": {
+                "operator": "7ya.io",
+                "operating_mode": "single_source_ai_integration",
+                "strategic_goal": strategic_goal,
+                "risk_level": risk,
+            },
+            "kpi_snapshot": metrics,
+            "alerts": kpi_alerts,
+            "priority_queue": priority_by_risk[risk],
+            "execution_protocol": {
+                "context_design": [
+                    "Global system instructions",
+                    "Project initializer payload",
+                    "Wakeup summary before each new directive",
+                    "Bento-box separation of instructions and data",
+                ],
+                "cadence": ["monday_strategy", "wednesday_review", "friday_scoreboard"],
+            },
+        }
+
     def dashboard_html(self) -> str:
         """Return a basic dashboard HTML for quick product demo."""
         metrics = self.get_metrics()
@@ -281,6 +346,16 @@ class WorkflowAPIHandler(BaseHTTPRequestHandler):
         if self.path == "/api/run/content-repurposing":
             module = self._module()
             self._send_json(module.run_content_repurposing_agent(payload))
+            return
+
+        if self.path == "/api/igor/brief":
+            module = self._module()
+            self._send_json(
+                module.build_igor_assistant_brief(
+                    risk_level=str(payload.get("risk_level", "normal")),
+                    strategic_goal=str(payload.get("strategic_goal", "increase_mrr")),
+                )
+            )
             return
 
         self._send_json({"error": "not found"}, status=404)
