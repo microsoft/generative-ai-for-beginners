@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "be9cef0460b3696ed5d8f6f8d2f64d45",
-  "translation_date": "2025-08-26T15:42:35+00:00",
-  "source_file": "00-course-setup/01-setup-cloud.md",
-  "language_code": "mr"
-}
--->
 # क्लाउड सेटअप ☁️ – GitHub Codespaces
 
 **हा मार्गदर्शक वापरा जर तुम्हाला स्थानिकपणे काहीही इन्स्टॉल करायचे नसेल.**  

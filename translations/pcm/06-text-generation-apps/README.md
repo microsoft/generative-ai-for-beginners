@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df027997f1448323d6159b78a1b669bf",
-  "translation_date": "2025-11-12T08:57:43+00:00",
-  "source_file": "06-text-generation-apps/README.md",
-  "language_code": "pcm"
-}
--->
 # How to Build Text Generation Apps
 
-[![How to Build Text Generation Apps](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.pcm.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![How to Build Text Generation Apps](../../../translated_images/pcm/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Click di image wey dey up to watch di video for dis lesson)_
 

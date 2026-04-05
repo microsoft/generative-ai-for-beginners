@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "58953c08b8ba7073b836d4270ea0fe86",
-  "translation_date": "2025-10-17T19:51:38+00:00",
-  "source_file": "08-building-search-applications/README.md",
-  "language_code": "nl"
-}
--->
 # Het bouwen van zoekapplicaties
 
-[![Introductie tot Generatieve AI en Grote Taalmodellen](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.nl.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Introductie tot Generatieve AI en Grote Taalmodellen](../../../translated_images/nl/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Klik op de afbeelding hierboven om de video van deze les te bekijken_
 
@@ -44,7 +35,7 @@ De les bevat een Embedding Index van de YouTube-transcripten van het Microsoft [
 
 Hieronder staat een voorbeeld van een semantische zoekopdracht voor de vraag 'kun je rstudio gebruiken met azure ml?'. Bekijk de YouTube-URL, je zult zien dat de URL een timestamp bevat die je naar het specifieke moment in de video brengt waar het antwoord op de vraag te vinden is.
 
-![Semantische zoekopdracht voor de vraag "kun je rstudio gebruiken met Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.nl.png)
+![Semantische zoekopdracht voor de vraag "kun je rstudio gebruiken met Azure ML"](../../../translated_images/nl/query-results.bb0480ebf025fac6.webp)
 
 ## Wat is semantisch zoeken?
 
@@ -163,7 +154,7 @@ Open het [oplossingsnotebook](./python/aoai-solution.ipynb?WT.mc_id=academic-105
 
 Wanneer je het notebook uitvoert, wordt je gevraagd om een zoekopdracht in te voeren. Het invoerveld ziet er als volgt uit:
 
-![Invoerveld voor de gebruiker om een zoekopdracht in te voeren](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.nl.png)
+![Invoerveld voor de gebruiker om een zoekopdracht in te voeren](../../../translated_images/nl/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Goed gedaan! Ga door met leren
 

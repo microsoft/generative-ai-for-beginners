@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c2f423d1402f71ca3869ec135bb77d16",
-  "translation_date": "2025-07-09T18:01:00+00:00",
-  "source_file": "18-fine-tuning/RESOURCES.md",
-  "language_code": "it"
-}
--->
 # Risorse per l'Apprendimento Autonomo
 
 La lezione è stata costruita utilizzando diverse risorse fondamentali di OpenAI e Azure OpenAI come riferimento per la terminologia e i tutorial. Ecco una lista non esaustiva, per i tuoi percorsi di apprendimento autonomo.

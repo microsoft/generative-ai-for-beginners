@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
-  "translation_date": "2025-10-17T23:48:25+00:00",
-  "source_file": "05-advanced-prompts/README.md",
-  "language_code": "ja"
-}
--->
 # 高度なプロンプトの作成
 
-[![高度なプロンプトの作成](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.ja.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![高度なプロンプトの作成](../../../translated_images/ja/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 前の章で学んだ内容を振り返りましょう：
 

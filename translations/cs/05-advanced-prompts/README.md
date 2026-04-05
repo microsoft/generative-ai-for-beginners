@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
-  "translation_date": "2025-10-17T21:35:05+00:00",
-  "source_file": "05-advanced-prompts/README.md",
-  "language_code": "cs"
-}
--->
 # Vytváření pokročilých promptů
 
-[![Vytváření pokročilých promptů](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.cs.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Vytváření pokročilých promptů](../../../translated_images/cs/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 Pojďme si zopakovat některé poznatky z předchozí kapitoly:
 

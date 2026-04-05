@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-11-12T08:55:47+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "pcm"
-}
--->
 # How to prepare transcription data
 
 Dis script wey go help prepare transcription data go download YouTube video transcript and arrange am make e fit work well with Semantic Search wey dey use OpenAI Embeddings and Functions sample.

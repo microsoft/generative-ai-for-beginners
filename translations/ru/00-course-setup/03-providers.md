@@ -1,51 +1,42 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "49ededa179004ea998664c780fbeac39",
-  "translation_date": "2025-08-26T13:51:00+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "ru"
-}
--->
 # Выбор и настройка провайдера LLM 🔑
 
-Задания **могут** быть настроены для работы с одним или несколькими развёрнутыми крупными языковыми моделями (LLM) через поддерживаемого провайдера, такого как OpenAI, Azure или Hugging Face. Эти сервисы предоставляют _хостинг-эндпоинт_ (API), к которому можно получить программный доступ при наличии правильных учётных данных (API-ключ или токен). В этом курсе мы рассматриваем следующие сервисы:
+Задания **могут** быть настроены для работы с одним или несколькими развертываниями Больших Языковых Моделей (LLM) через поддерживаемого сервисного провайдера, такого как OpenAI, Azure или Hugging Face. Они предоставляют _хостинговую конечную точку_ (API), к которой мы можем программно обращаться с правильными учетными данными (API-ключ или токен). В этом курсе мы рассматриваем следующих провайдеров:
 
  - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) с разнообразными моделями, включая основную серию GPT.
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) — OpenAI-модели с акцентом на корпоративное использование
- - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) — открытые модели и серверы для инференса
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) для моделей OpenAI с акцентом на корпоративную готовность
+ - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) для моделей с открытым исходным кодом и сервера вывода
 
-**Для выполнения упражнений вам понадобятся собственные аккаунты в этих сервисах**. Задания необязательные, поэтому вы можете выбрать настройку одного, всех или ни одного из провайдеров — по своему желанию. Несколько советов по регистрации:
+**Для этих упражнений вам потребуется использовать собственные аккаунты**. Задания являются необязательными, поэтому вы можете настроить одного, всех или ни одного из провайдеров в зависимости от ваших интересов. Некоторая информация для регистрации:
 
-| Регистрация | Стоимость | API-ключ | Playground | Комментарии |
+| Регистрация | Стоимость | API-ключ | Песочница | Комментарии |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Тарифы](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [На основе проекта](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [No-Code, Web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Доступно несколько моделей |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Тарифы](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Необходима предварительная заявка на доступ](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Тарифы](https://huggingface.co/pricing) | [Access Tokens](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [В Hugging Chat ограниченное количество моделей](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Цены](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Проектный](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Без кода, веб](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Доступно несколько моделей |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Цены](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [Быстрый старт SDK](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Быстрый старт Studio](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Необходимо предварительно подать заявку на доступ](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Цены](https://huggingface.co/pricing) | [Токены доступа](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat поддерживает ограниченное количество моделей](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
 | | | | | |
 
-Следуйте инструкциям ниже, чтобы _настроить_ этот репозиторий для работы с разными провайдерами. Задания, требующие определённого провайдера, будут содержать один из следующих тегов в названии файла:
+Следуйте инструкциям ниже, чтобы _настроить_ этот репозиторий для работы с разными провайдерами. Задания, требующие конкретного провайдера, будут содержать один из этих тегов в имени файла:
 
-- `aoai` — требуется Azure OpenAI endpoint и ключ
-- `oai` — требуется OpenAI endpoint и ключ
-- `hf` — требуется токен Hugging Face
+- `aoai` - требует конечную точку и ключ Azure OpenAI
+- `oai` - требует конечную точку и ключ OpenAI
+- `hf` - требует токен Hugging Face
 
-Вы можете настроить один, ни один или все провайдеры. Соответствующие задания просто выдадут ошибку при отсутствии нужных учётных данных.
+Вы можете настроить одного, ни одного или всех провайдеров. Связанные задания просто выдадут ошибку при отсутствии учетных данных.
 
-## Создание файла `.env`
+## Создайте файл `.env`
 
-Мы предполагаем, что вы уже ознакомились с инструкциями выше, зарегистрировались у нужного провайдера и получили необходимые данные для аутентификации (API_KEY или токен). В случае Azure OpenAI также предполагается, что у вас есть рабочий экземпляр Azure OpenAI Service (endpoint) с хотя бы одной развёрнутой GPT-моделью для генерации чата.
+Предполагается, что вы уже прочитали приведенные выше рекомендации, зарегистрировались у соответствующего провайдера и получили необходимые учетные данные для аутентификации (API_KEY или токен). В случае Azure OpenAI предполагается, что у вас также есть действующее развертывание сервиса Azure OpenAI (конечная точка) с хотя бы одной моделью GPT, развернутой для чат-комплешена.
 
-Далее нужно настроить **локальные переменные окружения** следующим образом:
+Следующий шаг — настроить ваши **локальные переменные окружения** следующим образом:
 
-1. В корневой папке найдите файл `.env.copy`, который должен содержать примерно следующее:
+1. Найдите в корневой папке файл `.env.copy`, который должен содержать примерно следующее:
 
    ```bash
-   # OpenAI Provider
+   # Поставщик OpenAI
    OPENAI_API_KEY='<add your OpenAI API key here>'
 
    ## Azure OpenAI
-   AZURE_OPENAI_API_VERSION='2024-02-01' # Default is set!
+   AZURE_OPENAI_API_VERSION='2024-02-01' # Значение по умолчанию установлено!
    AZURE_OPENAI_API_KEY='<add your AOAI key here>'
    AZURE_OPENAI_ENDPOINT='<add your AOIA service endpoint here>'
    AZURE_OPENAI_DEPLOYMENT='<add your chat completion model name here>' 
@@ -55,58 +46,58 @@ CO_OP_TRANSLATOR_METADATA:
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. Скопируйте этот файл в `.env` с помощью команды ниже. Этот файл добавлен в _gitignore_, чтобы ваши секреты были в безопасности.
+2. Скопируйте этот файл в `.env` с помощью команды ниже. Этот файл _игнорируется git_, что обеспечивает безопасность секретов.
 
    ```bash
    cp .env.copy .env
    ```
 
-3. Заполните значения (замените плейсхолдеры справа от `=`) как описано в следующем разделе.
+3. Заполните значения (замените заполнители справа от `=`) как описано в следующем разделе.
 
-4. (Опционально) Если вы используете GitHub Codespaces, можно сохранить переменные окружения как _секреты Codespaces_, связанные с этим репозиторием. В этом случае локальный файл .env создавать не нужно. **Однако обратите внимание, что этот вариант работает только при использовании GitHub Codespaces.** Если вы используете Docker Desktop, файл .env всё равно потребуется.
+4. (Опционально) Если вы используете GitHub Codespaces, у вас есть возможность сохранить переменные окружения как _секреты Codespaces_, связанные с этим репозиторием. В этом случае вам не нужно настраивать локальный файл .env. **Однако обратите внимание, что эта опция работает только при использовании GitHub Codespaces.** Если вы используете Docker Desktop, вам все равно нужно настроить файл .env.
 
-## Заполнение файла `.env`
+## Заполните файл `.env`
 
 Давайте быстро рассмотрим имена переменных, чтобы понять, что они означают:
 
 | Переменная  | Описание  |
 | :--- | :--- |
-| HUGGING_FACE_API_KEY | Токен доступа пользователя, который вы создаёте в своём профиле |
-| OPENAI_API_KEY | Ключ авторизации для использования сервиса (не для Azure OpenAI) |
-| AZURE_OPENAI_API_KEY | Ключ авторизации для использования этого сервиса |
-| AZURE_OPENAI_ENDPOINT | Развёрнутый endpoint для ресурса Azure OpenAI |
-| AZURE_OPENAI_DEPLOYMENT | Endpoint развёртывания модели _генерации текста_ |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Endpoint развёртывания модели _эмбеддингов текста_ |
+| HUGGING_FACE_API_KEY | Это токен доступа пользователя, который вы настроили в своем профиле |
+| OPENAI_API_KEY | Это ключ авторизации для использования сервиса не-Azure OpenAI |
+| AZURE_OPENAI_API_KEY | Это ключ авторизации для использования сервиса Azure OpenAI |
+| AZURE_OPENAI_ENDPOINT | Это конечная точка развернутого ресурса Azure OpenAI |
+| AZURE_OPENAI_DEPLOYMENT | Это конечная точка развертывания модели _генерации текста_ |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Это конечная точка развертывания модели _векторных эмбеддингов_ |
 | | |
 
-Примечание: последние две переменные Azure OpenAI отражают модель по умолчанию для генерации чата (генерация текста) и поиска по векторам (эмбеддинги) соответственно. Инструкции по их настройке будут даны в соответствующих заданиях.
+Примечание: последние две переменные Azure OpenAI отражают модель по умолчанию для чат-комплешена (генерация текста) и поиска по векторам (эмбеддинги) соответственно. Инструкции по их настройке будут даны в соответствующих заданиях.
 
 ## Настройка Azure: через портал
 
-Значения endpoint и ключа Azure OpenAI можно найти в [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), поэтому начнём с этого.
+Значения конечной точки и ключа Azure OpenAI можно найти в [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), начнем с него.
 
 1. Перейдите в [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
-1. В боковом меню выберите **Keys and Endpoint**.
-1. Нажмите **Show Keys** — вы увидите: KEY 1, KEY 2 и Endpoint.
-1. Для AZURE_OPENAI_API_KEY используйте значение KEY 1
-1. Для AZURE_OPENAI_ENDPOINT используйте значение Endpoint
+1. Нажмите на опцию **Keys and Endpoint** в боковом меню (слева).
+1. Нажмите **Show Keys** — вы увидите следующее: KEY 1, KEY 2 и Endpoint.
+1. Используйте значение KEY 1 для AZURE_OPENAI_API_KEY
+1. Используйте значение Endpoint для AZURE_OPENAI_ENDPOINT
 
-Далее нам понадобятся endpoints для конкретных моделей, которые вы развернули.
+Далее нам нужны конечные точки для конкретных моделей, которые мы развернули.
 
-1. В боковом меню (слева) для ресурса Azure OpenAI выберите **Model deployments**.
+1. Нажмите на опцию **Model deployments** в боковом меню (слева) для ресурса Azure OpenAI.
 1. На открывшейся странице нажмите **Manage Deployments**
 
-Это приведёт вас на сайт Azure OpenAI Studio, где мы найдём остальные значения, как описано ниже.
+Это приведет вас на сайт Azure OpenAI Studio, где мы найдем остальные значения, как описано ниже.
 
 ## Настройка Azure: через Studio
 
-1. Перейдите в [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **из вашего ресурса**, как описано выше.
-1. В левой панели выберите вкладку **Deployments**, чтобы увидеть развернутые модели.
-1. Если нужная модель не развернута, используйте **Create new deployment** для её развертывания.
-1. Вам понадобится модель _генерации текста_ — рекомендуем: **gpt-35-turbo**
-1. Вам понадобится модель _эмбеддингов текста_ — рекомендуем **text-embedding-ada-002**
+1. Перейдите в [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **через ваш ресурс**, как описано выше.
+1. Нажмите вкладку **Deployments** (боковое меню слева), чтобы увидеть текущие развернутые модели.
+1. Если нужная модель не развернута, используйте **Create new deployment** для ее развертывания.
+1. Вам понадобится модель _text-generation_ — рекомендуем: **gpt-35-turbo**
+1. Вам понадобится модель _text-embedding_ — рекомендуем **text-embedding-ada-002**
 
-Теперь обновите переменные окружения, указав _Deployment name_, который вы использовали. Обычно он совпадает с названием модели, если вы его явно не меняли. Например, у вас может быть:
+Теперь обновите переменные окружения, чтобы отразить имя _Deployment name_, которое вы использовали. Обычно оно совпадает с именем модели, если вы явно не изменяли его. Например, у вас может быть:
 
 ```bash
 AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
@@ -117,13 +108,15 @@ AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
 
 ## Настройка OpenAI: через профиль
 
-Ваш OpenAI API-ключ можно найти в [аккаунте OpenAI](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Если у вас его нет, зарегистрируйтесь и создайте API-ключ. После этого используйте его для заполнения переменной `OPENAI_API_KEY` в файле `.env`.
+Ваш API-ключ OpenAI можно найти в вашем [аккаунте OpenAI](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Если у вас его нет, вы можете зарегистрироваться и создать API-ключ. После получения ключа используйте его для заполнения переменной `OPENAI_API_KEY` в файле `.env`.
 
 ## Настройка Hugging Face: через профиль
 
-Ваш токен Hugging Face находится в профиле в разделе [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Не публикуйте и не делитесь этими токенами. Лучше создайте отдельный токен для этого проекта и скопируйте его в файл `.env` в переменную `HUGGING_FACE_API_KEY`. _Примечание:_ Технически это не API-ключ, но он используется для аутентификации, поэтому мы сохраняем такое название для единообразия.
+Ваш токен Hugging Face можно найти в вашем профиле в разделе [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Не публикуйте и не делитесь ими публично. Вместо этого создайте новый токен для использования в этом проекте и скопируйте его в файл `.env` в переменную `HUGGING_FACE_API_KEY`. _Примечание:_ технически это не API-ключ, но используется для аутентификации, поэтому мы сохраняем такое наименование для согласованности.
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Отказ от ответственности**:  
-Этот документ был переведен с помощью сервиса автоматического перевода [Co-op Translator](https://github.com/Azure/co-op-translator). Несмотря на стремление к точности, автоматические переводы могут содержать ошибки или неточности. Оригинальный документ на исходном языке следует считать авторитетным источником. Для получения критически важной информации рекомендуется профессиональный перевод человеком. Мы не несём ответственности за любые недоразумения или неправильные толкования, возникшие в результате использования данного перевода.
+Этот документ был переведен с помощью сервиса автоматического перевода [Co-op Translator](https://github.com/Azure/co-op-translator). Несмотря на наши усилия по обеспечению точности, имейте в виду, что автоматический перевод может содержать ошибки или неточности. Оригинальный документ на его исходном языке следует считать авторитетным источником. Для получения критически важной информации рекомендуется обращаться к профессиональному переводу, выполненному человеком. Мы не несем ответственности за любые недоразумения или неправильные толкования, возникшие в результате использования данного перевода.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

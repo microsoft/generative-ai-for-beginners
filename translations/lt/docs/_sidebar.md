@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4d1335b77a62c821d972c35ef82c586a",
-  "translation_date": "2025-08-25T12:46:48+00:00",
-  "source_file": "docs/_sidebar.md",
-  "language_code": "lt"
-}
--->
 - Pradžia
   - [Įvadas į generatyvinį dirbtinį intelektą](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)
 

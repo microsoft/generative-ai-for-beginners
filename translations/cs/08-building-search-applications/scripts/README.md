@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-07-09T13:12:29+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "cs"
-}
--->
 # Příprava dat pro přepis
 
 Skripty pro přípravu dat přepisu stahují přepisy videí z YouTube a připravují je pro použití se vzorcem Semantic Search s OpenAI Embeddings a Functions.

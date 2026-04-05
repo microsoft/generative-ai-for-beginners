@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-07-09T13:06:24+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "es"
-}
--->
 # Preparación de datos de transcripción
 
 Los scripts de preparación de datos de transcripción descargan las transcripciones de videos de YouTube y las preparan para su uso con el ejemplo de Búsqueda Semántica con OpenAI Embeddings y Funciones.

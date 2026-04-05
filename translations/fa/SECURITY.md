@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2d33a71bed73d6daee78e2d473ece975",
-  "translation_date": "2025-07-09T06:50:56+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "fa"
-}
--->
 ## امنیت
 
 مایکروسافت امنیت محصولات نرم‌افزاری و خدمات خود را بسیار جدی می‌گیرد، که شامل تمام مخازن کد منبع مدیریت‌شده از طریق سازمان‌های گیت‌هاب ما می‌شود، از جمله [Microsoft](https://github.com/microsoft)، [Azure](https://github.com/Azure)، [DotNet](https://github.com/dotnet)، [AspNet](https://github.com/aspnet)، [Xamarin](https://github.com/xamarin) و [سازمان‌های گیت‌هاب ما](https://opensource.microsoft.com/).

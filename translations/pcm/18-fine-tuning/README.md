@@ -1,113 +1,105 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "807f0d9fc1747e796433534e1be6a98a",
-  "translation_date": "2025-11-12T09:07:54+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "pcm"
-}
--->
-[![Open Source Models](../../../translated_images/18-lesson-banner.f30176815b1a5074fce9cceba317720586caa99e24001231a92fd04eeb54a121.pcm.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/pcm/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
-# How to Fine-Tune Your LLM
+# Fine-Tuning Your LLM
 
-To use big language models build generative AI apps dey come wit new wahala. One big wahala na how to make sure say di response wey di model dey give dey correct and relevant for wetin di user ask. For di lessons wey we don do before, we don talk about techniques like prompt engineering and retrieval-augmented generation wey dey try solve di problem by _changing di prompt wey we dey give di model_.
+To use large language models for build generative AI applications get new challenge dem. One big wahala na to make sure say response quality (accuracy and relevance) dey gidigba for the content wey the model generate for any user request. For the previous lessons, we don yarn about techniques like prompt engineering and retrieval-augmented generation wey dey try solve the problem by _modifying the prompt input_ for the existing model.
 
-For today lesson, we go talk about one new technique, **fine-tuning**, wey dey try solve di wahala by _retraining di model itself_ wit extra data. Make we enter di gist.
+For today lesson, we go talk about one third technique, **fine-tuning**, wey dey try tackle the challenge by _retraining the model itself_ with extra data. Make we enter the details.
 
-## Wetin You Go Learn
+## Learning Objectives
 
-Dis lesson go explain wetin fine-tuning mean for pre-trained language models, di benefits and wahala wey dey follow am, and how you fit use fine-tuning to make your generative AI models better.
+Dis lesson go introduce the idea for fine-tuning for pre-trained language models, explore the benefits and wahala dem of dis approach, and give you beta guide on when and how to use fine-tuning to improve the performance of your generative AI models.
 
-By di end of dis lesson, you go fit answer dis questions:
+By the time you finish dis lesson, you for sabi answer dis questions dem:
 
 - Wetin be fine-tuning for language models?
-- When and why e dey useful to fine-tune?
-- How person fit fine-tune pre-trained model?
-- Wetin be di limitations of fine-tuning?
+- When, and why, e beta to do fine-tuning?
+- How I fit fine-tune one pre-trained model?
+- Wetin be the limits of fine-tuning?
 
 You ready? Make we start.
 
 ## Illustrated Guide
 
-You wan get di overview of wetin we go talk before we start? Check dis illustrated guide wey dey show di learning journey for dis lesson - from di core concepts and why fine-tuning dey important, to di process and best practices for how to do di fine-tuning work. Dis topic dey very interesting, so no forget to check di [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) page for more links wey go help you learn by yourself!
+You want make you sabi the big picture of wetin we go cover before we enter? Check dis illustrated guide wey dey talk about the learning journey for dis lesson - from learning the core concepts and reason for fine-tuning, to understanding the process and best ways to follow to do the fine-tuning work. Dis topic na one correct one for exploration, so no forget to check the [Resources](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) page for extra links wey fit help your self-guided learning journey!
 
-![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a703467a120cb79a28b5ac1effc8d8d9d5b31bbbac6b8640432e14.pcm.png)
+![Illustrated Guide to Fine Tuning Language Models](../../../translated_images/pcm/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
 ## Wetin be fine-tuning for language models?
 
-Big language models na _pre-trained_ models wey dem don train wit plenty text wey dem gather from different places like di internet. As we don learn before, we dey use techniques like _prompt engineering_ and _retrieval-augmented generation_ to make di model dey give better answers to di user questions ("prompts").
+By definition, large language models dem _pre-trained_ on plenty text wey dem collect from different different places wey include internet. As we don learn for previous lessons, we need techniques like _prompt engineering_ and _retrieval-augmented generation_ to make sure say the quality of the model response to the user questions ("prompts") improve.
 
-One popular prompt-engineering technique na to give di model more direction on wetin we dey expect for di response by either giving _instructions_ (clear direction) or _showing am few examples_ (indirect direction). Dis one na wetin dem dey call _few-shot learning_, but e get two wahala:
+One popular prompt-engineering way na to give the model more guidance on wetin dem expect for the response by either give _instructions_ (clear guidance) or _give am small examples_ (implicit guidance). Dis na wetin dem dey call _few-shot learning_ but e get two wahala:
 
-- Di model get limit for di number of examples wey you fit give, and e fit affect how effective e go be.
-- Di cost of di model tokens fit make am expensive to dey add examples for every prompt, and e go limit flexibility.
+- Model token limits fit restrict the number of examples wey you fit give, and e fit reduce how e go work well.
+- Model token price fit make e costly to add examples for every prompt, and e reduce flexibility.
 
-Fine-tuning na one common practice for machine learning wey mean say we go take pre-trained model retrain am wit new data to make am perform better for one specific task. For language models, we fit fine-tune di pre-trained model _wit well-selected examples for one particular task or area_ to create **custom model** wey go dey more accurate and relevant for dat task or area. One extra benefit of fine-tuning na say e fit reduce di number of examples wey you need for few-shot learning - e go reduce token usage and di cost wey dey follow am.
+Fine-tuning na common practice for machine learning systems wey person go take pre-trained model come retrain am with new data to make e perform better for one specific work. For language models matter, you fit fine-tune the pre-trained model _with one selected set of examples for one particular task or application area_ to build one **custom model** wey fit dey more correct and relevant for that task or domain. One side-benefit of fine-tuning be say e fit reduce how many examples need for few-shot learning - this one go reduce token use and the price wey join.
 
-## When and why we go fine-tune models?
+## When and why we suppose fine-tune models?
 
-For dis matter, when we dey talk about fine-tuning, we dey refer to **supervised** fine-tuning wey mean say di retraining dey happen by **adding new data** wey no dey di original training dataset. Dis one different from unsupervised fine-tuning wey di model dey retrain wit di original data but wit different hyperparameters.
+For _dis_ matter, when we dey talk about fine-tuning, na **supervised** fine-tuning we mean wey be say the retraining dey done by **adding new data** wey no be part of the original training data. Dis one different from unsupervised fine-tuning wey model still dey trained on the original data, but e get different hyperparameters.
 
-Di main thing wey you go remember be say fine-tuning na advanced technique wey need some level of expertise to get di result wey you dey look for. If you no do am well, e fit no give di improvement wey you dey expect, and e fit even make di model performance for your area worse.
+The key thing to sabi be say fine-tuning na advanced technique wey need some level of skill to get the kind results wey you want. If you do am wrong, e fit no bring the improvements wey you expect, and e fit even spoil the model performance for the place wey you target.
 
-So, before you learn "how" to fine-tune language models, you need to know "why" you go choose dis method, and "when" you go start di fine-tuning process. Ask yourself dis questions:
+So, before you learn "how" to fine-tune language models, you need know "why" you suppose take dis road, and "when" you go start to fine-tune. Begin by ask yourself dis kind questions:
 
-- **Use Case**: Wetin be di _use case_ for fine-tuning? Wetin you wan improve for di current pre-trained model?
-- **Alternatives**: You don try _other techniques_ to get di result wey you dey look for? Use dem to create baseline for comparison.
-  - Prompt engineering: Try techniques like few-shot prompting wit examples of correct prompt responses. Check di quality of di responses.
-  - Retrieval Augmented Generation: Try add query results wey you search from your data to di prompts. Check di quality of di responses.
-- **Costs**: You don check di cost for fine-tuning?
-  - Tunability - di pre-trained model fit dey available for fine-tuning?
-  - Effort - to prepare training data, evaluate & refine di model.
-  - Compute - to run di fine-tuning jobs, and deploy di fine-tuned model.
-  - Data - you get enough quality examples wey go make fine-tuning work?
-- **Benefits**: You don confirm di benefits for fine-tuning?
-  - Quality - di fine-tuned model perform pass di baseline?
-  - Cost - e dey reduce token usage by making prompts simple?
-  - Extensibility - you fit use di base model for new areas?
+- **Use Case**: Wetin be your _use case_ for fine-tuning? Which part of the current pre-trained model you want make better?
+- **Alternatives**: You don try _other techniques_ before to get wetin you want? Use dem to create one baseline for comparison.
+  - Prompt engineering: Try quick techniques like few-shot prompting with examples wey relate to prompt response. Check the quality of responses.
+  - Retrieval Augmented Generation: Try to add search results to your prompts as extra info from your data. Check the quality of responses.
+- **Costs**: You don identify the price wey you go pay for fine-tuning?
+  - Tunability - the pre-trained model dey available for fine-tuning?
+  - Effort - for preparing training data, checking & improving model.
+  - Compute - for to run fine-tuning jobs, and to put fine-tuned model for use
+  - Data - access to enough good quality examples wey fit improve fine-tuning
+- **Benefits**: You don confirm the benefits of fine-tuning?
+  - Quality - the fine-tuned model perform pass the normal one?
+  - Cost - e reduce token usage by making prompts simple?
+  - Extensibility - fit re-use the base model for new domains?
 
-If you fit answer dis questions, you go fit decide if fine-tuning na di right method for your use case. Ideally, di method go make sense only if di benefits pass di cost. Once you decide to move forward, na time to think about _how_ you fit fine-tune di pre-trained model.
+If you fit answer these questions well, e go help you decide if fine-tuning na the correct route for your case. Ideally, e sef good if the benefits pass the costs. After you decide to continue, na time to think about _how_ you fit fine tune the pre-trained model.
 
-You wan get more gist about di decision-making process? Watch [To fine-tune or not to fine-tune](https://www.youtube.com/watch?v=0Jo-z-MFxJs)
+You want more ideas about how to decide? Watch [To fine-tune or not to fine-tune](https://www.youtube.com/watch?v=0Jo-z-MFxJs)
 
 ## How we fit fine-tune pre-trained model?
 
 To fine-tune pre-trained model, you go need:
 
 - pre-trained model wey you wan fine-tune
-- dataset wey you go use for fine-tuning
-- training environment to run di fine-tuning job
-- hosting environment to deploy di fine-tuned model
+- dataset to use for fine-tuning
+- training environment to do the fine-tuning job
+- hosting environment to put the fine-tuned model to work
 
 ## Fine-Tuning In Action
 
-Di resources wey dey below go show you step-by-step tutorials wey go guide you through real example wey use selected model wit well-prepared dataset. To follow dis tutorials, you go need account for di specific provider, plus access to di model and datasets wey dem dey use.
+Dis resources dem go give step-by-step tutorials to show you how to do am with real example using selected model plus selected dataset. To follow these tutorials, you need account on the provider wey you dey use, plus access to the right model and datasets.
 
 | Provider     | Tutorial                                                                                                                                                                       | Description                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| OpenAI       | [How to fine-tune chat models](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst)                | Learn how to fine-tune `gpt-35-turbo` for one specific area ("recipe assistant") by preparing training data, running di fine-tuning job, and using di fine-tuned model for inference.                                                                                                                                                                                                                                              |
-| Azure OpenAI | [GPT 3.5 Turbo fine-tuning tutorial](https://learn.microsoft.com/azure/ai-services/openai/tutorials/fine-tune?tabs=python-new%2Ccommand-line?WT.mc_id=academic-105485-koreyst) | Learn how to fine-tune `gpt-35-turbo-0613` model **on Azure** by taking steps to create & upload training data, run di fine-tuning job. Deploy & use di new model.                                                                                                                                                                                                                                                                 |
-| Hugging Face | [Fine-tuning LLMs with Hugging Face](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                               | Dis blog post go show you how to fine-tune _open LLM_ (example: `CodeLlama 7B`) using di [transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) library & [Transformer Reinforcement Learning (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst]) wit open [datasets](https://huggingface.co/docs/datasets/index?WT.mc_id=academic-105485-koreyst) on Hugging Face. |
+| OpenAI       | [How to fine-tune chat models](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst)                | Learn how to fine-tune `gpt-35-turbo` for one specific domain ("recipe assistant") by preparing training data, running the fine-tuning job, and using the fine-tuned model for inference.                                                                                                                                                                                                                                              |
+| Azure OpenAI | [GPT 3.5 Turbo fine-tuning tutorial](https://learn.microsoft.com/azure/ai-services/openai/tutorials/fine-tune?tabs=python-new%2Ccommand-line&WT.mc_id=academic-105485-koreyst) | Learn to fine-tune `gpt-35-turbo-0613` model **for Azure** by creating & uploading training data, then running the fine-tuning job. Deploy and use the new model.                                                                                                                                                                                                                                                                 |
+| Hugging Face | [Fine-tuning LLMs with Hugging Face](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                               | This post go guide you fine-tuning open LLM (like `CodeLlama 7B`) using the [transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) library & [Transformer Reinforcement Learning (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst) with open [datasets](https://huggingface.co/docs/datasets/index?WT.mc_id=academic-105485-koreyst) on Hugging Face. |
 |              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| 🤗 AutoTrain | [Fine-tuning LLMs with AutoTrain](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                                         | AutoTrain (or AutoTrain Advanced) na python library wey Hugging Face develop wey dey allow fine-tuning for many different tasks including LLM fine-tuning. AutoTrain na no-code solution and fine-tuning fit dey happen for your own cloud, Hugging Face Spaces or locally. E dey support web-based GUI, CLI and training wit yaml config files.                                                                                   |
+| 🤗 AutoTrain | [Fine-tuning LLMs with AutoTrain](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                                         | AutoTrain (or AutoTrain Advanced) na python library wey Hugging Face build wey allow fine-tuning for many different tasks including LLM fine-tuning. AutoTrain no need code, and you fit do the fine-tuning for your own cloud, on Hugging Face Spaces or locally. E get web-based GUI, CLI and also training with yaml config files.                                                                               |
 |              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-
+| 🦥 Unsloth | [Fine-tuning LLMs with Unsloth](https://github.com/unslothai/unsloth)                                                         | Unsloth na open-source framework wey fit support LLM fine-tuning and reinforcement learning (RL). Unsloth dey make local training, evaluation, and deployment easy with ready use [notebooks](https://github.com/unslothai/notebooks). E fit also support text-to-speech (TTS), BERT and multimodal models. To start, read their step-by-step [Fine-tuning LLMs Guide](https://docs.unsloth.ai/get-started/fine-tuning-llms-guide).                                                                          |
+|              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 ## Assignment
 
-Choose one of di tutorials wey dey above and follow am. _We fit replicate one version of dis tutorials for Jupyter Notebooks for dis repo for reference only. Abeg use di original sources directly to get di latest versions_.
+Pick one of the tutorials wey dey above and follow am well well. _We fit put one version of these tutorials for Jupyter Notebooks inside this repo for reference. But abeg use the original source directly to get the latest version._
 
-## Well Done! Continue Your Learning.
+## Great Work! Continue Your Learning.
 
-After you finish dis lesson, check our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue to improve your Generative AI knowledge!
+After you don finish this lesson, check our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) make you continue to increase your Generative AI knowledge!
 
-Congrats!! You don complete di final lesson for di v2 series for dis course! No stop to dey learn and build. \*\*Check di [RESOURCES](RESOURCES.md?WT.mc_id=academic-105485-koreyst) page for list of extra suggestions for dis topic.
+Congratulations!! You don finish the final lesson from v2 series for this course! No stop to learn and build. \*\*Check the [RESOURCES](RESOURCES.md?WT.mc_id=academic-105485-koreyst) page for more ideas just about dis topic.
 
-Our v1 series of lessons don also get update wit more assignments and concepts. So take small time to refresh your knowledge - and abeg [share your questions and feedback](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) to help us make dis lessons better for di community.
+Our v1 series lessons don also update with more assignments and concepts. So take small time to freshen your mind - and please [share your questions and feedback](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) to help us make these lessons beta for the community.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:  
-Dis dokyument don use AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator) do di translation. Even as we dey try make am correct, abeg sabi say machine translation fit get mistake or no dey accurate well. Di original dokyument for im native language na di main source wey you go trust. For important information, e better make professional human translation dey use. We no go fit take blame for any misunderstanding or wrong interpretation wey fit happen because you use dis translation.
+**Warning**:  
+Dis document don translate wit AI translation service wey dem dey call [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we dey try make am correct, make you sabi say AI fit make some mistakes or no get correct meaning. Di original document wey dey dia for dia own language na im be the correct one. If na important matter, e better make human wey sabi translate am well well do am. We no go take responsibility if person no understand or misunderstand dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-07-09T06:14:38+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "uk"
-}
--->
 # Внесок у проєкт
 
 Цей проєкт вітає внески та пропозиції. Більшість внесків вимагають, щоб ви погодилися з Угодою про ліцензію для контриб’юторів (CLA), яка підтверджує, що ви маєте право і фактично надаєте нам права на використання вашого внеску. Деталі можна знайти на <https://cla.microsoft.com>.
@@ -63,7 +54,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Наприклад, коли ви наведете курсор на будь-яке посилання у файлах, вам запропонують перейти за ним, натиснувши **ctrl + клік**
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.uk.png)
+![VS code follow links screenshot](../../translated_images/uk/vscode-follow-link.85520ab6a1237adc.webp)
 
 Якщо ви натиснете на посилання і воно не працює локально, то, ймовірно, воно викличе помилку у робочому процесі і не працюватиме на GitHub.
 
@@ -71,7 +62,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Коли ви вводите `./` або `../`, VS Code запропонує вибрати з доступних варіантів відповідно до введеного.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.uk.png)
+![VS code select relative path screenshot](../../translated_images/uk/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Виберіть шлях, клацнувши потрібний файл або папку, і ви будете впевнені, що ваш шлях не пошкоджений.
 
@@ -88,7 +79,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Якщо ні, ви можете отримати таку помилку.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.uk.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/uk/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 Щоб виправити цю проблему, відкрийте файл, на який вказав робочий процес, і додайте ідентифікатор відстеження в кінці відносних шляхів.
 
@@ -105,7 +96,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Якщо ні, ви можете отримати таку помилку.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.uk.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/uk/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 Щоб виправити цю проблему, відкрийте файл, на який вказав робочий процес, і додайте ідентифікатор відстеження в кінці URL.
 
@@ -122,7 +113,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Якщо ні, ви можете отримати таку помилку.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.uk.png)
+![GitHub check country locale comment screenshot](../../translated_images/uk/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 Щоб виправити цю проблему, відкрийте файл, на який вказав робочий процес, і видаліть локалізацію країни з URL.
 

@@ -1,19 +1,10 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-07-09T16:55:54+00:00",
-  "source_file": "15-rag-and-vector-databases/data/perceptron.md",
-  "language_code": "bn"
-}
--->
 # নিউরাল নেটওয়ার্কের পরিচিতি: পারসেপ্ট্রন
 
 আধুনিক নিউরাল নেটওয়ার্কের মতো কিছু তৈরি করার প্রথম প্রচেষ্টাগুলোর একটি ছিল ১৯৫৭ সালে কর্নেল এরোনটিক্যাল ল্যাবরেটরির ফ্রাঙ্ক রোজেনব্লাটের কাজ। এটি একটি হার্ডওয়্যার ইমপ্লিমেন্টেশন ছিল, যার নাম ছিল "Mark-1", যা প্রাথমিক জ্যামিতিক আকার যেমন ত্রিভুজ, বর্গ এবং বৃত্ত চিনতে সক্ষম ছিল।
 
 |      |      |
 |--------------|-----------|
-|<img src='images/Rosenblatt-wikipedia.jpg' alt='Frank Rosenblatt'/> | <img src='images/Mark_I_perceptron_wikipedia.jpg' alt='The Mark 1 Perceptron' />|
+|<img src='../../../../translated_images/bn/Rosenblatt-wikipedia.1d205667acda28c0.webp' alt='Frank Rosenblatt'/> | <img src='../../../../translated_images/bn/Mark_I_perceptron_wikipedia.434e46ca39e2be80.webp' alt='The Mark 1 Perceptron' />|
 
 > উইকিপিডিয়া থেকে ছবি
 

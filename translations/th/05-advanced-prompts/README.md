@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
-  "translation_date": "2025-10-17T18:32:46+00:00",
-  "source_file": "05-advanced-prompts/README.md",
-  "language_code": "th"
-}
--->
 # การสร้างคำสั่งขั้นสูง
 
-[![การสร้างคำสั่งขั้นสูง](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.th.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![การสร้างคำสั่งขั้นสูง](../../../translated_images/th/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 มาทบทวนสิ่งที่เราเรียนรู้จากบทก่อนหน้านี้:
 

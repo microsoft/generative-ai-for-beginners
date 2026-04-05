@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-10-11T11:25:03+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "et"
-}
--->
 # Transkriptsiooniandmete ettevalmistamine
 
 Transkriptsiooniandmete ettevalmistamise skriptid laadivad alla YouTube'i videote transkriptsioonid ja valmistavad need ette kasutamiseks näidises "Semantiline otsing OpenAI Embeddings ja Functions abil".

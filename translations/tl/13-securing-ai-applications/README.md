@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a2faf8ee7a0b851efa647a19788f1e5b",
-  "translation_date": "2025-10-17T13:24:24+00:00",
-  "source_file": "13-securing-ai-applications/README.md",
-  "language_code": "tl"
-}
--->
 # Pagpapanatili ng Seguridad ng Iyong Mga Aplikasyon sa Generative AI
 
-[![Pagpapanatili ng Seguridad ng Iyong Mga Aplikasyon sa Generative AI](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.tl.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Pagpapanatili ng Seguridad ng Iyong Mga Aplikasyon sa Generative AI](../../../translated_images/tl/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Panimula
 
@@ -129,7 +120,7 @@ Ang pag-eemulate ng mga banta sa totoong mundo ay itinuturing na karaniwang kasa
 
 > Ang kasanayan ng AI red teaming ay umunlad upang magkaroon ng mas malawak na kahulugan: hindi lamang ito sumasaklaw sa paghanap ng mga kahinaan sa seguridad, kundi pati na rin sa paghanap ng iba pang mga pagkabigo ng sistema, tulad ng pagbuo ng potensyal na mapanganib na nilalaman. Ang mga sistema ng AI ay may kasamang mga bagong panganib, at ang red teaming ay mahalaga sa pag-unawa sa mga bagong panganib na ito, tulad ng prompt injection at pagbuo ng nilalaman na walang basehan. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Mga gabay at resources para sa red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4d83bdf0635768c4fd8aa41ea539d8e3ffe17514aec4b4824.tl.png)]()
+[![Mga gabay at resources para sa red teaming](../../../translated_images/tl/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
 Narito ang mga pangunahing pananaw na humubog sa programa ng Microsoft AI Red Team.
 

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4d57fad773cbeb69c5dd62e65c34200d",
-  "translation_date": "2025-10-18T00:01:55+00:00",
-  "source_file": "03-using-generative-ai-responsibly/README.md",
-  "language_code": "ko"
-}
--->
 
 
 ---

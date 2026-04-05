@@ -1,0 +1,663 @@
+# ಪಠ್ಯ ಉತ್ಪಾದನೆ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ನಿರ್ಮಿಸುವುದು
+
+[![ಪಠ್ಯ ಉತ್ಪಾದನೆ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ನಿರ್ಮಿಸುವುದು](../../../translated_images/kn/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+
+> _(ಈ ಪಾಠದ ವೀಡಿಯೋವನ್ನು ನೋಡಲು ಮೇಲಿನ ಚಿತ್ರವನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ)_
+
+ನೀವು ಈ ಪಠ್ಯಕ್ರಮದ ಮೂಲಕ ಈಗಾಗಲೇ ನೋಡಿದ್ದೀರಿ, ಪ್ರಾಂಪ್ಟ್‌ಗಳು ಮತ್ತು "ಪ್ರಾಂಪ್ಟ್ ಎಂಜಿನಿಯರಿಂಗ್" ಎಂಬ ಸಂಪೂರ್ಣ ಶಿಸ್ತಿನಂತಹ ಮೂಲಭೂತ ಕಲ್ಪನೆಗಳಿವೆ. ನೀವು ಸಂವಹನ ಮಾಡಬಹುದಾದ ಅನೇಕ ಸಾಧನಗಳು, ಉದಾಹರಣೆಗೆ ChatGPT, Office 365, Microsoft Power Platform ಮತ್ತು ಇನ್ನಷ್ಟು, ನೀವು ಏನಾದರೂ ಸಾಧಿಸಲು ಪ್ರಾಂಪ್ಟ್‌ಗಳನ್ನು ಬಳಸಲು ಬೆಂಬಲಿಸುತ್ತವೆ.
+
+ನೀವು ಆಪ್‌ಗೆ ಇಂತಹ ಅನುಭವವನ್ನು ಸೇರಿಸಲು, ಪ್ರಾಂಪ್ಟ್‌ಗಳು, ಪೂರ್ಣಗೊಳಿಸುವಿಕೆಗಳು ಮತ್ತು ಕೆಲಸ ಮಾಡಲು ಲೈಬ್ರರಿ ಆಯ್ಕೆಮಾಡುವುದು ಮುಂತಾದ ಕಲ್ಪನೆಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಬೇಕಾಗುತ್ತದೆ. ಇದೇನೂ ಈ ಅಧ್ಯಾಯದಲ್ಲಿ ನೀವು ಕಲಿಯಲಿದ್ದೀರಿ.
+
+## ಪರಿಚಯ
+
+ಈ ಅಧ್ಯಾಯದಲ್ಲಿ, ನೀವು:
+
+- openai ಲೈಬ್ರರಿ ಮತ್ತು ಅದರ ಮೂಲಭೂತ ಕಲ್ಪನೆಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳುತ್ತೀರಿ.
+- openai ಬಳಸಿ ಪಠ್ಯ ಉತ್ಪಾದನೆ ಆಪ್ ನಿರ್ಮಿಸುತ್ತೀರಿ.
+- ಪ್ರಾಂಪ್ಟ್, ತಾಪಮಾನ ಮತ್ತು ಟೋಕನ್‌ಗಳಂತಹ ಕಲ್ಪನೆಗಳನ್ನು ಬಳಸಿಕೊಂಡು ಪಠ್ಯ ಉತ್ಪಾದನೆ ಆಪ್ ನಿರ್ಮಿಸುವ ವಿಧಾನವನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುತ್ತೀರಿ.
+
+## ಕಲಿಕೆಯ ಗುರಿಗಳು
+
+ಈ ಪಾಠದ ಕೊನೆಯಲ್ಲಿ, ನೀವು:
+
+- ಪಠ್ಯ ಉತ್ಪಾದನೆ ಆಪ್ ಎಂದರೇನು ಎಂದು ವಿವರಿಸಬಹುದು.
+- openai ಬಳಸಿ ಪಠ್ಯ ಉತ್ಪಾದನೆ ಆಪ್ ನಿರ್ಮಿಸಬಹುದು.
+- ನಿಮ್ಮ ಆಪ್ ಅನ್ನು ಹೆಚ್ಚು ಅಥವಾ ಕಡಿಮೆ ಟೋಕನ್‌ಗಳನ್ನು ಬಳಸಲು ಮತ್ತು ತಾಪಮಾನವನ್ನು ಬದಲಾಯಿಸಲು ಸಂರಚಿಸಬಹುದು, ವಿಭಿನ್ನ ಔಟ್‌ಪುಟ್‌ಗಾಗಿ.
+
+## ಪಠ್ಯ ಉತ್ಪಾದನೆ ಆಪ್ ಎಂದರೇನು?
+
+ಸಾಮಾನ್ಯವಾಗಿ ನೀವು ಆಪ್ ನಿರ್ಮಿಸುವಾಗ, ಅದು ಕೆಳಗಿನಂತೆಯಾದ ಇಂಟರ್ಫೇಸ್ ಹೊಂದಿರುತ್ತದೆ:
+
+- ಕಮಾಂಡ್ ಆಧಾರಿತ. ಕಾನ್ಸೋಲ್ ಆಪ್‌ಗಳು ಸಾಮಾನ್ಯವಾಗಿದ್ದು, ನೀವು ಕಮಾಂಡ್ ಟೈಪ್ ಮಾಡಿ ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸುತ್ತವೆ. ಉದಾಹರಣೆಗೆ, `git` ಒಂದು ಕಮಾಂಡ್ ಆಧಾರಿತ ಆಪ್.
+- ಬಳಕೆದಾರ ಇಂಟರ್ಫೇಸ್ (UI). ಕೆಲವು ಆಪ್‌ಗಳು ಗ್ರಾಫಿಕಲ್ ಬಳಕೆದಾರ ಇಂಟರ್ಫೇಸ್ (GUI) ಹೊಂದಿದ್ದು, ನೀವು ಬಟನ್‌ಗಳನ್ನು ಕ್ಲಿಕ್ ಮಾಡಬಹುದು, ಪಠ್ಯವನ್ನು ನಮೂದಿಸಬಹುದು, ಆಯ್ಕೆಗಳನ್ನು ಆರಿಸಬಹುದು ಮತ್ತು ಇನ್ನಷ್ಟು.
+
+### ಕಾನ್ಸೋಲ್ ಮತ್ತು UI ಆಪ್‌ಗಳು ಸೀಮಿತ
+
+ನೀವು ಕಮಾಂಡ್ ಆಧಾರಿತ ಆಪ್‌ಗೆ ಹೋಲಿಸಿದರೆ:
+
+- **ಇದು ಸೀಮಿತವಾಗಿದೆ**. ನೀವು ಯಾವುದೇ ಕಮಾಂಡ್ ಟೈಪ್ ಮಾಡಲಾಗುವುದಿಲ್ಲ, ಆಪ್ ಬೆಂಬಲಿಸುವ ಕಮಾಂಡ್‌ಗಳಷ್ಟೇ.
+- **ಭಾಷಾ ನಿರ್ದಿಷ್ಟ**. ಕೆಲವು ಆಪ್‌ಗಳು ಅನೇಕ ಭಾಷೆಗಳನ್ನು ಬೆಂಬಲಿಸುತ್ತವೆ, ಆದರೆ ಡೀಫಾಲ್ಟ್ ಆಗಿ ಆಪ್ ಒಂದು ನಿರ್ದಿಷ್ಟ ಭಾಷೆಗೆ ನಿರ್ಮಿಸಲಾಗಿದೆ, ನೀವು ಹೆಚ್ಚಿನ ಭಾಷಾ ಬೆಂಬಲವನ್ನು ಸೇರಿಸಬಹುದು.
+
+### ಪಠ್ಯ ಉತ್ಪಾದನೆ ಆಪ್‌ಗಳ ಲಾಭಗಳು
+
+ಹೀಗಾಗಿ ಪಠ್ಯ ಉತ್ಪಾದನೆ ಆಪ್ ಹೇಗೆ ವಿಭಿನ್ನ?
+
+ಪಠ್ಯ ಉತ್ಪಾದನೆ ಆಪ್‌ನಲ್ಲಿ, ನಿಮಗೆ ಹೆಚ್ಚು ಸ್ವಾತಂತ್ರ್ಯವಿದೆ, ನೀವು ಕಮಾಂಡ್‌ಗಳ ಅಥವಾ ನಿರ್ದಿಷ್ಟ ಇನ್‌ಪುಟ್ ಭಾಷೆಯ ಸೀಮಿತಕ್ಕೆ ಬದ್ಧರಾಗಿಲ್ಲ. ಬದಲಾಗಿ, ನೀವು ನೈಸರ್ಗಿಕ ಭಾಷೆಯನ್ನು ಬಳಸಿ ಆಪ್‌ನೊಂದಿಗೆ ಸಂವಹನ ಮಾಡಬಹುದು. ಮತ್ತೊಂದು ಲಾಭವೆಂದರೆ, ನೀವು ಈಗಾಗಲೇ ವಿಶಾಲ ಮಾಹಿತಿಯ ಸಂಗ್ರಹದ ಮೇಲೆ ತರಬೇತುಗೊಂಡಿರುವ ಡೇಟಾ ಮೂಲದೊಂದಿಗೆ ಸಂವಹನ ಮಾಡುತ್ತಿದ್ದೀರಿ, ಆದರೆ ಸಾಂಪ್ರದಾಯಿಕ ಆಪ್ ಡೇಟಾಬೇಸ್‌ನಲ್ಲಿರುವುದರ ಮೇಲೆ ಸೀಮಿತವಾಗಿರಬಹುದು.
+
+### ಪಠ್ಯ ಉತ್ಪಾದನೆ ಆಪ್‌ನೊಂದಿಗೆ ನಾನು ಏನು ನಿರ್ಮಿಸಬಹುದು?
+
+ನೀವು ಅನೇಕ ವಸ್ತುಗಳನ್ನು ನಿರ್ಮಿಸಬಹುದು. ಉದಾಹರಣೆಗೆ:
+
+- **ಚಾಟ್‌ಬಾಟ್**. ನಿಮ್ಮ ಕಂಪನಿ ಮತ್ತು ಅದರ ಉತ್ಪನ್ನಗಳ ಬಗ್ಗೆ ಪ್ರಶ್ನೆಗಳಿಗೆ ಉತ್ತರಿಸುವ ಚಾಟ್‌ಬಾಟ್ ಒಳ್ಳೆಯ ಆಯ್ಕೆ ಆಗಬಹುದು.
+- **ಸಹಾಯಕ**. LLMಗಳು ಪಠ್ಯ ಸಂಕ್ಷೇಪಣೆ, ಪಠ್ಯದಿಂದ ಒಳನೋಟಗಳನ್ನು ಪಡೆಯುವುದು, ರೆಸ್ಯೂಮ್‌ಗಳಂತಹ ಪಠ್ಯವನ್ನು ಉತ್ಪಾದಿಸುವುದು ಮುಂತಾದ ಕಾರ್ಯಗಳಲ್ಲಿ ಉತ್ತಮ.
+- **ಕೋಡ್ ಸಹಾಯಕ**. ನೀವು ಬಳಸುವ ಭಾಷಾ ಮಾದರಿಯ ಮೇಲೆ ಅವಲಂಬಿಸಿ, ನೀವು ಕೋಡ್ ಬರೆಯಲು ಸಹಾಯ ಮಾಡುವ ಕೋಡ್ ಸಹಾಯಕವನ್ನು ನಿರ್ಮಿಸಬಹುದು. ಉದಾಹರಣೆಗೆ, GitHub Copilot ಅಥವಾ ChatGPT ಅನ್ನು ಬಳಸಿಕೊಂಡು ಕೋಡ್ ಬರೆಯಲು ಸಹಾಯ ಮಾಡಬಹುದು.
+
+## ನಾನು ಹೇಗೆ ಪ್ರಾರಂಭಿಸಬಹುದು?
+
+ನೀವು ಸಾಮಾನ್ಯವಾಗಿ ಕೆಳಗಿನ ಎರಡು ವಿಧಾನಗಳನ್ನು ಒಳಗೊಂಡಿರುವ LLM ಜೊತೆಗೆ ಸಂಯೋಜಿಸುವ ಮಾರ್ಗವನ್ನು ಹುಡುಕಬೇಕಾಗುತ್ತದೆ:
+
+- API ಬಳಸಿ. ಇಲ್ಲಿ ನೀವು ನಿಮ್ಮ ಪ್ರಾಂಪ್ಟ್‌ನೊಂದಿಗೆ ವೆಬ್ ವಿನಂತಿಗಳನ್ನು ರಚಿಸಿ, ಉತ್ಪಾದಿತ ಪಠ್ಯವನ್ನು ಪಡೆಯುತ್ತೀರಿ.
+- ಲೈಬ್ರರಿ ಬಳಸಿ. ಲೈಬ್ರರಿಗಳು API ಕರೆಗಳನ್ನು ಸಂಗ್ರಹಿಸಿ ಅವುಗಳನ್ನು ಬಳಸಲು ಸುಲಭವಾಗಿಸುತ್ತವೆ.
+
+## ಲೈಬ್ರರಿಗಳು/SDKಗಳು
+
+LLMಗಳೊಂದಿಗೆ ಕೆಲಸ ಮಾಡಲು ಕೆಲವು ಪ್ರಸಿದ್ಧ ಲೈಬ್ರರಿಗಳು ಇವೆ:
+
+- **openai**, ಈ ಲೈಬ್ರರಿ ನಿಮ್ಮ ಮಾದರಿಯೊಂದಿಗೆ ಸಂಪರ್ಕ ಸಾಧಿಸಲು ಮತ್ತು ಪ್ರಾಂಪ್ಟ್‌ಗಳನ್ನು ಕಳುಹಿಸಲು ಸುಲಭವಾಗಿಸುತ್ತದೆ.
+
+ಮೇಲ್ಮಟ್ಟದಲ್ಲಿ ಕಾರ್ಯನಿರ್ವಹಿಸುವ ಲೈಬ್ರರಿಗಳು:
+
+- **Langchain**. Langchain ಪ್ರಸಿದ್ಧವಾಗಿದೆ ಮತ್ತು Python ಅನ್ನು ಬೆಂಬಲಿಸುತ್ತದೆ.
+- **Semantic Kernel**. Semantic Kernel ಮೈಕ್ರೋಸಾಫ್ಟ್‌ನ ಲೈಬ್ರರಿ, C#, Python ಮತ್ತು Java ಭಾಷೆಗಳನ್ನು ಬೆಂಬಲಿಸುತ್ತದೆ.
+
+## openai ಬಳಸಿ ಮೊದಲ ಆಪ್
+
+ನಾವು ನಮ್ಮ ಮೊದಲ ಆಪ್ ಅನ್ನು ಹೇಗೆ ನಿರ್ಮಿಸಬಹುದು, ಯಾವ ಲೈಬ್ರರಿಗಳು ಬೇಕು, ಎಷ್ಟು ಅಗತ್ಯವಿದೆ ಮತ್ತು ಇತ್ಯಾದಿ ನೋಡೋಣ.
+
+### openai ಅನ್ನು ಸ್ಥಾಪಿಸಿ
+
+OpenAI ಅಥವಾ Azure OpenAI ಜೊತೆಗೆ ಸಂವಹನ ಮಾಡಲು ಅನೇಕ ಲೈಬ್ರರಿಗಳು ಇವೆ. C#, Python, JavaScript, Java ಮುಂತಾದ ಅನೇಕ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಭಾಷೆಗಳನ್ನು ಬಳಸಬಹುದು. ನಾವು `openai` Python ಲೈಬ್ರರಿಯನ್ನು ಆಯ್ಕೆಮಾಡಿದ್ದೇವೆ, ಆದ್ದರಿಂದ `pip` ಬಳಸಿ ಅದನ್ನು ಸ್ಥಾಪಿಸುವೆವು.
+
+```bash
+pip install openai
+```
+
+### ಸಂಪನ್ಮೂಲವನ್ನು ರಚಿಸಿ
+
+ನೀವು ಕೆಳಗಿನ ಹಂತಗಳನ್ನು ಅನುಸರಿಸಬೇಕು:
+
+- Azure ನಲ್ಲಿ ಖಾತೆಯನ್ನು ರಚಿಸಿ [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
+- Azure OpenAI ಗೆ ಪ್ರವೇಶ ಪಡೆಯಿರಿ. [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) ಗೆ ಹೋಗಿ ಪ್ರವೇಶಕ್ಕಾಗಿ ವಿನಂತಿ ಮಾಡಿ.
+
+  > [!NOTE]
+  > ಬರೆಯುವ ಸಮಯದಲ್ಲಿ, ನೀವು Azure OpenAI ಗೆ ಪ್ರವೇಶಕ್ಕಾಗಿ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕಾಗುತ್ತದೆ.
+
+- Python ಅನ್ನು ಸ್ಥಾಪಿಸಿ <https://www.python.org/>
+- Azure OpenAI ಸೇವಾ ಸಂಪನ್ಮೂಲವನ್ನು ರಚಿಸಿ. [ಸಂಪನ್ಮೂಲವನ್ನು ರಚಿಸುವ ವಿಧಾನ](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst) ಈ ಮಾರ್ಗದರ್ಶಿಯನ್ನು ನೋಡಿ.
+
+### API ಕೀ ಮತ್ತು ಎಂಡ್‌ಪಾಯಿಂಟ್ ಅನ್ನು ಹುಡುಕಿ
+
+ಈ ಸಮಯದಲ್ಲಿ, ನಿಮ್ಮ `openai` ಲೈಬ್ರರಿಗೆ ಯಾವ API ಕೀ ಬಳಸಬೇಕೆಂದು ತಿಳಿಸಬೇಕು. ನಿಮ್ಮ API ಕೀ ಹುಡುಕಲು, ನಿಮ್ಮ Azure OpenAI ಸಂಪನ್ಮೂಲದ "ಕೀಗಳು ಮತ್ತು ಎಂಡ್‌ಪಾಯಿಂಟ್" ವಿಭಾಗಕ್ಕೆ ಹೋಗಿ "ಕೀ 1" ಮೌಲ್ಯವನ್ನು ನಕಲಿಸಿ.
+
+![Azure ಪೋರ್ಟಲ್‌ನಲ್ಲಿ ಕೀಗಳು ಮತ್ತು ಎಂಡ್‌ಪಾಯಿಂಟ್ ಸಂಪನ್ಮೂಲ ಬ್ಲೇಡ್](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+
+ಈ ಮಾಹಿತಿಯನ್ನು ನಕಲಿಸಿಕೊಂಡ ನಂತರ, ಲೈಬ್ರರಿಗಳನ್ನು ಅದನ್ನು ಬಳಸಲು ಸೂಚಿಸೋಣ.
+
+> [!NOTE]
+> ನಿಮ್ಮ API ಕೀ ಅನ್ನು ನಿಮ್ಮ ಕೋಡ್‌ನಿಂದ ಪ್ರತ್ಯೇಕಿಸುವುದು ಉತ್ತಮ. ನೀವು ಪರಿಸರ ಚರಗಳನ್ನು ಬಳಸಬಹುದು.
+>
+> - ಪರಿಸರ ಚರ `OPENAI_API_KEY` ಅನ್ನು ನಿಮ್ಮ API ಕೀಗೆ ಸೆಟ್ ಮಾಡಿ.
+>   `export OPENAI_API_KEY='sk-...'`
+
+### Azure ಸಂರಚನೆಯನ್ನು ಸೆಟ್ ಮಾಡಿ
+
+ನೀವು Azure OpenAI ಬಳಸುತ್ತಿದ್ದರೆ, ಸಂರಚನೆಯನ್ನು ಹೇಗೆ ಸೆಟ್ ಮಾಡುವುದು ಇಲ್ಲಿದೆ:
+
+```python
+openai.api_type = 'azure'
+openai.api_key = os.environ["OPENAI_API_KEY"]
+openai.api_version = '2023-05-15'
+openai.api_base = os.getenv("API_BASE")
+```
+
+ಮೇಲಿನ ಕೋಡ್‌ನಲ್ಲಿ ನಾವು ಕೆಳಗಿನವುಗಳನ್ನು ಸೆಟ್ ಮಾಡುತ್ತಿದ್ದೇವೆ:
+
+- `api_type` ಅನ್ನು `azure` ಗೆ. ಇದು ಲೈಬ್ರರಿಗೆ Azure OpenAI ಬಳಸಬೇಕೆಂದು ಸೂಚಿಸುತ್ತದೆ, OpenAI ಅಲ್ಲ.
+- `api_key`, ಇದು Azure ಪೋರ್ಟಲ್‌ನಲ್ಲಿ ಕಂಡುಬರುವ ನಿಮ್ಮ API ಕೀ.
+- `api_version`, ನೀವು ಬಳಸಬೇಕಾದ API ಆವೃತ್ತಿ. ಬರೆಯುವ ಸಮಯದಲ್ಲಿ, ಇತ್ತೀಚಿನ ಆವೃತ್ತಿ `2023-05-15`.
+- `api_base`, ಇದು API ಎಂಡ್‌ಪಾಯಿಂಟ್. ನೀವು ಅದನ್ನು Azure ಪೋರ್ಟಲ್‌ನಲ್ಲಿ ನಿಮ್ಮ API ಕೀ ಪಕ್ಕದಲ್ಲಿ ಕಾಣಬಹುದು.
+
+> [!NOTE] > `os.getenv` ಒಂದು ಫಂಕ್ಷನ್ ಆಗಿದ್ದು, ಪರಿಸರ ಚರಗಳನ್ನು ಓದುತ್ತದೆ. ನೀವು ಇದನ್ನು `OPENAI_API_KEY` ಮತ್ತು `API_BASE` ಮುಂತಾದ ಪರಿಸರ ಚರಗಳನ್ನು ಓದಲು ಬಳಸಬಹುದು. ಈ ಪರಿಸರ ಚರಗಳನ್ನು ನಿಮ್ಮ ಟರ್ಮಿನಲ್‌ನಲ್ಲಿ ಅಥವಾ `dotenv` ಲೈಬ್ರರಿ ಬಳಸಿ ಸೆಟ್ ಮಾಡಿ.
+
+## ಪಠ್ಯವನ್ನು ಉತ್ಪಾದಿಸಿ
+
+ಪಠ್ಯವನ್ನು ಉತ್ಪಾದಿಸುವ ವಿಧಾನವೆಂದರೆ `Completion` ಕ್ಲಾಸ್ ಅನ್ನು ಬಳಸುವುದು. ಉದಾಹರಣೆ ಇಲ್ಲಿದೆ:
+
+```python
+prompt = "Complete the following: Once upon a time there was a"
+
+completion = openai.Completion.create(model="davinci-002", prompt=prompt)
+print(completion.choices[0].text)
+```
+
+ಮೇಲಿನ ಕೋಡ್‌ನಲ್ಲಿ, ನಾವು completion ವಸ್ತುವನ್ನು ರಚಿಸಿ, ಬಳಸಬೇಕಾದ ಮಾದರಿಯನ್ನು ಮತ್ತು ಪ್ರಾಂಪ್ಟ್ ಅನ್ನು ಪಾಸ್ ಮಾಡುತ್ತೇವೆ. ನಂತರ ಉತ್ಪಾದಿತ ಪಠ್ಯವನ್ನು ಮುದ್ರಿಸುತ್ತೇವೆ.
+
+### ಚಾಟ್ ಪೂರ್ಣಗೊಳಿಸುವಿಕೆಗಳು
+
+ಇದುವರೆಗೆ, ನೀವು `Completion` ಬಳಸಿ ಪಠ್ಯವನ್ನು ಉತ್ಪಾದಿಸುವುದನ್ನು ನೋಡಿದ್ದೀರಿ. ಆದರೆ ಇನ್ನೊಂದು ಕ್ಲಾಸ್ ಇದೆ, `ChatCompletion`, ಇದು ಚಾಟ್‌ಬಾಟ್‌ಗಳಿಗೆ ಹೆಚ್ಚು ಸೂಕ್ತವಾಗಿದೆ. ಇದನ್ನು ಬಳಸುವ ಉದಾಹರಣೆ ಇಲ್ಲಿದೆ:
+
+```python
+import openai
+
+openai.api_key = "sk-..."
+
+completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
+print(completion.choices[0].message.content)
+```
+
+ಈ ಕಾರ್ಯಕ್ಷಮತೆಯ ಬಗ್ಗೆ ಮುಂದಿನ ಅಧ್ಯಾಯದಲ್ಲಿ ಹೆಚ್ಚು ತಿಳಿದುಕೊಳ್ಳುತ್ತೀರಿ.
+
+## ಅಭ್ಯಾಸ - ನಿಮ್ಮ ಮೊದಲ ಪಠ್ಯ ಉತ್ಪಾದನೆ ಆಪ್
+
+ಈಗ openai ಅನ್ನು ಸೆಟ್ ಮಾಡಿ ಸಂರಚಿಸುವುದನ್ನು ಕಲಿತಿದ್ದೀರಿ, ನಿಮ್ಮ ಮೊದಲ ಪಠ್ಯ ಉತ್ಪಾದನೆ ಆಪ್ ಅನ್ನು ನಿರ್ಮಿಸುವ ಸಮಯ.
+
+ನಿಮ್ಮ ಆಪ್ ನಿರ್ಮಿಸಲು, ಈ ಹಂತಗಳನ್ನು ಅನುಸರಿಸಿ:
+
+1. ವರ್ಚುವಲ್ ಪರಿಸರವನ್ನು ರಚಿಸಿ ಮತ್ತು openai ಅನ್ನು ಸ್ಥಾಪಿಸಿ:
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate
+   pip install openai
+   ```
+
+   > [!NOTE]
+   > ನೀವು Windows ಬಳಸುತ್ತಿದ್ದರೆ, `source venv/bin/activate` ಬದಲು `venv\Scripts\activate` ಟೈಪ್ ಮಾಡಿ.
+
+   > [!NOTE]
+   > ನಿಮ್ಮ Azure OpenAI ಕೀ ಅನ್ನು ಹುಡುಕಲು [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) ಗೆ ಹೋಗಿ, `Open AI` ಅನ್ನು ಹುಡುಕಿ, `Open AI resource` ಆಯ್ಕೆಮಾಡಿ, ನಂತರ `Keys and Endpoint` ಗೆ ಹೋಗಿ ಮತ್ತು `Key 1` ಮೌಲ್ಯವನ್ನು ನಕಲಿಸಿ.
+
+1. _app.py_ ಫೈಲ್ ರಚಿಸಿ ಮತ್ತು ಕೆಳಗಿನ ಕೋಡ್ ನೀಡಿ:
+
+   ```python
+   import openai
+
+   openai.api_key = "<replace this value with your open ai key or Azure OpenAI key>"
+
+   openai.api_type = 'azure'
+   openai.api_version = '2023-05-15'
+   openai.api_base = "<endpoint found in Azure Portal where your API key is>"
+   deployment_name = "<deployment name>"
+
+   # ನಿಮ್ಮ ಪೂರ್ಣಗೊಳಿಸುವಿಕೆ ಕೋಡ್ ಸೇರಿಸಿ
+   prompt = "Complete the following: Once upon a time there was a"
+   messages = [{"role": "user", "content": prompt}]
+
+   # ಪೂರ್ಣಗೊಳಿಸುವಿಕೆ ಮಾಡಿ
+   completion = openai.chat.completions.create(model=deployment_name, messages=messages)
+
+   # ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಮುದ್ರಿಸಿ
+   print(completion.choices[0].message.content)
+   ```
+
+   > [!NOTE]
+   > ನೀವು Azure OpenAI ಬಳಸುತ್ತಿದ್ದರೆ, `api_type` ಅನ್ನು `azure` ಗೆ ಮತ್ತು `api_key` ಅನ್ನು ನಿಮ್ಮ Azure OpenAI ಕೀಗೆ ಸೆಟ್ ಮಾಡಬೇಕು.
+
+   ನೀವು ಕೆಳಗಿನಂತೆಯಾದ ಔಟ್‌ಪುಟ್ ನೋಡಬಹುದು:
+
+   ```output
+    very unhappy _____.
+
+   Once upon a time there was a very unhappy mermaid.
+   ```
+
+## ವಿಭಿನ್ನ ಪ್ರಾಂಪ್ಟ್‌ಗಳ ಪ್ರಕಾರಗಳು, ವಿಭಿನ್ನ ಕಾರ್ಯಗಳಿಗೆ
+
+ಈಗ ನೀವು ಪ್ರಾಂಪ್ಟ್ ಬಳಸಿ ಪಠ್ಯವನ್ನು ಉತ್ಪಾದಿಸುವುದನ್ನು ನೋಡಿದ್ದೀರಿ. ನೀವು ಒಂದು ಪ್ರೋಗ್ರಾಂ ಕೂಡ ಹೊಂದಿದ್ದೀರಿ, ಅದನ್ನು ಬದಲಾಯಿಸಿ ವಿಭಿನ್ನ ರೀತಿಯ ಪಠ್ಯವನ್ನು ಉತ್ಪಾದಿಸಬಹುದು.
+
+ಪ್ರಾಂಪ್ಟ್‌ಗಳನ್ನು ಎಲ್ಲಾ ರೀತಿಯ ಕಾರ್ಯಗಳಿಗೆ ಬಳಸಬಹುದು. ಉದಾಹರಣೆಗೆ:
+
+- **ಒಂದು ರೀತಿಯ ಪಠ್ಯವನ್ನು ಉತ್ಪಾದಿಸಿ**. ಉದಾಹರಣೆಗೆ, ನೀವು ಕವಿತೆ, ಪ್ರಶ್ನೋತ್ತರಗಳಂತಹ ಪಠ್ಯವನ್ನು ಉತ್ಪಾದಿಸಬಹುದು.
+- **ಮಾಹಿತಿಯನ್ನು ಹುಡುಕಿ**. ನೀವು 'ವೆಬ್ ಡೆವಲಪ್‌ಮೆಂಟ್‌ನಲ್ಲಿ CORS ಎಂದರೇನು?' ಎಂಬಂತಹ ಮಾಹಿತಿಯನ್ನು ಹುಡುಕಲು ಪ್ರಾಂಪ್ಟ್‌ಗಳನ್ನು ಬಳಸಬಹುದು.
+- **ಕೋಡ್ ಉತ್ಪಾದಿಸಿ**. ನೀವು ಇಮೇಲ್‌ಗಳನ್ನು ಪರಿಶೀಲಿಸಲು ನಿಯಮಿತ ಅಭಿವ್ಯಕ್ತಿಯನ್ನು ಅಭಿವೃದ್ಧಿಪಡಿಸುವಂತಹ ಕೋಡ್ ಅಥವಾ ಸಂಪೂರ್ಣ ಪ್ರೋಗ್ರಾಂ, ಉದಾಹರಣೆಗೆ ವೆಬ್ ಆಪ್, ಉತ್ಪಾದಿಸಲು ಪ್ರಾಂಪ್ಟ್‌ಗಳನ್ನು ಬಳಸಬಹುದು.
+
+## ಹೆಚ್ಚು ಪ್ರಾಯೋಗಿಕ ಬಳಕೆ: ರೆಸಿಪಿ ಜನರೇಟರ್
+
+ನೀವು ಮನೆಯಲ್ಲಿ ಸಾಮಗ್ರಿಗಳನ್ನು ಹೊಂದಿದ್ದೀರಿ ಮತ್ತು ಏನಾದರೂ ಅಡುಗೆ ಮಾಡಲು ಬಯಸುತ್ತೀರಿ ಎಂದು ಕಲ್ಪಿಸಿ. ಅದಕ್ಕಾಗಿ, ನಿಮಗೆ ರೆಸಿಪಿ ಬೇಕಾಗುತ್ತದೆ. ರೆಸಿಪಿಗಳನ್ನು ಹುಡುಕಲು ನೀವು ಹುಡುಕಾಟ ಎಂಜಿನ್ ಬಳಸಬಹುದು ಅಥವಾ LLM ಬಳಸಬಹುದು.
+
+ನೀವು ಈ ರೀತಿಯ ಪ್ರಾಂಪ್ಟ್ ಬರೆಯಬಹುದು:
+
+> "ಕೆಳಗಿನ ಸಾಮಗ್ರಿಗಳೊಂದಿಗೆ ಒಂದು ವಾಂಡಿಗೆ 5 ರೆಸಿಪಿಗಳನ್ನು ತೋರಿಸಿ: ಕೋಳಿ, ಆಲೂಗಡ್ಡೆ ಮತ್ತು ಕ್ಯಾರೆಟ್‌ಗಳು. ಪ್ರತಿ ರೆಸಿಪಿಗೆ ಬಳಸಲಾದ ಎಲ್ಲಾ ಸಾಮಗ್ರಿಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಿ"
+
+ಮೇಲಿನ ಪ್ರಾಂಪ್ಟ್ ನೀಡಿದರೆ, ನೀವು ಈ ರೀತಿಯ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಪಡೆಯಬಹುದು:
+
+```output
+1. Roasted Chicken and Vegetables:
+Ingredients:
+- 4 chicken thighs
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 2 tablespoons olive oil
+- 2 cloves garlic, minced
+- 1 teaspoon dried thyme
+- 1 teaspoon dried oregano
+- Salt and pepper, to taste
+
+2. Chicken and Potato Stew:
+Ingredients:
+- 2 tablespoons olive oil
+- 1 onion, diced
+- 2 cloves garlic, minced
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 1 cup chicken broth
+- Salt and pepper, to taste
+
+3. Chicken and Potato Bake:
+Ingredients:
+- 2 tablespoons olive oil
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 onion, diced
+- 2 cloves garlic, minced
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 1 cup chicken broth
+- Salt and pepper, to taste
+
+4. Chicken and Potato Soup:
+Ingredients:
+- 2 tablespoons olive oil
+- 1 onion, diced
+- 2 cloves garlic, minced
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 4 cups chicken broth
+- Salt and pepper, to taste
+
+5. Chicken and Potato Hash:
+Ingredients:
+- 2 tablespoons olive oil
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 onion, diced
+- 2 cloves garlic, minced
+- 1 teaspoon dried oregano
+```
+
+ಈ ಫಲಿತಾಂಶ ಉತ್ತಮವಾಗಿದೆ, ನಾನು ಏನು ಅಡುಗೆ ಮಾಡಬೇಕೆಂದು ತಿಳಿದುಕೊಂಡಿದ್ದೇನೆ. ಈ ಸಮಯದಲ್ಲಿ, ಉಪಯುಕ್ತ ಸುಧಾರಣೆಗಳು:
+
+- ನಾನು ಇಷ್ಟಪಡುವುದಿಲ್ಲ ಅಥವಾ ಅಲರ್ಜಿಯಿರುವ ಸಾಮಗ್ರಿಗಳನ್ನು ಫಿಲ್ಟರ್ ಮಾಡುವುದು.
+- ನಾನು ಮನೆಯಲ್ಲಿ ಎಲ್ಲಾ ಸಾಮಗ್ರಿಗಳನ್ನು ಹೊಂದಿಲ್ಲದಿದ್ದರೆ, ಖರೀದಿ ಪಟ್ಟಿ ತಯಾರಿಸುವುದು.
+
+ಮೇಲಿನ ಪ್ರಕರಣಗಳಿಗೆ, ನಾವು ಹೆಚ್ಚುವರಿ ಪ್ರಾಂಪ್ಟ್ ಸೇರಿಸೋಣ:
+
+> "ದಯವಿಟ್ಟು ನಾನು ಅಲರ್ಜಿಯಿರುವ ಕಾರಣ ರೆಸಿಪಿಗಳಲ್ಲಿ ಬೆಳ್ಳುಳ್ಳಿ ತೆಗೆದುಹಾಕಿ ಮತ್ತು ಅದನ್ನು ಬೇರೆ ಯಾವುದಾದರೂ ಬದಲಾಯಿಸಿ. ಜೊತೆಗೆ, ನಾನು ಈಗಾಗಲೇ ಕೋಳಿ, ಆಲೂಗಡ್ಡೆ ಮತ್ತು ಕ್ಯಾರೆಟ್‌ಗಳನ್ನು ಹೊಂದಿರುವುದನ್ನು ಗಮನಿಸಿ, ರೆಸಿಪಿಗಳಿಗಾಗಿ ಖರೀದಿ ಪಟ್ಟಿಯನ್ನು ತಯಾರಿಸಿ."
+
+ಈಗ ನಿಮಗೆ ಹೊಸ ಫಲಿತಾಂಶ ಸಿಗುತ್ತದೆ, ಅಂದರೆ:
+
+```output
+1. Roasted Chicken and Vegetables:
+Ingredients:
+- 4 chicken thighs
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 2 tablespoons olive oil
+- 1 teaspoon dried thyme
+- 1 teaspoon dried oregano
+- Salt and pepper, to taste
+
+2. Chicken and Potato Stew:
+Ingredients:
+- 2 tablespoons olive oil
+- 1 onion, diced
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 1 cup chicken broth
+- Salt and pepper, to taste
+
+3. Chicken and Potato Bake:
+Ingredients:
+- 2 tablespoons olive oil
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 onion, diced
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 1 cup chicken broth
+- Salt and pepper, to taste
+
+4. Chicken and Potato Soup:
+Ingredients:
+- 2 tablespoons olive oil
+- 1 onion, diced
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 4 cups chicken broth
+- Salt and pepper, to taste
+
+5. Chicken and Potato Hash:
+Ingredients:
+- 2 tablespoons olive oil
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 onion, diced
+- 1 teaspoon dried oregano
+
+Shopping List:
+- Olive oil
+- Onion
+- Thyme
+- Oregano
+- Salt
+- Pepper
+```
+
+ಇದು ನಿಮ್ಮ ಐದು ರೆಸಿಪಿಗಳು, ಬೆಳ್ಳುಳ್ಳಿಯಿಲ್ಲದೆ ಮತ್ತು ನೀವು ಈಗಾಗಲೇ ಮನೆಯಲ್ಲಿ ಹೊಂದಿರುವುದನ್ನು ಗಮನಿಸಿ ಖರೀದಿ ಪಟ್ಟಿಯೂ ಇದೆ.
+
+## ಅಭ್ಯಾಸ - ರೆಸಿಪಿ ಜನರೇಟರ್ ನಿರ್ಮಿಸಿ
+
+ನಾವು ಒಂದು ದೃಶ್ಯಾವಳಿಯನ್ನು ಆಡಿದ ನಂತರ, ಅದಕ್ಕೆ ಹೊಂದುವಂತೆ ಕೋಡ್ ಬರೆಯೋಣ. ಇದಕ್ಕಾಗಿ, ಈ ಹಂತಗಳನ್ನು ಅನುಸರಿಸಿ:
+
+1. ಇತ್ತೀಚೆಗೆ ರಚಿಸಿದ _app.py_ ಫೈಲ್ ಅನ್ನು ಪ್ರಾರಂಭಿಕ ಬಿಂದುವಾಗಿ ಬಳಸಿ
+1. `prompt` ಚರವನ್ನು ಹುಡುಕಿ ಮತ್ತು ಅದರ ಕೋಡ್ ಅನ್ನು ಕೆಳಗಿನಂತೆಯಾಗಿ ಬದಲಾಯಿಸಿ:
+
+   ```python
+   prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
+   ```
+
+   ಈಗ ನೀವು ಕೋಡ್ ಅನ್ನು ರನ್ ಮಾಡಿದರೆ, ಈ ರೀತಿಯ ಔಟ್‌ಪುಟ್ ಕಾಣಬಹುದು:
+
+   ```output
+   -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
+   -Oven-Roasted Chicken with Potatoes and Carrots: 3 tablespoons extra-virgin olive oil, 1 tablespoon Dijon mustard, 1 tablespoon chopped fresh rosemary, 1 tablespoon chopped fresh thyme, 4 cloves garlic, minced, 1 1/2 pounds small red potatoes, quartered, 1 1/2 pounds carrots, quartered lengthwise, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 (4-pound) whole chicken
+   -Chicken, Potato, and Carrot Casserole: cooking spray, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and shredded, 1 potato, peeled and shredded, 1/2 teaspoon dried thyme leaves, 1/4 teaspoon salt, 1/4 teaspoon black pepper, 2 cups fat-free, low-sodium chicken broth, 1 cup frozen peas, 1/4 cup all-purpose flour, 1 cup 2% reduced-fat milk, 1/4 cup grated Parmesan cheese
+
+   -One Pot Chicken and Potato Dinner: 2 tablespoons olive oil, 1 pound boneless, skinless chicken thighs, cut into 1-inch pieces, 1 large onion, chopped, 3 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 2 cups chicken broth, 1/2 cup dry white wine
+
+   -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
+   ```
+
+   > ಗಮನಿಸಿ, ನಿಮ್ಮ LLM ನಿರ್ದಿಷ್ಟವಲ್ಲ, ಆದ್ದರಿಂದ ಪ್ರತಿ ಬಾರಿ ಪ್ರೋಗ್ರಾಂ ರನ್ ಮಾಡಿದಾಗ ವಿಭಿನ್ನ ಫಲಿತಾಂಶಗಳು ಸಿಗಬಹುದು.
+
+   ಚೆನ್ನಾಗಿದೆ, ನಾವು ಸುಧಾರಣೆಗಳನ್ನು ಹೇಗೆ ಮಾಡಬಹುದು ನೋಡೋಣ. ಸುಧಾರಣೆಗಾಗಿ, ಕೋಡ್ ಅನ್ನು ಲವಚಿಕವಾಗಿರಿಸಬೇಕು, ಆದ್ದರಿಂದ ಸಾಮಗ್ರಿಗಳು ಮತ್ತು ರೆಸಿಪಿಗಳ ಸಂಖ್ಯೆ ಸುಲಭವಾಗಿ ಬದಲಾಯಿಸಬಹುದು.
+
+1. ಕೋಡ್ ಅನ್ನು ಕೆಳಗಿನ ರೀತಿಯಲ್ಲಿ ಬದಲಾಯಿಸೋಣ:
+
+   ```python
+   no_recipes = input("No of recipes (for example, 5): ")
+
+   ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
+
+   # ರೆಸಿಪಿಗಳ ಸಂಖ್ಯೆಯನ್ನು ಪ್ರಾಂಪ್ಟ್ ಮತ್ತು ಪದಾರ್ಥಗಳಲ್ಲಿ ಮಧ್ಯಸ್ಥಗೊಳಿಸಿ
+   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
+   ```
+
+   ಪರೀಕ್ಷಾ ರನ್‌ಗೆ ಕೋಡ್ ಈ ರೀತಿ ಕಾಣಬಹುದು:
+
+   ```output
+   No of recipes (for example, 5): 3
+   List of ingredients (for example, chicken, potatoes, and carrots): milk,strawberries
+
+   -Strawberry milk shake: milk, strawberries, sugar, vanilla extract, ice cubes
+   -Strawberry shortcake: milk, flour, baking powder, sugar, salt, unsalted butter, strawberries, whipped cream
+   -Strawberry milk: milk, strawberries, sugar, vanilla extract
+   ```
+
+### ಫಿಲ್ಟರ್ ಮತ್ತು ಖರೀದಿ ಪಟ್ಟಿ ಸೇರಿಸಿ ಸುಧಾರಿಸಿ
+
+ನಾವು ಈಗ ರೆಸಿಪಿಗಳನ್ನು ಉತ್ಪಾದಿಸಲು ಸಾಮರ್ಥ್ಯವಿರುವ ಕಾರ್ಯನಿರ್ವಹಣಾ ಆಪ್ ಹೊಂದಿದ್ದೇವೆ ಮತ್ತು ಇದು ಬಳಕೆದಾರರಿಂದ ಇನ್‌ಪುಟ್‌ಗಳ ಮೇಲೆ ಅವಲಂಬಿತವಾಗಿರುವುದರಿಂದ ಲವಚಿಕವಾಗಿದೆ, ರೆಸಿಪಿಗಳ ಸಂಖ್ಯೆ ಮತ್ತು ಬಳಸಲಾದ ಸಾಮಗ್ರಿಗಳ ಎರಡೂ.
+
+ಇದನ್ನು ಇನ್ನಷ್ಟು ಸುಧಾರಿಸಲು, ನಾವು ಕೆಳಗಿನವುಗಳನ್ನು ಸೇರಿಸಲು ಬಯಸುತ್ತೇವೆ:
+
+- **ಸಾಮಗ್ರಿಗಳನ್ನು ಫಿಲ್ಟರ್ ಮಾಡಿ**. ನಾವು ಇಷ್ಟಪಡುವುದಿಲ್ಲ ಅಥವಾ ಅಲರ್ಜಿಯಿರುವ ಸಾಮಗ್ರಿಗಳನ್ನು ಫಿಲ್ಟರ್ ಮಾಡಬೇಕಾಗಿದೆ. ಇದನ್ನು ಸಾಧಿಸಲು, ನಾವು ನಮ್ಮ ಪ್ರಸ್ತುತ ಪ್ರಾಂಪ್ಟ್ ಅನ್ನು ಸಂಪಾದಿಸಿ ಅದರ ಕೊನೆಯಲ್ಲಿ ಫಿಲ್ಟರ್ ಶರತ್ತು ಸೇರಿಸಬಹುದು:
+
+  ```python
+  filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
+
+  prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
+  ```
+
+  ಮೇಲಿನ ಕೋಡ್‌ನಲ್ಲಿ, ನಾವು ಪ್ರಾಂಪ್ಟ್ ಕೊನೆಯಲ್ಲಿ `{filter}` ಅನ್ನು ಸೇರಿಸಿದ್ದೇವೆ ಮತ್ತು ಬಳಕೆದಾರರಿಂದ ಫಿಲ್ಟರ್ ಮೌಲ್ಯವನ್ನು ಹಿಡಿದಿಟ್ಟುಕೊಂಡಿದ್ದೇವೆ.
+
+  ಪ್ರೋಗ್ರಾಂ ರನ್ ಮಾಡುವ ಉದಾಹರಣೆಯ ಇನ್‌ಪುಟ್ ಈಗ ಈ ರೀತಿ ಕಾಣಬಹುದು:
+
+  ```output
+  No of recipes (for example, 5): 3
+  List of ingredients (for example, chicken, potatoes, and carrots): onion,milk
+  Filter (for example, vegetarian, vegan, or gluten-free): no milk
+
+  1. French Onion Soup
+
+  Ingredients:
+
+  -1 large onion, sliced
+  -3 cups beef broth
+  -1 cup milk
+  -6 slices french bread
+  -1/4 cup shredded Parmesan cheese
+  -1 tablespoon butter
+  -1 teaspoon dried thyme
+  -1/4 teaspoon salt
+  -1/4 teaspoon black pepper
+
+  Instructions:
+
+  1. In a large pot, sauté onions in butter until golden brown.
+  2. Add beef broth, milk, thyme, salt, and pepper. Bring to a boil.
+  3. Reduce heat and simmer for 10 minutes.
+  4. Place french bread slices on soup bowls.
+  5. Ladle soup over bread.
+  6. Sprinkle with Parmesan cheese.
+
+  2. Onion and Potato Soup
+
+  Ingredients:
+
+  -1 large onion, chopped
+  -2 cups potatoes, diced
+  -3 cups vegetable broth
+  -1 cup milk
+  -1/4 teaspoon black pepper
+
+  Instructions:
+
+  1. In a large pot, sauté onions in butter until golden brown.
+  2. Add potatoes, vegetable broth, milk, and pepper. Bring to a boil.
+  3. Reduce heat and simmer for 10 minutes.
+  4. Serve hot.
+
+  3. Creamy Onion Soup
+
+  Ingredients:
+
+  -1 large onion, chopped
+  -3 cups vegetable broth
+  -1 cup milk
+  -1/4 teaspoon black pepper
+  -1/4 cup all-purpose flour
+  -1/2 cup shredded Parmesan cheese
+
+  Instructions:
+
+  1. In a large pot, sauté onions in butter until golden brown.
+  2. Add vegetable broth, milk, and pepper. Bring to a boil.
+  3. Reduce heat and simmer for 10 minutes.
+  4. In a small bowl, whisk together flour and Parmesan cheese until smooth.
+  5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
+  ```
+
+  ನೀವು ನೋಡಬಹುದು, ಹಾಲು ಇರುವ ಯಾವುದೇ ರೆಸಿಪಿಗಳನ್ನು ಫಿಲ್ಟರ್ ಮಾಡಲಾಗಿದೆ. ಆದರೆ, ನೀವು ಲ್ಯಾಕ್ಟೋಸ್ ಅಸಹಿಷ್ಣುತೆ ಹೊಂದಿದ್ದರೆ, ಚೀಸ್ ಇರುವ ರೆಸಿಪಿಗಳನ್ನು ಕೂಡ ಫಿಲ್ಟರ್ ಮಾಡಬೇಕಾಗಬಹುದು, ಆದ್ದರಿಂದ ಸ್ಪಷ್ಟವಾಗಿರಬೇಕು.
+
+- **ಖರೀದಿ ಪಟ್ಟಿ ತಯಾರಿಸಿ**. ನಾವು ಈಗಾಗಲೇ ಮನೆಯಲ್ಲಿ ಇರುವುದನ್ನು ಗಮನಿಸಿ ಖರೀದಿ ಪಟ್ಟಿಯನ್ನು ತಯಾರಿಸಬೇಕು.
+
+  ಈ ಕಾರ್ಯಕ್ಕಾಗಿ, ನಾವು ಎಲ್ಲವನ್ನೂ ಒಂದೇ ಪ್ರಾಂಪ್ಟ್‌ನಲ್ಲಿ ಪರಿಹರಿಸಬಹುದು ಅಥವಾ ಎರಡು ಪ್ರಾಂಪ್ಟ್‌ಗಳಾಗಿ ವಿಭಜಿಸಬಹುದು. ಎರಡನೇ ವಿಧಾನ ಪ್ರಯತ್ನಿಸೋಣ. ಇಲ್ಲಿ ನಾವು ಹೆಚ್ಚುವರಿ ಪ್ರಾಂಪ್ಟ್ ಸೇರಿಸುವುದನ್ನು ಸೂಚಿಸುತ್ತಿದ್ದೇವೆ, ಆದರೆ ಅದಕ್ಕೆ ಮೊದಲ ಪ್ರಾಂಪ್ಟ್‌ನ ಫಲಿತಾಂಶವನ್ನು ಎರಡನೇ ಪ್ರಾಂಪ್ಟ್‌ಗೆ ಸಾಂದರ್ಭಿಕವಾಗಿ ಸೇರಿಸಬೇಕಾಗುತ್ತದೆ.
+
+  ಮೊದಲ ಪ್ರಾಂಪ್ಟ್‌ನ ಫಲಿತಾಂಶವನ್ನು ಮುದ್ರಿಸುವ ಕೋಡ್ ಭಾಗವನ್ನು ಹುಡುಕಿ, ಕೆಳಗಿನ ಕೋಡ್ ಅನ್ನು ಅದರ ಕೆಳಗೆ ಸೇರಿಸಿ:
+  ```python
+  old_prompt_result = completion.choices[0].message.content
+  prompt = "Produce a shopping list for the generated recipes and please don't include ingredients that I already have."
+
+  new_prompt = f"{old_prompt_result} {prompt}"
+  messages = [{"role": "user", "content": new_prompt}]
+  completion = openai.Completion.create(engine=deployment_name, messages=messages, max_tokens=1200)
+
+  # ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಮುದ್ರಿಸಿ
+  print("Shopping list:")
+  print(completion.choices[0].message.content)
+  ```
+
+  ಕೆಳಗಿನವುಗಳನ್ನು ಗಮನಿಸಿ:
+
+  1. ನಾವು ಮೊದಲ ಪ್ರಾಂಪ್ಟ್‌ನಿಂದ ಫಲಿತಾಂಶವನ್ನು ಹೊಸ ಪ್ರಾಂಪ್ಟ್‌ಗೆ ಸೇರಿಸುವ ಮೂಲಕ ಹೊಸ ಪ್ರಾಂಪ್ಟ್ ಅನ್ನು ರಚಿಸುತ್ತಿದ್ದೇವೆ:
+
+     ```python
+     new_prompt = f"{old_prompt_result} {prompt}"
+     ```
+
+  1. ನಾವು ಹೊಸ ವಿನಂತಿಯನ್ನು ಮಾಡುತ್ತೇವೆ, ಆದರೆ ಮೊದಲ ಪ್ರಾಂಪ್ಟ್‌ನಲ್ಲಿ ಕೇಳಿದ ಟೋಕನ್‌ಗಳ ಸಂಖ್ಯೆಯನ್ನು ಪರಿಗಣಿಸುತ್ತೇವೆ, ಆದ್ದರಿಂದ ಈ ಬಾರಿ ನಾವು `max_tokens` ಅನ್ನು 1200 ಎಂದು ಹೇಳುತ್ತೇವೆ.
+
+     ```python
+     completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
+     ```
+
+     ಈ ಕೋಡ್ ಅನ್ನು ಪ್ರಯೋಗಿಸಿದಾಗ, ನಾವು ಈಗ ಕೆಳಗಿನ ಔಟ್‌ಪುಟ್‌ಗೆ ಬರುತ್ತೇವೆ:
+
+     ```output
+     No of recipes (for example, 5): 2
+     List of ingredients (for example, chicken, potatoes, and carrots): apple,flour
+     Filter (for example, vegetarian, vegan, or gluten-free): sugar
+
+
+     -Apple and flour pancakes: 1 cup flour, 1/2 tsp baking powder, 1/2 tsp baking soda, 1/4 tsp salt, 1 tbsp sugar, 1 egg, 1 cup buttermilk or sour milk, 1/4 cup melted butter, 1 Granny Smith apple, peeled and grated
+     -Apple fritters: 1-1/2 cups flour, 1 tsp baking powder, 1/4 tsp salt, 1/4 tsp baking soda, 1/4 tsp nutmeg, 1/4 tsp cinnamon, 1/4 tsp allspice, 1/4 cup sugar, 1/4 cup vegetable shortening, 1/4 cup milk, 1 egg, 2 cups shredded, peeled apples
+     Shopping list:
+     -Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice
+     ```
+
+## ನಿಮ್ಮ ಸೆಟಪ್ ಅನ್ನು ಸುಧಾರಿಸಿ
+
+ನಾವು ಇದುವರೆಗೆ ಹೊಂದಿರುವುದು ಕೆಲಸ ಮಾಡುವ ಕೋಡ್ ಆಗಿದೆ, ಆದರೆ ಇನ್ನಷ್ಟು ಸುಧಾರಿಸಲು ಕೆಲವು ತಿದ್ದುಪಡಿ ಮಾಡಬೇಕಾಗಿದೆ. ನಾವು ಮಾಡಬೇಕಾದ ಕೆಲವು ವಿಷಯಗಳು:
+
+- **ರಹಸ್ಯಗಳನ್ನು ಕೋಡ್‌ನಿಂದ ಪ್ರತ್ಯೇಕಿಸಿ**, ಉದಾಹರಣೆಗೆ API ಕೀ. ರಹಸ್ಯಗಳು ಕೋಡ್‌ನಲ್ಲಿ ಇರಬಾರದು ಮತ್ತು ಅವುಗಳನ್ನು ಸುರಕ್ಷಿತ ಸ್ಥಳದಲ್ಲಿ ಸಂಗ್ರಹಿಸಬೇಕು. ರಹಸ್ಯಗಳನ್ನು ಕೋಡ್‌ನಿಂದ ಪ್ರತ್ಯೇಕಿಸಲು, ನಾವು ಪರಿಸರ ಚರಗಳನ್ನು ಮತ್ತು `python-dotenv` ಮುಂತಾದ ಲೈಬ್ರರಿಗಳನ್ನು ಬಳಸಬಹುದು ಅವುಗಳನ್ನು ಫೈಲ್‌ನಿಂದ ಲೋಡ್ ಮಾಡಲು. ಕೋಡ್‌ನಲ್ಲಿ ಅದು ಹೀಗೆ ಕಾಣುತ್ತದೆ:
+
+  1. ಕೆಳಗಿನ ವಿಷಯದೊಂದಿಗೆ `.env` ಫೈಲ್ ರಚಿಸಿ:
+
+     ```bash
+     OPENAI_API_KEY=sk-...
+     ```
+
+     > ಗಮನಿಸಿ, ಅಜೂರ್‌ಗಾಗಿ, ನೀವು ಕೆಳಗಿನ ಪರಿಸರ ಚರಗಳನ್ನು ಸೆಟ್ ಮಾಡಬೇಕಾಗುತ್ತದೆ:
+
+     ```bash
+     OPENAI_API_TYPE=azure
+     OPENAI_API_VERSION=2023-05-15
+     OPENAI_API_BASE=<replace>
+     ```
+
+     ಕೋಡ್‌ನಲ್ಲಿ, ನೀವು ಪರಿಸರ ಚರಗಳನ್ನು ಹೀಗೆ ಲೋಡ್ ಮಾಡುತ್ತೀರಿ:
+
+     ```python
+     from dotenv import load_dotenv
+
+     load_dotenv()
+
+     openai.api_key = os.environ["OPENAI_API_KEY"]
+     ```
+
+- **ಟೋಕನ್ ಉದ್ದದ ಬಗ್ಗೆ ಒಂದು ಮಾತು**. ನಾವು ಬೇಕಾದ ಪಠ್ಯವನ್ನು ರಚಿಸಲು ಎಷ್ಟು ಟೋಕನ್‌ಗಳು ಬೇಕು ಎಂಬುದನ್ನು ಪರಿಗಣಿಸಬೇಕು. ಟೋಕನ್‌ಗಳಿಗೆ ಹಣ ಖರ್ಚಾಗುತ್ತದೆ, ಆದ್ದರಿಂದ ಸಾಧ್ಯವಾದಷ್ಟು, ನಾವು ಬಳಸುವ ಟೋಕನ್‌ಗಳ ಸಂಖ್ಯೆಯಲ್ಲಿ ಆರ್ಥಿಕವಾಗಿರಬೇಕು. ಉದಾಹರಣೆಗೆ, ನಾವು ಪ್ರಾಂಪ್ಟ್ ಅನ್ನು ಹೀಗೆ ರೂಪಿಸಬಹುದೇ, ಇದರಿಂದ ಕಡಿಮೆ ಟೋಕನ್‌ಗಳನ್ನು ಬಳಸಬಹುದು?
+
+  ಬಳಸುವ ಟೋಕನ್‌ಗಳನ್ನು ಬದಲಾಯಿಸಲು, ನೀವು `max_tokens` ಪರಿಮಾಣವನ್ನು ಬಳಸಬಹುದು. ಉದಾಹರಣೆಗೆ, ನೀವು 100 ಟೋಕನ್‌ಗಳನ್ನು ಬಳಸಲು ಬಯಸಿದರೆ, ನೀವು ಹೀಗೆ ಮಾಡುತ್ತೀರಿ:
+
+  ```python
+  completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=100)
+  ```
+
+- **ತಾಪಮಾನ (temperature) ಜೊತೆ ಪ್ರಯೋಗ**. ತಾಪಮಾನವು ನಾವು ಇದುವರೆಗೆ ಉಲ್ಲೇಖಿಸದಿದ್ದರೂ, ನಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ ಎಂಬುದಕ್ಕೆ ಪ್ರಮುಖ ಸನ್ನಿವೇಶವಾಗಿದೆ. ತಾಪಮಾನ ಮೌಲ್ಯ ಹೆಚ್ಚಾದಂತೆ ಔಟ್‌ಪುಟ್ ಹೆಚ್ಚು ಯಾದೃಚ್ಛಿಕವಾಗುತ್ತದೆ. ವಿರುದ್ಧವಾಗಿ, ತಾಪಮಾನ ಮೌಲ್ಯ ಕಡಿಮೆ ಆದಂತೆ ಔಟ್‌ಪುಟ್ ಹೆಚ್ಚು ನಿರೀಕ್ಷಿತವಾಗಿರುತ್ತದೆ. ನೀವು ನಿಮ್ಮ ಔಟ್‌ಪುಟ್‌ನಲ್ಲಿ ಬದಲಾವಣೆ ಬಯಸುತ್ತೀರಾ ಅಥವಾ ಇಲ್ಲವೇ ಎಂದು ಪರಿಗಣಿಸಿ.
+
+  ತಾಪಮಾನವನ್ನು ಬದಲಾಯಿಸಲು, ನೀವು `temperature` ಪರಿಮಾಣವನ್ನು ಬಳಸಬಹುದು. ಉದಾಹರಣೆಗೆ, ನೀವು 0.5 ತಾಪಮಾನವನ್ನು ಬಳಸಲು ಬಯಸಿದರೆ, ನೀವು ಹೀಗೆ ಮಾಡುತ್ತೀರಿ:
+
+  ```python
+  completion = client.chat.completions.create(model=deployment, messages=messages, temperature=0.5)
+  ```
+
+  > ಗಮನಿಸಿ, 1.0 ಗೆ ಹತ್ತಿರವಾಗಿರುವಂತೆ ಔಟ್‌ಪುಟ್ ಹೆಚ್ಚು ವೈವಿಧ್ಯಮಯವಾಗುತ್ತದೆ.
+
+## ಕಾರ್ಯ
+
+ಈ ಕಾರ್ಯಕ್ಕಾಗಿ, ನೀವು ಏನು ನಿರ್ಮಿಸಬೇಕೆಂದು ಆಯ್ಕೆ ಮಾಡಬಹುದು.
+
+ಕೆಲವು ಸಲಹೆಗಳು ಇಲ್ಲಿವೆ:
+
+- ರೆಸಿಪಿ ಜನರೇಟರ್ ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಇನ್ನಷ್ಟು ಸುಧಾರಿಸಲು ತಿದ್ದುಪಡಿ ಮಾಡಿ. ತಾಪಮಾನ ಮೌಲ್ಯಗಳೊಂದಿಗೆ ಮತ್ತು ಪ್ರಾಂಪ್ಟ್‌ಗಳೊಂದಿಗೆ ಆಟವಾಡಿ ಮತ್ತು ನೀವು ಏನು ರಚಿಸಬಹುದು ಎಂದು ನೋಡಿ.
+- "ಅಧ್ಯಯನ ಗೆಳೆಯ" ಅನ್ನು ನಿರ್ಮಿಸಿ. ಈ ಅಪ್ಲಿಕೇಶನ್ ಒಂದು ವಿಷಯದ ಬಗ್ಗೆ ಪ್ರಶ್ನೆಗಳಿಗೆ ಉತ್ತರ ನೀಡಬಲ್ಲದು, ಉದಾಹರಣೆಗೆ Python, ನೀವು "Python ನಲ್ಲಿ ಒಂದು ನಿರ್ದಿಷ್ಟ ವಿಷಯವೇನು?" ಎಂಬಂತಹ ಪ್ರಾಂಪ್ಟ್‌ಗಳನ್ನು ಹೊಂದಬಹುದು, ಅಥವಾ ನೀವು "ನನಗೆ ಒಂದು ನಿರ್ದಿಷ್ಟ ವಿಷಯದ ಕೋಡ್ ತೋರಿಸಿ" ಎಂಬ ಪ್ರಾಂಪ್ಟ್ ಇರಬಹುದು.
+- ಇತಿಹಾಸ ಬಾಟ್, ಇತಿಹಾಸವನ್ನು ಜೀವಂತವಾಗಿಸು, ಬಾಟ್ ಅನ್ನು ಒಂದು ನಿರ್ದಿಷ್ಟ ಇತಿಹಾಸಿಕ ಪಾತ್ರವನ್ನು ಆಡಲು ಸೂಚಿಸಿ ಮತ್ತು ಅದರ ಜೀವನ ಮತ್ತು ಕಾಲದ ಬಗ್ಗೆ ಪ್ರಶ್ನೆಗಳನ್ನು ಕೇಳಿ.
+
+## ಪರಿಹಾರ
+
+### ಅಧ್ಯಯನ ಗೆಳೆಯ
+
+ಕೆಳಗಿನವು ಪ್ರಾರಂಭಿಕ ಪ್ರಾಂಪ್ಟ್, ನೀವು ಇದನ್ನು ಹೇಗೆ ಬಳಸಬಹುದು ಮತ್ತು ನಿಮ್ಮ ಇಚ್ಛೆಯಂತೆ ತಿದ್ದುಪಡಿ ಮಾಡಬಹುದು ಎಂದು ನೋಡಿ.
+
+```text
+- "You're an expert on the Python language
+
+    Suggest a beginner lesson for Python in the following format:
+
+    Format:
+    - concepts:
+    - brief explanation of the lesson:
+    - exercise in code with solutions"
+```
+
+### ಇತಿಹಾಸ ಬಾಟ್
+
+ನೀವು ಬಳಸಬಹುದಾದ ಕೆಲವು ಪ್ರಾಂಪ್ಟ್‌ಗಳು ಇಲ್ಲಿವೆ:
+
+```text
+- "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
+- "You are Abe Lincoln, respond using grammar and words like Abe would have used:
+
+   Tell me about your greatest accomplishments, in 300 words"
+```
+
+## ಜ್ಞಾನ ಪರಿಶೀಲನೆ
+
+ತಾಪಮಾನ (temperature) ಎಂಬ ಸಂಪ್ರದಾಯ ಏನು ಮಾಡುತ್ತದೆ?
+
+1. ಇದು ಔಟ್‌ಪುಟ್ ಎಷ್ಟು ಯಾದೃಚ್ಛಿಕವಾಗಿರುತ್ತದೆ ಎಂಬುದನ್ನು ನಿಯಂತ್ರಿಸುತ್ತದೆ.
+1. ಇದು ಪ್ರತಿಕ್ರಿಯೆಯ ಗಾತ್ರವನ್ನು ನಿಯಂತ್ರಿಸುತ್ತದೆ.
+1. ಇದು ಎಷ್ಟು ಟೋಕನ್‌ಗಳು ಬಳಸಲಾಗುತ್ತವೆ ಎಂಬುದನ್ನು ನಿಯಂತ್ರಿಸುತ್ತದೆ.
+
+## 🚀 ಸವಾಲು
+
+ಕಾರ್ಯವನ್ನು ಮಾಡುತ್ತಿರುವಾಗ, ತಾಪಮಾನವನ್ನು ಬದಲಾಯಿಸಲು ಪ್ರಯತ್ನಿಸಿ, ಅದನ್ನು 0, 0.5, ಮತ್ತು 1 ಗೆ ಸೆಟ್ ಮಾಡಿ. 0 ಅತಿ ಕಡಿಮೆ ವೈವಿಧ್ಯಮಯವಾಗಿದ್ದು, 1 ಅತಿ ಹೆಚ್ಚು ವೈವಿಧ್ಯಮಯವಾಗಿದೆ. ನಿಮ್ಮ ಅಪ್ಲಿಕೇಶನ್‌ಗೆ ಯಾವ ಮೌಲ್ಯ ಉತ್ತಮವಾಗಿ ಕೆಲಸ ಮಾಡುತ್ತದೆ?
+
+## ಅದ್ಭುತ ಕೆಲಸ! ನಿಮ್ಮ ಅಧ್ಯಯನವನ್ನು ಮುಂದುವರೆಸಿ
+
+ಈ ಪಾಠವನ್ನು ಪೂರ್ಣಗೊಳಿಸಿದ ನಂತರ, ನಮ್ಮ [ಜನರೇಟಿವ್ AI ಅಧ್ಯಯನ ಸಂಗ್ರಹ](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ಅನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ನಿಮ್ಮ ಜನರೇಟಿವ್ AI ಜ್ಞಾನವನ್ನು ಮುಂದುವರೆಸಿ!
+
+ಪಾಠ 7 ಗೆ ಹೋಗಿ, ಅಲ್ಲಿ ನಾವು [ಚಾಟ್ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ನಿರ್ಮಿಸುವುದನ್ನು](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst) ನೋಡುತ್ತೇವೆ!
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**ಅಸ್ವೀಕರಣ**:  
+ಈ ದಸ್ತಾವೇಜು AI ಅನುವಾದ ಸೇವೆ [Co-op Translator](https://github.com/Azure/co-op-translator) ಬಳಸಿ ಅನುವಾದಿಸಲಾಗಿದೆ. ನಾವು ನಿಖರತೆಯಿಗಾಗಿ ಪ್ರಯತ್ನಿಸುತ್ತಿದ್ದರೂ, ಸ್ವಯಂಚಾಲಿತ ಅನುವಾದಗಳಲ್ಲಿ ದೋಷಗಳು ಅಥವಾ ಅಸತ್ಯತೆಗಳು ಇರಬಹುದು ಎಂದು ದಯವಿಟ್ಟು ಗಮನಿಸಿ. ಮೂಲ ಭಾಷೆಯಲ್ಲಿರುವ ಮೂಲ ದಸ್ತಾವೇಜನ್ನು ಅಧಿಕೃತ ಮೂಲವಾಗಿ ಪರಿಗಣಿಸಬೇಕು. ಮಹತ್ವದ ಮಾಹಿತಿಗಾಗಿ, ವೃತ್ತಿಪರ ಮಾನವ ಅನುವಾದವನ್ನು ಶಿಫಾರಸು ಮಾಡಲಾಗುತ್ತದೆ. ಈ ಅನುವಾದ ಬಳಕೆಯಿಂದ ಉಂಟಾಗುವ ಯಾವುದೇ ತಪ್ಪು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುವಿಕೆ ಅಥವಾ ತಪ್ಪು ವಿವರಣೆಗಳಿಗೆ ನಾವು ಹೊಣೆಗಾರರಾಗುವುದಿಲ್ಲ.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

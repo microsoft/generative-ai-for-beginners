@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-07-09T16:32:57+00:00",
-  "source_file": "15-rag-and-vector-databases/data/frameworks.md",
-  "language_code": "da"
-}
--->
 # Neural Network Frameworks
 
 Som vi allerede har lært, for at kunne træne neurale netværk effektivt, skal vi gøre to ting:

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c2f423d1402f71ca3869ec135bb77d16",
-  "translation_date": "2025-07-09T17:57:12+00:00",
-  "source_file": "18-fine-tuning/RESOURCES.md",
-  "language_code": "ja"
-}
--->
 # 自主学習のためのリソース
 
 このレッスンは、用語やチュートリアルの参考としてOpenAIおよびAzure OpenAIの主要なリソースをいくつか使用して作成されました。以下は、あなた自身の自主学習の旅に役立つ非網羅的なリストです。

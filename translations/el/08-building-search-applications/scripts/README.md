@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-07-09T13:10:04+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "el"
-}
--->
 # Προετοιμασία δεδομένων μεταγραφής
 
 Τα σενάρια προετοιμασίας δεδομένων μεταγραφής κατεβάζουν απομαγνητοφωνήσεις βίντεο από το YouTube και τα προετοιμάζουν για χρήση με το παράδειγμα Semantic Search με OpenAI Embeddings και Functions.

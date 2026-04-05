@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df027997f1448323d6159b78a1b669bf",
-  "translation_date": "2025-10-18T02:48:38+00:00",
-  "source_file": "06-text-generation-apps/README.md",
-  "language_code": "et"
-}
--->
 # Teksti genereerimise rakenduste loomine
 
-[![Teksti genereerimise rakenduste loomine](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.et.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Teksti genereerimise rakenduste loomine](../../../translated_images/et/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(Klõpsa ülaloleval pildil, et vaadata selle õppetunni videot)_
 

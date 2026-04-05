@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "55168a94c75ef46d671743c607f8f9ff",
-  "translation_date": "2025-10-11T11:26:26+00:00",
-  "source_file": "docs/_navbar.md",
-  "language_code": "ta"
-}
--->
 <!-- _navbar.md -->
 
 * மொழியைத் தேர்ந்தெடுக்கவும்

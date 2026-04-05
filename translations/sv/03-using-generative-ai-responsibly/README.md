@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "4d57fad773cbeb69c5dd62e65c34200d",
-  "translation_date": "2025-10-17T19:00:21+00:00",
-  "source_file": "03-using-generative-ai-responsibly/README.md",
-  "language_code": "sv"
-}
--->
 # Använda Generativ AI Ansvarsfullt
 
-[![Använda Generativ AI Ansvarsfullt](../../../translated_images/03-lesson-banner.1ed56067a452d97709d51f6cc8b6953918b2287132f4909ade2008c936cd4af9.sv.png)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
+[![Använda Generativ AI Ansvarsfullt](../../../translated_images/sv/03-lesson-banner.1ed56067a452d977.webp)](https://youtu.be/YOp-e1GjZdA?si=7Wv4wu3x44L1DCVj)
 
 > _Klicka på bilden ovan för att se videon för denna lektion_
 
@@ -85,7 +76,7 @@ Denna typ av output är inte bara destruktiv för att bygga positiva produktuppl
 
 Nu när vi har identifierat vikten av Ansvarsfull Generativ AI, låt oss titta på 4 steg vi kan ta för att bygga våra AI-lösningar ansvarsfullt:
 
-![Mitigate Cycle](../../../translated_images/mitigate-cycle.babcd5a5658e1775d5f2cb47f2ff305cca090400a72d98d0f9e57e9db5637c72.sv.png)
+![Mitigate Cycle](../../../translated_images/sv/mitigate-cycle.babcd5a5658e1775.webp)
 
 ### Mäta Potentiella Skador
 
@@ -97,7 +88,7 @@ Eftersom vårt startup bygger en utbildningsprodukt skulle det vara bra att för
 
 Nu är det dags att hitta sätt där vi kan förhindra eller begränsa den potentiella skada som orsakas av modellen och dess svar. Vi kan titta på detta i 4 olika lager:
 
-![Mitigation Layers](../../../translated_images/mitigation-layers.377215120b9a1159a8c3982c6bbcf41b6adf8c8fa04ce35cbaeeb13b4979cdfc.sv.png)
+![Mitigation Layers](../../../translated_images/sv/mitigation-layers.377215120b9a1159.webp)
 
 - **Modell**. Välja rätt modell för rätt användningsområde. Större och mer komplexa modeller som GPT-4 kan innebära större risk för skadligt innehåll när de används för mindre och mer specifika användningsområden. Att använda din träningsdata för att finjustera minskar också risken för skadligt innehåll.
 

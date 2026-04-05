@@ -1,111 +1,105 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "807f0d9fc1747e796433534e1be6a98a",
-  "translation_date": "2025-10-17T22:09:40+00:00",
-  "source_file": "18-fine-tuning/README.md",
-  "language_code": "ro"
-}
--->
-[![Modele Open Source](../../../translated_images/18-lesson-banner.f30176815b1a5074fce9cceba317720586caa99e24001231a92fd04eeb54a121.ro.png)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Modele Open Source](../../../translated_images/ro/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
-# Ajustarea fină a modelului LLM
+# Ajustarea fină a LLM-ului tău
 
-Utilizarea modelelor lingvistice mari pentru a construi aplicații de AI generativ vine cu noi provocări. O problemă cheie este asigurarea calității răspunsurilor (precizie și relevanță) în conținutul generat de model pentru o cerere specifică a utilizatorului. În lecțiile anterioare, am discutat despre tehnici precum ingineria prompturilor și generarea augmentată prin recuperare, care încearcă să rezolve problema prin _modificarea intrării promptului_ în modelul existent.
+Utilizarea modelelor mari de limbaj pentru a construi aplicații AI generative vine cu noi provocări. O problemă esențială este asigurarea calității răspunsurilor (acuratețe și relevanță) în conținutul generat de model pentru o anumită cerere a utilizatorului. În lecțiile anterioare, am discutat tehnici precum ingineria promptului și generarea amplificată prin recuperare care încearcă să rezolve problema prin _modificarea inputului promptului_ către modelul existent.
 
-În lecția de astăzi, discutăm despre o a treia tehnică, **ajustarea fină**, care încearcă să abordeze provocarea prin _reantrenarea modelului însuși_ cu date suplimentare. Să intrăm în detalii.
+În lecția de astăzi, discutăm o a treia tehnică, **ajustarea fină**, care încearcă să abordeze provocarea prin _reantrenarea modelului însuși_ cu date suplimentare. Haideți să explorăm detaliile.
 
 ## Obiective de învățare
 
-Această lecție introduce conceptul de ajustare fină pentru modelele lingvistice pre-antrenate, explorează beneficiile și provocările acestei abordări și oferă îndrumări despre când și cum să folosiți ajustarea fină pentru a îmbunătăți performanța modelelor voastre de AI generativ.
+Această lecție introduce conceptul de ajustare fină pentru modelele de limbaj pre-antrenate, explorează beneficiile și provocările acestei abordări și oferă ghidaj despre când și cum să folosești ajustarea fină pentru a îmbunătăți performanța modelelor tale AI generative.
 
-Până la sfârșitul acestei lecții, ar trebui să puteți răspunde la următoarele întrebări:
+La finalul acestei lecții, ar trebui să poți răspunde la următoarele întrebări:
 
-- Ce este ajustarea fină pentru modelele lingvistice?
+- Ce este ajustarea fină pentru modelele de limbaj?
 - Când și de ce este utilă ajustarea fină?
 - Cum pot ajusta fin un model pre-antrenat?
 - Care sunt limitările ajustării fine?
 
-Gata? Să începem.
+Ești pregătit? Să începem.
 
 ## Ghid ilustrat
 
-Doriți să aveți o imagine de ansamblu a ceea ce vom acoperi înainte de a intra în detalii? Consultați acest ghid ilustrat care descrie parcursul de învățare pentru această lecție - de la învățarea conceptelor de bază și motivația pentru ajustarea fină, până la înțelegerea procesului și a celor mai bune practici pentru executarea sarcinii de ajustare fină. Este un subiect fascinant de explorat, așa că nu uitați să verificați pagina [Resurse](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) pentru linkuri suplimentare care să vă sprijine parcursul de învățare autodidact!
+Vrei să înțelegi imaginea de ansamblu a ceea ce vom acoperi înainte să intrăm în detalii? Consultă acest ghid ilustrat care descrie traseul de învățare pentru această lecție - de la învățarea conceptelor și motivației pentru ajustarea fină, la înțelegerea procesului și a celor mai bune practici pentru executarea sarcinii de ajustare fină. Este un subiect fascinant pentru explorare, așa că nu uita să verifici pagina de [Resurse](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) pentru linkuri suplimentare care să susțină călătoria ta de învățare autodirijată!
 
-![Ghid ilustrat pentru ajustarea fină a modelelor lingvistice](../../../translated_images/18-fine-tuning-sketchnote.11b21f9ec8a703467a120cb79a28b5ac1effc8d8d9d5b31bbbac6b8640432e14.ro.png)
+![Ghid ilustrat pentru ajustarea fină a modelelor de limbaj](../../../translated_images/ro/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
-## Ce este ajustarea fină pentru modelele lingvistice?
+## Ce este ajustarea fină pentru modelele de limbaj?
 
-Prin definiție, modelele lingvistice mari sunt _pre-antrenate_ pe cantități mari de text provenit din surse diverse, inclusiv internetul. Așa cum am învățat în lecțiile anterioare, avem nevoie de tehnici precum _ingineria prompturilor_ și _generarea augmentată prin recuperare_ pentru a îmbunătăți calitatea răspunsurilor modelului la întrebările utilizatorului ("prompturi").
+Prin definiție, modelele mari de limbaj sunt _pre-antrenate_ pe cantități mari de text provenind din diverse surse, inclusiv de pe internet. După cum am învățat în lecțiile anterioare, avem nevoie de tehnici precum _ingineria promptului_ și _generarea amplificată prin recuperare_ pentru a îmbunătăți calitatea răspunsurilor modelului la întrebările ("prompturile") utilizatorului.
 
-O tehnică populară de inginerie a prompturilor implică oferirea modelului mai multă îndrumare cu privire la ceea ce se așteaptă în răspuns, fie prin furnizarea de _instrucțiuni_ (ghidare explicită), fie _oferindu-i câteva exemple_ (ghidare implicită). Aceasta este denumită _învățare cu puține exemple_, dar are două limitări:
+O tehnică populară de inginerie a promptului implică oferirea modelului de mai multă ghidare cu privire la ceea ce se așteaptă în răspuns, fie prin furnizarea de _instrucțiuni_ (ghidare explicită), fie _exemplificare cu câteva exemple_ (ghidare implicită). Acesta se numește _învățare cu puține exemple_ (few-shot learning) dar are două limitări:
 
-- Limitele de token ale modelului pot restricționa numărul de exemple pe care le puteți oferi și pot limita eficiența.
-- Costurile token-urilor modelului pot face costisitor adăugarea de exemple la fiecare prompt și pot limita flexibilitatea.
+- Limitele de tokeni ale modelului pot restricționa numărul de exemple pe care le poți oferi și pot limita eficacitatea.
+- Costurile pe tokeni ale modelului pot face scumpă adăugarea de exemple la fiecare prompt și pot limita flexibilitatea.
 
-Ajustarea fină este o practică comună în sistemele de învățare automată, unde luăm un model pre-antrenat și îl reantrenăm cu date noi pentru a-i îmbunătăți performanța pe o sarcină specifică. În contextul modelelor lingvistice, putem ajusta fin modelul pre-antrenat _cu un set curat de exemple pentru o sarcină sau un domeniu de aplicație specific_ pentru a crea un **model personalizat** care poate fi mai precis și mai relevant pentru acea sarcină sau domeniu specific. Un beneficiu secundar al ajustării fine este că poate reduce numărul de exemple necesare pentru învățarea cu puține exemple - reducând utilizarea token-urilor și costurile aferente.
+Ajustarea fină este o practică obișnuită în sistemele de învățare automată unde luăm un model pre-antrenat și îl reantrenăm cu date noi pentru a-i îmbunătăți performanța într-o sarcină specifică. În contextul modelelor de limbaj, putem ajusta fin modelul pre-antrenat _cu un set selectat de exemple pentru o anumită sarcină sau domeniu de aplicație_ pentru a crea un **model personalizat** care poate fi mai precis și mai relevant pentru acea sarcină sau domeniu specific. Un beneficiu secundar al ajustării fine este că poate reduce și numărul de exemple necesare în învățarea cu puține exemple - reducând utilizarea tokenilor și costurile aferente.
 
 ## Când și de ce ar trebui să ajustăm fin modelele?
 
-În _acest_ context, când vorbim despre ajustare fină, ne referim la ajustarea fină **supervizată**, unde reantrenarea se face prin **adăugarea de date noi** care nu au făcut parte din setul de date original de antrenament. Acest lucru este diferit de abordarea ajustării fine nesupervizate, unde modelul este reantrenat pe datele originale, dar cu hiperparametri diferiți.
+În _acest_ context, când vorbim despre ajustarea fină, ne referim la ajustarea fină **supravegheată**, unde reantrenarea se face prin **adăugarea de date noi** care nu au făcut parte din setul original de date de antrenament. Aceasta este diferită de o abordare nesupravegheată de ajustare fină în care modelul este reantrenat pe datele originale, dar cu hiperparametri diferiți.
 
-Lucrul esențial de reținut este că ajustarea fină este o tehnică avansată care necesită un anumit nivel de expertiză pentru a obține rezultatele dorite. Dacă este realizată incorect, poate să nu ofere îmbunătățirile așteptate și poate chiar să degradeze performanța modelului pentru domeniul vizat.
+Ceea ce trebuie să reții este că ajustarea fină este o tehnică avansată care necesită un anumit nivel de expertiză pentru a obține rezultatele dorite. Dacă este făcută incorect, este posibil să nu ofere îmbunătățirile așteptate și poate chiar să degradeze performanța modelului pentru domeniul țintă.
 
-Așadar, înainte de a învăța "cum" să ajustați fin modelele lingvistice, trebuie să știți "de ce" ar trebui să urmați această cale și "când" să începeți procesul de ajustare fină. Începeți prin a vă pune aceste întrebări:
+Deci, înainte să înveți "cum" să ajustezi fin modelele de limbaj, trebuie să știi "de ce" să alegi această cale și "când" să începi procesul de ajustare fină. Începe prin a-ți pune aceste întrebări:
 
-- **Caz de utilizare**: Care este _cazul de utilizare_ pentru ajustarea fină? Ce aspect al modelului pre-antrenat actual doriți să îmbunătățiți?
-- **Alternative**: Ați încercat _alte tehnici_ pentru a obține rezultatele dorite? Folosiți-le pentru a crea o bază de comparație.
-  - Ingineria prompturilor: Încercați tehnici precum prompturi cu puține exemple, cu exemple de răspunsuri relevante. Evaluați calitatea răspunsurilor.
-  - Generarea augmentată prin recuperare: Încercați să augmentați prompturile cu rezultate ale interogărilor obținute prin căutarea datelor voastre. Evaluați calitatea răspunsurilor.
-- **Costuri**: Ați identificat costurile pentru ajustarea fină?
-  - Ajustabilitate - este modelul pre-antrenat disponibil pentru ajustare fină?
+- **Caz de utilizare**: Care este _cazul tău de utilizare_ pentru ajustarea fină? Ce aspect al modelului pre-antrenat curent vrei să îmbunătățești?
+- **Alternative**: Ai încercat _alte tehnici_ pentru a obține rezultatele dorite? Folosește-le pentru a crea o bază de comparație.
+  - Ingineria prompturilor: Încearcă tehnici cum ar fi promptingul cu câteva exemple relevante. Evaluează calitatea răspunsurilor.
+  - Generare amplificată prin recuperare: Încearcă să îmbunătățești prompturile cu rezultate obținute prin căutarea în datele tale. Evaluează calitatea răspunsurilor.
+- **Costuri**: Ai identificat costurile pentru ajustarea fină?
+  - Capacitatea de ajustare - este modelul pre-antrenat disponibil pentru ajustare fină?
   - Efort - pentru pregătirea datelor de antrenament, evaluarea și rafinarea modelului.
-  - Resurse de calcul - pentru rularea sarcinilor de ajustare fină și implementarea modelului ajustat fin.
-  - Date - acces la suficiente exemple de calitate pentru impactul ajustării fine.
-- **Beneficii**: Ați confirmat beneficiile ajustării fine?
-  - Calitate - modelul ajustat fin a depășit baza de comparație?
-  - Cost - reduce utilizarea token-urilor prin simplificarea prompturilor?
-  - Extensibilitate - poate fi reutilizat modelul de bază pentru noi domenii?
+  - Resurse de calcul - pentru rularea joburilor de ajustare fină și pentru implementarea modelului ajustat fin.
+  - Date - acces la exemple de calitate suficiente pentru impactul ajustării fine.
+- **Beneficii**: Ai confirmat beneficiile ajustării fine?
+  - Calitate - modelul ajustat fin a depășit baza de referință?
+  - Costuri - reduce utilizarea tokenilor prin simplificarea prompturilor?
+  - Extensibilitate - poți reutiliza modelul de bază pentru noi domenii?
 
-Răspunzând la aceste întrebări, ar trebui să puteți decide dacă ajustarea fină este abordarea potrivită pentru cazul vostru de utilizare. Ideal, abordarea este validă doar dacă beneficiile depășesc costurile. Odată ce decideți să continuați, este timpul să vă gândiți _cum_ puteți ajusta fin modelul pre-antrenat.
+Răspunzând acestor întrebări, ar trebui să poți decide dacă ajustarea fină este abordarea potrivită pentru cazul tău de utilizare. Ideal, această abordare este valabilă doar dacă beneficiile depășesc costurile. Odată ce decizi să continui, este timpul să te gândești _cum_ poți ajusta fin modelul pre-antrenat.
 
-Doriți mai multe informații despre procesul de luare a deciziilor? Urmăriți [Să ajustăm fin sau nu?](https://www.youtube.com/watch?v=0Jo-z-MFxJs)
+Vrei să obții mai multe perspective despre procesul decizional? Urmărește [To fine-tune or not to fine-tune](https://www.youtube.com/watch?v=0Jo-z-MFxJs)
 
 ## Cum putem ajusta fin un model pre-antrenat?
 
-Pentru a ajusta fin un model pre-antrenat, aveți nevoie de:
+Pentru a ajusta fin un model pre-antrenat, ai nevoie de:
 
 - un model pre-antrenat pentru ajustare fină
 - un set de date pentru ajustare fină
-- un mediu de antrenament pentru a rula sarcina de ajustare fină
+- un mediu de antrenament pentru a rula jobul de ajustare fină
 - un mediu de găzduire pentru a implementa modelul ajustat fin
 
 ## Ajustarea fină în practică
 
-Următoarele resurse oferă tutoriale pas cu pas pentru a vă ghida printr-un exemplu real folosind un model selectat cu un set de date curat. Pentru a parcurge aceste tutoriale, aveți nevoie de un cont la furnizorul specific, împreună cu acces la modelul și seturile de date relevante.
+Resursele următoare oferă tutoriale pas cu pas pentru a te ghida printr-un exemplu real folosind un model selectat cu un set de date selectat. Pentru a lucra cu aceste tutoriale, ai nevoie de un cont la furnizorul specific, împreună cu acces la modelul și seturile de date relevante.
 
-| Furnizor     | Tutorial                                                                                                                                                                       | Descriere                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| OpenAI       | [Cum să ajustați fin modelele de chat](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst)         | Învățați să ajustați fin un `gpt-35-turbo` pentru un domeniu specific ("asistent de rețete") prin pregătirea datelor de antrenament, rularea sarcinii de ajustare fină și utilizarea modelului ajustat fin pentru inferență.                                                                                                                                                                                                       |
-| Azure OpenAI | [Tutorial de ajustare fină GPT 3.5 Turbo](https://learn.microsoft.com/azure/ai-services/openai/tutorials/fine-tune?tabs=python-new%2Ccommand-line?WT.mc_id=academic-105485-koreyst) | Învățați să ajustați fin un model `gpt-35-turbo-0613` **pe Azure** parcurgând pașii pentru a crea și încărca datele de antrenament, a rula sarcina de ajustare fină. Implementați și utilizați noul model.                                                                                                                                                                                                                         |
-| Hugging Face | [Ajustarea fină a LLM-urilor cu Hugging Face](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                       | Acest articol de blog vă ghidează în ajustarea fină a unui _LLM deschis_ (ex: `CodeLlama 7B`) folosind biblioteca [transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) și [Transformer Reinforcement Learning (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst]) cu seturi de date deschise pe Hugging Face. |
-|              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| 🤗 AutoTrain | [Ajustarea fină a LLM-urilor cu AutoTrain](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                                 | AutoTrain (sau AutoTrain Advanced) este o bibliotecă Python dezvoltată de Hugging Face care permite ajustarea fină pentru multe sarcini diferite, inclusiv ajustarea fină a LLM-urilor. AutoTrain este o soluție fără cod, iar ajustarea fină poate fi realizată în propriul nor, pe Hugging Face Spaces sau local. Suportă atât o interfață web, CLI, cât și antrenament prin fișiere de configurare yaml.                     |
-|              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Furnizor    | Tutorial                                                                                                                                                                       | Descriere                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| OpenAI      | [How to fine-tune chat models](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst)                | Învață să ajustezi fin un `gpt-35-turbo` pentru un domeniu specific ("asistent rețete") pregătind datele de antrenament, rulând jobul de ajustare fină și folosind modelul ajustat fin pentru inferență.                                                                                                                                                                                                                                    |
+| Azure OpenAI| [GPT 3.5 Turbo fine-tuning tutorial](https://learn.microsoft.com/azure/ai-services/openai/tutorials/fine-tune?tabs=python-new%2Ccommand-line&WT.mc_id=academic-105485-koreyst) | Învață să ajustezi fin un model `gpt-35-turbo-0613` **pe Azure** prin pașii de creare și încărcare a datelor de antrenament, rularea jobului de ajustare fină. Implementarea și utilizarea noului model.                                                                                                                                                                                                                              |
+| Hugging Face| [Fine-tuning LLMs with Hugging Face](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                               | Această postare pe blog te ghidează în ajustarea fină a unui _LLM deschis_ (ex: `CodeLlama 7B`) folosind biblioteca [transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) și [Transformer Reinforcement Learning (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst) cu seturi de date deschise pe Hugging Face. |
+|             |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| 🤗 AutoTrain| [Fine-tuning LLMs with AutoTrain](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                                         | AutoTrain (sau AutoTrain Advanced) este o bibliotecă Python dezvoltată de Hugging Face care permite ajustarea fină pentru multe sarcini diferite, inclusiv ajustarea fină a LLM-urilor. AutoTrain este o soluție fără cod, iar ajustarea fină poate fi realizată în propriul cloud, pe Hugging Face Spaces sau local. Suportă interfață web, CLI și antrenamente prin fișiere de configurare yaml.                                                                               |
+|             |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| 🦥 Unsloth  | [Fine-tuning LLMs with Unsloth](https://github.com/unslothai/unsloth)                                                         | Unsloth este un cadru open-source care suportă ajustarea fină a LLM-urilor și învățarea cu întărire (RL). Unsloth simplifică antrenamentul local, evaluarea și implementarea cu [notebook-uri](https://github.com/unslothai/notebooks) gata de folosit. Suportă și text-to-speech (TTS), modele BERT și multimodale. Pentru a începe, citește ghidul lor pas cu pas [Fine-tuning LLMs Guide](https://docs.unsloth.ai/get-started/fine-tuning-llms-guide).                                                                             |
+|             |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+## Tema
 
-## Temă
+Selectează unul dintre tutorialele de mai sus și parcurge-l. _Este posibil să replicăm o versiune a acestor tutoriale în Jupyter Notebooks în acest repo doar ca referință. Te rugăm să folosești sursele originale pentru a obține cele mai recente versiuni_.
 
-Selectați unul dintre tutorialele de mai sus și parcurgeți-l. _Este posibil să replicăm o versiune a acestor tutoriale în Jupyter Notebooks în acest depozit doar pentru referință. Vă rugăm să folosiți sursele originale direct pentru a obține cele mai recente versiuni_.
+## Felicitări! Continuă-ți învățarea.
 
-## Felicitări! Continuați să învățați.
+După ce ai terminat această lecție, consultă colecția noastră de [Învățare Generativă AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) pentru a-ți continua creșterea cunoștințelor despre Generative AI!
 
-După ce ați finalizat această lecție, consultați [Colecția de învățare AI generativă](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) pentru a continua să vă dezvoltați cunoștințele despre AI generativ!
+Felicitări!! Ai finalizat lecția finală din seria v2 pentru acest curs! Nu te opri din a învăța și a crea. \*\*Consultă pagina [RESURSE](RESOURCES.md?WT.mc_id=academic-105485-koreyst) pentru o listă cu sugestii suplimentare doar pentru acest subiect.
 
-Felicitări!! Ați finalizat ultima lecție din seria v2 a acestui curs! Nu vă opriți din învățare și construire. \*\*Consultați pagina [RESURSE](RESOURCES.md?WT.mc_id=academic-105485-koreyst) pentru o listă de sugestii suplimentare doar pentru acest subiect.
-
-Seria noastră de lecții v1 a fost, de asemenea, actualizată cu mai multe teme și concepte. Așadar, luați un minut pentru a vă reîmprospăta cunoștințele - și vă rugăm să [împărtășiți întrebările și feedback-ul vostru](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) pentru a ne ajuta să îmbunătățim aceste lecții pentru comunitate.
+Seria noastră de lecții v1 a fost, de asemenea, actualizată cu mai multe teme și concepte. Așa că ia-ți un minut să-ți reîmprospătezi cunoștințele și te rugăm [să împărtășești întrebările și feedback-ul tău](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) pentru a ne ajuta să îmbunătățim aceste lecții pentru comunitate.
 
 ---
 
-**Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de oameni. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Declinarea responsabilității**:
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă trebuie considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională umană. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări eronate rezultând din utilizarea acestei traduceri.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-08-25T12:17:43+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "lt"
-}
--->
 # Prisidėjimas
 
 Šis projektas kviečia prisidėti ir teikti pasiūlymus. Dauguma indėlių reikalauja, kad sutiktumėte su Contributor License Agreement (CLA), patvirtinančiu, jog turite teisę ir iš tikrųjų suteikiate mums teisę naudoti jūsų indėlį. Daugiau informacijos rasite <https://cla.microsoft.com>.
@@ -63,7 +54,7 @@ Norėdami įsitikinti, kad jūsų nuorodos veikia tinkamai, naudokite VS code ir
 
 Pavyzdžiui, užvedus pelę ant nuorodos, VS code pasiūlys ją atidaryti paspaudus **ctrl + click**
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.lt.png)
+![VS code follow links screenshot](../../translated_images/lt/vscode-follow-link.85520ab6a1237adc.webp)
 
 Jei paspausite nuorodą ir ji neveikia lokaliai, tikrai sukels darbo eigos klaidą ir neveiks GitHub.
 
@@ -71,7 +62,7 @@ Norėdami ištaisyti šią problemą, rašykite nuorodą su VS code pagalba.
 
 Kai rašote `./` arba `../`, VS code pasiūlys pasirinkti iš galimų variantų pagal tai, ką įvedėte.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.lt.png)
+![VS code select relative path screenshot](../../translated_images/lt/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Sekite kelią paspaudę norimą failą ar aplanką ir būsite tikri, kad kelias nėra sugadintas.
 
@@ -88,7 +79,7 @@ Jei jis pridėtas prie jūsų reliatyvių kelių, praeisite patikrinimą.
 
 Jei ne, galite gauti šią klaidą.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.lt.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/lt/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 Norėdami ištaisyti šią problemą, atidarykite failo kelią, kurį pažymėjo darbo eiga, ir pridėkite sekimo ID reliatyvių kelių pabaigoje.
 
@@ -105,7 +96,7 @@ Jei jis pridėtas prie jūsų URL, praeisite patikrinimą.
 
 Jei ne, galite gauti šią klaidą.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.lt.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/lt/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 Norėdami ištaisyti šią problemą, atidarykite failo kelią, kurį pažymėjo darbo eiga, ir pridėkite sekimo ID URL pabaigoje.
 
@@ -122,7 +113,7 @@ Jei nėra, praeisite patikrinimą.
 
 Jei ne, galite gauti šią klaidą.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.lt.png)
+![GitHub check country locale comment screenshot](../../translated_images/lt/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 Norėdami ištaisyti šią problemą, atidarykite failo kelią, kurį pažymėjo darbo eiga, ir pašalinkite šalies lokalę iš URL.
 

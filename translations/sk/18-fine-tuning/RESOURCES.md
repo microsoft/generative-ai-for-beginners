@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c2f423d1402f71ca3869ec135bb77d16",
-  "translation_date": "2025-07-09T18:08:12+00:00",
-  "source_file": "18-fine-tuning/RESOURCES.md",
-  "language_code": "sk"
-}
--->
 # Zdroje pre samostatné štúdium
 
 Táto lekcia bola vytvorená na základe viacerých kľúčových zdrojov od OpenAI a Azure OpenAI, ktoré slúžili ako referencie pre terminológiu a návody. Tu je neúplný zoznam, ktorý vám pomôže na vašej ceste samostatného učenia.

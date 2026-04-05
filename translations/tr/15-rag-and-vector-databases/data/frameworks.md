@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-07-09T16:31:36+00:00",
-  "source_file": "15-rag-and-vector-databases/data/frameworks.md",
-  "language_code": "tr"
-}
--->
 # Sinir Ağı Çerçeveleri
 
 Zaten öğrendiğimiz gibi, sinir ağlarını verimli bir şekilde eğitebilmek için iki şey yapmamız gerekiyor:

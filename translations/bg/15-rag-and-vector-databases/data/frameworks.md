@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-07-09T16:37:27+00:00",
-  "source_file": "15-rag-and-vector-databases/data/frameworks.md",
-  "language_code": "bg"
-}
--->
 # Neural Network Frameworks
 
 Както вече научихме, за да можем ефективно да тренираме невронни мрежи, трябва да направим две неща:

@@ -1,19 +1,10 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-10-11T11:16:29+00:00",
-  "source_file": "15-rag-and-vector-databases/data/perceptron.md",
-  "language_code": "ta"
-}
--->
 # நரம்பியல் வலையமைப்புகளுக்கான அறிமுகம்: பெர்செப்ட்ரான்
 
 நவீன நரம்பியல் வலையமைப்புகளுக்கு ஒத்ததாக ஏதாவது ஒன்றை உருவாக்குவதற்கான முதல் முயற்சிகளில் ஒன்று 1957 ஆம் ஆண்டில் கார்னெல் ஏரோநாடிக்கல் ஆய்வகத்தில் இருந்து ஃப்ராங்க் ரோசன்பிளாட் செய்தார். இது "மார்க்-1" எனப்படும் ஒரு ஹார்ட்வேரின் செயல்பாடாக இருந்தது, இது முக்கோணங்கள், சதுரங்கள் மற்றும் வட்டங்கள் போன்ற அடிப்படை வடிவங்களை அடையாளம் காண வடிவமைக்கப்பட்டது.
 
 |      |      |
 |--------------|-----------|
-|<img src='../../../../translated_images/Rosenblatt-wikipedia.1d205667acda28c0f97ad594eb6dadfa0485605f3fb2155eca46a0255e98efac.ta.jpg' alt='ஃப்ராங்க் ரோசன்பிளாட்'/> | <img src='../../../../translated_images/Mark_I_perceptron_wikipedia.434e46ca39e2be801976110f8b1b75b13d1197f69e3a5f8b7537b43d35413e6f.ta.jpg' alt='மார்க் 1 பெர்செப்ட்ரான்' />|
+|<img src='../../../../translated_images/ta/Rosenblatt-wikipedia.1d205667acda28c0f97ad594eb6dadfa0485605f3fb2155eca46a0255e98efac.jpg' alt='ஃப்ராங்க் ரோசன்பிளாட்'/> | <img src='../../../../translated_images/ta/Mark_I_perceptron_wikipedia.434e46ca39e2be801976110f8b1b75b13d1197f69e3a5f8b7537b43d35413e6f.jpg' alt='மார்க் 1 பெர்செப்ட்ரான்' />|
 
 > விக்கிபீடியாவில் இருந்து பெறப்பட்ட படங்கள்
 

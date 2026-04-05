@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "58953c08b8ba7073b836d4270ea0fe86",
-  "translation_date": "2025-10-18T01:39:16+00:00",
-  "source_file": "08-building-search-applications/README.md",
-  "language_code": "sl"
-}
--->
 # Gradnja iskalnih aplikacij
 
-[![Uvod v generativno umetno inteligenco in velike jezikovne modele](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.sl.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Uvod v generativno umetno inteligenco in velike jezikovne modele](../../../translated_images/sl/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Kliknite zgornjo sliko za ogled videoposnetka te lekcije_
 
@@ -44,7 +35,7 @@ Lekcija vključuje indeks vektorskih predstavitev prepisov YouTube videoposnetko
 
 Spodaj je primer semantičnega iskanja za vprašanje 'Ali lahko uporabite rstudio z azure ml?'. Oglejte si URL YouTube videoposnetka, videli boste, da URL vsebuje časovno oznako, ki vas popelje na mesto v videoposnetku, kjer se nahaja odgovor na vprašanje.
 
-![Semantično iskanje za vprašanje "Ali lahko uporabite rstudio z Azure ML"](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.sl.png)
+![Semantično iskanje za vprašanje "Ali lahko uporabite rstudio z Azure ML"](../../../translated_images/sl/query-results.bb0480ebf025fac6.webp)
 
 ## Kaj je semantično iskanje?
 
@@ -162,7 +153,7 @@ Odprite [rešitveni zvezek](./python/aoai-solution.ipynb?WT.mc_id=academic-10548
 
 Ko zaženete zvezek, boste pozvani, da vnesete poizvedbo. Vnosno polje bo videti takole:
 
-![Vnosno polje za uporabnika za vnos poizvedbe](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.sl.png)
+![Vnosno polje za uporabnika za vnos poizvedbe](../../../translated_images/sl/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Odlično delo! Nadaljujte z učenjem
 

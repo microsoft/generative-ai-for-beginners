@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df98b2c59f87d8543135301e87969f70",
-  "translation_date": "2025-07-09T16:40:26+00:00",
-  "source_file": "15-rag-and-vector-databases/data/own_framework.md",
-  "language_code": "de"
-}
--->
 # Einführung in Neuronale Netze. Mehrschichtiger Perzeptron
 
 Im vorherigen Abschnitt hast du das einfachste Modell eines neuronalen Netzes kennengelernt – den einlagigen Perzeptron, ein lineares Zwei-Klassen-Klassifikationsmodell.

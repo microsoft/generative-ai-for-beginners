@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "19b8d432e5ed3ab209641dd8dad643fb",
-  "translation_date": "2025-10-03T11:13:45+00:00",
-  "source_file": "AGENTS.md",
-  "language_code": "my"
-}
--->
 # AGENTS.md
 
 ## ပရောဂျက်အကျဉ်းချုပ်

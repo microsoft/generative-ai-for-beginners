@@ -133,9 +133,7 @@ There are several ways to perform search within our database such as:
 
 - **Keyword search** - used for text searches
 
-- **Semantic search** - uses the semantic meaning of words
-
-- **Vector search** - converts documents from text to vector representations using embedding models. Retrieval will be done by querying the documents whose vector representations are closest to the user question.
+- **Vector search** - converts documents from text to vector representations using embedding models, permitting a **semantic search** using the meaning of words. Retrieval will be done by querying the documents whose vector representations are closest to the user question.
 
 - **Hybrid** - a combination of both keyword and vector search.
 
@@ -208,7 +206,7 @@ def chatbot(user_input):
     # create a message object
     messages=[
         {"role": "system", "content": "You are an AI assistant that helps with AI questions."},
-        {"role": "user", "content": history[-1]}
+        {"role": "user", "content": "\n\n".join(history) }
     ]
 
     # use chat completion to generate a response

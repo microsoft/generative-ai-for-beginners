@@ -1,0 +1,248 @@
+# Construção de Aplicações de IA com Baixo Código
+
+[![Construção de Aplicações de IA com Baixo Código](../../../translated_images/pt-PT/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+
+> _(Clique na imagem acima para assistir ao vídeo desta lição)_
+
+## Introdução
+
+Agora que aprendemos a criar aplicações de geração de imagens, vamos falar sobre baixo código. A IA generativa pode ser usada em várias áreas diferentes, incluindo baixo código, mas o que é baixo código e como podemos adicionar IA a ele?
+
+Criar aplicações e soluções tornou-se mais fácil para desenvolvedores tradicionais e não desenvolvedores através do uso de Plataformas de Desenvolvimento de Baixo Código. Essas plataformas permitem que você crie aplicações e soluções com pouco ou nenhum código. Isso é possível graças a um ambiente de desenvolvimento visual que permite arrastar e soltar componentes para construir aplicações e soluções. Isso possibilita criar aplicações e soluções de forma mais rápida e com menos recursos. Nesta lição, vamos explorar como usar o baixo código e como aprimorar o desenvolvimento de baixo código com IA usando o Power Platform.
+
+O Power Platform oferece às organizações a oportunidade de capacitar suas equipes para criar suas próprias soluções por meio de um ambiente intuitivo de baixo código ou sem código. Esse ambiente simplifica o processo de criação de soluções. Com o Power Platform, as soluções podem ser desenvolvidas em dias ou semanas, em vez de meses ou anos. O Power Platform é composto por cinco produtos principais: Power Apps, Power Automate, Power BI, Power Pages e Copilot Studio.
+
+Esta lição aborda:
+
+- Introdução à IA generativa no Power Platform
+- Introdução ao Copilot e como utilizá-lo
+- Usando IA generativa para criar aplicações e fluxos no Power Platform
+- Compreendendo os Modelos de IA no Power Platform com o AI Builder
+
+## Objetivos de Aprendizagem
+
+Ao final desta lição, você será capaz de:
+
+- Compreender como o Copilot funciona no Power Platform.
+
+- Criar uma aplicação de rastreamento de tarefas de estudantes para a nossa startup educacional.
+
+- Criar um fluxo de processamento de faturas que utiliza IA para extrair informações das faturas.
+
+- Aplicar as melhores práticas ao usar o modelo de IA "Create Text with GPT".
+
+As ferramentas e tecnologias que você usará nesta lição são:
+
+- **Power Apps**, para a aplicação de rastreamento de tarefas de estudantes, que fornece um ambiente de desenvolvimento de baixo código para criar aplicações para rastrear, gerenciar e interagir com dados.
+
+- **Dataverse**, para armazenar os dados da aplicação de rastreamento de tarefas de estudantes, onde o Dataverse fornecerá uma plataforma de dados de baixo código para armazenar os dados da aplicação.
+
+- **Power Automate**, para o fluxo de processamento de faturas, onde você terá um ambiente de desenvolvimento de baixo código para criar fluxos de trabalho que automatizam o processo de processamento de faturas.
+
+- **AI Builder**, para o modelo de IA de processamento de faturas, onde você usará modelos de IA pré-construídos para processar as faturas da nossa startup.
+
+## IA Generativa no Power Platform
+
+Aprimorar o desenvolvimento e as aplicações de baixo código com IA generativa é uma área de foco importante para o Power Platform. O objetivo é permitir que todos criem aplicações, sites, dashboards e automatizem processos com IA, _sem exigir qualquer expertise em ciência de dados_. Esse objetivo é alcançado integrando a IA generativa na experiência de desenvolvimento de baixo código no Power Platform na forma de Copilot e AI Builder.
+
+### Como funciona?
+
+O Copilot é um assistente de IA que permite criar soluções no Power Platform descrevendo seus requisitos em uma série de etapas conversacionais usando linguagem natural. Por exemplo, você pode instruir o assistente de IA a indicar quais campos sua aplicação usará e ele criará tanto a aplicação quanto o modelo de dados subjacente, ou poderá especificar como configurar um fluxo no Power Automate.
+
+Você pode usar funcionalidades impulsionadas pelo Copilot como um recurso nas telas da sua aplicação para permitir que os usuários descubram insights por meio de interações conversacionais.
+
+O AI Builder é uma capacidade de IA de baixo código disponível no Power Platform que permite usar modelos de IA para ajudar a automatizar processos e prever resultados. Com o AI Builder, você pode trazer IA para suas aplicações e fluxos que se conectam aos seus dados no Dataverse ou em várias fontes de dados na nuvem, como SharePoint, OneDrive ou Azure.
+
+O Copilot está disponível em todos os produtos do Power Platform: Power Apps, Power Automate, Power BI, Power Pages e Power Virtual Agents. O AI Builder está disponível no Power Apps e no Power Automate. Nesta lição, vamos focar em como usar o Copilot e o AI Builder no Power Apps e no Power Automate para criar uma solução para a nossa startup educacional.
+
+### Copilot no Power Apps
+
+Como parte do Power Platform, o Power Apps oferece um ambiente de desenvolvimento de baixo código para criar aplicações que rastreiam, gerenciam e interagem com dados. É um conjunto de serviços de desenvolvimento de aplicações com uma plataforma de dados escalável e a capacidade de se conectar a serviços na nuvem e dados locais. O Power Apps permite criar aplicações que funcionam em navegadores, tablets e telemóveis, e podem ser compartilhadas com colegas de trabalho. O Power Apps facilita o desenvolvimento de aplicações com uma interface simples, para que qualquer usuário empresarial ou desenvolvedor profissional possa criar aplicações personalizadas. A experiência de desenvolvimento de aplicações também é aprimorada com IA generativa por meio do Copilot.
+
+O recurso de assistente de IA Copilot no Power Apps permite que você descreva o tipo de aplicação que precisa e as informações que deseja que sua aplicação rastreie, colete ou exiba. O Copilot então gera uma aplicação responsiva baseada na sua descrição. Você pode personalizar a aplicação para atender às suas necessidades. O Copilot também gera e sugere uma Tabela Dataverse com os campos necessários para armazenar os dados que você deseja rastrear e alguns dados de exemplo. Vamos explorar o que é o Dataverse e como você pode usá-lo no Power Apps mais adiante nesta lição. Você pode personalizar a tabela para atender às suas necessidades usando o recurso de assistente Copilot por meio de etapas conversacionais. Este recurso está disponível diretamente na tela inicial do Power Apps.
+
+### Copilot no Power Automate
+
+Como parte do Power Platform, o Power Automate permite que os usuários criem fluxos de trabalho automatizados entre aplicações e serviços. Ele ajuda a automatizar processos empresariais repetitivos, como comunicação, coleta de dados e aprovações de decisões. Sua interface simples permite que usuários de todos os níveis técnicos (de iniciantes a desenvolvedores experientes) automatizem tarefas de trabalho. A experiência de desenvolvimento de fluxos de trabalho também é aprimorada com IA generativa por meio do Copilot.
+
+O recurso de assistente de IA Copilot no Power Automate permite que você descreva o tipo de fluxo que precisa e as ações que deseja que seu fluxo execute. O Copilot então gera um fluxo baseado na sua descrição. Você pode personalizar o fluxo para atender às suas necessidades. O Copilot também gera e sugere as ações necessárias para realizar a tarefa que você deseja automatizar. Vamos explorar o que são fluxos e como você pode usá-los no Power Automate mais adiante nesta lição. Você pode personalizar as ações para atender às suas necessidades usando o recurso de assistente Copilot por meio de etapas conversacionais. Este recurso está disponível diretamente na tela inicial do Power Automate.
+
+## Tarefa: Gerir tarefas de estudantes e faturas para a nossa startup, usando o Copilot
+
+A nossa startup oferece cursos online para estudantes. A startup cresceu rapidamente e agora está com dificuldades para atender à demanda por seus cursos. A startup contratou você como desenvolvedor do Power Platform para ajudá-los a criar uma solução de baixo código para ajudá-los a gerir as tarefas dos estudantes e as faturas. A solução deve ser capaz de ajudar a rastrear e gerir as tarefas dos estudantes através de uma aplicação e automatizar o processo de processamento de faturas através de um fluxo de trabalho. Foi solicitado que você use IA generativa para desenvolver a solução.
+
+Ao começar a usar o Copilot, você pode utilizar a [Power Platform Copilot Prompt Library](https://github.com/pnp/powerplatform-prompts?WT.mc_id=academic-109639-somelezediko) para começar com os prompts. Esta biblioteca contém uma lista de prompts que você pode usar para criar aplicações e fluxos com o Copilot. Você também pode usar os prompts da biblioteca para ter uma ideia de como descrever seus requisitos ao Copilot.
+
+### Criar uma Aplicação de Rastreamento de Tarefas de Estudantes para a Nossa Startup
+
+Os educadores da nossa startup têm enfrentado dificuldades para acompanhar as tarefas dos estudantes. Eles têm usado uma planilha para rastrear as tarefas, mas isso se tornou difícil de gerir à medida que o número de estudantes aumentou. Eles pediram que você criasse uma aplicação que os ajudasse a rastrear e gerir as tarefas dos estudantes. A aplicação deve permitir que eles adicionem novas tarefas, visualizem tarefas, atualizem tarefas e excluam tarefas. A aplicação também deve permitir que educadores e estudantes visualizem as tarefas que foram avaliadas e aquelas que ainda não foram.
+
+Você criará a aplicação usando o Copilot no Power Apps seguindo os passos abaixo:
+
+1. Navegue até a [tela inicial do Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst).
+
+1. Use a área de texto na tela inicial para descrever a aplicação que deseja criar. Por exemplo, **_Quero criar uma aplicação para rastrear e gerir tarefas de estudantes_**. Clique no botão **Enviar** para enviar o prompt ao Copilot de IA.
+
+![Descreva a aplicação que deseja criar](../../../translated_images/pt-PT/copilot-chat-prompt-powerapps.84250f341d060830.webp)
+
+1. O Copilot de IA sugerirá uma Tabela Dataverse com os campos necessários para armazenar os dados que deseja rastrear e alguns dados de exemplo. Você pode personalizar a tabela para atender às suas necessidades usando o recurso de assistente Copilot por meio de etapas conversacionais.
+
+   > **Importante**: O Dataverse é a plataforma de dados subjacente do Power Platform. É uma plataforma de dados de baixo código para armazenar os dados da aplicação. É um serviço totalmente gerido que armazena dados com segurança na Nuvem da Microsoft e é provisionado dentro do ambiente do Power Platform. Ele vem com recursos integrados de governança de dados, como classificação de dados, linhagem de dados, controle de acesso detalhado e muito mais. Você pode saber mais sobre o Dataverse [aqui](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
+
+   ![Campos sugeridos na nova tabela](../../../translated_images/pt-PT/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp)
+
+1. Os educadores querem enviar e-mails aos estudantes que enviaram suas tarefas para mantê-los atualizados sobre o progresso de suas tarefas. Você pode usar o Copilot para adicionar um novo campo à tabela para armazenar o e-mail do estudante. Por exemplo, você pode usar o seguinte prompt para adicionar um novo campo à tabela: **_Quero adicionar uma coluna para armazenar o e-mail do estudante_**. Clique no botão **Enviar** para enviar o prompt ao Copilot de IA.
+
+![Adicionando um novo campo](../../../translated_images/pt-PT/copilot-new-column.35e15ff21acaf274.webp)
+
+1. O Copilot de IA gerará um novo campo e você poderá personalizar o campo para atender às suas necessidades.
+
+1. Quando terminar de configurar a tabela, clique no botão **Criar aplicação** para criar a aplicação.
+
+1. O Copilot de IA gerará uma aplicação responsiva baseada na sua descrição. Você poderá personalizar a aplicação para atender às suas necessidades.
+
+1. Para que os educadores enviem e-mails aos estudantes, você pode usar o Copilot para adicionar uma nova tela à aplicação. Por exemplo, você pode usar o seguinte prompt para adicionar uma nova tela à aplicação: **_Quero adicionar uma tela para enviar e-mails aos estudantes_**. Clique no botão **Enviar** para enviar o prompt ao Copilot de IA.
+
+![Adicionando uma nova tela através de um prompt](../../../translated_images/pt-PT/copilot-new-screen.2e0bef7132a17392.webp)
+
+1. O Copilot de IA gerará uma nova tela e você poderá personalizar a tela para atender às suas necessidades.
+
+1. Quando terminar de configurar a aplicação, clique no botão **Salvar** para salvar a aplicação.
+
+1. Para compartilhar a aplicação com os educadores, clique no botão **Compartilhar** e, em seguida, clique novamente no botão **Compartilhar**. Você poderá compartilhar a aplicação com os educadores inserindo os endereços de e-mail deles.
+
+> **Seu dever de casa**: A aplicação que você acabou de criar é um bom começo, mas pode ser melhorada. Com o recurso de e-mail, os educadores só podem enviar e-mails aos estudantes manualmente, tendo que digitar os endereços de e-mail. Consegue usar o Copilot para criar uma automação que permita aos educadores enviar e-mails automaticamente aos estudantes quando eles enviarem suas tarefas? Sua dica é que, com o prompt certo, você pode usar o Copilot no Power Automate para criar isso.
+
+### Criar uma Tabela de Informações de Faturas para a Nossa Startup
+
+A equipe financeira da nossa startup tem enfrentado dificuldades para acompanhar as faturas. Eles têm usado uma planilha para rastrear as faturas, mas isso se tornou difícil de gerir à medida que o número de faturas aumentou. Eles pediram que você criasse uma tabela que os ajudasse a armazenar, rastrear e gerir as informações das faturas recebidas. A tabela deve ser usada para criar uma automação que extraia todas as informações das faturas e as armazene na tabela. A tabela também deve permitir que a equipe financeira visualize as faturas que foram pagas e aquelas que ainda não foram pagas.
+
+O Power Platform possui uma plataforma de dados subjacente chamada Dataverse que permite armazenar os dados para suas aplicações e soluções. O Dataverse fornece uma plataforma de dados de baixo código para armazenar os dados da aplicação. É um serviço totalmente gerido que armazena dados com segurança na Nuvem da Microsoft e é provisionado dentro do ambiente do Power Platform. Ele vem com recursos integrados de governança de dados, como classificação de dados, linhagem de dados, controle de acesso detalhado e mais. Você pode saber mais [sobre o Dataverse aqui](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
+Por que devemos usar o Dataverse na nossa startup? As tabelas padrão e personalizadas no Dataverse oferecem uma opção de armazenamento segura e baseada na nuvem para os seus dados. As tabelas permitem armazenar diferentes tipos de dados, semelhante ao uso de várias folhas em uma única pasta de trabalho do Excel. Pode-se usar as tabelas para armazenar dados específicos das necessidades da sua organização ou negócio. Alguns dos benefícios que nossa startup terá ao usar o Dataverse incluem, mas não se limitam a:
+
+- **Fácil de gerenciar**: Tanto os metadados quanto os dados são armazenados na nuvem, então não é necessário se preocupar com os detalhes de como eles são armazenados ou gerenciados. Pode-se focar na criação de aplicativos e soluções.
+
+- **Seguro**: O Dataverse oferece uma opção de armazenamento segura e baseada na nuvem para os seus dados. É possível controlar quem tem acesso aos dados nas suas tabelas e como podem acessá-los, utilizando segurança baseada em funções.
+
+- **Metadados ricos**: Tipos de dados e relacionamentos são usados diretamente no Power Apps.
+
+- **Lógica e validação**: Pode-se usar regras de negócios, campos calculados e regras de validação para aplicar lógica de negócios e manter a precisão dos dados.
+
+Agora que você sabe o que é o Dataverse e por que deve usá-lo, vamos ver como usar o Copilot para criar uma tabela no Dataverse que atenda às necessidades da nossa equipe financeira.
+
+> **Note**: Você usará esta tabela na próxima seção para criar uma automação que extrairá todas as informações das faturas e as armazenará na tabela.
+
+Para criar uma tabela no Dataverse usando o Copilot, siga os passos abaixo:
+
+1. Navegue até a [tela inicial do Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst).
+
+2. Na barra de navegação à esquerda, selecione **Tabelas** e clique em **Descrever nova tabela**.
+
+![Selecionar nova tabela](../../../translated_images/pt-PT/describe-new-table.0792373eb757281e.webp)
+
+3. Na tela **Descrever nova tabela**, use a área de texto para descrever a tabela que deseja criar. Por exemplo, **_Quero criar uma tabela para armazenar informações de faturas_**. Clique no botão **Enviar** para enviar o comando ao AI Copilot.
+
+![Descrever a tabela](../../../translated_images/pt-PT/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp)
+
+4. O AI Copilot sugerirá uma tabela do Dataverse com os campos necessários para armazenar os dados que deseja acompanhar e alguns dados de exemplo. Você pode personalizar a tabela conforme suas necessidades usando o recurso de assistente do AI Copilot por meio de etapas conversacionais.
+
+![Tabela sugerida pelo Dataverse](../../../translated_images/pt-PT/copilot-dataverse-table.b3bc936091324d9d.webp)
+
+5. A equipe financeira deseja enviar um e-mail ao fornecedor para atualizá-lo sobre o status atual da sua fatura. Você pode usar o Copilot para adicionar um novo campo à tabela para armazenar o e-mail do fornecedor. Por exemplo, pode usar o seguinte comando para adicionar um novo campo à tabela: **_Quero adicionar uma coluna para armazenar o e-mail do fornecedor_**. Clique no botão **Enviar** para enviar o comando ao AI Copilot.
+
+6. O AI Copilot gerará um novo campo e você poderá personalizá-lo conforme suas necessidades.
+
+7. Quando terminar de configurar a tabela, clique no botão **Criar** para criar a tabela.
+
+## Modelos de IA no Power Platform com AI Builder
+
+O AI Builder é uma funcionalidade de IA de baixo código disponível no Power Platform que permite usar modelos de IA para ajudar a automatizar processos e prever resultados. Com o AI Builder, é possível incorporar inteligência artificial nos seus aplicativos e fluxos que se conectam aos seus dados no Dataverse ou em várias fontes de dados na nuvem, como SharePoint, OneDrive ou Azure.
+
+## Modelos de IA pré-construídos vs Modelos de IA personalizados
+
+O AI Builder oferece dois tipos de modelos de IA: modelos pré-construídos e modelos personalizados. Os modelos pré-construídos são modelos de IA prontos para uso, treinados pela Microsoft e disponíveis no Power Platform. Eles ajudam a adicionar inteligência aos seus aplicativos e fluxos sem a necessidade de coletar dados e, em seguida, criar, treinar e publicar seus próprios modelos. Pode-se usar esses modelos para automatizar processos e prever resultados.
+
+Alguns dos modelos de IA pré-construídos disponíveis no Power Platform incluem:
+
+- **Extração de Frases-Chave**: Este modelo extrai frases-chave de textos.
+- **Detecção de Idioma**: Este modelo detecta o idioma de um texto.
+- **Análise de Sentimento**: Este modelo identifica sentimentos positivos, negativos, neutros ou mistos em textos.
+- **Leitor de Cartões de Visita**: Este modelo extrai informações de cartões de visita.
+- **Reconhecimento de Texto**: Este modelo extrai texto de imagens.
+- **Detecção de Objetos**: Este modelo detecta e extrai objetos de imagens.
+- **Processamento de Documentos**: Este modelo extrai informações de formulários.
+- **Processamento de Faturas**: Este modelo extrai informações de faturas.
+
+Com os modelos de IA personalizados, é possível trazer seu próprio modelo para o AI Builder, permitindo que ele funcione como qualquer modelo personalizado do AI Builder, possibilitando treinar o modelo usando seus próprios dados. Pode-se usar esses modelos para automatizar processos e prever resultados tanto no Power Apps quanto no Power Automate. Ao usar seu próprio modelo, existem limitações que se aplicam. Leia mais sobre essas [limitações](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
+
+![Modelos do AI Builder](../../../translated_images/pt-PT/ai-builder-models.8069423b84cfc47f.webp)
+
+## Tarefa #2 - Criar um Fluxo de Processamento de Faturas para Nossa Startup
+
+A equipe financeira tem enfrentado dificuldades para processar faturas. Eles têm usado uma planilha para acompanhar as faturas, mas isso se tornou difícil de gerenciar à medida que o número de faturas aumentou. Eles pediram para você criar um fluxo de trabalho que os ajude a processar faturas usando IA. O fluxo de trabalho deve permitir que eles extraiam informações das faturas e armazenem essas informações em uma tabela do Dataverse. O fluxo de trabalho também deve permitir que enviem um e-mail para a equipe financeira com as informações extraídas.
+
+Agora que você sabe o que é o AI Builder e por que deve usá-lo, vamos ver como usar o modelo de IA de Processamento de Faturas no AI Builder, que abordamos anteriormente, para criar um fluxo de trabalho que ajudará a equipe financeira a processar faturas.
+
+Para criar um fluxo de trabalho que ajude a equipe financeira a processar faturas usando o modelo de IA de Processamento de Faturas no AI Builder, siga os passos abaixo:
+
+1. Navegue até a [tela inicial do Power Automate](https://make.powerautomate.com?WT.mc_id=academic-105485-koreyst).
+
+2. Use a área de texto na tela inicial para descrever o fluxo de trabalho que deseja criar. Por exemplo, **_Processar uma fatura quando ela chegar na minha caixa de entrada_**. Clique no botão **Enviar** para enviar o comando ao AI Copilot.
+
+   ![Copilot power automate](../../../translated_images/pt-PT/copilot-chat-prompt-powerautomate.f377e478cc8412de.webp)
+
+3. O AI Copilot sugerirá as ações necessárias para realizar a tarefa que deseja automatizar. Pode clicar no botão **Próximo** para seguir para as próximas etapas.
+
+4. Na próxima etapa, o Power Automate solicitará que configure as conexões necessárias para o fluxo. Quando terminar, clique no botão **Criar fluxo** para criar o fluxo.
+
+5. O AI Copilot gerará um fluxo e você poderá personalizá-lo conforme suas necessidades.
+
+6. Atualize o gatilho do fluxo e defina a **Pasta** para a pasta onde as faturas serão armazenadas. Por exemplo, pode definir a pasta como **Caixa de Entrada**. Clique em **Mostrar opções avançadas** e defina **Somente com Anexos** como **Sim**. Isso garantirá que o fluxo seja executado apenas quando um e-mail com um anexo for recebido na pasta.
+
+7. Remova as seguintes ações do fluxo: **HTML para texto**, **Compor**, **Compor 2**, **Compor 3** e **Compor 4**, pois não serão usadas.
+
+8. Remova a ação **Condição** do fluxo, pois não será usada. Deve ficar como na captura de tela abaixo:
+
+   ![Power Automate, remover ações](../../../translated_images/pt-PT/powerautomate-remove-actions.7216392fe684ceba.webp)
+
+9. Clique no botão **Adicionar uma ação** e procure por **Dataverse**. Selecione a ação **Adicionar uma nova linha**.
+
+10. Na ação **Extrair informações das faturas**, atualize o **Arquivo da Fatura** para apontar para o **Conteúdo do Anexo** do e-mail. Isso garantirá que o fluxo extraia informações do anexo da fatura.
+
+11. Selecione a **Tabela** que criou anteriormente. Por exemplo, pode selecionar a tabela **Informações da Fatura**. Escolha o conteúdo dinâmico da ação anterior para preencher os seguintes campos:
+
+    - ID
+    - Valor
+    - Data
+    - Nome
+    - Status - Defina o **Status** como **Pendente**.
+    - E-mail do Fornecedor - Use o conteúdo dinâmico **De** do gatilho **Quando um novo e-mail chegar**.
+
+    ![Power Automate adicionar linha](../../../translated_images/pt-PT/powerautomate-add-row.5edce45e5dd3d51e.webp)
+
+12. Quando terminar o fluxo, clique no botão **Salvar** para salvar o fluxo. Você pode então testá-lo enviando um e-mail com uma fatura para a pasta especificada no gatilho.
+
+> **Seu dever de casa**: O fluxo que você acabou de criar é um bom começo, agora você precisa pensar em como pode criar uma automação que permita à nossa equipe financeira enviar um e-mail ao fornecedor para atualizá-lo sobre o status atual da sua fatura. Sua dica: o fluxo deve ser executado quando o status da fatura mudar.
+
+## Usar um Modelo de IA de Geração de Texto no Power Automate
+
+O modelo de IA Criar Texto com GPT no AI Builder permite gerar texto com base em um comando e é alimentado pelo Microsoft Azure OpenAI Service. Com essa funcionalidade, é possível incorporar a tecnologia GPT (Generative Pre-Trained Transformer) nos seus aplicativos e fluxos para criar uma variedade de fluxos automatizados e aplicativos perspicazes.
+
+Os modelos GPT passam por um treinamento extenso com grandes volumes de dados, permitindo que produzam textos que se assemelham muito à linguagem humana quando recebem um comando. Quando integrados à automação de fluxos de trabalho, modelos de IA como o GPT podem ser aproveitados para simplificar e automatizar uma ampla gama de tarefas.
+
+Por exemplo, pode-se criar fluxos para gerar automaticamente textos para diversos casos de uso, como: rascunhos de e-mails, descrições de produtos e mais. Também é possível usar o modelo para gerar textos para diversos aplicativos, como chatbots e aplicativos de atendimento ao cliente que permitem que os agentes de atendimento respondam de forma eficaz e eficiente às consultas dos clientes.
+
+![criar um prompt](../../../translated_images/pt-PT/create-prompt-gpt.69d429300c2e870a.webp)
+
+Para aprender como usar este modelo de IA no Power Automate, acesse o módulo [Adicionar inteligência com AI Builder e GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko).
+
+## Ótimo trabalho! Continue aprendendo
+
+Depois de concluir esta lição, confira nossa [coleção de aprendizado sobre IA generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para continuar aprimorando seu conhecimento sobre IA generativa!
+
+Vá para a Lição 11, onde veremos como [integrar IA generativa com chamadas de função](../11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst)!
+
+---
+
+**Aviso Legal**:  
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se uma tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.

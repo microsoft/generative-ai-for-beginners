@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-07-09T16:31:54+00:00",
-  "source_file": "15-rag-and-vector-databases/data/frameworks.md",
-  "language_code": "el"
-}
--->
 # Πλαίσια Νευρωνικών Δικτύων
 
 Όπως έχουμε ήδη μάθει, για να μπορέσουμε να εκπαιδεύσουμε νευρωνικά δίκτυα αποδοτικά, πρέπει να κάνουμε δύο πράγματα:

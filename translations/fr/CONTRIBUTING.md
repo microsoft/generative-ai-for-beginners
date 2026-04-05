@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-07-09T05:47:19+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "fr"
-}
--->
 # Contribution
 
 Ce projet accueille les contributions et suggestions. La plupart des contributions nécessitent que vous acceptiez un Accord de Licence de Contributeur (CLA) déclarant que vous avez le droit, et que vous accordez effectivement, les droits d’utilisation de votre contribution. Pour plus de détails, consultez <https://cla.microsoft.com>.
@@ -63,7 +54,7 @@ Pour vous assurer que vos liens fonctionnent correctement, utilisez simplement V
 
 Par exemple, lorsque vous survolez un lien dans vos fichiers, vous pouvez suivre le lien en appuyant sur **ctrl + clic**
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.fr.png)
+![VS code follow links screenshot](../../translated_images/fr/vscode-follow-link.85520ab6a1237adc.webp)
 
 Si vous cliquez sur un lien et qu’il ne fonctionne pas localement, il déclenchera sûrement le workflow et ne fonctionnera pas sur GitHub.
 
@@ -71,7 +62,7 @@ Pour corriger ce problème, essayez de taper le lien avec l’aide de VS Code.
 
 Lorsque vous tapez `./` ou `../`, VS Code vous propose de choisir parmi les options disponibles selon ce que vous avez saisi.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.fr.png)
+![VS code select relative path screenshot](../../translated_images/fr/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Suivez le chemin en cliquant sur le fichier ou dossier souhaité et vous serez sûr que votre chemin n’est pas cassé.
 
@@ -88,7 +79,7 @@ S’il est ajouté à vos chemins relatifs, vous passerez cette vérification.
 
 Sinon, vous pourriez recevoir l’erreur suivante.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.fr.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/fr/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 Pour corriger ce problème, ouvrez le chemin de fichier mis en évidence par le workflow et ajoutez l’identifiant de suivi à la fin des chemins relatifs.
 
@@ -105,7 +96,7 @@ S’il est ajouté à vos URLs, vous passerez cette vérification.
 
 Sinon, vous pourriez recevoir l’erreur suivante.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.fr.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/fr/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 Pour corriger ce problème, ouvrez le chemin de fichier mis en évidence par le workflow et ajoutez l’identifiant de suivi à la fin des URLs.
 
@@ -122,7 +113,7 @@ Si ce n’est pas présent dans vos URLs, vous passerez cette vérification.
 
 Sinon, vous pourriez recevoir l’erreur suivante.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.fr.png)
+![GitHub check country locale comment screenshot](../../translated_images/fr/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 Pour corriger ce problème, ouvrez le chemin de fichier mis en évidence par le workflow et supprimez la locale pays des URLs.
 

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-07-09T13:08:52+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "ne"
-}
--->
 # ट्रान्सक्रिप्शन डाटा तयारी
 
 ट्रान्सक्रिप्शन डाटा तयारी स्क्रिप्टहरूले YouTube भिडियो ट्रान्सक्रिप्टहरू डाउनलोड गरी Semantic Search with OpenAI Embeddings and Functions नमूनासँग प्रयोगका लागि तयार पार्छन्।

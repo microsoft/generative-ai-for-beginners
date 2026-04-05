@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df98b2c59f87d8543135301e87969f70",
-  "translation_date": "2025-07-09T16:46:32+00:00",
-  "source_file": "15-rag-and-vector-databases/data/own_framework.md",
-  "language_code": "el"
-}
--->
 # Εισαγωγή στα Νευρωνικά Δίκτυα. Πολυεπίπεδος Perceptron
 
 Στην προηγούμενη ενότητα, μάθατε για το πιο απλό μοντέλο νευρωνικού δικτύου - τον μονοεπίπεδο perceptron, ένα γραμμικό μοντέλο ταξινόμησης δύο κλάσεων.

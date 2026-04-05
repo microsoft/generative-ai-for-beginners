@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-07-09T16:28:04+00:00",
-  "source_file": "15-rag-and-vector-databases/data/frameworks.md",
-  "language_code": "ko"
-}
--->
 # Neural Network Frameworks
 
 우리가 이미 배운 것처럼, 신경망을 효율적으로 학습시키기 위해서는 두 가지가 필요합니다:

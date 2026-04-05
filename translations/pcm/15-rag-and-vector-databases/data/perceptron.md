@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-11-12T08:51:28+00:00",
-  "source_file": "15-rag-and-vector-databases/data/perceptron.md",
-  "language_code": "pcm"
-}
--->
 # Introduction to Neural Networks: Perceptron
 
 One of di first try wey dem do to create somtin wey resemble modern neural network na Frank Rosenblatt from Cornell Aeronautical Laboratory for 1957. E be hardware wey dem call "Mark-1", e dey designed to sabi primitive geometric shapes like triangle, square and circle.

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df98b2c59f87d8543135301e87969f70",
-  "translation_date": "2025-07-09T16:43:07+00:00",
-  "source_file": "15-rag-and-vector-databases/data/own_framework.md",
-  "language_code": "ko"
-}
--->
 # 신경망 소개. 다층 퍼셉트론
 
 이전 섹션에서는 가장 간단한 신경망 모델인 단일층 퍼셉트론, 즉 선형 이진 분류 모델에 대해 배웠습니다.

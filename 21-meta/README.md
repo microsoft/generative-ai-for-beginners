@@ -11,7 +11,7 @@ This lesson will cover:
 
 ## The Meta Family of Models 
 
-In this lesson, we will explore 2 models from the Meta family or "Llama Herd" - Llama 3.1 and Llama 3.2 
+In this lesson, we will explore 2 models from the Meta family or "Llama Herd" - Llama 3.1 and Llama 3.2.
 
 These models come in different variants and are available on the GitHub Model marketplace. Here are more details on using GitHub Models to [prototype with AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
 
@@ -27,13 +27,13 @@ Model Variants:
 
 At 405 Billion Parameters, Llama 3.1 fits into the open source LLM category. 
 
-The mode is an upgrade to the earlier release Llama 3 by offering: 
+The model is an upgrade to the earlier release Llama 3 by offering: 
 
 - Larger context window - 128k tokens vs 8k tokens 
 - Larger Max Output Tokens - 4096 vs 2048 
 - Better Multilingual Support - due to increase in training tokens 
 
-These enables Llama 3.1 to handle more complex use cases  when building GenAI applications including: 
+These enable Llama 3.1 to handle more complex use cases when building GenAI applications including: 
 - Native Function Calling - the ability to call external tools and functions outside of the LLM workflow
 - Better RAG Performance - due to the higher context window 
 - Synthetic Data Generation - the ability to create effective data for tasks such as fine-tuning 
@@ -45,7 +45,7 @@ Llama 3.1 has been fine-tuned to be more effective at making function or tool ca
 - **Brave Search** - Can be used to get up-to-date information like the weather by performing a web search 
 - **Wolfram Alpha** - Can be used for more complex mathematical calculations so writing your own functions is not required. 
 
-You can also create your own custom tools that LLM can call. 
+You can also create your own custom tools that the LLM can call. 
 
 In the code example below: 
 
@@ -53,7 +53,7 @@ In the code example below:
 - Send a user prompt that asks about the weather in a certain city. 
 - The LLM will respond with a tool call to the Brave Search tool which will look like this `<|python_tag|>brave_search.call(query="Stockholm weather")` 
 
-*Note: This example only makes the tool call, if you would like to get the results, you will need to create a free account on the Brave API page and define the function itself` 
+*Note: This example only makes the tool call, if you would like to get the results, you will need to create a free account on the Brave API page and define the function itself.
 
 ```python 
 import os
@@ -95,7 +95,7 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2 
 
-Despite being an LLM, one limitation that Llama 3.1 has is multimodality. That is, being able to use different types of input such as images as prompts and providing responses. This ability is one of the main features of Llama 3.2. These features also include: 
+Despite being an LLM, one limitation of Llama 3.1 is its lack of multimodality. That is, the inability to use different types of input such as images as prompts and provide responses. This ability is one of the main features of Llama 3.2. These features also include: 
 
 - Multimodality -  has the ability to evaluate both text and image prompts 
 - Small to Medium size variations (11B and 90B) - this provides flexible deployment options, 
@@ -151,7 +151,7 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Learning does not stop here, continue the Journey
+## Learning does not stop here, continue the journey
 
 After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
 

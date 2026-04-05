@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df98b2c59f87d8543135301e87969f70",
-  "translation_date": "2025-07-09T16:52:12+00:00",
-  "source_file": "15-rag-and-vector-databases/data/own_framework.md",
-  "language_code": "sl"
-}
--->
 # Uvod v nevronske mreže. Večplastni perceptron
 
 V prejšnjem poglavju ste spoznali najpreprostejši model nevronske mreže – enoplastni perceptron, linearen model za dvo-razredno klasifikacijo.

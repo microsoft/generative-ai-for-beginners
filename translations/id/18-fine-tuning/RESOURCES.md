@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c2f423d1402f71ca3869ec135bb77d16",
-  "translation_date": "2025-07-09T18:05:50+00:00",
-  "source_file": "18-fine-tuning/RESOURCES.md",
-  "language_code": "id"
-}
--->
 # Sumber Daya untuk Pembelajaran Mandiri
 
 Pelajaran ini dibuat dengan menggunakan sejumlah sumber utama dari OpenAI dan Azure OpenAI sebagai referensi untuk terminologi dan tutorial. Berikut adalah daftar yang tidak lengkap, untuk perjalanan pembelajaran mandiri Anda sendiri.

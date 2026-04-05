@@ -1,19 +1,10 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-07-09T17:01:27+00:00",
-  "source_file": "15-rag-and-vector-databases/data/perceptron.md",
-  "language_code": "sr"
-}
--->
 # Увод у неуронске мреже: Перцептрон
 
 Један од првих покушаја да се имплементира нешто слично модерној неуронској мрежи направио је Френк Розенблат са Корнел аеронаутичке лабораторије 1957. године. Ради се о хардверској имплементацији под називом "Mark-1", дизајнираној да препозна примитивне геометријске облике, као што су троуглови, квадрати и кругови.
 
 |      |      |
 |--------------|-----------|
-|<img src='images/Rosenblatt-wikipedia.jpg' alt='Frank Rosenblatt'/> | <img src='images/Mark_I_perceptron_wikipedia.jpg' alt='The Mark 1 Perceptron' />|
+|<img src='../../../../translated_images/sr/Rosenblatt-wikipedia.1d205667acda28c0.webp' alt='Frank Rosenblatt'/> | <img src='../../../../translated_images/sr/Mark_I_perceptron_wikipedia.434e46ca39e2be80.webp' alt='The Mark 1 Perceptron' />|
 
 > Слике са Википедије
 

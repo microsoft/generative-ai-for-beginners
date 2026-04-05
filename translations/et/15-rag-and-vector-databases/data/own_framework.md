@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df98b2c59f87d8543135301e87969f70",
-  "translation_date": "2025-10-11T11:17:21+00:00",
-  "source_file": "15-rag-and-vector-databases/data/own_framework.md",
-  "language_code": "et"
-}
--->
 # Sissejuhatus tehisnärvivõrkudesse. Mitmekihiline perceptron
 
 Eelmises osas õppisite tundma kõige lihtsamat tehisnärvivõrgu mudelit – ühekihilist perceptronit, mis on lineaarne kahe klassi klassifitseerimise mudel.

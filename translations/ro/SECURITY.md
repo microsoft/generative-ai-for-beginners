@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2d33a71bed73d6daee78e2d473ece975",
-  "translation_date": "2025-07-09T06:56:03+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "ro"
-}
--->
 ## Securitate
 
 Microsoft tratează cu seriozitate securitatea produselor și serviciilor noastre software, inclusiv toate depozitele de cod sursă gestionate prin organizațiile noastre GitHub, care includ [Microsoft](https://github.com/microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin) și [organizațiile noastre GitHub](https://opensource.microsoft.com/).

@@ -1,19 +1,10 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-07-09T16:56:08+00:00",
-  "source_file": "15-rag-and-vector-databases/data/perceptron.md",
-  "language_code": "mr"
-}
--->
 # न्यूरल नेटवर्क्सची ओळख: पर्सेप्ट्रॉन
 
 आधुनिक न्यूरल नेटवर्कसारखे काहीतरी तयार करण्याचा पहिला प्रयत्न 1957 मध्ये कॉर्नेल एरोनॉटिकल लॅबोरेटरीमधील फ्रँक रोझेनब्लॅट यांनी केला होता. त्याला "Mark-1" नावाचा हार्डवेअर इम्प्लिमेंटेशन म्हणतात, जो त्रिकोण, चौकोन आणि वर्तुळ यांसारख्या प्राथमिक भूमितीय आकृती ओळखण्यासाठी डिझाइन केला गेला होता.
 
 |      |      |
 |--------------|-----------|
-|<img src='images/Rosenblatt-wikipedia.jpg' alt='Frank Rosenblatt'/> | <img src='images/Mark_I_perceptron_wikipedia.jpg' alt='The Mark 1 Perceptron' />|
+|<img src='../../../../translated_images/mr/Rosenblatt-wikipedia.1d205667acda28c0.webp' alt='Frank Rosenblatt'/> | <img src='../../../../translated_images/mr/Mark_I_perceptron_wikipedia.434e46ca39e2be80.webp' alt='The Mark 1 Perceptron' />|
 
 > विकिपीडियामधून चित्रे
 

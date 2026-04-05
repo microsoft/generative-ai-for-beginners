@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c2f423d1402f71ca3869ec135bb77d16",
-  "translation_date": "2025-07-09T18:05:28+00:00",
-  "source_file": "18-fine-tuning/RESOURCES.md",
-  "language_code": "vi"
-}
--->
 # Tài Nguyên Cho Việc Học Tự Động
 
 Bài học được xây dựng dựa trên một số tài nguyên cốt lõi từ OpenAI và Azure OpenAI làm tham khảo cho thuật ngữ và hướng dẫn. Dưới đây là danh sách không đầy đủ, dành cho hành trình học tự động của bạn.

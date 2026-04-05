@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2d33a71bed73d6daee78e2d473ece975",
-  "translation_date": "2025-07-09T06:55:45+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "cs"
-}
--->
 ## Bezpečnost
 
 Microsoft bere bezpečnost našich softwarových produktů a služeb vážně, což zahrnuje všechny repozitáře zdrojového kódu spravované prostřednictvím našich GitHub organizací, mezi které patří [Microsoft](https://github.com/microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin) a [naše GitHub organizace](https://opensource.microsoft.com/).

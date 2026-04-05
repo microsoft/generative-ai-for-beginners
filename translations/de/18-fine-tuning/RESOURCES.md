@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c2f423d1402f71ca3869ec135bb77d16",
-  "translation_date": "2025-07-09T17:53:44+00:00",
-  "source_file": "18-fine-tuning/RESOURCES.md",
-  "language_code": "de"
-}
--->
 # Ressourcen für selbstgesteuertes Lernen
 
 Die Lektion wurde unter Verwendung einer Reihe von Kernressourcen von OpenAI und Azure OpenAI als Referenzen für Terminologie und Tutorials erstellt. Hier ist eine nicht vollständige Liste für deine eigenen selbstgesteuerten Lernwege.

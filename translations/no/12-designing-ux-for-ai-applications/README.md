@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "78bbeed50fd4dc9fdee931f5daf98cb3",
-  "translation_date": "2025-10-17T19:18:09+00:00",
-  "source_file": "12-designing-ux-for-ai-applications/README.md",
-  "language_code": "no"
-}
--->
 # Utforming brukeropplevelse for AI-applikasjoner
 
-[![Utforming brukeropplevelse for AI-applikasjoner](../../../translated_images/12-lesson-banner.c53c3c7c802e8f563953ce388f6a987ca493472c724d924b060be470951c53c8.no.png)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Utforming brukeropplevelse for AI-applikasjoner](../../../translated_images/no/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
 > _(Klikk på bildet ovenfor for å se videoen til denne leksjonen)_
 
@@ -58,7 +49,7 @@ Applikasjonen bør være **nyttig, pålitelig, tilgjengelig og behagelig** for �
 
 Å være behagelig betyr at applikasjonen er hyggelig å bruke. En tiltalende brukeropplevelse kan ha en positiv innvirkning på brukeren, oppmuntre dem til å komme tilbake til applikasjonen og øke forretningsinntektene.
 
-![bilde som illustrerer UX-hensyn i AI](../../../translated_images/uxinai.d5b4ed690f5cefff0c53ffcc01b480cdc1828402e1fdbc980490013a3c50935a.no.png)
+![bilde som illustrerer UX-hensyn i AI](../../../translated_images/no/uxinai.d5b4ed690f5cefff.webp)
 
 Ikke alle utfordringer kan løses med AI. AI kommer inn for å forbedre brukeropplevelsen, enten det er ved å automatisere manuelle oppgaver eller personalisere brukeropplevelser.
 
@@ -72,25 +63,25 @@ To måter å sikre at tillit settes i sentrum av designet er forklarbarhet og ko
 
 Når AI hjelper til med å informere beslutninger, som å formidle kunnskap til fremtidige generasjoner, er det avgjørende for lærere og foreldre å forstå hvordan AI-beslutninger tas. Dette er forklarbarhet - forståelse av hvordan AI-applikasjoner tar beslutninger. Å designe for forklarbarhet inkluderer å legge til detaljer som fremhever hvordan AI kom frem til resultatet. Publikum må være klar over at resultatet er generert av AI og ikke et menneske. For eksempel, i stedet for å si "Start chatting med din veileder nå", si "Bruk AI-veileder som tilpasser seg dine behov og hjelper deg å lære i ditt eget tempo."
 
-![en app-landingsside med tydelig illustrasjon av forklarbarhet i AI-applikasjoner](../../../translated_images/explanability-in-ai.134426a96b498fbfdc80c75ae0090aedc0fc97424ae0734fccf7fb00a59a20d9.no.png)
+![en app-landingsside med tydelig illustrasjon av forklarbarhet i AI-applikasjoner](../../../translated_images/no/explanability-in-ai.134426a96b498fbf.webp)
 
 Et annet eksempel er hvordan AI bruker bruker- og personlige data. For eksempel kan en bruker med personaen elev ha begrensninger basert på sin persona. AI kan kanskje ikke avsløre svar på spørsmål, men kan hjelpe brukeren med å tenke gjennom hvordan de kan løse et problem.
 
-![AI som svarer på spørsmål basert på persona](../../../translated_images/solving-questions.b7dea1604de0cbd2e9c5fa00b1a68a0ed77178a035b94b9213196b9d125d0be8.no.png)
+![AI som svarer på spørsmål basert på persona](../../../translated_images/no/solving-questions.b7dea1604de0cbd2.webp)
 
 En siste viktig del av forklarbarhet er forenkling av forklaringer. Elever og lærere er kanskje ikke AI-eksperter, derfor bør forklaringer på hva applikasjonen kan eller ikke kan gjøre være forenklet og lett å forstå.
 
-![forenklede forklaringer på AI-kapasiteter](../../../translated_images/simplified-explanations.4679508a406c3621fa22bad4673e717fbff02f8b8d58afcab8cb6f1aa893a82f.no.png)
+![forenklede forklaringer på AI-kapasiteter](../../../translated_images/no/simplified-explanations.4679508a406c3621.webp)
 
 ### Kontroll
 
 Generativ AI skaper et samarbeid mellom AI og brukeren, hvor for eksempel en bruker kan endre forespørsler for ulike resultater. I tillegg, når et resultat er generert, bør brukere kunne endre resultatene, noe som gir dem en følelse av kontroll. For eksempel, når du bruker Bing, kan du tilpasse forespørselen din basert på format, tone og lengde. I tillegg kan du gjøre endringer i resultatet og modifisere det som vist nedenfor:
 
-![Bing søkeresultater med alternativer for å endre forespørselen og resultatet](../../../translated_images/bing1.293ae8527dbe2789b675c8591c9fb3cb1aa2ada75c2877f9aa9edc059f7a8b1c.no.png)
+![Bing søkeresultater med alternativer for å endre forespørselen og resultatet](../../../translated_images/no/bing1.293ae8527dbe2789.webp)
 
 En annen funksjon i Bing som gir brukeren kontroll over applikasjonen, er muligheten til å velge inn og ut av dataene AI bruker. For en skoleapplikasjon kan en elev ønske å bruke sine egne notater samt lærerens ressurser som repetisjonsmateriale.
 
-![Bing søkeresultater med alternativer for å endre forespørselen og resultatet](../../../translated_images/bing2.309f4845528a88c28c1c9739fb61d91fd993dc35ebe6fc92c66791fb04fceb4d.no.png)
+![Bing søkeresultater med alternativer for å endre forespørselen og resultatet](../../../translated_images/no/bing2.309f4845528a88c2.webp)
 
 > Når du designer AI-applikasjoner, er det viktig å være bevisst for å sikre at brukere ikke overdriver tilliten og setter urealistiske forventninger til kapasiteten. En måte å gjøre dette på er ved å skape friksjon mellom forespørslene og resultatene. Minne brukeren på at dette er AI og ikke et medmenneske.
 
@@ -102,7 +93,7 @@ AI-applikasjoner bør bygges for å motta og gi tilbakemelding. Dette hjelper ik
 
 En annen måte å håndtere dette på er å tydelig kommunisere systemets kapasiteter og begrensninger. Når en bruker gjør en feil ved å be om noe som ligger utenfor AI-kapasiteten, bør det også være en måte å håndtere dette på, som vist nedenfor.
 
-![Gi tilbakemelding og håndtere feil](../../../translated_images/feedback-loops.7955c134429a94663443ad74d59044f8dc4ce354577f5b79b4bd2533f2cafc6f.no.png)
+![Gi tilbakemelding og håndtere feil](../../../translated_images/no/feedback-loops.7955c134429a9466.webp)
 
 Systemfeil er vanlige med applikasjoner der brukeren kan trenge hjelp med informasjon utenfor AI-ens omfang, eller applikasjonen kan ha en grense for hvor mange spørsmål/emner en bruker kan generere oppsummeringer for. For eksempel kan en AI-applikasjon trent med data på begrensede emner, for eksempel historie og matematikk, kanskje ikke håndtere spørsmål om geografi. For å redusere dette kan AI-systemet gi et svar som: "Beklager, vårt produkt er trent med data innen følgende emner....., jeg kan ikke svare på spørsmålet du stilte."
 

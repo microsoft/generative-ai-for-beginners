@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-07-09T16:29:35+00:00",
-  "source_file": "15-rag-and-vector-databases/data/frameworks.md",
-  "language_code": "ne"
-}
--->
 # न्यूरल नेटवर्क फ्रेमवर्कहरू
 
 जसरी हामीले पहिले नै सिकिसकेका छौं, न्यूरल नेटवर्कहरूलाई प्रभावकारी रूपमा प्रशिक्षण दिनका लागि हामीले दुई कामहरू गर्नुपर्छ:

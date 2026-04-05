@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "be9cef0460b3696ed5d8f6f8d2f64d45",
-  "translation_date": "2025-08-26T19:46:45+00:00",
-  "source_file": "00-course-setup/01-setup-cloud.md",
-  "language_code": "sl"
-}
--->
 # Nastavitev v oblaku ☁️ – GitHub Codespaces
 
 **Uporabite ta vodič, če ne želite ničesar nameščati lokalno.**  

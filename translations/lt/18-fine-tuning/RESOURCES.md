@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c2f423d1402f71ca3869ec135bb77d16",
-  "translation_date": "2025-08-25T12:43:54+00:00",
-  "source_file": "18-fine-tuning/RESOURCES.md",
-  "language_code": "lt"
-}
--->
 # Savarankiško Mokymosi Ištekliai
 
 Pamoka buvo sukurta naudojant pagrindinius OpenAI ir Azure OpenAI šaltinius kaip terminologijos ir mokymų pagrindą. Čia pateikiamas nebaigtinis sąrašas, kuris gali būti naudingas jūsų savarankiško mokymosi kelionėje.

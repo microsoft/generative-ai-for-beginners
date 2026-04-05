@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "a2faf8ee7a0b851efa647a19788f1e5b",
-  "translation_date": "2025-10-17T22:05:35+00:00",
-  "source_file": "13-securing-ai-applications/README.md",
-  "language_code": "ro"
-}
--->
 # Securizarea aplicațiilor tale de AI generativ
 
-[![Securizarea aplicațiilor tale de AI generativ](../../../translated_images/13-lesson-banner.14103e36b4bbf17398b64ed2b0531f6f2c6549e7f7342f797c40bcae5a11862e.ro.png)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Securizarea aplicațiilor tale de AI generativ](../../../translated_images/ro/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Introducere
 
@@ -125,7 +116,7 @@ Emularea amenințărilor din lumea reală este acum considerată o practică sta
 
 > Practica de red teaming pentru AI a evoluat pentru a avea un sens mai extins: nu acoperă doar identificarea vulnerabilităților de securitate, ci include și identificarea altor eșecuri ale sistemului, cum ar fi generarea de conținut potențial dăunător. Sistemele AI vin cu riscuri noi, iar red teaming-ul este esențial pentru a înțelege aceste riscuri noi, cum ar fi injectarea de prompturi și producerea de conținut nefundamentat. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
-[![Ghiduri și resurse pentru red teaming](../../../translated_images/13-AI-red-team.642ed54689d7e8a4d83bdf0635768c4fd8aa41ea539d8e3ffe17514aec4b4824.ro.png)]()
+[![Ghiduri și resurse pentru red teaming](../../../translated_images/ro/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
 Mai jos sunt prezentate perspectivele cheie care au modelat programul Microsoft AI Red Team.
 

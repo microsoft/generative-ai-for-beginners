@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-07-09T13:06:45+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "ru"
-}
--->
 # Подготовка данных транскрипции
 
 Скрипты подготовки данных транскрипции загружают расшифровки видео с YouTube и подготавливают их для использования с примером Semantic Search с OpenAI Embeddings и Functions.

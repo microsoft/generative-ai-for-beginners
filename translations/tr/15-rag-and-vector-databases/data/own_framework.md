@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df98b2c59f87d8543135301e87969f70",
-  "translation_date": "2025-07-09T16:46:16+00:00",
-  "source_file": "15-rag-and-vector-databases/data/own_framework.md",
-  "language_code": "tr"
-}
--->
 # Sinir Ağlarına Giriş. Çok Katmanlı Perceptron
 
 Önceki bölümde, en basit sinir ağı modeli olan tek katmanlı perceptron’u, yani doğrusal iki sınıflı sınıflandırma modelini öğrendiniz.

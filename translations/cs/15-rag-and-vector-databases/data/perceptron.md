@@ -1,19 +1,10 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-07-09T17:00:39+00:00",
-  "source_file": "15-rag-and-vector-databases/data/perceptron.md",
-  "language_code": "cs"
-}
--->
 # Úvod do neuronových sítí: Perceptron
 
 Jedním z prvních pokusů o implementaci něčeho podobného moderní neuronové síti byl Frank Rosenblatt z Cornell Aeronautical Laboratory v roce 1957. Šlo o hardwarovou implementaci nazvanou „Mark-1“, navrženou k rozpoznávání primitivních geometrických tvarů, jako jsou trojúhelníky, čtverce a kruhy.
 
 |      |      |
 |--------------|-----------|
-|<img src='images/Rosenblatt-wikipedia.jpg' alt='Frank Rosenblatt'/> | <img src='images/Mark_I_perceptron_wikipedia.jpg' alt='The Mark 1 Perceptron' />|
+|<img src='../../../../translated_images/cs/Rosenblatt-wikipedia.1d205667acda28c0.webp' alt='Frank Rosenblatt'/> | <img src='../../../../translated_images/cs/Mark_I_perceptron_wikipedia.434e46ca39e2be80.webp' alt='The Mark 1 Perceptron' />|
 
 > Obrázky z Wikipedie
 

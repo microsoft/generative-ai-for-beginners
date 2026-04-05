@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "be9cef0460b3696ed5d8f6f8d2f64d45",
-  "translation_date": "2025-08-26T19:54:19+00:00",
-  "source_file": "00-course-setup/01-setup-cloud.md",
-  "language_code": "my"
-}
--->
 # Cloud Setup ☁️ – GitHub Codespaces
 
 **တစ်ခုခုကို ကိုယ်ပိုင်ကွန်ပျူတာမှာ တင်သွင်းချင်မယ်ဆိုရင် ဒီလမ်းညွှန်ကို အသုံးပြုပါ။**  

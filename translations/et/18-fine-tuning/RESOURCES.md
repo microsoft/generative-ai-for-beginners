@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c2f423d1402f71ca3869ec135bb77d16",
-  "translation_date": "2025-10-11T11:51:02+00:00",
-  "source_file": "18-fine-tuning/RESOURCES.md",
-  "language_code": "et"
-}
--->
 # Ressursid iseseisvaks õppimiseks
 
 Tund koostati, kasutades mitmeid OpenAI ja Azure OpenAI põhiallikaid terminoloogia ja juhendite viitamiseks. Siin on mittetäielik loetelu, mida saate kasutada oma iseseisva õppimise teekonnal.

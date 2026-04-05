@@ -1,19 +1,10 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-07-09T16:56:36+00:00",
-  "source_file": "15-rag-and-vector-databases/data/perceptron.md",
-  "language_code": "pa"
-}
--->
 # ਨਿਊਰਲ ਨੈੱਟਵਰਕਸ ਦਾ ਪਰਿਚਯ: ਪਰਸੈਪਟਰਾਨ
 
 ਆਧੁਨਿਕ ਨਿਊਰਲ ਨੈੱਟਵਰਕ ਵਰਗਾ ਕੁਝ ਬਣਾਉਣ ਦੀ ਪਹਿਲੀ ਕੋਸ਼ਿਸ਼ 1957 ਵਿੱਚ ਕੋਰਨੇਲ ਏਰੋਨੌਟਿਕਲ ਲੈਬੋਰੇਟਰੀ ਦੇ ਫ੍ਰੈਂਕ ਰੋਜ਼ਨਬਲੈਟ ਨੇ ਕੀਤੀ ਸੀ। ਇਹ ਇੱਕ ਹਾਰਡਵੇਅਰ ਇੰਪਲੀਮੈਂਟੇਸ਼ਨ ਸੀ ਜਿਸਨੂੰ "Mark-1" ਕਿਹਾ ਜਾਂਦਾ ਸੀ, ਜੋ ਤਿਕੋਣ, ਵਰਗ ਅਤੇ ਗੋਲਾਕਾਰ ਵਰਗੀਆਂ ਪ੍ਰਾਚੀਨ ਜਿਆਮਿਤੀਕ ਆਕਾਰਾਂ ਨੂੰ ਪਛਾਣਨ ਲਈ ਬਣਾਇਆ ਗਿਆ ਸੀ।
 
 |      |      |
 |--------------|-----------|
-|<img src='images/Rosenblatt-wikipedia.jpg' alt='Frank Rosenblatt'/> | <img src='images/Mark_I_perceptron_wikipedia.jpg' alt='The Mark 1 Perceptron' />|
+|<img src='../../../../translated_images/pa/Rosenblatt-wikipedia.1d205667acda28c0.webp' alt='Frank Rosenblatt'/> | <img src='../../../../translated_images/pa/Mark_I_perceptron_wikipedia.434e46ca39e2be80.webp' alt='The Mark 1 Perceptron' />|
 
 > ਵਿਖੇ ਪਾਈਆਂ ਗਈਆਂ ਤਸਵੀਰਾਂ
 

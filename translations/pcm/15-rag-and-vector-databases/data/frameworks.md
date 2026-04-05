@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-11-12T08:51:13+00:00",
-  "source_file": "15-rag-and-vector-databases/data/frameworks.md",
-  "language_code": "pcm"
-}
--->
 # Neural Network Frameworks
 
 As we don learn already, to fit train neural networks well well, we need do two things:

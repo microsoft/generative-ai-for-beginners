@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df98b2c59f87d8543135301e87969f70",
-  "translation_date": "2025-07-09T16:42:48+00:00",
-  "source_file": "15-rag-and-vector-databases/data/own_framework.md",
-  "language_code": "ja"
-}
--->
 # ニューラルネットワーク入門：多層パーセプトロン
 
 前のセクションでは、最も単純なニューラルネットワークモデルである一層パーセプトロン、すなわち線形の二クラス分類モデルについて学びました。

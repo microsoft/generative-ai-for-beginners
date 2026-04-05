@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df98b2c59f87d8543135301e87969f70",
-  "translation_date": "2025-07-09T16:48:25+00:00",
-  "source_file": "15-rag-and-vector-databases/data/own_framework.md",
-  "language_code": "nl"
-}
--->
 # Introductie tot Neurale Netwerken. Multi-Layered Perceptron
 
 In de vorige sectie heb je geleerd over het eenvoudigste neurale netwerkmodel - de eendelige perceptron, een lineair tweeklassenclassificatiemodel.

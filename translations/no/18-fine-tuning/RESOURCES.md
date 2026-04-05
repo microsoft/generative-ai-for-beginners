@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c2f423d1402f71ca3869ec135bb77d16",
-  "translation_date": "2025-07-09T18:03:57+00:00",
-  "source_file": "18-fine-tuning/RESOURCES.md",
-  "language_code": "no"
-}
--->
 # Ressurser for selvstyrt læring
 
 Leksjonen er bygget ved hjelp av en rekke kjerne­ressurser fra OpenAI og Azure OpenAI som referanser for terminologi og veiledninger. Her er en ikke-uttømmende liste for dine egne selvstyrte læringsreiser.

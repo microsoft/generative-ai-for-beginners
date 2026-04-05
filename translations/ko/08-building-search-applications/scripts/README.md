@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-07-09T13:08:12+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "ko"
-}
--->
 # 전사 데이터 준비
 
 전사 데이터 준비 스크립트는 YouTube 동영상 자막을 다운로드하고, OpenAI 임베딩 및 함수와 함께 사용하는 시맨틱 검색 샘플에 맞게 준비합니다.

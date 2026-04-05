@@ -2,6 +2,9 @@ import ModelClient from "@azure-rest/ai-inference";
 import { AzureKeyCredential } from "@azure/core-auth";
 
 const token = process.env["GITHUB_TOKEN"];
+if (!token) {
+    throw new Error("GITHUB_TOKEN environment variable is required. Please set it before running this application.");
+}
 const endpoint = "https://models.inference.ai.azure.com";
 
 /* By using the Azure AI Inference SDK, you can easily experiment with different models
@@ -129,10 +132,25 @@ export async function main() {
             // We expect the tool to be a function call
             if (toolCall.type === "function") {
                 const toolCall = response.body.choices[0].message.tool_calls[0];
-                // Parse the function call arguments and call the function
-                const functionArgs = JSON.parse(toolCall.function.arguments);
-                console.log(`Calling function \`${toolCall.function.name}\` with arguments ${toolCall.function.arguments}`);
-                const callableFunc = namesToFunctions[toolCall.function.name];
+
+                // SECURITY: Validate function name exists in allowed functions map
+                const functionName = toolCall.function.name;
+                if (!Object.prototype.hasOwnProperty.call(namesToFunctions, functionName)) {
+                    throw new Error(`Unknown function requested: ${functionName}. Only allowed functions are: ${Object.keys(namesToFunctions).join(', ')}`);
+                }
+
+                // SECURITY: Safely parse JSON with error handling
+                let functionArgs;
+                try {
+                    functionArgs = JSON.parse(toolCall.function.arguments);
+                } catch (parseError) {
+                    throw new Error(`Failed to parse function arguments: ${parseError.message}`);
+                }
+
+                // Log function call (avoid logging sensitive data in production)
+                console.log(`Calling function \`${functionName}\` with arguments ${toolCall.function.arguments}`);
+
+                const callableFunc = namesToFunctions[functionName];
                 const functionReturn = callableFunc(functionArgs);
                 console.log(`Function returned = ${functionReturn}`);
 

@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
-  "translation_date": "2025-10-18T01:48:29+00:00",
-  "source_file": "05-advanced-prompts/README.md",
-  "language_code": "my"
-}
--->
 # အဆင့်မြင့် Prompt များဖန်တီးခြင်း
 
-[![အဆင့်မြင့် Prompt များဖန်တီးခြင်း](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.my.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![အဆင့်မြင့် Prompt များဖန်တီးခြင်း](../../../translated_images/my/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 ယခင်အခန်းမှ သင်ယူမှုများကို ပြန်လည်သုံးသပ်ကြပါစို့-
 

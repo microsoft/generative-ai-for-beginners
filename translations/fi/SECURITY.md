@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "2d33a71bed73d6daee78e2d473ece975",
-  "translation_date": "2025-07-09T06:54:27+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "fi"
-}
--->
 ## Turvallisuus
 
 Microsoft suhtautuu vakavasti ohjelmistotuotteidemme ja -palveluidemme turvallisuuteen, mikä kattaa kaikki lähdekoodivarastot, joita hallinnoidaan GitHub-organisaatioidemme kautta, mukaan lukien [Microsoft](https://github.com/microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin) sekä [GitHub-organisaatiomme](https://opensource.microsoft.com/).

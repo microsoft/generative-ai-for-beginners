@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
-  "translation_date": "2025-10-18T00:21:22+00:00",
-  "source_file": "05-advanced-prompts/README.md",
-  "language_code": "bn"
-}
--->
 # উন্নত প্রম্পট তৈরি করা
 
-[![উন্নত প্রম্পট তৈরি করা](../../../translated_images/05-lesson-banner.522610fd4a2cd82dbed66bb7e6fe104ed6da172e085dbb4d9100b28dc73ed435.bn.png)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![উন্নত প্রম্পট তৈরি করা](../../../translated_images/bn/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
 আগের অধ্যায় থেকে কিছু শেখা পুনরায় দেখে নেওয়া যাক:
 

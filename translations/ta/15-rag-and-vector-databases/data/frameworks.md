@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-10-11T11:15:42+00:00",
-  "source_file": "15-rag-and-vector-databases/data/frameworks.md",
-  "language_code": "ta"
-}
--->
 # நர்வியல் நெட்வொர்க் கட்டமைப்புகள்
 
 நாம் ஏற்கனவே கற்றுக்கொண்டது போல, நர்வியல் நெட்வொர்க்களை திறமையாக பயிற்சி செய்ய இரண்டு முக்கியமான செயல்களை செய்ய வேண்டும்:

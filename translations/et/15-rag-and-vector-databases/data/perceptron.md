@@ -1,19 +1,10 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-10-11T11:16:45+00:00",
-  "source_file": "15-rag-and-vector-databases/data/perceptron.md",
-  "language_code": "et"
-}
--->
 # Sissejuhatus närvivõrkudesse: Perceptron
 
 Üks esimesi katseid luua midagi tänapäevase närvivõrgu sarnast tehti 1957. aastal Frank Rosenblatti poolt Cornell Aeronautical Laboratory's. See oli riistvaraline lahendus nimega "Mark-1", mis oli loodud primitiivsete geomeetriliste kujundite, nagu kolmnurgad, ruudud ja ringid, äratundmiseks.
 
 |      |      |
 |--------------|-----------|
-|<img src='../../../../translated_images/Rosenblatt-wikipedia.1d205667acda28c0f97ad594eb6dadfa0485605f3fb2155eca46a0255e98efac.et.jpg' alt='Frank Rosenblatt'/> | <img src='../../../../translated_images/Mark_I_perceptron_wikipedia.434e46ca39e2be801976110f8b1b75b13d1197f69e3a5f8b7537b43d35413e6f.et.jpg' alt='Mark 1 Perceptron' />|
+|<img src='../../../../translated_images/et/Rosenblatt-wikipedia.1d205667acda28c0f97ad594eb6dadfa0485605f3fb2155eca46a0255e98efac.jpg' alt='Frank Rosenblatt'/> | <img src='../../../../translated_images/et/Mark_I_perceptron_wikipedia.434e46ca39e2be801976110f8b1b75b13d1197f69e3a5f8b7537b43d35413e6f.jpg' alt='Mark 1 Perceptron' />|
 
 > Pildid Wikipediast
 

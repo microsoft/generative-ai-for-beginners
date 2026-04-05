@@ -1,129 +1,122 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "49ededa179004ea998664c780fbeac39",
-  "translation_date": "2025-10-11T11:42:02+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "ta"
-}
--->
-# LLM வழங்குநரை தேர்வு & அமைத்தல் 🔑
+# LLM வழங்குநரை தேர்வு செய்தல் மற்றும் கட்டமைத்தல் 🔑
 
-**பணி**கள் ஒரு அல்லது அதற்கு மேற்பட்ட பெரிய மொழி மாதிரி (LLM) சேவைகளை OpenAI, Azure அல்லது Hugging Face போன்ற ஆதரிக்கப்பட்ட சேவை வழங்குநர்களின் மூலம் அமைக்கப்படலாம். இவை _hosted endpoint_ (API) வழங்குகின்றன, இதை சரியான அனுமதி சான்றுகள் (API key அல்லது token) மூலம் நிரலாக்கமாக அணுகலாம். இந்த பாடத்தில், இந்த வழங்குநர்களைப் பற்றி விவாதிக்கிறோம்:
+பணிகள் **சாத்தியமாக** ஒரு அல்லது அதற்கு மேற்பட்ட பெரிய மொழி மாதிரி (LLM) அமர்வுகளுக்கு ஆதரவு வழங்குநர்களான OpenAI, Azure அல்லது Hugging Face போன்ற சேவையகங்களின் மூலம் அமைக்கப்படலாம். இவை நமக்கு சரியான அங்கீகாரத்துடன் (API விசை அல்லது டோக்கன்) நிரலாக்கமாக அணுகக்கூடிய _ஹோஸ்ட் செய்யப்பட்ட முடிவுக்குறிப்பை_ (API) வழங்குகின்றன. இந்த பாடத்தில், நாம் இந்த வழங்குநர்களைப் பற்றி விவாதிக்கிறோம்:
 
- - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) பல்வேறு மாதிரிகளுடன், முக்கிய GPT தொடர் உட்பட.
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) OpenAI மாதிரிகளுக்கான தொழில்துறை தயார்நிலை மையமாக.
- - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) திறந்த மூல மாதிரிகள் மற்றும் inference server க்காக.
+ - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) பல்வேறு மாதிரிகளுடன், முக்கியமான GPT தொடர் உட்பட.
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) OpenAI மாதிரிகளுக்கான, நிறுவன தயாரிப்புக்கு கவனம் செலுத்தி
+ - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) திறந்த மூல மாதிரிகள் மற்றும் ஊக சேவையகம்
 
-**இந்த பயிற்சிகளுக்கான உங்கள் சொந்த கணக்குகளை நீங்கள் பயன்படுத்த வேண்டும்**. பணி விருப்பமானது, எனவே உங்கள் ஆர்வத்தின் அடிப்படையில் ஒரு, அனைத்தும் - அல்லது எதுவும் இல்லாமல் வழங்குநர்களை அமைக்க முடியும். பதிவு செய்ய சில வழிகாட்டுதல்கள்:
+**இந்த பயிற்சிகளுக்கு உங்கள் சொந்த கணக்குகளை பயன்படுத்த வேண்டும்**. பணிகள் விருப்பமானவை ஆகும், எனவே உங்கள் ஆர்வத்தின் அடிப்படையில் ஒரு, எல்லா அல்லது எதுவும் இல்லாமல் வழங்குநர்களை அமைக்க முடியும். பதிவு செய்ய சில வழிகாட்டுதல்கள்:
 
-| பதிவு | செலவு | API Key | Playground | கருத்துக்கள் |
+| பதிவு | செலவு | API விசை | விளையாட்டு மைதானம் | கருத்துக்கள் |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [விலை](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Project-based](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [No-Code, Web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | பல மாதிரிகள் கிடைக்கின்றன |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [விலை](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [அனுமதி பெற முன்பே விண்ணப்பிக்க வேண்டும்](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [விலை](https://huggingface.co/pricing) | [Access Tokens](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat க்கு வரையறுக்கப்பட்ட மாதிரிகள் உள்ளன](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [விலை நிர்ணயம்](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [திட்ட அடிப்படையிலானது](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [கோடில்லா, வலை](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | பல மாதிரிகள் கிடைக்கும் |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [விலை நிர்ணயம்](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK விரைவு தொடக்கம்](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [ஸ்டுடியோ விரைவு தொடக்கம்](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [அணுகலுக்கு முன்பே விண்ணப்பிக்க வேண்டும்](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [விலை நிர்ணயம்](https://huggingface.co/pricing) | [அணுகல் டோக்கன்கள்](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chatக்கு வரையறுக்கப்பட்ட மாதிரிகள் உள்ளன](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
 | | | | | |
 
-கீழே உள்ள வழிகாட்டுதல்களை பின்பற்றி இந்த repository ஐ பல்வேறு வழங்குநர்களுடன் பயன்படுத்த _configure_ செய்யுங்கள். குறிப்பிட்ட வழங்குநரை தேவைப்படும் பணிகள், filename இல் கீழ்க்காணும் குறிச்சொற்களை கொண்டிருக்கும்:
+வழிமுறைகளை பின்பற்றி இந்த சேமிப்பகத்தை வெவ்வேறு வழங்குநர்களுடன் பயன்படுத்த _கட்டமைக்கவும்_. குறிப்பிட்ட வழங்குநரை தேவைப்படுத்தும் பணிகள், அவற்றின் கோப்பு பெயரில் கீழ்க்காணும் குறிச்சொற்களில் ஒன்றை கொண்டிருக்கும்:
 
-- `aoai` - Azure OpenAI endpoint, key தேவை
-- `oai` - OpenAI endpoint, key தேவை
-- `hf` - Hugging Face token தேவை
+- `aoai` - Azure OpenAI முடிவுக்குறிப்பு, விசை தேவை
+- `oai` - OpenAI முடிவுக்குறிப்பு, விசை தேவை
+- `hf` - Hugging Face டோக்கன் தேவை
 
-நீங்கள் ஒரு, எதுவும் இல்லாமல், அல்லது அனைத்து வழங்குநர்களையும் அமைக்க முடியும். தொடர்புடைய பணிகள் credentials இல்லாமல் simply error ஆகும்.
+நீங்கள் ஒரு, எதுவும் இல்லாமல் அல்லது எல்லா வழங்குநர்களையும் கட்டமைக்கலாம். தொடர்புடைய பணிகள் அங்கீகாரங்கள் இல்லாமல் பிழை காட்டும்.
 
-## `.env` கோப்பை உருவாக்கவும்
+## `.env` கோப்பை உருவாக்குதல்
 
-மேலே உள்ள வழிகாட்டுதலை நீங்கள் ஏற்கனவே படித்துவிட்டு, தொடர்புடைய வழங்குநருடன் பதிவு செய்து, தேவையான authentication credentials (API_KEY அல்லது token) பெற்றிருக்கிறீர்கள் என்று நாங்கள் கருதுகிறோம். Azure OpenAI க்கான விஷயத்தில், நீங்கள் Azure OpenAI சேவையின் (endpoint) ஒரு செல்லுபடியாகும் deployment ஐ GPT மாதிரியை chat completion க்காக deploy செய்திருக்க வேண்டும்.
+மேலே உள்ள வழிகாட்டுதலை நீங்கள் ஏற்கனவே படித்து, தொடர்புடைய வழங்குநருடன் பதிவு செய்து, தேவையான அங்கீகார அங்கீகாரங்களை (API_KEY அல்லது டோக்கன்) பெற்றிருப்பதாக நாம் கருதுகிறோம். Azure OpenAI என்றால், குறைந்தது ஒரு GPT மாதிரி உரையாடல் நிறைவு செய்யும் வகையில் Azure OpenAI சேவையின் (முடிவுக்குறிப்பு) செல்லுபடியான அமர்வு உங்களிடம் இருக்க வேண்டும்.
 
-அடுத்த படியாக, உங்கள் **local environment variables** ஐ பின்வருமாறு configure செய்ய வேண்டும்:
+அடுத்த படி உங்கள் **உள்ளூர் சூழல் மாறிலிகளை** பின்வருமாறு கட்டமைக்க வேண்டும்:
 
-1. `.env.copy` என்ற கோப்பை root folder இல் தேடுங்கள், இது கீழ்க்காணும் உள்ளடக்கங்களை கொண்டிருக்கும்:
+1. ரூட் கோப்பகத்தில் `.env.copy` என்ற கோப்பு இருக்கிறதா என்று பாருங்கள். அதில் பின்வருமாறு உள்ளடக்கம் இருக்கும்:
 
    ```bash
-   # OpenAI Provider
+   # OpenAI வழங்குநர்
    OPENAI_API_KEY='<add your OpenAI API key here>'
 
-   ## Azure OpenAI
-   AZURE_OPENAI_API_VERSION='2024-02-01' # Default is set!
+   ## அசுரே OpenAI
+   AZURE_OPENAI_API_VERSION='2024-02-01' # இயல்புநிலை அமைக்கப்பட்டுள்ளது!
    AZURE_OPENAI_API_KEY='<add your AOAI key here>'
    AZURE_OPENAI_ENDPOINT='<add your AOIA service endpoint here>'
    AZURE_OPENAI_DEPLOYMENT='<add your chat completion model name here>' 
    AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='<add your embeddings model name here>'
 
-   ## Hugging Face
+   ## ஹக்கிங் பேஸ்
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. கீழே உள்ள கட்டளையை பயன்படுத்தி `.env` க்கு அந்த கோப்பை copy செய்யுங்கள். இந்த கோப்பு _gitignore-d_ ஆகும், இதனால் ரகசியங்கள் பாதுகாக்கப்படும்.
+2. கீழ்காணும் கட்டளையை பயன்படுத்தி அந்த கோப்பை `.env` ஆக நகலெடுக்கவும். இந்த கோப்பு _gitignore-இல்_ உள்ளது, ரகசியங்களை பாதுகாக்கிறது.
 
    ```bash
    cp .env.copy .env
    ```
 
-3. கீழே உள்ள பகுதியில் விளக்கப்பட்ட placeholders ஐ மாற்றி மதிப்புகளை நிரப்புங்கள்.
+3. அடுத்த பகுதியில் விவரிக்கப்பட்டபடி மதிப்புகளை (=`இடதுபுறம் உள்ள இடமாற்றிகளை மாற்றவும்) நிரப்பவும்.
 
-4. (விருப்பம்) நீங்கள் GitHub Codespaces ஐ பயன்படுத்தினால், இந்த repository உடன் தொடர்புடைய _Codespaces secrets_ ஆக environment variables ஐ சேமிக்க விருப்பம் உங்களுக்கு உள்ளது. இந்த வழியில் `.env` கோப்பை அமைக்க தேவையில்லை. **ஆனால், இந்த விருப்பம் GitHub Codespaces ஐ பயன்படுத்தினால் மட்டுமே செயல்படும்.** Docker Desktop ஐ பயன்படுத்தினால் `.env` கோப்பை அமைக்கவேண்டும்.
+4. (விருப்பம்) நீங்கள் GitHub Codespaces பயன்படுத்தினால், இந்த சேமிப்பகத்துடன் தொடர்புடைய _Codespaces ரகசியங்கள்_ ஆக சூழல் மாறிலிகளை சேமிக்கலாம். அந்த நிலையில், உள்ளூர் .env கோப்பை அமைக்க தேவையில்லை. **ஆனால், இந்த விருப்பம் GitHub Codespaces பயன்படுத்தும் போது மட்டுமே வேலை செய்கிறது என்பதை கவனிக்கவும்.** Docker Desktop பயன்படுத்தினால் .env கோப்பை அமைக்கவேண்டும்.
 
-## `.env` கோப்பை நிரப்பவும்
+## `.env` கோப்பை நிரப்புதல்
 
-Variable பெயர்கள் என்னை பிரதிபலிக்கின்றன என்பதை விரைவாக பார்ப்போம்:
+மாறிலி பெயர்களை விரைவாக பார்ப்போம், அவை என்ன குறிக்கின்றன என்று புரிந்து கொள்வோம்:
 
-| Variable  | விளக்கம்  |
+| மாறிலி  | விளக்கம்  |
 | :--- | :--- |
-| HUGGING_FACE_API_KEY | உங்கள் profile இல் அமைக்கப்பட்ட user access token |
-| OPENAI_API_KEY | non-Azure OpenAI endpoints க்கான authorization key |
-| AZURE_OPENAI_API_KEY | அந்த சேவையை பயன்படுத்த authorization key |
-| AZURE_OPENAI_ENDPOINT | Azure OpenAI resource க்கான deployed endpoint |
-| AZURE_OPENAI_DEPLOYMENT | இது _text generation_ மாதிரி deployment endpoint |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | இது _text embeddings_ மாதிரி deployment endpoint |
+| HUGGING_FACE_API_KEY | இது உங்கள் சுயவிவரத்தில் அமைத்த பயனர் அணுகல் டோக்கன் |
+| OPENAI_API_KEY | Azure அல்லாத OpenAI முடிவுக்குறிப்புகளுக்கான சேவை பயன்படுத்தும் அங்கீகார விசை |
+| AZURE_OPENAI_API_KEY | அந்த சேவையை பயன்படுத்தும் அங்கீகார விசை |
+| AZURE_OPENAI_ENDPOINT | Azure OpenAI வளத்திற்கான அமர்வு முடிவுக்குறிப்பு |
+| AZURE_OPENAI_DEPLOYMENT | _உரை உருவாக்கும்_ மாதிரி அமர்வு முடிவுக்குறிப்பு |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | _உரை நுழைவுகள்_ மாதிரி அமர்வு முடிவுக்குறிப்பு |
 | | |
 
-குறிப்பு: கடைசி இரண்டு Azure OpenAI variables chat completion (text generation) மற்றும் vector search (embeddings) க்கான default மாதிரியை பிரதிபலிக்கின்றன. அவற்றை அமைக்க வழிகாட்டுதல்கள் தொடர்புடைய பணிகளில் வரையறுக்கப்படும்.
+குறிப்பு: கடைசி இரண்டு Azure OpenAI மாறிலிகள் உரையாடல் நிறைவு (உரை உருவாக்கல்) மற்றும் வெக்டர் தேடல் (நுழைவுகள்) ஆகியவற்றுக்கான இயல்புநிலை மாதிரியை பிரதிபலிக்கின்றன. அவற்றை அமைக்கும் வழிமுறைகள் தொடர்புடைய பணிகளில் வரையறுக்கப்படும்.
 
-## Azure ஐ அமைக்க: Portal மூலம்
+## Azure ஐ கட்டமைத்தல்: போர்டல் மூலம்
 
-Azure OpenAI endpoint மற்றும் key மதிப்புகள் [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) இல் கிடைக்கும், எனவே அங்கு தொடங்குவோம்.
+Azure OpenAI முடிவுக்குறிப்பு மற்றும் விசை மதிப்புகள் [Azure போர்டல்](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) இல் காணப்படும், ஆகவே அங்கிருந்து தொடங்குவோம்.
 
-1. [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) க்கு செல்லவும்
-1. Sidebar (இடது மெனு) இல் **Keys and Endpoint** விருப்பத்தை கிளிக் செய்யவும்.
-1. **Show Keys** ஐ கிளிக் செய்யவும் - KEY 1, KEY 2 மற்றும் Endpoint ஆகியவற்றை நீங்கள் காணலாம்.
-1. KEY 1 மதிப்பை AZURE_OPENAI_API_KEY க்காக பயன்படுத்தவும்.
-1. Endpoint மதிப்பை AZURE_OPENAI_ENDPOINT க்காக பயன்படுத்தவும்.
+1. [Azure போர்டல்](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) செல்லவும்
+1. பக்கவாட்டில் (இடது மெனு) **Keys and Endpoint** விருப்பத்தை கிளிக் செய்யவும்.
+1. **Show Keys** கிளிக் செய்யவும் - KEY 1, KEY 2 மற்றும் Endpoint காணப்படும்.
+1. AZURE_OPENAI_API_KEY க்காக KEY 1 மதிப்பை பயன்படுத்தவும்
+1. AZURE_OPENAI_ENDPOINT க்காக Endpoint மதிப்பை பயன்படுத்தவும்
 
-அடுத்ததாக, deploy செய்துள்ள மாதிரிகளுக்கான endpoints தேவை.
+அடுத்து, நாம் அமர்த்திய குறிப்பிட்ட மாதிரிகளுக்கான முடிவுக்குறிப்புகளை தேவைப்படுத்துகிறோம்.
 
-1. Azure OpenAI resource க்கான Sidebar (இடது மெனு) இல் **Model deployments** விருப்பத்தை கிளிக் செய்யவும்.
-1. Destination பக்கத்தில் **Manage Deployments** ஐ கிளிக் செய்யவும்.
+1. Azure OpenAI வளத்திற்கான பக்கவாட்டில் (இடது மெனு) **Model deployments** விருப்பத்தை கிளிக் செய்யவும்.
+1. இலக்கு பக்கத்தில் **Manage Deployments** கிளிக் செய்யவும்
 
-இது Azure OpenAI Studio வலைத்தளத்திற்கு உங்களை அழைத்துச் செல்லும், அங்கு கீழே விவரிக்கப்பட்டுள்ள மற்ற மதிப்புகளை காணலாம்.
+இது Azure OpenAI ஸ்டுடியோ இணையதளத்திற்கு கொண்டு செல்லும், அங்கு கீழே விவரிக்கப்பட்ட மற்ற மதிப்புகளை காணலாம்.
 
-## Azure ஐ அமைக்க: Studio மூலம்
+## Azure ஐ கட்டமைத்தல்: ஸ்டுடியோ மூலம்
 
-1. [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) க்கு **உங்கள் resource** மூலம் மேலே விவரிக்கப்பட்டபடி செல்லவும்.
-1. Sidebar (இடது மெனு) இல் **Deployments** tab ஐ கிளிக் செய்து deploy செய்யப்பட்ட மாதிரிகளை பார்வையிடவும்.
-1. உங்கள் விருப்பமான மாதிரி deploy செய்யப்படவில்லை என்றால், **Create new deployment** ஐ பயன்படுத்தி deploy செய்யவும்.
-1. உங்களுக்கு _text-generation_ மாதிரி தேவை - **gpt-35-turbo** ஐ பரிந்துரைக்கிறோம்.
-1. உங்களுக்கு _text-embedding_ மாதிரி தேவை - **text-embedding-ada-002** ஐ பரிந்துரைக்கிறோம்.
+1. மேலே விவரிக்கப்பட்டபடி உங்கள் வளத்திலிருந்து [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) செல்லவும்.
+1. தற்போது அமர்த்தப்பட்ட மாதிரிகளை காண **Deployments** தாவலை (பக்கவாட்டில், இடது) கிளிக் செய்யவும்.
+1. உங்கள் விருப்பமான மாதிரி அமர்த்தப்படவில்லை என்றால், **Create new deployment** பயன்படுத்தி அதை அமர்த்தவும்.
+1. நீங்கள் _உரை உருவாக்கும்_ மாதிரியை தேவைப்படுத்துவீர்கள் - பரிந்துரைக்கப்படுகிறது: **gpt-35-turbo**
+1. நீங்கள் _உரை நுழைவுகள்_ மாதிரியை தேவைப்படுத்துவீர்கள் - பரிந்துரைக்கப்படுகிறது **text-embedding-ada-002**
 
-இப்போது environment variables ஐ _Deployment name_ ஐ பிரதிபலிக்க update செய்யுங்கள். இது பொதுவாக மாதிரி பெயருடன் ஒரே மாதிரியானதாக இருக்கும், நீங்கள் அதை explicitly மாற்றவில்லை என்றால். எனவே, உதாரணமாக, நீங்கள் இதைப் பெறலாம்:
+இப்போது, _Deployment name_ பயன்படுத்தியதை பிரதிபலிக்க சூழல் மாறிலிகளை புதுப்பிக்கவும். இது பொதுவாக மாதிரி பெயருடன் ஒரே மாதிரியாக இருக்கும், நீங்கள் அதை தெளிவாக மாற்றவில்லை என்றால். உதாரணமாக, நீங்கள் இதுபோன்றதாக இருக்கலாம்:
 
 ```bash
 AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
 ```
 
-**.env கோப்பை save செய்ய மறக்காதீர்கள்**. கோப்பை exit செய்து notebook ஐ இயக்குவதற்கான வழிகாட்டுதலுக்கு திரும்பலாம்.
+**முடிந்தவுடன் .env கோப்பை சேமிப்பதை மறக்காதீர்கள்**. இப்போது கோப்பை மூடி நோட்புக் இயக்கும் வழிமுறைகளுக்கு திரும்பலாம்.
 
-## OpenAI ஐ அமைக்க: Profile மூலம்
+## OpenAI ஐ கட்டமைத்தல்: சுயவிவரத்திலிருந்து
 
-உங்கள் OpenAI API key ஐ [OpenAI account](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) இல் காணலாம். உங்களுக்கு API key இல்லையெனில், ஒரு கணக்கை பதிவு செய்து API key ஐ உருவாக்கலாம். Key ஐ பெற்றவுடன், `.env` கோப்பில் `OPENAI_API_KEY` variable ஐ நிரப்ப பயன்படுத்தலாம்.
+உங்கள் OpenAI API விசை உங்கள் [OpenAI கணக்கில்](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) காணலாம். இல்லையெனில், கணக்கு பதிவு செய்து API விசை உருவாக்கலாம். விசையை பெற்றவுடன், `.env` கோப்பில் `OPENAI_API_KEY` மாறிலியை நிரப்ப பயன்படுத்தலாம்.
 
-## Hugging Face ஐ அமைக்க: Profile மூலம்
+## Hugging Face ஐ கட்டமைத்தல்: சுயவிவரத்திலிருந்து
 
-உங்கள் Hugging Face token ஐ [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst) இல் உங்கள் profile இல் காணலாம். இதை பொதுவாக பகிர வேண்டாம் அல்லது வெளியிட வேண்டாம். இந்த project பயன்பாட்டிற்காக புதிய token ஐ உருவாக்கி, `.env` கோப்பில் `HUGGING_FACE_API_KEY` variable கீழ் copy செய்யவும். _குறிப்பு:_ இது தொழில்நுட்ப ரீதியாக API key அல்ல, ஆனால் authentication க்காக பயன்படுத்தப்படுகிறது, எனவே consistency க்காக அந்த பெயரிடல் வழக்கத்தை வைத்திருக்கிறோம்.
+உங்கள் Hugging Face டோக்கன் உங்கள் சுயவிவரத்தில் [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst) பகுதியில் காணலாம். இதை பொது இடங்களில் பகிர வேண்டாம். பதிலாக, இந்த திட்ட பயன்பாட்டிற்காக புதிய டோக்கன் உருவாக்கி அதை `.env` கோப்பில் `HUGGING_FACE_API_KEY` மாறிலியில் நகலெடுக்கவும். _குறிப்பு:_ இது தொழில்நுட்ப ரீதியாக API விசை அல்ல, ஆனால் அங்கீகாரத்திற்காக பயன்படுத்தப்படுகிறது, எனவே ஒரே பெயரிடல் நடைமுறையை தொடர்கிறோம்.
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **குறிப்பு**:  
-இந்த ஆவணம் AI மொழிபெயர்ப்பு சேவை [Co-op Translator](https://github.com/Azure/co-op-translator) பயன்படுத்தி மொழிபெயர்க்கப்பட்டுள்ளது. எங்கள் துல்லியத்திற்கான முயற்சிகள் இருந்தாலும், தானியங்கி மொழிபெயர்ப்புகளில் பிழைகள் அல்லது தவறுகள் இருக்கக்கூடும் என்பதை கவனத்தில் கொள்ளவும். அதன் தாய்மொழியில் உள்ள மூல ஆவணம் அதிகாரப்பூர்வ ஆதாரமாக கருதப்பட வேண்டும். முக்கியமான தகவல்களுக்கு, தொழில்முறை மனித மொழிபெயர்ப்பு பரிந்துரைக்கப்படுகிறது. இந்த மொழிபெயர்ப்பைப் பயன்படுத்துவதால் ஏற்படும் எந்த தவறான புரிதல்கள் அல்லது தவறான விளக்கங்களுக்கு நாங்கள் பொறுப்பல்ல.
+இந்த ஆவணம் AI மொழிபெயர்ப்பு சேவை [Co-op Translator](https://github.com/Azure/co-op-translator) மூலம் மொழிபெயர்க்கப்பட்டுள்ளது. நாங்கள் துல்லியத்திற்காக முயற்சித்தாலும், தானியங்கி மொழிபெயர்ப்புகளில் பிழைகள் அல்லது தவறுகள் இருக்கக்கூடும் என்பதை தயவுசெய்து கவனிக்கவும். அசல் ஆவணம் அதன் சொந்த மொழியில் அதிகாரப்பூர்வ மூலமாக கருதப்பட வேண்டும். முக்கியமான தகவல்களுக்கு, தொழில்முறை மனித மொழிபெயர்ப்பு பரிந்துரைக்கப்படுகிறது. இந்த மொழிபெயர்ப்பின் பயன்பாட்டால் ஏற்படும் எந்த தவறான புரிதல்கள் அல்லது தவறான விளக்கங்களுக்கும் நாங்கள் பொறுப்பேற்கமாட்டோம்.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

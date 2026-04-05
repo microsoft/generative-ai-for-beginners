@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-08-25T12:47:04+00:00",
-  "source_file": "15-rag-and-vector-databases/data/frameworks.md",
-  "language_code": "lt"
-}
--->
 # Neuroninių tinklų karkasai
 
 Kaip jau sužinojome, norint efektyviai treniruoti neuroninius tinklus, reikia dviejų dalykų:

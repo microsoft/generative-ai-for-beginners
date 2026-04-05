@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "58953c08b8ba7073b836d4270ea0fe86",
-  "translation_date": "2025-10-18T02:49:38+00:00",
-  "source_file": "08-building-search-applications/README.md",
-  "language_code": "et"
-}
--->
 # Otsingurakenduste loomine
 
-[![Sissejuhatus generatiivse tehisintellekti ja suurte keelemudelite juurde](../../../translated_images/08-lesson-banner.8fff48c566dad08a1cbb9f4b4a2c16adfdd288a7bbfffdd30770b466fe08c25c.et.png)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Sissejuhatus generatiivse tehisintellekti ja suurte keelemudelite juurde](../../../translated_images/et/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
 > > _Klõpsa ülaloleval pildil, et vaadata selle õppetunni videot_
 
@@ -44,7 +35,7 @@ Otsingurakenduse loomine aitab sul mõista, kuidas kasutada sisendvektoreid andm
 
 Allpool on näide semantilisest päringust küsimuse "Kas Azure ML-i saab kasutada koos RStudio-ga?" kohta. Vaata YouTube'i URL-i, näed, et URL sisaldab ajatemplit, mis viib sind video sellele kohale, kus küsimusele vastus asub.
 
-![Semantiline päring küsimuse "Kas Azure ML-i saab kasutada koos RStudio-ga?" kohta](../../../translated_images/query-results.bb0480ebf025fac69c5179ad4d53b6627d643046838c857dc9e2b1281f1cdeb7.et.png)
+![Semantiline päring küsimuse "Kas Azure ML-i saab kasutada koos RStudio-ga?" kohta](../../../translated_images/et/query-results.bb0480ebf025fac6.webp)
 
 ## Mis on semantiline otsing?
 
@@ -162,7 +153,7 @@ Ava [lahenduse märkmik](./python/aoai-solution.ipynb?WT.mc_id=academic-105485-k
 
 Kui käivitad märkmiku, palutakse sul sisestada päring. Sisendkast näeb välja selline:
 
-![Sisendkast, kuhu kasutaja saab päringu sisestada](../../../translated_images/notebook-search.1e320b9c7fcbb0bc1436d98ea6ee73b4b54ca47990a1c952b340a2cadf8ac1ca.et.png)
+![Sisendkast, kuhu kasutaja saab päringu sisestada](../../../translated_images/et/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Tubli töö! Jätka õppimist
 

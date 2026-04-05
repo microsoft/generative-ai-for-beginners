@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "846ac8e3b7dcfb697d3309fec05f0fea",
-  "translation_date": "2025-10-18T01:42:48+00:00",
-  "source_file": "10-building-low-code-ai-applications/README.md",
-  "language_code": "sl"
-}
--->
 # Gradnja aplikacij AI z nizko kodo
 
-[![Gradnja aplikacij AI z nizko kodo](../../../translated_images/10-lesson-banner.a01ac8fe3fd86310c2e4065c0b3c584879f33b8ce797311821a636992f8a5b2f.sl.png)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Gradnja aplikacij AI z nizko kodo](../../../translated_images/sl/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
 > _(Kliknite zgornjo sliko za ogled videa te lekcije)_
 
@@ -92,17 +83,17 @@ Aplikacijo boste zgradili z uporabo Copilot v Power Apps po naslednjih korakih:
 
 1. Uporabite besedilno polje na domačem zaslonu, da opišete aplikacijo, ki jo želite zgraditi. Na primer, **_Želim zgraditi aplikacijo za sledenje in upravljanje študentskih nalog_**. Kliknite gumb **Pošlji**, da pošljete ukaz AI Copilot.
 
-![Opišite aplikacijo, ki jo želite zgraditi](../../../translated_images/copilot-chat-prompt-powerapps.84250f341d060830a296b68512e6b3b3aa3a4559f4f1c2d7bafeba8ad3fcd17a.sl.png)
+![Opišite aplikacijo, ki jo želite zgraditi](../../../translated_images/sl/copilot-chat-prompt-powerapps.84250f341d060830.webp)
 
 1. AI Copilot bo predlagal Dataverse tabelo s polji, ki jih potrebujete za shranjevanje podatkov, ki jih želite slediti, ter nekaj vzorčnih podatkov. Nato lahko tabelo prilagodite svojim potrebam z uporabo funkcije AI Copilot asistenta prek pogovornih korakov.
 
    > **Pomembno**: Dataverse je osnovna podatkovna platforma za Power Platform. Gre za platformo za podatke z nizko kodo za shranjevanje podatkov aplikacije. Je popolnoma upravljana storitev, ki varno shranjuje podatke v Microsoft Cloud in je na voljo v vašem okolju Power Platform. Ima vgrajene zmogljivosti upravljanja podatkov, kot so klasifikacija podatkov, izvor podatkov, natančen nadzor dostopa in več. Več o Dataverse lahko izveste [tukaj](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-   ![Predlagana polja v vaši novi tabeli](../../../translated_images/copilot-dataverse-table-powerapps.f4cc07b5d5f9327bd3783dd288debb2a959ce3320107512e235137aebd8a1a4c.sl.png)
+   ![Predlagana polja v vaši novi tabeli](../../../translated_images/sl/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp)
 
 1. Izobraževalci želijo pošiljati e-pošto študentom, ki so oddali svoje naloge, da jih obveščajo o napredku njihovih nalog. Copilot lahko uporabite za dodajanje novega polja v tabelo za shranjevanje e-pošte študentov. Na primer, lahko uporabite naslednji ukaz za dodajanje novega polja v tabelo: **_Želim dodati stolpec za shranjevanje e-pošte študentov_**. Kliknite gumb **Pošlji**, da pošljete ukaz AI Copilot.
 
-![Dodajanje novega polja](../../../translated_images/copilot-new-column.35e15ff21acaf2745965d427b130f2be772f0484835b44fe074d496b1a455f2a.sl.png)
+![Dodajanje novega polja](../../../translated_images/sl/copilot-new-column.35e15ff21acaf274.webp)
 
 1. AI Copilot bo ustvaril novo polje, nato pa ga lahko prilagodite svojim potrebam.
 
@@ -112,7 +103,7 @@ Aplikacijo boste zgradili z uporabo Copilot v Power Apps po naslednjih korakih:
 
 1. Da izobraževalci pošiljajo e-pošto študentom, lahko uporabite Copilot za dodajanje novega zaslona v aplikacijo. Na primer, lahko uporabite naslednji ukaz za dodajanje novega zaslona v aplikacijo: **_Želim dodati zaslon za pošiljanje e-pošte študentom_**. Kliknite gumb **Pošlji**, da pošljete ukaz AI Copilot.
 
-![Dodajanje novega zaslona prek ukaza](../../../translated_images/copilot-new-screen.2e0bef7132a173928bc621780b39799e03982d315cb5a9ff75a34b08054641d4.sl.png)
+![Dodajanje novega zaslona prek ukaza](../../../translated_images/sl/copilot-new-screen.2e0bef7132a17392.webp)
 
 1. AI Copilot bo ustvaril nov zaslon, nato pa ga lahko prilagodite svojim potrebam.
 
@@ -147,15 +138,15 @@ Za ustvarjanje tabele v Dataverse z uporabo Copilot sledite spodnjim korakom:
 
 2. Na levi navigacijski vrstici izberite **Tables** in nato kliknite **Describe the new Table**.
 
-![Izberite novo tabelo](../../../translated_images/describe-new-table.0792373eb757281e3c5f542f84cad3b5208bfe0e5c4a7786dd2bd31aa848a23c.sl.png)
+![Izberite novo tabelo](../../../translated_images/sl/describe-new-table.0792373eb757281e.webp)
 
 3. Na zaslonu **Describe the new Table** uporabite besedilno polje za opis tabele, ki jo želite ustvariti. Na primer, **_Želim ustvariti tabelo za shranjevanje informacij o računih_**. Kliknite gumb **Send**, da pošljete zahtevo AI Copilotu.
 
-![Opišite tabelo](../../../translated_images/copilot-chat-prompt-dataverse.feb2f81e5872b9d2b05d45d11bb6830e0f2ef6a2d4742413bc9a1e50a45bbb89.sl.png)
+![Opišite tabelo](../../../translated_images/sl/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp)
 
 4. AI Copilot bo predlagal tabelo Dataverse s polji, ki jih potrebujete za shranjevanje podatkov, ki jih želite spremljati, in nekaj vzorčnih podatkov. Nato lahko tabelo prilagodite svojim potrebam z uporabo funkcije AI Copilot prek pogovornih korakov.
 
-![Predlagana tabela Dataverse](../../../translated_images/copilot-dataverse-table.b3bc936091324d9db1e943d640df1c7a7df598e66d30f5b8a2999048e26a5073.sl.png)
+![Predlagana tabela Dataverse](../../../translated_images/sl/copilot-dataverse-table.b3bc936091324d9d.webp)
 
 5. Finančna ekipa želi poslati e-pošto dobavitelju, da ga obvesti o trenutnem stanju njegovega računa. Copilot lahko uporabite za dodajanje novega polja v tabelo za shranjevanje e-pošte dobavitelja. Na primer, lahko uporabite naslednjo zahtevo za dodajanje novega polja v tabelo: **_Želim dodati stolpec za shranjevanje e-pošte dobavitelja_**. Kliknite gumb **Send**, da pošljete zahtevo AI Copilotu.
 
@@ -184,7 +175,7 @@ Nekateri vnaprej pripravljeni AI modeli, ki so na voljo v Power Platform, vklju�
 
 S prilagojenimi AI modeli lahko v AI Builder vključite svoj model, da deluje kot kateri koli prilagojen model AI Builder, kar vam omogoča, da model usposobite z lastnimi podatki. Te modele lahko uporabite za avtomatizacijo procesov in napovedovanje rezultatov tako v Power Apps kot v Power Automate. Pri uporabi lastnega modela veljajo določene omejitve. Več o teh omejitvah preberite [tukaj](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
 
-![AI builder modeli](../../../translated_images/ai-builder-models.8069423b84cfc47f6bb989bc3cd0584b5b2471c80fad80bf504d356928a08c9c.sl.png)
+![AI builder modeli](../../../translated_images/sl/ai-builder-models.8069423b84cfc47f.webp)
 
 ## Naloga #2 - Izdelajte tok za obdelavo računov za naš startup
 
@@ -198,7 +189,7 @@ Za izdelavo delovnega toka, ki bo finančni ekipi pomagal obdelati račune z upo
 
 2. Uporabite besedilno polje na domači strani za opis delovnega toka, ki ga želite izdelati. Na primer, **_Obdelaj račun, ko prispe v mojo poštno mapo_**. Kliknite gumb **Send**, da pošljete zahtevo AI Copilotu.
 
-   ![Copilot power automate](../../../translated_images/copilot-chat-prompt-powerautomate.f377e478cc8412de4394fab09e5b72f97b3fc9312526b516ded426102f51c30d.sl.png)
+   ![Copilot power automate](../../../translated_images/sl/copilot-chat-prompt-powerautomate.f377e478cc8412de.webp)
 
 3. AI Copilot bo predlagal dejanja, ki jih potrebujete za izvedbo naloge, ki jo želite avtomatizirati. Kliknite gumb **Next**, da nadaljujete na naslednje korake.
 
@@ -212,7 +203,7 @@ Za izdelavo delovnega toka, ki bo finančni ekipi pomagal obdelati račune z upo
 
 8. Iz delovnega toka odstranite dejanje **Condition**, ker ga ne boste uporabljali. Videti bi moralo takole:
 
-   ![power automate, odstrani dejanja](../../../translated_images/powerautomate-remove-actions.7216392fe684ceba4b73c6383edd1cc5e7ded11afd0ca812052a11487d049ef8.sl.png)
+   ![power automate, odstrani dejanja](../../../translated_images/sl/powerautomate-remove-actions.7216392fe684ceba.webp)
 
 9. Kliknite gumb **Add an action** in poiščite **Dataverse**. Izberite dejanje **Add a new row**.
 
@@ -227,7 +218,7 @@ Za izdelavo delovnega toka, ki bo finančni ekipi pomagal obdelati račune z upo
     - Status - Nastavite **Status** na **Pending**.
     - E-pošta dobavitelja - Uporabite dinamično vsebino **From** iz sprožilca **When a new email arrives**.
 
-    ![power automate dodaj vrstico](../../../translated_images/powerautomate-add-row.5edce45e5dd3d51e5152688dc140ad43e1423e7a9fef9a206f82a7965ea68d73.sl.png)
+    ![power automate dodaj vrstico](../../../translated_images/sl/powerautomate-add-row.5edce45e5dd3d51e.webp)
 
 12. Ko končate s tokom, kliknite gumb **Save**, da shranite tok. Nato lahko tok preizkusite tako, da pošljete e-pošto z računom v mapo, ki ste jo določili v sprožilcu.
 
@@ -241,7 +232,7 @@ GPT modeli so obsežno usposobljeni na velikih količinah podatkov, kar jim omog
 
 Na primer, lahko izdelate tokove za samodejno generiranje besedila za različne primere uporabe, kot so: osnutki e-poštnih sporočil, opisi izdelkov in drugo. Model lahko uporabite tudi za generiranje besedila za različne aplikacije, kot so klepetalni roboti in aplikacije za podporo strankam, ki omogočajo agentom za podporo strankam učinkovito in uspešno odgovarjanje na vprašanja strank.
 
-![ustvari zahtevo](../../../translated_images/create-prompt-gpt.69d429300c2e870a12ec95556cda9bacf6a173e452cdca02973c90df5f705cee.sl.png)
+![ustvari zahtevo](../../../translated_images/sl/create-prompt-gpt.69d429300c2e870a.webp)
 
 Če želite izvedeti, kako uporabljati ta AI model v Power Automate, pojdite skozi modul [Dodajanje inteligence z AI Builder in GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko).
 

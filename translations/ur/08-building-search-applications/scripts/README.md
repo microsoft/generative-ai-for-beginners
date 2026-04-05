@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-07-09T13:07:13+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "ur"
-}
--->
 # ٹرانسکرپشن ڈیٹا کی تیاری
 
 ٹرانسکرپشن ڈیٹا کی تیاری کے اسکرپٹس یوٹیوب ویڈیو کے ٹرانسکرپٹس ڈاؤن لوڈ کرتے ہیں اور انہیں Semantic Search with OpenAI Embeddings and Functions کے نمونے کے ساتھ استعمال کے لیے تیار کرتے ہیں۔

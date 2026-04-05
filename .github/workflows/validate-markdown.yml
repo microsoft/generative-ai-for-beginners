@@ -2,15 +2,14 @@ name: Validate Markdown
 
 on:
   # Trigger the workflow on pull request
-  pull_request_target:
+  pull_request:
     branches: 
       - main
     paths:
       - '**.md'
       - '**.ipynb'
-    paths-ignore:
-      - 'translations/**'
-      - 'translated_images/**'
+      - '!translations/**'
+      - '!translated_images/**'
 
 permissions:
   contents: read
@@ -22,9 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v5
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
+        uses: actions/checkout@v6
       - name: Check broken Paths
         id: check-broken-paths
         uses: john0isaac/action-check-markdown@v1.1.0
@@ -40,9 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v5
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
+        uses: actions/checkout@v6
       - name: Run Check paths tracking
         id: check-paths-tracking
         uses: john0isaac/action-check-markdown@v1.1.0
@@ -58,9 +53,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v5
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
+        uses: actions/checkout@v6
       - name: Run Check URLs tracking
         id: check-urls-tracking
         uses: john0isaac/action-check-markdown@v1.1.0
@@ -76,9 +69,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v5
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
+        uses: actions/checkout@v6
       - name: Run Check URLs Country Locale
         id: check-urls-locale
         uses: john0isaac/action-check-markdown@v1.1.0
@@ -93,9 +84,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v5
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
+        uses: actions/checkout@v6
       - name: Run Check Broken URLs
         id: check-broken-urls
         uses: john0isaac/action-check-markdown@v1.1.0

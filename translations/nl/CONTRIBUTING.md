@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
-  "translation_date": "2025-07-09T06:08:58+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "nl"
-}
--->
 # Bijdragen
 
 Dit project verwelkomt bijdragen en suggesties. Voor de meeste bijdragen moet je akkoord gaan met een Contributor License Agreement (CLA) waarin je verklaart dat je het recht hebt om, en daadwerkelijk, ons de rechten verleent om jouw bijdrage te gebruiken. Voor meer informatie, bezoek <https://cla.microsoft.com>.
@@ -63,7 +54,7 @@ Om te controleren of je links goed werken, gebruik je gewoon VS Code.
 
 Bijvoorbeeld, als je met je muis over een link in je bestanden zweeft, krijg je de optie om de link te volgen door op **ctrl + klik** te drukken.
 
-![VS code follow links screenshot](../../translated_images/vscode-follow-link.85520ab6a1237adcf01cc9cd8c228ce7b32ae685a034250bd5109e2682b9dfca.nl.png)
+![VS code follow links screenshot](../../translated_images/nl/vscode-follow-link.85520ab6a1237adc.webp)
 
 Als je op een link klikt en deze werkt lokaal niet, dan zal de workflow ook falen en werkt het niet op GitHub.
 
@@ -71,7 +62,7 @@ Om dit op te lossen, probeer de link te typen met behulp van VS Code.
 
 Wanneer je `./` of `../` typt, zal VS Code je opties tonen op basis van wat je hebt getypt.
 
-![VS code select relative path screenshot](../../translated_images/vscode-select-relative-path.3804eb73c3a9e5f2d345e3d3288f8173a9e584254d0e505d8bcbc6461dbf1f6c.nl.png)
+![VS code select relative path screenshot](../../translated_images/nl/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
 Volg het pad door te klikken op het gewenste bestand of map, zo weet je zeker dat je pad niet verbroken is.
 
@@ -88,7 +79,7 @@ Als dit is toegevoegd, slaag je voor deze controle.
 
 Zo niet, dan krijg je mogelijk de volgende foutmelding.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/github-check-paths-missing-tracking-comment.880d4afe03e898ffadeebe0f61f7fdea7525c25238bead9fecabc81a0a83b1c0.nl.png)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/nl/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
 Om dit op te lossen, open je het bestandspad dat de workflow heeft gemarkeerd en voeg je de tracking-ID toe aan het einde van de relatieve paden.
 
@@ -105,7 +96,7 @@ Als dit is toegevoegd, slaag je voor deze controle.
 
 Zo niet, dan krijg je mogelijk de volgende foutmelding.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e3179e59e1bd7d44f16637a1bb1ab265562565251166841ef.nl.png)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/nl/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
 Om dit op te lossen, open je het bestandspad dat de workflow heeft gemarkeerd en voeg je de tracking-ID toe aan het einde van de URL’s.
 
@@ -122,7 +113,7 @@ Als dit niet voorkomt, slaag je voor deze controle.
 
 Zo niet, dan krijg je mogelijk de volgende foutmelding.
 
-![GitHub check country locale comment screenshot](../../translated_images/github-check-country-locale-comment.2f4fe93228161dee6ec8210f3d6ccc66af6864f6b178b8d96f30818498fba72a.nl.png)
+![GitHub check country locale comment screenshot](../../translated_images/nl/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
 Om dit op te lossen, open je het bestandspad dat de workflow heeft gemarkeerd en verwijder je de land-specifieke locale uit de URL’s.
 

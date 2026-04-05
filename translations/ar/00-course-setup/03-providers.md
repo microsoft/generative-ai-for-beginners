@@ -1,51 +1,42 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "49ededa179004ea998664c780fbeac39",
-  "translation_date": "2025-08-26T13:59:47+00:00",
-  "source_file": "00-course-setup/03-providers.md",
-  "language_code": "ar"
-}
--->
-# اختيار وتهيئة مزود LLM 🔑
+# اختيار وتكوين مزود نموذج اللغة الكبير 🔑
 
-يمكن أيضًا إعداد الواجبات لتعمل مع واحد أو أكثر من عمليات نشر نماذج اللغة الكبيرة (LLM) من خلال مزود خدمة مدعوم مثل OpenAI أو Azure أو Hugging Face. هذه الخدمات توفر _نقطة نهاية مستضافة_ (API) يمكننا الوصول إليها برمجيًا باستخدام بيانات الاعتماد الصحيحة (مفتاح API أو رمز توكن). في هذا المقرر، سنناقش هذه المزودات:
+يمكن أيضًا إعداد التعيينات للعمل مع نشر واحد أو أكثر من نماذج اللغة الكبيرة (LLM) من خلال مزود خدمة مدعوم مثل OpenAI أو Azure أو Hugging Face. توفر هذه نقطة نهاية مستضافة (API) يمكننا الوصول إليها برمجيًا باستخدام بيانات الاعتماد الصحيحة (مفتاح API أو رمز). في هذه الدورة، نناقش هؤلاء المزودين:
 
- - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) مع نماذج متنوعة تشمل سلسلة GPT الأساسية.
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) لنماذج OpenAI مع تركيز على جاهزية المؤسسات
+ - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) مع نماذج متنوعة بما في ذلك سلسلة GPT الأساسية.
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) لنماذج OpenAI مع التركيز على جاهزية المؤسسات
  - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) للنماذج مفتوحة المصدر وخادم الاستدلال
 
-**ستحتاج إلى استخدام حساباتك الخاصة لهذه التمارين**. الواجبات اختيارية، لذا يمكنك اختيار إعداد مزود واحد أو جميعها أو عدم إعداد أي منها حسب رغبتك. بعض الإرشادات للتسجيل:
+**ستحتاج إلى استخدام حساباتك الخاصة لهذه التمارين**. التعيينات اختيارية لذا يمكنك اختيار إعداد واحد، أو جميع المزودين - أو لا شيء - بناءً على اهتماماتك. بعض الإرشادات للتسجيل:
 
-| التسجيل | التكلفة | مفتاح API | Playground | ملاحظات |
+| التسجيل | التكلفة | مفتاح API | ساحة اللعب | التعليقات |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [الأسعار](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [حسب المشروع](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [بدون كود، ويب](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | نماذج متعددة متوفرة |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [الأسعار](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [دليل البدء السريع SDK](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [دليل البدء السريع Studio](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [يجب التقديم مسبقًا للوصول](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [الأسعار](https://huggingface.co/pricing) | [رموز الوصول](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat يحتوي على نماذج محدودة](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [التسعير](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [مبني على المشروع](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [بدون كود، ويب](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | نماذج متعددة متاحة |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [التسعير](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [بدء سريع SDK](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [بدء سريع Studio](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [يجب التقديم مسبقًا للوصول](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [التسعير](https://huggingface.co/pricing) | [رموز الوصول](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat يحتوي على نماذج محدودة](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
 | | | | | |
 
-اتبع التعليمات أدناه لـ _تهيئة_ هذا المستودع لاستخدامه مع مزودات مختلفة. الواجبات التي تتطلب مزودًا معينًا ستحتوي على أحد هذه الوسوم في اسم الملف:
+اتبع التعليمات أدناه لـ _تكوين_ هذا المستودع للاستخدام مع مزودين مختلفين. التعيينات التي تتطلب مزودًا محددًا ستحتوي على أحد هذه العلامات في اسم الملف:
 
-- `aoai` - يتطلب نقطة نهاية Azure OpenAI ومفتاح
-- `oai` - يتطلب نقطة نهاية OpenAI ومفتاح
+- `aoai` - يتطلب نقطة نهاية Azure OpenAI، مفتاح
+- `oai` - يتطلب نقطة نهاية OpenAI، مفتاح
 - `hf` - يتطلب رمز Hugging Face
 
-يمكنك تهيئة مزود واحد أو جميعها أو عدم تهيئة أي منها. الواجبات المتعلقة ستظهر خطأ في حال عدم وجود بيانات الاعتماد.
+يمكنك تكوين واحد، أو لا شيء، أو جميع المزودين. التعيينات ذات الصلة ستفشل ببساطة عند فقدان بيانات الاعتماد.
 
 ## إنشاء ملف `.env`
 
-نفترض أنك قرأت الإرشادات أعلاه وسجلت مع المزود المناسب، وحصلت على بيانات الاعتماد المطلوبة (API_KEY أو رمز توكن). في حالة Azure OpenAI، نفترض أيضًا أن لديك عملية نشر صالحة لخدمة Azure OpenAI (نقطة نهاية) مع نشر نموذج GPT واحد على الأقل لإكمال المحادثة.
+نفترض أنك قد قرأت الإرشادات أعلاه وسجلت مع المزود المناسب، وحصلت على بيانات الاعتماد المطلوبة للمصادقة (API_KEY أو الرمز). في حالة Azure OpenAI، نفترض أيضًا أن لديك نشرًا صالحًا لخدمة Azure OpenAI (نقطة نهاية) مع نشر نموذج GPT واحد على الأقل لإكمال الدردشة.
 
-الخطوة التالية هي تهيئة **متغيرات البيئة المحلية** كما يلي:
+الخطوة التالية هي تكوين **متغيرات البيئة المحلية** الخاصة بك كما يلي:
 
-1. ابحث في المجلد الجذري عن ملف باسم `.env.copy` يجب أن يحتوي على محتوى مثل هذا:
+1. ابحث في المجلد الجذر عن ملف `.env.copy` الذي يجب أن يحتوي على محتويات مثل هذه:
 
    ```bash
-   # OpenAI Provider
+   # مزود OpenAI
    OPENAI_API_KEY='<add your OpenAI API key here>'
 
-   ## Azure OpenAI
-   AZURE_OPENAI_API_VERSION='2024-02-01' # Default is set!
+   ## أزور OpenAI
+   AZURE_OPENAI_API_VERSION='2024-02-01' # تم التعيين الافتراضي!
    AZURE_OPENAI_API_KEY='<add your AOAI key here>'
    AZURE_OPENAI_ENDPOINT='<add your AOIA service endpoint here>'
    AZURE_OPENAI_DEPLOYMENT='<add your chat completion model name here>' 
@@ -55,17 +46,17 @@ CO_OP_TRANSLATOR_METADATA:
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. انسخ هذا الملف إلى `.env` باستخدام الأمر أدناه. هذا الملف _مستثنى من git_ للحفاظ على سرية البيانات.
+2. انسخ هذا الملف إلى `.env` باستخدام الأمر أدناه. هذا الملف _مُدرج في gitignore_، للحفاظ على الأسرار آمنة.
 
    ```bash
    cp .env.copy .env
    ```
 
-3. املأ القيم (استبدل العناصر النائبة على يمين `=`) كما هو موضح في القسم التالي.
+3. املأ القيم (استبدل العناصر النائبة على الجانب الأيمن من `=`) كما هو موضح في القسم التالي.
 
-4. (اختياري) إذا كنت تستخدم GitHub Codespaces، لديك خيار حفظ متغيرات البيئة كـ _أسرار Codespaces_ مرتبطة بهذا المستودع. في هذه الحالة، لن تحتاج إلى إعداد ملف .env محلي. **لكن لاحظ أن هذا الخيار يعمل فقط إذا كنت تستخدم GitHub Codespaces.** ستظل بحاجة لإعداد ملف .env إذا كنت تستخدم Docker Desktop بدلاً من ذلك.
+4. (اختياري) إذا كنت تستخدم GitHub Codespaces، لديك خيار حفظ متغيرات البيئة كـ _أسرار Codespaces_ مرتبطة بهذا المستودع. في هذه الحالة، لن تحتاج إلى إعداد ملف .env محلي. **ومع ذلك، لاحظ أن هذا الخيار يعمل فقط إذا كنت تستخدم GitHub Codespaces.** ستظل بحاجة إلى إعداد ملف .env إذا كنت تستخدم Docker Desktop بدلاً من ذلك.
 
-## تعبئة ملف `.env`
+## ملء ملف `.env`
 
 لنلقِ نظرة سريعة على أسماء المتغيرات لفهم ما تمثله:
 
@@ -75,55 +66,57 @@ CO_OP_TRANSLATOR_METADATA:
 | OPENAI_API_KEY | هذا هو مفتاح التفويض لاستخدام الخدمة لنقاط نهاية OpenAI غير Azure |
 | AZURE_OPENAI_API_KEY | هذا هو مفتاح التفويض لاستخدام تلك الخدمة |
 | AZURE_OPENAI_ENDPOINT | هذه هي نقطة النهاية المنشورة لمورد Azure OpenAI |
-| AZURE_OPENAI_DEPLOYMENT | هذه هي نقطة نهاية نشر نموذج _توليد النصوص_ |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | هذه هي نقطة نهاية نشر نموذج _تضمين النصوص_ |
+| AZURE_OPENAI_DEPLOYMENT | هذه هي نقطة نشر نموذج _توليد النص_ |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | هذه هي نقطة نشر نموذج _تضمين النصوص_ |
 | | |
 
-ملاحظة: آخر متغيرين لـ Azure OpenAI يعكسان النموذج الافتراضي لإكمال المحادثة (توليد النصوص) والبحث المتجهي (التضمين) على التوالي. سيتم تحديد تعليمات إعدادها في الواجبات ذات الصلة.
+ملاحظة: المتغيران الأخيران لـ Azure OpenAI يعكسان نموذجًا افتراضيًا لإكمال الدردشة (توليد النص) والبحث المتجهي (التضمينات) على التوالي. سيتم تعريف التعليمات الخاصة بإعدادها في التعيينات ذات الصلة.
 
-## تهيئة Azure: من البوابة
+## تكوين Azure: من البوابة
 
-ستجد قيم نقطة النهاية والمفتاح لـ Azure OpenAI في [بوابة Azure](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) لذا لنبدأ من هناك.
+سيتم العثور على قيم نقطة نهاية Azure OpenAI والمفتاح في [بوابة Azure](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) فلنبدأ من هناك.
 
-1. انتقل إلى [بوابة Azure](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
-1. انقر على خيار **Keys and Endpoint** في الشريط الجانبي (القائمة على اليسار).
-1. انقر على **Show Keys** - يجب أن ترى: KEY 1، KEY 2 ونقطة النهاية.
-1. استخدم قيمة KEY 1 لـ AZURE_OPENAI_API_KEY
-1. استخدم قيمة Endpoint لـ AZURE_OPENAI_ENDPOINT
+1. اذهب إلى [بوابة Azure](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
+1. انقر على خيار **المفاتيح ونقطة النهاية** في الشريط الجانبي (القائمة على اليسار).
+1. انقر على **إظهار المفاتيح** - يجب أن ترى التالي: المفتاح 1، المفتاح 2، ونقطة النهاية.
+1. استخدم قيمة المفتاح 1 لـ AZURE_OPENAI_API_KEY
+1. استخدم قيمة نقطة النهاية لـ AZURE_OPENAI_ENDPOINT
 
-بعد ذلك، نحتاج إلى نقاط النهاية للنماذج التي قمنا بنشرها.
+بعد ذلك، نحتاج إلى نقاط النهاية للنماذج المحددة التي نشرناها.
 
-1. انقر على خيار **Model deployments** في الشريط الجانبي (القائمة اليسرى) لمورد Azure OpenAI.
-1. في الصفحة المقصودة، انقر على **Manage Deployments**
+1. انقر على خيار **نشر النماذج** في الشريط الجانبي (القائمة اليسرى) لمورد Azure OpenAI.
+1. في الصفحة الوجهة، انقر على **إدارة النشرات**
 
 سيأخذك هذا إلى موقع Azure OpenAI Studio، حيث سنجد القيم الأخرى كما هو موضح أدناه.
 
-## تهيئة Azure: من الاستوديو
+## تكوين Azure: من الاستوديو
 
 1. انتقل إلى [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **من موردك** كما هو موضح أعلاه.
-1. انقر على تبويب **Deployments** (الشريط الجانبي، يسار) لعرض النماذج المنشورة حاليًا.
-1. إذا لم يكن النموذج المطلوب منشورًا، استخدم **Create new deployment** لنشره.
-1. ستحتاج إلى نموذج _توليد نصوص_ - نوصي بـ: **gpt-35-turbo**
-1. ستحتاج إلى نموذج _تضمين نصوص_ - نوصي بـ **text-embedding-ada-002**
+1. انقر على علامة التبويب **النشرات** (الشريط الجانبي، اليسار) لعرض النماذج المنشورة حاليًا.
+1. إذا لم يكن النموذج المطلوب منشورًا، استخدم **إنشاء نشر جديد** لنشره.
+1. ستحتاج إلى نموذج _توليد نص_ - نوصي بـ: **gpt-35-turbo**
+1. ستحتاج إلى نموذج _تضمين نص_ - نوصي بـ **text-embedding-ada-002**
 
-الآن قم بتحديث متغيرات البيئة لتعكس _اسم النشر_ المستخدم. غالبًا ما يكون هذا هو نفسه اسم النموذج إلا إذا قمت بتغييره صراحة. كمثال، قد يكون لديك:
+الآن حدّث متغيرات البيئة لتعكس _اسم النشر_ المستخدم. سيكون هذا عادةً نفس اسم النموذج ما لم تقم بتغييره صراحة. لذا، كمثال، قد يكون لديك:
 
 ```bash
 AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
 ```
 
-**لا تنس حفظ ملف .env عند الانتهاء**. يمكنك الآن إغلاق الملف والعودة إلى تعليمات تشغيل الدفتر.
+**لا تنس حفظ ملف .env عند الانتهاء**. يمكنك الآن الخروج من الملف والعودة إلى التعليمات لتشغيل الدفتر.
 
-## تهيئة OpenAI: من الملف الشخصي
+## تكوين OpenAI: من الملف الشخصي
 
-يمكنك العثور على مفتاح OpenAI API الخاص بك في [حسابك على OpenAI](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). إذا لم يكن لديك واحد، يمكنك التسجيل وإنشاء مفتاح API. بعد حصولك على المفتاح، يمكنك استخدامه لتعبئة متغير `OPENAI_API_KEY` في ملف `.env`.
+يمكن العثور على مفتاح API الخاص بـ OpenAI في [حساب OpenAI الخاص بك](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). إذا لم يكن لديك واحد، يمكنك التسجيل للحصول على حساب وإنشاء مفتاح API. بمجرد حصولك على المفتاح، يمكنك استخدامه لملء متغير `OPENAI_API_KEY` في ملف `.env`.
 
-## تهيئة Hugging Face: من الملف الشخصي
+## تكوين Hugging Face: من الملف الشخصي
 
-يمكنك العثور على رمز Hugging Face الخاص بك في ملفك الشخصي تحت [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). لا تقم بنشر هذه الرموز أو مشاركتها علنًا. بدلاً من ذلك، أنشئ رمزًا جديدًا لاستخدام هذا المشروع وادخله في ملف `.env` تحت متغير `HUGGING_FACE_API_KEY`. _ملاحظة:_ هذا ليس مفتاح API تقنيًا، لكنه يُستخدم للمصادقة لذا أبقينا على نفس التسمية للاتساق.
+يمكن العثور على رمز Hugging Face الخاص بك في ملفك الشخصي تحت [رموز الوصول](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). لا تنشرها أو تشاركها علنًا. بدلاً من ذلك، أنشئ رمزًا جديدًا لاستخدام هذا المشروع ونسخه إلى ملف `.env` تحت متغير `HUGGING_FACE_API_KEY`. _ملاحظة:_ هذا تقنيًا ليس مفتاح API ولكنه يُستخدم للمصادقة لذا نحتفظ بهذا التسمية للاتساق.
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **إخلاء المسؤولية**:  
-تمت ترجمة هذا المستند باستخدام خدمة الترجمة بالذكاء الاصطناعي [Co-op Translator](https://github.com/Azure/co-op-translator). بينما نسعى لتحقيق الدقة، يرجى العلم أن الترجمات الآلية قد تحتوي على أخطاء أو معلومات غير دقيقة. يجب اعتبار المستند الأصلي بلغته الأصلية هو المصدر الرسمي والموثوق. بالنسبة للمعلومات الحساسة أو الهامة، يُنصح بالاستعانة بترجمة بشرية احترافية. نحن غير مسؤولين عن أي سوء فهم أو تفسير خاطئ ينشأ عن استخدام هذه الترجمة.
+تمت ترجمة هذا المستند باستخدام خدمة الترجمة الآلية [Co-op Translator](https://github.com/Azure/co-op-translator). بينما نسعى لتحقيق الدقة، يرجى العلم أن الترجمات الآلية قد تحتوي على أخطاء أو عدم دقة. يجب اعتبار المستند الأصلي بلغته الأصلية المصدر الموثوق به. للمعلومات الهامة، يُنصح بالاعتماد على الترجمة البشرية المهنية. نحن غير مسؤولين عن أي سوء فهم أو تفسير ناتج عن استخدام هذه الترجمة.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

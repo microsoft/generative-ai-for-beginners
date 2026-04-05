@@ -130,7 +130,7 @@ dependencies:
       - azure-ai-ml
 ```
 
-If you find you getting errors using conda you can manually install the Microsoft AI Libraries using the following command in a terminal.
+If you find you are getting errors using conda you can manually install the Microsoft AI Libraries using the following command in a terminal.
 
 ```
 conda install -c microsoft azure-ai-ml

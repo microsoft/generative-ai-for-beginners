@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-07-09T16:29:57+00:00",
-  "source_file": "15-rag-and-vector-databases/data/frameworks.md",
-  "language_code": "pa"
-}
--->
 # ਨਿਊਰਲ ਨੈੱਟਵਰਕ ਫਰੇਮਵਰਕ
 
 ਜਿਵੇਂ ਕਿ ਅਸੀਂ ਪਹਿਲਾਂ ਹੀ ਸਿੱਖਿਆ ਹੈ, ਨਿਊਰਲ ਨੈੱਟਵਰਕ ਨੂੰ ਪ੍ਰਭਾਵਸ਼ਾਲੀ ਤਰੀਕੇ ਨਾਲ ਟ੍ਰੇਨ ਕਰਨ ਲਈ ਸਾਨੂੰ ਦੋ ਕੰਮ ਕਰਨੇ ਪੈਂਦੇ ਹਨ:

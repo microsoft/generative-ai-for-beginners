@@ -206,7 +206,9 @@ def process_queue(progress, task):
                 print(f"From function call: {filename}\t{speakers}")
 
             metadata["speaker"] = speakers
-            json.dump(metadata, open(filename, "w", encoding="utf-8"))
+            # SECURITY: Use context manager to properly close file handles
+            with open(filename, "w", encoding="utf-8") as out_file:
+                json.dump(metadata, out_file)
 
         q.task_done()
         time.sleep(0.2)

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c06b12caf3c901eb3156e3dd5b0aea56",
-  "translation_date": "2025-07-09T05:46:27+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "sk"
-}
--->
 # Microsoft Open Source Kód Správania
 
 Tento projekt prijal [Microsoft Open Source Kód Správania](https://opensource.microsoft.com/codeofconduct/).

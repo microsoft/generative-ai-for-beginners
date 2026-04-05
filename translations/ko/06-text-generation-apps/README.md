@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df027997f1448323d6159b78a1b669bf",
-  "translation_date": "2025-10-17T23:59:15+00:00",
-  "source_file": "06-text-generation-apps/README.md",
-  "language_code": "ko"
-}
--->
 # 텍스트 생성 애플리케이션 구축
 
-[![텍스트 생성 애플리케이션 구축](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.ko.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![텍스트 생성 애플리케이션 구축](../../../translated_images/ko/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(위 이미지를 클릭하면 이 강의의 동영상을 볼 수 있습니다)_
 

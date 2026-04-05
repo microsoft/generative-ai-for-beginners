@@ -1,19 +1,10 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b9d32511b27373a1b21b5789d4fda057",
-  "translation_date": "2025-11-12T08:54:43+00:00",
-  "source_file": "14-the-generative-ai-application-lifecycle/README.md",
-  "language_code": "pcm"
-}
--->
-[![Integrating with function calling](../../../translated_images/14-lesson-banner.066d74a31727ac121eeac06376a068a397d8e335281e63ce94130d11f516e46b.pcm.png)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
+[![Integrating with function calling](../../../translated_images/pcm/14-lesson-banner.066d74a31727ac12.webp)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
-# The Generative AI Application Lifecycle
+# Di Generative AI Application Lifecycle
 
-Di important question wey dey for all AI apps na how AI features go still dey relevant, as AI dey change fast. To make sure say your app go still dey relevant, reliable, and strong, you go need dey monitor, check, and improve am steady. Na here di generative AI lifecycle go help.
+One important question for alldi AI applications na di relevance of AI features, as AI fast dey evolve, to make sure sey your application still dey relevant, reliable, and strong, you need monitor am, check am well well, and improve am constantly. Na here di generative AI lifecycle come enter.
 
-Di generative AI lifecycle na framework wey dey guide you for di steps to develop, deploy, and maintain generative AI app. E go help you set your goals, measure performance, find di wahala, and solve am. E go also help you align your app with di ethical and legal standards for your area and di people wey dey use am. If you follow di generative AI lifecycle, your app go dey deliver value and satisfy your users.
+Di generative AI lifecycle na framework wey dey show you di steps dem for developing, deploying, and maintaining one generative AI application. E go help you define your goals, measure how your app dey perform, find di wahala dem, and how you go solve dem. E go also help make sure sey your application dey do wetin ethical and legal standards for your area and your stakeholders go allow. If you follow di generative AI lifecycle, you fit sure sey your app go always dey deliver value and make your users happy.
 
 ## Introduction
 
@@ -26,78 +17,78 @@ For dis chapter, you go:
 
 ## Understand di Paradigm Shift from MLOps to LLMOps
 
-LLMs na new tool for Artificial Intelligence, dem dey very strong for analysis and generation tasks for apps. But di power wey dem get dey affect how we dey streamline AI and Classic Machine Learning tasks.
+LLMs na new tool for di Artificial Intelligence arsenal, dem get strong power for analysis and generation task for applications, but dis power bring some consequences on how we dey arrange AI and Classic Machine Learning tasks.
 
-Because of dis, we need new way to adapt dis tool in dynamic way, with correct incentives. We fit call old AI apps "ML Apps" and di new AI Apps "GenAI Apps" or just "AI Apps," wey go show di mainstream technology and techniques wey dem dey use for di time. Dis change dey affect di way we dey look AI apps in many ways. Check di comparison below.
+So, we need new Paradigm to fit dis tool well, with correct incentives. We fit call old AI apps "ML Apps" and new AI apps "GenAI Apps" or just "AI Apps", wey go reflect di main technology and techniques wey people dey use that time. Dis one dey change how we dey take talk about am for many ways, look di comparison below.
 
-![LLMOps vs. MLOps comparison](../../../translated_images/01-llmops-shift.29bc933cb3bb0080a562e1655c0c719b71a72c3be6252d5c564b7f598987e602.pcm.png)
+![LLMOps vs. MLOps comparison](../../../translated_images/pcm/01-llmops-shift.29bc933cb3bb0080.webp)
 
-For LLMOps, we dey focus more on di App Developers, using integrations as key point, using "Models-as-a-Service" and thinking about di following metrics:
+Make you notice sey for LLMOps, we dey focus more on di App Developers, dey use integrations as main point, dey use "Models-as-a-Service" and dey think for dis points for metrics.
 
-- Quality: How good di response be
+- Quality: Response quality
 - Harm: Responsible AI
-- Honesty: Whether di response make sense or correct
+- Honesty: Response groundedness (E make sense? E correct?)
 - Cost: Solution Budget
-- Latency: Average time for token response
+- Latency: Avg. time for token response
 
 ## Di LLM Lifecycle
 
-To understand di lifecycle and di changes, make we look di infographic below.
+First, to understand di lifecycle and di changes, make we note di next infographic.
 
-![LLMOps infographic](../../../translated_images/02-llmops.70a942ead05a7645db740f68727d90160cb438ab71f0fb20548bc7fe5cad83ff.pcm.png)
+![LLMOps infographic](../../../translated_images/pcm/02-llmops.70a942ead05a7645.webp)
 
-You go notice say dis one different from di usual Lifecycles for MLOps. LLMs get many new requirements, like Prompting, different techniques to improve quality (Fine-Tuning, RAG, Meta-Prompts), different assessment and responsibility with responsible AI, and new evaluation metrics (Quality, Harm, Honesty, Cost, and Latency).
+As you fit see, dis one different from di usual Lifecycles wey we get for MLOps. LLMs get plenty new requirements, like Prompting, different ways to improve quality (Fine-Tuning, RAG, Meta-Prompts), different ways to measure and take responsibility with responsible AI, and new evaluation metrics (Quality, Harm, Honesty, Cost and Latency).
 
-For example, make we look how we dey ideate. We dey use prompt engineering to test different LLMs to see if di Hypothesis fit correct.
+For example, look how we dey ideate. We dey use prompt engineering to try different LLMs to explore wetin fit work to check if their Hypothesis fit be correct.
 
-Dis process no be straight line, e dey loop, dey repeat, and e get big cycle wey dey cover everything.
+Make you know sey dis one no dey linear, but e dey involve integrated loops, iterative and e get one big cycle wey join am all together.
 
-How we fit explore di steps? Make we break am down to understand how we fit build di lifecycle.
+How we fit explore those steps? Make we enter detail on how we fit build one lifecycle.
 
-![LLMOps Workflow](../../../translated_images/03-llm-stage-flows.3a1e1c401235a6cfa886ed6ba04aa52a096a545e1bc44fa54d7d5983a7201892.pcm.png)
+![LLMOps Workflow](../../../translated_images/pcm/03-llm-stage-flows.3a1e1c401235a6cf.webp)
 
-E fit look complicated, but make we focus on di three big steps first.
+E fit look small complex, but make we focus on di three big steps first.
 
-1. Ideating/Exploring: Exploration, na here we go explore based on our business needs. We go prototype, create [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst) and test if e dey efficient for our Hypothesis.
-2. Building/Augmenting: Implementation, na here we go evaluate bigger datasets, use techniques like Fine-tuning and RAG, to check di strength of our solution. If e no work, we go re-implement am, add new steps for di flow or restructure di data. After we test di flow and di scale, if e work and meet di Metrics, e ready for di next step.
-3. Operationalizing: Integration, na here we go add Monitoring and Alerts Systems to di system, deploy am and integrate am to di Application.
+1. Ideating/Exploring: Exploration, here we fit explore based on our business needs. Prototyping, creating one [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst) and test whether e good enough for our Hypothesis.
+1. Building/Augmenting: Implementation, now we start to evaluate for bigger datasets, implement techniques like Fine-tuning and RAG, to check if our solution strong. If e no work, we fit do am again, add new steps for our flow or arrange data well. After we test our flow and scale, if e work and we check our Metrics, e dey ready for next step.
+1. Operationalizing: Integration, now we add Monitoring and Alerts Systems to our system, deploy am and integrate the application.
 
-After dis, we go get di big cycle of Management, wey dey focus on security, compliance, and governance.
+Then, we get di big cycle of Management, wey dey focus on security, compliance and governance.
 
-Congrats, your AI App don ready to go and dey operational. If you wan try am yourself, check di [Contoso Chat Demo.](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreys)
+Congrats, now your AI App ready to run and work. For hands-on experience, check di [Contoso Chat Demo.](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst)
 
-Now, wetin be di tools we fit use?
+Now, wetin tools we fit use?
 
 ## Lifecycle Tooling
 
-For Tooling, Microsoft get [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) and [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst) wey go make di cycle easy to implement and ready to go.
+For Tooling, Microsoft dey provide the [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreyst) and [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst) wey go make your cycle easy to implement and ready to go.
 
-Di [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreys) allow you use [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreys). AI Studio na web portal wey allow you explore models, samples, and tools. You fit manage your resources, UI development flows, and SDK/CLI options for Code-First development.
+The [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreyst), allow you to use [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst). AI Studio na web portal wey allow you explore models, samples and tools. E dey manage your resources, UI development flows and SDK/CLI options for Code-First development.
 
-![Azure AI possibilities](../../../translated_images/04-azure-ai-platform.80203baf03a12fa8b166e194928f057074843d1955177baf0f5b53d50d7b6153.pcm.png)
+![Azure AI possibilities](../../../translated_images/pcm/04-azure-ai-platform.80203baf03a12fa8.webp)
 
-Azure AI dey allow you use plenty resources to manage your operations, services, projects, vector search, and database needs.
+Azure AI allow you use many resources to manage your operations, services, projects, vector search and database needs.
 
-![LLMOps with Azure AI](../../../translated_images/05-llm-azure-ai-prompt.a5ce85cdbb494bdf95420668e3464aae70d8b22275a744254e941dd5e73ae0d2.pcm.png)
+![LLMOps with Azure AI](../../../translated_images/pcm/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp)
 
-You fit build from Proof-of-Concept (POC) to large scale apps with PromptFlow:
+Construct, from Proof-of-Concept(POC) reach large scale applications with PromptFlow:
 
 - Design and Build apps from VS Code, with visual and functional tools
-- Test and fine-tune your apps for quality AI, easily.
-- Use Azure AI Studio to Integrate and Iterate with cloud, Push and Deploy for quick integration.
+- Test and fine-tune your apps for quality AI, no wahala.
+- Use Azure AI Studio to Integrate and Iterate with cloud, Push and Deploy for fast integration.
 
-![LLMOps with PromptFlow](../../../translated_images/06-llm-promptflow.a183eba07a3a7fdf4aa74db92a318b8cbbf4a608671f6b166216358d3203d8d4.pcm.png)
+![LLMOps with PromptFlow](../../../translated_images/pcm/06-llm-promptflow.a183eba07a3a7fdf.webp)
 
 ## Great! Continue your Learning!
 
-Nice one, now learn more about how we dey structure app to use di concepts with di [Contoso Chat App](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst), to see how Cloud Advocacy dey add di concepts for demos. For more content, check our [Ignite breakout session!
+Correct, now learn more about how we take structure application to use di concepts with [Contoso Chat App](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst), to see how Cloud Advocacy add those concepts for demonstrations. For more content, check out our [Ignite breakout session!
 ](https://www.youtube.com/watch?v=DdOylyrTOWg)
 
-Now, check Lesson 15, to understand how [Retrieval Augmented Generation and Vector Databases](../15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst) dey affect Generative AI and how e fit make apps more engaging!
+Now, check Lesson 15, to understand how [Retrieval Augmented Generation and Vector Databases](../15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst) dey impact Generative AI and to make Applications more beta and engaging!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:  
-Dis dokyument don use AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator) do di translation. Even as we dey try make am accurate, abeg sabi say automated translations fit get mistake or no dey correct well. Di original dokyument for im native language na di main source wey you go trust. For important information, e better make professional human translation dey use. We no go fit take blame for any misunderstanding or wrong interpretation wey fit happen because you use dis translation.
+Dis dokument don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we try make everything correct, abeg sabi say automated translations fit get mistakes or no too correct. Di original dokument wey e dey for im own language na di main correct source. If e serious matter, better make human professional translate am. We no go responsible if pesin no understand well or if e misinterpret dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

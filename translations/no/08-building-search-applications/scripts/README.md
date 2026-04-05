@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-07-09T13:10:45+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "no"
-}
--->
 # Forberedelse av transkripsjonsdata
 
 Skriptene for forberedelse av transkripsjonsdata laster ned YouTube-video-transkripsjoner og klargjør dem for bruk med eksempelet Semantic Search med OpenAI Embeddings og Functions.

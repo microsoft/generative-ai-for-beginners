@@ -1,33 +1,24 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "8a50125da1d2836fab30bb91c19def97",
-  "translation_date": "2025-08-26T18:47:42+00:00",
-  "source_file": "00-course-setup/02-setup-local.md",
-  "language_code": "hu"
-}
--->
 # Helyi beállítás 🖥️
 
-**Ezt az útmutatót akkor használd, ha mindent a saját laptopodon szeretnél futtatni.**  
-Két lehetőséged van: **(A) natív Python + virtuális környezet** vagy **(B) VS Code Dev Container Dockerrel**.  
-Válaszd azt, amelyik egyszerűbbnek tűnik—mindkettő ugyanazokra a leckékre vezet.
+**Használd ezt az útmutatót, ha mindent a saját laptopodon szeretnél futtatni.**  
+Két lehetőséged van: **(A) natív Python + virtual-env** vagy **(B) VS Code Dev Container Dockerrel**.  
+Válaszd azt, amelyik könnyebbnek tűnik—mindkettő ugyanahhoz a tananyaghoz vezet.
 
 ## 1. Előfeltételek
 
-| Eszköz              | Verzió / Megjegyzés                                                                |
-|---------------------|------------------------------------------------------------------------------------|
-| **Python**          | 3.10 + (letölthető innen: <https://python.org>)                                    |
-| **Git**             | Legfrissebb (Xcode / Git for Windows / Linux csomagkezelő tartalmazza)             |
-| **VS Code**         | Opcionális, de ajánlott <https://code.visualstudio.com>                            |
-| **Docker Desktop**  | *Csak* a B opcióhoz. Ingyenes telepítés: <https://docs.docker.com/desktop/>        |
+| Eszköz             | Verzió / Megjegyzések                                                               |
+|--------------------|-------------------------------------------------------------------------------------|
+| **Python**         | 3.10+ (letölthető innen: <https://python.org>)                                      |
+| **Git**            | Legfrissebb (Xcode / Git Windowsra / Linux csomagkezelő részeként érhető el)         |
+| **VS Code**        | Opcionális, de ajánlott <https://code.visualstudio.com>                             |
+| **Docker Desktop** | *Csak* a B opcióhoz. Ingyenes telepítés: <https://docs.docker.com/desktop/>         |
 
 > 💡 **Tipp** – Ellenőrizd az eszközöket terminálban:  
 > `python --version`, `git --version`, `docker --version`, `code --version`  
 
-## 2. A opció – Natív Python (leggyorsabb)
+## 2. Opció A – Natív Python (leggyorsabb)
 
-### 1. lépés  Klónozd ezt a repót
+### 1. lépés Klónozd ezt a repót
 
 ```bash
 git clone https://github.com/<your-github>/generative-ai-for-beginners
@@ -37,12 +28,12 @@ cd generative-ai-for-beginners
 ### 2. lépés Hozz létre és aktiválj egy virtuális környezetet
 
 ```bash
-python -m venv .venv          # make one
+python -m venv .venv          # készíts egyet
 source .venv/bin/activate     # macOS / Linux
 .\.venv\Scripts\activate      # Windows PowerShell
 ```
 
-✅ A prompt most (.venv)-vel kezdődik—ez azt jelenti, hogy a környezeten belül vagy.
+✅ A promptnak most (.venv)-vel kell kezdődnie — ez azt jelenti, hogy bent vagy a környezetben.
 
 ### 3. lépés Telepítsd a függőségeket
 
@@ -50,51 +41,51 @@ source .venv/bin/activate     # macOS / Linux
 pip install -r requirements.txt
 ```
 
-Ugorj a 3. szakaszra az [API kulcsoknál](../../../00-course-setup)
+Ugorj a 3. szakaszra az [API kulcsok hozzáadása](../../../00-course-setup) részhez
 
-## 2. B opció – VS Code Dev Container (Docker)
+## 2. Opció B – VS Code Dev Container (Docker)
 
-Ezt a repót és kurzust egy [fejlesztői konténerrel](https://containers.dev?WT.mc_id=academic-105485-koreyst) állítottuk be, amely univerzális futtatókörnyezetet biztosít Python3, .NET, Node.js és Java fejlesztéshez. A kapcsolódó konfiguráció a `devcontainer.json` fájlban van definiálva, amely a `.devcontainer/` mappában található a repó gyökerében.
+Ezt a repót és tanfolyamot egy [fejlesztői konténerrel](https://containers.dev?WT.mc_id=academic-105485-koreyst) állítottuk be, amely egy univerzális futtatókörnyezetet biztosít Python3, .NET, Node.js és Java fejlesztéshez. A kapcsolódó konfiguráció a `devcontainer.json` fájlban található, a `.devcontainer/` mappában, a repó gyökerében.
 
->**Miért válaszd ezt?**
->Ugyanaz a környezet, mint a Codespaces-ben; nincs függőségi eltérés.
+>**Miért válaszd ezt?**  
+>Ugyanaz a környezet, mint a Codespaces-ben; nincs függőségeltérés.
 
 ### 0. lépés Telepítsd a kiegészítőket
 
-Docker Desktop – ellenőrizd, hogy a ```docker --version``` működik.
+Docker Desktop – ellenőrizd, hogy a ```docker --version``` működik.  
 VS Code Remote – Containers bővítmény (ID: ms-vscode-remote.remote-containers).
 
 ### 1. lépés Nyisd meg a repót VS Code-ban
 
-Fájl ▸ Mappa megnyitása…  → generative-ai-for-beginners
+File ▸ Open Folder…  → generative-ai-for-beginners
 
-A VS Code érzékeli a .devcontainer/-t és felugró ablakot jelenít meg.
+A VS Code észleli a .devcontainer/ mappát és felugrik egy ablak.
 
-### 2. lépés Újraindítás konténerben
+### 2. lépés Nyisd meg újra a konténerben
 
-Kattints a “Reopen in Container” gombra. A Docker felépíti a képet (≈ 3 perc első alkalommal).
-Amikor megjelenik a terminál prompt, már a konténeren belül vagy.
+Kattints a „Reopen in Container” gombra. A Docker felépíti a képet (első alkalommal kb. 3 perc).  
+Amikor megjelenik a terminál prompt, bent vagy a konténerben.
 
-## 2. C opció – Miniconda
+## 2. Opció C – Miniconda
 
-A [Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) egy könnyű telepítő a [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python és néhány csomag telepítéséhez.
-A Conda egy csomagkezelő, amely megkönnyíti a különböző Python [**virtuális környezetek**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) és csomagok beállítását és váltását. Akkor is jól jön, ha olyan csomagot kell telepítened, ami `pip`-pel nem érhető el.
+A [Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) egy könnyű telepítő a [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python és néhány csomag telepítéséhez.  
+A Conda egy csomagkezelő, amely megkönnyíti különböző Python [**virtuális környezetek**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) és csomagok beállítását és váltását. Hasznos olyan csomagok telepítéséhez is, amelyek nem érhetők el `pip`-en keresztül.
 
-### 0. lépés  Telepítsd a Minicondát
+### 0. lépés Telepítsd a Minicondát
 
-Kövesd a [MiniConda telepítési útmutatót](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) a beállításhoz.
+Kövesd a [MiniConda telepítési útmutatót](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst).
 
 ```bash
 conda --version
 ```
 
-### 1. lépés Hozz létre virtuális környezetet
+### 1. lépés Hozz létre egy virtuális környezetet
 
-Hozz létre egy új környezetfájlt (*environment.yml*). Ha Codespaces-t használsz, ezt a `.devcontainer` könyvtárban hozd létre, tehát `.devcontainer/environment.yml`.
+Hozz létre egy új környezeti fájlt (*environment.yml*). Ha Codespaces-t használsz, hozd létre a `.devcontainer` könyvtárban, tehát `.devcontainer/environment.yml` néven.
 
-### 2. lépés  Töltsd fel a környezetfájlt
+### 2. lépés Töltsd fel a környezeti fájlt
 
-Add hozzá az alábbi kódrészletet az `environment.yml`-hez
+Add hozzá a következő részletet az `environment.yml` fájlhoz
 
 ```yml
 name: <environment-name>
@@ -111,25 +102,25 @@ dependencies:
 
 ```
 
-### 3. lépés Hozd létre a Conda környezetet
+### 3. lépés Hozd létre a Conda környezeted
 
 Futtasd az alábbi parancsokat a parancssorban/terminálban
 
 ```bash 
-conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer sub path applies to only Codespace setups
+conda env create --name ai4beg --file .devcontainer/environment.yml # A .devcontainer alkönyvtár csak a Codespace beállításokra vonatkozik
 conda activate ai4beg
 ```
 
-Ha problémába ütközöl, nézd meg a [Conda környezetek útmutatót](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst).
+Ha problémába ütközöl, nézd meg a [Conda környezetek útmutatóját](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst).
 
-## 2. D opció – Klasszikus Jupyter / Jupyter Lab (böngészőben)
+## 2. Opció D – Klasszikus Jupyter / Jupyter Lab (böngészőben)
 
 > **Kinek ajánlott?**  
-> Akik szeretik a klasszikus Jupyter felületet, vagy jegyzetfüzeteket akarnak futtatni VS Code nélkül.  
+> Akik szeretik a klasszikus Jupyter felületet, vagy VS Code nélkül szeretnének notebookokat futtatni.
 
-### 1. lépés  Ellenőrizd, hogy a Jupyter telepítve van
+### 1. lépés Győződj meg róla, hogy a Jupyter telepítve van
 
-A Jupyter helyi indításához nyisd meg a terminált/parancssort, navigálj a kurzus könyvtárába, és futtasd:
+A Jupyter helyi indításához nyisd meg a terminált/parancssort, navigálj a tanfolyam könyvtárába, és futtasd:
 
 ```bash
 jupyter notebook
@@ -141,22 +132,22 @@ vagy
 jupyterhub
 ```
 
-Ez elindít egy Jupyter példányt, és a hozzáférési URL megjelenik a parancssor ablakban.
+Ez elindít egy Jupyter példányt, és a hozzáférési URL megjelenik a parancssor ablakában.
 
-Az URL elérésével láthatod a kurzus felépítését, és navigálhatsz bármelyik `*.ipynb` fájlhoz. Például: `08-building-search-applications/python/oai-solution.ipynb`.
+Ha megnyitod az URL-t, látnod kell a tanfolyam vázlatát, és navigálhatsz bármely `*.ipynb` fájlhoz. Például: `08-building-search-applications/python/oai-solution.ipynb`.
 
 ## 3. Add hozzá az API kulcsaidat
 
-Az API kulcsok biztonságos tárolása nagyon fontos bármilyen alkalmazás fejlesztésekor. Nem ajánljuk, hogy az API kulcsokat közvetlenül a kódban tárold. Ha ezeket nyilvános repóba töltöd fel, biztonsági problémákhoz és akár nem kívánt költségekhez is vezethet, ha illetéktelenek használják fel.
-Íme egy lépésről-lépésre útmutató, hogyan hozhatsz létre `.env` fájlt Pythonhoz, és hogyan adhatod hozzá a `GITHUB_TOKEN`-t:
+Fontos, hogy az API kulcsaid biztonságban legyenek, amikor bármilyen alkalmazást építesz. Ajánlott, hogy ne tárold az API kulcsokat közvetlenül a kódban. Ha ezeket nyilvános repóba commitálod, az biztonsági problémákhoz és akár nem kívánt költségekhez is vezethet, ha rosszindulatú személy használja őket.  
+Íme egy lépésről lépésre útmutató, hogyan hozz létre egy `.env` fájlt Pythonhoz és hogyan add hozzá a `GITHUB_TOKEN`-t:
 
-1. **Navigálj a projekt könyvtáradba**: Nyisd meg a terminált vagy parancssort, és lépj arra a könyvtárra, ahol a `.env` fájlt létre szeretnéd hozni.
+1. **Navigálj a projekt könyvtáradba**: Nyisd meg a terminált vagy parancssort, és lépj be a projekt gyökérkönyvtárába, ahol létre szeretnéd hozni a `.env` fájlt.
 
    ```bash
    cd path/to/your/project
    ```
 
-2. **Hozd létre a `.env` fájlt**: Használd a kedvenc szövegszerkesztődet egy új `.env` nevű fájl létrehozásához. Parancssorból `touch` (Unix-alapú rendszereken) vagy `echo` (Windows-on):
+2. **Hozd létre a `.env` fájlt**: Használd a kedvenc szövegszerkesztődet egy új `.env` nevű fájl létrehozásához. Ha parancssort használsz, Unix-alapú rendszeren a `touch`, Windows-on az `echo` parancsot használhatod:
 
    Unix-alapú rendszerek:
 
@@ -170,61 +161,63 @@ Az API kulcsok biztonságos tárolása nagyon fontos bármilyen alkalmazás fejl
    echo . > .env
    ```
 
-3. **Szerkeszd a `.env` fájlt**: Nyisd meg a `.env` fájlt egy szövegszerkesztőben (pl. VS Code, Notepad++, vagy bármelyik másik). Írd be az alábbi sort, ahol a `your_github_token_here` helyére a saját GitHub tokenedet írd:
+3. **Szerkeszd a `.env` fájlt**: Nyisd meg a `.env` fájlt egy szövegszerkesztőben (pl. VS Code, Notepad++ vagy bármely más szerkesztő). Add hozzá a következő sort, a `your_github_token_here` helyére a saját GitHub tokenedet írva:
 
    ```env
    GITHUB_TOKEN=your_github_token_here
    ```
 
-4. **Mentsd el a fájlt**: Mentsd el a módosításokat, és zárd be a szerkesztőt.
+4. **Mentsd el a fájlt**: Mentsd el a változtatásokat és zárd be a szerkesztőt.
 
-5. **Telepítsd a `python-dotenv`-et**: Ha még nem tetted meg, telepítsd a `python-dotenv` csomagot, hogy a környezeti változókat a `.env` fájlból be tudd tölteni a Python alkalmazásodba. Telepítheted `pip`-pel:
+5. **Telepítsd a `python-dotenv` csomagot**: Ha még nem tetted meg, telepítened kell a `python-dotenv` csomagot, hogy a `.env` fájlból betölthesd a környezeti változókat a Python alkalmazásodba. Telepítheted a `pip` segítségével:
 
    ```bash
    pip install python-dotenv
    ```
 
-6. **Töltsd be a környezeti változókat a Python szkriptedben**: A Python szkriptedben a `python-dotenv` csomaggal töltheted be a `.env` fájlból a környezeti változókat:
+6. **Töltsd be a környezeti változókat a Python scriptedben**: A Python scriptedben használd a `python-dotenv` csomagot, hogy betöltsd a `.env` fájlban lévő környezeti változókat:
 
    ```python
    from dotenv import load_dotenv
    import os
 
-   # Load environment variables from .env file
+   # Környezeti változók betöltése a .env fájlból
    load_dotenv()
 
-   # Access the GITHUB_TOKEN variable
+   # A GITHUB_TOKEN változó elérése
    github_token = os.getenv("GITHUB_TOKEN")
 
    print(github_token)
    ```
 
-Ennyi! Sikeresen létrehoztad a `.env` fájlt, hozzáadtad a GitHub tokenedet, és betöltötted azt a Python alkalmazásodba.
+Ennyi! Sikeresen létrehoztál egy `.env` fájlt, hozzáadtad a GitHub tokenedet, és betöltötted a Python alkalmazásodba.
 
-🔐 Soha ne töltsd fel a .env fájlt—már benne van a .gitignore-ban.
-A teljes szolgáltatói útmutató a [`providers.md`](03-providers.md) fájlban található.
+🔐 Soha ne commitáld a .env fájlt — már benne van a .gitignore-ban.  
+A szolgáltatók teljes útmutatói a [`providers.md`](03-providers.md) fájlban találhatók.
 
-## 4. Hogyan tovább?
+## 4. Mi a következő lépés?
 
-| Ezt szeretném…      | Menj ide…                                                                |
-|---------------------|--------------------------------------------------------------------------|
-| Első lecke indítása | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)      |
-| LLM szolgáltató beállítása | [`providers.md`](03-providers.md)                                  |
-| Találkozz más tanulókkal | [Csatlakozz a Discordhoz](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) |
+| Mit szeretnék…       | Ugrás ide…                                                             |
+|---------------------|------------------------------------------------------------------------|
+| Kezdeni az 1. leckét | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)    |
+| Beállítani egy LLM szolgáltatót | [`providers.md`](03-providers.md)                              |
+| Megismerni más tanulókat | [Csatlakozz a Discord szerverünkhöz](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) |
 
 ## 5. Hibakeresés
 
-| Tünet                                      | Megoldás                                                        |
-|--------------------------------------------|-----------------------------------------------------------------|
-| `python not found`                         | Add hozzá a Python-t a PATH-hoz, vagy indítsd újra a terminált  |
-| `pip` nem tud kerekeket építeni (Windows)  | `pip install --upgrade pip setuptools wheel` majd próbáld újra. |
-| `ModuleNotFoundError: dotenv`              | Futtasd: `pip install -r requirements.txt` (a környezet nem volt telepítve). |
-| Docker build hibát ad *Nincs hely*         | Docker Desktop ▸ *Beállítások* ▸ *Erőforrások* → növeld a lemez méretét. |
-| VS Code folyamatosan újranyitást kér       | Lehet, hogy mindkét opció aktív; válassz egyet (venv **vagy** konténer)|
-| OpenAI 401 / 429 hibák                     | Ellenőrizd az `OPENAI_API_KEY` értékét / kérés limitet.         |
-| Hibák Conda használatakor                  | Telepítsd a Microsoft AI könyvtárakat: `conda install -c microsoft azure-ai-ml`|
+| Tünet                                    | Megoldás                                                        |
+|------------------------------------------|----------------------------------------------------------------|
+| `python not found`                       | Add hozzá a Pythont a PATH-hoz vagy nyisd meg újra a terminált telepítés után |
+| `pip` nem tud kereket építeni (Windows) | Futtasd: `pip install --upgrade pip setuptools wheel`, majd próbáld újra. |
+| `ModuleNotFoundError: dotenv`            | Futtasd: `pip install -r requirements.txt` (a környezet nem volt telepítve). |
+| Docker build hibák *Nincs hely*           | Docker Desktop ▸ *Settings* ▸ *Resources* → növeld a lemezméretet. |
+| VS Code folyton újranyitásra kér          | Lehet, hogy mindkét opció aktív; válassz egyet (venv **vagy** konténer) |
+| OpenAI 401 / 429 hibák                   | Ellenőrizd az `OPENAI_API_KEY` értékét / kéréskorlátokat.       |
+| Hibák Conda használatakor                | Telepítsd a Microsoft AI könyvtárakat: `conda install -c microsoft azure-ai-ml` |
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Jogi nyilatkozat**:
-Ez a dokumentum AI fordítási szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasoljuk a professzionális, emberi fordítást. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy félreértelmezésekért.
+Ezt a dokumentumot az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével fordítottuk le. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén professzionális emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy félreértelmezésekért.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

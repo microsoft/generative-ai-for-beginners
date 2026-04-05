@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-07-09T16:28:46+00:00",
-  "source_file": "15-rag-and-vector-databases/data/frameworks.md",
-  "language_code": "bn"
-}
--->
 # নিউরাল নেটওয়ার্ক ফ্রেমওয়ার্কস
 
 আমরা ইতিমধ্যে শিখেছি, নিউরাল নেটওয়ার্ক দক্ষতার সঙ্গে ট্রেন করার জন্য আমাদের দুইটি কাজ করতে হয়:

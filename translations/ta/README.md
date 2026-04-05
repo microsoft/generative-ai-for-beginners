@@ -1,170 +1,189 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "d90bfd4a5d8b43f1d616dbc6e9dc8342",
-  "translation_date": "2025-11-12T08:46:53+00:00",
-  "source_file": "README.md",
-  "language_code": "ta"
-}
--->
-![தொடக்கத்திற்கான ஜெனரேட்டிவ் AI](../../translated_images/repo-thumbnailv4-fixed.11f1ce6a85d01461c33c11943bb61f2b6d6dcce3a3b25cd27e627031f41f8e00.ta.png)
+![புதிய தலைமுறையி ஆற்றல் கற்கும் தொடக்கத்தினருக்கான இடைமுகம்](../../translated_images/ta/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
-### ஜெனரேட்டிவ் AI பயன்பாடுகளை உருவாக்க தொடங்க தேவையான அனைத்தையும் கற்றுத்தரும் 21 பாடங்கள்
+### 21 பாடங்கள், புதுமையான செயற்கை நுண்ணறிவு பயன்பாடுகளை தொடங்கத் தேவையான அனைத்தையும் கற்றுக் கொள்ள
 
 [![GitHub உரிமம்](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)
 [![GitHub பங்களிப்பாளர்கள்](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
 [![GitHub பிரச்சினைகள்](https://img.shields.io/github/issues/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/issues/?WT.mc_id=academic-105485-koreyst)
-[![GitHub pull-requests](https://img.shields.io/github/issues-pr/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/pulls/?WT.mc_id=academic-105485-koreyst)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com?WT.mc_id=academic-105485-koreyst)
+[![GitHub இழுக்க-மறுப்புக்கள்](https://img.shields.io/github/issues-pr/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/pulls/?WT.mc_id=academic-105485-koreyst)
+[![எதிர்பார்க்கப்படும் PRகள்](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com?WT.mc_id=academic-105485-koreyst)
 
-[![GitHub watchers](https://img.shields.io/github/watchers/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Watch)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/watchers/?WT.mc_id=academic-105485-koreyst)
-[![GitHub forks](https://img.shields.io/github/forks/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/network/?WT.mc_id=academic-105485-koreyst)
-[![GitHub stars](https://img.shields.io/github/stars/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/stargazers/?WT.mc_id=academic-105485-koreyst)
+[![GitHub கண்காணிப்பாளர்கள்](https://img.shields.io/github/watchers/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Watch)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/watchers/?WT.mc_id=academic-105485-koreyst)
+[![GitHub கலப்பைகள்](https://img.shields.io/github/forks/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/network/?WT.mc_id=academic-105485-koreyst)
+[![GitHub நட்சத்திரங்கள்](https://img.shields.io/github/stars/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/stargazers/?WT.mc_id=academic-105485-koreyst)
 
-[![](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
+[![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-### 🌐 பல மொழி ஆதரவு
+### 🌐 பன்மொழி ஆதரவு
 
-#### GitHub செயல்பாடு மூலம் ஆதரவு (தானியங்கி மற்றும் எப்போதும் புதுப்பிக்கப்பட்டது)
+#### GitHub செயல்பாட்டின் மூலம் ஆதரிக்கப்படுகிறது (தானியங்கி மற்றும் எப்போதும் புதுப்பிக்கப்பட்டது)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[அரபு](../ar/README.md) | [பெங்காலி](../bn/README.md) | [புல்கேரியன்](../bg/README.md) | [பர்மீஸ் (மியான்மர்)](../my/README.md) | [சீனம் (எளிமைப்படுத்தப்பட்டது)](../zh/README.md) | [சீனம் (சம்பிரதாயம், ஹாங்காங்)](../hk/README.md) | [சீனம் (சம்பிரதாயம், மக்காவு)](../mo/README.md) | [சீனம் (சம்பிரதாயம், தைவான்)](../tw/README.md) | [குரோஷியன்](../hr/README.md) | [செக்](../cs/README.md) | [டேனிஷ்](../da/README.md) | [டச்சு](../nl/README.md) | [எஸ்டோனியன்](../et/README.md) | [பின்னிஷ்](../fi/README.md) | [பிரெஞ்சு](../fr/README.md) | [ஜெர்மன்](../de/README.md) | [கிரேக்கம்](../el/README.md) | [ஹீப்ரு](../he/README.md) | [இந்தி](../hi/README.md) | [ஹங்கேரியன்](../hu/README.md) | [இந்தோனேஷியன்](../id/README.md) | [இத்தாலியன்](../it/README.md) | [ஜப்பானியன்](../ja/README.md) | [கொரியன்](../ko/README.md) | [லிதுவேனியன்](../lt/README.md) | [மலாய்](../ms/README.md) | [மராத்தி](../mr/README.md) | [நேபாளி](../ne/README.md) | [நைஜீரியன் பிட்ஜின்](../pcm/README.md) | [நார்வேஜியன்](../no/README.md) | [பெர்ஷியன் (பார்ஸி)](../fa/README.md) | [போலிஷ்](../pl/README.md) | [போர்ச்சுகீஸ் (பிரேசில்)](../br/README.md) | [போர்ச்சுகீஸ் (போர்ச்சுகல்)](../pt/README.md) | [பஞ்சாபி (குர்முகி)](../pa/README.md) | [ரோமானியன்](../ro/README.md) | [ரஷியன்](../ru/README.md) | [செர்பியன் (சிரிலிக்)](../sr/README.md) | [ஸ்லோவாக்](../sk/README.md) | [ஸ்லோவேனியன்](../sl/README.md) | [ஸ்பானிஷ்](../es/README.md) | [ஸ்வாஹிலி](../sw/README.md) | [ஸ்வீடிஷ்](../sv/README.md) | [டாகாலோக் (பிலிப்பினோ)](../tl/README.md) | [தமிழ்](./README.md) | [தாய்](../th/README.md) | [துருக்கிய](../tr/README.md) | [உக்ரேனியன்](../uk/README.md) | [உருது](../ur/README.md) | [வியட்நாமீஸ்](../vi/README.md)
+[அரபிக்](../ar/README.md) | [பெங்காலி](../bn/README.md) | [பல்கேரியம்](../bg/README.md) | [பர்மீஸ் (மியான்மார்)](../my/README.md) | [சீனம் (எளிமைப்படுத்தப்பட்ட)](../zh-CN/README.md) | [சீனம் (பாரம்பரிய, ஹாங்காங்)](../zh-HK/README.md) | [சீனம் (பாரம்பரிய, மகாவி)](../zh-MO/README.md) | [சீனம் (பாரம்பரிய, தைவான்)](../zh-TW/README.md) | [குரோஷியன்](../hr/README.md) | [செக்](../cs/README.md) | [டேனிஷ்](../da/README.md) | [டச்சு](../nl/README.md) | [எஸ்டோனியன்](../et/README.md) | [பின்னிஷ்](../fi/README.md) | [பிரஞ்சு](../fr/README.md) | [ஜெர்மன்](../de/README.md) | [கிரேக்க](../el/README.md) | [ஹீப்ரூ](../he/README.md) | [இந்தி](../hi/README.md) | [ஹங்கேரியன்](../hu/README.md) | [இந்தோனீசியன்](../id/README.md) | [இத்தாலியன்](../it/README.md) | [ஜப்பானியன்](../ja/README.md) | [கன்னடம்](../kn/README.md) | [கொரியன்](../ko/README.md) | [லிதுவேனியன்](../lt/README.md) | [மலாய்](../ms/README.md) | [மலையாளம்](../ml/README.md) | [மராத்தி](../mr/README.md) | [நேபாளி](../ne/README.md) | [நைஜீரியன் பிட்ஜின்](../pcm/README.md) | [நோர்வேஜியன்](../no/README.md) | [பெர்சியன் (ஃபார்சி)](../fa/README.md) | [போலிஷ்](../pl/README.md) | [போர்ச்சுகீஸ் (பிரேசில்)](../pt-BR/README.md) | [போர்ச்சுகீஸ் (போர்ச்சுகல்)](../pt-PT/README.md) | [பஞ்ஜாபி (குருமுகி)](../pa/README.md) | [ருமேனியன்](../ro/README.md) | [ரஷ்யன்](../ru/README.md) | [செர்பியன் (சிரீலிக்)](../sr/README.md) | [ஸ்லோவாக்](../sk/README.md) | [ஸ்லோவீனியன்](../sl/README.md) | [ஸ்பானிஷ்](../es/README.md) | [ஸ்வாஹிலி](../sw/README.md) | [ஸ்வீடிஷ்](../sv/README.md) | [டாகலாக் (பிலிப்பைனோ)](../tl/README.md) | [தமிழ்](./README.md) | [தெலுங்கு](../te/README.md) | [தை](../th/README.md) | [துருக்கிஷ்](../tr/README.md) | [உக்ரைனியன்](../uk/README.md) | [உருதி](../ur/README.md) | [வியட்நாமீஸ்](../vi/README.md)
+
+> **உள்ளூர் நகலை விரும்புகிறீர்களா?**
+>
+> இந்த रिपॉजிடோரியில் 50+ மொழி மொழிபெயர்ப்புகள் உள்ளன, இது பதிவிறக்க அளவைக் குறிப்பிடத்தக்கவாறு அதிகரிக்கிறது. மொழிபெயர்ப்புகளை இல்லாமல் நகலை பெற sparse checkout பயன்படுத்தவும்:
+>
+> **Bash / macOS / Linux:**
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/generative-ai-for-beginners.git
+> cd generative-ai-for-beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+>
+> **CMD (Windows):**
+> ```cmd
+> git clone --filter=blob:none --sparse https://github.com/microsoft/generative-ai-for-beginners.git
+> cd generative-ai-for-beginners
+> git sparse-checkout set --no-cone "/*" "!translations" "!translated_images"
+> ```
+>
+> இது உங்கள் کور்ஸை முடிக்க தேவையான அனைத்தையும் விரைவான பதிவிறக்கம் மூலம் வழங்கும்.
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-# தொடக்கத்திற்கான ஜெனரேட்டிவ் AI (பதிப்பு 3) - ஒரு பாடநெறி
+# ஆரம்ப நிலை புதுமையான செயற்கை நுண்ணறிவு (பதிப்பு 3) - ஒரு பாடநெறி
 
-Microsoft Cloud Advocates வழங்கும் 21 பாடங்களுடன் ஜெனரேட்டிவ் AI பயன்பாடுகளை உருவாக்க அடிப்படைகளை கற்றுக்கொள்ளுங்கள்.
+மைக்ரோசாஃப்ட் கிளவுட் ஆதரவாளர்களால் வழங்கப்படும் 21 பாடங்களின் முழுமையான பாடநெறியுடன் புதுமையான செயற்கை நுண்ணறிவு பயன்பாடுகளை உருவாக்குவதின் அடிப்படைகளை கற்றுக் கொள்ளுங்கள்.
 
-## 🌱 தொடங்குதல்
+## 🌱 துவக்கம்
 
-இந்த பாடநெறியில் 21 பாடங்கள் உள்ளன. ஒவ்வொரு பாடமும் தனித்துவமான தலைப்பை உள்ளடக்கியது, எனவே உங்களுக்கு விருப்பமான இடத்தில் தொடங்கலாம்!
+இந்த பாடநெறியில் 21 பாடங்கள் உள்ளன. ஒவ்வொரு பாடமும் தன்னுடைய தலைப்பை உள்ளடக்குகிறது; எனவே உங்கள் விருப்பப்படி எங்கே வேண்டுமானாலும் துவங்குங்கள்!
 
-பாடங்கள் "கற்றல்" பாடங்களாகவும், ஜெனரேட்டிவ் AI கருத்துக்களை விளக்குவதற்கான பாடங்களாகவும், "உருவாக்கல்" பாடங்களாகவும், Python மற்றும் TypeScript ஆகியவற்றில் கோடுகள் உதாரணங்களுடன் விளக்கப்படும்.
+பாடங்கள் "கற்று" பாடங்கள் அல்லது ஒரு புதுமையான செயற்கை நுண்ணறிவு கருத்தை விளக்கும் "செய்" பாடங்கள் என்று வகைப்படுத்தப்பட்டுள்ளது. "செய்" பாடங்களில் கூடுதலாக **Python** மற்றும் **TypeScript** இரண்டிலும் குறியீட்டு உதாரணங்கள் உண்டு.
 
-.NET டெவலப்பர்களுக்கு [Generative AI for Beginners (.NET Edition)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst) பார்க்கவும்!
+.NET மென்பொருள் உருவாக்குனர்களுக்கு [Generative AI for Beginners (.NET பதிப்பு)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst) பார்க்கவும்!
 
-ஒவ்வொரு பாடமும் கூடுதல் கற்றல் கருவிகளுடன் "கற்றல் தொடரவும்" பகுதியை உள்ளடக்கியது.
+ஒவ்வொரு பாடத்திலும் கூடுதல் கற்றல் கருவிகள் கொண்ட "கற்றுக்கொள்" பகுதியும் உள்ளது.
 
-## உங்களுக்கு தேவையானவை
-### இந்த பாடநெறியின் கோடுகளை இயக்க, நீங்கள் பயன்படுத்தலாம்:
- - [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **பாடங்கள்:** "aoai-assignment"
- - [GitHub Marketplace Model Catalog](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **பாடங்கள்:** "githubmodels"
- - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **பாடங்கள்:** "oai-assignment" 
+## நீங்கள் என்ன தேவை
+### இந்த பாடநெறியின் குறியீட்டை இயக்க, நீங்கள் இதையாவது பயன்படுத்தலாம்:
+ - [Azure OpenAI சேவை](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **பாடங்கள்:** "aoai-assignment"
+ - [GitHub மார்க்கெட் பிளேஸ் மாடல் பட்டியல்](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **பாடங்கள்:** "githubmodels"
+ - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **பாடங்கள்:** "oai-assignment"
+   
+- Python அல்லது TypeScript அடிப்படைக் அறிவு உதவும் - *முழுமையான முறையில் புதியவர்களுக்கு இந்த [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) மற்றும் [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst) பாடநெறிகளை பார்க்கவும்
+- உங்கள் சொந்த GitHub கணக்கிற்கு முழுமையான இந்த repoவை [fork செய்ய](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) ஒரு GitHub கணக்கு
 
-- Python அல்லது TypeScript பற்றிய அடிப்படை அறிவு உதவியாக இருக்கும் - \*முழுமையான தொடக்கர்களுக்கு [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) மற்றும் [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst) பாடநெறிகளை பார்க்கவும்
-- [இந்த முழு ரெப்போவை](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) உங்கள் GitHub கணக்கிற்கு fork செய்ய GitHub கணக்கு
+உங்கள் உருவாக்க வரையறையை அமைக்க உதவ **[பாடநெறித் தொடக்கம்](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** பாடத்தை உருவாக்கியுள்ளோம்.
 
-உங்கள் டெவலப்மென்ட் சூழலை அமைக்க உதவ **[Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** பாடத்தை உருவாக்கியுள்ளோம்.
+பின்னர் எளிதில் காண, இந்த repoவை [நட்சத்திரம் கொடுக்க (🌟)](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) மறக்காதீர்கள்.
 
-இந்த ரெப்போவை [நட்சத்திரமாக (🌟)](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) சேமிக்க மறக்காதீர்கள், பின்னர் எளிதாக கண்டுபிடிக்க.
+## 🧠 செயல்படுத்த தயாரா?
 
-## 🧠 வெளியிட தயாரா?
+மேலும் மேம்பட்ட குறியீட்டு உதாரணங்களுக்காக, எங்கள் [புதுமையான செயற்கை நுண்ணறிவு குறியீட்டு உதாரணங்கள் தொகுப்பை](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) Python மற்றும் TypeScript இரண்டிலும் பாருங்கள்.
 
-மேலும் மேம்பட்ட கோடு மாதிரிகளை தேடுகிறீர்களா? Python மற்றும் TypeScript ஆகியவற்றில் **[Generative AI Code Samples](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)** தொகுப்பை பார்க்கவும்.
+## 🗣️ மற்ற கற்றுக்கொண்டவர்களை சந்திக்கவும், ஆதரவு பெறவும்
 
-## 🗣️ மற்ற கற்றலாளர்களை சந்திக்கவும், ஆதரவு பெறவும்
+இந்த பாடநெறியை கற்று கொண்ட மற்றவர்களை சந்தித்து உறவுப்பாடு நிறுவ [அமேசான் Azure AI Foundry Discord சேவையகம்](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) இல் சேருங்கள்.
 
-இந்த பாடநெறியை எடுத்துக்கொள்கிற மற்ற கற்றலாளர்களை சந்திக்கவும், நெட்வொர்க் செய்யவும், ஆதரவு பெறவும் [Azure AI Foundry Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) இணையுங்கள்.
+எங்கள் [Azure AI Foundry Developer Forum](https://aka.ms/azureaifoundry/forum) இல் கேள்விகள் கேளவும் அல்லது தயாரிப்பு கருத்துக்களை பகிரவும்.
 
-கேள்விகளை கேட்கவும் அல்லது தயாரிப்பு கருத்துகளை [Azure AI Foundry Developer Forum](https://aka.ms/azureaifoundry/forum) இல் Github-ல் பகிரவும்.
+## 🚀 ஒரு ஸ்டார்ட்அப் கட்ட வேண்டும் என்று நினைக்கிறீர்களா?
 
-## 🚀 ஸ்டார்ட்அப் உருவாக்குகிறீர்களா?
-
-இன்று Azure credits உடன் உருவாக்க தொடங்க [Microsoft for Startups](https://www.microsoft.com/startups) பார்வையிடவும்.
+இன்றே Azure கிரெடிட்களைப் பயன்படுத்தி எப்படி தொடங்குவது என்பதை அறிய [Microsoft for Startups](https://www.microsoft.com/startups) ஐ பார்வையிடவும்.
 
 ## 🙏 உதவ விரும்புகிறீர்களா?
 
-உங்களிடம் பரிந்துரைகள் உள்ளனவா அல்லது எழுத்துப்பிழைகள் அல்லது கோடு பிழைகளை கண்டுபிடித்தீர்களா? [Raise an issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) அல்லது [Create a pull request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
+உங்களுக்கு யாராவது பரிந்துரைகள் அல்லது எழுத்துப்பிழைகள், குறியீடு பிழைகள் இருந்தால்? [ஒரு பிரச்சினையை எழுப்பவும்](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) அல்லது [ஒரு pull request உருவாக்கவும்](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
 
-## 📂 ஒவ்வொரு பாடமும் உள்ளடக்கியது:
+## 📂 ஒவ்வொரு பாடமும் கீழ்கண்டவற்றை உள்ளடக்குகிறது:
 
-- தலைப்பிற்கான குறுகிய வீடியோ அறிமுகம்
-- README-ல் உள்ள எழுத்து பாடம்
-- Azure OpenAI மற்றும் OpenAI API-ஐ ஆதரிக்கும் Python மற்றும் TypeScript கோடு மாதிரிகள்
+- தலைப்பிற்கு ஒரு சுருக்கமான வீடியோ அறிமுகம்
+- README இல் உள்ள எழுத்துப்பாடம்
+- Azure OpenAI மற்றும் OpenAI API க்கு ஆதரவான Python மற்றும் TypeScript குறியீட்டு உதாரணங்கள்
 - உங்கள் கற்றலை தொடர கூடுதல் வளங்களுக்கான இணைப்புகள்
 
 ## 🗃️ பாடங்கள்
 
-| #   | **பாட இணைப்பு**                                                                                                                              | **விளக்கம்**                                                                                 | **வீடியோ**                                                                   | **கூடுதல் கற்றல்**                                                             |
-| --- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 00  | [Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                 | **கற்றல்:** உங்கள் டெவலப்மென்ட் சூழலை அமைப்பது                                            | வீடியோ விரைவில் வரும்                                                                 | [மேலும் கற்றல்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 01  | [Introduction to Generative AI and LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **கற்றல்:** ஜெனரேட்டிவ் AI என்ன மற்றும் பெரிய மொழி மாதிரிகள் (LLMs) எப்படி வேலை செய்கின்றன என்பதை புரிந்துகொள்வது       | [வீடியோ](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் கற்றல்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 02  | [Exploring and comparing different LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)             | **கற்றல்:** உங்கள் பயன்பாட்டு வழக்கிற்கான சரியான மாதிரியை தேர்வு செய்வது                                      | [வீடியோ](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [மேலும் கற்றல்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 03  | [Using Generative AI Responsibly](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                           | **கற்றல்:** ஜெனரேட்டிவ் AI பயன்பாடுகளை பொறுப்புடன் உருவாக்குவது                                  | [வீடியோ](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [மேலும் கற்றல்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 04  | [Understanding Prompt Engineering Fundamentals](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **கற்றல்:** ப்ராம்ப்ட் என்ஜினியரிங் சிறந்த நடைமுறைகளை கையாண்டு செயல்படுவது                                           | [வீடியோ](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [மேலும் கற்றல்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 05  | [மேம்பட்ட ப்ராம்ப்ட்களை உருவாக்குதல்](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **கற்றுக்கொள்ளுங்கள்:** உங்கள் ப்ராம்ப்ட்களின் முடிவுகளை மேம்படுத்தும் ப்ராம்ப்ட் இன்ஜினியரிங் தொழில்நுட்பங்களை எப்படி பயன்படுத்துவது. | [வீடியோ](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [மேலும் அறிக](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 06  | [உரை உருவாக்க பயன்பாடுகளை உருவாக்குதல்](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **உருவாக்குங்கள்:** Azure OpenAI / OpenAI API பயன்படுத்தி ஒரு உரை உருவாக்க பயன்பாடு                                | [வீடியோ](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [மேலும் அறிக](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 07  | [அரட்டை பயன்பாடுகளை உருவாக்குதல்](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **உருவாக்குங்கள்:** அரட்டை பயன்பாடுகளை திறமையாக உருவாக்க மற்றும் ஒருங்கிணைக்கும் தொழில்நுட்பங்கள்.               | [வீடியோ](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் அறிக](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 08  | [தேடல் பயன்பாடுகள் மற்றும் வெக்டர் தரவுத்தொகுப்புகள்](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **உருவாக்குங்கள்:** தரவுகளை தேடுவதற்கு எம்பெடிங்குகளை பயன்படுத்தும் தேடல் பயன்பாடு                        | [வீடியோ](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [மேலும் அறிக](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 09  | [பட உருவாக்க பயன்பாடுகளை உருவாக்குதல்](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **உருவாக்குங்கள்:** ஒரு பட உருவாக்க பயன்பாடு                                                       | [வீடியோ](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [மேலும் அறிக](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 10  | [குறைந்த குறியீடு AI பயன்பாடுகளை உருவாக்குதல்](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **உருவாக்குங்கள்:** குறைந்த குறியீடு கருவிகளை பயன்படுத்தி ஒரு ஜெனரேட்டிவ் AI பயன்பாடு                                     | [வீடியோ](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் அறிக](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 11  | [வெளியக பயன்பாடுகளை செயல்பாட்டு அழைப்புடன் ஒருங்கிணைத்தல்](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **உருவாக்குங்கள்:** செயல்பாட்டு அழைப்பின் பயன்பாடுகள் மற்றும் பயன்பாடுகளுக்கான அதன் பயன்பாடுகள்                          | [வீடியோ](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் அறிக](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 12  | [AI பயன்பாடுகளுக்கான UX வடிவமைத்தல்](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **கற்றுக்கொள்ளுங்கள்:** ஜெனரேட்டிவ் AI பயன்பாடுகளை உருவாக்கும்போது UX வடிவமைப்பு கொள்கைகளை எப்படி பயன்படுத்துவது         | [வீடியோ](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் அறிக](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 13  | [உங்கள் ஜெனரேட்டிவ் AI பயன்பாடுகளை பாதுகாப்பது](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **கற்றுக்கொள்ளுங்கள்:** AI அமைப்புகளுக்கு உள்ள ஆபத்துகள் மற்றும் அவற்றை பாதுகாப்பதற்கான முறைகள்.             | [வீடியோ](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் அறிக](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 14  | [ஜெனரேட்டிவ் AI பயன்பாடுகளின் வாழ்க்கைச் சுழற்சி](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)           | **கற்றுக்கொள்ளுங்கள்:** LLM வாழ்க்கைச் சுழற்சியை மற்றும் LLMOps நிர்வகிக்க கருவிகள் மற்றும் அளவீடுகள்                         | [வீடியோ](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் அறிக](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 15  | [Retrieval Augmented Generation (RAG) மற்றும் வெக்டர் தரவுத்தொகுப்புகள்](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **உருவாக்குங்கள்:** RAG Framework பயன்படுத்தி வெக்டர் தரவுத்தொகுப்புகளில் இருந்து எம்பெடிங்குகளை பெறும் பயன்பாடு  | [வீடியோ](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் அறிக](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 16  | [திறந்த மூல மாதிரிகள் மற்றும் Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **உருவாக்குங்கள்:** Hugging Face-ல் கிடைக்கும் திறந்த மூல மாதிரிகளை பயன்படுத்தி ஒரு பயன்பாடு                    | [வீடியோ](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் அறிக](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 17  | [AI முகவர்கள்](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **உருவாக்குங்கள்:** AI Agent Framework பயன்படுத்தி ஒரு பயன்பாடு                                           | [வீடியோ](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் அறிக](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 18  | [LLMs-ஐ நன்றாக அமைத்தல்](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **கற்றுக்கொள்ளுங்கள்:** LLMs-ஐ நன்றாக அமைப்பதன் முக்கியத்துவம், காரணங்கள் மற்றும் செயல்முறை                                            | [வீடியோ](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் அறிக](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 19  | [SLMs-ஐ பயன்படுத்தி உருவாக்குதல்](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **கற்றுக்கொள்ளுங்கள்:** சிறிய மொழி மாதிரிகளை பயன்படுத்துவதன் நன்மைகள்                                            | வீடியோ விரைவில் | [மேலும் அறிக](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 20  | [Mistral மாதிரிகளை பயன்படுத்தி உருவாக்குதல்](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **கற்றுக்கொள்ளுங்கள்:** Mistral குடும்ப மாதிரிகளின் அம்சங்கள் மற்றும் வேறுபாடுகள்                                           | வீடியோ விரைவில் | [மேலும் அறிக](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 21  | [Meta மாதிரிகளை பயன்படுத்தி உருவாக்குதல்](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **கற்றுக்கொள்ளுங்கள்:** Meta குடும்ப மாதிரிகளின் அம்சங்கள் மற்றும் வேறுபாடுகள்                                           | வீடியோ விரைவில் | [மேலும் அறிக](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| #   | **பாட வழிசெலுத்தல்**                                                                                                                              | **விவரம்**                                                                                    | **வீடியோ**                                                                 | **கூடுதல் கற்றல்**                                                            |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| 00  | [பாடநெறி அமைப்பு](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                | **கற்று:** உங்கள் உருவாக்க சூழலை எவ்வாறு அமைப்பது                                         | வீடியோ விரைவில் வரும்                                                            | [மேலும் கற்று கொள்ள](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 01  | [புதுமையான செயற்கை நுண்ணறிவு மற்றும் LLMகளை அறிமுகம்](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                    | **கற்று:** புதுமையான செயற்கை நுண்ணறிவு என்றால் என்ன மற்றும் பெரிய மொழி மாதிரிகள் (LLMs) எப்படி செயல்படுகின்றன என்பதைப் புரிந்துகொள் | [வீடியோ](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst)  | [மேலும் கற்று கொள்ள](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 02  | [விரும்பிய LLMகளை ஆய்வு செய்க மற்றும் ஒப்பிடுக](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)         | **கற்று:** உங்கள் பயன்பாட்டுக்கான சரியான மாதிரியை எப்படி தேர்வு செய்வது                   | [வீடியோ](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [மேலும் கற்று கொள்ள](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 03  | [புதுமையான செயற்கை நுண்ணறிவைப் பொறுப்புடன் பயன்படுத்துதல்](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)        | **கற்று:** பொறுப்புடன் புதுமையான செயற்கை நுண்ணறிவு பயன்பாடுகளை எப்படி உருவாக்குவது          | [வீடியோ](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [மேலும் கற்று கொள்ள](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 04  | [பிராம்ட் பொறியியல் அடிப்படைகளைப் புரிந்துகொள்ளுதல்](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **கற்க:** கையில் செய்யக்கூடிய பிராம்ட் பொறியியல் சிறந்த நடைமுறைகள்                                           | [வீடியோ](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [மேலும் கற்றுக்கொள்ளவும்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 05  | [உன்னத பிராம்ட்களை உருவாக்குதல்](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **கற்க:** உங்கள் பிராம்ட்களின் முடிவை மேம்படுத்தும் பிராம்ட் பொறியியல் தொழில்நுட்பங்களை எப்படி பயன்படுத்துவது. | [வீடியோ](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [மேலும் கற்றுக்கொள்ளவும்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 06  | [உரையாக்கல் செயலிகளை உருவாக்குதல்](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **உரு:** Azure OpenAI / OpenAI API பயன்படுத்தி ஒரு உரையாக்கல் செயலியை உருவாக்குதல்                                | [வீடியோ](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [மேலும் கற்றுக்கொள்ளவும்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 07  | [அரட்டைத்தொடர்பு செயலிகளை உருவாக்குதல்](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **உரு:** அரட்டைத்தொடர்பு செயலிகளை திறம்பட கட்டி ஒருங்கிணைக்கும் தொழில்நுட்பங்கள்.               | [வீடியோ](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் கற்றுக்கொள்ளவும்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 08  | [தேடலை கட்டுப்படுத்தும் செயலிகள் மற்றும் வெக்டர் தரவுத்தளங்கள் உருவாக்குதல்](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **உரு:** தரவுகளை தேட எம்பெடிங்குகளை பயன்படுத்தும் தேடல் செயலி.                        | [வீடியோ](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [மேலும் கற்றுக்கொள்ளவும்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 09  | [படம் உருவாக்கும் செயலிகளை உருவாக்குதல்](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **உரு:** ஒரு படம் உருவாக்கும் செயலி                                                       | [வீடியோ](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [மேலும் கற்றுக்கொள்ளவும்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 10  | [குறைந்த கோட் AI செயலிகளை உருவாக்குதல்](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **உரு:** குறைந்த கோட் கருவிகள் பயன்படுத்தி ஒரு உருவாக்கும் AI செயலி                                     | [வீடியோ](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் கற்றுக்கொள்ளவும்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 11  | [வெளியிடப்பயன்பாடுகளை செயல்பாடுகளுடன் இணைத்தல்](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **உரு:** செயல்பாடு அழைப்புகளின் பயன்கள் மற்றும் பயன்படுத்தும் வழிகள்                          | [வீடியோ](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் கற்றுக்கொள்ளவும்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 12  | [AI செயலிகளுக்கான UX வடிவமைப்பு](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **கற்க:** உருவாக்கும் AI செயலிகளுக்கான UX வடிவமைப்பு 원칙ங்களை பயன்படுத்துவது         | [வீடியோ](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் கற்றுக்கொள்ளவும்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 13  | [உங்கள் உருவாக்கும் AI செயலிகளை பாதுகாப்பது](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **கற்க:** AI அமைப்புகளுக்கு உள்ள அச்சுறுத்தல்கள் மற்றும் பாதுகாப்பு முறைகள்.             | [வீடியோ](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் கற்றுக்கொள்ளவும்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 14  | [உருவாக்கும் AI செயலி வாழ்நாள் சுழற்சி](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)           | **கற்க:** LLM வாழ்நாள் சுழற்சியை மற்றும் LLMOps-ஐ பராமரிக்கும் கருவிகள் மற்றும் அளவுகோல்கள்                         | [வீடியோ](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் கற்றுக்கொள்ளவும்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 15  | [Retrieval Augmented Generation (RAG) மற்றும் வெக்டர் தரவுத்தளங்கள்](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **உரு:** வெக்டர் தரவுத்தளங்களில் இருந்து எம்பெடிங்குகளை மீட்டெடுக்க RAG கட்டமைப்பைப் பயன்படுத்தும் செயலி  | [வீடியோ](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் கற்றுக்கொள்ளவும்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 16  | [திறந்த மூல மாதிரிகள் மற்றும் Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **உரு:** Hugging Face-ல் கிடைக்கும் திறந்த மூல மாதிரிகளை பயன்படுத்தும் செயலி                    | [வீடியோ](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் கற்றுக்கொள்ளவும்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 17  | [AI முகவர்கள்](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **உரு:** AI முகவர் கட்டமைப்பை பயன்படுத்தும் செயலி                                           | [வீடியோ](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் கற்றுக்கொள்ளவும்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 18  | [LLMs மேம்படுத்துதல்](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **கற்க:** LLM-களை நுட்பமாக மேம்படுத்துவதன் என்ன, ஏன் மற்றும் எப்படி                                            | [வீடியோ](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [மேலும் கற்றுக்கொள்ளவும்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 19  | [SLMs உடன் கட்டமைத்தல்](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **கற்க:** சிறிய மொழி மாதிரிகளுடன் கட்டமைப்பதன் நன்மைகள்                                            | வீடியோ விரைவில் வரும் | [மேலும் கற்றுக்கொள்ளவும்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 20  | [Mistral மாதிரிகளுடன் கட்டமைத்தல்](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **கற்க:** Mistral குடும்ப மாதிரிகளின் அம்சங்கள் மற்றும் வேறுபாடுகள்                                           | வீடியோ விரைவில் வரும் | [மேலும் கற்றுக்கொள்ளவும்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 21  | [Meta மாதிரிகளுடன் கட்டமைத்தல்](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **கற்க:** Meta குடும்ப மாதிரிகளின் அம்சங்கள் மற்றும் வேறுபாடுகள்                                           | வீடியோ விரைவில் வரும் | [மேலும் கற்றுக்கொள்ளவும்](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 
 ### 🌟 சிறப்பு நன்றி
 
-[**ஜான் அசிஸ்**](https://www.linkedin.com/in/john0isaac/) அவர்களுக்கு அனைத்து GitHub Actions மற்றும் workflows உருவாக்கியதற்காக சிறப்பு நன்றி.
+GitHub செயலிகள் மற்றும் வேலைபாட்டுகளை உருவாக்கிய [**ஜான் அஸிஸ்**](https://www.linkedin.com/in/john0isaac/) அவர்களுக்கு சிறப்பு நன்றி
 
-[**பெர்னார்ட் மெர்கிள்**](https://www.linkedin.com/in/bernhard-merkle-738b73/) அவர்களுக்கு ஒவ்வொரு பாடத்திலும் முக்கிய பங்களிப்புகளைச் செய்து, கற்றல் மற்றும் குறியீட்டு அனுபவத்தை மேம்படுத்தியதற்காக நன்றி. 
+ஒவ்வொரு பாடத்திற்கும் கற்றுநர் மற்றும் குறியிட அனுபவத்தை மேம்படுத்த முக்கிய பங்களிப்புகளை செய்த [**பெர்ன்ஹார்டு மெர்கிள்**](https://www.linkedin.com/in/bernhard-merkle-738b73/) அவர்களுக்கு நன்றி.
 
-## 🎒 பிற பாடங்கள்
+## 🎒 பிற பாடநெறிகள்
 
-எங்கள் குழு பிற பாடங்களை உருவாக்குகிறது! பாருங்கள்:
+எங்கள் குழு பிற பாடநெறிகளை தயாரிக்கிறது! பாருங்கள்:
+
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
+### LangChain
+[![முதன்மைக்கு LangChain4j](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
+[![முதன்மைக்கு LangChain.js](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
+[![முதன்மைக்கு LangChain](https://img.shields.io/badge/LangChain%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://github.com/microsoft/langchain-for-beginners?WT.mc_id=m365-94501-dwahlin)
+---
 
 ### Azure / Edge / MCP / முகவர்கள்
-[![துவக்கத்திற்கான AZD](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![துவக்கத்திற்கான Edge AI](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![துவக்கத்திற்கான MCP](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![துவக்கத்திற்கான AI முகவர்கள்](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![முதன்மைக்கு AZD](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![முதன்மைக்கு Edge AI](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![முதன்மைக்கு MCP](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![முதன்மைக்கு AI முகவர்கள்](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
-
-### ஜெனரேட்டிவ் AI தொடர்
-[![துவக்கத்திற்கான ஜெனரேட்டிவ் AI](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![ஜெனரேட்டிவ் AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
-[![ஜெனரேட்டிவ் AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
-[![ஜெனரேட்டிவ் AI (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
-
----
-
-### முக்கிய கற்றல்
-[![துவக்கத்திற்கான ML](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
-[![துவக்கத்திற்கான தரவியல் அறிவியல்](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
-[![துவக்கத்திற்கான AI](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
-[![துவக்கத்திற்கான சைபர் பாதுகாப்பு](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
-[![தொடக்கநிலை வலை மேம்பாடு](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)  
-[![தொடக்கநிலை IoT](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)  
-[![தொடக்கநிலை XR மேம்பாடு](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)  
+ 
+### உருவாக்கும் AI தொடர்
+[![மத்திமைக்கு உருவாக்கும் AI](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![உருவாக்கும் AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
+[![உருவாக்கும் AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
+[![Generative AI (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
 
 ---
+ 
+### அடிப்படை கற்கை
+[![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
+[![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+[![Cybersecurity for Beginners](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
+[![Web Dev for Beginners](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+[![IoT for Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
-### Copilot தொடர்  
-[![AI இணை நிரலாக்கத்திற்கான Copilot](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)  
-[![C#/.NET க்கான Copilot](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)  
-[![Copilot சாகசம்](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)  
+---
+ 
+### கோபைலட் தொடர்
+[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
-## உதவி பெறுதல்  
+## உதவி பெறுதல்
 
-AI பயன்பாடுகளை உருவாக்குவதில் சிக்கல் அல்லது கேள்விகள் இருந்தால், இணைந்திடுங்கள்:  
+உங்கள் AI பயன்பாடுகள் கட்டியமைப்பதில் சிக்கல்கள் அல்லது கேள்விகள் இருந்தால், MCP பற்றிய விவாதங்களில் மற்ற கற்றலாளர்களுடனும், அனுபவ 있는 டெவலப்பர்களுடனும் சேருங்கள். இது ஒரு ஆதரவான சமூகம் ஆகும், அங்கு கேள்விகள் வரவேற்கப்படுகின்றன மற்றும் அறிவு சுதந்திரமாக பகிரப்படுகிறது.
 
-[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord?WT.mc_id=academic-105485-koreyst)  
+[![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-தயாரிப்பு கருத்துகள் அல்லது பிழைகள் இருந்தால், பார்வையிடுங்கள்:  
+தயாரிப்பு கருத்துக்களோ அல்லது பிழைகளோ இருந்தால், கட்டும்போது பார்வையிடவும்:
 
-[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum?WT.mc_id=academic-105485-koreyst)  
+[![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**குறிப்பு**:  
-இந்த ஆவணம் AI மொழிபெயர்ப்பு சேவை [Co-op Translator](https://github.com/Azure/co-op-translator) பயன்படுத்தி மொழிபெயர்க்கப்பட்டுள்ளது. நாங்கள் துல்லியத்திற்காக முயற்சிக்கிறோம், ஆனால் தானியங்கி மொழிபெயர்ப்புகளில் பிழைகள் அல்லது தவறுகள் இருக்கக்கூடும் என்பதை கவனத்தில் கொள்ளவும். அதன் தாய்மொழியில் உள்ள மூல ஆவணம் அதிகாரப்பூர்வ ஆதாரமாக கருதப்பட வேண்டும். முக்கியமான தகவல்களுக்கு, தொழில்முறை மனித மொழிபெயர்ப்பு பரிந்துரைக்கப்படுகிறது. இந்த மொழிபெயர்ப்பைப் பயன்படுத்துவதால் ஏற்படும் எந்த தவறான புரிதல்கள் அல்லது தவறான விளக்கங்களுக்கு நாங்கள் பொறுப்பல்ல.
+**முகவுரை**:
+இந்த ஆவணம் AI மொழிபெயர்ப்பு சேவையான [Co-op Translator](https://github.com/Azure/co-op-translator) மூலம் மொழிமாற்றம் செய்யப்பட்டு வருகிறது. நாங்கள் துல்லியத்திற்காக முயற்சி செய்கிறுபினும், தானியங்கி மொழிபெயர்ப்புகளில் பிழைகள் அல்லது தவறுகள் இடம்பெற வாய்ப்பு உள்ளது என்பதைக் கவனத்தில் கொள்ளவும். அசல் ஆவணம் அதன் சொந்த மொழியிலேயே அதிகாரப்பூர்வமாகக் கருதப்பட வேண்டும். முக்கியமான தகவலுக்கு, தொழில்நுட்ப மனித மொழிபெயர்ப்பு பரிந்துரைக்கப்படுகிறது. இந்த மொழிபெயர்ப்பின் பயன்பாட்டின் காரணமாக ஏற்படும் எந்தவொரு தவறான புரிதல்கள் அல்லது தவறான விளக்கங்களுக்கும் நாங்கள் பொறுப்பாமாக இருக்கின்றோம்.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

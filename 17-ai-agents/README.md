@@ -132,7 +132,7 @@ The code is verified before executing. Another feature to manage context in Task
 
 ## JARVIS
 
-The last agent framework we will explore is [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file?WT.mc_id=academic-105485-koreyst). What makes JARVIS unique is that it uses an LLM to manage the `state` of the conversation and the `tools`are other AI models. Each of the AI models are specialized models that perform certain tasks such as object detection, transcription or image captioning.
+The last agent framework we will explore is [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file&WT.mc_id=academic-105485-koreyst). What makes JARVIS unique is that it uses an LLM to manage the `state` of the conversation and the `tools`are other AI models. Each of the AI models are specialized models that perform certain tasks such as object detection, transcription or image captioning.
 
 ![JARVIS](images/jarvis.png?WT.mc_id=academic-105485-koreyst)
 

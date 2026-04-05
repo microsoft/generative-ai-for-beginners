@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-07-09T13:13:27+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "hr"
-}
--->
 # Priprema podataka za transkripciju
 
 Skripte za pripremu podataka za transkripciju preuzimaju transkripte YouTube videozapisa i pripremaju ih za korištenje s primjerom Semantic Search with OpenAI Embeddings and Functions.

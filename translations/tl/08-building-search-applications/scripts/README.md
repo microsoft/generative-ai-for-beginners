@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-07-09T13:11:55+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "tl"
-}
--->
 # Paghahanda ng datos para sa transkripsyon
 
 Ang mga script para sa paghahanda ng datos ng transkripsyon ay nagda-download ng mga transcript ng video mula sa YouTube at inihahanda ang mga ito para magamit sa Semantic Search gamit ang OpenAI Embeddings at Functions sample.

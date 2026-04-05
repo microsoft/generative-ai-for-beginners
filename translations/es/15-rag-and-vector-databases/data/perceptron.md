@@ -1,19 +1,10 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "59021c5f419d3feda19075910a74280a",
-  "translation_date": "2025-07-09T16:53:29+00:00",
-  "source_file": "15-rag-and-vector-databases/data/perceptron.md",
-  "language_code": "es"
-}
--->
 # Introducción a las Redes Neuronales: Perceptrón
 
 Uno de los primeros intentos de implementar algo similar a una red neuronal moderna fue realizado por Frank Rosenblatt del Cornell Aeronautical Laboratory en 1957. Fue una implementación en hardware llamada "Mark-1", diseñada para reconocer figuras geométricas primitivas, como triángulos, cuadrados y círculos.
 
 |      |      |
 |--------------|-----------|
-|<img src='images/Rosenblatt-wikipedia.jpg' alt='Frank Rosenblatt'/> | <img src='images/Mark_I_perceptron_wikipedia.jpg' alt='El Perceptrón Mark 1' />|
+|<img src='../../../../translated_images/es/Rosenblatt-wikipedia.1d205667acda28c0.webp' alt='Frank Rosenblatt'/> | <img src='../../../../translated_images/es/Mark_I_perceptron_wikipedia.434e46ca39e2be80.webp' alt='El Perceptrón Mark 1' />|
 
 > Imágenes de Wikipedia
 

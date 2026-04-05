@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
-  "translation_date": "2025-10-11T11:24:51+00:00",
-  "source_file": "08-building-search-applications/scripts/README.md",
-  "language_code": "ta"
-}
--->
 # உரை தரவுகளை தயாரித்தல்
 
 உரை தரவுகளை தயாரிக்கும் ஸ்கிரிப்ட்கள் YouTube வீடியோ உரைகளை பதிவிறக்கம் செய்து, Semantic Search with OpenAI Embeddings மற்றும் Functions மாதிரியில் பயன்படுத்த தயாராக செய்கின்றன.

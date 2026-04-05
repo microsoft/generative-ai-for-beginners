@@ -1,15 +1,6 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "df027997f1448323d6159b78a1b669bf",
-  "translation_date": "2025-10-18T00:09:19+00:00",
-  "source_file": "06-text-generation-apps/README.md",
-  "language_code": "hi"
-}
--->
 # टेक्स्ट जनरेशन एप्लिकेशन बनाना
 
-[![टेक्स्ट जनरेशन एप्लिकेशन बनाना](../../../translated_images/06-lesson-banner.a5c629f990a636c852353c5533f1a6a218ece579005e91f96339d508d9cf8f47.hi.png)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![टेक्स्ट जनरेशन एप्लिकेशन बनाना](../../../translated_images/hi/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
 > _(ऊपर दी गई छवि पर क्लिक करें इस पाठ का वीडियो देखने के लिए)_
 

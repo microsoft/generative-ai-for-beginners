@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "b5466bcedc3c75aa35476270362f626a",
-  "translation_date": "2025-07-09T16:35:39+00:00",
-  "source_file": "15-rag-and-vector-databases/data/frameworks.md",
-  "language_code": "sw"
-}
--->
 # Neural Network Frameworks
 
 Kama tulivyoshajifunza, ili kuweza kufundisha mitandao ya neva kwa ufanisi tunahitaji kufanya mambo mawili:
