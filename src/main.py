@@ -24,7 +24,15 @@ def main() -> None:
     # Supported options: Azure OpenAI, GitHub Models, OpenAI API.
     # See docs/setup.md for detailed configuration instructions.
 
-    user_name = input("Enter your name: ")
+    try:
+        user_name = input("Enter your name: ").strip()
+    except EOFError:
+        user_name = "Builder"
+        print("Enter your name: [auto] Builder")
+
+    if not user_name:
+        user_name = "Builder"
+
     print(get_greeting(user_name))
     print("\nNext steps:")
     print("  1. Read docs/setup.md to configure your environment.")
