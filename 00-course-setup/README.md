@@ -22,7 +22,7 @@ In your fork: **Code -> Codespaces -> New on main**
 
 #### 2.1 Add a secret
 
-1. ⚙️ Gear icon -> Command Pallete-> Codespaces : Manage user secret -> Add a new secret.
+1. ⚙️ Gear icon -> Command Palette-> Codespaces : Manage user secret -> Add a new secret.
 2. Name OPENAI_API_KEY, paste your key, Save.
 
 ### 3.  What’s next?
