@@ -32,7 +32,7 @@ This takes **~2 minutes** the first time.
 
 ### Option A Codespaces Secrets — Recommended
 
-1. ⚙️ Gear icon -> Command Pallete-> Codespaces : Manage user secret -> Add a new secret.
+1. ⚙️ Gear icon -> Command Palette-> Codespaces : Manage user secret -> Add a new secret.
 2. Name: OPENAI_API_KEY
 3. Value: paste your key → Add secret
 
