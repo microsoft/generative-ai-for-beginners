@@ -158,7 +158,7 @@ Aquí algunas características clave de NVIDIA NIM:
 
 NIM forma parte de NVIDIA AI Enterprise, cuyo objetivo es simplificar el despliegue y la operacionalización de modelos de IA, asegurando que funcionen de manera eficiente en GPUs NVIDIA.
 
-- Demo: Uso de Nividia NIM para llamar a Phi-3.5-Vision-API [[Haz clic en este enlace](python/Phi-3-Vision-Nividia-NIM.ipynb)]
+- Demo: Uso de NVIDIA NIM para llamar a Phi-3.5-Vision-API [[Haz clic en este enlace](python/Phi-3-Vision-Nividia-NIM.ipynb)]
 
 
 ### Inferencia Phi-3/3.5 en entorno local
