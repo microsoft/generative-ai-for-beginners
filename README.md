@@ -129,6 +129,7 @@ Special thanks to [**John Aziz**](https://www.linkedin.com/in/john0isaac/) for c
 
 ## 🎒 Other Courses
 
+- [x711](https://x711.io) — 24/7 AI agent gas station: universal tool API with web search, memory, and on-chain USDC payments for autonomous agents.
 Our team produces other courses! Check out:
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
