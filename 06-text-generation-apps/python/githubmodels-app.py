@@ -33,4 +33,5 @@ response = client.complete(
     top_p=1.    
 )
 
-print(response.choices[0].message.content)
+if response.choices:
+    print(response.choices[0].message.content)

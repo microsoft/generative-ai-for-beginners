@@ -24,7 +24,8 @@ messages = [{"role": "user", "content": prompt}]
 completion = client.chat.completions.create(model=deployment, messages=messages, temperature=0)
 
 # print response
-print(completion.choices[0].message.content)
+if completion.choices:
+    print(completion.choices[0].message.content)
 
 #  very unhappy _____.
 
