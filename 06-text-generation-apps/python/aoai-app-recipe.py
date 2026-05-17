@@ -69,7 +69,7 @@ completion = client.chat.completions.create(model=deployment, messages=messages,
 
 # print response
 print("Recipes:")
-if not completion.choices:
+if not completion.choices or completion.choices[0].message is None:
     print("No response received.")
 else:
     old_prompt_result = completion.choices[0].message.content
@@ -82,6 +82,6 @@ else:
 
     # print response
     print("\n=====Shopping list ======= \n")
-    if completion.choices:
+    if completion.choices and completion.choices[0].message is not None:
         print(completion.choices[0].message.content)
 

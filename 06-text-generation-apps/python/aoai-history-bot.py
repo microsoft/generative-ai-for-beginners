@@ -29,7 +29,7 @@ messages = [{"role": "user", "content": prompt}]
 completion = client.chat.completions.create(model=deployment, messages=messages, temperature=0)
 
 # print response
-if completion.choices:
+if completion.choices and completion.choices[0].message is not None:
     print(completion.choices[0].message.content)
 
 #  very unhappy _____.
