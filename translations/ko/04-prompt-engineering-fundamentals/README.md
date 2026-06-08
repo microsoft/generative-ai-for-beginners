@@ -278,7 +278,7 @@ response = openai.chat.completions.create(
 
 ### 프롬프트 템플릿
 
-프롬프트 템플릿은 _사전 정의된 프롬프트 레시피_로서 필요에 따라 저장하고 재사용하여 대규모로 더 일관된 사용자 경험을 제공할 수 있습니다. 가장 단순한 형태로, 이는 [OpenAI의 이 예시](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst)처럼 상호작용 프롬프트 구성 요소(사용자 및 시스템 메시지)와 API 기반 요청 형식을 모두 제공하는 프롬프트 예제 모음입니다 - 재사용을 지원합니다.
+프롬프트 템플릿은 _사전 정의된 프롬프트 레시피_로서 필요에 따라 저장하고 재사용하여 대규모로 더 일관된 사용자 경험을 제공할 수 있습니다. 가장 단순한 형태로, 이는 [OpenAI의 이 예시](https://platform.openai.com/docs/guides/prompt-engineering?WT.mc_id=academic-105485-koreyst)처럼 상호작용 프롬프트 구성 요소(사용자 및 시스템 메시지)와 API 기반 요청 형식을 모두 제공하는 프롬프트 예제 모음입니다 - 재사용을 지원합니다.
 
 좀 더 복잡한 형태는 [LangChain의 이 예시](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst)처럼 다양한 출처(사용자 입력, 시스템 컨텍스트, 외부 데이터 등)의 데이터를 동적으로 치환할 수 있는 _플레이스홀더_를 포함합니다. 이에 따라 프로그램적으로 일관된 사용자 경험을 만들기 위한 재사용 가능한 프롬프트 라이브러리를 구축할 수 있습니다.
 

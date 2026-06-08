@@ -278,7 +278,7 @@ Un’altra tecnica per usare il contenuto primario è fornire _cue_ invece di es
 
 ### Modelli di Prompt
 
-Un modello di prompt è una _ricetta predefinita per un prompt_ che può essere memorizzata e riutilizzata a seconda delle esigenze, per garantire esperienze utente più coerenti su scala. Nella sua forma più semplice, è semplicemente una raccolta di esempi di prompt come [questo di OpenAI](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst) che fornisce sia i componenti interattivi del prompt (messaggi utente e sistema) sia il formato della richiesta guidata dall’API - per supportare il riutilizzo.
+Un modello di prompt è una _ricetta predefinita per un prompt_ che può essere memorizzata e riutilizzata a seconda delle esigenze, per garantire esperienze utente più coerenti su scala. Nella sua forma più semplice, è semplicemente una raccolta di esempi di prompt come [questo di OpenAI](https://platform.openai.com/docs/guides/prompt-engineering?WT.mc_id=academic-105485-koreyst) che fornisce sia i componenti interattivi del prompt (messaggi utente e sistema) sia il formato della richiesta guidata dall’API - per supportare il riutilizzo.
 
 Nella sua forma più complessa come [questo esempio di LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst) contiene _segnaposto_ che possono essere sostituiti con dati provenienti da diverse fonti (input utente, contesto di sistema, fonti dati esterne ecc.) per generare un prompt dinamicamente. Questo ci permette di creare una libreria di prompt riutilizzabili che possono essere utilizzati per guidare esperienze utente coerenti **programmaticamente** su scala.
 

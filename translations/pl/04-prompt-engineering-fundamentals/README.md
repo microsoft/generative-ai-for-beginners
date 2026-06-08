@@ -278,7 +278,7 @@ Inną techniką korzystania z głównej treści jest podawanie _wskazówek_ zami
 
 ### Szablony Promptów
 
-Szablon promptu to _wstępnie zdefiniowany przepis na prompt_, który można przechowywać i ponownie wykorzystywać w razie potrzeby, aby zapewnić bardziej spójne doświadczenia użytkownika na dużą skalę. W najprostszej formie jest to po prostu zbiór przykładów promptów takich jak [ten od OpenAI](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst), który zapewnia zarówno interaktywne komponenty promptu (wiadomości użytkownika i systemu), jak i format żądania sterowany przez API - aby umożliwić ponowne użycie.
+Szablon promptu to _wstępnie zdefiniowany przepis na prompt_, który można przechowywać i ponownie wykorzystywać w razie potrzeby, aby zapewnić bardziej spójne doświadczenia użytkownika na dużą skalę. W najprostszej formie jest to po prostu zbiór przykładów promptów takich jak [ten od OpenAI](https://platform.openai.com/docs/guides/prompt-engineering?WT.mc_id=academic-105485-koreyst), który zapewnia zarówno interaktywne komponenty promptu (wiadomości użytkownika i systemu), jak i format żądania sterowany przez API - aby umożliwić ponowne użycie.
 
 W bardziej zaawansowanej formie, jak [ten przykład z LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst), zawiera _miejsca na dane_ (placeholders), które można zastąpić danymi z różnych źródeł (wejście użytkownika, kontekst systemu, zewnętrzne źródła danych itp.) w celu dynamicznego generowania promptu. Pozwala to na stworzenie biblioteki wielokrotnego użytku promptów, które można programowo wykorzystać do zapewniania spójnych doświadczeń użytkownika na dużą skalę.
 
