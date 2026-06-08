@@ -278,7 +278,7 @@ Een andere techniek voor het gebruik van primaire inhoud is het geven van _signa
 
 ### Prompttemplates
 
-Een prompttemplate is een _vooraf gedefinieerd recept voor een prompt_ dat kan worden opgeslagen en hergebruikt indien nodig, om meer consistente gebruikservaringen op schaal te stimuleren. In de eenvoudigste vorm is het gewoon een verzameling promptvoorbeelden zoals [dit voorbeeld van OpenAI](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst) dat zowel de interactieve promptcomponenten (gebruikers- en systeemberichten) als het API-gestuurde aanvraagformaat bevat – ter ondersteuning van hergebruik.
+Een prompttemplate is een _vooraf gedefinieerd recept voor een prompt_ dat kan worden opgeslagen en hergebruikt indien nodig, om meer consistente gebruikservaringen op schaal te stimuleren. In de eenvoudigste vorm is het gewoon een verzameling promptvoorbeelden zoals [dit voorbeeld van OpenAI](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst) dat zowel de interactieve promptcomponenten (gebruikers- en systeemberichten) als het API-gestuurde aanvraagformaat bevat – ter ondersteuning van hergebruik.
 
 In zijn complexere vorm, zoals [dit voorbeeld van LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst), bevat het _plaatsaanduidingen_ die kunnen worden vervangen door gegevens uit verschillende bronnen (gebruikersinvoer, systeemcontext, externe gegevensbronnen, enz.) om een prompt dynamisch te genereren. Dit stelt ons in staat om een bibliotheek van herbruikbare prompts te maken die kunnen worden gebruikt om consistente gebruikerservaringen **programmeerbaar** op schaal aan te sturen.
 

@@ -278,7 +278,7 @@ Một kỹ thuật khác dùng nội dung chính là cung cấp _dấu hiệu_ t
 
 ### Prompt Templates
 
-Một mẫu câu lệnh là một _công thức được định nghĩa sẵn cho một câu lệnh_ có thể được lưu trữ và sử dụng lại khi cần, để tạo ra trải nghiệm người dùng nhất quán hơn ở quy mô lớn. Ở dạng đơn giản nhất, nó chỉ là một tập hợp các ví dụ về câu lệnh như [ví dụ này từ OpenAI](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst) cung cấp cả các thành phần tương tác của câu lệnh (tin nhắn người dùng và hệ thống) và định dạng yêu cầu API - để hỗ trợ tái sử dụng.
+Một mẫu câu lệnh là một _công thức được định nghĩa sẵn cho một câu lệnh_ có thể được lưu trữ và sử dụng lại khi cần, để tạo ra trải nghiệm người dùng nhất quán hơn ở quy mô lớn. Ở dạng đơn giản nhất, nó chỉ là một tập hợp các ví dụ về câu lệnh như [ví dụ này từ OpenAI](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst) cung cấp cả các thành phần tương tác của câu lệnh (tin nhắn người dùng và hệ thống) và định dạng yêu cầu API - để hỗ trợ tái sử dụng.
 
 Ở dạng phức tạp hơn như [ví dụ này từ LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst) nó chứa các _chỗ giữ chỗ_ có thể được thay thế bằng dữ liệu từ nhiều nguồn khác nhau (đầu vào người dùng, ngữ cảnh hệ thống, nguồn dữ liệu bên ngoài, v.v.) để tạo một câu lệnh một cách động. Điều này cho phép chúng ta tạo ra thư viện các câu lệnh có thể sử dụng lại để tạo ra trải nghiệm người dùng nhất quán **theo cách lập trình** trên quy mô lớn.
 

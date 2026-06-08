@@ -280,7 +280,7 @@ Kita pagrindinio turinio naudojimo technika – teikti _užuominas_ vietoje pavy
 
 ### Promptų šablonai
 
-Promptų šablonas yra _iš anksto apibrėžtas prompto receptas_, kurį galima išsaugoti ir naudoti pagal poreikį, siekiant užtikrinti nuoseklias vartotojo patirtis dideliu mastu. Paprasčiausiu formatu tai tiesiog rinkinys promptų pavyzdžių, kaip [šis iš OpenAI](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst), kuris pateikia tiek interaktyvius prompto komponentus (vartotojo ir sistemos pranešimus), tiek API užklausos formatą – kad būtų lengviau pakartotinai naudoti.
+Promptų šablonas yra _iš anksto apibrėžtas prompto receptas_, kurį galima išsaugoti ir naudoti pagal poreikį, siekiant užtikrinti nuoseklias vartotojo patirtis dideliu mastu. Paprasčiausiu formatu tai tiesiog rinkinys promptų pavyzdžių, kaip [šis iš OpenAI](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst), kuris pateikia tiek interaktyvius prompto komponentus (vartotojo ir sistemos pranešimus), tiek API užklausos formatą – kad būtų lengviau pakartotinai naudoti.
 
 Sudėtingesnėje formoje, kaip [šis pavyzdys iš LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst), šablonas turi _vietų ženklus_, kuriuos galima pakeisti duomenimis iš įvairių šaltinių (vartotojo įvestis, sistemos kontekstas, išoriniai duomenų šaltiniai ir pan.), kad dinamiškai būtų sugeneruotas promptas. Tai leidžia kurti biblioteką pakartotinai naudojamų promptų, kurie gali **programiškai** užtikrinti nuoseklias vartotojo patirtis dideliu mastu.
 

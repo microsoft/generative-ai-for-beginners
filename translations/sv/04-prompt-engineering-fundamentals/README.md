@@ -278,7 +278,7 @@ En annan teknik för att använda primärt innehåll är att tillhandahålla _le
 
 ### Promptmallar
 
-En promptmall är ett _fördefinierat recept för en prompt_ som kan sparas och återanvändas vid behov för att skapa mer konsekventa användarupplevelser i stor skala. I sin enklaste form är det helt enkelt en samling promptexempel som [det här från OpenAI](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst) som tillhandahåller både de interaktiva promptkomponenterna (användar- och systemmeddelanden) och API-drivna förfrågningsformat – för att stödja återanvändning.
+En promptmall är ett _fördefinierat recept för en prompt_ som kan sparas och återanvändas vid behov för att skapa mer konsekventa användarupplevelser i stor skala. I sin enklaste form är det helt enkelt en samling promptexempel som [det här från OpenAI](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst) som tillhandahåller både de interaktiva promptkomponenterna (användar- och systemmeddelanden) och API-drivna förfrågningsformat – för att stödja återanvändning.
 
 I en mer komplex form, som [det här exemplet från LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst), innehåller den _platshållare_ som kan ersättas med data från olika källor (användarinmatning, systemkontext, externa datakällor etc.) för att dynamiskt generera en prompt. Detta gör att vi kan skapa ett bibliotek med återanvändbara prompts som kan användas för att driva konsekventa användarupplevelser **programmerbart** i stor skala.
 

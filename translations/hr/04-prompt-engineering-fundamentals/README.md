@@ -278,7 +278,7 @@ Druga tehnika za korištenje primarnog sadržaja jest davanje _naznaka_ umjesto 
 
 ### Predlošci upita
 
-Predložak upita je _unaprijed definirani recept za upit_ koji se može pohraniti i ponovno upotrijebiti prema potrebi kako bi se postiglo dosljednije korisničko iskustvo u velikom opsegu. U svom najjednostavnijem obliku to je jednostavno zbirka primjera upita poput [ovog iz OpenAI](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst) koji pruža i interaktivne komponente upita (poruke korisnika i sustava) i API format zahtjeva - za podršku ponovnoj upotrebi.
+Predložak upita je _unaprijed definirani recept za upit_ koji se može pohraniti i ponovno upotrijebiti prema potrebi kako bi se postiglo dosljednije korisničko iskustvo u velikom opsegu. U svom najjednostavnijem obliku to je jednostavno zbirka primjera upita poput [ovog iz OpenAI](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst) koji pruža i interaktivne komponente upita (poruke korisnika i sustava) i API format zahtjeva - za podršku ponovnoj upotrebi.
 
 U složenijem obliku kao [ovaj primjer iz LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst) sadrži _zamjenske oznake_ koje se mogu zamijeniti podacima iz različitih izvora (korisnički unos, kontekst sustava, vanjski izvori podataka itd.) za dinamičko generiranje upita. To nam omogućuje stvaranje biblioteke ponovljivo upotrebljivih upita kojima se može programatski upravljati radi postizanja dosljednog korisničkog iskustva u velikom opsegu.
 

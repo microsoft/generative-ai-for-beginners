@@ -270,7 +270,7 @@ Všimnite si, že pri zero-shot sme museli uviesť explicitnú inštrukciu („P
 
 ### Šablóny výziev
 
-Šablóna výzvy je _preddefinovaný recept na výzvu_, ktorý môže byť uložený a opakovane použitý podľa potreby, aby sa dosiahla konzistentnejšia používateľská skúsenosť vo veľkom meradle. V najjednoduchšej forme je to zbierka príkladov výziev ako [tento od OpenAI](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst), ktorý poskytuje interaktívne časti výzvy (správy používateľa a systému) a formát požiadavky riadený API - pre podporu opätovného použitia.
+Šablóna výzvy je _preddefinovaný recept na výzvu_, ktorý môže byť uložený a opakovane použitý podľa potreby, aby sa dosiahla konzistentnejšia používateľská skúsenosť vo veľkom meradle. V najjednoduchšej forme je to zbierka príkladov výziev ako [tento od OpenAI](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst), ktorý poskytuje interaktívne časti výzvy (správy používateľa a systému) a formát požiadavky riadený API - pre podporu opätovného použitia.
 
 V zložitejšej podobe ako [tento príklad od LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst) obsahuje _zástupné symboly_, ktoré môžu byť nahradené údajmi z rôznych zdrojov (vstup používateľa, systémový kontext, externé zdroje dát atď.) na dynamickú tvorbu výzvy. To nám umožňuje vytvoriť knižnicu opakovane použiteľných výziev, ktoré môžu **programovo** zabezpečiť konzistentné používateľské skúsenosti vo veľkom.
 

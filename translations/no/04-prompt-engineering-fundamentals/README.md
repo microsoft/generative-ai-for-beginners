@@ -278,7 +278,7 @@ En annen teknikk for å bruke primærinnholdet er å gi _føringer_ i stedet for
 
 ### Prompt Templates
 
-En prompt-mal er en _forhåndsdefinert oppskrift for en prompt_ som kan lagres og gjenbrukes etter behov, for å skape mer konsistente brukeropplevelser i stor skala. I sin enkleste form er det rett og slett en samling av prompt-eksempler som [dette fra OpenAI](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst) som gir både interaktive prompt-komponenter (bruker- og systemmeldinger) og API-drevne forespørselsformater – for å støtte gjenbruk.
+En prompt-mal er en _forhåndsdefinert oppskrift for en prompt_ som kan lagres og gjenbrukes etter behov, for å skape mer konsistente brukeropplevelser i stor skala. I sin enkleste form er det rett og slett en samling av prompt-eksempler som [dette fra OpenAI](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst) som gir både interaktive prompt-komponenter (bruker- og systemmeldinger) og API-drevne forespørselsformater – for å støtte gjenbruk.
 
 I en mer kompleks form som [dette eksempelet fra LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst) inneholder den _plassholdere_ som kan byttes ut med data fra ulike kilder (brukerinput, systemkontekst, eksterne datakilder osv.) for å generere en prompt dynamisk. Dette gjør at man kan lage et bibliotek av gjenbrukbare prompter som kan brukes for å skape konsistente brukeropplevelser **programmatisk** i stor skala.
 

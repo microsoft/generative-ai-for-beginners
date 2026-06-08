@@ -278,7 +278,7 @@ Birincil içeriği kullanmanın bir diğer yolu, örnekler yerine _ipuçları_ v
 
 ### İstek Şablonları
 
-Bir istek şablonu, _önceden tanımlanmış bir istek tarifi_ olup, gerektiğinde saklanıp yeniden kullanılabilir; böylece tutarlı kullanıcı deneyimlerini büyük ölçekte yönetir. En basit haliyle, kullanıcı ve sistem mesajlarını ve API tabanlı istek formatını içeren [OpenAI'nin şu örneği](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst) gibi bir dizi örnekten oluşur.
+Bir istek şablonu, _önceden tanımlanmış bir istek tarifi_ olup, gerektiğinde saklanıp yeniden kullanılabilir; böylece tutarlı kullanıcı deneyimlerini büyük ölçekte yönetir. En basit haliyle, kullanıcı ve sistem mesajlarını ve API tabanlı istek formatını içeren [OpenAI'nin şu örneği](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst) gibi bir dizi örnekten oluşur.
 
 Daha karmaşık bir formda, [LangChain'in şu örneği](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst) gibi, çeşitli kaynaklardan (kullanıcı girişi, sistem bağlamı, harici veri kaynakları vb.) dinamik olarak istek oluşturmak için _yer tutucular_ içerir. Bu, tutarlı kullanıcı deneyimlerini **programatik olarak** ölçeklendirmek için yeniden kullanılabilir istekler kütüphanesi oluşturmamızı sağlar.
 

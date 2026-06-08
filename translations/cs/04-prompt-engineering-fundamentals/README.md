@@ -278,7 +278,7 @@ Další technikou použití primárního obsahu je poskytnutí _náznaků_ míst
 
 ### Šablony promptů
 
-Šablona promptu je _předdefinovaný recept na prompt_, který může být uložen a znovu použit podle potřeby, aby se zajistila konzistentnější uživatelská zkušenost ve velkém měřítku. V nejjednodušší podobě je to jednoduše sbírka příkladů promptů jako [tento od OpenAI](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst), která poskytuje jak interaktivní komponenty promptu (zprávy uživatele a systému), tak formát požadavku řízený API – k podpoře opakovaného použití.
+Šablona promptu je _předdefinovaný recept na prompt_, který může být uložen a znovu použit podle potřeby, aby se zajistila konzistentnější uživatelská zkušenost ve velkém měřítku. V nejjednodušší podobě je to jednoduše sbírka příkladů promptů jako [tento od OpenAI](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst), která poskytuje jak interaktivní komponenty promptu (zprávy uživatele a systému), tak formát požadavku řízený API – k podpoře opakovaného použití.
 
 Ve složitější podobě jako [tento příklad od LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst) obsahuje _zástupné symboly_, které lze nahradit daty z různých zdrojů (uživatelský vstup, kontext systému, externí datové zdroje atd.) pro dynamickou tvorbu promptu. To nám umožňuje vytvářet knihovny znovupoužitelných promptů, které lze **programově** použít k řízení konzistentních uživatelských zážitků ve velkém.
 

@@ -278,7 +278,7 @@ Toinen tapa käyttää pääasiallista sisältöä on antaa _vihjeitä_ esimerkk
 
 ### Kehotekstimalleja
 
-Kehotekstimalli on _ennalta määritelty kaava kehotteelle_, jota voidaan tallentaa ja käyttää uudelleen tarpeen mukaan, tarjoten tasaisempia käyttäjäkokemuksia suuremmassa mittakaavassa. Yksinkertaisimmillaan se on kokoelma kehotteiden esimerkkejä kuten [tämä OpenAI:n esimerkki](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst), joka sisältää interaktiiviset kehotteet (käyttäjä- ja järjestelmäviestit) sekä API-pohjaisen pyyntömuodon uudelleenkäyttöä varten.
+Kehotekstimalli on _ennalta määritelty kaava kehotteelle_, jota voidaan tallentaa ja käyttää uudelleen tarpeen mukaan, tarjoten tasaisempia käyttäjäkokemuksia suuremmassa mittakaavassa. Yksinkertaisimmillaan se on kokoelma kehotteiden esimerkkejä kuten [tämä OpenAI:n esimerkki](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst), joka sisältää interaktiiviset kehotteet (käyttäjä- ja järjestelmäviestit) sekä API-pohjaisen pyyntömuodon uudelleenkäyttöä varten.
 
 Monimutkaisemmassa muodossaan, kuten [tämä LangChainin esimerkki](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst), se sisältää _paikkamerkkejä_, jotka voidaan korvata eri lähteistä saaduilla tiedoilla (käyttäjän syöttö, järjestelmän konteksti, ulkoiset tietolähteet jne.) dynaamisen kehotteen luomiseksi. Tämä mahdollistaa uudelleenkäytettävien kehotteiden kirjaston luomisen, joita voidaan käyttää ohjelmallisesti yhtenäisten käyttäjäkokemusten aikaansaamisessa suuressa mittakaavassa.
 

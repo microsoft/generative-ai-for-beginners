@@ -278,7 +278,7 @@ O altă tehnică pentru folosirea conținutului primar este să oferi _indici_ �
 
 ### Șabloane de prompturi
 
-Un șablon de prompt este o _rețetă predefinită pentru un prompt_ care poate fi stocată și reutilizată după nevoie, pentru a oferi experiențe mai consistente utilizatorilor la scară largă. În cea mai simplă formă, este pur și simplu o colecție de exemple de prompturi precum [acesta de la OpenAI](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst) care oferă atât componente interactive de prompt (mesaje pentru utilizator și sistem) cât și formatul cererii prin API - pentru a sprijini reutilizarea.
+Un șablon de prompt este o _rețetă predefinită pentru un prompt_ care poate fi stocată și reutilizată după nevoie, pentru a oferi experiențe mai consistente utilizatorilor la scară largă. În cea mai simplă formă, este pur și simplu o colecție de exemple de prompturi precum [acesta de la OpenAI](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst) care oferă atât componente interactive de prompt (mesaje pentru utilizator și sistem) cât și formatul cererii prin API - pentru a sprijini reutilizarea.
 
 În forma sa mai complexă, cum este [exemplul de la LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst), conține _locuri pentru date_ care pot fi înlocuite cu date din diferite surse (introducerea utilizatorului, contextul sistemului, surse externe etc.) pentru a genera un prompt dinamic. Aceasta ne permite să creăm o bibliotecă de prompturi reutilizabile care pot fi folosite pentru a oferi experiențe consistente **programatic** la scară.
 

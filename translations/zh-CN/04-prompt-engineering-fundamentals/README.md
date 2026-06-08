@@ -278,7 +278,7 @@ response = openai.chat.completions.create(
 
 ### Prompt Templates
 
-提示模板是一种_预定义的提示“配方”_，可以存储并根据需要重复使用，以推动更一致的大规模用户体验。它最简单的形式就是像[OpenAI这个示例](https://platform.openai.com/examples?WT.mc_id=academic-105485-koreyst)那样收集的提示示例，既包含交互式提示组件（用户和系统消息），又包含通过 API 调用的请求格式——以支持重复使用。
+提示模板是一种_预定义的提示“配方”_，可以存储并根据需要重复使用，以推动更一致的大规模用户体验。它最简单的形式就是像[OpenAI这个示例](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst)那样收集的提示示例，既包含交互式提示组件（用户和系统消息），又包含通过 API 调用的请求格式——以支持重复使用。
 
 在更复杂的形式如[LangChain的例子](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst)中，包含了_占位符_，可以用来自各种来源（用户输入、系统上下文、外部数据源等）的数据动态替换，从而生成动态提示。这使我们能够创建可重复使用的提示库，**通过编程方式**驱动更大规模的一致用户体验。
 
