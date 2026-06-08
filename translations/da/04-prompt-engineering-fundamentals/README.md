@@ -278,7 +278,7 @@ En anden teknik til at bruge primært indhold er at give _tips_ i stedet for eks
 
 ### Prompt Skabeloner
 
-En prompt-skabelon er en _foruddefineret opskrift på en prompt_, som kan gemmes og genbruges efter behov for at skabe mere konsistente brugeroplevelser i stor skala. I sin simpleste form er det blot en samling af prompt-eksempler som [dette fra OpenAI](https://platform.openai.com/docs/guides/prompt-engineering?WT.mc_id=academic-105485-koreyst), der giver både de interaktive prompt-komponenter (bruger- og systembeskeder) og API-styrede anmodningsformater – for at støtte genbrug.
+En prompt-skabelon er en _foruddefineret opskrift på en prompt_, som kan gemmes og genbruges efter behov for at skabe mere konsistente brugeroplevelser i stor skala. I sin simpleste form er det blot en samling af prompt-eksempler som [dette fra OpenAI](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst), der giver både de interaktive prompt-komponenter (bruger- og systembeskeder) og API-styrede anmodningsformater – for at støtte genbrug.
 
 I en mere kompleks form som [dette eksempel fra LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst) indeholder den _pladsholdere_, som kan erstattes med data fra forskellige kilder (brugers input, systemkontekst, eksterne datakilder osv.) for dynamisk at skabe en prompt. Det giver os mulighed for at oprette et bibliotek af genanvendelige prompts, der kan bruges til at skabe konsistente brugeroplevelser **programmatisk** i stor skala.
 

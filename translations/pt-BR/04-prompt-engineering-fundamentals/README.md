@@ -278,7 +278,7 @@ Outra técnica para usar conteúdo primário é fornecer _dicas_ ao invés de ex
 
 ### Modelos de Prompt
 
-Um modelo de prompt é uma _receita predefinida para um prompt_ que pode ser armazenada e reutilizada conforme necessário, para conduzir experiências de usuário mais consistentes em escala. Na sua forma mais simples, é simplesmente uma coleção de exemplos de prompt como [este do OpenAI](https://platform.openai.com/docs/guides/prompt-engineering?WT.mc_id=academic-105485-koreyst) que fornece tanto os componentes interativos do prompt (mensagens do usuário e do sistema) quanto o formato de requisição via API — para suportar a reutilização.
+Um modelo de prompt é uma _receita predefinida para um prompt_ que pode ser armazenada e reutilizada conforme necessário, para conduzir experiências de usuário mais consistentes em escala. Na sua forma mais simples, é simplesmente uma coleção de exemplos de prompt como [este do OpenAI](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst) que fornece tanto os componentes interativos do prompt (mensagens do usuário e do sistema) quanto o formato de requisição via API — para suportar a reutilização.
 
 Em sua forma mais complexa, como [este exemplo do LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst), ele contém _espaços reservados_ que podem ser substituídos por dados de várias fontes (entrada do usuário, contexto do sistema, fontes externas etc.) para gerar um prompt dinamicamente. Isso nos permite criar uma biblioteca de prompts reutilizáveis que podem ser usados para oferecer experiências de usuário consistentes **programaticamente** em escala.
 

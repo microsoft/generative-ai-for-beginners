@@ -278,7 +278,7 @@ Druga tehnika za uporabo primarne vsebine je zagotoviti _namige_ namesto primero
 
 ### Predloge Pozivov
 
-Predloga poziva je _vnaprej določena sestavina poziva_, ki jo lahko shranimo in ponovno uporabimo po potrebi, da zagotovimo bolj dosledno uporabniško izkušnjo v velikem obsegu. V svoji najpreprostejši obliki je to zbirka primerov pozivov, kot je [ta primer OpenAI](https://platform.openai.com/docs/guides/prompt-engineering?WT.mc_id=academic-105485-koreyst), ki zagotavlja interaktivne komponente poziva (uporabniški in sistemski sporočili) ter format zahteve prek API-ja – za podporo ponovni uporabi.
+Predloga poziva je _vnaprej določena sestavina poziva_, ki jo lahko shranimo in ponovno uporabimo po potrebi, da zagotovimo bolj dosledno uporabniško izkušnjo v velikem obsegu. V svoji najpreprostejši obliki je to zbirka primerov pozivov, kot je [ta primer OpenAI](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst), ki zagotavlja interaktivne komponente poziva (uporabniški in sistemski sporočili) ter format zahteve prek API-ja – za podporo ponovni uporabi.
 
 V bolj zapleteni obliki, kot je [ta primer LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst), vsebuje _zaščitna mesta_, ki jih je mogoče zamenjati z podatki iz različnih virov (uporabniški vnos, sistemski kontekst, zunanji podatkovni viri itd.), da se dinamično ustvari poziv. To nam omogoča ustvarjanje knjižnice ponovno uporabnih pozivov, ki se lahko **programatično** uporabljajo za zagotavljanje doslednih uporabniških izkušenj v velikem obsegu.
 

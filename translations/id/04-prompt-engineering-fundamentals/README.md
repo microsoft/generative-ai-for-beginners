@@ -278,7 +278,7 @@ Teknik lain untuk menggunakan konten utama adalah memberikan _isyarat_ daripada 
 
 ### Prompt Templates
 
-Template prompt adalah _resep yang telah ditentukan sebelumnya untuk sebuah prompt_ yang dapat disimpan dan digunakan ulang sesuai kebutuhan, untuk menghasilkan pengalaman pengguna yang lebih konsisten secara skala. Dalam bentuk paling sederhana, ini hanyalah kumpulan contoh prompt seperti [yang ini dari OpenAI](https://platform.openai.com/docs/guides/prompt-engineering?WT.mc_id=academic-105485-koreyst) yang menyediakan komponen prompt interaktif (pesan pengguna dan sistem) dan format permintaan yang digerakkan oleh API - untuk mendukung penggunaan ulang.
+Template prompt adalah _resep yang telah ditentukan sebelumnya untuk sebuah prompt_ yang dapat disimpan dan digunakan ulang sesuai kebutuhan, untuk menghasilkan pengalaman pengguna yang lebih konsisten secara skala. Dalam bentuk paling sederhana, ini hanyalah kumpulan contoh prompt seperti [yang ini dari OpenAI](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst) yang menyediakan komponen prompt interaktif (pesan pengguna dan sistem) dan format permintaan yang digerakkan oleh API - untuk mendukung penggunaan ulang.
 
 Dalam bentuk yang lebih kompleks seperti [contoh ini dari LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst) mengandung _placeholder_ yang dapat diganti dengan data dari berbagai sumber (input pengguna, konteks sistem, sumber data eksternal, dll.) untuk menghasilkan prompt secara dinamis. Ini memungkinkan kita membuat perpustakaan prompt yang dapat digunakan ulang untuk menghasilkan pengalaman pengguna yang konsisten secara **programatik** dalam skala besar.
 

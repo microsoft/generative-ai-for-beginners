@@ -278,7 +278,7 @@ Mbinu nyingine ya kutumia maudhui muhimu ni kutoa _chapa_ badala ya mifano. Kati
 
 ### Prompt Templates
 
-Kiolezo cha prompt ni _mapishi yaliyowekwa kabla kwa prompt_ ambayo yanaweza kuhifadhiwa na kutumika tena kadri inavyohitajika, ili kuendesha uzoefu wa mtumiaji unaoendana kwa kiwango kikubwa. Katika muundo wake rahisi kabisa, ni mkusanyiko wa mifano ya prompt kama [hii kutoka OpenAI](https://platform.openai.com/docs/guides/prompt-engineering?WT.mc_id=academic-105485-koreyst) inayotoa sehemu za prompt za maingiliano (jumbe za mtumiaji na mfumo) pamoja na muundo wa ombi la API - kusaidia kutumia tena.
+Kiolezo cha prompt ni _mapishi yaliyowekwa kabla kwa prompt_ ambayo yanaweza kuhifadhiwa na kutumika tena kadri inavyohitajika, ili kuendesha uzoefu wa mtumiaji unaoendana kwa kiwango kikubwa. Katika muundo wake rahisi kabisa, ni mkusanyiko wa mifano ya prompt kama [hii kutoka OpenAI](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst) inayotoa sehemu za prompt za maingiliano (jumbe za mtumiaji na mfumo) pamoja na muundo wa ombi la API - kusaidia kutumia tena.
 
 Katika muundo wake mgumu zaidi kama [mfano huu kutoka LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst) una _viashiria_ vinavyoweza kubadilishwa na data kutoka kwa vyanzo mbalimbali (ingizo la mtumiaji, muktadha wa mfumo, vyanzo vya data vya nje n.k.) ili kuunda prompt kwa njia ya mabadiliko ya wakati halisi. Hii inatupa uwezo wa kuunda maktaba za prompt zinazoweza kutumika tena ambazo zinaweza kutumika kuendesha uzoefu wa mtumiaji unaoendana **kwa mpangilio wa programu** kwa kiwango kikubwa.
 

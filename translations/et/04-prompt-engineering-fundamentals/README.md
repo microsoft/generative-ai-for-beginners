@@ -278,7 +278,7 @@ Teine peamise sisu kasutamise tehnika on pakkuda _vihjeid_ näidete asemel. Sel 
 
 ### Prompti mallid
 
-Prompti mall on _eelnevalt määratletud juhise retsept_, mida saab salvestada ja vajadusel uuesti kasutada, et tagada skaleeritult järjepidev kasutajakogemus. Lihtsas vormis on see lihtsalt valik näidispäringutest, nagu [see OpenAI näide](https://platform.openai.com/docs/guides/prompt-engineering?WT.mc_id=academic-105485-koreyst), mis sisaldab nii interaktiivse päringu komponente (kasutaja ja süsteemi sõnumid) kui ka API-põhist päringu vormingut – tagamaks korduvkasutatavust.
+Prompti mall on _eelnevalt määratletud juhise retsept_, mida saab salvestada ja vajadusel uuesti kasutada, et tagada skaleeritult järjepidev kasutajakogemus. Lihtsas vormis on see lihtsalt valik näidispäringutest, nagu [see OpenAI näide](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst), mis sisaldab nii interaktiivse päringu komponente (kasutaja ja süsteemi sõnumid) kui ka API-põhist päringu vormingut – tagamaks korduvkasutatavust.
 
 Raskemas vormis, nagu [see LangChain näide](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst), sisaldab see _kohatäiteid_, mida saab asendada eri andmeallikatest pärit infoga (kasutaja sisend, süsteemi kontekst, välised andmeallikad jms), et genereerida dünaamiliselt päringut. See võimaldab meil luua taaskasutatavate päringute raamatukogu, mida kasutatakse **programmiliselt** järjepideva kasutajakogemuse loomiseks ulatuslikult.
 

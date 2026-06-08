@@ -278,7 +278,7 @@ response = openai.chat.completions.create(
 
 ### Prompt Templates
 
-提示模板是 _預先定義的提示配方_，可以儲存並按需重用，以在大規模範圍內推動更一致的用戶體驗。它最簡單的形式，是像 [這個來自 OpenAI 的範例](https://platform.openai.com/docs/guides/prompt-engineering?WT.mc_id=academic-105485-koreyst) 一樣的一組提示示例，提供了交互式提示組件（用戶和系統訊息）和 API 請求格式，以支持重用。
+提示模板是 _預先定義的提示配方_，可以儲存並按需重用，以在大規模範圍內推動更一致的用戶體驗。它最簡單的形式，是像 [這個來自 OpenAI 的範例](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst) 一樣的一組提示示例，提供了交互式提示組件（用戶和系統訊息）和 API 請求格式，以支持重用。
 
 在更複雜的形式中，如 [這個來自 LangChain 的範例](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst) 包含了可以從多種來源（用戶輸入、系統上下文、外部數據源等）替換的 _佔位符_，以動態生成提示。這讓我們能夠建立可重用提示庫，從而能夠**程式化**地大規模驅動一致的用戶體驗。
 
