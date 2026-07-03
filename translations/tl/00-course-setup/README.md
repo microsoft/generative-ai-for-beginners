@@ -179,7 +179,7 @@ Kapag na-access mo ang URL, makikita mo ang outline ng kurso at maaari kang mag-
 
 ### Pagpapatakbo sa isang container
 
-Isang alternatibo sa pag-set up ng lahat sa iyong computer o Codespace ay ang paggamit ng isang [container](<https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Ang espesyal na `.devcontainer` folder sa loob ng course repository ay nagpapahintulot sa VS Code na i-setup ang proyekto sa loob ng isang container. Sa labas ng Codespaces, kakailanganin nitong mag-install ka ng Docker, at sa totoo lang, medyo mahirap ito kaya inirerekomenda namin ito lamang sa mga may karanasan sa paggamit ng containers.
+Isang alternatibo sa pag-set up ng lahat sa iyong computer o Codespace ay ang paggamit ng isang [container](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst). Ang espesyal na `.devcontainer` folder sa loob ng course repository ay nagpapahintulot sa VS Code na i-setup ang proyekto sa loob ng isang container. Sa labas ng Codespaces, kakailanganin nitong mag-install ka ng Docker, at sa totoo lang, medyo mahirap ito kaya inirerekomenda namin ito lamang sa mga may karanasan sa paggamit ng containers.
 
 Isa sa pinakamahusay na paraan para panatilihing ligtas ang iyong mga API key kapag gumagamit ng GitHub Codespaces ay ang paggamit ng Codespace Secrets. Mangyaring sundin ang [Codespaces secrets management](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) na gabay upang matuto pa tungkol dito.
 

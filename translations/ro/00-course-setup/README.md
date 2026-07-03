@@ -178,7 +178,7 @@ Odată ce accesezi URL-ul, ar trebui să vezi structura cursului și să poți n
 
 ### Rularea într-un container
 
-O alternativă la configurarea locală pe calculator sau în Codespace este să folosești un [container](<https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Directorul special `.devcontainer` din repo-ul cursului face posibil ca VS Code să configureze proiectul într-un container. În afara Codespaces, acest lucru necesită instalarea Docker, și sincer, implică ceva muncă, așa că recomandăm acest lucru doar celor cu experiență în lucru cu containere.
+O alternativă la configurarea locală pe calculator sau în Codespace este să folosești un [container](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst). Directorul special `.devcontainer` din repo-ul cursului face posibil ca VS Code să configureze proiectul într-un container. În afara Codespaces, acest lucru necesită instalarea Docker, și sincer, implică ceva muncă, așa că recomandăm acest lucru doar celor cu experiență în lucru cu containere.
 
 Una dintre cele mai sigure metode de a-ți proteja cheile API când folosești GitHub Codespaces este folosirea Codspace Secrets. Urmează ghidul privind [gestionarea secretelor în Codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) pentru detalii.
 

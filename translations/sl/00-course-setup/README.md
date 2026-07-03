@@ -179,7 +179,7 @@ Ko dostopate do URL-ja, boste videli načrt tečaja in lahko dostopali do katere
 
 ### Zagon v vsebniku
 
-Alternativa nastavitvi vsega na vašem računalniku ali Codespace je uporaba [vsebnikov](<https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Posebna mapa `.devcontainer` v repozitoriju omogoča VS Code, da nastavi projekt znotraj vsebnika. Izven Codespaces bo to zahtevalo namestitev Dockerja, in iskreno rečeno, zahteva nekaj dela, zato to priporočamo le tistim z izkušnjami z vsebniki.
+Alternativa nastavitvi vsega na vašem računalniku ali Codespace je uporaba [vsebnikov](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst). Posebna mapa `.devcontainer` v repozitoriju omogoča VS Code, da nastavi projekt znotraj vsebnika. Izven Codespaces bo to zahtevalo namestitev Dockerja, in iskreno rečeno, zahteva nekaj dela, zato to priporočamo le tistim z izkušnjami z vsebniki.
 
 Eden najboljših načinov, da ohranite varnost svojih API ključev pri uporabi GitHub Codespaces, je uporaba Codespace Secrets. Prosimo, sledite vodiču za [upravljanje skrivnosti v Codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) za več informacij.
 

@@ -179,7 +179,7 @@ jupyterhub
 
 ### Запуск у контейнері
 
-Альтернативою налаштуванню всього на вашому комп’ютері або використанню Codespace є використання [контейнера](<https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Спеціальна папка `.devcontainer` у репозиторії курсу дає можливість VS Code налаштовувати проєкт у контейнері. Поза Codespaces це вимагатиме встановлення Docker і дещо більше зусиль, тому ми рекомендуємо це тільки тим, хто має досвід роботи з контейнерами.
+Альтернативою налаштуванню всього на вашому комп’ютері або використанню Codespace є використання [контейнера](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst). Спеціальна папка `.devcontainer` у репозиторії курсу дає можливість VS Code налаштовувати проєкт у контейнері. Поза Codespaces це вимагатиме встановлення Docker і дещо більше зусиль, тому ми рекомендуємо це тільки тим, хто має досвід роботи з контейнерами.
 
 Один із найкращих способів безпечно зберігати свої API-ключі при роботі з GitHub Codespaces — це використання секретів Codespaces. Будь ласка, ознайомтеся з [керівництвом з керування секретами в Codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst).
 

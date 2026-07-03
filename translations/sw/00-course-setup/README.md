@@ -179,7 +179,7 @@ Ukifikia URL, unapaswa kuona muhtasari wa kozi na uweze kuvinjari kwenye faili y
 
 ### Kuendesha ndani ya kontena
 
-Njia mbadala ya kusanidi kila kitu kwenye kompyuta yako au Codespace ni kutumia [kontena](<https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Saraka maalum ya `.devcontainer` ndani ya maktaba ya kozi inaimarisha VS Code kuweka mradi ndani ya kontena. Nje ya Codespaces, hii itahitaji usakinishaji wa Docker, na kwa ukweli, inahusisha kazi kidogo, hivyo tunapendekeza hii kwa wale tu wenye uzoefu wa kazi na kontena.
+Njia mbadala ya kusanidi kila kitu kwenye kompyuta yako au Codespace ni kutumia [kontena](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst). Saraka maalum ya `.devcontainer` ndani ya maktaba ya kozi inaimarisha VS Code kuweka mradi ndani ya kontena. Nje ya Codespaces, hii itahitaji usakinishaji wa Docker, na kwa ukweli, inahusisha kazi kidogo, hivyo tunapendekeza hii kwa wale tu wenye uzoefu wa kazi na kontena.
 
 Njia moja bora ya kulinda funguo zako za API unapotumia GitHub Codespaces ni kwa kutumia Siri za Codespace. Tafadhali fuata mwongozo wa [kusimamia siri za Codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) ili kujifunza zaidi kuhusu hili.
 

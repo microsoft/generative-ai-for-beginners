@@ -179,7 +179,7 @@ Setelah anda mengakses URL tersebut, anda sepatutnya dapat melihat garis besar k
 
 ### Menjalankan dalam kontena
 
-Alternatif kepada penetapan semua perkara di komputer anda atau Codespace ialah menggunakan [kontena](<https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Folder khas `.devcontainer` dalam repositori kursus membolehkan VS Code menyediakan projek dalam sebuah kontena. Di luar Codespaces, ini memerlukan pemasangan Docker, dan secara terus-terangnya, ia memerlukan sedikit kerja, jadi kami mengesyorkan ini hanya untuk mereka yang berpengalaman bekerja dengan kontena.
+Alternatif kepada penetapan semua perkara di komputer anda atau Codespace ialah menggunakan [kontena](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst). Folder khas `.devcontainer` dalam repositori kursus membolehkan VS Code menyediakan projek dalam sebuah kontena. Di luar Codespaces, ini memerlukan pemasangan Docker, dan secara terus-terangnya, ia memerlukan sedikit kerja, jadi kami mengesyorkan ini hanya untuk mereka yang berpengalaman bekerja dengan kontena.
 
 Salah satu cara terbaik untuk menjaga kunci API anda selamat apabila menggunakan GitHub Codespaces adalah dengan menggunakan Rahsia Codespace. Sila ikut panduan [pengurusan rahsia Codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) untuk maklumat lanjut.
 
