@@ -32,7 +32,7 @@ There are many different types of LLM models, your choice of model depends on wh
 
 Depending on if you aim to use the models for text, audio, video, image generation and so on, you might opt for a different type of model.
 
-- **Audio and speech recognition**. Whisper-style models are still useful general-purpose speech recognition models, but production choices now also include newer speech-to-text models such as `gpt-4o-transcribe`, `gpt-4o-mini-transcribe`, and diarization variants. Evaluate language coverage, diarization, realtime support, latency, and cost for your scenario. Learn more in the [OpenAI speech-to-text guide](https://developers.openai.com/api/docs/guides/speech-to-text?WT.mc_id=academic-105485-koreyst).
+- **Audio and speech recognition**. Whisper-style models are still useful general-purpose speech recognition models, but production choices now also include newer speech-to-text models such as `gpt-4o-transcribe`, `gpt-4o-mini-transcribe`, and diarization variants. Evaluate language coverage, diarization, realtime support, latency, and cost for your scenario. Learn more in the [OpenAI speech-to-text documentation](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-koreyst).
 
 - **Image generation**. DALL-E and Midjourney are well-known image generation options, but current OpenAI image APIs center on GPT Image models such as `gpt-image-2`, while Stable Diffusion, Imagen, Flux, and other model families are also common choices. Compare prompt adherence, editing support, style control, safety requirements, and licensing. Learn more in the [OpenAI image generation guide](https://developers.openai.com/api/docs/guides/image-generation?WT.mc_id=academic-105485-koreyst) and Chapter 9 of this curriculum.
 
