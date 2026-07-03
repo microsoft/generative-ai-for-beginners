@@ -1,126 +1,126 @@
-# Haladó promptok létrehozása
+# Fejlett promptok létrehozása
 
-[![Haladó promptok létrehozása](../../../translated_images/hu/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Fejlett promptok létrehozása](../../../translated_images/hu/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
-Ismételjük át az előző fejezet tanulságait:
+Tekintsük át a korábbi fejezet tanulságait:
 
-> A prompt _mérnöki munka_ az a folyamat, amely során **irányítjuk a modellt relevánsabb válaszok felé**, hasznosabb utasítások vagy kontextus megadásával.
+> A prompt _tervezése_ az a folyamat, mely során **azzal irányítjuk a modellt relevánsabb válaszok felé**, hogy hasznosabb utasításokat vagy kontextust adunk meg.
 
-A promptok írásának két lépése van: a prompt megalkotása, releváns kontextus megadásával, és az _optimalizálás_, azaz a prompt fokozatos javítása.
+A promptok írásának két lépése van: a prompt összeállítása, releváns kontextus megadásával, és az _optimalizálás_, vagyis hogyan fejlesszük fokozatosan a promptot.
 
-Ezen a ponton már van némi alapvető ismeretünk arról, hogyan kell promptokat írni, de mélyebbre kell ásnunk. Ebben a fejezetben a különböző promptok kipróbálásától eljutunk annak megértéséig, hogy miért jobb az egyik prompt a másiknál. Megtanuljuk, hogyan kell promptokat alkotni néhány alapvető technika követésével, amelyeket bármely LLM-re alkalmazhatunk.
+Eddig alapvető ismereteket szereztünk a promptírásról, de mélyebbre kell mennünk. Ebben a fejezetben a különböző promptok kipróbálásától eljutunk addig, hogy megértsük, miért jobb az egyik prompt a másiknál. Megtanulod, hogyan építs fel promptokat alapvető technikákat követve, melyeket bármely LLM-re alkalmazhatsz.
 
 ## Bevezetés
 
-Ebben a fejezetben az alábbi témákat fogjuk tárgyalni:
+Ebben a fejezetben a következő témákat tárgyaljuk:
 
-- Bővítse a prompt mérnöki ismereteit különböző technikák alkalmazásával.
-- Állítsa be a promptokat az eltérő kimenetek érdekében.
+- Bővítsd prompttervezési ismereteidet különböző technikák alkalmazásával.
+- Állítsd be a promptjaidat, hogy változatos kimenetet kapj.
 
 ## Tanulási célok
 
-A lecke elvégzése után képes lesz:
+A lecke elvégzése után képes leszel:
 
-- Olyan prompt mérnöki technikákat alkalmazni, amelyek javítják a promptok eredményét.
-- Olyan promptokat létrehozni, amelyek vagy változatosak, vagy determinisztikusak.
+- Olyan prompttervezési technikákat alkalmazni, amelyek javítják a prompt kimenetelét.
+- Változatos vagy determinisztikus promptot végrehajtani.
 
-## Prompt mérnöki munka
+## Prompttervezés
 
-A prompt mérnöki munka olyan promptok létrehozásának folyamata, amelyek a kívánt eredményt hozzák létre. A prompt mérnöki munka több, mint egyszerű szöveges prompt írása. Ez nem egy mérnöki diszciplína, hanem inkább egy technikák halmaza, amelyeket alkalmazhatunk a kívánt eredmény eléréséhez.
+A prompttervezés a promptok létrehozásának folyamata, melyek a kívánt eredményt hozzák létre. Nem csupán szöveges prompt írásáról van szó. A prompttervezés nem mérnöki tudományág, hanem egy technikák halmaza, amelyeket alkalmazhatsz, hogy elérd a kívánt eredményt.
 
 ### Egy példa egy promptra
 
-Vegyünk egy alapvető promptot, például ezt:
+Vegyük ezt az egyszerű promptot:
 
-> Generálj 10 kérdést a földrajzról.
+> Hozz létre 10 kérdést a földrajzról.
 
-Ebben a promptban valójában különböző prompt technikákat alkalmazunk.
+Ebben a promptban több különböző prompttechnika is megjelenik.
 
-Nézzük meg részletesen.
+Nézzük szét.
 
-- **Kontextus**, megadjuk, hogy "földrajzról" szóljon.
-- **Kimenet korlátozása**, legfeljebb 10 kérdést szeretnénk.
+- **Kontextus**, megadod, hogy „földrajzról” legyen szó.
+- **Kimenet korlátozása**, nem szeretnél 10 kérdésnél többet.
 
-### Egyszerű promptok korlátai
+### Az egyszerű promptolás korlátai
 
-Lehet, hogy nem kapjuk meg a kívánt eredményt. A kérdések generálva lesznek, de a földrajz nagy téma, és lehet, hogy nem azt kapjuk, amit szeretnénk, az alábbi okok miatt:
+Lehet, hogy megkapod, amit szeretnél, de az is előfordulhat, hogy nem. A kérdések létrejönnek, de a földrajz egy nagy téma, és lehet, hogy nem azt kapod, amit szeretnél, a következő okok miatt:
 
-- **Nagy téma**, nem tudjuk, hogy országokról, fővárosokról, folyókról stb. fog szólni.
-- **Formátum**, mi van, ha a kérdéseket egy bizonyos formátumban szeretnénk?
+- **Nagy téma**, nem tudhatod, hogy országokról, fővárosokról, folyókról vagy másról lesz szó.
+- **Formátum**, mi van, ha a kérdések formázása is számít?
 
-Ahogy látható, sok mindent figyelembe kell venni a promptok létrehozásakor.
+Láthatod, sok szempontot kell figyelembe venni prompt létrehozásakor.
 
-Eddig láttunk egy egyszerű prompt példát, de a generatív AI sokkal többre képes, hogy segítsen az embereknek különböző szerepekben és iparágakban. Nézzük meg a következő alapvető technikákat.
+Eddig egy egyszerű példát láttunk, de a generatív MI ennél sokkal többre képes, hogy segítsen különböző szerepekben és iparágakban. Vizsgáljunk meg néhány alapvető technikát.
 
-### Prompt technikák
+### Promptolási technikák
 
-Először is meg kell értenünk, hogy a promptolás az LLM egy _felmerülő_ tulajdonsága, ami azt jelenti, hogy ez nem egy beépített funkció a modellben, hanem valami, amit a modell használata során fedezünk fel.
+Először meg kell értenünk, hogy a promptolás egy _emergens_ tulajdonsága az LLM-nek, vagyis nem egy beépített funkció, hanem olyasmi, amit használat közben fedezünk fel.
 
-Van néhány alapvető technika, amelyeket használhatunk egy LLM promptolásához. Nézzük meg őket.
+Vannak alapvető technikák, amiket használhatunk egy LLM promptolására. Nézzük őket.
 
-- **Zero-shot promptolás**, ez a promptolás legegyszerűbb formája. Ez egyetlen prompt, amely az LLM-től választ kér kizárólag a tanulási adatai alapján.
-- **Few-shot promptolás**, ez a promptolás irányítja az LLM-t azáltal, hogy 1 vagy több példát ad, amelyekre támaszkodhat a válasz generálásához.
-- **Chain-of-thought**, ez a promptolás arra utasítja az LLM-t, hogy bontsa le a problémát lépésekre.
-- **Generált tudás**, a prompt válaszának javítása érdekében generált tényeket vagy tudást adhatunk hozzá a prompthoz.
-- **Legkevesebbtől a legtöbbig**, hasonlóan a chain-of-thought-hoz, ez a technika arról szól, hogy egy problémát lépések sorozatára bontunk, majd kérjük, hogy ezeket a lépéseket sorrendben hajtsa végre.
-- **Önrefinálás**, ez a technika az LLM kimenetének kritizálásáról szól, majd kérjük, hogy javítsa azt.
-- **Maieutikus promptolás**, itt az a cél, hogy biztosítsuk az LLM válaszának helyességét, és kérjük, hogy magyarázza el a válasz különböző részeit. Ez az önrefinálás egyik formája.
+- **Zero-shot promptolás**, ez a legáltalánosabb forma. Egyetlen prompt, amely a modell tanulási adatain alapuló választ kér.
+- **Few-shot promptolás**, ebben a promptolási típusban egy vagy több példát adsz a modellnek, amire támaszkodhat a válasz generálásánál.
+- **Gondolatmenet (chain-of-thought)**, ez a prompt típus az LLM-et arra tanítja, hogyan bontson le egy problémát lépésekre.
+- **Generált tudás**, egy prompt válasz javítására kiegészítő generált tényeket vagy tudást adhatsz a promptod mellé.
+- **Least to most (kevésől a legtöbbhöz)**, mint a gondolatmenet, itt a nagy problémát lépésekre bontod és ezek sorrendben végrehajtását kéred.
+- **Önkritika (self-refine)**, ez a technika arról szól, hogy a modell kimenetét kritikával illeted, majd javítást kérsz tőle.
+- **Maieutikus promptolás**. Itt a cél, hogy az LLM válaszát helyesnek biztosítsd, miközben arra kérd, magyarázza meg a válasz különböző részeit. Ez egyfajta önkritisztika.
 
 ### Zero-shot promptolás
 
-Ez a promptolási stílus nagyon egyszerű, egyetlen promptból áll. Ez a technika valószínűleg az, amit használ, amikor elkezdi tanulni az LLM-eket. Íme egy példa:
+Ez a promptolási mód nagyon egyszerű: egyetlen promptból áll. Ez valószínűleg az, amit akkor használsz, amikor elkezdesz megtanulni egy LLM használatát. Példa:
 
-- Prompt: "Mi az algebra?"
-- Válasz: "Az algebra a matematika egy ága, amely a matematikai szimbólumokkal és azok manipulálásának szabályaival foglalkozik."
+- Prompt: „Mi az algebra?”
+- Válasz: „Az algebra a matematika egy ága, amely matematikai szimbólumokat és azok műveleti szabályait vizsgálja.”
 
 ### Few-shot promptolás
 
-Ez a promptolási stílus segíti a modellt azáltal, hogy néhány példát ad a kérés mellé. Egyetlen promptból áll, amelyhez további feladatspecifikus adatokat adunk. Íme egy példa:
+Ez a promptolási stílus példákat ad a kérés mellé, hogy segítsen a modellnek. Egyetlen prompt, kiegészítve bizonyos, feladatspecifikus adatokkal. Példa:
 
-- Prompt: "Írj egy verset Shakespeare stílusában. Íme néhány példa Shakespeare szonettjeire:
-  Szonett 18: 'Hasonlítsalak-e egy nyári naphoz? Te szebb vagy és szelídebb...'
-  Szonett 116: 'Ne engedj akadályt az igaz lelkek házasságában. A szerelem nem szerelem, ha változik, amikor változást talál...'
-  Szonett 132: 'Szeretem szemeidet, és ők, mintha sajnálnának engem, tudván, hogy szíved megvetéssel gyötör...'
-  Most írj egy szonettet a hold szépségéről."
-- Válasz: "Az égen lágyan ragyog a hold, Ezüstös fényével, amely gyengéd kegyelmet áraszt..."
+- Prompt: „Írj egy verset Shakespeare stílusában! Íme néhány példa Shakespeare-i szonettekre.:
+  18. szonett: 'Hasonlítsalak-é nyár napjához? Szebb vagy mint a tűző nyár...'
+  116. szonett: 'Ne engedjem szerelem útját akadályozni...'
+  132. szonett: 'Szeretem szemeid, melyek engem sajnálnak...'
+  Most írj egy szonettet a hold szépségéről.”
+- Válasz: „Az égen holdfény puhán ragyog, Ezüstös fény, mely gyengéden ontja...”
 
-A példák segítenek az LLM-nek megérteni a kívánt kimenet kontextusát, formátumát vagy stílusát. Segítenek a modellnek pontosabb és relevánsabb válaszokat generálni.
+A példák kontextust, formát és stílust adnak a modellnek. Segítenek megérteni a konkrét feladatot, így pontosabb, relevánsabb válaszokat ad.
 
-### Chain-of-thought
+### Gondolatmenet (Chain-of-thought)
 
-A Chain-of-thought egy nagyon érdekes technika, mivel arról szól, hogy az LLM-et lépések sorozatán keresztül vezessük. Az ötlet az, hogy az LLM-et úgy utasítsuk, hogy megértse, hogyan kell valamit megtenni. Vegyük a következő példát, láncolt gondolatmenet nélkül és azzal:
+A gondolatmenet egy érdekes technika, amely során az LLM-et lépéssorozaton keresztül vezeted. Az ötlet az, hogy az LLM-et úgy oktatod, hogy megértse, hogyan kell valamit lépésekre bontva megoldani. Nézzünk egy példát, gondolatmenettel és anélkül:
 
-    - Prompt: "Alice-nek 5 almája van, eldob 3 almát, ad 2-t Bobnak, és Bob visszaad egyet, hány almája van Alice-nek?"
+    - Prompt: „Alice-nek 5 almája van, dob 3-at, 2-t ad Bobnak, Bob pedig visszad ad egyet, hány almája van Alice-nek?”
     - Válasz: 5
 
-Az LLM 5-tel válaszol, ami helytelen. A helyes válasz 1 alma, a számítás alapján (5 -3 -2 + 1 = 1).
+Az LLM 5-öt ad válasznak, ami helytelen. A helyes válasz 1 alma, mert (5 -3 -2 + 1 = 1).
 
-Hogyan taníthatjuk meg az LLM-et, hogy ezt helyesen végezze el?
+Hogyan tanítsuk meg helyesen oldani?
 
-Próbáljuk ki a láncolt gondolatmenetet. A láncolt gondolatmenet alkalmazása azt jelenti:
+Próbáljuk meg a gondolatmenetet. Ez azt jelenti:
 
-1. Adjunk az LLM-nek egy hasonló példát.
-1. Mutassuk meg a számítást, és hogyan kell helyesen kiszámítani.
-1. Adjuk meg az eredeti promptot.
+1. Adj az LLM-nek egy hasonló példát.
+1. Mutasd meg a számítás menetét, hogyan kell helyesen számolni.
+1. Add meg az eredeti promptot.
 
-Így néz ki:
+Így:
 
-- Prompt: "Lisa-nak 7 almája van, eldob 1 almát, ad 4 almát Bartnak, és Bart visszaad egyet:
+- Prompt: „Lisa-nek 7 almája van, dob 1 almát, 4-et ad Bartnak, Bart visszaad egyet:
   7 -1 = 6
   6 -4 = 2
   2 +1 = 3  
-  Alice-nek 5 almája van, eldob 3 almát, ad 2-t Bobnak, és Bob visszaad egyet, hány almája van Alice-nek?"
+  Alice-nek 5 almája van, dob 3-at, 2-t ad Bobnak, Bob visszaad egyet, hány almája van Alice-nek?”
   Válasz: 1
 
-Figyeljük meg, hogy lényegesen hosszabb promptokat írunk egy másik példával, egy számítással, majd az eredeti prompttal, és eljutunk a helyes válaszhoz, ami 1.
+Láthatod, hogy sokkal hosszabb promptot írunk még egy példával és számítással, majd az eredeti kérdéssel, így a helyes 1-es válaszhoz jutunk.
 
-Ahogy látható, a láncolt gondolatmenet nagyon hatékony technika.
+A gondolatmenet nagyon hatékony technika.
 
 ### Generált tudás
 
-Sokszor, amikor promptot szeretnénk alkotni, azt a saját cégünk adataival szeretnénk megtenni. A prompt egy részének a cégből kell származnia, míg a másik résznek az aktuális promptnak kell lennie, amely iránt érdeklődünk.
+Gyakran, ha promptot akarsz építeni, saját céged adatait szeretnéd használni. A prompt egy része a cégtől származik, a másik rész pedig a valós prompt, ami érdekel.
 
-Például, ha az biztosítási üzletágban dolgozik, a prompt így nézhet ki:
+Például, ha biztosítási üzletágban vagy, a prompt így is kinézhet:
 
 ```text
 {{company}}: {{company_name}}
@@ -131,9 +131,9 @@ Budget: {{budget}}
 Requirements: {{requirements}}
 ```
 
-Fent látható, hogy a prompt hogyan van felépítve egy sablon segítségével. A sablonban számos változó található, amelyeket `{{variable}}` jelöl, és amelyeket a cég API-jából származó tényleges értékekkel helyettesítenek.
+Fent láthatod, hogy a prompt sablonból épül fel. A sablonban több változó van, `{{variable}}` formátumban, melyeket a cég API-ja valós értékekkel helyettesít.
 
-Íme egy példa arra, hogyan nézhet ki a prompt, miután a változókat a cég tartalmával helyettesítették:
+Íme egy példa arra, hogyan nézhet ki egy prompt, amikor a változókat a céged tartalma helyettesíti:
 
 ```text
 Insurance company: ACME Insurance
@@ -149,7 +149,7 @@ Budget: $1000
 Requirements: Car, Home, and Life insurance
 ```
 
-Ha ezt a promptot egy LLM-en keresztül futtatjuk, az alábbi választ kapjuk:
+Ennek az LLM-en futtatva ilyen válasz születik:
 
 ```output
 Given the budget and requirements, we suggest the following insurance package from ACME Insurance:
@@ -159,7 +159,7 @@ Given the budget and requirements, we suggest the following insurance package fr
 Total cost: $1,200 USD
 ```
 
-Ahogy látható, az LLM javasolja az életbiztosítást is, amit nem kellene. Ez az eredmény azt jelzi, hogy optimalizálnunk kell a promptot, hogy egyértelműbb legyen, mit engedhet meg. Néhány _próba és hiba_ után eljutunk a következő prompthoz:
+Láthatod, az is javasolja az életbiztosítást, amit nem kellene. Ez arra utal, hogy optimalizálni kell a promptot úgy, hogy tisztábban jelezze, mit enged meg. Néhány _próba-hiba_ után a következő promptnál kötünk ki:
 
 ```text
 Insurance company: ACME Insurance
@@ -174,48 +174,48 @@ Please suggest an insurance given the following budget and requirements:
 Budget: $1000 restrict choice to types: Car, Home
 ```
 
-Figyeljük meg, hogy a _típus_ és _költség_ hozzáadása, valamint a _korlátozás_ kulcsszó használata segít az LLM-nek megérteni, mit szeretnénk.
+Figyeld meg, hogy a _típus_ és _költség_ hozzáadása, valamint a _restrict_ kulcsszó segít az LLM-nek megérteni a kérést.
 
-Most a következő választ kapjuk:
+Most az alábbi válasz érkezik:
 
 ```output
 Given the budget and requirements, we suggest the Car, Cheap insurance product which costs 500 USD per month.
 ```
 
-Ennek a példának az volt a célja, hogy megmutassa, hogy bár egy alapvető technikát, például a _generált tudást_ használjuk, a legtöbb esetben még mindig optimalizálnunk kell a promptot a kívánt eredmény eléréséhez.
+A példa célja megmutatni, hogy bár egy egyszerű technikát használunk, mint a _generált tudás_, a promptot gyakran optimalizálni kell a kívánt eredmény eléréséhez.
 
-### Legkevesebbtől a legtöbbig
+### Least-to-most (kevésől a legtöbbhöz)
 
-A Legkevesebbtől a legtöbbig promptolás ötlete az, hogy egy nagyobb problémát kisebb alproblémákra bontunk. Így segítünk az LLM-nek "meghódítani" a nagyobb problémát. Jó példa lehet az adatkutatás, ahol az LLM-től kérhetjük, hogy ossza fel a problémát így:
+A Least-to-most promptolási ötlet az, hogy egy nagyobb problémát kisebb alproblémákra bontasz. Így segíted az LLM-et, hogyan "hódítsa meg" a nagy problémát. Jó példa lehet az adat tudomány, ahol az LLM-et megkérdezed, hogy bontsa szét 5 lépésben a feladatot:
 
-> Prompt: Hogyan végezzünk adatkutatást 5 lépésben?
+> Prompt: Hogyan végezzünk adat tudományt 5 lépésben?
 
-Az AI asszisztens válasza:
+Az AI segéd a következő választ adja:
 
 1. Adatok gyűjtése
-1. Adatok tisztítása
+1. Adatok megtisztítása
 1. Adatok elemzése
 1. Adatok ábrázolása
 1. Adatok bemutatása
 
-### Önrefinálás, az eredmények kritizálása
+### Önkritika, az eredmények kritikája
 
-A generatív AI-k és LLM-ek esetében nem lehet megbízni a kimenetben. Ellenőrizni kell. Végül is az LLM csak azt mutatja meg, hogy mi a következő legvalószínűbb dolog, amit mondani kell, nem pedig azt, hogy mi a helyes. Ezért jó ötlet, ha megkérjük az LLM-et, hogy kritizálja önmagát, ami az önrefinálás technikájához vezet.
+A generatív MI-k és LLM-ek esetében nem bízhatsz vakon a kimenetben. Ellenőrizned kell. Az LLM csak a legvalószínűbb következő szót vagy kifejezést adja, nem a helyes választ. Ezért jó ötlet, ha magát az LLM-et kéred önkritikára, ami az önkritika technikája.
 
-Hogyan működik? Kövesse az alábbi lépéseket:
+A folyamat így működik:
 
-1. Kezdeti prompt, amelyben az LLM-től kérünk egy probléma megoldását
-1. Az LLM válaszol
-1. Kritizáljuk a választ, és kérjük az AI-t, hogy javítsa
-1. Az LLM újra válaszol, ezúttal figyelembe véve a kritikát, és javaslatokat tesz a megoldásra
+1. Kezdeti prompt, amely megoldást kér a modelltől
+1. LLM válaszol
+1. Kritikát írsz a válaszra, és kéred az AI-t, hogy javítsa
+1. LLM újra válaszol, figyelembe véve a kritikát, és javaslatokat tesz
 
-Ezt a folyamatot annyiszor ismételheti, ahányszor csak szeretné.
+Ezt a folyamatot akárhányszor megismételheted.
 
-Íme egy példa erre a technikára:
+Példa erre a technikára:
 
-> Prompt: "Hozz létre egy Python Web API-t a termékek és ügyfelek útvonalával"
+> Prompt: „Készíts Python Web API-t a termékek és vásárlók útvonalaival”
 
-AI válasz:
+AI válasza:
 
 ```python
 import flask
@@ -230,9 +230,9 @@ def customers():
     return 'Customers'
 ```
 
-> Prompt: javasolj 3 javítást a fenti kódhoz
+> Prompt: javasolj 3 javítást a fenti kódon
 
-AI válasz:
+AI válasza:
 
 ```text
 Sure, here are three suggestions to improve the code:
@@ -261,21 +261,21 @@ if __name__ == '__main__':
     app.run()
 ```
 
-Ahogy látható, a fenti AI válasz javítja az első javasolt kódot az első válasz kritikájának köszönhetően.
+Láthatod, hogy az AI az első javasolt kódot javítja a kritika alapján.
 
 ### Maieutikus promptolás
 
-A maieutikus promptolás egy technika, amely hasonló az önrefináláshoz, de inkább arról szól, hogy az LLM-től kérjük, hogy magyarázza el önmagát. A cél az, hogy csökkentsük az LLM kimenetének ellentmondásait, és biztosítsuk, hogy helyes válaszra jusson. Az alábbi munkafolyamatot kell követni:
+A maieutikus promptolás egy technika, amely hasonló az önkritikához, de inkább arra kérd az LLM-et, magyarázza meg magát. A cél, hogy csökkentsük a válasz következetlenségeit és biztosítsuk a helyes választ. A folyamat:
 
-1. Kérje az LLM-t, hogy válaszoljon egy kérdésre
-1. A válasz minden részéhez kérje az LLM-t, hogy magyarázza el részletesebben.
-1. Ha vannak ellentmondások, dobja el az ellentmondásos részeket.
+1. Kérd meg az LLM-et, hogy válaszoljon egy kérdésre
+1. A válasz minden részletét kérd meg mélyebb magyarázatra.
+1. Ha következetlenség van, dobd el az ellentmondó részeket.
 
-Ismételje meg a 2. és 3. lépést, amíg át nem ment az összes részen, és elégedett nem lesz a válasszal.
+Ismételd a 2. és 3. lépéseket, amíg a teljes választ végig nem vetted és elégedett vagy.
 
-Íme egy példa prompt:
+Példa prompt:
 
-> prompt: Hogyan hozhatok létre válságtervet egy pandémia enyhítésére 5 lépésben?
+> prompt: Hogyan készíthetek válságtervet egy járvány mérséklésére 5 lépésben?
 > LLM válasz:
 
 ```text
@@ -286,9 +286,9 @@ Ismételje meg a 2. és 3. lépést, amíg át nem ment az összes részen, és 
 1. Identify the communication channels
 ```
 
-Az LLM azonosított 5 lépést, de meg tudjuk-e határozni, hogy ez helyes? Kérjük meg az LLM-et, hogy magyarázza el az egyes lépéseket részletesebben:
+Megadta az 5 lépést, de meg tudjuk állapítani, helyes-e? Kérjük meg az LLM-et, hogy magyarázza a lépéseket:
 
-> prompt: Magyarázd el az első lépést részletesebben, milyen kockázatok vannak részletesen egy pandémia esetén?
+> prompt: Magyarázd el az első lépést részletesebben, mik a kockázatok egy járvány esetén?
 
 ```text
 The risks are the following:
@@ -300,74 +300,74 @@ The risks are the following:
 - Loss of employees
 ```
 
-Ezen a ponton meg akarjuk győződni arról, hogy az LLM helyes, ezért kérjük, hogy magyarázza el az első kockázatot részletesebben, és reméljük, hogy következetes a fenti válasszal:
+Ebben a pontban biztosra akarunk menni, ezért megkérjük, magyarázza az első kockázatot részletesen, és reméljük, hogy következetes az előző válasszal:
 
-> prompt: Egy pandémia esetén mi a legnagyobb kockázat és miért?
+> prompt: Egy járványban mi a legnagyobb kockázat és miért?
 
 ```text
 The biggest risk is loss of life because it's the most important thing to protect.
 ```
 
-> Melyek a két legnagyobb kockázat egy pandémia esetén?
+> Mik a két legnagyobb kockázat egy járvány esetén?
 
 ```text
 The two biggest risks are loss of life and loss of business.
 ```
 
-Ezen a ponton az LLM következetes, és megemlíti az "életet" és az "üzletet" mint a két legnagyobb kockázatot. Most folytathatjuk a következő lépéssel, és viszonylag magabiztosak lehetünk. Azonban nem szabad vakon megbízni az LLM-ben, mindig ellenőrizni kell a kimenetet.
+Ekkor az LLM következetes, és az „élet” és az „üzlet” szavakat említi a két legnagyobb kockázatként. Folytathatjuk a következő lépéssel és viszonylag magabiztosak lehetünk. Ugyanakkor soha ne bízzunk vakon az LLM-ben, mindig ellenőrizd a kimenetet.
 
-## Változatos kimenet
+## Változtasd a kimenetet
 
-Az LLM-ek természetüknél fogva nem determinisztikusak, ami azt jelenti, hogy minden alkalommal más eredményt kapunk, amikor ugyanazt a promptot futtatjuk. Próbálja ki például a következő promptot:
+Az LLM-ek nem determinisztikusak, vagyis ugyanazt a promptot többször futtatva más-más eredményt adnak. Próbáld ki az alábbi promptot:
 
-> "Generálj kódot egy Python Web API-hoz"
+> „Generálj kódot Python Web API-hoz”
 
 ```python
-# Import necessary modules
+# Szükséges modulok importálása
 import flask
 from flask import request, jsonify
 
-# Create a Flask app
+# Flask alkalmazás létrehozása
 app = flask.Flask(__name__)
 
-# Create a route for the API
+# Útvonal létrehozása az API-hoz
 @app.route('/api', methods=['GET'])
 def api():
-    # Get the data from the request
+    # Adatok lekérése a kérésből
     data = request.args
 
-    # Process the data
+    # Az adatok feldolgozása
     result = process_data(data)
 
-    # Return the result as JSON
+    # Az eredmény visszaadása JSON formátumban
     return jsonify(result)
 
-# Function to process the data
+# Függvény az adatok feldolgozásához
 def process_data(data):
-    # Do something with the data
+    # Valami végrehajtása az adatokkal
     result = data + 1
 
-    # Return the result
+    # Az eredmény visszaadása
     return result
 
-# Run the app
+# Az alkalmazás futtatása
 if __name__ == '__main__':
     app.run()
 
 ```
 
-Ugyanazt a promptot újra futtatva kissé eltérő választ kapunk:
+Ugyanaz a prompt futtatva ismét némileg eltérő választ ad:
 
 ```python
-#import necessary packages
+#szükséges csomagok importálása
 import flask
 from flask import request, jsonify
 
-#create the Flask application
+#a Flask alkalmazás létrehozása
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
-#create a list of books
+#egy könyvek listájának létrehozása
 books = [
     {'id': 0,
      'title': 'A Fire Upon the Deep',
@@ -386,74 +386,208 @@ books = [
      'published': '1975'}
 ]
 
-#create an endpoint for the API
+#egy végpont létrehozása az API számára
 @app.route('/', methods=['GET'])
 def home():
     return '''<h1>Books API</h1>
 <p>A prototype API for retrieving books.</p>'''
 
-#create an endpoint to return all books
+#egy végpont létrehozása az összes könyv visszaadásához
 @app.route('/api/v1/resources/books/all', methods=['GET'])
 def api_all():
     return jsonify(books)
 
-#create an endpoint to return a single book
+#egy végpont létrehozása egyetlen könyv visszaadásához
 @app.route('/api/v1/resources/books', methods=['GET'])
 def api_id():
-    #check if an ID was provided as part of the URL
-    #if ID is provided, assign it to a variable
-    #if no ID is provided, display an error
+    #ellenőrizze, hogy az URL részeként megadtak-e azonosítót
+    #ha meg van adva az azonosító, rendelje egy változóhoz
+    #ha nincs azonosító megadva, hibát jelenít meg
     if 'id' in request.args:
         id = int(request.args['id'])
     else:
         return "Error: No id field provided. Please specify an id."
 
-    #create an empty list for our results
+    #egy üres lista létrehozása az eredményeinknek
     results = []
 
-    #loop through the data and match results that fit the requested ID
-    #IDs are unique, but other fields might return many results
+    #végigiterál a adatain, és egyező találatokat keres az igényelt azonosító alapján
+    #az azonosítók egyediek, de más mezők sok találatot adhatnak vissza
     for book in books:
         if book['id'] == id:
             results.append(book)
 
-    #use the jsonify function from Flask to convert our list of
-    #Python dictionaries to the JSON format
+    #a Flask jsonify függvényét használja a listánk
+    #Python szótárak JSON formátumba konvertálásához
     return jsonify(results)
 
 app.run()
 ```
 
-> Tehát probléma a változatos kimenet?
+> Akkor a változó kimenet probléma?
 
-Attól függ, hogy mit szeretne elérni. Ha konkrét választ szeretne, akkor ez probléma. Ha rendben van a változatos kimenet, például "Generálj bármilyen 3 kérdést a földrajzról", akkor ez nem probléma.
+Attól függ, mit akarsz. Ha konkrét választ szeretnél, az probléma. Ha elfogadod, hogy eltérő válaszokat kapsz, pl. „Generálj bármilyen 3 kérdést földrajzról”, akkor nem gond.
 
-### A hőmérséklet használata a kimenet változatosságának szabályozására
+### A "temperature" (hőmérséklet) használata a kimenet változtatásához
 
-Rendben, tehát eldöntöttük, hogy korlátozni szeretnénk a kimenetet, hogy kiszámíthatóbb, azaz inkább determinisztikus legyen. Hogyan érhetjük ezt el?
+Rendben, eldöntöttük, hogy akarjuk a kimenetet kiszámíthatóbbá, vagyis determinisztikusabbá tenni. Hogyan csináljuk?
 
-A hőmérséklet egy
-Ahogy látható, az eredmények nem is lehettek volna változatosabbak.
+A hőmérséklet értéke 0 és 1 között van, ahol 0 a legdeterministább, 1 pedig a legváltozatosabb. Az alapértelmezett érték 0.7. Nézzük meg, mi történik, ha kétszer lefuttatjuk ugyanazt a promptot 0.1-es hőmérséklettel:
 
-> Ne feledd, hogy több paramétert is megváltoztathatsz az output variálásához, mint például top-k, top-p, ismétlési büntetés, hosszúsági büntetés és diverzitási büntetés, de ezek kívül esnek ennek a tananyagnak a keretein.
+> „Generálj kódot Python Web API-hoz”
+
+```python
+#szükséges könyvtárak importálása
+import flask
+from flask import request, jsonify
+
+#egy Flask osztály példányának létrehozása
+app = flask.Flask(__name__)
+
+#egy végpont létrehozása az API-hoz
+@app.route('/api/v1/endpoint', methods=['GET'])
+def api_endpoint():
+    #a kérés adatainak lekérése
+    data = request.get_json()
+
+    #az adatok feldolgozása
+    result = process_data(data)
+
+    #az eredmény visszaadása
+    return jsonify(result)
+
+#függvény az adatok feldolgozásához
+def process_data(data):
+    #az adatok feldolgozása
+    result = {'result': 'success'}
+
+    #az eredmény visszaadása
+    return result
+
+#a Flask alkalmazás futtatása
+if __name__ == '__main__':
+    app.run()
+
+```
+
+Ismét futtatva ez a válasz érkezik:
+
+```python
+#szükséges könyvtárak importálása
+import flask
+from flask import request, jsonify
+
+#Flask alkalmazás létrehozása
+app = flask.Flask(__name__)
+
+#útvonal létrehozása az API-hoz
+@app.route('/api', methods=['GET'])
+def api_call():
+    #adatok lekérése a kérésből
+    data = request.get_json()
+
+    #adatok feldolgozása
+    result = process_data(data)
+
+    #eredmény visszaadása
+    return jsonify(result)
+
+#a process_data függvény definiálása
+def process_data(data):
+    #valami végrehajtása az adatokkal
+    result = data + 1
+
+    #eredmény visszaadása
+    return result
+
+#az alkalmazás futtatása
+if __name__ == '__main__':
+    app.run()
+
+```
+
+Alig van különbség a két kimenet között. Most csináljuk fordítva: állítsuk be a hőmérsékletet 0.9-re:
+
+```python
+# Szükséges könyvtárak importálása
+import flask
+from flask import request, jsonify
+
+# Flask alkalmazás létrehozása
+app = flask.Flask(__name__)
+
+# Egy útvonal létrehozása az API számára
+@app.route('/api', methods=['GET'])
+def api_call():
+    # Az adatok lekérése a kérésből
+    data = request.args
+
+    # Az adatok feldolgozása
+    result = process_data(data)
+
+    # Az eredmény visszaadása
+    return jsonify(result)
+
+# Függvény az adatok feldolgozásához
+def process_data(data):
+    # Valamit csinálni az adatokkal
+    result = data + 1
+
+    # Az eredmény visszaadása
+    return result
+
+# Az alkalmazás futtatása
+if __name__ == '__main__':
+    app.run()
+
+```
+
+és a második próbálkozás 0.9-es hőmérséklettel:
+
+```python
+import flask
+from flask import request, jsonify
+
+# hozd létre a Flask alkalmazást
+app = flask.Flask(__name__)
+app.config['DEBUG'] = True
+
+# hozz létre néhány tesztadatot
+books = [
+    {'id': 0, 'title': 'A Fire Upon The Deep', 'author': 'Vernor Vinge', 'first_sentence': 'The coldsleep itself was dreamless.', 'year_published': '1992'},
+    {'id': 1, 'title': 'The Ones Who Walk Away From Omelas', 'author': 'Ursula K. Le Guin', 'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.', 'published': '1973'},
+    {'id': 2, 'title': 'Dhalgren', 'author': 'Samuel R. Delany', 'first_sentence': 'to wound the autumnal city.', 'published': '1975'}
+]
+
+# hozz létre egy végpontot
+@app.route('/', methods=['GET'])
+def home():
+    return '''<h1>Welcome to our book API!</h1>'''
+
+@app.route('/api/v1/resources/books
+
+```
+
+Láthatod, hogy az eredmények sokkal eltérőbbek.
+> Megjegyzés: több paramétert is megváltoztathatsz az output variálásához, mint például top-k, top-p, ismétlési büntetés, hosszúsági büntetés és sokszínűségi büntetés, de ezek nincsenek belefoglalva ebbe a tananyagba.
 
 ## Jó gyakorlatok
 
-Számos gyakorlatot alkalmazhatsz annak érdekében, hogy elérd, amit szeretnél. Ahogy egyre többet használod a promptokat, megtalálod a saját stílusodat.
+Számos gyakorlat létezik, amit alkalmazhatsz, hogy megkapd, amit szeretnél. Ahogy egyre többet használsz promptokat, kialakul a saját stílusod.
 
-Az általunk tárgyalt technikákon túl van néhány jó gyakorlat, amit érdemes figyelembe venni, amikor egy LLM-et promptolsz.
+A technikák mellett, amiket áttekintettünk, van néhány jó gyakorlat, amit érdemes figyelembe venni, amikor egy LLM-et promptolsz.
 
 Íme néhány jó gyakorlat, amit érdemes megfontolni:
 
-- **Határozd meg a kontextust**. A kontextus számít, minél többet tudsz megadni, mint például a terület, téma stb., annál jobb.
-- Korlátozd az outputot. Ha egy adott számú elemet vagy konkrét hosszúságot szeretnél, add meg.
-- **Határozd meg, mit és hogyan**. Ne felejtsd el megemlíteni, hogy mit szeretnél és hogyan szeretnéd, például: "Hozz létre egy Python Web API-t, amely tartalmazza a termékek és ügyfelek útvonalait, oszd fel 3 fájlra".
-- **Használj sablonokat**. Gyakran szeretnéd gazdagítani a promptjaidat a céged adataival. Használj sablonokat ehhez. A sablonok tartalmazhatnak változókat, amelyeket tényleges adatokkal helyettesíthetsz.
-- **Írj helyesen**. Az LLM-ek valószínűleg helyes választ adnak, de ha helyesen írsz, jobb választ kapsz.
+- **Pontosan add meg a kontextust**. A kontextus számít, minél pontosabban meg tudod határozni, például domén, téma, stb., annál jobb.
+- Korlátozd a kimenetet. Ha meghatározott számú elemet vagy konkrét hosszúságot szeretnél, tüntesd fel.
+- **Határozd meg, hogy mit és hogyan**. Ne felejtsd el megemlíteni mindazt, amit szeretnél, és hogy hogyan, például: „Hozz létre egy Python Web API-t a products és customers route-okkal, bontsd 3 fájlra”.
+- **Használj sablonokat**. Gyakran szeretnéd az üzleti adataiddal bővíteni a promptokat. Használj sablonokat erre. A sablonok tartalmazhatnak változókat, amiket valódi adatokra cserélsz.
+- **Írj helyesen**. Az LLM-ek jó válaszokat adhatnak, de ha helyesen írsz, jobb válaszokat fogsz kapni.
 
 ## Feladat
 
-Itt van egy Python kód, amely bemutatja, hogyan lehet egyszerű API-t építeni Flask használatával:
+Íme egy Python kód, amely megmutatja, hogyan lehet egyszerű API-t építeni Flask használatával:
 
 ```python
 from flask import Flask, request
@@ -468,39 +602,41 @@ def hello():
 if __name__ == '__main__':
     app.run()
 ```
-  
-Használj egy AI asszisztenst, mint például GitHub Copilot vagy ChatGPT, és alkalmazd az "önfinomítás" technikát a kód javítására.
+
+Használj AI asszisztenst, például GitHub Copilot vagy ChatGPT-t, és alkalmazd a „self-refine” technikát a kód javításához.
 
 ## Megoldás
 
-Próbáld meg megoldani a feladatot úgy, hogy megfelelő promptokat adsz a kódhoz.
+Próbáld meg megoldani a feladatot, úgy, hogy megfelelő promptokat adsz a kódhoz.
 
-> [!TIP]  
-> Fogalmazz meg egy promptot, amelyben javítást kérsz, jó ötlet korlátozni, hogy hány javítást kérsz. Kérheted, hogy bizonyos módon javítsa, például architektúra, teljesítmény, biztonság stb.
+> [!TIP]
+> Fogalmazz meg egy promptot, amiben kéred a javítást, érdemes korlátozni a javítások számát. Kérheted azt is, hogy milyen módon javítsa, például architektúra, teljesítmény, biztonság stb.
 
-[Megoldás](../../../05-advanced-prompts/python/aoai-solution.py)
+[Solution](../../../05-advanced-prompts/python/aoai-solution.py)
 
 ## Tudásellenőrzés
 
-Miért használnám a chain-of-thought promptolást? Mutass egy helyes választ és két helytelen választ.
+Miért használnám a láncolt gondolkodás (chain-of-thought) promptolást? Mutass 1 helyes és 2 helytelen választ.
 
-1. Azért, hogy megtanítsam az LLM-et egy probléma megoldására.  
-1. B, Azért, hogy megtanítsam az LLM-et hibák keresésére a kódban.  
-1. C, Azért, hogy utasítsam az LLM-et különböző megoldások kidolgozására.
+1. Megtanítani az LLM-et egy probléma megoldására.
+1. B, Megtanítani az LLM-et, hogy találjon hibákat a kódban.
+1. C, Utasítani az LLM-et, hogy találjon ki különböző megoldásokat.
 
-A: 1, mert a chain-of-thought arról szól, hogy megmutatjuk az LLM-nek, hogyan oldjon meg egy problémát lépések sorozatával, valamint hasonló problémákat és azok megoldásait.
+A: 1, mert a láncolt gondolkodás arról szól, hogy megmutatjuk az LLM-nek, hogyan oldjon meg egy problémát egy lépéssorozaton keresztül, hasonló problémákkal és azok megoldásával.
 
 ## 🚀 Kihívás
 
-Az előző feladatban alkalmaztad az önfinomítás technikát. Vegyél egy programot, amit készítettél, és gondold át, milyen javításokat szeretnél alkalmazni rajta. Most használd az önfinomítás technikát a javasolt változtatások alkalmazására. Mit gondolsz az eredményről, jobb lett vagy rosszabb?
+Most épp a self-refine technikát alkalmaztad a feladatban. Vegyél elő bármilyen programot, amit írtál, és gondold át, milyen javításokat szeretnél alkalmazni rajta. Most használd a self-refine technikát a javasolt változtatások végrehajtására. Szerinted jobb vagy rosszabb lett az eredmény?
 
-## Szép munka! Folytasd a tanulást
+## Nagyszerű munka! Folytasd a tanulást!
 
-A lecke befejezése után nézd meg a [Generatív AI Tanulási gyűjteményt](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy tovább fejleszd a generatív AI tudásodat!
+A lecke elvégzése után nézd meg a [Generatív AI Tanuló gyűjteményünket](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy tovább fejleszd a generatív AI ismereteidet!
 
-Lépj tovább a 6. leckére, ahol alkalmazzuk a Prompt Engineering ismereteinket [szöveggeneráló alkalmazások építésével](../06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst).
+Lépj tovább a 6. leckéhez, ahol a promptfejlesztési tudásunkat alkalmazzuk[szöveggeneráló alkalmazások készítésével](../06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)
 
 ---
 
-**Felelősség kizárása**:  
-Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Jogi nyilatkozat**:
+Ez a dokumentum az AI fordítási szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár az pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén professzionális emberi fordítást javasolunk. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely ebből a fordításból ered.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
