@@ -180,7 +180,7 @@ jupyterhub
 
 ### اجرا در کانتینر
 
-راه جایگزین برای راه‌اندازی همه چیز روی کامپیوتر یا Codespace استفاده از [کانتینر](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>) است.  
+راه جایگزین برای راه‌اندازی همه چیز روی کامپیوتر یا Codespace استفاده از [کانتینر](<https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>) است.  
 پوشه خاص `.devcontainer` در مخزن دوره باعث می‌شود VS Code بتواند پروژه را داخل کانتینر راه‌اندازی کند.  
 خارج از Codespaces، این کار نیاز به نصب Docker دارد و به‌طور کلی کمی پیچیده است، بنابراین تنها به کسانی که تجربه کار با کانتینرها را دارند توصیه می‌شود.
 

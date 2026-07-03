@@ -179,7 +179,7 @@ jupyterhub
 
 ### التشغيل داخل حاوية
 
-بديل لإعداد كل شيء على جهازك أو في مساحة أكواد هو استخدام [حاوية](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). يتيح دليل `.devcontainer` الخاص بالمستودع إمكانية VS Code لإعداد المشروع داخل حاوية. خارج مساحات الأكواد، سيتطلب ذلك تثبيت Docker، وبصراحة، الأمر معقد قليلاً، لذا نوصي بذلك فقط لمن لديهم خبرة في العمل مع الحاويات.
+بديل لإعداد كل شيء على جهازك أو في مساحة أكواد هو استخدام [حاوية](<https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). يتيح دليل `.devcontainer` الخاص بالمستودع إمكانية VS Code لإعداد المشروع داخل حاوية. خارج مساحات الأكواد، سيتطلب ذلك تثبيت Docker، وبصراحة، الأمر معقد قليلاً، لذا نوصي بذلك فقط لمن لديهم خبرة في العمل مع الحاويات.
 
 واحدة من أفضل الطرق لحماية مفاتيح API الخاصة بك عند استخدام GitHub Codespaces هي باستخدام أسرار مساحات الأكواد. يرجى متابعة دليل [إدارة أسرار Codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) لمعرفة المزيد حول هذا.
 

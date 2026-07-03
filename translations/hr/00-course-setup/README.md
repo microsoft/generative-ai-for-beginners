@@ -178,7 +178,7 @@ Kada pristupite URL-u, trebali biste vidjeti okvir kolegija i moći navigirati d
 
 ### Pokretanje u containeru
 
-Alternativa za postavljanje svega na svom računalu ili Codespaceu je korištenje [containera](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Posebna `.devcontainer` mapa u repozitoriju omogućuje VS Code-u postavljanje projekta unutar containera. Izvan Codespaces ovo zahtijeva instalaciju Dockera i, iskreno govoreći, uključuje malo posla, stoga preporučujemo ovo samo iskusnim korisnicima koji već rade s containerima.
+Alternativa za postavljanje svega na svom računalu ili Codespaceu je korištenje [containera](<https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Posebna `.devcontainer` mapa u repozitoriju omogućuje VS Code-u postavljanje projekta unutar containera. Izvan Codespaces ovo zahtijeva instalaciju Dockera i, iskreno govoreći, uključuje malo posla, stoga preporučujemo ovo samo iskusnim korisnicima koji već rade s containerima.
 
 Jedan od najboljih načina da zaštitite svoje API ključeve pri korištenju GitHub Codespaces-a jest korištenje Codespace Secrets. Molimo pratite vodič za [upravljanje tajnama u Codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) kako biste saznali više.
 

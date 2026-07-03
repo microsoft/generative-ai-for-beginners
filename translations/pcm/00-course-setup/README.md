@@ -179,7 +179,7 @@ Once you open the URL, you go see the course outline and you fit enter any `*.ip
 
 ### Running in a container
 
-Another way to set everything up for your computer or Codespace na to use [container](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). The special `.devcontainer` folder inside the course repo dey make VS Code fit setup the project inside container. Outside Codespaces, dis one need Docker installation and e get some work involved, so we recommend am mainly to people wey get experience with containers.
+Another way to set everything up for your computer or Codespace na to use [container](<https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). The special `.devcontainer` folder inside the course repo dey make VS Code fit setup the project inside container. Outside Codespaces, dis one need Docker installation and e get some work involved, so we recommend am mainly to people wey get experience with containers.
 
 One of the best ways to keep your API keys safe when you dey use GitHub Codespaces na to use Codespace Secrets. Abeg follow the [Codespaces secrets management](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) guide to sabi more.
 

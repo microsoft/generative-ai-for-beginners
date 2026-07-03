@@ -179,7 +179,7 @@ Setelah mengakses URL tersebut, Anda akan melihat garis besar kursus dan dapat m
 
 ### Menjalankan dalam container
 
-Alternatif lain selain menyiapkan semua di komputer atau Codespace Anda adalah menggunakan [container](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Folder khusus `.devcontainer` dalam repositori kursus memungkinkan VS Code mengatur proyek dalam container. Di luar Codespaces, ini memerlukan pemasangan Docker, dan sebenarnya ini cukup rumit, jadi kami sarankan hanya bagi yang berpengalaman dengan container.
+Alternatif lain selain menyiapkan semua di komputer atau Codespace Anda adalah menggunakan [container](<https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Folder khusus `.devcontainer` dalam repositori kursus memungkinkan VS Code mengatur proyek dalam container. Di luar Codespaces, ini memerlukan pemasangan Docker, dan sebenarnya ini cukup rumit, jadi kami sarankan hanya bagi yang berpengalaman dengan container.
 
 Salah satu cara terbaik menjaga keamanan kunci API saat menggunakan GitHub Codespaces adalah dengan memakai Codespace Secrets. Silakan ikuti panduan [Codespaces secrets management](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) untuk mempelajarinya lebih lanjut.
 
