@@ -24,8 +24,8 @@ By the end of this lesson we will be able to:
 
 ## Key Terms
 
-Prompt Engineering: The practice of designing and refining inputs to guide AI models toward producing desired outputs.
-Tokenization: The process of converting text into smaller units, called tokens, that a model can understand and process.
+Prompt Engineering: The practice of designing and refining inputs to guide AI models toward producing desired outputs.  
+Tokenization: The process of converting text into smaller units, called tokens, that a model can understand and process.  
 Instruction-Tuned LLMs: Large Language Models (LLMs) that have been fine-tuned with specific instructions to improve their response accuracy and relevance.
 
 ## Learning Sandbox
@@ -34,8 +34,8 @@ Prompt engineering is currently more art than science. The best way to improve o
 
 The Jupyter Notebook accompanying this lesson provides a _sandbox_ environment where you can try out what you learn - as you go or as part of the code challenge at the end. To execute the exercises, you will need:
 
-1. **An Azure OpenAI API key** - the service endpoint for a deployed LLM.
-2. **A Python Runtime** - in which the Notebook can be executed.
+1. **An Azure OpenAI API key** - the service endpoint for a deployed LLM.  
+2. **A Python Runtime** - in which the Notebook can be executed.  
 3. **Local Env Variables** - _complete the [SETUP](./../00-course-setup/02-setup-local.md?WT.mc_id=academic-105485-koreyst) steps now to get ready_.
 
 The notebook comes with _starter_ exercises - but you are encouraged to add your own _Markdown_ (description) and _Code_ (prompt requests) sections to try out more examples or ideas - and build your intuition for prompt design.
@@ -70,13 +70,13 @@ Define it and explain why it is needed.
 
 We started this lesson by defining **Prompt Engineering** as the process of _designing and optimizing_ text inputs (prompts) to deliver consistent and quality responses (completions) for a given application objective and model. We can think of this as a 2-step process:
 
-- _designing_ the initial prompt for a given model and objective
+- _designing_ the initial prompt for a given model and objective  
 - _refining_ the prompt iteratively to improve the quality of the response
 
 This is necessarily a trial-and-error process that requires user intuition and effort to get optimal results. So why is it important? To answer that question, we first need to understand three concepts:
 
-- _Tokenization_ = how the model "sees" the prompt
-- _Base LLMs_ = how the foundation model "processes" a prompt
+- _Tokenization_ = how the model "sees" the prompt  
+- _Base LLMs_ = how the foundation model "processes" a prompt  
 - _Instruction-Tuned LLMs_ = how the model can now see "tasks"
 
 ### Tokenization
@@ -123,7 +123,7 @@ Now that we know how prompts are processed by LLMs, let's talk about _why_ we ne
 
 Let's see this in action in the OpenAI or Azure OpenAI Playground:
 
-- Use the same prompt with different LLM deployments (e.g, OpenAI, Azure OpenAI, Hugging Face) - did you see the variations?
+- Use the same prompt with different LLM deployments (e.g, OpenAI, Azure OpenAI, Hugging Face) - did you see the variations?  
 - Use the same prompt repeatedly with the _same_ LLM deployment (e.g., Azure OpenAI playground) - how did these variations differ?
 
 ### Fabrications Example
@@ -286,7 +286,7 @@ Finally, the real value of templates lies in the ability to create and publish _
 
 ## Supporting Content
 
-If we think about prompt construction as having an instruction (task) and a target (primary content), then _secondary content_ is like additional context we provide to **influence the output in some way**. It could be tuning parameters, formatting instructions, topic taxonomies etc. that can help the model _tailor_ its response to be suit the desired user objectives or expectations.
+If we think about prompt construction as having an instruction (task) and a target (primary content), then _secondary content_ is like additional context we provide to **influence the output in some way**. It could be tuning parameters, formatting instructions, topic taxonomies, etc. that can help the model _tailor_ its response to suit the desired user objectives or expectations.
 
 For example: Given a course catalog with extensive metadata (name, description, level, metadata tags, instructor etc.) on all the available courses in the curriculum:
 
@@ -319,9 +319,9 @@ Prompt Engineering is a trial-and-error process so keep three broad guiding fact
 
 1. **Domain Understanding Matters.** Response accuracy and relevance is a function of the _domain_ in which that application or user operates. Apply your intuition and domain expertise to **customize techniques** further. For instance, define _domain-specific personalities_ in your system prompts, or use _domain-specific templates_ in your user prompts. Provide secondary content that reflects domain-specific contexts, or use _domain-specific cues and examples_ to guide the model towards familiar usage patterns.
 
-2. **Model Understanding Matters.** We know models are stochastic by nature. But model implementations can also vary in terms of the training dataset they use (pre-trained knowledge), the capabilities they provide (e.g., via API or SDK) and the type of content they are optimized for (e.g, code vs. images vs. text). Understand the strengths and limitations of the model you are using, and use that knowledge to _prioritize tasks_ or build _customized templates_ that are optimized for the model's capabilities.
+2. **Model Understanding Matters.** We know models are stochastic by nature. But model implementations can also vary in terms of the training dataset they use (pre-trained knowledge), the capabilities they provide (e.g., via API or SDK) and the type of content they are optimized for (e.g., code vs. images vs. text). Understand the strengths and limitations of the model you are using, and use that knowledge to _prioritize tasks_ or build _customized templates_ that are optimized for the model's capabilities.
 
-3. **Iteration & Validation Matters.** Models are evolving rapidly, and so are the techniques for prompt engineering. As a domain expert, you may have other context or criteria _your_ specific application, that may not apply to the broader community. Use prompt engineering tools & techniques to "jump start" prompt construction, then iterate and validate the results using your own intuition and domain expertise. Record your insights and create a **knowledge base** (e.g, prompt libraries) that can be used as a new baseline by others, for faster iterations in the future.
+3. **Iteration & Validation Matters.** Models are evolving rapidly, and so are the techniques for prompt engineering. As a domain expert, you may have other context or criteria _your_ specific application, that may not apply to the broader community. Use prompt engineering tools & techniques to "jump start" prompt construction, then iterate and validate the results using your own intuition and domain expertise. Record your insights and create a **knowledge base** (e.g., prompt libraries) that can be used as a new baseline by others, for faster iterations in the future.
 
 ## Best Practices
 
@@ -366,7 +366,7 @@ For our assignment, we'll be using a Jupyter Notebook with exercises you can com
 
 ### Next, configure your environment variables
 
-- Copy the `.env.copy` file in repo root to `.env` and fill in the `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT` and `AZURE_OPENAI_DEPLOYMENT` values. Come back to [Learning Sandbox section](../../../04-prompt-engineering-fundamentals) to learn how.
+- Copy the `.env.copy` file in repo root to `.env` and fill in the `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT` and `AZURE_OPENAI_DEPLOYMENT` values. Come back to [Learning Sandbox section](#learning-sandbox) to learn how.
 
 ### Next, open the Jupyter Notebook
 
@@ -405,5 +405,5 @@ Head over to Lesson 5 where we will look at [advanced prompting techniques](../0
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
