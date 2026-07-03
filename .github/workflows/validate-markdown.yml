@@ -54,14 +54,25 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v7
-      - name: Run Check URLs tracking
-        id: check-urls-tracking
-        uses: john0isaac/action-check-markdown@v1.1.0
         with:
-          command: check_urls_tracking
-          directory: ./
-          guide-url: 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+      - name: Collect changed markdown files
+        id: changed-markdown-files
+        run: |
+          mapfile -t files < <(git diff --name-only --diff-filter=ACMR "${{ github.event.pull_request.base.sha }}"..."${{ github.event.pull_request.head.sha }}" -- '*.md' '*.ipynb' ':!translations/**' ':!translated_images/**')
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "has_files=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          printf '%s\n' "${files[@]}" > changed_markdown_files.txt
+          echo "has_files=true" >> "$GITHUB_OUTPUT"
+      - name: Run Check URLs tracking
+        if: steps.changed-markdown-files.outputs.has_files == 'true'
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install markdown-checker
+          mapfile -t files < changed_markdown_files.txt
+          markdown-checker --func check_urls_tracking --guide-url 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md' "${files[@]}"
   check-urls-locale:
     if: ${{ always() }}
     needs: check-urls-tracking
@@ -93,4 +104,3 @@ jobs:
           directory: ./
           guide-url: 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
           github-token: ${{ secrets.GITHUB_TOKEN }}
-
