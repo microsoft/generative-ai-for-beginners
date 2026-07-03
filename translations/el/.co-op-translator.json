@@ -25,7 +25,7 @@
   },
   "01-introduction-to-genai/README.md": {
     "original_hash": "bfb7901bdbece1ba3e9f35c400ca33e8",
-    "translation_date": "2025-10-17T18:27:28+00:00",
+    "translation_date": "2026-07-03T09:03:35+00:00",
     "source_file": "01-introduction-to-genai/README.md",
     "language_code": "el"
   },
@@ -49,19 +49,19 @@
   },
   "05-advanced-prompts/README.md": {
     "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
-    "translation_date": "2025-10-17T18:14:59+00:00",
+    "translation_date": "2026-07-03T08:40:05+00:00",
     "source_file": "05-advanced-prompts/README.md",
     "language_code": "el"
   },
   "06-text-generation-apps/README.md": {
     "original_hash": "df027997f1448323d6159b78a1b669bf",
-    "translation_date": "2025-10-17T18:16:16+00:00",
+    "translation_date": "2026-07-03T08:48:18+00:00",
     "source_file": "06-text-generation-apps/README.md",
     "language_code": "el"
   },
   "07-building-chat-applications/README.md": {
     "original_hash": "a5308963a56cfbad2d73b0fa99fe84b3",
-    "translation_date": "2025-10-17T18:26:13+00:00",
+    "translation_date": "2026-07-03T08:56:54+00:00",
     "source_file": "07-building-chat-applications/README.md",
     "language_code": "el"
   },
@@ -79,7 +79,7 @@
   },
   "09-building-image-applications/README.md": {
     "original_hash": "238cde5c90363d70ecc939569378da51",
-    "translation_date": "2025-10-17T18:24:10+00:00",
+    "translation_date": "2026-07-03T08:44:10+00:00",
     "source_file": "09-building-image-applications/README.md",
     "language_code": "el"
   },
@@ -97,7 +97,7 @@
   },
   "11-integrating-with-function-calling/README.md": {
     "original_hash": "f6f84f9ef2d066cd25850cab93580a50",
-    "translation_date": "2025-10-17T18:18:29+00:00",
+    "translation_date": "2026-07-03T08:59:59+00:00",
     "source_file": "11-integrating-with-function-calling/README.md",
     "language_code": "el"
   },
@@ -109,7 +109,7 @@
   },
   "13-securing-ai-applications/README.md": {
     "original_hash": "a2faf8ee7a0b851efa647a19788f1e5b",
-    "translation_date": "2025-10-17T18:19:02+00:00",
+    "translation_date": "2026-07-03T08:52:47+00:00",
     "source_file": "13-securing-ai-applications/README.md",
     "language_code": "el"
   },
