@@ -177,7 +177,7 @@ Po zadaní URL by ste mali vidieť osnovu kurzu a môžete prechádzať k akému
 
 ### Spúšťanie v kontajneri
 
-Alternatívou ku nastaveniu všetkého na vašom počítači alebo Codespace je použitie [kontajnera](<https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Špeciálny priečinok `.devcontainer` v repozitári kurzu umožňuje VS Code nastaviť projekt v kontajneri. Mimo Codespaces to vyžaduje inštaláciu Dockeru a celkovo to vyžaduje isté skúsenosti s kontajnermi, preto to odporúčame len skúseným používateľom.
+Alternatívou ku nastaveniu všetkého na vašom počítači alebo Codespace je použitie [kontajnera](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst). Špeciálny priečinok `.devcontainer` v repozitári kurzu umožňuje VS Code nastaviť projekt v kontajneri. Mimo Codespaces to vyžaduje inštaláciu Dockeru a celkovo to vyžaduje isté skúsenosti s kontajnermi, preto to odporúčame len skúseným používateľom.
 
 Jedným z najlepších spôsobov, ako bezpečne spravovať API kľúče pri používaní GitHub Codespaces, je používať Tajomstvá v Codespaces. Prosím, riaďte sa [návodom na správu tajomstiev v Codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst).
 

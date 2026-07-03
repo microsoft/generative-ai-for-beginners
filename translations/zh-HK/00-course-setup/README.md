@@ -178,7 +178,7 @@ jupyterhub
 
 ### 在容器中執行
 
-另一種選擇是使用[容器](<https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>)，來避免在電腦或 codespace 設定一切。課程庫中的特殊 `.devcontainer` 資料夾，可讓 VS Code 在容器中設定該專案。除了 Codespaces 外，你需要安裝 Docker，坦白說也需要一點技術背景，我們建議有容器使用經驗者使用此方案。
+另一種選擇是使用[容器](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst)，來避免在電腦或 codespace 設定一切。課程庫中的特殊 `.devcontainer` 資料夾，可讓 VS Code 在容器中設定該專案。除了 Codespaces 外，你需要安裝 Docker，坦白說也需要一點技術背景，我們建議有容器使用經驗者使用此方案。
 
 安全管理 API 金鑰的最佳方式之一是使用 GitHub Codespaces 的 Codespace Secrets。請參考[Codespaces secrets 管理](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst)指南以了解詳情。
 

@@ -179,7 +179,7 @@ Kun avaat URL-osoitteen, näet kurssin rakenteen ja voit avata `*.ipynb`-tiedost
 
 ### Suoritus säiliössä
 
-Vaihtoehtona kaiken järjestämiselle omalle koneelle tai Codespaceen on käyttää [säiliötä](<https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Kurssirepossa oleva `.devcontainer`-kansio mahdollistaa projektin käynnistämisen säiliössä VS Codessa. Codespacesin ulkopuolella tämä vaatii Dockerin asennuksen ja hieman teknistä osaamista, joten suosittelemme tätä vain kokeneille säiliöiden käyttäjille.
+Vaihtoehtona kaiken järjestämiselle omalle koneelle tai Codespaceen on käyttää [säiliötä](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst). Kurssirepossa oleva `.devcontainer`-kansio mahdollistaa projektin käynnistämisen säiliössä VS Codessa. Codespacesin ulkopuolella tämä vaatii Dockerin asennuksen ja hieman teknistä osaamista, joten suosittelemme tätä vain kokeneille säiliöiden käyttäjille.
 
 Yksi parhaista tavoista pitää API-avaimesi turvassa GitHub Codespacessa on käyttää Codespace Secrets -toimintoa. Tutustu [Codespaces-salaisuuksien hallintaan](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst).
 
