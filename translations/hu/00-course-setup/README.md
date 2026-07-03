@@ -179,7 +179,7 @@ Az URL elérésével láthatod a tanfolyam vázlatát, és bármely `*.ipynb` f�
 
 ### Konténerben futtatás
 
-Alternatív megoldásként a számítógépen vagy Codespace-ben való telepítés helyett használhatsz egy [konténert](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). A tanfolyam tárában található speciális `.devcontainer` mappa lehetővé teszi, hogy a VS Code konténerben állítsa be a projektet. Codespaces-en kívül ehhez Docker telepítése szükséges, és nem kevés előkészületet igényel, így ezt inkább azoknak ajánljuk, akik már rendelkeznek tapasztalattal konténerek használatában.
+Alternatív megoldásként a számítógépen vagy Codespace-ben való telepítés helyett használhatsz egy [konténert](<https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). A tanfolyam tárában található speciális `.devcontainer` mappa lehetővé teszi, hogy a VS Code konténerben állítsa be a projektet. Codespaces-en kívül ehhez Docker telepítése szükséges, és nem kevés előkészületet igényel, így ezt inkább azoknak ajánljuk, akik már rendelkeznek tapasztalattal konténerek használatában.
 
 Az API kulcsok biztonságos kezelése érdekében GitHub Codespaces használatakor célszerű a Codespace Secrets funkciót alkalmazni. Ehhez kérjük, kövesd a [Codespaces titkok kezeléséről szóló útmutatót](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst).
 

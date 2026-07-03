@@ -179,7 +179,7 @@ Kui URL-ile pääsete ligi, näete kursuse ülevaadet ja saate avada ükskõik m
 
 ### Käivitamine konteineris
 
-Alternatiivina arvutisse või Codespacesisse paigaldamisele saate kasutada [konteinerit](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Kursuse reposis on eriline `.devcontainer` kaust, mis võimaldab VS Codel projekti konteinerisse seadistada. väljaspool Codespacesi tuleb seejärel paigaldada Docker ning see nõuab veidi rohkem tööd, seega soovitame seda kasutada ainult kontneritega juba tuttavatele.
+Alternatiivina arvutisse või Codespacesisse paigaldamisele saate kasutada [konteinerit](<https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Kursuse reposis on eriline `.devcontainer` kaust, mis võimaldab VS Codel projekti konteinerisse seadistada. väljaspool Codespacesi tuleb seejärel paigaldada Docker ning see nõuab veidi rohkem tööd, seega soovitame seda kasutada ainult kontneritega juba tuttavatele.
 
 Üks parimaid viise oma API võtmete turvaliseks hoidmiseks GitHub Codespacesis on kasutada Codespaces Secrets'i. Lisateabe saamiseks järgige juhendit [Codespaces secrets management](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst).
 

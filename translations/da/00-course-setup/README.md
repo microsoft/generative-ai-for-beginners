@@ -178,7 +178,7 @@ Når du tilgår URL’en, vil du se kursusoversigten og kan navigere til en hvil
 
 ### Kørsel i en container
 
-Et alternativ til at sætte alt op på din computer eller i en Codespace er at bruge en [container](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Den særlige `.devcontainer`-mappe i kursusrepoet gør det muligt for VS Code at opsætte projektet i en container. Udenfor Codespaces kræver det installation af Docker, og det indebærer en del arbejde, så vi anbefaler det kun til personer med erfaring i at arbejde med containere.
+Et alternativ til at sætte alt op på din computer eller i en Codespace er at bruge en [container](<https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Den særlige `.devcontainer`-mappe i kursusrepoet gør det muligt for VS Code at opsætte projektet i en container. Udenfor Codespaces kræver det installation af Docker, og det indebærer en del arbejde, så vi anbefaler det kun til personer med erfaring i at arbejde med containere.
 
 En af de bedste måder til at holde dine API-nøgler sikre ved brug af GitHub Codespaces er ved at bruge Codespace Secrets. Følg venligst [Codespaces secrets management-guiden](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) for at lære mere herom.
 

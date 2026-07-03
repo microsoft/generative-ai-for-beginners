@@ -179,7 +179,7 @@ jupyterhub
 
 ### ਇੱਕ ਕੰਟੇਨਰ ਵਿੱਚ ਚਲਾਉਣਾ
 
-ਆਪਣੇ ਕੰਪਿਊਟਰ ਜਾਂ ਕੋਡਸਪੇਸ ਉੱਤੇ ਸਾਰਾ ਕੰਮ ਸੈੱਟਅਪ ਕਰਨ ਦੇ ਵਿਕਲਪ ਵਜੋਂ, ਤੁਸੀਂ [ਕন্টੇਨਰ](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>) ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦੇ ਹੋ। ਕੋਰਸ ਰੇਪੋਜ਼ਿਟਰੀ ਦੇ ਅੰਦਰ ਖਾਸ `.devcontainer` ਫੋਲਡਰ VS Code ਨੂੰ ਪ੍ਰੋਜੈਕਟ ਨੂੰ ਕੰਟੇਨਰ ਵਿੱਚ ਸੈੱਟਅਪ ਕਰਨ ਲਈ ਸਹੂਲਤ ਦਿੰਦਾ ਹੈ। Codespaces ਤੋਂ ਬਾਹਰ, ਇਸ ਲਈ ਡੋਕਰ ਦੀ ਇੰਸਟਾਲੇਸ਼ਨ ਜ਼ਰੂਰੀ ਹੈ, ਅਤੇ ਖੁੱਲ ਕੇ ਕਹਿਣਾ, ਇਹ ਕਾਫੀ ਮੁਸ਼ਕਲ ਹੈ, ਇਸ ਲਈ ਅਸੀਂ ਇਹ ਸਿਫਾਰਸ਼ ਸਿਰਫ ਉਹਨਾਂ ਨੂੰ ਕਰਦੇ ਹਾਂ ਜਿਨ੍ਹਾਂ ਕੋਡਸਪੇਸ ਅਤੇ ਕੰਟੇਨਰ ਵਰਗੇ ਤਜਰਬੇ ਹਨ।
+ਆਪਣੇ ਕੰਪਿਊਟਰ ਜਾਂ ਕੋਡਸਪੇਸ ਉੱਤੇ ਸਾਰਾ ਕੰਮ ਸੈੱਟਅਪ ਕਰਨ ਦੇ ਵਿਕਲਪ ਵਜੋਂ, ਤੁਸੀਂ [ਕন্টੇਨਰ](<https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>) ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦੇ ਹੋ। ਕੋਰਸ ਰੇਪੋਜ਼ਿਟਰੀ ਦੇ ਅੰਦਰ ਖਾਸ `.devcontainer` ਫੋਲਡਰ VS Code ਨੂੰ ਪ੍ਰੋਜੈਕਟ ਨੂੰ ਕੰਟੇਨਰ ਵਿੱਚ ਸੈੱਟਅਪ ਕਰਨ ਲਈ ਸਹੂਲਤ ਦਿੰਦਾ ਹੈ। Codespaces ਤੋਂ ਬਾਹਰ, ਇਸ ਲਈ ਡੋਕਰ ਦੀ ਇੰਸਟਾਲੇਸ਼ਨ ਜ਼ਰੂਰੀ ਹੈ, ਅਤੇ ਖੁੱਲ ਕੇ ਕਹਿਣਾ, ਇਹ ਕਾਫੀ ਮੁਸ਼ਕਲ ਹੈ, ਇਸ ਲਈ ਅਸੀਂ ਇਹ ਸਿਫਾਰਸ਼ ਸਿਰਫ ਉਹਨਾਂ ਨੂੰ ਕਰਦੇ ਹਾਂ ਜਿਨ੍ਹਾਂ ਕੋਡਸਪੇਸ ਅਤੇ ਕੰਟੇਨਰ ਵਰਗੇ ਤਜਰਬੇ ਹਨ।
 
 GitHub Codespaces ਵਰਤਦੇ ਸਮੇਂ ਆਪਣੇ API ਕੁੰਜੀਆਂ ਨੂੰ ਸੁਰੱਖਿਅਤ ਰੱਖਣ ਲਈ Codespace Secrets ਦੀ ਵਰਤੋਂ ਬਹੁਤ ਚੰਗਾ ਤਰੀਕਾ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ [Codespaces secrets management](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) ਗਾਈਡ ਨੂੰ ਫਾਲੋ ਕਰੋ।
 

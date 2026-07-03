@@ -178,7 +178,7 @@ jupyterhub
 
 ### Покретање у контејнеру
 
-Алтернатива постављању свега на вашем рачунару или Codespace-у је коришћење [контејнера](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Специјална `.devcontainer` фасцикла унутар репоа курса омогућава VS Code-у да подеси пројекат унутар контејнера. Изван Codespaces-а, ово захтева инсталацију Docker-а, а искрено, то укључује доста посла, па ову опцију препоручујемо само онима са искуством рада са контејнерима.
+Алтернатива постављању свега на вашем рачунару или Codespace-у је коришћење [контејнера](<https://en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Специјална `.devcontainer` фасцикла унутар репоа курса омогућава VS Code-у да подеси пројекат унутар контејнера. Изван Codespaces-а, ово захтева инсталацију Docker-а, а искрено, то укључује доста посла, па ову опцију препоручујемо само онима са искуством рада са контејнерима.
 
 Један од најбољих начина да своје API кључеве држите безбедним приликом коришћења GitHub Codespaces-а је коришћење Codespace Secrets. Молимо пратите [упутство за управљање Codespaces тајнама](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) да сазнате више о овоме.
 
