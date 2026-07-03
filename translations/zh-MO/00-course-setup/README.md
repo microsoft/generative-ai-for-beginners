@@ -178,7 +178,7 @@ jupyterhub
 
 ### 在容器中執行
 
-除了在電腦或 Codespace 設定環境外，你也可以使用[容器](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>)。課程儲存庫中的特殊 `.devcontainer` 資料夾可讓 VS Code 在容器中設定專案。  
+除了在電腦或 Codespace 設定環境外，你也可以使用[容器](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst)。課程儲存庫中的特殊 `.devcontainer` 資料夾可讓 VS Code 在容器中設定專案。  
 在 Codespaces 以外的情況，這需要安裝 Docker，而且確實比較複雜，所以我們建議只有有容器經驗的人選用。
 
 使用 GitHub Codespaces 時保護 API 金鑰安全的最佳方法之一是使用 Codespace Secrets。請參考[Codespaces 秘密管理指南](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst)了解詳情。

@@ -178,7 +178,7 @@ jupyterhub
 
 ### کنٹینر میں چلانا
 
-اپنے کمپیوٹر یا Codespace پر ہر چیز سیٹ اپ کرنے کا ایک متبادل طریقہ [کنٹینر](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>) کا استعمال ہے۔ کورس ریپوزٹری میں خاص `.devcontainer` فولڈر VS Code کو پروجیکٹ کو کنٹینر کے اندر سیٹ اپ کرنے کے قابل بناتا ہے۔ Codespaces کے باہر، اس کے لیے Docker انسٹال کرنا ہوگا، اور صاف گوئی سے کہیں تو یہ کچھ فنی تجربہ طلب کرتا ہے، اس لیے ہم اس کی سفارش صرف ان لوگوں کو کرتے ہیں جنہیں کنٹینرز کے ساتھ کام کرنے کا تجربہ ہو۔
+اپنے کمپیوٹر یا Codespace پر ہر چیز سیٹ اپ کرنے کا ایک متبادل طریقہ [کنٹینر](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst) کا استعمال ہے۔ کورس ریپوزٹری میں خاص `.devcontainer` فولڈر VS Code کو پروجیکٹ کو کنٹینر کے اندر سیٹ اپ کرنے کے قابل بناتا ہے۔ Codespaces کے باہر، اس کے لیے Docker انسٹال کرنا ہوگا، اور صاف گوئی سے کہیں تو یہ کچھ فنی تجربہ طلب کرتا ہے، اس لیے ہم اس کی سفارش صرف ان لوگوں کو کرتے ہیں جنہیں کنٹینرز کے ساتھ کام کرنے کا تجربہ ہو۔
 
 GitHub Codespaces استعمال کرتے وقت اپنی API کیز کو محفوظ رکھنے کا ایک بہترین طریقہ Codespace Secrets کا استعمال ہے۔ اس کے بارے میں مزید جاننے کے لیے براہ کرم [Codespaces secrets management](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) گائیڈ پر عمل کریں۔
 

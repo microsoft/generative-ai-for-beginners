@@ -179,7 +179,7 @@ jupyterhub
 
 ### കണ്ടെയ്‌നറിൽ ഓടിക്കൽ
 
-നിങ്ങളുടെ കമ്പ്യൂട്ടറിൽ അല്ലെങ്കിൽ Codespace-ൽ എല്ലാം സജ്ജമാക്കാൻ പകരം, ഒരു [കണ്ടെയ്‌നർ](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>) ഉപയോഗിക്കാം. കോഴ്സ് റിപോസിറ്ററിയിലെ പ്രത്യേക `.devcontainer` ഫോൾഡർ VS Code-നു പ്രോജക്ട് കണ്ടെയ്‌നറിൽ സജ്ജമാക്കാൻ സഹായിക്കുന്നു. Codespaces ഒഴികെ, Docker ഇൻസ്റ്റലേഷൻ ആവശ്യമാണ്, കൂടാതെ ഇത് ചിലത് പരിമിതമായ ചില പ്രവർത്തനം ആവശ്യപ്പെടുന്നതായിട്ടുണ്ട്, ഇത് കണ്ടെയ്‌നറുമേഖലയിൽ അനുഭവമുള്ളവർക്ക് ശുപാർശ ചെയ്യുന്നു.
+നിങ്ങളുടെ കമ്പ്യൂട്ടറിൽ അല്ലെങ്കിൽ Codespace-ൽ എല്ലാം സജ്ജമാക്കാൻ പകരം, ഒരു [കണ്ടെയ്‌നർ](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst) ഉപയോഗിക്കാം. കോഴ്സ് റിപോസിറ്ററിയിലെ പ്രത്യേക `.devcontainer` ഫോൾഡർ VS Code-നു പ്രോജക്ട് കണ്ടെയ്‌നറിൽ സജ്ജമാക്കാൻ സഹായിക്കുന്നു. Codespaces ഒഴികെ, Docker ഇൻസ്റ്റലേഷൻ ആവശ്യമാണ്, കൂടാതെ ഇത് ചിലത് പരിമിതമായ ചില പ്രവർത്തനം ആവശ്യപ്പെടുന്നതായിട്ടുണ്ട്, ഇത് കണ്ടെയ്‌നറുമേഖലയിൽ അനുഭവമുള്ളവർക്ക് ശുപാർശ ചെയ്യുന്നു.
 
 GitHub Codespaces ഉപയോഗിക്കുമ്പോൾ API കീകൾ സുരക്ഷിതമാക്കാനുള്ള മികച്ച മാർഗ്ഗങ്ങളിൽ ഒന്ന് Codespace Secrets ഉപയോഗിക്കുകയാണ്. കൂടുതൽ അറിയാൻ [Codespaces secrets management](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) ഗൈഡ് പിന്തുടരുക.
 

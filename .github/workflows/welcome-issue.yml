@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Add Label and thanks comment to Issue
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             const issueAuthor = context.payload.sender.login
@@ -28,7 +28,7 @@ jobs:
               body: `👋 Thanks for contributing @${ issueAuthor }! We will review the issue and get back to you soon.`
             })
       - name: Auto-assign issue
-        uses: pozil/auto-assign-issue@v2
+        uses: pozil/auto-assign-issue@v4
         with:
           repo-token:  ${{ secrets.GITHUB_TOKEN }}
           assignees: koreyspace

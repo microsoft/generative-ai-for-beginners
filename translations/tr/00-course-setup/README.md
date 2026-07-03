@@ -177,7 +177,7 @@ URL’ye eriştiğinizde kurs içeriği görünmeli ve herhangi bir `*.ipynb` do
 
 ### Bir konteynerde çalıştırmak
 
-Her şeyi bilgisayarınızda veya Codespace üzerinde kurmak yerine [konteyner](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>) kullanabilirsiniz. Kurs deposundaki özel `.devcontainer` klasörü, VS Code’un projeyi bir konteyner içinde kurmasını sağlar. Codespaces dışında bunu yapmak için Docker kurulumu şarttır ve biraz uğraş gerektirir; bu yüzden konteynerle çalışmaya deneyimli olanlara öneririz.
+Her şeyi bilgisayarınızda veya Codespace üzerinde kurmak yerine [konteyner](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst) kullanabilirsiniz. Kurs deposundaki özel `.devcontainer` klasörü, VS Code’un projeyi bir konteyner içinde kurmasını sağlar. Codespaces dışında bunu yapmak için Docker kurulumu şarttır ve biraz uğraş gerektirir; bu yüzden konteynerle çalışmaya deneyimli olanlara öneririz.
 
 GitHub Codespaces kullanırken API anahtarlarınızı güvende tutmanın en iyi yollarından biri Codespaces Secrets kullanmaktır. Daha fazla bilgi için [Codespaces gizli anahtar yönetimi](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) rehberini takip edin.
 

@@ -179,7 +179,7 @@ jupyterhub
 
 ### รันใน container
 
-อีกทางเลือกหนึ่งนอกจากการตั้งค่าบนเครื่องหรือ Codespace คือการใช้ [container](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>) ไดเรกทอรีพิเศษ `.devcontainer` ในรีโพนี้ช่วยให้ VS Code ตั้งโปรเจกต์ใน container ได้
+อีกทางเลือกหนึ่งนอกจากการตั้งค่าบนเครื่องหรือ Codespace คือการใช้ [container](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst) ไดเรกทอรีพิเศษ `.devcontainer` ในรีโพนี้ช่วยให้ VS Code ตั้งโปรเจกต์ใน container ได้
 
 นอกเหนือจาก Codespaces จะต้องติดตั้ง Docker และจริงๆ แล้วอาจซับซ้อน เราจึงแนะนำเฉพาะผู้ที่มีประสบการณ์กับ container เท่านั้น
 

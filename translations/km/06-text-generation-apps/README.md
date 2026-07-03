@@ -1,0 +1,661 @@
+# ការបង្កើតកម្មវិធីបង្កើតអត្ថបទ
+
+[![Building Text Generation Applications](../../../translated_images/km/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+
+> _(ចុចរូបភាពខាងលើ ដើម្បីមើលវីដេអូនៃមេរៀននេះ)_
+
+អ្នកបានឃើញរហូតមកដល់ពេលនេះតាមរយៈមេរៀននេះថាមានយោបល់មូលដ្ឋានដូចជា prompt ហើយថែមទាំងមានវិស័យមួយទៀតហៅថា "prompt engineering"។ មានឧបករណ៍ជាច្រើនដែលអ្នកអាចប្រើប្រាស់បានដូចជា ChatGPT, Office 365, Microsoft Power Platform និងផ្សេងទៀត ដែលគាំទ្រដោយការប្រើប្រាស់ prompt ដើម្បីបញ្ចប់កិច្ចការ។
+
+ដើម្បីអោយអ្នកបញ្ចូលបទពិសោធន៍បែបនេះទៅក្នុងកម្មវិធី អ្នកត្រូវយល់ពីយោបល់ដូចជា prompt, completions ហើយជ្រើសរើសបណ្ណាលេខមួយសម្រាប់ធ្វើការជាមួយវា។ នេះជាអ្វីដែលអ្នកនឹងរៀននៅក្នុងជំពូកនេះ។
+
+## ការណែនាំ
+
+នៅក្នុងជំពូកនេះ អ្នកនឹង៖
+
+- រៀនអំពីបណ្ណាលេខ openai និងយោបល់មូលដ្ឋានរបស់វា។
+- បង្កើតកម្មវិធីបង្កើតអត្ថបទដោយប្រើ openai។
+- យល់ពីរបៀបប្រើប្រាស់យោបល់ដូចជា prompt, temperature និង tokens ដើម្បីបង្កើតកម្មវិធីបង្កើតអត្ថបទ។
+
+## គោលបំណងការសិក្សា
+
+នៅចុងមេរៀននេះ អ្នកនឹងអាច៖
+
+- ពន្យល់ពីអ្វីជាកម្មវិធីបង្កើតអត្ថបទ។
+- បង្កើតកម្មវិធីបង្កើតអត្ថបទដោយប្រើ openai។
+- កំណត់រចនាសម្ព័ន្ធកម្មវិធីរបស់អ្នកឲ្យប្រើ tokens ឱ្យច្រើន ឬតិច និងប្តូរប្រភេទ temperature សម្រាប់លទ្ធផលផ្សេងៗ។
+
+## មានអ្វីខ្លះនៅក្នុងកម្មវិធីបង្កើតអត្ថបទ?
+
+ធម្មតា ពេលអ្នកបង្កើតកម្មវិធីវាមានចំណុចប្រទាក់មួយដែលដូចក្នុងរូបមួយចំនួនដូចជា៖
+
+- ប្រភេទបញ្ជា Command-based។ កម្មវិធី console ជាប្រភេទកម្មវិធីដែលអ្នកវាយបញ្ជា ហើយវាធ្វើការងារតាមបញ្ជាទាំងនោះ។ ឧទាហរណ៍ `git` គឺជាកម្មវិធី command-based។
+- ចំណុចប្រទាក់អ្នកប្រើ (UI)។ កម្មវិធីខ្លះមាន graphical user interfaces (GUIs) ដែលអ្នកអាចចុចប៊ូតុង បញ្ចូលអត្ថបទ ជ្រើសរើសជំរើស និងផ្សេងៗទៀត។
+
+### កម្មវិធី Console និង UI មានកំណត់
+
+ប្រៀបធៀបវានឹងកម្មវិធី command-based ដែល អ្នកវាយបញ្ជា៖
+
+- **វាមានកំណត់**។ អ្នកមិនអាចវាយបញ្ជាទាំងអស់បានទេ មានតែបញ្ជាដែលកម្មវិធីគាំទ្រតែប៉ុណ្ណោះ។
+- **ជាភាសាពិសេស**។ កម្មវិធីខ្លះគាំទ្រជាភាសាច្រើន ប៉ុន្តែកម្មវិធីត្រូវបានបង្កើតសម្រាប់ភាសាពិសេសមួយជាមូលដ្ឋាន ទោះបីអ្នកអាចបន្ថែមការគាំទ្រភាសាបន្ថែមក៏ដោយ។
+
+### អត្ថប្រយោជន៍នៃកម្មវិធីបង្កើតអត្ថបទ
+
+ហើយកម្មវិធីបង្កើតអត្ថបទខុសយ៉ាងដូចម្ដេច?
+
+នៅក្នុងកម្មវិធីបង្កើតអត្ថបទ អ្នកមានភាពអាចបត់បែនច្រើន កម្មវិធីមិនមានកំណត់លើប្រភេទបញ្ជា ឬភាសាបញ្ចូលជាក់លាក់ទេ។ ថែមទាំង អ្នកអាចប្រើភាសាធម្មជាតិដើម្បីអន្តរាគមន៍ជាមួយកម្មវិធី។ អត្ថប្រយោជន៍មួយទៀតគឺ អ្នកកំពុងប្រើទិន្នន័យដែលបានបណ្តុះបណ្តាលលើពហុអត្ថបទវែង ពីព្រោះកម្មវិធីបែបបុរាណមួយអាចមានកំណត់លើអ្វីដែលមានក្នុងមូលដ្ឋានទិន្នន័យ។
+
+### អ្វីខ្លះដែលអាចបង្កើតបានជាកម្មវិធីបង្កើតអត្ថបទ?
+
+មានរឿងជាច្រើនដែលអាចបង្កើតបាន ឧទាហរណ៍៖
+
+- **chatbot**។ chatbot ដែលឆ្លើយសំណួរអំពីប្រធានបទ ដូចជា ក្រុមហ៊ុនរបស់អ្នក និងផលិតផល របស់វា អាចជាជម្រើសល្អ។
+- **ជំនួយការ**។ LLMs ល្អសម្រាប់សង្ខេបអត្ថបទ ទាញយកព័ត៌មានពីអត្ថបទ បង្កើតអត្ថបទដូចជាវិញ្ញាបនបត្រ និងផ្សេងៗទៀត។
+- **ជំនួយការកូដ**។ អាស្រ័យលើម៉ូដែលភាសាដែលអ្នកប្រើ អ្នកអាចបង្កើតជំនួយការកូដ ដែលជួយអ្នកសរសេរកូដ។ ឧទាហរណ៍ អ្នកអាចប្រើផលិតផលដូចជា GitHub Copilot និង ChatGPT ដើម្បីជួយសរសេរកូដ។
+
+## តើធ្វើម៉េចដើម្បីចាប់ផ្តើម?
+
+អ្នកត្រូវរកវិធីភ្ជាប់ជាមួយ LLM ដែលធម្មតាទៅវិធីទាំងពីរខាងក្រោម៖
+
+- ប្រើ API។ នៅទីនេះ អ្នកកំពុងកសាងសំណើវែបដោយប្រើ prompt របស់អ្នក ហើយទទួលអត្ថបទដែលបង្កើតវិញ។
+- ប្រើបណ្ណាលេខ។ បណ្ណាលេខជួយស្វែងយល់ការហៅ API និងធ្វើឱ្យវាងាយប្រើ។
+
+## បណ្ណាលេខ/SDKs
+
+មានបណ្ណាលេខល្បីមួយចំនួនសម្រាប់ធ្វើការជាមួយ LLM ដូចជា៖
+
+- **openai** ដែលពីរបណ្ណាលេខនេះងាយស្រួលភ្ជាប់ទៅម៉ូដែលរបស់អ្នក និងផ្ញើ prompt ។
+
+បន្ទាប់មក មានបណ្ណាលេខដែលដំណើរការលើកម្រិតខ្ពស់ជាង៖
+
+- **Langchain**។ Langchain មានឈ្មោះល្បី និងគាំទ្រភាសា Python។
+- **Semantic Kernel**។ Semantic Kernel គឺជាបណ្ណាលេខពីបុគ្គលិក Microsoft ដែលគាំទ្រភាសា C#, Python និង Java។
+
+## កម្មវិធីដំបូង ដែលប្រើ openai
+
+យើងមកមើលវិធីដែលយើងអាចបង្កើតកម្មវិធីដំបូង ក៏ដូចជាបណ្ណាលេខដែលយើងត្រូវការ និងការទាមទារផ្សេងៗ។
+
+### ដំឡើង openai
+
+មានបណ្ណាលេខជាច្រើនសម្រាប់អន្តរាគមន៍ជាមួយ OpenAI ឬ Azure OpenAI។ អ្នកអាចប្រើភាសាកូដជាច្រើនដូចជា C#, Python, JavaScript, Java និងផ្សេងទៀត។ យើងបានជ្រើសប្រើបណ្ណាលេខ Python `openai` ដូច្នេះយើងប្រើ `pip` ដំឡើងវា។
+
+```bash
+pip install openai
+```
+
+### បង្កើតធនធាន
+
+អ្នកត្រូវអនុវត្តជំហានដូចខាងក្រោម៖
+
+- បង្កើតគណនីនៅលើ Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst)។
+- ទទួលការចូលប្រើ Azure OpenAI។ ទៅកាន់ [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) ហើយស្នើសុំការចូលប្រើ។
+
+  > [!NOTE]
+  > នៅពេលសរសេរ អ្នកត្រូវដាក់ពាក្យស្នើសុំការចូលប្រើ Azure OpenAI។
+
+- ដំឡើង Python <https://www.python.org/>
+- មានធនធាន Azure OpenAI Service។ សូមមើលមេរៀននេះសម្រាប់របៀប [បង្កើតធនធាន](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst)។
+
+### រកគន្លង API key និង endpoint
+
+នៅពេលនេះ អ្នកត្រូវប្រាប់បណ្ណាលេខ `openai` របស់អ្នកថាតើមាន API key ត្រូវប្រើណា។ ដើម្បីរក API key សូមទៅចំណុច "Keys and Endpoint" នៃធនធាន Azure OpenAI របស់អ្នក ហើយចម្លងតម្លៃ "Key 1"។
+
+![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+
+ឥឡូវនេះអ្នកបានចម្លងព័ត៌មាននេះហើយ អ្នកអាចណែនាំបណ្ណាលេខឲ្យប្រើវាបានរួចហើយ។
+
+> [!NOTE]
+> វាជារឿងល្អក្នុងការផ្លាស់ប្ដូរ API key របស់អ្នកចេញពីកូដ។ អ្នកអាចធ្វើវា​ដោយប្រើ environment variables។
+>
+> - បង្កើត environment variable `OPENAI_API_KEY` ជាមួយនឹង API key របស់អ្នក។
+>   `export OPENAI_API_KEY='sk-...'`
+
+### បង្កើតរចនាសម្ព័ន្ធក្នុង Azure
+
+ប្រសិនបើអ្នកប្រើ Azure OpenAI វិធីបង្កើតរៀបចំគឺ៖
+
+```python
+openai.api_type = 'azure'
+openai.api_key = os.environ["OPENAI_API_KEY"]
+openai.api_version = '2023-05-15'
+openai.api_base = os.getenv("API_BASE")
+```
+
+ខាងលើ យើងកំពុងកំណត់៖
+
+- `api_type` ទៅជា `azure`។ វាប្រាប់បណ្ណាលេខឲ្យប្រើ Azure OpenAI មិនមែន OpenAI ទេ។
+- `api_key` គឺជាគន្លង API key របស់អ្នកដែលបានរកនៅក្នុង Azure Portal។
+- `api_version` គឺជាកំណែ API ដែលអ្នកចង់ប្រើ។ នៅពេលសរសេរ កំណែចុងក្រោយគឺ `2023-05-15`។
+- `api_base` គឺជា endpoint នៃ API។ អ្នកអាចរកវានៅក្នុង Azure Portal នៅជិត API key របស់អ្នក។
+
+> [!NOTE] > `os.getenv` គឺជា function សម្រាប់អាន environment variables។ អ្នកអាចប្រើវាដើម្បីអាន environment variables ដូចជា `OPENAI_API_KEY` និង `API_BASE`។ សូមកំណត់ environment variables ទាំងនេះនៅក្នុង terminal របស់អ្នក ឬប្រើបណ្ណាលេខដូចជា `dotenv`។
+
+## បង្កើតអត្ថបទ
+
+វិធីបង្កើតអត្ថបទគឺប្រើ class `Completion`។ ខាងក្រោមគឺជាឧទាហរណ៍៖
+
+```python
+prompt = "Complete the following: Once upon a time there was a"
+
+completion = openai.Completion.create(model="davinci-002", prompt=prompt)
+print(completion.choices[0].text)
+```
+
+ក្នុងកូដខាងលើ យើងបង្កើតអ 객체 completion ហើយផ្ញើម៉ូដែលដែលយើងចង់ប្រើ និង prompt មក។ បន្ទាប់មកយើងបោះពុម្ពអត្ថបទដែលបានបង្កើត។
+
+### Chat completions
+
+រហូតមកដល់ពេលនេះ អ្នកបានឃើញពីរបៀបប្រើ `Completion` ដើម្បីបង្កើតអត្ថបទ។ ប៉ុន្តែក៏មាន class មួយទៀតហៅថា `ChatCompletion` ដែលមានសមត្ថភាពសម្រាប់ chatbot ជាង។ ខាងក្រោមជាគំរូនៃការប្រើវា៖
+
+```python
+import openai
+
+openai.api_key = "sk-..."
+
+completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
+print(completion.choices[0].message.content)
+```
+
+ព័ត៌មានបន្ថែមអំពីមុខងារនេះក្នុងជំពូកក្រោយ។
+
+## ការប្រលង - កម្មវិធីបង្កើតអត្ថបទដំបូងរបស់អ្នក
+
+ឥឡូវអ្នកបានរៀនពីរបៀបរៀបចំ និងកំណត់រចនាសម្ព័ន្ធ openai វិញ ពេលនេះពេលវេលាបង្កើតកម្មវិធីបង្កើតអត្ថបទដំបូងរបស់អ្នក។ ដើម្បីបង្កើតកម្មវិធី សូមធ្វើតាមជំហាន៖
+
+1. បង្កើត virtual environment ហើយដំឡើង openai៖
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate
+   pip install openai
+   ```
+
+   > [!NOTE]
+   > ប្រសិនបើអ្នកប្រើ Windows សូមវាយ `venv\Scripts\activate` ជំនួស `source venv/bin/activate`។
+
+   > [!NOTE]
+   > ស្វែងរកកូនសោ Azure OpenAI របស់អ្នកដោយទៅកាន់ [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) ហើយស្វែងរក `Open AI` ជ្រើសរើស `Open AI resource` បន្ទាប់មកជ្រើស `Keys and Endpoint` ហើយចម្លងតម្លៃ `Key 1`។
+
+1. បង្កើត​ឯកសារ _app.py_ ហើយដាក់កូដដូចខាងក្រោម៖
+
+   ```python
+   import openai
+
+   openai.api_key = "<replace this value with your open ai key or Azure OpenAI key>"
+
+   openai.api_type = 'azure'
+   openai.api_version = '2023-05-15'
+   openai.api_base = "<endpoint found in Azure Portal where your API key is>"
+   deployment_name = "<deployment name>"
+
+   # បញ្ចូលកូដបញ្ចប់របស់អ្នក
+   prompt = "Complete the following: Once upon a time there was a"
+   messages = [{"role": "user", "content": prompt}]
+
+   # បង្កើតការបញ្ចប់
+   completion = openai.chat.completions.create(model=deployment_name, messages=messages)
+
+   # បោះពុម្ពចេញកម្មវិធីឆ្លើយតប
+   print(completion.choices[0].message.content)
+   ```
+
+   > [!NOTE]
+   > ប្រសិនបើអ្នកប្រើ Azure OpenAI អ្នកត្រូវកំណត់ `api_type` ទៅ `azure` ហើយកំណត់ `api_key` ទៅកូនសោ Azure OpenAI របស់អ្នក។
+
+   អ្នកគួរត្រូវបានឃើញលទ្ធផលដូចខាងក្រោម៖
+
+   ```output
+    very unhappy _____.
+
+   Once upon a time there was a very unhappy mermaid.
+   ```
+
+## ប្រភេទ prompt ផ្សេងៗ សម្រាប់កិច្ចការ ផ្សេងៗ
+
+ឥឡូវនេះ អ្នកឃើញរបៀបបង្កើតអត្ថបទដោយប្រើ prompt ហើយអ្នកមានកម្មវិធីដំណើរការដែលអ្នកអាចកែប្រែ និងផ្លាស់ប្តូរប្រភេទអត្ថបទផ្សេងៗបាន។
+
+Prompt អាចប្រើសម្រាប់កិច្ចការជាច្រើន។ ឧទាហរណ៍៖
+
+- **បង្កើតប្រភេទអត្ថបទមួយ**។ ឧទាហរណ៍ អ្នកអាចបង្កើតកវី សំណួរសម្រាប់ការប្រលង និងផ្សេងៗទៀត។
+- **ស្វែងរកព័ត៌មាន**។ អ្នកអាចប្រើ prompt ដើម្បីរកព័ត៌មាន ដូចជា "CORS មានន័យយ៉ាងដូចម្តេចនៅក្នុងការអភិវឌ្ឍវែប?"។
+- **បង្កើតកូដ**។ អ្នកអាចប្រើ prompt ដើម្បីបង្កើតកូដ ដូចជាការអភិវឌ្ឍ regular expression សម្រាប់បញ្ជាក់អ៊ីមែល ឬបង្កើតកម្មវិធីពេញលេញមួយដូចជា web app។
+
+## ករណីប្រើប្រាស់ជាក់ស្តែងមួយ៖ បង្កើតមុខម្ហូប
+
+សូមនឹកស្រមៃថា អ្នកមានគ្រឿងផ្សំនៅផ្ទះ ហើយចង់ចម្អិនម្ហូបមួយ។ សម្រាប់វា អ្នកត្រូវការត្រូវមានមុខម្ហូប។ វិធីស្វែងរកមុខម្ហូបគឺប្រើម៉ាស៊ីនស្វែងរក ឬអ្នកអាចប្រើ LLM ដើម្បីធ្វើវា។
+
+អ្នកអាចសរសេរ prompt ដូចខាងក្រោម៖
+
+> "បង្ហាញមុខម្ហូប ៥ តំណាងសម្រាប់ម្ហូបដោយប្រើគ្រឿងផ្សំដូចខាងក្រោម៖ មាន់, ដំឡូង, និងម្ទេស។ សម្រាប់មុខម្ហូបនីមួយៗ បញ្ជីគ្រឿងផ្សំទាំងអស់ដែលបានប្រើ"
+
+ដោយផ្អែកលើ prompt ខាងលើ អ្នកអាចទទួលបានចម្លើយដូចជា៖
+
+```output
+1. Roasted Chicken and Vegetables:
+Ingredients:
+- 4 chicken thighs
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 2 tablespoons olive oil
+- 2 cloves garlic, minced
+- 1 teaspoon dried thyme
+- 1 teaspoon dried oregano
+- Salt and pepper, to taste
+
+2. Chicken and Potato Stew:
+Ingredients:
+- 2 tablespoons olive oil
+- 1 onion, diced
+- 2 cloves garlic, minced
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 1 cup chicken broth
+- Salt and pepper, to taste
+
+3. Chicken and Potato Bake:
+Ingredients:
+- 2 tablespoons olive oil
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 onion, diced
+- 2 cloves garlic, minced
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 1 cup chicken broth
+- Salt and pepper, to taste
+
+4. Chicken and Potato Soup:
+Ingredients:
+- 2 tablespoons olive oil
+- 1 onion, diced
+- 2 cloves garlic, minced
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 4 cups chicken broth
+- Salt and pepper, to taste
+
+5. Chicken and Potato Hash:
+Ingredients:
+- 2 tablespoons olive oil
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 onion, diced
+- 2 cloves garlic, minced
+- 1 teaspoon dried oregano
+```
+
+លទ្ធផលនេះល្អ ខ្ញុំដឹងថាត្រូវចម្អិនអ្វី។ នៅពេលនេះ អ្វីដែលអាចធ្វើបានជាការកែលម្អគឺ៖
+
+- តម្រុយក្រៅគ្រឿងផ្សំដែលខ្ញុំមិនចូលចិត្ត ឬមានអាលិចស៊ី។
+- បង្កើតបញ្ជីទំនិញ សម្រាប់ករណីខ្ញុំមិនមានគ្រឿងផ្សំទាំងអស់នៅផ្ទះ។
+
+សម្រាប់ករណីខាងលើ អ្នកត្រូវបន្ថែម prompt បន្ថែម៖
+
+> "សូមដកមុខម្ហូបដែលមានខ្ទឹមស ចំពោះខ្ញុំដែលមានអាលិចស៊ី ហើយជំនួសវាចេញជាអ្វីមួយផ្សេងទៀត។ បន្ថែមទៀត សូមបង្កើតបញ្ជីទំនិញសម្រាប់មុខម្ហូបទាំងនោះ ដោយគិតពីខ្ញុំមានមាន់ ដំឡូង និងម្ទេសរួចនៅផ្ទះ។"
+
+ឥឡូវនេះអ្នកមានលទ្ធផលថ្មី គឺ៖
+
+```output
+1. Roasted Chicken and Vegetables:
+Ingredients:
+- 4 chicken thighs
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 2 tablespoons olive oil
+- 1 teaspoon dried thyme
+- 1 teaspoon dried oregano
+- Salt and pepper, to taste
+
+2. Chicken and Potato Stew:
+Ingredients:
+- 2 tablespoons olive oil
+- 1 onion, diced
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 1 cup chicken broth
+- Salt and pepper, to taste
+
+3. Chicken and Potato Bake:
+Ingredients:
+- 2 tablespoons olive oil
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 onion, diced
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 1 cup chicken broth
+- Salt and pepper, to taste
+
+4. Chicken and Potato Soup:
+Ingredients:
+- 2 tablespoons olive oil
+- 1 onion, diced
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 teaspoon dried oregano
+- 1 teaspoon dried thyme
+- 4 cups chicken broth
+- Salt and pepper, to taste
+
+5. Chicken and Potato Hash:
+Ingredients:
+- 2 tablespoons olive oil
+- 2 chicken breasts, cut into cubes
+- 2 potatoes, cut into cubes
+- 2 carrots, cut into cubes
+- 1 onion, diced
+- 1 teaspoon dried oregano
+
+Shopping List:
+- Olive oil
+- Onion
+- Thyme
+- Oregano
+- Salt
+- Pepper
+```
+
+នេះជាមុខម្ហូប ៥ មុខរបស់អ្នក រួមមានមិនមានខ្ទឹមស និងអ្នកមានបញ្ជីទំនិញដែលគិតលើអ្វីដែលអ្នកមាននៅផ្ទះ។
+
+## ការប្រលង - បង្កើតកម្មវិធីបង្កើតមុខម្ហូប
+
+ឥឡូវនេះដែលយើងបានសម្តែងសេណារីយ៉ូមួយ ហើយលាយកូដតាមតម្រូវការនោះ។ សូមធ្វើតាមជំហាន៖
+
+1. ប្រើឯកសារ _app.py_ ដែលមានរួចជាចំណុំនៃការចាប់ផ្តើម
+1. រកឃើញអថេរ `prompt` ហើយប្ដូរកូដរបស់វាទៅដូចខាងក្រោម៖
+
+   ```python
+   prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
+   ```
+
+   ប្រសិនបើអ្នកដើរតាមកូដនេះ អ្នកគួរត្រូវបានឃើញលទ្ធផលដូចបែប៖
+
+   ```output
+   -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
+   -Oven-Roasted Chicken with Potatoes and Carrots: 3 tablespoons extra-virgin olive oil, 1 tablespoon Dijon mustard, 1 tablespoon chopped fresh rosemary, 1 tablespoon chopped fresh thyme, 4 cloves garlic, minced, 1 1/2 pounds small red potatoes, quartered, 1 1/2 pounds carrots, quartered lengthwise, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 (4-pound) whole chicken
+   -Chicken, Potato, and Carrot Casserole: cooking spray, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and shredded, 1 potato, peeled and shredded, 1/2 teaspoon dried thyme leaves, 1/4 teaspoon salt, 1/4 teaspoon black pepper, 2 cups fat-free, low-sodium chicken broth, 1 cup frozen peas, 1/4 cup all-purpose flour, 1 cup 2% reduced-fat milk, 1/4 cup grated Parmesan cheese
+
+   -One Pot Chicken and Potato Dinner: 2 tablespoons olive oil, 1 pound boneless, skinless chicken thighs, cut into 1-inch pieces, 1 large onion, chopped, 3 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 2 cups chicken broth, 1/2 cup dry white wine
+
+   -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
+   ```
+
+   > សូមចំណាំ LLM របស់អ្នកមិនមានលទ្ធផលដូចគ្នាទុកទេ ដូច្នេះអ្នកអាចទទួលលទ្ធផលខុសគ្នាបានរាល់ដងដែលដំណើរការកម្មវិធី។
+
+   ល្អ រួចទោះយើងមកមើលវិធីធ្វើឱ្យវាល្អប្រសើរជាងមុន។ ដើម្បីធ្វើឱ្យវាបត់បែនបាន មនុស្សចង់ឲ្យគ្រឿងផ្សំ និងចំនួនមុខម្ហូបអាចផ្លាស់ប្តូរបាន។
+
+1. យើងប្ដូរកូដដូចខាងក្រោម៖
+
+   ```python
+   no_recipes = input("No of recipes (for example, 5): ")
+
+   ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
+
+   # បញ្ចូលចំនួនរូបមន្តចូលទៅក្នុងការបញ្ចូល និងគ្រឿងផ្សំ
+   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
+   ```
+
+   ការប្រតិបត្ដិការតេស្តអាចមើលទៅដូចខាងក្រោម៖
+
+   ```output
+   No of recipes (for example, 5): 3
+   List of ingredients (for example, chicken, potatoes, and carrots): milk,strawberries
+
+   -Strawberry milk shake: milk, strawberries, sugar, vanilla extract, ice cubes
+   -Strawberry shortcake: milk, flour, baking powder, sugar, salt, unsalted butter, strawberries, whipped cream
+   -Strawberry milk: milk, strawberries, sugar, vanilla extract
+   ```
+
+### កែលម្អដោយបន្ថែមការតម្រុយ និងបញ្ជីទំនិញ
+
+ឥឡូវនេះ យើងមានកម្មវិធីដែលអាចបង្កើតមុខម្ហូប ហើយវាបត់បែនបាន ព្រោះវាអាស្រ័យលើបញ្ចូលពីអ្នកប្រើទាំងចំនួនមុខម្ហូប និងគ្រឿងផ្សំ។
+
+ដើម្បីកែលម្អបន្ថែម យើងចង់បន្ថែម៖
+
+- **តម្រុយគ្រឿងផ្សំ**។ យើងចង់អាចតម្រុយគ្រឿងផ្សំដែលមិនចូលចិត្តឬមានអាលិចស៊ី។ ដើម្បីធ្វើការផ្លាស់ប្តូរនេះ អ្នកអាចកែប្រែ prompt ដើមរបស់អ្នក និងបន្ថែមលក្ខខណ្ឌតម្រុយចុង prompt ដូចខាងក្រោម៖
+
+  ```python
+  filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
+
+  prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
+  ```
+
+  ខាងលើ យើងបន្ថែម `{filter}` នៅចុង prompt ហើយយើងក៏ទទួលតម្លៃតម្រុយពីអ្នកប្រើវា។
+
+  ឧទាហរណ៍បញ្ចូលការរត់កម្មវិធីឥឡូវនេះអាចមើលទៅដូចជា៖
+
+  ```output
+  No of recipes (for example, 5): 3
+  List of ingredients (for example, chicken, potatoes, and carrots): onion,milk
+  Filter (for example, vegetarian, vegan, or gluten-free): no milk
+
+  1. French Onion Soup
+
+  Ingredients:
+
+  -1 large onion, sliced
+  -3 cups beef broth
+  -1 cup milk
+  -6 slices french bread
+  -1/4 cup shredded Parmesan cheese
+  -1 tablespoon butter
+  -1 teaspoon dried thyme
+  -1/4 teaspoon salt
+  -1/4 teaspoon black pepper
+
+  Instructions:
+
+  1. In a large pot, sauté onions in butter until golden brown.
+  2. Add beef broth, milk, thyme, salt, and pepper. Bring to a boil.
+  3. Reduce heat and simmer for 10 minutes.
+  4. Place french bread slices on soup bowls.
+  5. Ladle soup over bread.
+  6. Sprinkle with Parmesan cheese.
+
+  2. Onion and Potato Soup
+
+  Ingredients:
+
+  -1 large onion, chopped
+  -2 cups potatoes, diced
+  -3 cups vegetable broth
+  -1 cup milk
+  -1/4 teaspoon black pepper
+
+  Instructions:
+
+  1. In a large pot, sauté onions in butter until golden brown.
+  2. Add potatoes, vegetable broth, milk, and pepper. Bring to a boil.
+  3. Reduce heat and simmer for 10 minutes.
+  4. Serve hot.
+
+  3. Creamy Onion Soup
+
+  Ingredients:
+
+  -1 large onion, chopped
+  -3 cups vegetable broth
+  -1 cup milk
+  -1/4 teaspoon black pepper
+  -1/4 cup all-purpose flour
+  -1/2 cup shredded Parmesan cheese
+
+  Instructions:
+
+  1. In a large pot, sauté onions in butter until golden brown.
+  2. Add vegetable broth, milk, and pepper. Bring to a boil.
+  3. Reduce heat and simmer for 10 minutes.
+  4. In a small bowl, whisk together flour and Parmesan cheese until smooth.
+  5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
+  ```
+
+  ដូចដែលអ្នកឃើញ មុខម្ហូបដែលមានទឹកដោះគោត្រូវបានតម្រុយចេញ។ ប៉ុន្តែ ប្រសិនបើអ្នកអត់អាចទទួលទឹកដោះមួយចំនួនបាន អ្នកអាចចង់តម្រុយមុខម្ហូបដែលមានឈីសដែរ ដូច្នេះតម្រូវការជាក់លាក់។
+
+- **បង្កើតបញ្ជីទំនិញ**។ យើងចង់បង្កើតបញ្ជីទំនិញដែលគិតទៅលើអ្វីដែលយើងមានរួចនៅផ្ទះ។
+
+  សម្រាប់មុខងារនេះ អ្នកអាចព្យាយាមដោះស្រាយទាំងអស់នៅក្នុង prompt មួយ ឬបំបែកវាចេញជាពីរផ្នែក។ សូមព្យាយាមជម្រើសទីពីរ។ នៅទីនេះ យើងសូមបន្ថែម prompt បន្ថែមមួយ ប៉ុន្តាសម្រាប់វាដំណើរការ អ្នកត្រូវបន្ថែមលទ្ធផលនៃ prompt ដំបូងជាបរិបទទៅ prompt ទីពីរ។
+
+  សូមរកឃើញផ្នែកក្នុងកូដ ដែលបោះពុម្ពលទ្ធផលពី prompt ដំបូង ហើយបន្ថែមកូដខាងក្រោមខាងក្រោម៖
+
+  ```python
+  old_prompt_result = completion.choices[0].message.content
+  prompt = "Produce a shopping list for the generated recipes and please don't include ingredients that I already have."
+
+  new_prompt = f"{old_prompt_result} {prompt}"
+  messages = [{"role": "user", "content": new_prompt}]
+  completion = openai.Completion.create(engine=deployment_name, messages=messages, max_tokens=1200)
+
+  # បោះពុម្ពការឆ្លើយតប
+  print("Shopping list:")
+  print(completion.choices[0].message.content)
+  ```
+
+  សូមទុកចិត្តដូចខាងក្រោម៖
+  1. យើងកំពុងសង់ prompt ថ្មីដោយបន្ថែមលទ្ធផលពី prompt ផ្ទាល់ដំបូងទៅ prompt ថ្មី:
+
+     ```python
+     new_prompt = f"{old_prompt_result} {prompt}"
+     ```
+
+  1. យើងធ្វើការស្នើសុំថ្មី ប៉ុន្តែគិតថា​ចំនួន tokens ដែលយើងបានស្នើរនៅក្នុង prompt ដំបូង ដូច្នេះដងនេះយើងនិយាយថា `max_tokens` គឺ ១២០០។
+
+     ```python
+     completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
+     ```
+
+     ប្រើកូដនេះដើម្បីការពិចារណា ឥឡូវនេះយើងទទួលបានលទ្ធផលដូចតទៅ៖
+
+     ```output
+     No of recipes (for example, 5): 2
+     List of ingredients (for example, chicken, potatoes, and carrots): apple,flour
+     Filter (for example, vegetarian, vegan, or gluten-free): sugar
+
+
+     -Apple and flour pancakes: 1 cup flour, 1/2 tsp baking powder, 1/2 tsp baking soda, 1/4 tsp salt, 1 tbsp sugar, 1 egg, 1 cup buttermilk or sour milk, 1/4 cup melted butter, 1 Granny Smith apple, peeled and grated
+     -Apple fritters: 1-1/2 cups flour, 1 tsp baking powder, 1/4 tsp salt, 1/4 tsp baking soda, 1/4 tsp nutmeg, 1/4 tsp cinnamon, 1/4 tsp allspice, 1/4 cup sugar, 1/4 cup vegetable shortening, 1/4 cup milk, 1 egg, 2 cups shredded, peeled apples
+     Shopping list:
+     -Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice
+     ```
+
+## បង្កើនការតំឡើងរបស់អ្នក
+
+អ្វីដែលយើងមានបច្ចុប្បន្នគឺកូដដែលដំណើរការ តែក៏មានការកែប្រែខ្លះៗដែលយើងគួរតែធ្វើដើម្បីធ្វើឲ្យរឿងកាន់តែប្រសើរ។ អ្វីខ្លះដែលយើងគួរធ្វើមានដូចជា៖
+
+- **បំបែកអាថ៍កំបាំងពីកូដ** ដូចជា key API ។ អាថ៍កំបាំងមិនគួរអោយមាននៅក្នុងកូដនោះទេ ហើយគួរតែរក្សាទុកនៅទីតាំងដែលមានសុវត្ថិភាព។ ដើម្បីបំបែកអាថ៍កំបាំងពីកូដ យើងអាចប្រើអថេរស окружការនិងបណ្ណាល័យដូចជា `python-dotenv` ដើម្បីបញ្ចូលវាពីឯកសារ។ នេះគឺជាវិធីដែលវាចេញក្នុងកូដ៖
+
+  1. បង្កើតឯកសារ `.env` ជាមួយខ្លឹមសារខាងក្រោម៖
+
+     ```bash
+     OPENAI_API_KEY=sk-...
+     ```
+
+     > សម្គាល់សម្រាប់ Azure អ្នកត្រូវកំណត់អថេរស окружការខាងក្រោម៖
+
+     ```bash
+     OPENAI_API_TYPE=azure
+     OPENAI_API_VERSION=2023-05-15
+     OPENAI_API_BASE=<replace>
+     ```
+
+     នៅក្នុងកូដ អ្នកនឹងបញ្ចូលអថេរស окружការដូចខាងក្រោម៖
+
+     ```python
+     from dotenv import load_dotenv
+
+     load_dotenv()
+
+     openai.api_key = os.environ["OPENAI_API_KEY"]
+     ```
+
+- **ពាក្យអំពីប្រវែង token** ។ យើងគួរពិចារណាចំនួន token ដែលយើងត្រូវការបង្កើតអត្ថបទដែលយើងចង់បាន។ Token មានថ្លៃ ដូច្នេះនៅកន្លែងណាដែលអាចធ្វើបាន យើងគួរព្យាយាមប្រើ token ឲ្យ​ទាបបំផុត។ ឧទាហរណ៍ តើយើងអាចបង្កើត prompt ដើម្បីប្រើ token តិចជាងនេះទេ?
+
+  ដើម្បីប្តូរ token ប្រើ អ្នកអាចប្រើប៉ារ៉ាម៉ែត្រ `max_tokens`។ ឧទាហរណ៍ ប្រសិនបើអ្នកចង់ប្រើ ១០០ token អ្នកនឹងធ្វើបែបនេះ៖
+
+  ```python
+  completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=100)
+  ```
+
+- **សាកល្បងនឹងសីតុណ្ហភាព** ។ សីតុណ្ហភាពគឺជានីមួយដែលយើងមិនបានគិតទេរហូតដល់ឥឡូវនេះ ប៉ុន្តែក៏មានភាពសំខាន់ដែលបញ្ជាក់ពីរបៀបសកម្មភាពកម្មវិធីរបស់យើង។ តម្លៃសីតុណ្ហភាព越ខ្ពស់លទ្ធផល越ចៃដន្យ។ តម្លៃសីតុណ្ហភាព越ទាបលទ្ធផល越អាចទាយបាន។ សូមចងចាំថាតើអ្នកចង់មានភាពបំលែងក្នុងលទ្ធផលរបស់អ្នកឬអត់។
+
+  ដើម្បីប្ដូរសីតុណ្ហភាព អ្នកអាចប្រើប៉ារ៉ាម៉ែត្រ `temperature`។ ឧទាហរណ៍ ប្រសិនបើអ្នកចង់ប្រើសីតុណ្ហភាព 0.5 អ្នកនឹងធ្វើបែបនេះ៖
+
+  ```python
+  completion = client.chat.completions.create(model=deployment, messages=messages, temperature=0.5)
+  ```
+
+  > សម្គាល់ ជិតទៅ 1.0 លទ្ធផលនឹងមានភាពបំលែងច្រើនជាង។
+
+## ការចាត់ចែង
+
+សម្រាប់កិច្ចការនេះ អ្នកអាចជ្រើសរើសអ្វីដែលចង់បង្កើត។
+
+នេះជាការផ្តល់អនុសាសន៍មួយចំនួន៖
+
+- កែប្រែកម្មវិធីបង្កើតបច្ចេកទេស (recipe generator app) ដើម្បីធ្វើឲ្យវាបានប្រសើរជាងមុន។ លេងជាមួយតម្លៃសីតុណ្ហភាព និង prompt ដើម្បីមើលអ្វីដែលអ្នកអាចបង្កើតបាន។
+- បង្កើត "មិត្តរួមសិក្សា"។ កម្មវិធីនេះគួរតិចខ្លីអាចឆ្លើយសំណួរអំពីប្រធានបទមួយដូចជា Python, អ្នកអាចមាន prompt ដូចជា "តើប្រធានបទមួយក្នុង Python មានអ្វីខ្លះ?" ឬអ្នកអាចមាន prompt ដែលនិយាយថា បង្ហាញខ្ញុំកូដសម្រាប់ប្រធានបទមួយជាដើម។
+- បុរសបុរាណ ធ្វើឲ្យប្រវត្តិសាស្ត្ររស់រវើតៗ ដំរុងបុរសបុរាណដើម្បីបម្រើជាតួអង្គប្រវត្តិសាស្ត្រមួយ ហើយសួរពីជីវិតរបស់វានិងពេលវេលា។
+
+## ដំណោះស្រាយ
+
+### មិត្តរួមសិក្សា
+
+ខាងក្រោមគឺជា prompt ចាប់ផ្តើម មើលថាអ្នកអាចប្រើវា និងកែប្រែវាឲ្យសមស្របចំពោះអ្នកយ៉ាងដូចម្តេច។
+
+```text
+- "You're an expert on the Python language
+
+    Suggest a beginner lesson for Python in the following format:
+
+    Format:
+    - concepts:
+    - brief explanation of the lesson:
+    - exercise in code with solutions"
+```
+
+### បុរសបុរាណ
+
+នេះជាទម្រង់ prompt អ្នកអាចប្រើបាន៖
+
+```text
+- "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
+- "You are Abe Lincoln, respond using grammar and words like Abe would have used:
+
+   Tell me about your greatest accomplishments, in 300 words"
+```
+
+## ការត្រួតពិនិត្យចំណេះដឹង
+
+តើគំនិតសីតុណ្ហភាពមានគោលបំណងអ្វី?
+
+1. វាកំណត់វិធីចៃដន្យនៃលទ្ធផល។
+1. វាកំណត់ទំហំការឆ្លើយតប។
+1. វាកំណត់ចំនួន token ដែលបានប្រើ។
+
+## 🚀 ការប្រកួត
+
+ពេលធ្វើកិច្ចការនេះ សាកល្បងប្ដូរសីតុណ្ហភាព សាកល្បងកំណត់វាទៅជា 0, 0.5, និង 1។ ចងចាំថា 0 ជាកម្រិតតិចបំផុតនៃការបំលែង និង 1 ជាកម្រិតខ្ពស់បំផុត។ តម្លៃណាដែលសមស្របបំផុតសម្រាប់កម្មវិធីរបស់អ្នក?
+
+## ការងារល្អ! បន្តការសិក្សារបស់អ្នក
+
+បន្ទាប់ពីបញ្ចប់មេរៀននេះ សូមពិនិត្យមើល [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ដើម្បីបន្តបង្កើនចំណេះដឹង Generative AI របស់អ្នក!
+
+ចូលទៅមេរៀនទី 7 ដែលយើងនឹងមើលពីរបៀប [បង្កើតកម្មវិធី chat](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**ការបដិសេធ**៖  
+ឯកសារនេះត្រូវបានបកប្រែដោយប្រើសេវាកម្មបកប្រែ AI [Co-op Translator](https://github.com/Azure/co-op-translator)។ ទោះយើងខិតខំប្រឹងប្រែងដល់ភាពត្រឹមត្រូវ ក៏សូមយល់ព្រមថា ការបកប្រែដោយស្វ័យប្រវត្តិនេះអាចមានកំហុស ឬ ការខុសឆ្គងបាន។ ឯកសារដែលមានភាសាតាមដើមគួរត្រូវបានយកជាមូលដ្ឋានអំណាច។ សម្រាប់ព័ត៌មានសំខាន់ៗ អនុញ្ញាតឱ្យមានការបកប្រែដោយមនុស្សជំនាញ។ យើងមិនទទួលខុសត្រូវចំពោះការយល់ច្រឡំ ឬការបកព្រួយដែលកើតមានពីការប្រើប្រាស់ការបកប្រែនេះឡើយ។
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

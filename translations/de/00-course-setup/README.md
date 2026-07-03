@@ -178,7 +178,7 @@ Wenn Sie die URL öffnen, sollte die Kursübersicht erscheinen, und Sie können 
 
 ### Ausführung in einem Container
 
-Eine Alternative zum Einrichten auf Ihrem Computer oder Codespace ist die Nutzung eines [Containers](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Das spezielle `.devcontainer`-Verzeichnis im Kurs-Repository ermöglicht es VS Code, das Projekt in einem Container einzurichten. Außerhalb von Codespaces ist dafür die Installation von Docker erforderlich und es braucht etwas Erfahrung. Wir empfehlen dies daher nur für Nutzer mit Erfahrung im Umgang mit Containern.
+Eine Alternative zum Einrichten auf Ihrem Computer oder Codespace ist die Nutzung eines [Containers](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst). Das spezielle `.devcontainer`-Verzeichnis im Kurs-Repository ermöglicht es VS Code, das Projekt in einem Container einzurichten. Außerhalb von Codespaces ist dafür die Installation von Docker erforderlich und es braucht etwas Erfahrung. Wir empfehlen dies daher nur für Nutzer mit Erfahrung im Umgang mit Containern.
 
 Eine der besten Möglichkeiten, Ihre API-Schlüssel bei Nutzung von GitHub Codespaces sicher zu verwahren, sind Codespace Secrets. Folgen Sie bitte der [Codespaces-Secrets-Verwaltung](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst), um mehr darüber zu erfahren.
 

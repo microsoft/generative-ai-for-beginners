@@ -178,7 +178,7 @@ jupyterhub
 
 ### Стартиране в контейнер
 
-Алтернатива на настройката на всичко на вашия компютър или Codespace е използването на [контейнер](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Специалната папка `.devcontainer` в учебното репо позволява на VS Code да настрои проекта в контейнер. Извън Codespaces това изисква инсталиране на Docker и определено включва малко повече работа, затова препоръчваме това само на тези с опит в работата с контейнери.
+Алтернатива на настройката на всичко на вашия компютър или Codespace е използването на [контейнер](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst). Специалната папка `.devcontainer` в учебното репо позволява на VS Code да настрои проекта в контейнер. Извън Codespaces това изисква инсталиране на Docker и определено включва малко повече работа, затова препоръчваме това само на тези с опит в работата с контейнери.
 
 Един от най-добрите начини да защитите API ключовете си, когато използвате GitHub Codespaces, е чрез използване на Codespace Secrets. Моля, следвайте [Ръководството за управление на тайни в Codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst), за да научите повече.
 

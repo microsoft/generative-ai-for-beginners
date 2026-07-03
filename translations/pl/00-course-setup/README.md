@@ -179,7 +179,7 @@ Po wejściu pod ten adres URL zobaczysz konspekt kursu i będziesz mógł nawigo
 
 ### Uruchamianie w kontenerze
 
-Alternatywą do konfiguracji wszystkiego na komputerze lub w Codespace jest użycie [kontenera](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Specjalny folder `.devcontainer` w repozytorium kursu umożliwia VS Code skonfigurowanie projektu w kontenerze. Poza Codespaces wymaga to instalacji Dockera i trochę pracy, więc polecamy to tylko osobom z doświadczeniem w pracy z kontenerami.
+Alternatywą do konfiguracji wszystkiego na komputerze lub w Codespace jest użycie [kontenera](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst). Specjalny folder `.devcontainer` w repozytorium kursu umożliwia VS Code skonfigurowanie projektu w kontenerze. Poza Codespaces wymaga to instalacji Dockera i trochę pracy, więc polecamy to tylko osobom z doświadczeniem w pracy z kontenerami.
 
 Jednym z najlepszych sposobów na bezpieczne przechowywanie kluczy API podczas korzystania z GitHub Codespaces jest używanie sekretów Codespace. Prosimy zapoznać się z przewodnikiem [zarządzania sekretami w Codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst).
 

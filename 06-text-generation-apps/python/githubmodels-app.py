@@ -33,4 +33,5 @@ response = client.complete(
     top_p=1.    
 )
 
-print(response.choices[0].message.content)
+if response.choices and response.choices[0].message is not None:
+    print(response.choices[0].message.content)

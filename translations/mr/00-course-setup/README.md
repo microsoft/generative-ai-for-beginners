@@ -179,7 +179,7 @@ URL मध्ये प्रवेश केल्यावर, तुम्ह
 
 ### कंटेनरमध्ये चालवणे
 
-तुमच्या संगणकावर किंवा Codespace वर सगळं सेटअप करण्याऐवजी [कंटेनर](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>) वापरण्याचा पर्याय आहे. कोर्स रेपॉजिटरीतील विशेष `.devcontainer` फोल्डरमुळे VS Code प्रोजेक्ट कंटेनरमध्ये सेट करू शकते. Codespaces व्यतिरिक्त, यासाठी Docker इन्स्टॉल करणे गरजेचे आहे, आणि थोडे काम आहे, त्यामुळे हा पर्याय कंटेनर वापराचा अनुभव असलेल्या लोकांसाठीच सुचवतो.
+तुमच्या संगणकावर किंवा Codespace वर सगळं सेटअप करण्याऐवजी [कंटेनर](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst) वापरण्याचा पर्याय आहे. कोर्स रेपॉजिटरीतील विशेष `.devcontainer` फोल्डरमुळे VS Code प्रोजेक्ट कंटेनरमध्ये सेट करू शकते. Codespaces व्यतिरिक्त, यासाठी Docker इन्स्टॉल करणे गरजेचे आहे, आणि थोडे काम आहे, त्यामुळे हा पर्याय कंटेनर वापराचा अनुभव असलेल्या लोकांसाठीच सुचवतो.
 
 GitHub Codespaces वापरताना API कीज सुरक्षित ठेवण्याचे सर्वोत्तम मार्गांपैकी एक म्हणजे Codespace Secrets वापरणे. कृपया [Codespaces गुपित व्यवस्थापन](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) मार्गदर्शक वाचा.
 

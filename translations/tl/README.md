@@ -1,6 +1,6 @@
-![Generative AI Para sa mga Nagsisimula](../../translated_images/tl/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
+![Generative AI Para sa Mga Nagsisimula](../../translated_images/tl/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
-### 21 Aralin na nagtuturo ng lahat ng kailangan mong malaman para makapagsimula sa paggawa ng Generative AI na mga aplikasyon
+### 21 Aralin na nagtuturo ng lahat ng kailangan mong malaman upang simulan ang paggawa ng mga Generative AI na aplikasyon
 
 [![GitHub license](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)
 [![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
@@ -14,16 +14,16 @@
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-### 🌐 Suporta sa Maraming Wika
+### 🌐 Suporta sa Maramihang Wika
 
-#### Sinusuportahan sa pamamagitan ng GitHub Action (Awtomatiko at Laging Nai-update)
+#### Sinusuportahan sa pamamagitan ng GitHub Action (Automatiko at Laging Napapanahon)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](./README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Khmer](../km/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](./README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
-> **Mas gusto mo bang Kopyahin Lokal?**
+> **Mas gusto mo bang I-clone nang Lokal?**
 >
-> Kasama sa repository na ito ang 50+ na pagsasalin ng wika na nagpapatindi ng laki ng pag-download. Para makopya nang walang mga pagsasalin, gamitin ang sparse checkout:
+> Ang repository na ito ay may 50+ pagsasalin sa wika na malaki ang dagdag sa laki ng pag-download. Para makapag-clone nang walang mga pagsasalin, gamitin ang sparse checkout:
 >
 > **Bash / macOS / Linux:**
 > ```bash
@@ -39,97 +39,97 @@
 > git sparse-checkout set --no-cone "/*" "!translations" "!translated_images"
 > ```
 >
-> Binibigyan ka nito ng lahat ng kailangan mo upang matapos ang kurso na may mas mabilis na pag-download.
+> Bibigyan ka nito ng lahat ng kailangan mo para tapusin ang kurso nang mas mabilis ang pag-download.
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-# Generative AI para sa mga Nagsisimula (Bersyon 3) - Isang Kurso
+# Generative AI para sa Mga Nagsisimula (Bersyon 3) - Isang Kurso
 
 Matutunan ang mga pundasyon ng paggawa ng Generative AI na mga aplikasyon gamit ang aming 21-aralin na komprehensibong kurso mula sa Microsoft Cloud Advocates.
 
 ## 🌱 Pagsisimula
 
-Mayroong 21 aralin ang kurso na ito. Ang bawat aralin ay may sariling paksa kaya magsimula ka kung saan mo gusto!
+Ang kursong ito ay binubuo ng 21 aralin. Ang bawat aralin ay sumasaklaw sa sarili nitong paksa kaya maaari kang magsimula kahit saan mo gustuhin!
 
-Ang mga aralin ay tinatawag na "Learn" para sa mga nagpapaliwanag ng konsepto ng Generative AI o "Build" na nagpapaliwanag ng konsepto at mga halimbawa ng code sa parehong **Python** at **TypeScript** kung maaari.
+Ang mga aralin ay may label na "Learn" para sa mga aralin na nagpapaliwanag ng konsepto ng Generative AI o "Build" na mga aralin na naglalahad ng konsepto at mga halimbawa ng code sa parehong **Python** at **TypeScript** kung maaari.
 
-Para sa mga .NET Developers, tingnan ang [Generative AI for Beginners (.NET Edition)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
+Para sa mga .NET Developer, tingnan ang [Generative AI para sa Mga Nagsisimula (.NET Edition)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
 
-Kabilang din sa bawat aralin ang seksyong "Keep Learning" na may karagdagang mga kasangkapan para sa pag-aaral.
+Ang bawat aralin ay may kasama ring "Keep Learning" na seksyon na may karagdagang mga kagamitan sa pag-aaral.
 
 ## Ano ang Kailangan Mo
-### Para patakbuhin ang code ng kursong ito, maaari kang gumamit ng alinman sa: 
+### Para patakbuhin ang code ng kursong ito, maaari mong gamitin ang alinman sa: 
  - [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **Mga Aralin:** "aoai-assignment"
  - [GitHub Marketplace Model Catalog](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **Mga Aralin:** "githubmodels"
  - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **Mga Aralin:** "oai-assignment" 
    
-- Ang batayang kaalaman sa Python o TypeScript ay nakakatulong - \*Para sa mga ganap na nagsisimula, tingnan ang mga kursong ito sa [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) at [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst)
-- Isang GitHub account para [i-fork ang buong repo na ito](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) sa iyong sariling GitHub account
+- Ang batayang kaalaman sa Python o TypeScript ay makatutulong - \*Para sa mga ganap na nagsisimula, tingnan ang mga kursong ito sa [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) at [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst)  
+- Isang GitHub account para [i-fork ang buong repo na ito](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) sa sarili mong GitHub account
 
-Nilikha namin ang **[Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** na aralin upang tulungan ka sa pagsasaayos ng iyong development environment.
+Nilikha namin ang isang **[Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** na aralin upang tulungan ka sa pagsasaayos ng iyong development environment.
 
-Huwag kalimutang [i-star (🌟) ang repo na ito](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) para madaling mahanap uli.
+Huwag kalimutang [bigyang bituin (🌟) ang repo na ito](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) upang mas madali mo itong mahanap mamaya.
 
-## 🧠 Handa Ka Na Bang I-deploy?
+## 🧠 Handa ka na bang I-deploy?
 
 Kung naghahanap ka ng mas advanced na mga halimbawa ng code, tingnan ang aming [koleksyon ng Generative AI Code Samples](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) sa parehong **Python** at **TypeScript**.
 
-## 🗣️ Makilala ang Iba pang mga Nag-aaral, Kumuha ng Suporta
+## 🗣️ Makipagkilala sa Ibang mga Nag-aaral, Humingi ng Suporta
 
-Sumali sa aming [opisyal na Azure AI Foundry Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) para makilala at makipag-network sa ibang mga nag-aaral ng kursong ito at kumuha ng suporta.
+Sumali sa aming [opisyal na Azure AI Foundry Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) upang makipagkilala at makipag-network sa ibang mga nag-aaral na kumukuha ng kursong ito at para sa suporta.
 
-Magtanong o magbahagi ng feedback sa produkto sa aming [Azure AI Foundry Developer Forum](https://aka.ms/azureaifoundry/forum) sa Github.
+Magtanong o magbahagi ng puna tungkol sa produkto sa aming [Azure AI Foundry Developer Forum](https://aka.ms/azureaifoundry/forum) sa Github.
 
-## 🚀 Nagtatayo ng Startup?
+## 🚀 Gumagawa ba ng Startup?
 
-Bisitahin ang [Microsoft for Startups](https://www.microsoft.com/startups) upang malaman kung paano magsimula sa paggawa gamit ang Azure credits ngayon.
+Bisita ang [Microsoft for Startups](https://www.microsoft.com/startups) upang malaman kung paano magsimula sa pagbuo gamit ang Azure credits ngayon.
 
-## 🙏 Nais tumulong?
+## 🙏 Gusto mo bang tumulong?
 
-Mayroon ka bang suhestiyon o nakakita ng mga pagkakamali sa baybay o code? [Mag-raise ng isyu](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) o [Gumawa ng pull request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
+Mayroon ka bang mga mungkahi o nakakita ng mga pagkakamali sa baybay o code? [Mag-raise ng isyu](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) o [Gumawa ng pull request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
 
-## 📂 Kasama sa bawat aralin:
+## 📂 Bawat aralin ay may kasamang:
 
-- Isang maikling pambungad na video tungkol sa paksa
+- Isang maikling video na pagpapakilala sa paksa
 - Isang nakasulat na aralin na matatagpuan sa README
 - Mga halimbawa ng code sa Python at TypeScript na sumusuporta sa Azure OpenAI at OpenAI API
-- Mga link sa karagdagang mga mapagkukunan upang ipagpatuloy ang iyong pag-aaral
+- Mga link sa karagdagang mga mapagkukunan para ipagpatuloy ang iyong pag-aaral
 
 ## 🗃️ Mga Aralin
 
-| #   | **Link ng Aralin**                                                                                                                            | **Paglalarawan**                                                                               | **Video**                                                                   | **Karagdagang Pag-aaral**                                                      |
-| --- | -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 00  | [Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                   | **Matuto:** Paano Isaayos ang Iyong Development Environment                                  | Video Darating Pa                                                               | [Alamin Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)  |
-| 01  | [Panimula sa Generative AI at LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                                      | **Matuto:** Unawain kung ano ang Generative AI at kung paano gumagana ang Large Language Models (LLMs) | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst)  | [Alamin Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)  |
-| 02  | [Pagsusuri at paghahambing ng iba't ibang LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)         | **Matuto:** Paano pumili ng tamang modelo para sa iyong paggamit                               | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)   | [Alamin Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)  |
-| 03  | [Paggamit ng Generative AI nang Responsably](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                   | **Matuto:** Paano gumawa ng Generative AI Applications nang may responsibilidad               | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)   | [Alamin Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)  |
-| 04  | [Pag-unawa sa Mga Pangunahing Kaalaman sa Prompt Engineering](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **Matuto:** Praktikal na Mga Pinakamahusay na Kasanayan sa Prompt Engineering                                              | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 05  | [Paggawa ng Mga Advanced na Prompt](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **Matuto:** Paano gamitin ang mga teknik sa prompt engineering na nagpapabuti ng resulta ng iyong mga prompt.             | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 06  | [Pagtayo ng Mga Aplikasyon sa Pagbuo ng Teksto](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Bumuo:** Isang app sa pagbuo ng teksto gamit ang Azure OpenAI / OpenAI API                                             | [Video](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 07  | [Pagtayo ng Mga Aplikasyon sa Chat](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Bumuo:** Mga teknik para sa mahusay na pagtayo at integrasyon ng mga aplikasyon sa chat.                               | [Video](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 08  | [Pagtayo ng Mga Search Apps at Vector Databases](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Bumuo:** Isang search application na gumagamit ng Embeddings para maghanap ng data.                                    | [Video](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 09  | [Pagtayo ng Mga Aplikasyon sa Pagbuo ng Imahe](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Bumuo:** Isang aplikasyon sa pagbuo ng imahe                                                                          | [Video](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 10  | [Pagtayo ng Mga Low Code AI Applications](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **Bumuo:** Isang Generative AI application gamit ang Low Code tools                                                   | [Video](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 11  | [Pagsasama ng Mga External na Application gamit ang Function Calling](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **Bumuo:** Ano ang function calling at mga gamit nito para sa mga aplikasyon                                         | [Video](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 12  | [Pagdidisenyo ng UX para sa AI Applications](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Matuto:** Paano ilapat ang mga prinsipyo ng disenyo ng UX sa pag-develop ng Generative AI Applications                | [Video](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 13  | [Pagprotekta sa Iyong Mga Generative AI Applications](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Matuto:** Ang mga banta at panganib sa mga AI system at mga paraan upang protektahan ang mga ito.                     | [Video](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 14  | [Ang Lifecycle ng Generative AI Application](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)           | **Matuto:** Ang mga kagamitan at sukatan para pamahalaan ang LLM Lifecycle at LLMOps                                     | [Video](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 15  | [Retrieval Augmented Generation (RAG) at Vector Databases](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **Bumuo:** Isang aplikasyon gamit ang RAG Framework para kumuha ng embeddings mula sa Vector Databases                    | [Video](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 16  | [Open Source Models at Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **Bumuo:** Isang aplikasyon gamit ang open source models na available sa Hugging Face                                   | [Video](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 17  | [AI Agents](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **Bumuo:** Isang aplikasyon gamit ang AI Agent Framework                                                               | [Video](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 18  | [Fine-Tuning LLMs](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Matuto:** Ano, bakit at paano ang fine-tuning ng LLMs                                                                | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 19  | [Pagtayo gamit ang SLMs](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Matuto:** Ang mga benepisyo ng pagtayo gamit ang Small Language Models                                                | Video Darating Pa | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 20  | [Pagtayo gamit ang Mistral Models](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Matuto:** Ang mga tampok at pagkakaiba ng Mistral Family Models                                                      | Video Darating Pa | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 21  | [Pagtayo gamit ang Meta Models](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Matuto:** Ang mga tampok at pagkakaiba ng Meta Family Models                                                        | Video Darating Pa | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| #   | **Link ng Aralin**                                                                                                                            | **Paglalarawan**                                                                                 | **Video**                                                                   | **Karagdagang Pag-aaral**                                                      |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| 00  | [Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                 | **Matuto:** Paano Isaayos ang Iyong Development Environment                                    | Video Paparating Pa                                                           | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)   |
+| 01  | [Pagpapakilala sa Generative AI at LLMs](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **Matuto:** Pag-unawa kung ano ang Generative AI at kung paano gumagana ang Large Language Models (LLMs). | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)   |
+| 02  | [Paggalugad at Paghahambing ng Iba't Ibang LLMs](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)      | **Matuto:** Paano pumili ng tamang modelo para sa iyong gamit                                   | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)   |
+| 03  | [Paggamit ng Generative AI nang Responsable](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                   | **Matuto:** Paano gumawa ng mga Generative AI na aplikasyon nang responsable                    | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)   |
+| 04  | [Pag-unawa sa mga Pangunahing Kaalaman sa Prompt Engineering](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **Matuto:** Mga Praktikal na Pinakamahusay na Gawain sa Prompt Engineering                                           | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 05  | [Paglikha ng Mga Advanced na Prompt](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **Matuto:** Paano gamitin ang mga teknik sa prompt engineering na nagpapabuti sa resulta ng iyong mga prompt. | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 06  | [Pagbuo ng Mga Application para sa Pagbuo ng Teksto](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Bumuo:** Isang application para sa pagbuo ng teksto gamit ang Azure OpenAI / OpenAI API                                | [Video](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 07  | [Pagbuo ng Mga Chat Application](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Bumuo:** Mga teknik para sa episyenteng pagbuo at integrasyon ng mga chat application.               | [Video](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 08  | [Pagbuo ng Mga Search App gamit ang Vector Databases](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Bumuo:** Isang search application na gumagamit ng Embeddings para maghanap ng datos.                        | [Video](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 09  | [Pagbuo ng Mga Application para sa Pagbuo ng Imahe](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Bumuo:** Isang application para sa pagbuo ng imahe                                                       | [Video](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 10  | [Pagbuo ng Mga Low Code AI Application](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **Bumuo:** Isang Generative AI application gamit ang mga Low Code tools                                     | [Video](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 11  | [Pagsasama ng Mga Panlabas na Application gamit ang Function Calling](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **Bumuo:** Ano ang function calling at ang mga gamit nito para sa mga application                          | [Video](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 12  | [Pagdidisenyo ng UX para sa Mga AI Application](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Matuto:** Paano gamitin ang mga prinsipyo ng UX design sa pagbuo ng Mga Generative AI Application         | [Video](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 13  | [Pag-secure ng Iyong Mga Generative AI Application](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Matuto:** Ang mga banta at panganib sa mga AI system at mga paraan para masiguro ang mga sistemang ito.             | [Video](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 14  | [Ang Siklo ng Buhay ng Generative AI Application](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)           | **Matuto:** Ang mga kagamitan at sukatan para pamahalaan ang LLM Lifecycle at LLMOps                         | [Video](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 15  | [Retrieval Augmented Generation (RAG) at Vector Databases](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **Bumuo:** Isang application gamit ang RAG Framework para kunin ang embeddings mula sa isang Vector Databases  | [Video](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 16  | [Mga Open Source na Modelo at Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **Bumuo:** Isang application gamit ang mga open source na modelo na makukuha sa Hugging Face                    | [Video](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 17  | [AI Agents](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **Bumuo:** Isang application gamit ang AI Agent Framework                                           | [Video](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 18  | [Fine-Tuning ng LLMs](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Matuto:** Ano, bakit, at paano ang fine-tuning ng LLMs                                            | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 19  | [Pagbuo gamit ang SLMs](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Matuto:** Ang mga benepisyo ng pagbuo gamit ang Small Language Models                                            | Video Malapit Nang Dumating | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 20  | [Pagbuo gamit ang Mistral Models](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Matuto:** Ang mga tampok at pagkakaiba ng mga Mistral Family Models                                           | Video Malapit Nang Dumating | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 21  | [Pagbuo gamit ang Meta Models](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Matuto:** Ang mga tampok at pagkakaiba ng mga Meta Family Models                                           | Video Malapit Nang Dumating | [Matuto Pa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 
-### 🌟 Espesyal na pasasalamat
+### 🌟 Espesyal na Pasasalamat
 
-Espesyal na pasasalamat kay [**John Aziz**](https://www.linkedin.com/in/john0isaac/) para sa paggawa ng lahat ng GitHub Actions at workflows
+Espesyal na pasasalamat kay [**John Aziz**](https://www.linkedin.com/in/john0isaac/) para sa paglikha ng lahat ng GitHub Actions at workflows
 
-Kay [**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) para sa mahahalagang kontribusyon sa bawat aralin upang mapabuti ang karanasan ng mga nag-aaral at code. 
+[**Bernhard Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) para sa paggawa ng mga mahahalagang kontribusyon sa bawat leksyon upang mapabuti ang karanasan sa pag-aaral at coding. 
 
-## 🎒 Ibang Mga Kurso
+## 🎒 Iba Pang Mga Kurso
 
-Ang aming koponan ay gumagawa pa ng ibang mga kurso! Tingnan:
+Ang aming koponan ay gumagawa pa ng ibang mga kurso! Tingnan ang:
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -165,25 +165,25 @@ Ang aming koponan ay gumagawa pa ng ibang mga kurso! Tingnan:
 
 ---
  
-### Copilot Series
+### Series ng Copilot
 [![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
-## Pagkuha ng Tulong
+## Humingi ng Tulong
 
-Kung ikaw ay na-stuck o may mga tanong tungkol sa paggawa ng AI apps. Sumali sa kapwa mga nag-aaral at mga bihasang developer sa mga talakayan tungkol sa MCP. Isa itong suportadong komunidad kung saan malugod na tinatanggap ang mga tanong at malayang ibinabahagi ang kaalaman.
+Kung ikaw ay natigil o may mga tanong tungkol sa paggawa ng mga AI app. Sumali sa mga kapwa nag-aaral at mga batikang developer sa mga talakayan tungkol sa MCP. Ito ay isang suportadong komunidad kung saan malugod ang pagtanggap sa mga tanong at malayang pagbabahagi ng kaalaman.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Kung mayroon kang feedback sa produkto o mga error habang ginagawa, bisitahin:
+Kung mayroon kang feedback tungkol sa produkto o mga error habang nagde-develop bisitahin:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Paunawa**:
-Ang dokumentong ito ay isinalin gamit ang serbisyong AI na pagsasalin [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat nagsusumikap kami ng katumpakan, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o di-tiyak na impormasyon. Ang orihinal na dokumento sa orihinal nitong wika ang itinuturing na pangunahing sanggunian. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.
+**Paunawa**:  
+Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't nagsusumikap kami para sa katumpakan, mangyaring tandaan na ang mga awtomatikong salin ay maaaring maglaman ng mga error o kamalian. Ang orihinal na dokumento sa kanyang orihinal na wika ang dapat ituring na pangunahing sanggunian. Para sa mga mahalagang impormasyon, inirerekomenda ang propesyonal na salin ng tao. Hindi kami mananagot sa anumang hindi pagkakaintindihan o maling interpretasyon na nagmula sa paggamit ng salin na ito.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

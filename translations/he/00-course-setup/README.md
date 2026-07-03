@@ -178,7 +178,7 @@ jupyterhub
 
 ### הרצה בתוך מכולה
 
-חלופה להגדיר הכל במחשב שלך או ב-Codespace היא שימוש ב-[מכולה](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). תיקיית `.devcontainer` המיוחדת במאגר הקורס מאפשרת ל-VS Code להגדיר את הפרויקט בתוך מכולה. מחוץ ל-Codespaces, הדבר דורש התקנת Docker, ויכלול קצת עבודה, לכן אנו ממליצים זאת רק למשתמשים עם ניסיון בעבודה עם מכולות.
+חלופה להגדיר הכל במחשב שלך או ב-Codespace היא שימוש ב-[מכולה](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst). תיקיית `.devcontainer` המיוחדת במאגר הקורס מאפשרת ל-VS Code להגדיר את הפרויקט בתוך מכולה. מחוץ ל-Codespaces, הדבר דורש התקנת Docker, ויכלול קצת עבודה, לכן אנו ממליצים זאת רק למשתמשים עם ניסיון בעבודה עם מכולות.
 
 אחת הדרכים הטובות ביותר לשמור על מפתחות ה-API שלך בטוחים בשימוש ב-GitHub Codespaces היא על ידי שימוש ב-Codespace Secrets. אנא עקוב אחרי [מדריך ניהול סודות ב-Codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) כדי ללמוד עוד על כך.
 

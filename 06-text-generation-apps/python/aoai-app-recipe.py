@@ -69,16 +69,21 @@ completion = client.chat.completions.create(model=deployment, messages=messages,
 
 # print response
 print("Recipes:")
-print(completion.choices[0].message.content)
+if not completion.choices or completion.choices[0].message is None:
+    print("No response received.")
+else:
+    old_prompt_result = completion.choices[0].message.content
+    print(old_prompt_result)
 
-old_prompt_result = completion.choices[0].message.content
-prompt_shopping = "Produce a shopping list, and please don't include ingredients that I already have at home: "
+    prompt_shopping = "Produce a shopping list, and please don't include ingredients that I already have at home: "
+    new_prompt = f"Given ingredients at home {ingredients} and these generated recipes: {old_prompt_result}, {prompt_shopping}"
+    messages = [{"role": "user", "content": new_prompt}]
+    completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=600, temperature=0)
 
-new_prompt = f"Given ingredients at home {ingredients} and these generated recipes: {old_prompt_result}, {prompt_shopping}"
-messages = [{"role": "user", "content": new_prompt}]
-completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=600, temperature=0)
-
-# print response
-print("\n=====Shopping list ======= \n")
-print(completion.choices[0].message.content)
+    # print response
+    print("\n=====Shopping list ======= \n")
+    if completion.choices and completion.choices[0].message is not None and completion.choices[0].message.content is not None:
+        print(completion.choices[0].message.content)
+    else:
+        print("No response received.")
 

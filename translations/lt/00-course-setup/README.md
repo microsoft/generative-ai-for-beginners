@@ -178,7 +178,7 @@ Patekę į URL turėtumėte matyti kurso struktūrą ir galėsite naršyti bet k
 
 ### Vykdymas konteineryje
 
-Alternatyva nustatyti viską savo kompiuteryje ar Codespace yra naudoti [konteinerį](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Specialus `.devcontainer` aplankas kurso repozitorijoje leidžia VS Code nustatyti projektą konteineryje. Ne Codespaces aplinkoje tai reikalauja Docker diegimo ir iš tiesų yra šiek tiek sudėtinga, todėl rekomenduojame tai tik patyrusiems konteinerių naudotojams.
+Alternatyva nustatyti viską savo kompiuteryje ar Codespace yra naudoti [konteinerį](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst). Specialus `.devcontainer` aplankas kurso repozitorijoje leidžia VS Code nustatyti projektą konteineryje. Ne Codespaces aplinkoje tai reikalauja Docker diegimo ir iš tiesų yra šiek tiek sudėtinga, todėl rekomenduojame tai tik patyrusiems konteinerių naudotojams.
 
 Vienas geriausių būdų saugiai laikyti savo API raktus naudojant GitHub Codespaces yra naudoti Codespace Secrets. Prašome sekti [Codespaces slaptažodžių valdymo](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) gido nurodymus.
 

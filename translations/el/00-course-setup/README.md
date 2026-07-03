@@ -178,7 +178,7 @@ jupyterhub
 
 ### Εκτέλεση μέσα σε container
 
-Μια εναλλακτική στο να ρυθμίσετε τα πάντα στον υπολογιστή σας ή στο Codespace είναι να χρησιμοποιήσετε ένα [container](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Ο ειδικός φάκελος `.devcontainer` μέσα στο repository του μαθήματος επιτρέπει στο VS Code να ρυθμίσει το έργο μέσα σε container. Εκτός Codespaces, αυτό απαιτεί την εγκατάσταση του Docker και, για να είμαστε ειλικρινείς, περιλαμβάνει λίγη δουλειά, οπότε το συνιστούμε μόνο σε όσους έχουν εμπειρία με containers.
+Μια εναλλακτική στο να ρυθμίσετε τα πάντα στον υπολογιστή σας ή στο Codespace είναι να χρησιμοποιήσετε ένα [container](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst). Ο ειδικός φάκελος `.devcontainer` μέσα στο repository του μαθήματος επιτρέπει στο VS Code να ρυθμίσει το έργο μέσα σε container. Εκτός Codespaces, αυτό απαιτεί την εγκατάσταση του Docker και, για να είμαστε ειλικρινείς, περιλαμβάνει λίγη δουλειά, οπότε το συνιστούμε μόνο σε όσους έχουν εμπειρία με containers.
 
 Ένας από τους καλύτερους τρόπους να κρατήσετε τα API κλειδιά σας ασφαλή όταν χρησιμοποιείτε GitHub Codespaces είναι να χρησιμοποιήσετε τα Codespace Secrets. Παρακαλούμε ακολουθήστε τον [οδηγό διαχείρισης μυστικών για Codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) για να μάθετε περισσότερα.
 

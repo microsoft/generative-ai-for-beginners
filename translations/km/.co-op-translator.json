@@ -1,0 +1,404 @@
+{
+  "00-course-setup/01-setup-cloud.md": {
+    "original_hash": "be9cef0460b3696ed5d8f6f8d2f64d45",
+    "translation_date": "2026-04-06T16:23:54+00:00",
+    "source_file": "00-course-setup/01-setup-cloud.md",
+    "language_code": "km"
+  },
+  "00-course-setup/02-setup-local.md": {
+    "original_hash": "f5cf0b10ab3c485e6334101f5784f1f3",
+    "translation_date": "2026-04-06T16:25:42+00:00",
+    "source_file": "00-course-setup/02-setup-local.md",
+    "language_code": "km"
+  },
+  "00-course-setup/03-providers.md": {
+    "original_hash": "0b5b016b0eb8a1cef2e3097620d8aa23",
+    "translation_date": "2026-04-06T16:24:46+00:00",
+    "source_file": "00-course-setup/03-providers.md",
+    "language_code": "km"
+  },
+  "00-course-setup/README.md": {
+    "original_hash": "8749a347f1cfbacbe836070025a76f7f",
+    "translation_date": "2026-04-06T16:27:06+00:00",
+    "source_file": "00-course-setup/README.md",
+    "language_code": "km"
+  },
+  "01-introduction-to-genai/README.md": {
+    "original_hash": "bfb7901bdbece1ba3e9f35c400ca33e8",
+    "translation_date": "2026-04-06T15:59:54+00:00",
+    "source_file": "01-introduction-to-genai/README.md",
+    "language_code": "km"
+  },
+  "02-exploring-and-comparing-different-llms/README.md": {
+    "original_hash": "6b7629b8ee4d7d874a27213e903d86a7",
+    "translation_date": "2026-04-06T16:21:29+00:00",
+    "source_file": "02-exploring-and-comparing-different-llms/README.md",
+    "language_code": "km"
+  },
+  "03-using-generative-ai-responsibly/README.md": {
+    "original_hash": "4d57fad773cbeb69c5dd62e65c34200d",
+    "translation_date": "2026-04-06T16:18:55+00:00",
+    "source_file": "03-using-generative-ai-responsibly/README.md",
+    "language_code": "km"
+  },
+  "04-prompt-engineering-fundamentals/README.md": {
+    "original_hash": "600e1c6b7a9f95fe929e6399c78bf1ad",
+    "translation_date": "2026-06-08T12:17:05+00:00",
+    "source_file": "04-prompt-engineering-fundamentals/README.md",
+    "language_code": "km"
+  },
+  "04-prompt-engineering-fundamentals/python/aoai-assignment.ipynb": {
+    "original_hash": "9b900544221c8d986e06ee6d25debef7",
+    "translation_date": "2026-04-06T16:46:04+00:00",
+    "source_file": "04-prompt-engineering-fundamentals/python/aoai-assignment.ipynb",
+    "language_code": "km"
+  },
+  "04-prompt-engineering-fundamentals/python/githubmodels-assignment.ipynb": {
+    "original_hash": "40586ff9e0ba4574f88e59700b9a0088",
+    "translation_date": "2026-04-06T16:46:43+00:00",
+    "source_file": "04-prompt-engineering-fundamentals/python/githubmodels-assignment.ipynb",
+    "language_code": "km"
+  },
+  "04-prompt-engineering-fundamentals/python/oai-assignment.ipynb": {
+    "original_hash": "ec9eedd4f3981f097d4bd34c849cb8b6",
+    "translation_date": "2026-04-06T16:45:29+00:00",
+    "source_file": "04-prompt-engineering-fundamentals/python/oai-assignment.ipynb",
+    "language_code": "km"
+  },
+  "05-advanced-prompts/README.md": {
+    "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
+    "translation_date": "2026-04-06T16:15:07+00:00",
+    "source_file": "05-advanced-prompts/README.md",
+    "language_code": "km"
+  },
+  "06-text-generation-apps/README.md": {
+    "original_hash": "df027997f1448323d6159b78a1b669bf",
+    "translation_date": "2026-04-06T16:33:37+00:00",
+    "source_file": "06-text-generation-apps/README.md",
+    "language_code": "km"
+  },
+  "06-text-generation-apps/python/aoai-assignment.ipynb": {
+    "original_hash": "ce7c4aeaf24d37670294fdaa84f30d89",
+    "translation_date": "2026-04-06T17:00:24+00:00",
+    "source_file": "06-text-generation-apps/python/aoai-assignment.ipynb",
+    "language_code": "km"
+  },
+  "06-text-generation-apps/python/githubmodels-assignment.ipynb": {
+    "original_hash": "e098ceda5593d3f1a23fbcb99d7164ef",
+    "translation_date": "2026-04-06T17:02:32+00:00",
+    "source_file": "06-text-generation-apps/python/githubmodels-assignment.ipynb",
+    "language_code": "km"
+  },
+  "06-text-generation-apps/python/oai-assigment.ipynb": {
+    "original_hash": "04d143aea0c88d45ab5f0183b7d25e83",
+    "translation_date": "2026-04-06T17:04:28+00:00",
+    "source_file": "06-text-generation-apps/python/oai-assigment.ipynb",
+    "language_code": "km"
+  },
+  "07-building-chat-applications/README.md": {
+    "original_hash": "a5308963a56cfbad2d73b0fa99fe84b3",
+    "translation_date": "2026-04-06T16:23:37+00:00",
+    "source_file": "07-building-chat-applications/README.md",
+    "language_code": "km"
+  },
+  "07-building-chat-applications/python/aoai-assigment-simple.ipynb": {
+    "original_hash": "f4bc916d6bd53dbb54eec65cc377a6e6",
+    "translation_date": "2026-04-06T16:50:12+00:00",
+    "source_file": "07-building-chat-applications/python/aoai-assigment-simple.ipynb",
+    "language_code": "km"
+  },
+  "07-building-chat-applications/python/aoai-assignment.ipynb": {
+    "original_hash": "0028b01848da8f2e46fd18198119c210",
+    "translation_date": "2026-04-06T16:53:21+00:00",
+    "source_file": "07-building-chat-applications/python/aoai-assignment.ipynb",
+    "language_code": "km"
+  },
+  "07-building-chat-applications/python/githubmodels-assignment-simple.ipynb": {
+    "original_hash": "3d6053d77ba13875cd4d40840a5f7a61",
+    "translation_date": "2026-04-06T16:50:07+00:00",
+    "source_file": "07-building-chat-applications/python/githubmodels-assignment-simple.ipynb",
+    "language_code": "km"
+  },
+  "07-building-chat-applications/python/githubmodels-assignment.ipynb": {
+    "original_hash": "3eeb8e5cad61b52a8366f6259a53ed49",
+    "translation_date": "2026-04-06T16:54:47+00:00",
+    "source_file": "07-building-chat-applications/python/githubmodels-assignment.ipynb",
+    "language_code": "km"
+  },
+  "07-building-chat-applications/python/oai-assigment-simple.ipynb": {
+    "original_hash": "9403f6a0192f80e1fa1720153793abe0",
+    "translation_date": "2026-04-06T16:53:26+00:00",
+    "source_file": "07-building-chat-applications/python/oai-assigment-simple.ipynb",
+    "language_code": "km"
+  },
+  "07-building-chat-applications/python/oai-assignment.ipynb": {
+    "original_hash": "1854bdde1dd56b366f1f6c9122f7d304",
+    "translation_date": "2026-04-06T16:51:31+00:00",
+    "source_file": "07-building-chat-applications/python/oai-assignment.ipynb",
+    "language_code": "km"
+  },
+  "08-building-search-applications/README.md": {
+    "original_hash": "58953c08b8ba7073b836d4270ea0fe86",
+    "translation_date": "2026-04-06T16:08:46+00:00",
+    "source_file": "08-building-search-applications/README.md",
+    "language_code": "km"
+  },
+  "08-building-search-applications/python/aoai-assignment.ipynb": {
+    "original_hash": "8bc7a8b05e3e2fb4038b3ba804e875bc",
+    "translation_date": "2026-04-06T16:49:11+00:00",
+    "source_file": "08-building-search-applications/python/aoai-assignment.ipynb",
+    "language_code": "km"
+  },
+  "08-building-search-applications/python/aoai-solution.ipynb": {
+    "original_hash": "ff5415e24294df268ec7e7a2b12af509",
+    "translation_date": "2026-04-06T16:49:01+00:00",
+    "source_file": "08-building-search-applications/python/aoai-solution.ipynb",
+    "language_code": "km"
+  },
+  "08-building-search-applications/python/oai-assignment.ipynb": {
+    "original_hash": "967d27a97c67132a3110f32a53567a83",
+    "translation_date": "2026-04-06T16:49:06+00:00",
+    "source_file": "08-building-search-applications/python/oai-assignment.ipynb",
+    "language_code": "km"
+  },
+  "08-building-search-applications/python/oai-solution.ipynb": {
+    "original_hash": "afb84920098ad1e6e4ca63ee9a61d9b8",
+    "translation_date": "2026-04-06T16:49:41+00:00",
+    "source_file": "08-building-search-applications/python/oai-solution.ipynb",
+    "language_code": "km"
+  },
+  "08-building-search-applications/scripts/README.md": {
+    "original_hash": "0d69f2d5814a698d3de5d0235940b5ae",
+    "translation_date": "2026-04-06T16:41:47+00:00",
+    "source_file": "08-building-search-applications/scripts/README.md",
+    "language_code": "km"
+  },
+  "09-building-image-applications/README.md": {
+    "original_hash": "238cde5c90363d70ecc939569378da51",
+    "translation_date": "2026-04-06T16:41:21+00:00",
+    "source_file": "09-building-image-applications/README.md",
+    "language_code": "km"
+  },
+  "09-building-image-applications/python/aoai-assignment.ipynb": {
+    "original_hash": "d5c5bc8d857e5cb63e313beac9fa6402",
+    "translation_date": "2026-04-06T17:08:02+00:00",
+    "source_file": "09-building-image-applications/python/aoai-assignment.ipynb",
+    "language_code": "km"
+  },
+  "09-building-image-applications/python/oai-assignment.ipynb": {
+    "original_hash": "967a3421f1d34546352f2ce877d74bbb",
+    "translation_date": "2026-04-06T17:06:52+00:00",
+    "source_file": "09-building-image-applications/python/oai-assignment.ipynb",
+    "language_code": "km"
+  },
+  "10-building-low-code-ai-applications/README.md": {
+    "original_hash": "846ac8e3b7dcfb697d3309fec05f0fea",
+    "translation_date": "2026-04-06T16:38:13+00:00",
+    "source_file": "10-building-low-code-ai-applications/README.md",
+    "language_code": "km"
+  },
+  "11-integrating-with-function-calling/README.md": {
+    "original_hash": "f6f84f9ef2d066cd25850cab93580a50",
+    "translation_date": "2026-04-06T16:31:44+00:00",
+    "source_file": "11-integrating-with-function-calling/README.md",
+    "language_code": "km"
+  },
+  "11-integrating-with-function-calling/python/aoai-assignment.ipynb": {
+    "original_hash": "2277587ff6cb5c40437e18d61fc2e239",
+    "translation_date": "2026-04-06T16:58:26+00:00",
+    "source_file": "11-integrating-with-function-calling/python/aoai-assignment.ipynb",
+    "language_code": "km"
+  },
+  "11-integrating-with-function-calling/python/oai-assignment.ipynb": {
+    "original_hash": "5c4a2a2529177c571be9a5a371d7242b",
+    "translation_date": "2026-04-06T16:56:41+00:00",
+    "source_file": "11-integrating-with-function-calling/python/oai-assignment.ipynb",
+    "language_code": "km"
+  },
+  "12-designing-ux-for-ai-applications/README.md": {
+    "original_hash": "78bbeed50fd4dc9fdee931f5daf98cb3",
+    "translation_date": "2026-04-06T16:10:12+00:00",
+    "source_file": "12-designing-ux-for-ai-applications/README.md",
+    "language_code": "km"
+  },
+  "13-securing-ai-applications/README.md": {
+    "original_hash": "a2faf8ee7a0b851efa647a19788f1e5b",
+    "translation_date": "2026-04-06T16:12:43+00:00",
+    "source_file": "13-securing-ai-applications/README.md",
+    "language_code": "km"
+  },
+  "14-the-generative-ai-application-lifecycle/README.md": {
+    "original_hash": "d853d54eb56fbe34325e0e709b407e99",
+    "translation_date": "2026-04-06T16:01:36+00:00",
+    "source_file": "14-the-generative-ai-application-lifecycle/README.md",
+    "language_code": "km"
+  },
+  "15-rag-and-vector-databases/README.md": {
+    "original_hash": "2210a0466c812d9defc4df2d9a709ff9",
+    "translation_date": "2026-04-06T16:39:40+00:00",
+    "source_file": "15-rag-and-vector-databases/README.md",
+    "language_code": "km"
+  },
+  "15-rag-and-vector-databases/data/frameworks.md": {
+    "original_hash": "b5466bcedc3c75aa35476270362f626a",
+    "translation_date": "2026-04-06T16:44:22+00:00",
+    "source_file": "15-rag-and-vector-databases/data/frameworks.md",
+    "language_code": "km"
+  },
+  "15-rag-and-vector-databases/data/own_framework.md": {
+    "original_hash": "df98b2c59f87d8543135301e87969f70",
+    "translation_date": "2026-04-06T16:42:39+00:00",
+    "source_file": "15-rag-and-vector-databases/data/own_framework.md",
+    "language_code": "km"
+  },
+  "15-rag-and-vector-databases/data/perceptron.md": {
+    "original_hash": "59021c5f419d3feda19075910a74280a",
+    "translation_date": "2026-04-06T16:43:18+00:00",
+    "source_file": "15-rag-and-vector-databases/data/perceptron.md",
+    "language_code": "km"
+  },
+  "15-rag-and-vector-databases/notebook-rag-vector-databases.ipynb": {
+    "original_hash": "e71ce4588c0f58d4d2e7a6d994cb8078",
+    "translation_date": "2026-04-06T16:44:46+00:00",
+    "source_file": "15-rag-and-vector-databases/notebook-rag-vector-databases.ipynb",
+    "language_code": "km"
+  },
+  "16-open-source-models/README.md": {
+    "original_hash": "85b754d4dc980f270f264d17116d9a5f",
+    "translation_date": "2026-04-06T16:00:43+00:00",
+    "source_file": "16-open-source-models/README.md",
+    "language_code": "km"
+  },
+  "17-ai-agents/README.md": {
+    "original_hash": "6a781629bbce965e50459abd737d1e9e",
+    "translation_date": "2026-04-06T16:30:20+00:00",
+    "source_file": "17-ai-agents/README.md",
+    "language_code": "km"
+  },
+  "18-fine-tuning/README.md": {
+    "original_hash": "7b9bd5188b2474f88c3a51405e61cc86",
+    "translation_date": "2026-04-06T16:35:48+00:00",
+    "source_file": "18-fine-tuning/README.md",
+    "language_code": "km"
+  },
+  "18-fine-tuning/RESOURCES.md": {
+    "original_hash": "c2f423d1402f71ca3869ec135bb77d16",
+    "translation_date": "2026-04-06T16:34:34+00:00",
+    "source_file": "18-fine-tuning/RESOURCES.md",
+    "language_code": "km"
+  },
+  "18-fine-tuning/python/openai/oai-assignment.ipynb": {
+    "original_hash": "1725725c956564056baf895e6ca92aa5",
+    "translation_date": "2026-04-06T17:05:51+00:00",
+    "source_file": "18-fine-tuning/python/openai/oai-assignment.ipynb",
+    "language_code": "km"
+  },
+  "19-slm/README.md": {
+    "original_hash": "7d849075d63853cef4b12a1d4e334da6",
+    "translation_date": "2026-04-06T16:17:26+00:00",
+    "source_file": "19-slm/README.md",
+    "language_code": "km"
+  },
+  "19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb": {
+    "original_hash": "e5a251ecfa1bc5d6997d51452eab872d",
+    "translation_date": "2026-04-06T16:49:57+00:00",
+    "source_file": "19-slm/python/Phi-3-Vision-Nividia-NIM.ipynb",
+    "language_code": "km"
+  },
+  "19-slm/python/phi35-instruct-demo.ipynb": {
+    "original_hash": "f2c0eca890183e25633c17cf3926f0db",
+    "translation_date": "2026-04-06T16:49:51+00:00",
+    "source_file": "19-slm/python/phi35-instruct-demo.ipynb",
+    "language_code": "km"
+  },
+  "19-slm/python/phi35-vision-demo.ipynb": {
+    "original_hash": "b5ae7034946eabf51b52b2c659a51b9b",
+    "translation_date": "2026-04-06T16:49:46+00:00",
+    "source_file": "19-slm/python/phi35-vision-demo.ipynb",
+    "language_code": "km"
+  },
+  "19-slm/python/phi35_moe_demo.ipynb": {
+    "original_hash": "9eba987c7db5557a0c7a913b7eeba684",
+    "translation_date": "2026-04-06T16:50:02+00:00",
+    "source_file": "19-slm/python/phi35_moe_demo.ipynb",
+    "language_code": "km"
+  },
+  "20-mistral/README.md": {
+    "original_hash": "fec8c0070389f47e413e3d423562f071",
+    "translation_date": "2026-04-06T16:07:23+00:00",
+    "source_file": "20-mistral/README.md",
+    "language_code": "km"
+  },
+  "20-mistral/python/githubmodels-assignment.ipynb": {
+    "original_hash": "bf972d661a2a02b46c964597d687f258",
+    "translation_date": "2026-04-06T16:48:27+00:00",
+    "source_file": "20-mistral/python/githubmodels-assignment.ipynb",
+    "language_code": "km"
+  },
+  "21-meta/README.md": {
+    "original_hash": "6e58be903fd4744170b3b5d71fa6404c",
+    "translation_date": "2026-04-06T16:06:26+00:00",
+    "source_file": "21-meta/README.md",
+    "language_code": "km"
+  },
+  "21-meta/python/githubmodels-assignment.ipynb": {
+    "original_hash": "da4ecf6a45fc7f57cd1bdc8fe6847832",
+    "translation_date": "2026-04-06T16:47:28+00:00",
+    "source_file": "21-meta/python/githubmodels-assignment.ipynb",
+    "language_code": "km"
+  },
+  "AGENTS.md": {
+    "original_hash": "19b8d432e5ed3ab209641dd8dad643fb",
+    "translation_date": "2026-04-06T15:55:12+00:00",
+    "source_file": "AGENTS.md",
+    "language_code": "km"
+  },
+  "CODE_OF_CONDUCT.md": {
+    "original_hash": "c06b12caf3c901eb3156e3dd5b0aea56",
+    "translation_date": "2026-04-06T15:55:20+00:00",
+    "source_file": "CODE_OF_CONDUCT.md",
+    "language_code": "km"
+  },
+  "CONTRIBUTING.md": {
+    "original_hash": "57c41f2af71001a2cff9d8eb797cb843",
+    "translation_date": "2026-04-06T15:53:41+00:00",
+    "source_file": "CONTRIBUTING.md",
+    "language_code": "km"
+  },
+  "README.md": {
+    "original_hash": "a94bcfe8d85c9fd652ba96292f8765e5",
+    "translation_date": "2026-04-06T15:58:10+00:00",
+    "source_file": "README.md",
+    "language_code": "km"
+  },
+  "SECURITY.md": {
+    "original_hash": "2d33a71bed73d6daee78e2d473ece975",
+    "translation_date": "2026-04-06T15:55:48+00:00",
+    "source_file": "SECURITY.md",
+    "language_code": "km"
+  },
+  "docs/ENHANCED_FEATURES_ROADMAP.md": {
+    "original_hash": "43fe261ba7a54e891e489255201c9253",
+    "translation_date": "2026-04-06T16:29:20+00:00",
+    "source_file": "docs/ENHANCED_FEATURES_ROADMAP.md",
+    "language_code": "km"
+  },
+  "docs/SECURITY_GUIDELINES.md": {
+    "original_hash": "2dc6195c00301d37e3dcdf50b8acc800",
+    "translation_date": "2026-04-06T16:28:15+00:00",
+    "source_file": "docs/SECURITY_GUIDELINES.md",
+    "language_code": "km"
+  },
+  "docs/_navbar.md": {
+    "original_hash": "55168a94c75ef46d671743c607f8f9ff",
+    "translation_date": "2026-04-06T16:27:20+00:00",
+    "source_file": "docs/_navbar.md",
+    "language_code": "km"
+  },
+  "docs/_sidebar.md": {
+    "original_hash": "4d1335b77a62c821d972c35ef82c586a",
+    "translation_date": "2026-04-06T16:27:13+00:00",
+    "source_file": "docs/_sidebar.md",
+    "language_code": "km"
+  }
+}
