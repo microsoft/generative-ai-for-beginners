@@ -137,7 +137,7 @@ Most of the models we mentioned in previous paragraphs (OpenAI models, open-weig
 
 ## Improving LLM results
 
-We’ve explored with our startup team different kinds of LLMs and a cloud platform (Microsoft Foundry) enabling us to compare different models, evaluate them on test data, improve performance, and deploy them on inference endpoints.
+We’ve explored with our startup team different kinds of LLMs and a cloud platform (Microsoft Foundry) that enables us to compare different models, evaluate them on test data, improve performance, and deploy them on inference endpoints.
 
 But when shall they consider fine-tuning a model rather than using a pre-trained one? Are there other approaches to improve model performance on specific workloads?
 
