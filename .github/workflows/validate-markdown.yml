@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v7
       - name: Check broken Paths
         id: check-broken-paths
-        uses: john0isaac/action-check-markdown@v1.1.0
+        uses: john0isaac/action-check-markdown@v1.3.1
         with:
           command: check_broken_paths
           directory: ./
@@ -40,7 +40,7 @@ jobs:
         uses: actions/checkout@v7
       - name: Run Check paths tracking
         id: check-paths-tracking
-        uses: john0isaac/action-check-markdown@v1.1.0
+        uses: john0isaac/action-check-markdown@v1.3.1
         with:
           command: check_paths_tracking
           directory: ./
@@ -83,7 +83,7 @@ jobs:
         uses: actions/checkout@v7
       - name: Run Check URLs Country Locale
         id: check-urls-locale
-        uses: john0isaac/action-check-markdown@v1.1.0
+        uses: john0isaac/action-check-markdown@v1.3.1
         with:
           command: check_urls_locale
           directory: ./
@@ -98,7 +98,7 @@ jobs:
         uses: actions/checkout@v7
       - name: Run Check Broken URLs
         id: check-broken-urls
-        uses: john0isaac/action-check-markdown@v1.1.0
+        uses: john0isaac/action-check-markdown@v1.3.1
         with:
           command: check_broken_urls
           directory: ./
