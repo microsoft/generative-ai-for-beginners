@@ -1,126 +1,126 @@
-# Kurti pažangius užklausų tekstus
+# Išplėstinių užklausų kūrimas
 
-[![Kurti pažangius užklausų tekstus](../../../translated_images/lt/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
+[![Creating Advanced Prompts](../../../translated_images/lt/05-lesson-banner.522610fd4a2cd82d.webp)](https://youtu.be/BAjzkaCdRok?si=NmUIyRf7-cDgbjtt)
 
-Apžvelkime, ką išmokome ankstesniame skyriuje:
+Apžvelkime kai kurias išmoktas temas iš ankstesnio skyriaus:
 
-> Užklausų _kūrimas_ – tai procesas, kurio metu mes **nukreipiame modelį link tinkamesnių atsakymų**, pateikdami naudingesnes instrukcijas ar kontekstą.
+> Užklausų _kūrimas_ yra procesas, kuriuo mes **vedame modelį link tinkamesnių atsakymų** pateikdami naudingesnes instrukcijas ar kontekstą.
 
-Užklausų rašymas susideda iš dviejų etapų: užklausos konstravimo, pateikiant tinkamą kontekstą, ir _optimizavimo_, t. y. kaip palaipsniui tobulinti užklausą.
+Taip pat yra du užklausų rašymo etapai: užklausos konstravimas, pateikiant aktualų kontekstą, ir _optimizavimas_, kaip palaipsniui tobulinti užklausą.
 
-Šiuo metu turime pagrindinį supratimą, kaip rašyti užklausas, tačiau reikia gilintis. Šiame skyriuje pereisite nuo įvairių užklausų bandymo prie supratimo, kodėl viena užklausa yra geresnė už kitą. Išmoksite kurti užklausas, vadovaudamiesi pagrindinėmis technikomis, kurias galima taikyti bet kuriam LLM.
+Šiuo metu turime pagrindinį supratimą, kaip rašyti užklausas, tačiau reikia žengti giliau. Šiame skyriuje pereisite nuo įvairių užklausų išbandymo prie supratimo, kodėl viena užklausa yra geresnė nei kita. Išmoksite kurti užklausas, remdamiesi pagrindinėmis technikomis, kurios taikomos bet kuriam LLM.
 
 ## Įvadas
 
 Šiame skyriuje aptarsime šias temas:
 
-- Išplėskite savo žinias apie užklausų kūrimą, taikydami skirtingas technikas savo užklausoms.
-- Konfigūruokite savo užklausas, kad gautumėte įvairius rezultatus.
+- Išplėsti savo žinias apie užklausų kūrimą taikant skirtingas technikas savo užklausoms.
+- Konfigūruoti savo užklausas, kad keistumėte išvestį.
 
 ## Mokymosi tikslai
 
 Baigę šią pamoką, galėsite:
 
-- Taikyti užklausų kūrimo technikas, kurios pagerina užklausų rezultatus.
+- Taikyti užklausų kūrimo technikas, gerinančias užklausų rezultatą.
 - Atlikti užklausas, kurios yra arba įvairios, arba deterministinės.
 
 ## Užklausų kūrimas
 
-Užklausų kūrimas – tai procesas, kurio metu kuriamos užklausos, siekiant gauti norimą rezultatą. Užklausų kūrimas nėra inžinerijos disciplina, tai labiau technikų rinkinys, kurį galite taikyti norimam rezultatui pasiekti.
+Užklausų kūrimas yra procesas, kuriuo sudaromos užklausos, kurios duos norimą rezultatą. Tai ne tik tekstinės užklausos rašymas. Užklausų kūrimas nėra inžinerijos disciplina, tai daugiau technikų rinkinys, kurį galite taikyti, kad gautumėte norimą rezultatą.
 
 ### Užklausos pavyzdys
 
-Pažvelkime į paprastą užklausą, pavyzdžiui, šią:
+Paimkime paprastą užklausą:
 
-> Sukurkite 10 geografijos klausimų.
+> Sugeneruokite 10 klausimų apie geografiją.
 
-Šioje užklausoje jūs iš tikrųjų taikote skirtingų užklausų technikų rinkinį.
+Šioje užklausoje taikote kelias skirtingas užklausų technikas.
 
 Išskaidykime tai.
 
-- **Kontekstas**, jūs nurodote, kad tai turėtų būti apie „geografiją“.
-- **Rezultato apribojimas**, norite ne daugiau kaip 10 klausimų.
+- **Kontekstas**, jūs nurodote, kad tai turi būti apie "geografiją".
+- **Išvesties apribojimas**, norite ne daugiau kaip 10 klausimų.
 
-### Paprastų užklausų apribojimai
+### Paprastų užklausų ribotumai
 
-Galite gauti arba negauti norimo rezultato. Klausimai bus sugeneruoti, tačiau geografija yra plati tema, ir galite negauti to, ko norite, dėl šių priežasčių:
+Galite gauti norimą rezultatą arba ne. Jūs gausite sugeneruotus klausimus, bet geografija yra plati tema ir gali būti, kad negausite to, ko norite dėl šių priežasčių:
 
 - **Plati tema**, nežinote, ar tai bus apie šalis, sostines, upes ir pan.
-- **Formatas**, o kas, jei norėtumėte, kad klausimai būtų suformatuoti tam tikru būdu?
+- **Formatas**, o jei norėtumėte, kad klausimai būtų pateikti tam tikru formatu?
 
 Kaip matote, kuriant užklausas reikia daug ką apsvarstyti.
 
-Iki šiol matėme paprastą užklausos pavyzdį, tačiau generatyvusis DI gali daug daugiau padėti žmonėms įvairiose srityse ir profesijose. Pažvelkime į keletą pagrindinių technikų.
+Iki šiol matėme paprastą užklausos pavyzdį, bet generatyvioji dirbtinis intelektas gali daug daugiau – padėti žmonėms įvairiose rolėse ir pramonės šakose. Toliau apžvelgsime pagrindines technikas.
 
 ### Užklausų technikos
 
-Pirmiausia turime suprasti, kad užklausų kūrimas yra _atsirandanti_ LLM savybė, tai reiškia, kad tai nėra funkcija, įdiegta modelyje, o kažkas, ką atrandame naudodamiesi modeliu.
+Pirmiausia turime suprasti, kad užklausų kūrimas yra _išliekanti_ LLM savybė, reiškianti, kad tai nėra modelio funkcija, o kažkas, ką atrandame naudodamiesi modeliu.
 
-Yra keletas pagrindinių technikų, kurias galime naudoti LLM užklausoms kurti. Pažvelkime į jas.
+Yra kelios pagrindinės technikos, kurias galime naudoti užklausoms kurti. Panagrinėkime jas.
 
-- **Vieno pavyzdžio užklausa**, tai pati paprasčiausia užklausų forma. Tai viena užklausa, prašanti LLM atsakymo, remiantis tik jo mokymo duomenimis.
-- **Kelių pavyzdžių užklausa**, tokio tipo užklausa nukreipia LLM, pateikdama 1 ar daugiau pavyzdžių, kuriais jis gali remtis generuodamas atsakymą.
-- **Mąstymo grandinė**, tokio tipo užklausa nurodo LLM, kaip suskaidyti problemą į žingsnius.
-- **Sugeneruotos žinios**, norėdami pagerinti užklausos atsakymą, galite papildomai pateikti sugeneruotus faktus ar žinias.
-- **Nuo paprasto iki sudėtingo**, kaip mąstymo grandinė, ši technika susijusi su problemos suskaidymu į žingsnius ir prašymu atlikti šiuos žingsnius eilės tvarka.
-- **Savęs tobulinimas**, ši technika susijusi su LLM atsakymo kritika ir prašymu jį patobulinti.
-- **Maieutinė užklausa**, čia norite užtikrinti, kad LLM atsakymas būtų teisingas, ir prašote paaiškinti įvairias atsakymo dalis. Tai savęs tobulinimo forma.
+- **Nulinės užklausos (zero-shot) metodas**, tai pats paprasčiausias užklausos forma. Tai viena užklausa, kuri prašo LLM atsakyti remiantis tik mokymo duomenimis.
+- **Kelių pavyzdžių užklausa (few-shot)**, šio tipo užklausa nukreipia LLM, pateikdama vieną ar kelis pavyzdžius, kuriais jis gali remtis generuodamas atsakymą.
+- **Minties grandinė (chain-of-thought)**, šis metodas moko LLM, kaip išskaidyti problemą į žingsnius.
+- **Generuotos žinios**, norint pagerinti užklausos atsakymą, galima papildomai pateikti sugeneruotą informaciją ar žinias kartu su užklausa.
+- **Nuo mažiausio iki didžiausio (least to most)**, panašiai kaip minties grandinė, ši technika kurią problemą išskaido į žingsnius ir prašo juos atlikti paeiliui.
+- **Savarankiškas tobulinimas (self-refine)**, ši technika reiškia kritiškai vertinti LLM atsakymą ir tada prašyti jį patobulinti.
+- **Maieutica (maieutic prompting)**. Čia norite įsitikinti, kad LLM atsakymas yra teisingas ir prašote jį paaiškinti įvairius atsakymo dalykus. Tai yra savarankiško tobulinimo forma.
 
-### Vieno pavyzdžio užklausa
+### Nulinės užklausos metodas
 
-Šis užklausų stilius yra labai paprastas, jis susideda iš vienos užklausos. Ši technika tikriausiai yra ta, kurią naudojate pradėdami mokytis apie LLM. Štai pavyzdys:
+Šis užklausos būdas labai paprastas, jis susideda iš vienos užklausos. Ši technika tikriausiai yra ta, kurią naudojate pradėdami mokytis apie LLM. Štai pavyzdys:
 
-- Užklausa: „Kas yra algebra?“
-- Atsakymas: „Algebra yra matematikos šaka, kuri tiria matematinius simbolius ir taisykles, kaip manipuliuoti šiais simboliais.“
+- Užklausa: "Kas yra algebra?"
+- Atsakymas: "Algebra yra matematikos šaka, kuri tiria matematinius simbolius ir taisykles, kaip manipuliuoti šiais simboliais."
 
 ### Kelių pavyzdžių užklausa
 
-Šis užklausų stilius padeda modeliui, pateikiant keletą pavyzdžių kartu su prašymu. Jis susideda iš vienos užklausos su papildomais užduoties specifiniais duomenimis. Štai pavyzdys:
+Ši užklausų forma padeda modeliui suteikdama keletą pavyzdžių kartu su užklausa. Ji susideda iš vienos užklausos su papildomais užduoties specifiniais duomenimis. Štai pavyzdys:
 
-- Užklausa: „Parašyk eilėraštį Šekspyro stiliumi. Štai keletas Šekspyro sonetų pavyzdžių:
-  Sonetas 18: „Ar palyginsiu tave su vasaros diena? Tu esi gražesnis ir švelnesnis...“
-  Sonetas 116: „Neleiskime tikrų protų santuokai Trukdyti. Meilė nėra meilė, kuri keičiasi, kai keičiasi aplinkybės...“
-  Sonetas 132: „Tavo akys man patinka, ir jos, tarsi gailėdamos manęs, Žinodamos tavo širdį, kankina mane panieka,...“
-  Dabar parašyk sonetą apie mėnulio grožį.“
-- Atsakymas: „Danguje mėnulis švelniai švyti, Sidabriniu švytėjimu, kuris skleidžia savo malonę,...“
+- Užklausa: "Parašyk eilėraštį Šekspyro stiliumi. Štai keletas Šekspyro sonetų pavyzdžių.:
+  Sonetas 18: 'Ar lyginsiu tave su vasaros diena? Tu švelnesnė ir rimtesnė...'
+  Sonetas 116: 'Neprieštarauju tikrų protų susijungimui. Meilė nėra meilė, kuri keičiasi, kai randa pokytį...'
+  Sonetas 132: 'Tavo akis myliu, ir jos, atjaučiančios mane, Žino, kad tavo širdis mane kankina panieka,...'
+  Dabar parašyk sonetą apie mėnulio grožį."
+- Atsakymas: "Danguje švelniai žiba mėnulis, Sidabrinė šviesa, metanti jo švelnų žavesį,..."
 
-Pavyzdžiai suteikia LLM kontekstą, formatą ar norimą stilių. Jie padeda modeliui suprasti konkrečią užduotį ir generuoti tikslesnius bei tinkamesnius atsakymus.
+Pavyzdžiai suteikia LLM kontekstą, formatą ar norimą stilių. Jie padeda modeliui suprasti konkrečią užduotį ir sugeneruoti tikslesnius bei atitinkančius atsakymus.
 
-### Mąstymo grandinė
+### Minties grandinė
 
-Mąstymo grandinė yra labai įdomi technika, nes ji susijusi su LLM vedimu per kelis žingsnius. Idėja yra nurodyti LLM, kaip kažką atlikti. Apsvarstykite šį pavyzdį, su ir be mąstymo grandinės:
+Minties grandinė yra labai įdomi technika, nes ji leidžia LLM atlikti veiksmų seką. Idėja yra nurodyti LLM, kaip atlikti kažką žingsniais. Pažvelkime į pavyzdį, su ir be minties grandinės:
 
-    - Užklausa: „Alisa turi 5 obuolius, išmeta 3 obuolius, duoda 2 Bobui, o Bobas grąžina vieną, kiek obuolių turi Alisa?“
+    - Užklausa: "Alice turi 5 obuolius, meta 3 obuolius, duoda 2 Bobui, o Bobas grąžina vieną, kiek obuolių turi Alice?"
     - Atsakymas: 5
 
-LLM atsako 5, kas yra neteisinga. Teisingas atsakymas yra 1 obuolys, atsižvelgiant į skaičiavimą (5 -3 -2 + 1 = 1).
+LLM atsako 5, kas neteisinga. Teisingas atsakymas yra 1 obuolys, atsižvelgiant į skaičiavimą (5 -3 -2 + 1 = 1).
 
-Kaip galime išmokyti LLM tai atlikti teisingai?
+Kaip galima išmokyti LLM tai padaryti teisingai?
 
-Pabandykime mąstymo grandinę. Taikant mąstymo grandinę reiškia:
+Pabandykime minties grandinę. Taikyti minties grandinę reiškia:
 
-1. Pateikite LLM panašų pavyzdį.
-1. Parodykite skaičiavimą ir kaip jį teisingai apskaičiuoti.
-1. Pateikite pradinę užklausą.
+1. Duoti LLM panašų pavyzdį.
+1. Pademonstruoti skaičiavimą ir kaip teisingai jį atlikti.
+1. Pateikti pirminę užklausą.
 
 Štai kaip:
 
-- Užklausa: „Liza turi 7 obuolius, išmeta 1 obuolį, duoda 4 obuolius Bartui, o Bartas grąžina vieną:
+- Užklausa: "Lisa turi 7 obuolius, meta 1 obuolį, duoda 4 obuolius Bartui, o Bartas grąžina vieną:
   7 -1 = 6
   6 -4 = 2
   2 +1 = 3  
-  Alisa turi 5 obuolius, išmeta 3 obuolius, duoda 2 Bobui, o Bobas grąžina vieną, kiek obuolių turi Alisa?“
+  Alice turi 5 obuolius, meta 3 obuolius, duoda 2 Bobui ir Bobas grąžina vieną, kiek obuolių turi Alice?"
   Atsakymas: 1
 
-Atkreipkite dėmesį, kaip rašome žymiai ilgesnes užklausas su kitu pavyzdžiu, skaičiavimu ir tada pradinę užklausą, ir gauname teisingą atsakymą 1.
+Pastebėkite, kad rašome žymiai ilgesnes užklausas su kitu pavyzdžiu, skaičiavimu ir tada pagrindine užklausa ir gauname teisingą atsakymą 1.
 
-Kaip matote, mąstymo grandinė yra labai galinga technika.
+Kaip matote, minties grandinė yra labai galinga technika.
 
-### Sugeneruotos žinios
+### Generuotos žinios
 
-Dažnai, kai norite sukurti užklausą, norite tai padaryti naudodami savo įmonės duomenis. Norite, kad dalis užklausos būtų iš įmonės, o kita dalis – tai, kas jus domina.
+Daugelis kartų, kai norite suformuluoti užklausą, norite naudoti savo įmonės duomenis. Norite, kad dalis užklausos būtų iš įmonės, o kita dalis – tai pati domina užklausa.
 
-Pavyzdžiui, jei dirbate draudimo versle, jūsų užklausa gali atrodyti taip:
+Kaip pavyzdys, ši jūsų užklausa gali atrodyti taip, jei dirbate draudimo versle:
 
 ```text
 {{company}}: {{company_name}}
@@ -131,9 +131,9 @@ Budget: {{budget}}
 Requirements: {{requirements}}
 ```
 
-Aukščiau matote, kaip užklausa sukonstruota naudojant šabloną. Šablone yra keletas kintamųjų, pažymėtų `{{variable}}`, kurie bus pakeisti faktinėmis vertėmis iš įmonės API.
+Viršuje matote, kaip užklausa sukonstruota naudojant šabloną. Šablone yra keletas kintamųjų, pažymėtų `{{variable}}`, kurie bus pakeisti aktualiomis reikšmėmis iš įmonės API.
 
-Štai pavyzdys, kaip užklausa galėtų atrodyti, kai kintamieji pakeičiami turiniu iš jūsų įmonės:
+Štai kaip užklausa galėtų atrodyti, kai kintamieji pakeisti jūsų įmonės turiniu:
 
 ```text
 Insurance company: ACME Insurance
@@ -149,7 +149,7 @@ Budget: $1000
 Requirements: Car, Home, and Life insurance
 ```
 
-Paleidus šią užklausą per LLM, gausite tokį atsakymą:
+Paleidus šią užklausą per LLM, bus gautas toks atsakymas:
 
 ```output
 Given the budget and requirements, we suggest the following insurance package from ACME Insurance:
@@ -159,7 +159,7 @@ Given the budget and requirements, we suggest the following insurance package fr
 Total cost: $1,200 USD
 ```
 
-Kaip matote, jis taip pat siūlo gyvybės draudimą, ko neturėtų. Šis rezultatas rodo, kad turime optimizuoti užklausą, kad ji būtų aiškesnė, ką galima leisti. Po tam tikro _bandymų ir klaidų_ proceso gauname tokią užklausą:
+Kaip matote, taip pat siūloma gyvybės draudimas, ko neturėtų būti. Šis rezultatas rodo, kad reikia optimizuoti užklausą pakeičiant ją aiškesne, ko galima leisti. Po kai kurių _bandymų ir klaidų_ gauname šią užklausą:
 
 ```text
 Insurance company: ACME Insurance
@@ -174,7 +174,7 @@ Please suggest an insurance given the following budget and requirements:
 Budget: $1000 restrict choice to types: Car, Home
 ```
 
-Atkreipkite dėmesį, kaip pridėjus _tipą_ ir _kainą_ bei naudojant raktinį žodį _apriboti_, LLM geriau supranta, ko norime.
+Pastebėkite, kaip pridėjus _tipą_, _kainą_ ir panaudojus raktinį žodį _riboti_ padeda LLM geriau suprasti, ko norime.
 
 Dabar gauname tokį atsakymą:
 
@@ -182,38 +182,38 @@ Dabar gauname tokį atsakymą:
 Given the budget and requirements, we suggest the Car, Cheap insurance product which costs 500 USD per month.
 ```
 
-Šio pavyzdžio tikslas buvo parodyti, kad net jei naudojame pagrindinę techniką, kaip _sugeneruotos žinios_, daugeliu atvejų vis tiek reikia optimizuoti užklausą, kad gautume norimą rezultatą.
+Šio pavyzdžio tikslas buvo parodyti, kad nors naudojame paprastą techniką kaip _generuotos žinios_, daugeliu atvejų vis tiek reikia optimizuoti užklausą norint gauti norimą rezultatą.
 
-### Nuo paprasto iki sudėtingo
+### Nuo mažiausio iki didžiausio
 
-„Nuo paprasto iki sudėtingo“ užklausų idėja yra suskaidyti didesnę problemą į subproblemas. Tokiu būdu padedate LLM „įveikti“ didesnę problemą. Geras pavyzdys galėtų būti duomenų mokslas, kur galite paprašyti LLM padalyti problemą taip:
+Idėja su Least-to-most užklausa yra išskaidyti didesnę problemą į smulkesnes problemas. Tokiu būdu padedate nukreipti LLM, kaip „įveikti“ didesnę problemą. Geras pavyzdys galėtų būti duomenų mokslas, kai galite paprašyti LLM padalyti problemą taip:
 
-> Užklausa: Kaip atlikti duomenų mokslą 5 žingsniais?
+> Užklausa: Kaip atlikti duomenų mokslą per 5 žingsnius?
 
-Jūsų DI asistentas atsakys:
+Jūsų AI padėjėjas atsakytų:
 
 1. Surinkti duomenis
 1. Išvalyti duomenis
 1. Analizuoti duomenis
-1. Vaizduoti duomenis
-1. Pateikti duomenis
+1. Nupiešti duomenis
+1. Pristatyti duomenis
 
-### Savęs tobulinimas, rezultatų kritika
+### Savarankiškas tobulinimas, kritikuokite rezultatus
 
-Naudojant generatyvinius DI ir LLM, negalite pasitikėti rezultatu. Jūs turite jį patikrinti. Galų gale, LLM tiesiog pateikia tai, kas greičiausiai turėtų būti pasakyta, o ne tai, kas yra teisinga. Todėl gera idėja yra paprašyti LLM kritikuoti save, kas veda mus prie savęs tobulinimo technikos.
+Su generatyviniu DI ir LLM negalite visiškai pasitikėti išvestimi. Turite ją patikrinti. Galų gale, LLM tiesiog pateikia jums, kas greičiausiai bus toliau sakoma, o ne kas yra teisinga. Todėl gera idėja yra paprašyti LLM save kritikuoti, kas veda prie savarankiško tobulinimo technikos.
 
 Kaip tai veikia:
 
-1. Pradinė užklausa, prašanti LLM išspręsti problemą
+1. Pradinė užklausa LLM spręsti problemą
 1. LLM atsako
-1. Jūs kritikuojate atsakymą ir prašote DI jį patobulinti
-1. LLM vėl atsako, šį kartą atsižvelgdamas į kritiką ir siūlo sprendimus, kuriuos sugalvojo
+1. Jūs kritikuojate atsakymą ir prašote DI patobulinti
+1. LLM vėl atsako, atsižvelgdamas į kritiką ir siūlo sprendimus
 
 Šį procesą galite kartoti tiek kartų, kiek norite.
 
-Štai pavyzdys, naudojant šią techniką:
+Štai pavyzdys naudojant šią techniką:
 
-> Užklausa: „Sukurkite Python Web API su maršrutais produktams ir klientams“
+> Užklausa: "Sukurk Python Web API su maršrutais products ir customers"
 
 DI atsakymas:
 
@@ -230,7 +230,7 @@ def customers():
     return 'Customers'
 ```
 
-> Užklausa: pasiūlykite 3 patobulinimus aukščiau pateiktam kodui
+> Užklausa: pasiūlyk 3 patobulinimus aukščiau pateiktam kodui
 
 DI atsakymas:
 
@@ -261,21 +261,21 @@ if __name__ == '__main__':
     app.run()
 ```
 
-Kaip matote, aukščiau pateiktas DI atsakymas patobulina pirmąjį pasiūlytą kodą, dėka pirmojo atsakymo kritikos.
+Kaip matote, aukščiau pateiktas DI atsakymas tobulina pirmą pateiktą kodą kritikų dėka.
 
-### Maieutinė užklausa
+### Maieutic užklausa
 
-Maieutinė užklausa yra technika, panaši į savęs tobulinimą, tačiau ji labiau susijusi su LLM prašymu paaiškinti save. Tikslas yra sumažinti LLM atsakymų nenuoseklumus, kad būtų užtikrintas teisingas atsakymas. Darbo eiga:
+Maieutic užklausa yra technika, panaši į savarankišką tobulinimą, tačiau labiau orientuota į LLM prašymą paaiškinti save. Tikslas – sumažinti prieštaravimus LLM atsakyme ir užtikrinti teisingą atsakymą. Sekti reikia tokį procesą:
 
-1. Paprašykite LLM atsakyti į klausimą
-1. Kiekvienai atsakymo daliai paprašykite LLM paaiškinti ją išsamiau.
-1. Jei yra nenuoseklumų, atmesti dalis, kurios yra nenuoseklios.
+1. Paprašyti LLM atsakyti į klausimą
+1. Kiekvienai atsakymo daliai paprašyti LLM paaiškinti išsamiau.
+1. Jei yra prieštaravimų, atmesti prieštaringas dalis.
 
 Kartokite 2 ir 3, kol peržiūrėsite visas dalis ir būsite patenkinti atsakymu.
 
 Štai pavyzdinė užklausa:
 
-> Užklausa: Kaip sukurti krizės planą pandemijai suvaldyti 5 žingsniais?
+> užklausa: Kaip sukurti krizių planą, skirtą pandemijos mažinimui per 5 žingsnius?
 > LLM atsakymas:
 
 ```text
@@ -286,9 +286,9 @@ Kartokite 2 ir 3, kol peržiūrėsite visas dalis ir būsite patenkinti atsakymu
 1. Identify the communication channels
 ```
 
-Jis nustatė 5 žingsnius, bet ar galime nustatyti, ar tai teisinga? Paprašykime LLM paaiškinti kiekvieną žingsnį išsamiau:
+Identifikuota 5 žingsniai, bet ar galime nustatyti, ar tai teisinga? Paprašykime LLM išsamiau paaiškinti kiekvieną žingsnį:
 
-> Užklausa: Paaiškinkite pirmąjį žingsnį išsamiau, kokios yra pandemijos rizikos?
+> užklausa: Paaiškink pirmą žingsnį išsamiau, kokios yra pandemijos rizikos detalizuotai?
 
 ```text
 The risks are the following:
@@ -300,74 +300,74 @@ The risks are the following:
 - Loss of employees
 ```
 
-Šiuo metu norime įsitikinti, kad LLM yra teisingas, todėl prašome paaiškinti pirmąją riziką išsamiau ir tikimės, kad ji bus nuosekli su aukščiau pateiktu atsakymu:
+Šiuo metu norime įsitikinti, kad LLM yra teisingas, todėl paprašome paaiškinti pirmą riziką išsamiau ir tikimės, kad ji sutaps su aukščiau pateiktu atsakymu:
 
-> Užklausa: Pandemijos metu, kokia yra didžiausia rizika ir kodėl?
+> užklausa: Pandemijos atveju, kuri yra didžiausia rizika ir kodėl?
 
 ```text
 The biggest risk is loss of life because it's the most important thing to protect.
 ```
 
-> Kokios yra dvi didžiausios rizikos pandemijos metu?
+> Kokios yra dvi didžiausios rizikos pandemijoje?
 
 ```text
 The two biggest risks are loss of life and loss of business.
 ```
 
-Šiuo metu LLM yra nuoseklus ir mini „gyvybę“ ir „verslą“ kaip dvi didžiausias rizikas. Dabar galime pereiti prie kito žingsnio ir jaustis gana užtikrintai. Tačiau neturėtume aklai pasitikėti LLM, visada turėtume patikrinti rezultatą.
+Šiuo momentu LLM yra nuoseklus ir mini „gyvenimą“ ir „verslą“ kaip dvi didžiausias rizikas. Dabar galime tęsti į kitą žingsnį ir jaustis gana užtikrintai. Tačiau neturėtume aklai tikėti LLM, visuomet reikia patikrinti atsakymą.
 
-## Įvairinkite savo rezultatus
+## Kituokite savo išvestį
 
-LLM yra nedeterministiniai iš prigimties, tai reiškia, kad kiekvieną kartą paleidus tą pačią užklausą gausite skirtingus rezultatus. Pabandykite, pavyzdžiui, šią užklausą:
+LLM pagal prigimtį yra nedeterministiniai, tai reiškia, kad kiekvieną kartą paleidus tą pačią užklausą, gausite skirtingą rezultatą. Išbandykite šią užklausą pavyzdžiui:
 
 > „Sugeneruokite Python Web API kodą“
 
 ```python
-# Import necessary modules
+# Importuoti reikiamus modulius
 import flask
 from flask import request, jsonify
 
-# Create a Flask app
+# Sukurti Flask programėlę
 app = flask.Flask(__name__)
 
-# Create a route for the API
+# Sukurti maršrutą API
 @app.route('/api', methods=['GET'])
 def api():
-    # Get the data from the request
+    # Gauti duomenis iš užklausos
     data = request.args
 
-    # Process the data
+    # Apdoroti duomenis
     result = process_data(data)
 
-    # Return the result as JSON
+    # Grąžinti rezultatą JSON formatu
     return jsonify(result)
 
-# Function to process the data
+# Funkcija duomenims apdoroti
 def process_data(data):
-    # Do something with the data
+    # Atlikti veiksmą su duomenimis
     result = data + 1
 
-    # Return the result
+    # Grąžinti rezultatą
     return result
 
-# Run the app
+# Paleisti programėlę
 if __name__ == '__main__':
     app.run()
 
 ```
 
-Paleidus tą pačią užklausą dar kartą, gaunamas šiek tiek kitoks atsakymas:
+Paleidus tą pačią užklausą dar kartą, sugeneruojamas šiek tiek skirtingas atsakymas:
 
 ```python
-#import necessary packages
+#importuoti reikiamas paketas
 import flask
 from flask import request, jsonify
 
-#create the Flask application
+#sukurti Flask programą
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
-#create a list of books
+#sukurti knygų sąrašą
 books = [
     {'id': 0,
      'title': 'A Fire Upon the Deep',
@@ -386,144 +386,204 @@ books = [
      'published': '1975'}
 ]
 
-#create an endpoint for the API
+#sukurti API galinį tašką
 @app.route('/', methods=['GET'])
 def home():
     return '''<h1>Books API</h1>
 <p>A prototype API for retrieving books.</p>'''
 
-#create an endpoint to return all books
+#sukurti galinį tašką, kuris grąžina visas knygas
 @app.route('/api/v1/resources/books/all', methods=['GET'])
 def api_all():
     return jsonify(books)
 
-#create an endpoint to return a single book
+#sukurti galinį tašką, kuris grąžina vieną knygą
 @app.route('/api/v1/resources/books', methods=['GET'])
 def api_id():
-    #check if an ID was provided as part of the URL
-    #if ID is provided, assign it to a variable
-    #if no ID is provided, display an error
+    #patikrinti, ar ID buvo pateiktas URL dalyje
+    #jei ID pateiktas, priskirti jį kintamajam
+    #jei ID nepateiktas, parodyti klaidą
     if 'id' in request.args:
         id = int(request.args['id'])
     else:
         return "Error: No id field provided. Please specify an id."
 
-    #create an empty list for our results
+    #sukurti tuščią sąrašą mūsų rezultatams
     results = []
 
-    #loop through the data and match results that fit the requested ID
-    #IDs are unique, but other fields might return many results
+    #pereiti per duomenis ir surasti atitinkančius prašomą ID rezultatus
+    #ID yra unikalūs, bet kiti laukai gali grąžinti daug rezultatų
     for book in books:
         if book['id'] == id:
             results.append(book)
 
-    #use the jsonify function from Flask to convert our list of
-    #Python dictionaries to the JSON format
+    #naudoti Flask funkciją jsonify, kad konvertuotume sąrašą
+    #Python žodynų į JSON formatą
     return jsonify(results)
 
 app.run()
 ```
 
-> Ar įvairūs rezultatai yra problema?
+> Ar tai, kad išvestis skirtinga, yra problema?
 
-Priklauso nuo to, ką bandote padaryti. Jei norite konkretaus atsakymo, tai yra problema. Jei jums tinka įvairūs rezultatai, pavyzdžiui, „Sugeneruokite bet kokius 3 geografijos klausimus“, tai nėra problema.
+Priklauso nuo to, ką bandote daryti. Jei norite konkretaus atsakymo, tuomet tai problema. Jei esate patenkintas įvairia išvestimi, pavyzdžiui, „Sugeneruok bet kokius 3 klausimus apie geografiją“, tai problema nėra.
 
-### Naudojant temperatūrą rezultatų įvairinimui
+### Naudojant temperatūrą išvesties variacijai reguliuoti
 
-Gerai, taigi nusprendėme, kad norime apriboti rezultatą, kad jis būtų labiau nuspėjamas, t. y. labiau deterministinis. Kaip tai padaryti?
+Gerai, nusprendėme apriboti išvestį, kad ji būtų labiau prognozuojama, t.y. labiau deterministinė. Kaip tai padaryti?
 
-Temperatūra yra vertė nuo 0 iki 1, kur 0 yra labiausiai deterministinis, o 1 – labiausiai įvairus. Numatytasis reikšmė yra 0.7. Pažiūrėkime, kas nutinka su dviem užklausos paleidimais, kai temperatūra nustatyta į 0.1:
+Temperatūra yra reikšmė nuo 0 iki 1, kur 0 – labiausiai deterministiška, o 1 – labiausiai įvairi. Numatytoji reikšmė yra 0,7. Pažiūrėkime, kas nutinka paleidus tą pačią užklausą du kartus, nustatant temperatūrą 0,1:
 
-> „Sugeneruokite Python Web API kodą“
+> „Sugeneruok Python Web API kodą“
 
 ```python
-#import necessary libraries
+#importuoti reikalingas bibliotekas
 import flask
 from flask import request, jsonify
 
-#create an instance of the Flask class
+#sukurti Flask klasės egzempliorių
 app = flask.Flask(__name__)
 
-#create an endpoint for the API
+#sukurti API galinį tašką
 @app.route('/api/v1/endpoint', methods=['GET'])
 def api_endpoint():
-    #get the request data
+    #gauti užklausos duomenis
     data = request.get_json()
 
-    #process the data
+    #apdoroti duomenis
     result = process_data(data)
 
-    #return the result
+    #grąžinti rezultatą
     return jsonify(result)
 
-#function to process the data
+#funkcija duomenims apdoroti
 def process_data(data):
-    #process the data
+    #apdoroti duomenis
     result = {'result': 'success'}
 
-    #return the result
+    #grąžinti rezultatą
     return result
 
-#run the Flask app
+#paleisti Flask programą
 if __name__ == '__main__':
     app.run()
 
 ```
 
-Paleidus užklausą dar kartą, gauname tokį rezultatą:
+Paleidus vėl gauname tokį rezultatą:
 
 ```python
-#import necessary libraries
+#importuoti reikiamas bibliotekas
 import flask
 from flask import request, jsonify
 
-#create a Flask app
+#sukurti Flask programą
 app = flask.Flask(__name__)
 
-#create a route for the API
+#sukurti API maršrutą
 @app.route('/api', methods=['GET'])
 def api_call():
-    #get the data from the request
+    #gauti duomenis iš užklausos
     data = request.get_json()
 
-    #process the data
+    #apdoroti duomenis
     result = process_data(data)
 
-    #return the result
+    #grąžinti rezultatą
     return jsonify(result)
 
-#define the process_data function
+#apibrėžti process_data funkciją
 def process_data(data):
-    #do something with the data
+    #kažką daryti su duomenimis
     result = data + 1
 
-    #return the result
+    #grąžinti rezultatą
     return result
 
-#run the app
+#paleisti programą
 if __name__ == '__main__':
     app.run()
 
 ```
 
-Tarp š
-Kaip matote, rezultatai negalėjo būti įvairesni.
+Šių dviejų išvestių skirtumas labai mažas. Dabar darykime priešingai – nustatykime temperatūrą 0,9:
 
-> Atkreipkite dėmesį, kad yra daugiau parametrų, kuriuos galite pakeisti norėdami įvairinti rezultatą, pavyzdžiui, top-k, top-p, pasikartojimo bauda, ilgio bauda ir įvairovės bauda, tačiau jie nepatenka į šios mokymo programos apimtį.
+```python
+# Importuokite reikalingas bibliotekas
+import flask
+from flask import request, jsonify
+
+# Sukurkite Flask programėlę
+app = flask.Flask(__name__)
+
+# Sukurkite API maršrutą
+@app.route('/api', methods=['GET'])
+def api_call():
+    # Gaukite duomenis iš užklausos
+    data = request.args
+
+    # Apdorokite duomenis
+    result = process_data(data)
+
+    # Grąžinkite rezultatą
+    return jsonify(result)
+
+# Funkcija duomenims apdoroti
+def process_data(data):
+    # Atlikite ką nors su duomenimis
+    result = data + 1
+
+    # Grąžinkite rezultatą
+    return result
+
+# Paleiskite programėlę
+if __name__ == '__main__':
+    app.run()
+
+```
+
+ir antras bandymas su temperatūra 0,9:
+
+```python
+import flask
+from flask import request, jsonify
+
+# sukurti Flask programėlę
+app = flask.Flask(__name__)
+app.config['DEBUG'] = True
+
+# sukurti kai kuriuos testinius duomenis
+books = [
+    {'id': 0, 'title': 'A Fire Upon The Deep', 'author': 'Vernor Vinge', 'first_sentence': 'The coldsleep itself was dreamless.', 'year_published': '1992'},
+    {'id': 1, 'title': 'The Ones Who Walk Away From Omelas', 'author': 'Ursula K. Le Guin', 'first_sentence': 'With a clamor of bells that set the swallows soaring, the Festival of Summer came to the city Omelas, bright-towered by the sea.', 'published': '1973'},
+    {'id': 2, 'title': 'Dhalgren', 'author': 'Samuel R. Delany', 'first_sentence': 'to wound the autumnal city.', 'published': '1975'}
+]
+
+# sukurti galinį tašką
+@app.route('/', methods=['GET'])
+def home():
+    return '''<h1>Welcome to our book API!</h1>'''
+
+@app.route('/api/v1/resources/books
+
+```
+
+Kaip matote, rezultatai yra be galo įvairūs.
+> Atkreipkite dėmesį, kad yra daugiau parametrų, kuriuos galite keisti norėdami įvairovinti išvestį, pavyzdžiui, top-k, top-p, pakartojimo bauda, ilgio bauda ir įvairovės bauda, tačiau šie dalykai yra už šio mokymo kurso ribų.
 
 ## Geros praktikos
 
-Yra daugybė praktikų, kurias galite taikyti, kad pasiektumėte norimą rezultatą. Naudodami užklausų formulavimą vis daugiau, rasite savo stilių.
+Yra daug praktikų, kurias galite taikyti, kad gautumėte norimą rezultatą. Jūs rasite savo stilių naudodamiesi paklausimus vis daugiau.
 
-Be jau aptartų technikų, yra keletas gerų praktikų, kurias verta apsvarstyti formuluojant užklausas LLM.
+Be technikų, kurias aptarėme, yra keletas gerų praktikų, kurias verta apsvarstyti formuluojant klausimus dideliems kalbos modeliams (LLM).
 
 Štai keletas gerų praktikų, kurias verta apsvarstyti:
 
-- **Nurodykite kontekstą**. Kontekstas yra svarbus – kuo daugiau galite nurodyti, pavyzdžiui, sritį, temą ir pan., tuo geriau.
-- Apribokite rezultatą. Jei norite tam tikro skaičiaus elementų ar tam tikro ilgio, nurodykite tai.
-- **Nurodykite tiek ką, tiek kaip**. Nepamirškite paminėti tiek, ko norite, tiek kaip norite, pavyzdžiui: „Sukurkite Python Web API su maršrutais produktams ir klientams, padalinkite jį į 3 failus“.
-- **Naudokite šablonus**. Dažnai norėsite praturtinti savo užklausas duomenimis iš savo įmonės. Naudokite šablonus tam pasiekti. Šablonuose gali būti kintamųjų, kuriuos pakeisite tikrais duomenimis.
-- **Rašykite taisyklingai**. LLM gali pateikti jums teisingą atsakymą, tačiau jei rašysite taisyklingai, gausite geresnį atsakymą.
+- **Nurodykite kontekstą**. Kontekstas svarbus, kuo daugiau galite nurodyti, pavyzdžiui, sritį, temą ir pan., tuo geriau.
+- Apribokite išvestį. Jei norite tam tikro elementų skaičiaus arba tam tikro ilgio, nurodykite tai.
+- **Nurodykite tiek ką, tiek kaip**. Prisiminkite paminėti tiek ką norite, tiek kaip norite, pavyzdžiui „Sukurkite Python Web API su maršrutais products ir customers, padalinkite jį į 3 failus“.
+- **Naudokite šablonus**. Dažnai norėsite praturtinti savo paklausimus duomenimis iš savo įmonės. Tam naudokite šablonus. Šablonai gali turėti kintamuosius, kuriuos pakeičiate tikrais duomenimis.
+- **Rašykite taisyklingai**. LLM gali pateikti teisingą atsakymą, tačiau jei rašysite taisyklingai, gausite geresnį atsakymą.
 
 ## Užduotis
 
@@ -543,38 +603,40 @@ if __name__ == '__main__':
     app.run()
 ```
 
-Naudokite AI asistentą, pvz., GitHub Copilot arba ChatGPT, ir pritaikykite „self-refine“ techniką, kad patobulintumėte kodą.
+Naudokite AI asistentą, tokį kaip GitHub Copilot arba ChatGPT, ir taikykite „self-refine“ techniką, kad pagerintumėte kodą.
 
 ## Sprendimas
 
-Pabandykite išspręsti užduotį, pridėdami tinkamas užklausas prie kodo.
+Pabandykite išspręsti užduotį pridėdami tinkamus paklausimus prie kodo.
 
 > [!TIP]
-> Suformuluokite užklausą, kad paprašytumėte patobulinti, gerai apriboti, kiek patobulinimų norite. Taip pat galite paprašyti patobulinti tam tikru būdu, pavyzdžiui, architektūrą, našumą, saugumą ir pan.
+> Formuluokite paklausimą, prašydami patobulinti, gerai apriboti patobulinimų skaičių. Taip pat galite prašyti patobulinti tam tikru aspektu, pvz., architektūra, našumu, saugumu ir pan.
 
 [Sprendimas](../../../05-advanced-prompts/python/aoai-solution.py)
 
 ## Žinių patikrinimas
 
-Kodėl turėčiau naudoti „chain-of-thought“ užklausų formulavimą? Parodykite 1 teisingą atsakymą ir 2 neteisingus atsakymus.
+Kodėl naudotumėte chain-of-thought paklausimą? Parodykite man 1 teisingą atsakymą ir 2 neteisingus atsakymus.
 
-1. Mokyti LLM, kaip išspręsti problemą.
-1. B, Mokyti LLM rasti klaidas kode.
-1. C, Nurodyti LLM sugalvoti skirtingus sprendimus.
+1. Kad išmokytumėte LLM, kaip spręsti problemą.
+1. B, Kad išmokytumėte LLM rasti klaidas kode.
+1. C, Kad nurodytumėte LLM pasiūlyti skirtingus sprendimus.
 
-A: 1, nes „chain-of-thought“ yra apie tai, kaip parodyti LLM, kaip išspręsti problemą, pateikiant jai veiksmų seką, panašias problemas ir jų sprendimo būdus.
+A: 1, nes chain-of-thought reiškia parodyti LLM, kaip spręsti problemą, pateikiant jam žingsnių seką, panašias problemas ir kaip jos buvo sprendžiamos.
 
 ## 🚀 Iššūkis
 
-Jūs ką tik panaudojote „self-refine“ techniką užduotyje. Paimkite bet kurią jūsų sukurtą programą ir apsvarstykite, kokius patobulinimus norėtumėte jai pritaikyti. Dabar naudokite „self-refine“ techniką, kad pritaikytumėte siūlomus pakeitimus. Ką manote apie rezultatą – ar jis geresnis, ar blogesnis?
+Jūs ką tik pritaikėte self-refine techniką užduotyje. Paimkite bet kurį sukurtą programą ir apsvarstykite, kokius patobulinimus norėtumėte pritaikyti. Dabar naudokite self-refine techniką, kad įgyvendintumėte pasiūlytus pakeitimus. Koks, jūsų nuomone, buvo rezultatas – geresnis ar blogesnis?
 
 ## Puikus darbas! Tęskite mokymąsi
 
-Baigę šią pamoką, peržiūrėkite mūsų [Generatyvios AI mokymosi kolekciją](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), kad toliau gilintumėte savo žinias apie generatyviąją AI!
+Baigę šią pamoką, apsilankykite mūsų [Generatyvios AI mokymosi kolekcijoje](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), kad toliau gilintumėte savo žinias apie generatyviąją AI!
 
-Eikite į 6 pamoką, kur pritaikysime savo žinias apie užklausų formulavimą [kurdamas teksto generavimo programas](../06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)
+Pereikite prie 6 pamokos, kur pritaikysime žinias apie paklausimų inžineriją, [kuriant teksto generavimo programas](../06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)
 
 ---
 
-**Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Dėl svarbios informacijos rekomenduojama profesionali žmogaus vertimo paslauga. Mes neprisiimame atsakomybės už nesusipratimus ar neteisingus interpretavimus, atsiradusius naudojant šį vertimą.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Atsakomybės apribojimas**:
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojama naudoti profesionalų žmogiškąjį vertimą. Mes neatsakome už jokius nesusipratimus ar neteisingą interpretaciją, kilusią naudojantis šiuo vertimu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
