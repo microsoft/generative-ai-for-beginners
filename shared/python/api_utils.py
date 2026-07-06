@@ -6,18 +6,14 @@ proper timeout, error handling, and retry logic.
 """
 
 import os
-from typing import Any, Optional
+from typing import Any
 
 import requests
 from requests.exceptions import RequestException
 
 
 def make_safe_request(
-    url: str,
-    method: str = "GET",
-    timeout: int = 30,
-    retries: int = 3,
-    **kwargs: Any
+    url: str, method: str = "GET", timeout: int = 30, retries: int = 3, **kwargs: Any
 ) -> requests.Response:
     """
     Make an HTTP request with proper timeout and error handling.
@@ -39,16 +35,11 @@ def make_safe_request(
         >>> response = make_safe_request("https://api.example.com/data")
         >>> data = response.json()
     """
-    last_exception: Optional[Exception] = None
+    last_exception: Exception | None = None
 
     for attempt in range(retries):
         try:
-            response = requests.request(
-                method=method,
-                url=url,
-                timeout=timeout,
-                **kwargs
-            )
+            response = requests.request(method=method, url=url, timeout=timeout, **kwargs)
             response.raise_for_status()
             return response
         except RequestException as e:
@@ -62,7 +53,7 @@ def make_safe_request(
     raise last_exception or RequestException("Request failed")
 
 
-def create_openai_client(api_key: Optional[str] = None) -> Any:
+def create_openai_client(api_key: str | None = None) -> Any:
     """
     Create an OpenAI client with proper configuration.
 
@@ -78,7 +69,7 @@ def create_openai_client(api_key: Optional[str] = None) -> Any:
 
     Example:
         >>> client = create_openai_client()
-        >>> response = client.chat.completions.create(...)
+        >>> response = client.responses.create(model="gpt-4o-mini", input="Hello")
     """
     try:
         from openai import OpenAI
@@ -98,22 +89,24 @@ def create_openai_client(api_key: Optional[str] = None) -> Any:
 
 
 def create_azure_openai_client(
-    endpoint: Optional[str] = None,
-    api_key: Optional[str] = None,
-    api_version: str = "2024-02-01"
+    endpoint: str | None = None,
+    api_key: str | None = None,
 ) -> Any:
     """
-    Create an Azure OpenAI client with proper configuration.
+    Create an Azure OpenAI (Microsoft Foundry) client with proper configuration.
+
+    The client targets the Azure OpenAI v1 endpoint (``<endpoint>/openai/v1/``),
+    which powers the Responses API. Because the v1 endpoint is used, no
+    ``api_version`` is required.
 
     Args:
         endpoint: Azure OpenAI endpoint URL. If not provided, reads from
                   AZURE_OPENAI_ENDPOINT env var.
         api_key: Azure OpenAI API key. If not provided, reads from
                  AZURE_OPENAI_API_KEY env var.
-        api_version: Azure OpenAI API version.
 
     Returns:
-        An AzureOpenAI client instance.
+        An OpenAI client instance configured for the Azure v1 endpoint.
 
     Raises:
         ValueError: If endpoint or API key is missing.
@@ -121,10 +114,10 @@ def create_azure_openai_client(
 
     Example:
         >>> client = create_azure_openai_client()
-        >>> response = client.chat.completions.create(...)
+        >>> response = client.responses.create(model="gpt-4o-mini", input="Hello")
     """
     try:
-        from openai import AzureOpenAI
+        from openai import OpenAI
     except ImportError as e:
         raise ImportError(
             "The 'openai' package is required. Install it with: pip install openai"
@@ -145,10 +138,9 @@ def create_azure_openai_client(
             "environment variable or pass api_key parameter."
         )
 
-    return AzureOpenAI(
-        azure_endpoint=_endpoint,
+    return OpenAI(
         api_key=_api_key,
-        api_version=api_version
+        base_url=f"{_endpoint.rstrip('/')}/openai/v1/",
     )
 
 

@@ -59,8 +59,9 @@ Each lesson also includes a "Keep Learning" section with additional learning too
 ## What You Need
 ### To run the code of this course, you can use either: 
  - [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **Lessons:** "aoai-assignment"
- - [GitHub Marketplace Model Catalog](https://aka.ms/genai-beginners/gh-models?WT.mc_id=academic-105485-koreyst) - **Lessons:** "githubmodels"
+ - [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) - **Lessons:** "githubmodels" (GitHub Models is retiring at the end of July 2026 - use Microsoft Foundry Models instead)
  - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **Lessons:** "oai-assignment" 
+ - [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) - Run models fully offline on your own device, no cloud subscription required
    
 - Basic knowledge of Python or TypeScript is helpful - \*For absolute beginners check out these [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) and [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst) courses
 - A GitHub account to [fork this entire repo](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) to your own GitHub account
@@ -75,9 +76,9 @@ If you are looking for more advanced code samples, check out our [collection of 
 
 ## 🗣️ Meet Other Learners, Get Support
 
-Join our [official Azure AI Foundry Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) to meet and network with other learners taking this course and get support.
+Join our [official Microsoft Foundry Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) to meet and network with other learners taking this course and get support.
 
-Ask questions or share product feedback in our [Azure AI Foundry Developer Forum](https://aka.ms/azureaifoundry/forum) on Github.
+Ask questions or share product feedback in our [Microsoft Foundry Developer Forum](https://aka.ms/azureaifoundry/forum) on Github.
 
 ## 🚀 Building a Startup?
 

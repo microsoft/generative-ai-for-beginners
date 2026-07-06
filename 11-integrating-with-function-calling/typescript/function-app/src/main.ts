@@ -1,4 +1,4 @@
-import { OpenAIClient, AzureKeyCredential } from "@azure/openai";
+import OpenAI from "openai";
 import axios, { AxiosError } from "axios";
 import * as dotenv from "dotenv";
 
@@ -56,7 +56,9 @@ async function findWeather(currentLocation: string, placeType: string): Promise<
   }
 }
 
-const getCurrentWeatherFunction = {
+// Responses API tools use a flat schema: { type, name, description, parameters }
+const getCurrentWeatherTool = {
+  type: "function" as const,
   name: "findWeather",
   description: "Get the current weather in a given location",
   parameters: {
@@ -77,35 +79,40 @@ const getCurrentWeatherFunction = {
 
 async function main() {
   try {
-    console.log("== Chat Completions App with Functions ==");
+    console.log("== Chat App with Functions (Responses API) ==");
 
-    const client = new OpenAIClient(endpoint, new AzureKeyCredential(azureApiKey));
-    const deploymentName = "gpt-4"; // if you want to use 'gpt-4' model you need to create a resource in Sweden Central region
-    
-    const userParams = { 
-      location: "New York", 
-      unit: "C" 
+    // The Responses API is served from the Azure OpenAI (Microsoft Foundry) v1 endpoint.
+    const client = new OpenAI({
+      apiKey: azureApiKey,
+      baseURL: `${endpoint.replace(/\/$/, '')}/openai/v1/`,
+    });
+    const deploymentName = process.env.AZURE_OPENAI_DEPLOYMENT || "gpt-4o-mini";
+
+    const userParams = {
+      location: "New York",
+      unit: "C"
     };
-    
-    const result = await client.getChatCompletions(deploymentName, [
-      { 
-        role: "user", 
-        content: `What's the weather in ${userParams.location}, ${userParams.unit}?`,
-      },  
-    ], {
-      functions: [getCurrentWeatherFunction],
+
+    const result = await client.responses.create({
+      model: deploymentName,
+      input: [
+        {
+          role: "user",
+          content: `What's the weather in ${userParams.location}, ${userParams.unit}?`,
+        },
+      ],
+      tools: [getCurrentWeatherTool],
+      store: false,
     });
 
-    for (const choice of result.choices) {
-      console.log(choice.message?.functionCall);
-
-      if (choice.message?.functionCall) {
-        const { arguments: argumentsJson } = choice.message.functionCall;
+    for (const item of result.output) {
+      if (item.type === "function_call") {
+        console.log(item);
 
         // SECURITY: Safely parse JSON with validation
         let parsedArgs: { location?: string; unit?: string };
         try {
-          parsedArgs = JSON.parse(argumentsJson || '{}');
+          parsedArgs = JSON.parse(item.arguments || '{}');
         } catch (parseError) {
           console.error('Failed to parse function arguments');
           continue;

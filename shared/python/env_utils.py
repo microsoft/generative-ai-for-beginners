@@ -6,10 +6,9 @@ variables, ensuring that sensitive configuration is properly handled.
 """
 
 import os
-from typing import Optional
 
 
-def get_required_env(var_name: str, description: Optional[str] = None) -> str:
+def get_required_env(var_name: str, description: str | None = None) -> str:
     """
     Get a required environment variable or raise an error with helpful message.
 

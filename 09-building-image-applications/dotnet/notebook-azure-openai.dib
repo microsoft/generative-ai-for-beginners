@@ -4,7 +4,7 @@
 
 #!csharp
 
-#r "nuget: Azure.AI.OpenAI, 1.0.0-beta.9"
+#r "nuget: Azure.AI.OpenAI, 2.1.0"
 
 #!csharp
 
@@ -12,26 +12,37 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using Azure.AI.OpenAI;
-using Azure;
+using OpenAI.Images;
+using System.ClientModel;
 
 #!csharp
 
 string endpoint = "<replace with endpoint>";
 string key = "<replace with API key>";
 
+// Enter the name of your image model deployment (for example: gpt-image-1).
+string deployment = "<replace with deployment>";
+
 #!csharp
 
-OpenAIClient client = new(new Uri(endpoint), new AzureKeyCredential(key));
+AzureOpenAIClient azureClient = new(new Uri(endpoint), new ApiKeyCredential(key));
+ImageClient imageClient = azureClient.GetImageClient(deployment);
 
-var imageGenerations = await client.GetImageGenerationsAsync(
+GeneratedImage image = await imageClient.GenerateImageAsync(
+    "captain with a parrot on his shoulder",
     new ImageGenerationOptions()
     {
-        Prompt = "captain with a parrot on his shoulder",
-        Size = ImageSize.Size256x256,
+        Size = GeneratedImageSize.W1024xH1024,
     });
 
-// Image Generations responses provide URLs you can use to retrieve requested images
-Uri imageUri = imageGenerations.Value.Data[0].Url;
-
-// Print the image URI to console:
-Console.WriteLine(imageUri);
+// gpt-image-1 returns the image as bytes; DALL-E models return a URL instead.
+if (image.ImageUri is not null)
+{
+    Console.WriteLine(image.ImageUri);
+}
+else
+{
+    string path = "generated_image.png";
+    await File.WriteAllBytesAsync(path, image.ImageBytes.ToArray());
+    Console.WriteLine($"Image saved to {path}");
+}

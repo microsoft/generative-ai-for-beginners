@@ -9,8 +9,7 @@ import queue
 import time
 import argparse
 import dotenv
-import openai
-from openai.embeddings_utils import get_embedding
+from openai import OpenAI, BadRequestError
 from rich.progress import Progress
 from tenacity import (
     retry,
@@ -35,14 +34,14 @@ OPENAI_REQUEST_TIMEOUT = 60
 
 OPENAI_MAX_TOKENS = 512
 AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = os.getenv(
-    "AZURE_OPENAI_MODEL_DEPLOYMENT_NAME", "gpt-35-turbo"
+    "AZURE_OPENAI_MODEL_DEPLOYMENT_NAME", "gpt-4o-mini"
 )
 
 
-openai.api_type = "azure"
-openai.api_key = API_KEY
-openai.api_base = RESOURCE_ENDPOINT
-openai.api_version = "2023-07-01-preview"
+client = OpenAI(
+    api_key=API_KEY,
+    base_url=f"{RESOURCE_ENDPOINT.rstrip('/')}/openai/v1/",
+)
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-f", "--folder")
@@ -72,7 +71,8 @@ get_speaker_name = {
 }
 
 
-openai_functions = [get_speaker_name]
+# Responses API uses a flat tool format (name/description/parameters at the top level)
+openai_functions = [{"type": "function", **get_speaker_name}]
 
 
 # these maps are used to make the function name string to the function call
@@ -104,7 +104,7 @@ counter = Counter()
 @retry(
     wait=wait_random_exponential(min=6, max=10),
     stop=stop_after_attempt(4),
-    retry=retry_if_not_exception_type(openai.InvalidRequestError),
+    retry=retry_if_not_exception_type(BadRequestError),
 )
 def get_speaker_info(text):
     """Gets the OpenAI functions from the text."""
@@ -112,30 +112,29 @@ def get_speaker_info(text):
     function_name = None
     arguments = None
 
-    response_1 = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo-0613",
-        messages=[
+    response_1 = client.responses.create(
+        model=AZURE_OPENAI_MODEL_DEPLOYMENT_NAME,
+        input=[
             {
                 "role": "system",
                 "content": "You are an AI assistant that can extract speaker names from text as a list of comma separated names. Try and extract the speaker names from the title. Speaker names are usually less than 3 words long.",
             },
             {"role": "user", "content": text},
         ],
-        functions=openai_functions,
-        max_tokens=OPENAI_MAX_TOKENS,
-        engine=AZURE_OPENAI_MODEL_DEPLOYMENT_NAME,
-        request_timeout=OPENAI_REQUEST_TIMEOUT,
-        function_call={"name": "get_speaker_name"},
+        tools=openai_functions,
+        max_output_tokens=OPENAI_MAX_TOKENS,
+        timeout=OPENAI_REQUEST_TIMEOUT,
+        tool_choice={"type": "function", "name": "get_speaker_name"},
         temperature=0.0,
+        store=False,
     )
 
-    # The assistant's response includes a function call. We extract the arguments from this function call
+    # The model's response includes a function call. We extract the arguments from it.
+    tool_calls = [item for item in response_1.output if item.type == "function_call"]
 
-    result = response_1.get("choices")[0].get("message")
-
-    if result.get("function_call"):
-        function_name = result.get("function_call").get("name")
-        arguments = json.loads(result.get("function_call").get("arguments"))
+    if tool_calls:
+        function_name = tool_calls[0].name
+        arguments = json.loads(tool_calls[0].arguments)
 
     return function_name, arguments
 

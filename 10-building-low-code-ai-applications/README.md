@@ -18,6 +18,7 @@ This lesson covers:
 - Introduction to Copilot and how to use it
 - Using Generative AI to build apps and flows in Power Platform
 - Understanding the AI Models in Power Platform with AI Builder
+- Building intelligent agents with Microsoft Copilot Studio
 
 ## Learning Goals
 
@@ -30,6 +31,8 @@ By the end of this lesson, you will be able to:
 - Build an Invoice Processing Flow that uses AI to extract information from invoices.
 
 - Apply best practices when using the Create Text with GPT AI Model.
+
+- Understand what Microsoft Copilot Studio is and how to build intelligent agents with it.
 
 The tools and technologies that you will use in this lesson are:
 
@@ -53,7 +56,7 @@ You can use Copilot driven functionalities as a feature in your app screens to e
 
 AI Builder is a low-code AI capability available in Power Platform that enables you to use AI Models to help you to automate processes and predict outcomes. With AI Builder you can bring AI to your apps and flows that connect to your data in Dataverse or in various cloud data sources, such as SharePoint, OneDrive or Azure.
 
-Copilot is available in all of the Power Platform products: Power Apps, Power Automate, Power BI, Power Pages and Power Virtual Agents. AI Builder is available in Power Apps and Power Automate. In this lesson, we will focus on how to use Copilot and AI Builder in Power Apps and Power Automate to build a solution for our education startup.
+Copilot is available in all of the Power Platform products: Power Apps, Power Automate, Power BI, Power Pages and Copilot Studio (formerly Power Virtual Agents). AI Builder is available in Power Apps and Power Automate. In this lesson, we will focus on how to use Copilot and AI Builder in Power Apps and Power Automate to build a solution for our education startup.
 
 ### Copilot in Power Apps
 
@@ -66,6 +69,30 @@ The copilot AI assistant feature in Power Apps enables you to describe what kind
 As part of the Power Platform, Power Automate lets users create automated workflows between applications and services. It helps automate repetitive business processes such as communication, data collection, and decision approvals. Its simple interface allows users with every technical competence (from beginners to seasoned developers) to automate work tasks. The workflow development experience is also enhanced with Generative AI through Copilot.
 
 The copilot AI assistant feature in Power Automate enables you to describe what kind of flow you need and what actions you want your flow to perform. Copilot then generates a flow based on your description. You can then customize the flow to meet your needs. The AI Copilot also generates and suggests the actions you need to perform the task you want to automate. We will look at what flows are and how you can use them in Power Automate in this lesson later. You can then customize the actions to meet your needs using the AI Copilot assistant feature through conversational steps. This feature is readily available from the Power Automate home screen.
+
+## Building Intelligent Agents with Microsoft Copilot Studio
+
+[Microsoft Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/fundamentals-what-is-copilot-studio?WT.mc_id=academic-105485-koreyst) (formerly Power Virtual Agents) is the low-code member of the Power Platform for building **AI agents** — conversational copilots that can answer questions, take actions, and automate tasks on behalf of your users. Just like the rest of Power Platform, you build these agents in a visual, natural-language-first experience: you describe what you want the agent to do, and Copilot Studio helps scaffold its instructions, knowledge, and actions.
+
+For our education startup, you could build an agent that answers student questions about courses, checks assignment deadlines, and even emails an instructor — all without writing code.
+
+Here are some of the latest capabilities that make Copilot Studio powerful:
+
+- **Generative answers from your knowledge**. Instead of hand-authoring every conversation, you can connect **knowledge sources** — public websites, SharePoint, OneDrive, Dataverse, uploaded files, or enterprise data through connectors — and the agent generates grounded answers from them.
+
+- **Generative orchestration**. Rather than relying on rigid trigger phrases, the agent uses AI to understand a request and dynamically decide which knowledge, topics, and actions to combine to fulfil it, including chaining several steps together.
+
+- **Actions and connectors**. Agents can *do* things, not just chat. You can give an agent actions backed by the 1,500+ prebuilt Power Platform connectors, Power Automate flows, custom REST APIs, prompts, or **Model Context Protocol (MCP)** servers.
+
+- **Autonomous agents**. Agents aren't limited to responding in a chat window. You can build **autonomous agents** that are triggered by events — such as a new email, a new record in Dataverse, or a file being uploaded — and then act in the background to complete a task.
+
+- **Multi-agent orchestration**. Agents can call other agents. A Copilot Studio agent can hand off to, or be extended by, other agents, including agents published to Microsoft 365 Copilot and agents built in Microsoft Foundry.
+
+- **Model choice**. Beyond the built-in models, you can bring models from the Microsoft Foundry model catalog to tailor how your agent reasons and responds.
+
+- **Publish anywhere**. Once built, an agent can be published to multiple channels — Microsoft Teams, Microsoft 365 Copilot, a website or custom app, and more — with security, authentication, and analytics managed through the Power Platform admin experience.
+
+You can start building your first agent at [copilotstudio.microsoft.com](https://copilotstudio.microsoft.com?WT.mc_id=academic-105485-koreyst) and learn more in the [Microsoft Copilot Studio documentation](https://learn.microsoft.com/microsoft-copilot-studio/?WT.mc_id=academic-105485-koreyst).
 
 ## Assignment: Manage student assignments and invoices for our startup, using Copilot
 
@@ -240,5 +267,7 @@ To learn how to use this AI Model in Power Automate, go through the [Add intelli
 ## Great Work! Continue Your Learning
 
 After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
+
+Want to customize and get more out of Copilot? Explore [Awesome Copilot](https://github.com/github/awesome-copilot?WT.mc_id=academic-105485-koreyst) — a community-contributed collection of instructions, agents, skills, and configurations to help you make the most of GitHub Copilot.
 
 Head over to Lesson 11 where we will look at how to [integrate Generative AI with Function Calling](../11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst)!

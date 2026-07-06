@@ -6,14 +6,10 @@ protecting against prompt injection and other input-based attacks.
 """
 
 import re
-from typing import Optional
 
 
 def validate_number_input(
-    value: str,
-    min_val: int = 1,
-    max_val: int = 100,
-    field_name: str = "number"
+    value: str, min_val: int = 1, max_val: int = 100, field_name: str = "number"
 ) -> int:
     """
     Validate and convert string input to an integer within bounds.
@@ -37,9 +33,7 @@ def validate_number_input(
     try:
         num = int(value.strip())
         if num < min_val or num > max_val:
-            raise ValueError(
-                f"{field_name} must be between {min_val} and {max_val}, got {num}"
-            )
+            raise ValueError(f"{field_name} must be between {min_val} and {max_val}, got {num}")
         return num
     except (ValueError, AttributeError) as e:
         if "must be between" in str(e):
@@ -54,7 +48,7 @@ def validate_text_input(
     max_length: int = 500,
     min_length: int = 1,
     allow_empty: bool = False,
-    field_name: str = "input"
+    field_name: str = "input",
 ) -> str:
     """
     Validate and sanitize text input.
@@ -82,7 +76,9 @@ def validate_text_input(
 
     trimmed = value.strip()
 
-    if not trimmed and not allow_empty:
+    if not trimmed:
+        if allow_empty:
+            return ""
         raise ValueError(f"{field_name} cannot be empty")
 
     if len(trimmed) > max_length:
@@ -92,18 +88,12 @@ def validate_text_input(
         )
 
     if len(trimmed) < min_length:
-        raise ValueError(
-            f"{field_name} is too short. Minimum {min_length} characters required"
-        )
+        raise ValueError(f"{field_name} is too short. Minimum {min_length} characters required")
 
     return trimmed
 
 
-def sanitize_prompt_input(
-    value: str,
-    max_length: int = 1000,
-    strict: bool = False
-) -> str:
+def sanitize_prompt_input(value: str, max_length: int = 1000, strict: bool = False) -> str:
     """
     Sanitize user input intended for use in LLM prompts.
 
@@ -131,25 +121,25 @@ def sanitize_prompt_input(
     sanitized = value.strip()
 
     # Remove null bytes and control characters (except newlines and tabs)
-    sanitized = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]', '', sanitized)
+    sanitized = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]", "", sanitized)
 
     # Remove potentially dangerous template/injection patterns
     dangerous_patterns = [
-        r'\{\{.*?\}\}',  # Template injection
-        r'\${.*?}',      # Variable substitution
-        r'<script.*?>.*?</script>',  # Script tags
-        r'javascript:',  # JavaScript URLs
+        r"\{\{.*?\}\}",  # Template injection
+        r"\${.*?}",  # Variable substitution
+        r"<script.*?>.*?</script>",  # Script tags
+        r"javascript:",  # JavaScript URLs
     ]
 
     for pattern in dangerous_patterns:
-        sanitized = re.sub(pattern, '', sanitized, flags=re.IGNORECASE | re.DOTALL)
+        sanitized = re.sub(pattern, "", sanitized, flags=re.IGNORECASE | re.DOTALL)
 
     if strict:
         # In strict mode, only allow safe characters
-        sanitized = re.sub(r'[^\w\s,.\'\"-?!@#$%&*()+=:;]', '', sanitized, flags=re.UNICODE)
+        sanitized = re.sub(r"[^\w\s,.\'\"-?!@#$%&*()+=:;]", "", sanitized, flags=re.UNICODE)
 
     # Normalize whitespace
-    sanitized = re.sub(r'\s+', ' ', sanitized)
+    sanitized = re.sub(r"\s+", " ", sanitized)
     sanitized = sanitized.strip()
 
     if len(sanitized) > max_length:
@@ -177,7 +167,7 @@ def validate_email(email: str) -> str:
     email = email.strip().lower()
 
     # Basic email pattern
-    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    pattern = r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
 
     if not re.match(pattern, email):
         raise ValueError(f"Invalid email format: {email}")
@@ -203,11 +193,11 @@ def validate_url(url: str, require_https: bool = True) -> str:
 
     # Basic URL pattern
     if require_https:
-        pattern = r'^https://[a-zA-Z0-9.-]+(?:/[^\s]*)?$'
+        pattern = r"^https://[a-zA-Z0-9.-]+(?:/[^\s]*)?$"
         if not re.match(pattern, url):
             raise ValueError(f"Invalid HTTPS URL: {url}")
     else:
-        pattern = r'^https?://[a-zA-Z0-9.-]+(?:/[^\s]*)?$'
+        pattern = r"^https?://[a-zA-Z0-9.-]+(?:/[^\s]*)?$"
         if not re.match(pattern, url):
             raise ValueError(f"Invalid URL: {url}")
 

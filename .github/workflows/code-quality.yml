@@ -1,0 +1,94 @@
+name: Code Quality
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.py'
+      - '**.ts'
+      - '**.js'
+      - 'pyproject.toml'
+      - '.eslintrc.json'
+      - '.github/workflows/code-quality.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '**.py'
+      - '**.ts'
+      - '**.js'
+      - 'pyproject.toml'
+      - '.eslintrc.json'
+      - '.github/workflows/code-quality.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  python-quality:
+    name: Python Lint & Format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install linters
+        run: python -m pip install --upgrade ruff black
+
+      # Enforced: the maintained shared utilities module must stay clean.
+      - name: Ruff lint (shared utilities)
+        run: ruff check shared/
+
+      - name: Black format check (shared utilities)
+        run: black --check shared/
+
+      # Advisory: surface issues across the rest of the curriculum without
+      # failing the build (lesson samples are intentionally kept simple).
+      - name: Ruff lint (full repository, advisory)
+        continue-on-error: true
+        run: ruff check .
+
+  python-tests:
+    name: Python Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install test dependencies
+        run: python -m pip install pytest openai requests python-dotenv
+
+      - name: Run pytest (shared utilities)
+        run: pytest tests/
+
+
+  js-quality:
+    name: JavaScript/TypeScript Lint (advisory)
+    runs-on: ubuntu-latest
+    # Advisory only: educational samples are not held to strict lint rules.
+    continue-on-error: true
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install ESLint
+        run: npm install --no-save eslint@8 @typescript-eslint/parser @typescript-eslint/eslint-plugin
+
+      - name: Run ESLint
+        run: npx eslint . --ext .js,.ts

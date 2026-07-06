@@ -75,11 +75,11 @@ One last key part of explainability is the simplification of explanations. Stude
 
 ### Control
 
-Generative AI creates a collaboration between AI and the user, where for instance a user can modify prompts for different results. Additionally, once an output is generated, users should be able to modify the results giving them a sense of control. For example, when using Bing, you can tailor your prompt based on format, tone and length. Additionally, you can add changes to your output and modify the output as shown below:
+Generative AI creates a collaboration between AI and the user, where for instance a user can modify prompts for different results. Additionally, once an output is generated, users should be able to modify the results giving them a sense of control. For example, when using Microsoft Copilot (formerly Bing Chat), you can tailor your prompt based on format, tone and length. Additionally, you can add changes to your output and modify the output as shown below:
 
 ![Bing search results with options to modify the prompt and output](./images/bing1.png?WT.mc_id=academic-105485-koreyst "Bing search results with options to modify the prompt and output")
 
-Another feature in Bing that allows a user to have control over the application is the ability to opt in and opt out of the data AI uses. For a school application, a student might want to use their notes as well as the teachers' resources as revision material.
+Another feature in Microsoft Copilot that allows a user to have control over the application is the ability to opt in and opt out of the data AI uses. For a school application, a student might want to use their notes as well as the teachers' resources as revision material.
 
 ![Bing search results with options to modify the prompt and output](./images/bing2.png?WT.mc_id=academic-105485-koreyst "Bing search results with options to modify the prompt and output")
 

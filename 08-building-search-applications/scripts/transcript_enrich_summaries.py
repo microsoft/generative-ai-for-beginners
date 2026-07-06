@@ -7,7 +7,7 @@ import threading
 import logging
 import argparse
 import dotenv
-import openai
+from openai import OpenAI, BadRequestError
 from tenacity import (
     retry,
     wait_random_exponential,
@@ -22,16 +22,16 @@ dotenv.load_dotenv()
 API_KEY = os.environ["AZURE_OPENAI_API_KEY"]
 RESOURCE_ENDPOINT = os.environ["AZURE_OPENAI_ENDPOINT"]
 AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = os.getenv(
-    "AZURE_OPENAI_MODEL_DEPLOYMENT_NAME", "gpt-35-turbo"
+    "AZURE_OPENAI_MODEL_DEPLOYMENT_NAME", "gpt-4o-mini"
 )
 MAX_TOKENS = 512
 PROCESSOR_THREADS = 10
 OPENAI_REQUEST_TIMEOUT = 30
 
-openai.api_type = "azure"
-openai.api_key = API_KEY
-openai.api_base = RESOURCE_ENDPOINT
-openai.api_version = "2023-07-01-preview"
+client = OpenAI(
+    api_key=API_KEY,
+    base_url=f"{RESOURCE_ENDPOINT.rstrip('/')}/openai/v1/",
+)
 
 logging.basicConfig(level=logging.WARNING)
 logger = logging.getLogger(__name__)
@@ -77,7 +77,7 @@ counter = Counter()
 @retry(
     wait=wait_random_exponential(min=10, max=45),
     stop=stop_after_attempt(20),
-    retry=retry_if_not_exception_type(openai.InvalidRequestError),
+    retry=retry_if_not_exception_type(BadRequestError),
 )
 def chatgpt_summary(text):
     """generate a summary using chatgpt"""
@@ -90,25 +90,23 @@ def chatgpt_summary(text):
         {"role": "user", "content": text},
     ]
 
-    response = openai.ChatCompletion.create(
-        engine=AZURE_OPENAI_MODEL_DEPLOYMENT_NAME,
-        messages=messages,
+    response = client.responses.create(
+        model=AZURE_OPENAI_MODEL_DEPLOYMENT_NAME,
+        input=messages,
         temperature=0.7,
-        max_tokens=MAX_TOKENS,
+        max_output_tokens=MAX_TOKENS,
         top_p=0.0,
-        frequency_penalty=0,
-        presence_penalty=0,
-        stop=None,
-        request_timeout=OPENAI_REQUEST_TIMEOUT,
+        timeout=OPENAI_REQUEST_TIMEOUT,
+        store=False,
     )
 
     # print(response)
 
-    text = response.get("choices", [])[0].get("message", {}).get("content", text)
-    finish_reason = response.get("choices", [])[0].get("finish_reason", "")
+    text = response.output_text or text
+    finish_reason = response.status
 
     # print(finish_reason)
-    if finish_reason != "stop":
+    if finish_reason != "completed":
         logger.warning("Stop reason: %s", finish_reason)
         logger.warning("Text: %s", text)
         logger.warning("Increase Max Tokens and try again")
@@ -121,7 +119,7 @@ def process_queue(progress, task):
     """process the queue"""
     while not q.empty():
         if errors > 100:
-            logger.exit("Too many errors. Exiting...")
+            logger.error("Too many errors. Exiting...")
             exit(1)
 
         segment = q.get()
@@ -141,7 +139,7 @@ def process_queue(progress, task):
         # get a summary of the text using chatgpt
         try:
             summary = chatgpt_summary(text)
-        except openai.InvalidRequestError as invalid_request_error:
+        except BadRequestError as invalid_request_error:
             logger.warning("Error: %s", invalid_request_error)
             summary = text
         except Exception as e:

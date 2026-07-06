@@ -56,19 +56,22 @@ Let's say we want to create a database of student data so we can suggest the rig
    ```python
    import os
    import json
-   from openai import AzureOpenAI
+   from openai import OpenAI
    from dotenv import load_dotenv
    load_dotenv()
 
-   client = AzureOpenAI(
-   api_key=os.environ['AZURE_OPENAI_API_KEY'],  # this is also the default, it can be omitted
-   api_version = "2023-07-01-preview"
+   # The Responses API is served from the Azure OpenAI (Microsoft Foundry) v1
+   # endpoint, so we point the OpenAI client at <your-endpoint>/openai/v1/.
+   endpoint = os.environ['AZURE_OPENAI_ENDPOINT']
+   client = OpenAI(
+   api_key=os.environ['AZURE_OPENAI_API_KEY'],
+   base_url=f"{endpoint.rstrip('/')}/openai/v1/",
    )
 
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   Below is some Python code for configuring our connection to Azure OpenAI where we set `api_type`, `api_base`, `api_version` and `api_key`.
+   Below is some Python code for configuring our connection to Azure OpenAI. Because we use the v1 endpoint, we only need to set the `api_key` and `base_url` (no `api_version` is required).
 
 1. Creating two student descriptions using variables `student_1_description` and `student_2_description`.
 
@@ -112,31 +115,33 @@ Let's say we want to create a database of student data so we can suggest the rig
 
    The above prompts instruct the LLM to extract information and return the response in JSON format.
 
-1. After setting up the prompts and the connection to Azure OpenAI, we will now send the prompts to the LLM by using `openai.ChatCompletion`. We store the prompt in the `messages` variable and assign the role to `user`. This is to mimic a message from a user being written to a chatbot.
+1. After setting up the prompts and the connection to Azure OpenAI, we will now send the prompts to the LLM by using `client.responses.create`. We store the prompt in the `input` variable and assign the role to `user`. This is to mimic a message from a user being written to a chatbot.
 
    ```python
    # response from prompt one
-   openai_response1 = client.chat.completions.create(
+   openai_response1 = client.responses.create(
    model=deployment,
-   messages = [{'role': 'user', 'content': prompt1}]
+   input = [{'role': 'user', 'content': prompt1}],
+   store=False,
    )
-   openai_response1.choices[0].message.content
+   openai_response1.output_text
 
    # response from prompt two
-   openai_response2 = client.chat.completions.create(
+   openai_response2 = client.responses.create(
    model=deployment,
-   messages = [{'role': 'user', 'content': prompt2}]
+   input = [{'role': 'user', 'content': prompt2}],
+   store=False,
    )
-   openai_response2.choices[0].message.content
+   openai_response2.output_text
    ```
 
-Now we can send both requests to the LLM and examine the response we receive by finding it like so `openai_response1['choices'][0]['message']['content']`.
+Now we can send both requests to the LLM and examine the response we receive by finding it like so `openai_response1.output_text`.
 
 1. Lastly, we can convert the response to JSON format by calling `json.loads`:
 
    ```python
    # Loading the response as a JSON object
-   json_response1 = json.loads(openai_response1.choices[0].message.content)
+   json_response1 = json.loads(openai_response1.output_text)
    json_response1
    ```
 
@@ -188,15 +193,15 @@ There are many different use cases where function calls can improve your app lik
 
 The process of creating a function call includes 3 main steps:
 
-1. **Calling** the Chat Completions API with a list of your functions and a user message.
+1. **Calling** the Responses API with a list of your functions (tools) and a user message.
 2. **Reading** the model's response to perform an action i.e. execute a function or API Call.
-3. **Making** another call to Chat Completions API with the response from your function to use that information to create a response to the user.
+3. **Making** another call to the Responses API with the response from your function to use that information to create a response to the user.
 
 ![LLM Flow](./images/LLM-Flow.png?WT.mc_id=academic-105485-koreyst)
 
 ### Step 1 - creating messages
 
-The first step is to create a user message. This can be dynamically assigned by taking the value of a text input or you can assign a value here. If this is your first time working with the Chat Completions API, we need to define the `role` and the `content` of the message.
+The first step is to create a user message. This can be dynamically assigned by taking the value of a text input or you can assign a value here. If this is your first time working with the Responses API, we need to define the `role` and the `content` of the message.
 
 The `role` can be either `system` (creating rules), `assistant` (the model) or `user` (the end-user). For function calling, we will assign this as `user` and an example question.
 
@@ -212,11 +217,12 @@ Next, we will define a function and the parameters of that function. We will use
 
 > **Important** : Functions are included in the system message to the LLM and will be included in the amount of available tokens you have available.
 
-Below, we create the functions as an array of items. Each item is a function and has properties `name`, `description` and `parameters`:
+Below, we create the functions as an array of items. Each item is a tool in the flat Responses API format, with properties `type`, `name`, `description` and `parameters`:
 
 ```python
 functions = [
    {
+      "type":"function",
       "name":"search_courses",
       "description":"Retrieves courses from the search index based on the parameters provided",
       "parameters":{
@@ -258,36 +264,36 @@ There's also an optional property `required` - required property for the functio
 
 ### Step 3 - Making the function call
 
-After defining a function, we now need to include it in the call to the Chat Completion API. We do this by adding `functions` to the request. In this case `functions=functions`.
+After defining a function, we now need to include it in the call to the Responses API. We do this by adding `tools` to the request. In this case `tools=functions`.
 
-There is also an option to set `function_call` to `auto`. This means we will let the LLM decide which function should be called based on the user message rather than assigning it ourselves.
+There is also an option to set `tool_choice` to `auto`. This means we will let the LLM decide which function should be called based on the user message rather than assigning it ourselves.
 
-Here's some code below where we call `ChatCompletion.create`, note how we set `functions=functions` and `function_call="auto"` and thereby giving the LLM the choice when to call the functions we provide it:
+Here's some code below where we call `client.responses.create`, note how we set `tools=functions` and `tool_choice="auto"` and thereby giving the LLM the choice when to call the functions we provide it:
 
 ```python
-response = client.chat.completions.create(model=deployment,
-                                        messages=messages,
-                                        functions=functions,
-                                        function_call="auto")
+response = client.responses.create(model=deployment,
+                                        input=messages,
+                                        tools=functions,
+                                        tool_choice="auto",
+                                        store=False)
 
-print(response.choices[0].message)
+print(response.output)
 ```
 
-The response coming back now looks like so:
+The response coming back now includes a `function_call` item in `response.output` that looks like so:
 
 ```json
 {
-  "role": "assistant",
-  "function_call": {
-    "name": "search_courses",
-    "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
-  }
+  "type": "function_call",
+  "name": "search_courses",
+  "call_id": "call_abc123",
+  "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
 }
 ```
 
 Here we can see how the function `search_courses` was called and with what arguments, as listed in the `arguments` property in the JSON response.
 
-The conclusion the LLM was able to find the data to fit the arguments of the function as it was extracting it from the value provided to the `messages` parameter in the chat completion call. Below is a reminder of the `messages` value:
+The conclusion the LLM was able to find the data to fit the arguments of the function as it was extracting it from the value provided to the `input` parameter in the Responses API call. Below is a reminder of the `messages` value:
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
@@ -305,10 +311,11 @@ After we have tested the formatted response from the LLM, we can now integrate t
 
 To integrate this into our application, let's take the following steps:
 
-1. First, let's make the call to the OpenAI services and store the message in a variable called `response_message`.
+1. First, let's make the call to the OpenAI services and extract the function call items from the response `output`.
 
    ```python
-   response_message = response.choices[0].message
+   response_items = response.output
+   tool_calls = [item for item in response_items if item.type == "function_call"]
    ```
 
 1. Now we will define the function that will call the Microsoft Learn API to get a list of courses:
@@ -337,49 +344,41 @@ To integrate this into our application, let's take the following steps:
 
 Ok, so we created `functions` variables and a corresponding Python function, how do we tell the LLM how to map these two together so our Python function is called?
 
-1. To see if we need to call a Python function, we need to look into the LLM response and see if `function_call` is part of it and call the pointed-out function. Here's how you can make the mentioned check below:
+1. To see if we need to call a Python function, we need to look into the LLM response and see if a `function_call` item is part of it and call the pointed-out function. Here's how you can make the mentioned check below:
 
    ```python
    # Check if the model wants to call a function
-   if response_message.function_call.name:
-    print("Recommended Function call:")
-    print(response_message.function_call.name)
-    print()
+   if tool_calls:
+    for tool_call in tool_calls:
+     print("Recommended Function call:")
+     print(tool_call.name)
+     print()
 
-    # Call the function.
-    function_name = response_message.function_call.name
+     # Call the function.
+     function_name = tool_call.name
 
-    available_functions = {
-            "search_courses": search_courses,
-    }
-    function_to_call = available_functions[function_name]
+     available_functions = {
+             "search_courses": search_courses,
+     }
+     function_to_call = available_functions[function_name]
 
-    function_args = json.loads(response_message.function_call.arguments)
-    function_response = function_to_call(**function_args)
+     function_args = json.loads(tool_call.arguments)
+     function_response = function_to_call(**function_args)
 
-    print("Output of function call:")
-    print(function_response)
-    print(type(function_response))
+     print("Output of function call:")
+     print(function_response)
+     print(type(function_response))
 
-
-    # Add the assistant response and function response to the messages
-    messages.append( # adding assistant response to messages
-        {
-            "role": response_message.role,
-            "function_call": {
-                "name": function_name,
-                "arguments": response_message.function_call.arguments,
-            },
-            "content": None
-        }
-    )
-    messages.append( # adding function response to messages
-        {
-            "role": "function",
-            "name": function_name,
-            "content":function_response,
-        }
-    )
+     # Add the function call and its result back to the conversation.
+     # The model's function_call item must be appended before its output.
+     messages.append(tool_call)  # the assistant's function_call item
+     messages.append( # the function result
+         {
+             "type": "function_call_output",
+             "call_id": tool_call.call_id,
+             "output": function_response,
+         }
+     )
    ```
 
    These three lines, ensure we extract the function name, the arguments and make the call:
@@ -387,7 +386,7 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    ```python
    function_to_call = available_functions[function_name]
 
-   function_args = json.loads(response_message.function_call.arguments)
+   function_args = json.loads(tool_call.arguments)
    function_response = function_to_call(**function_args)
    ```
 
@@ -419,26 +418,31 @@ Ok, so we created `functions` variables and a corresponding Python function, how
    print(messages)
    print()
 
-   second_response = client.chat.completions.create(
-      messages=messages,
+   second_response = client.responses.create(
+      input=messages,
       model=deployment,
-      function_call="auto",
-      functions=functions,
-      temperature=0
-         )  # get a new response from GPT where it can see the function response
+      tool_choice="auto",
+      tools=functions,
+      temperature=0,
+      store=False,
+         )  # get a new response from the model where it can see the function response
 
 
-   print(second_response.choices[0].message)
+   print(second_response.output_text)
    ```
 
    **Output**
 
-   ```python
-   {
-     "role": "assistant",
-     "content": "I found some good courses for beginner students to learn Azure:\n\n1. [Describe concepts of cryptography] (https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)\n2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)\n3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)\n4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)\n5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)\n\nYou can click on the links to access the courses."
-   }
+   ```text
+   I found some good courses for beginner students to learn Azure:
 
+   1. [Describe concepts of cryptography](https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)
+   2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)
+   3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)
+   4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)
+   5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)
+
+   You can click on the links to access the courses.
    ```
 
 ## Assignment

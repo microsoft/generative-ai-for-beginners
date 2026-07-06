@@ -22,7 +22,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@azure/openai": "^1.0.0-beta.10",
+    "openai": "^4.77.0",
     "axios": "^1.16.0",
     "dotenv": "^16.3.1",
     "rimraf": "^5.0.5"

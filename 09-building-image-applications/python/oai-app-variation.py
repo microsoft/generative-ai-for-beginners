@@ -1,4 +1,4 @@
-from openai import OpenAI
+from openai import OpenAI, BadRequestError
 import os
 import requests
 from PIL import Image
@@ -7,7 +7,7 @@ import dotenv
 # import dotenv
 dotenv.load_dotenv()
 
-openai = OpenAI()
+client = OpenAI()
 
 image_dir = os.path.join(os.curdir, 'images')
 
@@ -17,7 +17,7 @@ image_path = os.path.join(image_dir, 'generated-image.png')
 # ---creating variation below---
 try:
     print("LOG creating variation")
-    response = openai.images.create_variation(
+    response = client.images.create_variation(
         image=open("generated-image.png", "rb"),
         n=1,
         size="1024x1024"
@@ -35,5 +35,5 @@ try:
     # Display the image in the default image viewer
     image = Image.open(image_path)
     image.show()
-except openai.InvalidRequestError as err:
+except BadRequestError as err:
     print(err)

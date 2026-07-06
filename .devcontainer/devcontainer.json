@@ -16,8 +16,26 @@
 		"vscode": {
 			"extensions": [
 				"ms-python.python",
-				"ms-toolsai.jupyter"
-			]
+				"ms-python.vscode-pylance",
+				"ms-toolsai.jupyter",
+				"ms-python.black-formatter",
+				"charliermarsh.ruff",
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"github.copilot"
+			],
+			"settings": {
+				"editor.formatOnSave": true,
+				"[python]": {
+					"editor.defaultFormatter": "ms-python.black-formatter"
+				},
+				"[javascript]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[typescript]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				}
+			}
 		}
 	}
 }

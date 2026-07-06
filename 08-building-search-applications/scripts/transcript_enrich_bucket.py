@@ -40,7 +40,7 @@ if not TRANSCRIPT_FOLDER:
     exit(1)
 
 # https://stackoverflow.com/questions/75804599/openai-api-how-do-i-count-tokens-before-i-send-an-api-request
-ENCODING_MODEL = "gpt-3.5-turbo"
+ENCODING_MODEL = "gpt-4o-mini"
 tokenizer = tiktoken.encoding_for_model(ENCODING_MODEL)
 
 

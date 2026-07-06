@@ -7,7 +7,7 @@ load_dotenv()
 
 # configure Azure OpenAI service client 
 client = OpenAI()
-deployment="gpt-3.5-turbo"
+deployment="gpt-4o-mini"
 
 # add your completion code
 question = input("Ask your questions on python language to your study buddy: ")
@@ -22,13 +22,11 @@ Whenever certain questions are asked, you need to provide response in below form
 
 Provide answer for the question: {question}
 """
-messages = [{"role": "user", "content": prompt}]  
-# make completion
-completion = client.chat.completions.create(model=deployment, messages=messages)
+# make a request using the Responses API
+response = client.responses.create(model=deployment, input=prompt, store=False)
 
 # print response
-if completion.choices and completion.choices[0].message is not None:
-    print(completion.choices[0].message.content)
+print(response.output_text)
 
 #  very unhappy _____.
 

@@ -81,7 +81,7 @@ So what does it take to build an image generation application? You need the foll
 ## Create and deploy an Azure OpenAI model
 
 If not done already, follow the instructions on the [Microsoft Learn](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst) page
-to create an Azure OpenAI resource and model. Select DALL-E 3 as model.  
+to create an Azure OpenAI resource and model. Select **gpt-image-1** as model (the current generation Azure OpenAI image model; DALL-E 3 is legacy and no longer available for new deployments).
 
 ## Create the app
 
@@ -90,7 +90,7 @@ to create an Azure OpenAI resource and model. Select DALL-E 3 as model.
    ```text
    AZURE_OPENAI_ENDPOINT=<your endpoint>
    AZURE_OPENAI_API_KEY=<your key>
-   AZURE_OPENAI_DEPLOYMENT="dall-e-3"
+   AZURE_OPENAI_DEPLOYMENT="gpt-image-1"
    ```
 
    Locate this information in Azure OpenAI Foundry Portal for your resource in the "Deployments" section.
@@ -136,7 +136,7 @@ to create an Azure OpenAI resource and model. Select DALL-E 3 as model.
     client = AzureOpenAI(
       azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"],
       api_key=os.environ['AZURE_OPENAI_API_KEY'],
-      api_version = "2024-02-01"
+      api_version = "2024-10-21"
       )
     try:
         # Create an image by using the image generation API
@@ -167,7 +167,7 @@ to create an Azure OpenAI resource and model. Select DALL-E 3 as model.
         image.show()
 
     # catch exceptions
-    except openai.InvalidRequestError as err:
+    except openai.BadRequestError as err:
         print(err)
    ```
 
@@ -197,7 +197,7 @@ Let's explain this code:
   client = AzureOpenAI(
       azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"],
       api_key=os.environ['AZURE_OPENAI_API_KEY'],
-      api_version = "2024-02-01"
+      api_version = "2024-10-21"
       )
   ```
 
@@ -273,15 +273,15 @@ Here is an example using GPT Image:
 - **Create variations**. The idea is that you take an existing image and ask that variations are created. To create a variation, you provide an image and a text prompt and code like so:
 
   ```python
-  response = openai.Image.create_variation(
+  response = client.images.create_variation(
     image=open("bunny-lollipop.png", "rb"),
     n=1,
     size="1024x1024"
   )
-  image_url = response['data'][0]['url']
+  image_url = response.data[0].url
   ```
 
-  > Note, this is only supported on OpenAI
+  > Note, this is only supported on OpenAI's DALL-E 2 model, not gpt-image-1
 
 ## Temperature
 
@@ -300,7 +300,7 @@ Now let's run that same prompt just to see that we won't get the same image twic
 As you can see, the images are similar, but not the same. Let's try changing the temperature value to 0.1 and see what happens:
 
 ```python
- generation_response = client.images.create(
+ generation_response = client.images.generate(
         prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
         size='1024x1024',
         n=2
@@ -314,7 +314,7 @@ So let's try to make the response more deterministic. We could observe from the 
 Let's therefore change our code and set the temperature to 0, like so:
 
 ```python
-generation_response = client.images.create(
+generation_response = client.images.generate(
         prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
         size='1024x1024',
         n=2,
@@ -413,7 +413,7 @@ dotenv.load_dotenv()
 client = AzureOpenAI(
   azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"],
   api_key=os.environ['AZURE_OPENAI_API_KEY'],
-  api_version = "2024-02-01"
+  api_version = "2024-10-21"
   )
 
 
@@ -435,7 +435,7 @@ Do not consider any input from the following that is not safe for work or approp
 
 prompt = f"""{meta_prompt}
 Generate monument of the Arc of Triumph in Paris, France, in the evening light with a small child holding a Teddy looks on.
-""""
+"""
 
 try:
     # Create an image by using the image generation API

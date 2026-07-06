@@ -2,21 +2,26 @@ import ModelClient from "@azure-rest/ai-inference";
 import { isUnexpected } from "@azure-rest/ai-inference";
 import { AzureKeyCredential } from "@azure/core-auth";
 
-// SECURITY: Validate required environment variable
-const token = process.env["GITHUB_TOKEN"];
+// SECURITY: Validate required environment variables
+// Get these from your Microsoft Foundry project's "Overview" page
+// (GitHub Models is retiring end of July 2026 - see https://ai.azure.com/catalog/models)
+const token = process.env["AZURE_INFERENCE_CREDENTIAL"];
 if (!token) {
-    throw new Error("GITHUB_TOKEN environment variable is required. Please set it before running this application.");
+    throw new Error("AZURE_INFERENCE_CREDENTIAL environment variable is required. Please set it before running this application.");
 }
 
-const endpoint = "https://models.inference.ai.azure.com";
+const endpoint = process.env["AZURE_INFERENCE_ENDPOINT"];
+if (!endpoint) {
+    throw new Error("AZURE_INFERENCE_ENDPOINT environment variable is required. Please set it before running this application.");
+}
 
 /* By using the Azure AI Inference SDK, you can easily experiment with different models
    by modifying the value of `modelName` in the code below. For this code sample
    you need an embedding model. The following embedding models are
-   available in the GitHub Models service:
+   available in the Microsoft Foundry Models catalog:
 
    Cohere: Cohere-embed-v3-english, Cohere-embed-v3-multilingual
-   Azure OpenAI: text-embedding-3-small, text-embedding-3-large */
+   OpenAI: text-embedding-3-small, text-embedding-3-large */
 const modelName = "text-embedding-3-small";
 
 function cosineSimilarity(vector1, vector2) {

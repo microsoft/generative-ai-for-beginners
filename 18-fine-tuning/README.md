@@ -73,6 +73,8 @@ To fine-tune a pre-trained model, you need to have:
 
 ## Fine-Tuning In Action
 
+> **Note:** `gpt-35-turbo` / `gpt-3.5-turbo`, referenced in some of the tutorials below, is retired for both inference and fine-tuning. If you're starting a new fine-tuning job today, target a currently supported model instead - for example `gpt-4o-mini` or `gpt-4.1-mini`. See the [Fine-tuning models list](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure?WT.mc_id=academic-105485-koreyst#fine-tuning-models) for the current set of fine-tunable models. The concepts and steps in these tutorials still apply.
+
 The following resources provide step-by-step tutorials to walk you through a real example using a selected model with a curated dataset. To work through these tutorials, you need an account on the specific provider, along with access to the relevant model and datasets.
 
 | Provider     | Tutorial                                                                                                                                                                       | Description                                                                                                                                                                                                                                                                                                                                                                                                                        |

@@ -1,4 +1,4 @@
-from openai import AzureOpenAI
+from openai import AzureOpenAI, BadRequestError
 import os
 import requests
 from PIL import Image
@@ -11,7 +11,7 @@ dotenv.load_dotenv()
 # Get endpoint and key from environment variables
 client = AzureOpenAI(
   api_key=os.environ['AZURE_OPENAI_API_KEY'],  # this is also the default, it can be omitted
-  api_version = "2023-12-01-preview",
+  api_version = "2024-10-21", # check the Microsoft Foundry docs for the current API version required by your model
   azure_endpoint=os.environ['AZURE_OPENAI_ENDPOINT'] 
   )
 
@@ -34,7 +34,6 @@ try:
         size="1024x1024"
     )
 
-    client.images.create_variation()
     response = json.loads(result.model_dump_json())
 
     image_path = os.path.join(image_dir, 'generated_variation.png')
@@ -49,7 +48,7 @@ try:
     # Display the image in the default image viewer
     image = Image.open(image_path)
     image.show()
-#except openai.InvalidRequestError as err:
+#except BadRequestError as err:
 #    print(err)
     
 finally:

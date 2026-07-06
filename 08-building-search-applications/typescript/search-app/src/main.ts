@@ -1,10 +1,11 @@
-import { OpenAIClient, AzureKeyCredential } from "@azure/openai";
+import { AzureOpenAI } from "openai";
 import * as dotenv from "dotenv";
 
 dotenv.config();
 
 const endpoint = process.env.AZURE_OPENAI_ENDPOINT || "";
 const azureApiKey = process.env.AZURE_OPENAI_API_KEY || "";
+const apiVersion = "2024-10-21";
 
 /**
  * Calculates the cosine similarity between two vectors.
@@ -36,16 +37,17 @@ async function main() {
         
         console.log("== Building Search Applications with Azure OpenAI ==");
 
-        const client = new OpenAIClient(endpoint, new AzureKeyCredential(azureApiKey));
-        const deploymentName = "deployment-name-embeddings"; // here should be of type ADA embedding for Azure OpenAI
+        // Use the embeddings deployment configured in your .env file
+        const deploymentName = process.env.AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT || "text-embedding-3-small";
+        const client = new AzureOpenAI({ endpoint, apiKey: azureApiKey, apiVersion, deployment: deploymentName });
 
         const source = "Car";
         const compareTo = "Vehicle";
         const parrot = "A bird";
 
-        const parrotEmbedding = await client.getEmbeddings(deploymentName, [parrot]);
-        const embeddings = await client.getEmbeddings(deploymentName, [source]);
-        const embeddingsCompareTo = await client.getEmbeddings(deploymentName, [compareTo]);
+        const parrotEmbedding = await client.embeddings.create({ model: deploymentName, input: [parrot] });
+        const embeddings = await client.embeddings.create({ model: deploymentName, input: [source] });
+        const embeddingsCompareTo = await client.embeddings.create({ model: deploymentName, input: [compareTo] });
 
         const carArray = embeddings.data[0].embedding;
         const vehicleArray = embeddingsCompareTo.data[0].embedding;

@@ -38,9 +38,9 @@ api_key = get_required_env("OPENAI_API_KEY")
 
 ```javascript
 // Good: Validate environment variables in JavaScript
-const token = process.env["GITHUB_TOKEN"];
+const token = process.env["AZURE_INFERENCE_CREDENTIAL"];
 if (!token) {
-    throw new Error("GITHUB_TOKEN environment variable is required");
+    throw new Error("AZURE_INFERENCE_CREDENTIAL environment variable is required");
 }
 ```
 
@@ -95,20 +95,21 @@ def validate_text_input(value: str, max_length: int = 500) -> str:
 ### OpenAI/Azure OpenAI Client Creation
 
 ```python
-from openai import AzureOpenAI
+from openai import OpenAI
 
-def create_azure_client() -> AzureOpenAI:
-    """Create Azure OpenAI client with proper configuration."""
+def create_azure_client() -> OpenAI:
+    """Create an Azure OpenAI (Microsoft Foundry) client with proper configuration."""
     endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
     api_key = os.getenv("AZURE_OPENAI_API_KEY")
 
     if not endpoint or not api_key:
         raise ValueError("Azure OpenAI credentials are required")
 
-    return AzureOpenAI(
-        azure_endpoint=endpoint,
+    # The Responses API is served from the Azure OpenAI v1 endpoint, so we point
+    # the OpenAI client at <endpoint>/openai/v1/ (no api_version required).
+    return OpenAI(
         api_key=api_key,
-        api_version="2024-02-01"
+        base_url=f"{endpoint.rstrip('/')}/openai/v1/",
     )
 ```
 
@@ -215,7 +216,7 @@ except Exception as e:
 from openai import OpenAIError, RateLimitError
 
 try:
-    result = client.chat.completions.create(...)
+    result = client.responses.create(...)
 except RateLimitError:
     print("Rate limit exceeded. Please wait and try again.")
 except OpenAIError as e:

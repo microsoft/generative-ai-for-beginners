@@ -1,21 +1,26 @@
 import ModelClient from "@azure-rest/ai-inference";
 import { AzureKeyCredential } from "@azure/core-auth";
 
-const token = process.env["GITHUB_TOKEN"];
+// Get these from your Microsoft Foundry project's "Overview" page
+// (GitHub Models is retiring end of July 2026 - see https://ai.azure.com/catalog/models)
+const token = process.env["AZURE_INFERENCE_CREDENTIAL"];
 if (!token) {
-    throw new Error("GITHUB_TOKEN environment variable is required. Please set it before running this application.");
+    throw new Error("AZURE_INFERENCE_CREDENTIAL environment variable is required. Please set it before running this application.");
 }
-const endpoint = "https://models.inference.ai.azure.com";
+const endpoint = process.env["AZURE_INFERENCE_ENDPOINT"];
+if (!endpoint) {
+    throw new Error("AZURE_INFERENCE_ENDPOINT environment variable is required. Please set it before running this application.");
+}
 
 /* By using the Azure AI Inference SDK, you can easily experiment with different models
    by modifying the value of `modelName` in the code below. For this code sample
    you need a model supporting tools. The following compatible models are
-   available in the GitHub Models service:
+   available in the Microsoft Foundry Models catalog:
 
-   Cohere: Cohere-command-r, Cohere-command-r-plus
-   Mistral AI: Mistral-large, Mistral-large-2407, Mistral-Nemo, Mistral-small
-   Azure OpenAI: gpt-4o-mini, gpt-4o */
-const modelName = "gpt-4o";
+   Cohere: Cohere-command-r-08-2024, Cohere-command-r-plus-08-2024
+   Mistral AI: Mistral-large-2411, Mistral-small-2503
+   OpenAI: gpt-4o-mini, gpt-4o, gpt-4.1, gpt-4.1-mini */
+const modelName = "gpt-4o-mini";
 
 function getFlightInfo({ originCity, destinationCity }) {
     if (originCity === "Seattle" && destinationCity === "Miami") {

@@ -1,4 +1,4 @@
-from openai import AzureOpenAI
+from openai import OpenAI
 import os
 import re
 from dotenv import load_dotenv
@@ -36,11 +36,10 @@ def validate_text_input(value: str, max_length: int = 500) -> str:
         raise ValueError("Input contains invalid characters")
     return sanitized.strip()
 
-# configure Azure OpenAI service client
-client = AzureOpenAI(
-    azure_endpoint=get_required_env("AZURE_OPENAI_ENDPOINT"),
+# configure the OpenAI client against the Azure OpenAI (Microsoft Foundry) v1 endpoint
+client = OpenAI(
     api_key=get_required_env('AZURE_OPENAI_API_KEY'),
-    api_version="2023-10-01-preview"
+    base_url=f"{get_required_env('AZURE_OPENAI_ENDPOINT').rstrip('/')}/openai/v1/",
 )
 
 deployment = get_required_env('AZURE_OPENAI_DEPLOYMENT')
@@ -62,28 +61,26 @@ except ValueError as e:
 # interpolate the number of recipes into the prompt and ingredients
 # Note: Using validated and sanitized inputs
 prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter_value}: "
-messages = [{"role": "user", "content": prompt}]
 
-completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=600, temperature = 0.1)
+response = client.responses.create(model=deployment, input=prompt, max_output_tokens=600, temperature=0.1, store=False)
 
 
 # print response
 print("Recipes:")
-if not completion.choices or completion.choices[0].message is None:
+old_prompt_result = response.output_text
+if not old_prompt_result:
     print("No response received.")
 else:
-    old_prompt_result = completion.choices[0].message.content
     print(old_prompt_result)
 
     prompt_shopping = "Produce a shopping list, and please don't include ingredients that I already have at home: "
     new_prompt = f"Given ingredients at home {ingredients} and these generated recipes: {old_prompt_result}, {prompt_shopping}"
-    messages = [{"role": "user", "content": new_prompt}]
-    completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=600, temperature=0)
+    response = client.responses.create(model=deployment, input=new_prompt, max_output_tokens=600, temperature=0, store=False)
 
     # print response
     print("\n=====Shopping list ======= \n")
-    if completion.choices and completion.choices[0].message is not None and completion.choices[0].message.content is not None:
-        print(completion.choices[0].message.content)
+    if response.output_text:
+        print(response.output_text)
     else:
         print("No response received.")
 

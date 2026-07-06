@@ -23,7 +23,7 @@ Codespaces gives you a free, browser-based VS Code instance with all dependencie
 
 1. **Fork** this repo (top-right **Fork** button).  
 2. In your fork, click **Code ▸ Codespaces ▸ Create codespace on main**.  
-   ![ialog showing buttons to create a codespace](./images/who-will-pay.webp?WT.mc_id=academic-105485-koreyst)
+   ![Dialog showing buttons to create a codespace](./images/who-will-pay.webp?WT.mc_id=academic-105485-koreyst)
 
 ✅ A browser VS Code window opens and the dev container starts building.
 This takes **~2 minutes** the first time.

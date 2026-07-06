@@ -3,10 +3,12 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-token = os.environ["GITHUB_TOKEN"]
-endpoint = "https://models.inference.ai.azure.com"
+# Get these from your Microsoft Foundry project's "Overview" page
+# (GitHub Models is retiring end of July 2026 - see https://ai.azure.com/catalog/models)
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 
-model_name = "gpt-4o"
+model_name = "gpt-4o-mini"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,

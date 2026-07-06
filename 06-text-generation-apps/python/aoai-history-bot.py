@@ -1,15 +1,14 @@
-from openai import AzureOpenAI
+from openai import OpenAI
 import os
 from dotenv import load_dotenv
 
 # load environment variables from .env file
 load_dotenv()
 
-# configure Azure OpenAI service client 
-client = AzureOpenAI(
-  azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"], 
+# configure the OpenAI client against the Azure OpenAI (Microsoft Foundry) v1 endpoint
+client = OpenAI(
   api_key=os.environ['AZURE_OPENAI_API_KEY'],  
-  api_version = "2023-10-01-preview"
+  base_url=f"{os.environ['AZURE_OPENAI_ENDPOINT'].rstrip('/')}/openai/v1/",
   )
 
 deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
@@ -24,13 +23,11 @@ Whenever certain questions are asked, you need to remember facts about the timel
 
 Provide answer for the question: {question}
 """
-messages = [{"role": "user", "content": prompt}]  
-# make completion
-completion = client.chat.completions.create(model=deployment, messages=messages, temperature=0)
+# make a request using the Responses API
+response = client.responses.create(model=deployment, input=prompt, store=False)
 
 # print response
-if completion.choices and completion.choices[0].message is not None:
-    print(completion.choices[0].message.content)
+print(response.output_text)
 
 #  very unhappy _____.
 
