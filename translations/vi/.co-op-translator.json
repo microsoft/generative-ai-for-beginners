@@ -215,6 +215,19 @@
     "source_file": "SECURITY.md",
     "language_code": "vi"
   },
+  "__translation_failures__": {
+    "05-advanced-prompts/README.md": {
+      "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
+      "source_file": "05-advanced-prompts/README.md",
+      "language_code": "vi",
+      "failure_date": "2026-07-08T14:46:24+00:00",
+      "status": "failed",
+      "error_type": "TranslationContentFilterError",
+      "error_message": "Provider blocked markdown translation at prompt 1/2 because finish_reason was 'content_filter'.",
+      "translator_version": "0.20.0",
+      "failure_policy_version": 1
+    }
+  },
   "docs/ENHANCED_FEATURES_ROADMAP.md": {
     "original_hash": "43fe261ba7a54e891e489255201c9253",
     "translation_date": "2026-02-16T14:59:00+00:00",
