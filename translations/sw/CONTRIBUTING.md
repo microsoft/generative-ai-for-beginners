@@ -1,113 +1,130 @@
 # Kuchangia
 
-Mradi huu unakaribisha michango na mapendekezo. Michango mingi inahitaji ukubali Mkataba wa Leseni ya Mchangiaji (CLA) unaothibitisha kuwa una haki, na kwa kweli unatoa, haki kwetu kutumia mchango wako. Kwa maelezo zaidi, tembelea <https://cla.microsoft.com>.
+Mradi huu unakaribisha michango na mapendekezo. Michango mingi inahitaji wewe kukubali Mkataba wa Leseni ya Mchangiaji (CLA) unaothibitisha kuwa una haki ya, na kwa kweli unatupa haki za kutumia mchango wako. Kwa maelezo, tembelea <https://cla.microsoft.com>.
 
-> Muhimu: unapotafsiri maandishi katika hifadhidata hii, tafadhali hakikisha hutumii tafsiri za mashine. Tutathibitisha tafsiri kupitia jamii, hivyo tafadhali jitolee tu kwa tafsiri za lugha unazozifahamu vizuri.
+> Muhimu: unapotafsiri maandishi katika hifadhidata hii, tafadhali hakikisha hutumiishi tafsiri ya mashine. Tutathibitisha tafsiri kupitia jamii, hivyo tafadhali jitolee kutafsiri tu katika lugha unazozifahamu vyema.
 
-Unapowasilisha ombi la kuvuta (pull request), roboti wa CLA atabaini moja kwa moja kama unahitaji kutoa CLA na kuandaa PR ipasavyo (mfano, lebo, maoni). Fuata tu maelekezo yanayotolewa na roboti. Hii itabidi ufanye mara moja tu kwa hifadhidata zote zinazotumia CLA yetu.
+Unapowasilisha ombi la kuvutia (pull request), roboti wa CLA atabaini moja kwa moja kama unahitaji kutoa CLA na kupamba PR ipasavyo (mfano, lebo, maoni). Fuata tu maelekezo yaliyotolewa na roboti. Utahitaji kufanya hivi mara moja tu kwa hifadhidata zote zinazotumia CLA yetu.
 
 ## Kanuni za Maadili
 
-Mradi huu umechukua [Kanuni za Maadili za Chanzo Huria za Microsoft](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst). Kwa maelezo zaidi soma [Maswali Yanayoulizwa Mara kwa Mara kuhusu Kanuni za Maadili](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst) au wasiliana na [opencode@microsoft.com](mailto:opencode@microsoft.com) kwa maswali au maoni zaidi.
+Mradi huu umechukua [Kanuni za Maadili za Vyanzo Huria za Microsoft](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst).
+Kwa maelezo zaidi soma [Maswali Yanayoulizwa Mara kwa Mara kuhusu Kanuni za Maadili](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst) au wasiliana na [opencode@microsoft.com](mailto:opencode@microsoft.com) ikiwa una maswali au maoni mengine yoyote.
 
 ## Swali au Tatizo?
 
-Tafadhali usifungue masuala ya GitHub kwa maswali ya msaada wa jumla kwani orodha ya GitHub inapaswa kutumika kwa maombi ya vipengele na ripoti za hitilafu. Hii itatusaidia kufuatilia kwa urahisi masuala halisi au hitilafu kutoka kwa msimbo na kuweka mjadala wa jumla tofauti na msimbo halisi.
+Tafadhali usifungue matatizo ya GitHub kwa maswali ya msaada wa jumla kwani orodha ya GitHub inapaswa kutumiwa kwa maombi ya vipengele na ripoti za hitilafu. Hii itatusaidia kufuatilia kwa urahisi zaidi matatizo halisi au hitilafu kutoka kwa msimbo na kuweka mijadala ya jumla tofauti na msimbo halisi.
 
 ## Makosa ya Kielelezo, Masuala, Hitilafu na Michango
 
-Unapowasilisha mabadiliko yoyote kwenye hifadhidata ya Generative AI for Beginners, tafadhali fuata mapendekezo haya.
+Kila unapo wasilisha mabadiliko yoyote kwenye hifadhidata ya Generative AI for Beginners, tafadhali fuata mapendekezo haya.
 
-* Daima tengeneza nakala ya hifadhidata kwenye akaunti yako kabla ya kufanya mabadiliko yako
-* Usichanganye mabadiliko mengi katika ombi moja la kuvuta. Kwa mfano, wasilisha marekebisho ya hitilafu na masasisho ya nyaraka kwa PR tofauti
-* Ikiwa ombi lako la kuvuta linaonyesha migongano ya kuunganisha, hakikisha unasasisha maini yako ya ndani kuwa nakala halisi ya hifadhidata kuu kabla ya kufanya mabadiliko
-* Ikiwa unawasilisha tafsiri, tafadhali tengeneza PR moja kwa faili zote zilizotafsiriwa kwani hatukubali tafsiri za sehemu za maudhui
-* Ikiwa unawasilisha marekebisho ya makosa ya kielelezo au nyaraka, unaweza kuchanganya mabadiliko katika PR moja pale inapofaa
+* Daima fanya tawi la hifadhidata chini ya akaunti yako mwenyewe kabla ya kufanya mabadiliko yako
+* Usichanganye mabadiliko kadhaa katika ombi moja la kuvutia. Kwa mfano, wasilisha marekebisho ya hitilafu na masasisho ya nyaraka kwa kutumia PR tofauti
+* Ikiwa ombi lako la kuvutia linaonyesha mizozo ya muunganiko, hakikisha unasasisha maini yako ya ndani kuwa mfano wa ile iliyoko kwenye hifadhidata kuu kabla ya kufanya mabadiliko
+* Ikiwa unawasilisha tafsiri, tafadhali tengeneza PR moja kwa faili zote zilizotafsiriwa kwani hatukubali tafsiri za sehemu katika maudhui
+* Ikiwa unawasilisha makosa ya kielelezo au marekebisho ya nyaraka, unaweza kuchanganya mabadiliko kwa PR moja pale inapotokea
 
-## Mwongozo wa Jumla wa Kuandika
+## Mwongozo wa Jumla kwa Kuandika
 
-- Hakikisha URL zako zote zimefungwa kwa mabano ya mraba zikiwa zifuate na mabano ya mviringo bila nafasi za ziada ndani au karibu `[](../..)`.
-- Hakikisha viungo vyovyote vinavyohusiana (yaani viungo kwa faili na folda nyingine katika hifadhidata) vinaanza na `./` ikimaanisha faili au folda iliyoko katika saraka ya kazi ya sasa au `../` ikimaanisha faili au folda iliyoko katika saraka ya kazi ya mzazi.
-- Hakikisha viungo vyovyote vinavyohusiana vina kitambulisho cha ufuatiliaji (yaani `?` au `&` kisha `wt.mc_id=` au `WT.mc_id=`) mwishoni mwao.
-- Hakikisha URL yoyote kutoka kwa maeneo yafuatayo _github.com, microsoft.com, visualstudio.com, aka.ms, na azure.com_ ina kitambulisho cha ufuatiliaji (yaani `?` au `&` kisha `wt.mc_id=` au `WT.mc_id=`) mwishoni mwao.
-- Hakikisha viungo vyako havina lugha maalum za nchi ndani yao (yaani `/en-us/` au `/en/`).
-- Hakikisha picha zote zimehifadhiwa katika folda ya `./images`.
-- Hakikisha picha zina majina yenye maelezo kwa kutumia herufi za Kiingereza, nambari, na dash katika jina la picha yako.
+- Hakikisha URL zako zote zimefungwa kwa mabano za mraba kisha kufuatwa na mabano ya duara bila nafasi za ziada au ndani yao `[]()`.
+- Hakikisha viungo vyovyote vya jamaa (yaani viungo kwa faili na folda nyingine katika hifadhidata) vinaanza na `./` ikimaanisha faili au folda iliyoko katika saraka ya sasa ya kazi au `../` ikimaanisha faili au folda iliyoko kwenye saraka ya mzazi.
+- Hakikisha viungo vyovyote vya jamaa vina ID ya ufuatiliaji (yaani `?` au `&` kisha `wt.mc_id=` au `WT.mc_id=`) mwishoni mwao.
+- Hakikisha URL yoyote kutoka kwa maeneo yafuatayo _github.com, microsoft.com, visualstudio.com, aka.ms, na azure.com_ ina ID ya ufuatiliaji (yaani `?` au `&` kisha `wt.mc_id=` au `WT.mc_id=`) mwishoni mwao.
+- Hakikisha viungo vyako havina lugha maalum ya nchi (yaani `/en-us/` au `/en/`).
+- Hakikisha picha zote zimo katika folda ya `./images`.
+- Hakikisha picha zinaitwa kwa majina yanayoelezea kwa kutumia herufi za Kiingereza, namba, na vifungo katika jina la picha yako.
 
-## Mipangilio ya Kazi ya GitHub
+## Mifumo ya Kazi ya GitHub
 
-Unapowasilisha ombi la kuvuta, mchakato nne tofauti utaanzishwa kuthibitisha sheria zilizotangazwa hapo juu. Fuata tu maelekezo yaliyotajwa hapa kufanikisha ukaguzi wa mchakato.
+Unapowasilisha ombi la kuvutia, mifumo minne tofauti ya kazi itazinduliwa kuthibitisha kanuni zilizotangazwa.
+Fuata tu maelekezo yaliyotajwa hapa ili kufaulu ukaguzi wa mchakato.
 
-- [Angalia Njia Zinazovunjika Zinavyohusiana](../..)
-- [Angalia Njia Zina Ufuatiliaji](../..)
-- [Angalia URL Zina Ufuatiliaji](../..)
-- [Angalia URL Hazina Lugha Maalum za Nchi](../..)
+- [Kagua Njia za Jamaa Zilizovunjika](#kagua-njia-za-jamaa-zilizovunjika)
+- [Kagua Njia Zinazoambatana na Ufuatiliaji](#kagua-njia-zinazoambatana-na-ufuatiliaji)
+- [Kagua URL Zina Ufuatiliaji](#kagua-url-zina-ufuatiliaji)
+- [Kagua URL Hazina Lugha Maalum](#kagua-url-hazina-lugha-maalum)
 
-### Angalia Njia Zinazovunjika Zinavyohusiana
+### Kagua Njia za Jamaa Zilizovunjika
 
-Mchakato huu unahakikisha kuwa njia yoyote inayohusiana katika faili zako inafanya kazi. Hifadhidata hii imetangazwa kwenye kurasa za GitHub hivyo unahitaji kuwa makini sana unapoandika viungo vinavyounganisha kila kitu ili kutoelekeza mtu mahali pasipo sahihi.
+Mchakato huu unahakikisha kuwa njia yoyote ya jamaa katika faili zako inafanya kazi.
+Hifadhidata hii imewekwa kwenye kurasa za GitHub, hivyo unahitaji kuwa makini sana unapoandika viungo vinavyounganisha kila kitu ili usimpeleke mtu mahali pasipaswi.
 
-Ili kuhakikisha viungo vyako vinafanya kazi vizuri tumia VS code kuangalia.
+Ili kuhakikisha viungo vyako vinafanya kazi vizuri tumia VS code kukagua.
 
-Kwa mfano, unapoelekeza kipanya juu ya kiungo chochote katika faili zako utaombwa kufuata kiungo kwa kubonyeza **ctrl + click**
+Kwa mfano, unapoelekeza kipanya juu ya kiungo chochote katika faili zako, utapewa fursa kuifuata kwa kubofya **ctrl + bonyeza**
 
 ![VS code follow links screenshot](../../translated_images/sw/vscode-follow-link.85520ab6a1237adc.webp)
 
-Ukibonyeza kiungo na hakifanyi kazi kwa ndani basi, hakika mchakato utaanzishwa na hautafanya kazi kwenye GitHub.
+Ikiwa ubofya kiungo na hakifanyi kazi ndani ya eneo lako, basi hakika kitawasababisha mchakato na hakitafanya kazi kwenye GitHub.
 
 Kurekebisha tatizo hili, jaribu kuandika kiungo kwa msaada wa VS code.
 
-Unapoandika `./` au `../` VS code itakuomba uchague kutoka kwa chaguzi zinazopatikana kulingana na ulichokiandika.
+Unapoandika `./` au `../` VS code itakupa chaguzi kulingana na ulichoandika.
 
 ![VS code select relative path screenshot](../../translated_images/sw/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
 
-Fuata njia kwa kubonyeza faili au folda unayotaka na utahakikisha njia yako haivunjiki.
+Fuata njia kwa kubofya faili au folda unayotaka na uta hakikisha njia yako haivunjiki.
 
-Mara tu unapoongeza njia inayohusiana sahihi, hifadhi, na tuma mabadiliko yako mchakato utaanzishwa tena kuthibitisha mabadiliko yako. Ikiwa utapita ukaguzi basi uko tayari kuendelea.
+Mara utakapoongeza njia sahihi ya jamaa, hifadhi na sukuma mabadiliko, mchakato utazinduliwa tena kuthibitisha mabadiliko yako.
+Ikiwa utapita ukaguzi basi uko sawa.
 
-### Angalia Njia Zina Ufuatiliaji
+### Kagua Njia Zinazoambatana na Ufuatiliaji
 
-Mchakato huu unahakikisha kuwa njia yoyote inayohusiana ina ufuatiliaji ndani yake. Hifadhidata hii imetangazwa kwenye kurasa za GitHub hivyo tunahitaji kufuatilia mabadiliko kati ya faili na folda tofauti.
+Mchakato huu unahakikisha kuwa njia yoyote ya jamaa ina ufuatiliaji ndani yake.
+Hifadhidata hii imewekwa kwenye kurasa za GitHub hivyo tunahitaji kufuatilia harakati kati ya faili na folda tofauti.
 
-Ili kuhakikisha njia zako zinazohusiana zina ufuatiliaji ndani yake angalia maandishi haya `?wt.mc_id=` mwishoni mwa njia. Ikiwa yameambatishwa kwenye njia zako zinazohusiana basi utapita ukaguzi huu.
+Ili kuhakikisha njia zako za jamaa zina ufuatiliaji ndani yake, angalia maandishi yafuatayo `?wt.mc_id=` mwishoni mwa njia.
+Ikiwa imeongezwa kwenye njia zako za jamaa basi utapita kwenye ukaguzi huu.
 
 Kama sivyo, unaweza kupata kosa lifuatalo.
 
 ![GitHub check paths missing tracking comment screenshot](../../translated_images/sw/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
 
-Kurekebisha tatizo hili, jaribu kufungua njia ya faili iliyobainishwa na mchakato na ongeza kitambulisho cha ufuatiliaji mwishoni mwa njia zinazohusiana.
+Kurekebisha tatizo hili, jaribu kufungua njia ya faili iliyobainishwa na mchakato na ongeza ID ya ufuatiliaji mwishoni mwa njia za jamaa.
 
-Mara tu unapoongeza kitambulisho cha ufuatiliaji, hifadhi, na tuma mabadiliko yako mchakato utaanzishwa tena kuthibitisha mabadiliko yako. Ikiwa utapita ukaguzi basi uko tayari kuendelea.
+Mara utakapoongeza ID ya ufuatiliaji, hifadhi na sukuma mabadiliko, mchakato utazinduliwa tena kuthibitisha mabadiliko yako.
+Ikiwa utapita ukaguzi basi uko sawa.
 
-### Angalia URL Zina Ufuatiliaji
+### Kagua URL Zina Ufuatiliaji
 
-Mchakato huu unahakikisha kuwa URL yoyote ya wavuti ina ufuatiliaji ndani yake. Hifadhidata hii inapatikana kwa kila mtu hivyo unahitaji kuhakikisha kufuatilia upatikanaji ili kujua trafiki inatoka wapi.
+Mchakato huu unahakikisha kuwa URL yoyote ya mtandao ina ufuatiliaji ndani yake.
+Hifadhidata hii inapatikana kwa kila mtu, hivyo unahitaji kuhakikisha unafuata ufikiaji ili kujua trafiki inatoka wapi.
 
-Ili kuhakikisha URL zako zina ufuatiliaji ndani yake angalia maandishi haya `?wt.mc_id=` mwishoni mwa URL. Ikiwa yameambatishwa kwenye URL zako basi utapita ukaguzi huu.
+Ili kuhakikisha URL zako zina ufuatiliaji ndani yake, angalia maandishi yafuatayo `?wt.mc_id=` mwishoni mwa URL.
+Ikiwa imeongezwa kwenye URL zako basi utapita kwenye ukaguzi huu.
 
 Kama sivyo, unaweza kupata kosa lifuatalo.
 
 ![GitHub check urls missing tracking comment screenshot](../../translated_images/sw/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
 
-Kurekebisha tatizo hili, jaribu kufungua njia ya faili iliyobainishwa na mchakato na ongeza kitambulisho cha ufuatiliaji mwishoni mwa URL.
+Kurekebisha tatizo hili, jaribu kufungua njia ya faili iliyobainishwa na mchakato na ongeza ID ya ufuatiliaji mwishoni mwa URL.
 
-Mara tu unapoongeza kitambulisho cha ufuatiliaji, hifadhi, na tuma mabadiliko yako mchakato utaanzishwa tena kuthibitisha mabadiliko yako. Ikiwa utapita ukaguzi basi uko tayari kuendelea.
+Mara utakapoongeza ID ya ufuatiliaji, hifadhi na sukuma mabadiliko, mchakato utazinduliwa tena kuthibitisha mabadiliko yako.
+Ikiwa utapita ukaguzi basi uko sawa.
 
-### Angalia URL Hazina Lugha Maalum za Nchi
+### Kagua URL Hazina Lugha Maalum
 
-Mchakato huu unahakikisha kuwa URL yoyote ya wavuti haina lugha maalum za nchi ndani yake. Hifadhidata hii inapatikana kwa kila mtu duniani hivyo unahitaji kuhakikisha huna lugha maalum za nchi kwenye URL zako.
+Mchakato huu unahakikisha kuwa URL yoyote ya mtandao haina lugha maalum ya nchi ndani yake.
+Hifadhidata hii inapatikana kwa kila mtu duniani kote hivyo unahitaji kuhakikisha haujumuishi lugha ya nchi yako katika URL.
 
-Ili kuhakikisha URL zako hazina lugha maalum za nchi ndani yake angalia maandishi haya `/en-us/` au `/en/` au lugha nyingine yoyote mahali popote kwenye URL. Ikiwa hayapo kwenye URL zako basi utapita ukaguzi huu.
+Ili kuhakikisha URL zako hazina lugha ya nchi ndani yake, angalia maandishi yafuatayo `/en-us/` au `/en/` au lugha nyingine yoyote mahali popote ndani ya URL.
+Ikiwa haipo kwenye URL zako basi utapita kwenye ukaguzi huu.
 
 Kama sivyo, unaweza kupata kosa lifuatalo.
 
 ![GitHub check country locale comment screenshot](../../translated_images/sw/github-check-country-locale-comment.2f4fe93228161dee.webp)
 
-Kurekebisha tatizo hili, jaribu kufungua njia ya faili iliyobainishwa na mchakato na ondoa lugha maalum ya nchi kutoka kwenye URL.
+Kurekebisha tatizo hili, jaribu kufungua njia ya faili iliyobainishwa na mchakato na toa lugha ya nchi kutoka URL.
 
-Mara tu unapoondoa lugha maalum ya nchi, hifadhi, na tuma mabadiliko yako mchakato utaanzishwa tena kuthibitisha mabadiliko yako. Ikiwa utapita ukaguzi basi uko tayari kuendelea.
+Mara utakapotoa lugha ya nchi, hifadhi na sukuma mabadiliko, mchakato utazinduliwa tena kuthibitisha mabadiliko yako.
+Ikiwa utapita ukaguzi basi uko sawa.
 
-Hongera! Tutarudi kwako haraka iwezekanavyo na maoni kuhusu mchango wako.
+Hongera! Tutarudi kwako haraka iwezekanavyo kwa maoni kuhusu mchango wako.
 
-**Kiarifu cha Kutotegemea**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inapendekezwa. Hatubebei dhamana kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Kionyozo**:
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kupata usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake halisi inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inapendekezwa. Hatutojibu kwa kuelewa vibaya au tafsiri potofu zinazotokea kutokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

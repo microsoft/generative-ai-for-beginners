@@ -25,7 +25,7 @@
   },
   "01-introduction-to-genai/README.md": {
     "original_hash": "bfb7901bdbece1ba3e9f35c400ca33e8",
-    "translation_date": "2025-10-18T02:04:39+00:00",
+    "translation_date": "2026-07-06T21:41:32+00:00",
     "source_file": "01-introduction-to-genai/README.md",
     "language_code": "my"
   },
@@ -37,7 +37,7 @@
   },
   "03-using-generative-ai-responsibly/README.md": {
     "original_hash": "4d57fad773cbeb69c5dd62e65c34200d",
-    "translation_date": "2025-10-18T01:55:08+00:00",
+    "translation_date": "2026-07-06T21:42:39+00:00",
     "source_file": "03-using-generative-ai-responsibly/README.md",
     "language_code": "my"
   },
@@ -49,25 +49,25 @@
   },
   "05-advanced-prompts/README.md": {
     "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
-    "translation_date": "2025-10-18T01:48:29+00:00",
+    "translation_date": "2026-07-06T21:30:17+00:00",
     "source_file": "05-advanced-prompts/README.md",
     "language_code": "my"
   },
   "06-text-generation-apps/README.md": {
     "original_hash": "df027997f1448323d6159b78a1b669bf",
-    "translation_date": "2025-10-18T01:50:02+00:00",
+    "translation_date": "2026-07-06T21:32:59+00:00",
     "source_file": "06-text-generation-apps/README.md",
     "language_code": "my"
   },
   "07-building-chat-applications/README.md": {
     "original_hash": "a5308963a56cfbad2d73b0fa99fe84b3",
-    "translation_date": "2025-10-18T02:03:16+00:00",
+    "translation_date": "2026-07-06T21:37:57+00:00",
     "source_file": "07-building-chat-applications/README.md",
     "language_code": "my"
   },
   "08-building-search-applications/README.md": {
     "original_hash": "58953c08b8ba7073b836d4270ea0fe86",
-    "translation_date": "2025-10-18T01:52:28+00:00",
+    "translation_date": "2026-07-06T21:36:24+00:00",
     "source_file": "08-building-search-applications/README.md",
     "language_code": "my"
   },
@@ -79,13 +79,13 @@
   },
   "09-building-image-applications/README.md": {
     "original_hash": "238cde5c90363d70ecc939569378da51",
-    "translation_date": "2025-10-18T02:01:02+00:00",
+    "translation_date": "2026-07-06T21:31:50+00:00",
     "source_file": "09-building-image-applications/README.md",
     "language_code": "my"
   },
   "10-building-low-code-ai-applications/README.md": {
     "original_hash": "846ac8e3b7dcfb697d3309fec05f0fea",
-    "translation_date": "2025-10-18T01:59:24+00:00",
+    "translation_date": "2026-07-06T21:28:17+00:00",
     "source_file": "10-building-low-code-ai-applications/README.md",
     "language_code": "my"
   },
@@ -97,19 +97,19 @@
   },
   "11-integrating-with-function-calling/README.md": {
     "original_hash": "f6f84f9ef2d066cd25850cab93580a50",
-    "translation_date": "2025-10-18T01:53:38+00:00",
+    "translation_date": "2026-07-06T21:40:28+00:00",
     "source_file": "11-integrating-with-function-calling/README.md",
     "language_code": "my"
   },
   "12-designing-ux-for-ai-applications/README.md": {
     "original_hash": "78bbeed50fd4dc9fdee931f5daf98cb3",
-    "translation_date": "2025-10-18T01:51:24+00:00",
+    "translation_date": "2026-07-06T21:33:50+00:00",
     "source_file": "12-designing-ux-for-ai-applications/README.md",
     "language_code": "my"
   },
   "13-securing-ai-applications/README.md": {
     "original_hash": "a2faf8ee7a0b851efa647a19788f1e5b",
-    "translation_date": "2025-10-18T01:54:16+00:00",
+    "translation_date": "2026-07-06T21:35:15+00:00",
     "source_file": "13-securing-ai-applications/README.md",
     "language_code": "my"
   },
@@ -169,7 +169,7 @@
   },
   "19-slm/README.md": {
     "original_hash": "7d849075d63853cef4b12a1d4e334da6",
-    "translation_date": "2026-03-06T12:59:20+00:00",
+    "translation_date": "2026-07-06T21:39:25+00:00",
     "source_file": "19-slm/README.md",
     "language_code": "my"
   },
