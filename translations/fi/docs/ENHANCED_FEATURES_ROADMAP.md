@@ -1,6 +1,6 @@
-# Parannettujen ominaisuuksien ja parannusten tiekartta
+# Parannettujen ominaisuuksien ja kehityssuunnitelman tiekartta
 
-Tässä asiakirjassa esitetään suositellut parannukset ja kehitysehdotukset Generative AI for Beginners -opintojaksolle, perustuen kattavaan koodikatselmukseen ja alan parhaiden käytäntöjen analyysiin.
+Tämä asiakirja kuvaa suositeltuja parannuksia ja kehitysehdotuksia Generative AI for Beginners -opetussuunnitelmaan, perustuen kattavaan koodin tarkastukseen ja alan parhaiden käytäntöjen analyysiin.
 
 ## Tiivistelmä
 
@@ -10,48 +10,48 @@ Koodikanta on analysoitu turvallisuuden, koodin laadun ja opetuksellisen tehokku
 
 ## 1. Turvallisuuden parannukset (Prioriteetti: Kriittinen)
 
-### 1.1 Välittömät korjaukset (Valmistunut)
+### 1.1 Välittömät korjaukset (Valmiit)
 
-| Ongelmakohta | Vaikuttavat tiedostot | Tila |
-|--------------|----------------------|-------|
-| Kovakoodattu SECRET_KEY | `05-advanced-prompts/python/aoai-solution.py` | Korjattu |
+| Ongelma | Vaikuttavat tiedostot | Tila |
+|-------|----------------|--------|
+| Koodiin kirjoitettu SECRET_KEY | `05-advanced-prompts/python/aoai-solution.py` | Korjattu |
 | Puuttuva ympäristömuuttujien validointi | Useita JS/TS-tiedostoja | Korjattu |
-| Turvattomat funktion kutsut | `11-integrating-with-function-calling/js-githubmodels/app.js` | Korjattu |
+| Turvattomat funktiokutsut | `11-integrating-with-function-calling/js-githubmodels/app.js` | Korjattu |
 | Tiedostokahvojen vuoto | `08-building-search-applications/scripts/` | Korjattu |
-| Puuttuvat pyyntöaikakatkaisut | `09-building-image-applications/python/` | Korjattu |
+| Puuttuvat pyynnön aikakatkaisut | `09-building-image-applications/python/` | Korjattu |
 
-### 1.2 Suositellut lisäturvaominaisuudet
+### 1.2 Suositellut lisäturvallisuusominaisuudet
 
-1. **Rajapintakutsujen rajoitusesimerkit**
-   - Lisää esimerkkikoodi, joka näyttää, miten rajapintakutsujen määrää rajoitetaan
-   - Havainnollista eksponentiaalisen viiveen (exponential backoff) mallinnusta
+1. **Rajoitusesimerkit**
+   - Lisää esimerkkikoodi, joka näyttää kuinka toteuttaa rajoitus API-kutsuissa
+   - Havainnollista eksponentiaalinen palautuskäyttäytyminen
 
-2. **API-avainten kierto**
-   - Lisää ohjeet API-avainten kiertämisen parhaista käytännöistä
+2. **API-avaimen kierto**
+   - Lisää dokumentaatio parhaista käytännöistä API-avainten kiertoon
    - Sisällytä esimerkkejä Azure Key Vaultin tai vastaavien palveluiden käytöstä
 
-3. **Sisällön turvamoduulien integrointi**
-   - Lisää esimerkkejä Azure Content Safety API:n käyttämisestä
+3. **Sisällön turvallisuuden integrointi**
+   - Lisää esimerkkejä Azure Content Safety API:sta
    - Havainnollista syötteen ja tuloksen moderointimalleja
 
 ---
 
 ## 2. Koodin laadun parannukset
 
-### 2.1 Lisätyt konfiguraatiotiedostot
+### 2.1 Konfiguraatiotiedostot lisätty
 
 | Tiedosto | Tarkoitus |
-|----------|-----------|
-| `.eslintrc.json` | JavaScript/TypeScript linttausasetukset |
-| `.prettierrc` | Koodinmuotoilun standardit |
+|------|---------|
+| `.eslintrc.json` | JavaScript/TypeScript-linttausasetukset |
+| `.prettierrc` | Koodin muotoilun standardit |
 | `pyproject.toml` | Python-työkalujen konfiguraatio (Black, Ruff, mypy) |
 
-### 2.2 Luodut jaetut apuohjelmat
+### 2.2 Jaetut apuohjelmat luotu
 
-Uusi `shared/python/` moduuli sisältää:
+Uusi `shared/python/` -moduuli sisältää:
 - `env_utils.py` - Ympäristömuuttujien käsittely
-- `input_validation.py` - Syötteen validointi ja puhdistus
-- `api_utils.py` - Turvalliset API-pyyntöjen kääreet
+- `input_validation.py` - Syötteiden validointi ja puhdistus
+- `api_utils.py` - Turvalliset API-pyyntöjen rullaukset
 
 ### 2.3 Suositellut koodin parannukset
 
@@ -64,29 +64,29 @@ Uusi `shared/python/` moduuli sisältää:
    - Lisää JSDoc-kommentit kaikkiin JavaScript/TypeScript-funktioihin
 
 3. **Testauskehys**
-   - Lisää pytest-konfiguraatio ja esimerkkitestit
-   - Lisää Jest-konfiguraatio JavaScript/TypeScript:lle
+   - Lisää pytest-asetukset ja esimerkkitestit _(valmiina: pytest-asetus `pyproject.toml`-tiedostossa; esimerkkitestit jaetuille apuohjelmille [`tests/`](../../../tests) -hakemistossa, joita ajaa CI)_
+   - Lisää Jest-konfiguraatio JavaScript/TypeScriptille
 
 ---
 
-## 3. Opetusparannukset
+## 3. Opetukselliset parannukset
 
 ### 3.1 Uudet oppituntien aiheet
 
-1. **Turvallisuus AI-sovelluksissa** (Ehdotettu oppitunti 22)
-   - Kehoteinjektiohyökkäykset ja puolustukset
-   - API-avainhallinta
+1. **Turvallisuus tekoälysovelluksissa** (Ehdotettu oppitunti 22)
+   - Kehoteinjektiohyökkäykset ja suojaukset
+   - API-avainten hallinta
    - Sisällön moderointi
-   - Kutsujen rajoittaminen ja väärinkäytön estäminen
+   - Rajoitus ja väärinkäytön ehkäisy
 
-2. **Tuotantoon vieminen** (Ehdotettu oppitunti 23)
-   - Konttiteknologia Dockerilla
+2. **Tuotantoon käyttöönotto** (Ehdotettu oppitunti 23)
+   - Kontitus Dockerilla
    - CI/CD-putket
-   - Valvonta ja lokitus
+   - Monitorointi ja lokitus
    - Kustannusten hallinta
 
 3. **Edistyneet RAG-tekniikat** (Ehdotettu oppitunti 24)
-   - Hybridihaku (avainsanat + semantiikka)
+   - Hybridihaku (avainsanat + semanttinen)
    - Uudelleenjärjestelystrategiat
    - Monimodaalinen RAG
    - Arviointimittarit
@@ -94,41 +94,46 @@ Uusi `shared/python/` moduuli sisältää:
 ### 3.2 Nykyisten oppituntien parannukset
 
 | Oppitunti | Suositeltu parannus |
-|-----------|---------------------|
-| 06 - Tekstin generointi | Lisää suoratoistovaste-esimerkkejä |
-| 07 - Chat-sovellukset | Lisää keskustelumuistimallit |
-| 08 - Hakusovellukset | Lisää vektoritietokannan vertailu |
-| 09 - Kuvagenerointi | Lisää kuvan muokkaus-/vaihtoehtoesimerkkejä |
-| 11 - Funktiokutsut | Lisää rinnakkaisten funktiokutsujen esimerkkejä |
-| 15 - RAG | Lisää paloitusstrategioiden vertailu |
-| 17 - AI-agentit | Lisää moniagenttien orkestrointi |
+|--------|------------------------|
+| 06 - Tekstintuotanto | Lisää suoravirtauksen esimerkit |
+| 07 - Chat-sovellukset | Lisää keskustelumuistin mallit |
+| 08 - Hakusovellukset | Lisää vektoripohjaisten tietokantojen vertailu |
+| 09 - Kuvantuotanto | Lisää kuvan muokkaus/variaatioesimerkit |
+| 11 - Funktiokutsut | Lisää rinnakkaiset funktiokutsut |
+| 15 - RAG | Lisää pilkkomisstrategian vertailu |
+| 17 - Tekoälyagentit | Lisää moni-agenttien orkestrointi |
 
 ---
 
 ## 4. API:n modernisointi
 
-### 4.1 Päivitettävät vanhentuneet API-mallit
+### 4.1 Vanhentuneet API-kuviot (Migraatio valmis)
 
-| Vanha malli | Uusi malli | Vaikuttavat tiedostot |
-|-------------|------------|-----------------------|
-| `openai.api_type = "azure"` | `AzureOpenAI()` -asiakas | Useita skriptejä `08-building-search-applications/` |
-| `openai.ChatCompletion.create()` | `client.chat.completions.create()` | Useita Jupyter-muistikirjoja |
-| `df.append()` (pandas) | `pd.concat()` | RAG-muistikirja |
+Kaikki Python- ja TypeScript-chat-esimerkit on muunnettu Chat Completions APIsta Responses APIin (`client.responses.create(...)` → `response.output_text`).
 
-### 4.2 Demonstroitavat uudet API-ominaisuudet
+| Vanha kuvio | Uusi kuvio | Tila |
+|-------------|-------------|--------|
+| `openai.api_type = "azure"` / `AzureOpenAI()` (chat) | `OpenAI(base_url="<endpoint>/openai/v1/")` (Responses API) | Valmis |
+| `openai.ChatCompletion.create()` / `client.chat.completions.create()` | `client.responses.create(input=...)` → `response.output_text` | Valmis |
+| `@azure/openai` `OpenAIClient.getChatCompletions()` (TypeScript) | `openai` paketti `client.responses.create()` → `response.output_text` | Valmis |
+| `df.append()` (pandas) | `pd.concat()` | Valmis |
 
-1. **Rakenteiset tulosteet** (OpenAI)
+> **Huom:** Microsoft Foundry Models -esimerkit, jotka käyttävät `azure-ai-inference` / `@azure-rest/ai-inference` SDK:ta (`client.complete()`), pysyvät Model Inference API:ssa, joka ei tue Responses APIa. `AzureOpenAI()` pidetään tarkoituksella siellä missä se edelleen on voimassa (embeddings ja kuvantuotanto).
+
+### 4.2 Uudet API-ominaisuudet esitettäväksi
+
+1. **Rakenteelliset vastaukset** (OpenAI)
    - JSON-tila
-   - Funktiokutsut tiukoilla skeemoilla
+   - Funktiokutsut tiukkojen skeemojen kanssa
 
-2. **Näkökyvyn ominaisuudet**
-   - Kuvan analyysi GPT-4V:llä
-   - Monimodaaliset promptit
+2. **Näkökyvyt**
+   - Kuvanalyysi GPT-4o (vision) avulla
+   - Monimodaaliset kehoteet
 
-3. **Assistants API**
+3. **Responses API:n sisäänrakennetut työkalut** (korvaa vanhan Assistants API:n)
    - Koodin tulkki
-   - Tiedoston haku
-   - Räätälöidyt työkalut
+   - Tiedostohaku
+   - Verkkohaku ja mukautetut työkalut
 
 ---
 
@@ -136,7 +141,7 @@ Uusi `shared/python/` moduuli sisältää:
 
 ### 5.1 CI/CD-parannukset
 
-Nykyiset työnkulut hoitavat markdownin validoinnin. Suositellut lisäykset:
+Toteutettu tiedostossa [`.github/workflows/code-quality.yml`](../../../.github/workflows/code-quality.yml): Pythonin linttaus/muotoilu (Ruff + Black) on **pakollinen** ylläpidetyssä `shared/` apuohjelmamoduulissa ja toimii **suosituksena** muissa opetussisällöissä, sekä suosituksena ESLint-käsky JavaScript/TypeScriptille. Esimerkkiperustaso oli:
 
 ```yaml
 # .github/workflows/code-quality.yml
@@ -167,7 +172,9 @@ jobs:
       - run: npx eslint .
 ```
 
-### 5.2 Turvatarkastukset
+### 5.2 Turvallisuusskannaus
+
+Toteutettu tiedostossa [`.github/workflows/security.yml`](../../../.github/workflows/security.yml): CodeQL-analyysi Pythonille ja JavaScript/TypeScriptille (push, pull request ja viikoittain) sekä riippuvuuksien tarkastus pull requesteissa. Esimerkkiperustaso oli:
 
 ```yaml
 # .github/workflows/security.yml
@@ -198,7 +205,7 @@ jobs:
 
 ### 6.1 DevContainer-parannukset
 
-Päivitä `.devcontainer/devcontainer.json`:
+Toteutettu tiedostoissa [`.devcontainer/devcontainer.json`](../../../.devcontainer/devcontainer.json) ja [`.devcontainer/post-create.sh`](../../../.devcontainer/post-create.sh): säiliö sisältää nyt Pylancen, Black-muotoilijan, Ruffin, ESLintin, Prettierin ja Copilotin laajennukset, sallii muotoilun tallennettaessa repo-laajuisella Black/Prettier-konfiguraatiolla ja asentaa kehitystyökalut (`ruff`, `black`, `mypy`, `pytest`), jotta [code-quality työnkulku](../../../.github/workflows/code-quality.yml) voidaan toistaa paikallisesti. `mcr.microsoft.com/devcontainers/universal` peruskuva sisältää Pythonin ja Noden, joten lisäominaisuuksia ei tarvita. Esimerkkiperustaso oli:
 
 ```json
 {
@@ -232,12 +239,12 @@ Päivitä `.devcontainer/devcontainer.json`:
 }
 ```
 
-### 6.2 Interaktiivinen oppimisympäristö
+### 6.2 Interaktiivinen harjoitusympäristö
 
-Harkitse lisäämistä:
-- Jupyter-muistikirjat valmiiksi asetetuilla API-avaimilla (ympäristön kautta)
-- Gradio/Streamlit-demoja visuaalisille oppijoille
-- Interaktiivisia visailuja tiedon arviointiin
+Harkitse seuraavia lisäyksiä:
+- Jupyter-muistikirjat esitäytetyillä API-avaimilla (ympäristömuuttujien kautta)
+- Gradio/Streamlit-demot visuaalisille oppijoille
+- Interaktiiviset tietovisat tiedon arvioimiseksi
 
 ---
 
@@ -246,106 +253,103 @@ Harkitse lisäämistä:
 ### 7.1 Nykyinen kielituki
 
 | Teknologia | Käsitellyt oppitunnit | Tila |
-|------------|-----------------------|-------|
+|------------|-----------------|--------|
 | Python | Kaikki | Täydellinen |
 | TypeScript | 06-09, 11 | Osittainen |
 | JavaScript | 06-08, 11 | Osittainen |
-| .NET/C# | Joitakin | Osittainen |
+| .NET/C# | Jotkut | Osittainen |
 
 ### 7.2 Suositellut lisäykset
 
-1. **Go** - Kasvava AI/ML-työkaluissa
-2. **Rust** - Suorituskykykriittiset sovellukset
-3. **Java/Kotlin** - Yrityssovellukset
+1. **Go** - Kasvava AI/ML-työkalujen kieli
+2. **Rust** - Suorituskykykritiikka sovelluksissa
+3. **Java/Kotlin** - Enterprise-sovellukset
 
 ---
 
 ## 8. Suorituskyvyn optimoinnit
 
-### 8.1 Koodi­tason optimoinnit
+### 8.1 Kooditasoiset optimoinnit
 
 1. **Async/Await-mallit**
-   - Lisää asynkronisia esimerkkejä eräajoon
-   - Havainnollista rinnakkaisia API-kutsuja
+   - Lisää asynkronisia esimerkkejä eräprosessoinnista
+   - Havainnollista rinnakkaiset API-kutsut
 
-2. **välimuististrategiat**
-   - Lisää upotusten (embedding) välimuistin esimerkkejä
-   - Havainnollista vasteiden välimuistimallinnusta
+2. **Välimuististrategiat**
+   - Lisää upotusten välimuistiesimerkkejä
+   - Havainnollista vastausvälimuistimallit
 
 3. **Tokenien optimointi**
-   - Lisää tiktokenin käyttöönottoesimerkkejä
-   - Havainnollista prompttien pakkaustekniikoita
+   - Lisää tiktokenin käytön esimerkkejä
+   - Havainnollista kehotteen pakkaustekniikoita
 
 ### 8.2 Kustannusten optimointiesimerkit
 
-Lisää esimerkkejä, jotka näyttävät:
-- Mallin valinnan tehtävän kompleksisuuden mukaan
-- Prompttien suunnittelun token-tehokkuuden parantamiseksi
-- Eräajon tehokas käyttäminen suurissa toiminnoissa
+Lisää esimerkkejä, jotka osoittavat:
+- Mallin valinnan tehtävän monimutkaisuuden mukaan
+- Kehotteen optimointia token-efektiivisyyteen
+- Eräprosessi bulk-toimintoihin
 
 ---
 
 ## 9. Saavutettavuus ja kansainvälistyminen
 
-### 9.1 Nykyinen käännöstila
+### 9.1 Nykyinen käännösten tila
 
-| Kieli | Tila |
+Kaikki käännökset ovat **valmiit** ja tuotettu automaattisesti [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst) -työkalulla, joka tuottaa ja pitää yli 50 kieliversiota opetussuunnitelmasta synkronoituna englanninkielisen lähteen kanssa. Käännetty sisältö sijaitsee `translations/`-kansiossa ja lokalisoidut kuvat `translated_images/`-kansiossa; kaikkien saatavilla olevien kielten täydellinen lista on julkaistu projektin README-tiedoston alussa.
+
+| Näkökulma | Tila |
 |--------|--------|
-| Englanti | Täydellinen |
-| Kiina (yksinkertaistettu) | Täydellinen |
-| Japani | Täydellinen |
-| Korea | Täydellinen |
-| Espanja | Osittainen |
-| Portugali | Osittainen |
-| Turkki | Osittainen |
-| Puola | Osittainen |
+| Käännösten kattavuus | Täydellinen — yli 50 kieltä, kaikki oppitunnit |
+| Käännösmenetelmä | Automaattinen Azure Co-op Translatorin kautta |
+| Synkronoitu englanninkielisen lähteen kanssa | Kyllä — uudelleenluotu automaattisesti |
 
 ### 9.2 Saavutettavuuden parannukset
 
-1. Lisää alt-tekstit kaikkiin kuviin
-2. Varmista koodiesimerkkien oikea syntaksin korostus
-3. Lisää videoiden tekstitykset kaikkiin videotiedostoihin
-4. Varmista, että värikontrastit täyttävät WCAG-ohjeistukset
+1. Lisää vaihtoehtoinen teksti kaikkiin kuviin
+2. Varmista, että koodiesimerkeissä on asianmukainen syntaksiväritys
+3. Lisää videotekstit kaikille videoaineistoille
+4. Varmista, että värikontrasti täyttää WCAG-ohjeet
 
 ---
 
 ## 10. Toteutuksen priorisointi
 
-### Vaihe 1: Välitön (Viikot 1-2)
+### Vaihe 1: Välittömät toimet (Viikko 1-2)
 - [x] Korjaa kriittiset turvallisuusongelmat
-- [x] Lisää koodin laadun konfiguraatio
+- [x] Lisää koodin laadun konfigurointi
 - [x] Luo jaetut apuohjelmat
 - [x] Dokumentoi turvallisuusohjeet
 
-### Vaihe 2: Lyhyen aikavälin (Viikot 3-4)
-- [ ] Päivitä vanhentuneet API-mallit
-- [ ] Lisää tyyppivihjeet kaikkiin Python-tiedostoihin
-- [ ] Lisää CI/CD-työnkulut koodin laadulle
-- [ ] Luo turvatarkastus työnkulku
+### Vaihe 2: Lyhyen aikavälin toimet (Viikko 3-4)
+- [x] Päivitä vanhentuneet API-kuviot (Chat Completions → Responses API, Python + TypeScript)
+- [ ] Lisää tyyppivihjeet kaikkiin Python-tiedostoihin (valmiina ylläpidetylle `shared/` moduulille; oppituntiesimerkit pidetään yksinkertaisina)
+- [x] Lisää CI/CD-työnkulut koodin laadulle
+- [x] Luo turvallisuusskannaus työnkulku
 
-### Vaihe 3: Keskipitkän aikavälin (Kuukaudet 2-3)
-- [ ] Lisää uusi turvallisuusopetus
-- [ ] Lisää tuotantoon viemisen opetus
-- [ ] Paranna DevContainer-asetuksia
-- [ ] Lisää interaktiiviset demonstroinnit
+### Vaihe 3: Keskipitkän aikavälin toimet (Kuukaudet 2-3)
+- [ ] Lisää uusi turvallisuusoppitunti
+- [ ] Lisää tuotantoon käyttöönotto opetukseen
+- [x] Paranna DevContainerin asetuksia
+- [ ] Lisää interaktiiviset demot
 
-### Vaihe 4: Pitkän aikavälin (Kuukaudet 4+)
-- [ ] Lisää edistynyt RAG-opetus
+### Vaihe 4: Pitkän aikavälin toimet (Kuukaudet 4+)
+- [ ] Lisää edistynyt RAG-oppitunti
 - [ ] Laajenna kielitukea
-- [ ] Lisää kattava testikattavuus
+- [ ] Lisää kattava testauspaketti
 - [ ] Luo sertifiointiohjelma
 
 ---
 
 ## Yhteenveto
 
-Tämä tiekartta tarjoaa jäsennellyn lähestymistavan Generative AI for Beginners -opintojakson parantamiseen. Käsittelemällä turvallisuushaasteita, modernisoimalla rajapintoja ja lisäämällä opetussisältöä, kurssi valmistaa opiskelijoita paremmin todellisiin AI-sovelluskehityksen haasteisiin.
+Tämä tiekartta tarjoaa rakenteellisen lähestymistavan Generative AI for Beginners -opetussuunnitelman parantamiseen. Käsittelemällä turvallisuuskysymyksiä, modernisoimalla API:t ja lisäämällä opetussisältöjä, kurssi valmistaa opiskelijat paremmin käytännön tekoälysovellusten kehitykseen.
 
-Kysymyksiä tai osallistumisia varten, avaa ongelma GitHub-repositoriossa.
+Kysymyksiä tai kontribuutioita varten avaa issue GitHub-repositoriossa.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty tekoälypohjaisella käännöspalvelulla [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta automaattisissa käännöksissä saattaa esiintyä virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäiskielellä on virallinen lähde. Tärkeissä asioissa suositellaan ammattimaisen ihmiskääntäjän käyttöä. Emme ota vastuuta mahdollisista väärinymmärryksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+**Vastuuvapauslauseke**:
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, otathan huomioon, että automaattiset käännökset saattavat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäiskielellä on virallinen lähde. Tärkeissä asioissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

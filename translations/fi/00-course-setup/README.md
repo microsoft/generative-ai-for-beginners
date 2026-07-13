@@ -1,49 +1,49 @@
-# Tämä kurssi käynnistyy
+# Tämän kurssin aloitus
 
-Olemme erittäin innoissamme siitä, että aloitat tämän kurssin ja näet, mitä innostut rakentamaan generatiivisen tekoälyn avulla!
+Olemme todella innoissamme, että aloitat tämän kurssin ja näet, mitä saat inspiraatiota rakentaa Generatiivisen tekoälyn avulla!
 
-Varmistaaksemme onnistumisesi, tämä sivu sisältää asennusohjeet, tekniset vaatimukset ja ohjeet kuinka saat apua tarvittaessa.
+Varmistaaksemme menestyksesi, tällä sivulla kerrotaan asennusvaiheet, tekniset vaatimukset ja mistä saada apua tarvittaessa.
 
-## Asentamisohjeet
+## Asennusvaiheet
 
 Kurssin aloittamiseksi sinun tulee suorittaa seuraavat vaiheet.
 
-### 1. Haarauta tämä repo
+### 1. Forkkaa tämä repo
 
-[Haarauta koko repo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) omaan GitHub-tiliisi, jotta voit muokata koodia ja suorittaa haasteet. Voit myös [merkitä tämän repon tähdellä (🌟)](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) löytääksesi sen ja siihen liittyvät repot helpommin.
+[Forkkaa koko repo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) omaan GitHub-tiliisi, jotta voit muokata koodia ja suorittaa haasteet. Voit myös [tähtiä (🌟) tämän repoin](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) helpottaaksesi sen ja siihen liittyvien repoiden löytämistä.
 
 ### 2. Luo codespace
 
-Välttääksesi riippuvuusongelmat koodia ajettaessa, suosittelemme tämän kurssin suorittamista [GitHub Codespacesissa](https://github.com/features/codespaces?WT.mc_id=academic-105485-koreyst).
+Välttääksesi riippuvuusongelmia koodia suoritettaessa suosittelemme tämän kurssin suorittamista [GitHub Codespacesissä](https://github.com/features/codespaces?WT.mc_id=academic-105485-koreyst).
 
-Oman haarautumisesi sisällä: **Code -> Codespaces -> New on main**
+Forkissasi: **Code -> Codespaces -> New on main**
 
-![Dialogi, jossa on napit codespacen luomiseksi](../../../translated_images/fi/who-will-pay.4c0609b1c7780f44.webp)
+![Dialog showing buttons to create a codespace](../../../translated_images/fi/who-will-pay.4c0609b1c7780f44.webp)
 
 #### 2.1 Lisää salaisuus
 
 1. ⚙️ Hammasratas-kuvake -> Command Pallete -> Codespaces : Manage user secret -> Add a new secret.
-2. Nimeä se OPENAI_API_KEY, liitä avain, Tallenna.
+2. Nimeä OPENAI_API_KEY, liitä avain, Tallenna.
 
-### 3. Mitä sitten?
+### 3. Mitä seuraavaksi?
 
-| Haluan…              | Mene kohtaan…                                                         |
-|----------------------|----------------------------------------------------------------------|
-| Aloita oppitunti 1    | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)  |
-| Työskennellä offline  | [`setup-local.md`](02-setup-local.md)                                |
-| Aseta LLM-palveluntarjoaja | [`providers.md`](03-providers.md)                                   |
-| Tapaa muita oppijoita | [Liity Discordiin](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)  |
+| Haluan…            | Mene kohtaan…                                                           |
+|---------------------|-------------------------------------------------------------------------|
+| Aloita Lesson 1     | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
+| Työskennellä offline | [`setup-local.md`](02-setup-local.md)                                   |
+| Asenna LLM-palveluntarjoaja | [`providers.md`](03-providers.md)                                        |
+| Tapaa muita oppijoita | [Liity Discordiin](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
 
-## Ongelmien ratkaisu
+## Vianmääritys
 
 
-| Oire                                       | Korjaus                                                         |
-|--------------------------------------------|-----------------------------------------------------------------|
-| Kontin rakennus jumissa yli 10 min         | **Codespaces ➜ “Rebuild Container”**                            |
-| `python: command not found`                  | Terminaali ei yhdistänyt; napsauta **+** ➜ *bash*              |
-| `401 Unauthorized` OpenAI:lta                | Väärä / vanhentunut `OPENAI_API_KEY`                             |
-| VS Code näyttää “Dev container mounting…”    | Päivitä selainikkuna—Codespaces menettää välillä yhteyden       |
-| Muistikirjan ydin puuttuu                   | Muistikirjan valikko ➜ **Kernel ▸ Select Kernel ▸ Python 3**   |
+| Oire                                    | Korjaus                                                        |
+|----------------------------------------|----------------------------------------------------------------|
+| Kontin rakentaminen jumissa > 10 min   | **Codespaces ➜ “Rebuild Container”**                           |
+| `python: command not found`              | Terminaali ei liitetty; klikkaa **+** ➜ *bash*                 |
+| `401 Unauthorized` OpenAI:lta             | Väärä / vanhentunut `OPENAI_API_KEY`                           |
+| VS Code näyttää “Dev container mounting…” | Päivitä selainvälilehti—Codespaces menettää toisinaan yhteyden  |
+| Notebookin ydin puuttuu                  | Notebook-valikko ➜ **Kernel ▸ Select Kernel ▸ Python 3**       |
 
    Unix-pohjaiset järjestelmät:
 
@@ -57,21 +57,24 @@ Oman haarautumisesi sisällä: **Code -> Codespaces -> New on main**
    echo . > .env
    ```
 
-3. **Muokkaa `.env`-tiedostoa**: Avaa `.env`-tiedosto tekstieditorissa (esim. VS Code, Notepad++ tai muu editori). Lisää tiedostoon seuraava rivi korvaten `your_github_token_here` omalla GitHub-tokenillasi:
+3. **Muokkaa `.env`-tiedostoa**: Avaa `.env`-tiedosto tekstieditorissa (esim. VS Code, Notepad++ tai muu editori). Lisää tiedostoon seuraavat rivit, korvaten paikkamerkit omalla Microsoft Foundry Models -päätepisteelläsi ja avaimellasi (katso [`providers.md`](03-providers.md) ohjeet niiden saamiseen):
+
+   > **Huom:** GitHub Models (ja sen `GITHUB_TOKEN`-muuttuja) poistuu käytöstä heinäkuun 2026 lopussa. Käytä sen sijaan [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
 
    ```env
-   GITHUB_TOKEN=your_github_token_here
+   AZURE_INFERENCE_ENDPOINT=your_foundry_endpoint_here
+   AZURE_INFERENCE_CREDENTIAL=your_foundry_api_key_here
    ```
 
 4. **Tallenna tiedosto**: Tallenna muutokset ja sulje tekstieditori.
 
-5. **Asenna `python-dotenv`**: Jos et ole vielä asentanut, sinun tulee asentaa `python-dotenv`-paketti, jotta voit ladata ympäristömuuttujat `.env`-tiedostosta Python-sovellukseesi. Voit asentaa sen käyttämällä `pip`-komentoa:
+5. **Asenna `python-dotenv`**: Jos et ole vielä asentanut, sinun täytyy asentaa `python-dotenv`-paketti, jotta ympäristömuuttujat ladataan `.env`-tiedostosta Python-sovellukseesi. Voit asentaa sen `pip`-komennolla:
 
    ```bash
    pip install python-dotenv
    ```
 
-6. **Lataa ympäristömuuttujat Python-skriptissä**: Käytä Python-skriptissäsi `python-dotenv`-pakettia lukeaksesi muuttujat `.env`-tiedostosta:
+6. **Lataa ympäristömuuttujat Python-skriptissäsi**: Python-skriptissäsi käytä `python-dotenv`-pakettia lataamaan ympäristömuuttujat `.env`-tiedostosta:
 
    ```python
    from dotenv import load_dotenv
@@ -80,41 +83,42 @@ Oman haarautumisesi sisällä: **Code -> Codespaces -> New on main**
    # Lataa ympäristömuuttujat .env-tiedostosta
    load_dotenv()
 
-   # Käytä GITHUB_TOKEN-muuttujaa
-   github_token = os.getenv("GITHUB_TOKEN")
+   # Käytä Microsoft Foundry Models -muuttujia
+   endpoint = os.getenv("AZURE_INFERENCE_ENDPOINT")
+   token = os.getenv("AZURE_INFERENCE_CREDENTIAL")
 
-   print(github_token)
+   print(endpoint)
    ```
 
-Siinä kaikki! Olet onnistuneesti luonut `.env`-tiedoston, lisännyt siihen GitHub-tokenisi ja ladannut sen Python-sovellukseesi.
+Siinä se! Olet onnistuneesti luonut `.env`-tiedoston, lisännyt Microsoft Foundry Models -tunnisteesi ja ladannut ne Python-sovellukseesi.
 
-## Kuinka suorittaa paikallisesti omalla tietokoneellasi
+## Miten suorittaa paikallisesti tietokoneellasi
 
-Koodin suorittaminen paikallisesti edellyttää, että sinulla on asennettuna jokin versio [Pythonista](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
+Suorittaaksesi koodin paikallisesti tietokoneellasi, sinun pitää olla asennettuna jokin versio [Pythonista](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
 
-Repo täytyy sitten kloonata:
+Käyttääksesi repositiota sinun tulee kloonata se:
 
 ```shell
 git clone https://github.com/microsoft/generative-ai-for-beginners
 cd generative-ai-for-beginners
 ```
 
-Kun kaikki on kloonattu, voit alkaa työstää!
+Kun olet saanut kaiken valmiiksi, voit aloittaa!
 
 ## Valinnaiset vaiheet
 
-### Minicondan asentaminen
+### Minicondan asennus
 
-[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) on kevyt asennustyökalu [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst):n, Pythonin sekä joidenkin pakettien asentamiseen.  
-Conda on pakettien hallintaan tarkoitettu työkalu, joka helpottaa eri Python-[**virtuaaliympäristöjen**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) ja pakettien asentamista ja vaihtoa. Se on myös hyödyllinen, kun asennettavia paketteja ei ole saatavilla `pip`-komennolla.
+[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) on kevyt asentaja [Condan](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Pythonin sekä muutamien pakettien asentamiseen.
+Conda itsessään on pakettien hallintaohjelma, joka helpottaa erilaisten Python- [**virtuaaliympäristöjen**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) ja pakettien asettelua ja vaihtamista. Se on myös hyödyllinen asentamaan paketteja, joita ei voi asentaa `pip`-komennolla.
 
-Voit seurata [Miniconda asennusohjetta](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) asennusta varten.
+Voit seurata [MiniCondan asennusopasta](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) sen asentamiseksi.
 
-Miniconda asennettuna, sinun tulee kloonata [repositorio](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) (jos et ole vielä tehnyt sitä).
+Minicondan asennettuasi kloonaa [repo](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) (jos et ole jo tehnyt).
 
-Seuraavaksi sinun täytyy luoda virtuaaliympäristö. Condalla tämä tehdään luomalla uusi ympäristötiedosto (_environment.yml_). Jos suoritat Codespacesissa, luo tämä `.devcontainer`-kansioon, eli polku on `.devcontainer/environment.yml`.
+Seuraavaksi sinun tulee luoda virtuaaliympäristö. Condalla tämä onnistuu luomalla uusi ympäristötiedosto (_environment.yml_). Jos seuraat tätä oppaana Codespacesin kautta, luo tiedosto `.devcontainer`-kansioon, eli `.devcontainer/environment.yml`.
 
-Täytä ympäristötiedostosi seuraavalla koodilla:
+Täytä ympäristötiedosto alla olevalla koodikatkelmalla:
 
 ```yml
 name: <environment-name>
@@ -130,38 +134,38 @@ dependencies:
       - azure-ai-ml
 ```
 
-Jos conda-komentoa käytettäessä tulee virheitä, voit asentaa Microsoft AI Libraries -kirjastot manuaalisesti avaamalla terminaalin ja ajamalla seuraavan komennon:
+Jos saat virheitä condaa käytettäessä, voit asentaa Microsoft AI -kirjastot manuaalisesti seuraavalla terminaalikomennolla.
 
 ```
 conda install -c microsoft azure-ai-ml
 ```
 
-Ympäristötiedosto määrittelee tarvittavat riippuvuudet. `<environment-name>` tarkoittaa haluamaasi Conda-ympäristön nimeä ja `<python-version>` on Pythonin versio (esim. `3` on uusin pääversio).
+Ympäristötiedostossa määritellään tarvittavat riippuvuudet. `<environment-name>` tarkoittaa nimeä, jonka haluat antaa Conda-ympäristöllesi, ja `<python-version>` on haluamasi Python-versio, esimerkiksi `3` on uusin iso Python-versio.
 
-Kun tämä on tehty, voit luoda Conda-ympäristösi suorittamalla seuraavat komennot komentorivillä/terminaalissa:
+Kun tiedosto on valmis, voit luoda Conda-ympäristön suorittamalla seuraavat komennot komentorivillä/terminaalissa:
 
 ```bash
-conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer-alihakupolku koskee vain Codespace-asetuksia
+conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer-alikansio koskee vain Codespace-asetuksia
 conda activate ai4beg
 ```
 
-Katso lisää [Conda environment -oppaasta](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) jos kohtaat ongelmia.
+Katso [Conda environments guide](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) jos kohtaat ongelmia.
 
-### Visual Studio Coden käyttö Python-tuelle laajennuksella
+### Visual Studio Coden käyttö Python-tukilaajennuksella
 
-Suosittelemme käyttämään tähän kurssiin [Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) -editoria yhdessä [Python-tuki-laajennuksen](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) kanssa. Tämä on kuitenkin vain suositus, ei pakollinen vaatimus.
+Suosittelemme käyttämään tätä kurssia varten [Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) -editoria, johon on asennettu [Python-tukilaajennus](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst). Tämä on kuitenkin enemmän suositus kuin pakollinen vaatimus.
 
-> **Huom:** Kun avaat kurssin repositorion VS Codessa, voit halutessasi rakentaa projektin säiliöön. Tämä onnistuu [erikoisella `.devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) -kansiolla, joka löytyy kurssin reposta. Lisätietoa tästä myöhemmin.
+> **Huom:** Avaamalla kurssin repoin VS Codessa sinulla on mahdollisuus asentaa projekti säilöön (container). Tämä johtuu reposta löytyvästä [erityisestä `.devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) -kansiosta. Lisätietoja tästä myöhemmin.
 
-> **Huom:** Kun kloonaat ja avaat kansion VS Codessa, editori ehdottaa automaattisesti Python-tuen asennusta.
+> **Huom:** Kloonattuasi ja avatessasi kansion VS Codessa, sinulle suositellaan automaattisesti Python-tukilaajennuksen asentamista.
 
-> **Huom:** Jos VS Code ehdottaa repositorion avaamista säiliössä, hylkää tämä, jos haluat käyttää tietokoneelle asennettua Python-versiota.
+> **Huom:** Jos VS Code ehdottaa repoin avaamista uudestaan säilössä, hylkää tämä pyyntö käyttääksesi paikallisesti asennettua Python-versiota.
 
 ### Jupyterin käyttö selaimessa
 
-Voit myös tehdä projektia [Jupyter-ympäristössä](https://jupyter.org?WT.mc_id=academic-105485-koreyst) suoraan selaimessasi. Sekä klassinen Jupyter että [Jupyter Hub](https://jupyter.org/hub?WT.mc_id=academic-105485-koreyst) tarjoavat miellyttävän kehitysympäristön ominaisuuksineen, kuten automaattinen täydennys, koodin korostus jne.
+Voit myös tehdä projektia [Jupyter-ympäristössä](https://jupyter.org?WT.mc_id=academic-105485-koreyst) suoraan selaimessasi. Sekä klassinen Jupyter että [Jupyter Hub](https://jupyter.org/hub?WT.mc_id=academic-105485-koreyst) tarjoavat miellyttävän kehitysympäristön ominaisuuksineen, kuten koodin automaattisen täydennyksen ja korostamisen.
 
-Aloittaaksesi Jupyteriä paikallisesti, siirry terminaaliin/komentoriville, mene kurssihakemistoon ja aja:
+Jupyterin lokalisoitu käynnistys: Mene terminaaliin/komentoriville, siirry kurssin kansion sisään ja suorita:
 
 ```bash
 jupyter notebook
@@ -173,60 +177,63 @@ tai
 jupyterhub
 ```
 
-Tämä käynnistää Jupyter-instanssin, ja pääsylinkin URL tulostetaan komentoriville.
+Tämä käynnistää Jupyter-instanssin ja saat sen URL-osoitteen komentoriville näytettäväksi.
 
-Kun avaat URL-osoitteen, näet kurssin rakenteen ja voit avata `*.ipynb`-tiedostoja, esimerkiksi `08-building-search-applications/python/oai-solution.ipynb`.
+Kun pääset URL-osoitteeseen, näet kurssin sisällön ja voit navigoida mihin tahansa `*.ipynb`-tiedostoon. Esimerkiksi `08-building-search-applications/python/oai-solution.ipynb`.
 
-### Suoritus säiliössä
+### Suoritus säilössä (container)
 
-Vaihtoehtona kaiken järjestämiselle omalle koneelle tai Codespaceen on käyttää [säiliötä](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst). Kurssirepossa oleva `.devcontainer`-kansio mahdollistaa projektin käynnistämisen säiliössä VS Codessa. Codespacesin ulkopuolella tämä vaatii Dockerin asennuksen ja hieman teknistä osaamista, joten suosittelemme tätä vain kokeneille säiliöiden käyttäjille.
+Vaihtoehtona kaiken asentamiselle tietokoneelle tai Codespaceen on käyttää [säilöä](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Kurssirepon erityinen `.devcontainer`-kansio mahdollistaa projektin asentamisen VS Codessa säilöön. Codespacesin ulkopuolella tämä vaatii Dockerin asennuksen, ja on aika työlästä, joten suosittelemme tätä vain säilöjen kanssa kokeneille.
 
-Yksi parhaista tavoista pitää API-avaimesi turvassa GitHub Codespacessa on käyttää Codespace Secrets -toimintoa. Tutustu [Codespaces-salaisuuksien hallintaan](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst).
+Yksi parhaista tavoista pitää API-avaimesi turvassa GitHub Codespacesissä on käyttää Codespace Secrets -ominaisuutta. Seuraa [Codespacesin salaisuuksien hallintaopasta](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) lisätietojen saamiseksi.
+
 
 ## Oppitunnit ja tekniset vaatimukset
 
-Kurssi sisältää 6 konseptituntia ja 6 koodausoppituntia.
+Kurssilla on 6 teoriaoppituntia ja 6 koodaustuntia.
 
-Koodausoppitunneilla käytämme Azure OpenAI -palvelua. Sinun tarvitsee päästä Azure OpenAI -palveluun ja sinulla tulee olla API-avain tämän koodin suorittamiseen. Voit hakea pääsyä [täyttämällä tämän hakemuksen](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst).
+Koodaustunneilla käytämme Azure OpenAI -palvelua. Sinun tulee saada pääsy Azure OpenAI -palveluun ja API-avain koodin suorittamiseksi. Voit hakea pääsyä [täyttämällä tämän hakemuksen](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst).
 
-Kun odotat hakemuksesi käsittelyä, jokaisella koodausoppitunnilla on mukana `README.md` -tiedosto, jossa voit tarkastella koodia ja tuloksia.
+Kun odotat hakemuksen käsittelyä, jokaisen koodaustunnin mukana on myös `README.md`-tiedosto, jossa voit tarkastella koodia ja tuloksia.
 
-## Azure OpenAI -palvelun käyttöönotto ensimmäistä kertaa
+## Azure OpenAI -palvelun ensimmäinen käyttö
 
-Jos työskentelet Azure OpenAI -palvelun kanssa ensimmäistä kertaa, seuraa tätä opasta kuinka [luot ja otat käyttöön Azure OpenAI -resurssin.](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
+Jos käytät Azure OpenAI -palvelua ensimmäistä kertaa, seuraa tätä opasta, kuinka [luoda ja ottaa käyttöön Azure OpenAI Service -resurssi.](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
 
-## OpenAI API:n käyttö ensimmäistä kertaa
+## OpenAI API:n ensimmäinen käyttö
 
-Jos työskentelet OpenAI API:n kanssa ensimmäistä kertaa, seuraa opasta kuinka [luot ja käytät rajapintaa.](https://platform.openai.com/docs/quickstart?context=pythont&WT.mc_id=academic-105485-koreyst)
+Jos käytät OpenAI API:a ensimmäistä kertaa, seuraa opasta miten [luoda ja käyttää rajapintaa.](https://platform.openai.com/docs/quickstart?context=pythont&WT.mc_id=academic-105485-koreyst)
 
 ## Tapaa muita oppijoita
 
-Olemme luoneet kanavia viralliselle [AI Community Discord -palvelimellemme](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) muiden oppijoiden tapaamista varten. Tämä on erinomainen tapa verkostoitua muiden samanhenkisten yrittäjien, rakentajien, opiskelijoiden ja kaikkien generatiivisen tekoälyn osaamisen kehittämisestä kiinnostuneiden kanssa.
+Olemme luoneet kanavia viralliselle [AI Community Discord -palvelimellemme](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) muiden oppijoiden tapaamista varten. Tämä on loistava tapa verkostoitua samanhenkisten yrittäjien, rakentajien, opiskelijoiden ja kaikkien kanssa, jotka haluavat kehittyä Generatiivisessa tekoälyssä.
 
-[![Liity discord-kanavalle](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
+[![Liity Discord-kanavalle](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
-Projektitiimi on myös läsnä tässä Discord-palvelimessa auttamassa oppijoita.
+Projektitiimi on myös mukana tässä Discord-palvelimella auttamassa oppijoita.
 
 ## Osallistu
 
-Tämä kurssi on avoimen lähdekoodin hanke. Jos havaitset parannusmahdollisuuksia tai ongelmia, tee [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) tai ilmoita [GitHub-ongelmasta](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst).
+Tämä kurssi on avoimen lähdekoodin aloitte. Jos näet parannettavaa tai ongelmia, tee [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) tai kirjaa [GitHub-issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst).
 
-Projektitiimi seuraa kaikkia panostuksia. Osallistuminen avoimen lähdekoodin hankkeisiin on upea tapa kehittää uraasi generatiivisen tekoälyn parissa.
+Projektitiimi seuraa kaikkia panoksia. Avoimen lähdekoodin osallistuminen on upea tapa rakentaa uraasi Generatiivisessa tekoälyssä.
 
-Suurin osa panostuksista vaatii, että allekirjoitat Kontribuuttorisopimuksen (Contributor License Agreement, CLA), jossa vakuutat, että sinulla on oikeus ja että annat meille oikeudet käyttää panostasi. Lisätietoja löytyy [CLA, Contributor License Agreement -sivustolta](https://cla.microsoft.com?WT.mc_id=academic-105485-koreyst).
+Useimmat osallistumiset edellyttävät, että hyväksyt Contributor License Agreementin (CLA), jossa vahvistat, että sinulla on oikeus myöntää meille oikeudet käyttää panostasi. Lisätietoja saat osoitteesta [CLA, Contributor License Agreement -sivusto](https://cla.microsoft.com?WT.mc_id=academic-105485-koreyst).
 
-Tärkeää: kun käännät tekstiä tässä repossa, varmista, että et käytä konekäännöksiä. Tarkistamme käännökset yhteisön kautta, joten anna käännöksiä vain kielillä, joissa olet osaaja.
+Tärkeää: käännettäessä tekstiä tässä repossa varmista, ettei käytetä konekäännöksiä. Varmistamme käännökset yhteisön kautta, joten toimi käännösten vapaaehtoisena vain kielissä, joissa olet taitava.
 
-Kun lähetät pull requestin, CLA-botti automaattisesti tarkistaa, tarvitseeko sinun allekirjoittaa CLA, ja merkitsee PR:n asianmukaisesti (esim. tagi, kommentti). Noudata botin ohjeita. Tämä riittää tekemään vain kerran kaikissa CLA-sopimuksia käyttävissä repokoissa.
+Kun teet pull requestin, CLA-botti määrittää automaattisesti, tarvitseeko sinun toimittaa CLA ja merkitsee PR:n asianmukaisesti (esim. tunnisteella, kommentilla). Seuraa vain botin ohjeita. Tämä tarvitaan vain kerran kaikissa CLA:ta käyttävissä repositioissa.
 
-Tämä projekti on ottanut käyttöön [Microsoft Open Source Code of Conductin](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst). Lisätietoja saat lukemalla Code of Conductin usein kysytyt kysymykset (FAQ) tai ottamalla yhteyttä [sähköpostitse opencode@microsoft.com](opencode@microsoft.com) lisäkysymyksissä tai palautteessa.
 
-## Aloitetaan!
-Nyt kun olet suorittanut kurssin loppuun saattamiseksi tarvittavat vaiheet, aloitetaan perehtymällä [Generatiiviseen tekoälyyn ja suurimallimalleihin](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
+Tämä projekti on ottanut käyttöön [Microsoftin avoimen lähdekoodin käytösohjeet](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst). Lisätietoja löytyy Käytösohjeiden UKK:sta tai voit ottaa yhteyttä osoitteeseen [Email opencode](opencode@microsoft.com) mahdollisia lisäkysymyksiä tai kommentteja varten.
+
+## Aloitetaan
+
+Nyt kun olet suorittanut kurssin vaaditut vaiheet, aloitetaan tutustumalla [johdantoon generatiiviseen tekoälyyn ja suurriippuvuusmalleihin](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Vastuuvapauslauseke**:
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Pyrimme tarkkuuteen, mutta otathan huomioon, että automaattikäännöksissä saattaa esiintyä virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen omalla kielellä tulee pitää virallisena lähteenä. Tärkeissä tiedoissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tästä käännöksestä johtuvista väärinymmärryksistä tai tulkinnoista.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, otathan huomioon, että automaattiset käännökset saattavat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäiskielellä on virallinen lähde. Tärkeissä asioissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
