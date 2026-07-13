@@ -2,59 +2,60 @@
 
 ## はじめに
 
-このレッスンで学ぶ内容:
+このレッスンでは以下を扱います：
 
-- 主要な2つのMetaファミリーモデル - Llama 3.1 と Llama 3.2 の探索
+- Metaファミリーの主要な2つのモデル - Llama 3.1とLlama 3.2 の探求
 - 各モデルのユースケースとシナリオの理解
 - 各モデルの独自機能を示すコードサンプル
 
-## Metaファミリーモデルについて
 
-このレッスンでは、Metaファミリーまたは「Llama Herd」から2つのモデル、Llama 3.1 と Llama 3.2 を探ります。
+## Metaファミリーのモデル
 
-これらのモデルは異なるバリアントで提供され、GitHubモデルマーケットプレイスで入手可能です。GitHub Modelsを使って[AIモデルでプロトタイピングする方法](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst)の詳細はこちらです。
+このレッスンでは、Metaファミリー、または「Llama Herd」から2つのモデル - Llama 3.1 と Llama 3.2 を探ります。
 
-モデルバリアント:  
-- Llama 3.1 - 70B Instruct  
-- Llama 3.1 - 405B Instruct  
-- Llama 3.2 - 11B Vision Instruct  
+これらのモデルはさまざまなバリエーションがあり、[Microsoft Foundry Models catalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst)で利用可能です。
+
+> **注意:** GitHub Modelsは2026年7月末に終了します。AIモデルのプロトタイピングに [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) を使用する詳細はこちらをご覧ください。
+
+モデルバリエーション：
+- Llama 3.1 - 70B Instruct
+- Llama 3.1 - 405B Instruct
+- Llama 3.2 - 11B Vision Instruct
 - Llama 3.2 - 90B Vision Instruct
 
-*注意: Llama 3もGitHub Modelsで利用可能ですが、本レッスンでは扱いません*
+*注意：Llama 3もMicrosoft Foundry Modelsで利用可能ですが、本レッスンでは扱いません*
 
 ## Llama 3.1
 
-4050億パラメータを持つLlama 3.1は、オープンソースのLLMカテゴリに属します。
+4050億パラメータで、Llama 3.1はオープンソースLLMカテゴリに属します。
 
-このモデルは初期リリースのLlama 3をアップグレードし、以下を提供します:
+このモデルは以前のリリースであるLlama 3のアップグレード版であり、以下の特徴を提供します：
 
-- より大きなコンテキストウィンドウ - 8kトークンから128kトークンへ
-- より大きな最大出力トークン - 2048から4096へ
-- 向上した多言語対応 - トレーニングトークン数の増加により
+- より大きなコンテキストウィンドウ - 128kトークン対8kトークン
+- より大きな最大出力トークン数 - 4096対2048
+- より良い多言語対応 - トレーニングトークンの増加による
 
-これにより、Llama 3.1はGenAIアプリケーション構築時により複雑なユースケースを扱うことが可能になります。例えば:  
-- ネイティブ関数呼び出し - LLMワークフロー外の外部ツールや関数を呼び出す能力  
-- より良いRAGパフォーマンス - より大きなコンテキストウィンドウによる  
-- 合成データ生成 - 微調整のための効果的なデータ作成能力  
+これにより、Llama 3.1はGenAIアプリケーション構築時により複雑なユースケースに対応可能になります。例えば：
+- ネイティブ関数呼び出し - LLMワークフロー外の外部ツールや関数を呼び出す能力
+- より良いRAGパフォーマンス - より大きなコンテキストウィンドウによる
+- 合成データ生成 - ファインチューニングなどのタスクのための効果的なデータを作成する能力
 
 ### ネイティブ関数呼び出し
 
-Llama 3.1は関数やツール呼び出しをより効果的に行えるようにファインチューニングされています。また、モデルはユーザープロンプトに基づいて使用する必要のある2つの組み込みツールを識別できます。
+Llama 3.1は関数やツールの呼び出しをより効果的に行うようファインチューニングされています。また、ユーザーのプロンプトに基づいて使用が必要と判断される2つの組み込みツールがあります。これらのツールは：
 
-これらのツールは:
+- **Brave Search** - Web検索を行い、天気などの最新情報を取得可能
+- **Wolfram Alpha** - より複雑な数学的計算に使用でき、自作関数を書く必要がありません
 
-- **Brave Search** - ウェブ検索を行い、天気などの最新情報を取得可能  
-- **Wolfram Alpha** - 複雑な数学計算に利用できるため、自作関数は不要  
+また、LLMが呼び出せる独自のカスタムツールも作成できます。
 
-独自のカスタムツールも作成してLLMが呼び出せるようにできます。
+以下のコード例では：
 
-以下のコード例では:
+- システムプロンプト内で利用可能なツール（brave_search, wolfram_alpha）を定義しています。
+- ある都市の天気について問い合わせるユーザープロンプトを送信します。
+- LLMはBrave Searchツールの呼び出しで応答し、 `<|python_tag|>brave_search.call(query="Stockholm weather")` のようになります。
 
-- システムプロンプト内に利用可能なツール（brave_search、wolfram_alpha）を定義します。  
-- ある都市の天気を尋ねるユーザープロンプトを送信します。  
-- LLMはBrave Searchツールへの呼び出しを `<|python_tag|>brave_search.call(query="Stockholm weather")` のように返します。
-
-*注意: この例はツール呼び出しのみ行い、結果を取得したい場合はBrave APIページで無料アカウントを作成し、関数自体を定義する必要があります。*
+*注意：この例はツール呼び出しのみを行います。結果を得るには、Brave APIページで無料アカウントを作成し、関数自体を定義する必要があります。
 
 ```python 
 import os
@@ -62,9 +63,10 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import AssistantMessage, SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-token = os.environ["GITHUB_TOKEN"]
-endpoint = "https://models.inference.ai.azure.com"
-model_name = "meta-llama-3.1-405b-instruct"
+# これらは Microsoft Foundry プロジェクトの「概要」ページから取得してください
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
+model_name = "Meta-Llama-3.1-405B-Instruct"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -96,13 +98,14 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-LLMであるにもかかわらず、Llama 3.1の制約の一つはマルチモーダリティがないこと、つまり画像など異なるタイプの入力をプロンプトとして使い、応答を生成できない点です。この機能がLlama 3.2の主要な特徴の一つです。その他の特徴は:
+Llama 3.1はLLMであるものの、多様な入力（画像など）をプロンプトとして使用し応答を返すことができないという制限があります。この機能はLlama 3.2の主な特徴のひとつです。他の特徴には以下が含まれます：
 
-- マルチモーダリティ - テキストと画像プロンプトの両方を評価可能  
-- 小〜中サイズのバリエーション（11B と 90B） - 柔軟なデプロイオプションを提供  
-- テキストのみのバリエーション（1B と 3B） - エッジ / モバイルデバイスでのデプロイが可能で低レイテンシを実現  
+- マルチモーダリティ - テキストおよび画像の両方のプロンプトを評価可能
+- 小規模から中規模のバリエーション（11Bと90B） - 柔軟な展開オプションを提供
+- テキストのみバリエーション（1Bと3B） - エッジ/モバイルデバイスへの展開や低レイテンシを実現
 
-このマルチモーダルサポートはオープンソースモデルの世界における大きな進歩を示します。以下のコード例では、画像とテキストの両方のプロンプトを取り、Llama 3.2 90Bから画像の分析を得ます。
+マルチモーダルサポートはオープンソースモデルの世界で大きな進歩を示します。以下のコード例では、画像とテキストのプロンプトの両方を使用して、Llama 3.2 90Bによる画像の分析を行います。
+
 
 ### Llama 3.2によるマルチモーダルサポート
 
@@ -119,8 +122,9 @@ from azure.ai.inference.models import (
 )
 from azure.core.credentials import AzureKeyCredential
 
-token = os.environ["GITHUB_TOKEN"]
-endpoint = "https://models.inference.ai.azure.com"
+# これらはMicrosoft Foundryプロジェクトの「概要」ページから取得します
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Llama-3.2-90B-Vision-Instruct"
 
 client = ChatCompletionsClient(
@@ -151,13 +155,13 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## 学びはここで終わりません、旅を続けましょう
+## 学習はここで終わらない、旅を続けよう
 
-このレッスンを修了したら、ぜひ[Generative AI Learningコレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)をチェックして、生成AIの知識をさらにレベルアップしましょう！
+このレッスンを終えたら、[Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)をチェックして、生成AIの知識をさらにレベルアップしましょう！
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**免責事項**:  
-本書類はAI翻訳サービス「Co-op Translator」（https://github.com/Azure/co-op-translator）を使用して翻訳されています。正確性を期しておりますが、自動翻訳には誤りや不正確な箇所が含まれる可能性があります。原文の言語で記載された文書が正式な情報源とみなされるべきです。重要な情報については、専門の翻訳者による人力翻訳を推奨します。本翻訳の利用に起因するいかなる誤解や誤訳についても、当方は責任を負いかねます。
+**免責事項**：
+本書類は AI 翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を期していますが、自動翻訳には誤りや不正確な部分が含まれる可能性があることをご承知おきください。原文の原語版が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じたいかなる誤解や解釈違いについても、当方は責任を負いかねます。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

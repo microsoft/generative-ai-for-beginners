@@ -2,75 +2,78 @@
 
 [![함수 호출과 통합하기](../../../translated_images/ko/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
-이전 레슨에서 이미 많은 것을 배웠습니다. 하지만 더 개선할 수 있는 부분이 있습니다. 우리가 해결할 수 있는 몇 가지 문제는 응답을 더 일관된 형식으로 만들어 후속 작업에서 쉽게 처리할 수 있도록 하는 방법과, 다른 소스의 데이터를 추가하여 애플리케이션을 더욱 풍부하게 만드는 방법입니다.
+이전 수업에서 꽤 많은 것을 배웠습니다. 그러나 우리는 더 개선할 수 있습니다. 여기서 다루고자 하는 것은 응답을 하위 단계에서 더 쉽게 사용할 수 있도록 더 일관된 응답 형식을 얻는 방법과 애플리케이션을 더욱 풍부하게 만들기 위해 다른 소스의 데이터를 추가하는 방법입니다.
 
-이 장에서는 위에서 언급한 문제를 해결하는 방법을 다룹니다.
+위에서 언급한 문제는 이 장에서 해결하고자 하는 문제들입니다.
 
 ## 소개
 
-이 레슨에서는 다음을 다룹니다:
+이 수업에서 다룰 내용은 다음과 같습니다:
 
-- 함수 호출이 무엇인지와 그 사용 사례를 설명합니다.
-- Azure OpenAI를 사용하여 함수 호출을 생성합니다.
-- 애플리케이션에 함수 호출을 통합하는 방법을 설명합니다.
+- 함수 호출이 무엇이며 사용 사례를 설명합니다.
+- Azure OpenAI를 사용해 함수 호출을 생성하는 방법.
+- 애플리케이션에 함수 호출을 통합하는 방법.
 
 ## 학습 목표
 
-이 레슨이 끝날 때까지 다음을 할 수 있습니다:
+이 수업이 끝나면 다음을 할 수 있습니다:
 
-- 함수 호출을 사용하는 목적을 설명합니다.
-- Azure OpenAI 서비스를 사용하여 함수 호출을 설정합니다.
-- 애플리케이션의 사용 사례에 맞는 효과적인 함수 호출을 설계합니다.
+- 함수 호출을 사용하는 목적을 설명할 수 있습니다.
+- Azure OpenAI 서비스를 사용해 함수 호출을 설정할 수 있습니다.
+- 애플리케이션 사용 사례에 맞는 효과적인 함수 호출을 설계할 수 있습니다.
 
-## 시나리오: 챗봇을 함수로 개선하기
+## 시나리오: 기능으로 챗봇 개선하기
 
-이번 레슨에서는 교육 스타트업을 위한 기능을 구축하려고 합니다. 사용자가 챗봇을 사용하여 기술 과정을 찾을 수 있도록 하는 기능입니다. 우리는 사용자의 기술 수준, 현재 역할, 관심 있는 기술에 맞는 과정을 추천할 것입니다.
+이 수업에서는 교육 스타트업을 위해 사용자가 챗봇을 통해 기술 과정을 찾을 수 있는 기능을 구축하고자 합니다. 사용자의 기술 수준, 현재 직무 및 관심 기술에 맞는 과정을 추천할 것입니다.
 
-이 시나리오를 완료하기 위해 다음을 조합하여 사용합니다:
+이 시나리오를 완료하기 위해 다음을 조합해서 사용할 것입니다:
 
-- `Azure OpenAI`를 사용하여 사용자에게 채팅 경험을 제공합니다.
-- `Microsoft Learn Catalog API`를 사용하여 사용자의 요청에 따라 과정을 찾을 수 있도록 돕습니다.
-- `Function Calling`을 사용하여 사용자의 쿼리를 함수로 보내 API 요청을 수행합니다.
+- `Azure OpenAI`를 사용해 사용자에게 채팅 경험을 제공합니다.
+- `Microsoft Learn Catalog API`로 사용자의 요청에 따라 과정을 찾도록 돕습니다.
+- `Function Calling`을 사용해 사용자의 질의를 함수로 전달하여 API 요청을 합니다.
 
-먼저, 우리가 왜 함수 호출을 사용해야 하는지 살펴보겠습니다:
+먼저, 함수 호출을 왜 사용하려 하는지 살펴보겠습니다:
 
-## 함수 호출의 필요성
+## 함수 호출이 필요한 이유
 
-함수 호출 이전에는 LLM의 응답이 비구조적이고 일관성이 없었습니다. 개발자는 각 응답의 변형을 처리할 수 있도록 복잡한 검증 코드를 작성해야 했습니다. 사용자는 "스톡홀름의 현재 날씨는 무엇인가요?"와 같은 질문에 답을 받을 수 없었습니다. 이는 모델이 학습된 데이터의 시간에 제한되었기 때문입니다.
+함수 호출 이전에는 LLM이 반환하는 응답이 비구조적이고 일관되지 않았습니다. 개발자는 각각의 응답 변형을 처리하는 복잡한 검증 코드를 작성해야 했습니다. 사용자는 "스톡홀름의 현재 날씨가 어떻게 돼?"와 같은 답변을 받을 수 없었습니다. 이는 모델이 학습된 시점의 데이터 한계 때문입니다.
 
-함수 호출은 Azure OpenAI 서비스의 기능으로 다음과 같은 제한을 극복할 수 있습니다:
+함수 호출은 Azure OpenAI 서비스의 기능으로서 다음 제한점을 극복합니다:
 
-- **일관된 응답 형식**. 응답 형식을 더 잘 제어할 수 있다면 응답을 다른 시스템에 통합하기가 더 쉬워집니다.
-- **외부 데이터**. 애플리케이션의 다른 소스 데이터를 채팅 컨텍스트에서 사용할 수 있는 기능.
+- **일관된 응답 형식**. 응답 형식을 더 잘 제어할 수 있다면 하위 시스템과 쉽게 통합할 수 있습니다.
+- **외부 데이터 사용**. 애플리케이션 내 다른 소스의 데이터를 채팅 컨텍스트에서 사용할 수 있습니다.
 
 ## 시나리오를 통한 문제 설명
 
-> 아래 시나리오를 실행하려면 [포함된 노트북](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst)을 사용하는 것을 권장합니다. 또는 단순히 읽으면서 함수가 문제를 해결하는 데 어떻게 도움이 되는지 설명하는 예제를 확인할 수 있습니다.
+> 아래 시나리오를 실행하려면 [포함된 노트북](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst)을 사용하는 것을 권장합니다. 아니면 읽으면서 함수가 문제를 어떻게 해결하는지 이해할 수 있습니다.
 
-응답 형식 문제를 설명하는 예제를 살펴보겠습니다:
+응답 형식 문제를 보여주는 예제를 살펴보겠습니다:
 
-학생 데이터를 데이터베이스에 저장하여 적합한 과정을 추천하고 싶다고 가정해봅시다. 아래에는 매우 유사한 데이터를 포함한 두 학생 설명이 있습니다.
+학생 데이터베이스를 생성해 적합한 과정을 제안하려고 합니다. 아래 두 학생 설명은 데이터 내용이 매우 유사합니다.
 
-1. Azure OpenAI 리소스에 연결을 생성합니다:
+1. Azure OpenAI 리소스에 연결을 만듭니다:
 
    ```python
    import os
    import json
-   from openai import AzureOpenAI
+   from openai import OpenAI
    from dotenv import load_dotenv
    load_dotenv()
 
-   client = AzureOpenAI(
-   api_key=os.environ['AZURE_OPENAI_API_KEY'],  # this is also the default, it can be omitted
-   api_version = "2023-07-01-preview"
+   # Responses API는 Azure OpenAI (Microsoft Foundry) v1 엔드포인트에서 제공됩니다
+   # 따라서 OpenAI 클라이언트를 <your-endpoint>/openai/v1/로 지정합니다.
+   endpoint = os.environ['AZURE_OPENAI_ENDPOINT']
+   client = OpenAI(
+   api_key=os.environ['AZURE_OPENAI_API_KEY'],
+   base_url=f"{endpoint.rstrip('/')}/openai/v1/",
    )
 
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   아래는 `api_type`, `api_base`, `api_version`, `api_key`를 설정하여 Azure OpenAI와 연결을 구성하는 Python 코드입니다.
+   아래는 Azure OpenAI 연결 설정을 위한 Python 코드입니다. v1 엔드포인트를 사용하므로 `api_key`와 `base_url`만 설정합니다 (`api_version`은 필요 없음).
 
-1. `student_1_description` 및 `student_2_description` 변수를 사용하여 두 학생 설명을 생성합니다.
+1. `student_1_description` 및 `student_2_description` 변수로 두 학생 설명을 만듭니다.
 
    ```python
    student_1_description="Emily Johnson is a sophomore majoring in computer science at Duke University. She has a 3.7 GPA. Emily is an active member of the university's Chess Club and Debate Team. She hopes to pursue a career in software engineering after graduating."
@@ -78,9 +81,9 @@
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   위 학생 설명을 LLM에 보내 데이터를 분석하려고 합니다. 이 데이터는 애플리케이션에서 사용되거나 API로 전송되거나 데이터베이스에 저장될 수 있습니다.
+   위 학생 설명을 LLM에 보내 데이터를 파싱하려 합니다. 이 데이터는 나중에 API 요청에 보내거나 데이터베이스에 저장할 수 있습니다.
 
-1. LLM에 우리가 관심 있는 정보를 추출하고 JSON 형식으로 응답을 반환하도록 지시하는 두 개의 동일한 프롬프트를 생성합니다:
+1. LLM에 필요한 정보를 추출하도록 지시하는 두 개의 동일한 프롬프트를 만듭니다:
 
    ```python
    prompt1 = f'''
@@ -110,33 +113,35 @@
    '''
    ```
 
-   위 프롬프트는 LLM에게 정보를 추출하고 JSON 형식으로 응답을 반환하도록 지시합니다.
+   위 프롬프트는 LLM에 정보를 추출해 JSON 형식으로 응답하도록 지시합니다.
 
-1. 프롬프트와 Azure OpenAI 연결을 설정한 후, `openai.ChatCompletion`을 사용하여 프롬프트를 LLM에 보냅니다. 프롬프트는 `messages` 변수에 저장되고 역할은 `user`로 지정됩니다. 이는 사용자가 챗봇에 메시지를 작성하는 것을 모방합니다.
+1. 프롬프트와 Azure OpenAI 연결 설정 후 `client.responses.create`를 사용해 프롬프트를 LLM에 전송합니다. 프롬프트는 `input` 변수에 저장하며 역할은 `user`로 지정하여 사용자가 챗봇에 메시지를 보낸 것처럼 합니다.
 
    ```python
-   # response from prompt one
-   openai_response1 = client.chat.completions.create(
+   # 프롬프트 1에 대한 응답
+   openai_response1 = client.responses.create(
    model=deployment,
-   messages = [{'role': 'user', 'content': prompt1}]
+   input = [{'role': 'user', 'content': prompt1}],
+   store=False,
    )
-   openai_response1.choices[0].message.content
+   openai_response1.output_text
 
-   # response from prompt two
-   openai_response2 = client.chat.completions.create(
+   # 프롬프트 2에 대한 응답
+   openai_response2 = client.responses.create(
    model=deployment,
-   messages = [{'role': 'user', 'content': prompt2}]
+   input = [{'role': 'user', 'content': prompt2}],
+   store=False,
    )
-   openai_response2.choices[0].message.content
+   openai_response2.output_text
    ```
 
-이제 두 요청을 LLM에 보내고 `openai_response1['choices'][0]['message']['content']`를 통해 받은 응답을 확인할 수 있습니다.
+이제 두 요청을 LLM에 보내고 `openai_response1.output_text`와 같이 받아온 응답을 확인할 수 있습니다.
 
-1. 마지막으로, `json.loads`를 호출하여 응답을 JSON 형식으로 변환할 수 있습니다:
+1. 마지막으로 `json.loads`를 사용해 응답을 JSON 형식으로 변환합니다:
 
    ```python
-   # Loading the response as a JSON object
-   json_response1 = json.loads(openai_response1.choices[0].message.content)
+   # 응답을 JSON 객체로 로드 중
+   json_response1 = json.loads(openai_response1.output_text)
    json_response1
    ```
 
@@ -164,59 +169,60 @@
    }
    ```
 
-   프롬프트가 동일하고 설명이 유사함에도 불구하고, `Grades` 속성의 값이 다르게 형식화된 것을 볼 수 있습니다. 예를 들어, `3.7` 또는 `3.7 GPA` 형식으로 나타날 수 있습니다.
+   같은 프롬프트와 유사한 설명에도 불구하고 `Grades` 속성 값은 다르게 형식화되어 `3.7` 또는 `3.7 GPA`처럼 나올 수 있습니다.
 
-   이 결과는 LLM이 작성된 프롬프트 형태의 비구조적 데이터를 받아 비구조적 데이터로 반환하기 때문입니다. 우리는 이 데이터를 저장하거나 사용할 때 무엇을 기대해야 하는지 알 수 있도록 구조화된 형식이 필요합니다.
+   이는 LLM이 비구조적 데이터(프롬프트 텍스트)를 가져와 역시 비구조적 데이터로 반환하기 때문입니다. 데이터를 저장하거나 활용할 때 기대하는 형식을 알 수 있도록 구조화된 형식이 필요합니다.
 
-그렇다면 형식 문제를 어떻게 해결할 수 있을까요? 함수 호출을 사용하면 구조화된 데이터를 받을 수 있습니다. 함수 호출을 사용할 때 LLM이 실제로 함수 호출을 실행하거나 실행하지는 않습니다. 대신, 우리는 LLM이 응답을 따를 구조를 만듭니다. 그런 다음 이러한 구조화된 응답을 사용하여 애플리케이션에서 실행할 함수를 결정합니다.
+그렇다면 형식 문제는 어떻게 해결할 수 있을까요? 함수 호출을 사용하면 구조화된 데이터를 확실히 받을 수 있습니다. 함수 호출 시 LLM은 함수를 직접 호출하거나 실행하지 않습니다. 대신, 응답을 위한 구조를 정의해 LLM이 그에 따라 응답하도록 합니다. 그 구조화된 응답을 바탕으로 애플리케이션에서 어떤 함수를 실행할지 결정하는 것입니다.
 
-![function flow](../../../translated_images/ko/Function-Flow.083875364af4f4bb.webp)
+![기능 흐름](../../../translated_images/ko/Function-Flow.083875364af4f4bb.webp)
 
-그런 다음 함수에서 반환된 데이터를 가져와 LLM에 다시 보냅니다. LLM은 자연어를 사용하여 사용자의 질문에 답변합니다.
+함수에서 반환된 값을 가져와 다시 LLM에게 보내면 LLM은 자연어로 응답해 사용자의 질문에 답합니다.
 
 ## 함수 호출 사용 사례
 
-함수 호출이 애플리케이션을 개선할 수 있는 다양한 사용 사례가 있습니다:
+함수 호출이 앱을 개선할 수 있는 다양한 사용 사례가 있습니다:
 
-- **외부 도구 호출**. 챗봇은 사용자 질문에 대한 답변을 제공하는 데 매우 유용합니다. 함수 호출을 사용하면 챗봇이 사용자의 메시지를 사용하여 특정 작업을 완료할 수 있습니다. 예를 들어, 학생이 챗봇에게 "이 과목에 대해 더 많은 도움을 요청하는 이메일을 내 강사에게 보내주세요"라고 요청할 수 있습니다. 이는 `send_email(to: string, body: string)`이라는 함수 호출을 생성할 수 있습니다.
+- **외부 도구 호출**. 챗봇은 사용자 질문에 답하는 데 탁월합니다. 함수 호출을 사용하면 챗봇이 사용자의 메시지를 특정 작업을 완료하는 데 쓸 수 있습니다. 예를 들어 학생이 "이 과목에 대해 더 도움이 필요하다고 강사에게 이메일 보내줘"라고 하면 `send_email(to: string, body: string)` 함수를 호출할 수 있습니다.
 
-- **API 또는 데이터베이스 쿼리 생성**. 사용자는 자연어를 사용하여 정보를 찾고 이를 형식화된 쿼리 또는 API 요청으로 변환할 수 있습니다. 예를 들어, 교사가 "마지막 과제를 완료한 학생은 누구인가요?"라고 요청하면 `get_completed(student_name: string, assignment: int, current_status: string)`이라는 함수를 호출할 수 있습니다.
+- **API 또는 데이터베이스 쿼리 생성**. 사용자는 자연어로 정보를 찾아 포맷된 쿼리나 API 요청으로 변환됩니다. 예를 들어 교사가 "최근 과제를 완료한 학생이 누구인가"를 요청하면 `get_completed(student_name: string, assignment: int, current_status: string)` 함수가 호출될 수 있습니다.
 
-- **구조화된 데이터 생성**. 사용자는 텍스트 블록 또는 CSV를 가져와 LLM을 사용하여 중요한 정보를 추출할 수 있습니다. 예를 들어, 학생이 평화 협정에 대한 위키피디아 기사를 AI 플래시카드로 변환할 수 있습니다. 이는 `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`라는 함수를 사용하여 수행할 수 있습니다.
+- **구조화된 데이터 생성**. 사용자는 텍스트 블록이나 CSV에서 중요한 정보를 추출하기 위해 LLM을 사용할 수 있습니다. 예를 들어, 학생이 평화 협정에 관한 위키피디아 기사를 AI 플래시카드로 변환할 때 `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)` 함수를 사용할 수 있습니다.
 
-## 첫 번째 함수 호출 생성하기
+## 첫 번째 함수 호출 만들기
 
-함수 호출을 생성하는 과정은 3단계로 이루어져 있습니다:
+함수 호출 생성 과정은 주요 3단계로 구성됩니다:
 
-1. 사용자 메시지와 함수 목록을 사용하여 Chat Completions API를 호출합니다.
-2. 모델의 응답을 읽어 작업을 수행합니다. 즉, 함수나 API 호출을 실행합니다.
-3. 함수에서 받은 응답을 사용하여 사용자에게 응답을 생성하기 위해 Chat Completions API를 다시 호출합니다.
+1. 함수 목록(도구)과 사용자 메시지를 포함해 응답 API를 호출합니다.
+2. 모델의 응답을 읽고 동작(함수 또는 API 호출 실행)을 수행합니다.
+3. 함수 응답을 사용해 사용자에게 보낼 응답을 생성하기 위해 다시 응답 API를 호출합니다.
 
-![LLM Flow](../../../translated_images/ko/LLM-Flow.3285ed8caf4796d7.webp)
+![LLM 흐름](../../../translated_images/ko/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### 1단계 - 메시지 생성
 
-첫 번째 단계는 사용자 메시지를 생성하는 것입니다. 이는 텍스트 입력 값에서 동적으로 할당하거나 여기에서 값을 직접 할당할 수 있습니다. Chat Completions API를 처음 사용하는 경우, 메시지의 `role`과 `content`를 정의해야 합니다.
+첫 단계는 사용자 메시지를 만드는 것입니다. 이는 텍스트 입력 값으로 동적으로 지정하거나 여기서 직접 지정할 수 있습니다. Responses API를 처음 사용한다면 `role`과 `content`를 정의해야 합니다.
 
-`role`은 `system`(규칙 생성), `assistant`(모델) 또는 `user`(최종 사용자)일 수 있습니다. 함수 호출의 경우 이를 `user`로 지정하고 예제 질문을 추가합니다.
+`role`은 `system`(규칙 생성), `assistant`(모델), `user`(최종 사용자) 중 하나입니다. 함수 호출의 경우 `user` 역할과 예시 질문을 할당합니다.
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-다양한 역할을 할당함으로써 LLM이 시스템이 말하는 것인지 사용자인지 명확히 알 수 있으며, 이를 통해 LLM이 대화 기록을 기반으로 구축할 수 있습니다.
+서로 다른 역할을 할당함으로써 시스템이 말하는지, 사용자가 말하는지 명확히 하여 LLM이 대화 기록을 구성하는 데 도움이 됩니다.
 
-### 2단계 - 함수 생성
+### 2단계 - 함수 정의
 
-다음으로, 함수와 해당 함수의 매개변수를 정의합니다. 여기서는 `search_courses`라는 하나의 함수만 사용하지만 여러 개의 함수를 생성할 수 있습니다.
+다음으로, 함수와 그 매개변수를 정의합니다. 여기서는 하나의 함수 `search_courses`만 사용하지만 여러 개를 생성할 수 있습니다.
 
-> **중요**: 함수는 LLM에 대한 시스템 메시지에 포함되며 사용 가능한 토큰 수에 포함됩니다.
+> <strong>중요</strong>: 함수는 시스템 메시지에 포함되어 LLM에게 전달되며 사용 가능한 토큰 수에 포함됩니다.
 
-아래에서는 각 항목이 함수인 배열로 함수를 생성합니다. 각 항목은 `name`, `description`, `parameters` 속성을 가진 함수입니다:
+아래에서 함수 배열을 만듭니다. 각 항목은 Responses API 플랫 포맷의 도구이며, `type`, `name`, `description`, `parameters` 속성을 갖습니다:
 
 ```python
 functions = [
    {
+      "type":"function",
       "name":"search_courses",
       "description":"Retrieves courses from the search index based on the parameters provided",
       "parameters":{
@@ -243,75 +249,76 @@ functions = [
 ]
 ```
 
-각 함수 인스턴스를 더 자세히 설명하겠습니다:
+아래에 각 함수 인스턴스를 자세히 설명합니다:
 
-- `name` - 호출하려는 함수의 이름입니다.
-- `description` - 함수가 작동하는 방법에 대한 설명입니다. 여기서는 구체적이고 명확해야 합니다.
-- `parameters` - 모델이 응답을 생성할 때 사용할 값과 형식의 목록입니다. `parameters` 배열은 항목으로 구성되며, 각 항목은 다음 속성을 가집니다:
-  1.  `type` - 속성이 저장될 데이터 유형.
-  1.  `properties` - 모델이 응답에 사용할 특정 값 목록.
-      1. `name` - 모델이 형식화된 응답에서 사용할 속성의 이름, 예를 들어 `product`.
-      1. `type` - 이 속성의 데이터 유형, 예를 들어 `string`.
-      1. `description` - 특정 속성에 대한 설명.
+- `name` - 호출할 함수 이름입니다.
+- `description` - 함수 동작에 대한 설명입니다. 구체적이고 명확해야 합니다.
+- `parameters` - 응답에서 모델이 생성할 값과 형식의 리스트입니다. 배열 항목은 다음 속성을 가집니다:
+  1. `type` - 속성이 저장될 데이터 타입입니다.
+  1. `properties` - 응답에 사용할 구체적인 값 목록입니다.
+      1. `name` - 모델이 포맷된 응답에서 사용할 속성 이름입니다(예: `product`).
+      1. `type` - 이 속성의 데이터 타입입니다(예: `string`).
+      1. `description` - 해당 속성에 대한 설명입니다.
 
-선택적 속성으로 `required`가 있습니다. 이는 함수 호출이 완료되기 위해 필요한 속성입니다.
+또한 선택적으로 `required` 속성이 있어 함수 호출이 완료되기 위해 필요한 속성을 지정할 수 있습니다.
 
-### 3단계 - 함수 호출하기
+### 3단계 - 함수 호출 실행
 
-함수를 정의한 후, 이제 Chat Completion API 호출에 포함해야 합니다. 이를 위해 요청에 `functions`를 추가합니다. 이 경우 `functions=functions`로 설정합니다.
+함수 정의 후, 이제 이를 Responses API 호출에 포함해야 합니다. 요청에 `tools`를 추가하는데 여기서는 `tools=functions`로 설정합니다.
 
-또한 `function_call`을 `auto`로 설정할 수 있습니다. 이는 사용자 메시지에 따라 LLM이 호출할 함수를 스스로 결정하도록 합니다.
+`tool_choice`를 `auto`로 설정할 수도 있는데, 이는 사용자가 직접 지정하지 않고 LLM이 사용자 메시지에 따라 어떤 함수를 호출할지 결정하게 하는 설정입니다.
 
-아래 코드는 `ChatCompletion.create`를 호출하는 코드입니다. 여기서 `functions=functions`와 `function_call="auto"`를 설정하여 LLM이 제공된 함수를 호출할 시점을 결정하도록 합니다:
+아래 코드는 `client.responses.create`를 호출하는 예시입니다. `tools=functions`, `tool_choice="auto"`를 설정하여 LLM이 함수 호출 시점을 선택하도록 합니다:
 
 ```python
-response = client.chat.completions.create(model=deployment,
-                                        messages=messages,
-                                        functions=functions,
-                                        function_call="auto")
+response = client.responses.create(model=deployment,
+                                        input=messages,
+                                        tools=functions,
+                                        tool_choice="auto",
+                                        store=False)
 
-print(response.choices[0].message)
+print(response.output)
 ```
 
-이제 반환된 응답은 다음과 같습니다:
+응답에는 이제 `response.output` 내에 `function_call` 항목이 포함되어 다음과 같습니다:
 
 ```json
 {
-  "role": "assistant",
-  "function_call": {
-    "name": "search_courses",
-    "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
-  }
+  "type": "function_call",
+  "name": "search_courses",
+  "call_id": "call_abc123",
+  "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
 }
 ```
 
-여기서 `search_courses` 함수가 호출되었으며, JSON 응답의 `arguments` 속성에 나열된 인수와 함께 호출된 것을 확인할 수 있습니다.
+여기서 함수 `search_courses`가 호출되었고, JSON 응답의 `arguments` 속성에 어떤 인자가 전달되었는지 볼 수 있습니다.
 
-LLM은 `messages` 매개변수에 제공된 값에서 데이터를 추출하여 함수의 인수에 맞는 데이터를 찾을 수 있었습니다. 아래는 `messages` 값의 요약입니다:
+LLM은 `input` 매개변수 값에서 데이터를 추출해 함수 인자에 맞춰 전달했음을 알 수 있습니다. 다시 `messages` 값을 참고해 봅니다:
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-보시다시피, `student`, `Azure`, `beginner`가 `messages`에서 추출되어 함수의 입력으로 설정되었습니다. 이러한 방식으로 함수를 사용하는 것은 프롬프트에서 정보를 추출하고 LLM에 구조를 제공하며 재사용 가능한 기능을 갖추는 훌륭한 방법입니다.
+보시다시피 `student`, `Azure`, `beginner`가 `messages`에서 추출되어 함수 입력으로 설정되었습니다. 이처럼 함수를 사용하면 프롬프트에서 정보를 효과적으로 추출하고, LLM에 구조를 제공하며, 재사용 가능한 기능을 구현할 수 있습니다.
 
-다음으로, 이를 애플리케이션에서 사용하는 방법을 살펴보겠습니다.
+다음으로 이 기능을 애플리케이션에서 어떻게 활용할 수 있는지 살펴봅니다.
 
 ## 애플리케이션에 함수 호출 통합하기
 
-LLM의 형식화된 응답을 테스트한 후, 이제 이를 애플리케이션에 통합할 수 있습니다.
+LLM의 형식화된 응답을 테스트한 후, 이를 애플리케이션에 통합할 수 있습니다.
 
 ### 흐름 관리
 
-이를 애플리케이션에 통합하려면 다음 단계를 따르세요:
+애플리케이션에 통합하려면 다음 단계를 수행합니다:
 
-1. 먼저 OpenAI 서비스에 호출을 수행하고 메시지를 `response_message`라는 변수에 저장합니다.
+1. 먼저 OpenAI 서비스에 호출을 하고 응답 `output`에서 함수 호출 항목을 추출합니다.
 
    ```python
-   response_message = response.choices[0].message
+   response_items = response.output
+   tool_calls = [item for item in response_items if item.type == "function_call"]
    ```
 
-1. 이제 Microsoft Learn API를 호출하여 과정 목록을 가져오는 함수를 정의합니다:
+1. 이제 마이크로소프트 Learn API를 호출해 과정 목록을 가져오는 함수를 정의합니다:
 
    ```python
    import requests
@@ -333,67 +340,59 @@ LLM의 형식화된 응답을 테스트한 후, 이제 이를 애플리케이션
      return str(results)
    ```
 
-   이제 `functions` 변수에 도입된 함수 이름과 매핑되는 실제 Python 함수를 생성합니다. 또한 필요한 데이터를 가져오기 위해 실제 외부 API 호출을 수행합니다. 이 경우 Microsoft Learn API를 사용하여 교육 모듈을 검색합니다.
+   `functions` 변수에 정의한 함수 이름에 대응하는 실제 Python 함수를 만드는 예입니다. 실제 외부 API를 호출해 필요한 데이터를 가져옵니다. 여기서는 Microsoft Learn API를 이용해 교육 모듈을 검색합니다.
 
-좋습니다, 이제 `functions` 변수와 해당 Python 함수를 생성했으니, 두 가지를 어떻게 매핑하여 Python 함수가 호출되도록 할 수 있을까요?
+그렇다면 `functions` 변수와 Python 함수를 연결해 LLM이 Python 함수를 호출하도록 어떻게 알릴까요?
 
-1. Python 함수를 호출해야 하는지 확인하려면 LLM 응답에서 `function_call`이 포함되어 있는지 확인하고 지정된 함수를 호출해야 합니다. 아래는 이를 확인하는 방법입니다:
+1. Python 함수를 호출할지 확인하려면 LLM 응답에 `function_call` 항목이 포함되어 있는지 점검하고, 해당 함수를 호출합니다. 아래는 점검하는 예시 코드입니다:
 
    ```python
-   # Check if the model wants to call a function
-   if response_message.function_call.name:
-    print("Recommended Function call:")
-    print(response_message.function_call.name)
-    print()
+   # 모델이 함수를 호출하려는지 확인합니다
+   if tool_calls:
+    for tool_call in tool_calls:
+     print("Recommended Function call:")
+     print(tool_call.name)
+     print()
 
-    # Call the function.
-    function_name = response_message.function_call.name
+     # 함수를 호출합니다.
+     function_name = tool_call.name
 
-    available_functions = {
-            "search_courses": search_courses,
-    }
-    function_to_call = available_functions[function_name]
+     available_functions = {
+             "search_courses": search_courses,
+     }
+     function_to_call = available_functions[function_name]
 
-    function_args = json.loads(response_message.function_call.arguments)
-    function_response = function_to_call(**function_args)
+     function_args = json.loads(tool_call.arguments)
+     function_response = function_to_call(**function_args)
 
-    print("Output of function call:")
-    print(function_response)
-    print(type(function_response))
+     print("Output of function call:")
+     print(function_response)
+     print(type(function_response))
 
-
-    # Add the assistant response and function response to the messages
-    messages.append( # adding assistant response to messages
-        {
-            "role": response_message.role,
-            "function_call": {
-                "name": function_name,
-                "arguments": response_message.function_call.arguments,
-            },
-            "content": None
-        }
-    )
-    messages.append( # adding function response to messages
-        {
-            "role": "function",
-            "name": function_name,
-            "content":function_response,
-        }
-    )
+     # 함수 호출 및 그 결과를 대화에 다시 추가합니다.
+     # 모델의 function_call 항목은 출력 전에 추가되어야 합니다.
+     messages.append(tool_call)  # 어시스턴트의 function_call 항목
+     messages.append( # 함수 결과
+         {
+             "type": "function_call_output",
+             "call_id": tool_call.call_id,
+             "output": function_response,
+         }
+     )
    ```
 
-   아래 세 줄은 함수 이름과 인수를 추출하고 호출을 수행합니다:
+   세 줄 코드로 함수 이름과 인자를 추출하고 호출을 수행합니다:
 
    ```python
    function_to_call = available_functions[function_name]
 
-   function_args = json.loads(response_message.function_call.arguments)
+   function_args = json.loads(tool_call.arguments)
    function_response = function_to_call(**function_args)
    ```
 
-   아래는 코드 실행 결과 출력입니다:
+   아래는 실행 결과 출력 예시입니다:
 
-   **출력**
+   <strong>출력</strong>
 
    ```Recommended Function call:
    {
@@ -412,52 +411,60 @@ LLM의 형식화된 응답을 테스트한 후, 이제 이를 애플리케이션
    <class 'str'>
    ```
 
-1. 이제 업데이트된 메시지 `messages`를 LLM에 보내 API JSON 형식 응답 대신 자연어 응답을 받을 수 있습니다.
+1. 이제 업데이트된 메시지 `messages`를 LLM에 보내 API JSON 형식이 아닌 자연어 응답을 받습니다.
 
    ```python
    print("Messages in next request:")
    print(messages)
    print()
 
-   second_response = client.chat.completions.create(
-      messages=messages,
+   second_response = client.responses.create(
+      input=messages,
       model=deployment,
-      function_call="auto",
-      functions=functions,
-      temperature=0
-         )  # get a new response from GPT where it can see the function response
+      tool_choice="auto",
+      tools=functions,
+      temperature=0,
+      store=False,
+         )  # 함수 응답을 볼 수 있는 상태에서 모델로부터 새로운 응답을 받습니다
 
 
-   print(second_response.choices[0].message)
+   print(second_response.output_text)
    ```
 
-   **출력**
+   <strong>출력</strong>
 
-   ```python
-   {
-     "role": "assistant",
-     "content": "I found some good courses for beginner students to learn Azure:\n\n1. [Describe concepts of cryptography] (https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)\n2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)\n3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)\n4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)\n5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)\n\nYou can click on the links to access the courses."
-   }
+   ```text
+   I found some good courses for beginner students to learn Azure:
 
+   1. [Describe concepts of cryptography](https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)
+   2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)
+   3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)
+   4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)
+   5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)
+
+   You can click on the links to access the courses.
    ```
 
 ## 과제
 
-Azure OpenAI 함수 호출 학습을 계속하려면 다음을 수행할 수 있습니다:
+Azure OpenAI 함수 호출 학습을 계속하려면 다음을 구현해 보세요:
 
-- 학습자가 더 많은 과정을 찾는 데 도움이 될 수 있는 함수의 매개변수를 추가하세요.
-- 학습자의 모국어와 같은 추가 정보를 수집하는 또 다른 함수 호출을 생성하세요.
-- 함수 호출 및/또는 API 호출이 적합한 강좌를 반환하지 않을 경우 오류 처리를 생성하세요.
+- 학습자가 더 많은 과정을 찾는 데 도움이 될 수 있는 함수의 추가 매개변수.
 
-힌트: 이 데이터가 어떻게 그리고 어디에서 사용 가능한지 확인하려면 [Learn API 참조 문서](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) 페이지를 참조하세요.
+- 학습자의 모국어와 같은 더 많은 정보를 받는 또 다른 함수 호출을 만드세요
+- 함수 호출 및/또는 API 호출이 적합한 강좌를 반환하지 않을 때의 오류 처리를 만드세요
 
-## 훌륭한 작업! 여정을 계속하세요
+힌트: 이 데이터가 어떻게 그리고 어디에서 사용 가능한지 알아보려면 [Learn API 참조 문서](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) 페이지를 참고하세요.
 
-이 강의를 완료한 후, [Generative AI 학습 컬렉션](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)을 확인하여 Generative AI 지식을 계속 향상시키세요!
+## 훌륭합니다! 여정을 계속하세요
 
-Lesson 12로 이동하여 [AI 애플리케이션을 위한 UX 디자인](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)을 살펴보세요!
+이 수업을 완료한 후, [생성 AI 학습 컬렉션](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)을 확인하여 생성 AI 지식을 계속 향상시키세요!
+
+12과로 이동하여 [AI 애플리케이션을 위한 UX 설계](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)에 대해 알아봅시다!
 
 ---
 
-**면책 조항**:  
-이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 위해 최선을 다하지만, 자동 번역에는 오류나 부정확성이 포함될 수 있습니다. 원본 문서를 해당 언어로 작성된 상태에서 권위 있는 자료로 간주해야 합니다. 중요한 정보의 경우, 전문적인 인간 번역을 권장합니다. 이 번역 사용으로 인해 발생하는 오해나 잘못된 해석에 대해 책임지지 않습니다.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**면책 조항**:
+이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 기하기 위해 노력하고 있으나, 자동 번역은 오류나 부정확한 부분이 있을 수 있음을 유의하시기 바랍니다. 원본 문서의 원어본이 권위 있는 자료로 간주되어야 합니다. 중요한 정보의 경우, 전문가의 인간 번역을 권장합니다. 이 번역 사용으로 인해 발생하는 오해나 잘못된 해석에 대해 당사는 책임을 지지 않습니다.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
