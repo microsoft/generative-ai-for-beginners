@@ -1,10 +1,10 @@
-# Planul de Îmbunătățiri și Funcționalități Îmbunătățite
+# Foia de Parcurs pentru Funcționalități Îmbunătățite și Dezvoltări
 
-Acest document prezintă îmbunătățirile și ajustările recomandate pentru curriculumul Generative AI for Beginners, bazate pe o revizuire cuprinzătoare a codului și analiza celor mai bune practici din industrie.
+Acest document prezintă îmbunătățirile și dezvoltările recomandate pentru curriculumul Generative AI for Beginners, bazate pe o revizuire detaliată a codului și o analiză a celor mai bune practici din industrie.
 
 ## Rezumat Executiv
 
-Codul a fost analizat din perspectiva securității, calității codului și eficacității educaționale. Acest document oferă recomandări pentru remedieri imediate, îmbunătățiri pe termen scurt și extinderi viitoare.
+Codul a fost analizat în ceea ce privește securitatea, calitatea codului și eficacitatea educațională. Acest document oferă recomandări pentru remedieri imediate, îmbunătățiri pe termen scurt și dezvoltări viitoare.
 
 ---
 
@@ -13,122 +13,127 @@ Codul a fost analizat din perspectiva securității, calității codului și efi
 ### 1.1 Remedieri Imediate (Finalizate)
 
 | Problemă | Fișiere Afectate | Stare |
-|----------|------------------|-------|
-| SECRET_KEY hardcodificat | `05-advanced-prompts/python/aoai-solution.py` | Remediat |
-| Lipsă validare env | Mai multe fișiere JS/TS | Remediat |
-| Apeluri funcții nesigure | `11-integrating-with-function-calling/js-githubmodels/app.js` | Remediat |
-| Scurgeri de handle-uri de fișiere | `08-building-search-applications/scripts/` | Remediat |
-| Lipsă timeout-uri pentru cereri | `09-building-image-applications/python/` | Remediat |
+|-------|----------------|--------|
+| SECRET_KEY hardcodat | `05-advanced-prompts/python/aoai-solution.py` | Remediat |
+| Lipsă validare mediu | Mai multe fișiere JS/TS | Remediat |
+| Apeluri de funcții nesigure | `11-integrating-with-function-calling/js-githubmodels/app.js` | Remediat |
+| Scurgeri de handle fișiere | `08-building-search-applications/scripts/` | Remediat |
+| Lipsă timeout-uri pentru solicitări | `09-building-image-applications/python/` | Remediat |
 
-### 1.2 Funcționalități Adiționale Recomandate de Securitate
+### 1.2 Caracteristici suplimentare de securitate recomandate
 
-1. **Exemple de Limitare a Ratei**
-   - Adăugarea de cod exemplu pentru implementarea limitării ratei apelurilor API
-   - Demonstrarea unor pattern-uri de backoff exponențial
+1. **Exemple de limitare a ratei**
+   - Adăugați cod exemplu pentru implementarea limitării ratei la apelurile API
+   - Demonstrați modele de backoff exponențial
 
-2. **Rotirea Cheilor API**
-   - Documentație privind practicile optime pentru rotirea cheilor API
-   - Exemple de utilizare Azure Key Vault sau servicii similare
+2. **Rotirea cheilor API**
+   - Adăugați documentație privind cele mai bune practici pentru rotirea cheilor API
+   - Includeți exemple de utilizare a Azure Key Vault sau servicii similare
 
-3. **Integrarea Siguranței Conținutului**
-   - Exemple de utilizare Azure Content Safety API
-   - Demonstrarea pattern-urilor pentru moderarea inputului și outputului
+3. **Integrarea siguranței conținutului**
+   - Adăugați exemple folosind Azure Content Safety API
+   - Demonstrați modele de moderare pentru input/output
 
 ---
 
 ## 2. Îmbunătățiri ale Calității Codului
 
-### 2.1 Fișiere de Configurație Adăugate
+### 2.1 Fișiere de Configurare Adăugate
 
 | Fișier | Scop |
-|--------|-------|
-| `.eslintrc.json` | Reguli de linting pentru JavaScript/TypeScript |
-| `.prettierrc` | Standardele de formatat cod |
-| `pyproject.toml` | Configurare tooling Python (Black, Ruff, mypy) |
+|------|---------|
+| `.eslintrc.json` | Reguli de linting JavaScript/TypeScript |
+| `.prettierrc` | Standardele de formatare a codului |
+| `pyproject.toml` | Configurarea uneltelor Python (Black, Ruff, mypy) |
 
 ### 2.2 Utilitare Comune Create
 
-Modul nou `shared/python/` cu:
-- `env_utils.py` - manipularea variabilelor de mediu
-- `input_validation.py` - validarea și sanitizarea inputului
-- `api_utils.py` - wrapper-e sigure pentru cereri API
+Nou modul `shared/python/` cu:
+- `env_utils.py` - Gestionarea variabilelor de mediu
+- `input_validation.py` - Validarea și sanitizarea inputurilor
+- `api_utils.py` - Învelitori sigure pentru cererile API
 
-### 2.3 Recomandări pentru Îmbunătățirea Codului
+### 2.3 Îmbunătățiri Recomandate ale Codului
 
-1. **Acoperirea Hint-urilor de Tip**
-   - Adăugarea hint-urilor de tip în toate fișierele Python
-   - Activarea modului strict TypeScript în toate proiectele TS
+1. **Acoperire cu tipuri**
+   - Adăugați adnotări de tip la toate fișierele Python
+   - Activați modul strict TypeScript pentru toate proiectele TS
 
-2. **Standardele de Documentare**
-   - Adăugarea de docstring-uri pentru toate funcțiile Python
-   - Adăugarea de comentarii JSDoc pentru toate funcțiile JavaScript/TypeScript
+2. **Standarde pentru documentație**
+   - Adăugați docstrings pentru toate funcțiile Python
+   - Adăugați comentarii JSDoc pentru toate funcțiile JavaScript/TypeScript
 
-3. **Framework de Testare**
-   - Adăugarea configurației pytest și exemple de teste
-   - Adăugarea configurației Jest pentru JavaScript/TypeScript
+3. **Cadru de testare**
+   - Adăugați configurație pytest și teste exemplu _(finalizat: configurație pytest în `pyproject.toml`; teste exemplu pentru utilitarele comune în [`tests/`](../../../tests) rulate în CI)_
+   - Adăugați configurație Jest pentru JavaScript/TypeScript
 
 ---
 
 ## 3. Îmbunătățiri Educaționale
 
-### 3.1 Subiecte Noi pentru Lecții
+### 3.1 Subiecte Noi ale Lecțiilor
 
-1. **Securitate în Aplicațiile AI** (Lecția propusă 22)
-   - Atacuri și apărare în prompt injection
-   - Managementul cheilor API
+1. **Securitatea în aplicațiile AI** (Lecția propusă 22)
+   - Atacuri de injecție de prompt și contramăsuri
+   - Gestionarea cheilor API
    - Moderarea conținutului
    - Limitarea ratei și prevenirea abuzurilor
 
-2. **Implementare în Producție** (Lecția propusă 23)
+2. **Dezvoltare în producție** (Lecția propusă 23)
    - Containerizare cu Docker
    - Pipeline-uri CI/CD
    - Monitorizare și logging
-   - Managementul costurilor
+   - Gestionarea costurilor
 
-3. **Tehnici Avansate RAG** (Lecția propusă 24)
-   - Căutare hibridă (keyword + semantic)
-   - Strategii de re-rangare
-   - RAG multi-modal
-   - Metrice de evaluare
+3. **Tehnici avansate RAG** (Lecția propusă 24)
+   - Căutare hibridă (cuvânt cheie + semantic)
+   - Strategii de re-ranking
+   - RAG multimodal
+   - Metrici de evaluare
 
-### 3.2 Îmbunătățiri la Lecțiile Existente
+### 3.2 Îmbunătățiri ale Lecțiilor Existente
 
 | Lecție | Îmbunătățire Recomandată |
-|--------|--------------------------|
-| 06 - Generarea de Text | Adăugarea de exemple de streaming response |
-| 07 - Aplicații Chat | Adăugarea pattern-urilor pentru memoria conversațiilor |
-| 08 - Aplicații de Căutare | Adăugarea comparației bazelor de date vectoriale |
-| 09 - Generare Imagini | Adăugarea de exemple pentru editare/variație imagini |
-| 11 - Apelarea Funcțiilor | Apelare paralelă a funcțiilor |
-| 15 - RAG | Comparație strategiilor de chunking |
-| 17 - Agenți AI | Orchestrarea multi-agent |
+|--------|------------------------|
+| 06 - Generare Text | Adăugați exemple de răspuns în streaming |
+| 07 - Aplicații de chat | Adăugați modele de memorie pentru conversații |
+| 08 - Aplicații de căutare | Adăugați comparație de baze de date vectoriale |
+| 09 - Generare imagine | Adăugați exemple de editare/variație a imaginii |
+| 11 - Apelare de funcții | Adăugați apelare paralelă de funcții |
+| 15 - RAG | Adăugați comparație de strategii de împărțire pe bucăți |
+| 17 - Agenți AI | Adăugați orchestrare multi-agent |
 
 ---
 
-## 4. Modernizarea API-urilor
+## 4. Modernizarea API-ului
 
-### 4.1 Pattern-uri API Deprecate de Actualizat
+### 4.1 Modele API deprecate (Migrare finalizată)
 
-| Pattern Vechi | Pattern Nou | Fișiere Afectate |
-|---------------|-------------|------------------|
-| `openai.api_type = "azure"` | client `AzureOpenAI()` | Mai multe scripturi în `08-building-search-applications/` |
-| `openai.ChatCompletion.create()` | `client.chat.completions.create()` | Mai multe notebook-uri |
-| `df.append()` (pandas) | `pd.concat()` | Notebook RAG |
+Toate exemplele Python și TypeScript pentru **chat** au fost migrate de la Chat Completions API la **Responses API** (`client.responses.create(...)` → `response.output_text`).
 
-### 4.2 Funcționalități Noi API de Demonstrat
+| Model Vechi | Model Nou | Stare |
+|-------------|-------------|--------|
+| `openai.api_type = "azure"` / `AzureOpenAI()` (chat) | `OpenAI(base_url="<endpoint>/openai/v1/")` (Responses API) | Finalizat |
+| `openai.ChatCompletion.create()` / `client.chat.completions.create()` | `client.responses.create(input=...)` → `response.output_text` | Finalizat |
+| `@azure/openai` `OpenAIClient.getChatCompletions()` (TypeScript) | pachetul `openai` `client.responses.create()` → `response.output_text` | Finalizat |
+| `df.append()` (pandas) | `pd.concat()` | Finalizat |
 
-1. **Output-uri Structurate** (OpenAI)
-   - Mod JSON
-   - Apelarea funcțiilor cu scheme stricte
+> **Notă:** Exemplele Microsoft Foundry Models care folosesc SDK-ul `azure-ai-inference` / `@azure-rest/ai-inference` (`client.complete()`) rămân pe Model Inference API, care nu suportă Responses API. `AzureOpenAI()` este păstrat intenționat unde este încă valabil (embedding-uri și generare de imagini).
 
-2. **Capabilități Vision**
-   - Analiza imaginilor cu GPT-4V
-   - Prompturi multi-modale
+### 4.2 Caracteristici noi ale API-ului de demonstrat
 
-3. **API Asistenți**
-   - Interpreter de cod
+1. **Ieșiri structurate** (OpenAI)
+   - Modul JSON
+   - Apel de funcții cu scheme stricte
+
+2. **Capabilități vizuale**
+   - Analiza imaginilor cu GPT-4o (vision)
+   - Prompts multimodale
+
+3. **Instrumente încorporate în Responses API** (înlocuiește vechiul Assistants API)
+   - Interpret de cod
    - Căutare fișiere
-   - Unelte customizate
+   - Căutare web și instrumente personalizate
 
 ---
 
@@ -136,7 +141,7 @@ Modul nou `shared/python/` cu:
 
 ### 5.1 Îmbunătățiri CI/CD
 
-Workflows actuale gestionează validarea markdown. Adăugări recomandate:
+Implementat în [`.github/workflows/code-quality.yml`](../../../.github/workflows/code-quality.yml): linting/formatare Python (Ruff + Black) este **impus** pe modulul de utilitare `shared/` întreținut și rulează **consultativ** pe restul curriculumului, plus o trecere consultativă ESLint pentru JavaScript/TypeScript. Linia de bază ilustrativă a fost:
 
 ```yaml
 # .github/workflows/code-quality.yml
@@ -167,7 +172,9 @@ jobs:
       - run: npx eslint .
 ```
 
-### 5.2 Scanare de Securitate
+### 5.2 Scanare de securitate
+
+Implementat în [`.github/workflows/security.yml`](../../../.github/workflows/security.yml): analiză CodeQL pentru Python și JavaScript/TypeScript (la push, pull request și program săptămânal) plus o revizuire a dependențelor pe pull requests. Linia de bază ilustrativă a fost:
 
 ```yaml
 # .github/workflows/security.yml
@@ -194,11 +201,11 @@ jobs:
 
 ---
 
-## 6. Îmbunătățiri pentru Experiența Dezvoltatorului
+## 6. Îmbunătățiri ale Experienței Dezvoltatorului
 
 ### 6.1 Îmbunătățiri DevContainer
 
-Actualizați `.devcontainer/devcontainer.json`:
+Implementat în [`.devcontainer/devcontainer.json`](../../../.devcontainer/devcontainer.json) și [`.devcontainer/post-create.sh`](../../../.devcontainer/post-create.sh): containerul include acum extensiile Pylance, Black formatter, Ruff, ESLint, Prettier și Copilot, activează formatarea la salvare conectată la configurația Black/Prettier a depozitului și instalează uneltele de dezvoltare (`ruff`, `black`, `mypy`, `pytest`) pentru a reproduce acasă workflow-ul [code-quality](../../../.github/workflows/code-quality.yml). Imaginea de bază `mcr.microsoft.com/devcontainers/universal` include deja Python și Node, deci nu sunt necesare caracteristici suplimentare. Linia de bază ilustrativă a fost:
 
 ```json
 {
@@ -232,120 +239,117 @@ Actualizați `.devcontainer/devcontainer.json`:
 }
 ```
 
-### 6.2 Playground Interactiv
+### 6.2 Teren de joacă interactiv
 
-Se recomandă adăugarea:
-- Notebook-uri Jupyter cu chei API precompletate (prin mediu)
-- Demo-uri Gradio/Streamlit pentru utilizatorii vizuali
-- Quiz-uri interactive pentru evaluarea cunoștințelor
+Luați în considerare adăugarea:
+- Notebook-uri Jupyter cu chei API pre-completate (prin mediu)
+- Demo-uri Gradio/Streamlit pentru învățare vizuală
+- Chestionare interactive pentru evaluarea cunoștințelor
 
 ---
 
-## 7. Suport Multi-limbaj
+## 7. Suport Multilingv
 
-### 7.1 Acoperirea Limbilor Curente
+### 7.1 Acoperirea lingvistică curentă
 
-| Tehnologie | Lecții Acoperite | Stare |
-|------------|------------------|-------|
+| Tehnologie | Lecții acoperite | Stare |
+|------------|-----------------|--------|
 | Python | Toate | Complet |
 | TypeScript | 06-09, 11 | Parțial |
 | JavaScript | 06-08, 11 | Parțial |
-| .NET/C# | Câteva | Parțial |
+| .NET/C# | Unele | Parțial |
 
-### 7.2 Adăugiri Recomandate
+### 7.2 Adăugiri recomandate
 
-1. **Go** - Creștere în tooling AI/ML
-2. **Rust** - Aplicații cu cerințe de performanță ridicată
+1. **Go** - Creștere în uneltele AI/ML
+2. **Rust** - Aplicații critice pentru performanță
 3. **Java/Kotlin** - Aplicații enterprise
 
 ---
 
 ## 8. Optimizări de Performanță
 
-### 8.1 Optimizări la Nivel de Cod
+### 8.1 Optimizări la nivel de cod
 
-1. **Pattern-uri Async/Await**
-   - Exemple de async pentru procesare batch
-   - Demonstrarea apelurilor concurente API
+1. **Modele Async/Await**
+   - Adăugați exemple async pentru procesare în batch
+   - Demonstrați apeluri API concurente
 
-2. **Strategii de Caching**
-   - Exemple de caching pentru embedding
-   - Demonstrarea pattern-urilor de caching a răspunsurilor
+2. **Strategii de caching**
+   - Adăugați exemple de caching pentru embedding-uri
+   - Demonstrați modele de caching pentru răspunsuri
 
-3. **Optimizarea Tokenilor**
-   - Exemple de utilizare tiktoken
-   - Tehnici de comprimare a prompturilor
+3. **Optimizare de tokeni**
+   - Adăugați exemple de utilizare tiktoken
+   - Demonstrați tehnici de compresie a promptului
 
-### 8.2 Exemple de Optimizare a Costurilor
+### 8.2 Exemple de optimizare a costurilor
 
-Exemple demonstrative pentru:
-- Selectarea modelelor în funcție de complexitatea task-ului
-- Ingineria prompturilor pentru eficiență la nivel de tokeni
-- Procesare batch pentru operațiuni de volum
+Adăugați exemple care demonstrează:
+- Selectarea modelului în funcție de complexitatea sarcinii
+- Ingineria promptului pentru eficiență în tokeni
+- Procesarea în batch pentru operațiuni în masă
 
 ---
 
 ## 9. Accesibilitate și Internaționalizare
 
-### 9.1 Status Curent al Traducerilor
+### 9.1 Stadiul traducerilor curente
 
-| Limbă | Stare |
-|-------|-------|
-| Engleză | Complet |
-| Chineză (Simplificat) | Complet |
-| Japoneză | Complet |
-| Coreeană | Complet |
-| Spaniolă | Parțial |
-| Portugheză | Parțial |
-| Turcă | Parțial |
-| Poloneză | Parțial |
+Toate traducerile sunt **complete** și generate automat de [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst), care produce și menține sincronizate peste 50 de versiuni lingvistice ale curriculumului cu sursa în engleză. Conținutul tradus este sub `translations/` și imaginile localizate sub `translated_images/`; lista completă a limbilor disponibile este publicată în partea de sus a README-ului din depozit.
 
-### 9.2 Îmbunătățiri de Accesibilitate
+| Aspect | Stare |
+|--------|--------|
+| Acoperire traduceri | Completă — peste 50 de limbi, toate lecțiile |
+| Metoda traducerii | Automatizată prin [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst) |
+| Menținut sincronizat cu sursa în engleză | Da — regenerat automat |
 
-1. Adăugarea textului alternativ pentru toate imaginile
-2. Asigurarea evidențierii corecte a sintaxei în exemplele de cod
-3. Adăugarea transcrierilor video pentru tot conținutul video
-4. Asigurarea contrastului de culoare conform ghidurilor WCAG
+### 9.2 Îmbunătățiri pentru accesibilitate
+
+1. Adăugați text alternativ tuturor imaginilor
+2. Asigurați evidențierea sintaxei pentru exemple de cod
+3. Adăugați transcrieri video pentru tot conținutul video
+4. Asigurați contrastul culorilor conform ghidurilor WCAG
 
 ---
 
-## 10. Prioritizarea Implementării
+## 10. Prioritatea Implementării
 
 ### Faza 1: Imediat (Săptămânile 1-2)
-- [x] Remedierea problemelor critice de securitate
-- [x] Adăugarea configurațiilor pentru calitatea codului
-- [x] Crearea utilitarelor comune
-- [x] Documentarea liniilor directoare de securitate
+- [x] Remediați probleme critice de securitate
+- [x] Adăugați configurații pentru calitatea codului
+- [x] Creați utilitare comune
+- [x] Documentați ghidurile de securitate
 
 ### Faza 2: Pe termen scurt (Săptămânile 3-4)
-- [ ] Actualizarea pattern-urilor API depreciate
-- [ ] Adăugarea hint-urilor de tip în toate fișierele Python
-- [ ] Adăugarea workflow-urilor CI/CD pentru calitate cod
-- [ ] Crearea workflow-ului de scanare de securitate
+- [x] Actualizați modelele API deprecate (Chat Completions → Responses API, Python + TypeScript)
+- [ ] Adăugați adnotări de tip la toate fișierele Python (finalizat pentru modulul `shared/`; exemplele din lecții au fost păstrate simple)
+- [x] Adăugați workflow-uri CI/CD pentru calitatea codului
+- [x] Creați workflow pentru scanare de securitate
 
 ### Faza 3: Pe termen mediu (Lunile 2-3)
-- [ ] Adăugarea lecției noi de securitate
-- [ ] Lecția despre implementarea în producție
-- [ ] Îmbunătățirea setup-ului DevContainer
-- [ ] Adăugarea demo-urilor interactive
+- [ ] Adăugați lecția nouă de securitate
+- [ ] Adăugați lecția de dezvoltare în producție
+- [x] Îmbunătățiți configurarea DevContainer
+- [ ] Adăugați demo-uri interactive
 
 ### Faza 4: Pe termen lung (Luna 4+)
-- [ ] Lecția avansată RAG
-- [ ] Extinderea acoperirii limbilor
-- [ ] Adăugarea suitei complete de teste
-- [ ] Crearea programului de certificare
+- [ ] Adăugați lecția avansată RAG
+- [ ] Extindeți suportul lingvistic
+- [ ] Adăugați o suită completă de teste
+- [ ] Creați program de certificare
 
 ---
 
 ## Concluzie
 
-Acest plan oferă o abordare structurată pentru îmbunătățirea curriculumului Generative AI for Beginners. Prin abordarea preocupărilor legate de securitate, modernizarea API-urilor și adăugarea de conținut educațional, cursul va pregăti mai bine studenții pentru dezvoltarea aplicațiilor AI în lumea reală.
+Această foaie de parcurs oferă o abordare structurată pentru îmbunătățirea curriculumului Generative AI for Beginners. Prin abordarea preocupărilor de securitate, modernizarea API-urilor și adăugarea de conținut educațional, cursul va pregăti mai bine studenții pentru dezvoltarea aplicațiilor AI în lumea reală.
 
-Pentru întrebări sau contribuții, vă rugăm să deschideți un issue în repository-ul GitHub.
+Pentru întrebări sau contribuții, vă rugăm să deschideți o problemă pe depozitul GitHub.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă trebuie considerat sursa oficială. Pentru informații critice, se recomandă o traducere profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru neînțelegeri sau interpretări greșite care pot rezulta din utilizarea acestei traduceri.
+**Declinare a responsabilității**:
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). În timp ce ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă trebuie considerat sursa autorizată. Pentru informații critice, se recomandă traducerea profesională realizată de un om. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care decurg din utilizarea acestei traduceri.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

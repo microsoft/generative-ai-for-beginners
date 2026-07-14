@@ -1,10 +1,10 @@
 # Príprava dát pre prepis
 
-Skripty na prípravu dát pre prepis sťahujú prepisy videí z YouTube a pripravujú ich na použitie so vzorom Semantic Search s OpenAI Embeddings a Functions.
+Skripty na prípravu dát pre prepis sťahujú tabuľky titulkov videí z YouTube a pripravujú ich na použitie so vzorovým príkladom Semantického vyhľadávania s OpenAI Embeddings a Funkciami.
 
 Skripty na prípravu dát pre prepis boli testované na najnovších verziách Windows 11, macOS Ventura a Ubuntu 22.04 (a novších).
 
-## Vytvorenie potrebných zdrojov Azure OpenAI Service
+## Vytvorenie požadovaných zdrojov služby Azure OpenAI
 
 > [!IMPORTANT]
 > Odporúčame aktualizovať Azure CLI na najnovšiu verziu, aby bola zabezpečená kompatibilita s OpenAI
@@ -14,21 +14,21 @@ Skripty na prípravu dát pre prepis boli testované na najnovších verziách W
 
 > [!NOTE]
 > V týchto inštrukciách používame skupinu zdrojov s názvom "semantic-video-search" v regióne East US.
-> Môžete zmeniť názov skupiny zdrojov, ale pri zmene lokality zdrojov
-> skontrolujte [tabuľku dostupnosti modelov](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> Môžete zmeniť názov skupiny zdrojov, ale pri zmene umiestnenia zdrojov
+> si skontrolujte [tabuľku dostupnosti modelov](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. Vytvorte zdroj Azure OpenAI Service.
+1. Vytvorte zdroj služby Azure OpenAI.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Získajte endpoint a kľúče na použitie v tejto aplikácii
+1. Získajte koncový bod a kľúče na použitie v tejto aplikácii
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -37,9 +37,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. Nasadzujte nasledujúce modely:
-   - `text-embedding-ada-002` verzia `2` alebo vyššia, pomenovaný `text-embedding-ada-002`
-   - `gpt-35-turbo` verzia `0613` alebo vyššia, pomenovaný `gpt-35-turbo`
+1. Nasadte nasledujúce modely:
+   - `text-embedding-ada-002` verzia `2` alebo vyššia, s názvom `text-embedding-ada-002`
+   - `gpt-4o-mini` s názvom `gpt-4o-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,9 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-35-turbo \
-    --model-name gpt-35-turbo \
-    --model-version "0613"  \
+    --deployment-name gpt-4o-mini \
+    --model-name gpt-4o-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -67,9 +66,9 @@ az cognitiveservices account deployment create \
 
 ## Premenné prostredia
 
-Na spustenie skriptov na prípravu dát prepisu z YouTube sú potrebné nasledujúce premenné prostredia.
+Na spustenie skriptov na prípravu dát prepisu YouTube sú potrebné nasledujúce premenné prostredia.
 
-### Na Windows
+### Vo Windows
 
 Odporúčame pridať premenné do používateľských premenných prostredia.
 `Windows Štart` > `Upraviť systémové premenné prostredia` > `Premenné prostredia` > `Používateľské premenné` pre [USER] > `Nové`.
@@ -81,7 +80,16 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-### Na Linux a macOS
+<!-- Premenné prostredia môžete pridať do svojho profilu PowerShell.
+
+```powershell
+$env:AZURE_OPENAI_API_KEY = "<váš API kľúč služby Azure OpenAI>"
+$env:AZURE_OPENAI_ENDPOINT = "<váš koncový bod služby Azure OpenAI>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<názov nasadenia modelu služby Azure OpenAI>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<váš Google API kľúč pre vývojárov>"
+``` -->
+
+### Na Linuxe a macOS
 
 Odporúčame pridať nasledujúce exporty do súboru `~/.bashrc` alebo `~/.zshrc`.
 
@@ -92,10 +100,10 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## Inštalácia potrebných Python knižníc
+## Inštalácia požadovaných Python knižníc
 
 1. Nainštalujte [git klienta](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), ak ešte nie je nainštalovaný.
-1. V okne `Terminál` naklonujte vzorový projekt do preferovaného priečinka repozitára.
+1. V okne `Terminálu` sklonujte vzorový príklad do preferovaného priečinka.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -107,29 +115,29 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. Vytvorte Python virtuálne prostredie.
+1. Vytvorte virtuálne prostredie Pythonu.
 
-    Na Windows:
+    Vo Windows:
 
     ```powershell
     python -m venv .venv
     ```
 
-    Na macOS a Linux:
+    Na macOS a Linuxe:
 
     ```bash
     python3 -m venv .venv
     ```
 
-1. Aktivujte Python virtuálne prostredie.
+1. Aktivujte virtuálne prostredie Pythonu.
 
-   Na Windows:
+   Vo Windows:
 
    ```powershell
    .venv\Scripts\activate
    ```
 
-   Na macOS a Linux:
+   Na macOS a Linuxe:
 
    ```bash
    source .venv/bin/activate
@@ -137,31 +145,35 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Nainštalujte požadované knižnice.
 
-   Na Windows:
+   Vo Windows:
 
    ```powershell
    pip install -r requirements.txt
    ```
 
-   Na macOS a Linux:
+   Na macOS a Linuxe:
 
    ```bash
    pip3 install -r requirements.txt
    ```
 
-## Spustenie skriptov na prípravu dát prepisu z YouTube
+## Spustenie skriptov na prípravu dát prepisu YouTube
 
-### Na Windows
+### Vo Windows
 
 ```powershell
 .\transcripts_prepare.ps1
 ```
 
-### Na macOS a Linux
+### Na macOS a Linuxe
 
 ```bash
 ./transcripts_prepare.sh
 ```
 
-**Vyhlásenie o zodpovednosti**:  
-Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, majte na pamäti, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Originálny dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vyhlásenie o zodpovednosti**:
+Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, vezmite prosím na vedomie, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho natívnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
