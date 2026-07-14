@@ -1,317 +1,320 @@
 # AGENTS.md
 
-## Tổng quan dự án
+## Tổng Quan Dự Án
 
-Kho lưu trữ này chứa một chương trình giảng dạy gồm 21 bài học toàn diện về các nguyên tắc cơ bản của AI tạo sinh và phát triển ứng dụng. Khóa học được thiết kế cho người mới bắt đầu và bao gồm mọi thứ từ các khái niệm cơ bản đến xây dựng ứng dụng sẵn sàng cho sản xuất.
+Kho lưu trữ này chứa một chương trình giảng dạy đầy đủ gồm 21 bài học về cơ bản AI Tạo Sinh và phát triển ứng dụng. Khóa học được thiết kế dành cho người mới bắt đầu và bao quát từ các khái niệm cơ bản đến xây dựng các ứng dụng sẵn sàng sản xuất.
 
-**Công nghệ chính:**
+**Công Nghệ Chính:**
 - Python 3.9+ với các thư viện: `openai`, `python-dotenv`, `tiktoken`, `azure-ai-inference`, `pandas`, `numpy`, `matplotlib`
-- TypeScript/JavaScript với Node.js và các thư viện: `@azure/openai`, `@azure-rest/ai-inference`, `openai`
-- Dịch vụ Azure OpenAI, OpenAI API, và GitHub Models
-- Jupyter Notebooks để học tương tác
-- Dev Containers để đảm bảo môi trường phát triển nhất quán
+- TypeScript/JavaScript với Node.js và các thư viện: `openai` (Azure OpenAI qua endpoint v1 + API Responses), `@azure-rest/ai-inference` (Microsoft Foundry Models)
+- Dịch vụ Azure OpenAI, API OpenAI, và Microsoft Foundry Models (GitHub Models sẽ ngừng hoạt động vào cuối tháng 7 năm 2026)
+- Jupyter Notebooks cho học tương tác
+- Dev Containers để có môi trường phát triển nhất quán
 
-**Cấu trúc kho lưu trữ:**
-- 21 thư mục bài học được đánh số (00-21) chứa các tệp README, ví dụ mã, và bài tập
-- Nhiều triển khai: Python, TypeScript, và đôi khi có cả ví dụ .NET
-- Thư mục dịch với hơn 40 phiên bản ngôn ngữ
-- Cấu hình tập trung qua tệp `.env` (sử dụng `.env.copy` làm mẫu)
+**Cấu Trúc Kho Lưu Trữ:**
+- 21 thư mục bài học đánh số (00-21) chứa README, ví dụ mã, và bài tập
+- Nhiều triển khai: Python, TypeScript, và đôi khi các ví dụ .NET
+- Thư mục dịch thuật với hơn 40 phiên bản ngôn ngữ
+- Cấu hình tập trung qua file `.env` (dùng `.env.copy` làm mẫu)
 
-## Lệnh thiết lập
+## Lệnh Thiết Lập
 
-### Thiết lập ban đầu cho kho lưu trữ
+### Thiết Lập Kho Lưu Trữ Ban Đầu
 
 ```bash
-# Clone the repository
+# Sao chép kho lưu trữ
 git clone https://github.com/microsoft/generative-ai-for-beginners.git
 cd generative-ai-for-beginners
 
-# Copy environment template
+# Sao chép mẫu môi trường
 cp .env.copy .env
-# Edit .env with your API keys and endpoints
+# Chỉnh sửa .env với khóa API và điểm cuối của bạn
 ```
 
-### Thiết lập môi trường Python
+### Thiết Lập Môi Trường Python
 
 ```bash
-# Create virtual environment
+# Tạo môi trường ảo
 python3 -m venv venv
 
-# Activate virtual environment
-# On macOS/Linux:
+# Kích hoạt môi trường ảo
+# Trên macOS/Linux:
 source venv/bin/activate
-# On Windows:
+# Trên Windows:
 venv\Scripts\activate
 
-# Install dependencies
+# Cài đặt các phụ thuộc
 pip install -r requirements.txt
 ```
 
-### Thiết lập Node.js/TypeScript
+### Thiết Lập Node.js/TypeScript
 
 ```bash
-# Install root-level dependencies (for documentation tooling)
+# Cài đặt các phụ thuộc cấp root (cho công cụ tài liệu)
 npm install
 
-# For individual lesson TypeScript examples, navigate to the specific lesson:
+# Đối với các ví dụ TypeScript từng bài học, điều hướng đến bài học cụ thể:
 cd 06-text-generation-apps/typescript/recipe-app
 npm install
 ```
 
-### Thiết lập Dev Container (Khuyến nghị)
+### Thiết Lập Dev Container (Khuyến nghị)
 
-Kho lưu trữ bao gồm cấu hình `.devcontainer` dành cho GitHub Codespaces hoặc Dev Containers của VS Code:
+Kho lưu trữ bao gồm cấu hình `.devcontainer` cho GitHub Codespaces hoặc VS Code Dev Containers:
 
-1. Mở kho lưu trữ trong GitHub Codespaces hoặc VS Code với tiện ích mở rộng Dev Containers
+1. Mở kho lưu trữ trong GitHub Codespaces hoặc VS Code với tiện ích Dev Containers
 2. Dev Container sẽ tự động:
    - Cài đặt các phụ thuộc Python từ `requirements.txt`
-   - Chạy script sau khi tạo (`.devcontainer/post-create.sh`)
-   - Thiết lập kernel Jupyter
+   - Chạy script post-create (`.devcontainer/post-create.sh`)
+   - Cấu hình kernel Jupyter
 
-## Quy trình phát triển
+## Quy Trình Phát Triển
 
-### Biến môi trường
+### Biến Môi Trường
 
-Tất cả các bài học yêu cầu truy cập API sử dụng các biến môi trường được định nghĩa trong `.env`:
+Tất cả các bài học cần truy cập API sử dụng biến môi trường được định nghĩa trong `.env`:
 
-- `OPENAI_API_KEY` - Dành cho OpenAI API
-- `AZURE_OPENAI_API_KEY` - Dành cho dịch vụ Azure OpenAI
-- `AZURE_OPENAI_ENDPOINT` - URL endpoint của Azure OpenAI
-- `AZURE_OPENAI_DEPLOYMENT` - Tên triển khai mô hình hoàn thành hội thoại
+- `OPENAI_API_KEY` - Cho API OpenAI
+- `AZURE_OPENAI_API_KEY` - Cho Azure OpenAI trong Microsoft Foundry (Dịch vụ Azure OpenAI hiện là một phần của Microsoft Foundry: https://ai.azure.com)
+- `AZURE_OPENAI_ENDPOINT` - URL endpoint Azure OpenAI (endpoint tài nguyên Foundry)
+- `AZURE_OPENAI_DEPLOYMENT` - Tên triển khai mô hình chat completion
 - `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Tên triển khai mô hình embeddings
-- `AZURE_OPENAI_API_VERSION` - Phiên bản API (mặc định: `2024-02-01`)
-- `HUGGING_FACE_API_KEY` - Dành cho các mô hình Hugging Face
-- `GITHUB_TOKEN` - Dành cho GitHub Models
+- `AZURE_OPENAI_API_VERSION` - Phiên bản API (mặc định: `2024-10-21`)
+- `HUGGING_FACE_API_KEY` - Cho mô hình Hugging Face
+- `AZURE_INFERENCE_ENDPOINT` - Endpoint Microsoft Foundry Models (catalog mô hình đa nhà cung cấp)
+- `AZURE_INFERENCE_CREDENTIAL` - Khóa API Microsoft Foundry Models (thay thế `GITHUB_TOKEN` sắp ngừng)
 
-### Chạy các ví dụ Python
+### Chạy Các Ví Dụ Python
 
 ```bash
-# Navigate to lesson directory
+# Điều hướng đến thư mục bài học
 cd 06-text-generation-apps/python
 
-# Run a Python script
+# Chạy một script Python
 python aoai-app.py
 ```
 
-### Chạy các ví dụ TypeScript
+### Chạy Các Ví Dụ TypeScript
 
 ```bash
-# Navigate to TypeScript app directory
+# Điều hướng đến thư mục ứng dụng TypeScript
 cd 06-text-generation-apps/typescript/recipe-app
 
-# Build the TypeScript code
+# Xây dựng mã TypeScript
 npm run build
 
-# Run the application
+# Chạy ứng dụng
 npm start
 ```
 
 ### Chạy Jupyter Notebooks
 
 ```bash
-# Start Jupyter in the repository root
+# Khởi động Jupyter trong thư mục gốc của kho lưu trữ
 jupyter notebook
 
-# Or use VS Code with Jupyter extension
+# Hoặc sử dụng VS Code với tiện ích mở rộng Jupyter
 ```
 
-### Làm việc với các loại bài học khác nhau
+### Làm Việc Với Các Loại Bài Học Khác Nhau
 
-- **Bài học "Learn"**: Tập trung vào tài liệu README.md và các khái niệm
-- **Bài học "Build"**: Bao gồm các ví dụ mã hoạt động bằng Python và TypeScript
-- Mỗi bài học có một tệp README.md với lý thuyết, hướng dẫn mã, và liên kết đến nội dung video
+- **Bài học "Học"**: Tập trung vào tài liệu README.md và lý thuyết
+- **Bài học "Xây dựng"**: Bao gồm ví dụ mã chạy được bằng Python và TypeScript
+- Mỗi bài học có README.md với lý thuyết, hướng dẫn mã và liên kết đến nội dung video
 
-## Hướng dẫn phong cách mã
+## Hướng Dẫn Phong Cách Mã
 
 ### Python
 
 - Sử dụng `python-dotenv` để quản lý biến môi trường
-- Import thư viện `openai` để tương tác với API
-- Sử dụng `pylint` để kiểm tra mã (một số ví dụ bao gồm `# pylint: disable=all` để đơn giản hóa)
-- Tuân theo quy ước đặt tên PEP 8
-- Lưu thông tin xác thực API trong tệp `.env`, không bao giờ trong mã
+- Import thư viện `openai` để tương tác API
+- Dùng `pylint` để kiểm tra mã (một số ví dụ có `# pylint: disable=all` để đơn giản)
+- Tuân thủ quy tắc đặt tên theo PEP 8
+- Lưu trữ thông tin API trong file `.env`, không lưu trực tiếp trong mã
 
 ### TypeScript
 
-- Sử dụng gói `dotenv` cho biến môi trường
-- Cấu hình TypeScript trong `tsconfig.json` cho mỗi ứng dụng
-- Sử dụng `@azure/openai` hoặc `@azure-rest/ai-inference` cho các dịch vụ Azure
-- Sử dụng `nodemon` để phát triển với tính năng tự động tải lại
-- Biên dịch trước khi chạy: `npm run build` sau đó `npm start`
+- Sử dụng package `dotenv` cho biến môi trường
+- Cấu hình TypeScript trong `tsconfig.json` cho từng ứng dụng
+- Dùng package `openai` cho Azure OpenAI (chỉ định client tới endpoint `/openai/v1/` và gọi `client.responses.create`); dùng `@azure-rest/ai-inference` cho Microsoft Foundry Models
+- Sử dụng `nodemon` để phát triển với tự động tải lại
+- Xây dựng trước khi chạy: `npm run build` rồi `npm start`
 
-### Quy ước chung
+### Quy Ước Chung
 
 - Giữ các ví dụ mã đơn giản và mang tính giáo dục
-- Bao gồm các chú thích giải thích các khái niệm chính
-- Mã của mỗi bài học nên tự chứa và có thể chạy được
-- Sử dụng cách đặt tên nhất quán: tiền tố `aoai-` cho Azure OpenAI, `oai-` cho OpenAI API, `githubmodels-` cho GitHub Models
+- Bao gồm chú thích giải thích các khái niệm chính
+- Mỗi đoạn mã của bài học phải đầy đủ và có thể chạy được
+- Dùng tên gọi nhất quán: tiền tố `aoai-` cho Azure OpenAI, `oai-` cho OpenAI API, `githubmodels-` cho Microsoft Foundry Models (giữ tiền tố kế thừa từ thời GitHub Models)
 
-## Hướng dẫn tài liệu
+## Hướng Dẫn Tài Liệu
 
-### Phong cách Markdown
+### Phong Cách Markdown
 
-- Tất cả các URL phải được bao bọc trong định dạng `[text](../../url)` mà không có khoảng trắng thừa
-- Liên kết tương đối phải bắt đầu bằng `./` hoặc `../`
-- Tất cả các liên kết đến miền Microsoft phải bao gồm ID theo dõi: `?WT.mc_id=academic-105485-koreyst`
-- Không sử dụng các địa chỉ URL có ngôn ngữ cụ thể (tránh `/en-us/`)
-- Hình ảnh được lưu trữ trong thư mục `./images` với tên mô tả
-- Sử dụng ký tự tiếng Anh, số, và dấu gạch ngang trong tên tệp
+- Tất cả URL phải bọc trong định dạng `[text](../../url)` không có khoảng trắng thừa
+- Liên kết tương đối phải bắt đầu với `./` hoặc `../`
+- Tất cả liên kết tới các miền Microsoft phải có ID theo dõi: `?WT.mc_id=academic-105485-koreyst`
+- Không sử dụng địa phương hóa theo quốc gia trong URL (tránh `/en-us/`)
+- Hình ảnh lưu trong thư mục `./images` với tên mô tả
+- Sử dụng ký tự tiếng Anh, số và dấu gạch nối trong tên file
 
-### Hỗ trợ dịch thuật
+### Hỗ Trợ Dịch Thuật
 
 - Kho lưu trữ hỗ trợ hơn 40 ngôn ngữ thông qua GitHub Actions tự động
-- Các bản dịch được lưu trong thư mục `translations/`
-- Không gửi các bản dịch không đầy đủ
-- Không chấp nhận các bản dịch bằng máy
+- Bản dịch lưu trong thư mục `translations/`
+- Không gửi bản dịch chưa hoàn chỉnh
+- Không chấp nhận bản dịch máy
 - Hình ảnh được dịch lưu trong thư mục `translated_images/`
 
-## Kiểm tra và xác thực
+## Kiểm Tra và Xác Thực
 
-### Kiểm tra trước khi gửi
+### Kiểm Tra Trước Khi Gửi
 
-Kho lưu trữ này sử dụng GitHub Actions để xác thực. Trước khi gửi PR:
+Kho lưu trữ này sử dụng GitHub Actions để validate. Trước khi gửi PR:
 
-1. **Kiểm tra liên kết Markdown**:
+1. **Kiểm tra các liên kết Markdown**:
    ```bash
-   # The validate-markdown.yml workflow checks:
-   # - Broken relative paths
-   # - Missing tracking IDs on paths
-   # - Missing tracking IDs on URLs
-   # - URLs with country locale
-   # - Broken external URLs
+   # Quy trình validate-markdown.yml kiểm tra:
+   # - Đường dẫn tương đối bị hỏng
+   # - Thiếu ID theo dõi trên các đường dẫn
+   # - Thiếu ID theo dõi trên các URL
+   # - URL chứa vùng ngôn ngữ quốc gia
+   # - URL bên ngoài bị hỏng
    ```
 
 2. **Kiểm tra thủ công**:
-   - Kiểm tra các ví dụ Python: Kích hoạt venv và chạy các script
-   - Kiểm tra các ví dụ TypeScript: `npm install`, `npm run build`, `npm start`
-   - Xác minh các biến môi trường được cấu hình chính xác
-   - Kiểm tra rằng các khóa API hoạt động với các ví dụ mã
+   - Thử các ví dụ Python: Kích hoạt venv và chạy script
+   - Thử các ví dụ TypeScript: `npm install`, `npm run build`, `npm start`
+   - Xác nhận biến môi trường được cấu hình đúng
+   - Kiểm tra khóa API hoạt động với ví dụ mã
 
 3. **Ví dụ mã**:
-   - Đảm bảo tất cả mã chạy không có lỗi
-   - Kiểm tra với cả Azure OpenAI và OpenAI API khi áp dụng
-   - Xác minh các ví dụ hoạt động với GitHub Models nếu được hỗ trợ
+   - Đảm bảo tất cả mã chạy không lỗi
+   - Thử với cả Azure OpenAI và OpenAI API khi có thể
+   - Xác nhận ví dụ hoạt động với Microsoft Foundry Models khi được hỗ trợ
 
-### Không có kiểm tra tự động
+### Không Có Kiểm Tra Tự Động
 
-Đây là một kho lưu trữ giáo dục tập trung vào các hướng dẫn và ví dụ. Không có kiểm tra đơn vị hoặc kiểm tra tích hợp nào cần chạy. Việc xác thực chủ yếu là:
+Đây là kho lưu trữ giáo dục tập trung vào hướng dẫn và ví dụ. Không có kiểm tra đơn vị hay kiểm tra tích hợp tự động. Xác thực chủ yếu gồm:
 - Kiểm tra thủ công các ví dụ mã
 - GitHub Actions để xác thực Markdown
-- Đánh giá nội dung giáo dục từ cộng đồng
+- Đánh giá cộng đồng về nội dung giáo dục
 
-## Hướng dẫn gửi Pull Request
+## Hướng Dẫn Pull Request
 
-### Trước khi gửi
+### Trước Khi Gửi
 
-1. Kiểm tra các thay đổi mã trong cả Python và TypeScript khi áp dụng
-2. Chạy xác thực Markdown (tự động kích hoạt trên PR)
-3. Đảm bảo các ID theo dõi có mặt trên tất cả các URL của Microsoft
-4. Kiểm tra rằng các liên kết tương đối hợp lệ
-5. Xác minh hình ảnh được tham chiếu đúng cách
+1. Kiểm tra thay đổi mã trong cả Python và TypeScript khi có thể
+2. Chạy xác thực Markdown (tự động khi gửi PR)
+3. Đảm bảo tất cả URL Microsoft có ID theo dõi
+4. Kiểm tra liên kết tương đối hợp lệ
+5. Xác nhận hình ảnh được tham chiếu đúng
 
-### Định dạng tiêu đề PR
+### Định Dạng Tiêu Đề PR
 
-- Sử dụng tiêu đề mô tả: `[Lesson 06] Fix Python example typo` hoặc `Update README for lesson 08`
-- Tham chiếu số vấn đề khi áp dụng: `Fixes #123`
+- Dùng tiêu đề mô tả: `[Lesson 06] Sửa lỗi gõ trong ví dụ Python` hoặc `Cập nhật README cho bài 08`
+- Tham chiếu số issue nếu có: `Fixes #123`
 
-### Mô tả PR
+### Mô Tả PR
 
-- Giải thích những gì đã thay đổi và lý do
-- Liên kết đến các vấn đề liên quan
-- Đối với thay đổi mã, chỉ rõ các ví dụ nào đã được kiểm tra
-- Đối với PR dịch thuật, bao gồm tất cả các tệp để hoàn thành bản dịch
+- Giải thích thay đổi gì và tại sao
+- Liên kết đến các issue liên quan
+- Với thay đổi mã, chỉ rõ ví dụ đã được thử
+- Với PR dịch thuật, bao gồm tất cả file cho bản dịch hoàn chỉnh
 
-### Yêu cầu đóng góp
+### Yêu Cầu Đóng Góp
 
-- Ký Microsoft CLA (tự động trên PR đầu tiên)
-- Fork kho lưu trữ vào tài khoản của bạn trước khi thực hiện thay đổi
-- Một PR cho mỗi thay đổi logic (không kết hợp các sửa lỗi không liên quan)
-- Giữ PR tập trung và nhỏ gọn khi có thể
+- Ký Microsoft CLA (tự động khi PR đầu tiên)
+- Fork kho lưu trữ vào tài khoản của bạn trước khi thay đổi
+- Một PR cho một thay đổi logic (không gộp các sửa lỗi không liên quan)
+- Giữ PR tập trung và nhỏ khi có thể
 
-## Quy trình làm việc phổ biến
+## Các Quy Trình Thông Dụng
 
-### Thêm một ví dụ mã mới
+### Thêm Ví Dụ Mã Mới
 
-1. Điều hướng đến thư mục bài học phù hợp
+1. Điều hướng đến thư mục bài học tương ứng
 2. Tạo ví dụ trong thư mục con `python/` hoặc `typescript/`
-3. Tuân theo quy ước đặt tên: `{provider}-{example-name}.{py|ts|js}`
-4. Kiểm tra với thông tin xác thực API thực tế
-5. Tài liệu hóa bất kỳ biến môi trường mới nào trong README của bài học
+3. Tuân thủ quy ước đặt tên: `{provider}-{example-name}.{py|ts|js}`
+4. Thử nghiệm với thông tin API thực tế
+5. Ghi tài liệu các biến môi trường mới trong README bài học
 
-### Cập nhật tài liệu
+### Cập Nhật Tài Liệu
 
-1. Chỉnh sửa README.md trong thư mục bài học
-2. Tuân theo hướng dẫn Markdown (ID theo dõi, liên kết tương đối)
-3. Cập nhật bản dịch được xử lý bởi GitHub Actions (không chỉnh sửa thủ công)
-4. Kiểm tra tất cả các liên kết hợp lệ
+1. Sửa README.md trong thư mục bài học
+2. Tuân thủ hướng dẫn Markdown (ID theo dõi, liên kết tương đối)
+3. Cập nhật dịch thuật được xử lý bởi GitHub Actions (không sửa tay)
+4. Kiểm tra tất cả liên kết hợp lệ
 
-### Làm việc với Dev Containers
+### Làm Việc Với Dev Containers
 
-1. Kho lưu trữ bao gồm `.devcontainer/devcontainer.json`
-2. Script sau khi tạo tự động cài đặt các phụ thuộc Python
+1. Kho lưu trữ có file `.devcontainer/devcontainer.json`
+2. Script post-create tự động cài phụ thuộc Python
 3. Các tiện ích mở rộng cho Python và Jupyter được cấu hình sẵn
 4. Môi trường dựa trên `mcr.microsoft.com/devcontainers/universal:2.11.2`
 
-## Triển khai và xuất bản
+## Triển Khai và Xuất Bản
 
-Đây là một kho lưu trữ học tập - không có quy trình triển khai. Chương trình giảng dạy được sử dụng bởi:
+Đây là kho lưu trữ học tập - không có quy trình triển khai. Chương trình được sử dụng qua:
 
-1. **Kho lưu trữ GitHub**: Truy cập trực tiếp vào mã và tài liệu
-2. **GitHub Codespaces**: Môi trường phát triển tức thì với thiết lập được cấu hình sẵn
-3. **Microsoft Learn**: Nội dung có thể được đồng bộ hóa lên nền tảng học tập chính thức
+1. **Kho Lưu Trữ GitHub**: Truy cập trực tiếp mã và tài liệu
+2. **GitHub Codespaces**: Môi trường dev ngay lập tức với thiết lập sẵn
+3. **Microsoft Learn**: Nội dung có thể được phân phối trên nền tảng học chính thức
 4. **docsify**: Trang tài liệu được xây dựng từ Markdown (xem `docsifytopdf.js` và `package.json`)
 
-### Xây dựng trang tài liệu
+### Xây Dựng Trang Tài Liệu
 
 ```bash
-# Generate PDF from documentation (if needed)
+# Tạo PDF từ tài liệu (nếu cần)
 npm run convert
 ```
 
-## Xử lý sự cố
+## Khắc Phục Sự Cố
 
-### Các vấn đề phổ biến
+### Các Vấn Đề Thường Gặp
 
-**Lỗi import Python**:
-- Đảm bảo môi trường ảo đã được kích hoạt
+**Lỗi Import Python**:
+- Đảm bảo kích hoạt môi trường ảo
 - Chạy `pip install -r requirements.txt`
-- Kiểm tra phiên bản Python là 3.9+
+- Kiểm tra phiên bản Python >= 3.9
 
-**Lỗi biên dịch TypeScript**:
-- Chạy `npm install` trong thư mục ứng dụng cụ thể
+**Lỗi Biên Dịch TypeScript**:
+- Chạy `npm install` trong thư mục ứng dụng tương ứng
 - Kiểm tra phiên bản Node.js tương thích
-- Xóa `node_modules` và cài đặt lại nếu cần
+- Xóa thư mục `node_modules` và cài lại nếu cần
 
-**Lỗi xác thực API**:
-- Xác minh tệp `.env` tồn tại và có giá trị chính xác
+**Lỗi Xác Thực API**:
+- Xác nhận file `.env` tồn tại và có giá trị đúng
 - Kiểm tra các khóa API hợp lệ và chưa hết hạn
-- Đảm bảo URL endpoint chính xác cho khu vực của bạn
+- Đảm bảo URL endpoint đúng khu vực của bạn
 
-**Thiếu biến môi trường**:
+**Thiếu Biến Môi Trường**:
 - Sao chép `.env.copy` thành `.env`
-- Điền tất cả các giá trị cần thiết cho bài học bạn đang làm
+- Điền đầy đủ các giá trị cần thiết cho bài học đang làm
 - Khởi động lại ứng dụng sau khi cập nhật `.env`
 
-## Tài nguyên bổ sung
+## Tài Nguyên Bổ Sung
 
-- [Hướng dẫn thiết lập khóa học](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
-- [Hướng dẫn đóng góp](./CONTRIBUTING.md)
-- [Quy tắc ứng xử](./CODE_OF_CONDUCT.md)
-- [Chính sách bảo mật](./SECURITY.md)
-- [Azure AI Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
-- [Bộ sưu tập các ví dụ mã nâng cao](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
+- [Hướng Dẫn Thiết Lập Khóa Học](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
+- [Hướng Dẫn Đóng Góp](./CONTRIBUTING.md)
+- [Quy Tắc Ứng Xử](./CODE_OF_CONDUCT.md)
+- [Chính Sách Bảo Mật](./SECURITY.md)
+- [Discord Azure AI](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
+- [Bộ Sưu Tập Mẫu Mã Nâng Cao](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
 
-## Ghi chú cụ thể về dự án
+## Ghi Chú Riêng Cho Dự Án
 
-- Đây là một **kho lưu trữ giáo dục** tập trung vào học tập, không phải mã sản xuất
-- Các ví dụ được thiết kế đơn giản và tập trung vào việc giảng dạy các khái niệm
-- Chất lượng mã được cân bằng với tính rõ ràng trong giáo dục
-- Mỗi bài học là tự chứa và có thể hoàn thành độc lập
-- Kho lưu trữ hỗ trợ nhiều nhà cung cấp API: Azure OpenAI, OpenAI, và GitHub Models
+- Đây là kho lưu trữ **giáo dục** tập trung vào học tập, không phải mã sản xuất
+- Các ví dụ được thiết kế đơn giản nhằm mục đích giảng dạy các khái niệm
+- Chất lượng mã được cân bằng với tính rõ ràng giáo dục
+- Mỗi bài học độc lập và có thể hoàn thành riêng lẻ
+- Kho lưu trữ hỗ trợ nhiều nhà cung cấp API: Azure OpenAI, OpenAI, Microsoft Foundry Models, và các nhà cung cấp offline như Foundry Local và Ollama
 - Nội dung đa ngôn ngữ với quy trình dịch tự động
-- Cộng đồng hoạt động trên Discord để đặt câu hỏi và hỗ trợ
+- Cộng đồng hoạt động trên Discord để hỗ trợ và trả lời câu hỏi
 
 ---
 
-**Tuyên bố miễn trừ trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ bản địa nên được coi là nguồn thông tin chính thức. Đối với các thông tin quan trọng, khuyến nghị sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Tuyên bố miễn trừ trách nhiệm**:
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng bản dịch tự động có thể chứa lỗi hoặc sai sót. Tài liệu gốc bằng ngôn ngữ gốc nên được coi là nguồn tin chính thức. Đối với thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm về bất kỳ hiểu lầm hoặc giải thích sai nào phát sinh từ việc sử dụng bản dịch này.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

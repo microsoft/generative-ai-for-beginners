@@ -1,76 +1,79 @@
-# שילוב עם קריאה לפונקציות
+# אינטגרציה עם קריאת פונקציות
 
-[![שילוב עם קריאה לפונקציות](../../../translated_images/he/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![אינטגרציה עם קריאת פונקציות](../../../translated_images/he/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
-למדת לא מעט עד כה בשיעורים הקודמים. עם זאת, תמיד יש מקום לשיפור. בין הדברים שניתן לשפר הם איך לקבל פורמט תגובה עקבי יותר כדי להקל על העבודה עם התגובה בהמשך. בנוסף, ייתכן שנרצה להוסיף נתונים ממקורות אחרים כדי להעשיר את האפליקציה שלנו.
+למדתם די הרבה עד כה בשיעורים הקודמים. עם זאת, ניתן לשפר עוד יותר. יש כמה דברים שנוכל לטפל בהם כמו איך לקבל פורמט תגובה עקבי יותר כדי להקל על העבודה עם התגובה בהמשך. בנוסף, נרצה להוסיף נתונים ממקורות אחרים כדי להעשיר עוד יותר את היישום שלנו.
 
-הבעיות שהוזכרו לעיל הן בדיוק מה שהפרק הזה מתמקד בו.
+הבעיות שהוזכרו למעלה הן מה שהפרק הזה יעסוק לטפל בהם.
 
-## הקדמה
+## מבוא
 
-השיעור הזה יכסה:
+שיעור זה יכסה:
 
-- הסבר על מהי קריאה לפונקציות ושימושיה.
-- יצירת קריאה לפונקציה באמצעות Azure OpenAI.
-- איך לשלב קריאה לפונקציה באפליקציה.
+- להסביר מהי קריאת פונקציה ומתי משתמשים בה.
+- יצירת קריאת פונקציה באמצעות Azure OpenAI.
+- איך לשלב קריאת פונקציה בתוך יישום.
 
-## מטרות למידה
+## יעדי הלמידה
 
-בסיום השיעור הזה, תוכל:
+בסיום השיעור, תוכל:
 
-- להסביר את מטרת השימוש בקריאה לפונקציות.
-- להגדיר קריאה לפונקציה באמצעות שירות Azure OpenAI.
-- לעצב קריאות פונקציה יעילות עבור השימוש באפליקציה שלך.
+- להסביר את מטרת השימוש בקריאת פונקציה.
+- להגדיר קריאת פונקציה באמצעות שירות Azure OpenAI.
+- לעצב קריאות פונקציה יעילות לשימוש ביישום שלך.
 
-## תרחיש: שיפור הצ'אטבוט שלנו באמצעות פונקציות
+## תרחיש: שיפור צ'אטבוט עם פונקציות
 
-בשיעור הזה, אנחנו רוצים לבנות תכונה עבור חברת הסטארטאפ החינוכית שלנו שתאפשר למשתמשים להשתמש בצ'אטבוט כדי למצוא קורסים טכניים. נמליץ על קורסים שמתאימים לרמת המיומנות שלהם, תפקידם הנוכחי והטכנולוגיה שמעניינת אותם.
+לשיעור זה, נרצה לבנות תכונה לסטארטאפ חינוכי שלנו שתאפשר למשתמשים להשתמש בצ'אטבוט למציאת קורסים טכניים. נמליץ על קורסים שמתאימים לרמת הידע, תפקיד נוכחי וטכנולוגיה מעניינת.
 
-כדי להשלים את התרחיש הזה, נשתמש בשילוב של:
+להשלמת התרחיש נשתמש בשילוב של:
 
-- `Azure OpenAI` ליצירת חוויית צ'אט עבור המשתמש.
-- `Microsoft Learn Catalog API` כדי לעזור למשתמשים למצוא קורסים בהתאם לבקשתם.
-- `קריאה לפונקציות` כדי לקחת את השאילתה של המשתמש ולשלוח אותה לפונקציה שתבצע את בקשת ה-API.
+- `Azure OpenAI` ליצירת חווית צ'אט למשתמש.
+- `Microsoft Learn Catalog API` שיעזור למשתמשים למצוא קורסים לפי הבקשה שלהם.
+- `Function Calling` שתקח את שאילתת המשתמש ותשלח אותה לפונקציה שתבצע את בקשת ה-API.
 
-כדי להתחיל, בואו נבחן מדוע בכלל נרצה להשתמש בקריאה לפונקציות:
+כדי להתחיל, נבחן מדוע נרצה להשתמש בקריאת פונקציות מלכתחילה:
 
-## למה קריאה לפונקציות
+## למה קריאת פונקציות
 
-לפני קריאה לפונקציות, התגובות מ-LLM היו לא מובנות ולא עקביות. מפתחים נדרשו לכתוב קוד אימות מורכב כדי לוודא שהם יכולים להתמודד עם כל וריאציה של תגובה. משתמשים לא יכלו לקבל תשובות כמו "מה מזג האוויר הנוכחי בסטוקהולם?". זאת מכיוון שהמודלים היו מוגבלים לזמן שבו הנתונים אומנו.
+לפני קריאת פונקציות, התגובות מ-LLM היו לא מובנות ולא עקביות. המפתחים נדרשו לכתוב קוד אימות מסובך כדי להתמודד עם כל וריאציה של תגובה. משתמשים לא יכלו לקבל תשובות כמו "מה מזג האוויר הנוכחי בסטוקהולם?". זאת כי הדגמים התבססו על מידע שהוגבל לזמן האימון.
 
-קריאה לפונקציות היא תכונה של שירות Azure OpenAI שמתגברת על המגבלות הבאות:
+קריאת פונקציות היא תכונה של שירות Azure OpenAI להתגבר על המגבלות הבאות:
 
-- **פורמט תגובה עקבי**. אם נוכל לשלוט טוב יותר בפורמט התגובה, נוכל לשלב את התגובה בקלות רבה יותר במערכות אחרות.
-- **נתונים חיצוניים**. היכולת להשתמש בנתונים ממקורות אחרים של אפליקציה בהקשר של צ'אט.
+- **פורמט תגובה עקבי**. אם נוכל לשלוט טוב יותר בפורמט התגובה נוכל לשלב את התגובה בקלות במערכות אחרות.
+- **נתונים חיצוניים**. יכולת להשתמש בנתונים ממקורות אחרים של יישום בתוך הקשר שיחה.
 
-## המחשת הבעיה דרך תרחיש
+## המחשת הבעיה באמצעות תרחיש
 
-> אנו ממליצים להשתמש ב-[מחברת המצורפת](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) אם תרצו להריץ את התרחיש הבא. ניתן גם לקרוא בלבד, שכן אנו מנסים להמחיש בעיה שבה פונקציות יכולות לעזור לפתור אותה.
+> מומלץ להשתמש ב-[מחברת כלולה](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) אם ברצונך להריץ את התרחיש שלהלן. אפשר גם לקרוא בלבד כשאנחנו מנסים להמחיש בעיה שבה פונקציות יכולות לעזור לפתור אותה.
 
-בואו נבחן דוגמה שממחישה את בעיית פורמט התגובה:
+נבחן דוגמה שמדגימה את בעיית פורמט התגובה:
 
-נניח שאנחנו רוצים ליצור מסד נתונים של נתוני תלמידים כדי שנוכל להציע להם את הקורס המתאים. להלן שתי תיאורים של תלמידים שמאוד דומים בנתונים שהם מכילים.
+נניח שאנחנו רוצים ליצור מסד נתונים של נתוני סטודנטים כדי להציע להם את הקורס המתאים. למטה יש שתי תיאורים של סטודנטים שהם דומים מאוד בנתונים שמכילים.
 
-1. יצירת חיבור למשאב Azure OpenAI שלנו:
+1. צור חיבור למשאב Azure OpenAI שלנו:
 
    ```python
    import os
    import json
-   from openai import AzureOpenAI
+   from openai import OpenAI
    from dotenv import load_dotenv
    load_dotenv()
 
-   client = AzureOpenAI(
-   api_key=os.environ['AZURE_OPENAI_API_KEY'],  # this is also the default, it can be omitted
-   api_version = "2023-07-01-preview"
+   # ממשק התגובות מופעל מ- Azure OpenAI (Microsoft Foundry) גרסה 1
+   # נקודת הקצה, לכן אנו מגדירים את לקוח OpenAI על <your-endpoint>/openai/v1/.
+   endpoint = os.environ['AZURE_OPENAI_ENDPOINT']
+   client = OpenAI(
+   api_key=os.environ['AZURE_OPENAI_API_KEY'],
+   base_url=f"{endpoint.rstrip('/')}/openai/v1/",
    )
 
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   להלן קוד Python שמגדיר את החיבור ל-Azure OpenAI שבו אנו מגדירים `api_type`, `api_base`, `api_version` ו-`api_key`.
+   למטה יש קוד פייתון שמגדיר את החיבור שלנו ל-Azure OpenAI. מכיוון שאנו משתמשים ב-endpoint v1, רק צריך להגדיר את `api_key` ו-`base_url` (לא צריך `api_version`).
 
-1. יצירת שני תיאורי תלמידים באמצעות משתנים `student_1_description` ו-`student_2_description`.
+1. יצירת שני תיאורי סטודנטים באמצעות המשתנים `student_1_description` ו-`student_2_description`.
 
    ```python
    student_1_description="Emily Johnson is a sophomore majoring in computer science at Duke University. She has a 3.7 GPA. Emily is an active member of the university's Chess Club and Debate Team. She hopes to pursue a career in software engineering after graduating."
@@ -78,9 +81,9 @@
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   אנו רוצים לשלוח את תיאורי התלמידים הללו ל-LLM כדי לנתח את הנתונים. נתונים אלו יכולים לשמש מאוחר יותר באפליקציה שלנו ולהישלח ל-API או להישמר במסד נתונים.
+   אנו רוצים לשלוח את תיאורי הסטודנטים ל-LLM כדי לפרש את הנתונים. נתונים אלו ישמשו אחר כך ביישום שלנו ויכולים להישלח ל-API או להישמר במסד נתונים.
 
-1. בואו ניצור שני הנחיות זהות שבהן אנו מנחים את ה-LLM על איזה מידע אנו מעוניינים:
+1. ניצור שני הודעות זהות שבהן נתווה על ה-LLM איזו מידע מעניין אותנו:
 
    ```python
    prompt1 = f'''
@@ -110,33 +113,35 @@
    '''
    ```
 
-   ההנחיות לעיל מנחות את ה-LLM לחלץ מידע ולהחזיר את התגובה בפורמט JSON.
+   ההודעות למעלה מורות ל-LLM להוציא מידע ולהחזיר את התגובה בפורמט JSON.
 
-1. לאחר הגדרת ההנחיות והחיבור ל-Azure OpenAI, נשלח כעת את ההנחיות ל-LLM באמצעות `openai.ChatCompletion`. אנו שומרים את ההנחיה במשתנה `messages` ומקצים את התפקיד ל-`user`. זה כדי לדמות הודעה ממשתמש שנכתבת לצ'אטבוט.
+1. לאחר הגדרת ההודעות והחיבור ל-Azure OpenAI, נשלח את ההודעות ל-LLM באמצעות `client.responses.create`. נשמור את ההודעה במשתנה `input` ונגדיר את התפקיד ל-`user`. זאת כדי לדמות הודעה משתמש שנכתבת לצ'אטבוט.
 
    ```python
-   # response from prompt one
-   openai_response1 = client.chat.completions.create(
+   # תגובה מהבקשה הראשונה
+   openai_response1 = client.responses.create(
    model=deployment,
-   messages = [{'role': 'user', 'content': prompt1}]
+   input = [{'role': 'user', 'content': prompt1}],
+   store=False,
    )
-   openai_response1.choices[0].message.content
+   openai_response1.output_text
 
-   # response from prompt two
-   openai_response2 = client.chat.completions.create(
+   # תגובה מהבקשה השנייה
+   openai_response2 = client.responses.create(
    model=deployment,
-   messages = [{'role': 'user', 'content': prompt2}]
+   input = [{'role': 'user', 'content': prompt2}],
+   store=False,
    )
-   openai_response2.choices[0].message.content
+   openai_response2.output_text
    ```
 
-כעת נוכל לשלוח את שתי הבקשות ל-LLM ולבחון את התגובה שאנו מקבלים על ידי מציאתה כך `openai_response1['choices'][0]['message']['content']`.
+כעת נוכל לשלוח את שתי הבקשות ל-LLM ולבחון את התגובה המתקבלת על ידי מציאתה למשל כך `openai_response1.output_text`.
 
-1. לבסוף, נוכל להמיר את התגובה לפורמט JSON על ידי קריאה ל-`json.loads`:
+1. לבסוף, ניתן להמיר את התגובה לפורמט JSON על ידי קריאה ל- `json.loads`:
 
    ```python
-   # Loading the response as a JSON object
-   json_response1 = json.loads(openai_response1.choices[0].message.content)
+   # טוען את התגובה כאובייקט JSON
+   json_response1 = json.loads(openai_response1.output_text)
    json_response1
    ```
 
@@ -164,59 +169,60 @@
    }
    ```
 
-   למרות שההנחיות זהות והתיאורים דומים, אנו רואים ערכים של מאפיין `Grades` בפורמט שונה, כמו `3.7` או `3.7 GPA`.
+   למרות שההודעות זהות והתיאורים דומים, אנו רואים ערכים שונים של התכונה `Grades` המופיעים בפורמטים שונים, למשל יכול לקבל ערך כמו `3.7` או `3.7 GPA`.
 
-   תוצאה זו נובעת מכך שה-LLM לוקח נתונים לא מובנים בצורה של הנחיה כתובה ומחזיר גם נתונים לא מובנים. אנו צריכים פורמט מובנה כדי שנדע למה לצפות כשאנו שומרים או משתמשים בנתונים אלו.
+   התוצאה הזו נובעת מהיות ה-LLM מקבל נתונים לא מובנים בצורת ההודעה הכתובה ומחזיר גם נתונים לא מובנים. אנו צריכים פורמט מובנה כדי לדעת למה לצפות בעת שמירת הנתונים או השימוש בהם.
 
-אז איך פותרים את בעיית הפורמט? באמצעות קריאה לפונקציות, אנו יכולים לוודא שאנו מקבלים נתונים מובנים בחזרה. כאשר משתמשים בקריאה לפונקציות, ה-LLM לא באמת קורא או מריץ פונקציות. במקום זאת, אנו יוצרים מבנה שה-LLM יעקוב אחריו בתגובותיו. אנו משתמשים בתגובות המובנות הללו כדי לדעת איזו פונקציה להריץ באפליקציות שלנו.
+אז איך פותרים את בעיית הפורמט? באמצעות קריאת פונקציה, נוודא שנקבל נתונים מובנים חזרה. בעת שימוש בקריאת פונקציה, ה-LLM לא באמת מפעיל או מריץ פונקציות. במקום זאת, אנו יוצרים מבנה שה-LLM יעקוב אחריו בתגובותיו. לאחר מכן נשתמש בתגובות המובנות הללו כדי לדעת איזו פונקציה להריץ ביישומים שלנו.
 
-![זרימת פונקציות](../../../translated_images/he/Function-Flow.083875364af4f4bb.webp)
+![זרימת פונקציה](../../../translated_images/he/Function-Flow.083875364af4f4bb.webp)
 
-לאחר מכן, אנו יכולים לקחת את מה שמוחזר מהפונקציה ולשלוח זאת בחזרה ל-LLM. ה-LLM יגיב בשפה טבעית כדי לענות על השאילתה של המשתמש.
+לאחר מכן נוכל לקחת את התוצאה שהוחזרה מהפונקציה ולשלוח אותה חזרה ל-LLM. ה-LLM יענה בשפה טבעית על שאילתת המשתמש.
 
-## שימושים לקריאה לפונקציות
+## מקרים לשימוש בקריאות פונקציה
 
-ישנם שימושים רבים שבהם קריאה לפונקציות יכולה לשפר את האפליקציה שלך, כמו:
+ישנם מקרים שונים בהם קריאות פונקציה יכולות לשפר את היישום שלך, כגון:
 
-- **קריאה לכלים חיצוניים**. צ'אטבוטים מצוינים במתן תשובות לשאלות של משתמשים. באמצעות קריאה לפונקציות, הצ'אטבוטים יכולים להשתמש בהודעות ממשתמשים כדי לבצע משימות מסוימות. לדוגמה, תלמיד יכול לבקש מהצ'אטבוט "שלח אימייל למורה שלי ואמור שאני זקוק לעזרה נוספת בנושא הזה". זה יכול לבצע קריאה לפונקציה `send_email(to: string, body: string)`.
+- **שימוש בכלים חיצוניים**. צ'אטבוטים מצוינים במתן תשובות לשאלות משתמשים. באמצעות קריאת פונקציה, הצ'אטבוטים יכולים להשתמש בהודעות המשתמש לבצע משימות מסוימות. לדוגמה, סטודנט יכול לבקש מן הצ'אטבוט "שלח מייל למרצה שלי שאמרתי שאני צריך עזרה נוספת בנושא זה". זה יכול לקרוא לפונקציה בשם `send_email(to: string, body: string)`
 
-- **יצירת שאילתות API או מסד נתונים**. משתמשים יכולים למצוא מידע באמצעות שפה טבעית שמומרת לשאילתה או בקשת API בפורמט מובנה. דוגמה לכך יכולה להיות מורה שמבקש "מי התלמידים שסיימו את המשימה האחרונה" שיכול לקרוא לפונקציה בשם `get_completed(student_name: string, assignment: int, current_status: string)`.
+- **יצירת שאילתות API או מסד נתונים**. משתמשים יכולים למצוא מידע באמצעות שפה טבעית שזוכה להמרה לשאילתה או בקשת API בפורמט מסודר. דוגמה לכך היא מורה שמתעניין ב"מי הסטודנטים שסיימו את המשימה האחרונה", שיכול לקרוא לפונקציה בשם `get_completed(student_name: string, assignment: int, current_status: string)`
 
-- **יצירת נתונים מובנים**. משתמשים יכולים לקחת בלוק טקסט או CSV ולהשתמש ב-LLM כדי לחלץ מידע חשוב ממנו. לדוגמה, תלמיד יכול להמיר מאמר מוויקיפדיה על הסכמי שלום ליצירת כרטיסי פלאש AI. זה יכול להיעשות באמצעות פונקציה בשם `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`.
+- **יצירת נתונים מובנים**. משתמשים יכולים לקחת בלוק טקסט או CSV ולהשתמש ב-LLM כדי לחלץ מידע חשוב מהם. לדוגמה, סטודנט יכול להמיר מאמר מוויקיפדיה על הסכמי שלום ליצירת כרטיסיות AI. זה יכול להיעשות באמצעות פונקציה בשם `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`
 
-## יצירת קריאה לפונקציה ראשונה
+## יצירת קריאת הפונקציה הראשונה שלך
 
-תהליך יצירת קריאה לפונקציה כולל 3 שלבים עיקריים:
+תהליך יצירת קריאת פונקציה כולל 3 שלבים עיקריים:
 
-1. **קריאה** ל-Chat Completions API עם רשימת הפונקציות שלך והודעת משתמש.
-2. **קריאה** לתגובה של המודל כדי לבצע פעולה, כלומר להריץ פונקציה או קריאת API.
-3. **ביצוע** קריאה נוספת ל-Chat Completions API עם התגובה מהפונקציה כדי להשתמש במידע הזה ליצירת תגובה למשתמש.
+1. **קריאה** ל-Responses API עם רשימת הפונקציות (כלים) שלך והודעת משתמש.
+2. **קריאה** לתגובת המודל לביצוע פעולה כגון הרצת פונקציה או קריאת API.
+3. **ביצוע** קריאה נוספת ל-Responses API עם תגובת הפונקציה שלך כדי להשתמש במידע הזה ליצירת תגובה למשתמש.
 
 ![זרימת LLM](../../../translated_images/he/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### שלב 1 - יצירת הודעות
 
-השלב הראשון הוא יצירת הודעת משתמש. ניתן להקצות ערך באופן דינמי על ידי לקיחת הערך של קלט טקסט או להקצות ערך כאן. אם זו הפעם הראשונה שלך לעבוד עם Chat Completions API, אנו צריכים להגדיר את `role` ואת `content` של ההודעה.
+השלב הראשון הוא ליצור הודעת משתמש. ניתן להקצות זאת בצורה דינמית על ידי לקיחת ערך מהזנת טקסט או להקצות ערך כאן. אם זו הפעם הראשונה שאתה עובד עם Responses API, אנו צריכים להגדיר את `role` ואת `content` של ההודעה.
 
-ה-`role` יכול להיות `system` (יצירת כללים), `assistant` (המודל) או `user` (המשתמש הסופי). עבור קריאה לפונקציות, אנו נציין זאת כ-`user` ודוגמה לשאלה.
+ה-`role` יכול להיות `system` (יצירת חוקים), `assistant` (המודל) או `user` (המשתמש הסופי). בקריאת פונקציה, נגדיר זאת כ-`user` ודוגמת שאלה.
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-על ידי הקצאת תפקידים שונים, זה מבהיר ל-LLM אם זה המערכת שאומרת משהו או המשתמש, מה שעוזר לבנות היסטוריית שיחה שה-LLM יכול לבנות עליה.
+על ידי הקצאת תפקידים שונים, ברור ל-LLM אם זו מערכת שמדברת או המשתמש, מה שעוזר לבנות היסטוריית שיחה שעל ה-LLM לבנות עליה.
 
 ### שלב 2 - יצירת פונקציות
 
-לאחר מכן, נגדיר פונקציה ואת הפרמטרים שלה. נשתמש רק בפונקציה אחת כאן בשם `search_courses`, אך ניתן ליצור פונקציות רבות.
+לאחר מכן נגדיר פונקציה ואת הפרמטרים שלה. כאן נשתמש בפונקציה אחת בלבד בשם `search_courses` אבל ניתן ליצור פונקציות מרובות.
 
-> **חשוב**: פונקציות נכללות בהודעת המערכת ל-LLM וייכללו בכמות הטוקנים הזמינים שיש לך.
+> **חשוב** : פונקציות כלולות בהודעת המערכת ל-LLM ויכללו בכמות הטוקנים הזמינה שיש לכם.
 
-להלן, אנו יוצרים את הפונקציות כמערך של פריטים. כל פריט הוא פונקציה ויש לו מאפיינים `name`, `description` ו-`parameters`:
+למטה, ניצור את הפונקציות כמערך פריטים. כל פריט הוא כלי בממשק Responses API הפשוט, עם תכונות `type`, `name`, `description` ו-`parameters`:
 
 ```python
 functions = [
    {
+      "type":"function",
       "name":"search_courses",
       "description":"Retrieves courses from the search index based on the parameters provided",
       "parameters":{
@@ -243,75 +249,76 @@ functions = [
 ]
 ```
 
-בואו נתאר כל מופע פונקציה בפירוט רב יותר להלן:
+נסביר כל מופע פונקציה בפירוט למטה:
 
-- `name` - שם הפונקציה שאנו רוצים שתיקרא.
-- `description` - זהו התיאור של איך הפונקציה עובדת. כאן חשוב להיות ספציפיים וברורים.
-- `parameters` - רשימת ערכים ופורמט שהמודל יפיק בתגובתו. מערך הפרמטרים מורכב מפריטים שבהם לפריטים יש את המאפיינים הבאים:
-  1.  `type` - סוג הנתונים שבו המאפיינים יישמרו.
-  1.  `properties` - רשימת הערכים הספציפיים שהמודל ישתמש בהם בתגובתו המובנית.
-      1. `name` - המפתח הוא שם המאפיין שהמודל ישתמש בו בתגובתו המובנית, לדוגמה, `product`.
-      1. `type` - סוג הנתונים של מאפיין זה, לדוגמה, `string`.
-      1. `description` - תיאור של המאפיין הספציפי.
+- `name` - שם הפונקציה שאנו רוצים לקרוא לה.
+- `description` - תיאור כיצד הפונקציה פועלת. כאן חשוב להיות מדויקים וברורים.
+- `parameters` - רשימת ערכים ופורמט שהמודל יפיק בתגובתו. מערך הפרמטרים כולל פריטים שבהם יש את התכונות הבאות:
+  1.  `type` - סוג הנתונים של התכונות שבהם יאוחסנו הערכים.
+  1.  `properties` - רשימת הערכים הספציפיים שהמודל ישתמש בהם בתגובתו
+      1. `name` - המפתח הוא שם התכונה שהמודל ישתמש בו בתגובה המפורמנת, לדוגמה, `product`.
+      1. `type` - סוג הנתונים של תכונה זו, לדוגמה, `string`.
+      1. `description` - תיאור התכונה הספציפית.
 
-יש גם מאפיין אופציונלי `required` - מאפיין נדרש כדי להשלים את קריאת הפונקציה.
+יש גם תכונה אופציונלית בשם `required` - תכונה דרושה כדי שהקריאה לפונקציה תושלם.
 
-### שלב 3 - ביצוע קריאה לפונקציה
+### שלב 3 - ביצוע קריאת הפונקציה
 
-לאחר הגדרת פונקציה, כעת אנו צריכים לכלול אותה בקריאה ל-Chat Completion API. אנו עושים זאת על ידי הוספת `functions` לבקשה. במקרה זה `functions=functions`.
+לאחר הגדרת הפונקציה, עלינו לכלול אותה בקריאה ל-Responses API. נעשה זאת על ידי הוספת `tools` לבקשה. במקרה זה `tools=functions`.
 
-יש גם אפשרות להגדיר `function_call` ל-`auto`. זה אומר שניתן ל-LLM להחליט איזו פונקציה יש לקרוא בהתבסס על הודעת המשתמש במקום להקצות אותה בעצמנו.
+יש גם אפשרות להגדיר `tool_choice` ל-`auto`. משמעות הדבר היא שנאפשר ל-LLM להחליט איזו פונקציה לקרוא על פי הודעת המשתמש במקום להגדיר זאת בעצמנו.
 
-להלן קוד שבו אנו קוראים ל-`ChatCompletion.create`, שימו לב איך אנו מגדירים `functions=functions` ו-`function_call="auto"` ובכך נותנים ל-LLM את הבחירה מתי לקרוא לפונקציות שאנו מספקים לו:
+להלן קוד שבו קוראים ל- `client.responses.create`, שים לב כיצד הגדרנו `tools=functions` ו-`tool_choice="auto"` ובכך נותנים ל-LLM את האפשרות מתי לקרוא לפונקציות שאנו מספקים לו:
 
 ```python
-response = client.chat.completions.create(model=deployment,
-                                        messages=messages,
-                                        functions=functions,
-                                        function_call="auto")
+response = client.responses.create(model=deployment,
+                                        input=messages,
+                                        tools=functions,
+                                        tool_choice="auto",
+                                        store=False)
 
-print(response.choices[0].message)
+print(response.output)
 ```
 
-התגובה שמתקבלת נראית כך:
+התגובה המתקבלת כעת כוללת פריט `function_call` בתוך `response.output` שנראה כך:
 
 ```json
 {
-  "role": "assistant",
-  "function_call": {
-    "name": "search_courses",
-    "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
-  }
+  "type": "function_call",
+  "name": "search_courses",
+  "call_id": "call_abc123",
+  "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
 }
 ```
 
-כאן אנו רואים איך הפונקציה `search_courses` נקראה ועם אילו ארגומנטים, כפי שמפורט במאפיין `arguments` בתגובה JSON.
+כאן אנו רואים כיצד פונקציית `search_courses` נקראה ובאילו ארגומנטים, כפי שמפורט בתכונה `arguments` בתגובה בפורמט JSON.
 
-המסקנה היא שה-LLM הצליח למצוא את הנתונים שמתאימים לארגומנטים של הפונקציה כשהוא חילץ אותם מהערך שסופק למשתנה `messages` בקריאה ל-Chat Completion. להלן תזכורת לערך של `messages`:
+המסקנה היא ש-LLM הצליח למצוא את הנתונים המתאימים לארגומנטים של הפונקציה כשהוציא אותם מהערך שסופק לפרמטר `input` בקריאת Responses API. למטה תזכורת לערך `messages`:
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-כפי שניתן לראות, `student`, `Azure` ו-`beginner` חולצו מ-`messages` והוגדרו כקלט לפונקציה. שימוש בפונקציות בדרך זו הוא דרך מצוינת לחלץ מידע מהנחיה וגם לספק מבנה ל-LLM וליצור פונקציונליות חוזרת.
+כפי שניתן לראות, `student`, `Azure` ו-`beginner` חולצו מ-`messages` והוגדרו כקלט לפונקציה. שימוש בפונקציות בדרך זו היא דרך מצוינת לחלץ מידע מפרומפט וגם לספק מבנה ל-LLM וליצור פונקציונליות שניתנת לשימוש חוזר.
 
-כעת, אנו צריכים לראות איך ניתן להשתמש בזה באפליקציה שלנו.
+כעת צריך לראות איך נוכל להשתמש בזה ביישום שלנו.
 
-## שילוב קריאות פונקציות באפליקציה
+## שילוב קריאות פונקציה ביישום
 
-לאחר שבדקנו את תגובת הפורמט מה-LLM, כעת נוכל לשלב זאת באפליקציה.
+לאחר שבדקנו את תגובת ה-LLM המעוצבת, נוכל כעת לשלב זאת ביישום.
 
 ### ניהול הזרימה
 
-כדי לשלב זאת באפליקציה שלנו, בואו נבצע את השלבים הבאים:
+כדי לשלב זאת ביישום שלנו, נעשה את השלבים הבאים:
 
-1. ראשית, נבצע את הקריאה לשירותי OpenAI ונשמור את ההודעה במשתנה בשם `response_message`.
+1. ראשית, נשגר את הקריאה לשירותי OpenAI וניתן לשלוף את פריטי קריאת הפונקציה מתוך התגובה `output`.
 
    ```python
-   response_message = response.choices[0].message
+   response_items = response.output
+   tool_calls = [item for item in response_items if item.type == "function_call"]
    ```
 
-1. כעת נגדיר את הפונקציה שתבצע קריאה ל-Microsoft Learn API כדי לקבל רשימת קורסים:
+1. כעת נגדיר את הפונקציה שתקרוא ל-Microsoft Learn API כדי לקבל רשימת קורסים:
 
    ```python
    import requests
@@ -333,67 +340,59 @@ messages= [ {"role": "user", "content": "Find me a good course for a beginner st
      return str(results)
    ```
 
-   שימו לב איך אנו יוצרים כעת פונקציית Python אמיתית שמתאימה לשמות הפונקציות שהוצגו במשתנה `functions`. אנו גם מבצעים קריאות API חיצוניות אמיתיות כדי לאחזר את הנתונים שאנו צריכים. במקרה זה, אנו פונים ל-Microsoft Learn API כדי לחפש מודולי הדרכה.
+   שים לב כי כעת אנו יוצרים פונקציית פייתון ממשית שממפה לשמות הפונקציות שהוגדרו במשתנה `functions`. כמו כן, אנו מבצעים קריאות API חיצוניות אמיתיות כדי לקבל את הנתונים הנחוצים. במקרה זה, אנו פונים ל-Microsoft Learn API לחיפוש מודולי הכשרה.
 
-אוקיי, אז יצרנו משתנה `functions` ופונקציית Python תואמת, איך אנו אומרים ל-LLM איך למפות בין השניים כך שפונקציית Python שלנו תיקרא?
+אוקיי, יצרנו את משתנה `functions` ופונקציית פייתון מקבילה, איך נודיע ל-LLM כיצד למפות ביניהם כך שהפונקציה בפייתון תקרא?
 
-1. כדי לראות אם אנו צריכים לקרוא לפונקציית Python, אנו צריכים לבדוק בתגובה של ה-LLM אם `function_call` הוא חלק ממנה ולקרוא לפונקציה שצוינה. הנה איך ניתן לבצע את הבדיקה המוזכרת להלן:
+1. כדי לבדוק האם יש צורך לקרוא לפונקציית פייתון, עלינו לבדוק את התגובה מה-LLM ולראות אם קיים פריט `function_call` כחלק ממנו, ולהפעיל את הפונקציה שצוינה. כך ניתן לבצע את הבדיקה למטה:
 
    ```python
-   # Check if the model wants to call a function
-   if response_message.function_call.name:
-    print("Recommended Function call:")
-    print(response_message.function_call.name)
-    print()
+   # בדוק אם הדגם רוצה לקרוא לפונקציה
+   if tool_calls:
+    for tool_call in tool_calls:
+     print("Recommended Function call:")
+     print(tool_call.name)
+     print()
 
-    # Call the function.
-    function_name = response_message.function_call.name
+     # קרא לפונקציה.
+     function_name = tool_call.name
 
-    available_functions = {
-            "search_courses": search_courses,
-    }
-    function_to_call = available_functions[function_name]
+     available_functions = {
+             "search_courses": search_courses,
+     }
+     function_to_call = available_functions[function_name]
 
-    function_args = json.loads(response_message.function_call.arguments)
-    function_response = function_to_call(**function_args)
+     function_args = json.loads(tool_call.arguments)
+     function_response = function_to_call(**function_args)
 
-    print("Output of function call:")
-    print(function_response)
-    print(type(function_response))
+     print("Output of function call:")
+     print(function_response)
+     print(type(function_response))
 
-
-    # Add the assistant response and function response to the messages
-    messages.append( # adding assistant response to messages
-        {
-            "role": response_message.role,
-            "function_call": {
-                "name": function_name,
-                "arguments": response_message.function_call.arguments,
-            },
-            "content": None
-        }
-    )
-    messages.append( # adding function response to messages
-        {
-            "role": "function",
-            "name": function_name,
-            "content":function_response,
-        }
-    )
+     # הוסף את קריאת הפונקציה ותוצאתה לשיחה.
+     # פריט ה-function_call של הדגם חייב להיות מצורף לפני הפלט שלו.
+     messages.append(tool_call)  # פריט ה-function_call של העוזר
+     messages.append( # תוצאת הפונקציה
+         {
+             "type": "function_call_output",
+             "call_id": tool_call.call_id,
+             "output": function_response,
+         }
+     )
    ```
 
-   שלושת השורות הללו מבטיחות שאנו מחלצים את שם הפונקציה, הארגומנטים ומבצעים את הקריאה:
+   שלוש השורות הללו מוודאות שאנו שולפים את שם הפונקציה, את הארגומנטים ומבצעים את הקריאה:
 
    ```python
    function_to_call = available_functions[function_name]
 
-   function_args = json.loads(response_message.function_call.arguments)
+   function_args = json.loads(tool_call.arguments)
    function_response = function_to_call(**function_args)
    ```
 
-   להלן הפלט מהרצת הקוד שלנו:
+   להלן פלט ההרצה של הקוד שלנו:
 
-   **פלט**
+**פלט**
 
    ```Recommended Function call:
    {
@@ -412,52 +411,60 @@ messages= [ {"role": "user", "content": "Find me a good course for a beginner st
    <class 'str'>
    ```
 
-1. כעת נשלח את ההודעה המעודכנת, `messages`, ל-LLM כדי שנוכל לקבל תגובה בשפה טבעית במקום תגובה בפורמט JSON של API.
+1. כעת נשלח את ההודעה המעודכנת, `messages` ל-LLM כדי לקבל תגובה בשפה טבעית במקום תגובת JSON ממסד נתונים.
 
    ```python
    print("Messages in next request:")
    print(messages)
    print()
 
-   second_response = client.chat.completions.create(
-      messages=messages,
+   second_response = client.responses.create(
+      input=messages,
       model=deployment,
-      function_call="auto",
-      functions=functions,
-      temperature=0
-         )  # get a new response from GPT where it can see the function response
+      tool_choice="auto",
+      tools=functions,
+      temperature=0,
+      store=False,
+         )  # לקבל תשובה חדשה מהמודל שבו הוא יכול לראות את תגובת הפונקציה
 
 
-   print(second_response.choices[0].message)
+   print(second_response.output_text)
    ```
 
-   **פלט**
+**פלט**
 
-   ```python
-   {
-     "role": "assistant",
-     "content": "I found some good courses for beginner students to learn Azure:\n\n1. [Describe concepts of cryptography] (https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)\n2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)\n3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)\n4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)\n5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)\n\nYou can click on the links to access the courses."
-   }
+   ```text
+   I found some good courses for beginner students to learn Azure:
 
+   1. [Describe concepts of cryptography](https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)
+   2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)
+   3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)
+   4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)
+   5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)
+
+   You can click on the links to access the courses.
    ```
 
 ## משימה
 
-כדי להמשיך ללמוד על קריאה לפונקציות ב-Azure OpenAI, ניתן לבנות:
+כדי להמשיך ללמוד על Azure OpenAI Function Calling תוכל לבנות:
 
-- יותר פרמטרים לפונקציה שעשויים לעזור ללומדים למצוא יותר קורסים.
-- ליצור קריאה לפונקציה נוספת שלוקחת יותר מידע מהלומד כמו שפת האם שלו.
+- פרמטרים נוספים של הפונקציה שעשויים לעזור ללומדים למצוא עוד קורסים.
+
+- צור קריאת פונקציה נוספת שלוקחת מידע נוסף מהלומד כמו שפת האם שלו
 - צור טיפול בשגיאות כאשר קריאת הפונקציה ו/או קריאת ה-API לא מחזירה קורסים מתאימים
 
-רמז: עקוב אחר עמוד [תיעוד ה-API של Learn](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) כדי לראות כיצד והיכן נתונים אלו זמינים.
+רמז: עקוב אחרי [תיעוד הממשק API של Learn](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) כדי לראות איך ואיפה הנתונים האלה זמינים.
 
-## עבודה נהדרת! המשך המסע
+## עבודה מצוינת! המשך את המסע
 
-לאחר סיום השיעור הזה, בדוק את [אוסף הלמידה של AI גנרטיבי](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) כדי להמשיך לשפר את הידע שלך ב-AI גנרטיבי!
+לאחר סיום השעור הזה, בדוק את [אוסף הלמידה של Generative AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) שלנו כדי להמשיך לשפר את הידע שלך ב-Generative AI!
 
-עבור לשיעור 12, שבו נבחן כיצד [לעצב UX עבור יישומי AI](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+עבור לשיעור 12, שבו נבחן כיצד [לתכנן חוויית משתמש ליישומי AI](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**כתב ויתור**:  
-מסמך זה תורגם באמצעות שירות תרגום AI [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי אנושי. איננו אחראים לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**כתב ויתור**:
+מסמך זה תורגם באמצעות שירות תרגום אוטומטי [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עלולים להכיל שגיאות או אי-דיוקים. יש להחשיב את המסמך המקורי בשפתו הטבעית כמקור הסמכות. למידע קריטי מומלץ להשתמש בתרגום מקצועי על ידי מתרגם אדם. אנו לא אחראים לכל אי-הבנה או פירוש שגוי הנובע מהשימוש בתרגום זה.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

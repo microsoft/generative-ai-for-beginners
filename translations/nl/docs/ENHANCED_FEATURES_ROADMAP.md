@@ -1,142 +1,147 @@
-# Uitgebreide functies en verbeteringen roadmap
+# Verbeterde functies en verbeteringen roadmap
 
-Dit document schetst aanbevolen verbeteringen en uitbreidingen voor het Generative AI for Beginners-curriculum, gebaseerd op een uitgebreide code-review en analyse van industriële best practices.
+Dit document beschrijft aanbevolen verbeteringen en uitbreidingen voor het Generative AI for Beginners-curriculum, gebaseerd op een uitgebreide code-review en analyse van best practices in de industrie.
 
-## Samenvatting voor de directie
+## Samenvatting voor leidinggevenden
 
-De codebase is geanalyseerd op beveiliging, codekwaliteit en educatieve effectiviteit. Dit document biedt aanbevelingen voor onmiddellijke oplossingen, verbeteringen op korte termijn en toekomstige uitbreidingen.
+De codebase is geanalyseerd op beveiliging, codekwaliteit en educatieve effectiviteit. Dit document biedt aanbevelingen voor directe reparaties, kortetermijnverbeteringen en toekomstige uitbreidingen.
 
 ---
 
 ## 1. Beveiligingsverbeteringen (Prioriteit: Kritiek)
 
-### 1.1 Onmiddellijke oplossingen (Voltooid)
+### 1.1 Directe Reparaties (Voltooid)
 
-| Probleem | Betreffende bestanden | Status |
-|----------|----------------------|--------|
-| Hardcoded SECRET_KEY | `05-advanced-prompts/python/aoai-solution.py` | Opgelost |
-| Ontbrekende env-validatie | Meerdere JS/TS-bestanden | Opgelost |
-| Onveilige functieaanroepen | `11-integrating-with-function-calling/js-githubmodels/app.js` | Opgelost |
-| Bestandskoppelingslekken | `08-building-search-applications/scripts/` | Opgelost |
-| Ontbrekende request timeouts | `09-building-image-applications/python/` | Opgelost |
+| Probleem | Betrokken Bestanden | Status |
+|---------|--------------------|--------|
+| Hardcoded SECRET_KEY | `05-advanced-prompts/python/aoai-solution.py` | Gerepareerd |
+| Ontbrekende omgeving-validatie | Meerdere JS/TS-bestanden | Gerepareerd |
+| Onveilige functieaanroepen | `11-integrating-with-function-calling/js-githubmodels/app.js` | Gerepareerd |
+| File handle leaks | `08-building-search-applications/scripts/` | Gerepareerd |
+| Ontbrekende request-timeouts | `09-building-image-applications/python/` | Gerepareerd |
 
-### 1.2 Aanbevolen aanvullende beveiligingsfuncties
+### 1.2 Aanbevolen Extra Beveiligingsfuncties
 
-1. **Voorbeelden rate limiting**
-   - Voeg voorbeeldcode toe die laat zien hoe rate limiting te implementeren voor API-aanroepen
+1. **Voorbeelden van Rate Limiting**
+   - Voeg voorbeeldcode toe om rate limiting voor API-aanroepen te implementeren
    - Demonstreer exponentiële backoff-patronen
 
-2. **API Key Rotatie**
-   - Voeg documentatie toe over best practices voor het roteren van API-sleutels
-   - Voeg voorbeelden toe van het gebruik van Azure Key Vault of soortgelijke diensten
+2. **API Sleutel Rotatie**
+   - Voeg documentatie toe over best practices voor rotatie van API-sleutels
+   - Inclusief voorbeelden voor het gebruik van Azure Key Vault of vergelijkbare services
 
-3. **Integratie Content Safety**
-   - Voeg voorbeelden toe met gebruik van de Azure Content Safety API
+3. **Content Safety Integratie**
+   - Voeg voorbeelden toe van het gebruik van Azure Content Safety API
    - Demonstreer input/output moderatiepatronen
 
 ---
 
-## 2. Verbeteringen in codekwaliteit
+## 2. Verbeteringen codekwaliteit
 
 ### 2.1 Toegevoegde configuratiebestanden
 
 | Bestand | Doel |
-|---------|-------|
-| `.eslintrc.json` | Lintregels voor JavaScript/TypeScript |
-| `.prettierrc` | Code-opmaak standaarden |
-| `pyproject.toml` | Python toolconfiguratie (Black, Ruff, mypy) |
+|--------|------|
+| `.eslintrc.json` | JavaScript/TypeScript lintregels |
+| `.prettierrc` | Code formatteringsstandaarden |
+| `pyproject.toml` | Python tooling configuratie (Black, Ruff, mypy) |
 
-### 2.2 Gedeelde utilities aangemaakt
+### 2.2 Gedeelde hulpprogramma's aangemaakt
 
-Nieuwe `shared/python/` module met:
-- `env_utils.py` - Omgang met omgevingsvariabelen
-- `input_validation.py` - Validatie en sanering van input
-- `api_utils.py` - Veilige API-aanroep wrappers
+Nieuw `shared/python/`-module met:
+- `env_utils.py` - Afhandeling van omgevingsvariabelen
+- `input_validation.py` - Validatie en sanering van invoer
+- `api_utils.py` - Veilige API-aanvraag wrappers
 
 ### 2.3 Aanbevolen codeverbeteringen
 
-1. **Type hints dekking**
+1. **Type Hints Dekking**
    - Voeg type hints toe aan alle Python-bestanden
-   - Schakel strikte TypeScript modus in alle TS-projecten in
+   - Zet strikte TypeScript-modus aan in alle TS-projecten
 
 2. **Documentatiestandaarden**
    - Voeg docstrings toe aan alle Python-functies
-   - Voeg JSDoc-commentaren toe aan alle JavaScript/TypeScript-functies
+   - Voeg JSDoc-comments toe aan alle JavaScript/TypeScript functies
 
-3. **Testframework**
-   - Voeg pytest-configuratie en voorbeeldtests toe
+3. **Test Framework**
+   - Voeg pytest-configuratie en voorbeeldtests toe _(gedaan: pytest config in `pyproject.toml`; voorbeeldtests voor de gedeelde hulpprogramma's in [`tests/`](../../../tests) worden uitgevoerd in CI)_
    - Voeg Jest-configuratie toe voor JavaScript/TypeScript
 
 ---
 
 ## 3. Educatieve uitbreidingen
 
-### 3.1 Nieuwe lesthema's
+### 3.1 Nieuwe lesonderwerpen
 
 1. **Beveiliging in AI-toepassingen** (Voorgestelde les 22)
-   - Prompt injection aanvallen en verdedigingsmaatregelen
-   - API-sleutelbeheer
+   - Prompt injection aanvallen en verdedigingsmethoden
+   - API sleutelbeheer
    - Contentmoderatie
    - Rate limiting en misbruikpreventie
 
 2. **Productie-implementatie** (Voorgestelde les 23)
    - Containerisatie met Docker
-   - CI/CD pipelines
+   - CI/CD-pijplijnen
    - Monitoring en logging
    - Kostenbeheer
 
 3. **Geavanceerde RAG-technieken** (Voorgestelde les 24)
-   - Hybride zoeken (keyword + semantisch)
-   - Herordeningstrategieën
-   - Multi-modal RAG
+   - Hybride zoeken (zoekwoord + semantisch)
+   - Herordening strategieën
+   - Multi-modale RAG
    - Evaluatiemaatstaven
 
 ### 3.2 Verbeteringen bestaande lessen
 
-| Les | Aanbevolen verbetering |
-|-----|-----------------------|
+| Les | Aanbevolen Verbetering |
+|-----|----------------------|
 | 06 - Tekstgeneratie | Voeg streaming response voorbeelden toe |
-| 07 - Chatapplicaties | Voeg gesprekgeheugenpatronen toe |
-| 08 - Zoekapplicaties | Voeg vergelijking vector databases toe |
-| 09 - Beeldgeneratie | Voeg voorbeelden beeldbewerking/variatie toe |
+| 07 - Chatapplicaties | Voeg gespreksgeheugenpatronen toe |
+| 08 - Zoekapplicaties | Voeg vergelijking van vector databases toe |
+| 09 - Beeldgeneratie | Voeg voorbeelden voor beeldbewerking/variaties toe |
 | 11 - Functieaanroepen | Voeg parallelle functieaanroepen toe |
-| 15 - RAG | Voeg vergelijking chunking strategieën toe |
+| 15 - RAG | Voeg vergelijking van chunkingstrategieën toe |
 | 17 - AI Agents | Voeg multi-agent orkestratie toe |
 
 ---
 
-## 4. API-modernisering
+## 4. API Modernisering
 
-### 4.1 Verouderde API-patronen bijwerken
+### 4.1 Verouderde API-patronen (Migratie voltooid)
 
-| Oud patroon | Nieuw patroon | Betreffende bestanden |
-|-------------|--------------|----------------------|
-| `openai.api_type = "azure"` | `AzureOpenAI()` client | Meerdere scripts in `08-building-search-applications/` |
-| `openai.ChatCompletion.create()` | `client.chat.completions.create()` | Meerdere notebooks |
-| `df.append()` (pandas) | `pd.concat()` | RAG notebook |
+Alle Python- en TypeScript-**chat**-voorbeelden zijn gemigreerd van de Chat Completions API naar de **Responses API** (`client.responses.create(...)` → `response.output_text`).
 
-### 4.2 Nieuwe API-functies demonstreren
+| Oud Patroon | Nieuw Patroon | Status |
+|------------|--------------|--------|
+| `openai.api_type = "azure"` / `AzureOpenAI()` (chat) | `OpenAI(base_url="<endpoint>/openai/v1/")` (Responses API) | Voltooid |
+| `openai.ChatCompletion.create()` / `client.chat.completions.create()` | `client.responses.create(input=...)` → `response.output_text` | Voltooid |
+| `@azure/openai` `OpenAIClient.getChatCompletions()` (TypeScript) | `openai` package `client.responses.create()` → `response.output_text` | Voltooid |
+| `df.append()` (pandas) | `pd.concat()` | Voltooid |
 
-1. **Gestructureerde outputs** (OpenAI)
+> **Opmerking:** Microsoft Foundry Models-voorbeelden die de `azure-ai-inference` / `@azure-rest/ai-inference` SDK gebruiken (`client.complete()`) blijven op de Model Inference API, die de Responses API niet ondersteunt. `AzureOpenAI()` wordt bewust behouden waar nog geldig (embeddings en beeldgeneratie).
+
+### 4.2 Nieuwe API-functies om te demonstreren
+
+1. **Gestructureerde Uitvoer** (OpenAI)
    - JSON-modus
    - Functieaanroepen met strikte schema's
 
-2. **Vision-mogelijkheden**
-   - Beeldanalyse met GPT-4V
+2. **Visie-mogelijkheden**
+   - Beeldanalyse met GPT-4o (vision)
    - Multi-modale prompts
 
-3. **Assistants API**
-   - Code-interpreter
-   - Bestandszoekfunctie
-   - Aangepaste tools
+3. **Responses API ingebouwde hulpmiddelen** (vervangt de legacy Assistants API)
+   - Code interpreter
+   - Bestand zoeken
+   - Web zoeken en aangepaste tools
 
 ---
 
 ## 5. Infrastructuurverbeteringen
 
-### 5.1 CI/CD-verbeteringen
+### 5.1 CI/CD verbeteringen
 
-Huidige workflows verwerken markdown-validatie. Aanbevolen toevoegingen:
+Geïmplementeerd in [`.github/workflows/code-quality.yml`](../../../.github/workflows/code-quality.yml): Python linting/formatting (Ruff + Black) is **afgedwongen** op de onderhouden `shared/` hulpprogrammamodule en draait **adviseur**-modus over de rest van het curriculum, plus een adviserende ESLint-run voor JavaScript/TypeScript. De illustratieve basislijn was:
 
 ```yaml
 # .github/workflows/code-quality.yml
@@ -169,6 +174,8 @@ jobs:
 
 ### 5.2 Beveiligingsscanning
 
+Geïmplementeerd in [`.github/workflows/security.yml`](../../../.github/workflows/security.yml): CodeQL-analyse voor Python en JavaScript/TypeScript (bij push, pull request en wekelijks schema) plus een afhankelijkheidcontrole bij pull requests. De illustratieve basislijn was:
+
 ```yaml
 # .github/workflows/security.yml
 name: Security Scan
@@ -194,11 +201,11 @@ jobs:
 
 ---
 
-## 6. Verbeteringen ontwikkelaarservaring
+## 6. Verbeteringen aan ontwikkelaarservaring
 
-### 6.1 DevContainer-verbeteringen
+### 6.1 DevContainer verbeteringen
 
-Werk `.devcontainer/devcontainer.json` bij:
+Geïmplementeerd in [`.devcontainer/devcontainer.json`](../../../.devcontainer/devcontainer.json) en [`.devcontainer/post-create.sh`](../../../.devcontainer/post-create.sh): de container levert nu Pylance, de Black formatter, Ruff, ESLint, Prettier en Copilot extensies, schakelt format-on-save in gekoppeld aan de Black/Prettier-config van de repo, en installeert de ontwikkeltools (`ruff`, `black`, `mypy`, `pytest`) zodat de [code-quality workflow](../../../.github/workflows/code-quality.yml) lokaal reproduceerbaar is. Het `mcr.microsoft.com/devcontainers/universal` basisimage bevat al Python en Node, dus extra functies zijn niet vereist. De illustratieve basislijn was:
 
 ```json
 {
@@ -234,7 +241,7 @@ Werk `.devcontainer/devcontainer.json` bij:
 
 ### 6.2 Interactieve speelplaats
 
-Overweeg toevoeging van:
+Overweeg toe te voegen:
 - Jupyter notebooks met vooraf ingevulde API-sleutels (via omgeving)
 - Gradio/Streamlit-demo's voor visuele leerlingen
 - Interactieve quizzen voor kennisbeoordeling
@@ -246,7 +253,7 @@ Overweeg toevoeging van:
 ### 7.1 Huidige taalondersteuning
 
 | Technologie | Gedekte lessen | Status |
-|-------------|----------------|--------|
+|------------|-----------------|--------|
 | Python | Alle | Volledig |
 | TypeScript | 06-09, 11 | Gedeeltelijk |
 | JavaScript | 06-08, 11 | Gedeeltelijk |
@@ -254,98 +261,95 @@ Overweeg toevoeging van:
 
 ### 7.2 Aanbevolen toevoegingen
 
-1. **Go** - Groeiende tooling in AI/ML
-2. **Rust** - Prestatieskritische toepassingen
-3. **Java/Kotlin** - Enterprise applicaties
+1. **Go** - Groeiend in AI/ML-tooling
+2. **Rust** - Prestatiekritieke toepassingen
+3. **Java/Kotlin** - Enterprise-toepassingen
 
 ---
 
 ## 8. Prestatieoptimalisaties
 
-### 8.1 Optimalisaties op code-niveau
+### 8.1 Optimalisaties op code niveau
 
 1. **Async/Await-patronen**
    - Voeg async-voorbeelden toe voor batchverwerking
    - Demonstreer gelijktijdige API-aanroepen
 
 2. **Caching-strategieën**
-   - Voeg voorbeelden toe van embedding-caching
-   - Demonstreer response-caching patronen
+   - Voeg voorbeelden toe van embedding caching
+   - Demonstreer response caching patronen
 
 3. **Tokenoptimalisatie**
-   - Voeg tiktoken-gebruiksvoorbeelden toe
-   - Demonstreer prompt-compressietechnieken
+   - Voeg voorbeelden toe van tiktoken-gebruik
+   - Demonstreer promptcompressietechnieken
 
-### 8.2 Voorbeelden kostenoptimalisatie
+### 8.2 Kostenoptimalisatievoorbeelden
 
-Voeg voorbeelden toe die tonen:
-- Modelselectie gebaseerd op taakcomplexiteit
+Voeg voorbeelden toe die laten zien:
+- Modelselectie op basis van taakcomplexiteit
 - Prompt engineering voor token-efficiëntie
-- Batchverwerking voor bulkoperaties
+- Batchverwerking voor bulkbewerkingen
 
 ---
 
-## 9. Toegankelijkheid en internationalisering
+## 9. Toegankelijkheid en internationalisatie
 
-### 9.1 Huidige vertaalsituatie
+### 9.1 Huidige vertaalstatus
 
-| Taal | Status |
-|-------|--------|
-| Engels | Volledig |
-| Chinees (vereenvoudigd) | Volledig |
-| Japans | Volledig |
-| Koreaans | Volledig |
-| Spaans | Gedeeltelijk |
-| Portugees | Gedeeltelijk |
-| Turks | Gedeeltelijk |
-| Pools | Gedeeltelijk |
+Alle vertalingen zijn **voltooid** en worden automatisch gegenereerd door de [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst), die meer dan 50 taalversies van het curriculum produceert en synchroniseert met de Engelse bron. Vertaalde inhoud bevindt zich onder `translations/` en gelokaliseerde afbeeldingen onder `translated_images/`; de volledige lijst beschikbare talen staat bovenaan de repository README.
 
-### 9.2 Toegankelijkheidsverbeteringen
+| Aspect | Status |
+|--------|--------|
+| Vertaaldekkingsgraad | Volledig — 50+ talen, alle lessen |
+| Vertaalmethode | Geautomatiseerd via [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst) |
+| Gesynchroniseerd met Engelse bron | Ja — automatisch opnieuw gegenereerd |
+
+### 9.2 Verbeteringen voor toegankelijkheid
 
 1. Voeg alt-tekst toe aan alle afbeeldingen
-2. Zorg voor correcte syntax-highlighting in codevoorbeelden
-3. Voeg transcripties toe voor alle video-inhoud
+2. Zorg dat codevoorbeelden correcte syntaxhighlighting hebben
+3. Voeg videotranscripties toe voor alle videocontent
 4. Zorg dat kleurcontrasten voldoen aan WCAG-richtlijnen
 
 ---
 
 ## 10. Implementatieprioriteit
 
-### Fase 1: Onmiddellijk (Week 1-2)
-- [x] Kritieke beveiligingsproblemen oplossen
-- [x] Codekwaliteitconfiguratie toevoegen
-- [x] Gedeelde utilities creëren
-- [x] Beveiligingsrichtlijnen documenteren
+### Fase 1: Direct (Week 1-2)
+- [x] Los kritieke beveiligingsproblemen op
+- [x] Voeg codekwaliteitsconfiguratie toe
+- [x] Maak gedeelde hulpprogramma's aan
+- [x] Documenteer beveiligingsrichtlijnen
 
-### Fase 2: Korte termijn (Week 3-4)
-- [ ] Verouderde API-patronen bijwerken
-- [ ] Type hints toevoegen aan alle Python-bestanden
-- [ ] CI/CD workflows toevoegen voor codekwaliteit
-- [ ] Beveiligingsscanning workflow creëren
+### Fase 2: Kortetermijn (Week 3-4)
+- [x] Update verouderde API-patronen (Chat Completions → Responses API, Python + TypeScript)
+- [ ] Voeg type hints toe aan alle Python-bestanden (gedaan voor het onderhouden `shared/`-module; lesvoorbeelden blijven eenvoudig)
+- [x] Voeg CI/CD workflows toe voor codekwaliteit
+- [x] Maak beveiligingsscanning workflow aan
 
 ### Fase 3: Middellange termijn (Maand 2-3)
-- [ ] Nieuwe beveiligingsles toevoegen
-- [ ] Les productiedeployment toevoegen
-- [ ] DevContainer-setup verbeteren
-- [ ] Interactieve demos toevoegen
+- [ ] Voeg nieuwe beveiligingsles toe
+- [ ] Voeg les toe over productie-implementatie
+- [x] Verbeter DevContainer-setup
+- [ ] Voeg interactieve demo's toe
 
 ### Fase 4: Lange termijn (Maand 4+)
-- [ ] Geavanceerde RAG-les toevoegen
-- [ ] Taalondersteuning uitbreiden
-- [ ] Uitgebreide test-suite toevoegen
-- [ ] Certificeringsprogramma creëren
+- [ ] Voeg geavanceerde RAG-les toe
+- [ ] Breid taaldekking uit
+- [ ] Voeg uitgebreide testset toe
+- [ ] Creëer certificeringsprogramma
 
 ---
 
 ## Conclusie
 
-Deze roadmap biedt een gestructureerde aanpak voor het verbeteren van het Generative AI for Beginners-curriculum. Door beveiligingsproblemen aan te pakken, APIs te moderniseren en educatieve inhoud toe te voegen, zal de cursus studenten beter voorbereiden op het ontwikkelen van AI-toepassingen in de praktijk.
+Deze roadmap biedt een gestructureerde aanpak om het Generative AI for Beginners-curriculum te verbeteren. Door beveiligingsproblemen aan te pakken, API's te moderniseren en educatieve inhoud toe te voegen, zal de cursus studenten beter voorbereiden op de ontwikkeling van AI-toepassingen in de praktijk.
 
 Voor vragen of bijdragen kunt u een issue openen in de GitHub-repository.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsdienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel wij streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat automatische vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het oorspronkelijke document in de oorspronkelijke taal dient als de gezaghebbende bron te worden beschouwd. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+**Disclaimer**:
+Dit document is vertaald met behulp van de AI vertaaldienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u er rekening mee te houden dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

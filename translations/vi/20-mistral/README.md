@@ -1,39 +1,42 @@
-# Xây dựng với các Mô hình Mistral
+# Xây dựng với các Mô hình Mistral 
 
-## Giới thiệu
+## Giới thiệu 
 
-Bài học này sẽ bao gồm:
-- Khám phá các mô hình Mistral khác nhau
-- Hiểu các trường hợp sử dụng và kịch bản cho từng mô hình
-- Khám phá các ví dụ mã cho thấy các tính năng độc đáo của từng mô hình.
+Bài học này sẽ bao gồm: 
+- Khám phá các mô hình Mistral khác nhau 
+- Hiểu các trường hợp sử dụng và kịch bản cho từng mô hình 
+- Khám phá các ví dụ mã nguồn thể hiện các tính năng độc đáo của từng mô hình. 
 
-## Các Mô hình Mistral
+## Các Mô hình Mistral 
 
-Trong bài học này, chúng ta sẽ khám phá 3 mô hình Mistral khác nhau:
-**Mistral Large**, **Mistral Small** và **Mistral Nemo**.
+Trong bài học này, chúng ta sẽ khám phá 3 mô hình Mistral khác nhau: 
+**Mistral Large**, **Mistral Small** và **Mistral Nemo**. 
 
-Mỗi mô hình này đều có sẵn miễn phí trên GitHub Model marketplace. Mã trong sổ tay này sẽ sử dụng các mô hình này để chạy mã. Dưới đây là thêm chi tiết về việc sử dụng GitHub Models để [nguyên mẫu với các mô hình AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Mỗi mô hình này đều có sẵn miễn phí trên [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst). Mã trong sổ tay này sẽ sử dụng các mô hình đó để chạy mã.
+
+> **Lưu ý:** GitHub Models sẽ ngừng hoạt động vào cuối tháng 7 năm 2026. Dưới đây là thêm thông tin về cách sử dụng [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) để thiết kế mẫu với các mô hình AI. 
+
 
 ## Mistral Large 2 (2407)
-Mistral Large 2 hiện là mô hình chủ lực của Mistral và được thiết kế cho mục đích doanh nghiệp.
+Mistral Large 2 hiện là mô hình chủ lực từ Mistral và được thiết kế cho doanh nghiệp. 
 
-Mô hình này là bản nâng cấp so với Mistral Large gốc bằng cách cung cấp
-- Cửa sổ ngữ cảnh lớn hơn - 128k so với 32k
-- Hiệu suất tốt hơn trong các nhiệm vụ Toán học và Lập trình - độ chính xác trung bình 76,9% so với 60,4%
-- Hiệu suất đa ngôn ngữ tăng cường - các ngôn ngữ bao gồm: tiếng Anh, tiếng Pháp, tiếng Đức, tiếng Tây Ban Nha, tiếng Ý, tiếng Bồ Đào Nha, tiếng Hà Lan, tiếng Nga, tiếng Trung Quốc, tiếng Nhật, tiếng Hàn, tiếng Ả Rập và tiếng Hindi.
+Mô hình này là bản nâng cấp của Mistral Large ban đầu với: 
+- Cửa sổ ngữ cảnh lớn hơn - 128k so với 32k 
+- Hiệu suất tốt hơn trên các bài toán Toán và Lập trình - độ chính xác trung bình 76,9% so với 60,4% 
+- Nâng cao hiệu suất đa ngôn ngữ - bao gồm các ngôn ngữ: Tiếng Anh, Pháp, Đức, Tây Ban Nha, Ý, Bồ Đào Nha, Hà Lan, Nga, Trung Quốc, Nhật Bản, Hàn Quốc, Ả Rập và Hindi.
 
-Với những tính năng này, Mistral Large nổi bật ở
-- *Tạo nội dung tăng cường truy xuất (RAG)* - nhờ cửa sổ ngữ cảnh lớn hơn
-- *Gọi chức năng* - mô hình này có chức năng gọi hàm bản địa cho phép tích hợp với các công cụ và API bên ngoài. Các cuộc gọi này có thể thực hiện đồng thời hoặc tuần tự từng cái một.
-- *Tạo mã* - mô hình này nổi bật trong việc tạo mã Python, Java, TypeScript và C++.
+Với các tính năng này, Mistral Large nổi bật tại: 
+- *Sinh văn bản tăng cường truy hồi (RAG)* - do cửa sổ ngữ cảnh lớn hơn
+- *Gọi hàm* - mô hình này có khả năng gọi hàm gốc cho phép tích hợp với các công cụ và API bên ngoài. Các cuộc gọi này có thể thực hiện đồng thời hoặc tuần tự nối tiếp. 
+- *Sinh mã* - mô hình này nổi bật với sinh mã Python, Java, TypeScript và C++. 
 
-### Ví dụ RAG sử dụng Mistral Large 2
+### Ví dụ RAG sử dụng Mistral Large 2 
 
-Trong ví dụ này, chúng ta sử dụng Mistral Large 2 để chạy mô hình RAG trên một tài liệu văn bản. Câu hỏi được viết bằng tiếng Hàn và hỏi về các hoạt động của tác giả trước khi vào đại học.
+Trong ví dụ này, chúng ta sử dụng Mistral Large 2 để chạy mẫu RAG trên tài liệu văn bản. Câu hỏi được viết bằng tiếng Hàn và hỏi về các hoạt động của tác giả trước khi vào đại học. 
 
-Nó sử dụng Mô hình Nhúng Cohere để tạo nhúng của tài liệu văn bản cũng như câu hỏi. Đối với ví dụ này, nó sử dụng gói Python faiss làm kho vector.
+Nó sử dụng mô hình Nhúng Cohere để tạo các nhúng của tài liệu văn bản cũng như câu hỏi. Với mẫu này, nó sử dụng gói faiss Python làm kho vector. 
 
-Lời nhắc gửi tới mô hình Mistral bao gồm cả câu hỏi và các đoạn văn được lấy ra tương tự như câu hỏi. Mô hình sau đó trả lời bằng ngôn ngữ tự nhiên.
+Lời nhắc gửi đến mô hình Mistral bao gồm cả các câu hỏi và các đoạn được lấy ra tương tự với câu hỏi. Sau đó, Mô hình đưa ra phản hồi ngôn ngữ tự nhiên. 
 
 ```python 
 pip install faiss-cpu
@@ -50,9 +53,10 @@ from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.inference import EmbeddingsClient
 
-endpoint = "https://models.inference.ai.azure.com"
+# Lấy những cái này từ trang "Tổng quan" của dự án Microsoft Foundry của bạn
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-large"
-token = os.environ["GITHUB_TOKEN"]
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -101,7 +105,7 @@ question_embedding = embed_client.embed(
 question_embeddings = np.array(question_embedding.data[0].embedding)
 
 
-D, I = index.search(question_embeddings.reshape(1, -1), k=2) # khoảng cách, chỉ mục
+D, I = index.search(question_embeddings.reshape(1, -1), k=2) # khoảng cách, chỉ số
 retrieved_chunks = [chunks[i] for i in I.tolist()[0]]
 
 prompt = f"""
@@ -129,29 +133,30 @@ chat_response = client.complete(
 print(chat_response.choices[0].message.content)
 ```
 
-## Mistral Small
-Mistral Small là một mô hình khác trong gia đình Mistral thuộc loại mô hình cao cấp/doanh nghiệp. Như tên gọi, đây là một Mô hình Ngôn ngữ Nhỏ (SLM). Ưu điểm của việc sử dụng Mistral Small là:
+## Mistral Small 
+Mistral Small là một mô hình khác trong dòng Mistral thuộc loại mô hình hạng nhất/doanh nghiệp. Như tên gọi, đây là một Mô hình Ngôn ngữ Nhỏ (SLM). Ưu điểm của việc sử dụng Mistral Small là: 
 - Tiết kiệm chi phí so với các LLM Mistral như Mistral Large và NeMo - giảm giá 80%
 - Độ trễ thấp - phản hồi nhanh hơn so với các LLM của Mistral
-- Linh hoạt - có thể triển khai trên nhiều môi trường khác nhau với ít yêu cầu về tài nguyên hơn.
+- Linh hoạt - có thể triển khai trên nhiều môi trường khác nhau với ít giới hạn về tài nguyên cần thiết. 
 
-Mistral Small rất tốt cho:
-- Các nhiệm vụ dựa trên văn bản như tóm tắt, phân tích cảm xúc và dịch thuật.
-- Ứng dụng có yêu cầu truy cập thường xuyên nhờ hiệu quả về chi phí
-- Các nhiệm vụ liên quan đến mã có độ trễ thấp như xem xét và gợi ý mã
 
-## So sánh Mistral Small và Mistral Large
+Mistral Small rất phù hợp cho: 
+- Các tác vụ dựa trên văn bản như tóm tắt, phân tích cảm xúc và dịch thuật. 
+- Các ứng dụng có yêu cầu truy vấn thường xuyên nhờ hiệu quả về chi phí 
+- Các tác vụ mã có độ trễ thấp như xem xét và gợi ý mã 
 
-Để thấy sự khác biệt về độ trễ giữa Mistral Small và Large, hãy chạy các ô bên dưới.
+## So sánh Mistral Small và Mistral Large 
 
-Bạn sẽ thấy khác biệt về thời gian phản hồi trong khoảng 3-5 giây. Ngoài ra, hãy chú ý đến độ dài và phong cách trả lời trên cùng một lời nhắc.
+Để thấy sự khác biệt về độ trễ giữa Mistral Small và Large, chạy các ô bên dưới. 
+
+Bạn sẽ thấy sự khác biệt về thời gian phản hồi khoảng 3-5 giây. Cũng lưu ý độ dài và phong cách câu trả lời với cùng một lời nhắc.  
 
 ```python 
 
 import os 
-endpoint = "https://models.inference.ai.azure.com"
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-small"
-token = os.environ["GITHUB_TOKEN"]
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -180,9 +185,9 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-endpoint = "https://models.inference.ai.azure.com"
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-large"
-token = os.environ["GITHUB_TOKEN"]
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -206,23 +211,24 @@ print(response.choices[0].message.content)
 
 ## Mistral NeMo
 
-So với hai mô hình khác được thảo luận trong bài học này, Mistral NeMo là mô hình duy nhất miễn phí và có giấy phép Apache2.
+So với hai mô hình khác được thảo luận trong bài học này, Mistral NeMo là mô hình duy nhất miễn phí với Giấy phép Apache2. 
 
-Nó được xem như một bản nâng cấp của LLM mã nguồn mở trước đó từ Mistral, Mistral 7B.
+Nó được xem là bản nâng cấp của LLM mã nguồn mở trước đó từ Mistral, Mistral 7B. 
 
-Một vài điểm nổi bật khác của mô hình NeMo là:
+Một số tính năng khác của mô hình NeMo là: 
 
-- *Phân tách token hiệu quả hơn:* Mô hình này dùng bộ phân tách token Tekken thay cho tiktoken thường thấy. Điều này cho phép hiệu suất tốt hơn với nhiều ngôn ngữ và mã hơn.
+- *Mã hóa token hiệu quả hơn:* Mô hình này sử dụng bộ mã hóa Tekken thay vì tiktoken thường dùng. Điều này cho phép hiệu suất tốt hơn với nhiều ngôn ngữ và mã nguồn. 
 
-- *Tinh chỉnh:* Mô hình cơ sở có sẵn để tinh chỉnh. Điều này giúp linh hoạt hơn cho các trường hợp sử dụng cần tinh chỉnh.
+- *Tinh chỉnh:* Mô hình cơ sở có sẵn để tinh chỉnh. Điều này cho phép linh hoạt hơn cho các trường hợp sử dụng cần tinh chỉnh. 
 
-- *Gọi chức năng bản địa* - Giống như Mistral Large, mô hình này đã được đào tạo gọi hàm. Điều này làm cho nó trở nên độc đáo khi là một trong những mô hình mã nguồn mở đầu tiên làm được điều này.
+- *Gọi hàm gốc* - Giống Mistral Large, mô hình này được huấn luyện với gọi hàm. Điều này khiến nó trở nên độc đáo như một trong những mô hình mã nguồn mở đầu tiên có tính năng này. 
 
-### So sánh bộ phân tách token
 
-Trong ví dụ này, chúng ta sẽ xem cách Mistral NeMo xử lý phân tách token so với Mistral Large.
+### So sánh Bộ mã hóa Token 
 
-Cả hai ví dụ đều sử dụng cùng một lời nhắc nhưng bạn sẽ thấy NeMo trả về ít token hơn Mistral Large.
+Trong ví dụ này, chúng ta sẽ xem cách Mistral NeMo xử lý mã hóa token so với Mistral Large. 
+
+Cả hai ví dụ đều nhận cùng một lời nhắc nhưng bạn sẽ thấy NeMo trả về ít token hơn so với Mistral Large. 
 
 ```bash
 pip install mistral-common
@@ -246,7 +252,7 @@ model_name = "open-mistral-nemo"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Mã hóa một danh sách tin nhắn
+# Mã hóa một danh sách các tin nhắn
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -285,7 +291,7 @@ print(len(tokens))
 ```
 
 ```python
-# Nhập khẩu các gói cần thiết:
+# Nhập các gói cần thiết:
 from mistral_common.protocol.instruct.messages import (
     UserMessage,
 )
@@ -340,13 +346,13 @@ tokens, text = tokenized.tokens, tokenized.text
 print(len(tokens))
 ```
 
-## Học tập không dừng lại ở đây, tiếp tục hành trình
+## Học hỏi không dừng lại ở đây, tiếp tục hành trình
 
-Sau khi hoàn thành bài học này, hãy xem bộ sưu tập [Học tập AI Tạo sinh của chúng tôi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) để tiếp tục nâng cao kiến thức về AI Tạo sinh của bạn!
+Sau khi hoàn thành bài học này, hãy xem bộ sưu tập [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) của chúng tôi để tiếp tục nâng cao kiến thức về AI Tạo sinh!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Tuyên bố từ chối trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng bản dịch tự động có thể chứa lỗi hoặc sai sót. Tài liệu gốc bằng ngôn ngữ gốc nên được xem là nguồn tham khảo chính thức. Đối với các thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp do con người thực hiện. Chúng tôi không chịu trách nhiệm cho bất kỳ sự hiểu nhầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
+**Tuyên bố miễn trừ trách nhiệm**:
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng bản dịch tự động có thể chứa lỗi hoặc sai sót. Tài liệu gốc bằng ngôn ngữ gốc nên được coi là nguồn tin chính thức. Đối với thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp bởi con người. Chúng tôi không chịu trách nhiệm về bất kỳ hiểu lầm hoặc giải thích sai nào phát sinh từ việc sử dụng bản dịch này.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
