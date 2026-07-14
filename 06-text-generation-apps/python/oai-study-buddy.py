@@ -7,7 +7,7 @@ load_dotenv()
 
 # configure Azure OpenAI service client 
 client = OpenAI()
-deployment="gpt-4o-mini"
+deployment="gpt-5-mini"
 
 # add your completion code
 question = input("Ask your questions on python language to your study buddy: ")

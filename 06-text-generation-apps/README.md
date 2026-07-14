@@ -87,19 +87,19 @@ pip install openai
 You need to carry out the following steps:
 
 - Create an account on Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- Gain access to Azure OpenAI. Go to [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) and request access.
+- Gain access to Azure OpenAI. Go to [https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) and request access.
 
   > [!NOTE]
   > At the time of writing, you need to apply for access to Azure OpenAI.
 
 - Install Python <https://www.python.org/>
-- Have created an Azure OpenAI Service resource. See this guide for how to [create a resource](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- Have created an Azure OpenAI Service resource. See this guide for how to [create a resource](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
 ### Locate API key and endpoint
 
 At this point, you need to tell your `openai` library what API key to use. To find your API key, go to "Keys and Endpoint" section of your Azure OpenAI resource and copy the "Key 1" value.
 
-![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-foundry/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
 Now that you have this information copied, let's instruct the libraries to use it.
 
@@ -138,7 +138,7 @@ The way to generate text is to use the Responses API via the `responses.create` 
 prompt = "Complete the following: Once upon a time there was a"
 
 response = client.responses.create(
-    model="gpt-4o-mini",  # this is your model deployment name
+    model="gpt-5-mini",  # this is your model deployment name
     input=prompt,
     store=False,
 )
@@ -156,7 +156,7 @@ from openai import OpenAI
 
 client = OpenAI(api_key="sk-...")
 
-response = client.responses.create(model="gpt-4o-mini", input="Hello world", store=False)
+response = client.responses.create(model="gpt-5-mini", input="Hello world", store=False)
 print(response.output_text)
 ```
 
@@ -203,7 +203,7 @@ Now that we learned how to set up and configure openai, it's time to build your 
    ```
 
    > [!NOTE]
-   > If you're using plain OpenAI (not Azure), use `client = OpenAI(api_key="<replace this value with your OpenAI key>")` (no `base_url`) and pass a model name like `gpt-4o-mini` instead of a deployment name.
+   > If you're using plain OpenAI (not Azure), use `client = OpenAI(api_key="<replace this value with your OpenAI key>")` (no `base_url`) and pass a model name like `gpt-5-mini` instead of a deployment name.
 
    You should see an output like the following:
 
@@ -602,6 +602,12 @@ What we have so far is code that works, but there are some tweaks we should be d
   ```
 
   > Note, the closer to 1.0, the more varied the output.
+
+- **Reasoning models don't use `temperature`**. This is an important 2026 shift. The current, non-deprecated models on Microsoft Foundry are **reasoning models** (the GPT-5 family, o-series) - and they **don't support `temperature` or `top_p`** (nor `max_tokens`; use `max_output_tokens`). If you send `temperature` to `gpt-5-mini` you'll get a "parameter not supported" error. So to try the temperature example above, point it at a model that still supports sampling controls - for example an open **Llama** model such as `Llama-3.3-70B-Instruct` from the [Microsoft Foundry model catalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst), called via the Foundry Models / Azure AI Inference endpoint (the same way as the `githubmodels-*` samples). For reasoning models like GPT-5, you steer output differently:
+  - **Prompt engineering** - clear instructions, examples, and structured output (see lesson [04 - Prompt Engineering](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)) do the work that sampling knobs used to.
+  - **Reasoning controls** - parameters like reasoning effort/verbosity trade depth of reasoning against latency and cost.
+
+  In short: `temperature`/`top_p` are still valid on many models (Llama, Mistral, Phi, and the GPT-4.x family - though GPT-4.x is deprecating), but the direction of travel is prompt engineering + reasoning controls on reasoning models like GPT-5.
 
 ## Assignment
 

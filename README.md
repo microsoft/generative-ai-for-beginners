@@ -82,7 +82,7 @@ Ask questions or share product feedback in our [Microsoft Foundry Developer Foru
 
 ## 🚀 Building a Startup?
 
-Visit [Microsoft for Startups](https://www.microsoft.com/startups) to find out how to get started building with Azure credits today.
+Visit [Microsoft for Startups](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst) to find out how to get started building with Azure credits today.
 
 ## 🙏 Want to help?
 

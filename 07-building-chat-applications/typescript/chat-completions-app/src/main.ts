@@ -18,7 +18,7 @@ export async function main() {
         console.log("== Chat Completions App ==");
 
         // Use the deployment name configured in your .env file
-        const deploymentName = process.env.AZURE_OPENAI_DEPLOYMENT || 'gpt-4o-mini';
+        const deploymentName = process.env.AZURE_OPENAI_DEPLOYMENT || 'gpt-5-mini';
 
         const result = await client.responses.create({
             model: deploymentName,

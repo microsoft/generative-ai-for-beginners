@@ -8,7 +8,7 @@ from azure.core.credentials import AzureKeyCredential
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 
-model_name = "gpt-4o-mini"
+model_name = "gpt-5-mini"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -29,10 +29,7 @@ response = client.complete(
         },
     ],
     model=model_name,
-    # Optional parameters
-    temperature=1.,
-    max_tokens=1000,
-    top_p=1.    
+    # Note: gpt-5 reasoning models don't accept temperature/top_p; leave them at their defaults.
 )
 
 if response.choices and response.choices[0].message is not None:

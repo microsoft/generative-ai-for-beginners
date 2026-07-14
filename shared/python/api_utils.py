@@ -69,7 +69,7 @@ def create_openai_client(api_key: str | None = None) -> Any:
 
     Example:
         >>> client = create_openai_client()
-        >>> response = client.responses.create(model="gpt-4o-mini", input="Hello")
+        >>> response = client.responses.create(model="gpt-5-mini", input="Hello")
     """
     try:
         from openai import OpenAI
@@ -114,7 +114,7 @@ def create_azure_openai_client(
 
     Example:
         >>> client = create_azure_openai_client()
-        >>> response = client.responses.create(model="gpt-4o-mini", input="Hello")
+        >>> response = client.responses.create(model="gpt-5-mini", input="Hello")
     """
     try:
         from openai import OpenAI

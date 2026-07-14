@@ -28,7 +28,7 @@ AI Agents allow Large Language Models (LLMs) to perform tasks by giving them acc
 
 Let's define these terms:
 
-**Large Language Models** - These are the models referred throughout this course such as GPT-3.5, GPT-4, Llama-2, etc.
+**Large Language Models** - These are the models referred throughout this course such as GPT-5, GPT-4o, and Llama 3.3, etc.
 
 **State** - This refers to the context that the LLM is working in. The LLM uses the context of its past actions and the current context, guiding its decision-making for subsequent actions. AI Agent Frameworks allow developers to maintain this context easier.
 
@@ -161,7 +161,7 @@ from azure.identity.aio import AzureCliCredential
 from agent_framework.openai import OpenAIChatClient
 
 client = OpenAIChatClient(
-    model="my-gpt-4o-deployment",
+    model="my-gpt-5-mini-deployment",
     azure_endpoint="https://my-resource.openai.azure.com",
     credential=AzureCliCredential(),
 )

@@ -7,7 +7,7 @@ load_dotenv()
 
 # configure OpenAI service client 
 client = OpenAI()
-deployment = "gpt-4o-mini"
+deployment = "gpt-5-mini"
 
 # add your completion code
 prompt = "Complete the following: Once upon a time there was a"

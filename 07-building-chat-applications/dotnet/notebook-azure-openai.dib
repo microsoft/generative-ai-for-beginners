@@ -19,7 +19,7 @@ using static System.Environment;
 string endpoint = "<replace with endpoint>";
 string key = "<replace with API key>";
 
-// Enter the deployment name you chose when you deployed the model (for example: gpt-4o-mini).
+// Enter the deployment name you chose when you deployed the model (for example: gpt-5-mini).
 string deployment = "<replace with deployment>";
 
 AzureOpenAIClient azureClient = new(new Uri(endpoint), new ApiKeyCredential(key));

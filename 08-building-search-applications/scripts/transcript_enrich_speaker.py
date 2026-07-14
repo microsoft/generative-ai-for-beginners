@@ -34,7 +34,7 @@ OPENAI_REQUEST_TIMEOUT = 60
 
 OPENAI_MAX_TOKENS = 512
 AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = os.getenv(
-    "AZURE_OPENAI_MODEL_DEPLOYMENT_NAME", "gpt-4o-mini"
+    "AZURE_OPENAI_MODEL_DEPLOYMENT_NAME", "gpt-5-mini"
 )
 
 
@@ -125,7 +125,6 @@ def get_speaker_info(text):
         max_output_tokens=OPENAI_MAX_TOKENS,
         timeout=OPENAI_REQUEST_TIMEOUT,
         tool_choice={"type": "function", "name": "get_speaker_name"},
-        temperature=0.0,
         store=False,
     )
 

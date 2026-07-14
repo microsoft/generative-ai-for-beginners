@@ -71,16 +71,55 @@ To fine-tune a pre-trained model, you need to have:
 - a training environment to run the fine-tuning job
 - a hosting environment to deploy fine-tuned model
 
+## Fine-Tuning on Microsoft Foundry
+
+[Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) is where you fine-tune, deploy, and manage custom models on Azure today (it brings together what used to be Azure OpenAI Studio and Azure AI Studio). Before you start a job, it helps to understand the choices Foundry gives you - and the best practices the platform recommends. Under the hood, Foundry uses **LoRA (low-rank adaptation)** to fine-tune models efficiently, which keeps training faster and more affordable than retraining every weight.
+
+### Step 1: Pick a training technique
+
+Foundry supports three fine-tuning techniques. **Start with SFT** - it covers the widest range of scenarios.
+
+| Technique | What it does | When to use it |
+| --- | --- | --- |
+| **Supervised Fine-Tuning (SFT)** | Trains on input/output example pairs so the model learns to produce the responses you want. | The default for most tasks: domain specialization, task performance, style and tone, instruction-following, and language adaptation. |
+| **Direct Preference Optimization (DPO)** | Learns from _preferred vs. non-preferred_ response pairs to align outputs with human preferences. | Improving response quality, safety, and alignment when you have comparative feedback. |
+| **Reinforcement Fine-Tuning (RFT)** | Uses reward signals from _graders_ to optimize complex behaviors with reinforcement learning. | Objective, reasoning-heavy domains (math, chemistry, physics) with clear right/wrong answers. Requires more ML expertise. |
+
+### Step 2: Pick a training tier
+
+Foundry lets you choose how and where training runs:
+
+- **Standard** - trains in your resource's region and guarantees data residency. Use it when data must stay in a specific region.
+- **Global** - cheaper and faster to queue by using capacity beyond your region (data and weights are copied to the training region). A good default when data residency isn't a requirement.
+- **Developer** - the lowest cost, using idle capacity with no latency/SLA guarantees (jobs can be preempted and resumed). Ideal for experimentation.
+
+### Step 3: Choose a base model
+
+Fine-tunable models include OpenAI `gpt-4o-mini`, `gpt-4o`, `gpt-4.1`, `gpt-4.1-mini`, and `gpt-4.1-nano` (SFT; the 4o/4.1 family also supports DPO), the reasoning models `o4-mini` and `gpt-5` (RFT), plus open-source models such as `Ministral-3B`, `Qwen-32B`, `Llama-3.3-70B-Instruct`, and `gpt-oss-20b` (SFT on Foundry resources). Always check the current [Fine-tuning models list](https://learn.microsoft.com/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure?WT.mc_id=academic-105485-koreyst#fine-tuning-models) for supported methods, regions, and availability.
+
+> Foundry offers two modalities: **serverless** (consumption-based pricing, no GPU quota to manage, OpenAI and selected models) and **managed compute** (bring-your-own VMs via Azure Machine Learning for the widest model range). Most people should start with serverless.
+
+### Foundry best practices
+
+- **Baseline first.** Measure the base model with prompt engineering and RAG _before_ you fine-tune, so you can prove the gain.
+- **Start small, then scale.** Begin with 50-100 high-quality examples to validate the approach, then grow to 500+ for production. Quality beats quantity - prune low-quality examples.
+- **Format data correctly.** Training and validation files must be JSONL, UTF-8 **with a BOM**, under 512 MB, using the chat-completions message format. Always include a validation file so you can watch for overfitting.
+- **Keep the training system prompt at inference.** Use the same system message when you call the model that you used during training.
+- **Evaluate checkpoints - don't blindly deploy the last one.** Foundry keeps the last three epochs as deployable checkpoints; pick the one that generalizes best by watching `train_loss` / `valid_loss` and token accuracy.
+- **Measure token cost alongside quality** when comparing the fine-tuned model to the baseline.
+- **Iterate with continuous fine-tuning.** You can fine-tune an already fine-tuned model on new data (supported for OpenAI models).
+- **Mind hosting costs.** A deployed custom model bills hourly, and an inactive deployment is removed after 15 days - clean up what you don't need.
+
+Work through the end-to-end walkthrough in [Customize a model with fine-tuning](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/fine-tuning?WT.mc_id=academic-105485-koreyst), and see the guides for [DPO](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/fine-tuning-direct-preference-optimization?WT.mc_id=academic-105485-koreyst) and [RFT](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/reinforcement-fine-tuning?WT.mc_id=academic-105485-koreyst) when you're ready for the other techniques.
+
 ## Fine-Tuning In Action
 
-> **Note:** `gpt-35-turbo` / `gpt-3.5-turbo`, referenced in some of the tutorials below, is retired for both inference and fine-tuning. If you're starting a new fine-tuning job today, target a currently supported model instead - for example `gpt-4o-mini` or `gpt-4.1-mini`. See the [Fine-tuning models list](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure?WT.mc_id=academic-105485-koreyst#fine-tuning-models) for the current set of fine-tunable models. The concepts and steps in these tutorials still apply.
-
-The following resources provide step-by-step tutorials to walk you through a real example using a selected model with a curated dataset. To work through these tutorials, you need an account on the specific provider, along with access to the relevant model and datasets.
+The following resources provide step-by-step tutorials that walk you through a real example on a currently supported model with a curated dataset. To work through them, you need an account on the specific provider, along with access to the relevant model and datasets.
 
 | Provider     | Tutorial                                                                                                                                                                       | Description                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| OpenAI       | [How to fine-tune chat models](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst)                | Learn to fine-tune a `gpt-35-turbo` for a specific domain ("recipe assistant") by preparing training data, running the fine-tuning job, and using the fine-tuned model for inference.                                                                                                                                                                                                                                              |
-| Azure OpenAI | [GPT 3.5 Turbo fine-tuning tutorial](https://learn.microsoft.com/azure/ai-services/openai/tutorials/fine-tune?tabs=python-new%2Ccommand-line&WT.mc_id=academic-105485-koreyst) | Learn to fine-tune a `gpt-35-turbo-0613` model **on Azure** by taking steps to create & upload training data, run the fine-tuning job. Deploy & use the new model.                                                                                                                                                                                                                                                                 |
+| OpenAI       | [How to fine-tune chat models](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst)                | Learn to fine-tune a recent OpenAI chat model for a specific domain ("recipe assistant") by preparing training data, running the fine-tuning job, and using the fine-tuned model for inference.                                                                                                                                                                                                                                              |
+| Microsoft Foundry | [Customize a model with fine-tuning](https://learn.microsoft.com/azure/ai-foundry/openai/tutorials/fine-tune?WT.mc_id=academic-105485-koreyst) | Learn to fine-tune a currently supported model such as `gpt-4.1-mini` **on Azure** with Microsoft Foundry: prepare & upload training and validation data, run the fine-tuning job, then deploy & use the new model.                                                                                                                                                                                                                                                                 |
 | Hugging Face | [Fine-tuning LLMs with Hugging Face](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                               | This blog post walks you fine-tuning an _open LLM_ (ex: `CodeLlama 7B`) using the [transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) library & [Transformer Reinforcement Learning (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst) with open [datasets](https://huggingface.co/docs/datasets/index?WT.mc_id=academic-105485-koreyst) on Hugging Face. |
 |              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | 🤗 AutoTrain | [Fine-tuning LLMs with AutoTrain](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                                         | AutoTrain (or AutoTrain Advanced) is a python library developed by Hugging Face that allows finetuning for many different tasks including LLM finetuning. AutoTrain is a no-code solution and finetuning can be done in your own cloud, on Hugging Face Spaces or locally. It supports both a web-based GUI, CLI and training via yaml config files.                                                                               |

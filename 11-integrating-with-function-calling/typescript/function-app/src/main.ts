@@ -86,7 +86,7 @@ async function main() {
       apiKey: azureApiKey,
       baseURL: `${endpoint.replace(/\/$/, '')}/openai/v1/`,
     });
-    const deploymentName = process.env.AZURE_OPENAI_DEPLOYMENT || "gpt-4o-mini";
+    const deploymentName = process.env.AZURE_OPENAI_DEPLOYMENT || "gpt-5-mini";
 
     const userParams = {
       location: "New York",

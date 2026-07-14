@@ -20,7 +20,7 @@ using System.ClientModel;
 string endpoint = "<replace with endpoint>";
 string key = "<replace with API key>";
 
-// Enter the name of your image model deployment (for example: gpt-image-1).
+// Enter the name of your image model deployment (for example: gpt-image-2).
 string deployment = "<replace with deployment>";
 
 #!csharp
@@ -35,7 +35,7 @@ GeneratedImage image = await imageClient.GenerateImageAsync(
         Size = GeneratedImageSize.W1024xH1024,
     });
 
-// gpt-image-1 returns the image as bytes; DALL-E models return a URL instead.
+// gpt-image models return the image as bytes; DALL-E models returned a URL instead.
 if (image.ImageUri is not null)
 {
     Console.WriteLine(image.ImageUri);

@@ -77,12 +77,21 @@ All lessons requiring API access use environment variables defined in `.env`:
 - `OPENAI_API_KEY` - For OpenAI API
 - `AZURE_OPENAI_API_KEY` - For Azure OpenAI in Microsoft Foundry (Azure OpenAI Service is now part of Microsoft Foundry: https://ai.azure.com)
 - `AZURE_OPENAI_ENDPOINT` - Azure OpenAI endpoint URL (Foundry resource endpoint)
-- `AZURE_OPENAI_DEPLOYMENT` - Chat completion model deployment name
-- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Embeddings model deployment name
+- `AZURE_OPENAI_DEPLOYMENT` - Chat completion model deployment name (course default: `gpt-5-mini`)
+- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Embeddings model deployment name (course default: `text-embedding-3-small`)
 - `AZURE_OPENAI_API_VERSION` - API version (default: `2024-10-21`)
 - `HUGGING_FACE_API_KEY` - For Hugging Face models
 - `AZURE_INFERENCE_ENDPOINT` - Microsoft Foundry Models endpoint (multi-provider model catalog)
 - `AZURE_INFERENCE_CREDENTIAL` - Microsoft Foundry Models API key (replaces the retiring `GITHUB_TOKEN`)
+- `AZURE_INFERENCE_CHAT_MODEL` - A non-reasoning model (e.g. `Llama-3.3-70B-Instruct`) used by the `temperature` examples, since reasoning models don't support sampling controls
+
+### Model conventions (important)
+
+- **Default chat model is `gpt-5-mini`** - a current, non-deprecated **reasoning** model. As of 2026 the older temperature-capable "mini" models (`gpt-4o-mini`, `gpt-4.1-mini`) are *deprecating*, so the curriculum standardizes on the GPT-5 family.
+- **Reasoning models reject `temperature` and `top_p`**, and use `max_output_tokens` (Responses API) / `max_completion_tokens` (chat completions) instead of `max_tokens`. Do **not** add `temperature`/`top_p`/`max_tokens` to samples that call `gpt-5-mini`.
+- **To demonstrate `temperature`**, samples use a **Llama** model (`Llama-3.3-70B-Instruct`) via the Microsoft Foundry Models endpoint (`AZURE_INFERENCE_CHAT_MODEL`). Steer reasoning models with prompt engineering + reasoning controls instead of sampling knobs.
+- **Fine-tuning (lesson 18)** keeps `gpt-4.1-mini`: GPT-5 only supports reinforcement fine-tuning (RFT), not the supervised fine-tuning (SFT) shown there.
+- Lessons 20 (Mistral) and 21 (Meta) keep `temperature`/`max_tokens` because they target Mistral/Llama models, which support them.
 
 ### Running Python Examples
 

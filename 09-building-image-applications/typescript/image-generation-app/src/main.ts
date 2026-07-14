@@ -1,13 +1,14 @@
 import { AzureOpenAI } from "openai";
 import * as dotenv from "dotenv";
+import * as fs from "fs";
 
 dotenv.config();
 
 const endpoint = process.env.AZURE_OPENAI_ENDPOINT || '';
 const apiKey = process.env.AZURE_OPENAI_API_KEY || '';
-// gpt-image-1 is the current generation Azure OpenAI image model (DALL-E 3 is legacy)
-const deployment = process.env.AZURE_OPENAI_DEPLOYMENT || 'gpt-image-1';
-const apiVersion = "2024-10-21";
+// gpt-image-2 is the latest Azure OpenAI image model (DALL-E is legacy)
+const deployment = process.env.AZURE_OPENAI_DEPLOYMENT || 'gpt-image-2';
+const apiVersion = "2025-04-01-preview";
 
 const promptImage = "captain with a parrot on his shoulder";
 
@@ -25,7 +26,10 @@ export async function main() {
     });
 
     for (const image of imageGenerations.data) {
-      console.log(`Image generated URL...: ${image.url}`);
+      // gpt-image models return the image as base64 (b64_json), not a URL
+      const buffer = Buffer.from(image.b64_json ?? "", "base64");
+      fs.writeFileSync("generated-image.png", buffer);
+      console.log("Saved generated-image.png");
     }
   } catch (error) {
     console.log("The sample encountered an error: ", error);

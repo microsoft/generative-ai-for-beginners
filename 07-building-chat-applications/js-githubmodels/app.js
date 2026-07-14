@@ -21,9 +21,9 @@ if (!endpoint) {
    Cohere: Cohere-command-r-08-2024, Cohere-command-r-plus-08-2024
    Meta: Meta-Llama-3.1-405B-Instruct, Meta-Llama-3.1-70B-Instruct, Meta-Llama-3.1-8B-Instruct, Llama-3.2-11B-Vision-Instruct, Llama-3.2-90B-Vision-Instruct
    Mistral AI: Mistral-large-2411, Mistral-small-2503, Codestral-2501, Ministral-3B
-   OpenAI: gpt-4o-mini, gpt-4o, gpt-4.1, gpt-4.1-mini
+   OpenAI: gpt-5-mini, gpt-4o-mini, gpt-4o, gpt-4.1, gpt-4.1-mini
    Microsoft: Phi-4, Phi-4-mini-instruct, Phi-4-multimodal-instruct, Phi-4-reasoning */
-const modelName = "gpt-4o-mini";
+const modelName = "gpt-5-mini";
 
 export async function main() {
 

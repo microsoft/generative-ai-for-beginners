@@ -72,11 +72,11 @@ client = OpenAI(
     api_key=API_KEY
     )
 
-response = client.responses.create(model="gpt-4o-mini", input="Suggest two titles for an instructional lesson on chat applications for generative AI.", store=False)
+response = client.responses.create(model="gpt-5-mini", input="Suggest two titles for an instructional lesson on chat applications for generative AI.", store=False)
 print(response.output_text)
 ```
 
-The above example uses the GPT-4o mini model with the Responses API to complete the prompt, but notice that the API key is set prior to doing so. You'd receive an error if you didn't set the key.
+The above example uses the GPT-5 mini model with the Responses API to complete the prompt, but notice that the API key is set prior to doing so. You'd receive an error if you didn't set the key.
 
 ## User Experience (UX)
 
@@ -96,7 +96,7 @@ This "profile" prompts ChatGPT to create a lesson plan on linked lists. Notice t
 
 ### Microsoft's System Message Framework for Large Language Models
 
-[Microsoft has provided guidance](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) for writing effective system messages when generating responses from LLMs broken down into 4 areas:
+[Microsoft has provided guidance](https://learn.microsoft.com/azure/ai-foundry/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) for writing effective system messages when generating responses from LLMs broken down into 4 areas:
 
 1. Defining who the model is for, as well as its capabilities and limitations.
 2. Defining the model's output format.

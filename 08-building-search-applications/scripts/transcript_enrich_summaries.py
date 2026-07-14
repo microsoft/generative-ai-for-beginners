@@ -22,7 +22,7 @@ dotenv.load_dotenv()
 API_KEY = os.environ["AZURE_OPENAI_API_KEY"]
 RESOURCE_ENDPOINT = os.environ["AZURE_OPENAI_ENDPOINT"]
 AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = os.getenv(
-    "AZURE_OPENAI_MODEL_DEPLOYMENT_NAME", "gpt-4o-mini"
+    "AZURE_OPENAI_MODEL_DEPLOYMENT_NAME", "gpt-5-mini"
 )
 MAX_TOKENS = 512
 PROCESSOR_THREADS = 10
@@ -93,9 +93,7 @@ def chatgpt_summary(text):
     response = client.responses.create(
         model=AZURE_OPENAI_MODEL_DEPLOYMENT_NAME,
         input=messages,
-        temperature=0.7,
         max_output_tokens=MAX_TOKENS,
-        top_p=0.0,
         timeout=OPENAI_REQUEST_TIMEOUT,
         store=False,
     )

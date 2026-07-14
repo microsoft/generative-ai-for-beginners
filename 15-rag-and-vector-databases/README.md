@@ -211,8 +211,7 @@ def chatbot(user_input):
 
     # use the Responses API to generate a response
     response = client.responses.create(
-        model="gpt-4o-mini",
-        temperature=0.7,
+        model="gpt-5-mini",
         max_output_tokens=800,
         input=messages,
         store=False,

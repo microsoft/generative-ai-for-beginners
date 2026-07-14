@@ -235,12 +235,12 @@ resp = client.responses.create(
 print(resp.output_text)
 ```
 
-## O-series (o1, o3-mini, o3, o4-mini)
+## Reasoning models (o1, o3, o3-mini, o4-mini, GPT-5 family)
 
 | Chat Completions | Responses API | Notes |
 |---|---|---|
 | `max_completion_tokens` | `max_output_tokens` | Set high (4096+) |
 | `reasoning_effort` | `reasoning={"effort": ...}` | keep low/medium/high |
-| `temperature` | remove or set to `1` | o-series only accepts 1 |
+| `temperature` | remove | GPT-5 rejects it outright (o-series only accepts `1`). To vary output, use a non-reasoning model such as `Llama-3.3-70B-Instruct` via Foundry Models. |
 | `top_p` | remove | not supported |
 | `seed` | remove | not supported |

@@ -4,6 +4,7 @@ import requests
 from requests.exceptions import RequestException
 from PIL import Image
 from dotenv import load_dotenv
+import base64
 
 # Load environment variables from .env file
 load_dotenv()
@@ -19,7 +20,7 @@ client = OpenAI(api_key=api_key)
 try:
     # Create an image by using the image generation API
     generation_response = client.images.generate(
-        model="dall-e-3",
+        model="gpt-image-1",
         prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
         size='1024x1024',
         n=1
@@ -37,16 +38,8 @@ try:
     # Retrieve the generated image
     print(generation_response)
 
-    image_url = generation_response.data[0].url  # extract image URL from response
-
-    # SECURITY: Add timeout and error handling for HTTP request
-    try:
-        response = requests.get(image_url, timeout=30)
-        response.raise_for_status()  # Raise exception for HTTP errors
-        generated_image = response.content
-    except RequestException as req_err:
-        print(f"Failed to download generated image: {req_err}")
-        raise
+    # gpt-image models return the image as base64 (b64_json), not a URL
+    generated_image = base64.b64decode(generation_response.data[0].b64_json)
 
     with open(image_path, "wb") as image_file:
         image_file.write(generated_image)

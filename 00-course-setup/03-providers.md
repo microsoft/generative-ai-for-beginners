@@ -3,7 +3,7 @@
 Assignments **may** also be setup to work against one or more Large Language Model (LLM) deployments through a supported service provider like OpenAI, Azure or Hugging Face. These provide a _hosted endpoint_ (API) that we can access programmatically with the right credentials (API key or token). In this course, we discuss these providers:
 
  - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) with diverse models including the core GPT series.
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) for OpenAI models with enterprise readiness in focus
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-foundry/openai/?WT.mc_id=academic-105485-koreyst) for OpenAI models with enterprise readiness in focus
  - [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) for a single endpoint and API key to access hundreds of models from OpenAI, Meta, Mistral, Cohere, Microsoft and more (replaces GitHub Models, which is retiring at the end of July 2026)
  - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) for open-source models and inference server
  - [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) or [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) if you'd rather run models fully offline on your own device, with no cloud subscription required
@@ -13,10 +13,10 @@ Assignments **may** also be setup to work against one or more Large Language Mod
 | Signup | Cost | API Key | Playground | Comments |
 |:---|:---|:---|:---|:---|
 | [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Pricing](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Project-based](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [No-Code, Web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Multiple Models Available |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Pricing](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Must Apply Ahead For Access](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) | [Pricing](https://azure.microsoft.com/pricing/details/ai-foundry/?WT.mc_id=academic-105485-koreyst) | [Project Overview page](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) | [Foundry Playground](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) | Free tier available; one endpoint + key for many model providers |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Pricing](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK Quickstart](https://learn.microsoft.com/azure/ai-foundry/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio Quickstart](https://learn.microsoft.com/azure/ai-foundry/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Must Apply Ahead For Access](https://learn.microsoft.com/azure/ai-foundry/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) | [Pricing](https://azure.microsoft.com/pricing/details/ai-foundry/?WT.mc_id=academic-105485-koreyst) | [Project Overview page](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) | [Foundry Playground](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) | Free tier available; one endpoint + key for many model providers |
 | [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Pricing](https://huggingface.co/pricing) | [Access Tokens](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat has limited models](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
-| [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) | Free (runs on your device) | Not required | [Local CLI/SDK](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) | Fully offline, OpenAI-compatible endpoint |
+| [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) | Free (runs on your device) | Not required | [Local CLI/SDK](https://learn.microsoft.com/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) | Fully offline, OpenAI-compatible endpoint |
 | | | | | |
 
 Follow the directions below to _configure_ this repository for use with different providers. Assignments that require a specific provider will contain one of these tags in their filename:
@@ -45,7 +45,7 @@ The next step is to configure your **local environment variables** as follows:
    AZURE_OPENAI_API_VERSION='2024-10-21' # Default is set! (current stable GA API version)
    AZURE_OPENAI_API_KEY='<add your Foundry resource key here>'
    AZURE_OPENAI_ENDPOINT='<add your Foundry resource endpoint here, e.g. https://<resource-name>.openai.azure.com>'
-   AZURE_OPENAI_DEPLOYMENT='<add your chat completion model deployment name here, e.g. gpt-4o-mini>'
+   AZURE_OPENAI_DEPLOYMENT='<add your chat completion model deployment name here, e.g. gpt-5-mini>'
    AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='<add your embeddings model deployment name here, e.g. text-embedding-3-small>'
 
    ## Microsoft Foundry Models (multi-provider model catalog, replaces GitHub Models, which retires end of July 2026)
@@ -108,13 +108,13 @@ This will take you to the Microsoft Foundry portal, where we'll find the other v
 1. Navigate to the [Microsoft Foundry portal](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) **from your resource** as described above.
 1. Click the **Deployments** tab (sidebar, left) to view currently deployed models.
 1. If your desired model is not deployed, use **Deploy model** to deploy it from the [model catalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
-1. You will need a _text-generation_ model - we recommend: **gpt-4o-mini**
+1. You will need a _text-generation_ model - we recommend: **gpt-5-mini**
 1. You will need a _text-embedding_ model - we recommend **text-embedding-3-small**
 
 Now update the environment variables to reflect the _Deployment name_ used. This will typically be the same as the model name unless you changed it explicitly. So, as an example, you might have:
 
 ```bash
-AZURE_OPENAI_DEPLOYMENT='gpt-4o-mini'
+AZURE_OPENAI_DEPLOYMENT='gpt-5-mini'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-3-small'
 ```
 
@@ -133,7 +133,7 @@ Your Hugging Face token can be found in your profile under [Access Tokens](https
 > **Note:** GitHub Models is retiring at the end of July 2026. Microsoft Foundry Models is the direct replacement, offering the same free-to-try model catalog and Azure AI Inference SDK / OpenAI SDK experience.
 
 1. Go to [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) and create (or open) a Foundry project.
-1. Browse the [model catalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) and deploy a model, for example `gpt-4o-mini`.
+1. Browse the [model catalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) and deploy a model, for example `gpt-5-mini`.
 1. On the project's **Overview** page, copy the **endpoint** and **API key**.
 1. Use the endpoint value for `AZURE_INFERENCE_ENDPOINT` and the key value for `AZURE_INFERENCE_CREDENTIAL` in your `.env` file.
 
@@ -141,7 +141,7 @@ Your Hugging Face token can be found in your profile under [Access Tokens](https
 
 If you'd rather not use a cloud subscription at all, you can run compatible open models directly on your own device:
 
-- **[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst)** - Microsoft's on-device runtime. It automatically selects the best execution provider (NPU, GPU, or CPU) and exposes an OpenAI-compatible endpoint, so you can reuse most of the sample code in this course with minimal changes. See the [Foundry Local documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) to get started, or install with `winget install Microsoft.FoundryLocal` (Windows) / `brew install microsoft/foundrylocal/foundrylocal` (macOS).
+- **[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst)** - Microsoft's on-device runtime. It automatically selects the best execution provider (NPU, GPU, or CPU) and exposes an OpenAI-compatible endpoint, so you can reuse most of the sample code in this course with minimal changes. See the [Foundry Local documentation](https://learn.microsoft.com/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) to get started, or install with `winget install Microsoft.FoundryLocal` (Windows) / `brew install microsoft/foundrylocal/foundrylocal` (macOS).
 - **[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst)** - a popular alternative for running open models like Llama, Phi, Mistral, and Gemma locally.
 
 See [Lesson 19: Building with SLMs](../19-slm/README.md?WT.mc_id=academic-105485-koreyst) for hands-on examples using both options.

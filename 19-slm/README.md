@@ -207,7 +207,7 @@ ollama run phi3.5
 
 **Foundry Local**
 
-[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) is Microsoft's offline, on-device runtime for running models like Phi entirely on your own hardware - no Azure subscription, API key, or network connection required. It automatically picks the best execution provider available (NPU, GPU, or CPU) and exposes an OpenAI-compatible endpoint, so existing `openai`/Azure AI Inference SDK code can point at it with minimal changes. See the [Foundry Local documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) to get started.
+[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) is Microsoft's offline, on-device runtime for running models like Phi entirely on your own hardware - no Azure subscription, API key, or network connection required. It automatically picks the best execution provider available (NPU, GPU, or CPU) and exposes an OpenAI-compatible endpoint, so existing `openai`/Azure AI Inference SDK code can point at it with minimal changes. See the [Foundry Local documentation](https://learn.microsoft.com/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) to get started.
 
 ```bash
 

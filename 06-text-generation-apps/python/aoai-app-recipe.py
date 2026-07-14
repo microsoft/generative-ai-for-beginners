@@ -62,7 +62,7 @@ except ValueError as e:
 # Note: Using validated and sanitized inputs
 prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter_value}: "
 
-response = client.responses.create(model=deployment, input=prompt, max_output_tokens=600, temperature=0.1, store=False)
+response = client.responses.create(model=deployment, input=prompt, max_output_tokens=600, store=False)
 
 
 # print response
@@ -75,7 +75,7 @@ else:
 
     prompt_shopping = "Produce a shopping list, and please don't include ingredients that I already have at home: "
     new_prompt = f"Given ingredients at home {ingredients} and these generated recipes: {old_prompt_result}, {prompt_shopping}"
-    response = client.responses.create(model=deployment, input=new_prompt, max_output_tokens=600, temperature=0, store=False)
+    response = client.responses.create(model=deployment, input=new_prompt, max_output_tokens=600, store=False)
 
     # print response
     print("\n=====Shopping list ======= \n")

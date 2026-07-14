@@ -17,7 +17,7 @@ using static System.Environment;
 string endpoint = "<replace with endpoint>";
 string key = "<replace with API key>";
 
-// Enter the deployment name you chose when you deployed the model (for example: gpt-4o-mini).
+// Enter the deployment name you chose when you deployed the model (for example: gpt-5-mini).
 string deployment = "<replace with deployment>";
 
 AzureOpenAIClient azureClient = new(new Uri(endpoint), new ApiKeyCredential(key));
@@ -45,11 +45,14 @@ string prompt = $"Show me {no_recipes} recipes for a dish with the following ing
 
 #!csharp
 
-// deployment, prompt, max output tokens, temperature
+// gpt-5 reasoning models don't support Temperature/top_p, and need a generous output-token
+// budget so the visible answer isn't truncated by reasoning tokens. To experiment with
+// Temperature in .NET, call a non-reasoning model (for example a Llama model such as
+// Llama-3.3-70B-Instruct) via the Azure.AI.Inference SDK against your Foundry Models endpoint -
+// the same way the js-githubmodels sample uses Llama.
 ChatCompletionOptions options = new()
 {
-    MaxOutputTokenCount = 150,
-    Temperature = 0.1f,
+    MaxOutputTokenCount = 800,
 };
 
 ChatCompletion completion = chatClient.CompleteChat(

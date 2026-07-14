@@ -17,7 +17,7 @@ export async function main() {
     console.log("== Recipe Recommendation App ==");
 
     // Use the deployment name configured in your .env file
-    const deploymentName = process.env.AZURE_OPENAI_DEPLOYMENT || 'gpt-4o-mini';
+    const deploymentName = process.env.AZURE_OPENAI_DEPLOYMENT || 'gpt-5-mini';
 
     console.log("Number of recipes: (for example: 5): ");
     const numRecipes = "2";
@@ -44,7 +44,6 @@ export async function main() {
                 },
             ],
             max_output_tokens: 700,
-            temperature: 0.1,
             store: false,
         });
 
@@ -69,7 +68,6 @@ export async function main() {
                 },
             ],
             max_output_tokens: 700,
-            temperature: 0.1,
             store: false,
         });
 

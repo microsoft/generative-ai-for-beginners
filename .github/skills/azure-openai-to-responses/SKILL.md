@@ -140,7 +140,7 @@ rg "models\.github\.ai|models\.inference\.ai\.azure"  # GitHub Models: remove
 - Streaming: iterate events, handle `event.type == "response.output_text.delta"` (use `event.delta`) and `response.completed`
 - Tools: flat format, `tool_choice`, return results as `function_call_output` items; append `response.output` items for round-trips
 - Multi-turn: maintain conversation in an `input` array, or use `previous_response_id` (requires `store=True`)
-- O-series: `max_completion_tokens` → `max_output_tokens` (4096+), `reasoning_effort` → `reasoning={"effort": ...}`, `temperature` must be 1/omitted, remove `top_p`
+- Reasoning models (o-series, GPT-5): `max_completion_tokens` → `max_output_tokens` (4096+), `reasoning_effort` → `reasoning={"effort": ...}`, omit `temperature`/`top_p` (GPT-5 rejects `temperature` outright; to vary output use a non-reasoning model like `Llama-3.3-70B-Instruct` via Foundry Models)
 
 ## Acceptance criteria (all must pass)
 
@@ -156,6 +156,6 @@ See [references/cheat-sheet.md](./references/cheat-sheet.md) for complete before
 
 ## References
 
-- [Azure OpenAI Responses API docs](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/responses)
+- [Azure OpenAI Responses API docs](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/responses)
 - [OpenAI Responses API reference](https://platform.openai.com/docs/api-reference/responses)
 - [Source skill: Azure-Samples/azure-openai-to-responses](https://github.com/Azure-Samples/azure-openai-to-responses)
