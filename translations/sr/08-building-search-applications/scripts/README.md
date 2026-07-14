@@ -1,34 +1,34 @@
-# Припрема података за транскрипцију
+# Припрема података транскрипције
 
-Скрипте за припрему података за транскрипцију преузимају транскрипте YouTube видео снимака и припремају их за коришћење са примером Semantic Search са OpenAI уграђеним моделима и функцијама.
+Скрипте за припрему података транскрипције преузимају транскрипте видео снимака са YouTube-а и припремају их за коришћење са примером Семантичке претраге са OpenAI уграђивањима и функцијама.
 
-Скрипте за припрему података за транскрипцију тестиране су на најновијим верзијама Windows 11, macOS Ventura и Ubuntu 22.04 (и новијим).
+Скрипте за припрему података транскрипције су тестиране на најновијим издањима Windows 11, macOS Ventura и Ubuntu 22.04 (и новије).
 
-## Креирање потребних ресурса у Azure OpenAI Service
+## Креирање потребних ресурса Azure OpenAI услуге
 
 > [!IMPORTANT]
-> Препоручујемо да ажурирате Azure CLI на најновију верзију како бисте обезбедили компатибилност са OpenAI
+> Предлажемо да ажурирате Azure CLI на најновију верзију ради обезбеђења компатибилности са OpenAI
 > Погледајте [Документацију](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
-1. Креирајте resource group
+1. Креирајте ресурсну групу
 
 > [!NOTE]
-> За ове инструкције користимо resource group под именом "semantic-video-search" у East US региону.
-> Можете променити име resource group-а, али ако мењате локацију ресурса,
+> За ове инструкције користимо ресурсну групу под називом "semantic-video-search" у региону East US.
+> Можете променити име ресурсне групе, али када мењате локацију ресурса,
 > проверите [табелу доступности модела](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. Креирајте Azure OpenAI Service ресурс.
+1. Креирајте Azure OpenAI сервис ресурс.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Преузмите endpoint и кључеве за коришћење у овој апликацији
+1. Набавите крајњу тачку и кључеве за коришћење у овој апликацији
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -37,9 +37,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. Деплојујте следеће моделе:
+1. Деплотирајте следеће моделе:
    - `text-embedding-ada-002` верзија `2` или новија, под именом `text-embedding-ada-002`
-   - `gpt-35-turbo` верзија `0613` или новија, под именом `gpt-35-turbo`
+   - `gpt-4o-mini` под именом `gpt-4o-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,9 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-35-turbo \
-    --model-name gpt-35-turbo \
-    --model-version "0613"  \
+    --deployment-name gpt-4o-mini \
+    --model-name gpt-4o-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -67,7 +66,7 @@ az cognitiveservices account deployment create \
 
 ## Променљиве окружења
 
-За покретање скрипти за припрему YouTube транскрипција потребне су следеће променљиве окружења.
+Следеће променљиве окружења су потребне за извршавање скрипти за припрему података транскрипције са YouTube-а.
 
 ### На Windows-у
 
@@ -81,11 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
+<!-- Можете додати променљиве окружења у свој PowerShell профил.
 
+```powershell
+$env:AZURE_OPENAI_API_KEY = "<your Azure OpenAI Service API key>"
+$env:AZURE_OPENAI_ENDPOINT = "<your Azure OpenAI Service endpoint>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<your Azure OpenAI Service model deployment name>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<your Google developer API key>"
+``` -->
 
-### На Linux-у и macOS-у
+### На Linux и macOS
 
-Препоручује се додавање следећих export наредби у ваш `~/.bashrc` или `~/.zshrc` фајл.
+Препоручује се да следеће export наредбе додате у свој `~/.bashrc` или `~/.zshrc` фајл.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -97,7 +103,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ## Инсталирање потребних Python библиотека
 
 1. Инсталирајте [git клијент](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) ако већ није инсталиран.
-1. Из `Terminal` прозора, клонирајте пример у жељени фолдер за репозиторијум.
+1. Из `Terminal` прозора клонирајте пример у жељени фолдер свог репозиторијума.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -117,7 +123,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     python -m venv .venv
     ```
 
-    На macOS-у и Linux-у:
+    На macOS и Linux-у:
 
     ```bash
     python3 -m venv .venv
@@ -131,7 +137,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    .venv\Scripts\activate
    ```
 
-   На macOS-у и Linux-у:
+   На macOS и Linux-у:
 
    ```bash
    source .venv/bin/activate
@@ -145,13 +151,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip install -r requirements.txt
    ```
 
-   На macOS-у и Linux-у:
+   На macOS и Linux-у:
 
    ```bash
    pip3 install -r requirements.txt
    ```
 
-## Покретање скрипти за припрему YouTube транскрипција
+## Покрените скрипте за припрему података транскрипције са YouTube-а
 
 ### На Windows-у
 
@@ -159,11 +165,15 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 .\transcripts_prepare.ps1
 ```
 
-### На macOS-у и Linux-у
+### На macOS и Linux-у
 
 ```bash
 ./transcripts_prepare.sh
 ```
 
-**Одрицање од одговорности**:  
-Овај документ је преведен коришћењем AI сервиса за превођење [Co-op Translator](https://github.com/Azure/co-op-translator). Иако се трудимо да превод буде тачан, молимо вас да имате у виду да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитетним извором. За критичне информације препоручује се професионални људски превод. Нисмо одговорни за било каква неспоразума или погрешна тумачења настала коришћењем овог превода.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Изјава о одрицању одговорности**:
+Овај документ је преведен коришћењем услуге за аутоматски превод [Co-op Translator](https://github.com/Azure/co-op-translator). Иако тежимо тачности, имајте у виду да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитативним извором. За критичне информације препоручује се професионални људски превод. Нисмо одговорни за било каква неспоразума или погрешна тумачења која произилазе из коришћења овог превода.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
