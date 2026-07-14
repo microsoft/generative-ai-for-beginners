@@ -1,51 +1,53 @@
-# Configuração na Cloud ☁️ – GitHub Codespaces
+# Configuração na Nuvem ☁️ – GitHub Codespaces
 
-**Use este guia se não quiser instalar nada no seu computador.**  
-O Codespaces oferece-lhe uma instância gratuita do VS Code no navegador, já com todas as dependências instaladas.
-
----
-
-## 1.  Porquê usar Codespaces?
-
-| Vantagem | O que significa para si |
-|----------|------------------------|
-| ✅ Sem instalações | Funciona em Chromebook, iPad, computadores da escola… |
-| ✅ Contentor de desenvolvimento pré-configurado | Python 3, Node.js, .NET, Java já incluídos |
-| ✅ Quota gratuita | Contas pessoais têm **120 horas de núcleo / 60 GB-horas por mês** |
-
-> 💡 **Tip**  
-> Mantenha a sua quota em dia **parando** ou **eliminando** codespaces que não está a usar  
-> (Ver ▸ Paleta de Comandos ▸ *Codespaces: Stop Codespace*).
+**Use este guia se não quiser instalar nada localmente.**  
+O Codespaces oferece-lhe uma instância gratuita do VS Code baseada no navegador com todas as dependências pré-instaladas.
 
 ---
 
-## 2.  Criar um Codespace (um clique)
+## 1.  Porquê o Codespaces?
 
-1. **Faça fork** deste repositório (botão **Fork** no canto superior direito).  
-2. No seu fork, clique em **Code ▸ Codespaces ▸ Create codespace on main**.  
-   ![Diálogo a mostrar botões para criar um codespace](../../../00-course-setup/images/who-will-pay.webp)
+| Benefício | O que isso significa para si |
+|---------|----------------------------|
+| ✅ Zero instalações | Funciona em Chromebook, iPad, PCs do laboratório da escola... |
+| ✅ Contentor de desenvolvimento pré-construído | Python 3, Node.js, .NET, Java já incluídos |
+| ✅ Quota gratuita | Contas pessoais recebem **120 horas-core / 60 GB-horas por mês** |
 
-✅ Abre-se uma janela do VS Code no navegador e o contentor de desenvolvimento começa a ser criado.
-Isto demora cerca de **2 minutos** na primeira vez.
+> 💡 **Dica**  
+> Mantenha a sua quota saudável **parando** ou **apagando** codespaces inativos  
+> (Ver ▸ Command Palette ▸ *Codespaces: Stop Codespace*).
 
-## 3. Adicione a sua chave API (de forma segura)
+---
 
-### Opção A Segredos do Codespaces — Recomendado
+## 2.  Criar um Codespace (com um clique)
 
-1. ⚙️ Ícone de engrenagem -> Paleta de Comandos -> Codespaces : Manage user secret -> Add a new secret.
+1. **Faça fork** deste repositório (botão **Fork** no canto superior-direito).  
+2. No seu fork, clique **Code ▸ Codespaces ▸ Create codespace on main**.  
+   ![Dialog showing buttons to create a codespace](../../../translated_images/pt-PT/who-will-pay.4c0609b1c7780f44.webp)
+
+✅ Abrirá uma janela do VS Code no navegador e o contentor de desenvolvimento começará a ser construído.
+Isto demora **~2 minutos** na primeira vez.
+
+## 3. Adicione a sua chave API (da forma segura)
+
+### Opção A Segredos Codespaces — Recomendado
+
+1. ⚙️ Ícone de engrenagem -> Command Palette -> Codespaces : Manage user secret -> Add a new secret.
 2. Nome: OPENAI_API_KEY
 3. Valor: cole a sua chave → Add secret
 
-Pronto—o nosso código vai detetar automaticamente.
+É tudo – o nosso código irá usá-la automaticamente.
 
-### Opção B Ficheiro .env (se precisar mesmo)
+### Opção B ficheiro .env (se realmente precisar)
 
 ```bash
 cp .env.copy .env
-code .env         # fill in OPENAI_API_KEY=your_key_here
+code .env         # preencha OPENAI_API_KEY=sua_chave_aqui
 ```
 
 ---
 
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Aviso Legal**:
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se a tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas resultantes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução automática [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas resultantes da utilização desta tradução.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
