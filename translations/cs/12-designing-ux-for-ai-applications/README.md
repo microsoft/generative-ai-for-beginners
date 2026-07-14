@@ -1,125 +1,127 @@
-# Navrhování UX pro AI aplikace
+# Návrh UX pro AI aplikace
 
-[![Navrhování UX pro AI aplikace](../../../translated_images/cs/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Návrh UX pro AI aplikace](../../../translated_images/cs/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
-> _(Klikněte na obrázek výše pro zhlédnutí videa této lekce)_
+> _(Klikněte na obrázek výše pro zobrazení videa této lekce)_
 
-Uživatelská zkušenost je velmi důležitým aspektem při vytváření aplikací. Uživatelé musí být schopni používat vaši aplikaci efektivně k plnění úkolů. Být efektivní je jedna věc, ale je také nutné navrhovat aplikace tak, aby je mohli používat všichni, tedy aby byly _přístupné_. Tato kapitola se zaměří na tuto oblast, abyste nakonec navrhli aplikaci, kterou lidé mohou a chtějí používat.
+Uživatelská zkušenost je velmi důležitý aspekt při vytváření aplikací. Uživatelé musí být schopni vaši aplikaci používat efektivním způsobem pro plnění úkolů. Efektivita je jedna věc, ale zároveň je třeba navrhnout aplikace tak, aby je mohl používat každý, aby byly _přístupné_. Tato kapitola se zaměří na tuto oblast, abyste nakonec navrhli aplikaci, kterou lidé mohou a chtějí používat.
 
 ## Úvod
 
-Uživatelská zkušenost je způsob, jakým uživatel interaguje s konkrétním produktem nebo službou, ať už jde o systém, nástroj nebo design. Při vývoji AI aplikací se vývojáři zaměřují nejen na zajištění efektivní uživatelské zkušenosti, ale také na její etiku. V této lekci se zaměříme na to, jak vytvářet aplikace umělé inteligence (AI), které odpovídají potřebám uživatelů.
+Uživatelská zkušenost je to, jak uživatel interaguje a používá konkrétní produkt nebo službu, ať už jde o systém, nástroj nebo design. Při vývoji AI aplikací se vývojáři soustředí nejen na to, aby uživatelská zkušenost byla efektivní, ale také etická. V této lekci se zabýváme tím, jak vytvářet aplikace umělé inteligence (AI), které odpovídají potřebám uživatelů.
 
-Lekce pokryje následující oblasti:
+Lekce bude pokrývat následující oblasti:
 
 - Úvod do uživatelské zkušenosti a pochopení potřeb uživatelů
-- Navrhování AI aplikací pro důvěru a transparentnost
-- Navrhování AI aplikací pro spolupráci a zpětnou vazbu
+- Návrh AI aplikací pro důvěru a transparentnost
+- Návrh AI aplikací pro spolupráci a zpětnou vazbu
 
 ## Cíle učení
 
 Po absolvování této lekce budete schopni:
 
-- Pochopit, jak vytvářet AI aplikace, které odpovídají potřebám uživatelů.
-- Navrhovat AI aplikace, které podporují důvěru a spolupráci.
+- Pochopit, jak vytvářet AI aplikace, které splňují potřeby uživatelů.
+- Navrhnout AI aplikace, které podporují důvěru a spolupráci.
 
-### Předpoklad
+### Požadované znalosti
 
-Věnujte čas a přečtěte si více o [uživatelské zkušenosti a designovém myšlení.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
+Věnujte čas a přečtěte si více o [uživatelské zkušenosti a designovém myšlení](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
 
 ## Úvod do uživatelské zkušenosti a pochopení potřeb uživatelů
 
-V našem fiktivním vzdělávacím startupu máme dva hlavní typy uživatelů: učitele a studenty. Každý z těchto dvou typů má jedinečné potřeby. Design zaměřený na uživatele upřednostňuje uživatele a zajišťuje, že produkty jsou relevantní a přínosné pro ty, pro které jsou určeny.
+V našem fiktivním startupu zabývajícím se vzděláváním máme dva hlavní uživatele, učitele a studenty. Každý z těchto uživatelů má jedinečné potřeby. Uživatelsky orientovaný design dává na první místo uživatele a zajišťuje, že jsou produkty relevantní a prospěšné pro ty, pro které jsou určeny.
 
-Aplikace by měla být **užitečná, spolehlivá, přístupná a příjemná**, aby poskytovala dobrou uživatelskou zkušenost.
+Aplikace by měla být **užitečná, spolehlivá, přístupná a příjemná**, aby poskytla dobrou uživatelskou zkušenost.
 
 ### Použitelnost
 
-Být užitečný znamená, že aplikace má funkce odpovídající jejímu zamýšlenému účelu, například automatizaci procesu hodnocení nebo generování kartiček pro opakování. Aplikace, která automatizuje proces hodnocení, by měla být schopna přesně a efektivně přiřazovat známky k práci studentů na základě předem definovaných kritérií. Podobně aplikace, která generuje kartičky pro opakování, by měla být schopna vytvářet relevantní a rozmanité otázky na základě svých dat.
+Být užitečný znamená, že aplikace má funkce odpovídající svému zamýšlenému účelu, například automatizaci procesu hodnocení nebo generování učebních kartiček pro opakování. Aplikace, která automatizuje hodnocení, by měla být schopna přesně a efektivně přiřadit skóre práci studentů na základě předem stanovených kritérií. Stejně tak aplikace generující opakovací kartičky by měla být schopná vytvářet relevantní a různorodé otázky na základě svých dat.
 
 ### Spolehlivost
 
-Být spolehlivý znamená, že aplikace dokáže konzistentně a bez chyb plnit svůj úkol. Nicméně AI, stejně jako lidé, není dokonalá a může být náchylná k chybám. Aplikace se mohou setkat s chybami nebo neočekávanými situacemi, které vyžadují lidský zásah nebo opravu. Jak se vypořádáte s chybami? V poslední části této lekce se zaměříme na to, jak jsou AI systémy a aplikace navrženy pro spolupráci a zpětnou vazbu.
+Být spolehlivý znamená, že aplikace dokáže vykonávat svůj úkol konzistentně a bez chyb. Nicméně AI, stejně jako lidé, není dokonalá a může podléhat chybám. Aplikace mohou narazit na chyby nebo neočekávané situace, které vyžadují lidský zásah nebo opravu. Jak řešíte chyby? V poslední části této lekce pokryjeme, jak jsou systémy a aplikace AI navrženy pro spolupráci a zpětnou vazbu.
 
 ### Přístupnost
 
-Být přístupný znamená rozšířit uživatelskou zkušenost na uživatele s různými schopnostmi, včetně těch s postižením, a zajistit, že nikdo nebude vynechán. Dodržováním zásad a pokynů pro přístupnost se AI řešení stávají inkluzivnějšími, použitelnějšími a přínosnějšími pro všechny uživatele.
+Být přístupný znamená rozšířit uživatelskou zkušenost i na uživatele s různými schopnostmi, včetně těch se zdravotním postižením, aby nikdo nebyl vynechán. Dodržováním zásad a pravidel přístupnosti se AI řešení stávají více inkluzivními, používatelnými a prospěšnými pro všechny uživatele.
 
 ### Příjemnost
 
-Být příjemný znamená, že je aplikace radost používat. Příjemná uživatelská zkušenost může mít pozitivní dopad na uživatele, povzbudit je k návratu k aplikaci a zvýšit příjmy firmy.
+Být příjemný znamená, že je aplikace radost ji používat. Příjemná uživatelská zkušenost může mít pozitivní dopad na uživatele, povzbuzovat je k opakovanému použití aplikace a zvyšovat příjmy podniku.
 
 ![obrázek ilustrující úvahy o UX v AI](../../../translated_images/cs/uxinai.d5b4ed690f5cefff.webp)
 
-Ne každý problém lze vyřešit pomocí AI. AI přichází na řadu, aby doplnila vaši uživatelskou zkušenost, ať už automatizací manuálních úkolů nebo personalizací uživatelských zkušeností.
+Ne všechny problémy lze vyřešit pomocí AI. AI pomáhá rozšířit vaši uživatelskou zkušenost, ať už automatizací manuálních úkolů nebo personalizací uživatelských zážitků.
 
-## Navrhování AI aplikací pro důvěru a transparentnost
+## Návrh AI aplikací pro důvěru a transparentnost
 
-Budování důvěry je klíčové při navrhování AI aplikací. Důvěra zajišťuje, že uživatel má jistotu, že aplikace splní úkol, poskytne konzistentní výsledky a že výsledky odpovídají potřebám uživatele. Rizikem v této oblasti je nedůvěra a přehnaná důvěra. Nedůvěra nastává, když uživatel má malou nebo žádnou důvěru v AI systém, což vede k odmítnutí vaší aplikace. Přehnaná důvěra nastává, když uživatel přeceňuje schopnosti AI systému, což vede k tomu, že uživatel příliš důvěřuje AI systému. Například automatizovaný systém hodnocení v případě přehnané důvěry může vést k tomu, že učitel neprojde některé práce, aby se ujistil, že systém hodnocení funguje správně. To by mohlo vést k nespravedlivým nebo nepřesným známkám pro studenty nebo k přehlédnutí příležitostí pro zpětnou vazbu a zlepšení.
+Budování důvěry je klíčové při návrhu AI aplikací. Důvěra zajišťuje, že uživatel je přesvědčen, že aplikace zvládne práci, bude konzistentně dodávat výsledky a výsledky odpovídají potřebám uživatele. Riziko v této oblasti spočívá v nedůvěře a přílišné důvěře. Nedůvěra nastává, když uživatel nemá téměř žádnou důvěru v AI systém, což vede k odmítnutí vaší aplikace. Přílišná důvěra nastává, když uživatel přeceňuje schopnosti AI systému, což vede k přílišné důvěře uživatelů v AI systém. Například u automatizovaného systému hodnocení by přílišná důvěra mohla vést k tomu, že učitel nezkontroluje některé práce, aby se ujistil, že systém funguje správně. To by mohlo mít za následek nespravedlivé nebo nepřesné známky pro studenty či promarněné příležitosti pro zpětnou vazbu a zlepšení.
 
-Dva způsoby, jak zajistit, že důvěra je umístěna přímo do středu designu, jsou vysvětlitelnost a kontrola.
+Dva způsoby, jak zajistit, aby byla důvěra středem návrhu, jsou vysvětlitelnost a kontrola.
 
 ### Vysvětlitelnost
 
-Když AI pomáhá informovat rozhodnutí, jako je předávání znalostí budoucím generacím, je důležité, aby učitelé a rodiče rozuměli tomu, jak jsou rozhodnutí AI přijímána. To je vysvětlitelnost - pochopení, jak AI aplikace přijímají rozhodnutí. Navrhování pro vysvětlitelnost zahrnuje přidávání podrobností, které zdůrazňují, jak AI dospěla k výstupu. Publikum musí být informováno, že výstup je generován AI a nikoli člověkem. Například místo "Začněte chatovat se svým učitelem nyní" řekněte "Použijte AI učitele, který se přizpůsobí vašim potřebám a pomůže vám učit se vaším tempem."
+Když AI pomáhá informovat rozhodnutí, například předávání znalostí budoucím generacím, je klíčové, aby učitelé a rodiče rozuměli tomu, jak jsou AI rozhodnutí přijímána. To je vysvětlitelnost – porozumění tomu, jak AI aplikace přijímají rozhodnutí. Návrh s ohledem na vysvětlitelnost zahrnuje přidání detailů, které ukazují, jak AI dospěla k výsledku. Publikum musí být informováno, že výstup je generován AI a nikoliv člověkem. Například namísto „Začněte nyní chatovat se svým lektorem“ říct „Použijte AI lektora, který se přizpůsobí vašim potřebám a pomáhá vám učit se vlastním tempem.“
 
-![stránka aplikace s jasnou ilustrací vysvětlitelnosti v AI aplikacích](../../../translated_images/cs/explanability-in-ai.134426a96b498fbf.webp)
+![uvodní stránka aplikace s jasnou ilustrací vysvětlitelnosti v AI aplikacích](../../../translated_images/cs/explanability-in-ai.134426a96b498fbf.webp)
 
-Dalším příkladem je, jak AI používá uživatelská a osobní data. Například uživatel s personou student může mít omezení na základě své persony. AI nemusí být schopna odhalit odpovědi na otázky, ale může pomoci uživateli přemýšlet o tom, jak může problém vyřešit.
+Dalším příkladem je, jak AI používá uživatelská a osobní data. Například uživatel s personou studenta může mít omezení vyplývající z jeho persony. AI nemusí být schopna odhalit odpovědi na otázky, ale může uživatele vést, aby přemýšlel o tom, jak problém vyřešit.
 
 ![AI odpovídající na otázky na základě persony](../../../translated_images/cs/solving-questions.b7dea1604de0cbd2.webp)
 
 Poslední klíčovou částí vysvětlitelnosti je zjednodušení vysvětlení. Studenti a učitelé nemusí být odborníky na AI, proto by vysvětlení toho, co aplikace může nebo nemůže dělat, měla být zjednodušená a snadno pochopitelná.
 
-![zjednodušená vysvětlení schopností AI](../../../translated_images/cs/simplified-explanations.4679508a406c3621.webp)
+![zjednodušená vysvětlení o schopnostech AI](../../../translated_images/cs/simplified-explanations.4679508a406c3621.webp)
 
 ### Kontrola
 
-Generativní AI vytváří spolupráci mezi AI a uživatelem, kde například uživatel může upravit podněty pro různé výsledky. Navíc, jakmile je výstup generován, uživatelé by měli být schopni upravit výsledky, což jim dává pocit kontroly. Například při používání Bingu můžete upravit svůj podnět na základě formátu, tónu a délky. Navíc můžete přidat změny do svého výstupu a upravit ho, jak je ukázáno níže:
+Generativní AI vytváří spolupráci mezi AI a uživatelem, kde například uživatel může upravovat podněty pro různé výsledky. Navíc jakmile je výstup vygenerován, uživatelé by měli mít možnost výsledek upravit, čímž získávají pocit kontroly. Například při použití Microsoft Copilot (dříve Bing Chat) můžete upravit svůj podnět podle formátu, tónu a délky. Také můžete přidat změny do svého výstupu a modifikovat ho, jak je ukázáno níže:
 
-![Výsledky vyhledávání Bing s možnostmi úpravy podnětu a výstupu](../../../translated_images/cs/bing1.293ae8527dbe2789.webp)
+![Výsledky vyhledávání Bing s možnostmi upravit podnět a výstup](../../../translated_images/cs/bing1.293ae8527dbe2789.webp)
 
-Další funkcí v Bingu, která umožňuje uživateli mít kontrolu nad aplikací, je možnost přihlásit se nebo odhlásit z dat, která AI používá. Pro školní aplikaci může student chtít použít své poznámky i zdroje učitelů jako materiál pro opakování.
+Další funkcí v Microsoft Copilot, která uživateli umožňuje mít kontrolu nad aplikací, je možnost zapnout a vypnout používání dat AI. Pro školní aplikaci může student chtít použít své poznámky i zdroje učitele jako materiály pro opakování.
 
-![Výsledky vyhledávání Bing s možnostmi úpravy podnětu a výstupu](../../../translated_images/cs/bing2.309f4845528a88c2.webp)
+![Výsledky vyhledávání Bing s možnostmi upravit podnět a výstup](../../../translated_images/cs/bing2.309f4845528a88c2.webp)
 
-> Při navrhování AI aplikací je klíčová záměrnost, která zajistí, že uživatelé nebudou přehnaně důvěřovat a nastavovat nerealistická očekávání ohledně jejích schopností. Jedním ze způsobů, jak toho dosáhnout, je vytvoření tření mezi podněty a výsledky. Připomínání uživateli, že se jedná o AI a nikoli o jiného člověka.
+> Při navrhování AI aplikací je klíčové úmyslné jednání, aby uživatelé nepřeceňovali důvěru a nesetkávali se s nereálnými očekáváními schopností. Jedním ze způsobů, jak toho dosáhnout, je vytvořit tření mezi podněty a výsledky. Připomínat uživateli, že jde o AI a nikoliv o jiného člověka.
 
-## Navrhování AI aplikací pro spolupráci a zpětnou vazbu
+## Návrh AI aplikací pro spolupráci a zpětnou vazbu
 
-Jak již bylo zmíněno, generativní AI vytváří spolupráci mezi uživatelem a AI. Většina interakcí spočívá v tom, že uživatel zadá podnět a AI generuje výstup. Co když je výstup nesprávný? Jak aplikace řeší chyby, pokud k nim dojde? Obviňuje AI uživatele nebo si vezme čas na vysvětlení chyby?
+Jak již bylo zmíněno, generativní AI vytváří spolupráci mezi uživatelem a AI. Většina interakcí spočívá v tom, že uživatel zadá podnět a AI vygeneruje výstup. Co když je výstup nesprávný? Jak aplikace zvládá chyby, pokud k nim dojde? Viní AI uživatele nebo si vezme čas na vysvětlení chyby?
 
-AI aplikace by měly být navrženy tak, aby přijímaly a poskytovaly zpětnou vazbu. To nejen pomáhá AI systému zlepšovat se, ale také buduje důvěru s uživateli. Zpětnovazební smyčka by měla být zahrnuta do designu, příkladem může být jednoduché palec nahoru nebo dolů na výstupu.
+AI aplikace by měly být navrženy tak, aby přijímaly a poskytovaly zpětnou vazbu. To nejen pomáhá systému AI zlepšovat se, ale také buduje důvěru uživatelů. V designu by měla být zahrnuta zpětnovazební smyčka, například jednoduchý palec nahoru nebo dolů k výstupu.
 
-Dalším způsobem, jak to řešit, je jasně komunikovat schopnosti a omezení systému. Když uživatel udělá chybu při požadavku na něco mimo schopnosti AI, mělo by existovat také způsob, jak to řešit, jak je ukázáno níže.
+Dalším způsobem, jak to řešit, je jasně komunikovat schopnosti a omezení systému. Když uživatel udělá chybu a požaduje něco, co přesahuje možnosti AI, měl by existovat způsob, jak to řešit, jak je ukázáno níže.
 
 ![Poskytování zpětné vazby a řešení chyb](../../../translated_images/cs/feedback-loops.7955c134429a9466.webp)
 
-Systémové chyby jsou běžné u aplikací, kde uživatel může potřebovat pomoc s informacemi mimo rozsah AI nebo aplikace může mít limit na počet otázek/předmětů, které uživatel může generovat souhrny. Například AI aplikace trénovaná na datech z omezených předmětů, například historie a matematiky, nemusí být schopna řešit otázky týkající se geografie. Aby se tomu předešlo, AI systém může dát odpověď jako: "Promiňte, náš produkt byl trénován na datech z následujících předmětů....., nemohu odpovědět na otázku, kterou jste položili."
+Chyby systému jsou běžné u aplikací, kde uživatel může potřebovat pomoc s informacemi mimo rozsah AI nebo může existovat limit na počet otázek/předmětů, pro které může uživatel generovat souhrny. Například AI aplikace trénovaná na omezených předmětech, například Historii a Matematiku, nemusí být schopna zpracovat otázky z oblasti Geografie. Aby se tomu zabránilo, může AI systém reagovat například takto: „Omlouváme se, náš produkt byl natrénován na data z následujících předmětů....., nemohu odpovědět na vámi položenou otázku.“
 
-AI aplikace nejsou dokonalé, proto jsou náchylné k chybám. Při navrhování vašich aplikací byste měli zajistit, že vytvoříte prostor pro zpětnou vazbu od uživatelů a řešení chyb způsobem, který je jednoduchý a snadno vysvětlitelný.
+AI aplikace nejsou dokonalé, proto mohou dělat chyby. Při navrhování aplikací byste měli zajistit prostor pro zpětnou vazbu od uživatelů a řešení chyb způsobem, který je jednoduchý a snadno vysvětlitelný.
 
-## Úkol
+## Zadání
 
-Vezměte jakékoli AI aplikace, které jste dosud vytvořili, a zvažte implementaci níže uvedených kroků do vaší aplikace:
+Vezměte jakékoli AI aplikace, které jste dosud vytvořili, a zvažte implementaci níže uvedených kroků ve vaší aplikaci:
 
-- **Příjemnost:** Zvažte, jak můžete udělat vaši aplikaci příjemnější. Přidáváte vysvětlení všude? Povzbuzujete uživatele k prozkoumání? Jak formulujete své chybové zprávy?
+- **Příjemnost:** Zvažte, jak můžete svou aplikaci udělat příjemnější. Přidáváte vysvětlení všude? Podporujete uživatele v prozkoumávání? Jak formulujete chybové zprávy?
 
-- **Použitelnost:** Vytváříte webovou aplikaci. Ujistěte se, že je vaše aplikace navigovatelná jak myší, tak klávesnicí.
+- **Použitelnost:** Budujete webovou aplikaci. Ujistěte se, že je vaše aplikace ovladatelná myší i klávesnicí.
 
-- **Důvěra a transparentnost:** Nevěřte AI úplně a jejímu výstupu, zvažte, jak byste přidali člověka do procesu ověřování výstupu. Také zvažte a implementujte další způsoby, jak dosáhnout důvěry a transparentnosti.
+- **Důvěra a transparentnost:** Nedůvěřujte AI a jejím výsledkům úplně, zvažte, jak byste přidali člověka do procesu pro ověření výsledků. Také zvažte a implementujte jiné způsoby, jak dosáhnout důvěry a transparentnosti.
 
-- **Kontrola:** Dejte uživateli kontrolu nad daty, která poskytuje aplikaci. Implementujte způsob, jakým se uživatel může přihlásit nebo odhlásit ze sběru dat v AI aplikaci.
+- **Kontrola:** Dejte uživateli kontrolu nad daty, která do aplikace poskytuje. Umožněte uživateli přihlásit se k odebírání dat a odhlásit se od sběru dat v AI aplikaci.
 
-<!-- ## [Kvíz po přednášce](../../../12-designing-ux-for-ai-applications/quiz-url) -->
+<!-- ## [Post-lecture quiz](../../../12-designing-ux-for-ai-applications/quiz-url) -->
 
 ## Pokračujte ve svém učení!
 
-Po dokončení této lekce se podívejte na naši [kolekci učení o generativní AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), abyste dále rozvíjeli své znalosti o generativní AI!
+Po dokončení této lekce si prohlédněte naši [kolekci Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), abyste pokračovali ve zdokonalování svých znalostí generativní AI!
 
-Přejděte na lekci 13, kde se podíváme na [zabezpečení AI aplikací](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Přejděte k lekci 13, kde se podíváme na to, jak [zajišťovat AI aplikace](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Prohlášení**:  
-Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). I když se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Prohlášení o omezení odpovědnosti**:
+Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). Přestože usilujeme o co největší přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Originální dokument v jeho mateřském jazyce by měl být považován za autoritativní zdroj. Pro kritické informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za jakékoli nedorozumění nebo nesprávné interpretace vzniklé použitím tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

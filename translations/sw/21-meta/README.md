@@ -1,58 +1,61 @@
-# Kujenga Kwa Miundo ya Familia ya Meta
+# Kujenga Kwa Mfumo wa Familia ya Meta 
 
-## Utangulizi
+## Utangulizi 
 
-Somo hili litashughulikia:
+Somo hili litajumuisha: 
 
-- Kuchunguza miundo kuu miwili ya familia ya Meta - Llama 3.1 na Llama 3.2
-- Kuelewa matumizi na matukio ya kila mfano
-- Mfano wa msimbo kuonyesha sifa za kipekee za kila mfano
+- Kuchunguza mifano miwili kuu ya familia ya Meta - Llama 3.1 na Llama 3.2 
+- Kuelewa matumizi na matukio ya kila mfano 
+- Sampuli ya msimbo kuonyesha sifa za kipekee za kila mfano 
 
-## Familia ya Miundo ya Meta
 
-Katika somo hili, tutachunguza miundo 2 kutoka kwa familia ya Meta au "Llama Herd" - Llama 3.1 na Llama 3.2.
+## Familia ya Mifano ya Meta 
 
-Miundo hii inakuja katika aina tofauti na inapatikana kwenye soko la GitHub Model. Hapa kuna maelezo zaidi juu ya kutumia GitHub Models ku [fanya majaribio na miundo ya AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Katika somo hili, tutachunguza mifano 2 kutoka kwa familia ya Meta au "Kundi la Llama" - Llama 3.1 na Llama 3.2.
 
-Aina za Miundo:
-- Llama 3.1 - 70B Instruct
-- Llama 3.1 - 405B Instruct
-- Llama 3.2 - 11B Vision Instruct
-- Llama 3.2 - 90B Vision Instruct
+Mifano hii inakuja kwa aina tofauti na inapatikana katika [Katalogi ya Mifano ya Microsoft Foundry](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
 
-*Kumbuka: Llama 3 pia inapatikana kwenye GitHub Models lakini haitashughulikiwa katika somo hili*
+> **Kumbuka:** GitHub Models inakoma kufanikisha mwishoni mwa Julai 2026. Hapa kuna maelezo zaidi ya kutumia [Mifano ya Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) kuunda mfano na mifano ya AI.
 
-## Llama 3.1
+Aina za Mfano: 
+- Llama 3.1 - 70B Instruct 
+- Llama 3.1 - 405B Instruct 
+- Llama 3.2 - 11B Vision Instruct 
+- Llama 3.2 - 90B Vision Instruct 
 
-Kwa Parameta Bilioni 405, Llama 3.1 inaingia katika kundi la LLM za chanzo huria.
+*Kumbuka: Llama 3 pia inapatikana katika Mifano ya Microsoft Foundry lakini haitajadiliwa katika somo hili*
 
-Mfano huu ni sasisho la toleo la awali Llama 3 kwa kutoa:
+## Llama 3.1 
 
-- Dirisha kubwa la muktadha - tokeni 128k dhidi ya tokeni 8k
-- Max Output Tokens kubwa - 4096 dhidi ya 2048
-- Msaada Bora wa Lugha Nyingi - kutokana na ongezeko la tokeni za mafunzo
+Kwa Paramita Bilioni 405, Llama 3.1 inaingia katika kundi la LLM za chanzo huria. 
 
-Hizi zinamruhusu Llama 3.1 kushughulikia matumizi changamani zaidi wakati wa kujenga programu za GenAI ikiwemo:
-- Kupiga Simu za Kazi Asilia - uwezo wa kupiga simu kwa zana na kazi za nje ya mtiririko wa LLM
-- Utendaji Bora wa RAG - kutokana na dirisha kubwa la muktadha
-- Uundaji wa Data Bandia - uwezo wa kuunda data yenye ufanisi kwa kazi kama vile kuboresha mafunzo
+Mfano huu ni sasisho la toleo la awali la Llama 3 kwa kutoa: 
 
-### Kupiga Simu za Kazi Asilia
+- Dirisha kubwa la muktadha - tokeni 128k dhidi ya tokeni 8k 
+- Idadi kubwa ya Max Output Tokens - 4096 dhidi ya 2048 
+- Msaada bora wa lugha mbalimbali - kwa sababu ya kuongezeka kwa tokeni za mafunzo 
 
-Llama 3.1 imeboreshwa ili kuwa na ufanisi zaidi katika kupiga simu za kazi au zana. Pia ina zana mbili zilizojengewa ndani ambazo mfano unaweza kubaini zinahitaji kutumika kulingana na maelekezo kutoka kwa mtumiaji. Zana hizi ni:
+Hii inaruhusu Llama 3.1 kushughulikia matumizi magumu zaidi wakati wa kujenga programu za GenAI ikiwa ni pamoja na: 
+- Kupiga simu za Kifunction asilia - uwezo wa kuitisha zana za nje na kazi nje ya mtiririko wa LLM
+- Utendaji Bora wa RAG - kutokana na dirisha kubwa zaidi la muktadha 
+- Uundaji wa Data ya Syntetiki - uwezo wa kuunda data bora kwa kazi kama vile kufinywa 
 
-- **Brave Search** - Inaweza kutumika kupata taarifa za hivi karibuni kama hali ya hewa kwa kufanya utafutaji wa wavuti
-- **Wolfram Alpha** - Inaweza kutumika kwa hesabu tata za hisabati hivyo kuandika kazi zako mwenyewe si lazima.
+### Kupiga Simu Kifunction Asilia 
 
-Unaweza pia kuunda zana zako maalum ambazo LLM inaweza kuzipiga simu.
+Llama 3.1 imesanifiwa tena ili kuwa na ufanisi zaidi katika kupiga simu za kifunction au zana. Pia ina zana mbili zilizojengwa ndani ambazo mfano unaweza kubaini zinahitaji kutumiwa kulingana na ombi la mtumiaji. Zana hizi ni: 
 
-Katika mfano wa msimbo hapa chini:
+- **Brave Search** - Inaweza kutumika kupata habari za hivi karibuni kama hali ya hewa kwa kufanya utafutaji wa wavuti 
+- **Wolfram Alpha** - Inaweza kutumika kwa mahesabu magumu zaidi ya kihisabati hivyo kuandika kazi zako mwenyewe si lazima. 
 
-- Tunaelezea zana zinazopatikana (brave_search, wolfram_alpha) katika maelekezo ya mfumo.
-- Kutuma maelekezo ya mtumiaji yanayoulizia kuhusu hali ya hewa katika mji fulani.
-- LLM itajibu kwa simu ya zana ya Brave Search ambayo itaonekana kama hii `<|python_tag|>brave_search.call(query="Stockholm weather")`
+Pia unaweza kuunda zana zako za kawaida ambazo LLM inaweza kuitisha. 
 
-*Kumbuka: Mfano huu unapiga simu ya zana tu, ikiwa ungependa kupata matokeo, utahitaji kuunda akaunti ya bure kwenye ukurasa wa Brave API na kufafanua kazi yenyewe.*
+Katika mfano wa msimbo chini: 
+
+- Tunateua zana zinazopatikana (brave_search, wolfram_alpha) katika onyo la mfumo. 
+- Tuma ombi la mtumiaji linalouliza kuhusu hali ya hewa katika mji fulani. 
+- LLM itajibu kwa simu ya zana kwa zana ya Brave Search ambayo itaonekana kama hii `<|python_tag|>brave_search.call(query="Stockholm weather")` 
+
+*Kumbuka: Mfano huu unafanya simu tu ya zana, kama unataka kupata matokeo, utahitaji kujisajili bure kwenye ukurasa wa Brave API na kufafanua kifunction yenyewe.
 
 ```python 
 import os
@@ -60,9 +63,10 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import AssistantMessage, SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-token = os.environ["GITHUB_TOKEN"]
-endpoint = "https://models.inference.ai.azure.com"
-model_name = "meta-llama-3.1-405b-instruct"
+# Pata hizi kutoka ukurasa wa "Muhtasari" wa mradi wako wa Microsoft Foundry
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
+model_name = "Meta-Llama-3.1-405B-Instruct"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -92,15 +96,16 @@ response = client.complete(messages=messages, model=model_name)
 print(response.choices[0].message.content)
 ```
 
-## Llama 3.2
+## Llama 3.2 
 
-Licha ya kuwa LLM, moja ya kikomo cha Llama 3.1 ni ukosefu wa multimodality. Yaani, kushindwa kutumia aina tofauti za maingizo kama picha kama maelekezo na kutoa majibu. Uwezo huu ni moja ya sifa kuu za Llama 3.2. Sifa hizi pia ni pamoja na:
+Licha ya kuwa LLM, kizuizi kimoja cha Llama 3.1 ni ukosefu wa multimodality. Yaani, kutoweza kutumia aina tofauti za ingizo kama picha kama mateke na kutoa majibu. Uwezo huu ni mojawapo ya sifa kuu za Llama 3.2. Sifa hizi pia zinajumuisha: 
 
-- Multimodality - ina uwezo wa kutathmini maelekezo ya maandishi na picha
-- Aina ndogo hadi za kati (11B na 90B) - hii inatoa chaguzi za uanzishaji zinazoeleweka,
-- Aina za maandishi tu (1B na 3B) - hii inaruhusu mfano kuwekwa kwenye vifaa vya edge / simu na kutoa ucheleweshaji mdogo
+- Multimodality - ina uwezo wa kutathmini mateke ya maandishi na picha 
+- Aina ndogo hadi za kati (11B na 90B) - hii inatoa chaguzi flexible za ueneaji, 
+- Aina za maandishi tu (1B na 3B) - hii inaruhusu mfano kuenezwa kwenye vifaa vya edge / simu na kutoa ucheleweshaji mdogo 
 
-Msaada wa multimodal ni hatua kubwa katika ulimwengu wa miundo ya chanzo huria. Mfano wa msimbo hapa chini unachukua picha na maelekezo ya maandishi kupata uchambuzi wa picha kutoka Llama 3.2 90B.
+Msaada wa multimodal ni hatua kubwa katika dunia ya mifano ya chanzo huria. Mfano wa msimbo chini unatumia picha na kufanya tahmini ya picha kutoka Llama 3.2 90B. 
+
 
 ### Msaada wa Multimodal na Llama 3.2
 
@@ -117,8 +122,9 @@ from azure.ai.inference.models import (
 )
 from azure.core.credentials import AzureKeyCredential
 
-token = os.environ["GITHUB_TOKEN"]
-endpoint = "https://models.inference.ai.azure.com"
+# Pata haya kutoka kwenye ukurasa wa "Muhtasari" wa mradi wako wa Microsoft Foundry
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Llama-3.2-90B-Vision-Instruct"
 
 client = ChatCompletionsClient(
@@ -149,13 +155,13 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Kujifunza hakukomi hapa, endelea na safari
+## Kujifunza hakukomi hapa, endelea safari
 
-Baada ya kumaliza somo hili, angalia [Mkusanyiko wetu wa Kujifunza AI ya Kizazi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kuongeza ufahamu wako wa AI ya Kizazi!
+Baada ya kumaliza somo hili, angalia [Mkusanyiko wetu wa Kujifunza AI ya Kizazi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kuongeza ujuzi wako wa AI ya Kizazi!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Kiarifa**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi usahihi, tafadhali fahamu kwamba tafsiri za moja kwa moja zinaweza kuwa na makosa au ukosefu wa usahihi. Hati asili katika lugha yake ya asili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu na ya binadamu inapendekezwa. Hatuwezi kuwajibika kwa kutoelewana au tafsiri potofu zitokanazo na matumizi ya tafsiri hii.
+**Kionyozo**:
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kupata usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake halisi inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inapendekezwa. Hatutojibu kwa kuelewa vibaya au tafsiri potofu zinazotokea kutokana na matumizi ya tafsiri hii.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

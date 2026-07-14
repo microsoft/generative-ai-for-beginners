@@ -4,16 +4,16 @@
 
 _(Klikněte na obrázek výše pro zhlédnutí videa této lekce)_
 
-Generativní AI je umělá inteligence schopná generovat text, obrázky a další typy obsahu. Co ji činí fantastickou technologií, je její schopnost demokratizovat AI – kdokoli ji může používat s minimálním úsilím, stačí zadat textový podnět, větu napsanou v přirozeném jazyce. Nemusíte se učit programovací jazyky jako Java nebo SQL, abyste dosáhli něčeho hodnotného – stačí použít svůj jazyk, říct, co chcete, a AI model vám nabídne návrh. Aplikace a dopad této technologie jsou obrovské – můžete psát nebo rozumět zprávám, vytvářet aplikace a mnoho dalšího, a to vše během několika sekund.
+Generativní AI je umělá inteligence schopná generovat text, obrázky a další typy obsahu. To, co ji činí skvělou technologií, je, že demokratizuje AI - kdokoli ji může použít jen s textovým promptem, větou napsanou v přirozeném jazyce. Nemusíte se učit jazyk jako Java nebo SQL, abyste něco hodnotného dokázali, stačí použít svůj jazyk, napsat, co chcete, a dostanete návrh od AI modelu. Použití a dopad této technologie je obrovský: píšete nebo chápete reporty, vytváříte aplikace a mnohem více, vše během sekund.
 
-V tomto kurzu prozkoumáme, jak naše startupová společnost využívá generativní AI k odemykání nových scénářů ve světě vzdělávání a jak se vypořádáváme s nevyhnutelnými výzvami spojenými se sociálními dopady jejího použití a technologickými omezeními.
+V tomto kurzu prozkoumáme, jak náš startup využívá generativní AI pro odemykání nových scénářů ve světě vzdělávání a jak řešíme nevyhnutelné výzvy spojené se sociálními dopady jejího použití a technologickými omezeními.
 
 ## Úvod
 
 Tato lekce pokryje:
 
-- Úvod do obchodního scénáře: naše startupová myšlenka a mise.
-- Generativní AI a jak jsme se dostali k současnému technologickému prostředí.
+- Úvod do obchodního scénáře: naše idea a mise startupu.
+- Generativní AI a jak jsme se dostali k současnému technologickému stavu.
 - Vnitřní fungování velkého jazykového modelu.
 - Hlavní schopnosti a praktické případy použití velkých jazykových modelů.
 
@@ -26,113 +26,119 @@ Po dokončení této lekce budete rozumět:
 
 ## Scénář: náš vzdělávací startup
 
-Generativní umělá inteligence (AI) představuje vrchol technologie AI, posouvající hranice toho, co bylo kdysi považováno za nemožné. Generativní AI modely mají mnoho schopností a aplikací, ale v tomto kurzu prozkoumáme, jak revolucionalizují vzdělávání prostřednictvím fiktivního startupu. Tento startup budeme nazývat _náš startup_. Náš startup působí v oblasti vzdělávání s ambiciózním posláním:
+Generativní umělá inteligence (AI) představuje vrchol technologie AI, posouvajíc hranice toho, co bylo dříve považováno za nemožné. Generativní AI modely mají mnoho schopností a aplikací, ale v tomto kurzu se zaměříme na to, jak revolucionalizují vzdělávání prostřednictvím fiktivního startupu, který budeme nazývat _náš startup_. Náš startup působí v oblasti vzdělávání s ambiciózním posláním
 
-> _zlepšit přístupnost k učení na globální úrovni, zajistit rovný přístup ke vzdělání a poskytovat personalizované vzdělávací zkušenosti každému studentovi podle jeho potřeb_.
+> _zlepšovat dostupnost vzdělávání na globální úrovni, zajišťovat rovný přístup ke vzdělání a poskytovat personalizované vzdělávací zážitky každému studentovi podle jeho potřeb_.
 
-Tým našeho startupu si je vědom, že tohoto cíle nedosáhneme bez využití jednoho z nejmocnějších nástrojů moderní doby – velkých jazykových modelů (LLMs).
+Náš tým si je vědom, že tohoto cíle nelze dosáhnout bez využití jednoho z nejsilnějších nástrojů moderní doby – velkých jazykových modelů (LLMs).
 
-Generativní AI má potenciál revolucionalizovat způsob, jakým se dnes učíme a vyučujeme, kdy studenti mají k dispozici virtuální učitele 24 hodin denně, kteří poskytují obrovské množství informací a příkladů, a učitelé mohou využívat inovativní nástroje k hodnocení svých studentů a poskytování zpětné vazby.
+Očekává se, že generativní AI revolucionalizuje způsob, jakým se dnes učíme a vyučujeme, kdy studenti mají k dispozici virtuální učitele 24 hodin denně, kteří poskytují obrovské množství informací a příkladů, a učitelé mohou využívat inovativní nástroje k hodnocení studentů a poskytování zpětné vazby.
 
-![Pět mladých studentů sledujících monitor - obrázek od DALLE2](../../../translated_images/cs/students-by-DALLE2.b70fddaced1042ee.webp)
+![Pět mladých studentů dívajících se na monitor - obrázek od DALLE2](../../../translated_images/cs/students-by-DALLE2.b70fddaced1042ee.webp)
 
-Začněme definováním některých základních pojmů a terminologie, které budeme používat v průběhu kurzu.
+Na začátek si definujme základní pojmy a terminologii, kterou budeme v průběhu kurzu používat.
 
-## Jak jsme se dostali k generativní AI?
+## Jak jsme se dostali k Generativní AI?
 
-Navzdory mimořádnému _hype_, který byl nedávno vytvořen oznámením generativních AI modelů, je tato technologie výsledkem desetiletí výzkumu, přičemž první výzkumné snahy sahají až do 60. let. Nyní jsme v bodě, kdy AI má lidské kognitivní schopnosti, jako je konverzace, což ukazují například [OpenAI ChatGPT](https://openai.com/chatgpt) nebo [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), který také používá model GPT pro konverzace při webovém vyhledávání.
+Navzdory mimořádnému _hype_, který generovaly nedávné oznámení generativních AI modelů, tato technologie je ve vývoji desítky let, přičemž první výzkumy sahají do 60. let. Dnes jsme na úrovni AI s lidskými kognitivními schopnostmi, jako je konverzace, jak dokládají například [OpenAI ChatGPT](https://openai.com/chatgpt) nebo [Microsoft Copilot](https://copilot.microsoft.com/?WT.mc_id=academic-105485-koreyst), který také používá GPT model pro svou konverzační webovou vyhledávací zkušenost.
 
-Pokud se vrátíme trochu zpět, první prototypy AI sestávaly z psaných chatbotů, které se opíraly o znalostní bázi získanou od skupiny odborníků a reprezentovanou v počítači. Odpovědi v této znalostní bázi byly aktivovány klíčovými slovy objevujícími se ve vstupním textu. Brzy se však ukázalo, že takový přístup, využívající psané chatboty, není dobře škálovatelný.
+Trochu zpět, první prototypy AI sestávaly z psaných chatbotů, které se spoléhaly na znalostní bázi extrahovanou od skupiny expertů a reprezentovanou v počítači. Odpovědi ve znalostní bázi byly spouštěny klíčovými slovy obsaženými v textovém vstupu.
+Brzy však bylo jasné, že tento přístup, používající psané chatboty, není škálovatelný.
 
 ### Statistický přístup k AI: strojové učení
 
-Zlom nastal v 90. letech, kdy se začal aplikovat statistický přístup k analýze textu. To vedlo k vývoji nových algoritmů – známých jako strojové učení – schopných se učit vzory z dat bez explicitního programování. Tento přístup umožňuje strojům simulovat porozumění lidskému jazyku: statistický model je trénován na párování text-štítek, což modelu umožňuje klasifikovat neznámý vstupní text s předem definovaným štítkem reprezentujícím záměr zprávy.
+Obrat nastal v 90. letech zavedením statistického přístupu k analýze textu. Ten vedl k vývoji nových algoritmů - známých jako strojové učení - schopných učit se vzory z dat bez explicitního programování. Tento přístup umožňuje strojům simulovat porozumění lidskému jazyku: statistický model je trénován na párech text-štítek, což umožňuje modelu klasifikovat neznámý vstupní text s předem definovaným štítkem představujícím záměr zprávy.
 
 ### Neuronové sítě a moderní virtuální asistenti
 
-V posledních letech technologický vývoj hardwaru, schopného zpracovávat větší množství dat a složitější výpočty, podpořil výzkum v oblasti AI, což vedlo k vývoji pokročilých algoritmů strojového učení známých jako neuronové sítě nebo algoritmy hlubokého učení.
+V posledních letech technologický vývoj hardwaru, schopného zvládat větší objemy dat a složitější výpočty, podnítil výzkum v oblasti AI a vedl k vývoji pokročilých algoritmů strojového učení známých jako neuronové sítě nebo hluboké učení.
 
-Neuronové sítě (a zejména rekurentní neuronové sítě – RNN) významně zlepšily zpracování přirozeného jazyka, umožňující reprezentaci významu textu smysluplnějším způsobem, který zohledňuje kontext slova ve větě.
+Neuronové sítě (zejména rekurentní neuronové sítě – RNN) výrazně zlepšily zpracování přirozeného jazyka tím, že umožnily reprezentovat význam textu smysluplnějším způsobem, a to oceněním kontextu slova ve větě.
 
-Tato technologie poháněla virtuální asistenty, které se objevily v první dekádě nového století, velmi schopné interpretovat lidský jazyk, identifikovat potřebu a provést akci k jejímu uspokojení – například odpovědět předem definovaným skriptem nebo využít službu třetí strany.
+Tato technologie poháněla virtuální asistenty narozené v první dekádě nového století, velmi zdatné v interpretaci lidského jazyka, identifikaci potřeby a provádění činnosti, která ji uspokojuje – například odpověď předdefinovaným skriptem nebo využití služby třetí strany.
 
 ### Současnost, generativní AI
 
-Tak jsme se dostali k dnešní generativní AI, kterou lze považovat za podmnožinu hlubokého učení.
+Tak jsme se dostali k dnešní generativní AI, která může být chápána jako podmnožina hlubokého učení.
 
-![AI, ML, DL a generativní AI](../../../translated_images/cs/AI-diagram.c391fa518451a40d.webp)
+![AI, ML, DL a Generativní AI](../../../translated_images/cs/AI-diagram.c391fa518451a40d.webp)
 
-Po desetiletích výzkumu v oblasti AI nová architektura modelu – nazvaná _Transformer_ – překonala limity RNN, protože dokáže přijímat mnohem delší sekvence textu jako vstup. Transformery jsou založeny na mechanismu pozornosti, který umožňuje modelu přidělovat různé váhy vstupům, které přijímá, a „věnovat větší pozornost“ tam, kde je soustředěna nejrelevantnější informace, bez ohledu na jejich pořadí v textové sekvenci.
+Po desetiletích výzkumu v oblasti AI nová architektura modelu – nazvaná _Transformer_ – překonala omezení RNN tím, že dokáže zpracovat mnohem delší sekvence textu jako vstup. Transformery jsou založeny na mechanismu pozornosti, který umožňuje modelu dávat různou váhu vstupům, 'věnovat větší pozornost' tam, kde je soustředěna nejdůležitější informace, bez ohledu na jejich pořadí v textové sekvenci.
 
-Většina nedávných generativních AI modelů – známých také jako velké jazykové modely (LLMs), protože pracují s textovými vstupy a výstupy – je skutečně založena na této architektuře. Zajímavé na těchto modelech – trénovaných na obrovském množství neoznačených dat z různých zdrojů, jako jsou knihy, články a webové stránky – je, že mohou být přizpůsobeny široké škále úkolů a generovat gramaticky správný text s náznakem kreativity. Takže nejenže neuvěřitelně zlepšily schopnost stroje „rozumět“ vstupnímu textu, ale umožnily jeho schopnost generovat originální odpověď v lidském jazyce.
+Většina nedávných generativních AI modelů – známých také jako velké jazykové modely (LLMs), protože pracují s textovými vstupy a výstupy – je skutečně založena na této architektuře. Co je zajímavé na těchto modelech, které jsou trénovány na obrovském množství neoznačených dat z různých zdrojů jako knihy, články a webové stránky – je, že je lze přizpůsobit širokému spektru úkolů a generovat gramaticky správný text s nádechem kreativity. Takže nejenže výrazně zlepšily schopnost stroje 'rozumět' vstupnímu textu, ale umožnily i generování originální odpovědi v lidském jazyce.
 
 ## Jak fungují velké jazykové modely?
 
-V další kapitole prozkoumáme různé typy generativních AI modelů, ale prozatím se podívejme na to, jak fungují velké jazykové modely, se zaměřením na modely OpenAI GPT (Generative Pre-trained Transformer).
+V následující kapitole budeme zkoumat různé typy generativních AI modelů, ale nyní si pojďme představit, jak fungují velké jazykové modely, se zaměřením na modely OpenAI GPT (Generative Pre-trained Transformer).
 
-- **Tokenizér, text na čísla**: Velké jazykové modely přijímají text jako vstup a generují text jako výstup. Nicméně, protože jsou statistické modely, pracují mnohem lépe s čísly než s textovými sekvencemi. Proto je každý vstup do modelu zpracován tokenizérem, než je použit hlavním modelem. Token je část textu – skládající se z proměnného počtu znaků, takže hlavním úkolem tokenizéru je rozdělit vstup na pole tokenů. Poté je každý token mapován na index tokenu, což je číselné kódování původního textového úseku.
+- **Tokenizer, text na čísla**: Velké jazykové modely přijímají text jako vstup a generují text jako výstup. Jako statistické modely však lépe pracují s čísly než s textovými sekvencemi. Proto je každý vstup před použitím v jádru modelu zpracován tokenizerem. Token je úsek textu – složený z proměnného počtu znaků, takže hlavním úkolem tokenizeru je rozdělit vstup do pole tokenů. Každý token je pak mapován na index tokenu, což je celočíselné kódování původního úseku textu.
 
 ![Příklad tokenizace](../../../translated_images/cs/tokenizer-example.80a5c151ee7d1bd4.webp)
 
-- **Predikce výstupních tokenů**: Na základě n tokenů jako vstupu (s maximálním n, které se liší od modelu k modelu) je model schopen předpovědět jeden token jako výstup. Tento token je poté začleněn do vstupu další iterace, v rozšiřujícím se vzoru okna, což umožňuje lepší uživatelskou zkušenost získání jedné (nebo více) věty jako odpovědi. To vysvětluje, proč, pokud jste si někdy hráli s ChatGPT, jste si možná všimli, že někdy vypadá, jako by se zastavil uprostřed věty.
+- **Predikce výstupních tokenů**: Model dostane n tokenů jako vstup (s maximálním n lišícím se model od modelu) a dokáže na výstup predikovat jeden token. Tento token je pak začleněn do vstupu další iterace v rozšiřujícím okně, což umožňuje lepší uživatelský zážitek získání jedné (nebo více) vět jako odpovědi. To vysvětluje, proč pokud někdy pracujete s ChatGPT, může se zdát, že občas přestane uprostřed věty.
 
-- **Proces výběru, pravděpodobnostní rozdělení**: Výstupní token je vybrán modelem podle jeho pravděpodobnosti výskytu po aktuální textové sekvenci. To je proto, že model předpovídá pravděpodobnostní rozdělení všech možných „dalších tokenů“, vypočítané na základě jeho tréninku. Nicméně, ne vždy je vybrán token s nejvyšší pravděpodobností z výsledného rozdělení. Do tohoto výběru je přidána určitá míra náhodnosti, aby model jednal nedeterministickým způsobem – nedostaneme přesně stejný výstup pro stejný vstup. Tato míra náhodnosti je přidána k simulaci procesu kreativního myšlení a může být nastavena pomocí parametru modelu nazývaného teplota.
+- **Proces výběru, pravděpodobnostní rozdělení**: Výstupní token vybírá model na základě pravděpodobnosti jeho výskytu po aktuální textové sekvenci. Model odhaduje pravděpodobnostní rozdělení pro všechny možné „následující tokeny“ získané z tréninku. Ne vždy však je z rozdělení vybrán token s nejvyšší pravděpodobností. Do výběru je přidána určitá náhodnost tak, že model jedná nedeterministicky – nedostaneme stejný výstup pro stejný vstup. Tato náhodnost simuluje proces kreativního myšlení a může být řízena parametrem modelu nazývaným teplota (temperature).
 
 ## Jak může náš startup využít velké jazykové modely?
 
-Nyní, když máme lepší pochopení vnitřního fungování velkého jazykového modelu, podívejme se na některé praktické příklady nejběžnějších úkolů, které mohou vykonávat velmi dobře, s ohledem na náš obchodní scénář. Řekli jsme, že hlavní schopností velkého jazykového modelu je _generování textu od nuly, počínaje textovým vstupem napsaným v přirozeném jazyce_.
+Teď, když lépe rozumíme vnitřnímu fungování velkého jazykového modelu, podívejme se na některé praktické příklady běžných úkolů, které zvládají velmi dobře, s ohledem na náš obchodní scénář.
+Řekli jsme, že hlavní schopností velkého jazykového modelu je _generování textu od nuly, vycházejícího ze vstupu napsaného v přirozeném jazyce_.
 
 Ale jaký typ textového vstupu a výstupu?
-Vstup velkého jazykového modelu je známý jako podnět (prompt), zatímco výstup je známý jako dokončení (completion), což odkazuje na mechanismus modelu generování dalšího tokenu k dokončení aktuálního vstupu. Podrobněji se podíváme na to, co je podnět a jak ho navrhnout tak, aby z modelu bylo možné získat co nejvíce. Prozatím si řekněme, že podnět může zahrnovat:
+Vstup velkého jazykového modelu se nazývá prompt, zatímco výstup je completion, což je termín odkazující na mechanismus modelu generovat další token k doplnění aktuálního vstupu. Podíváme se podrobněji na to, co je prompt a jak ho navrhnout tak, abychom z modelu získali co nejvíce. Prozatím však řekněme, že prompt může obsahovat:
 
-- **Instrukci** specifikující typ výstupu, který od modelu očekáváme. Tato instrukce může někdy obsahovat příklady nebo další data.
+- **Instrukci** určující typ výstupu, který od modelu očekáváme. Tato instrukce může někdy obsahovat příklady nebo další data.
 
-  1. Shrnutí článku, knihy, recenzí produktů a další, spolu s extrakcí poznatků z nestrukturovaných dat.
+  1. Shrnutí článku, knihy, recenzí produktů a další, včetně extrakce poznatků z nestrukturovaných dat.
     
     ![Příklad shrnutí](../../../translated_images/cs/summarization-example.7b7ff97147b3d790.webp)
   
-  2. Kreativní nápady a návrhy článků, esejí, úkolů a dalších.
+  2. Kreativní nápady a návrhy článku, eseje, zadání a dalších.
       
      ![Příklad kreativního psaní](../../../translated_images/cs/creative-writing-example.e24a685b5a543ad1.webp)
 
-- **Otázku**, položenou formou konverzace s agentem.
+- **Otázku** položenou ve formě konverzace s agentem.
   
   ![Příklad konverzace](../../../translated_images/cs/conversation-example.60c2afc0f595fa59.webp)
 
-- Úsek **textu k dokončení**, což implicitně znamená žádost o pomoc s psaním.
+- Úsek **textu k doplnění**, což implicitně znamená žádost o pomoc s psaním.
   
-  ![Příklad dokončení textu](../../../translated_images/cs/text-completion-example.cbb0f28403d42752.webp)
+  ![Příklad doplnění textu](../../../translated_images/cs/text-completion-example.cbb0f28403d42752.webp)
 
-- Úsek **kódu** spolu s žádostí o jeho vysvětlení a dokumentaci, nebo komentář žádající o generování části kódu, která provádí konkrétní úkol.
+- Úsek **kódu** spolu se žádostí o vysvětlení a dokumentaci, nebo komentář žádající vygenerovat kus kódu vykonávající specifický úkol.
   
   ![Příklad kódování](../../../translated_images/cs/coding-example.50ebabe8a6afff20.webp)
 
-Výše uvedené příklady jsou poměrně jednoduché a nejsou zamýšleny jako vyčerpávající demonstrace schopností velkých jazykových modelů. Mají za cíl ukázat potenciál využití generativní AI, zejména, ale nejen, v kontextu vzdělávání.
+Výše uvedené příklady jsou poměrně jednoduché a nemají sloužit jako vyčerpávající demonstrace schopností velkých jazykových modelů. Mají ukázat potenciál generativní AI, zejména, ale nejen v kontextech vzdělávání.
 
-Navíc výstup generativního AI modelu není dokonalý a někdy může kreativita modelu působit proti němu, což vede k výstupu, který je kombinací slov, jež lidský uživatel může interpretovat jako zkreslení reality, nebo může být urážlivý. Generativní AI není inteligentní – alespoň ne v komplexním smyslu inteligence, zahrnující kritické a kreativní myšlení nebo emocionální inteligenci; není deterministická a není zcela důvěryhodná, protože může kombinovat nesprávné odkazy, obsah a tvrzení se správnými informacemi a prezentovat je přesvědčivým a sebevědomým způsobem. V následujících lekcích se budeme zabývat všemi těmito omezeními a uvidíme, co můžeme udělat pro jejich zmírnění.
+Také je třeba říci, že výstup generativního AI modelu není dokonalý a někdy může jeho kreativita pracovat proti němu, což vede k výstupu, který je kombinací slov, jež uživatel může vnímat jako mystifikaci reality nebo dokonce urážlivý. Generativní AI není inteligentní – alespoň ne ve smyslu komplexního pojetí inteligence zahrnující kritické a kreativní myšlení nebo emoční inteligenci; není deterministická a není spolehlivá, protože se mohou kombinovat falešné informace, například chybné odkazy, obsah a tvrzení, s pravdivými daty, prezentované přesvědčivě a sebevědomě. V následujících lekcích budeme tato omezení řešit a uvidíme, co pro jejich zmírnění můžeme udělat.
 
-## Úkol
+## Zadání
 
-Vaším úkolem je přečíst si více o [generativní AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) a pokusit se identifikovat oblast, kde byste dnes mohli přidat generativní AI, která ji zatím nevyužívá. Jaký by byl rozdíl oproti "starému způsobu", mohli byste udělat něco, co dříve nebylo možné, nebo byste byli rychlejší? Napište 300 slovní shrnutí o tom, jak by vypadala vaše vysněná AI startupová společnost, a zahrňte nadpisy jako "Problém", "Jak bych použil AI", "Dopad" a případně obchodní plán.
+Vaším úkolem je prostudovat více o [generativní AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) a pokusit se identifikovat oblast, kde byste dnes přidali generativní AI tam, kde ještě není. Jaký by byl dopad oproti "starému způsobu"? Můžete dělat něco, co předtím nebylo možné, nebo jste rychlejší? Napište 300 slov shrnutí, jak by vypadal váš vysněný AI startup, včetně nadpisů jako "Problém", "Jak bych použil AI", "Dopad" a volitelně i obchodní plán.
 
-Pokud tento úkol splníte, možná budete připraveni přihlásit se do inkubátoru Microsoftu, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst), kde nabízíme kredity na Azure, OpenAI, mentoring a mnoho dalšího, podívejte se na to!
+Pokud tento úkol splníte, můžete být dokonce připraveni podat žádost do inkubátoru Microsoftu, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst), kde nabízíme kredity na Azure, OpenAI, mentoring a mnoho dalšího, podívejte se na to!
 
 ## Kontrola znalostí
 
 Co je pravda o velkých jazykových modelech?
 
-1. Dostanete pokaždé stejnou odpověď.
-2. Dělá věci perfektně, skvěle sčítá čísla, vytváří funkční kód atd.
-3. Odpověď se může lišit i při použití stejného podnětu. Je také skvělý na vytvoření prvního návrhu něčeho, ať už textu nebo kódu. Ale výsledky je třeba zlepšit.
+1. Dostanete pokaždé přesně stejnou odpověď.
+1. Dělají věci perfektně, jsou skvělí v sčítání čísel, generování funkčního kódu atd.
+1. Odpovědi se mohou lišit i při stejném promptu. Jsou také skvělí pro získání první verze něčeho, ať už textu nebo kódu. Výsledky ale je potřeba dále upravovat.
 
-A: 3, LLM je nedeterministický, odpověď se liší, nicméně jeho variabilitu můžete ovládat pomocí nastavení teploty. Neměli byste také očekávat, že bude dělat věci perfektně, je tu proto, aby za vás udělal těžkou práci, což často znamená, že dostanete dobrý první pokus, který je třeba postupně vylepšit.
+Odpověď: 3, LLM je nedeterministický, odpovědi se liší, ale variabilitu lze ovládat nastavením teploty. Neměli bychom od něj očekávat perfektní výsledky, je tu proto, aby zvládal náročné úkoly, což často znamená získání dobrého prvního pokusu, který je třeba postupně vylepšovat.
 
-## Skvělá práce! Pokračujte v cestě
+## Výborně! Pokračujte dále
 
-Po dokončení této lekce se podívejte na naši [sbírku učení o generativní AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), abyste dále rozvíjeli své znalosti o generativní AI!
-Přejděte na Lekci 2, kde se podíváme na to, jak [prozkoumat a porovnat různé typy LLM](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
+Po dokončení této lekce si prohlédněte naši [kolekci učení o generativní AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), abyste dále rozšiřovali své znalosti generativní AI!
+
+
+Přejděte do Lekce 2, kde se podíváme, jak [prozkoumat a porovnat různé typy LLM](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Prohlášení**:  
-Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Prohlášení o omezení odpovědnosti**:
+Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). Přestože usilujeme o co největší přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Originální dokument v jeho mateřském jazyce by měl být považován za autoritativní zdroj. Pro kritické informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za jakékoli nedorozumění nebo nesprávné interpretace vzniklé použitím tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

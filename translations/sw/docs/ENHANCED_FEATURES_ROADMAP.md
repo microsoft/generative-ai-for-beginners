@@ -1,38 +1,38 @@
 # Ramani ya Sifa Zilizoboreshwa na Maboresho
 
-Hati hii inaelezea maboresho na maendeleo yanayopendekezwa kwa mtaala wa Generative AI kwa Waanzilishi, kulingana na uchunguzi wa kina wa msimbo na uchambuzi wa mbinu bora za sekta.
+Hati hii inaelezea maboresho na nyongeza zinazopendekezwa kwa kozi ya Generative AI kwa Waanzilganaji, kulingana na uhakiki wa kina wa msimbo na uchambuzi wa mbinu bora za sekta.
 
-## Muhtasari Mkuu
+## Muhtasari wa Utendaji
 
-Msimbo umechunguzwa kwa usalama, ubora wa msimbo, na ufanisi wa kielimu. Hati hii inatoa mapendekezo ya marekebisho ya haraka, maboresho ya muda mfupi, na maendeleo ya baadaye.
+Msimbo umechambuliwa kwa usalama, ubora wa msimbo, na ufanisi wa kielimu. Hati hii inatoa mapendekezo ya matengenezo ya haraka, maboresho ya muda mfupi, na nyongeza za baadaye.
 
 ---
 
-## 1. Maboresho ya Usalama (Kipaumbele: Muhimu Sana)
+## 1. Maboresho ya Usalama (Kipaumbele: Kikubwa)
 
-### 1.1 Marekebisho ya Haraka (Yamekamilika)
+### 1.1 Matengenezo ya Haraka (Yamekamilika)
 
-| Tatizo | Faili Zinazoathirika | Hali |
-|--------|---------------------|-------|
-| SECRET_KEY iliyowekwa moja kwa moja | `05-advanced-prompts/python/aoai-solution.py` | Imerekebishwa |
-| Ukosefu wa uhakiki wa env | Faili nyingi za JS/TS | Imerekebishwa |
-| Mitoaji wa kazi usiolindwa | `11-integrating-with-function-calling/js-githubmodels/app.js` | Imerekebishwa |
-| Kutokwa kwa handle za faili | `08-building-search-applications/scripts/` | Imerekebishwa |
-| Ukosefu wa wakati wa kuomba | `09-building-image-applications/python/` | Imerekebishwa |
+| Tatizo | Faili Zilizohusishwa | Hali |
+|-------|----------------|--------|
+| SECRET_KEY iliyowekwa moja kwa moja msimboni | `05-advanced-prompts/python/aoai-solution.py` | Imekamilika |
+| Ukosefu wa uhakiki wa mazingira | Faili nyingi za JS/TS | Imekamilika |
+| Mito ya kazi zisizo salama | `11-integrating-with-function-calling/js-githubmodels/app.js` | Imekamilika |
+| Kuachwa kwa mafaili wazi | `08-building-search-applications/scripts/` | Imekamilika |
+| Ukosefu wa mipaka ya muda ya maombi | `09-building-image-applications/python/` | Imekamilika |
 
-### 1.2 Vipengele vya Usalama Vinavyopendekezwa Zaidi
+### 1.2 Sifa Zaidi za Usalama Zinazopendekezwa
 
-1. **Mifano ya Kupunguza Kiwango cha Maombi**
-   - Ongeza msimbo wa mfano unaoonesha jinsi ya kutekeleza kupunguza kiwango cha maombi kwa API
-   - Onyesha mifumo ya kurudi nyuma kwa mng’ao (exponential backoff)
+1. **Mifano ya Kuzuia Msongamano wa Maombi (Rate Limiting)**
+   - Ongeza msimbo wa mfano unaoonyesha jinsi ya kutekeleza kuzuia msongamano wa maombi kwa API
+   - Onyesha mifumo ya kurejeleza kwa mkupuo (exponential backoff)
 
-2. **Mzunguko wa Mfunguo za API**
-   - Ongeza nyaraka juu ya mbinu bora za kuzungusha funguo za API
-   - Jumuisha mifano ya kutumia Azure Key Vault au huduma zinazofanana
+2. **Mzunguko wa Funguo za API**
+   - Ongeza nyaraka kuhusu mbinu bora za mzunguko wa funguo za API
+   - Jumuisha mifano ya matumizi ya Azure Key Vault au huduma zinazofanana
 
-3. **Uunganishaji wa Usalama wa Maudhui**
+3. **Muunganiko wa Usalama wa Maudhui**
    - Ongeza mifano inayotumia Azure Content Safety API
-   - Onyesha mifumo ya urekebishaji wa ingizo/matokeo
+   - Onyesha mifumo ya udhibiti wa ingizo/mazao
 
 ---
 
@@ -41,94 +41,99 @@ Msimbo umechunguzwa kwa usalama, ubora wa msimbo, na ufanisi wa kielimu. Hati hi
 ### 2.1 Faili za Usanidi Zimeongezwa
 
 | Faili | Kusudi |
-|-------|---------|
+|------|---------|
 | `.eslintrc.json` | Sheria za linting za JavaScript/TypeScript |
-| `.prettierrc` | Viwango vya muundo wa msimbo |
+| `.prettierrc` | Viwango vya usanifu wa msimbo |
 | `pyproject.toml` | Usanidi wa zana za Python (Black, Ruff, mypy) |
 
-### 2.2 Vifaa Vilivyoshirikiwa Vimeundwa
+### 2.2 Huduma Iliyoshirikiwa Imetengenezwa
 
-Moduli mpya `shared/python/` pamoja na:
+Moduli mpya `shared/python/` yenye:
 - `env_utils.py` - Usimamizi wa mabadiliko ya mazingira
-- `input_validation.py` - Uhakiki na usafi wa ingizo
-- `api_utils.py` - Weka mzunguko salama wa ombi za API
+- `input_validation.py` - Uhakiki na kusafisha ingizo
+- `api_utils.py` - Vikombozi salama vya maombi ya API
 
 ### 2.3 Maboresho ya Msimbo Yanayopendekezwa
 
-1. **Mwanga wa Aina za Data**
-   - Ongeza mwanga wa aina zote za faili za Python
+1. **Ufunuo wa Aina (Type Hints)**
+   - Ongeza ufafanuzi wa aina kwa faili zote za Python
    - Washa hali kali ya TypeScript katika miradi yote ya TS
 
 2. **Viwango vya Nyaraka**
-   - Ongeza maelezo ya kazi za Python zote
-   - Ongeza maoni ya JSDoc kwenye kazi zote za JavaScript/TypeScript
+   - Ongeza docstrings kwa kazi zote za Python
+   - Ongeza maelezo ya JSDoc kwa kazi zote za JavaScript/TypeScript
 
-3. **Mazingira ya Upimaji**
-   - Ongeza usanidi wa pytest na mifano ya vipimo
+3. **Mfumo wa Upimaji**
+   - Ongeza usanidi wa pytest na mifano ya majaribio _(yamekamilika: usanidi wa pytest ndani ya `pyproject.toml`; mifano ya majaribio kwa huduma zilizoshirikiwa katika [`tests/`](../../../tests) inatekelezwa CI)_
    - Ongeza usanidi wa Jest kwa JavaScript/TypeScript
 
 ---
 
 ## 3. Maboresho ya Kielimu
 
-### 3.1 Mada Mpya za Masomo
+### 3.1 Mada Mpya za Somo
 
-1. **Usalama katika Programu za AI** (Somo lililopendekezwa 22)
-   - Mashambulizi ya sindano ya prompt na kinga
+1. **Usalama katika Programu za AI** (Somo Lililopendekezwa 22)
+   - Mashambulizi ya kuchanganya maagizo na kinga
    - Usimamizi wa funguo za API
    - Udhibiti wa maudhui
-   - Kupunguza kiwango cha maombi na kuzuia matumizi mabaya
+   - Kuzuia msongamano na matumizi mabaya
 
-2. **Uwekaji Kiwanda wa Uzalishaji** (Somo lililopendekezwa 23)
-   - Ufungashaji kwa Docker
-   - Mifumo ya CI/CD
-   - Ufuatiliaji na kuandika kumbukumbu
+2. **Usambazaji wa Matokeo (Production Deployment)** (Somo Lililopendekezwa 23)
+   - Ufungashaji kwa kutumia Docker
+   - Mijadala ya CI/CD
+   - Ufuatiliaji na kurekodi kumbukumbu
    - Usimamizi wa gharama
 
-3. **Mbinu Zaidi za RAG** (Somo lililopendekezwa 24)
-   - Utafutaji mchanganyiko (maneno + maana)
+3. **Mbinu Zaidi za RAG (Retrieval-Augmented Generation)** (Somo Lililopendekezwa 24)
+   - Utafutaji mchanganyiko (maneno muhimu + maana)
    - Mikakati ya upangaji upya
-   - RAG za njia nyingi
-   - Vipimo vya tathmini
+   - RAG ya aina nyingi (multi-modal)
+   - Mipimo ya tathmini
 
-### 3.2 Maboresho kwa Masomo Yanayopo
+### 3.2 Maboresho ya Masomo Yanayopo
 
 | Somo | Maboresho Yanayopendekezwa |
-|-------|----------------------------|
-| 06 - Uundaji wa Maandishi | Ongeza mifano ya majibu ya mtiririko |
-| 07 - Programu za Chat | Ongeza mifumo ya kumbukumbu ya mazungumzo |
-| 08 - Programu za Utafutaji | Ongeza kulinganisha hifadhidata za vector |
-| 09 - Uundaji wa Picha | Ongeza mifano ya uhariri/mbadala wa picha |
-| 11 - Kuitisha Kazi | Ongeza kuitisha kazi sambamba |
-| 15 - RAG | Ongeza kulinganisha mkakati wa kugawa vipande |
-| 17 - Wakala wa AI | Ongeza uratibu wa wakala wengi |
+|--------|------------------------|
+| 06 - Kizazi cha Maandishi | Ongeza mifano ya majibu ya moja kwa moja (streaming) |
+| 07 - Programu za Mazungumzo (Chat) | Ongeza mifumo ya kumbukumbu za mazungumzo |
+| 08 - Programu za Utafutaji | Ongeza kulinganisha za hifadhidata za vekta |
+| 09 - Kizazi cha Picha | Ongeza mifano ya uhariri/varieti za picha |
+| 11 - Kufanya Simu za Kazi (Function Calling) | Ongeza simu za kazi sambamba |
+| 15 - RAG | Ongeza kulinganisha kwa mikakati ya kugawanya vipande |
+| 17 - Maajenti wa AI | Ongeza usimamizi wa maajenti wengi |
 
 ---
 
 ## 4. Uboreshaji wa API
 
-### 4.1 Mifumo ya API Iliyoachwa Kutumika Ibadilishwe
+### 4.1 Mifumo ya API Iliyotelekezwa (Uhamisho Umekamilika)
 
-| Mfanano wa Kale | Mfanano Mpya | Faili Zinazoathirika |
-|-----------------|--------------|---------------------|
-| `openai.api_type = "azure"` | `AzureOpenAI()` mteja | Script nyingi katika `08-building-search-applications/` |
-| `openai.ChatCompletion.create()` | `client.chat.completions.create()` | Notibuki nyingi |
-| `df.append()` (pandas) | `pd.concat()` | Notibuki la RAG |
+Sampuli zote za Python na TypeScript za **chat** zimehamishwa kutoka API za Chat Completions kwenda **Responses API** (`client.responses.create(...)` → `response.output_text`).
 
-### 4.2 Vipengele Vipya vya API vya Kuonesha
+| Mfiduo wa Kale | Mfiduo Mpya | Hali |
+|-------------|-------------|--------|
+| `openai.api_type = "azure"` / `AzureOpenAI()` (chat) | `OpenAI(base_url="<endpoint>/openai/v1/")` (Responses API) | Imekamilika |
+| `openai.ChatCompletion.create()` / `client.chat.completions.create()` | `client.responses.create(input=...)` → `response.output_text` | Imekamilika |
+| `@azure/openai` `OpenAIClient.getChatCompletions()` (TypeScript) | `openai` package `client.responses.create()` → `response.output_text` | Imekamilika |
+| `df.append()` (pandas) | `pd.concat()` | Imekamilika |
 
-1. **Matokeo Yenye Muundo** (OpenAI)
+> **Kumbuka:** Sampuli za Microsoft Foundry Models zinazotumia `azure-ai-inference` / `@azure-rest/ai-inference` SDK (`client.complete()`) zipo bado kwenye Model Inference API, ambayo haisaidii Responses API. `AzureOpenAI()` bado hutumika sehemu zinazofaa (kama embeddings na kizazi cha picha).
+
+### 4.2 Sifa Mpya za API za Kuonyesha
+
+1. **Matokeo Yaliyo Pangwa (Structured Outputs)** (OpenAI)
    - Hali ya JSON
-   - Kuitisha kazi kwa kanuni kali
+   - Kufanya simu za kazi kwa sera kali za miundo
 
 2. **Uwezo wa Maono**
-   - Uchambuzi wa picha na GPT-4V
-   - Prompt za njia nyingi
+   - Uchambuzi wa picha na GPT-4o (maono)
+   - Maagizo ya aina nyingi (multi-modal)
 
-3. **API ya Msaidizi**
-   - Mfasiri wa msimbo
+3. **Zana Zilizojengwa ndani za Responses API** (zinazozirejesha API za Kale za Assistants)
+   - Tafsiri ya msimbo
    - Utafutaji wa faili
-   - Zana maalum
+   - Utafutaji wa wavuti na zana maalum
 
 ---
 
@@ -136,7 +141,7 @@ Moduli mpya `shared/python/` pamoja na:
 
 ### 5.1 Maboresho ya CI/CD
 
-Mtiririko wa kazi wa sasa unashughulikia uthibitishaji wa markdown. Ongezo zinazopendekezwa:
+Imetekelezwa katika [`.github/workflows/code-quality.yml`](../../../.github/workflows/code-quality.yml): Kuangalia na kusanifu msimbo wa Python (Ruff + Black) ni **lazima** katika moduli ya huduma `shared/` inayodumishwa na hutekelezwa kwa ushauri katika mizani mingine ya kozi, pamoja na kuangalia ESLint ya tahadhari kwa JavaScript/TypeScript. Msingi wa mfano ulikuwa:
 
 ```yaml
 # .github/workflows/code-quality.yml
@@ -167,7 +172,9 @@ jobs:
       - run: npx eslint .
 ```
 
-### 5.2 Usafishaji wa Usalama
+### 5.2 Uangalizi wa Usalama
+
+Imetekelezwa katika [`.github/workflows/security.yml`](../../../.github/workflows/security.yml): Uchambuzi wa CodeQL kwa Python na JavaScript/TypeScript (kila mara baada ya kusukuma msimbo, ombi la kuvuta, na ratiba ya wiki) pamoja na ukaguzi wa utegemezi katika maombi ya kuvuta. Msingi wa mfano ulikuwa:
 
 ```yaml
 # .github/workflows/security.yml
@@ -194,11 +201,11 @@ jobs:
 
 ---
 
-## 6. Maboresho ya Uzoefu wa Mtengenezaji
+## 6. Maboresho ya Uzoefu wa Mwanaendelezi
 
 ### 6.1 Maboresho ya DevContainer
 
-Sasisha `.devcontainer/devcontainer.json`:
+Imetekelezwa katika [`.devcontainer/devcontainer.json`](../../../.devcontainer/devcontainer.json) na [`.devcontainer/post-create.sh`](../../../.devcontainer/post-create.sh): kontena sasa ina Pylance, formatter wa Black, Ruff, ESLint, Prettier, na viendelezi vya Copilot, inaruhusu usanifu kwa kuokoa uliounganishwa na usanidi wa Black/Prettier wa repo, na kusanifu zana za maendeleo (`ruff`, `black`, `mypy`, `pytest`) ili [mtiririko wa kazi wa ubora wa msimbo](../../../.github/workflows/code-quality.yml) uweze kurudiwa kiasili. Picha ya msingi ya `mcr.microsoft.com/devcontainers/universal` tayari ina Python na Node, hivyo sifa za ziada hazihitajiki. Msingi wa mfano ulikuwa:
 
 ```json
 {
@@ -232,120 +239,117 @@ Sasisha `.devcontainer/devcontainer.json`:
 }
 ```
 
-### 6.2 Sehemu ya Mageuzi ya Kuingiliana
+### 6.2 Uwanja wa Maingiliano (Interactive Playground)
 
 Fikiria kuongeza:
-- Notibuki za Jupyter zilizo na funguo za API zilizowekwa (kupitia mazingira)
-- Maonyesho ya Gradio/Streamlit kwa wanafunzi wa kuona
-- Maswali ya kuhisabu maarifa kwa kuingiliana
+- Daftari za Jupyter zilizo na funguo za API tayari zimejazwa (kupitia mazingira)
+- Maonyesho ya Gradio/Streamlit kwa wanafunzi wanaoona
+- Maswali ya maingiliano ya tathmini ya maarifa
 
 ---
 
-## 7. Msaada wa Lugha Mbalimbali
+## 7. Usaidizi wa Lugha Nyingi
 
-### 7.1 Ufungaji wa Lugha Ulivyo Sasa
+### 7.1 Ufadhili wa Lugha wa Sasa
 
 | Teknolojia | Masomo Yaliyofunikwa | Hali |
-|------------|---------------------|------|
-| Python | Yote | Kamili |
+|------------|-----------------|--------|
+| Python | Yote | Imekamilika |
 | TypeScript | 06-09, 11 | Sehemu |
 | JavaScript | 06-08, 11 | Sehemu |
 | .NET/C# | Baadhi | Sehemu |
 
-### 7.2 Ongezo Zinazopendekezwa
+### 7.2 Ongezeko Zinazopendekezwa
 
-1. **Go** - Inaongezeka katika zana za AI/ML
-2. **Rust** - Programu muhimu kwa utendaji
-3. **Java/Kotlin** - Programu za biashara
+1. **Go** - Inakua katika zana za AI/ML
+2. **Rust** - Programu zenye utegemezi mkubwa kwa utendaji
+3. **Java/Kotlin** - Programu za kampuni kubwa
 
 ---
 
-## 8. Maboresho ya Utendaji
+## 8. Uboreshaji wa Utendaji
 
-### 8.1 Maboresho ya Ngazi ya Msimbo
+### 8.1 Maboresho ya Kiwango cha Msimbo
 
 1. **Mifumo ya Async/Await**
    - Ongeza mifano ya async kwa usindikaji wa kundi
-   - Onyesha kuitwa kwa API kwa wakati mmoja
+   - Onyesha simu za API zinazofanyika kwa wakati mmoja
 
-2. **Mikakati ya Kuweka Kache**
-   - Ongeza mifano ya kuweka kache embeddings
-   - Onyesha mifumo ya kuweka kache majibu
+2. **Mikakati ya Kuweka Akiba (Caching)**
+   - Ongeza mifano ya kuweka akiba kwa embeddings
+   - Oneshe mifumo ya kuweka akiba ya majibu
 
 3. **Uboreshaji wa Tokeni**
    - Ongeza mifano ya matumizi ya tiktoken
-   - Onyesha mbinu za kusindika prompt
+   - Oneshe mbinu za kukandamiza maagizo (prompt compression)
 
-### 8.2 Mifano ya Kuokoa Gharama
+### 8.2 Mifano ya Ufanisi wa Gharama
 
-Ongeza mifano inayothibitisha:
-- Uchaguzi wa modeli kulingana na ugumu wa kazi
-- Usanifu wa prompt kwa ufanisi wa tokeni
-- Usindikaji wa kundi kwa shughuli kubwa
+Ongeza mifano inayoonesha:
+- Uteuzi wa mfano kulingana na ugumu wa kazi
+- Uhandisi wa maagizo kwa ufanisi wa tokeni
+- Usindikaji wa kundi kwa shughuli nyingi
 
 ---
 
-## 9. Ufikikaji na Utafsiri wa Kimataifa
+## 9. Upatikanaji na Utafutaji Lugha za Kigeni
 
-### 9.1 Hali ya Utafsiri Sasa
+### 9.1 Hali ya Tafsiri ya Sasa
 
-| Lugha | Hali |
-|--------|-------|
-| Kiingereza | Kamili |
-| Kichina (Rahisi) | Kamili |
-| Kijapani | Kamili |
-| Kikorea | Kamili |
-| Kihispania | Sehemu |
-| Kireno | Sehemu |
-| Kituruki | Sehemu |
-| Kipolishi | Sehemu |
+Tafsiri zote ni **kamili** na zimeundwa moja kwa moja na [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst), ambayo hutengeneza na kuweka toleo la kozi katika lugha 50+ linalolingana na chanzo cha Kiingereza. Yaliyotafsiriwa huwekwa chini ya `translations/` na picha za eneo chini ya `translated_images/`; orodha kamili ya lugha zinapatikana mwanzoni mwa README ya hifadhi.
 
-### 9.2 Maboresho ya Ufikikaji
+| Kipengele | Hali |
+|--------|--------|
+| Ufadhili wa Tafsiri | Kamili — lugha 50+, masomo yote |
+| Njia ya Tafsiri | Imekamilishwa kiotomatiki kupitia [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst) |
+| Inalingana na chanzo cha Kiingereza | Ndiyo — inaibuliwa kiotomatiki |
 
-1. Ongeza maandishi ya alt kwa picha zote
-2. Hakikisha mifano ya msimbo ina muonekano sahihi wa msimbo
-3. Ongeza maandishi ya video kwa maudhui yote ya video
+### 9.2 Maboresho ya Upatikanaji
+
+1. Ongeza maandishi mbadala (alt text) kwa picha zote
+2. Hakikisha sampuli za msimbo zina uonyeshaji sahihi wa sintaksia
+3. Ongeza nakala za video kwa maudhui yote ya video
 4. Hakikisha tofauti ya rangi inakidhi miongozo ya WCAG
 
 ---
 
 ## 10. Kipaumbele cha Utekelezaji
 
-### Awamu ya 1: Mara Moja (Wiki 1-2)
-- [x] Rekebisha masuala makubwa ya usalama
+### Awamu 1: Mara Moja (Wiki 1-2)
+- [x] Tengeneza matatizo muhimu ya usalama
 - [x] Ongeza usanidi wa ubora wa msimbo
-- [x] Unda vifaa vilivyoshirikiwa
+- [x] Unda huduma zilizoshirikiwa
 - [x] Andika miongozo ya usalama
 
-### Awamu ya 2: Muda Mfupi (Wiki 3-4)
-- [ ] Sasisha mifumo ya API iliyotumiwa
-- [ ] Ongeza mwanga wa aina kwa faili zote za Python
-- [ ] Ongeza mtiririko wa CI/CD kwa ubora wa msimbo
-- [ ] Unda mtiririko wa usafishaji wa usalama
+### Awamu 2: Muda Mfupi (Wiki 3-4)
+- [x] Sasisha mifumo ya API iliyotelekezwa (Chat Completions → Responses API, Python + TypeScript)
+- [ ] Ongeza ufafanuzi wa aina kwa faili zote za Python (imefanyika kwa moduli `shared/` inayodumishwa; sampuli za masomo ni rahisi)
+- [x] Ongeza mikondo ya CI/CD kwa ubora wa msimbo
+- [x] Unda mtiririko wa uangalizi wa usalama
 
-### Awamu ya 3: Muda wa Kati (Miezi 2-3)
+### Awamu 3: Muda wa Kati (Mwezi 2-3)
 - [ ] Ongeza somo jipya la usalama
-- [ ] Ongeza somo la uwekaji kiwanda
-- [ ] Boreshaji wa usanidi wa DevContainer
-- [ ] Ongeza maonyesho ya kuingiliana
+- [ ] Ongeza somo la usambazaji wa matokeo
+- [x] Boresha usanidi wa DevContainer
+- [ ] Ongeza maonyesho ya maingiliano
 
-### Awamu ya 4: Muda Mrefu (Miezi 4+)
+### Awamu 4: Muda Mrefu (Mwezi 4+)
 - [ ] Ongeza somo la RAG la hali ya juu
-- [ ] Panua ufunikaji wa lugha
-- [ ] Ongeza kifurushi kamili cha vipimo
-- [ ] Unda mpango wa vyeti
+- [ ] Panua ufadhili wa lugha
+- [ ] Ongeza mkusanyiko kamili wa majaribio
+- [ ] Unda programu ya vyeti
 
 ---
 
 ## Hitimisho
 
-Ramani hii inatoa njia iliyoainishwa ya kuboresha mtaala wa Generative AI kwa Waanzilishi. Kwa kushughulikia masuala ya usalama, kuboresha APIs, na kuongeza maudhui ya kielimu, kozi itawaandaa wanafunzi kwa maendeleo ya kweli ya programu za AI.
+Ramani hii inatoa njia iliyopangwa za kuboresha kozi ya Generative AI kwa Waanzilganaji. Kwa kushughulikia masuala ya usalama, kuiboresha API, na kuongeza maudhui ya kielimu, kozi itawaandalia wanafunzi vizuri zaidi maendeleo ya maombi ya AI halisi.
 
-Kwa maswali au michango, tafadhali fungua tatizo kwenye hazina ya GitHub.
+Kwa maswali au michango, tafadhali fungua suala kwenye hifadhi ya GitHub.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Kiarifu cha Kukataa**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kufikia usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au dosari. Hati asili kwa lugha yake halisi inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inashauriwa. Hatuna wajibu wowote kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
+**Kionyozo**:
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kupata usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake halisi inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inapendekezwa. Hatutojibu kwa kuelewa vibaya au tafsiri potofu zinazotokea kutokana na matumizi ya tafsiri hii.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

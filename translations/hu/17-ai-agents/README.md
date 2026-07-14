@@ -1,26 +1,26 @@
-[![Open Source Models](../../../translated_images/hu/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Nyílt Forráskódú Modellek](../../../translated_images/hu/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Bevezetés
 
-Az AI Ügynökök izgalmas fejlesztést képviselnek a Generatív MI területén, lehetővé téve, hogy a Nagy Nyelvi Modellek (LLM-ek) az asszisztensekből olyan ügynökökké fejlődjenek, amelyek képesek cselekvéseket végrehajtani. Az AI Ügynök keretrendszerek lehetővé teszik a fejlesztők számára alkalmazások létrehozását, amelyek hozzáférést biztosítanak az LLM-ek számára eszközökhöz és állapotkezeléshez. Ezek a keretrendszerek növelik a láthatóságot is, lehetővé téve a felhasználók és fejlesztők számára, hogy nyomon kövessék az LLM-ek által tervezett cselekvéseket, ezáltal javítva a felhasználói élmény menedzsmentjét.
+Az AI Ügynökök izgalmas fejlesztést jelentenek a Generatív AI területén, lehetővé téve, hogy a Nagy Nyelvi Modellek (LLM-ek) asszisztensekből olyan ügynökökké fejlődjenek, amelyek képesek cselekedetek végrehajtására. Az AI Ügynök keretrendszerek lehetővé teszik a fejlesztők számára olyan alkalmazások létrehozását, amelyek hozzáférést biztosítanak az LLM-eknek eszközökhöz és állapotkezeléshez. Ezek a keretrendszerek növelik a láthatóságot is, lehetővé téve a felhasználók és fejlesztők számára, hogy figyelemmel kísérjék az LLM-ek által tervezett cselekvéseket, ezáltal javítva a felhasználói élmény kezelését.
 
-A lecke a következő területeket fogja érinteni:
+A tananyag a következő területeket fogja lefedni:
 
-- Mi az az AI Ügynök? – Pontosan mit értünk AI Ügynök alatt?
-- Négy különböző AI Ügynök Keretrendszer bemutatása – Mi teszi őket egyedivé?
-- AI Ügynökök alkalmazása különböző használati esetekben – Mikor érdemes AI Ügynököket használni?
+- Az AI Ügynök fogalmának megértése - Mi is pontosan az AI Ügynök?
+- Öt különböző AI Ügynök Keretrendszer felfedezése - Mi teszi őket egyedivé?
+- Ezeknek az AI Ügynököknek az alkalmazása különböző esetekben - Mikor érdemes AI Ügynököket használni?
 
 ## Tanulási célok
 
-A lecke elvégzése után képes leszel:
+A tananyag elvégzése után képes leszel:
 
-- Elmagyarázni, mi az AI Ügynök és hogyan alkalmazható.
-- Megérteni a népszerű AI Ügynök Keretrendszerek közötti különbségeket és jellemzőiket.
+- Elmagyarázni, mik azok az AI Ügynökök és hogyan használhatók.
+- Megérteni a különbségeket népszerű AI Ügynök Keretrendszerek között, és azok eltéréseit.
 - Megérteni, hogyan működnek az AI Ügynökök az alkalmazások építéséhez.
 
 ## Mik azok az AI Ügynökök?
 
-Az AI Ügynökök nagyon izgalmas területet jelentenek a Generatív MI világában. Ezzel az izgalommal néha fogalmi és alkalmazási zavar is együtt jár. Hogy egyszerűek és befogadóak legyünk a legtöbb AI Ügynökre utaló eszközzel, a következő definíciót fogjuk használni:
+Az AI Ügynökök nagyon izgalmas területet képviselnek a Generatív AI világában. Ez az izgalom néha a fogalmak és alkalmazásuk összezavarodásával járhat. Annak érdekében, hogy egyszerű és minden, AI Ügynököt említő eszközt magába foglaló definíciót használjunk, a következőt fogjuk alkalmazni:
 
 Az AI Ügynökök lehetővé teszik a Nagy Nyelvi Modellek (LLM-ek) számára, hogy feladatokat hajtsanak végre azáltal, hogy hozzáférést kapnak egy **állapothoz** és **eszközökhöz**.
 
@@ -28,35 +28,35 @@ Az AI Ügynökök lehetővé teszik a Nagy Nyelvi Modellek (LLM-ek) számára, h
 
 Határozzuk meg ezeket a fogalmakat:
 
-**Nagy Nyelvi Modellek** – Ezek azok a modellek, amelyekre a kurzus során hivatkozunk, például GPT-3.5, GPT-4, Llama-2 stb.
+**Nagy Nyelvi Modellek** - Ezek a tanfolyam során említett modellek, mint például a GPT-3.5, GPT-4, Llama-2, stb.
 
-**Állapot** – Ez az a kontextus, amelyben az LLM dolgozik. Az LLM a korábbi cselekvések és a jelenlegi kontextus alapján irányítja a döntéseit a további lépésekhez. Az AI Ügynök Keretrendszerek megkönnyítik a fejlesztők számára, hogy fenntartsák ezt a kontextust.
+**Állapot** - Ez utal arra a kontextusra, amiben az LLM dolgozik. Az LLM a korábbi cselekvések és az aktuális kontextus alapján alakítja döntéshozatalát a következő lépésekhez. Az AI Ügynök Keretrendszerek megkönnyítik a fejlesztők számára ennek a kontextusnak a fenntartását.
 
-**Eszközök** – A felhasználó által kért, és az LLM által megtervezett feladat végrehajtásához az LLM-nek hozzáférést kell kapnia eszközökhöz. Néhány példa eszközökre: adatbázis, API, külső alkalmazás vagy akár egy másik LLM!
+**Eszközök** - Ahhoz, hogy az LLM végrehajtsa a felhasználó által kért és általa tervezett feladatot, hozzáférnie kell eszközökhöz. Például egy adatbázis, egy API, egy külső alkalmazás vagy akár egy másik LLM is lehet eszköz!
 
-Ezek a definíciók remélhetőleg jó alapot adnak a továbblépéshez, miközben megvizsgáljuk, hogyan vannak megvalósítva. Fedezzünk fel néhány különböző AI Ügynök keretrendszert:
+Ezek a meghatározások remélhetőleg jó alapot adnak a továbblépéshez, miközben megnézzük az implementációikat. Vizsgáljunk meg néhány különböző AI Ügynök keretrendszert:
 
 ## LangChain Ügynökök
 
-A [LangChain Ügynökök](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) megvalósítják a fent definiált elveket.
+A [LangChain Ügynökök](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) megvalósítják a fentiekben bemutatott definíciókat.
 
-Az **állapot** kezelésére egy beépített függvényt használnak, amely az `AgentExecutor` névre hallgat. Ez elfogadja a definiált `agent`-et és az elérhető `tools`-okat.
+Az **állapot** kezelésére beépített funkciót használ, amely az `AgentExecutor` nevet viseli. Ez fogadja a definiált `agent`-et és a rendelkezésre álló `tools`-okat.
 
-Az `Agent Executor` tárolja a chat előzményeket is, hogy biztosítsa a beszélgetés kontextusát.
+Az `Agent Executor` eltárolja a chat előzményeit is, hogy megadja a beszélgetés kontextusát.
 
 ![Langchain Agents](../../../translated_images/hu/langchain-agents.edcc55b5d5c43716.webp)
 
-A LangChain kínál egy [eszközkatalógust](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), amelyeket be lehet importálni az alkalmazásba, ahová az LLM hozzáférhet. Ezeket a közösség és a LangChain csapata készíti.
+A LangChain egy [eszköztárat](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) kínál, amelyet importálni lehet az alkalmazásodba, és amelyhez az LLM hozzáférhet. Ezeket a közösség és a LangChain csapata hozta létre.
 
-Ezeket az eszközöket definiálhatod, majd átadhatod az `Agent Executor`-nak.
+Ezután definiálhatod ezeket az eszközöket, és átadhatod őket az `Agent Executor`-nek.
 
-A láthatóság szintén fontos szempont AI Ügynökök esetén. Fontos, hogy az alkalmazásfejlesztők megértsék, mely eszközt használja az LLM és miért. Ennek érdekében a LangChain csapata kifejlesztette a LangSmith-et.
+A láthatóság szintén fontos szempont AI Ügynökök esetén. Fontos, hogy az alkalmazás fejlesztői megértsék, melyik eszközt használja az LLM és miért. Erre a LangChain csapata fejlesztette ki a LangSmith-et.
 
 ## AutoGen
 
-A következő AI Ügynök keretrendszer, amiről beszélünk, az [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). Az AutoGen fő fókusza a beszélgetés. Az ügynökök mind **beszélgetőképesek**, mind **testreszabhatók**.
+A következő, amit megvizsgálunk az AI Ügynök keretrendszerek között az [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). Az AutoGen fő fókusza a párbeszéd. Az ügynökök egyszerre **beszélgetőképesek** és **testreszabhatóak**.
 
-**Beszélgetőképes -** Az LLM-ek képesek megkezdeni és folytatni egy beszélgetést egy másik LLM-mel, hogy végrehajtsanak egy feladatot. Ez úgy történik, hogy `AssistantAgents` jönnek létre és kapnak egy specifikus rendszerüzenetet.
+**Beszélgetőképes -** Az LLM-ek képesek egy másik LLM-mel beszélgetést kezdeni és folytatni egy feladat elvégzéséhez. Ezt `AssistantAgents` létrehozásával és egy specifikus rendszerüzenet megadásával érik el.
 
 ```python
 
@@ -64,7 +64,7 @@ autogen.AssistantAgent( name="Coder", llm_config=llm_config, ) pm = autogen.Assi
 
 ```
 
-**Testreszabható** – Az ügynökök nem csak LLM-ek lehetnek, hanem felhasználók vagy eszközök is. Fejlesztőként definiálhatsz egy `UserProxyAgent`-et, amely felelős a felhasználóval való interakcióért, hogy visszajelzést kapjon a feladat végrehajtásával kapcsolatban. Ez a visszajelzés folytathatja vagy leállíthatja a feladat végrehajtását.
+**Testreszabható** - Az ügynökök nemcsak LLM-ként, hanem felhasználóként vagy eszközként is meghatározhatók. Fejlesztőként definiálhatsz egy `UserProxyAgent`-et, amely felelős a felhasználói visszajelzés kezeléséért a feladat végrehajtásában. Ez a visszajelzés vagy folytathatja a feladat végrehajtását, vagy megállíthatja azt.
 
 ```python
 user_proxy = UserProxyAgent(name="user_proxy")
@@ -72,30 +72,30 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 ### Állapot és Eszközök
 
-Az állapot változtatására és kezelésére egy asszisztens ügynök Python kódot generál a feladat végrehajtásához.
+Az állapot változtatásához és kezeléséhez egy asszisztens Ügynök Python kódot generál a feladat elvégzéséhez.
 
-Itt egy példa a folyamatról:
+Íme egy példa a folyamatról:
 
 ![AutoGen](../../../translated_images/hu/autogen.dee9a25a45fde584.webp)
 
-#### LLM definiálva egy rendszerüzenettel
+#### LLM rendszerüzenettel definiálva
 
 ```python
 system_message="For weather related tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done."
 ```
 
-Ez a rendszerüzenet irányítja ezt a konkrét LLM-et arra, hogy mely funkciók relevánsak a feladatához. Ne feledd, az AutoGen segítségével több definiált AssistantAgent is lehet különböző rendszerüzenetekkel.
+Ez a rendszerüzenet irányítja az adott LLM-et, hogy mely funkciók relevánsak a számára. Ne feledd, AutoGen-nel több különböző AssistantAgent is definiálható eltérő rendszerüzenetekkel.
 
-#### A beszélgetést a felhasználó kezdeményezi
+#### A beszélgetést a felhasználó indítja
 
 ```python
 user_proxy.initiate_chat( chatbot, message="I am planning a trip to NYC next week, can you help me pick out what to wear? ", )
 
 ```
 
-Ez a felhasználói proxy (ember) üzenet indítja el az ügynök folyamatát, hogy feltárja azokat a funkciókat, amelyeket végre kell hajtania.
+Ez az üzenet a user_proxy (ember) részéről indítja el az Ügynök folyamatát, hogy feltérképezze, mely funkciókat kell végrehajtania.
 
-#### A funkció végrehajtása
+#### A funkció végrehajtásra kerül
 
 ```bash
 chatbot (to user_proxy):
@@ -106,63 +106,145 @@ chatbot (to user_proxy):
 
 ```
 
-Amint az első beszélgetés feldolgozásra kerül, az ügynök elküldi a javasolt eszközt a híváshoz. Ebben az esetben ez egy `get_weather` nevű függvény. A konfigurációdtól függően ez a függvény automatikusan végrehajtódhat és olvasható az ügynök által, vagy a felhasználói input alapján hajtható végre.
+Miután az első beszélgetés feldolgozásra került, az Ügynök elküldi a javasolt eszközt, amelyet hívni kell. Ebben az esetben ez egy `get_weather` nevű funkció. Konfigurációtól függően ez a funkció automatikusan végrehajtásra kerülhet az Ügynök által, vagy a felhasználó bemenetétől függően.
 
-Találsz egy listát az [AutoGen kódmintákból](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst), hogy még jobban megismerhesd a fejlesztést.
+További [AutoGen kód példákat](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) találsz, amikkel mélyebben megismerheted a fejlesztést.
 
-## Taskweaver
+## Microsoft Agent Framework
 
-A következő ügynök keretrendszer, amit felfedezünk, a [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). Ez egy „kód-első” ügynök, mert nemcsak `sztringekkel` dolgozik, hanem Python DataFrame-ekkel is. Ez rendkívül hasznos adatelemzési és generálási feladatoknál, mint például gráfok, diagramok készítése vagy véletlenszám-generálás.
+A [Microsoft Agent Framework](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst) a Microsoft nyílt forráskódú SDK-ja AI Ügynökök és többügynökös rendszerek építéséhez **Python** és **.NET** környezetben. Egyesíti két korábbi Microsoft projekt – a **Semantic Kernel** vállalati funkcióit és az **AutoGen** többügynökös koordinációját – egyetlen, támogatott keretrendszerben. Ha ma kezdesz új ügynök projektet, ez az ajánlott utódja az AutoGennek.
+
+A keretrendszer skálázható egyetlen **beszélgető ügynöktől** egészen a komplex **többügynökös munkafolyamatokig**, és közvetlenül integrálódik a Microsoft Foundry-val, az Azure OpenAI-val és az OpenAI-val. Beépített megfigyelhetőséget biztosít az OpenTelemetry-n keresztül, hogy pontosan nyomon kövesd, mit csinálnak az ügynökeid.
 
 ### Állapot és Eszközök
 
-A beszélgetés állapotának kezelésére a TaskWeaver a `Planner` (tervező) koncepcióját használja. A `Planner` egy LLM, amely átveszi a felhasználói kérést és felméri a feladatokat, amelyeket teljesíteni kell a kérés teljesítéséhez.
+**Állapot** - A keretrendszer kezeli a beszélgetési kontextust helyetted **szálak** (threads) segítségével. Egy ügynök követi az üzenettörténetet (felhasználói kérések, eszközhívások és azok eredményei), így minden lépés az előzőkre épül. A szálak elmenthetők is, lehetővé téve a beszélgetés felfüggesztését és későbbi folytatását.
 
-A feladatok végrehajtásához a `Planner` hozzáférést kap egy `Plugins` gyűjteményhez, amely lehet Python osztály vagy egy általános kódértelmező. Ezeket a plugineket beágyazásokként tárolják, hogy az LLM könnyebben találhassa meg a megfelelő plugint.
+**Eszközök** - Egy ügynöknek egyszerű Python függvényeket adhatsz eszközként. A típusannotációval ellátott paraméterek automatikusan sémává alakulnak, így a modell tudja, hogyan és mikor hívja meg azokat (funkcióhívás). A keretrendszer támogatja a Model Context Protocol (MCP) szervereket és a hosztolt eszközöket, például a kódfordítót.
+
+Íme egy példa egy egyedi eszközzel rendelkező egyszeri ügynökre:
+
+```python
+import asyncio
+from typing import Annotated
+
+from pydantic import Field
+from agent_framework import Agent
+from agent_framework.openai import OpenAIChatClient
+
+
+def get_weather(
+    location: Annotated[str, Field(description="The location to get the weather for.")],
+) -> str:
+    """Get the weather for a given location."""
+    return f"The weather in {location} is sunny with a high of 22°C."
+
+
+async def main():
+    agent = Agent(
+        client=OpenAIChatClient(),
+        instructions="You are a helpful assistant that can answer weather questions.",
+        tools=[get_weather],
+    )
+
+    response = await agent.run("What's the weather in Amsterdam?")
+    print(response)
+
+
+asyncio.run(main())
+```
+
+Az Azure OpenAI-hoz való csatlakozáshoz a Microsoft Foundry-ban add át az endpointodat és a hitelesítő adatokat a kliensnek:
+
+```python
+from azure.identity.aio import AzureCliCredential
+from agent_framework.openai import OpenAIChatClient
+
+client = OpenAIChatClient(
+    model="my-gpt-4o-deployment",
+    azure_endpoint="https://my-resource.openai.azure.com",
+    credential=AzureCliCredential(),
+)
+```
+
+### Többügynökös munkafolyamatok
+
+A keretrendszer igazi erőssége az, hogy több ügynököt képes összehangolni. Például az ügynököket egymás után futtathatod úgy, hogy mindegyik továbbadja a kontextusát a következőnek, vagy párhuzamosan több ügynökhöz is lehet szétosztani a feladatokat, majd összegezni az eredményeket:
+
+```python
+from agent_framework.orchestrations import SequentialBuilder, ConcurrentBuilder
+
+# Ügynökök futtatása sorban, a beszélgetési kontextus átadása a láncon keresztül
+sequential = SequentialBuilder(participants=[researcher, writer, editor]).build()
+
+# Párhuzamosan elosztás az ügynökök között, majd azok válaszainak összesítése
+concurrent = ConcurrentBuilder(participants=[analyst_a, analyst_b, analyst_c]).build()
+```
+
+A keretrendszer telepítéséhez és a kezdéshez:
+
+```bash
+pip install agent-framework-core
+# Opcionális integrációk
+pip install agent-framework-openai       # OpenAI és Azure OpenAI
+pip install agent-framework-foundry      # Microsoft Foundry
+```
+
+Többet fedezhetsz fel a [Microsoft Agent Framework tárházban](https://github.com/microsoft/agent-framework?WT.mc_id=academic-105485-koreyst) és a [hivatalos dokumentációban](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst).
+
+## Taskweaver
+
+A következő ügynök keretrendszer, amit megnézünk, a [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). Ezt úgy ismerik, mint "kód-először" ügynököt, mert nem csak `stringekkel` dolgozik, hanem Python DataFrame-ekkel is. Ez nagyon hasznos adat elemzéshez és generálási feladatokhoz. Például grafikonok és diagramok készítéséhez, vagy véletlenszámok generálásához.
+
+### Állapot és Eszközök
+
+A beszélgetés állapotának kezelésére a TaskWeaver a `Planner` koncepciót használja. A `Planner` egy LLM, amely megkapja a felhasználók kérését, és felvázolja a teljesítendő feladatokat.
+
+A feladatok elvégzéséhez a `Planner` hozzáfér az úgynevezett `Plugins` gyűjteményhez. Ezek lehetnek Python osztályok vagy általános kódfordítók. Ezek a pluginok beágyazva vannak tárolva, hogy az LLM jobban tudjon keresni a megfelelő plugint.
 
 ![Taskweaver](../../../translated_images/hu/taskweaver.da8559999267715a.webp)
 
-Itt egy példa egy pluginelemre, ami anomáliaérzékelést kezel:
+Íme egy példa egy anomália detektáló pluginra:
 
 ```python
 class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_col_name: str, value_col_name: str):
 ```
 
-A kód végrehajtás előtt ellenőrizve van. Egy másik funkció a kontextus kezelésére a Taskweaver-ben az `experience` (tapasztalat). Az experience lehetővé teszi, hogy egy beszélgetés kontextusát hosszú távon egy YAML fájlban tároljuk. Ez úgy konfigurálható, hogy az LLM idővel javuljon egyes feladatokban, amennyiben korábbi beszélgetéseknek van kitéve.
+A kód végrehajtás előtt hitelesítésre kerül. Egy másik funkció a Taskweaver-ben a kontextus kezelésére az `experience`. Az experience lehetővé teszi, hogy egy beszélgetés kontextusa hosszú távon tárolódjon YAML fájlban. Ez konfigurálható úgy, hogy az LLM idővel javuljon bizonyos feladatokon, mivel korábbi beszélgetésekhez van kitéve.
 
 ## JARVIS
 
-Az utolsó ügynök keretrendszer, amit felfedezünk, a [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file&WT.mc_id=academic-105485-koreyst). Ami egyedivé teszi a JARVIS-t, hogy egy LLM kezeli a beszélgetés `állapotát`, míg az `eszközök` más AI modellek. Ezek az AI modellek specializált modellek, amelyek bizonyos feladatokat látnak el, például tárgyfelismerést, átírást vagy képmagyarázatot.
+Az utolsó ügynök keretrendszer, amit megvizsgálunk, a [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file&WT.mc_id=academic-105485-koreyst). Ami különlegessé teszi JARVIS-t, hogy egy LLM kezeli a beszélgetés `állapotát`, míg a `tools` más AI modellek. Ezek az AI modellek specializált modellek, amelyek bizonyos feladatokat végeznek el, mint például objektumfelismerés, átirat készítés vagy képaláírás generálás.
 
 ![JARVIS](../../../translated_images/hu/jarvis.762ddbadbd1a3a33.webp)
 
-Az általános célú LLM megkapja a felhasználói kérést, azonosítja a konkrét feladatot és az esetleges argumentumokat/adatokat, amelyek a feladat végrehajtásához szükségesek.
+Az LLM, mint általános célú modell, megkapja a felhasználó kérését, és azonosítja a specifikus feladatot és azokat az argumentumokat/adatokat, amelyek szükségesek a feladat elvégzéséhez.
 
 ```python
 [{"task": "object-detection", "id": 0, "dep": [-1], "args": {"image": "e1.jpg" }}]
 ```
 
-Az LLM ezután a kérést olyan formátumba alakítja, amelyet a specializált AI modell képes értelmezni, például JSON formátumba. Amikor az AI modell visszaadja az előrejelzését a feladat alapján, az LLM megkapja a választ.
+Az LLM ezután olyan formátumba rendezi a kérést, amit a specializált AI modell értelmezni tud, például JSON-ként. Miután az AI modell visszaküldi az előrejelzését a feladat alapján, az LLM megkapja a választ.
 
-Ha a feladat végrehajtásához több modellre is szükség van, az LLM értelmezi a modellek válaszait is, mielőtt egyesítené őket a használó számára adott válasz előállításához.
+Ha több modellre van szükség a feladat befejezéséhez, az LLM értelmezi az ezekről érkezett válaszokat, mielőtt összefogja őket a felhasználó válaszának generálásához.
 
-Az alábbi példa bemutatja, hogyan működne ez, amikor egy felhasználó leírást és tárgyak számát kéri egy képen:
+Az alábbi példa bemutatja, hogyan működik ez, amikor a felhasználó egy kép objektumainak leírását és számát kéri:
 
 ## Feladat
 
-Az AI Ügynökök tanulásának folytatásához építhetsz AutoGen-nel:
+Az AI Ügynökök tanulmányozásának folytatásához az alábbiakat építheted meg a Microsoft Agent Framework-kel:
 
-- Egy alkalmazást, amely szimulál egy üzleti találkozót egy oktatási startup különböző részlegei között.
-- Rendszerüzenetek létrehozását, amelyek irányítják az LLM-eket a különböző személyiségek és prioritások megértésében, és lehetővé teszik a felhasználónak, hogy új termékötleteket mutasson be.
-- Az LLM ezután generáljon követő kérdéseket minden részlegtől, hogy finomítsa és javítsa az ajánlatot és a termékötletet.
+- Egy alkalmazás, amely egy üzleti megbeszélést szimulál egy oktatási startup különböző osztályaival.
+- Rendszerüzenetek létrehozása, amelyek irányítják az LLM-eket abban, hogy megértsék a különböző személyiségeket és prioritásokat, és lehetővé teszik a felhasználónak, hogy új termékötletet mutasson be.
+- Az LLM-nek ezt követően kérdéseket kell generálnia az egyes osztályoktól, hogy finomítsa és javítsa az ötletet és a terméket.
 
-## A tanulás itt nem ér véget, folytasd az utat
+## A tanulás itt nem áll meg, folytasd az utad
 
-A lecke elvégzése után nézd meg [Generatív MI Tanulási gyűjteményünket](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy tovább fejleszd Generatív MI tudásodat!
+A tananyag elvégzése után nézd meg a [Generatív AI Tanulási gyűjteményünket](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy tovább fejleszd Generatív AI tudásodat!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Jogi Nyilatkozat**:  
-Ezt a dokumentumot az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével fordítottuk. Bár pontos fordításra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum a saját nyelvén tekintendő hivatalos forrásnak. Kritikus információk esetén profi emberi fordítást javaslunk. Nem vállalunk felelősséget az ebből eredő félreértésekért vagy téves értelmezésekért.
+**Jogi nyilatkozat**:
+Ez a dokumentum az AI fordítási szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár az pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén professzionális emberi fordítást javasolunk. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely ebből a fordításból ered.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

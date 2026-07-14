@@ -1,21 +1,21 @@
-# Kuandaa data za uandishi wa maneno
+# Kuandaa data za uandikishaji
 
-Skripti za kuandaa data za uandishi wa maneno hupakua manukuu ya video za YouTube na kuziandaa kwa matumizi na mfano wa Semantic Search with OpenAI Embeddings and Functions.
+Scripts za kuandaa data za uandikishaji hukamata manukuu ya video za YouTube na kuziandaa kwa matumizi na mfano wa Semantic Search with OpenAI Embeddings and Functions.
 
-Skripti za kuandaa data za uandishi wa maneno zimeshahakikiwa kwenye toleo la hivi karibuni la Windows 11, macOS Ventura na Ubuntu 22.04 (na zaidi).
+Scripts za kuandaa data za uandikishaji zimeshatumwa kwenye matoleo ya karibuni ya Windows 11, macOS Ventura na Ubuntu 22.04 (na juu yake).
 
 ## Tengeneza rasilimali zinazohitajika za Azure OpenAI Service
 
 > [!IMPORTANT]
-> Tunapendekeza usasishaji wa Azure CLI hadi toleo la hivi karibuni ili kuhakikisha ulinganifu na OpenAI
+> Tunapendekeza upitie Azure CLI hadi toleo la karibuni ili kuhakikisha ulinganifu na OpenAI
 > Angalia [Documentation](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Tengeneza kundi la rasilimali
 
 > [!NOTE]
-> Kwa maelekezo haya tunatumia kundi la rasilimali linaloitwa "semantic-video-search" katika East US.
-> Unaweza kubadilisha jina la kundi la rasilimali, lakini unapobadilisha eneo la rasilimali,
-> angalia [model availability table](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> Kwa maagizo haya tunatumia kundi la rasilimali linaloitwa "semantic-video-search" katika East US.
+> Unaweza kubadilisha jina la kundi la rasilimali, lakini unapobadilisha eneo la rasilimali, 
+> angalia [jedwali la upatikanaji wa modeli](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
@@ -28,7 +28,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Pata endpoint na funguo kwa matumizi katika programu hii
+1. Pata sehemu ya mwisho na funguo za matumizi katika programu hii
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -37,9 +37,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. Sambaza mifano ifuatayo:
-   - `text-embedding-ada-002` toleo `2` au zaidi, liitwe `text-embedding-ada-002`
-   - `gpt-35-turbo` toleo `0613` au zaidi, liitwe `gpt-35-turbo`
+1. Weka modeli zifuatazo:
+   - toleo la `text-embedding-ada-002` lenye `2` au zaidi, liitwe `text-embedding-ada-002`
+   - `gpt-4o-mini` liitwe `gpt-4o-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,9 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-35-turbo \
-    --model-name gpt-35-turbo \
-    --model-version "0613"  \
+    --deployment-name gpt-4o-mini \
+    --model-name gpt-4o-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -67,11 +66,11 @@ az cognitiveservices account deployment create \
 
 ## Mabadiliko ya mazingira
 
-Mabadiliko yafuatayo ya mazingira yanahitajika kuendesha skripti za kuandaa data za uandishi wa maneno za YouTube.
+Mabadiliko ya mazingira yafuatayo yanahitajika kuendesha scripts za kuandaa data za uandikishaji za YouTube.
 
 ### Kwenye Windows
 
-Inashauriwa kuongeza mabadiliko haya kwenye mabadiliko ya mazingira ya `user`.
+Tunapendekeza kuongeza mabadiliko haya kwenye mabadiliko ya mazingira ya `user`.
 `Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` kwa [USER] > `New`.
 
 ```text
@@ -81,9 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
+<!-- Unaweza kuongeza mabadiliko ya mazingira kwenye wasifu wako wa PowerShell.
+
+```powershell
+$env:AZURE_OPENAI_API_KEY = "<your Azure OpenAI Service API key>"
+$env:AZURE_OPENAI_ENDPOINT = "<your Azure OpenAI Service endpoint>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<your Azure OpenAI Service model deployment name>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<your Google developer API key>"
+``` -->
+
 ### Kwenye Linux na macOS
 
-Inashauriwa kuongeza amri zifuatazo za export kwenye faili yako ya `~/.bashrc` au `~/.zshrc`.
+Tunapendekeza kuongeza exports zifuatazo kwenye faili lako `~/.bashrc` au `~/.zshrc`.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -94,8 +102,8 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## Sakinisha maktaba za Python zinazohitajika
 
-1. Sakinisha [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) kama bado haijasakinishwa.
-1. Kutoka kwenye dirisha la `Terminal`, nakili mfano hadi folda yako unayopendelea ya repo.
+1. Sakinisha [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) ikiwa bado haisakinishwi.
+1. Kutoka dirisha la `Terminal`, nakili mfano hadi folda yako ya depo unayoipenda.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -137,7 +145,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Sakinisha maktaba zinazohitajika.
 
-   Kwenye Windows:
+   Kwenye windows:
 
    ```powershell
    pip install -r requirements.txt
@@ -149,9 +157,9 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## Endesha skripti za kuandaa data za uandishi wa maneno za YouTube
+## Endesha scripts za kuandaa data za uandikishaji za YouTube
 
-### Kwenye Windows
+### Kwenye windows
 
 ```powershell
 .\transcripts_prepare.ps1
@@ -163,5 +171,9 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ./transcripts_prepare.sh
 ```
 
-**Kiarifu cha Kutotegemea**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inapendekezwa. Hatubebei dhamana kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Kionyozo**:
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kupata usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake halisi inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inapendekezwa. Hatutojibu kwa kuelewa vibaya au tafsiri potofu zinazotokea kutokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

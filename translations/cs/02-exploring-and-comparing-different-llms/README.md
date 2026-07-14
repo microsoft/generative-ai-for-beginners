@@ -1,207 +1,211 @@
-# Zkoumání a porovnávání různých LLM
+# Průzkum a porovnání různých LLM
 
-[![Zkoumání a porovnávání různých LLM](../../../translated_images/cs/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Průzkum a porovnání různých LLM](../../../translated_images/cs/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
-> _Klikněte na obrázek výše pro zhlédnutí videa této lekce_
+> _Klikněte na obrázek výše pro zobrazení videa této lekce_
 
-V předchozí lekci jsme viděli, jak Generativní AI mění technologické prostředí, jak fungují velké jazykové modely (LLM) a jak je může firma - jako náš startup - aplikovat na své případy použití a růst! V této kapitole se zaměříme na porovnání různých typů velkých jazykových modelů (LLM), abychom pochopili jejich výhody a nevýhody.
+V předchozí lekci jsme viděli, jak Generativní AI mění technologickou krajinu, jak fungují velké jazykové modely (LLM) a jak je může podnik - jako náš startup - aplikovat na své případové použití a růst! V této kapitole si chceme porovnat a rozlišit různé typy velkých jazykových modelů (LLM), abychom pochopili jejich výhody a nevýhody.
 
-Dalším krokem na cestě našeho startupu je prozkoumání současného prostředí LLM a pochopení, které z nich jsou vhodné pro náš případ použití.
+Dalším krokem v cestě našeho startupu je prozkoumání současné krajiny LLM a porozumění tomu, které jsou vhodné pro náš případ použití.
 
 ## Úvod
 
 Tato lekce pokryje:
 
-- Různé typy LLM v současném prostředí.
+- Různé typy LLM v současné krajině.
 - Testování, iteraci a porovnávání různých modelů pro váš případ použití v Azure.
 - Jak nasadit LLM.
 
-## Cíle učení
+## Výukové cíle
 
 Po dokončení této lekce budete schopni:
 
 - Vybrat správný model pro váš případ použití.
-- Pochopit, jak testovat, iterovat a zlepšovat výkon vašeho modelu.
-- Vědět, jak firmy nasazují modely.
+- Porozumět tomu, jak testovat, iterovat a zlepšovat výkon svého modelu.
+- Vědět, jak podniky nasazují modely.
 
-## Pochopení různých typů LLM
+## Porozumět různým typům LLM
 
-LLM mohou být kategorizovány podle jejich architektury, tréninkových dat a případu použití. Pochopení těchto rozdílů pomůže našemu startupu vybrat správný model pro daný scénář a pochopit, jak testovat, iterovat a zlepšovat výkon.
+LLM lze kategorizovat různými způsoby podle jejich architektury, tréninkových dat a případu použití. Porozumění těmto rozdílům pomůže našemu startupu vybrat správný model pro daný scénář a pochopit, jak testovat, iterovat a zlepšovat výkon.
 
-Existuje mnoho různých typů LLM modelů, výběr modelu závisí na tom, k čemu je chcete použít, na vašich datech, na tom, kolik jste ochotni zaplatit a dalších faktorech.
+Existuje mnoho různých typů LLM modelů, výběr modelu závisí na tom, k čemu je chcete používat, jaká máte data, kolik jste ochotni zaplatit a další faktory.
 
-V závislosti na tom, zda chcete modely použít pro generování textu, audia, videa, obrázků a podobně, můžete zvolit jiný typ modelu.
+V závislosti na tom, zda chcete modely použít pro text, audio, video, generování obrázků a podobně, můžete volit jiný typ modelu.
 
-- **Rozpoznávání zvuku a řeči**. Pro tento účel jsou modely typu Whisper skvělou volbou, protože jsou univerzální a zaměřené na rozpoznávání řeči. Jsou trénovány na různorodém zvuku a dokážou provádět vícejazyčné rozpoznávání řeči. Více o [modelech typu Whisper zde](https://platform.openai.com/docs/models/whisper?WT.mc_id=academic-105485-koreyst).
+- **Rozpoznávání zvuku a řeči**. Modely ve stylu Whisper jsou stále užitečné obecné modely pro rozpoznávání řeči, ale produkčně se nyní používají také novější modely převodu řeči na text, jako `gpt-4o-transcribe`, `gpt-4o-mini-transcribe` a varianty pro diarizaci. Vyhodnoťte pokrytí jazyků, diarizaci, podporu v reálném čase, latenci a náklady pro váš scénář. Více se dozvíte v [dokumentaci OpenAI k převodu řeči na text](https://platform.openai.com/docs/guides/speech-to-text?WT.mc_id=academic-105485-koreyst).
 
-- **Generování obrázků**. Pro generování obrázků jsou dvě velmi známé volby DALL-E a Midjourney. DALL-E je nabízeno službou Azure OpenAI. [Přečtěte si více o DALL-E zde](https://platform.openai.com/docs/models/dall-e?WT.mc_id=academic-105485-koreyst) a také v kapitole 9 tohoto kurzu.
+- **Generování obrazů**. DALL-E a Midjourney jsou známé možnosti generování obrázků, ale aktuální OpenAI image API jsou založena na GPT Image modelech, jako je `gpt-image-2`, zatímco Stable Diffusion, Imagen, Flux a další rodiny modelů jsou rovněž běžné. Porovnejte dodržování promptu, podporu úprav, kontrolu stylu, bezpečnostní požadavky a licencování. Více se dozvíte v [průvodci OpenAI generováním obrazů](https://platform.openai.com/docs/guides/images?WT.mc_id=academic-105485-koreyst) a v kapitole 9 tohoto kurikula.
 
-- **Generování textu**. Většina modelů je trénována na generování textu a máte širokou škálu možností od GPT-3.5 po GPT-4. Přicházejí s různými náklady, přičemž GPT-4 je nejdražší. Stojí za to podívat se na [Azure OpenAI playground](https://oai.azure.com/portal/playground?WT.mc_id=academic-105485-koreyst), abyste vyhodnotili, které modely nejlépe vyhovují vašim potřebám z hlediska schopností a nákladů.
+- **Generování textu**. Textové modely nyní zahrnují frontové modely, modely pro uvažování, menší modely s nízkou latencí a modely s otevřenou vahou. Aktuální příklady jsou OpenAI GPT-5.x modely, Anthropic Claude 4.x modely, Google Gemini 3.x modely, Meta Llama 4 modely a Mistral modely. Nevybírejte jen podle data vydání nebo ceny; porovnejte kvalitu úloh, latenci, kontextové okno, použití nástrojů, bezpečnostní chování, regionální dostupnost a celkové náklady. [Microsoft Foundry katalog modelů](https://ai.azure.com/catalog?WT.mc_id=academic-105485-koreyst) je dobrým místem k porovnání modelů dostupných v Azure.
 
-- **Multimodalita**. Pokud chcete pracovat s více typy dat na vstupu a výstupu, můžete se podívat na modely jako [gpt-4 turbo s vizí nebo gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models#gpt-4-and-gpt-4-turbo-models?WT.mc_id=academic-105485-koreyst) - nejnovější verze modelů OpenAI - které dokážou kombinovat zpracování přirozeného jazyka s vizuálním porozuměním, což umožňuje interakce prostřednictvím multimodálních rozhraní.
+- **Multimodalita**. Mnoho současných modelů může zpracovávat více než text. Některé přijímají vstupy obrázků, zvuku nebo videa; některé mohou volat nástroje; a specializované modely mohou generovat obrázky, zvuk nebo video. Například aktuální OpenAI modely podporují text a vstup obrázků, Gemini modely mohou podporovat text, kód, obrázky, zvuk a video v závislosti na variantě, a Llama 4 Scout a Maverick jsou nativně multimodální modely s otevřenou vahou. Vždy zkontrolujte popis modelu (model card) pro podporované vstupní a výstupní modality před vytvořením pracovního postupu.
 
-Výběr modelu znamená získání základních schopností, které však nemusí být dostatečné. Často máte firemní specifická data, která nějakým způsobem potřebujete sdělit LLM. Existuje několik různých přístupů, jak to udělat, více o tom v nadcházejících sekcích.
+Výběr modelu znamená získání základních schopností, které však nemusí být dostačující. Často máte data specifická pro firmu, o kterých je třeba LLM nějak informovat. Existuje několik různých způsobů, jak k tomu přistoupit, více o tom v následujících sekcích.
 
 ### Základní modely versus LLM
 
-Termín Základní model byl [zaveden výzkumníky ze Stanfordu](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) a je definován jako AI model, který splňuje některá kritéria, například:
+Termín Základní model (Foundation Model) byl [zaveden vědci ze Stanfordu](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) a definuje se jako AI model, který splňuje určitá kritéria, jako například:
 
-- **Jsou trénovány pomocí neřízeného učení nebo samostatně řízeného učení**, což znamená, že jsou trénovány na neoznačených multimodálních datech a nevyžadují lidské anotace nebo označování dat pro svůj tréninkový proces.
-- **Jsou velmi velké modely**, založené na velmi hlubokých neuronových sítích trénovaných na miliardách parametrů.
-- **Obvykle slouží jako „základ“ pro jiné modely**, což znamená, že mohou být použity jako výchozí bod pro vytvoření dalších modelů, což lze provést jemným doladěním.
+- **Jsou trénovány pomocí učení bez dozoru nebo samo-řízeného učení**, což znamená, že jsou trénovány na neoznačených multimodálních datech a nevyžadují lidskou anotaci nebo označování dat pro trénink.
+- **Jsou to velmi velké modely**, založené na velmi hlubokých neuronových sítích trénovaných na miliardách parametrů.
+- **Obvykle slouží jako "základ" pro další modely**, což znamená, že mohou být použity jako výchozí bod pro další modely, které lze ladit (fine-tune).
 
 ![Základní modely versus LLM](../../../translated_images/cs/FoundationModel.e4859dbb7a825c94.webp)
 
-Zdroj obrázku: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
+Zdroj obrázku: [Essential Guide to Foundation Models and Large Language Models | od Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
-Pro další objasnění tohoto rozlišení si vezměme jako příklad ChatGPT. Pro vytvoření první verze ChatGPT sloužil model GPT-3.5 jako základní model. To znamená, že OpenAI použilo některá data specifická pro chat k vytvoření upravené verze GPT-3.5, která byla specializována na dobrý výkon v konverzačních scénářích, jako jsou chatboty.
+Pro lepší pochopení tohoto rozlišení vezměme ChatGPT jako historický příklad. Rané verze ChatGPT používaly GPT-3.5 jako základní model. OpenAI pak použil data specifická pro chat a techniky zarovnání, aby vytvořil doladěnou verzi, která fungovala lépe v konverzačních scénářích, jako jsou chatboty. Moderní AI služby často přepínají mezi několika variantami modelů, takže název služby a základní model nemusí být vždy stejný.
 
 ![Základní model](../../../translated_images/cs/Multimodal.2c389c6439e0fc51.webp)
 
 Zdroj obrázku: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
-### Open Source versus Proprietární modely
+### Modely s otevřenou vahou / open-source versus proprietární modely
 
-Dalším způsobem kategorizace LLM je, zda jsou open source nebo proprietární.
+Další způsob klasifikace LLM je podle toho, zda jsou open-weight, open-source nebo proprietární.
 
-Open-source modely jsou modely, které jsou zpřístupněny veřejnosti a mohou být použity kýmkoli. Často jsou zpřístupněny společností, která je vytvořila, nebo výzkumnou komunitou. Tyto modely mohou být prohlíženy, upravovány a přizpůsobovány pro různé případy použití v LLM. Nicméně nejsou vždy optimalizovány pro produkční použití a nemusí být tak výkonné jako proprietární modely. Navíc financování open-source modelů může být omezené, nemusí být dlouhodobě udržovány nebo aktualizovány s nejnovějším výzkumem. Příklady populárních open-source modelů zahrnují [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst), [Bloom](https://huggingface.co/bigscience/bloom) a [LLaMA](https://llama.meta.com).
+Open-source a modely s otevřenou vahou umožňují přístup k artefaktům modelu pro inspekci, stažení nebo přizpůsobení, ale jejich licence se liší. Některé jsou plně open-source, jiné jsou open-weight s omezeními použití. Mohou být užitečné, když firma potřebuje větší kontrolu nad nasazením, lokalitou dat, náklady nebo přizpůsobením. Nicméně týmy stále musí zkontrolovat licenční podmínky, náklady na provoz, údržbu, bezpečnostní aktualizace a kvalitu hodnocení před použitím v produkci. Příklady zahrnují [Meta Llama 4](https://ai.meta.com/blog/llama-4-multimodal-intelligence/?WT.mc_id=academic-105485-koreyst), některé [Mistral modely](https://docs.mistral.ai/models/overview?WT.mc_id=academic-105485-koreyst) a mnoho modelů hostovaných na [Hugging Face](https://huggingface.co/models?WT.mc_id=academic-105485-koreyst).
 
-Proprietární modely jsou modely, které vlastní společnost a nejsou zpřístupněny veřejnosti. Tyto modely jsou často optimalizovány pro produkční použití. Nicméně není dovoleno je prohlížet, upravovat nebo přizpůsobovat pro různé případy použití. Navíc nejsou vždy dostupné zdarma a mohou vyžadovat předplatné nebo platbu za použití. Uživatelé také nemají kontrolu nad daty, která jsou použita k trénování modelu, což znamená, že by měli důvěřovat vlastníkovi modelu, že zajistí závazek k ochraně dat a odpovědnému používání AI. Příklady populárních proprietárních modelů zahrnují [OpenAI modely](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-koreyst), [Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst) nebo [Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-koreyst).
+Proprietární modely jsou vlastněny a hostovány poskytovatelem. Tyto modely jsou často optimalizované pro řízený produkční provoz a mohou nabízet robustní podporu, bezpečnostní systémy, integraci nástrojů a škálovatelnost. Nicméně zákazníci obvykle nemohou modelové váhy prohlížet nebo měnit a musí zkontrolovat podmínky poskytovatele pro ochranu soukromí, uchování dat, dodržování předpisů a přijatelných způsobů použití. Příklady zahrnují [OpenAI modely](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst), [Google Gemini](https://deepmind.google/models/gemini/pro/?WT.mc_id=academic-105485-koreyst) a [Anthropic Claude](https://platform.claude.com/docs/en/about-claude/models/overview?WT.mc_id=academic-105485-koreyst).
 
-### Embedding versus Generování obrázků versus Generování textu a kódu
+### Vkládání vs. generování obrázků vs. generování textu a kódu
 
-LLM mohou být také kategorizovány podle výstupu, který generují.
+LLM lze také kategorizovat podle výstupu, který generují.
 
-Embeddings jsou sada modelů, které dokážou převést text do numerické podoby, nazývané embedding, což je numerická reprezentace vstupního textu. Embeddings usnadňují strojům pochopení vztahů mezi slovy nebo větami a mohou být použity jako vstupy pro jiné modely, jako jsou klasifikační modely nebo modely shlukování, které mají lepší výkon na numerických datech. Embedding modely se často používají pro transfer learning, kde je model vytvořen pro náhradní úkol, pro který je dostatek dat, a poté jsou váhy modelu (embeddings) znovu použity pro jiné následné úkoly. Příkladem této kategorie je [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
+Vkládání (embeddingy) jsou skupiny modelů, které dokážou převést text do číselné podoby, zvané embedding, což je číselná reprezentace vstupního textu. Embeddingy usnadňují strojům porozumět vztahům mezi slovy nebo větami a mohou být používány jako vstupy do jiných modelů, jako jsou klasifikační modely nebo klastrovací modely, které mají lepší výkon na číselných datech. Embedding modely se často používají pro transfer learning, kdy je model vytvořen pro náhradní úlohu, pro kterou existuje mnoho dat, a pak se váhy modelu (embeddingy) znovu používají pro jiné úlohy. Příkladem této kategorie jsou [OpenAI embeddingy](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
 ![Embedding](../../../translated_images/cs/Embedding.c3708fe988ccf760.webp)
 
-Modely generování obrázků jsou modely, které generují obrázky. Tyto modely se často používají pro úpravy obrázků, syntézu obrázků a překlad obrázků. Modely generování obrázků jsou často trénovány na velkých datových sadách obrázků, jako je [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), a mohou být použity k vytváření nových obrázků nebo k úpravě existujících obrázků pomocí technik jako inpainting, super-rozlišení a kolorování. Příklady zahrnují [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) a [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
+Modely generování obrázků jsou modely, které generují obrázky. Tyto modely se často používají pro úpravu obrázků, syntézu obrázků a převod obrázků. Jsou často trénovány na velkých datasetech obrázků, jako je [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), a mohou být použity k generování nových obrázků nebo k úpravě existujících obrázků technikami jako inpainting, super-resolution a kolorizace. Příklady zahrnují [GPT Image modely](https://platform.openai.com/docs/guides/images?WT.mc_id=academic-105485-koreyst), [Stable Diffusion modely](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst) a Imagen modely.
 
 ![Generování obrázků](../../../translated_images/cs/Image.349c080266a763fd.webp)
 
-Modely generování textu a kódu jsou modely, které generují text nebo kód. Tyto modely se často používají pro sumarizaci textu, překlad a odpovídání na otázky. Modely generování textu jsou často trénovány na velkých datových sadách textu, jako je [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), a mohou být použity k vytváření nového textu nebo k odpovídání na otázky. Modely generování kódu, jako [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), jsou často trénovány na velkých datových sadách kódu, jako je GitHub, a mohou být použity k vytváření nového kódu nebo k opravě chyb v existujícím kódu.
+Modely generování textu a kódu jsou modely, které generují text nebo kód. Tyto modely se často používají pro shrnutí textu, překlady a odpovědi na otázky. Textové modely jsou často trénovány na velkých datasetech textu, jako je [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), a mohou sloužit k generování nového textu nebo odpovídání na otázky. Modely generující kód, jako je [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), jsou často trénovány na velkých datasetech kódu, jako je GitHub, a mohou být použity k generování nového kódu nebo opravě chyb v existujícím kódu.
 
 ![Generování textu a kódu](../../../translated_images/cs/Text.a8c0cf139e5cc2a0.webp)
 
-### Encoder-Decoder versus Pouze Decoder
+### Encoder-Decoder versus pouze Decoder
 
-Abychom mohli hovořit o různých typech architektur LLM, použijme analogii.
+Pro objasnění různých typů architektur LLM použijme analogii.
 
-Představte si, že vám váš nadřízený zadal úkol napsat kvíz pro studenty. Máte dva kolegy; jeden se stará o tvorbu obsahu a druhý o jeho kontrolu.
+Představte si, že váš manažer vám zadal úkol napsat kvíz pro studenty. Máte dva kolegy; jeden se stará o tvorbu obsahu a druhý o jeho kontrolu.
 
-Tvůrce obsahu je jako model pouze Decoder, může se podívat na téma a na to, co jste již napsali, a na základě toho vytvořit kurz. Jsou velmi dobří v psaní poutavého a informativního obsahu, ale nejsou příliš dobří v pochopení tématu a vzdělávacích cílů. Některé příklady modelů pouze Decoder jsou modely rodiny GPT, jako je GPT-3.
+Tvůrce obsahu je jako model pouze s dekodérem: může se podívat na téma, vidět, co jste již napsali, a pokračovat v generování obsahu na základě tohoto kontextu. Jsou velmi dobří v psaní poutavého a informativního obsahu, ale nejsou vždy nejlepší volbou, pokud je úkolem pouze klasifikovat, vyhledávat nebo kódovat informace. Příklady rodin pouze dekodérových modelů jsou GPT a Llama.
 
-Recenzent je jako model pouze Encoder, podívá se na napsaný kurz a odpovědi, všimne si vztahu mezi nimi a pochopí kontext, ale není dobrý v generování obsahu. Příkladem modelu pouze Encoder by byl BERT.
+Kontrolor je jako model pouze s enkodérem, prohlíží si napsaný kurz a odpovědi, vnímá vztahy mezi nimi a rozumí kontextu, ale nevytváří obsah. Příkladem modelu pouze s enkodérem je BERT.
 
-Představte si, že bychom mohli mít někoho, kdo by mohl kvíz vytvořit i zkontrolovat, to je model Encoder-Decoder. Některé příklady by byly BART a T5.
+Představte si, že máme někoho, kdo by mohl vytvořit i zkontrolovat kvíz, to je model Encoder-Decoder. Některé příklady jsou BART a T5.
 
 ### Služba versus Model
 
-Nyní si povíme o rozdílu mezi službou a modelem. Služba je produkt, který je nabízen poskytovatelem cloudových služeb a často je kombinací modelů, dat a dalších komponent. Model je základní součástí služby a často je základním modelem, jako je LLM.
+Nyní si povíme rozdíl mezi službou a modelem. Služba je produkt nabízený poskytovatelem cloudových služeb a často je kombinací modelů, dat a dalších komponent. Model je jádrem služby a často je to základní model, jako LLM.
 
-Služby jsou často optimalizovány pro produkční použití a často se snadněji používají než modely, prostřednictvím grafického uživatelského rozhraní. Nicméně služby nejsou vždy dostupné zdarma a mohou vyžadovat předplatné nebo platbu za použití, výměnou za využití vybavení a zdrojů vlastníka služby, optimalizaci nákladů a snadné škálování. Příkladem služby je [Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), která nabízí plán plateb podle využití, což znamená, že uživatelé jsou účtováni úměrně tomu, kolik službu využívají. Navíc Azure OpenAI Service nabízí bezpečnost na úrovni podniku a rámec odpovědné AI nad schopnostmi modelů.
+Služby jsou často optimalizovány pro produkční použití a bývají snazší na použití než modely, například přes grafické uživatelské rozhraní. Služby však nejsou vždy zdarma a mohou vyžadovat předplatné nebo platbu za využití, výměnou za využití zařízení a zdrojů vlastníka služby, optimalizaci nákladů a snadné škálování. Příkladem služby je [Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), která nabízí tarif pay-as-you-go, kdy jsou uživatelé účtováni úměrně k využití služby. Azure OpenAI Service také poskytuje podnikovou bezpečnost a rámec zodpovědné AI nad schopnostmi modelů.
 
-Modely jsou pouze neuronová síť, s parametry, váhami a dalšími. Umožňují firmám provozovat lokálně, avšak vyžadují nákup vybavení, vytvoření struktury pro škálování a zakoupení licence nebo použití open-source modelu. Model jako LLaMA je dostupný k použití, vyžaduje však výpočetní výkon pro provoz modelu.
+Modely jsou artefakty neuronových sítí: parametry, váhy, architektura, tokenizér a podporující konfigurace. Provoz modelu lokálně nebo v soukromém prostředí vyžaduje vhodný hardware, infrastrukturu pro nasazení, monitorování a kompatibilní open-source/open-weight licenci nebo komerční licenci. Modely s otevřenou vahou jako Llama 4 nebo Mistral modely lze hostovat samostatně, ale stále potřebují výpočetní výkon a provozní zkušenosti.
 
 ## Jak testovat a iterovat s různými modely pro pochopení výkonu v Azure
 
-Jakmile náš tým prozkoumá současné prostředí LLM a identifikuje některé dobré kandidáty pro své scénáře, dalším krokem je jejich testování na vlastních datech a pracovních zátěžích. Jedná se o iterativní proces, který se provádí prostřednictvím experimentů a měření.
-Většina modelů, které jsme zmínili v předchozích odstavcích (modely OpenAI, open source modely jako Llama2 a Hugging Face transformers), je dostupná v [Modelovém katalogu](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview?WT.mc_id=academic-105485-koreyst) v [Azure AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst).
 
-[Azure AI Studio](https://learn.microsoft.com/azure/ai-studio/what-is-ai-studio?WT.mc_id=academic-105485-koreyst) je cloudová platforma navržená pro vývojáře, kteří chtějí vytvářet aplikace generativní AI a spravovat celý vývojový cyklus – od experimentování po hodnocení – kombinací všech služeb Azure AI do jednoho centra s praktickým grafickým rozhraním. Modelový katalog v Azure AI Studio umožňuje uživatelům:
+Jakmile náš tým prozkoumal aktuální krajinu LLM a identifikoval několik dobrých kandidátů pro jejich scénáře, dalším krokem je jejich testování na jejich datech a pracovním zatížení. Je to iterativní proces, prováděný experimenty a měřeními.
+Většina modelů, které jsme zmínili v předchozích odstavcích (modely OpenAI, open-weight modely jako Llama 4 a Mistral, a modely Hugging Face) je dostupná v [Microsoft Foundry Models](https://learn.microsoft.com/azure/foundry/concepts/foundry-models-overview?WT.mc_id=academic-105485-koreyst).
 
-- Najít základní model, který je zajímá, v katalogu – ať už proprietární nebo open source, s možností filtrování podle úkolu, licence nebo názvu. Pro zlepšení vyhledávání jsou modely organizovány do kolekcí, jako je kolekce Azure OpenAI, kolekce Hugging Face a další.
+[Microsoft Foundry](https://learn.microsoft.com/azure/foundry/what-is-foundry?WT.mc_id=academic-105485-koreyst), dříve Azure AI Studio/Azure AI Foundry, je jednotná platforma Azure pro vytváření AI aplikací a agentů. Pomáhá vývojářům řídit životní cyklus od experimentování a hodnocení po nasazení, monitorování a správu. Katalog modelů v Microsoft Foundry umožňuje uživateli:
 
-![Modelový katalog](../../../translated_images/cs/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
+- Najít ve fondu základní model zájmu, včetně modelů prodávaných Azure a modelů od partnerů a komunitních poskytovatelů. Uživatelé mohou filtrovat podle úkolu, poskytovatele, licence, možnosti nasazení nebo názvu.
 
-- Prohlédnout si kartu modelu, která obsahuje podrobný popis zamýšleného použití a tréninkových dat, ukázky kódu a výsledky hodnocení z interní knihovny hodnocení.
+![Model catalog](../../../translated_images/cs/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
 
-![Karta modelu](../../../translated_images/cs/ModelCard.598051692c6e400d.webp)
+- Prohlédnout si modelovou kartu, včetně podrobného popisu zamýšleného použití a tréninkových dat, ukázkových kódů a výsledků hodnocení v interní knihovně hodnocení.
 
-- Porovnat benchmarky napříč modely a datovými sadami dostupnými v průmyslu, aby bylo možné posoudit, který model nejlépe odpovídá obchodnímu scénáři, prostřednictvím panelu [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
+![Model card](../../../translated_images/cs/ModelCard.598051692c6e400d.webp)
 
-![Benchmarky modelů](../../../translated_images/cs/ModelBenchmarks.254cb20fbd06c03a.webp)
+- Porovnat benchmarky napříč modely a datasetů dostupných v průmyslu, aby se vyhodnotilo, který nejlépe odpovídá obchodnímu scénáři, prostřednictvím panelu [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
 
-- Doladit model na vlastních tréninkových datech, aby se zlepšil výkon modelu v konkrétní pracovní zátěži, s využitím experimentálních a sledovacích schopností Azure AI Studio.
+![Model benchmarks](../../../translated_images/cs/ModelBenchmarks.254cb20fbd06c03a.webp)
 
-![Doladění modelu](../../../translated_images/cs/FineTuning.aac48f07142e36fd.webp)
+- Doladit podporované modely na vlastních tréninkových datech, aby se zlepšil výkon modelu v konkrétním pracovním zatížení, využívající schopnosti experimentování a sledování Microsoft Foundry.
 
-- Nasadit původní předtrénovaný model nebo doladěnou verzi na vzdálené rozhraní pro inferenci v reálném čase – spravovaný výpočetní výkon – nebo serverless API endpoint – [platba za použití](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) – aby aplikace mohly model využívat.
+![Model fine-tuning](../../../translated_images/cs/FineTuning.aac48f07142e36fd.webp)
 
-![Nasazení modelu](../../../translated_images/cs/ModelDeploy.890da48cbd0bccdb.webp)
+- Nasadit původní předtrénovaný model nebo jeho doladěnou verzi na vzdálený inference endpoint v reálném čase, pomocí spravovaného výpočetního výkonu nebo serverless možností nasazení, aby aplikace mohly model využívat.
+
+![Model deployment](../../../translated_images/cs/ModelDeploy.890da48cbd0bccdb.webp)
 
 > [!NOTE]
-> Ne všechny modely v katalogu jsou aktuálně dostupné pro doladění a/nebo nasazení s platbou za použití. Podrobnosti o schopnostech a omezeních modelu najdete na jeho kartě.
+> Ne všechny modely v katalogu jsou v současnosti dostupné pro doladění a/nebo nasazení na platbu podle využití. Zkontrolujte modelovou kartu pro detaily o schopnostech a omezeních modelu.
 
-## Zlepšení výsledků LLM
+## Zlepšování výsledků LLM
 
-S naším startupovým týmem jsme prozkoumali různé typy LLM a cloudovou platformu (Azure Machine Learning), která nám umožňuje porovnávat různé modely, hodnotit je na testovacích datech, zlepšovat jejich výkon a nasazovat je na inferenční endpointy.
+Náš startupový tým prozkoumal různé druhy LLM a cloudovou platformu (Microsoft Foundry), která nám umožňuje porovnat různé modely, vyhodnotit je na testovacích datech, zlepšit výkon a nasadit je na inference endpoints.
 
-Kdy by měli zvážit doladění modelu místo použití předtrénovaného? Existují jiné přístupy ke zlepšení výkonu modelu na specifických pracovních zátěžích?
+Ale kdy by měli zvážit doladění modelu namísto použití předtrénovaného? Existují jiné přístupy ke zlepšení výkonu modelu na specifickém pracovním zatížení?
 
-Existuje několik přístupů, které může firma použít k dosažení požadovaných výsledků z LLM. Při nasazování LLM do produkce můžete vybírat různé typy modelů s různými stupni tréninku, s různou úrovní složitosti, nákladů a kvality. Zde jsou některé přístupy:
+Existuje několik přístupů, které může podnik použít, aby dosáhl výsledků, které od LLM potřebuje. Při nasazení LLM v produkci můžete zvolit různé typy modelů s různým stupněm tréninku, s rozdílnou složitostí, náklady a kvalitou. Zde jsou různé přístupy:
 
-- **Prompt engineering s kontextem**. Cílem je poskytnout dostatek kontextu při zadávání promptu, aby bylo zajištěno, že dostanete požadované odpovědi.
+- **Prompt engineering s kontextem**. Myšlenka je poskytnout dostatek kontextu při vyvolání, aby byla zajištěna požadovaná odpověď.
 
-- **Retrieval Augmented Generation, RAG**. Vaše data mohou být například v databázi nebo na webovém endpointu. Aby byla tato data nebo jejich podmnožina zahrnuta při zadávání promptu, můžete relevantní data načíst a přidat je do promptu uživatele.
+- **Retrieval Augmented Generation, RAG**. Vaše data mohou existovat například v databázi nebo na webovém endpointu, aby bylo zajištěno, že tato data nebo jejich podmnožina jsou zahrnuta v době promptu, můžete načíst relevantní data a učinit je součástí uživatelova promptu.
 
-- **Doladěný model**. Zde model dále trénujete na vlastních datech, což vede k tomu, že model je přesnější a lépe reaguje na vaše potřeby, ale může být nákladný.
+- **Doladěný model**. Zde jste model dále trénovali na vlastních datech, což vedlo k tomu, že model je přesnější a reaguje lépe na vaše potřeby, ale může to být nákladné.
 
-![Nasazení LLM](../../../translated_images/cs/Deploy.18b2d27412ec8c02.webp)
+![LLMs deployment](../../../translated_images/cs/Deploy.18b2d27412ec8c02.webp)
 
-Zdroj obrázku: [Čtyři způsoby, jak firmy nasazují LLM | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
+Zdroj obrázku: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 
 ### Prompt engineering s kontextem
 
-Předtrénované LLM fungují velmi dobře na obecné úkoly v oblasti přirozeného jazyka, i když je voláte s krátkým promptem, například větou k dokončení nebo otázkou – tzv. „zero-shot“ učení.
+Předtrénované LLM fungují velmi dobře u obecných úloh přirozeného jazyka, dokonce i když je vyvoláte krátkým promptem, jako je věta k doplnění nebo otázka – tzv. „zero-shot“ učení.
 
-Nicméně čím více uživatel dokáže formulovat svůj dotaz, s podrobným požadavkem a příklady – tedy Kontextem – tím přesnější a bližší očekáváním uživatele bude odpověď. V tomto případě mluvíme o „one-shot“ učení, pokud prompt obsahuje pouze jeden příklad, a o „few-shot“ učení, pokud obsahuje více příkladů. Prompt engineering s kontextem je nejefektivnější přístup pro začátek.
+Čím více uživatel dokáže rámovat svůj dotaz podrobnou žádostí a příklady – Kontext – tím přesnější a bližší očekáváním uživatele bude odpověď. V tomto případě mluvíme o „one-shot“ učení, pokud prompt zahrnuje pouze jeden příklad, a „few-shot“ učení, pokud obsahuje více příkladů.
+Prompt engineering s kontextem je nejefektivnější přístup, od kterého začít.
 
 ### Retrieval Augmented Generation (RAG)
 
-LLM mají omezení v tom, že mohou používat pouze data, která byla použita během jejich tréninku k vytvoření odpovědi. To znamená, že neznají nic o faktech, která se stala po jejich tréninkovém procesu, a nemohou přistupovat k neveřejným informacím (například firemním datům).
-Toto lze překonat pomocí RAG, techniky, která rozšiřuje prompt o externí data ve formě částí dokumentů, s ohledem na limity délky promptu. To je podporováno nástroji pro vektorové databáze (jako [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)), které získávají užitečné části z různých předem definovaných datových zdrojů a přidávají je do kontextu promptu.
+LLM mají omezení, že mohou použít pouze data, která byla použita během jejich tréninku, aby generovaly odpověď. To znamená, že neznají fakta, která se stala po jejich tréninkovém procesu, a nemají přístup k neveřejným informacím (jako jsou firemní data).
+To lze překonat pomocí RAG, techniky, která doplňuje prompt o externí data ve formě částí dokumentů, s ohledem na omezení délky promptu. Toto podporují nástroje vektorových databází (jako [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)), které vyhledávají užitečné fragmenty z různých předem definovaných datových zdrojů a přidávají je do Kontextu promptu.
 
-Tato technika je velmi užitečná, když firma nemá dostatek dat, času nebo zdrojů na doladění LLM, ale přesto si přeje zlepšit výkon na specifické pracovní zátěži a snížit riziko mystifikací, tj. zkreslení reality nebo škodlivého obsahu.
+Tato technika je velmi užitečná, když podnik nemá dostatek dat, času nebo zdrojů pro doladění LLM, ale přesto chce zlepšit výkon na specifickém pracovním zatížení a snížit riziko halucinovaných, zastaralých nebo nepodložených odpovědí.
 
 ### Doladěný model
 
-Doladění je proces, který využívá transferové učení k „přizpůsobení“ modelu na konkrétní úkol nebo k řešení specifického problému. Na rozdíl od few-shot učení a RAG vede k vytvoření nového modelu s aktualizovanými váhami a biasy. Vyžaduje sadu tréninkových příkladů, které se skládají z jednoho vstupu (promptu) a jeho odpovídajícího výstupu (dokončení).
-Tento přístup by byl preferován, pokud:
+Doladění je proces, který využívá transfer learning k „adaptaci“ modelu na následný úkol nebo k řešení specifického problému. Na rozdíl od few-shot učení a RAG vede k vytvoření nového modelu s aktualizovanými vahami a biasy. Vyžaduje sadu tréninkových příkladů složených z jediného vstupu (promptu) a jeho odpovídajícího výstupu (kompletace).
+Toto je preferovaný přístup, pokud:
 
-- **Použití doladěných modelů**. Firma by chtěla použít doladěné méně schopné modely (jako embedding modely) místo vysoce výkonných modelů, což by vedlo k nákladově efektivnějšímu a rychlejšímu řešení.
+- **Používáte menší modely specifické pro úkol**. Podnik chce doladit menší model pro úzce vymezený úkol místo opakovaného vyvolávání většího frontier modelu, což přináší efektivnější a rychlejší řešení.
 
-- **Zohlednění latence**. Latence je důležitá pro konkrétní případ použití, takže není možné použít velmi dlouhé prompty nebo počet příkladů, které by se měly modelu naučit, neodpovídá limitu délky promptu.
+- **Zvažujete latenci**. Latence je důležitá pro specifický případ použití, takže není možné použít velmi dlouhé prompty nebo počet příkladů, ze kterých by se měl model učit, nevyhovuje limitu délky promptu.
 
-- **Aktualizace dat**. Firma má velké množství kvalitních dat a referenčních štítků a zdroje potřebné k tomu, aby tato data byla průběžně aktualizována.
+- **Adaptujete stabilní chování**. Podnik má mnoho kvalitních příkladů a chce, aby model konzistentně následoval vzor úkolu, výstupní formát, tón nebo doménově specifický styl. Pokud je hlavním problémem čerstvá fakta nebo soukromé znalosti, které se často mění, použijte RAG místo spoléhání se výhradně na doladění.
 
 ### Trénovaný model
 
-Trénování LLM od začátku je bezpochyby nejnáročnější a nejsložitější přístup, který vyžaduje obrovské množství dat, kvalifikované zdroje a odpovídající výpočetní výkon. Tuto možnost by bylo vhodné zvážit pouze v situaci, kdy má firma případ použití specifický pro danou oblast a velké množství dat zaměřených na danou oblast.
+Trénovat LLM od začátku bezpochyby je nejtěžší a nejkomplexnější přístup, vyžadující obrovské množství dat, kvalifikované zdroje a odpovídající výpočetní výkon. Tuto možnost je vhodné zvážit pouze v případě, že má podnik doménově specifický případ použití a velké množství doménových dat.
 
 ## Kontrola znalostí
 
-Jaký by mohl být dobrý přístup ke zlepšení výsledků dokončení LLM?
+Jaký by mohl být dobrý přístup ke zlepšení výsledků dokončení u LLM?
 
-1. Prompt engineering s kontextem  
-1. RAG  
-1. Doladěný model  
+1. Prompt engineering s kontextem
+1. RAG
+1. Doladěný model
 
-A:3, pokud máte čas, zdroje a kvalitní data, doladění je lepší možnost, jak zůstat aktuální. Nicméně pokud chcete zlepšit výsledky a nemáte dostatek času, stojí za to nejprve zvážit RAG.
+A: Všechny tři mohou pomoci. Začněte s prompt engineeringem a kontextem pro rychlá zlepšení a použijte RAG, když model potřebuje aktuální fakta nebo soukromá firemní data. Zvolte doladění, pokud máte dostatek kvalitních příkladů a potřebujete, aby model konzistentně následoval úkol, formát, tón nebo doménový vzor.
 
 ## 🚀 Výzva
 
-Zjistěte více o tom, jak můžete [použít RAG](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst) pro vaše podnikání.
+Přečtěte si více o tom, jak můžete [použít RAG](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst) pro vaše podnikání.
 
-## Skvělá práce, pokračujte ve svém vzdělávání
+## Skvělá práce, pokračujte ve vzdělávání
 
-Po dokončení této lekce se podívejte na naši [kolekci Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), abyste si dále rozšířili své znalosti o generativní AI!
+Po dokončení této lekce si prohlédněte naši [kolekci pro učení Generativní AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), abyste pokračovali v rozšiřování svých znalostí o Generativní AI!
 
-Přejděte na lekci 3, kde se podíváme na to, jak [budovat s generativní AI odpovědně](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
+Přesuňte se do Lekce 3, kde se podíváme na to, jak [stavět s Generativní AI zodpovědně](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Prohlášení**:  
-Tento dokument byl přeložen pomocí služby AI pro překlad [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Prohlášení o omezení odpovědnosti**:
+Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). Přestože usilujeme o co největší přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Originální dokument v jeho mateřském jazyce by měl být považován za autoritativní zdroj. Pro kritické informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za jakékoli nedorozumění nebo nesprávné interpretace vzniklé použitím tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

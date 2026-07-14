@@ -1,51 +1,53 @@
-# Cloud Setup ☁️ – GitHub Codespaces
+# Nastavení v cloudu ☁️ – GitHub Codespaces
 
-**Použijte tento návod, pokud nechcete nic instalovat na svůj počítač.**  
-Codespaces vám nabízí zdarma VS Code v prohlížeči se všemi potřebnými závislostmi už předinstalovanými.
+**Použijte tento návod, pokud nechcete nic instalovat lokálně.**  
+Codespaces vám poskytne bezplatnou instanci VS Code v prohlížeči se všemi předinstalovanými závislostmi.
 
 ---
 
 ## 1.  Proč Codespaces?
 
-| Výhoda | Co to znamená pro vás |
-|--------|----------------------|
+| Výhoda | Co to pro vás znamená |
+|---------|----------------------|
 | ✅ Žádné instalace | Funguje na Chromebooku, iPadu, školních počítačích… |
 | ✅ Předpřipravený vývojový kontejner | Python 3, Node.js, .NET, Java už uvnitř |
-| ✅ Zdarma limit | Osobní účty mají **120 core-hodin / 60 GB-hodin měsíčně** |
+| ✅ Zdarma kvóta | Osobní účty mají **120 core-hodin / 60 GB-hodin za měsíc** |
 
 > 💡 **Tip**  
-> Šetřete svůj limit tím, že budete **zastavovat** nebo **mazat** neaktivní codespaces  
+> Udržujte svou kvótu zdravou tím, že **zastavíte** nebo **smažete** neaktivní codespaces  
 > (Zobrazit ▸ Příkazová paleta ▸ *Codespaces: Stop Codespace*).
 
 ---
 
-## 2.  Vytvoření Codespace (jedním kliknutím)
+## 2.  Vytvoření Codespace (jedno kliknutí)
 
 1. **Forkněte** tento repozitář (vpravo nahoře tlačítko **Fork**).  
 2. Ve svém forku klikněte na **Code ▸ Codespaces ▸ Create codespace on main**.  
-   ![Dialog s tlačítky pro vytvoření codespace](../../../00-course-setup/images/who-will-pay.webp)
+   ![Dialog ukazující tlačítka pro vytvoření codespace](../../../translated_images/cs/who-will-pay.4c0609b1c7780f44.webp)
 
 ✅ Otevře se okno VS Code v prohlížeči a začne se stavět vývojový kontejner.
-Poprvé to trvá **asi 2 minuty**.
+Tento proces trvá **~2 minuty** napoprvé.
 
-## 3. Přidejte svůj API klíč (bezpečně)
+## 3. Přidejte svůj API klíč (bezpečným způsobem)
 
-### Možnost A Codespaces Secrets — Doporučeno
+### Možnost A Secrets Codespaces — Doporučeno
 
-1. ⚙️ Ikona ozubeného kola -> Příkazová paleta -> Codespaces : Manage user secret -> Add a new secret.
+1. ⚙️ Ikona ozubeného kolečka -> Příkazová paleta -> Codespaces : Spravovat uživatelské tajemství -> Přidat nové tajemství.
 2. Název: OPENAI_API_KEY
-3. Hodnota: vložte svůj klíč → Add secret
+3. Hodnota: vložte svůj klíč → Přidat tajemství
 
-Hotovo—náš kód si klíč automaticky načte.
+Tím je hotovo – náš kód si ho automaticky načte.
 
 ### Možnost B .env soubor (pokud ho opravdu potřebujete)
 
 ```bash
 cp .env.copy .env
-code .env         # fill in OPENAI_API_KEY=your_key_here
+code .env         # vyplňte OPENAI_API_KEY=váš_klíč_zde
 ```
 
 ---
 
-**Prohlášení**:  
-Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). Přestože se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Za autoritativní zdroj by měl být považován původní dokument v jeho rodném jazyce. Pro kritické informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádné nedorozumění nebo nesprávné výklady vzniklé použitím tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Prohlášení o omezení odpovědnosti**:
+Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). Přestože usilujeme o co největší přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Originální dokument v jeho mateřském jazyce by měl být považován za autoritativní zdroj. Pro kritické informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za jakékoli nedorozumění nebo nesprávné interpretace vzniklé použitím tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
