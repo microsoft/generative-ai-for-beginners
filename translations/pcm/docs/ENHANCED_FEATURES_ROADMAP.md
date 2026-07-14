@@ -1,10 +1,10 @@
-# Enhanced Features and Improvements Roadmap
+# Beta Beta Fita Plus Improvements Roadmap
 
-Dis dokument dey outline recommended enhancements and improvements for di Generative AI for Beginners curriculum, based on one comprehensive code review and analysis of di best practices for industry.
+Dis dokument dey show wetin person fit do beta plus beta for Generative AI for Beginners kurs, based on full code check and di best tins wey industry dey do.
 
 ## Executive Summary
 
-Dem don analyze di codebase for security, code quality, and how e dey help learn. Dis dokument dey provide recommendations for quick fixes, short-term improvements, and wetin fit be done later.
+Codebase don check for security, code quality, plus how e go help people learn well. Dis dokument go give ideas for quick fix, near improvement, and future better changes.
 
 ---
 
@@ -23,16 +23,16 @@ Dem don analyze di codebase for security, code quality, and how e dey help learn
 ### 1.2 Recommended Additional Security Features
 
 1. **Rate Limiting Examples**
-   - Add example code wey show how to implement rate limiting for API calls
-   - Show how exponential backoff patterns dey work
+   - Add example code wey show how to do rate limiting for API calls
+   - Show exponential backoff patterns
 
 2. **API Key Rotation**
-   - Add documentation on di best way to dey rotate API keys
-   - Put examples wey use Azure Key Vault or similar services
+   - Add document wey explain best way to turn API keys
+   - Put example of how to use Azure Key Vault or similar services
 
 3. **Content Safety Integration**
-   - Add examples wey use Azure Content Safety API
-   - Show how input/output moderation patterns dey go
+   - Put example wey dey use Azure Content Safety API
+   - Show how to moderate input/output
 
 ---
 
@@ -48,7 +48,7 @@ Dem don analyze di codebase for security, code quality, and how e dey help learn
 
 ### 2.2 Shared Utilities Created
 
-New `shared/python/` module with:
+New `shared/python/` module get:
 - `env_utils.py` - Environment variable handling
 - `input_validation.py` - Input validation and sanitization
 - `api_utils.py` - Safe API request wrappers
@@ -56,15 +56,15 @@ New `shared/python/` module with:
 ### 2.3 Recommended Code Improvements
 
 1. **Type Hints Coverage**
-   - Add type hints to all Python files
+   - Add type hints for all Python files
    - Enable strict TypeScript mode for all TS projects
 
 2. **Documentation Standards**
-   - Add docstrings to all Python functions
-   - Add JSDoc comments to all JavaScript/TypeScript functions
+   - Add docstrings for all Python functions
+   - Add JSDoc comments for all JavaScript/TypeScript functions
 
 3. **Testing Framework**
-   - Add pytest configuration and example tests
+   - Add pytest configuration and example tests _(done: pytest config inside `pyproject.toml`; example tests for shared utilities inside [`tests/`](../../../tests) wey run for CI)_
    - Add Jest configuration for JavaScript/TypeScript
 
 ---
@@ -73,14 +73,14 @@ New `shared/python/` module with:
 
 ### 3.1 New Lesson Topics
 
-1. **Security in AI Applications** (Proposed Lesson 22)
-   - Prompt injection attacks and defenses
+1. **Security for AI Applications** (Proposed Lesson 22)
+   - Prompt injection attack and how to defend
    - API key management
    - Content moderation
-   - Rate limiting and abuse prevention
+   - Rate limiting and stop abuse
 
 2. **Production Deployment** (Proposed Lesson 23)
-   - Containerization with Docker
+   - Containerization wit Docker
    - CI/CD pipelines
    - Monitoring and logging
    - Cost management
@@ -107,13 +107,18 @@ New `shared/python/` module with:
 
 ## 4. API Modernization
 
-### 4.1 Deprecated API Patterns to Update
+### 4.1 Deprecated API Patterns (Migration Completed)
 
-| Old Pattern | New Pattern | Files Affected |
-|-------------|-------------|----------------|
-| `openai.api_type = "azure"` | `AzureOpenAI()` client | Multiple scripts in `08-building-search-applications/` |
-| `openai.ChatCompletion.create()` | `client.chat.completions.create()` | Multiple notebooks |
-| `df.append()` (pandas) | `pd.concat()` | RAG notebook |
+All Python and TypeScript **chat** samples don move from Chat Completions API to **Responses API** (`client.responses.create(...)` → `response.output_text`).
+
+| Old Pattern | New Pattern | Status |
+|-------------|-------------|--------|
+| `openai.api_type = "azure"` / `AzureOpenAI()` (chat) | `OpenAI(base_url="<endpoint>/openai/v1/")` (Responses API) | Completed |
+| `openai.ChatCompletion.create()` / `client.chat.completions.create()` | `client.responses.create(input=...)` → `response.output_text` | Completed |
+| `@azure/openai` `OpenAIClient.getChatCompletions()` (TypeScript) | `openai` package `client.responses.create()` → `response.output_text` | Completed |
+| `df.append()` (pandas) | `pd.concat()` | Completed |
+
+> **Note:** Microsoft Foundry Models samples wey use `azure-ai-inference` / `@azure-rest/ai-inference` SDK (`client.complete()`) still dey use Model Inference API, weh no support Responses API. `AzureOpenAI()` still dey use where e still valid (embeddings and image generation).
 
 ### 4.2 New API Features to Demonstrate
 
@@ -122,13 +127,13 @@ New `shared/python/` module with:
    - Function calling with strict schemas
 
 2. **Vision Capabilities**
-   - Image analysis with GPT-4V
+   - Image analysis with GPT-4o (vision)
    - Multi-modal prompts
 
-3. **Assistants API**
+3. **Responses API Built-in Tools** (replace old Assistants API)
    - Code interpreter
    - File search
-   - Custom tools
+   - Web search and custom tools
 
 ---
 
@@ -136,7 +141,7 @@ New `shared/python/` module with:
 
 ### 5.1 CI/CD Enhancements
 
-Current workflows dey handle markdown validation. Recommended additions:
+Done for [`.github/workflows/code-quality.yml`](../../../.github/workflows/code-quality.yml): Python linting/formatting (Ruff + Black) dey **enforced** for maintained `shared/` utilities module and e dey run **advisory** for other parts of the curriculum, plus advisory ESLint pass for JavaScript/TypeScript. Base example be like dis:
 
 ```yaml
 # .github/workflows/code-quality.yml
@@ -169,6 +174,8 @@ jobs:
 
 ### 5.2 Security Scanning
 
+Done for [`.github/workflows/security.yml`](../../../.github/workflows/security.yml): CodeQL analysis for Python and JavaScript/TypeScript (on push, pull request, plus every week) with dependency review on pull requests. Base example be like dis:
+
 ```yaml
 # .github/workflows/security.yml
 name: Security Scan
@@ -198,7 +205,7 @@ jobs:
 
 ### 6.1 DevContainer Enhancements
 
-Update `.devcontainer/devcontainer.json`:
+Done for [`.devcontainer/devcontainer.json`](../../../.devcontainer/devcontainer.json) and [`.devcontainer/post-create.sh`](../../../.devcontainer/post-create.sh): container now get Pylance, Black formatter, Ruff, ESLint, Prettier, and Copilot extensions, e enable format-on-save wey connect to repo Black/Prettier config, plus e install developer tools (`ruff`, `black`, `mypy`, `pytest`) so [code-quality workflow](../../../.github/workflows/code-quality.yml) fit run local. The `mcr.microsoft.com/devcontainers/universal` base image get Python and Node inside already, so no extra feature dey needed. Base example be like dis:
 
 ```json
 {
@@ -234,10 +241,10 @@ Update `.devcontainer/devcontainer.json`:
 
 ### 6.2 Interactive Playground
 
-Think about to add:
-- Jupyter notebooks wey get pre-filled API keys (via environment)
-- Gradio/Streamlit demos for people wey learn by seeing
-- Interactive quizzes to test knowledge
+Abeg consider add:
+- Jupyter notebooks with pre-filled API keys (from environment)
+- Gradio/Streamlit demos for people wey learn better with visuals
+- Interactive quizzes for knowledge check
 
 ---
 
@@ -254,9 +261,9 @@ Think about to add:
 
 ### 7.2 Recommended Additions
 
-1. **Go** - Dey grow for AI/ML tooling
-2. **Rust** - For performance-critical applications
-3. **Java/Kotlin** - Enterprise applications
+1. **Go** - Growing for AI/ML tools
+2. **Rust** - For performance critical apps
+3. **Java/Kotlin** - For enterprise apps
 
 ---
 
@@ -266,7 +273,7 @@ Think about to add:
 
 1. **Async/Await Patterns**
    - Add async examples for batch processing
-   - Show how concurrent API calls dey work
+   - Show concurrent API calls
 
 2. **Caching Strategies**
    - Add embedding caching examples
@@ -279,9 +286,9 @@ Think about to add:
 ### 8.2 Cost Optimization Examples
 
 Add examples wey show:
-- How to choose model based on task complexity
+- Model selection based on how hard task be
 - Prompt engineering for token efficiency
-- Batch processing for big operations
+- Batch processing for bulk operations
 
 ---
 
@@ -289,23 +296,20 @@ Add examples wey show:
 
 ### 9.1 Current Translation Status
 
-| Language | Status |
-|----------|--------|
-| English | Complete |
-| Chinese (Simplified) | Complete |
-| Japanese | Complete |
-| Korean | Complete |
-| Spanish | Partial |
-| Portuguese | Partial |
-| Turkish | Partial |
-| Polish | Partial |
+All translations don finish and dem dey automatically done by [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst), wey dey produce and maintain 50+ language versions for the curriculum dey sync wit the English source. Translations dey under `translations/` and localized images under `translated_images/`; full list of all languages dey for the top of the repository README.
+
+| Aspect | Status |
+|--------|--------|
+| Translation coverage | Complete — 50+ languages, all lessons |
+| Translation method | Automated via [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst) |
+| Kept in sync with English source | Yes — e dey regenerate automatically |
 
 ### 9.2 Accessibility Improvements
 
 1. Add alt text to all images
-2. Make sure code samples get proper syntax highlighting
-3. Add video transcripts for all video content
-4. Make sure color contrast meet WCAG guidelines
+2. Make sure code samples get correct syntax highlighting
+3. Add video transcripts for all videos
+4. Make sure color contrast follow WCAG guidelines
 
 ---
 
@@ -318,15 +322,15 @@ Add examples wey show:
 - [x] Document security guidelines
 
 ### Phase 2: Short-term (Week 3-4)
-- [ ] Update deprecated API patterns
-- [ ] Add type hints to all Python files
-- [ ] Add CI/CD workflows for code quality
-- [ ] Create security scanning workflow
+- [x] Update deprecated API patterns (Chat Completions → Responses API, Python + TypeScript)
+- [ ] Add type hints for all Python files (done for maintained `shared/` module; lesson samples simple)
+- [x] Add CI/CD workflows for code quality
+- [x] Create security scanning workflow
 
 ### Phase 3: Medium-term (Month 2-3)
 - [ ] Add new security lesson
 - [ ] Add production deployment lesson
-- [ ] Improve DevContainer setup
+- [x] Improve DevContainer setup
 - [ ] Add interactive demos
 
 ### Phase 4: Long-term (Month 4+)
@@ -339,13 +343,13 @@ Add examples wey show:
 
 ## Conclusion
 
-Dis roadmap provide one structured way to make Generative AI for Beginners curriculum beta. By solving security mata, modernizing APIs, and adding correct educational content, di course go fit prepare students well for real AI application development.
+Dis roadmap dey give structured way to beta di Generative AI for Beginners kurs. If person fix security wahala, modernize APIs, plus add beta learning content, the kurs go ready students well for real-world AI development.
 
-If you get questions or want contribute, abeg open issue for di GitHub repository.
+If you get question or want contribute, abeg open issue for di GitHub repository.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:
-Dis document dem don use AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator) translate am. Even though we dey try make e correct, abeg make una sabi say automated translation fit get mistake or no too clear. Di original document weh e come from e own language na di correct one wey get final authority. If na important tin, make you use professional human translator. We no go responsible for any misunderstanding or wrong meaning wey fit happen because you use dis translation.
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even tho we dey try make am correct, abeg make you know say automated translation fit get errors or mistakes. Di original document for dia own language na im be di correct source. For important info, make person wey sabi human translation do am. We no go responsible for any misunderstanding or wrong understanding wey fit happen because of dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

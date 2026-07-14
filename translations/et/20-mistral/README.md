@@ -1,40 +1,42 @@
-# Mistral mudelitega ehitamine
+# Mistral mudelitega ehitamine 
 
-## Sissejuhatus
+## Sissejuhatus 
 
-Selles õppetükis käsitleme:
-- Erinevate Mistral mudelite uurimist
-- Iga mudeli kasutusjuhtude ja stsenaariumide mõistmist
-- Koodi näidete uurimist, mis näitavad iga mudeli unikaalseid omadusi.
+See õppetund käsitleb: 
+- Erinevate Mistral mudelite uurimist 
+- Iga mudeli kasutusjuhtude ja stsenaariumide mõistmist 
+- Koodinäidete uurimist, mis näitavad iga mudeli ainulaadseid omadusi. 
 
-## Mistral mudelid
+## Mistral mudelid 
 
-Selles õppetükis uurime 3 erinevat Mistral mudelit:
-**Mistral Large**, **Mistral Small** ja **Mistral Nemo**.
+Selles õppetunnis uurime kolme erinevat Mistral mudelit: 
+**Mistral Large**, **Mistral Small** ja **Mistral Nemo**. 
 
-Iga neist mudelitest on GitHubi mudeliturgudel tasuta saadaval. Selle märkme kood kasutab nende mudelite käitamiseks neid mudeleid. Rohkem teavet GitHubi mudelite kasutamise kohta leiate siit: [prototüüpimine AI mudelitega](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Iga neist mudelitest on tasuta saadaval aadressil [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst). Selle märkmiku kood kasutab neid mudeleid koodi käivitamiseks.
+
+> **Märkus:** GitHub Models pensionile jääb 2026. aasta juuli lõpus. Rohkem teavet AI mudelite prototüüpimiseks kasutamise kohta leiate [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) juurest. 
+
 
 ## Mistral Large 2 (2407)
+Mistral Large 2 on praegu Mistrali lipulaevmudel ja on mõeldud ettevõtte kasutuseks. 
 
-Mistral Large 2 on hetkel Mistrali lipulaevmudel ja on loodud ettevõtte kasutamiseks.
+Mudel on täiendus originaalsele Mistral Large mudelile, pakkudes 
+- Suuremat konteksti akent - 128k vs 32k 
+- Paremat tulemuslikkust matemaatika ja koodi ülesannetes - 76,9% keskmist täpsust vs 60,4% 
+- Suurenenud mitmekeelseid võimekusi - keeled hõlmavad: inglise, prantsuse, saksa, hispaania, itaalia, portugali, hollandi, vene, hiina, jaapani, korea, araabia ja hindi keelt.
 
-Mudelit on uuendatud võrreldes originaaliga Mistral Large, pakkudes
-- Suuremat konteksti akent - 128k vs 32k
-- Paremat sooritust matemaatika ja programmeerimise ülesannetes - 76.9% keskmine täpsus vs 60.4%
-- Suurenenud mitmekeelseid võimalusi - keeled hõlmavad: inglise, prantsuse, saksa, hispaania, itaalia, portugali, hollandi, vene, hiina, jaapani, korea, araabia ja hindi keeli.
+Nende omadustega paistab Mistral Large silma: 
+- *Taasesitusega täiendatud genereerimine (RAG)* - suurema konteksti akna tõttu
+- *Funktsioonikõned* - see mudel toetab natiivset funktsioonikõnede kasutamist, mis võimaldab integreerumist väliste tööriistade ja API-dega. Need kõned võivad toimuda nii paralleelselt kui ka järjestikku.
+- *Koodigeneerimine* - see mudel on väga hea Pythoni, Java, TypeScripti ja C++ genereerimisel. 
 
-Nende omadustega on Mistral Large suurepärane:
-- *Andmete rikastatud genereerimiseks (RAG)* - tänu suuremale konteksti aknale
-- *Funktsioonikõnedele* - see mudel toetab natiivset funktsioonikõnede tegemist, mis võimaldab integreerimist väliste tööriistade ja API-dega. Neid kõnesid saab teha nii paralleelselt kui ka järjestikku.
-- *Koodigeneratsiooniks* - mudel on väga hea Python-, Java-, TypeScript- ja C++-koodi genereerimisel.
+### RAG näide, kasutades Mistral Large 2 
 
-### RAG näide, kasutades Mistral Large 2 mudelit
+Selles näites kasutame Mistral Large 2 RAG mustriga tekstidokumendi töötlemiseks. Küsimus on kirjutatud korea keeles ja küsib autori tegevusi enne ülikooli. 
 
-Selles näites kasutame Mistral Large 2 mudelit, et teostada RAG mustrit tekstidokumendi põhjal. Küsimus on kirjutatud korea keeles ja küsib autori tegevuste kohta enne kolledžit.
+See kasutab Cohere embedimist mudelit, et luua embedimised tekstidokumendi ja küsimuse jaoks. Selle näite puhul kasutatakse faiss Python paketti vektoripoena. 
 
-See kasutab Cohere Embeddings mudelit, et luua tekstidokumendi ja küsimuse manuseid. Selle näite puhul kasutatakse faiss Python paketti vektorpoodina.
-
-Mudelitele saadetud sisend sisaldab nii küsimusi kui ka leitud tekstiosasid, mis on küsimusega sarnased. Mudel annab seejärel loomuliku keele vastuse.
+Mudelile saadetav prompt sisaldab nii küsimust kui ka leitud lõike, mis on küsimusega sarnased. Mudel seejärel vastab loomulikus keeles. 
 
 ```python 
 pip install faiss-cpu
@@ -51,9 +53,10 @@ from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.inference import EmbeddingsClient
 
-endpoint = "https://models.inference.ai.azure.com"
+# Hankige need oma Microsoft Foundry projekti "Ülevaade" lehelt
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-large"
-token = os.environ["GITHUB_TOKEN"]
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -102,7 +105,7 @@ question_embedding = embed_client.embed(
 question_embeddings = np.array(question_embedding.data[0].embedding)
 
 
-D, I = index.search(question_embeddings.reshape(1, -1), k=2) # vahemaa, indeks
+D, I = index.search(question_embeddings.reshape(1, -1), k=2) # kaugus, indeks
 retrieved_chunks = [chunks[i] for i in I.tolist()[0]]
 
 prompt = f"""
@@ -130,31 +133,30 @@ chat_response = client.complete(
 print(chat_response.choices[0].message.content)
 ```
 
+## Mistral Small 
+Mistral Small on teine mudel Mistrali mudelite peres, kuuludes premier/ettevõtte kategooriasse. Nagu nimigi vihjab, on see mudel väike keelemudel (Small Language Model, SLM). Mistral Small kasutamise eelised on: 
+- Kuluefektiivsus võrreldes Mistral LLM-dega nagu Mistral Large ja NeMo - 80% hinnalangus
+- Madal latentsus - vastused kiiremad võrreldes Mistral LLM-dega
+- Paindlikkus - saab kasutada erinevates keskkondades, kus ressursinõuded on kergemad. 
 
-## Mistral Small
 
-Mistral Small on veel üks mudel Mistrali perekonnas, kuuludes tipp/ettevõtte kategooriasse. Nime järgi on tegu väikese keelemudeliga (SLM). Mistral Small kasutamise eelised on:
-- Kuluefektiivsus võrreldes Mistral LLM-idega nagu Mistral Large ja NeMo - 80% hinnalangus
-- Madal latentsus - kiirem reageerimine võrreldes Mistral LLM-idega
-- Paindlikkus - saab juurutada erinevates keskkondades, nõudes vähem ressursse.
+Mistral Small sobib suurepäraselt: 
+- Tekstipõhisteks ülesanneteks nagu kokkuvõtete tegemine, meeleoluanalüüs ja tõlkimine. 
+- Rakendustesse, kus päringuid tehakse sageli, tänu selle soodsale hinnale 
+- Madala latentsusega koodiülesannete jaoks nagu ülevaatus ja koodisoovitused 
 
-Mistral Small sobib hästi:
-- Tekstipõhisteks ülesanneteks nagu kokkuvõtete koostamine, meeleolu analüüs ja tõlkimine.
-- Rakendusteks, kus esitatakse sagedasi päringuid tänu selle kuluefektiivsusele
-- Madala latentsusega koodülesanneteks nagu koodi ülevaatus ja soovitused
+## Mistral Small ja Mistral Large võrdlus 
 
-## Mistral Small ja Mistral Large võrdlus
+Latentsuse erinevuste demonstreerimiseks Mistral Small ja Large vahel käivita allolevad lahtrid. 
 
-Et näha latentsuse erinevusi Mistral Small ja Large vahel, käivitage alljärgnevad lahtrid.
-
-Te peaksite nägema reageerimisajade erinevust 3-5 sekundi vahel. Pöörake ka tähelepanu vastuse pikkusele ja stiilile sama sisendi puhul.
+Peaksid nägema vastuseaja erinevust umbes 3–5 sekundit. Pane tähele ka vastuse pikkust ja stiili sama prompti puhul.  
 
 ```python 
 
 import os 
-endpoint = "https://models.inference.ai.azure.com"
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-small"
-token = os.environ["GITHUB_TOKEN"]
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -183,9 +185,9 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-endpoint = "https://models.inference.ai.azure.com"
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-large"
-token = os.environ["GITHUB_TOKEN"]
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -207,26 +209,26 @@ print(response.choices[0].message.content)
 
 ```
 
-
 ## Mistral NeMo
 
-Võrreldes teiste kahe mudeliga, mis selles õppetükis käsitletud, on Mistral NeMo ainus tasuta mudel, millel on Apache2 litsents.
+Võrreldes kahe eelnevalt käsitletud mudeliga on Mistral NeMo ainus tasuta mudel, millel on Apache2 litsents. 
 
-Seda peetakse uuenduseks varasemale Mistrali avatud lähtekoodiga LLM-ile, Mistral 7B-le.
+Seda peetakse täienduseks varasemale avatud lähtekoodiga Mistrali suurele keelemudelile Mistral 7B-le. 
 
-Mõned muud NeMo mudeli omadused on:
+Mõned NeMo mudeli muud omadused on: 
 
-- *Tõhusam tokeniseerimine:* See mudel kasutab Tekkeni tokeniseerijat, mitte sagedamini kasutatavat tiktokenit. See võimaldab paremat tootlikkust mitmete keelte ja koodide puhul.
+- *Tõhusam tokeniseerimine:* See mudel kasutab Tekken tokenisaatorit, mis on paindlikum kui tavapärasem tiktoken. See tagab parema jõudluse paljudes keeltes ja koodis. 
 
-- *Täpsustamine:* Baasmudel on saadaval täpsustamiseks. See võimaldab suuremat paindlikkust kasutusjuhtudeks, kus võib vaja minna mudeli täpsustamist.
+- *Peenhäälestus:* Põhimudel on saadaval peenhäälestamiseks. See võimaldab rohkem paindlikkust kasutusjuhtudel, kus peenhäälestus võib vajalik olla. 
 
-- *Natiivne funktsioonikõne* - Nagu Mistral Large, on seda mudelit õpetatud funktsioonikõnete teostamiseks. See teeb sellest ühe esimestest avatud lähtekoodiga mudelitest, mis seda toetab.
+- *Natiivne funktsioonikõnede tugi* - Nagu Mistral Large, on see mudel koolitatud funktsioonikõnedele. See teeb temast unikaalse, kuna tegemist on ühe esimese avatud lähtekoodiga mudeliga, mis seda toetab. 
 
-### Tokeniseerijate võrdlus
 
-Selles näites vaatleme, kuidas Mistral NeMo tokeniseerimist teostab võrreldes Mistral Large mudeliga.
+### Tokenisaatorite võrdlus 
 
-Mõlemad näited kasutavad sama sisendit, kuid te peaksite nägema, et NeMo tagastab vähem tokeneid kui Mistral Large.
+Selles näites vaatleme, kuidas Mistral NeMo tokeniseerib võrreldes Mistral Large mudeliga. 
+
+Mõlemad näited kasutavad sama prompti, kuid näed, et NeMo tagastab vähem tähemärke kui Mistral Large. 
 
 ```bash
 pip install mistral-common
@@ -244,7 +246,7 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Laadi Mistrali tokeniseerija
+# Laadi Mistral tokeniseerija
 
 model_name = "open-mistral-nemo"
 
@@ -300,7 +302,7 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Laadi Mistrali tokenisaator
+# Laadi Mistral tokeniseerija
 
 model_name = "mistral-large-latest"
 
@@ -344,14 +346,13 @@ tokens, text = tokenized.tokens, tokenized.text
 print(len(tokens))
 ```
 
+## Õppimine ei peatu siin, jätka teekonda
 
-## Õppimine ei lõpe siin, jätkake teekonda
-
-Pärast selle õppetüki lõpetamist vaadake meie [Generative AI õppimiskogu](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata oma generatiivse AI teadmiste tõstmist!
+Pärast selle õppetunni lõpetamist vaata meie [Generative AI õppe kollektsiooni](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata oma generatiivse tehisintellekti teadmiste tõstmist!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Vastutusest loobumine**:
-See dokument on tõlgitud kasutades tehisintellektil põhinevat tõlketeenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi me püüame täpsust, palun pidage meeles, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument oma emakeeles tuleks pidada autoriteetseks allikaks. Tähtsa info puhul soovitatakse kasutada professionaalse inimese tõlget. Me ei vastuta selle tõlke kasutamisest tingitud arusaamatuste ega valesti mõistmiste eest.
+**Lahtiütlus**:
+See dokument on tõlgitud kasutades AI tõlketeenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi me püüdleme täpsuse poole, palun pange tähele, et automatiseeritud tõlgetes võib esineda vigu või ebatäpsusi. Originaaldokument selle emakeeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta selle tõlkega seotud eksimustest või valesti mõistmistest.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

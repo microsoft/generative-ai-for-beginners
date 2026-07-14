@@ -1,76 +1,79 @@
-# How to join function call
+# Integrating wit function calling
 
-[![How to join function call](../../../translated_images/pcm/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integrating wit function calling](../../../translated_images/pcm/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
-You don learn plenty things for di previous lessons. But we fit still improve am. Some things we fit look into na how we fit get response wey dey consistent so e go easy to work with di response later. Plus, we fit wan add data from other places to make our app better.
+You don learn beta tins so far inside di previous lessons. But, we fit improve more. Some tins we fit try solve na how we fit get one consistent response format wey go make am easy to work wit di response after. Also, we fit want add data from oda sources to make our application better.
 
-Na di problems wey we mention above dis chapter wan solve.
+Di problems we mention up dere na wetin dis chapter dey try solve.
 
 ## Introduction
 
 Dis lesson go cover:
 
-- Wetin function call be and di kain things we fit use am do.
-- How to create function call with Azure OpenAI.
-- How to join function call inside app.
+- Explain wetin function calling be and how e fit dey use.
+- How to create function call wit Azure OpenAI.
+- How to join function call inside application.
 
 ## Learning Goals
 
-By di end of dis lesson, you go sabi:
+By di time we finish dis lesson, you go fit:
 
-- Explain why we dey use function call.
-- Setup Function Call with Azure OpenAI Service.
-- Design better function calls for di kain things wey your app dey do.
+- Explain the reason why we dey use function calling.
+- Setup Function Call wit Azure OpenAI Service.
+- Design better function calls for your app use case.
 
-## Scenario: Make our chatbot better with functions
+## Scenario: Better our chatbot wit functions
 
-For dis lesson, we wan build one feature for our education startup wey go allow users use chatbot to find technical courses. We go recommend courses wey match their skill level, current role, and di technology wey dem dey interested in.
+For dis lesson, we wan build beta feature for our education startup weh go make users take use chatbot find technical courses. We go recommend courses wey fit dia skill level, current role and technology wey dem like.
 
-To finish dis scenario, we go use:
+To do dis scenario, we go use mix of:
 
-- `Azure OpenAI` to create chat experience for di user.
-- `Microsoft Learn Catalog API` to help users find courses based on wetin dem dey ask.
-- `Function Calling` to take di user's query and send am to one function to make di API request.
+- `Azure OpenAI` to create chat way for user.
+- `Microsoft Learn Catalog API` to help users find courses based on wetin user request.
+- `Function Calling` to carry user question come give function make e do API request.
 
-Make we start by looking why we go wan use function call first:
+Make we start, mek we look why we fit use function calling for first place:
 
 ## Why Function Calling
 
-Before function call, di response wey LLM dey give no dey structured and e dey inconsistent. Developers go need write plenty validation code to make sure say dem fit handle di different kain response wey dem dey get. Users no fit get answers like "Wetin be di current weather for Stockholm?". Dis na because di models dey limited to di time wey dem train di data.
+Before function calling, answers wey LLM give no get arrangement or consistency. Developers gats write tori validation code to fit handle each type of answer variation. Users no fit ask question like "Wetin be current weather for Stockholm?" get answer. Na becos model limits to di time data train on.
 
-Function Calling na one feature for Azure OpenAI Service wey dey help solve dis problems:
+Function Calling na feature for Azure OpenAI Service to fix dis problems:
 
-- **Consistent response format**. If we fit control di response format well, e go easy to join di response with other systems later.
-- **External data**. E go allow us use data from other places for di app inside chat.
+- **Consistent response format**. If we fit control response format well, e go easy to join response with oda systems later.
+- **External data**. Fit use data from oda application sources inside chat.
 
-## Show di problem with one scenario
+## Show di problem wit scenario
 
-> We dey recommend make you use di [notebook wey dey here](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) if you wan run di scenario wey dey below. You fit also just read am as we dey try show di problem wey functions fit help solve.
+> We advise make you use di [included notebook](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) if you want run di below scenario. You fit just read along as we dey try show problem weh functions fit help solve.
 
-Make we look di example wey dey show di response format problem:
+Make we see example weh show the response format wahala:
 
-Make we say we wan create one database of student data so we fit suggest di correct course to dem. Below we get two descriptions of students wey dey similar for di data wey dem contain.
+Make we say we wan create database of student data to help give correct course suggestion. Below we get two student description wey nearly be the same for the data inside.
 
-1. Create connection to our Azure OpenAI resource:
+1. Connect to our Azure OpenAI resource:
 
    ```python
    import os
    import json
-   from openai import AzureOpenAI
+   from openai import OpenAI
    from dotenv import load_dotenv
    load_dotenv()
 
-   client = AzureOpenAI(
-   api_key=os.environ['AZURE_OPENAI_API_KEY'],  # this is also the default, it can be omitted
-   api_version = "2023-07-01-preview"
+   # Di Responses API dey served from di Azure OpenAI (Microsoft Foundry) v1
+   # endpoint, so we dey point di OpenAI client for <your-endpoint>/openai/v1/.
+   endpoint = os.environ['AZURE_OPENAI_ENDPOINT']
+   client = OpenAI(
+   api_key=os.environ['AZURE_OPENAI_API_KEY'],
+   base_url=f"{endpoint.rstrip('/')}/openai/v1/",
    )
 
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   Below na Python code wey dey configure our connection to Azure OpenAI where we set `api_type`, `api_base`, `api_version` and `api_key`.
+   Below be some Python code to setup our connection to Azure OpenAI. Because we dey use v1 endpoint, we just need set `api_key` and `base_url` (no `api_version` needed).
 
-1. Create two student descriptions using variables `student_1_description` and `student_2_description`.
+1. Create two student description wen we put for variables `student_1_description` and `student_2_description`.
 
    ```python
    student_1_description="Emily Johnson is a sophomore majoring in computer science at Duke University. She has a 3.7 GPA. Emily is an active member of the university's Chess Club and Debate Team. She hopes to pursue a career in software engineering after graduating."
@@ -78,9 +81,9 @@ Make we say we wan create one database of student data so we fit suggest di corr
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   We wan send di student descriptions above to LLM to parse di data. Dis data fit later dey used for our app and fit dey sent to API or stored inside database.
+   We wan send dis student description to LLM to parse di data. Dis data fit later use inside our app or send go API or store for database.
 
-1. Make we create two prompts wey dey identical where we dey tell di LLM wetin we wan make e extract:
+1. Make we create two same prompts wey we hear LLM wetin info we dey look for:
 
    ```python
    prompt1 = f'''
@@ -110,33 +113,35 @@ Make we say we wan create one database of student data so we fit suggest di corr
    '''
    ```
 
-   Di prompts above dey tell di LLM to extract information and return di response for JSON format.
+   Di prompts above tell LLM to extract info and return response inside JSON format.
 
-1. After we don set di prompts and di connection to Azure OpenAI, we go now send di prompts to di LLM by using `openai.ChatCompletion`. We go store di prompt inside di `messages` variable and assign di role to `user`. Dis na to act like message wey user dey write to chatbot.
+1. After set prompts and connection to Azure OpenAI, we go send prompts to LLM wit `client.responses.create`. We put prompt for `input` and set role to `user`. Dis na to imitate message wey user write give chatbot.
 
    ```python
-   # response from prompt one
-   openai_response1 = client.chat.completions.create(
+   # response wey come from prompt one
+   openai_response1 = client.responses.create(
    model=deployment,
-   messages = [{'role': 'user', 'content': prompt1}]
+   input = [{'role': 'user', 'content': prompt1}],
+   store=False,
    )
-   openai_response1.choices[0].message.content
+   openai_response1.output_text
 
-   # response from prompt two
-   openai_response2 = client.chat.completions.create(
+   # response wey come from prompt two
+   openai_response2 = client.responses.create(
    model=deployment,
-   messages = [{'role': 'user', 'content': prompt2}]
+   input = [{'role': 'user', 'content': prompt2}],
+   store=False,
    )
-   openai_response2.choices[0].message.content
+   openai_response2.output_text
    ```
 
-Now we fit send di two requests to di LLM and check di response wey we receive by finding am like dis `openai_response1['choices'][0]['message']['content']`.
+Now we fit send both requests to LLM and check the response we receive by finding am like `openai_response1.output_text`.
 
-1. Lastly, we fit change di response to JSON format by calling `json.loads`:
+1. Lastly, we fit convert response go JSON format by calling `json.loads`:
 
    ```python
-   # Loading the response as a JSON object
-   json_response1 = json.loads(openai_response1.choices[0].message.content)
+   # Dey load di response as JSON object
+   json_response1 = json.loads(openai_response1.output_text)
    json_response1
    ```
 
@@ -164,59 +169,60 @@ Now we fit send di two requests to di LLM and check di response wey we receive b
    }
    ```
 
-   Even though di prompts dey di same and di descriptions dey similar, we dey see di values for di `Grades` property dey formatted differently, like `3.7` or `3.7 GPA`.
+   Even tho prompts na di same and descriptions almost same, we see the `Grades` property values no format the same way, sometimes e be `3.7` or `3.7 GPA`.
 
-   Dis result na because di LLM dey take unstructured data for di written prompt and e dey return unstructured data too. We need structured format so we go sabi wetin to expect when we dey store or use di data.
+   Dis result na becos LLM just dey take unstructured data form prompt and return unstructured data too. We need structured format so we know wetin dey come when we dey store or use data.
 
-So how we go solve di formatting problem? By using functional calling, we fit make sure say we dey receive structured data back. When we dey use function calling, di LLM no dey actually call or run any function. Instead, we dey create structure for di LLM to follow for di responses. We go then use di structured responses to sabi wetin function to run for our apps.
+So how we go solve di formatting wahala? By using function calling, we fit make sure say we go get structured data back. When you dey use function calling, LLM no dey call nor run functions. But we go create structure for LLM to follow for e response. Then we fit use structured response know wetin function to run for app.
 
 ![function flow](../../../translated_images/pcm/Function-Flow.083875364af4f4bb.webp)
 
-We fit then take wetin di function return and send am back to di LLM. Di LLM go then respond using natural language to answer di user's query.
+We fit take wetin come from function and send am back to LLM. LLM go respond wit natural language answer to user question.
 
-## Use Cases for using function calls
+## Where you fit use function calls
 
-Plenty different use cases dey where function calls fit make your app better like:
+Plenty different ways function calls fit improve your app like:
 
-- **Calling External Tools**. Chatbots dey good for answering questions from users. By using function calling, di chatbots fit use messages from users to complete certain tasks. For example, student fit ask chatbot "Send email to my instructor say I need more help for dis subject". Dis fit make function call to `send_email(to: string, body: string)`
+- **Calling External Tools**. Chatbots dey good for giving answers to user questions. By using function calling, chatbots fit use user message run some tasks. For example, student fit ask chatbot to "Send email to my instructor say I need more help for this subject". E fit call function `send_email(to: string, body: string)`
 
-- **Create API or Database Queries**. Users fit find information using natural language wey go change to formatted query or API request. Example fit be teacher wey dey ask "Who be di students wey finish di last assignment" wey fit call function wey dem name `get_completed(student_name: string, assignment: int, current_status: string)`
+- **Create API or Database Queries**. Users fit find info using natural language wey go turn to formatted query or API request. Example na teacher wey talk "Who be the students wey complete last assignment?" e fit call function `get_completed(student_name: string, assignment: int, current_status: string)`
 
-- **Creating Structured Data**. Users fit take block of text or CSV and use di LLM to extract di important information from am. For example, student fit change Wikipedia article about peace agreements to create AI flashcards. Dis fit happen by using function wey dem call `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`
+- **Creating Structured Data**. Users fit carry text or CSV and use LLM to extract important info. Example na student fit convert Wikipedia article about peace agreements to make AI flashcards. E fit do dis with function `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`
 
 ## How to Create Your First Function Call
 
-Di process to create function call get 3 main steps:
+Di way to create function call get 3 main steps:
 
-1. **Call** di Chat Completions API with list of your functions and user message.
-2. **Read** di model response to do action like run function or API Call.
-3. **Make** another call to Chat Completions API with di response from your function to use di information to create response for di user.
+1. **Call** Responses API wit list of your functions (tools) and user message.
+2. **Read** model response to know to perform action like run function or API Call.
+3. **Make** another call to Responses API wit response from your function to use that info create response to user.
 
 ![LLM Flow](../../../translated_images/pcm/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### Step 1 - create messages
 
-Di first step na to create user message. Dis fit dey assigned dynamically by taking di value of text input or you fit assign value here. If dis na your first time to work with Chat Completions API, we need to define di `role` and di `content` of di message.
+Di first step na create user message. You fit assign am dynamically by taking text input or assign am here. If dis your first time to work wit Responses API, we gats define `role` and `content` of message.
 
-Di `role` fit be `system` (create rules), `assistant` (di model) or `user` (di end-user). For function calling, we go assign am as `user` and example question.
+Di `role` fit be `system` (create rules), `assistant` (the model) or `user` (end-user). For function calling, we go assign am `user` wit example question.
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-By assigning different roles, e dey clear to di LLM if na di system dey talk or di user, wey dey help build conversation history wey di LLM fit use.
+By assigning different roles, e clear for LLM whether na system dey talk or user, e dey help build conversation history wey LLM fit build upon.
 
 ### Step 2 - create functions
 
-Next, we go define one function and di parameters of di function. We go use just one function here wey dem call `search_courses` but you fit create plenty functions.
+Next, we go define function and e parameters. We go use one function called `search_courses` but you fit create many functions.
 
-> **Important** : Functions dey included for di system message to di LLM and go dey count for di amount of tokens wey you get.
+> **Important** : Functions dey inside system message for LLM and dem go use tokens from your available tokens.
 
-Below, we dey create di functions as array of items. Each item na one function and e get properties `name`, `description` and `parameters`:
+Below, we create functions as array with items. Each item na tool for flat Responses API format, with properties `type`, `name`, `description` and `parameters`:
 
 ```python
 functions = [
    {
+      "type":"function",
       "name":"search_courses",
       "description":"Retrieves courses from the search index based on the parameters provided",
       "parameters":{
@@ -243,75 +249,76 @@ functions = [
 ]
 ```
 
-Make we explain each function instance more:
+Make we explain each function instance better below:
 
-- `name` - Di name of di function wey we wan make e dey called.
-- `description` - Dis na di description of how di function dey work. E dey important to dey clear and specific here.
-- `parameters` - List of values and format wey you wan make di model produce for di response. Di parameters array get items wey get di following properties:
-  1.  `type` - Di data type wey di properties go dey stored in.
-  1.  `properties` - List of di specific values wey di model go use for di response
-      1. `name` - Di key na di name of di property wey di model go use for di formatted response, like `product`.
-      1. `type` - Di data type of dis property, like `string`.
+- `name` - Di name of function we want make e call.
+- `description` - Description of how function dey work. E good to clear and specific here.
+- `parameters` - List of values and format wey you want model make e produce for response. Parameters get items with:
+  1.  `type` - Data type where property go store inside.
+  1.  `properties` - List of specific values model go use for response
+      1. `name` - Key na name of property wey model go use for formatted response for example, `product`.
+      1. `type` - Data type of dis property, example, `string`.
       1. `description` - Description of di specific property.
 
-E get optional property `required` - required property for di function call to complete.
+E get optional property `required` - property wey user must provide for function call complete.
 
-### Step 3 - Make di function call
+### Step 3 - Make function call
 
-After we don define function, we go now need include am for di call to di Chat Completion API. We go do dis by adding `functions` to di request. For dis case `functions=functions`.
+After define function, now we gats put am for call to Responses API. We do am by add `tools` to request. For here na `tools=functions`.
 
-E get option to set `function_call` to `auto`. Dis mean we go allow di LLM decide which function e go call based on di user message instead of assigning am ourselves.
+You fit also set `tool_choice` to `auto`. Mean say we go let LLM decide which function to call base on user message no be we go assign am ourselves.
 
-Here na code below where we dey call `ChatCompletion.create`, note how we set `functions=functions` and `function_call="auto"` and allow di LLM choose when to call di functions we provide:
+Code dey below weh we call `client.responses.create`, notice we set `tools=functions` and `tool_choice="auto"` to give LLM chance to choose when to call functions we give am:
 
 ```python
-response = client.chat.completions.create(model=deployment,
-                                        messages=messages,
-                                        functions=functions,
-                                        function_call="auto")
+response = client.responses.create(model=deployment,
+                                        input=messages,
+                                        tools=functions,
+                                        tool_choice="auto",
+                                        store=False)
 
-print(response.choices[0].message)
+print(response.output)
 ```
 
-Di response wey dey come back now go look like dis:
+The response we get now get `function_call` item inside `response.output` like dis:
 
 ```json
 {
-  "role": "assistant",
-  "function_call": {
-    "name": "search_courses",
-    "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
-  }
+  "type": "function_call",
+  "name": "search_courses",
+  "call_id": "call_abc123",
+  "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
 }
 ```
 
-Here we dey see how di function `search_courses` dey called and di arguments wey e use, as e dey listed for di `arguments` property for di JSON response.
+Here we fit see how function `search_courses` call and wetin e arguments be as e show inside `arguments` property for JSON response.
 
-Di conclusion na say di LLM fit find di data to match di arguments of di function as e dey extract am from di value wey dey provided to di `messages` parameter for di chat completion call. Below na reminder of di `messages` value:
+The conclusion be say LLM fit find data to fit function arguments as e dey extract am from value wey we put for `input` parameter of Responses API call. Below na reminder for `messages` value:
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-As you dey see, `student`, `Azure` and `beginner` dey extracted from `messages` and set as input to di function. To use functions like dis na better way to extract information from prompt but also to provide structure to di LLM and get reusable functionality.
+As you fit see, `student`, `Azure` and `beginner` comot from `messages` and dem use as input for function. To use functions dis way na beta way to extract info from prompt and also provide structure for LLM to make reusable function.
 
 Next, we go see how we fit use dis for our app.
 
-## How to Join Function Calls Inside App
+## Join Function Calls into Application
 
-After we don test di formatted response from di LLM, we fit now join dis inside app.
+After we don test formatted response from LLM, now we fit join am inside application.
 
 ### Manage di flow
 
-To join dis inside our app, make we take di following steps:
+To join am for our application, make we take dis steps:
 
-1. First, make we call di OpenAI services and store di message inside variable wey dem call `response_message`.
+1. First, make call to OpenAI services and extract function call items from `response.output`.
 
    ```python
-   response_message = response.choices[0].message
+   response_items = response.output
+   tool_calls = [item for item in response_items if item.type == "function_call"]
    ```
 
-1. Now we go define di function wey go call di Microsoft Learn API to get list of courses:
+1. Now we go define function wey go call Microsoft Learn API to get list of courses:
 
    ```python
    import requests
@@ -333,65 +340,57 @@ To join dis inside our app, make we take di following steps:
      return str(results)
    ```
 
-   Note how we dey now create real Python function wey match di function names wey dey di `functions` variable. We dey also make real external API calls to get di data we need. For dis case, we dey go against di Microsoft Learn API to search for training modules.
+   Notice how we create real Python function wey correspond to function names for `functions` variable. We also dey make real external API calls to fetch data. For here, we dey use Microsoft Learn API to search training modules.
 
-Ok, so we don create `functions` variables and di Python function wey match am, how we go tell di LLM how to match di two together so our Python function go dey called?
+Ok, so we create `functions` variable and Python function, how we talk to LLM to map dem together so Python function call go happen?
 
-1. To see if we need call Python function, we need check di LLM response and see if `function_call` dey part of am and call di function wey e point out. Here na how you fit make di check below:
+1. To know if we gats call Python function, we gats check LLM response if `function_call` dey inside and run function wey e point out. See how to do dis check below:
 
    ```python
-   # Check if the model wants to call a function
-   if response_message.function_call.name:
-    print("Recommended Function call:")
-    print(response_message.function_call.name)
-    print()
+   # Check if di model wan call function
+   if tool_calls:
+    for tool_call in tool_calls:
+     print("Recommended Function call:")
+     print(tool_call.name)
+     print()
 
-    # Call the function.
-    function_name = response_message.function_call.name
+     # Call di function.
+     function_name = tool_call.name
 
-    available_functions = {
-            "search_courses": search_courses,
-    }
-    function_to_call = available_functions[function_name]
+     available_functions = {
+             "search_courses": search_courses,
+     }
+     function_to_call = available_functions[function_name]
 
-    function_args = json.loads(response_message.function_call.arguments)
-    function_response = function_to_call(**function_args)
+     function_args = json.loads(tool_call.arguments)
+     function_response = function_to_call(**function_args)
 
-    print("Output of function call:")
-    print(function_response)
-    print(type(function_response))
+     print("Output of function call:")
+     print(function_response)
+     print(type(function_response))
 
-
-    # Add the assistant response and function response to the messages
-    messages.append( # adding assistant response to messages
-        {
-            "role": response_message.role,
-            "function_call": {
-                "name": function_name,
-                "arguments": response_message.function_call.arguments,
-            },
-            "content": None
-        }
-    )
-    messages.append( # adding function response to messages
-        {
-            "role": "function",
-            "name": function_name,
-            "content":function_response,
-        }
-    )
+     # Add di function call plus im result back to di conversation.
+     # Di model function_call item suppose dey put before e output.
+     messages.append(tool_call)  # di assistant function_call item
+     messages.append( # di function result
+         {
+             "type": "function_call_output",
+             "call_id": tool_call.call_id,
+             "output": function_response,
+         }
+     )
    ```
 
-   Dis three lines, dey make sure say we extract di function name, di arguments and make di call:
+   These three lines dey make sure we extract function name, arguments and run function:
 
    ```python
    function_to_call = available_functions[function_name]
 
-   function_args = json.loads(response_message.function_call.arguments)
+   function_args = json.loads(tool_call.arguments)
    function_response = function_to_call(**function_args)
    ```
 
-   Below na di output from running our code:
+   Below be output from our code run:
 
    **Output**
 
@@ -412,54 +411,60 @@ Ok, so we don create `functions` variables and di Python function wey match am, 
    <class 'str'>
    ```
 
-1. Now we go send di updated message, `messages` to di LLM so we fit receive natural language response instead of API JSON formatted response.
+1. Now we go send updated message, `messages` go LLM so we fit get natural language response no be API JSON formatted response.
 
    ```python
    print("Messages in next request:")
    print(messages)
    print()
 
-   second_response = client.chat.completions.create(
-      messages=messages,
+   second_response = client.responses.create(
+      input=messages,
       model=deployment,
-      function_call="auto",
-      functions=functions,
-      temperature=0
-         )  # get a new response from GPT where it can see the function response
+      tool_choice="auto",
+      tools=functions,
+      temperature=0,
+      store=False,
+         )  # get new response from di model wey e fit see di function response
 
 
-   print(second_response.choices[0].message)
+   print(second_response.output_text)
    ```
 
    **Output**
 
-   ```python
-   {
-     "role": "assistant",
-     "content": "I found some good courses for beginner students to learn Azure:\n\n1. [Describe concepts of cryptography] (https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)\n2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)\n3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)\n4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)\n5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)\n\nYou can click on the links to access the courses."
-   }
+   ```text
+   I found some good courses for beginner students to learn Azure:
 
+   1. [Describe concepts of cryptography](https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)
+   2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)
+   3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)
+   4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)
+   5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)
+
+   You can click on the links to access the courses.
    ```
 
 ## Assignment
 
-To continue your learning of Azure OpenAI Function Calling you fit build:
+To continue your learning about Azure OpenAI Function Calling you fit build:
 
-- Add more parameters for di function wey fit help learners find more courses.
-- Create another function call wey go take more information from di learner like di language wey dem dey speak.
-- Make error handling for when di function call and/or API call no return any correct courses
+- More parameters for function wey fit help learners find more courses.
 
-Hint: Check di [Learn API reference documentation](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) page to see how and where dis data dey available.
+- Create another function call wey go take more information from the learner like their native language
+- Create error handling wen the function call and/or API call no return any suitable courses
 
-## Good Job! Continue di Journey
+Hint: Follow the [Learn API reference documentation](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) page to see how and where dis data dey available.
 
-After you finish dis lesson, go check our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue to sabi more about Generative AI!
+## Great Work! Continue the Journey
 
-Go Lesson 12, where we go talk about how to [design UX for AI applications](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+After you finish dis lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue to level up your Generative AI knowledge!
+
+Head go Lesson 12, wey we go look how to [design UX for AI applications](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:  
-Dis dokyument don use AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator) do di translation. Even as we dey try make am accurate, abeg make you sabi say machine translation fit get mistake or no dey correct well. Di original dokyument wey dey for im native language na di main source wey you go trust. For important information, e better make professional human translation dey use. We no go fit take blame for any misunderstanding or wrong interpretation wey fit happen because you use dis translation.
+**Disclaimer**:
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even tho we dey try make am correct, abeg make you know say automated translation fit get errors or mistakes. Di original document for dia own language na im be di correct source. For important info, make person wey sabi human translation do am. We no go responsible for any misunderstanding or wrong understanding wey fit happen because of dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

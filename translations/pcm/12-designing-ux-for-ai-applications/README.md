@@ -2,15 +2,15 @@
 
 [![Designing UX for AI Applications](../../../translated_images/pcm/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
-> _(Click di image wey dey up to watch di video for dis lesson)_
+> _(Click di bild we dey above to watch video for dis lesson)_
 
-Di way wey user go take use app na very important part of how you go build am. Users suppose fit use di app well well to do wetin dem wan do. E no just dey about efficiency, you go also design di app make e dey easy for everybody to use, make e _accessible_. Dis chapter go focus on dis area so you fit design app wey people go wan use and fit use.
+User experience na one very important tin for building apps. Users need make dem fit use your app well to do things. To dey efficient na one mata but you sef need design apps so dat everybody fit use am, make e dey _accessible_. Dis chapter go focus on dis area so you go fit design app wey people fit and wan use.
 
 ## Introduction
 
-User experience na di way person dey interact with and use one product or service, whether na system, tool, or design. When you dey develop AI applications, developers no dey only focus on how di user experience go dey effective, dem dey also think about ethics. For dis lesson, we go talk about how to build Artificial Intelligence (AI) applications wey go meet user needs.
+User experience na how person take interact wit and use one particular product or service like system, tool, or design. When people dey make AI applications, dem no go just focus to make user experience effective but make e sef be ethical. For dis lesson, we go talk how to build Artificial Intelligence (AI) applications wey dey meet user needs.
 
-Dis lesson go cover di following:
+Dis lesson go cover dis kain tins:
 
 - Introduction to User Experience and Understanding User Needs
 - Designing AI Applications for Trust and Transparency
@@ -18,108 +18,110 @@ Dis lesson go cover di following:
 
 ## Learning goals
 
-After you don finish dis lesson, you go sabi:
+After you don take dis lesson, you go fit:
 
-- How to build AI applications wey go meet di user needs.
-- How to design AI applications wey go promote trust and collaboration.
+- Understand how to build AI applications wey go meet user needs.
+- Design AI applications wey go promote trust and collaboration.
 
 ### Prerequisite
 
-Take small time read more about [user experience and design thinking.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
+Take some time read more about [user experience and design thinking.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
 
 ## Introduction to User Experience and Understanding User Needs
 
-For our fictitious education startup, we get two main users, teachers and students. Each of dem get di kind needs wey dem want. User-centered design dey prioritize di user to make sure say di product go dey relevant and useful for di people wey e dey meant for.
+For our fake education startup, we get two main users, teachers and students. Each user get their own special needs. User-centered design na to put user first make sure say products dey relevant and good for the people wey dem make am for.
 
-Di application suppose **useful, reliable, accessible and pleasant** to give better user experience.
+The application suppose be **useful, reliable, accessible and pleasant** to give good user experience.
 
 ### Usability
 
-To dey useful mean say di application get di kind functionality wey match wetin e suppose do, like automating grading process or generating flashcards for revision. For example, app wey dey automate grading suppose fit assign scores to students' work well well based on di criteria wey dem don set. Di same thing go for app wey dey generate flashcards; e suppose fit create relevant and diverse questions based on di data wey e get.
+To be useful mean say the app get work wey match di purpose, like to automate grading process or to generate flashcards for revision. One app wey dey automate grading suppose fit assign correct scores to students work based on criteria wey dem set before. Like-wise, one app wey dey generate revision flashcards suppose fit create correct and different questions from the data.
 
 ### Reliability
 
-To dey reliable mean say di application go dey do wetin e suppose do well well without wahala. But AI, just like humans, no dey perfect and e fit make mistake. Di applications fit get errors or situations wey go need human intervention or correction. How you go handle errors? For di last part of dis lesson, we go talk about how AI systems and applications dey designed for collaboration and feedback.
+To be reliable mean say the app fit do e work steady steady without wahala. But, AI be like humans -- e no perfect and fit make mistake. The apps fit get error or come face wahala wey need human hand to fix am. How you go take handle errors? For last part of dis lesson, we go tok how AI systems and applications dey designed for collaboration and feedback.
 
 ### Accessibility
 
-To dey accessible mean say di user experience go reach people wey get different abilities, including people wey get disabilities, so nobody go dey left out. If you follow accessibility guidelines and principles, AI solutions go dey more inclusive, usable, and useful for everybody.
+To be accessible mean say you go extend the user experience to users wey get different abilities, including people wey get disabilities, make sure say no pesin go left out. If you follow accessibility rules and principles, AI go dey more inclusive, easy to use, and good for everybody.
 
 ### Pleasant
 
-To dey pleasant mean say di application go dey enjoyable to use. If di user experience sweet, e go make di user wan come back to use di app again and e fit even increase business revenue.
+To be pleasant mean say the app go sweet to use. One better user experience fit make user want come back again and e fit increase business money.
 
-![image wey dey show UX considerations for AI](../../../translated_images/pcm/uxinai.d5b4ed690f5cefff.webp)
+![image illustrating UX considerations in AI](../../../translated_images/pcm/uxinai.d5b4ed690f5cefff.webp)
 
-No be every problem AI fit solve. AI dey help improve di user experience, whether na to automate manual tasks or personalize user experiences.
+No be all problem dem fit solve with AI. AI dey come to support your user experience, whether na to automate manual work, or to personalize user experiences.
 
 ## Designing AI Applications for Trust and Transparency
 
-To build trust na very important thing when you dey design AI applications. Trust dey make user sure say di application go do di work well, deliver results consistently, and di results go be wetin di user need. Di risk for dis area na mistrust and overtrust. Mistrust dey happen when user no get trust for di AI system, e go make di user reject di application. Overtrust dey happen when user dey overestimate wetin di AI system fit do, e go make di user trust di AI system too much. For example, automated grading system fit make teacher no check di papers again to confirm say di grading system dey work well. Dis fit lead to unfair or wrong grades for di students or missed opportunities for feedback and improvement.
+To build trust na very important tin when you dey design AI applications. Trust mean say user get confidence say the app go do the work, go dey consistent with results and na di kind result wey user need. One risk for dis area na mistrust and overtrust. Mistrust na wen user no trust AI system at all, e fit make user reject your app. Overtrust na wen user overrate wetin AI system fit do, e fit make user trust AI system too much. Like automated grading system if user overtrust, teacher fit no want check some papers to see if grading system work well. Dis fit cause wrong or unfair grades for students or lose chance for feedback and improvement.
 
-Two ways wey you fit make sure say trust dey di center of di design na explainability and control.
+Two ways to make sure say trust dey important for design be explainability and control.
 
 ### Explainability
 
-When AI dey help make decisions like teaching future generations, e dey very important make teachers and parents understand how AI dey make di decisions. Dis na explainability - to understand how AI applications dey make decisions. To design for explainability, you go add details wey go show how AI take reach di output. People suppose sabi say na AI generate di output, no be human. For example, instead of saying "Start chatting with your tutor now," you fit say "Use AI tutor wey dey adapt to your needs and go help you learn at your pace."
+When AI dey help decision making like to teach children, e important make teachers and parents understand how AI make decisions. Dis na explainability - to understand how AI applications make decision. Designing for explainability mean to add details wey show how AI land for the answer. Audience go sabi say na AI generate the output no be human. Example, instead of say "Start chatting with your tutor now" you fit talk "Use AI tutor wey dey adjust to your needs and help you learn at your own pace."
 
-![app landing page wey dey show explainability for AI applications](../../../translated_images/pcm/explanability-in-ai.134426a96b498fbf.webp)
+![an app landing page with clear illustration of explainability in AI applications](../../../translated_images/pcm/explanability-in-ai.134426a96b498fbf.webp)
 
-Another example na how AI dey use user and personal data. For example, user wey be student fit get limitations based on di persona. Di AI fit no fit reveal answers to questions but e fit help guide di user to think how dem go solve di problem.
+Another example na how AI dey use user and personal data. For example, one user wey get persona student fit get limitation based on the persona. AI no fit just give answer to every question but fit guide the user how to reason the problem.
 
-![AI dey reply questions based on persona](../../../translated_images/pcm/solving-questions.b7dea1604de0cbd2.webp)
+![AI replying to questions based on persona](../../../translated_images/pcm/solving-questions.b7dea1604de0cbd2.webp)
 
-One last important part of explainability na to simplify di explanations. Students and teachers no be AI experts, so di explanation of wetin di application fit do or no fit do suppose dey simple and easy to understand.
+One last penting part for explainability na to make explanation simple. Students and teachers no be AI experts, so explanation of wetin app fit do or no fit do suppose dey simple and easy to understand.
 
 ![simplified explanations on AI capabilities](../../../translated_images/pcm/simplified-explanations.4679508a406c3621.webp)
 
 ### Control
 
-Generative AI dey create collaboration between AI and di user, where user fit modify prompts to get different results. Plus, after output don generate, users suppose fit modify di results to give dem sense of control. For example, when you dey use Bing, you fit adjust your prompt based on format, tone, and length. Plus, you fit add changes to di output and modify am as e dey show below:
+Generative AI dey create collaboration between AI and user, where user fit change prompts to get different results. After output don come, users suppose fit change am to get control. Like when you dey use Microsoft Copilot (wey dem bin dey call Bing Chat), you fit adjust your prompt based on format, tone and length. You fit also add changes to output and modify am like dis:
 
-![Bing search results wey get options to modify di prompt and output](../../../translated_images/pcm/bing1.293ae8527dbe2789.webp)
+![Bing search results with options to modify the prompt and output](../../../translated_images/pcm/bing1.293ae8527dbe2789.webp)
 
-Another feature for Bing wey dey give user control na di ability to opt in and opt out of di data wey AI dey use. For school application, student fit wan use dia notes plus di teachers' resources as revision material.
+Another feature for Microsoft Copilot wey give user control na to fit opt in or opt out of the data wey AI dey use. For school app, student fit want use their notes plus teachers resources as revision materials.
 
-![Bing search results wey get options to modify di prompt and output](../../../translated_images/pcm/bing2.309f4845528a88c2.webp)
+![Bing search results with options to modify the prompt and output](../../../translated_images/pcm/bing2.309f4845528a88c2.webp)
 
-> When you dey design AI applications, you go need intentionality to make sure say users no go overtrust di system or get unrealistic expectations of wetin e fit do. One way to do dis na to create small friction between di prompts and di results. Remind di user say na AI dey work, no be human.
+> When you dey design AI applications, make sure say you dey intentional to stop users from overtrust, no to set unrealistic hopes for wetin e fit do. One way to do this na to create some small wahala between prompts and results. Remind user say dis na AI no be person.
 
 ## Designing AI Applications for Collaboration and Feedback
 
-As we don talk before, generative AI dey create collaboration between di user and AI. Most times, di user go input prompt and AI go generate output. But wetin go happen if di output no correct? How di application go handle errors if dem happen? Di AI go blame di user or e go take time explain di error?
+Like we talk before, generative AI dey create collaboration between user and AI. Most times, user go put prompt and AI go give output. If output no correct, how app go handle errors? AI go blame user or e go try explain error?
 
-AI applications suppose dey built to receive and give feedback. Dis no just dey help di AI system improve, e dey also build trust with di users. Feedback loop suppose dey di design, example fit be simple thumbs up or down for di output.
+AI applications suppose dey built to receive and give feedback. Dis no only help AI system improve but go build trust with users. Feedback loop suppose dey for design, fit be simple thumbs up or down for output.
 
-Another way to handle dis na to clearly talk di capabilities and limitations of di system. If user make mistake request something wey dey beyond wetin di AI fit do, di application suppose get way to handle am, like di example wey dey below.
+Another way to handle dis na to tok clearly about capabilities and limits of system. If user ask for something wey pass AI capability, suppose get way to handle am like dis below.
 
 ![Giving feedback and handling errors](../../../translated_images/pcm/feedback-loops.7955c134429a9466.webp)
 
-System errors dey common for applications where user fit need help with information wey dey outside di scope of di AI or di application fit get limit on how many questions/subjects user fit generate summaries. For example, AI application wey dem train with data for limited subjects like History and Math fit no fit handle questions about Geography. To solve dis, di AI system fit give response like: "Sorry, our product don train with data for di following subjects....., I no fit respond to di question wey you ask."
+System errors dey happen for apps where user fit need info wey no dey for AI or app get limit on how many questions or subjects user fit generate summaries from. Like for example, AI app wey training data only get History and Math no fit answer Geography questions. To solve dis, AI system fit talk say: "Sorry, our product don train on these subjects....., I no fit answer your question."
 
-AI applications no dey perfect, so dem fit make mistakes. When you dey design your applications, you go need create room for feedback from users and error handling in way wey dey simple and easy to understand.
+AI apps no perfect, so dem go make mistakes. When you dey design your apps, make sure say you create space for user feedback and easy way to handle errors wey easy to explain.
 
 ## Assignment
 
-Take any AI apps wey you don build before, think about how you fit implement di steps wey dey below for your app:
+Take any AI apps wey you don build so far, think about how you fit do below steps for your app:
 
-- **Pleasant:** Think about how you fit make your app more pleasant. You dey add explanations everywhere? You dey encourage di user to explore? How you dey write your error messages?
+- **Pleasant:** Think how you fit make your app more pleasant. You dey add explanations everywhere? You dey encourage user to explore? How you dey talk your error messages?
 
-- **Usability:** If you dey build web app, make sure say di app fit work with both mouse and keyboard.
+- **Usability:** If you dey build web app. Make sure say both mouse and keyboard fit navigate your app.
 
-- **Trust and transparency:** No trust di AI completely and di output wey e dey give, think about how you fit add human to di process to verify di output. Also, think and implement other ways to achieve trust and transparency.
+- **Trust and transparency:** No just trust AI and output fully, think how you go fit add human to check output. Also think about other ways to get trust and transparency.
 
-- **Control:** Give di user control of di data wey dem dey provide to di application. Implement way wey user fit opt-in and opt-out of data collection for di AI application.
+- **Control:** Make user get control of data wey dem give app. Make way for user to opt-in or opt-out of data collection in AI app.
+
+<!-- ## [Post-lecture quiz](../../../12-designing-ux-for-ai-applications/quiz-url) -->
 
 ## Continue Your Learning!
 
-After you don finish dis lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue to sabi more about Generative AI!
+After you finish dis lesson, check our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue to sabi more about Generative AI!
 
-Go Lesson 13, where we go talk about how to [secure AI applications](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Go Lesson 13 next, where we go see how to [secure AI applications](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:  
-Dis dokyument don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even as we dey try make am accurate, abeg make you sabi say machine translation fit get mistake or no dey correct well. Di original dokyument for im native language na di main source wey you go trust. For important mata, na beta make you use professional human translation. We no go fit take blame for any misunderstanding or wrong interpretation wey fit happen because you use dis translation.
+**Disclaimer**:
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even tho we dey try make am correct, abeg make you know say automated translation fit get errors or mistakes. Di original document for dia own language na im be di correct source. For important info, make person wey sabi human translation do am. We no go responsible for any misunderstanding or wrong understanding wey fit happen because of dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

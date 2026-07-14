@@ -1,317 +1,320 @@
 # AGENTS.md
 
-## Projekti ülevaade
+## Projekti Ülevaade
 
-See repositoorium sisaldab põhjalikku 21-õppetunnist koosnevat õppekava, mis õpetab generatiivse tehisintellekti aluseid ja rakenduste arendamist. Kursus on mõeldud algajatele ning hõlmab kõike alates põhimõistetest kuni tootmiskõlblike rakenduste loomiseni.
+See hoidla sisaldab põhjalikku 21-peatükilist õppekava, mis õpetab Generatiivse tehisintellekti põhitõdesid ja rakenduste arendamist. Kursus on mõeldud algajatele ja käsitleb kõike alates põhimõistetest kuni tootmisvalmis rakenduste ehitamiseni.
 
-**Peamised tehnoloogiad:**
-- Python 3.9+ koos järgmiste teekidega: `openai`, `python-dotenv`, `tiktoken`, `azure-ai-inference`, `pandas`, `numpy`, `matplotlib`
-- TypeScript/JavaScript koos Node.js ja teekidega: `@azure/openai`, `@azure-rest/ai-inference`, `openai`
-- Azure OpenAI Service, OpenAI API ja GitHub Models
-- Jupyter Notebooks interaktiivseks õppimiseks
-- Dev Containers ühtlase arenduskeskkonna tagamiseks
+**Peamised Tehnoloogiad:**
+- Python 3.9+ koos teekidega: `openai`, `python-dotenv`, `tiktoken`, `azure-ai-inference`, `pandas`, `numpy`, `matplotlib`
+- TypeScript/JavaScript Node.js-ga ja teekidega: `openai` (Azure OpenAI läbi v1 lõpp-punkti + Responses API), `@azure-rest/ai-inference` (Microsoft Foundry mudelid)
+- Azure OpenAI teenus, OpenAI API ja Microsoft Foundry mudelid (GitHub Models lõpetab juuli 2026 lõpus)
+- Jupyteri sülearvutid interaktiivseks õppimiseks
+- Dev Containerid ühtlase arenduskeskkonna tagamiseks
 
-**Repositooriumi struktuur:**
-- 21 nummerdatud õppetunni kausta (00-21), mis sisaldavad README-sid, koodinäiteid ja ülesandeid
-- Mitu teostust: Python, TypeScript ja mõnikord .NET näited
-- Tõlgete kaust, mis sisaldab üle 40 keeleversiooni
-- Keskne konfiguratsioon `.env` faili kaudu (kasutage mallina `.env.copy`)
+**Hoidla Struktuur:**
+- 21 numbriga tähistatud peatüki kataloogi (00-21), sisaldades READMEsid, koodinäiteid ja ülesandeid
+- Mitmed rakendused: Python, TypeScript ja vahel .NET näited
+- Tõlketööd kaustas 40+ keeles
+- Keskne konfiguratsioon `.env` faili kaudu (kasuta `.env.copy` mallina)
 
-## Seadistamise käsud
+## Seadistuskäsud
 
-### Esmane repositooriumi seadistamine
+### Hoidla Alglaadimine
 
 ```bash
-# Clone the repository
+# Klooni hoidla
 git clone https://github.com/microsoft/generative-ai-for-beginners.git
 cd generative-ai-for-beginners
 
-# Copy environment template
+# Kopeeri keskkonna mall
 cp .env.copy .env
-# Edit .env with your API keys and endpoints
+# Muuda .env oma API võtmete ja otsapunktidega
 ```
 
-### Python keskkonna seadistamine
+### Python Keskkonna Seadistamine
 
 ```bash
-# Create virtual environment
+# Loo virtuaalne keskkond
 python3 -m venv venv
 
-# Activate virtual environment
-# On macOS/Linux:
+# Aktiveeri virtuaalne keskkond
+# macOS/Linuxil:
 source venv/bin/activate
-# On Windows:
+# Windowsil:
 venv\Scripts\activate
 
-# Install dependencies
+# Paigalda sõltuvused
 pip install -r requirements.txt
 ```
 
-### Node.js/TypeScript seadistamine
+### Node.js/TypeScript Seadistamine
 
 ```bash
-# Install root-level dependencies (for documentation tooling)
+# Paigalda juurtaseme sõltuvused (dokumentatsiooni tööriistade jaoks)
 npm install
 
-# For individual lesson TypeScript examples, navigate to the specific lesson:
+# Individuaalsete õppetükkide TypeScripti näidiste jaoks liigu konkreetse õppetüki juurde:
 cd 06-text-generation-apps/typescript/recipe-app
 npm install
 ```
 
-### Dev Containeri seadistamine (soovitatav)
+### Dev Containeri Seadistamine (Soovitatav)
 
-Repositoorium sisaldab `.devcontainer` konfiguratsiooni GitHub Codespaces'i või VS Code Dev Containers'i jaoks:
+Hoidla sisaldab `.devcontainer` konfiguratsiooni GitHub Codespaces või VS Code Dev Containerite jaoks:
 
-1. Avage repositoorium GitHub Codespaces'is või VS Code'is Dev Containers laiendiga
-2. Dev Container teeb automaatselt järgmist:
-   - Installib Python'i sõltuvused failist `requirements.txt`
-   - Käivitab post-loome skripti (`.devcontainer/post-create.sh`)
-   - Seadistab Jupyter kernel'i
+1. Ava hoidla GitHub Codespaces või VS Code Dev Containers laiendusega
+2. Dev Container teeb automaatselt:
+   - Paigaldab Python sõltuvused `requirements.txt` failist
+   - Käivitab post-create skripti (`.devcontainer/post-create.sh`)
+   - Seadistab Jupyteri kernel’i
 
-## Arendustöövoog
+## Arendusvoog
 
 ### Keskkonnamuutujad
 
-Kõik õppetunnid, mis vajavad API ligipääsu, kasutavad `.env` failis määratletud keskkonnamuutujaid:
+Kõik peatükid, mis vajavad API ligipääsu, kasutavad `.env` failis määratletud keskkonnamuutujaid:
 
 - `OPENAI_API_KEY` - OpenAI API jaoks
-- `AZURE_OPENAI_API_KEY` - Azure OpenAI Service jaoks
-- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI lõpp-punkti URL
-- `AZURE_OPENAI_DEPLOYMENT` - Chat completion mudeli juurutamise nimi
-- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Embeddings mudeli juurutamise nimi
-- `AZURE_OPENAI_API_VERSION` - API versioon (vaikimisi: `2024-02-01`)
+- `AZURE_OPENAI_API_KEY` - Azure OpenAI jaoks Microsoft Foundry’s (Azure OpenAI teenus on nüüd osa Microsoft Foundry'st: https://ai.azure.com)
+- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI lõpp-punkti URL (Foundry ressursi lõpp-punkt)
+- `AZURE_OPENAI_DEPLOYMENT` - Chat completion mudeli juurutuse nimi
+- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Embeddings mudeli juurutuse nimi
+- `AZURE_OPENAI_API_VERSION` - API versioon (vaikimisi: `2024-10-21`)
 - `HUGGING_FACE_API_KEY` - Hugging Face mudelite jaoks
-- `GITHUB_TOKEN` - GitHub Models jaoks
+- `AZURE_INFERENCE_ENDPOINT` - Microsoft Foundry mudelite lõpp-punkt (mitme pakkuja mudelikataloog)
+- `AZURE_INFERENCE_CREDENTIAL` - Microsoft Foundry mudelite API võti (asendab lõppeva `GITHUB_TOKEN`)
 
-### Python näidete käivitamine
+### Python Näidete Käivitamine
 
 ```bash
-# Navigate to lesson directory
+# Liigu õppetüki kataloogi
 cd 06-text-generation-apps/python
 
-# Run a Python script
+# Käivita Pythoni skript
 python aoai-app.py
 ```
 
-### TypeScript näidete käivitamine
+### TypeScript Näidete Käivitamine
 
 ```bash
-# Navigate to TypeScript app directory
+# Liigu TypeScript rakenduse kausta
 cd 06-text-generation-apps/typescript/recipe-app
 
-# Build the TypeScript code
+# Koosta TypeScript kood
 npm run build
 
-# Run the application
+# Käivita rakendus
 npm start
 ```
 
-### Jupyter Notebookide kasutamine
+### Jupyteri Sülearvutite Käivitamine
 
 ```bash
-# Start Jupyter in the repository root
+# Käivita Jupyter hoidla juurest
 jupyter notebook
 
-# Or use VS Code with Jupyter extension
+# Või kasuta VS Code'i koos Jupyteri laiendiga
 ```
 
-### Erinevate õppetüüpidega töötamine
+### Töö erinevate peatükkide tüüpidega
 
-- **"Learn" õppetunnid**: Keskenduvad README.md dokumentatsioonile ja kontseptsioonidele
-- **"Build" õppetunnid**: Sisaldavad töötavaid koodinäiteid Pythonis ja TypeScriptis
-- Igal õppetunnil on README.md, mis sisaldab teooriat, koodi ülevaateid ja linke videomaterjalidele
+- **"Õpi" peatükid**: Keskenduvad README.md dokumentatsioonile ja mõistetele
+- **"Ehita" peatükid**: Sisaldavad töötavaid koodinäiteid Pythonis ja TypeScriptis
+- Igal peatükil on README.md koos teooria, koodikõndidega ja videosisu linkidega
 
-## Koodistiili juhised
+## Koodistiili Juhised
 
 ### Python
 
-- Kasutage keskkonnamuutujate haldamiseks `python-dotenv`
-- Importige API interaktsioonideks `openai` teek
-- Kasutage lintimiseks `pylint` (mõned näited sisaldavad lihtsuse huvides `# pylint: disable=all`)
-- Järgige PEP 8 nimetamisreegleid
-- Salvestage API mandaadid `.env` faili, mitte koodi
+- Kasuta `python-dotenv` keskkonnamuutujate haldamiseks
+- Impordi `openai` teek API interaktsioonide jaoks
+- Kasuta `pylint` lintimiseks (mõned näited sisaldavad `# pylint: disable=all` lihtsuse huvides)
+- Järgi PEP 8 nimetamise konventsioone
+- Hoia API volitused `.env` failis, mitte kunagi koodis
 
 ### TypeScript
 
-- Kasutage keskkonnamuutujate jaoks `dotenv` paketti
-- TypeScripti konfiguratsioon failis `tsconfig.json` iga rakenduse jaoks
-- Kasutage Azure teenuste jaoks `@azure/openai` või `@azure-rest/ai-inference`
-- Kasutage arendamiseks automaatse taaskäivitusega `nodemon`
-- Enne käivitamist kompileerige: `npm run build`, seejärel `npm start`
+- Kasuta `dotenv` paketti keskkonnamuutujate jaoks
+- TypeScript konfiguratsioon asub iga rakenduse `tsconfig.json` failis
+- Kasuta `openai` paketti Azure OpenAI jaoks (suuna klient `/openai/v1/` lõpp-punktile ja kutsu `client.responses.create`); kasuta `@azure-rest/ai-inference` Microsoft Foundry mudelite jaoks
+- Kasuta arenduses `nodemon` automaatseks taaskäivituseks
+- Enne käivitamist tee build: `npm run build` siis `npm start`
 
-### Üldised tavad
+### Üldised Konventsioonid
 
-- Hoidke koodinäited lihtsad ja harivad
-- Lisage kommentaare, mis selgitavad põhikontseptsioone
-- Iga õppetunni kood peaks olema iseseisev ja käivitatav
-- Kasutage järjepidevaid nimetusi: `aoai-` Azure OpenAI jaoks, `oai-` OpenAI API jaoks, `githubmodels-` GitHub Models jaoks
+- Hoia koodinäited lihtsate ja harivatena
+- Lisa kommentaarid, mis selgitavad võtmekontseptsioone
+- Iga peatüki kood peaks olema iseseisev ja jooksutatav
+- Kasuta järjepidevaid nimetusi: `aoai-` eesliide Azure OpenAI jaoks, `oai-` OpenAI API jaoks, `githubmodels-` Microsoft Foundry mudelite jaoks (pärand eesliide GitHub Modelsi ajastust)
 
-## Dokumentatsiooni juhised
+## Dokumentatsiooni Juhised
 
-### Markdown stiil
+### Markdown Stiil
 
-- Kõik URL-id peavad olema vormingus `[tekst](../../url)` ilma lisatühikuteta
-- Suhtelised lingid peavad algama `./` või `../`
-- Kõik Microsofti domeenide lingid peavad sisaldama jälgimis-ID-d: `?WT.mc_id=academic-105485-koreyst`
-- URL-ides ei tohi olla riigispetsiifilisi lokaale (vältige `/en-us/`)
-- Pildid tuleb salvestada kausta `./images` kirjeldavate nimedega
-- Failinimedes kasutage ainult inglise tähti, numbreid ja kriipse
+- Kõik URL-id peavad olema vormindatud `[tekst](../../url)` kujul ilma täiendavate tühikuteta
+- Relatiivsed lingid peavad algama `./` või `../`
+- Kõik lingid Microsofti domeenidesse peavad sisaldama jälgimis-ID-d: `?WT.mc_id=academic-105485-koreyst`
+- URL-id ei tohi sisaldada riigipõhiseid lokaliseeringuid (väldi `/en-us/`)
+- Pildid hoitakse kaustas `./images` kirjeldusega failinimedega
+- Kasuta failinimedes inglise tähti, numbreid ja sidekriipsu
 
-### Tõlke tugi
+### Tõlke Toetus
 
-- Repositoorium toetab üle 40 keele automaatsete GitHub Actions tõlgete kaudu
-- Tõlked salvestatakse kausta `translations/`
-- Osalisi tõlkeid ei aktsepteerita
-- Masintõlkeid ei aktsepteerita
-- Tõlgitud pildid salvestatakse kausta `translated_images/`
+- Hoidla toetab 40+ keelt automatiseeritud GitHub Actionsi kaudu
+- Tõlked hoitakse kaustas `translations/`
+- Ei tohi esitada osalisi tõlkeid
+- Masintõlked ei ole aktsepteeritud
+- Tõlgitud pildid on kaustas `translated_images/`
 
-## Testimine ja valideerimine
+## Testimine ja Kinnitamine
 
-### Enne esitamist kontrollige
+### Enne Esitamist Kontrollimine
 
-See repositoorium kasutab valideerimiseks GitHub Actions'i. Enne PR-ide esitamist:
+See hoidla kasutab valideerimiseks GitHub Actionsit. Enne PR esitamist:
 
-1. **Kontrollige Markdown linke**:
+1. **Kontrolli Markdown linke**:
    ```bash
-   # The validate-markdown.yml workflow checks:
-   # - Broken relative paths
-   # - Missing tracking IDs on paths
-   # - Missing tracking IDs on URLs
-   # - URLs with country locale
-   # - Broken external URLs
+   # validate-markdown.yml töövoog kontrollib:
+   # - Katkised suhtelised teed
+   # - Puuduvad jälgimis-ID-d teedel
+   # - Puuduvad jälgimis-ID-d URL-ides
+   # - URL-id riigi kohalikuga
+   # - Katkised välised URL-id
    ```
 
-2. **Manuaalne testimine**:
-   - Testige Python'i näiteid: aktiveerige venv ja käivitage skriptid
-   - Testige TypeScript'i näiteid: `npm install`, `npm run build`, `npm start`
-   - Veenduge, et keskkonnamuutujad on õigesti seadistatud
-   - Kontrollige, et API võtmed töötavad koodinäidetega
+2. **Käsitsi testimine**:
+   - Testi Python näiteid: aktiveeri venv ja käivita skriptid
+   - Testi TypeScript näiteid: `npm install`, `npm run build`, `npm start`
+   - Kontrolli, et keskkonnamuutujad oleks õigesti seadistatud
+   - Kontrolli, et API võtmed töötaksid koodinäidetega
 
 3. **Koodinäited**:
-   - Veenduge, et kogu kood töötab vigadeta
-   - Testige nii Azure OpenAI kui ka OpenAI API-ga, kui see on asjakohane
-   - Kontrollige, et näited töötavad toetatud GitHub Models'iga
+   - Veendu, et kogu kood jookseb ilma vigadeta
+   - Testi nii Azure OpenAI kui OpenAI API-ga, kui see on asjakohane
+   - Kontrolli, et näited töötavad Microsoft Foundry mudelitega, kus see toetatud
 
-### Automaatseid teste ei ole
+### Automaatseid Teste Ei Ole
 
-See on hariduslik repositoorium, mis keskendub õpetustele ja näidetele. Üksustestid või integreerimistestid puuduvad. Valideerimine toimub peamiselt:
-- Koodinäidete manuaalne testimine
-- GitHub Actions Markdown'i valideerimiseks
-- Kogukonna ülevaated haridusliku sisu kohta
+See on hariduslik hoidla, mis keskendub õppetundidele ja näidetele. Ühikuteste ega integreerimisteste ei ole. Kinnitus põhineb peamiselt:
+- Käsitsi testimine koodinäidetega
+- GitHub Actions Markdown valideerimiseks
+- Kogukonna ülevaatus haridusliku sisu osas
 
-## Pull Request'i juhised
+## Pull Requesti Juhised
 
-### Enne esitamist
+### Enne Esitamist
 
-1. Testige koodimuudatusi nii Pythonis kui ka TypeScriptis, kui see on asjakohane
-2. Käivitage Markdown'i valideerimine (käivitatakse automaatselt PR-is)
-3. Veenduge, et kõik Microsofti URL-id sisaldavad jälgimis-ID-d
-4. Kontrollige, et suhtelised lingid on kehtivad
-5. Veenduge, et pildid on õigesti viidatud
+1. Testi koodimuudatusi nii Pythonis kui TypeScriptis, kui see on asjakohane
+2. Käivita Markdown valideerimine (käivitatakse automaatselt PR ajal)
+3. Veendu, et kõigil Microsofti URLidel on olemas jälgimis-ID-d
+4. Kontrolli, et relatiivsed lingid on korrektsed
+5. Veendu, et pildid on õigesti viidatud
 
-### PR-i pealkirja formaat
+### PR Pealkirja Vorming
 
-- Kasutage kirjeldavaid pealkirju: `[Lesson 06] Parandage Python'i näite viga` või `Uuendage README õppetunni 08 jaoks`
-- Viidake vajadusel probleeminumbritele: `Fixes #123`
+- Kasuta kirjeldavaid pealkirju: `[Lesson 06] Paranda Python näite trükiviga` või `Uuenda README peatüki 08 jaoks`
+- Viita probleeminumbritele, kui see on asjakohane: `Fixes #123`
 
-### PR-i kirjeldus
+### PR Kirjeldus
 
-- Selgitage, mida muudeti ja miks
-- Linkige seotud probleemidega
-- Koodimuudatuste puhul täpsustage, milliseid näiteid testiti
-- Tõlke PR-ide puhul lisage kõik failid täieliku tõlke jaoks
+- Selgita, mis muudatused tehti ja miks
+- Lisa lingid seotud probleemidele
+- Koodimuudatuste korral täpsusta, milliseid näiteid testiti
+- Tõlke PR-ide puhul lisa kõik failid täieliku tõlke jaoks
 
-### Kaastöö nõuded
+### Panustamise Nõuded
 
-- Allkirjastage Microsoft CLA (automaatselt esimesel PR-il)
-- Forkige repositoorium oma kontole enne muudatuste tegemist
-- Üks PR iga loogilise muudatuse kohta (ärge ühendage mitteseotud parandusi)
-- Hoidke PR-id keskendunud ja võimalusel väikesed
+- Allkirjasta Microsofti CLA (automaatne esimesel PR-il)
+- Loo enne muutuste tegemist hoidla oma kontosse
+- Üks PR ühele loogilisele muutusele (ära ühenda mitteseotud parandusi)
+- Hoia PR-id võimalikult fookustatud ja väikesed
 
-## Tavalised töövood
+## Tavalised Töövood
 
-### Uue koodinäite lisamine
+### Uue Koodinäite Lisamine
 
-1. Navigeerige sobivasse õppetunni kausta
-2. Looge näide kaustas `python/` või `typescript/`
-3. Järgige nimetamisreeglit: `{provider}-{example-name}.{py|ts|js}`
-4. Testige tegelike API mandaadidega
-5. Dokumenteerige kõik uued keskkonnamuutujad õppetunni README-s
+1. Liigu vastavasse peatüki kataloogi
+2. Loo näide `python/` või `typescript/` alamkaustas
+3. Järgi nimetamisreeglit: `{provider}-{example-name}.{py|ts|js}`
+4. Testi koos tegelike API volitustega
+5. Dokumenteeri kõik uued keskkonnamuutujad peatüki README-s
 
-### Dokumentatsiooni uuendamine
+### Dokumentatsiooni Uuendamine
 
-1. Redigeerige README.md faili õppetunni kaustas
-2. Järgige Markdown'i juhiseid (jälgimis-ID-d, suhtelised lingid)
-3. Tõlkeid haldab GitHub Actions (ärge muutke käsitsi)
-4. Testige, et kõik lingid on kehtivad
+1. Muuda README.md faili peatüki kataloogis
+2. Järgi Markdown juhiseid (jälgimis-ID-d, relatiivsed lingid)
+3. Tõlkeid haldavad GitHub Actionsid (ära muuda käsitsi)
+4. Kontrolli, et kõik lingid on kehtivad
 
-### Dev Containeritega töötamine
+### Töö Dev Containeritega
 
-1. Repositoorium sisaldab `.devcontainer/devcontainer.json` faili
-2. Post-loome skript installib automaatselt Python'i sõltuvused
-3. Laiendused Python'i ja Jupyter'i jaoks on eelkonfigureeritud
-4. Keskkond põhineb `mcr.microsoft.com/devcontainers/universal:2.11.2`
+1. Hoidla sisaldab `.devcontainer/devcontainer.json` faili
+2. Post-create skript paigaldab Python sõltuvused automaatselt
+3. Python ja Jupyteri laiendused on eelkonfigureeritud
+4. Keskkond põhineb `mcr.microsoft.com/devcontainers/universal:2.11.2` baasil
 
-## Juurutamine ja avaldamine
+## Lõpetamine ja Avaldamine
 
-See on õpperepositoorium - juurutamisprotsessi ei ole. Õppekava kasutatakse järgmiselt:
+See on õppehoidla - sellel puudub juurutusprotsess. Õppekava kasutatakse järgmiste kaudu:
 
-1. **GitHub repositoorium**: Otsene juurdepääs koodile ja dokumentatsioonile
+1. **GitHub Repository**: Otsene ligipääs koodile ja dokumentatsioonile
 2. **GitHub Codespaces**: Kohene arenduskeskkond eelkonfigureeritud seadistusega
-3. **Microsoft Learn**: Sisu võib olla sünkroniseeritud ametlikule õppeplatvormile
-4. **docsify**: Dokumentatsioonisait, mis on ehitatud Markdown'ist (vt `docsifytopdf.js` ja `package.json`)
+3. **Microsoft Learn**: Sisu võib olla seotud ametliku õppeplatvormiga
+4. **docsify**: Dokumentatsiooni sait ehitatud Markdownist (vt `docsifytopdf.js` ja `package.json`)
 
-### Dokumentatsioonisaidi ehitamine
+### Dokumentatsiooni saidi ehitamine
 
 ```bash
-# Generate PDF from documentation (if needed)
+# Genereeri PDF dokumentatsioonist (vajadusel)
 npm run convert
 ```
 
-## Tõrkeotsing
+## Probleemide Lahendamine
 
-### Levinud probleemid
+### Tavalised Probleemid
 
-**Python'i impordivead**:
-- Veenduge, et virtuaalne keskkond on aktiveeritud
-- Käivitage `pip install -r requirements.txt`
-- Kontrollige, et Python'i versioon on 3.9+
+**Python Importimise Vead**:
+- Veendu, et virtuaalkeskkond on aktiveeritud
+- Käivita `pip install -r requirements.txt`
+- Kontrolli, et Python versioon on 3.9 või uuem
 
-**TypeScript'i kompileerimisvead**:
-- Käivitage `npm install` vastavas rakenduse kaustas
-- Kontrollige, et Node.js versioon on ühilduv
-- Tühjendage `node_modules` ja installige uuesti, kui vaja
+**TypeScript Build Vead**:
+- Käivita `npm install` vastavas rakenduse kataloogis
+- Kontrolli Node.js versiooni sobivust
+- Tühjenda `node_modules` ja paigalda uuesti, kui vaja
 
-**API autentimisvead**:
-- Veenduge, et `.env` fail eksisteerib ja sisaldab õigeid väärtusi
-- Kontrollige, et API võtmed on kehtivad ja mitte aegunud
-- Veenduge, et lõpp-punkti URL-id on teie piirkonna jaoks õiged
+**API Autentimise Vead**:
+- Veendu, et `.env` fail eksisteerib ja väärtused on õiged
+- Kontrolli, et API võtmed on kehtivad ja pole aegunud
+- Veendu, et lõpp-punktide URL-id on regiooni jaoks õiged
 
-**Puuduvad keskkonnamuutujad**:
-- Kopeerige `.env.copy` fail `.env`-iks
-- Täitke kõik vajalikud väärtused õppetunni jaoks, millega töötate
-- Taaskäivitage oma rakendus pärast `.env` uuendamist
+**Puuduvad Keskkonnamuutujad**:
+- Kopeeri `.env.copy` faili `.env` alla
+- Täida kõik vajaminevad väärtused peatüki jaoks, millega töötad
+- Taaskäivita rakendus pärast `.env` uuendamist
 
-## Lisamaterjalid
+## Täiendavad Ressursid
 
-- [Kursuse seadistamise juhend](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
-- [Kaastöö juhised](./CONTRIBUTING.md)
+- [Kursuse Seadistamisjuhend](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
+- [Panustamise Juhised](./CONTRIBUTING.md)
 - [Käitumisjuhend](./CODE_OF_CONDUCT.md)
 - [Turvapoliitika](./SECURITY.md)
 - [Azure AI Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
-- [Kogumik edasijõudnute koodinäidetest](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
+- [Täiustatud Koodinäidete Kogu](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
 
-## Projekti erimärkused
+## Projekti Spetsiifilised Märkmed
 
-- See on **õpperepositoorium**, mis keskendub õppimisele, mitte tootmiskoodile
-- Näited on tahtlikult lihtsad ja keskenduvad kontseptsioonide õpetamisele
-- Koodikvaliteet on tasakaalus haridusliku selgusega
-- Iga õppetund on iseseisev ja seda saab eraldi läbida
-- Repositoorium toetab mitut API pakkujat: Azure OpenAI, OpenAI ja GitHub Models
-- Sisu on mitmekeelne, kasutades automatiseeritud tõlke töövooge
+- See on **hariduslik hoidla**, keskendudes õppimisele, mitte tootmiskoodile
+- Näited on teadlikult lihtsad ja mõistete õpetamisele orienteeritud
+- Koodi kvaliteet on tasakaalus haridusliku selgusega
+- Iga peatükk on iseseisev ja saab sooritada sõltumatult
+- Hoidla toetab mitut API pakkujat: Azure OpenAI, OpenAI, Microsoft Foundry mudelid ja ka võrguühenduseta pakkujaid nagu Foundry Local ja Ollama
+- Sisu on mitmekeelne automatiseeritud tõketöövoogudega
 - Aktiivne kogukond Discordis küsimuste ja toe jaoks
 
 ---
 
-**Lahtiütlus**:  
-See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti tõlgenduste eest.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Lahtiütlus**:
+See dokument on tõlgitud kasutades AI tõlketeenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi me püüdleme täpsuse poole, palun pange tähele, et automatiseeritud tõlgetes võib esineda vigu või ebatäpsusi. Originaaldokument selle emakeeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta selle tõlkega seotud eksimustest või valesti mõistmistest.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

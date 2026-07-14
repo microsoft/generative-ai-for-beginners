@@ -2,139 +2,143 @@
 
 [![Introduction to Generative AI and Large Language Models](../../../translated_images/pcm/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
-_(Click di image wey dey up to watch di video for dis lesson)_
+_(Click the image above to view video of this lesson)_
 
-Generative AI na artificial intelligence wey fit create text, images and oda kain content. Wetin make am beta technology be say e dey make AI easy for everybody, anybody fit use am just by typing text prompt, one sentence wey dey for natural language. You no need sabi language like Java or SQL to do something wey make sense, all you need na to use your own language, talk wetin you want and AI model go give you suggestion. Di kain tins wey you fit use am do plenty, like write or understand reports, write applications and plenty oda tins, all for seconds.
+Generative AI na artificial intelligence wey fit create text, pictures and oda kain content. Wetin make am beta technology na say e dey open AI for everybody, anybodi fit use am just by giving small text prompt, one sentence wey na normal language. You no need learn language like Java or SQL to fit do beta tin, all wey you need na to use your language, talk wetin you want and AI model go show you suggestion. Di tins wey fit use am for get plenti impact, you fit write or understand report dem, write application dem and plenti oda tins, all na quick quick.
 
-For dis curriculum, we go look how our startup dey use generative AI to open new ways for education and how we dey handle di challenges wey dey come with di social impact of di technology and di limitations wey e get.
+For dis curriculum, we go explore how our startup dey use generative AI to open beta new tins for education world and how we dey solve di wahala wey go follow how e go affect society and di limits wey the technology get.
 
 ## Introduction
 
 Dis lesson go cover:
 
-- Introduction to di business idea: our startup idea and mission.
-- Generative AI and how we reach di technology wey dey now.
+- Introduction to di business tin: our startup idea and mission.
+- Generative AI and how we take reach di technology we dey now.
 - How large language model dey work inside.
-- Di main tins wey Large Language Models fit do and how person fit use am.
+- Main powers and beta ways to use Large Language Models.
 
 ## Learning Goals
 
 After you finish dis lesson, you go sabi:
 
 - Wetin generative AI be and how Large Language Models dey work.
-- How you fit use large language models for different tins, especially for education.
+- How you fit use large language models for different tins, especially for education matter dem.
 
 ## Scenario: our educational startup
 
-Generative Artificial Intelligence (AI) na di top level for AI technology, e dey push di limit of wetin people think say no fit happen before. Generative AI models get plenty tins wey dem fit do, but for dis curriculum we go look how e dey change education through one startup wey we go call _our startup_. Our startup dey work for education area and di mission wey we get na:
+Generative Artificial Intelligence (AI) na di highest level for AI technology, e dey push wetin people ever think say e possible. Generative AI models get plenti powers and areas wey dem fit use am, but for dis course we go see how e dey change education through one story startup. We go call dis startup _our startup_. Our startup dey education space with one big mission wey be
 
-> _to make learning easy for everybody, anywhere for di world, make sure say everybody fit get education and give each person di kain learning wey dem need._
+> _beta access to learning anywhere for di world, make education reach everybody equally and give each learner learning wey dey fit am well well, according to wetin dem need_.
 
-Our startup team sabi say we no fit reach dis goal if we no use one of di strongest tools wey dey now – Large Language Models (LLMs).
+Our startup people sabi say we no fit reach dis goal if we no use one of di strongest tin for today – Large Language Models (LLMs).
 
-Generative AI dey change di way we dey learn and teach today, students fit get virtual teachers wey dey available 24 hours wey dey give plenty information and examples, and teachers fit use new tools to check how students dey do and give feedback.
+Generative AI dey expected to change how we learn and teach today, with students fit get virtual teachers anytime, 24 hours, wey go give plenti info and examples, and teachers fit use new tools to check their students and give dem feedback.
 
-![Five young students dey look monitor - image by DALLE2](../../../translated_images/pcm/students-by-DALLE2.b70fddaced1042ee.webp)
+![Five young students looking at a monitor - image by DALLE2](../../../translated_images/pcm/students-by-DALLE2.b70fddaced1042ee.webp)
 
-To start, make we define some basic tins and words wey we go dey use for dis curriculum.
+To start, mek we define some basic tins and words we go dey use for di whole course.
 
-## How we take get Generative AI?
+## How did we get Generative AI?
 
-Even though di _hype_ wey dey around generative AI models plenty, dis technology don dey since di 60s. Now AI don reach di level wey e get human cognitive ability, like conversation, as we see for example [OpenAI ChatGPT](https://openai.com/chatgpt) or [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), wey dey use GPT model for web search Bing conversations.
+Even though dis generative AI models don dey make plenty noise recently, dis technology don dey develop since di 60s. Now, AI get human-like mind power, like conversation, as you fit see for example [OpenAI ChatGPT](https://openai.com/chatgpt) or [Microsoft Copilot](https://copilot.microsoft.com/?WT.mc_id=academic-105485-koreyst), wey also use GPT model for talk and search for web.
 
-If we go back small, di first AI prototypes na typewritten chatbots wey dey use knowledge wey dem collect from experts and put for computer. Di answers for di knowledge base dey triggered by keywords wey dey di input text. But e no take long before people see say dis method no dey work well.
+Before this, di first AI prototypes use typewritten chatbots, wey dey use knowledge wey dem collect from expert pipo and put for computer. Di answers wey dem get na from keywords wey dey inside di text wey dem input.
+But e quick clear say dis style of chatbot no fit grow well.
 
-### Di statistical way for AI: Machine Learning
+### A statistical approach to AI: Machine Learning
 
-Di big change happen for di 90s, when dem start to use statistical method for text analysis. Dis one bring new algorithms – wey dem dey call machine learning – wey fit learn pattern from data without person programming am directly. Dis method make machines fit understand human language: di statistical model go train with text-label pairings, so e fit classify unknown input text with di label wey dey represent di meaning of di message.
+Di 90s bring one big change: people start use statistical approach for text analysis. Dis lead to new algorithm – wey dem call machine learning – wey fit learn patterns from data without you tell am how exactly. Dis approach let machines sabi human language better: statistical model dey train on text-label pairings, so e fit fit classify unknown text with label wey show wetin message mean.
 
-### Neural networks and di modern virtual assistants
+### Neural networks and modern virtual assistants
 
-For recent years, di way hardware don improve, wey fit handle plenty data and complex calculations, e help AI research, wey lead to di creation of advanced machine learning algorithms wey dem dey call neural networks or deep learning algorithms.
+Recently hardware don beta, fit manage big data and heavy calculations, dis push research for AI and lead to better machine learning algorithms wey dem call neural networks or deep learning.
 
-Neural networks (especially Recurrent Neural Networks – RNNs) make natural language processing better, e fit represent di meaning of text well, and e dey value di context of word for sentence.
+Neural networks (especially Recurrent Neural Networks – RNNs) don help plenti for natural language processing, dem fit show text meaning well and dey value word context inside sentence.
 
-Dis na di technology wey dey power di virtual assistants wey start for di first ten years of di new century, wey sabi interpret human language well, know wetin person need, and do action to meet di need – like answer with pre-defined script or use 3rd party service.
+Dis technology na wetin power virtual assistants wey show for first ten years of this century, wey sabi human language well, fit understand wetin person want, then do action to help – like answer with script or use third party service.
 
-### Di present day, Generative AI
+### Present day, Generative AI
 
-Na so we take reach Generative AI today, wey be one part of deep learning.
+Na so generative AI come dey today, we fit see am as a part of deep learning.
 
 ![AI, ML, DL and Generative AI](../../../translated_images/pcm/AI-diagram.c391fa518451a40d.webp)
 
-After many years of research for AI, new model architecture – wey dem dey call _Transformer_ – don pass di limit of RNNs, e fit take longer text as input. Transformers dey use attention mechanism, wey make di model dey give different weight to di inputs e receive, ‘pay attention’ to di important information, no matter di order for di text.
+After plenty years of AI research, new model style – wey dem call _Transformer_ – pass RNN limits, e fit take longer text as input. Transformers dey use attention mechanism, wey make model fit put more weight for important info, no matter position for text sequence.
 
-Most of di generative AI models wey dey now – wey dem dey call Large Language Models (LLMs), because dem dey work with text input and output – na dis architecture dem dey use. Wetin dey interesting about dis models – wey dem train with plenty unlabeled data from books, articles and websites – be say dem fit adapt to many tasks and fit generate text wey dey correct grammatically and even dey creative. So, e no just make machine sabi ‘understand’ input text well, e also make dem fit generate original response for human language.
+Most new generative AI models – still dey call Large Language Models (LLMs) since dem dey deal with text input and output – na based on dis architecture. Wetin dey interesting be say dem train dem on huge amount of unlabeled data from books, articles and websites – so e fit adapt to many tasks and generate correct text wey dey creative small. Dem no just make machine sabi text well, but dem fit make am generate original answer like human.
 
-## How large language models dey work?
+## How do large language models work?
 
-For di next chapter we go look different types of Generative AI models, but for now make we see how large language models dey work, especially OpenAI GPT (Generative Pre-trained Transformer) models.
+For di next chapter we go explore different kinds of Generative AI models, but now make we look how large language models dey work well, especially OpenAI GPT (Generative Pre-trained Transformer) models.
 
-- **Tokenizer, text to numbers**: Large Language Models dey take text as input and dey generate text as output. But because dem be statistical models, dem dey work better with numbers than text. Na why every input to di model dey pass through tokenizer before e reach di main model. Token na small piece of text – wey fit get different number of characters, so di tokenizer dey split di input into array of tokens. Then, each token go get token index, wey be di number wey represent di original text.
+- **Tokenizer, text to numbers**: Large Language Models dey receive text as input and generate text as output. But as dem be statistical models, dem dey work beta with numbers than text. Na why every input to model na tokenizer first dey process am before core model use am. Token na small part of text – e get different number of characters, so tokenizer main work na to split input into tokens. Then each token get token index, na number code of original text.
 
 ![Example of tokenization](../../../translated_images/pcm/tokenizer-example.80a5c151ee7d1bd4.webp)
 
-- **Predicting output tokens**: If di model get n tokens as input (di max n dey different for each model), e fit predict one token as output. Dis token go join di input for di next round, like expanding window, wey dey make di user experience better as e dey give one or more sentences as answer. Na why, if you don use ChatGPT before, you go notice say sometimes e dey stop for middle of sentence.
+- **Predicting output tokens**: If model get n tokens as input (max n dey different for one model to oda), e fit predict one token as output. Dis token go enter input for next round, like say e dey expand window, so user sabi get one (or more) sentence as answer. Na why if you try ChatGPT, you fit notice say sometimes e stop for middle of sentence.
 
-- **Selection process, probability distribution**: Di model dey choose di output token based on di chance wey e go happen after di current text. Dis na because di model dey predict probability distribution for all di possible ‘next tokens’, based on di training wey e get. But e no dey always choose di token wey get di highest chance. Dem dey add small randomness to di choice, so di model go act like e dey think creatively – we no go get di same output for di same input. Dis randomness fit dey adjusted with one model parameter wey dem dey call temperature.
+- **Selection process, probability distribution**: Model go choose output token based on how likely e dey to appear after current text sequence. Model dey predict probability for all the ‘next tokens’, based on training. But e no always choose token wey get highest probability. Small randomness dey put inside selection, make model no dey always give same answer for same input. This randomness dey simulate creative thinking and you fit control am with parameter wey dem call temperature.
 
-## How our startup fit use Large Language Models?
+## How can our startup leverage Large Language Models?
 
-Now we don understand how large language model dey work, make we see some examples of di common tasks wey dem fit do well, especially for our business idea. We don talk say di main thing wey Large Language Model fit do na _create text from scratch, starting from text wey person write for natural language_.
+Now say we sabi better how large language model dey work inside, make we see some beta examples of tins wey dem fit do well, especially for our business scenario.
+We talk say main power of Large Language Model na _to generate text from scratch, starting from one textual input wey na normal language_.
 
-But wetin be di kind text wey dem fit take as input and wetin dem fit give as output?
-Di input for large language model na wetin dem dey call prompt, while di output na completion, wey mean di model dey generate di next token to complete di current input. We go talk more about wetin prompt be and how to design am well to get di best from di model. But for now, make we talk say prompt fit get:
+But which kain textual input and output?
+Input wey Large Language Model dey take na prompt, output na completion, dis one na how model dey generate next token to finish input. We go discuss deep on wetin prompt be and how to design am to get best from model. But for now, make we just talk say prompt fit get:
 
-- One **instruction** wey dey explain di kind output wey we dey expect from di model. Sometimes dis instruction fit get examples or extra data.
+- One **instruction** wey tell type output we want. Sometimes instruction fit get examples or extra data.
 
-  1. Summary of article, book, product reviews and more, plus extraction of information from unstructured data.
+  1. Summary of article, book, product reviews and more, plus insight collection from unstructured data.
     
     ![Example of summarization](../../../translated_images/pcm/summarization-example.7b7ff97147b3d790.webp)
   
-  2. Creative ideas and writing of article, essay, assignment or more.
+  2. Creative ideation and design of article, essay, assignment or more.
       
      ![Example of creative writing](../../../translated_images/pcm/creative-writing-example.e24a685b5a543ad1.webp)
 
-- One **question**, wey person go ask like conversation with di agent.
+- One **question**, wey dem ask like conversation with agent.
   
   ![Example of conversation](../../../translated_images/pcm/conversation-example.60c2afc0f595fa59.webp)
 
-- One piece of **text to complete**, wey dey indirectly ask for writing help.
+- One part of **text to complete**, wey mean say you dey ask for writing help.
   
   ![Example of text completion](../../../translated_images/pcm/text-completion-example.cbb0f28403d42752.webp)
 
-- One piece of **code** with di ask to explain and document am, or comment wey dey ask to generate code wey go do one specific task.
+- One part of **code** plus request to explain and document am, or comment to generate code for one task.
   
   ![Coding example](../../../translated_images/pcm/coding-example.50ebabe8a6afff20.webp)
 
-Di examples wey dey up dey simple and no dey show all di things wey Large Language Models fit do. Dem dey show di potential of generative AI, especially for education.
+Di examples we show na simple ones, no be all Large Language Models fit do. Dem suppose show how generative AI fit help, especially but no only for education.
 
-But di output wey generative AI dey give no dey perfect and sometimes di creativity of di model fit make am give output wey no make sense, or even offensive. Generative AI no be intelligent – at least for di full meaning of intelligence, wey include critical and creative thinking or emotional intelligence; e no dey predictable, and e no dey trustworthy, because e fit mix wrong information with correct one and present am confidently. For di next lessons, we go talk about all dis limitations and how we fit reduce dem.
+Also, output from generative AI no perfect and sometimes di creativity fit make output confuse, or fit be offensive. Generative AI no be intelligent for full meaning, no get full critical or creative reasoning, or emotional intelligence; e no dey deterministic and no dey always trustable, because e fit combine false things, like wrong facts, content and statements with correct ones, and talk am like say e sure. For next lessons, we go talk about all these wahalas and how to reduce dem.
 
 ## Assignment
 
-Your assignment na to read more about [generative AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) and try to find one area wey you go add generative AI today wey no get am. How di impact go different from di "old way", you fit do something wey you no fit do before, or you go dey faster? Write 300 words summary about wetin your dream AI startup go look like and include headers like "Problem", "How I go use AI", "Impact" and if you like, business plan.
+Your assignment na to read more about [generative AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) and try find one area wey you go put generative AI now wey no get am. How e go different from di old way, you fit do something before wey you no fit before, or you go fast pass before? Write 300-word summary on how your dream AI startup go be and put headers like "Problem", "How I would use AI", "Impact" and if you like, business plan.
 
-If you do dis task, you fit even apply for Microsoft's incubator, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst) wey dey give credits for Azure, OpenAI, mentoring and plenty more, check am out!
+If you do dis task, you fit ready to apply for Microsoft incubator, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst) wey dey give credits for Azure, OpenAI, mentoring and more, check am out!
 
 ## Knowledge check
 
 Wetin true about large language models?
 
-1. You go get di same response every time.
-1. E dey do things perfect, e sabi add numbers, produce working code etc.
-1. Di response fit change even if you use di same prompt. E dey good for giving first draft of something, whether na text or code. But you go need improve di result.
+1. You go get exact same answer every time.
+1. E dey do all tins perfectly, beta at adding numbers, produce working code and so on.
+1. Di answer fit change even if you use same prompt. E beta at giving first draft of any tin, text or code. But you need improve the output.
 
-A: 3, LLM no dey predictable, di response dey change, but you fit control di change with temperature setting. You no suppose expect am to dey perfect, e dey to help you do di hard work wey go give you good first try wey you go improve.
+A: 3, LLM no dey deterministic, answer dey change, but you fit control am with temperature setting. You no gats expect perfect thing, e dey here to help you carry heavy work, often meaning say you go get beta first try for tin wey you gats improve slowly.
 
-## Great Work! Continue di Journey
+## Great Work! Continue the Journey
 
-After you finish dis lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue to sabi more about Generative AI!
-Make you waka go Lesson 2 wey we go check how to [explore and compare different LLM types](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
+After you finish dis lesson, check our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue sabi more about Generative AI!
+
+
+Go Lesson 2 weh we go check how to [explore and compare different LLM types](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:  
-Dis dokyument don use AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator) do di translation. Even as we dey try make am correct, abeg sabi say machine translation fit get mistake or no dey accurate well. Di original dokyument wey dey for im native language na di main source wey you go trust. For important information, e better make professional human translator check am. We no go fit take blame for any misunderstanding or wrong interpretation wey fit happen because you use dis translation.
+**Disclaimer**:
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even tho we dey try make am correct, abeg make you know say automated translation fit get errors or mistakes. Di original document for dia own language na im be di correct source. For important info, make person wey sabi human translation do am. We no go responsible for any misunderstanding or wrong understanding wey fit happen because of dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
