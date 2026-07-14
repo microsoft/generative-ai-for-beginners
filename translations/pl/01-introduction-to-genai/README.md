@@ -1,138 +1,144 @@
-# Wprowadzenie do generatywnej sztucznej inteligencji i dużych modeli językowych
+# Wprowadzenie do Generatywnej Sztucznej Inteligencji i Dużych Modeli Językowych
 
-[![Wprowadzenie do generatywnej sztucznej inteligencji i dużych modeli językowych](../../../translated_images/pl/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Wprowadzenie do Generatywnej Sztucznej Inteligencji i Dużych Modeli Językowych](../../../translated_images/pl/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
-_(Kliknij obrazek powyżej, aby obejrzeć wideo z tej lekcji)_
+_(Kliknij powyższy obraz, aby obejrzeć wideo z tej lekcji)_
 
-Generatywna sztuczna inteligencja to technologia zdolna do generowania tekstu, obrazów i innych rodzajów treści. To, co czyni ją wyjątkową, to fakt, że demokratyzuje dostęp do AI – każdy może z niej korzystać, używając jedynie prostego tekstowego polecenia, zdania napisanego w języku naturalnym. Nie musisz znać języków programowania takich jak Java czy SQL, aby osiągnąć coś wartościowego – wystarczy, że użyjesz swojego języka, wyrazisz swoje potrzeby, a model AI zaproponuje odpowiednie rozwiązanie. Zastosowania i wpływ tej technologii są ogromne – od pisania i rozumienia raportów, przez tworzenie aplikacji, aż po wiele innych zadań, wszystko w zaledwie kilka sekund.
+Generatywna SI to sztuczna inteligencja zdolna do generowania tekstu, obrazów i innych typów treści. To, co czyni tę technologię fantastyczną, to fakt, że demokratyzuje SI — każdy może jej używać z pomocą zaledwie prostego polecenia tekstowego, zdania napisanego w języku naturalnym. Nie musisz uczyć się języków takich jak Java czy SQL, aby zrobić coś wartościowego, wystarczy użyć swojego języka, określić, co chcesz, a otrzymujesz sugestię od modelu SI. Zastosowania i wpływ tej technologii są ogromne, możesz pisać lub rozumieć raporty, tworzyć aplikacje i wiele więcej, wszystko w kilka sekund.
 
-W tym programie nauczania zbadamy, jak nasz startup wykorzystuje generatywną sztuczną inteligencję, aby otworzyć nowe możliwości w świecie edukacji, oraz jak radzimy sobie z nieuniknionymi wyzwaniami związanymi z jej społecznymi implikacjami i ograniczeniami technologicznymi.
+W tym kursie przyjrzymy się, jak nasz startup wykorzystuje generatywną SI, aby otworzyć nowe scenariusze w świecie edukacji oraz jak radzimy sobie z nieuniknionymi wyzwaniami związanymi z społecznymi konsekwencjami jej zastosowania i ograniczeniami technologicznymi.
 
 ## Wprowadzenie
 
-Ta lekcja obejmie:
+Ta lekcja omówi:
 
-- Wprowadzenie do scenariusza biznesowego: nasz pomysł na startup i misję.
-- Generatywną sztuczną inteligencję i jej miejsce w obecnym krajobrazie technologicznym.
-- Działanie dużych modeli językowych.
-- Główne możliwości i praktyczne zastosowania dużych modeli językowych.
+- Wprowadzenie do scenariusza biznesowego: pomysł i misja naszego startupu.
+- Generatywna SI i jak dotarliśmy do obecnego krajobrazu technologicznego.
+- Wewnętrzne działanie dużego modelu językowego.
+- Główne możliwości i praktyczne zastosowania Dużych Modeli Językowych.
 
 ## Cele nauki
 
 Po ukończeniu tej lekcji zrozumiesz:
 
-- Czym jest generatywna sztuczna inteligencja i jak działają duże modele językowe.
-- Jak można wykorzystać duże modele językowe w różnych zastosowaniach, ze szczególnym uwzględnieniem scenariuszy edukacyjnych.
+- Czym jest generatywna SI i jak działają Duże Modele Językowe.
+- Jak możesz wykorzystać duże modele językowe w różnych zastosowaniach, ze szczególnym uwzględnieniem scenariuszy edukacyjnych.
 
-## Scenariusz: nasz edukacyjny startup
+## Scenariusz: nasz startup edukacyjny
 
-Generatywna sztuczna inteligencja (AI) reprezentuje szczyt technologii AI, przesuwając granice tego, co kiedyś uważano za niemożliwe. Modele generatywnej AI mają wiele możliwości i zastosowań, ale w ramach tego programu nauczania zbadamy, jak rewolucjonizują edukację za pomocą fikcyjnego startupu. Nazwiemy ten startup _naszym startupem_. Nasz startup działa w obszarze edukacji, realizując ambitną misję:
+Generatywna sztuczna inteligencja (SI) reprezentuje szczyt technologii SI, przesuwając granice tego, co kiedyś uważano za niemożliwe. Modele generatywne mają wiele zdolności i zastosowań, ale w tym kursie skupimy się na tym, jak rewolucjonizują edukację poprzez fikcyjny startup. Nazwiemy ten startup _naszym startupem_. Nasz startup działa w obszarze edukacji z ambitnym celem
 
-> _poprawa dostępności edukacji na skalę globalną, zapewnienie równego dostępu do nauki oraz dostarczanie spersonalizowanych doświadczeń edukacyjnych każdemu uczniowi, zgodnie z jego potrzebami_.
+> _poprawy dostępności nauki na całym świecie, zapewniając sprawiedliwy dostęp do edukacji i oferując spersonalizowane doświadczenia edukacyjne każdemu uczniowi, zgodnie z jego potrzebami_.
 
-Zespół naszego startupu zdaje sobie sprawę, że nie uda nam się osiągnąć tego celu bez wykorzystania jednego z najpotężniejszych narzędzi współczesnych czasów – dużych modeli językowych (LLM).
+Zespół naszego startupu zdaje sobie sprawę, że nie osiągniemy tego celu bez wykorzystania jednego z najpotężniejszych narzędzi współczesności – Dużych Modeli Językowych (LLM).
 
-Generatywna sztuczna inteligencja ma potencjał, aby zrewolucjonizować sposób, w jaki uczymy się i nauczamy. Uczniowie mogą korzystać z wirtualnych nauczycieli dostępnych przez całą dobę, którzy dostarczają ogromne ilości informacji i przykładów, a nauczyciele mogą wykorzystywać innowacyjne narzędzia do oceny swoich uczniów i udzielania im informacji zwrotnej.
+Generatywna SI ma zrewolucjonizować sposób, w jaki uczymy się i nauczamy dzisiaj, z uczniami mającymi do dyspozycji wirtualnych nauczycieli 24 godziny na dobę, którzy dostarczają ogromne ilości informacji i przykładów, oraz nauczycielami, którzy mogą korzystać z innowacyjnych narzędzi do oceny swoich uczniów i udzielania informacji zwrotnej.
 
-![Pięcioro młodych uczniów patrzących na monitor - obraz stworzony przez DALLE2](../../../translated_images/pl/students-by-DALLE2.b70fddaced1042ee.webp)
+![Pięciu młodych uczniów patrzących na monitor - obraz stworzony przez DALLE2](../../../translated_images/pl/students-by-DALLE2.b70fddaced1042ee.webp)
 
-Na początek zdefiniujmy kilka podstawowych pojęć i terminów, które będziemy używać w całym programie nauczania.
+Na początek zdefiniujmy kilka podstawowych pojęć i terminów, których będziemy używać w trakcie kursu.
 
-## Jak powstała generatywna sztuczna inteligencja?
+## Jak doszliśmy do generatywnej SI?
 
-Pomimo ogromnego _szumu_ wywołanego ostatnio przez ogłoszenie modeli generatywnej AI, technologia ta powstawała przez dekady, a pierwsze badania w tej dziedzinie sięgają lat 60. Obecnie AI osiągnęła poziom zdolności poznawczych zbliżonych do ludzkich, takich jak prowadzenie rozmów, co można zaobserwować na przykładzie [OpenAI ChatGPT](https://openai.com/chatgpt) czy [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), który również korzysta z modelu GPT do rozmów w wyszukiwarce Bing.
+Mimo ogromnego _hype'u_ wywołanego ostatnio przez zapowiedź modeli generatywnej SI, ta technologia rozwija się od dziesięcioleci, a pierwsze badania sięgają lat 60. Obecnie mamy SI dysponującą ludzkimi zdolnościami poznawczymi, np. prowadzącą rozmowę, jak pokazują na przykład [OpenAI ChatGPT](https://openai.com/chatgpt) czy [Microsoft Copilot](https://copilot.microsoft.com/?WT.mc_id=academic-105485-koreyst), który również wykorzystuje model GPT do swojej konwersacyjnej wyszukiwarki internetowej.
 
-Wracając do początków, pierwsze prototypy AI składały się z chatbotów obsługiwanych za pomocą pisma maszynowego, które opierały się na bazie wiedzy pozyskanej od grupy ekspertów i zapisanej w komputerze. Odpowiedzi w bazie wiedzy były wywoływane przez słowa kluczowe pojawiające się w tekście wejściowym. Jednak szybko okazało się, że takie podejście, oparte na pisanych chatbotach, nie jest skalowalne.
+Cofając się trochę, pierwsze prototypy SI składały się z pisanych na maszynie chatbotów, opierających się na bazie wiedzy wyciągniętej od grupy ekspertów i zaimplementowanej w komputerze. Odpowiedzi w bazie wiedzy były wywoływane przez słowa kluczowe pojawiające się w tekście wejściowym.
+Jednak szybko stało się jasne, że takie podejście, wykorzystujące pisane na maszynie chatboty, nie skalowało się dobrze.
 
-### Statystyczne podejście do AI: Uczenie maszynowe
+### Statystyczne podejście do SI: uczenie maszynowe
 
-Przełom nastąpił w latach 90., kiedy zastosowano statystyczne podejście do analizy tekstu. Doprowadziło to do opracowania nowych algorytmów – znanych jako uczenie maszynowe – zdolnych do nauki wzorców z danych bez konieczności ich jawnego programowania. Podejście to pozwoliło maszynom na symulację rozumienia języka ludzkiego: model statystyczny był trenowany na parach tekst-etykieta, co umożliwiało klasyfikację nieznanego tekstu wejściowego z przypisaną wcześniej etykietą reprezentującą intencję wiadomości.
+Przełom nastąpił w latach 90., dzięki zastosowaniu statystycznego podejścia do analizy tekstu. Doprowadziło to do opracowania nowych algorytmów – nazywanych uczeniem maszynowym – zdolnych do uczenia się wzorców z danych bez potrzeby programowania na sztywno. To podejście pozwala maszynom symulować rozumienie języka ludzkiego: model statystyczny jest trenowany na parach tekst-etykieta, co umożliwia klasyfikowanie nieznanego tekstu wejściowego zgodnie z określoną etykietą reprezentującą intencję wiadomości.
 
-### Sieci neuronowe i nowoczesne wirtualne asystenty
+### Sieci neuronowe i nowoczesni wirtualni asystenci
 
-W ostatnich latach rozwój technologii sprzętowej, zdolnej do obsługi większych ilości danych i bardziej złożonych obliczeń, zachęcił do badań nad AI, prowadząc do opracowania zaawansowanych algorytmów uczenia maszynowego, znanych jako sieci neuronowe lub algorytmy głębokiego uczenia.
+W ostatnich latach, rozwój technologiczny sprzętu, zdolnego do obsługi większych ilości danych i bardziej złożonych obliczeń, pobudził badania nad SI, prowadząc do rozwinięcia zaawansowanych algorytmów uczenia maszynowego znanych jako sieci neuronowe lub algorytmy głębokiego uczenia.
 
-Sieci neuronowe (a w szczególności rekurencyjne sieci neuronowe – RNN) znacząco poprawiły przetwarzanie języka naturalnego, umożliwiając bardziej znaczące reprezentowanie sensu tekstu, uwzględniając kontekst słowa w zdaniu.
+Sieci neuronowe (a w szczególności rekurencyjne sieci neuronowe – RNN) znacznie ulepszyły przetwarzanie języka naturalnego, umożliwiając reprezentację znaczenia tekstu w bardziej sensowny sposób, z uwzględnieniem kontekstu słowa w zdaniu.
 
-To właśnie ta technologia napędzała wirtualnych asystentów, którzy pojawili się w pierwszej dekadzie nowego stulecia. Byli oni bardzo biegli w interpretowaniu języka ludzkiego, identyfikowaniu potrzeb i wykonywaniu działań, aby je zaspokoić – takich jak udzielanie odpowiedzi na podstawie z góry określonego skryptu czy korzystanie z usług zewnętrznych.
+To technologia, która zasilała wirtualnych asystentów powstałych w pierwszej dekadzie nowego stulecia, bardzo biegłych w interpretacji języka ludzkiego, identyfikowaniu potrzeb i wykonywaniu działań je zaspokajających – jak odpowiadanie według z góry ustalonego scenariusza lub korzystanie z usługi zewnętrznego dostawcy.
 
-### Obecnie: Generatywna sztuczna inteligencja
+### Obecnie, generatywna SI
 
-Tak doszliśmy do dzisiejszej generatywnej sztucznej inteligencji, która może być postrzegana jako podzbiór głębokiego uczenia.
+Tak oto doszliśmy do generatywnej SI dzisiaj, którą można uznać za podzbiór głębokiego uczenia.
 
-![AI, ML, DL i generatywna AI](../../../translated_images/pl/AI-diagram.c391fa518451a40d.webp)
+![AI, ML, DL oraz Generatywna SI](../../../translated_images/pl/AI-diagram.c391fa518451a40d.webp)
 
-Po dekadach badań w dziedzinie AI, nowa architektura modelu – zwana _Transformer_ – pokonała ograniczenia RNN, umożliwiając przetwarzanie znacznie dłuższych sekwencji tekstu jako danych wejściowych. Transformatory opierają się na mechanizmie uwagi, który pozwala modelowi przypisywać różne wagi do otrzymanych danych wejściowych, „zwracając większą uwagę” na najbardziej istotne informacje, niezależnie od ich kolejności w sekwencji tekstowej.
+Po dziesięcioleciach badań nad SI pojawiła się nowa architektura modelu – nazywana _Transformer_ – która pokonała ograniczenia RNN, będąc w stanie przyjąć jako wejście znacznie dłuższe sekwencje tekstu. Transformatory bazują na mechanizmie uwagi, pozwalając modelowi na nadawanie różnej wagi otrzymanym wejściom, „zwracając większą uwagę” tam, gdzie skoncentrowana jest najważniejsza informacja, niezależnie od ich kolejności w sekwencji tekstowej.
 
-Większość współczesnych modeli generatywnej AI – znanych również jako duże modele językowe (LLM), ponieważ pracują z tekstowymi danymi wejściowymi i wyjściowymi – opiera się właśnie na tej architekturze. Co ciekawe, modele te – trenowane na ogromnych ilościach nieoznaczonych danych z różnych źródeł, takich jak książki, artykuły i strony internetowe – mogą być dostosowywane do szerokiej gamy zadań i generować gramatycznie poprawny tekst z pozorami kreatywności. Nie tylko znacznie zwiększyły zdolność maszyny do „rozumienia” tekstu wejściowego, ale także umożliwiły generowanie oryginalnych odpowiedzi w języku ludzkim.
+Większość współczesnych modeli generatywnej SI – znanych również jako Duże Modele Językowe (LLM), ponieważ operują na tekstowych danych wejściowych i wyjściowych – opiera się właśnie na tej architekturze. Co ciekawe, modele te – wytrenowane na ogromnej ilości nieoznakowanych danych pochodzących z różnorodnych źródeł, takich jak książki, artykuły i strony internetowe – mogą być dostosowane do szerokiej gamy zadań oraz generować gramatycznie poprawny tekst z pozorami kreatywności. Więc nie tylko znacznie zwiększyły zdolność maszyny do „rozumienia” tekstu wejściowego, lecz także umożliwiły generowanie przez nią oryginalnej odpowiedzi w języku ludzkim.
 
 ## Jak działają duże modele językowe?
 
-W następnym rozdziale przyjrzymy się różnym typom modeli generatywnej AI, ale na razie zobaczmy, jak działają duże modele językowe, koncentrując się na modelach OpenAI GPT (Generative Pre-trained Transformer).
+W następnych rozdziałach przyjrzymy się różnym typom modeli generatywnej SI, ale na razie spójrzmy, jak działają duże modele językowe, z naciskiem na modele OpenAI GPT (Generative Pre-trained Transformer).
 
-- **Tokenizacja, tekst na liczby**: Duże modele językowe otrzymują tekst jako dane wejściowe i generują tekst jako dane wyjściowe. Jednak jako modele statystyczne, lepiej radzą sobie z liczbami niż z sekwencjami tekstowymi. Dlatego każdy tekst wejściowy jest najpierw przetwarzany przez tokenizator, zanim zostanie użyty przez główny model. Token to fragment tekstu – składający się z zmiennej liczby znaków, więc głównym zadaniem tokenizatora jest podzielenie tekstu wejściowego na tablicę tokenów. Następnie każdy token jest mapowany na indeks tokenu, który jest liczbą całkowitą kodującą oryginalny fragment tekstu.
+- **Tokenizator, tekst na liczby**: Duże Modele Językowe przyjmują tekst jako wejście i generują tekst jako wyjście. Jednak jako modele statystyczne działają znacznie lepiej na liczbach niż na sekwencjach tekstu. Dlatego każde wejście do modelu jest przetwarzane przez tokenizator, zanim zostanie użyte przez główny model. Token to fragment tekstu – składający się z zmiennej liczby znaków, dlatego głównym zadaniem tokenizatora jest podzielenie wejścia na tablicę tokenów. Następnie każdy token jest mapowany na indeks tokenu, czyli całkowitą reprezentację oryginalnego fragmentu tekstu.
 
 ![Przykład tokenizacji](../../../translated_images/pl/tokenizer-example.80a5c151ee7d1bd4.webp)
 
-- **Przewidywanie tokenów wyjściowych**: Mając n tokenów jako dane wejściowe (gdzie maksymalne n różni się w zależności od modelu), model jest w stanie przewidzieć jeden token jako dane wyjściowe. Ten token jest następnie włączany do danych wejściowych kolejnej iteracji, w rozszerzającym się wzorcu okna, co umożliwia lepsze doświadczenie użytkownika, który otrzymuje jedno (lub kilka) zdań jako odpowiedź. To wyjaśnia, dlaczego, jeśli kiedykolwiek korzystałeś z ChatGPT, mogłeś zauważyć, że czasami wygląda, jakby zatrzymywał się w połowie zdania.
+- **Przewidywanie tokenów wyjściowych**: Mając n tokenów na wejściu (maksymalna liczba n różni się w zależności od modelu), model jest w stanie przewidzieć jeden token jako wyjście. Ten token jest następnie włączany do wejścia w kolejnej iteracji, w schemacie rozszerzającego się okna, co umożliwia lepsze doświadczenie użytkownika, otrzymującego jedno (lub więcej) zdanie jako odpowiedź. To tłumaczy, dlaczego, jeśli kiedykolwiek grałeś z ChatGPT, mogłeś zauważyć, że czasami wydaje się zatrzymywać w środku zdania.
 
-- **Proces wyboru, rozkład prawdopodobieństwa**: Token wyjściowy jest wybierany przez model zgodnie z jego prawdopodobieństwem wystąpienia po obecnej sekwencji tekstowej. Dzieje się tak, ponieważ model przewiduje rozkład prawdopodobieństwa dla wszystkich możliwych „następnych tokenów”, obliczany na podstawie jego treningu. Jednak nie zawsze wybierany jest token o najwyższym prawdopodobieństwie z wynikowego rozkładu. Do tego wyboru dodawany jest stopień losowości, dzięki czemu model działa w sposób niedeterministyczny – nie otrzymujemy dokładnie takiego samego wyniku dla tego samego wejścia. Ten stopień losowości można dostosować za pomocą parametru modelu zwanego temperaturą.
+- **Proces wyboru, rozkład prawdopodobieństwa**: Token wyjściowy jest wybierany przez model zgodnie z prawdopodobieństwem jego wystąpienia po obecnej sekwencji tekstu. Model przewiduje rozkład prawdopodobieństwa dla wszystkich możliwych „następnych tokenów”, obliczany na podstawie treningu. Jednak nie zawsze wybierany jest token o najwyższym prawdopodobieństwie w rozkładzie. Dodana jest pewna doza losowości, dzięki czemu model działa w sposób niedeterministyczny – nie otrzymujemy dokładnie takiej samej odpowiedzi dla tego samego wejścia. Ta losowość symuluje proces twórczego myślenia i może być regulowana przy pomocy parametru modelu nazwanego temperaturą.
 
-## Jak nasz startup może wykorzystać duże modele językowe?
+## Jak nasz startup może wykorzystać Duże Modele Językowe?
 
-Teraz, gdy lepiej rozumiemy działanie dużego modelu językowego, zobaczmy kilka praktycznych przykładów najczęstszych zadań, które mogą być przez nie dobrze wykonywane, z uwzględnieniem naszego scenariusza biznesowego. Powiedzieliśmy, że główną zdolnością dużego modelu językowego jest _generowanie tekstu od podstaw, na podstawie tekstowego wejścia napisanego w języku naturalnym_.
+Teraz, gdy lepiej rozumiemy działanie dużego modelu językowego, zobaczmy kilka praktycznych przykładów najczęstszych zadań, które potrafią wykonać całkiem dobrze, z uwzględnieniem naszego scenariusza biznesowego.
+Powiedzieliśmy, że główną zdolnością Dużego Modelu Językowego jest _generowanie tekstu od zera, zaczynając od tekstowego wejścia, napisanego w języku naturalnym_.
 
 Ale jaki rodzaj tekstowego wejścia i wyjścia?
-Wejście dużego modelu językowego nazywane jest promptem, a wyjście nazywane jest completion, co odnosi się do mechanizmu modelu generowania kolejnego tokenu w celu uzupełnienia obecnego wejścia. Zgłębimy, czym jest prompt i jak go zaprojektować, aby jak najlepiej wykorzystać możliwości modelu. Na razie powiedzmy tylko, że prompt może zawierać:
+Wejście do dużego modelu językowego nazywamy promptem, a wyjście – completion, termin odnoszący się do mechanizmu modelu generowania następnego tokenu w celu uzupełnienia aktualnego wejścia. Wkrótce zagłębimy się w to, czym jest prompt i jak go zaprojektować, aby jak najlepiej wykorzystać model. Na razie powiedzmy, że prompt może zawierać:
 
-- **Instrukcję** określającą rodzaj oczekiwanego wyjścia z modelu. Instrukcja ta czasami może zawierać przykłady lub dodatkowe dane.
+- **Instrukcję**, określającą typ oczekiwanego wyjścia modelu. Ta instrukcja czasami może zawierać przykłady lub dodatkowe dane.
 
-  1. Podsumowanie artykułu, książki, recenzji produktów i innych, wraz z wyciąganiem wniosków z nieustrukturyzowanych danych.
+  1. Streszczenie artykułu, książki, recenzji produktów i innych, wraz z wydobywaniem informacji z nieustrukturyzowanych danych.
     
-    ![Przykład podsumowania](../../../translated_images/pl/summarization-example.7b7ff97147b3d790.webp)
+    ![Przykład streszczenia](../../../translated_images/pl/summarization-example.7b7ff97147b3d790.webp)
   
-  2. Kreatywne pomysły i projektowanie artykułu, eseju, zadania lub innych treści.
+  2. Kreatywne pomysły i projektowanie artykułów, esejów, prac domowych i innych.
       
-     ![Przykład kreatywnego pisania](../../../translated_images/pl/creative-writing-example.e24a685b5a543ad1.webp)
+     ![Przykład twórczego pisania](../../../translated_images/pl/creative-writing-example.e24a685b5a543ad1.webp)
 
 - **Pytanie**, zadane w formie rozmowy z agentem.
   
   ![Przykład rozmowy](../../../translated_images/pl/conversation-example.60c2afc0f595fa59.webp)
 
-- Fragment **tekstu do uzupełnienia**, który implikuje prośbę o pomoc w pisaniu.
+- Fragment **tekstu do uzupełnienia**, co jest pośrednio prośbą o pomoc w pisaniu.
   
   ![Przykład uzupełniania tekstu](../../../translated_images/pl/text-completion-example.cbb0f28403d42752.webp)
 
-- Fragment **kodu** wraz z prośbą o jego wyjaśnienie i dokumentację, lub komentarz z prośbą o wygenerowanie fragmentu kodu wykonującego określone zadanie.
+- Fragment **kodu** wraz z prośbą o wyjaśnienie i dokumentację lub komentarz proszący o wygenerowanie kawałka kodu wykonującego konkretne zadanie.
   
   ![Przykład kodowania](../../../translated_images/pl/coding-example.50ebabe8a6afff20.webp)
 
-Powyższe przykłady są dość proste i nie mają na celu wyczerpującego przedstawienia możliwości dużych modeli językowych. Mają one na celu pokazanie potencjału wykorzystania generatywnej AI, szczególnie, ale nie tylko, w kontekstach edukacyjnych.
+Przykłady powyżej są dość proste i nie mają na celu wyczerpującego pokazania możliwości Dużych Modeli Językowych. Mają pokazać potencjał wykorzystania generatywnej SI, szczególnie, ale nie wyłącznie, w kontekstach edukacyjnych.
 
-Należy również pamiętać, że wyjście generatywnego modelu AI nie jest doskonałe, a czasami kreatywność modelu może działać przeciwko niemu, prowadząc do wyników, które użytkownik może interpretować jako zniekształcenie rzeczywistości lub mogą być obraźliwe. Generatywna AI nie jest inteligentna – przynajmniej w bardziej kompleksowym znaczeniu inteligencji, obejmującym krytyczne i kreatywne myślenie czy inteligencję emocjonalną; nie jest deterministyczna i nie jest w pełni godna zaufania, ponieważ może łączyć błędne odniesienia, treści i stwierdzenia z poprawnymi informacjami, prezentując je w przekonujący i pewny sposób. W kolejnych lekcjach zajmiemy się wszystkimi tymi ograniczeniami i zobaczymy, co możemy zrobić, aby je zminimalizować.
+Ponadto wynik modelu generatywnej SI nie jest idealny, a czasem kreatywność modelu może działać na jego niekorzyść, skutkując produktem będącym zlepkiem słów, który użytkownik ludzki może odczytać jako mistyfikację rzeczywistości lub jako treść obraźliwą. Generatywna SI nie jest inteligentna – przynajmniej w szerszym rozumieniu inteligencji, obejmującym myślenie krytyczne, twórcze czy inteligencję emocjonalną; nie jest deterministyczna i nie jest godna zaufania, ponieważ zmyślenia, takie jak błędne odniesienia, treści i stwierdzenia, mogą być połączone z poprawnymi informacjami i przedstawione w przekonujący i pewny sposób. W kolejnych lekcjach będziemy zajmować się tymi ograniczeniami i zobaczymy, co można zrobić, aby je złagodzić.
 
 ## Zadanie
 
-Twoim zadaniem jest zapoznanie się z tematem [generatywnej AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) i próba zidentyfikowania obszaru, w którym można by dziś zastosować generatywną AI, a który jeszcze jej nie wykorzystuje. Jakie byłyby różnice w porównaniu do tradycyjnego podejścia? Czy można zrobić coś, czego wcześniej nie można było? Czy można działać szybciej? Napisz podsumowanie na 300 słów, opisując, jak wyglądałby Twój wymarzony startup AI, i uwzględnij nagłówki takie jak "Problem", "Jak wykorzystałbym AI", "Wpływ" oraz opcjonalnie plan biznesowy.
+Twoim zadaniem jest zapoznać się bliżej z [generatywną SI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) i spróbować zidentyfikować obszar, w którym dzisiaj dodałbyś generatywną SI, mimo że jej tam nie ma. Jak różniłby się wpływ w porównaniu do podejścia „starej szkoły”, czy możesz zrobić coś, czego wcześniej nie mogłeś, lub czy jesteś szybszy? Napisz 300-słowne streszczenie swojego wymarzonego startupu AI i dołącz nagłówki takie jak „Problem”, „Jak bym użył SI”, „Wpływ” i opcjonalnie plan biznesowy.
 
-Jeśli wykonasz to zadanie, możesz być gotowy, aby aplikować do inkubatora Microsoftu, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst), gdzie oferujemy kredyty na usługi Azure, OpenAI, mentoring i wiele więcej. Sprawdź to!
+Jeśli wykonasz to zadanie, możesz być nawet gotowy do aplikacji do inkubatora Microsoftu, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst), oferujemy kredyty na Azure, OpenAI, mentoring i wiele więcej, sprawdź to!
 
 ## Sprawdzenie wiedzy
 
 Co jest prawdą o dużych modelach językowych?
 
 1. Za każdym razem otrzymujesz dokładnie tę samą odpowiedź.
-1. Działa idealnie, świetnie dodaje liczby, generuje działający kod itp.
-1. Odpowiedź może się różnić, mimo użycia tego samego promptu. Jest również świetna w dostarczaniu pierwszej wersji czegoś, czy to tekstu, czy kodu. Jednak wyniki wymagają dalszego dopracowania.
+1. Robią wszystko perfekcyjnie, świetnie liczą, generują działający kod itd.
+1. Odpowiedź może się różnić mimo użycia tego samego promptu. Są też świetne w dawaniu pierwszej wersji czegoś, czy to tekstu czy kodu. Ale musisz poprawić wyniki.
 
-Odpowiedź: 3, LLM jest niedeterministyczny, odpowiedź może się różnić, jednak można kontrolować jej zmienność za pomocą ustawienia temperatury. Nie należy również oczekiwać, że będzie działać perfekcyjnie – jego zadaniem jest wykonanie ciężkiej pracy, co często oznacza dostarczenie dobrego pierwszego szkicu, który należy stopniowo poprawiać.
+A: 3, LLM jest niedeterministyczny, odpowiedź się różni, jednak możesz kontrolować jej zmienność przez ustawienie temperatury. Nie powinieneś też oczekiwać, że zrobi coś perfekcyjnie, chodzi o to, aby wykonać ciężką pracę za Ciebie, co często oznacza, że otrzymujesz dobry pierwszy szkic czegoś, co musisz stopniowo poprawiać.
 
-## Świetna robota! Kontynuuj naukę
+## Świetna robota! Kontynuuj podróż
 
-Po ukończeniu tej lekcji, sprawdź naszą [kolekcję nauki o generatywnej AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby dalej rozwijać swoją wiedzę
+Po ukończeniu tej lekcji sprawdź naszą [kolekcję kursów Generatywnej SI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby dalej rozwijać swoją wiedzę o Generatywnej SI!
+
+
 Przejdź do Lekcji 2, gdzie przyjrzymy się, jak [eksplorować i porównywać różne typy LLM](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się zapewnić dokładność, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za autorytatywne źródło. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Zastrzeżenie**:
+Niniejszy dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Choć dążymy do dokładności, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub niedokładności. Oryginalny dokument w jego języku źródłowym należy uznawać za autorytatywne źródło. W przypadku informacji krytycznych zalecane jest skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

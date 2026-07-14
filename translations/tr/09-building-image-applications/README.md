@@ -1,100 +1,101 @@
-# Görüntü Oluşturma Uygulamaları Oluşturma
+# Görüntü Üretim Uygulamaları Geliştirme
 
-[![Görüntü Oluşturma Uygulamaları Oluşturma](../../../translated_images/tr/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![Görüntü Üretim Uygulamaları Geliştirme](../../../translated_images/tr/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
-Büyük Dil Modelleri (LLM'ler) yalnızca metin oluşturma ile sınırlı değildir. Metin açıklamalarından görüntü oluşturmak da mümkündür. Görüntülerin bir modalite olarak kullanılması, MedTech, mimarlık, turizm, oyun geliştirme gibi birçok alanda oldukça faydalı olabilir. Bu bölümde, en popüler iki görüntü oluşturma modeli olan DALL-E ve Midjourney'i inceleyeceğiz.
+LLM'lerin sadece metin üretiminden ibaret olmadığını biliyor muydunuz? Metin açıklamalarından görüntü de oluşturmak mümkündür. Görüntüleri bir modalite olarak kullanmak MedTech, mimari, turizm, oyun geliştirme ve daha birçok alanda çok faydalı olabilir. Bu bölümde, en popüler iki görüntü üretim modeli olan DALL-E ve Midjourney'i inceleyeceğiz.
 
 ## Giriş
 
 Bu derste şunları ele alacağız:
 
-- Görüntü oluşturma ve neden faydalı olduğu.
-- DALL-E ve Midjourney, ne oldukları ve nasıl çalıştıkları.
-- Görüntü oluşturma uygulaması nasıl oluşturulur.
+- Görüntü üretimi ve neden faydalı olduğu.
+- DALL-E ve Midjourney modellerinin ne olduğu ve nasıl çalıştığı.
+- Bir görüntü üretim uygulamasını nasıl inşa edeceğiniz.
 
 ## Öğrenme Hedefleri
 
 Bu dersi tamamladıktan sonra şunları yapabileceksiniz:
 
-- Görüntü oluşturma uygulaması oluşturmak.
-- Uygulamanız için meta istemlerle sınırlar belirlemek.
+- Bir görüntü üretim uygulaması geliştirmek.
+- Uygulamanız için meta komutlarla sınırlar belirlemek.
 - DALL-E ve Midjourney ile çalışmak.
 
-## Neden bir görüntü oluşturma uygulaması oluşturmalısınız?
+## Neden görüntü üretim uygulaması geliştirmeliyiz?
 
-Görüntü oluşturma uygulamaları, Üretken Yapay Zeka'nın yeteneklerini keşfetmek için harika bir yoldur. Örneğin şu amaçlarla kullanılabilirler:
+Görüntü üretim uygulamaları, Yaratıcı Yapay Zekanın yeteneklerini keşfetmek için harika bir yoldur. Örneğin, şu amaçlarla kullanılabilir:
 
-- **Görüntü düzenleme ve sentezleme**. Görüntü düzenleme ve görüntü sentezleme gibi çeşitli kullanım durumları için görüntüler oluşturabilirsiniz.
+- **Görüntü düzenleme ve sentezi**. Görüntü düzenleme ve sentezi gibi çeşitli kullanım durumları için görüntüler oluşturabilirsiniz.
 
-- **Çeşitli endüstrilere uygulanabilir**. MedTech, Turizm, Oyun geliştirme gibi çeşitli endüstriler için görüntüler oluşturmak için de kullanılabilirler.
+- **Çeşitli endüstrilere uygulanabilir**. Ayrıca MedTech, Turizm, Oyun geliştirme gibi çeşitli sektörler için görüntüler oluşturmakta kullanılabilirler.
 
 ## Senaryo: Edu4All
 
-Bu ders kapsamında, Edu4All adlı girişimimizle çalışmaya devam edeceğiz. Öğrenciler, değerlendirmeleri için görüntüler oluşturacaklar; hangi görüntülerin oluşturulacağı tamamen öğrencilere bağlıdır. Örneğin, kendi masalları için illüstrasyonlar oluşturabilir, hikayeleri için yeni bir karakter yaratabilir veya fikirlerini ve kavramlarını görselleştirmelerine yardımcı olabilirler.
+Bu derste, girişimimiz Edu4All ile çalışmaya devam edeceğiz. Öğrenciler değerlendirmelerinde kullanmak üzere görüntüler oluşturacaklar; görüntülerin ne olduğu tamamen öğrencilere bağlıdır, kendi masalları için çizimler, hikayelerine yeni bir karakter yaratmak veya fikirlerini ve kavramlarını görselleştirmeye yardımcı olabilirler.
 
-Edu4All öğrencilerinin sınıfta anıtlar üzerinde çalışırken oluşturabilecekleri örneklerden biri:
+Örneğin, Edu4All öğrencileri sınıfta anıtlarda çalışıyorlarsa aşağıdaki gibi görüntüler oluşturabilirler:
 
-![Edu4All girişimi, anıtlar üzerine sınıf, Eyfel Kulesi](../../../translated_images/tr/startup.94d6b79cc4bb3f5a.webp)
+![Edu4All girişimi, anıtlar sınıfı, Eyfel Kulesi](../../../translated_images/tr/startup.94d6b79cc4bb3f5a.webp)
 
-şu tür bir istem kullanarak:
+şu komut kullanılarak
 
-> "Sabahın erken saatlerinde güneş ışığında Eyfel Kulesi'nin yanında bir köpek"
+> "Sabah erken güneş ışığında Eyfel Kulesi yanında köpek"
 
 ## DALL-E ve Midjourney nedir?
 
-[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) ve [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst), metin istemleri kullanarak görüntü oluşturmanıza olanak tanıyan en popüler iki görüntü oluşturma modelidir.
+[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) ve [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst), promtlar kullanarak görüntü oluşturmayı sağlayan en popüler iki görüntü üretim modelidir.
 
 ### DALL-E
 
-Öncelikle DALL-E ile başlayalım. Bu, metin açıklamalarından görüntü oluşturan bir Üretken Yapay Zeka modelidir.
+Şimdi metin açıklamalarından görüntü üreten bir Yaratıcı Yapay Zeka modeli olan DALL-E ile başlayalım.
 
-> [DALL-E, CLIP ve diffused attention adlı iki modelin birleşimidir](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst).
+> [DALL-E, CLIP ve yayılmış dikkat olmak üzere iki modelin birleşimidir](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst).
 
-- **CLIP**, görüntüler ve metinlerden sayısal veri temsilleri (embedding) oluşturan bir modeldir.
+- **CLIP**, görüntüler ve metinlerden veri için sayısal temsil olan embeddingler üretir.
 
-- **Diffused attention**, embeddinglerden görüntü oluşturan bir modeldir. DALL-E, bir görüntü ve metin veri seti üzerinde eğitilmiştir ve metin açıklamalarından görüntü oluşturmak için kullanılabilir. Örneğin, DALL-E bir şapka takmış kedi veya mohawk saçlı bir köpek görüntüsü oluşturmak için kullanılabilir.
+- **Yayılmış dikkat**, embeddinglerden görüntüler üretir. DALL-E, görüntüler ve metinlerden oluşan bir veri seti üzerinde eğitilmiştir ve metin açıklamalarından görüntüler oluşturabilir. Örneğin, DALL-E şapkalı bir kedi veya mohawklı bir köpeğin görüntüsünü oluşturabilir.
 
 ### Midjourney
 
-Midjourney, DALL-E'ye benzer şekilde çalışır; metin istemlerinden görüntüler oluşturur. Midjourney, "şapka takmış bir kedi" veya "mohawk saçlı bir köpek" gibi istemler kullanılarak görüntüler oluşturmak için kullanılabilir.
+Midjourney, DALL-E'ye benzer şekilde çalışır ve metin komutlarından görüntüler üretir. Midjourney, “şapkalı bir kedi” veya “mohawklı bir köpek” gibi komutlarla da görüntüler oluşturabilir.
 
 ![Midjourney tarafından oluşturulan görüntü, mekanik güvercin](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
-_Wikipedia'dan alınan görsel, Midjourney tarafından oluşturulmuş görüntü_
+_Görüntü kaynağı Wikipedia, Midjourney tarafından oluşturuldu_
 
-## DALL-E ve Midjourney nasıl çalışır?
+## DALL-E ve Midjourney nasıl çalışır
 
-Öncelikle, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E, _autoregressive transformer_ ile transformer mimarisine dayalı bir Üretken Yapay Zeka modelidir.
+Öncelikle [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E, _autoregressive transformer_ yapısına dayalı bir Yaratıcı Yapay Zeka modelidir.
 
-Bir _autoregressive transformer_, bir modelin metin açıklamalarından görüntü oluşturma şeklini tanımlar; bir pikseli birer birer oluşturur ve ardından oluşturulan pikselleri bir sonraki pikseli oluşturmak için kullanır. Sinir ağında birden fazla katmandan geçerek görüntü tamamlanır.
+_Autoregressive transformer_, metin açıklamalarından görüntü oluşturmayı tanımlar; birer piksel üreterek ilerler ve oluşturduğu pikselleri kullanarak sonraki pikselleri üretir. Görüntü tamamlanana kadar sinir ağının birden çok katmanında işlem görür.
 
-Bu süreçle DALL-E, oluşturduğu görüntüdeki nitelikleri, nesneleri, özellikleri ve daha fazlasını kontrol eder. Ancak, DALL-E 2 ve 3, oluşturulan görüntü üzerinde daha fazla kontrol sağlar.
+Bu süreçle DALL-E, ürettiği görüntüde nesneler, özellikler ve detaylar üzerinde kontrol sahibidir. Ancak DALL-E 2 ve 3, üretilen görüntü üzerinde daha fazla kontrol imkanı sunar.
 
-## İlk görüntü oluşturma uygulamanızı oluşturma
+## İlk görüntü üretim uygulamanızı oluşturmak
 
-Peki bir görüntü oluşturma uygulaması oluşturmak için neye ihtiyacınız var? Şu kütüphanelere ihtiyacınız olacak:
+Peki bir görüntü üretim uygulaması geliştirmek için neler gerekir? Aşağıdaki kütüphanelere ihtiyacınız olacak:
 
-- **python-dotenv**, gizli bilgilerinizi _.env_ dosyasında koddan uzak tutmanız için bu kütüphaneyi kullanmanız şiddetle tavsiye edilir.
-- **openai**, OpenAI API ile etkileşim kurmak için kullanacağınız kütüphane.
+- **python-dotenv**, gizli bilgilerinizi koddan uzak tutmak için _.env_ dosyasında saklamak adına kullanmanız şiddetle tavsiye edilir.
+- **openai**, OpenAI API ile etkileşim için kullanacağınız kütüphane.
 - **pillow**, Python'da görüntülerle çalışmak için.
 - **requests**, HTTP istekleri yapmanıza yardımcı olur.
 
-## Azure OpenAI modelini oluşturma ve dağıtma
+## Azure OpenAI modeli oluşturma ve dağıtma
 
-Henüz yapmadıysanız, [Microsoft Learn](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal) sayfasındaki talimatları izleyerek bir Azure OpenAI kaynağı ve model oluşturun. Model olarak DALL-E 3'ü seçin.
+Henüz yapmadıysanız, bir Azure OpenAI kaynağı ve modeli oluşturmak için [Microsoft Learn](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst) sayfasındaki talimatları takip edin.
+Model olarak **gpt-image-1** seçin (mevcut nesil Azure OpenAI görüntü modeli; DALL-E 3 eskidir ve yeni dağıtımlar için artık mevcut değildir).
 
 ## Uygulamayı oluşturma
 
-1. _.env_ adlı bir dosya oluşturun ve şu içeriği ekleyin:
+1. Aşağıdaki içerikte bir _.env_ dosyası oluşturun:
 
    ```text
    AZURE_OPENAI_ENDPOINT=<your endpoint>
    AZURE_OPENAI_API_KEY=<your key>
-   AZURE_OPENAI_DEPLOYMENT="dall-e-3"
+   AZURE_OPENAI_DEPLOYMENT="gpt-image-1"
    ```
 
-   Bu bilgiyi Azure OpenAI Foundry Portal'daki "Deployments" bölümünde bulabilirsiniz.
+   Bu bilgileri Azure OpenAI Foundry Portalınızda "Deployments" bölümünde bulabilirsiniz.
 
-1. Yukarıdaki kütüphaneleri _requirements.txt_ adlı bir dosyada şu şekilde toplayın:
+1. Yukarıdaki kütüphaneleri _requirements.txt_ adlı bir dosyada toplayın:
 
    ```text
    python-dotenv
@@ -103,7 +104,7 @@ Henüz yapmadıysanız, [Microsoft Learn](https://learn.microsoft.com/azure/ai-f
    requests
    ```
 
-1. Ardından sanal bir ortam oluşturun ve kütüphaneleri yükleyin:
+1. Ardından, sanal ortam oluşturun ve kütüphaneleri yükleyin:
 
    ```bash
    python3 -m venv venv
@@ -111,14 +112,14 @@ Henüz yapmadıysanız, [Microsoft Learn](https://learn.microsoft.com/azure/ai-f
    pip install -r requirements.txt
    ```
 
-   Windows için sanal ortam oluşturma ve etkinleştirme komutları şunlardır:
+   Windows için sanal ortam oluşturup etkinleştirmek üzere şu komutları kullanın:
 
    ```bash
    python3 -m venv venv
    venv\Scripts\activate.bat
    ```
 
-1. _app.py_ adlı bir dosyaya şu kodu ekleyin:
+1. _app.py_ adlı dosyaya aşağıdaki kodu ekleyin:
 
     ```python
     import openai
@@ -128,51 +129,51 @@ Henüz yapmadıysanız, [Microsoft Learn](https://learn.microsoft.com/azure/ai-f
     import dotenv
     from openai import OpenAI, AzureOpenAI
     
-    # import dotenv
+    # dotenv'i içe aktar
     dotenv.load_dotenv()
     
-    # configure Azure OpenAI service client 
+    # Azure OpenAI servis istemcisini yapılandır
     client = AzureOpenAI(
       azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"],
       api_key=os.environ['AZURE_OPENAI_API_KEY'],
-      api_version = "2024-02-01"
+      api_version = "2024-10-21"
       )
     try:
-        # Create an image by using the image generation API
+        # Görüntü oluşturma API'si kullanarak bir resim oluştur
         generation_response = client.images.generate(
                                 prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',
                                 size='1024x1024', n=1,
                                 model=os.environ['AZURE_OPENAI_DEPLOYMENT']
                               )
 
-        # Set the directory for the stored image
+        # Kaydedilen resim için dizini ayarla
         image_dir = os.path.join(os.curdir, 'images')
 
-        # If the directory doesn't exist, create it
+        # Dizin yoksa oluştur
         if not os.path.isdir(image_dir):
             os.mkdir(image_dir)
 
-        # Initialize the image path (note the filetype should be png)
+        # Resim yolunu başlat (dosya türünün png olması gerektiğine dikkat et)
         image_path = os.path.join(image_dir, 'generated-image.png')
 
-        # Retrieve the generated image
-        image_url = generation_response.data[0].url  # extract image URL from response
-        generated_image = requests.get(image_url).content  # download the image
+        # Oluşturulan resmi al
+        image_url = generation_response.data[0].url  # Yanıttan resim URL'sini çıkar
+        generated_image = requests.get(image_url).content  # Resmi indir
         with open(image_path, "wb") as image_file:
             image_file.write(generated_image)
 
-        # Display the image in the default image viewer
+        # Resmi varsayılan resim görüntüleyicide göster
         image = Image.open(image_path)
         image.show()
 
-    # catch exceptions
-    except openai.InvalidRequestError as err:
+    # İstisnaları yakala
+    except openai.BadRequestError as err:
         print(err)
    ```
 
 Bu kodu açıklayalım:
 
-- Öncelikle, OpenAI kütüphanesi, dotenv kütüphanesi, requests kütüphanesi ve Pillow kütüphanesi dahil olmak üzere ihtiyacımız olan kütüphaneleri içe aktarıyoruz.
+- Öncelikle, OpenAI, dotenv, requests ve Pillow kütüphaneleri dahil olmak üzere gereksinim duyduğumuz kütüphaneleri içe aktarırız.
 
   ```python
   import openai
@@ -182,28 +183,28 @@ Bu kodu açıklayalım:
   import dotenv
   ```
 
-- Daha sonra, _.env_ dosyasından ortam değişkenlerini yüklüyoruz.
+- Sonra _.env_ dosyasından ortam değişkenlerini yükleriz.
 
   ```python
-  # import dotenv
+  # dotenv'i içe aktar
   dotenv.load_dotenv()
   ```
 
-- Ardından, Azure OpenAI hizmeti istemcisini yapılandırıyoruz.
+- Ardından Azure OpenAI servis istemcisini yapılandırırız
 
   ```python
-  # Get endpoint and key from environment variables
+  # Uç noktayı ve anahtarı ortam değişkenlerinden alın
   client = AzureOpenAI(
       azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"],
       api_key=os.environ['AZURE_OPENAI_API_KEY'],
-      api_version = "2024-02-01"
+      api_version = "2024-10-21"
       )
   ```
 
-- Son olarak, görüntüyü oluşturuyoruz:
+- Sonra görüntüyü oluştururuz:
 
   ```python
-  # Create an image by using the image generation API
+  # Görüntü oluşturma API'sini kullanarak bir görüntü oluşturun
   generation_response = client.images.generate(
                         prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',
                         size='1024x1024', n=1,
@@ -211,18 +212,18 @@ Bu kodu açıklayalım:
                       )
   ```
 
-  Yukarıdaki kod, oluşturulan görüntünün URL'sini içeren bir JSON nesnesiyle yanıt verir. Bu URL'yi kullanarak görüntüyü indirip bir dosyaya kaydedebiliriz.
+  Yukarıdaki kod, oluşturulan görüntünün URL'sini içeren bir JSON nesnesi ile yanıt verir. Bu URL'yi kullanarak görüntüyü indirebilir ve bir dosyaya kaydedebiliriz.
 
-- Son olarak, görüntüyü açar ve standart görüntü görüntüleyici ile görüntüleriz:
+- Son olarak, görüntüyü açar ve standart görüntüleyici ile görüntüleriz:
 
   ```python
   image = Image.open(image_path)
   image.show()
   ```
 
-### Görüntü oluşturma hakkında daha fazla bilgi
+### Görüntü oluşturma kodunun daha ayrıntılı açıklaması
 
-Görüntüyü oluşturan koda daha detaylı bakalım:
+Görüntü oluşturma kodunu daha detaylı inceleyelim:
 
    ```python
      generation_response = client.images.generate(
@@ -232,23 +233,23 @@ Görüntüyü oluşturan koda daha detaylı bakalım:
                            )
    ```
 
-- **prompt**, görüntüyü oluşturmak için kullanılan metin istemidir. Bu durumda, "Sisli bir çayırda nergislerin yetiştiği bir alanda lolipop tutan bir atın üzerindeki tavşan" istemini kullanıyoruz.
-- **size**, oluşturulan görüntünün boyutudur. Bu durumda, 1024x1024 piksel boyutunda bir görüntü oluşturuyoruz.
-- **n**, oluşturulan görüntü sayısıdır. Bu durumda, iki görüntü oluşturuyoruz.
-- **temperature**, Üretken Yapay Zeka modelinin çıktısının rastgeleliğini kontrol eden bir parametredir. Sıcaklık, 0 ile 1 arasında bir değerdir; burada 0, çıktının deterministik olduğu ve 1, çıktının rastgele olduğu anlamına gelir. Varsayılan değer 0.7'dir.
+- **prompt**, görüntüyü oluşturmak için kullanılan metin komutudur. Bu örnekte, "At üzerindeki tavşan, lolipop tutuyor, nergislerin yetiştiği sisli çayırda" komutunu kullanıyoruz.
+- **size**, oluşturulan görüntünün boyutudur. Bu örnekte 1024x1024 piksel görüntü oluşturuluyor.
+- **n**, oluşturulacak görüntü sayısıdır. Biz burada iki görüntü oluşturuyoruz.
+- **temperature**, Yaratıcı Yapay Zeka modelinin çıktısının rastgeleliğini kontrol eden bir parametredir. 0 değeri çıktının deterministik olduğunu, 1 değeri ise tamamen rastgele çıktılar üreteceğini ifade eder. Varsayılan değer 0.7'dir.
 
-Görüntülerle yapabileceğiniz daha fazla şey var ve bunları bir sonraki bölümde ele alacağız.
+Görüntülerle yapılabilecek başka şeyler de var; bunları sonraki bölümde ele alacağız.
 
-## Görüntü oluşturmanın ek yetenekleri
+## Görüntü üretiminin ek yetenekleri
 
-Şimdiye kadar, Python'da birkaç satır kodla bir görüntü oluşturmayı nasıl başardığımızı gördünüz. Ancak, görüntülerle yapabileceğiniz daha fazla şey var.
+Şimdiye kadar, Python'da birkaç satır kod ile nasıl görüntü oluşturduğumuzu gördünüz. Ancak görüntülerle yapılabilecek başka şeyler de var.
 
 Ayrıca şunları yapabilirsiniz:
 
-- **Düzenlemeler yapma**. Mevcut bir görüntüye bir maske ve bir istem sağlayarak bir görüntüyü değiştirebilirsiniz. Örneğin, bir görüntünün bir kısmına bir şey ekleyebilirsiniz. Tavşan görüntümüzü hayal edin; tavşana bir şapka ekleyebilirsiniz. Bunu, görüntüyü, bir maske (değişiklik yapılacak alanı belirleyen) ve yapılması gerekeni belirten bir metin istemi sağlayarak yapabilirsiniz. 
-> Not: Bu özellik DALL-E 3'te desteklenmemektedir.
-
-İşte GPT Image kullanılarak yapılmış bir örnek:
+- **Düzenlemeler yapma**. Mevcut bir görüntüye maske ve komut sağlayarak görüntüyü değiştirebilirsiniz. Örneğin, bir görüntünün bir bölümüne bir şey ekleyebilirsiniz. Tavşan görüntümüzü düşünün; tavşanın üzerine şapka ekleyebilirsiniz. Bunu yapmak için görüntüyü, değişiklik yapılacak alanı belirten bir maskeyi ve ne yapılacağını belirten bir metin komutunu sağlamalısınız. 
+> Not: Bu DALL-E 3'te desteklenmemektedir. 
+ 
+İşte GPT Image kullanarak bir örnek:
 
    ```python
    response = client.images.edit(
@@ -260,7 +261,7 @@ Ayrıca şunları yapabilirsiniz:
    image_url = response.data[0].url
    ```
 
-  Temel görüntü yalnızca havuzlu salonu içerirken, son görüntüde bir flamingo olacaktır:
+  Temel görüntü sadece havuzlu salonu içerecek ancak son görüntüye bir flamingo eklenecektir:
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
   <img src="../../../translated_images/tr/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
@@ -268,80 +269,81 @@ Ayrıca şunları yapabilirsiniz:
   <img src="../../../translated_images/tr/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
-- **Varyasyonlar oluşturma**. Buradaki fikir, mevcut bir görüntüyü alıp farklı varyasyonlar oluşturmanızdır. Bir varyasyon oluşturmak için bir görüntü ve bir metin istemi sağlayarak şu şekilde kod yazabilirsiniz:
+
+- **Varyasyonlar yaratma**. Var olan bir görüntü alıp varyasyonların oluşturulmasını isteyebilirsiniz. Bir varyasyon oluşturmak için görüntü ve metin komutu sağlar, şu şekilde kod yazarsınız:
 
   ```python
-  response = openai.Image.create_variation(
+  response = client.images.create_variation(
     image=open("bunny-lollipop.png", "rb"),
     n=1,
     size="1024x1024"
   )
-  image_url = response['data'][0]['url']
+  image_url = response.data[0].url
   ```
 
-  > Not: Bu özellik yalnızca OpenAI'de desteklenmektedir.
+  > Not, bu yalnızca OpenAI'nin DALL-E 2 modelinde desteklenmektedir, gpt-image-1 modelinde değil
 
-## Sıcaklık
+## Temperature (sıcaklık)
 
-Sıcaklık, Üretken Yapay Zeka modelinin çıktısının rastgeleliğini kontrol eden bir parametredir. Sıcaklık, 0 ile 1 arasında bir değerdir; burada 0, çıktının deterministik olduğu ve 1, çıktının rastgele olduğu anlamına gelir. Varsayılan değer 0.7'dir.
+Temperature, Bir Yaratıcı Yapay Zeka modelinin çıktısının rastgeleliğini kontrol eden bir parametredir. 0 değeri çıktının deterministik olduğunu, 1 değeri ise tamamen rastgele çıktılar üreteceğini ifade eder. Varsayılan değer 0.7'dir.
 
-Sıcaklığın nasıl çalıştığını görmek için bu istemi iki kez çalıştırarak bir örneğe bakalım:
+Temperature'ın nasıl çalıştığına bakalım, bu komutu iki kez çalıştırarak:
 
-> İstem: "Sisli bir çayırda nergislerin yetiştiği bir alanda lolipop tutan bir atın üzerindeki tavşan"
+> Komut : "At üzerindeki tavşan, lolipop tutuyor, nergislerin yetiştiği sisli çayırda"
 
-![Lolipop tutan bir atın üzerindeki tavşan, versiyon 1](../../../translated_images/tr/v1-generated-image.a295cfcffa3c13c2.webp)
+![At üzerindeki tavşan lolipop tutuyor, versiyon 1](../../../translated_images/tr/v1-generated-image.a295cfcffa3c13c2.webp)
 
-Şimdi aynı istemi tekrar çalıştırarak aynı görüntüyü iki kez alamayacağımızı görelim:
+Şimdi aynı komutu tekrar çalıştırıp aynı görüntünün iki kez oluşmayacağını görelim:
 
-![Atın üzerindeki tavşan görüntüsü](../../../translated_images/tr/v2-generated-image.33f55a3714efe61d.webp)
+![At üzerindeki tavşanın oluşturduğu görüntü](../../../translated_images/tr/v2-generated-image.33f55a3714efe61d.webp)
 
-Gördüğünüz gibi, görüntüler benzer ancak aynı değil. Şimdi sıcaklık değerini 0.1'e değiştirip ne olduğunu görelim:
+Görüldüğü üzere, görüntüler benzer ama aynı değil. Temperature değerini 0.1 yapalım ve ne olduğuna bakalım:
 
 ```python
- generation_response = client.images.create(
-        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
+ generation_response = client.images.generate(
+        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Komut metninizi buraya girin
         size='1024x1024',
         n=2
     )
 ```
 
-### Sıcaklığı değiştirme
+### Temperature değerini değiştirme
 
-Yanıtı daha deterministik hale getirmeye çalışalım. Oluşturduğumuz iki görüntüden, ilk görüntüde bir tavşan ve ikinci görüntüde bir at olduğunu gözlemleyebiliriz, dolayısıyla görüntüler oldukça farklıdır.
+Tepkiyi daha deterministik hale getirmeye çalışalım. Oluşturduğumuz iki görüntüye baktığımızda, birincisinde tavşan var, ikincisinde at var, yani görüntüler oldukça farklı.
 
-Bu nedenle kodumuzu değiştirip sıcaklığı 0 olarak ayarlayalım:
+O halde kodumuzu değiştirip temperature'ı 0 olarak ayarlayalım:
 
 ```python
-generation_response = client.images.create(
-        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
+generation_response = client.images.generate(
+        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # İstek metninizi buraya girin
         size='1024x1024',
         n=2,
         temperature=0
     )
 ```
 
-Şimdi bu kodu çalıştırdığınızda şu iki görüntüyü elde edersiniz:
+Bu kodu çalıştırdığınızda şu iki görüntüyü elde edersiniz:
 
-- ![Sıcaklık 0, v1](../../../translated_images/tr/v1-temp-generated-image.a4346e1d2360a056.webp)
-- ![Sıcaklık 0, v2](../../../translated_images/tr/v2-temp-generated-image.871d0c920dbfb0f1.webp)
+- ![Temperature 0, v1](../../../translated_images/tr/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![Temperature 0 , v2](../../../translated_images/tr/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
-Burada açıkça görebilirsiniz ki görüntüler birbirine daha çok benziyor.
+Burada görüntülerin birbirine daha çok benzediğini açıkça görebilirsiniz.
 
-## Uygulamanız için sınırları meta istemlerle nasıl tanımlarsınız?
+## Uygulamanız için sınırları nasıl belirleriz - metapromptlar
 
-Demo ile müşterilerimiz için zaten görüntüler oluşturabiliyoruz. Ancak, uygulamamız için bazı sınırlar oluşturmalıyız.
+Demo uygulamamız ile müşterilerimiz için görüntüler oluşturabiliyoruz. Ancak uygulamanız için bazı sınırlar koymanız gerekir.
 
-Örneğin, iş için uygun olmayan veya çocuklar için uygun olmayan görüntüler oluşturmak istemiyoruz.
+Örneğin, iş yerinde uygun olmayan ya da çocuklar için uygun olmayan görüntüler oluşturmak istemeyiz.
 
-Bunu _meta istemler_ ile yapabiliriz. Meta istemler, Üretken Yapay Zeka modelinin çıktısını kontrol etmek için kullanılan metin istemleridir. Örneğin, meta istemleri kullanarak çıktıyı kontrol edebilir ve oluşturulan görüntülerin iş için uygun veya çocuklar için uygun olmasını sağlayabiliriz.
+Bunu _metapromptlar_ ile yapabiliriz. Metapromptlar, bir Yaratıcı Yapay Zeka modelinin çıktısını kontrol eden metin komutlarıdır. Örneğin, metapromptlar ile çıktıyı kontrol ederek oluşturulan görüntülerin iş yeri için güvenli veya çocuklar için uygun olmasını sağlarız.
 
 ### Nasıl çalışır?
 
-Peki, meta istemler nasıl çalışır?
+Metapromptlar nasıl çalışır?
 
-Meta istemler, Üretken Yapay Zeka modelinin çıktısını kontrol etmek için kullanılan metin istemleridir. Metin istemden önce konumlandırılırlar ve modelin çıktısını kontrol etmek için kullanılırlar. İstem girdisi ve meta istem girdisini tek bir metin istemde kapsar.
+Metapromptlar, bir Yaratıcı Yapay Zeka modelinin çıktısını kontrol etmek için metin komutlarıdır; metin komutundan önce konumlanır ve model çıktısını kontrol etmek için kullanılır. Uygulamalarda bu şekilde yerleştirilerek model çıktısı kontrol edilir. Komut girişi ve metaprompt aynı metin komutunda birleştirilir.
 
-Bir meta istem örneği şu şekilde olabilir:
+Bir metaprompt örneği şöyle olabilir:
 
 ```text
 You are an assistant designer that creates images for children.
@@ -360,7 +362,7 @@ Do not consider any input from the following that is not safe for work or approp
 
 ```
 
-Şimdi, demo'muzda meta istemleri nasıl kullanabileceğimizi görelim.
+Şimdi, demo uygulamamızda metapromptları nasıl kullanabileceğimize bakalım.
 
 ```python
 disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
@@ -382,20 +384,22 @@ Do not consider any input from the following that is not safe for work or approp
 prompt = f"{meta_prompt}
 Create an image of a bunny on a horse, holding a lollipop"
 
-# TODO add request to generate image
+# TODO resim oluşturmak için istek ekle
 ```
 
-Yukarıdaki istemden, oluşturulan tüm görüntülerin meta istemi dikkate aldığını görebilirsiniz.
+Yukarıdaki komuttan, oluşturulan tüm görüntülerin metapromptu dikkate aldığı görülmektedir.
 
-## Ödev - Öğrencileri destekleyelim
+## Ödev - öğrencileri yetkilendirelim
 
-Bu dersin başında Edu4All'ı tanıttık. Şimdi öğrencilerin değerlendirmeleri için görüntüler oluşturmalarını sağlama zamanı.
+Bu dersin başında Edu4All'dan bahsetmiştik. Şimdi öğrencilerin değerlendirmeleri için görüntü oluşturmalarını sağlamanın zamanı geldi.
 
-Öğrenciler, anıtlar içeren değerlendirmeleri için görüntüler oluşturacaklar; hangi anıtların olacağı tamamen öğrencilere bağlı. Öğrencilerden bu görevde yaratıcılıklarını kullanarak bu anıtları farklı bağlamlara yerleştirmeleri isteniyor.
+
+Öğrenciler, değerlendirmeleri için anıtlar içeren görseller oluşturacaklar, hangi anıtların seçileceği öğrencilere kalmıştır. Öğrencilerden, bu görevde yaratıcılıklarını kullanarak bu anıtları farklı bağlamlarda yerleştirmeleri istenmektedir.
 
 ## Çözüm
 
 İşte olası bir çözüm:
+
 ```python
 import openai
 import os
@@ -403,14 +407,14 @@ import requests
 from PIL import Image
 import dotenv
 from openai import AzureOpenAI
-# import dotenv
+# dotenv'i içe aktar
 dotenv.load_dotenv()
 
-# Get endpoint and key from environment variables
+# Uç noktayı ve anahtarı ortam değişkenlerinden al
 client = AzureOpenAI(
   azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"],
   api_key=os.environ['AZURE_OPENAI_API_KEY'],
-  api_version = "2024-02-01"
+  api_version = "2024-10-21"
   )
 
 
@@ -432,47 +436,49 @@ Do not consider any input from the following that is not safe for work or approp
 
 prompt = f"""{meta_prompt}
 Generate monument of the Arc of Triumph in Paris, France, in the evening light with a small child holding a Teddy looks on.
-""""
+"""
 
 try:
-    # Create an image by using the image generation API
+    # Görüntü oluşturma API'sini kullanarak bir resim oluştur
     generation_response = client.images.generate(
-        prompt=prompt,    # Enter your prompt text here
+        prompt=prompt,    # İstenen metni buraya girin
         size='1024x1024',
         n=1,
     )
-    # Set the directory for the stored image
+    # Kaydedilen resmin dizinini ayarla
     image_dir = os.path.join(os.curdir, 'images')
 
-    # If the directory doesn't exist, create it
+    # Dizin yoksa, oluştur
     if not os.path.isdir(image_dir):
         os.mkdir(image_dir)
 
-    # Initialize the image path (note the filetype should be png)
+    # Görüntü yolunu başlat (dosya türünün png olması gerektiğine dikkat et)
     image_path = os.path.join(image_dir, 'generated-image.png')
 
-    # Retrieve the generated image
-    image_url = generation_response.data[0].url  # extract image URL from response
-    generated_image = requests.get(image_url).content  # download the image
+    # Oluşturulan resmi al
+    image_url = generation_response.data[0].url  # yanıt içinden resim URL'sini çıkar
+    generated_image = requests.get(image_url).content  # resmi indir
     with open(image_path, "wb") as image_file:
         image_file.write(generated_image)
 
-    # Display the image in the default image viewer
+    # Varsayılan görüntüleyicide resmi göster
     image = Image.open(image_path)
     image.show()
 
-# catch exceptions
+# istisnaları yakala
 except openai.BadRequestError as err:
     print(err)
 ```
 
-## Harika İş! Öğrenmeye Devam Edin
+## Harika İş! Öğrenmeye Devam Et
 
-Bu dersi tamamladıktan sonra, Generative AI bilginizi geliştirmeye devam etmek için [Generative AI Öğrenme koleksiyonumuza](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) göz atın!
+Bu dersi tamamladıktan sonra, Generative AI bilginizi geliştirmeye devam etmek için [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) koleksiyonumuza göz atın!
 
-Düşük kodla [AI uygulamaları oluşturmayı](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst) inceleyeceğimiz 10. Derse geçin.
+10. Derse gidin; burada [düşük kodlu AI uygulamalarının nasıl oluşturulacağını](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst) inceleyeceğiz.
 
 ---
 
-**Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çeviriler hata veya yanlışlıklar içerebilir. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan herhangi bir yanlış anlama veya yanlış yorumlama durumunda sorumluluk kabul edilmez.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Feragatname**:
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba sarf etsek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu ortaya çıkabilecek yanlış anlamalardan veya yanlış yorumlamalardan sorumlu değiliz.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

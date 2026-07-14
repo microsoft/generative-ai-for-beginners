@@ -1,44 +1,47 @@
-# Mistral Modelleri ile İnşa Etme
+# Mistral Modelleri ile İnşa Etme 
 
-## Giriş
+## Giriş 
 
-Bu derste şunlar ele alınacaktır:  
-- Farklı Mistral Modellerini keşfetmek  
-- Her modelin kullanım durumları ve senaryolarını anlamak  
+Bu ders şunları kapsayacak: 
+- Farklı Mistral Modellerini keşfetmek 
+- Her modelin kullanım durumlarını ve senaryolarını anlamak 
 - Her modelin benzersiz özelliklerini gösteren kod örneklerini incelemek.
 
-## Mistral Modelleri
+## Mistral Modelleri 
 
-Bu derste, 3 farklı Mistral modelini keşfedeceğiz:  
-**Mistral Large**, **Mistral Small** ve **Mistral Nemo**.
+Bu derste, 3 farklı Mistral modelini keşfedeceğiz: 
+**Mistral Large**, **Mistral Small** ve **Mistral Nemo**. 
 
-Bu modellerin her biri GitHub Model pazarında ücretsiz olarak mevcuttur. Bu not defterindeki kod, bu modelleri kullanarak çalıştırılacaktır. GitHub Modellerini kullanarak [AI modelleri ile prototip oluşturma](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst) hakkında daha fazla bilgi için buraya bakabilirsiniz.
+Bu modellerin her biri [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) üzerinde ücretsiz olarak mevcuttur. Bu not defterindeki kod, kodu çalıştırmak için bu modelleri kullanacaktır.
 
-## Mistral Large 2 (2407)  
-Mistral Large 2, şu anda Mistral'in amiral gemisi modeli olup kurumsal kullanım için tasarlanmıştır.
+> **Not:** GitHub Modelleri Temmuz 2026 sonunda kapanacaktır. AI modelleriyle prototipleme yapmak için [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) kullanımı hakkında daha fazla bilgiyi buradan alabilirsiniz. 
 
-Model, orijinal Mistral Large modeline göre şu yükseltmeleri sunar:  
-- Daha Büyük Bağlam Penceresi - 128k vs 32k  
-- Matematik ve Kodlama Görevlerinde Daha İyi Performans - %76,9 ortalama doğruluk vs %60,4  
-- Artırılmış çok dilli performans - diller arasında: İngilizce, Fransızca, Almanca, İspanyolca, İtalyanca, Portekizce, Felemenkçe, Rusça, Çince, Japonca, Korece, Arapça ve Hintçe.
 
-Bu özelliklerle Mistral Large aşağıda başarılıdır:  
-- *Geri Getirime Dayalı Üretim (RAG)* - daha büyük bağlam penceresi sayesinde  
-- *Fonksiyon Çağrısı* - bu model, harici araçlar ve API’lerle entegrasyon sağlayan yerel fonksiyon çağrısı destekler. Bu çağrılar paralel veya ardışık sırayla yapılabilir.  
-- *Kod Üretimi* - Python, Java, TypeScript ve C++ üretiminde üstün performans gösterir.
+## Mistral Large 2 (2407)
+Mistral Large 2 şu anda Mistral’ın amiral gemisi modelidir ve kurumsal kullanım için tasarlanmıştır. 
 
-### Mistral Large 2 ile RAG Örneği
+Model, orijinal Mistral Large modeline göre şu geliştirmeleri sunar: 
+- Daha Büyük Bağlam Penceresi - 128k vs 32k 
+- Matematik ve Kodlama Görevlerinde Daha İyi Performans - %76.9 ortalama doğruluk vs %60.4 
+- Artan çok dilli performans - diller şunları içerir: İngilizce, Fransızca, Almanca, İspanyolca, İtalyanca, Portekizce, Hollandaca, Rusça, Çince, Japonca, Korece, Arapça ve Hintçe.
 
-Bu örnekte, Mistral Large 2 kullanarak bir metin belgesi üzerinde RAG deseni uygulanmaktadır. Soru Korece yazılmıştır ve yazarın üniversite öncesi faaliyetlerini sormaktadır.
+Bu özelliklerle, Mistral Large şu konularda mükemmeldir: 
+- *Getiri Artırılmış Üretim (RAG)* - daha büyük bağlam penceresi nedeniyle
+- *Fonksiyon Çağrısı* - bu model yerel fonksiyon çağrısına sahiptir, bu da harici araçlar ve API'lerle entegrasyona imkan tanır. Bu çağrılar paralel olarak veya sırayla yapılabilir. 
+- *Kod Üretimi* - bu model Python, Java, TypeScript ve C++ üretiminde mükemmeldir. 
 
-Cohere Embeddings Model, metin belgesi ve sorunun gömme vektörlerini oluşturmak için kullanılır. Bu örnek için faiss Python paketi vektör deposu olarak tercih edilmiştir.
+### Mistral Large 2 kullanarak RAG Örneği 
 
-Mistral modeline gönderilen istem, hem soruları hem de soruya benzer şekilde elde edilen parçaları içerir. Model daha sonra doğal dil yanıtı verir.
+Bu örnekte, bir metin belgesi üzerinde RAG deseni çalıştırmak için Mistral Large 2 kullanıyoruz. Soru Korece yazılmış ve yazarın üniversite öncesi faaliyetlerini soruyor. 
+
+Metin belgesi ile sorunun gömme (embedding) vektörlerini oluşturmak için Cohere Embeddings Modeli kullanılmaktadır. Bu örnek için vektör deposu olarak faiss Python paketi kullanılmaktadır. 
+
+Mistral modeline gönderilen istem, hem soruları hem de soruya benzer şekilde alınan parçaları içerir. Model daha sonra doğal dil yanıtı sağlar. 
 
 ```python 
 pip install faiss-cpu
 ```
-  
+
 ```python 
 import requests
 import numpy as np
@@ -50,9 +53,10 @@ from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.inference import EmbeddingsClient
 
-endpoint = "https://models.inference.ai.azure.com"
+# Bunları Microsoft Foundry projenizin "Genel Bakış" sayfasından alın
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-large"
-token = os.environ["GITHUB_TOKEN"]
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -128,31 +132,31 @@ chat_response = client.complete(
 
 print(chat_response.choices[0].message.content)
 ```
-  
 
-## Mistral Small  
-Mistral Small, Mistral ailesinde premier/kurumsal kategori altında yer alan bir başka modeldir. Adından da anlaşılacağı üzere bu model Küçük Dil Modeli (SLM)dir. Mistral Small kullanmanın avantajları şunlardır:  
-- Mistral Large ve NeMo gibi Mistral LLM'lerine kıyasla maliyet tasarrufu sağlar - %80 fiyat düşüşü  
-- Düşük gecikme süresi - Mistral LLM'lerine göre daha hızlı yanıt  
-- Esnek - Gereken kaynaklar konusunda daha az kısıtlamayla farklı ortamlarda konuşlandırılabilir.
+## Mistral Small 
+Mistral Small, Mistral ailesinde premier/kurumsal kategori altında başka bir modeldir. İsminin de gösterdiği gibi, bu model Küçük Dil Modelidir (SLM). Mistral Small kullanımının avantajları şunlardır: 
+- Mistral LLM'leri gibi Mistral Large ve NeMo ile kıyaslandığında maliyet tasarrufu - %80 fiyat düşüşü
+- Düşük gecikme süresi - Mistral’ın LLM'lerine kıyasla daha hızlı yanıt
+- Esnek - gerekli kaynaklar konusunda daha az kısıtlamalarla farklı ortamlarda dağıtılabilir. 
 
-Mistral Small için ideal kullanım alanları:  
-- Özetleme, duygu analizi ve çeviri gibi metin tabanlı görevler.  
-- Sık istek yapılan uygulamalar için maliyet etkinliği nedeniyle uygun.  
-- İnceleme ve kod önerileri gibi düşük gecikmeli kod görevleri.
 
-## Mistral Small ile Mistral Large Karşılaştırması
+Mistral Small için ideal kullanım alanları: 
+- Özetleme, duygu analizi ve çeviri gibi metin tabanlı görevler. 
+- Maliyet etkinliği nedeniyle sık sık istek yapılan uygulamalar 
+- İnceleme ve kod önerileri gibi düşük gecikmeli kod görevleri 
 
-Mistral Small ile Large arasındaki gecikme farklarını göstermek için aşağıdaki hücreleri çalıştırın.
+## Mistral Small ve Mistral Large karşılaştırması 
 
-Yanıt sürelerinde 3-5 saniye arasında fark görmelisiniz. Ayrıca aynı istem için yanıt uzunlukları ve stilini not edin.
+Mistral Small ve Large arasındaki gecikme farklarını göstermek için aşağıdaki hücreleri çalıştırın. 
+
+Aynı istem için yanıt süreleri arasında 3-5 saniye fark görmelisiniz. Ayrıca yanıt uzunluklarına ve tarzına dikkat edin.  
 
 ```python 
 
 import os 
-endpoint = "https://models.inference.ai.azure.com"
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-small"
-token = os.environ["GITHUB_TOKEN"]
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -173,7 +177,7 @@ response = client.complete(
 print(response.choices[0].message.content)
 
 ```
-  
+
 ```python 
 
 import os
@@ -181,9 +185,9 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-endpoint = "https://models.inference.ai.azure.com"
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-large"
-token = os.environ["GITHUB_TOKEN"]
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -204,32 +208,32 @@ response = client.complete(
 print(response.choices[0].message.content)
 
 ```
-  
 
 ## Mistral NeMo
 
-Bu derste ele alınan diğer iki modele kıyasla, Mistral NeMo Apache2 Lisansıyla sunulan tek ücretsiz modeldir.
+Bu derste ele alınan diğer iki modele kıyasla, Mistral NeMo Apache2 Lisansına sahip tek ücretsiz modeldir. 
 
-Mistral NeMo, Mistral’in önceki açık kaynak LLM’si olan Mistral 7B’ye bir yükseltme olarak görülmektedir.
+Mistral NeMo, Mistral’ın önceki açık kaynak LLM'si olan Mistral 7B için bir yükseltme olarak görülmektedir. 
 
-NeMo modelinin diğer bazı özellikleri şunlardır:
+NeMo modelinin diğer bazı özellikleri şunlardır: 
 
-- *Daha verimli tokenizasyon:* Bu model, daha yaygın kullanılan tiktoken yerine Tekken tokenlaştırıcıyı kullanır. Bu sayede daha fazla dil ve kod üzerinde daha iyi performans sağlar.
+- *Daha verimli tokenizasyon:* Bu model, daha yaygın kullanılan tiktoken yerine Tekken tokenizer kullanır. Bu, daha fazla dil ve kodda daha iyi performans sağlar. 
 
-- *İnce ayar yapabilme:* Temel model ince ayar yapılabilir olarak sunulmaktadır. Bu, ince ayarın gerekli olabileceği kullanım durumlarına daha fazla esneklik katmaktadır.
+- *İnce Ayar (Finetuning):* Temel model ince ayar için kullanılabilir. Bu, ince ayarın gerekli olabileceği kullanım durumları için daha fazla esneklik sağlar. 
 
-- *Yerel Fonksiyon Çağrısı* - Mistral Large gibi, bu model de fonksiyon çağrısı üzerine eğitilmiştir. Bu, onu ilk açık kaynak modellerinden biri olarak benzersiz kılar.
+- *Yerleşik Fonksiyon Çağrısı* - Mistral Large gibi, bu model fonksiyon çağrısı için eğitilmiştir. Bu, onu bu yetkiye sahip ilk açık kaynak modellerden biri olarak benzersiz kılar. 
 
-### Tokenlaştırıcıların Karşılaştırılması
 
-Bu örnekte, Mistral NeMo’nun tokenizasyonu Mistral Large ile nasıl ele aldığına bakacağız.
+### Tokenizer Karşılaştırması 
 
-Her iki örnek de aynı istemi alır ancak NeMo’nun Mistral Large’dan daha az token döndürdüğünü görmelisiniz.
+Bu örnekte, Mistral NeMo'nun tokenizasyonunu Mistral Large ile karşılaştıracağız. 
+
+Her iki örnek aynı istemi alır ancak NeMo’nun Mistral Large’dan daha az token döndürdüğünü görmelisiniz. 
 
 ```bash
 pip install mistral-common
 ```
-  
+
 ```python 
 # Gerekli paketleri içe aktar:
 from mistral_common.protocol.instruct.messages import (
@@ -242,69 +246,13 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Mistral belirleyicisini yükle
+# Mistral tokenizer yükle
 
 model_name = "open-mistral-nemo"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Mesajlar listesini belirleyiciye dönüştür
-tokenized = tokenizer.encode_chat_completion(
-    ChatCompletionRequest(
-        tools=[
-            Tool(
-                function=Function(
-                    name="get_current_weather",
-                    description="Get the current weather",
-                    parameters={
-                        "type": "object",
-                        "properties": {
-                            "location": {
-                                "type": "string",
-                                "description": "The city and state, e.g. San Francisco, CA",
-                            },
-                            "format": {
-                                "type": "string",
-                                "enum": ["celsius", "fahrenheit"],
-                                "description": "The temperature unit to use. Infer this from the user's location.",
-                            },
-                        },
-                        "required": ["location", "format"],
-                    },
-                )
-            )
-        ],
-        messages=[
-            UserMessage(content="What's the weather like today in Paris"),
-        ],
-        model=model_name,
-    )
-)
-tokens, text = tokenized.tokens, tokenized.text
-
-# Belirteç sayısını say
-print(len(tokens))
-```
-  
-```python
-# Gerekli paketleri içe aktar:
-from mistral_common.protocol.instruct.messages import (
-    UserMessage,
-)
-from mistral_common.protocol.instruct.request import ChatCompletionRequest
-from mistral_common.protocol.instruct.tool_calls import (
-    Function,
-    Tool,
-)
-from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
-
-# Mistral tokenlaştırıcısını yükle
-
-model_name = "mistral-large-latest"
-
-tokenizer = MistralTokenizer.from_model(model_name)
-
-# Bir mesaj listesini tokenle
+# Bir mesajlar listesi tokenize et
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -341,15 +289,70 @@ tokens, text = tokenized.tokens, tokenized.text
 # Token sayısını say
 print(len(tokens))
 ```
-  
 
-## Öğrenme burada bitmez, yolculuğa devam edin
+```python
+# Gerekli paketleri içe aktar:
+from mistral_common.protocol.instruct.messages import (
+    UserMessage,
+)
+from mistral_common.protocol.instruct.request import ChatCompletionRequest
+from mistral_common.protocol.instruct.tool_calls import (
+    Function,
+    Tool,
+)
+from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-Bu dersi tamamladıktan sonra, Generative AI bilgi seviyenizi artırmak için [Generative AI Öğrenme koleksiyonumuza](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) göz atmayı unutmayın!
+# Mistral belirleyicisini yükle
+
+model_name = "mistral-large-latest"
+
+tokenizer = MistralTokenizer.from_model(model_name)
+
+# Bir mesaj listesini belirtkleştir
+tokenized = tokenizer.encode_chat_completion(
+    ChatCompletionRequest(
+        tools=[
+            Tool(
+                function=Function(
+                    name="get_current_weather",
+                    description="Get the current weather",
+                    parameters={
+                        "type": "object",
+                        "properties": {
+                            "location": {
+                                "type": "string",
+                                "description": "The city and state, e.g. San Francisco, CA",
+                            },
+                            "format": {
+                                "type": "string",
+                                "enum": ["celsius", "fahrenheit"],
+                                "description": "The temperature unit to use. Infer this from the user's location.",
+                            },
+                        },
+                        "required": ["location", "format"],
+                    },
+                )
+            )
+        ],
+        messages=[
+            UserMessage(content="What's the weather like today in Paris"),
+        ],
+        model=model_name,
+    )
+)
+tokens, text = tokenized.tokens, tokenized.text
+
+# Belirteç sayısını say
+print(len(tokens))
+```
+
+## Öğrenme burada bitmiyor, yolculuğa devam edin
+
+Bu dersi tamamladıktan sonra, [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) koleksiyonumuzu inceleyerek Üretken AI bilginizi geliştirmeye devam edin!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Sorumluluk Reddi**:
-Bu belge, AI çeviri servisi [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstermemize rağmen, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilindeki hali ile resmi ve yetkili kaynak olarak kabul edilmelidir. Önemli bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu oluşabilecek yanlış anlamalar veya yorum farklılıklarından sorumlu değiliz.
+**Feragatname**:
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba sarf etsek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu ortaya çıkabilecek yanlış anlamalardan veya yanlış yorumlamalardan sorumlu değiliz.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

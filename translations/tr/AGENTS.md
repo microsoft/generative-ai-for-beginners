@@ -1,72 +1,72 @@
 # AGENTS.md
 
-## Proje Genel Bakış
+## Proje Genel Bakışı
 
-Bu depo, Generative AI temellerini ve uygulama geliştirmeyi öğreten 21 derslik kapsamlı bir müfredat içerir. Kurs, başlangıç seviyesindeki kullanıcılar için tasarlanmıştır ve temel kavramlardan üretime hazır uygulamalar oluşturmaya kadar her şeyi kapsar.
+Bu depo, Üretken Yapay Zeka temellerini ve uygulama geliştirmeyi öğreten kapsamlı, 21 derslik bir müfredat içerir. Kurs, yeni başlayanlar için tasarlanmış olup temel kavramlardan üretime hazır uygulamalar geliştirmeye kadar her şeyi kapsar.
 
-**Anahtar Teknolojiler:**
+**Temel Teknolojiler:**
 - Python 3.9+ ve kütüphaneler: `openai`, `python-dotenv`, `tiktoken`, `azure-ai-inference`, `pandas`, `numpy`, `matplotlib`
-- TypeScript/JavaScript ve Node.js kütüphaneleri: `@azure/openai`, `@azure-rest/ai-inference`, `openai`
-- Azure OpenAI Hizmeti, OpenAI API ve GitHub Modelleri
-- Etkileşimli öğrenim için Jupyter Notebooks
-- Tutarlı bir geliştirme ortamı için Dev Containers
+- Node.js ile TypeScript/JavaScript ve kütüphaneler: `openai` (Azure OpenAI v1 uç noktası + Yanıtlar API), `@azure-rest/ai-inference` (Microsoft Foundry Modelleri)
+- Azure OpenAI Hizmeti, OpenAI API ve Microsoft Foundry Modelleri (GitHub Modelleri Temmuz 2026 sonunda kullanımdan kalkıyor)
+- Etkileşimli öğrenme için Jupyter Notebooks
+- Tutarlı geliştirme ortamı için Dev Containers
 
 **Depo Yapısı:**
-- 21 numaralandırılmış ders dizini (00-21), README'ler, kod örnekleri ve ödevler içerir
-- Birden fazla uygulama: Python, TypeScript ve bazen .NET örnekleri
-- 40+ dil versiyonuyla çeviri dizini
-- Merkezi yapılandırma `.env` dosyası üzerinden (şablon olarak `.env.copy` kullanın)
+- 21 numaralandırılmış ders dizini (00-21) içerisinde README'ler, kod örnekleri ve ödevler
+- Birden çok uygulama: Python, TypeScript ve bazen .NET örnekleri
+- 40+ dil sürümü içeren çeviri dizini
+- `.env` dosyası aracılığıyla merkezi konfigürasyon (`.env.copy` şablon olarak kullanılır)
 
 ## Kurulum Komutları
 
-### Depo İlk Kurulumu
+### İlk Depo Kurulumu
 
 ```bash
-# Clone the repository
+# Depoyu klonla
 git clone https://github.com/microsoft/generative-ai-for-beginners.git
 cd generative-ai-for-beginners
 
-# Copy environment template
+# Ortam şablonunu kopyala
 cp .env.copy .env
-# Edit .env with your API keys and endpoints
+# .env dosyasını API anahtarlarınız ve uç noktalarınız ile düzenleyin
 ```
 
-### Python Ortamı Kurulumu
+### Python Ortamının Kurulumu
 
 ```bash
-# Create virtual environment
+# Sanal ortam oluştur
 python3 -m venv venv
 
-# Activate virtual environment
-# On macOS/Linux:
+# Sanal ortamı etkinleştir
+# macOS/Linux üzerinde:
 source venv/bin/activate
-# On Windows:
+# Windows üzerinde:
 venv\Scripts\activate
 
-# Install dependencies
+# Bağımlılıkları yükle
 pip install -r requirements.txt
 ```
 
 ### Node.js/TypeScript Kurulumu
 
 ```bash
-# Install root-level dependencies (for documentation tooling)
+# Kök düzeyde bağımlılıkları kurun (belgelendirme araçları için)
 npm install
 
-# For individual lesson TypeScript examples, navigate to the specific lesson:
+# Bireysel ders TypeScript örnekleri için, belirli derse gidin:
 cd 06-text-generation-apps/typescript/recipe-app
 npm install
 ```
 
 ### Dev Container Kurulumu (Önerilir)
 
-Depo, GitHub Codespaces veya VS Code Dev Containers için bir `.devcontainer` yapılandırması içerir:
+Depo, GitHub Codespaces veya VS Code Dev Containers için `.devcontainer` konfigürasyonu içerir:
 
-1. Depoyu GitHub Codespaces veya Dev Containers uzantısı ile VS Code'da açın
+1. Depoyu GitHub Codespaces veya VS Code Dev Containers uzantısı ile açın
 2. Dev Container otomatik olarak:
-   - `requirements.txt` dosyasından Python bağımlılıklarını yükler
-   - Post-create script'i çalıştırır (`.devcontainer/post-create.sh`)
-   - Jupyter kernelini kurar
+   - `requirements.txt` içindeki Python bağımlılıklarını kurar
+   - Oluşturma sonrası betiği çalıştırır (`.devcontainer/post-create.sh`)
+   - Jupyter çekirdeği kurar
 
 ## Geliştirme İş Akışı
 
@@ -75,93 +75,94 @@ Depo, GitHub Codespaces veya VS Code Dev Containers için bir `.devcontainer` ya
 API erişimi gerektiren tüm dersler `.env` dosyasında tanımlanan ortam değişkenlerini kullanır:
 
 - `OPENAI_API_KEY` - OpenAI API için
-- `AZURE_OPENAI_API_KEY` - Azure OpenAI Hizmeti için
-- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI endpoint URL'si
+- `AZURE_OPENAI_API_KEY` - Microsoft Foundry'de Azure OpenAI için (Azure OpenAI Hizmeti artık Microsoft Foundry parçası: https://ai.azure.com)
+- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI uç nokta URL'si (Foundry kaynak uç noktası)
 - `AZURE_OPENAI_DEPLOYMENT` - Sohbet tamamlama modeli dağıtım adı
 - `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Embeddings modeli dağıtım adı
-- `AZURE_OPENAI_API_VERSION` - API versiyonu (varsayılan: `2024-02-01`)
+- `AZURE_OPENAI_API_VERSION` - API sürümü (varsayılan: `2024-10-21`)
 - `HUGGING_FACE_API_KEY` - Hugging Face modelleri için
-- `GITHUB_TOKEN` - GitHub Modelleri için
+- `AZURE_INFERENCE_ENDPOINT` - Microsoft Foundry Modelleri uç noktası (çok sağlayıcılı model kataloğu)
+- `AZURE_INFERENCE_CREDENTIAL` - Microsoft Foundry Modelleri API anahtarı (emekliye ayrılan `GITHUB_TOKEN` yerine)
 
-### Python Örneklerini Çalıştırma
+### Python Örneklerini Çalıştırmak
 
 ```bash
-# Navigate to lesson directory
+# Ders dizinine gidin
 cd 06-text-generation-apps/python
 
-# Run a Python script
+# Bir Python betiği çalıştırın
 python aoai-app.py
 ```
 
-### TypeScript Örneklerini Çalıştırma
+### TypeScript Örneklerini Çalıştırmak
 
 ```bash
-# Navigate to TypeScript app directory
+# TypeScript uygulama dizinine git
 cd 06-text-generation-apps/typescript/recipe-app
 
-# Build the TypeScript code
+# TypeScript kodunu derle
 npm run build
 
-# Run the application
+# Uygulamayı çalıştır
 npm start
 ```
 
-### Jupyter Notebooks ile Çalışma
+### Jupyter Notebooks Çalıştırmak
 
 ```bash
-# Start Jupyter in the repository root
+# Jupyter'ı depo kökünde başlat
 jupyter notebook
 
-# Or use VS Code with Jupyter extension
+# Veya Jupyter eklentisi ile VS Code kullanın
 ```
 
-### Farklı Ders Türleriyle Çalışma
+### Farklı Ders Türleri ile Çalışmak
 
-- **"Learn" dersleri**: README.md belgelerine ve kavramlara odaklanır
+- **"Learn" dersleri**: README.md belgeleri ve kavramlara odaklanır
 - **"Build" dersleri**: Python ve TypeScript'te çalışan kod örnekleri içerir
-- Her ders, teori, kod incelemeleri ve video içerik bağlantıları içeren bir README.md dosyasına sahiptir
+- Her ders bir README.md içerir: teori, kod açılamaları ve video bağlantıları
 
-## Kod Stili Yönergeleri
+## Kod Stili Rehberi
 
 ### Python
 
-- Ortam değişkenlerini yönetmek için `python-dotenv` kullanın
+- Ortam değişkeni yönetimi için `python-dotenv` kullanın
 - API etkileşimleri için `openai` kütüphanesini içe aktarın
-- Linting için `pylint` kullanın (bazı örneklerde basitlik için `# pylint: disable=all` bulunur)
-- PEP 8 adlandırma kurallarına uyun
-- API kimlik bilgilerini `.env` dosyasında saklayın, kodda asla saklamayın
+- Kod incelemesi için `pylint` kullanın (bazı örneklerde basitlik için `# pylint: disable=all` vardır)
+- PEP 8 isimlendirme kurallarına uyun
+- API kimlik bilgilerini `.env` dosyasında saklayın, asla koda yazmayın
 
 ### TypeScript
 
-- Ortam değişkenleri için `dotenv` paketini kullanın
-- Her uygulama için `tsconfig.json` içinde TypeScript yapılandırması
-- Azure hizmetleri için `@azure/openai` veya `@azure-rest/ai-inference` kullanın
-- Otomatik yeniden yükleme ile geliştirme için `nodemon` kullanın
-- Çalıştırmadan önce derleyin: `npm run build` ardından `npm start`
+- Ortam değişkenleri için `dotenv` paketi kullanın
+- Her uygulama için `tsconfig.json` TypeScript konfigürasyonu
+- Azure OpenAI için `openai` paketi (istemciyi `/openai/v1/` uç noktasına yönlendirin ve `client.responses.create` çağırın); Microsoft Foundry Modelleri için `@azure-rest/ai-inference` kullanın
+- Oto-yenilemeli geliştirme için `nodemon` kullanın
+- Çalıştırmadan önce derleyin: `npm run build` sonra `npm start`
 
 ### Genel Kurallar
 
 - Kod örneklerini basit ve eğitici tutun
 - Anahtar kavramları açıklayan yorumlar ekleyin
-- Her dersin kodu bağımsız ve çalıştırılabilir olmalıdır
-- Tutarlı adlandırma kullanın: Azure OpenAI için `aoai-`, OpenAI API için `oai-`, GitHub Modelleri için `githubmodels-`
+- Her dersin kodu kendi içinde tam ve çalıştırılabilir olmalı
+- Tutarlı isimlendirme kullanın: Azure OpenAI için `aoai-`, OpenAI API için `oai-`, Microsoft Foundry Modelleri için `githubmodels-` (GitHub Modelleri döneminden kalan eski önek)
 
-## Belgelendirme Yönergeleri
+## Dokümantasyon Kılavuzları
 
 ### Markdown Stili
 
-- Tüm URL'ler `[metin](../../url)` formatında olmalı, ekstra boşluk olmamalı
-- Göreceli bağlantılar `./` veya `../` ile başlamalı
-- Microsoft alan adlarına yapılan tüm bağlantılar izleme kimliği içermeli: `?WT.mc_id=academic-105485-koreyst`
-- URL'lerde ülkeye özgü yerel ayarları kullanmayın (örneğin `/en-us/`'tan kaçının)
-- Görseller `./images` klasöründe açıklayıcı adlarla saklanmalı
+- Tüm URL'ler `[text](../../url)` formatında boşluksuz olmalıdır
+- Göreli bağlantılar `./` veya `../` ile başlamalıdır
+- Microsoft alan adlarına yapılan tüm bağlantılar izleme kimliği içermelidir: `?WT.mc_id=academic-105485-koreyst`
+- URL'lerde ülkeye özgü yerel ayarlar kullanılmamalıdır (örneğin `/en-us/` kaçının)
+- Görseller `./images` klasöründe açıklayıcı isimlerle saklanmalı
 - Dosya adlarında İngilizce karakterler, rakamlar ve tireler kullanılmalı
 
 ### Çeviri Desteği
 
-- Depo, GitHub Actions aracılığıyla 40+ dili destekler
+- Depo, GitHub Actions ile 40+ dili otomatik olarak destekler
 - Çeviriler `translations/` dizininde saklanır
-- Kısmi çeviriler gönderilmemelidir
+- Kısmi çeviri gönderimleri yapılmamalıdır
 - Makine çevirileri kabul edilmez
 - Çevrilmiş görseller `translated_images/` dizininde saklanır
 
@@ -171,100 +172,100 @@ jupyter notebook
 
 Bu depo, doğrulama için GitHub Actions kullanır. PR göndermeden önce:
 
-1. **Markdown Bağlantılarını Kontrol Et**:
+1. **Markdown Bağlantılarını Kontrol Edin**:
    ```bash
-   # The validate-markdown.yml workflow checks:
-   # - Broken relative paths
-   # - Missing tracking IDs on paths
-   # - Missing tracking IDs on URLs
-   # - URLs with country locale
-   # - Broken external URLs
+   # validate-markdown.yml iş akışı şunları kontrol eder:
+   # - Kırık göreli yollar
+   # - Yollarda eksik izleme kimlikleri
+   # - URL'lerde eksik izleme kimlikleri
+   # - Ülke yerel ayarına sahip URL'ler
+   # - Kırık harici URL'ler
    ```
 
 2. **Manuel Test**:
-   - Python örneklerini test edin: venv'i etkinleştirin ve scriptleri çalıştırın
+   - Python örneklerini test edin: venv'i etkinleştirin ve betikleri çalıştırın
    - TypeScript örneklerini test edin: `npm install`, `npm run build`, `npm start`
    - Ortam değişkenlerinin doğru yapılandırıldığını doğrulayın
-   - API anahtarlarının kod örnekleriyle çalıştığını kontrol edin
+   - API anahtarlarının kod örnekleri ile çalıştığını kontrol edin
 
 3. **Kod Örnekleri**:
-   - Tüm kodun hatasız çalıştığından emin olun
-   - Uygulanabilir olduğunda hem Azure OpenAI hem de OpenAI API ile test edin
-   - GitHub Modelleri desteklendiğinde örneklerin çalıştığını doğrulayın
+   - Tüm kodun hatasız çalışmasını sağlayın
+   - Uygun olduğunda hem Azure OpenAI hem OpenAI API ile test edin
+   - Desteklenen yerlerde Microsoft Foundry Modelleri ile örneklerin çalıştığını doğrulayın
 
 ### Otomatik Test Yok
 
-Bu, eğitim odaklı bir depo olup, öğreticiler ve örnekler üzerine yoğunlaşır. Çalıştırılacak birim testleri veya entegrasyon testleri yoktur. Doğrulama öncelikle:
+Bu eğitim deposu, öğreticiler ve örnekler üzerine odaklıdır. Çalıştırılacak birim testi veya entegrasyon testi yoktur. Doğrulama esas olarak:
 - Kod örneklerinin manuel testi
 - Markdown doğrulaması için GitHub Actions
 - Eğitim içeriğinin topluluk incelemesi
 
-## Pull Request Yönergeleri
+## Pull Request Kılavuzları
 
 ### Göndermeden Önce
 
-1. Python ve TypeScript'teki kod değişikliklerini test edin (uygulanabilir olduğunda)
-2. Markdown doğrulamasını çalıştırın (PR'de otomatik olarak tetiklenir)
-3. Tüm Microsoft URL'lerinde izleme kimliklerinin bulunduğundan emin olun
-4. Göreceli bağlantıların geçerli olduğunu kontrol edin
-5. Görsellerin doğru şekilde referans alındığını doğrulayın
+1. Uygunsa hem Python hem TypeScript kod değişikliklerini test edin
+2. Markdown doğrulamasını çalıştırın (PR ile otomatik tetiklenir)
+3. Tüm Microsoft URL'lerinde izleme kimliklerinin olduğundan emin olun
+4. Göreli bağlantıların geçerli olduğunu kontrol edin
+5. Görsellerin doğru şekilde referans verildiğini doğrulayın
 
 ### PR Başlık Formatı
 
-- Açıklayıcı başlıklar kullanın: `[Lesson 06] Fix Python example typo` veya `Update README for lesson 08`
-- Uygulanabilir olduğunda sorun numaralarına referans verin: `Fixes #123`
+- Açıklayıcı başlıklar kullanın: `[Lesson 06] Python örneği hata düzeltme` veya `Ders 08 için README güncelleme`
+- Uygunsa ilgili sorun numaralarını referans gösterin: `Fixes #123`
 
 ### PR Açıklaması
 
-- Ne değiştiğini ve neden değiştiğini açıklayın
+- Nelerin değiştirildiğini ve nedenini açıklayın
 - İlgili sorunlara bağlantı verin
 - Kod değişiklikleri için hangi örneklerin test edildiğini belirtin
-- Çeviri PR'leri için tüm dosyaları içeren eksiksiz bir çeviri ekleyin
+- Çeviri PR'ları için tüm dosyaların tam çeviri olarak eklendiğinden emin olun
 
-### Katılım Gereksinimleri
+### Katkı Koşulları
 
-- Microsoft CLA'yı imzalayın (ilk PR'de otomatik olarak yapılır)
-- Deponun bir kopyasını hesabınıza fork edin ve değişiklikleri yapın
-- Her mantıksal değişiklik için bir PR gönderin (ilgili olmayan düzeltmeleri birleştirmeyin)
-- PR'leri mümkün olduğunca odaklı ve küçük tutun
+- Microsoft CLA imzalayın (ilk PR'de otomatik)
+- Değişiklik yapmadan önce depoyu kendi hesabınıza çatallayın
+- Her mantıksal değişiklik için bir PR yapın (alakasız düzeltmeleri birleştirmeyin)
+- Mümkünse PR'ları odaklı ve küçük tutun
 
 ## Yaygın İş Akışları
 
 ### Yeni Bir Kod Örneği Ekleme
 
 1. İlgili ders dizinine gidin
-2. `python/` veya `typescript/` alt dizininde örnek oluşturun
-3. Adlandırma kurallarına uyun: `{provider}-{example-name}.{py|ts|js}`
-4. Gerçek API kimlik bilgileriyle test edin
-5. Yeni ortam değişkenlerini ders README'sinde belgeleyin
+2. Örneği `python/` veya `typescript/` alt dizininde oluşturun
+3. İsimlendirme kuralına uyun: `{provider}-{example-name}.{py|ts|js}`
+4. Gerçek API kimlik bilgileri ile test edin
+5. Herhangi yeni ortam değişkenlerini ders README'sinde belgeleyin
 
-### Belgeleri Güncelleme
+### Dokümantasyonu Güncelleme
 
 1. Ders dizinindeki README.md dosyasını düzenleyin
-2. Markdown yönergelerine uyun (izleme kimlikleri, göreceli bağlantılar)
-3. Çeviri güncellemeleri GitHub Actions tarafından işlenir (manuel olarak düzenlemeyin)
+2. Markdown kurallarına uyun (izleme kimlikleri, göreli bağlantılar)
+3. Çeviriler GitHub Actions tarafından yönetilir (manüel düzenlemeyin)
 4. Tüm bağlantıların geçerli olduğunu test edin
 
 ### Dev Containers ile Çalışma
 
-1. Depo `.devcontainer/devcontainer.json` içerir
-2. Post-create script Python bağımlılıklarını otomatik olarak yükler
-3. Python ve Jupyter için uzantılar önceden yapılandırılmıştır
-4. Ortam `mcr.microsoft.com/devcontainers/universal:2.11.2` tabanlıdır
+1. Depoda `.devcontainer/devcontainer.json` dosyası bulunur
+2. Oluşturma sonrası betik, Python bağımlılıklarını otomatik kurar
+3. Python ve Jupyter eklentileri önceden yapılandırılmıştır
+4. Ortam `mcr.microsoft.com/devcontainers/universal:2.11.2` bazlıdır
 
 ## Dağıtım ve Yayınlama
 
-Bu bir öğrenim deposudur - herhangi bir dağıtım süreci yoktur. Müfredat şu yollarla tüketilir:
+Bu bir öğrenim deposudur - herhangi bir dağıtım süreci yoktur. Müfredat şu yollarla kullanılır:
 
-1. **GitHub Deposu**: Kod ve belgelere doğrudan erişim
-2. **GitHub Codespaces**: Önceden yapılandırılmış kurulumla anında geliştirme ortamı
-3. **Microsoft Learn**: İçerik resmi öğrenim platformuna aktarılabilir
-4. **docsify**: Markdown'dan oluşturulan belge sitesi (bkz. `docsifytopdf.js` ve `package.json`)
+1. **GitHub Deposu**: Koda ve dokümantasyona doğrudan erişim
+2. **GitHub Codespaces**: Önceden yapılandırılmış anlık geliştirme ortamı
+3. **Microsoft Learn**: İçerik resmi öğrenme platformunda yayınlanabilir
+4. **docsify**: Markdown'dan oluşturulmuş dokümantasyon sitesi (bkz. `docsifytopdf.js` ve `package.json`)
 
-### Belge Sitesi Oluşturma
+### Dokümantasyon Sitesi Oluşturma
 
 ```bash
-# Generate PDF from documentation (if needed)
+# Gerekirse belgelerden PDF oluşturun
 npm run convert
 ```
 
@@ -274,44 +275,46 @@ npm run convert
 
 **Python İçe Aktarma Hataları**:
 - Sanal ortamın etkinleştirildiğinden emin olun
-- `pip install -r requirements.txt` çalıştırın
-- Python sürümünün 3.9+ olduğundan emin olun
+- `pip install -r requirements.txt` komutunu çalıştırın
+- Python sürümünün 3.9+ olduğunu kontrol edin
 
 **TypeScript Derleme Hataları**:
-- Belirli uygulama dizininde `npm install` çalıştırın
+- İlgili uygulama dizininde `npm install` çalıştırın
 - Node.js sürümünün uyumlu olduğundan emin olun
-- `node_modules` klasörünü temizleyin ve yeniden yükleyin
+- Gerekirse `node_modules` klasörünü temizleyip yeniden kurun
 
-**API Kimlik Doğrulama Hataları**:
-- `.env` dosyasının mevcut olduğunu ve doğru değerler içerdiğini doğrulayın
+**API Doğrulama Hataları**:
+- `.env` dosyasının varlığını ve doğru değerleri kontrol edin
 - API anahtarlarının geçerli ve süresi dolmamış olduğundan emin olun
-- Endpoint URL'lerinin bölgeniz için doğru olduğundan emin olun
+- Bölgenize uygun uç nokta URL'lerinin doğru olduğundan emin olun
 
 **Eksik Ortam Değişkenleri**:
 - `.env.copy` dosyasını `.env` olarak kopyalayın
-- Çalıştığınız ders için gerekli tüm değerleri doldurun
+- Üzerinde çalıştığınız ders için tüm gerekli değerleri doldurun
 - `.env` güncellendikten sonra uygulamanızı yeniden başlatın
 
 ## Ek Kaynaklar
 
-- [Kurs Kurulum Kılavuzu](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
-- [Katkı Sağlama Yönergeleri](./CONTRIBUTING.md)
+- [Kurs Kurulum Rehberi](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
+- [Katkı Kılavuzu](./CONTRIBUTING.md)
 - [Davranış Kuralları](./CODE_OF_CONDUCT.md)
 - [Güvenlik Politikası](./SECURITY.md)
 - [Azure AI Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 - [Gelişmiş Kod Örnekleri Koleksiyonu](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
 
-## Projeye Özel Notlar
+## Proje Özel Notları
 
-- Bu, **eğitim odaklı bir depo** olup, üretim koduna değil öğrenmeye odaklanır
-- Örnekler, kavramları öğretmeye odaklanarak kasıtlı olarak basittir
-- Kod kalitesi, eğitimsel açıklıkla dengelenmiştir
-- Her ders bağımsızdır ve tek başına tamamlanabilir
-- Depo, birden fazla API sağlayıcısını destekler: Azure OpenAI, OpenAI ve GitHub Modelleri
-- İçerik, otomatik çeviri iş akışlarıyla çok dilli olarak sunulur
-- Sorular ve destek için Discord'da aktif bir topluluk bulunmaktadır
+- Bu, üretim kodu değil, öğrenime odaklı bir **eğitim deposu**
+- Örnekler kasıtlı olarak basit ve kavram öğretmeye yönelik
+- Kod kalitesi eğitim açıklığı ile dengelenmiştir
+- Her ders bağımsız tamamlanabilir, kendi içinde tamdır
+- Depo, birden çok API sağlayıcısını destekler: Azure OpenAI, OpenAI, Microsoft Foundry Modelleri ve Foundry Local ile Ollama gibi çevrimdışı sağlayıcılar
+- İçerik çok dilli olup otomatik çeviri iş akışlarına sahiptir
+- Sorular ve destek için aktif bir Discord topluluğu mevcuttur
 
 ---
 
-**Feragatname**:  
-Bu belge, [Co-op Translator](https://github.com/Azure/co-op-translator) adlı bir yapay zeka çeviri hizmeti kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dilindeki hali, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul edilmez.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Feragatname**:
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba sarf etsek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu ortaya çıkabilecek yanlış anlamalardan veya yanlış yorumlamalardan sorumlu değiliz.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

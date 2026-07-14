@@ -1,21 +1,21 @@
-# Preparazione dati trascrizione
+# Preparazione dati di trascrizione
 
-Gli script per la preparazione dei dati di trascrizione scaricano le trascrizioni dei video YouTube e le preparano per l'uso con l'esempio Semantic Search con OpenAI Embeddings e Functions.
+Gli script di preparazione dei dati di trascrizione scaricano le trascrizioni dei video di YouTube e le preparano per l'uso con l'esempio di Ricerca Semantica con OpenAI Embeddings e Funzioni.
 
-Gli script per la preparazione dei dati di trascrizione sono stati testati sulle ultime versioni di Windows 11, macOS Ventura e Ubuntu 22.04 (e successive).
+Gli script di preparazione dei dati di trascrizione sono stati testati sulle ultime versioni di Windows 11, macOS Ventura e Ubuntu 22.04 (e successive).
 
-## Creare le risorse necessarie per Azure OpenAI Service
+## Creare le risorse richieste di Azure OpenAI Service
 
 > [!IMPORTANT]
-> Consigliamo di aggiornare l'Azure CLI all'ultima versione per garantire la compatibilità con OpenAI
-> Consulta la [Documentazione](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
+> Suggeriamo di aggiornare l'Azure CLI all'ultima versione per garantire la compatibilità con OpenAI
+> Vedi [Documentazione](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Crea un gruppo di risorse
 
 > [!NOTE]
-> Per queste istruzioni utilizziamo il gruppo di risorse chiamato "semantic-video-search" in East US.
-> Puoi cambiare il nome del gruppo di risorse, ma se modifichi la posizione delle risorse,
-> verifica la [tabella di disponibilità dei modelli](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> Per queste istruzioni stiamo usando il gruppo di risorse denominato "semantic-video-search" in East US.
+> Puoi cambiare il nome del gruppo di risorse, ma cambiando la posizione delle risorse,
+> controlla la [tabella di disponibilità dei modelli](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
@@ -28,7 +28,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Ottieni l'endpoint e le chiavi per l'uso in questa applicazione
+1. Ottieni endpoint e chiavi per l'uso in questa applicazione
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -39,7 +39,7 @@ az cognitiveservices account keys list --name semantic-video-openai \
 
 1. Distribuisci i seguenti modelli:
    - `text-embedding-ada-002` versione `2` o superiore, denominato `text-embedding-ada-002`
-   - `gpt-35-turbo` versione `0613` o superiore, denominato `gpt-35-turbo`
+   - `gpt-4o-mini` denominato `gpt-4o-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,9 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-35-turbo \
-    --model-name gpt-35-turbo \
-    --model-version "0613"  \
+    --deployment-name gpt-4o-mini \
+    --model-name gpt-4o-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -67,12 +66,12 @@ az cognitiveservices account deployment create \
 
 ## Variabili d'ambiente
 
-Le seguenti variabili d'ambiente sono necessarie per eseguire gli script di preparazione dati trascrizione YouTube.
+Le seguenti variabili d'ambiente sono richieste per eseguire gli script di preparazione dati di trascrizione di YouTube.
 
 ### Su Windows
 
-Si consiglia di aggiungere le variabili alle variabili d'ambiente `utente`.
-`Start di Windows` > `Modifica le variabili d'ambiente di sistema` > `Variabili d'ambiente` > `Variabili utente` per [USER] > `Nuova`.
+Consigliamo di aggiungere le variabili alle variabili d'ambiente `user`.
+`Menu Start di Windows` > `Modifica le variabili d'ambiente di sistema` > `Variabili d'ambiente` > `Variabili utente` per [USER] > `Nuova`.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -81,11 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
+<!-- Puoi aggiungere le variabili d'ambiente al tuo profilo PowerShell.
 
+```powershell
+$env:AZURE_OPENAI_API_KEY = "<la tua chiave API di Azure OpenAI Service>"
+$env:AZURE_OPENAI_ENDPOINT = "<il tuo endpoint di Azure OpenAI Service>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<il nome della distribuzione del modello di Azure OpenAI Service>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<la tua chiave API sviluppatore Google>"
+``` -->
 
 ### Su Linux e macOS
 
-Si consiglia di aggiungere le seguenti esportazioni al file `~/.bashrc` o `~/.zshrc`.
+Consigliamo di aggiungere le seguenti esportazioni nei file `~/.bashrc` o `~/.zshrc`.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -97,13 +103,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ## Installare le librerie Python richieste
 
 1. Installa il [client git](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) se non è già installato.
-1. Da una finestra `Terminale`, clona l'esempio nella cartella del tuo repository preferito.
+1. Da una finestra `Terminale`, clona l'esempio nella cartella del repository preferita.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
     ```
 
-1. Vai nella cartella `data_prep`.
+1. Naviga nella cartella `data_prep`.
 
    ```bash
    cd semanic-search-openai-embeddings-functions/src/data_prep
@@ -151,7 +157,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## Eseguire gli script di preparazione dati trascrizione YouTube
+## Esegui gli script di preparazione dati di trascrizione di YouTube
 
 ### Su Windows
 
@@ -165,5 +171,9 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ./transcripts_prepare.sh
 ```
 
-**Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Pur impegnandoci per garantire l’accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa deve essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un umano. Non ci assumiamo alcuna responsabilità per eventuali malintesi o interpretazioni errate derivanti dall’uso di questa traduzione.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Disclaimer**:
+Questo documento è stato tradotto utilizzando il servizio di traduzione AI [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire la precisione, si prega di notare che le traduzioni automatizzate possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa deve essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un essere umano. Non siamo responsabili per eventuali malintesi o interpretazioni errate derivanti dall’uso di questa traduzione.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

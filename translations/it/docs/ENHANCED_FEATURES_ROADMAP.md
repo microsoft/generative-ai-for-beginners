@@ -1,142 +1,147 @@
-# Roadmap delle funzionalità avanzate e dei miglioramenti
+# Roadmap per Funzionalità Migliorate e Miglioramenti
 
-Questo documento descrive i miglioramenti raccomandati per il curriculum Generative AI for Beginners, basati su una revisione approfondita del codice e sull'analisi delle best practice del settore.
+Questo documento delinea miglioramenti e perfezionamenti raccomandati per il curriculum Generative AI for Beginners, basati su una revisione completa del codice e analisi delle best practice del settore.
 
-## Sommario esecutivo
+## Sintesi Esecutiva
 
-Il codice è stato analizzato per la sicurezza, la qualità del codice e l’efficacia didattica. Questo documento fornisce raccomandazioni per correzioni immediate, miglioramenti a breve termine e potenziamenti futuri.
+Il codice è stato analizzato per sicurezza, qualità del codice ed efficacia educativa. Questo documento fornisce raccomandazioni per correzioni immediate, miglioramenti a breve termine e potenziamenti futuri.
 
 ---
 
-## 1. Miglioramenti per la sicurezza (Priorità: Critica)
+## 1. Miglioramenti della Sicurezza (Priorità: Critica)
 
-### 1.1 Correzioni immediate (Completate)
+### 1.1 Correzioni Immediate (Completate)
 
-| Problema | File interessati | Stato |
-|----------|------------------|-------|
-| SECRET_KEY codificata in modo rigido | `05-advanced-prompts/python/aoai-solution.py` | Risolto |
-| Mancata validazione dell'ambiente | Diversi file JS/TS | Risolto |
+| Problema | File Interessati | Stato |
+|-------|----------------|--------|
+| SECRET_KEY hardcoded | `05-advanced-prompts/python/aoai-solution.py` | Risolto |
+| Mancata validazione env | Diversi file JS/TS | Risolto |
 | Chiamate a funzioni non sicure | `11-integrating-with-function-calling/js-githubmodels/app.js` | Risolto |
-| Perdite di gestori di file | `08-building-search-applications/scripts/` | Risolto |
-| Mancata impostazione di timeout per le richieste | `09-building-image-applications/python/` | Risolto |
+| Perdita di handle di file | `08-building-search-applications/scripts/` | Risolto |
+| Mancati timeout nelle richieste | `09-building-image-applications/python/` | Risolto |
 
-### 1.2 Funzionalità di sicurezza aggiuntive consigliate
+### 1.2 Funzionalità di Sicurezza Aggiuntive Raccomandate
 
 1. **Esempi di Rate Limiting**
-   - Aggiungere codice esempio per implementare il rate limiting per le chiamate API
-   - Dimostrare schemi di backoff esponenziale
+   - Aggiungere codice di esempio che mostra come implementare il rate limiting per le chiamate API
+   - Dimostrare pattern di backoff esponenziale
 
-2. **Rotazione delle API Key**
-   - Documentare le best practice per la rotazione delle API key
+2. **Rotazione delle Chiavi API**
+   - Aggiungere documentazione sulle best practice per la rotazione delle chiavi API
    - Includere esempi di utilizzo di Azure Key Vault o servizi simili
 
-3. **Integrazione Content Safety**
-   - Aggiungere esempi con l'API Azure Content Safety
-   - Dimostrare pattern di moderazione di input/output
+3. **Integrazione per la Sicurezza dei Contenuti**
+   - Aggiungere esempi di utilizzo dell’API Azure Content Safety
+   - Dimostrare pattern di moderazione input/output
 
 ---
 
-## 2. Miglioramenti della qualità del codice
+## 2. Miglioramenti della Qualità del Codice
 
-### 2.1 File di configurazione aggiunti
+### 2.1 Aggiunti File di Configurazione
 
 | File | Scopo |
-|-------|-------|
-| `.eslintrc.json` | Regole di linting JavaScript/TypeScript |
+|------|---------|
+| `.eslintrc.json` | Regole di linting per JavaScript/TypeScript |
 | `.prettierrc` | Standard di formattazione del codice |
 | `pyproject.toml` | Configurazione degli strumenti Python (Black, Ruff, mypy) |
 
-### 2.2 Utility condivise create
+### 2.2 Creazione di Utility Condivise
 
 Nuovo modulo `shared/python/` con:
-- `env_utils.py` - Gestione delle variabili d'ambiente
-- `input_validation.py` - Validazione e sanificazione degli input
-- `api_utils.py` - Wrapper sicuri per le richieste API
+- `env_utils.py` - Gestione variabili d’ambiente
+- `input_validation.py` - Validazione e sanificazione input
+- `api_utils.py` - Wrapper sicuri per richieste API
 
-### 2.3 Miglioramenti consigliati al codice
+### 2.3 Miglioramenti Consigliati al Codice
 
-1. **Copertura dei Type Hints**
-   - Aggiungere type hints a tutti i file Python
-   - Abilitare modalità strict TypeScript in tutti i progetti TS
+1. **Copertura dei Type Hint**
+   - Aggiungere type hint a tutti i file Python
+   - Abilitare la modalità TypeScript rigorosa in tutti i progetti TS
 
-2. **Standard di documentazione**
+2. **Standard di Documentazione**
    - Aggiungere docstring a tutte le funzioni Python
    - Aggiungere commenti JSDoc a tutte le funzioni JavaScript/TypeScript
 
-3. **Framework di testing**
-   - Aggiungere configurazione pytest ed esempi di test
+3. **Framework di Testing**
+   - Aggiungere configurazione pytest ed esempi di test _(fatto: config pytest in `pyproject.toml`; esempi di test per le utility condivise in [`tests/`](../../../tests) eseguiti in CI)_
    - Aggiungere configurazione Jest per JavaScript/TypeScript
 
 ---
 
-## 3. Miglioramenti educativi
+## 3. Miglioramenti Educativi
 
-### 3.1 Nuovi argomenti per le lezioni
+### 3.1 Nuovi Argomenti per Lezioni
 
-1. **Sicurezza nelle applicazioni AI** (Lezione proposta 22)
-   - Attacchi e difese da prompt injection
-   - Gestione delle API key
+1. **Sicurezza nelle Applicazioni AI** (Lezione proposta 22)
+   - Attacchi e difese da injection di prompt
+   - Gestione chiavi API
    - Moderazione dei contenuti
-   - Rate limiting e prevenzione degli abusi
+   - Rate limiting e prevenzione abusi
 
-2. **Deploy in produzione** (Lezione proposta 23)
+2. **Deployment in Produzione** (Lezione proposta 23)
    - Containerizzazione con Docker
    - Pipeline CI/CD
    - Monitoraggio e logging
    - Gestione dei costi
 
-3. **Tecniche avanzate di RAG** (Lezione proposta 24)
+3. **Tecniche RAG Avanzate** (Lezione proposta 24)
    - Ricerca ibrida (keyword + semantica)
    - Strategie di re-ranking
    - RAG multimodale
    - Metriche di valutazione
 
-### 3.2 Miglioramenti delle lezioni esistenti
+### 3.2 Miglioramenti alle Lezioni Esistenti
 
-| Lezione | Miglioramento consigliato |
-|---------|---------------------------|
-| 06 - Generazione testo | Aggiungere esempi di risposte in streaming |
-| 07 - Applicazioni chat | Aggiungere schemi di memoria per conversazioni |
-| 08 - Applicazioni di ricerca | Aggiungere confronto dei database vettoriali |
-| 09 - Generazione immagini | Aggiungere esempi di editing/variazione immagini |
-| 11 - Funzionamento chiamate | Aggiungere chiamate funzione parallele |
-| 15 - RAG | Aggiungere confronto strategie di chunking |
+| Lezione | Miglioramento Raccomandato |
+|--------|------------------------|
+| 06 - Generazione Testo | Aggiungere esempi di risposta in streaming |
+| 07 - Applicazioni Chat | Aggiungere pattern di memoria per conversazioni |
+| 08 - Applicazioni di Ricerca | Aggiungere confronto tra database vettoriali |
+| 09 - Generazione Immagini | Aggiungere esempi di modifica/variazione immagini |
+| 11 - Funzione di Chiamata | Aggiungere chiamate a funzioni parallele |
+| 15 - RAG | Aggiungere confronto tra strategie di chunking |
 | 17 - Agenti AI | Aggiungere orchestrazione multi-agente |
 
 ---
 
 ## 4. Modernizzazione API
 
-### 4.1 Aggiornamenti dei pattern API deprecati
+### 4.1 Pattern API Deprecati (Migrazione Completata)
 
-| Pattern vecchio | Pattern nuovo | File interessati |
-|-----------------|---------------|------------------|
-| `openai.api_type = "azure"` | Client `AzureOpenAI()` | Diversi script in `08-building-search-applications/` |
-| `openai.ChatCompletion.create()` | `client.chat.completions.create()` | Diversi notebook |
-| `df.append()` (pandas) | `pd.concat()` | Notebook RAG |
+Tutti i campioni Python e TypeScript **chat** sono stati migrati dalla Chat Completions API alla **Responses API** (`client.responses.create(...)` → `response.output_text`).
 
-### 4.2 Nuove funzionalità API da dimostrare
+| Vecchio Pattern | Nuovo Pattern | Stato |
+|-------------|-------------|--------|
+| `openai.api_type = "azure"` / `AzureOpenAI()` (chat) | `OpenAI(base_url="<endpoint>/openai/v1/")` (Responses API) | Completato |
+| `openai.ChatCompletion.create()` / `client.chat.completions.create()` | `client.responses.create(input=...)` → `response.output_text` | Completato |
+| `@azure/openai` `OpenAIClient.getChatCompletions()` (TypeScript) | `openai` package `client.responses.create()` → `response.output_text` | Completato |
+| `df.append()` (pandas) | `pd.concat()` | Completato |
 
-1. **Output strutturati** (OpenAI)
+> **Nota:** I campioni Microsoft Foundry Models che usano gli SDK `azure-ai-inference` / `@azure-rest/ai-inference` (`client.complete()`) rimangono sulla Model Inference API, che non supporta la Responses API. `AzureOpenAI()` viene mantenuto intenzionalmente dove ancora valido (embeddings e generazione immagini).
+
+### 4.2 Nuove Funzionalità API da Dimostrare
+
+1. **Output Strutturati** (OpenAI)
    - Modalità JSON
-   - Chiamata di funzioni con schemi rigorosi
+   - Chiamata a funzioni con schemi rigidi
 
-2. **Capacità di Vision**
-   - Analisi immagini con GPT-4V
+2. **Capacità Vision**
+   - Analisi immagini con GPT-4o (vision)
    - Prompt multimodali
 
-3. **Assistants API**
-   - Interprete di codice
+3. **Strumenti Integrati Responses API** (sostituisce la vecchia Assistants API)
+   - Interprete codice
    - Ricerca file
-   - Strumenti personalizzati
+   - Ricerca web e strumenti personalizzati
 
 ---
 
-## 5. Miglioramenti infrastrutturali
+## 5. Miglioramenti dell’Infrastruttura
 
 ### 5.1 Miglioramenti CI/CD
 
-Gli attuali workflow gestiscono la validazione markdown. Si raccomandano aggiunte:
+Implementato in [`.github/workflows/code-quality.yml`](../../../.github/workflows/code-quality.yml): Linting/formattazione Python (Ruff + Black) **obbligatorio** sul modulo delle utility `shared/` mantenuto e **consigliato** sul resto del curriculum, oltre a un passaggio ESLint consigliativo per JavaScript/TypeScript. La baseline illustrativa era:
 
 ```yaml
 # .github/workflows/code-quality.yml
@@ -167,7 +172,9 @@ jobs:
       - run: npx eslint .
 ```
 
-### 5.2 Scansione di sicurezza
+### 5.2 Scansione della Sicurezza
+
+Implementato in [`.github/workflows/security.yml`](../../../.github/workflows/security.yml): Analisi CodeQL per Python e JavaScript/TypeScript (su push, pull request e pianificazione settimanale) più revisione delle dipendenze sulle pull request. La baseline illustrativa era:
 
 ```yaml
 # .github/workflows/security.yml
@@ -194,11 +201,12 @@ jobs:
 
 ---
 
-## 6. Miglioramenti dell’esperienza sviluppatore
+## 6. Miglioramenti nell’Esperienza Sviluppatore
 
 ### 6.1 Miglioramenti DevContainer
 
-Aggiornare `.devcontainer/devcontainer.json`:
+
+Implementato in [`.devcontainer/devcontainer.json`](../../../.devcontainer/devcontainer.json) e [`.devcontainer/post-create.sh`](../../../.devcontainer/post-create.sh): il contenitore ora include le estensioni Pylance, il formatter Black, Ruff, ESLint, Prettier e Copilot, abilita il format-on-save collegato alla configurazione Black/Prettier del repository e installa gli strumenti per sviluppatori (`ruff`, `black`, `mypy`, `pytest`) così che il [workflow di qualità del codice](../../../.github/workflows/code-quality.yml) possa essere riprodotto localmente. L'immagine base `mcr.microsoft.com/devcontainers/universal` include già Python e Node, quindi non sono necessarie funzionalità aggiuntive. La baseline illustrativa era:
 
 ```json
 {
@@ -232,120 +240,117 @@ Aggiornare `.devcontainer/devcontainer.json`:
 }
 ```
 
-### 6.2 Playground interattivo
+### 6.2 Playground Interattivo
 
-Considerare l’aggiunta di:
-- Notebook Jupyter con API key preimpostate (tramite ambiente)
-- Demo Gradio/Streamlit per utenti visivi
-- Quiz interattivi per verifiche conoscenza
+Considerare l'aggiunta di:
+- Notebook Jupyter con chiavi API precompilate (tramite ambiente)
+- Demo Gradio/Streamlit per apprendenti visivi
+- Quiz interattivi per la valutazione della conoscenza
 
 ---
 
-## 7. Supporto multilingua
+## 7. Supporto Multilingue
 
-### 7.1 Copertura linguistica attuale
+### 7.1 Copertura Linguistica Attuale
 
-| Tecnologia | Lezioni coperte | Stato |
-|------------|-----------------|-------|
+| Tecnologia | Lezioni Coperte | Stato |
+|------------|-----------------|--------|
 | Python | Tutte | Completo |
 | TypeScript | 06-09, 11 | Parziale |
 | JavaScript | 06-08, 11 | Parziale |
 | .NET/C# | Alcune | Parziale |
 
-### 7.2 Aggiunte consigliate
+### 7.2 Aggiunte Consigliate
 
-1. **Go** - Crescente nell’ecosistema AI/ML
-2. **Rust** - Applicazioni ad alte prestazioni
-3. **Java/Kotlin** - Applicazioni enterprise
+1. **Go** - Crescente negli strumenti AI/ML
+2. **Rust** - Applicazioni a prestazioni critiche
+3. **Java/Kotlin** - Applicazioni aziendali
 
 ---
 
-## 8. Ottimizzazioni delle prestazioni
+## 8. Ottimizzazioni delle Prestazioni
 
-### 8.1 Ottimizzazioni a livello di codice
+### 8.1 Ottimizzazioni a Livello di Codice
 
 1. **Pattern Async/Await**
-   - Aggiungere esempi async per elaborazioni batch
+   - Aggiungere esempi async per elaborazione batch
    - Dimostrare chiamate API concorrenti
 
-2. **Strategie di caching**
-   - Aggiungere esempi di caching di embeddings
-   - Dimostrare pattern di caching risposte
+2. **Strategie di Caching**
+   - Aggiungere esempi di caching di embedding
+   - Dimostrare modelli di caching delle risposte
 
-3. **Ottimizzazione dei token**
-   - Aggiungere esempi di uso di tiktoken
-   - Dimostrare tecniche di compressione prompt
+3. **Ottimizzazione dei Token**
+   - Aggiungere esempi di utilizzo di tiktoken
+   - Dimostrare tecniche di compressione del prompt
 
-### 8.2 Esempi di ottimizzazione costi
+### 8.2 Esempi di Ottimizzazione dei Costi
 
 Aggiungere esempi che mostrano:
-- Selezione modello in base alla complessità del task
-- Prompt engineering per efficienza token
+- Selezione del modello in base alla complessità del compito
+- Ingegneria del prompt per efficienza dei token
 - Elaborazione batch per operazioni in blocco
 
 ---
 
-## 9. Accessibilità e internazionalizzazione
+## 9. Accessibilità e Internazionalizzazione
 
-### 9.1 Stato attuale delle traduzioni
+### 9.1 Stato Attuale della Traduzione
 
-| Lingua | Stato |
-|--------|-------|
-| Inglese | Completo |
-| Cinese (semplificato) | Completo |
-| Giapponese | Completo |
-| Coreano | Completo |
-| Spagnolo | Parziale |
-| Portoghese | Parziale |
-| Turco | Parziale |
-| Polacco | Parziale |
+Tutte le traduzioni sono **complete** e generate automaticamente dal [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst), che produce e mantiene sincronizzate oltre 50 versioni linguistiche del curriculum con la fonte inglese. I contenuti tradotti sono sotto `translations/` e le immagini localizzate sotto `translated_images/`; la lista completa delle lingue disponibili è pubblicata in cima al README del repository.
 
-### 9.2 Miglioramenti per l’accessibilità
+| Aspetto | Stato |
+|--------|--------|
+| Copertura della traduzione | Completa — più di 50 lingue, tutte le lezioni |
+| Metodo di traduzione | Automatizzato tramite [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst) |
+| Mantenuto sincronizzato con la fonte inglese | Sì — rigenerato automaticamente |
+
+### 9.2 Miglioramenti di Accessibilità
 
 1. Aggiungere testo alternativo a tutte le immagini
-2. Garantire la corretta evidenziazione della sintassi nei codici
-3. Aggiungere trascrizioni video per tutti i contenuti video
-4. Garantire il contrasto colore conforme alle linee guida WCAG
+2. Assicurarsi che gli esempi di codice abbiano una corretta evidenziazione della sintassi
+3. Aggiungere trascrizioni video a tutti i contenuti video
+4. Assicurarsi che il contrasto dei colori sia conforme alle linee guida WCAG
 
 ---
 
-## 10. Priorità di implementazione
+## 10. Priorità di Implementazione
 
-### Fase 1: Immediata (settimane 1-2)
-- [x] Correggere problemi critici di sicurezza
-- [x] Aggiungere configurazione qualità codice
+### Fase 1: Immediata (Settimane 1-2)
+- [x] Risolvere problemi critici di sicurezza
+- [x] Aggiungere configurazione per la qualità del codice
 - [x] Creare utility condivise
-- [x] Documentare linee guida per la sicurezza
+- [x] Documentare le linee guida di sicurezza
 
-### Fase 2: Breve termine (settimane 3-4)
-- [ ] Aggiornare pattern API deprecati
-- [ ] Aggiungere type hints a tutti i file Python
-- [ ] Aggiungere workflow CI/CD per qualità codice
-- [ ] Creare workflow per scansione sicurezza
+### Fase 2: Breve termine (Settimane 3-4)
+- [x] Aggiornare pattern API deprecati (Chat Completions → Responses API, Python + TypeScript)
+- [ ] Aggiungere suggerimenti di tipo a tutti i file Python (fatto per il modulo mantenuto `shared/`; esempi delle lezioni mantenuti semplici)
+- [x] Aggiungere workflow CI/CD per la qualità del codice
+- [x] Creare workflow di scansione della sicurezza
 
-### Fase 3: Medio termine (mesi 2-3)
+### Fase 3: Medio termine (Mesi 2-3)
 - [ ] Aggiungere nuova lezione sulla sicurezza
-- [ ] Aggiungere lezione sul deploy in produzione
-- [ ] Migliorare setup DevContainer
+- [ ] Aggiungere lezione sul deployment in produzione
+- [x] Migliorare la configurazione del DevContainer
 - [ ] Aggiungere demo interattive
 
-### Fase 4: Lungo termine (mese 4+)
-- [ ] Aggiungere lezione avanzata su RAG
-- [ ] Espandere copertura linguistica
-- [ ] Aggiungere suite completa di test
+### Fase 4: Lungo termine (Mese 4+)
+- [ ] Aggiungere lezione avanzata RAG
+- [ ] Espandere la copertura linguistica
+- [ ] Aggiungere suite di test completa
 - [ ] Creare programma di certificazione
 
 ---
 
 ## Conclusione
 
-Questa roadmap fornisce un approccio strutturato per migliorare il curriculum Generative AI for Beginners. Affrontando le problematiche di sicurezza, modernizzando le API e aggiungendo contenuti didattici, il corso preparerà meglio gli studenti allo sviluppo di applicazioni AI reali.
+Questa roadmap fornisce un approccio strutturato per migliorare il curriculum Generative AI for Beginners. Affrontando questioni di sicurezza, aggiornando le API e aggiungendo contenuti educativi, il corso preparerà meglio gli studenti allo sviluppo di applicazioni AI nel mondo reale.
 
-Per domande o contributi, aprire una issue nel repository GitHub.
+Per domande o contributi, si prega di aprire un issue nel repository GitHub.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:  
-Questo documento è stato tradotto utilizzando il servizio di traduzione automatica [Co-op Translator](https://github.com/Azure/co-op-translator). Pur impegnandoci per garantire accuratezza, si prega di notare che le traduzioni automatiche possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa deve essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale realizzata da un traduttore umano. Non siamo responsabili per eventuali incomprensioni o interpretazioni errate derivanti dall’uso di questa traduzione.
+**Disclaimer**:
+Questo documento è stato tradotto utilizzando il servizio di traduzione AI [Co-op Translator](https://github.com/Azure/co-op-translator). Sebbene ci impegniamo per garantire la precisione, si prega di notare che le traduzioni automatizzate possono contenere errori o imprecisioni. Il documento originale nella sua lingua nativa deve essere considerato la fonte autorevole. Per informazioni critiche, si raccomanda una traduzione professionale effettuata da un essere umano. Non siamo responsabili per eventuali malintesi o interpretazioni errate derivanti dall’uso di questa traduzione.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

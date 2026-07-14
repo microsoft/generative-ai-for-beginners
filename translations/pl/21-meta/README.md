@@ -8,11 +8,14 @@ Ta lekcja obejmie:
 - Zrozumienie zastosowań i scenariuszy dla każdego modelu
 - Przykład kodu pokazujący unikalne cechy każdego modelu
 
+
 ## Rodzina modeli Meta
 
-W tej lekcji zapoznamy się z 2 modelami z rodziny Meta lub "stada Llama" - Llama 3.1 i Llama 3.2.
+W tej lekcji zbadamy 2 modele z rodziny Meta, czyli "stado Llam" - Llama 3.1 i Llama 3.2.
 
-Modele te dostępne są w różnych wariantach i można je znaleźć na rynku modeli GitHub. Oto więcej szczegółów na temat korzystania z modeli GitHub, aby [prototypować z modelami AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Modele te występują w różnych wariantach i są dostępne w [Microsoft Foundry Models catalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
+
+> **Uwaga:** GitHub Models zostanie wycofany pod koniec lipca 2026 roku. Poniżej znajdują się szczegóły dotyczące korzystania z [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) do prototypowania z modelami AI.
 
 Warianty modeli:
 - Llama 3.1 - 70B Instruct
@@ -20,39 +23,39 @@ Warianty modeli:
 - Llama 3.2 - 11B Vision Instruct
 - Llama 3.2 - 90B Vision Instruct
 
-*Uwaga: Llama 3 jest również dostępna w modelach GitHub, ale nie będzie omawiana w tej lekcji*
+*Uwaga: Llama 3 jest również dostępny w Microsoft Foundry Models, ale nie będzie omawiany w tej lekcji*
 
 ## Llama 3.1
 
-Przy 405 miliardach parametrów, Llama 3.1 mieści się w kategorii otwartych modeli LLM.
+Llama 3.1 zawiera 405 miliardów parametrów i należy do kategorii otwartych modeli LLM.
 
 Model jest ulepszeniem wcześniejszej wersji Llama 3, oferując:
 
-- Większe okno kontekstowe - 128k tokenów vs 8k tokenów
-- Większą maksymalną liczbę tokenów wyjściowych - 4096 vs 2048
-- Lepsze wsparcie wielojęzyczne - dzięki zwiększonej liczbie tokenów treningowych
+- Większe okno kontekstu - 128k tokenów vs 8k tokenów
+- Większa maksymalna liczba tokenów wyjściowych - 4096 vs 2048
+- Lepsze wsparcie wielojęzyczne - dzięki zwiększeniu liczby tokenów treningowych
 
-To pozwala Llama 3.1 radzić sobie z bardziej złożonymi przypadkami użycia podczas budowy aplikacji GenAI, w tym:
-- Natywne wywoływanie funkcji - możliwość wywoływania zewnętrznych narzędzi i funkcji poza przepływem LLM
-- Lepsza wydajność RAG - dzięki większemu oknu kontekstowemu
-- Generowanie danych syntetycznych - możliwość tworzenia efektywnych danych do zadań takich jak fine-tuning
+Dzięki temu Llama 3.1 może obsługiwać bardziej złożone przypadki użycia przy tworzeniu aplikacji GenAI, w tym:
+- Natywne wywoływanie funkcji - możliwość wywoływania zewnętrznych narzędzi i funkcji poza przepływem pracy LLM
+- Lepsza wydajność RAG - dzięki większemu oknu kontekstu
+- Syntetyczne generowanie danych - możliwość tworzenia skutecznych danych do zadań takich jak fine-tuning
 
 ### Natywne wywoływanie funkcji
 
-Llama 3.1 została dostrojona tak, aby efektywniej wykonywać wywołania funkcji lub narzędzi. Posiada również dwa wbudowane narzędzia, które model potrafi rozpoznać jako konieczne do użycia na podstawie zapytania użytkownika. Narzędzia te to:
+Llama 3.1 został zoptymalizowany, aby być bardziej efektywnym w wywoływaniu funkcji lub narzędzi. Ma także dwa wbudowane narzędzia, które model może zidentyfikować jako potrzebne do użycia na podstawie polecenia od użytkownika. Narzędzia te to:
 
-- **Brave Search** - może być używane do pobierania aktualnych informacji, takich jak pogoda, wykonując wyszukiwanie w sieci
-- **Wolfram Alpha** - może być używane do bardziej zaawansowanych obliczeń matematycznych, więc nie jest wymagane pisanie własnych funkcji.
+- **Brave Search** - może być używany do uzyskiwania aktualnych informacji, takich jak pogoda, poprzez wyszukiwanie w sieci
+- **Wolfram Alpha** - może być używany do bardziej złożonych obliczeń matematycznych, więc nie jest konieczne pisanie własnych funkcji.
 
-Możesz także tworzyć własne niestandardowe narzędzia, które LLM może wywoływać.
+Możesz także tworzyć własne niestandardowe narzędzia, które LLM może wywołać.
 
-W przykładzie kodu poniżej:
+W poniższym przykładzie kodu:
 
-- Definiujemy dostępne narzędzia (brave_search, wolfram_alpha) w podpowiedzi systemowej.
-- Wysyłamy zapytanie użytkownika dotyczące pogody w określonym mieście.
+- Definiujemy dostępne narzędzia (brave_search, wolfram_alpha) w systemowym komunikacie.
+- Wysyłamy polecenie użytkownika pytające o pogodę w określonym mieście.
 - LLM odpowie wywołaniem narzędzia Brave Search, które będzie wyglądać tak: `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*Uwaga: Ten przykład wykonuje tylko wywołanie narzędzia, jeśli chcesz uzyskać wyniki, musisz założyć darmowe konto na stronie Brave API i samodzielnie zdefiniować funkcję.
+*Uwaga: Ten przykład tylko wykonuje wywołanie narzędzia, jeśli chcesz uzyskać wyniki, musisz utworzyć darmowe konto na stronie API Brave i samodzielnie zdefiniować funkcję.
 
 ```python 
 import os
@@ -60,9 +63,10 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import AssistantMessage, SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-token = os.environ["GITHUB_TOKEN"]
-endpoint = "https://models.inference.ai.azure.com"
-model_name = "meta-llama-3.1-405b-instruct"
+# Pobierz je ze strony "Przegląd" swojego projektu Microsoft Foundry
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
+model_name = "Meta-Llama-3.1-405B-Instruct"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -94,13 +98,14 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-Pomimo bycia modelem LLM, jedną z ograniczeń Llama 3.1 jest brak multimodalności. To znaczy, brak możliwości używania różnych rodzajów danych wejściowych, takich jak obrazy, jako podpowiedzi oraz udzielania na nie odpowiedzi. Ta funkcja jest jedną z głównych cech Llama 3.2. Inne cechy obejmują:
+Pomimo bycia modelem LLM, jedną z ograniczeń Llama 3.1 jest brak multimodalności. To znaczy, brak możliwości używania różnych typów danych wejściowych, takich jak obrazy jako podpowiedzi, oraz generowania na ich podstawie odpowiedzi. Ta zdolność jest jedną z głównych cech Llama 3.2. Inne cechy obejmują:
 
-- Multimodalność - zdolność do oceny zarówno tekstowych, jak i obrazowych podpowiedzi
-- Warianty o rozmiarach od małych do średnich (11B i 90B) - zapewniają elastyczne opcje wdrożeniowe,
-- Warianty tylko tekstowe (1B i 3B) - pozwalają na wdrożenie modelu na urządzeniach edge / mobilnych i zapewniają niskie opóźnienia
+- Multimodalność - potrafi oceniać zarówno tekstowe, jak i obrazowe podpowiedzi
+- Warianty od małych do średnich rozmiarów (11B i 90B) - zapewnia elastyczne opcje wdrożenia,
+- Warianty tylko tekstowe (1B i 3B) - pozwalają na wdrożenie modelu na urządzeniach brzegowych / mobilnych i zapewniają niskie opóźnienia
 
-Wsparcie multimodalne to duży krok naprzód w świecie otwartych modeli. Przykład kodu poniżej bierze zarówno obraz, jak i podpowiedź tekstową, aby uzyskać analizę obrazu z Llama 3.2 90B.
+Wsparcie multimodalne to duży krok naprzód w świecie otwartych modeli. Poniższy przykład kodu przyjmuje zarówno obraz, jak i tekstową podpowiedź, aby uzyskać analizę obrazu z Llama 3.2 90B.
+
 
 ### Wsparcie multimodalne z Llama 3.2
 
@@ -117,8 +122,9 @@ from azure.ai.inference.models import (
 )
 from azure.core.credentials import AzureKeyCredential
 
-token = os.environ["GITHUB_TOKEN"]
-endpoint = "https://models.inference.ai.azure.com"
+# Pobierz je ze strony „Przegląd” projektu Microsoft Foundry
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Llama-3.2-90B-Vision-Instruct"
 
 client = ChatCompletionsClient(
@@ -151,11 +157,11 @@ print(response.choices[0].message.content)
 
 ## Nauka nie kończy się tutaj, kontynuuj podróż
 
-Po ukończeniu tej lekcji sprawdź naszą [kolekcję nauki Generatywnej AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby dalej rozwijać swoją wiedzę na temat Generatywnej AI!
+Po ukończeniu tej lekcji sprawdź naszą [kolekcję Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby dalej rozwijać swoją wiedzę o Generative AI!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Zastrzeżenie**:  
-Niniejszy dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mimo że dokładamy starań, aby tłumaczenie było jak najbardziej precyzyjne, należy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w języku źródłowym powinien być uznawany za wiarygodne źródło. W przypadku informacji krytycznych zalecane jest skorzystanie z profesjonalnego tłumaczenia wykonywanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.
+**Zastrzeżenie**:
+Niniejszy dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Choć dążymy do dokładności, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub niedokładności. Oryginalny dokument w jego języku źródłowym należy uznawać za autorytatywne źródło. W przypadku informacji krytycznych zalecane jest skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

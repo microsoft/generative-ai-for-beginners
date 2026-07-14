@@ -1,62 +1,62 @@
 # Gelişmiş Özellikler ve İyileştirmeler Yol Haritası
 
-Bu belge, kapsamlı bir kod incelemesi ve sektörün en iyi uygulamalarının analizi temel alınarak, Başlangıç Seviyesi için Üretici Yapay Zeka müfredatı için önerilen iyileştirmeleri ve geliştirmeleri özetlemektedir.
+Bu belge, kapsamlı bir kod incelemesi ve sektörün en iyi uygulamalarının analizi temelinde Başlangıç Seviyesi Üretken AI müfredatı için önerilen geliştirmeler ve iyileştirmeleri özetlemektedir.
 
 ## Yönetici Özeti
 
-Kod tabanı, güvenlik, kod kalitesi ve eğitimsel etkinlik açısından analiz edilmiştir. Bu belge, acil düzeltmeler, kısa vadeli iyileştirmeler ve gelecekteki geliştirmeler için öneriler sunar.
+Kod tabanı güvenlik, kod kalitesi ve eğitsel etkinlik açısından analiz edilmiştir. Bu belge, hemen uygulanacak düzeltmeler, kısa vadeli iyileştirmeler ve gelecekteki geliştirmeler için öneriler sunmaktadır.
 
 ---
 
 ## 1. Güvenlik İyileştirmeleri (Öncelik: Kritik)
 
-### 1.1 Acil Düzeltmeler (Tamamlandı)
+### 1.1 Hemen Düzeltmeler (Tamamlandı)
 
 | Sorun | Etkilenen Dosyalar | Durum |
-|-------|--------------------|-------|
-| Sert kodlanmış SECRET_KEY | `05-advanced-prompts/python/aoai-solution.py` | Düzeltildi |
-| Eksik ortam doğrulaması | Birden fazla JS/TS dosyası | Düzeltildi |
+|-------|----------------|--------|
+| Sabit kodlanmış SECRET_KEY | `05-advanced-prompts/python/aoai-solution.py` | Düzeltildi |
+| Eksik env doğrulaması | Birden fazla JS/TS dosyası | Düzeltildi |
 | Güvensiz fonksiyon çağrıları | `11-integrating-with-function-calling/js-githubmodels/app.js` | Düzeltildi |
-| Dosya tutacağı sızıntıları | `08-building-search-applications/scripts/` | Düzeltildi |
+| Dosya tutucu sızıntıları | `08-building-search-applications/scripts/` | Düzeltildi |
 | Eksik istek zaman aşımı | `09-building-image-applications/python/` | Düzeltildi |
 
 ### 1.2 Önerilen Ek Güvenlik Özellikleri
 
-1. **Hız Sınırlama Örnekleri**
-   - API çağrıları için hız sınırlaması uygulamasını gösterecek örnek kod ekleyin
-   - Üstel geri çekilme desenlerini gösterin
+1. **Oran Sınırlandırma Örnekleri**
+   - API çağrıları için oran sınırlandırmanın nasıl uygulanacağını gösteren örnek kod ekleyin
+   - Üssel geri çekilme desenlerini gösterin
 
-2. **API Anahtarı Döndürme**
-   - API anahtarlarının döndürülmesi için en iyi uygulamalar hakkında dokümantasyon ekleyin
-   - Azure Key Vault veya benzeri servislerin kullanımına örnekler dahil edin
+2. **API Anahtarı Rotasyonu**
+   - API anahtarlarının rotasyonu için en iyi uygulamalar hakkında dokümantasyon ekleyin
+   - Azure Key Vault veya benzeri servislerin kullanım örneklerini dahil edin
 
 3. **İçerik Güvenliği Entegrasyonu**
-   - Azure Content Safety API kullanımına ilişkin örnekler ekleyin
-   - Girdi/çıktı moderasyon desenlerini gösterin
+   - Azure İçerik Güvenliği API'si kullanarak örnekler ekleyin
+   - Girdi/çıktı moderasyonu desenlerini gösterin
 
 ---
 
 ## 2. Kod Kalitesi İyileştirmeleri
 
-### 2.1 Eklenecek Yapılandırma Dosyaları
+### 2.1 Konfigürasyon Dosyaları Eklendi
 
-| Dosya | Amacı |
-|-------|-------|
+| Dosya | Amaç |
+|------|---------|
 | `.eslintrc.json` | JavaScript/TypeScript lint kuralları |
-| `.prettierrc` | Kod biçimlendirme standartları |
-| `pyproject.toml` | Python araç yapılandırması (Black, Ruff, mypy) |
+| `.prettierrc` | Kod formatlama standartları |
+| `pyproject.toml` | Python araç konfigürasyonu (Black, Ruff, mypy) |
 
-### 2.2 Oluşturulan Paylaşılan Yardımcılar
+### 2.2 Ortak Yardımcılar Oluşturuldu
 
-Yeni `shared/python/` modülü:
-- `env_utils.py` - Ortam değişkeni yönetimi
+Yeni `shared/python/` modülü ile:
+- `env_utils.py` - Ortam değişkeni işlemleri
 - `input_validation.py` - Girdi doğrulama ve temizleme
 - `api_utils.py` - Güvenli API istek sarmalayıcıları
 
 ### 2.3 Önerilen Kod İyileştirmeleri
 
-1. **Tip İpuçları Kapsamı**
-   - Tüm Python dosyalarına tip ipuçları ekleyin
+1. **Tür İpucu Kapsamı**
+   - Tüm Python dosyalarına tür ipuçları ekleyin
    - Tüm TS projelerinde katı TypeScript modu etkinleştirin
 
 2. **Dokümantasyon Standartları**
@@ -64,28 +64,28 @@ Yeni `shared/python/` modülü:
    - Tüm JavaScript/TypeScript fonksiyonlarına JSDoc yorumları ekleyin
 
 3. **Test Çerçevesi**
-   - pytest yapılandırması ve örnek testler ekleyin
-   - JavaScript/TypeScript için Jest yapılandırması ekleyin
+   - pytest konfigürasyonu ve örnek testler ekleyin _(tamamlandı: `pyproject.toml` içinde pytest konfigürasyonu; paylaşılan yardımcı modüller için [`tests/`](../../../tests) içinde örnek testler CI’da çalıştırılıyor)_
+   - JavaScript/TypeScript için Jest konfigürasyonu ekleyin
 
 ---
 
-## 3. Eğitimsel İyileştirmeler
+## 3. Eğitsel İyileştirmeler
 
 ### 3.1 Yeni Ders Konuları
 
-1. **Yapay Zeka Uygulamalarında Güvenlik** (Önerilen Ders 22)
-   - Komut enjeksiyon saldırıları ve savunmaları
+1. **AI Uygulamalarında Güvenlik** (Önerilen Ders 22)
+   - İstem enjeksiyonu saldırıları ve savunmaları
    - API anahtarı yönetimi
    - İçerik moderasyonu
-   - Hız sınırlama ve kötüye kullanım önleme
+   - Oran sınırlandırma ve kötüye kullanım önleme
 
-2. **Üretim Ortamına Dağıtım** (Önerilen Ders 23)
-   - Docker ile konteynerizasyon
-   - CI/CD hatları
+2. **Üretim Dağıtımı** (Önerilen Ders 23)
+   - Docker ile konteynerleştirme
+   - CI/CD boru hatları
    - İzleme ve günlükleme
    - Maliyet yönetimi
 
-3. **İleri RAG Teknikleri** (Önerilen Ders 24)
+3. **Gelişmiş RAG Teknikleri** (Önerilen Ders 24)
    - Hibrit arama (anahtar kelime + anlamsal)
    - Yeniden sıralama stratejileri
    - Çok modlu RAG
@@ -94,41 +94,46 @@ Yeni `shared/python/` modülü:
 ### 3.2 Mevcut Ders İyileştirmeleri
 
 | Ders | Önerilen İyileştirme |
-|-------|---------------------|
-| 06 - Metin Üretimi | Akış bazlı yanıt örnekleri eklenmeli |
-| 07 - Sohbet Uygulamaları | Konuşma hafızası desenleri eklenmeli |
-| 08 - Arama Uygulamaları | Vektör veritabanı karşılaştırması eklenmeli |
-| 09 - Görsel Üretimi | Görüntü düzenleme/çeşitlilik örnekleri eklenmeli |
-| 11 - Fonksiyon Çağrısı | Paralel fonksiyon çağrısı eklenmeli |
-| 15 - RAG | Parçalama stratejisi karşılaştırması eklenmeli |
-| 17 - Yapay Zeka Ajanları | Çok ajanlı orkestrasyon eklenmeli |
+|--------|------------------------|
+| 06 - Metin Üretimi | Akışlı yanıt örnekleri ekleyin |
+| 07 - Sohbet Uygulamaları | Konuşma hafızası desenleri ekleyin |
+| 08 - Arama Uygulamaları | Vektör veritabanı karşılaştırması ekleyin |
+| 09 - Görsel Üretimi | Görsel düzenleme/çeşitlendirme örnekleri ekleyin |
+| 11 - Fonksiyon Çağrısı | Paralel fonksiyon çağrısı ekleyin |
+| 15 - RAG | Parçalama stratejisi karşılaştırması ekleyin |
+| 17 - AI Ajanları | Çoklu ajan orkestrasyonu ekleyin |
 
 ---
 
 ## 4. API Modernizasyonu
 
-### 4.1 Güncellenmesi Gereken Kullanımdan Kalmış API Kalıpları
+### 4.1 Kullanımdan Kaldırılmış API Desenleri (Geçiş Tamamlandı)
 
-| Eski Kalıp | Yeni Kalıp | Etkilenen Dosyalar |
-|------------|------------|--------------------|
-| `openai.api_type = "azure"` | `AzureOpenAI()` istemcisi | `08-building-search-applications/` içindeki birden fazla script |
-| `openai.ChatCompletion.create()` | `client.chat.completions.create()` | Birden çok not defteri |
-| `df.append()` (pandas) | `pd.concat()` | RAG not defteri |
+Tüm Python ve TypeScript **sohbet** örnekleri, Chat Completions API'den **Responses API**'e (`client.responses.create(...)` → `response.output_text`) taşındı.
+
+| Eski Desen | Yeni Desen | Durum |
+|-------------|-------------|--------|
+| `openai.api_type = "azure"` / `AzureOpenAI()` (sohbet) | `OpenAI(base_url="<endpoint>/openai/v1/")` (Responses API) | Tamamlandı |
+| `openai.ChatCompletion.create()` / `client.chat.completions.create()` | `client.responses.create(input=...)` → `response.output_text` | Tamamlandı |
+| `@azure/openai` `OpenAIClient.getChatCompletions()` (TypeScript) | `openai` paketi `client.responses.create()` → `response.output_text` | Tamamlandı |
+| `df.append()` (pandas) | `pd.concat()` | Tamamlandı |
+
+> **Not:** `azure-ai-inference` / `@azure-rest/ai-inference` SDK'sını (`client.complete()`) kullanan Microsoft Foundry Modelleri örnekleri Model İnferans API'sinde kalmaya devam ediyor ve Responses API'yi desteklememektedir. `AzureOpenAI()` hala geçerli olduğu yerlerde (embedding ve görsel üretim) kasıtlı olarak korunmuştur.
 
 ### 4.2 Gösterilecek Yeni API Özellikleri
 
 1. **Yapılandırılmış Çıktılar** (OpenAI)
    - JSON modu
-   - Katı şemalar ile fonksiyon çağrısı
+   - Kesin şemalarla fonksiyon çağrısı
 
-2. **Görsel Yetkinlikler**
-   - GPT-4V ile görüntü analizi
+2. **Görsel Yetenekler**
+   - GPT-4o (görsel) ile görüntü analizi
    - Çok modlu istemler
 
-3. **Asistanlar API**
+3. **Responses API Yerleşik Araçları** (eski Assistants API'nin yerine geçer)
    - Kod yorumlayıcı
    - Dosya arama
-   - Özel araçlar
+   - Web arama ve özel araçlar
 
 ---
 
@@ -136,7 +141,7 @@ Yeni `shared/python/` modülü:
 
 ### 5.1 CI/CD İyileştirmeleri
 
-Mevcut iş akışları markdown doğrulamasını yönetmektedir. Önerilen eklemeler:
+[`.github/workflows/code-quality.yml`](../../../.github/workflows/code-quality.yml) dosyasında uygulandı: Python linting/formatlama (Ruff + Black) `shared/` yardımcı modülünde **zorunlu** olup müfredatın geri kalanında **öneri** olarak çalışır, ayrıca JavaScript/TypeScript için öneri ESLint geçişi içerir. Örnek temel şudur:
 
 ```yaml
 # .github/workflows/code-quality.yml
@@ -167,7 +172,9 @@ jobs:
       - run: npx eslint .
 ```
 
-### 5.2 Güvenlik Tarama
+### 5.2 Güvenlik Taraması
+
+[`.github/workflows/security.yml`](../../../.github/workflows/security.yml) dosyasında uygulandı: Python ve JavaScript/TypeScript için CodeQL analizi (push, pull request ve haftalık takvimde) ve bağımlılık incelemesi pull requestlerde. Örnek temel şudur:
 
 ```yaml
 # .github/workflows/security.yml
@@ -198,7 +205,7 @@ jobs:
 
 ### 6.1 DevContainer İyileştirmeleri
 
-`.devcontainer/devcontainer.json` güncellemesi:
+[`.devcontainer/devcontainer.json`](../../../.devcontainer/devcontainer.json) ve [`.devcontainer/post-create.sh`](../../../.devcontainer/post-create.sh) içinde uygulandı: konteyner artık Pylance, Black , Ruff, ESLint, Prettier ve Copilot eklentileriyle birlikte gelir, kayıt sırasında formatlama özelliği repo'nun Black/Prettier konfigürasyonuna bağlı olarak etkinleştirilir ve geliştirici araçları (`ruff`, `black`, `mypy`, `pytest`) kurulur, böylece [code-quality workflow](../../../.github/workflows/code-quality.yml) yerel olarak tekrarlanabilir. `mcr.microsoft.com/devcontainers/universal` temel imajı Python ve Node içerdiğinden ekstra özellik gerekmez. Örnek temel şudur:
 
 ```json
 {
@@ -234,10 +241,10 @@ jobs:
 
 ### 6.2 Etkileşimli Oyun Alanı
 
-Aşağıdakilerin eklenmesi düşünülebilir:
-- Önceden doldurulmuş API anahtarlarıyla (ortam üzerinden) Jupyter not defterleri
-- Görsel öğreniciler için Gradio/Streamlit demoları
-- Bilgi değerlendirme için etkileşimli sınavlar
+Şunları eklemeyi düşünün:
+- Ortam değişkeni ile önceden doldurulmuş API anahtarları içeren Jupyter defterleri
+- Görsel öğrenenler için Gradio/Streamlit demoları
+- Bilgi değerlendirmesi için etkileşimli testler
 
 ---
 
@@ -246,13 +253,13 @@ Aşağıdakilerin eklenmesi düşünülebilir:
 ### 7.1 Mevcut Dil Kapsamı
 
 | Teknoloji | Kapsanan Dersler | Durum |
-|-----------|------------------|--------|
-| Python | Tümü | Tamamlandı |
+|------------|-----------------|--------|
+| Python | Tüm dersler | Tamamlandı |
 | TypeScript | 06-09, 11 | Kısmi |
 | JavaScript | 06-08, 11 | Kısmi |
-| .NET/C# | Bazıları | Kısmi |
+| .NET/C# | Bazı dersler | Kısmi |
 
-### 7.2 Önerilen Eklemeler
+### 7.2 Önerilen Eklentiler
 
 1. **Go** - AI/ML araçlarında büyüyor
 2. **Rust** - Performans kritik uygulamalar
@@ -265,11 +272,11 @@ Aşağıdakilerin eklenmesi düşünülebilir:
 ### 8.1 Kod Seviyesi Optimizasyonlar
 
 1. **Async/Await Desenleri**
-   - Yığın işlemesi için async örnekleri ekleyin
+   - Toplu işlem için async örnekleri ekleyin
    - Eşzamanlı API çağrılarını gösterin
 
 2. **Önbellekleme Stratejileri**
-   - Gömme önbellekleme örnekleri ekleyin
+   - Embedding önbellekleme örnekleri ekleyin
    - Yanıt önbellekleme desenlerini gösterin
 
 3. **Token Optimizasyonu**
@@ -278,10 +285,10 @@ Aşağıdakilerin eklenmesi düşünülebilir:
 
 ### 8.2 Maliyet Optimizasyonu Örnekleri
 
-Aşağıdaki örneklerin eklenmesi:
+Aşağıdaki konuları gösteren örnekler ekleyin:
 - Görev karmaşıklığına göre model seçimi
 - Token verimliliği için istem mühendisliği
-- Toplu işlemler için yığın işleme
+- Toplu işlemler için batch işleme
 
 ---
 
@@ -289,63 +296,60 @@ Aşağıdaki örneklerin eklenmesi:
 
 ### 9.1 Mevcut Çeviri Durumu
 
-| Dil | Durum |
-|------|--------|
-| İngilizce | Tamamlandı |
-| Çince (Basitleştirilmiş) | Tamamlandı |
-| Japonca | Tamamlandı |
-| Korece | Tamamlandı |
-| İspanyolca | Kısmi |
-| Portekizce | Kısmi |
-| Türkçe | Kısmi |
-| Lehçe | Kısmi |
+Tüm çeviriler, müfredatın İngilizce kaynağı ile senkronize edilen 50'den fazla dil versiyonu otomatik olarak üreten ve güncelleyen [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst) tarafından otomatik olarak tamamlanmıştır. Çevrilmiş içerik `translations/` altında, yerelleştirilmiş görseller `translated_images/` altında bulunmakta; mevcut dillerin tam listesi depo README'sinin başında yayınlanmıştır.
+
+| Kapsam | Durum |
+|--------|--------|
+| Çeviri kapsamı | Tamamlandı — 50+ dil, tüm dersler |
+| Çeviri yöntemi | Otomatik, [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst) aracılığıyla |
+| İngilizce kaynakla senkron | Evet — otomatik yeniden üretim |
 
 ### 9.2 Erişilebilirlik İyileştirmeleri
 
-1. Tüm görseller için alt metin ekleyin
-2. Kod örneklerinde uygun sözdizimi vurgulaması sağlayın
-3. Tüm video içeriklere video transkriptleri ekleyin
-4. Renk kontrastının WCAG yönergelerine uygun olduğundan emin olun
+1. Tüm görsellere alt metin ekleyin
+2. Kod örneklerinin doğru sözdizimi vurgulamasına sahip olduğundan emin olun
+3. Tüm video içerikleri için video transkriptleri ekleyin
+4. Renk kontrastının WCAG yönergelerine uyduğundan emin olun
 
 ---
 
 ## 10. Uygulama Önceliği
 
-### Faz 1: Acil (1-2. Hafta)
-- [x] Kritik güvenlik sorunlarını düzelt
-- [x] Kod kalitesi yapılandırması ekle
-- [x] Paylaşılan yardımcılar oluştur
-- [x] Güvenlik kılavuzlarını dokümante et
+### Aşama 1: Hemen (1-2. Hafta)
+- [x] Kritik güvenlik sorunlarını düzeltin
+- [x] Kod kalitesi konfigürasyonu ekleyin
+- [x] Ortak yardımcılar oluşturun
+- [x] Güvenlik yönergelerini belgeleyin
 
-### Faz 2: Kısa vadeli (3-4. Hafta)
-- [ ] Kullanımdan kalmış API kalıplarını güncelle
-- [ ] Tüm Python dosyalarına tip ipuçları ekle
-- [ ] Kod kalitesi için CI/CD iş akışları ekle
-- [ ] Güvenlik tarama iş akışı oluştur
+### Aşama 2: Kısa Vadeli (3-4. Hafta)
+- [x] Kullanımdan kaldırılmış API desenlerini güncelleyin (Chat Completions → Responses API, Python + TypeScript)
+- [ ] Tüm Python dosyalarına tür ipuçları ekleyin (`shared/` modülü için yapıldı; ders örnekleri basit tutuldu)
+- [x] Kod kalitesi için CI/CD iş akışları ekleyin
+- [x] Güvenlik tarama iş akışı oluşturun
 
-### Faz 3: Orta vadeli (2-3. Ay)
-- [ ] Yeni güvenlik dersi ekle
-- [ ] Üretim dağıtım dersi ekle
-- [ ] DevContainer ayarını iyileştir
-- [ ] Etkileşimli demolar ekle
+### Aşama 3: Orta Vadeli (2-3. Ay)
+- [ ] Yeni güvenlik dersi ekleyin
+- [ ] Üretim dağıtım dersi ekleyin
+- [x] DevContainer kurulumu iyileştirin
+- [ ] Etkileşimli demolar ekleyin
 
-### Faz 4: Uzun vadeli (4. Ay ve sonrası)
-- [ ] İleri RAG dersi ekle
-- [ ] Dil kapsamını genişlet
-- [ ] Kapsamlı test paketi oluştur
-- [ ] Sertifikasyon programı oluştur
+### Aşama 4: Uzun Vadeli (4. Ay ve sonrası)
+- [ ] Gelişmiş RAG dersi ekleyin
+- [ ] Dil kapsamını genişletin
+- [ ] Kapsamlı test süiti ekleyin
+- [ ] Sertifikasyon programı oluşturun
 
 ---
 
 ## Sonuç
 
-Bu yol haritası, Başlangıç Seviyesi için Üretici Yapay Zeka müfredatını iyileştirmeye yönelik yapılandırılmış bir yaklaşım sunar. Güvenlik sorunlarına odaklanarak, API’leri modernize ederek ve eğitim içeriğini artırarak, kurs öğrencileri gerçek dünya AI uygulama geliştirmeye daha iyi hazırlayacaktır.
+Bu yol haritası, Başlangıç Seviyesi Üretken AI müfredatını iyileştirmek için yapılandırılmış bir yaklaşım sunar. Güvenlik endişelerini ele alarak, API'leri modernize ederek ve eğitsel içerik ekleyerek, kurs öğrencileri gerçek dünya AI uygulama geliştirme için daha iyi hazırlayacaktır.
 
 Sorular veya katkılar için lütfen GitHub deposunda bir issue açın.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluğa özen gösterilse de, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayınız. Orijinal belgenin kendi dilindeki versiyonu yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanılması sonucu oluşabilecek yanlış anlamalar veya yorum hatalarından sorumlu değiliz.
+**Feragatname**:
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba sarf etsek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu ortaya çıkabilecek yanlış anlamalardan veya yanlış yorumlamalardan sorumlu değiliz.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
