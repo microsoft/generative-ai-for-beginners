@@ -1,21 +1,21 @@
-# ការរៀបចំទិន្នន័យបម្លែងសំឡេង
+# ព្រឹត្ដការណ៍ទិន្នន័យកិច្ចសម្ភាសន៍
 
-ស្គ្រីបរៀបចំទិន្នន័យបម្លែងសំឡេងទាញយកអត្ថបទវីដេអូ YouTube និងរៀបចំវាឱ្យប្រើជាមួយគំរូស្វែងរក Semantic ជាមួយ OpenAI Embeddings និង Functions ។
+ស្ក្រិបបញ្ចូលព្រឹត្ដការណ៍ទិន្នន័យកិច្ចសម្ភាសន៍ ទាញយកអត្ថបទវីដេអូ YouTube ហើយត្រៀមវា សម្រាប់ប្រើជាមួយ ស្វែងរកអារម្មណ៍ដោយការពិពណ៌នាដោយ OpenAI Embeddings និង Functions ឧទាហរណ៍។
 
-ស្គ្រីបរៀបចំទិន្នន័យបម្លែងសំឡេងត្រូវបានសាកល្បងនៅលើកំណែចុងក្រោយ Windows 11, macOS Ventura និង Ubuntu 22.04 (និងលើស).
+ស្ក្រិបបញ្ចូលព្រឹត្ដការណ៍ទិន្នន័យកិច្ចសម្ភាសន៍ បានត្រូវបានសាកល្បងលើកំណែចុងក្រោយ Windows 11, macOS Ventura និង Ubuntu 22.04 (ឬលើស)។
 
 ## បង្កើតធនធាន Azure OpenAI Service ដែលត្រូវការ
 
 > [!IMPORTANT]
-> យើងផ្តល់អនុសាសន៍ឱ្យអ្នកធ្វើបច្ចុប្បន្នភាព Azure CLI ទៅកំណែចុងក្រោយដើម្បីធានាការភាពសមរម្យជាមួយ OpenAI
-> មើល [ឯកសារណ៍](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
+> យើងសូមផ្តល់អនុសាសន៍ឲ្យអ្នកធ្វើបច្ចុប្បន្នភាព Azure CLI ទៅកំណែចុងក្រោយ ដើម្បីធានាការយោងគ្នាជាមួយ OpenAI
+> មើល [អត្ថាធិប្បាយ](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. បង្កើតក្រុមធនធាន
 
 > [!NOTE]
-> សម្រាប់ការណែនាំទាំងនេះ យើងកំពុងប្រើក្រុមធនធានដែលមានឈ្មោះ "semantic-video-search" នៅ East US។
-> អ្នកអាចប្ដូរឈ្មោះក្រុមធនធានបាន ប៉ុន្តេលើពេលប្ដូរទីតាំងសម្រាប់ធនធាន, 
-> សូមពិនិត្ដតារាង [ការចូលប្រើម៉ូដែល](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst)។
+> សម្រាប់ការណែនាំទាំងនេះ យើងកំពុងប្រើក្រុមធនធានឈ្មោះ "semantic-video-search" នៅតំបន់ East US។
+> អ្នកអាចផ្លាស់ប្តូរឈ្មោះក្រុមធនធានបាន ប៉ុន្តេលើពេលផ្លាស់ទីកន្លែងសម្រាប់ធនធាន,
+> សូមពិនិត្យតារាង [model availability table](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst)។
 
 ```console
 az group create --name semantic-video-search --location eastus
@@ -28,7 +28,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. ទទួលបានចំណុចចប់ និងកូនសោសម្រាប់ប្រើប្រាស់ក្នុងកម្មវិធីនេះ
+1. ទទួលបានចំណុចចេញ និង key សម្រាប់ប្រើនៅកម្មវិធីនេះ
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -37,9 +37,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. ចេញផ្សាយម៉ូដែលដូចតទៅ៖
-   - `text-embedding-ada-002` កំណែ `2` ឬលើស, មានឈ្មោះ `text-embedding-ada-002`
-   - `gpt-35-turbo` កំណែ `0613` ឬលើស, មានឈ្មោះ `gpt-35-turbo`
+1. បញ្ជូនមូលដ្ឋានម៉ូដែលដូចខាងក្រោម៖
+   - `text-embedding-ada-002` កំណែ `2` ឬលើស កំណត់ឈ្មោះ `text-embedding-ada-002`
+   - `gpt-4o-mini` កំណត់ឈ្មោះ `gpt-4o-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,25 +53,24 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-35-turbo \
-    --model-name gpt-35-turbo \
-    --model-version "0613"  \
+    --deployment-name gpt-4o-mini \
+    --model-name gpt-4o-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
 ```
 
-## កម្មវិធីដែលត្រូវការ
+## បច្ចេកវិជ្ជាដែលត្រូវការ
 
 - [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) ឬលើស
 
-## បំណែងអថេរបរិស្ថាន
+## អថេរបរិស្ថាន
 
-អថេរបរិស្ថានខាងក្រោមត្រូវការដើម្បីបញ្ជាររបៀបស្គ្រីបរៀបចំទិន្នន័យបម្លែងសំឡេង YouTube។
+អថេរបរិស្ថានខាងក្រោមត្រូវការ ដើម្បីរត់ស្ក្រិបបញ្ចូលព្រឹត្ដការណ៍ទិន្នន័យកិច្ចសម្ភាសន៍ YouTube។
 
-### នៅលើ Windows
+### លើ Windows
 
-ផ្តល់អនុសាសន៍បន្ថែមអថេរទៅអថេរបរិស្ថាន `user` របស់អ្នក។
+ណែនាំបន្ថែមអថេរទៅក្នុងអថេរបរិស្ថាន `user` របស់អ្នក។
 `Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` សម្រាប់ [USER] > `New`។
 
 ```text
@@ -90,9 +89,9 @@ $env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<your Azure OpenAI Service model depl
 $env:GOOGLE_DEVELOPER_API_KEY = "<your Google developer API key>"
 ``` -->
 
-### នៅលើ Linux និង macOS
+### លើ Linux និង macOS
 
-ផ្តល់អនុសាសន៍បន្ថែមការនាំចេញខាងក្រោមទៅក្នុងឯកសារ `~/.bashrc` ឬ `~/.zshrc` របស់អ្នក។
+ណែនាំបន្ថែមការនាំចេញខាងក្រោមទៅក្នុងឯកសារ `~/.bashrc` ឬ `~/.zshrc` របស់អ្នក។
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -103,42 +102,42 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## ដំឡើងបណ្ណាល័យ Python ដែលត្រូវការ
 
-1. ដំឡើង [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) ប្រសិនបើមិនទាន់ត្រូវបានដំឡើង។
-1. ពីចំហៀង `Terminal`, បកចម្លងគំរូទៅកាន់ថត repo ដែលអ្នកចូលចិត្ត។
+1. ដំឡើង [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) ប្រសិនបើមិនទាន់បានដំឡើង។
+1. ពីបង្អួច `Terminal` ឆ្លងសម្លេងឧទាហរណ៍ទៅថត repo ដែលអ្នកចូលចិត្ត។
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
     ```
 
-1. ធ្វើដំណើរទៅថត `data_prep` ។
+1. ចូលទៅថត `data_prep`។
 
    ```bash
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. បង្កើតបរិបទ Python virtual ។
+1. បង្កើតបរិស្ថាន virtual Python។
 
-    នៅលើ Windows:
+    លើ Windows:
 
     ```powershell
     python -m venv .venv
     ```
 
-    នៅលើយ macOS និង Linux:
+    លើ macOS និង Linux:
 
     ```bash
     python3 -m venv .venv
     ```
 
-1. បើកបរិបទ Python virtual ។
+1. បើកបរិស្ថាន virtual Python។
 
-   នៅលើ Windows:
+   លើ Windows:
 
    ```powershell
    .venv\Scripts\activate
    ```
 
-   នៅលើយ macOS និង Linux:
+   លើ macOS និង Linux:
 
    ```bash
    source .venv/bin/activate
@@ -146,27 +145,27 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. ដំឡើងបណ្ណាល័យដែលត្រូវការ។
 
-   នៅលើ Windows:
+   លើ Windows:
 
    ```powershell
    pip install -r requirements.txt
    ```
 
-   នៅលើយ macOS និង Linux:
+   លើ macOS និង Linux:
 
    ```bash
    pip3 install -r requirements.txt
    ```
 
-## រត់ស្គ្រីបរៀបចំទិន្នន័យបម្លែងសំឡេង YouTube
+## រត់ស្ក្រិបបញ្ចូលព្រឹត្ដការណ៍ទិន្នន័យកិច្ចសម្ភាសន៍ YouTube
 
-### នៅលើ Windows
+### លើ Windows
 
 ```powershell
 .\transcripts_prepare.ps1
 ```
 
-### នៅលើយ macOS និង Linux
+### លើ macOS និង Linux
 
 ```bash
 ./transcripts_prepare.sh
@@ -175,6 +174,6 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**ការបដិសេធ**៖  
-ឯកសារនេះត្រូវបានបកប្រែដោយប្រើសេវាកម្មបកប្រែ AI [Co-op Translator](https://github.com/Azure/co-op-translator)។ ក្នុងខណៈដែលយើងខិតខំរកភាពត្រឹមត្រូវ សូមជ្រាបថាការបកប្រែដោយស្វ័យប្រវត្តិនេះអាចមានកំហុស ឬការបាត់បង់ភាពត្រឹមត្រូវខ្លះ។ ឯកសារដើមក្នុងភាសាម្ខាងគឺជាអ្នកផ្តល់ព័ត៌មានដែលមានអាជ្ញាធរមានសុពលភាព។ សម្រាប់ព័ត៌មានសំខាន់ៗ ការបកប្រែដោយអ្នកជំនាញមនុស្សគឺជាជម្រើសដែលបានណែនាំ។ យើងមិនទទួលខុសត្រូវចំពោះការយល់ច្រឡំ ឬការបញ្ចេញមតិមិនត្រឹមត្រូវដែលកើតមានអំពីការប្រើប្រាស់ការបកប្រែនេះឡើយ។
+**ការបដិសេធ**:
+ឯកសារនេះត្រូវបានបម្លែងភាសា ដោយប្រើសេវាបម្លែងភាសា AI [Co-op Translator](https://github.com/Azure/co-op-translator)។ ទោះយើងខ្ញុំមានក្តីប្រាថ្នាឱ្យបានច្បាស់លាស់ តែសូមយល់ដឹងថាការបម្លែងដោយស្វ័យប្រវត្តិក៏អាចមានកំហុសឬភាពមិនត្រឹមត្រូវ។ ឯកសារដើមជាភាសាទីតាំងគួរត្រូវបានគេប្រើជាប្រភពច្បាស់លាស់។ សម្រាប់ព័ត៌មានសំខាន់ៗ សូមណែនាំឱ្យប្រើប្រាស់ការប្រែដោយមនុស្សជំនាញ។ យើងខ្ញុំមិនទទួលខុសត្រូវចំពោះការយល់ច្រឡំ ឬការបកស្រាយខុសបន្ទាប់ពីការប្រើប្រាស់ការបម្លែងនេះនោះទេ។
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

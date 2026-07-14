@@ -1,122 +1,155 @@
-# ការជ្រើសរើស និងកំណត់រចនាសម្ព័ន្ធអ្នកផ្គត់ផ្គង់ LLM 🔑
+# ការជ្រើសរើស & ការកំណត់រចនាសម្ព័ន្ធអ្នកផ្គត់ផ្គង់ LLM 🔑
 
-តំណែងការងារ **អាច** ត្រូវបានកំណត់ដំណើរការ ដើម្បីធ្វើការជាមួយការចុះបញ្ជីម៉ូដែលភាសាធំ (LLM) មួយឬច្រើន តាមរយៈអ្នកផ្គត់ផ្គង់សេវាកម្មដែលគាំទ្រដូចជា OpenAI, Azure ឬ Hugging Face។ អ្នកផ្គត់ផ្គង់ទាំងនេះផ្តល់នូវ _ចំណុចចូលផ្ទះ (API)_ ដែលយើងអាចចូលប្រើបានដោយកម្មវិធីជាមួយអត្តសញ្ញាណត្រឹមត្រូវ (កូនសោ API ឬតូកែន)។ នៅក្នុងមេរៀននេះ យើងពិនិត្យអ្នកផ្គត់ផ្គង់ទាំងនេះ៖
+ការងារដែលត្រូវបំពេញ **អាច** ត្រូវបានកំណត់ឱ្យធ្វើការជាមួយបណ្តាំម៉ូដែលភាសាធំមួយឬច្រើន (LLM) តាមរយៈអ្នកផ្គត់ផ្គង់សេវាកម្មដែលគាំទ្រដូចជា OpenAI, Azure ឬ Hugging Face។ អ្នកផ្គត់ផ្គង់ទាំងនេះផ្តល់នូវ _ចំណុចយោងដែលមានម៉ាស៊ីនបម្រើ_ (API) ដែលយើងអាចចូលដំណើរការដោយកម្មវិធីបានជាមួយសញ្ញាទទួលស្គាល់ត្រឹមត្រូវ (សោរ API ឬ token)។ ក្នុងវគ្គនេះ យើងពិភាក្សាអ្នកផ្គត់ផ្គង់ទាំងនេះ៖
 
- - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) ជាមួយម៉ូដែលផ្សេងៗដែលរួមមានស៊េរី GPT មូលដ្ឋាន។
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) សម្រាប់ម៉ូដែល OpenAI ដែលផ្តោតលើភាពរួមបញ្ចូលសម្រាប់អង្គការធំ
- - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) សម្រាប់ម៉ូដែលដើមចេញ និងម៉ាស៊ីនបម្រើបម្លែងសេចក្ដីសន្និដ្ឋាន
+ - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) ជាមួយម៉ូដែលផ្សេងៗ រួមទាំងស៊េរី GPT មូលដ្ឋាន។
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) សម្រាប់ម៉ូដែល OpenAI ដែលផ្តោតលើភាពសមស្របសម្រាប់អាជីវកម្ម
+ - [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) សម្រាប់ចំណុចយោងតែមួយ និងសោរ API មួយដើម្បីចូលបានម៉ូដែលរាប់រយពី OpenAI, Meta, Mistral, Cohere, Microsoft និងផ្សេងៗទៀត (ជំនួស GitHub Models ដែលនឹងផប់នៅចុងខែកក្កដា ឆ្នាំ ២០២៦)
+ - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) សម្រាប់ម៉ូដែលដើមបើករបស់សហគមន៍ និងម៉ាស៊ីនបម្រើសំរាប់អនុវត្តន៍
+ - [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) ឬ [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) ប្រសិនបើអ្នកចង់ដំណើរការម៉ូដែលលើឧបករណ៍ផ្ទាល់ខ្លួនដោយមិនត្រូវការជាវ៣ក្នុងពពក
 
-**អ្នកត្រូវប្រើគណនីផ្ទាល់ខ្លួនសម្រាប់មេរៀនទាំងនេះ**។ តំណែងការងារត្រូវបានជាជម្រើស ដូច្នេះអ្នកអាចជ្រើសកំណត់លំហូរមួយ ឬគ្រប់គ្រាន់ ឬមិនមានអ្នកផ្គត់ផ្គង់ណាមួយផ្អែកលើចំណាប់អារម្មណ៍របស់អ្នក។ ការណែនាំខ្លះសម្រាប់ការចុះឈ្មោះ៖
+**អ្នកនិងត្រូវការប្រើគណនីផ្ទាល់ខ្លួនសម្រាប់លំហាត់ទាំងនេះ** ។ ការងារត្រូវបំពេញជាជម្រើស ដូច្នេះអ្នកអាចជ្រើសតាំងតែមួយ ឬទាំងអស់ - ឬមិនតាំងឡើយ - របស់អ្នកផ្គត់ផ្គង់បណ្តាញដោយផ្អែកលើចំណាប់អារម្មណ៍របស់អ្នក។ មានមួយចំនួននៃការណែនាំក្នុងការចុះឈ្មោះ៖
 
-| ចុះឈ្មោះ | តម្លៃ | តួកូនសោ API | លំហូរ | អត្ថបទបន្ថែម |
+| ចុះឈ្មោះ | ថ្លៃ | សោរ API | លេងល្បែង | យោបល់ |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [តម្លៃ](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [គម្រោងផ្អែក](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [គ្មានកូដ, វេបសាយ](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | មានម៉ូដែលជាច្រើនជ្រើសរើស |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [តម្លៃ](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [ដំណើរការឆាប់រហ័ស SDK](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [ដំណើរការStudioឆាប់រហ័ស](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [ត្រូវដាក់ពាក្យជាមុនសម្រាប់ការចូលប្រើ](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [តម្លៃ](https://huggingface.co/pricing) | [តូកែនចូលដំណើរការ](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat មានម៉ូដែលកំណត់](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [តម្លៃ](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [ព្រោងលើគម្រោង](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [អសកម្មដំណើរការគ្មានកូដ, វេបសាយ](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | មានម៉ូដែលច្រើន។ |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [តម្លៃ](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [ការចាប់ផ្តើមរយៈពេលខ្លី SDK](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [ការចាប់ផ្តើមរយៈពេលខ្លី Studio](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [ត្រូវដាក់ពាក្យសុំរួចមុនសម្រាប់ចូលប្រើប្រាស់](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) | [តម្លៃ](https://azure.microsoft.com/pricing/details/ai-foundry/?WT.mc_id=academic-105485-koreyst) | [ទំព័រពិពណ៌នាគម្រោង](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) | [លេងល្បែង Foundry](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) | មានជម្រើសថ្នាក់ឥតគិតថ្លៃ; ចំណុច​យោងមួយ + សោរមួយសម្រាប់អ្នកផ្គត់ផ្គង់ម៉ូដែលជាច្រើន |
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [តម្លៃ](https://huggingface.co/pricing) | [សញ្ញាសុវត្ថិភាព](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat មានម៉ូដែលកំណត់](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) | ឥតគិតថ្លៃ (ដំណើរការលើឧបករណ៍របស់អ្នក) | មិនត្រូវការ | [សេចក្តីណែនាំ CLI/SDK ផ្ទាល់](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) | ដំណើរការផ្ទាល់ឥតខ្សែ, ចំណុចយោងដែលផ្គូរផ្គង OpenAI |
 | | | | | |
 
-អនុវត្តតាមការណែនាំខាងក្រោម ដើម្បី _កំណត់រចនាសម្ព័ន្ធ_ ឃ្លាំងសម្រង់នេះសម្រាប់ប្រើជាមួយអ្នកផ្គត់ផ្គង់ផ្សេងៗ។ តំណែងការងារដែលត្រូវការ​ការផ្គត់ផ្គង់ជាក់លាក់ នឹងមានស្លាកដូចខាងក្រោមក្នុងឈ្មោះឯកសារ៖
+តាមដានការណែនាំខាងក្រោមដើម្បី _កំណត់រចនាសម្ព័ន្ធ_ ដែលតំណាងឱ្យគម្រោងនេះសម្រាប់ការប្រើប្រាស់ជាមួយអ្នកផ្គត់ផ្គង់ផ្សេងៗ។ ការងារត្រូវការអ្នកផ្គត់ផ្គង់ពិសេសនឹងមានស្លាកមួយនៅក្នុងឈ្មោះឯកសារ៖
 
-- `aoai` - ត្រូវការ Azure OpenAI endpoint និងកូនសោ
-- `oai` - ត្រូវការ OpenAI endpoint និងកូនសោ
-- `hf` - ត្រូវការ Hugging Face token
+- `aoai` - ត្រូវការចំណុចយោង Azure OpenAI និងសោរ
+- `oai` - ត្រូវការចំណុចយោង OpenAI និងសោរ
+- `hf` - ត្រូវការសញ្ញា Hugging Face
+- `githubmodels` - ត្រូវការចំណុចយោងម៉ូដែល Microsoft Foundry និងសោរ (GitHub Models នឹងផប់នៅចុងខែកក្កដា ២០២៦)
 
-អ្នកអាចកំណត់រចនាសម្ព័ន្ធអ្នកផ្គត់ផ្គង់មួយ ឬគ្មាន ឬគ្រប់គ្រាន់។ ការងារដែលពាក់ព័ន្ធនឹងបង្ហាញកំហុសនៅពេលគ្មានតំណរភ្ជាប់ដែលត្រូវបានផ្តល់។
+អ្នកអាចកំណត់រចនាសម្ព័ន្ធមួយ, គ្មាន, ឬទាំងអស់នៃអ្នកផ្គត់ផ្គង់។ ការងារពាក់ព័ន្ធនឹងបង្ហាញប្រាប់ខុសថា នៅពេលខ្វះសញ្ញាទទួលស្គាល់។
 
 ## បង្កើតឯកសារ `.env`
 
-យើងសន្មត់ថាអ្នកបានអានការណែនាំខាងលើរួចហើយ និងបានចុះឈ្មោះជាមួយអ្នកផ្គត់ផ្គង់សមស្រប ហើយបានទទួលអត្តសញ្ញាណផ្ទៀងផ្ទាត់ត្រូវការ (API_KEY ឬ token)។ សម្រាប់ Azure OpenAI យើងសន្មត់ថាអ្នកមានការចុះបញ្ជីសេវាកម្ម Azure OpenAI (endpoint) ដែលបានដំណើរការ មួយក៏ដូចជាម៉ូដែល GPT មួយយ៉ាងហោចណាស់សម្រាប់បញ្ចប់ការឆាត។
+យើងសន្យាថាអ្នកបានអានការណែនាំខាងលើ ហើយចុះឈ្មោះជាមួយអ្នកផ្គត់ផ្គង់ដែលពាក់ព័ន្ធ និងទទួលបានសញ្ញាផ្ទៀងផ្ទាត់ត្រឹមត្រូវ (API_KEY ឬ token) រួចហើយ។ ដល់Azure OpenAI យើងសន្យាថាអ្នកមានការចេញផ្សាយមួយហើយនៃសេវាអាជីវកម្ម Azure OpenAI (endpoint) ដោយមានយ៉ាងហោចណាស់ម៉ូដែល GPT មួយសម្រាប់ការសម្រេចកិច្ចសន្ទនា។
 
-ជំហានបន្ទាប់គឺកំណត់រចនាសម្ព័ន្ធ **អថេរបរិស្ថាន​ក្នុងបរិបទ​តំបន់​ផ្ទាល់** របស់អ្នក ដូចខាងក្រោម៖
+ជំហានបន្ទាប់គឺកំណត់អថេរបរិស្ថាន **ក្នុងស្រុក** របស់អ្នកដូចខាងក្រោម៖
 
-1. ស្វែងរកឯកសារ `.env.copy` នៅថតម៉ាស៊ីនដើមដែលមានមាតិកាមើលទៅដូចជា៖
+1. ស្វែងរកក្នុងថតដើមឯកសារ `.env.copy` មួយដែលគួរតែមានមាតិកាដូចខាងក្រោម៖
 
    ```bash
-   # អ្នកផ្គត់ផ្គង់ OpenAI
+   # អ្នកផ្តល់ OpenAI
    OPENAI_API_KEY='<add your OpenAI API key here>'
 
-   ## Azure OpenAI
-   AZURE_OPENAI_API_VERSION='2024-02-01' # ការកំណត់លំនាំដើមបានដាក់សោហើយ!
-   AZURE_OPENAI_API_KEY='<add your AOAI key here>'
-   AZURE_OPENAI_ENDPOINT='<add your AOIA service endpoint here>'
-   AZURE_OPENAI_DEPLOYMENT='<add your chat completion model name here>' 
-   AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='<add your embeddings model name here>'
+   ## Azure OpenAI ក្នុង Microsoft Foundry
+   ## (សេវា Azure OpenAI ឥឡូវជាផ្នែកមួយនៃ Microsoft Foundry: https://ai.azure.com)
+   AZURE_OPENAI_API_VERSION='2024-10-21' # កំណត់លំនាំដើមរួចចំពោះ! (កំណែ API GA ដែលស្ថិតស្ថេរបច្ចុប្បន្ន)
+   AZURE_OPENAI_API_KEY='<add your Foundry resource key here>'
+   AZURE_OPENAI_ENDPOINT='<add your Foundry resource endpoint here, e.g. https://<resource-name>.openai.azure.com>'
+   AZURE_OPENAI_DEPLOYMENT='<add your chat completion model deployment name here, e.g. gpt-4o-mini>'
+   AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='<add your embeddings model deployment name here, e.g. text-embedding-3-small>'
+
+   ## ម៉ូដែល Microsoft Foundry (កាតាឡុកម៉ូដែលច្រើនអ្នកផ្តល់ ជំនួសម៉ូដែល GitHub ដែលនឹងចាកចេញចុងខែកក្កដា ២០២៦)
+   AZURE_INFERENCE_ENDPOINT='<add your Microsoft Foundry project endpoint here>'
+   AZURE_INFERENCE_CREDENTIAL='<add your Microsoft Foundry Models API key here>'
 
    ## Hugging Face
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. ចម្លងឯកសារនោះទៅ `.env` ដោយប្រើពាក្យបញ្ជាក្រោមនេះ។ ឯកសារនេះ _gitignore-d_ ដើម្បីរក្សាគន្លងសម្ងាត់។
+2. ចម្លងឯកសារនោះ ទៅជា `.env` ដោយប្រើពាក្យបញ្ជាខាងក្រោម។ ឯកសារនេះត្រូវបាន _gitignore_ ដើម្បីរក្សាសម្ងាត់។
 
    ```bash
    cp .env.copy .env
    ```
 
-3. បំពេញតម្លៃ (ជំនួសម៉ាកកន្លែងផ្នែកខាងស្ដាំនៃ `=`) ដូចបានពិពណ៌នាក្នុងផ្នែកបន្ទាប់។
+3. បំពេញតម្លៃ (ប្តូរផ្ទាំងដាក់តម្លៃខាងស្ដាំនៃ `=`) ដូចបានពណ៌នាឲ្យស្គាល់នៅផ្នែកបន្ទាប់។
 
-4. (ជាជម្រើស) ប្រសិនបើអ្នកប្រើ GitHub Codespaces អ្នកអាចរក្សាទុកអថេរបរិស្ថានជារឿង _Codespaces secrets_ ដែលភ្ជាប់ជាមួយឃ្លាំងនេះ។ នៅក្នុងករណីនោះ អ្នកមិនចាំបាច់កំណត់ឯកសារ .env ក្នុងតំបន់ផ្ទាល់ទេ។ **ប៉ុន្តែ សូមចំណាំថាជម្រើសនេះដំណើរការតែប្រសិនបើអ្នកប្រើ GitHub Codespaces ប៉ុណ្ណោះ។** អ្នកត្រូវកំណត់ឯកសារ .env នៅក្នុងតំបន់ផ្ទាល់ ប្រសិនបើអ្នកប្រើ Docker Desktop ចំពោះវិធីសាស្រ្តផ្សេង។
+4. (ជាជម្រើស) ប្រសិនបើអ្នកប្រើប្រាស់ GitHub Codespaces អ្នកអាចរក្សាទុកអថេរបរិស្ថានជា _Codespaces សម្ងាត់_ ដែលទាក់ទងនឹងគម្រោងនេះបាន។ ក្នុងករណីនោះ អ្នកមិនចាំបាច់ត្រូវកំណត់ .env នៅក្នុងស្រុកទេ។ **ប៉ុន្តែ សូមចំណាំថាជម្រើសនេះដំណើរការតែនៅពេលអ្នកប្រើ GitHub Codespaces ពីព្រោះប៉ុណ្ណោះ។** អ្នកនៅតែត្រូវកំណត់ .env ប្រសិនបើប្រើ Docker Desktop។
 
-## បំពេញព័ត៌មានក្នុងឯកសារ `.env`
+## បំពេញឯកសារ `.env`
 
-មកមើលឈ្មោះអថេរដើម្បីយល់ពីតើវាបង្ហាញអ្វី៖
+យើងមកមើលឈ្មោះអថេរដើម្បីយល់ពីអ្វីដែលពួកវាតំណាង៖
 
-| អថេរ | សេចក្ដីពិពណ៌នា |
+| អថេរ  | ការពិពណ៌នា  |
 | :--- | :--- |
-| HUGGING_FACE_API_KEY | នេះគឺជា token ចូលប្រើរបស់អ្នកដែលអ្នកបានកំណត់នៅក្នុងគណនីផ្ទាល់ខ្លួន |
-| OPENAI_API_KEY | នេះគឺជាកូនសោអនុញ្ញាតសម្រាប់ប្រើសេវាដែលមិនមែន Azure OpenAI |
-| AZURE_OPENAI_API_KEY | នេះគឺជាកូនសោអនុញ្ញាតសម្រាប់ប្រើសេវាកម្មនោះ |
-| AZURE_OPENAI_ENDPOINT | នេះគឺជា endpoint ដែលបានដំណើរការសម្រាប់ធនធាន Azure OpenAI |
-| AZURE_OPENAI_DEPLOYMENT | នេះគឺជា endpoint ការចុះបញ្ជីម៉ូដែល _បង្កើតអត្ថបទ_ |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | នេះគឺជា endpoint ការចុះបញ្ជីម៉ូដែល _វេកទ័រអត្ថបទ_ |
+| HUGGING_FACE_API_KEY | នេះគឺជាសញ្ញាចូលប្រើដែលអ្នកបានកំណត់នៅក្នុងប្រវត្តិរូបរបស់អ្នក |
+| OPENAI_API_KEY | នេះគឺជាសោរក្នុងការអនុញ្ញាតប្រើប្រាស់សេវាកម្មសម្រាប់ចំណុចយោង OpenAI មិនមែន Azure |
+| AZURE_OPENAI_API_KEY | នេះគឺជាសោរក្នុងការអនុញ្ញាតប្រើប្រាស់សេវាកម្មនោះ |
+| AZURE_OPENAI_ENDPOINT | នេះគឺជាចំណុចយោងដែលបានចេញផ្សាយសម្រាប់ធនធាន Azure OpenAI |
+| AZURE_OPENAI_DEPLOYMENT | នេះគឺជាចំណុចយោងសម្រាប់ការចេញផ្សាយម៉ូដែល _បង្កើតអត្ថបទ_ |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | នេះគឺជាចំណុចយោងសម្រាប់ការចេញផ្សាយម៉ូដែល _បង្កើតអត្ថបទបញ្ចូល_ |
+| AZURE_INFERENCE_ENDPOINT | នេះគឺជាចំណុចយោងសម្រាប់គម្រោង Microsoft Foundry របស់អ្នក សម្រាប់ម៉ូដែល Microsoft Foundry |
+| AZURE_INFERENCE_CREDENTIAL | នេះគឺជាសោរ API សម្រាប់គម្រោង Microsoft Foundry របស់អ្នក |
 | | |
 
-ចំណាំៈ អថេរចុងក្រោយពី Azure OpenAI សំដៅទៅលើម៉ូដែលលំនាំដើមសម្រាប់បញ្ចប់ការឆាត (បង្កើតអត្ថបទ) និងស្វែងរកវ៉ិចទ័រ (វេកទ័រ) តាមលំដាប់។ សេចក្ដីណែនាំសម្រាប់កំណត់រចនាសម្ព័ន្ធនឹងត្រូវបានបញ្ជាក់នៅក្នុងតំណែងការងារពាក់ព័ន្ធ។
+សម្គាល់៖ អ deux dernière variables Azure OpenAI បង្ហាញពីម៉ូដែលលំនាំដើមសម្រាប់ការសម្រេចសន្ទនា (បង្កើតអត្ថបទ) និងស្វែងរកវ៉ិចទ័រ (បញ្ចូល) តាមលំដាប់។ សេចក្តីណែនាំសម្រាប់កំណត់រចនាសម្ព័ន្ធពួកវានឹងត្រូវបានកំណត់នៅក្នុងការងារពាក់ព័ន្ធ។
 
-## កំណត់រចនាសម្ព័ន្ធ Azure៖ ពី Portal
+## កំណត់រចនាសម្ព័ន្ធ Azure OpenAI: ពីកំពូលផតថល
 
-តម្លៃ endpoint និងកូនសោ Azure OpenAI អាចរកបាននៅក្នុង [ផតថល Azure](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) ដូច្នេះចូរចាប់ផ្តើមនៅទីនោះ។
+> **សម្គាល់:** សេវា Azure OpenAI ឥឡូវគឺជាផ្នែកមួយនៃ [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst)។ ធនធាន និងការចេញផ្សាយនៅតែបញ្ចេញនៅក្នុងកំពូលផតថល់ Azure ប៉ុន្តែការគ្រប់គ្រងម៉ូដែលប្រចាំថ្ងៃ (ការចេញផ្សាយ, លេងល្បែង, ការត្រួតពិនិត្យ) ឥឡូវនេះកើតឡើងនៅក្នុងកំពូលផតថល Foundry ជំនួស "Azure OpenAI Studio" ដែលមានរូបភាពឯកត្ត។
 
-1. ចូរចូលទៅ [ផតថល Azure](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
-1. ចុចជម្រើស **Keys and Endpoint** ក្នុងផ្នែកម៉ឺនុយខាងឆ្វេង។
-1. ចុច **បង្ហាញកូនសោ** - អ្នកគួរមើលឃើញ KEY 1, KEY 2 និង Endpoint។
-1. ប្រើតម្លៃ KEY 1 សម្រាប់ AZURE_OPENAI_API_KEY
-1. ប្រើតម្លៃ Endpoint សម្រាប់ AZURE_OPENAI_ENDPOINT
+តម្លៃចំណុច​យោង Azure OpenAI និងសោរនឹងត្រូវ​រកឃើញ​នៅ​ក្នុង [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) ដូច្នេះ​មកចាប់ផ្តើមពីទីនោះ។
 
-បន្ទាប់មក យើងត្រូវការចំណុចចូលសម្រាប់ម៉ូឌែលជាក់លាក់ដែលបានចុះបញ្ជី។
+1. ទៅកាន់ [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
+1. ចុចលើជម្រើស **Keys and Endpoint** នៅក្នុងបញ្ជីខាងឆ្វេង។
+1. ចុច **បង្ហាញសោរ** - អ្នកគួរតែឃើញ KEY 1, KEY 2 និង Endpoint។
+1. ប្រើតម្លៃ KEY 1 សម្រាប់ `AZURE_OPENAI_API_KEY`
+1. ប្រើតម្លៃ Endpoint សម្រាប់ `AZURE_OPENAI_ENDPOINT`
 
-1. ចុចជម្រើស **Model deployments** នៅផ្នែកម៉ឺនុយខាងឆ្វេង សម្រាប់ធនធាន Azure OpenAI។
-1. នៅផ្នែកផ្ទាំងគោលដៅ ចុច **គ្រប់គ្រងការចុះបញ្ជី**
+បន្ទាប់មក យើងត្រូវការចំណុច​យោងសម្រាប់ម៉ូដែលដែលបានចេញផ្សាយជាក់លាក់។
 
-នេះនឹងនាំអ្នកទៅគេហទំព័រ Azure OpenAI Studio ដែលយើងនឹងឃើញតម្លៃផ្សេងៗដូចបានពិពណ៌នាខាងក្រោម។
+1. ចុចលើជម្រើស **Model deployments** នៅក្នុងបញ្ជីខាងឆ្វេងសម្រាប់ធនធាន Azure OpenAI។
+1. នៅក្នុងទំព័រគោលដៅ ចុច **ទៅកាន់ Microsoft Foundry portal** (ឬ **គ្រប់គ្រងការចេញផ្សាយ** ប្រែប្រួលទៅតាមប្រភេទធនធានរបស់អ្នក)
 
-## កំណត់រចនាសម្ព័ន្ធ Azure៖ ពី Studio
+នេះនឹងនាំអ្នកទៅកាន់កំពូលផតថល Microsoft Foundry ដែលនៅទីនោះយើងនឹងរកឃើញតម្លៃជំនួយផ្សេងៗដូចបានពិពណ៌នាខាងក្រោម។
 
-1. ចូលទៅ [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **ពីធនធានរបស់អ្នក** ដូចបានពិពណ៌នាពីមុន។
-1. ចុចផ្ទាំង **Deployments** (ម៉ឺនុយខាងឆ្វេង) ដើម្បីមើលម៉ូឌែលដែលបានចុះបញ្ជីឡើងវិញ។
-1. ប្រសិនបើម៉ូឌែលដែលអ្នកចង់ប្រើមិនមានទេ សូមប្រើ **បង្កើតការចុះបញ្ជីថ្មី** ដើម្បីចុះបញ្ជីវា។
-1. អ្នកត្រូវការ ម៉ូឌែល _បង្កើតអត្ថបទ_ — យើងផ្តល់អនុសាសន៍: **gpt-35-turbo**
-1. អ្នកត្រូវការ ម៉ូឌែល _វេកទ័រអត្ថបទ_ — យើងផ្តល់អនុសាសន៍ **text-embedding-ada-002**
+## កំណត់រចនាសម្ព័ន្ធ Azure OpenAI: ពីកំពូលផតថល Microsoft Foundry
 
-ឥឡូវធ្វើបច្ចុប្បន្នភាពអថេរបរិស្ថាន ដើម្បីបង្ហាញសេចក្ដីយោងទៅ _ឈ្មោះការចុះបញ្ជី_ ដែលបានប្រើ។ ជាទូទៅវានឹងដូចគ្នានៅជាមួយឈ្មោះម៉ូឌែល លុះត្រាតែអ្នកបានផ្លាស់ប្តូរយ៉ាងច្បាស់លាស់។ ឧទាហរណ៍ អ្នកអាចមាន៖
+1. ចូលទៅកាន់ [Microsoft Foundry portal](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) **ពីធនធានរបស់អ្នក** ដូចបានពិពណ៌នាខាងលើ។
+1. ចុចផ្ទាំង **Deployments** (បញ្ជីខាងឆ្វេង) ដើម្បីមើលម៉ូដែលដែលបានចេញផ្សាយបច្ចុប្បន្ន។
+1. ប្រសិនបើម៉ូដែលដែលអ្នកចង់បានមិនទាន់ចេញផ្សាយទេ ប្រើ **Deploy model** ដើម្បីចេញផ្សាយវាពី [ឃ្លាំងម៉ូដែល](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst)។
+1. អ្នកត្រូវការម៉ូដែល _បង្កើតអត្ថបទ_ — យើងផ្ដល់អនុសាសន៍៖ **gpt-4o-mini**
+1. អ្នកត្រូវការម៉ូដែល _បញ្ចូលអត្ថបទ_ — យើងផ្ដល់អនុសាសន៍ **text-embedding-3-small**
+
+ឥឡូវនេះធ្វើឱ្យអថេរបរិស្ថានបានធ្វើសាកល្បងឈ្មោះ _Deployment name_ ដែលបានប្រើ។ វាធម្មតា។ ត្រូវគឺដូចមូលដ្ឋានម៉ូដែលបើអ្នកមិនបានផ្លាស់ប្តូរយ៉ាងច្បាស់។ ឧទាហរណ៍ អ្នកជាអ្នកមាន៖
 
 ```bash
-AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
-AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
+AZURE_OPENAI_DEPLOYMENT='gpt-4o-mini'
+AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-3-small'
 ```
 
-**កុំភ្លេចរក្សាទុកឯកសារ .env ពេលបញ្ចប់**។ អ្នកអាចចាកចេញពីឯកសារនោះ ហើយត្រឡប់ទៅការណែនាំសម្រាប់រត់ notebook ។
+**កុំភ្លេចរក្សាទុកឯកសារ .env នៅពេលបានបញ្ចប់។** ឥឡូវនេះអ្នកអាចចេញពីឯកសារនោះ និងត្រឡប់ទៅប្រតិបត្តិការសម្រាប់ដំណើរការលេខាធិការសៀវភៅ។
 
-## កំណត់រចនាសម្ព័ន្ធ OpenAI៖ ពីគណនីអង្គភាព
+## កំណត់រចនាសម្ព័ន្ធ OpenAI: ពីប្រវត្តិរូប
 
-កូនសោ API របស់ OpenAI អាចរកបាននៅក្នុង [គណនី OpenAI របស់អ្នក](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst)។ ប្រសិនបើអ្នកមិនមានទេ អ្នកអាចចុះឈ្មោះគណនី ហើយបង្កើតកូនសោ API បាន។ បន្ទាប់ពីមានកូនសោ អ្នកអាចប្រើសម្រាប់បំពេញអថេរ `OPENAI_API_KEY` នៅក្នុងឯកសារ `.env` ។
+សោរ API OpenAI របស់អ្នកអាចរកឃើញបាននៅក្នុង [គណនី OpenAI របស់អ្នក](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst)។ ប្រសិនបើអ្នកមិនមានសោរមួយទេ អ្នកអាចចុះឈ្មោះសម្រាប់គណនី និងបង្កើតសោរ API ។ បន្ទាប់ពីមានសោរ អ្នកប្រើវាសម្រាប់បំពេញអថេរ `OPENAI_API_KEY` នៅក្នុងឯកសារ `.env`។
 
-## កំណត់រចនាសម្ព័ន្ធ Hugging Face៖ ពីគណនីផ្ទាល់ខ្លួន
+## កំណត់រចនាសម្ព័ន្ធ Hugging Face: ពីប្រវត្តិរូប
 
-តូកែន Hugging Face របស់អ្នកអាចរកបាននៅក្នុងគណនីផ្ទាល់ខ្លួនរបស់អ្នកក្រោម[Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst)។ មិនត្រូវបង្ហោះឬចែករំលែកវាជាសាធារណៈទេ។ ផ្ទុយពីនេះ សូមបង្កើត token ថ្មីសម្រាប់គម្រោងនេះ ហើយចម្លងវាចូលក្នុងឯកសារ `.env` ក្រោមអថេរ `HUGGING_FACE_API_KEY`។ _ចំណាំ៖_ នេះបច្ចេកទេសមិនមែនជា key API នេះទេ ប៉ុន្តែប្រើសម្រាប់អត្តសញ្ញាណ តែយើងរក្សា ឈ្មោះនេះសម្រាប់ការត្រួតពិនិត្យតម្រូវការដូចគ្នា។
+សញ្ញា Hugging Face របស់អ្នកអាចរកឃើញនៅក្នុងប្រវត្តិរូបរបស់អ្នកក្រោម [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst)។ មិនត្រូវផ្សព្វផ្សាយឬចែករំលែកពួកវាដោយសាធារណៈ។ ជាជំនួស អ្នកគួរបង្កើតសញ្ញាថ្មីសម្រាប់ការប្រើប្រាស់គម្រោងនេះ ហើយចម្លងវាទៅក្នុងឯកសារ `.env` ក្រោមអថេរ `HUGGING_FACE_API_KEY` ។ _សម្គាល់:_ វាជាសញ្ញាដែលមិនមែនសោរ API ដែរពីពេលបច្ចេកទេស ប៉ុន្តែប្រើសម្រាប់ការផ្ទៀងផ្ទាត់ ដូច្នោះយើងកំពុងរក្សាប្រព័ន្ធដាក់ឈ្មោះនេះសម្រាប់ភាពស្របគ្នា។
+
+## កំណត់រចនាសម្ព័ន្ធម៉ូដែល Microsoft Foundry: ពីកំពូលផតថល
+
+> **សម្គាល់:** GitHub Models នឹងផប់នៅចុងខែកក្កដា ២០២៦។ ម៉ូដែល Microsoft Foundry ជាចម្លើយផ្ទាល់, ផ្តល់ឱកាសសាកល្បងឥតគិតថ្លៃក្នុងឃ្លាំងម៉ូដែល និងបទពិសោធន៍ Azure AI Inference SDK / OpenAI SDK ដូចគ្នា។
+
+1. ទៅកាន់ [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) ហើយបង្កើត (ឬបើក) គម្រោង Foundry។
+1. រុករក [ឃ្លាំងម៉ូដែល](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) ហើយចេញផ្សាយម៉ូដែលមួយ, ឧទាហរណ៍ `gpt-4o-mini`។
+1. នៅលើទំព័រ **សង្ខេប** នៃគម្រោង ចម្លង **ចំណុចយោង** និង **សោរ API**។
+1. ប្រើតម្លៃចំណុចយោងសម្រាប់ `AZURE_INFERENCE_ENDPOINT` និងតម្លៃសោរសម្រាប់ `AZURE_INFERENCE_CREDENTIAL` ក្នុងឯកសារ `.env` របស់អ្នក។
+
+## អ្នកផ្គត់ផ្គង់ក្រៅបណ្ដាញ / ក្នុងស្រុក
+
+ប្រសិនបើអ្នកមិនចង់ប្រើជាវសេវាកម្មក្នុងពពកទេ អ្នកអាចដំណើរការម៉ូដែលបើកដែលអាចប្រើបានដោយផ្ទាល់លើឧបករណ៍ផ្ទាល់ខ្លួនរបស់អ្នក៖
+
+- **[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst)**- រត់បញ្ជាលើឧបករណ៍របស់ Microsoft ។ វាជ្រើសរើសអ្នកផ្គត់ផ្គង់ការប្រតិបត្តិការដ៏ល្អបំផុត (NPU, GPU, ឬ CPU) ដោយស្វ័យប្រវត្តិ និងផ្តល់ចំណុចយោងដែលផ្គូរផ្គង OpenAI ដូច្នេះ អ្នកអាចប្រើកូដគំរូ ភាគច្រើននៅក្នុងវគ្គនេះដោយមានបម្រែបម្រួលតិចតួច។ មើល [ឯកសារផ្ទាល់ Foundry Local](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) ដើម្បីចាប់ផ្តើម ឬដំឡើងដោយកំណត់ពាក្យបញ្ជា `winget install Microsoft.FoundryLocal` (Windows) / `brew install microsoft/foundrylocal/foundrylocal` (macOS)។
+- **[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst)** - ជជម្រើសពេញនិយមសម្រាប់ការប្រើម៉ូដែលបើកដូចជា Llama, Phi, Mistral និង Gemma ក្នុងស្រុក។
+
+
+មើល [មេរៀនទី 19៖ ការសាងសង់ជាមួយ SLMs](../19-slm/README.md?WT.mc_id=academic-105485-koreyst) សម្រាប់ឧទាហរណ៍អនុវត្តន៍ចំណែកពីរប្រើប្រាស់ទាំងពីរ។
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**ការកំណត់សូមប្រយ័ត្ន**៖  
-ឯកសារនេះត្រូវបានបកប្រែដោយប្រើសេវាកម្មបកប្រែ AI [Co-op Translator](https://github.com/Azure/co-op-translator)។ ទោះបីយើងខិតខំទុកចិត្តលទ្ធផលឱ្យមានភាពត្រឹមត្រូវ ក៏សូមយល់ឲ្យបានដឹងថាការបកប្រែដោយស្វ័យប្រវត្តិអាចមានកំហុสนិងការមិនត្រឹមត្រូវ។ ឯកសារដើមភាសាម្ចាស់៖​ គួរតែចាត់ទុកថាជា ដៃគូប្រឹក្សាផ្លូវការដែលមានសិទ្ធិ។ សម្រាប់ព័ត៌មានសំខាន់ៗ ការបកប្រែដោយមនុស្សជំនាញត្រូវបានណែនាំ។ យើងមិនទទួលបន្ទុកចំពោះការយល់ច្រឡំនូវការច្រឡំណាមួយដែលកើតឡើងពីការប្រើប្រាស់ការបកប្រែនេះឡើយ។
+**ការបដិសេធ**:
+ឯកសារនេះត្រូវបានបម្លែងភាសា ដោយប្រើសេវាបម្លែងភាសា AI [Co-op Translator](https://github.com/Azure/co-op-translator)។ ទោះយើងខ្ញុំមានក្តីប្រាថ្នាឱ្យបានច្បាស់លាស់ តែសូមយល់ដឹងថាការបម្លែងដោយស្វ័យប្រវត្តិក៏អាចមានកំហុសឬភាពមិនត្រឹមត្រូវ។ ឯកសារដើមជាភាសាទីតាំងគួរត្រូវបានគេប្រើជាប្រភពច្បាស់លាស់។ សម្រាប់ព័ត៌មានសំខាន់ៗ សូមណែនាំឱ្យប្រើប្រាស់ការប្រែដោយមនុស្សជំនាញ។ យើងខ្ញុំមិនទទួលខុសត្រូវចំពោះការយល់ច្រឡំ ឬការបកស្រាយខុសបន្ទាប់ពីការប្រើប្រាស់ការបម្លែងនេះនោះទេ។
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
