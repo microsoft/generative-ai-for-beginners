@@ -1,93 +1,93 @@
-# 強化功能和改進路線圖
+# 強化功能與改進路線圖
 
-本文件概述了基於全面的代碼審查和行業最佳實踐分析，針對「生成式 AI 初學者」課程推薦的增強和改進建議。
+本文件列出基於全面代碼審查及行業最佳實踐分析，對新手生成式 AI 課程推薦的增強和改進方案。
 
 ## 執行摘要
 
-代碼庫已對安全性、代碼質量和教育效果進行分析。本文件提供了即時修復、短期改進和未來增強的建議。
+代碼庫已就安全性、代碼質量及教育效果進行分析。本文提供立即修復、近期改進及未來增強建議。
 
 ---
 
 ## 1. 安全性增強（優先級：關鍵）
 
-### 1.1 即時修復（已完成）
+### 1.1 立即修復（已完成）
 
-| 問題 | 受影響文件 | 狀態 |
+| 問題 | 影響檔案 | 狀態 |
 |-------|----------------|--------|
-| 硬編碼的 SECRET_KEY | `05-advanced-prompts/python/aoai-solution.py` | 已修復 |
-| 缺少環境驗證 | 多個 JS/TS 文件 | 已修復 |
-| 不安全的函數調用 | `11-integrating-with-function-calling/js-githubmodels/app.js` | 已修復 |
-| 文件句柄洩漏 | `08-building-search-applications/scripts/` | 已修復 |
-| 缺少請求超時 | `09-building-image-applications/python/` | 已修復 |
+| 硬編碼 SECRET_KEY | `05-advanced-prompts/python/aoai-solution.py` | 已修正 |
+| 缺少環境變數驗證 | 多個 JS/TS 檔案 | 已修正 |
+| 不安全的函數調用 | `11-integrating-with-function-calling/js-githubmodels/app.js` | 已修正 |
+| 檔案句柄洩露 | `08-building-search-applications/scripts/` | 已修正 |
+| 缺少請求超時 | `09-building-image-applications/python/` | 已修正 |
 
-### 1.2 推薦的額外安全功能
+### 1.2 推薦額外安全功能
 
-1. **速率限制示例**
-   - 新增示範代碼展示如何對 API 調用實施速率限制
-   - 展示指數回退模式
+1. <strong>速率限制範例</strong>
+   - 新增示範如何對 API 調用實現速率限制的範例代碼
+   - 展示指數退避模式
 
-2. **API 金鑰輪替**
-   - 增加有關 API 金鑰輪替的最佳實踐文件
-   - 包含使用 Azure Key Vault 或類似服務的示例
+2. **API 密鑰輪替**
+   - 新增有關 API 密鑰輪替最佳實踐的文件
+   - 包含使用 Azure Key Vault 或類似服務的範例
 
-3. **內容安全整合**
-   - 新增使用 Azure Content Safety API 的示例
-   - 展示輸入/輸出審核模式
+3. <strong>內容安全整合</strong>
+   - 新增使用 Azure Content Safety API 的範例
+   - 示範輸入/輸出審查模式
 
 ---
 
-## 2. 代碼質量改進
+## 2. 代碼質量提升
 
-### 2.1 新增配置文件
+### 2.1 新增配置檔案
 
-| 文件 | 目的 |
+| 檔案 | 目的 |
 |------|---------|
-| `.eslintrc.json` | JavaScript/TypeScript 的代碼檢查規則 |
+| `.eslintrc.json` | JavaScript/TypeScript 代碼檢查規則 |
 | `.prettierrc` | 代碼格式化標準 |
-| `pyproject.toml` | Python 工具配置（Black、Ruff、mypy） |
+| `pyproject.toml` | Python 工具設定（Black、Ruff、mypy） |
 
-### 2.2 創建共用工具
+### 2.2 新增共用工具
 
-新增 `shared/python/` 模組包含：
-- `env_utils.py` - 環境變量處理
-- `input_validation.py` - 輸入驗證與清理
-- `api_utils.py` - 安全的 API 請求封裝
+新增 `shared/python/` 模組，包含：
+- `env_utils.py` - 環境變數處理
+- `input_validation.py` - 輸入驗證與消毒
+- `api_utils.py` - 安全 API 請求包裝器
 
-### 2.3 推薦的代碼改進
+### 2.3 推薦代碼改進
 
-1. **類型提示覆蓋**
-   - 為所有 Python 文件添加類型提示
-   - 在所有 TS 項目中啟用嚴格的 TypeScript 模式
+1. <strong>型別提示覆蓋</strong>
+   - 補充所有 Python 檔案的型別提示
+   - 啟用所有 TS 項目中的嚴格型別模式
 
-2. **文檔標準**
-   - 為所有 Python 函數添加 Docstring
-   - 為所有 JavaScript/TypeScript 函數添加 JSDoc 註釋
+2. <strong>文件標準</strong>
+   - 為所有 Python 函數添加文檔字符串
+   - 為所有 JavaScript/TypeScript 函數添加 JSDoc 注釋
 
-3. **測試框架**
-   - 添加 pytest 配置及示例測試
-   - 為 JavaScript/TypeScript 添加 Jest 配置
+3. <strong>測試框架</strong>
+   - 添加 pytest 配置及範例測試 _(已完成：`pyproject.toml` 中含 pytest 配置；CI 中執行 [`tests/`](../../../tests) 的共用工具範例測試)_
+   - 添加 JavaScript/TypeScript 的 Jest 配置
 
 ---
 
-## 3. 教育增強
+## 3. 教育性增強
 
 ### 3.1 新課程主題
 
-1. **AI 應用中的安全性**（建議課程 22）
+1. **AI 應用中的安全性**（建議第 22 課）
    - 提示注入攻擊與防禦
-   - API 金鑰管理
-   - 內容審核
-   - 速率限制與濫用防止
+   - API 密鑰管理
+   - 內容審查
+   - 速率限制與濫用防範
 
-2. **生產環境部署**（建議課程 23）
+2. <strong>生產部署</strong>（建議第 23 課）
    - 使用 Docker 容器化
-   - CI/CD 管線
+   - CI/CD 管道
    - 監控與日誌
    - 成本管理
 
-3. **進階 RAG 技術**（建議課程 24）
+3. **進階 RAG 技術**（建議第 24 課）
    - 混合搜索（關鍵字 + 語義）
-   - 重排序策略
+   - 重排策略
    - 多模態 RAG
    - 評估指標
 
@@ -95,40 +95,45 @@
 
 | 課程 | 推薦改進 |
 |--------|------------------------|
-| 06 - 文字生成 | 添加串流回應示例 |
-| 07 - 聊天應用 | 添加對話記憶模式 |
-| 08 - 搜索應用 | 添加向量資料庫比較 |
-| 09 - 影像生成 | 添加影像編輯/變化示例 |
-| 11 - 函數調用 | 添加平行函數調用 |
-| 15 - RAG | 添加切塊策略比較 |
-| 17 - AI 代理 | 添加多代理協調 |
+| 06 - 文字生成 | 新增串流式響應範例 |
+| 07 - 聊天應用 | 新增對話記憶模式 |
+| 08 - 搜索應用 | 新增向量資料庫比較 |
+| 09 - 影像生成 | 新增圖片編輯/變化範例 |
+| 11 - 函數呼叫 | 新增平行函數呼叫 |
+| 15 - RAG | 新增分塊策略比較 |
+| 17 - AI 代理 | 新增多代理協調 |
 
 ---
 
 ## 4. API 現代化
 
-### 4.1 待更新的已棄用 API 模式
+### 4.1 棄用 API 模式（遷移完成）
 
-| 舊模式 | 新模式 | 受影響文件 |
-|-------------|-------------|----------------|
-| `openai.api_type = "azure"` | `AzureOpenAI()` 客戶端 | `08-building-search-applications/` 多個腳本 |
-| `openai.ChatCompletion.create()` | `client.chat.completions.create()` | 多個筆記本 |
-| `df.append()` (pandas) | `pd.concat()` | RAG 筆記本 |
+所有 Python 與 TypeScript 的 <strong>聊天</strong> 範例已從 Chat Completions API 遷移到 **Responses API**（`client.responses.create(...)` → `response.output_text`）。
+
+| 舊模式 | 新模式 | 狀態 |
+|-------------|-------------|--------|
+| `openai.api_type = "azure"` / `AzureOpenAI()`（聊天） | `OpenAI(base_url="<endpoint>/openai/v1/")`（Responses API） | 已完成 |
+| `openai.ChatCompletion.create()` / `client.chat.completions.create()` | `client.responses.create(input=...)` → `response.output_text` | 已完成 |
+| `@azure/openai` `OpenAIClient.getChatCompletions()`（TypeScript） | `openai` 套件 `client.responses.create()` → `response.output_text` | 已完成 |
+| `df.append()` (pandas) | `pd.concat()` | 已完成 |
+
+> **注意：** 使用 `azure-ai-inference` / `@azure-rest/ai-inference` SDK（`client.complete()`）的 Microsoft Foundry Models 範例仍使用模型推斷 API，該 API 不支持 Responses API。`AzureOpenAI()` 仍在可用的情況下保留（用於 embedding 及影像生成）。
 
 ### 4.2 新 API 功能示範
 
-1. **結構化輸出**（OpenAI）
+1. <strong>結構化輸出</strong>（OpenAI）
    - JSON 模式
-   - 函數調用與嚴格 schema
+   - 帶嚴格 schema 的函數調用
 
-2. **視覺能力**
-   - GPT-4V 影像分析
+2. <strong>視覺功能</strong>
+   - 使用 GPT-4o（視覺）的圖片分析
    - 多模態提示
 
-3. **助理 API**
+3. **Responses API 內建工具**（取代舊 Assistants API）
    - 代碼解釋器
    - 文件搜索
-   - 自訂工具
+   - 網頁搜索與自訂工具
 
 ---
 
@@ -136,7 +141,7 @@
 
 ### 5.1 CI/CD 增強
 
-目前工作流處理 Markdown 驗證。建議新增：
+已實作於 [`.github/workflows/code-quality.yml`](../../../.github/workflows/code-quality.yml)：Python 代碼檢查/格式化（Ruff + Black）於維護中的 `shared/` 工具模組採強制執行，課程其餘部分則為建議性，且針對 JavaScript/TypeScript 執行 ESLint 建議性檢查。示範基準為：
 
 ```yaml
 # .github/workflows/code-quality.yml
@@ -169,6 +174,8 @@ jobs:
 
 ### 5.2 安全掃描
 
+已實作於 [`.github/workflows/security.yml`](../../../.github/workflows/security.yml)：Python 及 JavaScript/TypeScript 的 CodeQL 分析（觸發於 push、pull request 與每週排程），此外於 pull request 執行相依性審查。示範基準為：
+
 ```yaml
 # .github/workflows/security.yml
 name: Security Scan
@@ -194,11 +201,11 @@ jobs:
 
 ---
 
-## 6. 開發者體驗改進
+## 6. 開發體驗改進
 
 ### 6.1 DevContainer 增強
 
-更新 `.devcontainer/devcontainer.json`：
+已實作於 [`.devcontainer/devcontainer.json`](../../../.devcontainer/devcontainer.json) 與 [`.devcontainer/post-create.sh`](../../../.devcontainer/post-create.sh)：容器現在內置 Pylance、Black 格式化工具、Ruff、ESLint、Prettier 及 Copilot 擴充功能，啟用保存時格式化並連結到 repo 的 Black/Prettier 設定，且安裝開發工具（`ruff`、`black`、`mypy`、`pytest`），使 [code-quality workflow](../../../.github/workflows/code-quality.yml) 可於本地重現。基底映像使用 `mcr.microsoft.com/devcontainers/universal`，已內含 Python 和 Node，不需額外功能。示範基準為：
 
 ```json
 {
@@ -235,27 +242,27 @@ jobs:
 ### 6.2 互動式遊樂場
 
 考慮新增：
-- 含預先填充 API 金鑰的 Jupyter 筆記本（通過環境變量）
-- Gradio/Streamlit 示範，適合視覺學習者
-- 互動式小測驗以評估知識
+- 帶預置 API 密鑰（透過環境變數）的 Jupyter 筆記本
+- 適合視覺學習者的 Gradio/Streamlit 示範
+- 用於知識評估的互動式測驗
 
 ---
 
 ## 7. 多語言支援
 
-### 7.1 目前語言覆蓋
+### 7.1 目前語言涵蓋
 
-| 技術 | 覆蓋課程 | 狀態 |
+| 技術 | 涵蓋課程 | 狀態 |
 |------------|-----------------|--------|
-| Python | 全部 | 完成 |
+| Python | 全部 | 完整 |
 | TypeScript | 06-09, 11 | 部分 |
 | JavaScript | 06-08, 11 | 部分 |
 | .NET/C# | 部分 | 部分 |
 
 ### 7.2 推薦新增語言
 
-1. **Go** - AI/ML 工具日益增長
-2. **Rust** - 性能關鍵應用
+1. **Go** - AI/ML 工具快速成長中
+2. **Rust** - 性能區域關鍵應用
 3. **Java/Kotlin** - 企業應用
 
 ---
@@ -264,88 +271,85 @@ jobs:
 
 ### 8.1 代碼層級優化
 
-1. **Async/Await 模式**
-   - 新增批次處理的異步示例
-   - 展示並行 API 調用
+1. **非同步/等待模式**
+   - 新增批次處理的非同步範例
+   - 展示併發 API 呼叫
 
-2. **緩存策略**
-   - 添加嵌入緩存示例
-   - 展示回應緩存模式
+2. <strong>快取策略</strong>
+   - 新增 embedding 快取範例
+   - 展示回應快取模式
 
 3. **Token 優化**
-   - 添加 tiktoken 使用示例
+   - 添加 tiktoken 使用範例
    - 展示提示壓縮技術
 
-### 8.2 成本優化示例
+### 8.2 成本優化範例
 
-新增示例展示：
+新增示範：
 - 根據任務複雜度選擇模型
-- 提示工程以提升 token 使用效率
-- 批次處理以提高大宗操作效益
+- 提示工程以提升 token 效率
+- 批量處理實現批量操作
 
 ---
 
-## 9. 無障礙與國際化
+## 9. 可及性與國際化
 
-### 9.1 目前翻譯狀態
+### 9.1 當前翻譯狀態
 
-| 語言 | 狀態 |
-|----------|--------|
-| 英文 | 完成 |
-| 中文（簡體） | 完成 |
-| 日文 | 完成 |
-| 韓文 | 完成 |
-| 西班牙文 | 部分 |
-| 葡萄牙文 | 部分 |
-| 土耳其文 | 部分 |
-| 波蘭文 | 部分 |
+所有翻譯均【完整】由 [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst) 自動生成，該工具保持 50 多種語言版本的課程與英語版同步。翻譯內容放置於 `translations/`，本地化圖片位於 `translated_images/`；完整可用語言列表發佈於資料庫 README 頂部。
 
-### 9.2 無障礙改進
+| 方面 | 狀態 |
+|--------|--------|
+| 翻譯覆蓋率 | 完整 — 50 多種語言，所有課程 |
+| 翻譯方式 | 透過 [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst) 自動化 |
+| 與英文原稿保持同步 | 是 — 自動重生成 |
 
-1. 為所有圖片添加替代文字
-2. 確保程式碼範例有適當語法高亮
-3. 為所有影片提供文字稿
+### 9.2 可及性改進
+
+1. 所有圖片添加替代文字
+2. 確保程式碼範例具有適當語法高亮
+3. 全部影片內容添加字幕稿
 4. 確保色彩對比符合 WCAG 指引
 
 ---
 
-## 10. 實施優先順序
+## 10. 實施優先次序
 
-### 第 1 階段：即時（第 1-2 週）
+### 第一階段：立即（第 1-2 週）
 - [x] 修復關鍵安全問題
 - [x] 新增代碼質量配置
 - [x] 建立共用工具
 - [x] 文件化安全指引
 
-### 第 2 階段：短期（第 3-4 週）
-- [ ] 更新已棄用 API 模式
-- [ ] 為所有 Python 文件添加類型提示
-- [ ] 新增 CI/CD 工作流以保證代碼質量
-- [ ] 建立安全掃描工作流
+### 第二階段：短期（第 3-4 週）
+- [x] 更新棄用 API 模式（聊天完成 → Responses API，Python + TypeScript）
+- [ ] 為所有 Python 檔案添加型別提示（維護中的 `shared/` 模組已完成；課程範例保持簡單）
+- [x] 新增 CI/CD 工作流程以保證代碼質量
+- [x] 創建安全掃描工作流程
 
-### 第 3 階段：中期（第 2-3 月）
-- [ ] 新增安全性課程
+### 第三階段：中期（第 2-3 個月）
+- [ ] 新增安全相關課程
 - [ ] 新增生產部署課程
-- [ ] 改善 DevContainer 設置
+- [x] 優化 DevContainer 設置
 - [ ] 新增互動示範
 
-### 第 4 階段：長期（第 4 月以上）
+### 第四階段：長期（第 4 個月以上）
 - [ ] 新增進階 RAG 課程
-- [ ] 擴展語言覆蓋
-- [ ] 添加全面測試套件
+- [ ] 擴充語言涵蓋範圍
+- [ ] 增建全面測試套件
 - [ ] 建立認證計劃
 
 ---
 
 ## 結論
 
-本路線圖提供了改善「生成式 AI 初學者」課程的結構化方案。透過解決安全問題、現代化 API 並添加教學內容，該課程將更能幫助學生準備真實世界的 AI 應用開發。
+本路線圖提供系統化方案以優化新手生成式 AI 課程。透過解決安全問題、更新 API 並增補教學內容，課程將更好裝備學員應對實務 AI 應用開發。
 
-如有疑問或貢獻，請在 GitHub 儲存庫中開啟 issue。
+如有問題或欲作出貢獻，請於 GitHub 資料庫開啟 Issue。
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **免責聲明**：
-本文件乃使用人工智能翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於確保準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件以其母語版本為準，應視為權威來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯而產生的任何誤解或誤釋承擔責任。
+本文件使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們力求準確，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於重要資訊，建議尋求專業人工翻譯。我們不對因使用本翻譯而引起的任何誤解或曲解承擔責任。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

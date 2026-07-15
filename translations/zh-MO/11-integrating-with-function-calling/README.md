@@ -1,76 +1,79 @@
-# 與函數呼叫整合
+# 整合函式呼叫
 
-[![與函數呼叫整合](../../../translated_images/zh-MO/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![整合函式呼叫](../../../translated_images/zh-MO/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
-在之前的課程中，你已經學到了不少內容。然而，我們還可以進一步改進。有些問題需要解決，例如如何獲得更一致的回應格式，以便於後續處理。此外，我們可能希望從其他來源添加數據，以進一步豐富我們的應用程式。
+你在之前的課程中已經學習了不少內容。然而，我們還可以進一步改進。我們可以解決的一些問題是如何獲得更一致的回應格式，以便更容易處理後續的回應。同時，我們可能還想從其他來源添加數據，以進一步豐富我們的應用程式。
 
-上述問題正是本章要探討的內容。
+上述問題正是本章節想要解決的。
 
-## 簡介
+## 介紹
 
 本課程將涵蓋：
 
-- 解釋什麼是函數呼叫及其使用案例。
-- 使用 Azure OpenAI 創建函數呼叫。
-- 如何將函數呼叫整合到應用程式中。
+- 解釋什麼是函式呼叫及其使用場景。
+- 使用 Azure OpenAI 建立函式呼叫。
+- 如何將函式呼叫整合進應用程式中。
 
 ## 學習目標
 
 完成本課程後，你將能夠：
 
-- 解釋使用函數呼叫的目的。
-- 使用 Azure OpenAI Service 設置函數呼叫。
-- 為你的應用程式設計有效的函數呼叫。
+- 說明使用函式呼叫的目的。
+- 使用 Azure OpenAI 服務設定函式呼叫。
+- 根據應用程式的使用情境設計有效的函式呼叫。
 
-## 情境：使用函數改進我們的聊天機器人
+## 情境：用函式改善我們的聊天機器人
 
-在本課程中，我們希望為教育初創公司建立一個功能，讓使用者可以使用聊天機器人尋找技術課程。我們將推薦符合他們技能水平、目前角色和感興趣技術的課程。
+在本課程中，我們想為教育初創企業構建一個功能，讓用戶能使用聊天機器人尋找技術課程。我們會根據他們的技能水平、當前職位和感興趣的技術推薦課程。
 
-為了完成這個情境，我們將使用以下組合：
+完成此情境，我們將結合使用：
 
-- `Azure OpenAI` 創建使用者的聊天體驗。
-- `Microsoft Learn Catalog API` 幫助使用者根據其需求找到課程。
-- `Function Calling` 將使用者的查詢發送到函數以進行 API 請求。
+- `Azure OpenAI` 為使用者創建聊天體驗。
+- `Microsoft Learn Catalog API` 以協助使用者依據請求尋找課程。
+- `函式呼叫` 將使用者的查詢送出至函式以發出 API 請求。
 
-首先，讓我們看看為什麼我們需要使用函數呼叫：
+先來看看為何我們首先想使用函式呼叫：
 
-## 為什麼要使用函數呼叫
+## 為什麼使用函式呼叫
 
-在使用函數呼叫之前，LLM 的回應是非結構化且不一致的。開發者需要編寫複雜的驗證代碼，以確保能夠處理每種回應的變化。使用者無法獲得像「斯德哥爾摩目前的天氣如何？」這樣的答案。這是因為模型僅限於訓練數據的時間範圍。
+在有函式呼叫之前，LLM 的回應是非結構化且不一致的。開發人員必須撰寫複雜的驗證程式碼以確保能處理每種回應變化。使用者無法得到像「斯德哥爾摩目前的天氣如何？」這樣的答案。這是因為模型的資料僅限於訓練時的時間點。
 
-函數呼叫是 Azure OpenAI Service 的一項功能，用於克服以下限制：
+函式呼叫是 Azure OpenAI 服務的一項功能，能克服以下限制：
 
-- **一致的回應格式**。如果我們能更好地控制回應格式，就能更輕鬆地將回應整合到其他系統中。
-- **外部數據**。能夠在聊天上下文中使用應用程式的其他數據來源。
+- <strong>一致的回應格式</strong>。如果我們能更好地控制回應格式，便能更輕鬆地整合該回應至下游系統。
+- <strong>外部數據</strong>。能在聊天情境中使用應用程式的其他來源數據。
 
-## 通過情境說明問題
+## 透過情境說明問題
 
-> 我們建議你使用[附帶的筆記本](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst)來運行以下情境。如果你只是想了解問題的說明，也可以直接閱讀。
+> 如果你想運行以下情境，我們建議你使用[附帶的 notebook](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst)。你也可以直接閱讀，我們試圖說明一個函式能如何協助解決問題的情況。
 
-讓我們看看一個例子，說明回應格式問題：
+來看一個說明回應格式問題的範例：
 
-假設我們想創建一個學生數據庫，以便向他們推薦合適的課程。以下是兩個非常相似的學生描述。
+假如我們想建立學生資料庫，便能為他們推薦合適的課程。以下有兩份學生描述，數據內容相當相似。
 
-1. 與 Azure OpenAI 資源建立連接：
+1. 建立與 Azure OpenAI 資源的連接：
 
    ```python
    import os
    import json
-   from openai import AzureOpenAI
+   from openai import OpenAI
    from dotenv import load_dotenv
    load_dotenv()
 
-   client = AzureOpenAI(
-   api_key=os.environ['AZURE_OPENAI_API_KEY'],  # this is also the default, it can be omitted
-   api_version = "2023-07-01-preview"
+   # 回應 API 是由 Azure OpenAI（Microsoft Foundry）v1 端點提供服務
+   # 所以我們將 OpenAI 用戶端指向 <your-endpoint>/openai/v1/。
+   endpoint = os.environ['AZURE_OPENAI_ENDPOINT']
+   client = OpenAI(
+   api_key=os.environ['AZURE_OPENAI_API_KEY'],
+   base_url=f"{endpoint.rstrip('/')}/openai/v1/",
    )
 
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   以下是一些 Python 代碼，用於配置我們與 Azure OpenAI 的連接，其中設置了 `api_type`、`api_base`、`api_version` 和 `api_key`。
+   以下是一些 Python 程式碼用於配置我們的 Azure OpenAI 連接。因為使用 v1 端點，所以只需設定 `api_key` 與 `base_url`（不需 `api_version`）。
 
-1. 使用變數 `student_1_description` 和 `student_2_description` 創建兩個學生描述。
+1. 使用變數 `student_1_description` 與 `student_2_description` 建立兩份學生描述。
 
    ```python
    student_1_description="Emily Johnson is a sophomore majoring in computer science at Duke University. She has a 3.7 GPA. Emily is an active member of the university's Chess Club and Debate Team. She hopes to pursue a career in software engineering after graduating."
@@ -78,9 +81,9 @@
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   我們希望將上述學生描述發送到 LLM 以解析數據。這些數據可以稍後用於我們的應用程式，並發送到 API 或存儲到數據庫中。
+   我們想將上述學生描述發送給 LLM 以解析資料。這些資料稍後可以在應用程式中使用，並發送至 API 或儲存進資料庫。
 
-1. 創建兩個相同的提示，指示 LLM 我們感興趣的信息：
+1. 建立兩個相同的提示，指示 LLM 我們感興趣的是哪些資訊：
 
    ```python
    prompt1 = f'''
@@ -110,33 +113,35 @@
    '''
    ```
 
-   上述提示指示 LLM 提取信息並以 JSON 格式返回回應。
+   上述提示指示 LLM 擷取資訊並以 JSON 格式回應。
 
-1. 設置提示和與 Azure OpenAI 的連接後，我們現在使用 `openai.ChatCompletion` 將提示發送到 LLM。我們將提示存儲在 `messages` 變數中，並將角色分配為 `user`，以模擬使用者向聊天機器人發送消息。
+1. 設定好提示與 Azure OpenAI 連接後，我們將用 `client.responses.create` 傳送提示至 LLM。我們將訊息存到 `input` 變數，並將角色設為 `user`。這是模擬使用者向聊天機器人發訊息。
 
    ```python
-   # response from prompt one
-   openai_response1 = client.chat.completions.create(
+   # 從提示一得到的回應
+   openai_response1 = client.responses.create(
    model=deployment,
-   messages = [{'role': 'user', 'content': prompt1}]
+   input = [{'role': 'user', 'content': prompt1}],
+   store=False,
    )
-   openai_response1.choices[0].message.content
+   openai_response1.output_text
 
-   # response from prompt two
-   openai_response2 = client.chat.completions.create(
+   # 從提示二得到的回應
+   openai_response2 = client.responses.create(
    model=deployment,
-   messages = [{'role': 'user', 'content': prompt2}]
+   input = [{'role': 'user', 'content': prompt2}],
+   store=False,
    )
-   openai_response2.choices[0].message.content
+   openai_response2.output_text
    ```
 
-現在我們可以向 LLM 發送兩個請求，並通過以下方式檢查收到的回應：`openai_response1['choices'][0]['message']['content']`。
+現在我們可以同時發送兩個請求至 LLM，並透過 `openai_response1.output_text` 來檢視所得到的回應。
 
-1. 最後，我們可以通過調用 `json.loads` 將回應轉換為 JSON 格式：
+1. 最後，我們可以用 `json.loads` 將回應轉成 JSON 格式：
 
    ```python
-   # Loading the response as a JSON object
-   json_response1 = json.loads(openai_response1.choices[0].message.content)
+   # 將回應加載為 JSON 物件
+   json_response1 = json.loads(openai_response1.output_text)
    json_response1
    ```
 
@@ -164,59 +169,60 @@
    }
    ```
 
-   即使提示相同且描述相似，我們仍然看到 `Grades` 屬性的值格式不同，例如有時是 `3.7` 或 `3.7 GPA`。
+   雖然提示相同且描述相似，但我們發現 `Grades` 屬性的值格式不一致，可能是 `3.7` 或 `3.7 GPA` 等格式。
 
-   這是因為 LLM 接收非結構化數據（以書面提示的形式），並返回非結構化數據。我們需要一個結構化的格式，以便在存儲或使用這些數據時知道該期待什麼。
+   這個結果是因為 LLM 接收的是非結構化的文字提示，且回傳的也是非結構化資料。我們需要有結構化格式，才能知道儲存或使用資料時會是什麼樣態。
 
-那麼我們如何解決格式問題呢？通過使用函數呼叫，我們可以確保收到結構化的數據。使用函數呼叫時，LLM 實際上並不會調用或運行任何函數。相反，我們為 LLM 創建一個結構，以便其遵循回應格式。我們然後使用這些結構化的回應來確定在應用程式中需要運行哪些函數。
+那麼，我們如何解決格式問題呢？利用函式呼叫，我們能確保得到結構化資料。使用函式呼叫時，LLM 實際上並不會呼叫或執行任何函式，而是給出一個結構供 LLM 回應。接著，我們利用那些結構化回應來知道應該在應用程式中執行哪個函式。
 
-![函數流程](../../../translated_images/zh-MO/Function-Flow.083875364af4f4bb.webp)
+![function flow](../../../translated_images/zh-MO/Function-Flow.083875364af4f4bb.webp)
 
-接著，我們可以將函數返回的結果發送回 LLM。LLM 隨後會使用自然語言回應使用者的查詢。
+我們可以將函式回傳的內容再送回 LLM，LLM 將以自然語言回答使用者的查詢。
 
-## 使用函數呼叫的案例
+## 函式呼叫使用場景
 
-函數呼叫可以在許多不同的使用場景中改進你的應用程式，例如：
+函式呼叫能在多個不同應用場景中提升你的應用程式，比如：
 
-- **調用外部工具**。聊天機器人非常擅長回答使用者的問題。通過使用函數呼叫，聊天機器人可以使用使用者的消息完成某些任務。例如，學生可以要求聊天機器人「發送一封電子郵件給我的老師，說我需要更多幫助」。這可以調用函數 `send_email(to: string, body: string)`。
+- <strong>呼叫外部工具</strong>。聊天機器人擅長回答使用者問題，透過函式呼叫，可以用使用者訊息完成特定任務。例如，學生可以請聊天機器人「發送郵件給我的老師，說我需要更多這門科目的協助」，這就能呼叫函式 `send_email(to: string, body: string)`。
 
-- **創建 API 或數據庫查詢**。使用者可以使用自然語言查找信息，這些信息會被轉換為格式化的查詢或 API 請求。例如，老師可以要求「哪些學生完成了最後的作業」，這可以調用函數 `get_completed(student_name: string, assignment: int, current_status: string)`。
+- **建立 API 或資料庫查詢**。使用者用自然語言查詢資訊，轉換成格式化的查詢或 API 請求。例如，老師請求「哪些學生完成了上次作業」，可以呼叫 `get_completed(student_name: string, assignment: int, current_status: string)` 函式。
 
-- **創建結構化數據**。使用者可以從文本塊或 CSV 中提取重要信息。例如，學生可以將關於和平協議的維基百科文章轉換為 AI 閃卡。這可以通過函數 `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)` 完成。
+- <strong>建立結構化資料</strong>。使用者可以拿一段文字或 CSV，並用 LLM 擷取重要資訊。例如，學生可將維基百科上關於和平協議的文章轉成 AI 快閃卡，這可透過 `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)` 函式完成。
 
-## 創建你的第一個函數呼叫
+## 建立你的第一個函式呼叫
 
-創建函數呼叫的過程包括三個主要步驟：
+建立函式呼叫包含三個主要步驟：
 
-1. **呼叫** Chat Completions API，提供函數列表和使用者消息。
-2. **讀取**模型的回應以執行操作，例如執行函數或 API 呼叫。
-3. **再次呼叫** Chat Completions API，使用函數的回應生成使用者的回應。
+1. 使用函式列表（工具）及使用者訊息呼叫 Responses API。
+2. 讀取模型的回應以執行動作，例如呼叫函式或 API。
+3. 使用函式回應再次呼叫 Responses API，利用該資訊建立對使用者的回答。
 
-![LLM 流程](../../../translated_images/zh-MO/LLM-Flow.3285ed8caf4796d7.webp)
+![LLM Flow](../../../translated_images/zh-MO/LLM-Flow.3285ed8caf4796d7.webp)
 
-### 步驟 1 - 創建消息
+### 步驟 1 - 建立訊息
 
-第一步是創建使用者消息。這可以通過文本輸入的值動態分配，也可以直接在此處分配值。如果你是第一次使用 Chat Completions API，我們需要定義消息的 `role` 和 `content`。
+第一步是建立使用者訊息。此訊息可以動態從文字輸入取得，也可以在此直接指定值。若是第一次使用 Responses API，我們需要定義訊息的 `role` 與 `content`。
 
-`role` 可以是 `system`（創建規則）、`assistant`（模型）或 `user`（終端使用者）。對於函數呼叫，我們將其分配為 `user`，並提供一個示例問題。
+`role` 可以是 `system`（建立規則）、`assistant`（模型）、或 `user`（終端使用者）。對函式呼叫而言，我們會指定為 `user` 及範例問題。
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-通過分配不同的角色，可以明確告訴 LLM 是系統在說話還是使用者，這有助於建立 LLM 可以基於的對話歷史。
+指定不同的角色，有助 LLM 明確了解講話的是系統還是使用者，方便構建對話歷史。
 
-### 步驟 2 - 創建函數
+### 步驟 2 - 建立函式
 
-接下來，我們將定義一個函數及其參數。我們在此僅使用一個函數 `search_courses`，但你可以創建多個函數。
+接著，我們會定義函式以及函式參數。這裡只用一個函式 `search_courses`，但你可以建立多個函式。
 
-> **重要**：函數包含在系統消息中，並計入可用的 token 數量。
+> <strong>重要</strong> ：函式會包含在發送給 LLM 的系統訊息中，會佔用可用的 token 配額。
 
-以下，我們將函數創建為一個項目數組。每個項目都是一個函數，並具有屬性 `name`、`description` 和 `parameters`：
+以下是我們將函式建立為項目陣列。每個項目是 Responses API 扁平結構格式的工具，擁有 `type`、`name`、`description` 與 `parameters` 屬性：
 
 ```python
 functions = [
    {
+      "type":"function",
       "name":"search_courses",
       "description":"Retrieves courses from the search index based on the parameters provided",
       "parameters":{
@@ -243,75 +249,76 @@ functions = [
 ]
 ```
 
-讓我們更詳細地描述每個函數實例：
+下面詳細說明每個函式實例屬性：
 
-- `name` - 我們希望被調用的函數名稱。
-- `description` - 函數的工作描述。這裡需要具體且清晰。
-- `parameters` - 模型在回應中生成的值和格式的列表。參數數組由項目組成，項目具有以下屬性：
-  1.  `type` - 屬性將存儲的數據類型。
-  1.  `properties` - 模型在回應中使用的具體值列表。
-      1. `name` - 屬性的名稱，例如 `product`。
-      1. `type` - 屬性的數據類型，例如 `string`。
-      1. `description` - 屬性的具體描述。
+- `name` — 想被呼叫的函式名稱。
+- `description` — 函式的功能描述，在此需清楚、具體。
+- `parameters` — 模型生成回應時應包含的值與格式列表。`parameters` 陣列包含項目，這些項目有以下屬性：
+  1. `type` — 屬性資料類型。
+  2. `properties` — 模型將用於回應的具體值清單。
+      1. `name` — key 名稱，模型回應中會使用這個屬性名稱，例如 `product`。
+      1. `type` — 這個屬性的資料類型，例如 `string`。
+      1. `description` — 具體屬性說明。
 
-還有一個可選屬性 `required` - 完成函數呼叫所需的屬性。
+此外還有一個可選屬性 `required` — 代表函式呼叫時該屬性是必須的。
 
-### 步驟 3 - 執行函數呼叫
+### 步驟 3 - 執行函式呼叫
 
-定義函數後，我們需要在 Chat Completion API 的呼叫中包含它。我們通過在請求中添加 `functions` 來完成此操作。在此情況下 `functions=functions`。
+定義函式後，我們要在呼叫 Responses API 時包含它。透過在請求中加入 `tools`，此例中設為 `tools=functions`。
 
-還可以選擇將 `function_call` 設置為 `auto`。這意味著我們將讓 LLM 根據使用者消息決定應調用哪個函數，而不是自己分配。
+也可設定 `tool_choice` 為 `auto`，這表示讓 LLM 判斷根據使用者訊息應該呼叫哪個函式，而非我們手動指定。
 
-以下是一些代碼，展示如何呼叫 `ChatCompletion.create`，注意我們如何設置 `functions=functions` 和 `function_call="auto"`，從而讓 LLM 自行決定何時調用我們提供的函數：
+下方程式碼示範呼叫 `client.responses.create`，可見我們設定了 `tools=functions` 與 `tool_choice="auto"`，因此給 LLM 決定何時呼叫所提供函式的權限：
 
 ```python
-response = client.chat.completions.create(model=deployment,
-                                        messages=messages,
-                                        functions=functions,
-                                        function_call="auto")
+response = client.responses.create(model=deployment,
+                                        input=messages,
+                                        tools=functions,
+                                        tool_choice="auto",
+                                        store=False)
 
-print(response.choices[0].message)
+print(response.output)
 ```
 
-回應現在看起來如下：
+回應結果現在包含了 `response.output` 內的 `function_call` 項目，如下所示：
 
 ```json
 {
-  "role": "assistant",
-  "function_call": {
-    "name": "search_courses",
-    "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
-  }
+  "type": "function_call",
+  "name": "search_courses",
+  "call_id": "call_abc123",
+  "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
 }
 ```
 
-在這裡，我們可以看到函數 `search_courses` 被調用，以及使用了哪些參數，這些參數列在 JSON 回應的 `arguments` 屬性中。
+從中我們能看到函式 `search_courses` 被呼叫，及用於 `arguments` 屬性的參數。
 
-LLM 能夠從提供給 `messages` 參數的值中提取數據以符合函數的參數。以下是 `messages` 值的提醒：
+LLM 能根據給予 `input` 參數的內容，找到符合函式輸入的資料。下面是 `messages` 的提醒：
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-如你所見，`student`、`Azure` 和 `beginner` 從 `messages` 中提取並設置為函數的輸入。以這種方式使用函數是一種從提示中提取信息的好方法，同時也為 LLM 提供結構化並具有可重用的功能。
+如你所見，`student`、`Azure` 與 `beginner` 是從 `messages` 提取並作為函式輸入。這種用函式的方式，不僅能從提示中擷取資料，還能給 LLM 加上結構並打造可重用功能。
 
-接下來，我們需要看看如何將其整合到應用程式中。
+接下來我們看看如何在應用程式中使用這個功能。
 
-## 將函數呼叫整合到應用程式中
+## 將函式呼叫整合至應用程式
 
-在測試了 LLM 的格式化回應後，我們現在可以將其整合到應用程式中。
+在測試完 LLM 格式化的回應後，我們現在可以將它整合至應用程式中。
 
 ### 管理流程
 
-要將其整合到應用程式中，請按照以下步驟操作：
+要整合至應用，我們採取以下幾步：
 
-1. 首先，呼叫 OpenAI 服務並將消息存儲在名為 `response_message` 的變數中。
+1. 首先呼叫 OpenAI 服務，從回應的 `output` 裡取得函式呼叫項目。
 
    ```python
-   response_message = response.choices[0].message
+   response_items = response.output
+   tool_calls = [item for item in response_items if item.type == "function_call"]
    ```
 
-1. 現在我們將定義一個函數，該函數將調用 Microsoft Learn API 以獲取課程列表：
+1. 接著定義呼叫 Microsoft Learn API 的函式，取得課程清單：
 
    ```python
    import requests
@@ -333,67 +340,59 @@ messages= [ {"role": "user", "content": "Find me a good course for a beginner st
      return str(results)
    ```
 
-   注意我們現在創建了一個實際的 Python 函數，該函數映射到 `functions` 變數中引入的函數名稱。我們還進行了真正的外部 API 呼叫以獲取所需數據。在此情況下，我們調用 Microsoft Learn API 以搜索培訓模組。
+   注意，我們現在建立一個真實的 Python 函式，對應先前在 `functions` 變數中定義的函式名稱。我們也在呼叫真實的外部 API 來取得所需資料，此例中是向 Microsoft Learn API 搜尋訓練模組。
 
-好的，我們創建了 `functions` 變數和相應的 Python 函數，那麼如何告訴 LLM 如何將這兩者映射在一起，以便調用我們的 Python 函數？
+好的，我們建立了 `functions` 變數與相應的 Python 函式，如何讓 LLM 知道兩者對應，從而呼叫這個 Python 函式呢？
 
-1. 要查看是否需要調用 Python 函數，我們需要檢查 LLM 的回應，查看是否包含 `function_call`，並調用指定的函數。以下是如何進行上述檢查：
+1. 要判斷是否需要呼叫 Python 函式，我們需查看 LLM 回應是否包含 `function_call` 項目，並執行對應函式。下面是檢查的程式碼示範：
 
    ```python
-   # Check if the model wants to call a function
-   if response_message.function_call.name:
-    print("Recommended Function call:")
-    print(response_message.function_call.name)
-    print()
+   # 檢查模型是否想呼叫函數
+   if tool_calls:
+    for tool_call in tool_calls:
+     print("Recommended Function call:")
+     print(tool_call.name)
+     print()
 
-    # Call the function.
-    function_name = response_message.function_call.name
+     # 呼叫該函數。
+     function_name = tool_call.name
 
-    available_functions = {
-            "search_courses": search_courses,
-    }
-    function_to_call = available_functions[function_name]
+     available_functions = {
+             "search_courses": search_courses,
+     }
+     function_to_call = available_functions[function_name]
 
-    function_args = json.loads(response_message.function_call.arguments)
-    function_response = function_to_call(**function_args)
+     function_args = json.loads(tool_call.arguments)
+     function_response = function_to_call(**function_args)
 
-    print("Output of function call:")
-    print(function_response)
-    print(type(function_response))
+     print("Output of function call:")
+     print(function_response)
+     print(type(function_response))
 
-
-    # Add the assistant response and function response to the messages
-    messages.append( # adding assistant response to messages
-        {
-            "role": response_message.role,
-            "function_call": {
-                "name": function_name,
-                "arguments": response_message.function_call.arguments,
-            },
-            "content": None
-        }
-    )
-    messages.append( # adding function response to messages
-        {
-            "role": "function",
-            "name": function_name,
-            "content":function_response,
-        }
-    )
+     # 將函數呼叫及其結果加入對話中。
+     # 模型的 function_call 項目必須在其輸出之前附加。
+     messages.append(tool_call)  # 助手的 function_call 項目
+     messages.append( # 函數結果
+         {
+             "type": "function_call_output",
+             "call_id": tool_call.call_id,
+             "output": function_response,
+         }
+     )
    ```
 
-   這三行代碼確保我們提取函數名稱、參數並進行調用：
+   這三行程式碼確保我們提取函式名稱、參數並執行呼叫：
 
    ```python
    function_to_call = available_functions[function_name]
 
-   function_args = json.loads(response_message.function_call.arguments)
+   function_args = json.loads(tool_call.arguments)
    function_response = function_to_call(**function_args)
    ```
 
-   以下是運行代碼的輸出：
+   以下是執行程式碼後的輸出：
 
-   **輸出**
+   <strong>輸出</strong>
 
    ```Recommended Function call:
    {
@@ -412,52 +411,60 @@ messages= [ {"role": "user", "content": "Find me a good course for a beginner st
    <class 'str'>
    ```
 
-1. 現在我們將更新的消息 `messages` 發送給 LLM，以便接收自然語言回應，而不是 API JSON 格式的回應。
+1. 現在我們將更新的訊息 `messages` 傳回給 LLM，以獲得自然語言回應，而非 API 的 JSON 格式回應。
 
    ```python
    print("Messages in next request:")
    print(messages)
    print()
 
-   second_response = client.chat.completions.create(
-      messages=messages,
+   second_response = client.responses.create(
+      input=messages,
       model=deployment,
-      function_call="auto",
-      functions=functions,
-      temperature=0
-         )  # get a new response from GPT where it can see the function response
+      tool_choice="auto",
+      tools=functions,
+      temperature=0,
+      store=False,
+         )  # 從模型取得一個新回應，使其能看到函數回應
 
 
-   print(second_response.choices[0].message)
+   print(second_response.output_text)
    ```
 
-   **輸出**
+   <strong>輸出</strong>
 
-   ```python
-   {
-     "role": "assistant",
-     "content": "I found some good courses for beginner students to learn Azure:\n\n1. [Describe concepts of cryptography] (https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)\n2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)\n3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)\n4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)\n5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)\n\nYou can click on the links to access the courses."
-   }
+   ```text
+   I found some good courses for beginner students to learn Azure:
 
+   1. [Describe concepts of cryptography](https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)
+   2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)
+   3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)
+   4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)
+   5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)
+
+   You can click on the links to access the courses.
    ```
 
 ## 作業
 
-為了繼續學習 Azure OpenAI 函數呼叫，你可以嘗試：
+若要繼續學習 Azure OpenAI 函式呼叫，你可以構建：
 
-- 增加函數的參數，以幫助學習者找到更多課程。
-- 創建另一個函數呼叫，收集更多學習者的信息，例如他們的母語。
-- 建立錯誤處理機制，當函數呼叫和/或 API 呼叫未返回任何合適的課程時
+- 更多函式參數，可能幫助學習者尋找更多課程。
 
-提示：請參考 [Learn API 參考文件](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) 頁面，了解這些數據的可用性及位置。
+- 建立另一個函式呼叫，以取得學習者更多資訊，例如他們的母語
+- 建立當函式呼叫和/或 API 呼叫未回傳任何合適課程時的錯誤處理
 
-## 做得好！繼續前進
+提示：請參考 [Learn API 參考文件](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) 頁面，了解此資料如何及在哪裡可用。
 
-完成本課程後，請查看我們的 [生成式 AI 學習系列](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，繼續提升您的生成式 AI 知識！
+## 很棒！繼續旅程
 
-前往第 12 課，我們將探討如何 [設計 AI 應用的使用者體驗](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)！
+完成本課程後，請查看我們的[生成式 AI 學習集合](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，持續提升你的生成式 AI 知識！
+
+前往第 12 課，我們將探討如何[設計 AI 應用的 UX](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)！
 
 ---
 
-**免責聲明**：  
-本文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們努力確保準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵信息，建議使用專業人工翻譯。我們對因使用此翻譯而產生的任何誤解或錯誤解釋不承擔責任。
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**免責聲明**：
+本文件使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們力求準確，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於重要資訊，建議尋求專業人工翻譯。我們不對因使用本翻譯而引起的任何誤解或曲解承擔責任。
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

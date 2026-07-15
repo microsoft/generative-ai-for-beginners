@@ -1,317 +1,320 @@
 # AGENTS.md
 
-## 項目概覽
+## 專案概覽
 
-此存儲庫包含一套完整的21課課程，教授生成式人工智能的基礎知識及應用開發。課程專為初學者設計，涵蓋從基本概念到構建生產級應用的所有內容。
+此儲存庫包含一套完整的 21 課課程，教授生成式 AI 的基礎知識與應用開發。課程專為初學者設計，涵蓋從基本概念到建置可投入生產的應用程式。
 
 **主要技術：**
-- Python 3.9+ 及以下庫：`openai`、`python-dotenv`、`tiktoken`、`azure-ai-inference`、`pandas`、`numpy`、`matplotlib`
-- TypeScript/JavaScript 及 Node.js 庫：`@azure/openai`、`@azure-rest/ai-inference`、`openai`
-- Azure OpenAI Service、OpenAI API 和 GitHub Models
-- Jupyter Notebooks 用於互動式學習
-- Dev Containers 提供一致的開發環境
+- Python 3.9+，使用函式庫：`openai`、`python-dotenv`、`tiktoken`、`azure-ai-inference`、`pandas`、`numpy`、`matplotlib`
+- TypeScript/JavaScript，搭配 Node.js 與函式庫：`openai`（Azure OpenAI 透過 v1 endpoint + Responses API）、`@azure-rest/ai-inference`（Microsoft Foundry Models）
+- Azure OpenAI 服務、OpenAI API 與 Microsoft Foundry Models（GitHub Models 將於 2026 年 7 月底退役）
+- 互動式 Jupyter 筆記本
+- 開發容器（Dev Containers）確保開發環境一致
 
-**存儲庫結構：**
-- 21個編號的課程目錄（00-21），包含README文件、代碼示例和作業
-- 多種實現方式：Python、TypeScript，有時還包括 .NET 示例
-- 翻譯目錄，支持40多種語言版本
-- 通過 `.env` 文件集中配置（使用 `.env.copy` 作為模板）
+**儲存庫結構：**
+- 21 個編號課程目錄（00-21），包含 README、程式碼範例與作業
+- 多種實作：Python、TypeScript，部分包含 .NET 範例
+- 翻譯資料夾，提供 40 多種語言版本
+- 中央化設定透過 `.env` 檔案管理（使用 `.env.copy` 作為範本）
 
-## 設置命令
+## 設定指令
 
-### 初始存儲庫設置
+### 初始儲存庫設定
 
 ```bash
-# Clone the repository
+# 複製儲存庫
 git clone https://github.com/microsoft/generative-ai-for-beginners.git
 cd generative-ai-for-beginners
 
-# Copy environment template
+# 複製環境範本
 cp .env.copy .env
-# Edit .env with your API keys and endpoints
+# 使用你的 API 金鑰和端點編輯 .env
 ```
 
-### Python 環境設置
+### Python 環境設定
 
 ```bash
-# Create virtual environment
+# 建立虛擬環境
 python3 -m venv venv
 
-# Activate virtual environment
-# On macOS/Linux:
+# 啟動虛擬環境
+# 在 macOS/Linux 上：
 source venv/bin/activate
-# On Windows:
+# 在 Windows 上：
 venv\Scripts\activate
 
-# Install dependencies
+# 安裝依賴項
 pip install -r requirements.txt
 ```
 
-### Node.js/TypeScript 設置
+### Node.js/TypeScript 設定
 
 ```bash
-# Install root-level dependencies (for documentation tooling)
+# 安裝根目錄層級的依賴（用於文件工具）
 npm install
 
-# For individual lesson TypeScript examples, navigate to the specific lesson:
+# 對於單個課程的 TypeScript 範例，請導覽至特定課程：
 cd 06-text-generation-apps/typescript/recipe-app
 npm install
 ```
 
-### Dev Container 設置（推薦）
+### 開發容器設定（推薦）
 
-存儲庫包含 `.devcontainer` 配置文件，用於 GitHub Codespaces 或 VS Code Dev Containers：
+本儲存庫提供 `.devcontainer` 設定，適用於 GitHub Codespaces 或 VS Code Dev Containers：
 
-1. 在 GitHub Codespaces 或 VS Code 中打開存儲庫，並安裝 Dev Containers 擴展
-2. Dev Container 將自動執行以下操作：
-   - 從 `requirements.txt` 安裝 Python 依賴項
-   - 運行 post-create 腳本（`.devcontainer/post-create.sh`）
-   - 設置 Jupyter kernel
+1. 於 GitHub Codespaces 或已安裝 Dev Containers 擴充功能的 VS Code 開啟儲存庫
+2. 開發容器將自動：
+   - 從 `requirements.txt` 安裝 Python 依賴
+   - 執行建立後腳本（`.devcontainer/post-create.sh`）
+   - 設定 Jupyter 核心
 
 ## 開發工作流程
 
-### 環境變量
+### 環境變數
 
-所有需要 API 訪問的課程都使用 `.env` 文件中定義的環境變量：
+需要 API 存取的所有課程均使用 `.env` 定義的環境變數：
 
 - `OPENAI_API_KEY` - 用於 OpenAI API
-- `AZURE_OPENAI_API_KEY` - 用於 Azure OpenAI Service
-- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI 端點 URL
-- `AZURE_OPENAI_DEPLOYMENT` - 聊天完成模型的部署名稱
-- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - 嵌入模型的部署名稱
-- `AZURE_OPENAI_API_VERSION` - API 版本（默認：`2024-02-01`）
+- `AZURE_OPENAI_API_KEY` - Microsoft Foundry 中的 Azure OpenAI 金鑰（Azure OpenAI 服務現為 Microsoft Foundry 一部分：https://ai.azure.com）
+- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI 端點 URL（Foundry 資源端點）
+- `AZURE_OPENAI_DEPLOYMENT` - 聊天完成模型部署名稱
+- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - 嵌入模型部署名稱
+- `AZURE_OPENAI_API_VERSION` - API 版本（預設：`2024-10-21`）
 - `HUGGING_FACE_API_KEY` - 用於 Hugging Face 模型
-- `GITHUB_TOKEN` - 用於 GitHub Models
+- `AZURE_INFERENCE_ENDPOINT` - Microsoft Foundry Models 端點（多供應者模型目錄）
+- `AZURE_INFERENCE_CREDENTIAL` - Microsoft Foundry Models API 金鑰（取代即將退役的 `GITHUB_TOKEN`）
 
-### 運行 Python 示例
+### 執行 Python 範例
 
 ```bash
-# Navigate to lesson directory
+# 前往課程目錄
 cd 06-text-generation-apps/python
 
-# Run a Python script
+# 執行 Python 腳本
 python aoai-app.py
 ```
 
-### 運行 TypeScript 示例
+### 執行 TypeScript 範例
 
 ```bash
-# Navigate to TypeScript app directory
+# 導航至 TypeScript 應用程式目錄
 cd 06-text-generation-apps/typescript/recipe-app
 
-# Build the TypeScript code
+# 編譯 TypeScript 代碼
 npm run build
 
-# Run the application
+# 運行應用程式
 npm start
 ```
 
-### 運行 Jupyter Notebooks
+### 執行 Jupyter 筆記本
 
 ```bash
-# Start Jupyter in the repository root
+# 在倉庫根目錄啟動 Jupyter
 jupyter notebook
 
-# Or use VS Code with Jupyter extension
+# 或使用帶有 Jupyter 擴展的 VS Code
 ```
 
-### 處理不同類型的課程
+### 處理不同課程類型
 
-- **"Learn" 課程**：專注於 README.md 文檔和概念
-- **"Build" 課程**：包含 Python 和 TypeScript 的工作代碼示例
-- 每個課程都有 README.md 文件，包含理論、代碼講解和視頻內容的鏈接
+- **「學習」課程**：聚焦於 README.md 文件與概念說明
+- **「建置」課程**：包含 Python 與 TypeScript 的實作程式碼範例
+- 每堂課均有 README.md，涵蓋理論、程式碼解析及影片連結
 
-## 代碼風格指南
+## 程式碼風格指南
 
 ### Python
 
-- 使用 `python-dotenv` 管理環境變量
-- 導入 `openai` 庫進行 API 交互
-- 使用 `pylint` 進行代碼檢查（某些示例包含 `# pylint: disable=all` 以簡化）
-- 遵循 PEP 8 命名規範
-- 將 API 憑證存儲在 `.env` 文件中，切勿直接寫入代碼
+- 使用 `python-dotenv` 管理環境變數
+- 匯入 `openai` 函式庫以呼叫 API
+- 使用 `pylint` 進行程式碼檢查（部分範例包含 `# pylint: disable=all` 以簡化）
+- 遵循 PEP 8 命名慣例
+- 將 API 憑證存放於 `.env`，切勿硬編碼於程式碼中
 
 ### TypeScript
 
-- 使用 `dotenv` 包管理環境變量
-- 每個應用的 TypeScript 配置存儲在 `tsconfig.json` 中
-- 使用 `@azure/openai` 或 `@azure-rest/ai-inference` 進行 Azure 服務交互
-- 使用 `nodemon` 進行開發，支持自動重載
-- 運行前需先構建：`npm run build` 然後 `npm start`
+- 使用 `dotenv` 套件管理環境變數
+- 各應用在 `tsconfig.json` 中設定 TypeScript 編譯選項
+- 使用 `openai` 套件調用 Azure OpenAI（指向 `/openai/v1/` 端點並呼叫 `client.responses.create`）；Microsoft Foundry Models 使用 `@azure-rest/ai-inference`
+- 開發時使用 `nodemon` 自動重載
+- 執行前先建置：`npm run build`，再執行 `npm start`
 
-### 通用規範
+### 一般慣例
 
-- 保持代碼示例簡單且具有教育性
-- 包含解釋關鍵概念的註釋
-- 每個課程的代碼應該是自包含且可運行的
-- 使用一致的命名：`aoai-` 前綴表示 Azure OpenAI，`oai-` 表示 OpenAI API，`githubmodels-` 表示 GitHub Models
+- 保持程式碼範例簡潔且具教學性
+- 加入註解說明重要概念
+- 每個課程的程式碼應獨立且可執行
+- 命名保持一致：`aoai-` 前綴表示 Azure OpenAI，`oai-` 表示 OpenAI API，`githubmodels-` 表示 Microsoft Foundry Models（保留 GitHub Models 時代的舊前綴）
 
-## 文檔指南
+## 文件指南
 
-### Markdown 風格
+### Markdown 樣式
 
-- 所有 URL 必須使用 `[文本](../../url)` 格式包裹，且無多餘空格
-- 相對鏈接必須以 `./` 或 `../` 開頭
-- 所有指向 Microsoft 域的鏈接必須包含跟蹤 ID：`?WT.mc_id=academic-105485-koreyst`
-- URL 中不得包含國家/地區特定的語言標識（避免 `/en-us/`）
-- 圖片存儲在 `./images` 文件夾中，文件名需具描述性
-- 文件名使用英文字母、數字和連字符
+- 所有 URL 必須採用 `[text](../../url)` 格式，且無多餘空白
+- 相對連結必須以 `./` 或 `../` 起頭
+- 所有 Microsoft 網域連結必須包含追蹤 ID：`?WT.mc_id=academic-105485-koreyst`
+- 避免 URL 中包含特定國家地區語系（勿出現 `/en-us/`）
+- 圖像存放於 `./images` 資料夾並使用描述性名稱
+- 檔名使用英文字符、數字與連字號
 
-### 翻譯支持
+### 翻譯支援
 
-- 存儲庫通過 GitHub Actions 支持40多種語言
-- 翻譯存儲在 `translations/` 目錄中
-- 不接受部分翻譯
+- 儲存庫透過自動化 GitHub Actions 支援超過 40 種語言
+- 翻譯版本存放於 `translations/` 資料夾
+- 不接受部分翻譯提交
 - 不接受機器翻譯
-- 翻譯後的圖片存儲在 `translated_images/` 目錄中
+- 翻譯後的圖像存放於 `translated_images/` 資料夾
 
 ## 測試與驗證
 
 ### 提交前檢查
 
-此存儲庫使用 GitHub Actions 進行驗證。在提交 PR 之前：
+本儲存庫使用 GitHub Actions 進行驗證。提交 PR 前請：
 
-1. **檢查 Markdown 鏈接**：
+1. **檢查 Markdown 連結**：
    ```bash
-   # The validate-markdown.yml workflow checks:
-   # - Broken relative paths
-   # - Missing tracking IDs on paths
-   # - Missing tracking IDs on URLs
-   # - URLs with country locale
-   # - Broken external URLs
+   # validate-markdown.yml 工作流程檢查：
+   # - 斷開的相對路徑
+   # - 路徑缺少追蹤 ID
+   # - URL 缺少追蹤 ID
+   # - 含有國家地區碼的 URL
+   # - 斷開的外部 URL
    ```
 
-2. **手動測試**：
-   - 測試 Python 示例：激活虛擬環境並運行腳本
-   - 測試 TypeScript 示例：`npm install`，`npm run build`，`npm start`
-   - 確保環境變量配置正確
-   - 檢查 API 密鑰是否與代碼示例兼容
+2. <strong>手動測試</strong>：
+   - 測試 Python 範例：啟動 venv 並執行腳本
+   - 測試 TypeScript 範例：執行 `npm install`，`npm run build`，再 `npm start`
+   - 確認環境變數設定正確
+   - 確認 API 金鑰可與範例程式碼正常運作
 
-3. **代碼示例**：
-   - 確保所有代碼運行無錯誤
-   - 在適用時測試 Azure OpenAI 和 OpenAI API
-   - 驗證示例是否支持 GitHub Models
+3. <strong>程式碼範例</strong>：
+   - 確認所有程式碼皆可無誤執行
+   - 必要時，同時測試 Azure OpenAI 與 OpenAI API
+   - 確認支援時，範例可搭配 Microsoft Foundry Models 運作
 
 ### 無自動化測試
 
-這是一個以教程和示例為主的教育存儲庫，沒有單元測試或集成測試。驗證主要包括：
-- 手動測試代碼示例
-- GitHub Actions 用於 Markdown 驗證
-- 社區審核教育內容
+本為教學用儲存庫，專注於教程與範例，無單元測試或整合測試。驗證主要依賴：
+- 程式碼範例的人工測試
+- 使用 GitHub Actions 驗證 Markdown
+- 社群對教學內容的審核
 
 ## Pull Request 指南
 
-### 提交前
+### 提交前準備
 
-1. 在適用時測試 Python 和 TypeScript 的代碼更改
-2. 運行 Markdown 驗證（PR 提交時自動觸發）
-3. 確保所有 Microsoft URL 包含跟蹤 ID
-4. 檢查相對鏈接是否有效
-5. 確保圖片引用正確
+1. 針對 Python 與 TypeScript 皆測試程式碼變更（如適用）
+2. 執行 Markdown 驗證（PR 自動觸發）
+3. 確認所有 Microsoft 網址包含追蹤 ID
+4. 確認相對連結有效
+5. 確認圖像標示正確
 
 ### PR 標題格式
 
-- 使用描述性標題：`[Lesson 06] 修正 Python 示例錯誤` 或 `更新第08課的 README`
-- 在適用時引用問題編號：`Fixes #123`
+- 使用描述性標題：`[Lesson 06] 修正 Python 範例錯字` 或 `更新第 08 課 README`
+- 如適用，標示相關 issue 編號：`修正 #123`
 
-### PR 描述
+### PR 說明
 
-- 解釋更改內容及原因
-- 鏈接相關問題
-- 對於代碼更改，說明測試了哪些示例
-- 對於翻譯 PR，包含所有文件以完成翻譯
+- 說明變更內容及原因
+- 連結相關 issue
+- 針對程式碼變更，指定測試過的範例
+- 翻譯 PR 需包含所有檔案，確保完整翻譯
 
 ### 貢獻要求
 
-- 簽署 Microsoft CLA（首次提交 PR 時自動完成）
-- 在進行更改之前，將存儲庫分叉到您的帳戶
-- 每個 PR 僅包含一個邏輯更改（不要合併不相關的修復）
-- 儘量保持 PR 集中且小型化
+- 簽署 Microsoft CLA（首個 PR 自動完成）
+- 先 Fork 儲存庫至自身帳號再進行修改
+- 一個 PR 僅包含一項邏輯變更（勿合併不相關修正）
+- PR 儘量聚焦且精簡
 
 ## 常見工作流程
 
-### 添加新代碼示例
+### 新增程式碼範例
 
-1. 進入相應的課程目錄
-2. 在 `python/` 或 `typescript/` 子目錄中創建示例
-3. 遵循命名規範：`{provider}-{example-name}.{py|ts|js}`
-4. 使用實際 API 憑證進行測試
-5. 在課程 README 中記錄任何新環境變量
+1. 進入對應課程目錄
+2. 於 `python/` 或 `typescript/` 子目錄中新增範例
+3. 依命名慣例命名：`{provider}-{example-name}.{py|ts|js}`
+4. 以真實 API 憑證測試
+5. 在課程 README 記錄任何新增環境變數
 
-### 更新文檔
+### 文件更新
 
-1. 編輯課程目錄中的 README.md 文件
-2. 遵循 Markdown 指南（跟蹤 ID、相對鏈接）
-3. 翻譯由 GitHub Actions 處理（請勿手動編輯）
-4. 測試所有鏈接是否有效
+1. 編輯對應課程目錄的 README.md
+2. 遵循 Markdown 指南（追蹤 ID、相對連結）
+3. 翻譯由 GitHub Actions 自動處理（勿手動編輯）
+4. 確認所有連結均有效
 
-### 使用 Dev Containers
+### 使用開發容器
 
-1. 存儲庫包含 `.devcontainer/devcontainer.json`
-2. Post-create 腳本自動安裝 Python 依賴項
-3. 預配置 Python 和 Jupyter 擴展
+1. 儲存庫包含 `.devcontainer/devcontainer.json`
+2. 建立後腳本自動安裝 Python 依賴
+3. 預先設定 Python 與 Jupyter 擴充功能
 4. 環境基於 `mcr.microsoft.com/devcontainers/universal:2.11.2`
 
-## 部署與發布
+## 部署與發佈
 
-這是一個學習存儲庫，沒有部署流程。課程內容的使用方式包括：
+此為學習性質的儲存庫，無部署流程。課程資源透過：
 
-1. **GitHub 存儲庫**：直接訪問代碼和文檔
-2. **GitHub Codespaces**：即時開發環境，預配置設置
-3. **Microsoft Learn**：內容可能會同步到官方學習平台
-4. **docsify**：基於 Markdown 的文檔網站（參見 `docsifytopdf.js` 和 `package.json`）
+1. **GitHub 儲存庫**：直接存取程式碼與文件
+2. **GitHub Codespaces**：即時且預先設定好的開發環境
+3. **Microsoft Learn**：課程內容可能會同步發布至官方學習平台
+4. **docsify**：由 Markdown 建立的文件網站（請參閱 `docsifytopdf.js` 及 `package.json`）
 
-### 構建文檔網站
+### 建置文件網站
 
 ```bash
-# Generate PDF from documentation (if needed)
+# 從文件產生 PDF（如有需要）
 npm run convert
 ```
 
-## 故障排除
+## 疑難排解
 
 ### 常見問題
 
-**Python 導入錯誤**：
-- 確保虛擬環境已激活
-- 運行 `pip install -r requirements.txt`
-- 檢查 Python 版本是否為 3.9+
+**Python 匯入錯誤**：
+- 確認虛擬環境已啟動
+- 執行 `pip install -r requirements.txt`
+- 確認 Python 版本為 3.9+
 
-**TypeScript 構建錯誤**：
-- 在特定應用目錄中運行 `npm install`
-- 檢查 Node.js 版本是否兼容
-- 清除 `node_modules` 並重新安裝
+**TypeScript 建置錯誤**：
+- 於對應應用目錄執行 `npm install`
+- 確認 Node.js 版本相容
+- 如有需要，清除 `node_modules` 後重新安裝
 
 **API 認證錯誤**：
-- 確保 `.env` 文件存在且值正確
-- 檢查 API 密鑰是否有效且未過期
-- 確保端點 URL 與您的地區匹配
+- 確認 `.env` 檔案存在且內容正確
+- 確認 API 金鑰有效且未過期
+- 確認端點 URL 適用於你的區域
 
-**缺少環境變量**：
+<strong>缺少環境變數</strong>：
 - 將 `.env.copy` 複製為 `.env`
-- 填寫您正在處理的課程所需的所有值
-- 更新 `.env` 後重啟應用
+- 填寫你所作業課程所需的全部數值
+- 更新 `.env` 後請重啟應用程式
 
-## 其他資源
+## 額外資源
 
-- [課程設置指南](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
+- [課程設定指南](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
 - [貢獻指南](./CONTRIBUTING.md)
-- [行為準則](./CODE_OF_CONDUCT.md)
-- [安全政策](./SECURITY.md)
+- [行為守則](./CODE_OF_CONDUCT.md)
+- [資安政策](./SECURITY.md)
 - [Azure AI Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
-- [高級代碼示例集合](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
+- [進階程式碼範例彙整](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
 
-## 項目特定注意事項
+## 專案特定說明
 
-- 這是一個**教育存儲庫**，專注於學習，而非生產代碼
-- 示例故意簡化，重點在於教授概念
-- 代碼質量與教育清晰度之間取得平衡
-- 每個課程都是自包含的，可以獨立完成
-- 存儲庫支持多個 API 提供商：Azure OpenAI、OpenAI 和 GitHub Models
-- 內容支持多語言，並具有自動翻譯工作流
-- Discord 上有活躍的社區提供問題解答和支持
+- 這是個<strong>教學性質的儲存庫</strong>，專注於學習，不是用於生產
+- 範例故意簡單，重點是教導概念
+- 程式碼品質與教學清晰度取得平衡
+- 每堂課獨立，能獨立完成
+- 儲存庫支援多個 API 提供者：Azure OpenAI、OpenAI、Microsoft Foundry Models，以及離線提供者如 Foundry Local 和 Ollama
+- 內容多語系，搭配自動化翻譯工作流程
+- Discord 上有活躍社群，提供問題解答與支援
 
 ---
 
-**免責聲明**：  
-本文件已使用人工智能翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於關鍵信息，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋概不負責。
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**免責聲明**：
+本文件由 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 翻譯而成。雖然我們致力於確保準確性，但請注意，機器自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於重要資訊，建議進行專業人工翻譯。我們不對因使用本翻譯而產生的任何誤解或誤釋承擔責任。
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,44 +1,47 @@
-# 使用 Mistral 模型進行構建
+# 使用 Mistral 模型構建 
 
-## 簡介
+## 介紹 
 
-本課程將涵蓋：  
-- 探索不同的 Mistral 模型  
-- 了解每個模型的使用案例與場景  
-- 探索展示每個模型獨特功能的程式碼範例。
+本課程將涵蓋： 
+- 探索不同的 Mistral 模型 
+- 了解每個模型的使用案例和情境 
+- 探索展示每個模型獨特功能的程式碼範例。 
 
-## Mistral 模型
+## Mistral 模型 
 
-在本課程中，我們將探索 3 個不同的 Mistral 模型：  
-**Mistral Large**、**Mistral Small** 和 **Mistral Nemo**。
+在本課程中，我們將探索 3 種不同的 Mistral 模型： 
+**Mistral Large**、**Mistral Small** 和 **Mistral Nemo**。 
 
-這些模型均免費提供於 GitHub Model 市場中。本筆記本中的程式碼將使用這些模型來執行。關於如何使用 GitHub Models [進行 AI 模型原型設計](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst) 的更多詳情，請參閱該連結。
+這些模型皆可在 [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) 免費取得。本筆記本中的程式碼將使用這些模型來執行。 
 
-## Mistral Large 2 (2407)  
-Mistral Large 2 目前是 Mistral 的旗艦模型，專為企業級使用設計。
+> **注意：** GitHub Models 將於 2026 年 7 月底退休。這裡有更多使用 [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) 來快速試驗 AI 模型的詳細資訊。 
 
-該模型是原始 Mistral Large 的升級版，提供  
-- 更大的上下文窗口 — 128k 對比 32k  
-- 在數學與程式編碼任務上的更佳表現 — 平均準確度 76.9% 對比 60.4%  
-- 增強的多語言性能 — 支援語言包括：英文、法文、德文、西班牙文、義大利文、葡萄牙文、荷蘭文、俄文、中文、日文、韓文、阿拉伯文與印地語。
 
-有了這些功能，Mistral Large 在以下方面表現優異  
-- *檢索增強生成 (RAG)* — 得益於更大的上下文窗口  
-- *函數呼叫* — 此模型具有原生函數呼叫能力，允許與外部工具及 API 整合。這些呼叫可平行執行，或以序列順序依次進行。  
-- *程式碼生成* — 在 Python、Java、TypeScript 及 C++ 的生成方面表現出色。
+## Mistral Large 2 (2407)
+Mistral Large 2 是目前 Mistral 的旗艦模型，專為企業使用設計。 
 
-### 使用 Mistral Large 2 的 RAG 範例
+該模型是對原始 Mistral Large 的升級，具備  
+- 更大的上下文視窗 - 128k 對比 32k 
+- 在數學和編碼任務上的更佳表現 - 平均準確率 76.9% 對比 60.4% 
+- 增強的多語言性能 - 支援語言包括：英文、法文、德文、西班牙文、義大利文、葡萄牙文、荷蘭文、俄文、中文、日文、韓文、阿拉伯文及印地文。 
 
-在此範例中，我們使用 Mistral Large 2 針對文字文件執行 RAG 模式。問題以韓文書寫，詢問作者大學前的活動。
+有了這些特性，Mistral Large 擅長於 
+- *基於檢索增強生成 (RAG)* - 因為較大的上下文視窗 
+- <em>函數呼叫</em> - 該模型具備原生函數呼叫功能，允許與外部工具和 API 整合。這些呼叫可以同時平行進行或依序逐一執行。 
+- <em>程式碼生成</em> - 該模型在 Python、Java、TypeScript 及 C++ 的生成方面表現優異。 
 
-它使用 Cohere Embeddings 模型來建立文字文件與問題的嵌入向量。範例中使用 faiss Python 套件作為向量庫。
+### 使用 Mistral Large 2 的 RAG 範例 
 
-送至 Mistral 模型的提示中包含問題與與問題相似的檢索段落。模型隨後提供自然語言回應。
+在此範例中，我們使用 Mistral Large 2 在文本文件上執行 RAG 模式。問題以韓文書寫，詢問作者大學前的活動。 
+
+它使用 Cohere Embeddings 模型來對文本文件和問題產生嵌入向量。此範例使用 faiss Python 套件作為向量庫。 
+
+傳送給 Mistral 模型的提示包含問題和與問題相似的已檢索文本片段，模型隨後給出自然語言回答。 
 
 ```python 
 pip install faiss-cpu
 ```
-  
+
 ```python 
 import requests
 import numpy as np
@@ -50,9 +53,10 @@ from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.inference import EmbeddingsClient
 
-endpoint = "https://models.inference.ai.azure.com"
+# 從您的 Microsoft Foundry 專案的「概覽」頁面取得這些
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-large"
-token = os.environ["GITHUB_TOKEN"]
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -128,30 +132,31 @@ chat_response = client.complete(
 
 print(chat_response.choices[0].message.content)
 ```
-  
-## Mistral Small  
-Mistral Small 是 Mistral 家族中屬於頂級／企業類別的另一款模型。如其名所示，此模型為小型語言模型 (SLM)。使用 Mistral Small 的優勢包括：  
-- 相較於 Mistral 大型 LLM（如 Mistral Large 與 NeMo）的成本節省 — 價格降低 80%  
-- 低延遲 — 相較 Mistral 的大型 LLM 有更快的反應速度  
-- 靈活性高 — 可於不同環境中部署，對所需資源限制較少。
 
-Mistral Small 很適合：  
-- 文字相關任務，如摘要、情感分析和翻譯。  
-- 由於成本效益高，適用於頻繁請求的應用場景  
-- 低延遲程式碼相關任務，如程式碼審查和建議。
+## Mistral Small 
+Mistral Small 是 Mistral 模型家族中的另一款屬於高級／企業類別的模型。如其名所示，這是一款小型語言模型 (SLM)。使用 Mistral Small 的優點是： 
+- 與 Mistral 大型語言模型（如 Mistral Large 和 NeMo）相比，節省成本 - 降價 80% 
+- 低延遲 - 回應速度比 Mistral 的大型語言模型快 
+- 靈活 - 可部署在不同環境中，對所需資源的限制較少。 
 
-## 比較 Mistral Small 與 Mistral Large
 
-為展示 Mistral Small 與 Large 延遲的差異，請執行以下儲存格。
+Mistral Small 非常適合： 
+- 以文本為基礎的任務，如摘要、情感分析和翻譯。 
+- 由於成本效益適合頻繁請求的應用 
+- 低延遲的程式碼任務，如程式碼審查和建議 
 
-您會看到約 3-5 秒的反應時間差異。且請注意同一提示在回應長度與風格上也有所不同。
+## 比較 Mistral Small 與 Mistral Large 
+
+為了顯示 Mistral Small 和 Large 之間的延遲差異，請執行以下單元格。 
+
+你會看到回應時間差異約為 3-5 秒。同時留意相同提示下的回應長度和風格。  
 
 ```python 
 
 import os 
-endpoint = "https://models.inference.ai.azure.com"
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-small"
-token = os.environ["GITHUB_TOKEN"]
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -172,7 +177,7 @@ response = client.complete(
 print(response.choices[0].message.content)
 
 ```
-  
+
 ```python 
 
 import os
@@ -180,9 +185,9 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-endpoint = "https://models.inference.ai.azure.com"
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-large"
-token = os.environ["GITHUB_TOKEN"]
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -203,31 +208,32 @@ response = client.complete(
 print(response.choices[0].message.content)
 
 ```
-  
+
 ## Mistral NeMo
 
-與本課程中討論的其他兩個模型相比，Mistral NeMo 是唯一擁有 Apache2 授權的免費模型。
+與本課程中討論的其他兩款模型相比，Mistral NeMo 是唯一擁有 Apache2 授權的免費模型。 
 
-它被視為早期 Mistral 開源大型語言模型 Mistral 7B 的升級版。
+它被視為早期 Mistral 開源大型語言模型 Mistral 7B 的升級版。 
 
-NeMo 模型的其他特點包括：
+NeMo 模型的其他特點包括： 
 
-- *更高效的分詞器：* 此模型使用 Tekken 分詞器，取代較常用的 tiktoken。這提升了對多種語言與程式碼的表現。
+- *更高效的分詞器：* 此模型使用 Tekken 分詞器，取代較常用的 tiktoken。這提升了對更多語言和程式碼的性能。 
 
-- *微調能力：* 基底模型可用於微調。這讓其在需要微調的使用案例中具備更大靈活度。
+- *微調：* 基礎模型可進行微調，為需要微調的使用案例提供更大彈性。 
 
-- *原生函數呼叫* — 類似 Mistral Large，此模型經過函數呼叫訓練。這使其成為首批具備此功能的開源模型之一。
+- <em>原生函數呼叫</em> - 類似於 Mistral Large，該模型也經過函數呼叫訓練。這使其成為最早支援此功能的開源模型之一。 
 
-### 分詞器比較
 
-在本範例中，我們將觀察 Mistral NeMo 相較於 Mistral Large 的分詞處理。
+### 比較分詞器 
 
-兩個範例均使用相同的提示，但您會發現 NeMo 返回的 token 數量少於 Mistral Large。
+在此範例中，我們將比較 Mistral NeMo 與 Mistral Large 處理分詞的差異。 
+
+兩個範例使用相同提示，但你會看到 NeMo 回傳的 token 數較 Mistral Large 少。 
 
 ```bash
 pip install mistral-common
 ```
-  
+
 ```python 
 # 匯入所需的套件：
 from mistral_common.protocol.instruct.messages import (
@@ -280,12 +286,12 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# 計算標記數量
+# 計算分詞數量
 print(len(tokens))
 ```
-  
+
 ```python
-# 匯入所需的套件：
+# 匯入所需套件：
 from mistral_common.protocol.instruct.messages import (
     UserMessage,
 )
@@ -302,7 +308,7 @@ model_name = "mistral-large-latest"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# 對訊息列表進行分詞
+# 對訊息清單進行分詞
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -336,17 +342,17 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# 計算標記數量
+# 計算分詞數量
 print(len(tokens))
 ```
-  
-## 學習不止於此，繼續前進之旅
 
-完成本課程後，請參考我們的[生成式 AI 學習集合](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)以持續提升您的生成式 AI 知識！
+## 學習不止於此，繼續你的旅程
+
+完成本課程後，請參考我們的 [生成式 AI 學習合集](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，持續提升你的生成式 AI 知識！ 
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**免責聲明**：  
-本文件使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於準確性，但請注意自動翻譯可能包含錯誤或不準確之處。原始文件的原文版本應視為權威來源。對於重要資訊，建議使用專業人工翻譯。我們對因使用本翻譯所引起的任何誤解或誤釋不承擔任何責任。
+**免責聲明**：
+此文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們努力追求準確性，但請注意自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應視為權威來源。對於關鍵資訊，建議採用專業人工翻譯。我們不對因使用此翻譯所產生的任何誤解或誤譯承擔責任。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
