@@ -1,134 +1,139 @@
-# Vägkarta för Förbättrade Funktioner och Förbättringar
+# Förbättrade Funktioner och Förbättringsplan
 
-Detta dokument beskriver rekommenderade förbättringar och utvecklingar för kursplanen Generativ AI för Nybörjare, baserat på en omfattande kodgranskning och analys av branschens bästa praxis.
+Detta dokument beskriver rekommenderade förbättringar och uppgraderingar för Generative AI for Beginners-kursplanen, baserat på en omfattande kodgranskning och analys av branschens bästa praxis.
 
 ## Sammanfattning
 
-Kodbasen har analyserats för säkerhet, kodkvalitet och utbildningseffektivitet. Detta dokument ger rekommendationer för omedelbara åtgärder, kortsiktiga förbättringar och framtida utvecklingar.
+Kodbasen har analyserats för säkerhet, kodkvalitet och pedagogisk effektivitet. Detta dokument ger rekommendationer för omedelbara lösningar, kortsiktiga förbättringar och framtida uppgraderingar.
 
 ---
 
 ## 1. Säkerhetsförbättringar (Prioritet: Kritisk)
 
-### 1.1 Omedelbara åtgärder (Slutförda)
+### 1.1 Omedelbara Fixar (Slutförda)
 
 | Problem | Påverkade filer | Status |
-|---------|-----------------|--------|
-| Inbäddad SECRET_KEY | `05-advanced-prompts/python/aoai-solution.py` | Åtgärdad |
-| Saknad validering av miljövariabler | Flera JS/TS filer | Åtgärdad |
-| Osäkra funktionsanrop | `11-integrating-with-function-calling/js-githubmodels/app.js` | Åtgärdad |
-| Läckage av filhanterare | `08-building-search-applications/scripts/` | Åtgärdad |
-| Saknade timeout för förfrågningar | `09-building-image-applications/python/` | Åtgärdad |
+|-------|----------------|--------|
+| Hårdkodad SECRET_KEY | `05-advanced-prompts/python/aoai-solution.py` | Fixad |
+| Saknad validering av miljövariabler | Flera JS/TS-filer | Fixad |
+| Osäkra funktionsanrop | `11-integrating-with-function-calling/js-githubmodels/app.js` | Fixad |
+| Filhandtagsläckor | `08-building-search-applications/scripts/` | Fixad |
+| Saknade timeout för förfrågningar | `09-building-image-applications/python/` | Fixad |
 
-### 1.2 Rekommenderade ytterligare säkerhetsfunktioner
+### 1.2 Rekommenderade Ytterligare Säkerhetsfunktioner
 
-1. **Exempel på Rate Limiting**
-   - Lägg till exempel som visar hur man implementerar rate limiting för API-anrop
-   - Visa mönster för exponentiell backoff
+1. **Exempel på Avgränsning av API-anrop**
+   - Lägg till exempel på hur man implementerar rate limiting för API-anrop
+   - Visa exponentiella backoff-mönster
 
 2. **Rotation av API-nycklar**
    - Lägg till dokumentation om bästa praxis för rotation av API-nycklar
-   - Inkludera exempel med Azure Key Vault eller liknande tjänster
+   - Inkludera exempel på användning av Azure Key Vault eller liknande tjänster
 
-3. **Integrering av innehållssäkerhet**
+3. **Integrering av Content Safety**
    - Lägg till exempel med Azure Content Safety API
-   - Visa mönster för in- och utgångsmoderering
+   - Visa mönster för in-/utdata-moderering
 
 ---
 
-## 2. Förbättringar av kodkvalitet
+## 2. Kodkvalitetsförbättringar
 
-### 2.1 Tillagda konfigurationsfiler
+### 2.1 Konfigurationsfiler tillagda
 
 | Fil | Syfte |
-|------|--------|
-| `.eslintrc.json` | Lintningsregler för JavaScript/TypeScript |
+|------|---------|
+| `.eslintrc.json` | JavaScript/TypeScript lintningsregler |
 | `.prettierrc` | Kodformateringsstandarder |
-| `pyproject.toml` | Pythonverktygskonfiguration (Black, Ruff, mypy) |
+| `pyproject.toml` | Python verktygskonfiguration (Black, Ruff, mypy) |
 
-### 2.2 Skapade gemensamma verktyg
+### 2.2 Delade Verktyg Skapade
 
-Ny modul `shared/python/` med:
+Ny `shared/python/` modul med:
 - `env_utils.py` - Hantering av miljövariabler
-- `input_validation.py` - Validering och sanering av indata
-- `api_utils.py` - Säker omslag för API-förfrågningar
+- `input_validation.py` - Inmatningsvalidering och sanering
+- `api_utils.py` - Säkra API-förfrågningar
 
-### 2.3 Rekommenderade kodförbättringar
+### 2.3 Rekommenderade Kodingrepp
 
-1. **Täcka typanteckningar**
-   - Lägg till typanteckningar i alla Python-filer
+1. **Typanvisningar Täckning**
+   - Lägg till typanvisningar i alla Python-filer
    - Aktivera strikt TypeScript-läge i alla TS-projekt
 
 2. **Dokumentationsstandarder**
-   - Lägg till docstrings i alla Python-funktioner
-   - Lägg till JSDoc-kommentarer i alla JavaScript/TypeScript-funktioner
+   - Lägg till docstrings till alla Python-funktioner
+   - Lägg till JSDoc-kommentarer till alla JavaScript/TypeScript-funktioner
 
 3. **Testningsramverk**
-   - Lägg till pytest-konfiguration och exempeltester
+   - Lägg till pytest-konfiguration och exempeltester _(gjort: pytest-konfiguration i `pyproject.toml`; exempeltester för delade verktyg i [`tests/`](../../../tests) körs i CI)_
    - Lägg till Jest-konfiguration för JavaScript/TypeScript
 
 ---
 
-## 3. Pedagogiska förbättringar
+## 3. Pedagogiska Förbättringar
 
-### 3.1 Nya ämnen för lektioner
+### 3.1 Nya Lektionsteman
 
-1. **Säkerhet i AI-applikationer** (Föreslagen lektion 22)
-   - Promptinjektionsattacker och skydd
+1. **Säkerhet i AI-applikationer** (Föreslagen Lektion 22)
+   - Prompt injection-attacker och försvar
    - Hantering av API-nycklar
    - Innehållsmoderering
    - Rate limiting och missbruksprevention
 
-2. **Produktionssättning** (Föreslagen lektion 23)
+2. **Produktiondistribution** (Föreslagen Lektion 23)
    - Containerisering med Docker
    - CI/CD-pipelines
    - Övervakning och loggning
    - Kostnadshantering
 
-3. **Avancerade RAG-tekniker** (Föreslagen lektion 24)
-   - Hybrid-sökning (nyckelord + semantik)
+3. **Avancerade RAG-tekniker** (Föreslagen Lektion 24)
+   - Hybrid sökning (nyckelord + semantisk)
    - Omrankningsstrategier
    - Multimodal RAG
-   - Utvärderingsmått
+   - Utvärderingsmetoder
 
-### 3.2 Befintliga lektionsförbättringar
+### 3.2 Förbättringar av Befintliga Lektioner
 
 | Lektion | Rekommenderad förbättring |
-|---------|-------------------------|
-| 06 - Textgenerering | Lägg till exempel på streamingrespons |
-| 07 - Chatt-applikationer | Lägg till mönster för konversationsminne |
+|--------|--------------------------|
+| 06 - Textgenerering | Lägg till exempel på strömmade svar |
+| 07 - Chattapplikationer | Lägg till mönster för konversationsminne |
 | 08 - Sökapplikationer | Lägg till jämförelse av vektordatabaser |
 | 09 - Bildgenerering | Lägg till exempel på bildredigering/variation |
 | 11 - Funktionsanrop | Lägg till parallella funktionsanrop |
-| 15 - RAG | Lägg till jämförelse av chunkningsstrategier |
-| 17 - AI-agenter | Lägg till samordning av flera agenter |
+| 15 - RAG | Lägg till jämförelse av chunking-strategier |
+| 17 - AI-agenter | Lägg till multi-agent orkestrering |
 
 ---
 
 ## 4. API-modernisering
 
-### 4.1 Föråldrade API-mönster att uppdatera
+### 4.1 Utfasade API-mönster (Migration slutförd)
 
-| Gammalt mönster | Nytt mönster | Påverkade filer |
-|-----------------|--------------|-----------------|
-| `openai.api_type = "azure"` | `AzureOpenAI()` klient | Flera skript i `08-building-search-applications/` |
-| `openai.ChatCompletion.create()` | `client.chat.completions.create()` | Flera notebooks |
-| `df.append()` (pandas) | `pd.concat()` | RAG-notebook |
+Alla Python- och TypeScript-exempel för **chatt** har migrerats från Chat Completions API till **Responses API** (`client.responses.create(...)` → `response.output_text`).
+
+| Gamla Mönstret | Nya Mönstret | Status |
+|-------------|-------------|--------|
+| `openai.api_type = "azure"` / `AzureOpenAI()` (chatt) | `OpenAI(base_url="<endpoint>/openai/v1/")` (Responses API) | Slutförd |
+| `openai.ChatCompletion.create()` / `client.chat.completions.create()` | `client.responses.create(input=...)` → `response.output_text` | Slutförd |
+| `@azure/openai` `OpenAIClient.getChatCompletions()` (TypeScript) | `openai`-paket `client.responses.create()` → `response.output_text` | Slutförd |
+| `df.append()` (pandas) | `pd.concat()` | Slutförd |
+
+> **Notera:** Microsoft Foundry Models-exempel som använder `azure-ai-inference` / `@azure-rest/ai-inference` SDK (`client.complete()`) kvarstår på Model Inference API, som inte stödjer Responses API. `AzureOpenAI()` behålls medvetet där det fortfarande är giltigt (inbäddningar och bildgenerering).
 
 ### 4.2 Nya API-funktioner att demonstrera
 
 1. **Strukturerade svar** (OpenAI)
    - JSON-läge
-   - Funktionsanrop med strikta scheman
+   - Funktionsanrop med strikta schemas
 
 2. **Visionfunktioner**
-   - Bildanalys med GPT-4V
-   - Multimodala prompts
+   - Bildanalys med GPT-4o (vision)
+   - Multimodala promptar
 
-3. **Assistants API**
+3. **Responses API Inbyggda Verktyg** (ersätter det äldre Assistants API)
    - Kodtolk
    - Filsökning
-   - Anpassade verktyg
+   - Webb-sökning och anpassade verktyg
 
 ---
 
@@ -136,7 +141,7 @@ Ny modul `shared/python/` med:
 
 ### 5.1 CI/CD-förbättringar
 
-Nuvarande arbetsflöden hanterar markdownvalidering. Rekommenderade tillägg:
+Implementerat i [`.github/workflows/code-quality.yml`](../../../.github/workflows/code-quality.yml): Python linting/formatering (Ruff + Black) är **påbjuden** för den underhållna `shared/`-modulen och körs **rådgivande** för resten av kursmaterialet, plus en rådgivande ESLint-pass för JavaScript/TypeScript. Baslinjen var:
 
 ```yaml
 # .github/workflows/code-quality.yml
@@ -169,6 +174,8 @@ jobs:
 
 ### 5.2 Säkerhetsskanning
 
+Implementerat i [`.github/workflows/security.yml`](../../../.github/workflows/security.yml): CodeQL-analys för Python och JavaScript/TypeScript (vid push, pull request och veckoschema) plus beroenderevision på pull requests. Baslinjen var:
+
 ```yaml
 # .github/workflows/security.yml
 name: Security Scan
@@ -194,11 +201,11 @@ jobs:
 
 ---
 
-## 6. Förbättringar av utvecklarupplevelsen
+## 6. Utvecklarupplevelse-förbättringar
 
-### 6.1 Förbättringar av DevContainer
+### 6.1 DevContainer-förbättringar
 
-Uppdatera `.devcontainer/devcontainer.json`:
+Implementerat i [`.devcontainer/devcontainer.json`](../../../.devcontainer/devcontainer.json) och [`.devcontainer/post-create.sh`](../../../.devcontainer/post-create.sh): containern levereras nu med Pylance, Black formatter, Ruff, ESLint, Prettier och Copilot-tillägg, aktiverar format-on-save kopplat till repo:ts Black/Prettier-konfiguration och installerar utvecklarverktyg (`ruff`, `black`, `mypy`, `pytest`) så att [code-quality workflow](../../../.github/workflows/code-quality.yml) kan reproducera lokalt. Basbilden `mcr.microsoft.com/devcontainers/universal` innehåller redan Python och Node, så inga extra funktioner krävs. Baslinjen var:
 
 ```json
 {
@@ -232,7 +239,7 @@ Uppdatera `.devcontainer/devcontainer.json`:
 }
 ```
 
-### 6.2 Interaktiv lekyta
+### 6.2 Interaktiv Lekplats
 
 Överväg att lägga till:
 - Jupyter-notebooks med förifyllda API-nycklar (via miljövariabler)
@@ -241,20 +248,20 @@ Uppdatera `.devcontainer/devcontainer.json`:
 
 ---
 
-## 7. Stöd för flera språk
+## 7. Flerspråkigt Stöd
 
-### 7.1 Nuvarande språktäckning
+### 7.1 Nuvarande Språktäckning
 
-| Teknik | Behandlade lektioner | Status |
-|---------|--------------------|--------|
+| Teknologi | Täckt i Lektioner | Status |
+|------------|-----------------|--------|
 | Python | Alla | Komplett |
-| TypeScript | 06-09, 11 | Partiell |
-| JavaScript | 06-08, 11 | Partiell |
-| .NET/C# | Vissa | Partiell |
+| TypeScript | 06-09, 11 | Delvis |
+| JavaScript | 06-08, 11 | Delvis |
+| .NET/C# | Vissa | Delvis |
 
-### 7.2 Rekommenderade tillägg
+### 7.2 Rekommenderade Tillägg
 
-1. **Go** - Växande inom AI/ML-verktyg
+1. **Go** - Växer inom AI/ML-verktyg
 2. **Rust** - Prestandakritiska applikationer
 3. **Java/Kotlin** - Företagsapplikationer
 
@@ -262,90 +269,87 @@ Uppdatera `.devcontainer/devcontainer.json`:
 
 ## 8. Prestandaoptimeringar
 
-### 8.1 Optimeringar på kodnivå
+### 8.1 Optimeringar på Kodnivå
 
 1. **Async/Await-mönster**
    - Lägg till asynkrona exempel för batchbearbetning
-   - Visa samtidiga API-anrop
+   - Visa parallella API-anrop
 
 2. **Cachingstrategier**
-   - Lägg till exempel på caching av inbäddningar
-   - Visa mönster för cache av svar
+   - Lägg till exempel på cachning av embeddingar
+   - Visa mönster för responscachning
 
 3. **Tokenoptimering**
-   - Lägg till exempel på användning av tiktoken
+   - Lägg till exempel på tiktoken-användning
    - Visa tekniker för promptkomprimering
 
-### 8.2 Exempel på kostnadsoptimering
+### 8.2 Exempel på Kostnadsoptimering
 
 Lägg till exempel som visar:
 - Modellval baserat på uppgiftskomplexitet
-- Prompt-engineering för token-effektivitet
-- Batchbearbetning för volymhantering
+- Promptteknik för token-effektivitet
+- Batchbearbetning för massoperationer
 
 ---
 
-## 9. Tillgänglighet och Internationalisering
+## 9. Tillgänglighet och Internationell Användning
 
-### 9.1 Nuvarande översättningsstatus
+### 9.1 Nuvarande Översättningsstatus
 
-| Språk | Status |
+Alla översättningar är **kompletta** och genereras automatiskt av [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst), som producerar och håller 50+ språkversioner av kursplanen i synk med den engelska källan. Översatt innehåll finns under `translations/` och lokaliserade bilder under `translated_images/`; fullständig lista över tillgängliga språk publiceras i toppen av repo:ts README.
+
+| Aspekt | Status |
 |--------|--------|
-| Engelska | Komplett |
-| Kinesiska (förenklad) | Komplett |
-| Japanska | Komplett |
-| Koreanska | Komplett |
-| Spanska | Partiell |
-| Portugisiska | Partiell |
-| Turkiska | Partiell |
-| Polska | Partiell |
+| Översättningstäckning | Komplett — 50+ språk, alla lektioner |
+| Översättningsmetod | Automatisk via [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst) |
+| Hålls synkad med engelsk källa | Ja — regenereras automatiskt |
 
-### 9.2 Förbättringar av tillgänglighet
+### 9.2 Tillgänglighetsförbättringar
 
-1. Lägg till alt-text för alla bilder
-2. Säkerställ korrekt syntaxmarkering i kodexempel
+1. Lägg till alt-text till alla bilder
+2. Säkerställ att kodexempel har korrekt syntaxmarkering
 3. Lägg till videotranskriptioner för allt videoinnehåll
-4. Säkerställ att färgkontraster uppfyller WCAG-riktlinjer
+4. Säkerställ att färgkontrast möter WCAG-riktlinjer
 
 ---
 
-## 10. Prioritering av implementering
+## 10. Implementeringsprioritering
 
-### Fas 1: Omedelbart (Vecka 1-2)
-- [x] Åtgärda kritiska säkerhetsproblem
+### Fas 1: Omedelbar (Vecka 1-2)
+- [x] Fixa kritiska säkerhetsproblem
 - [x] Lägg till konfiguration för kodkvalitet
-- [x] Skapa gemensamma verktyg
+- [x] Skapa delade verktyg
 - [x] Dokumentera säkerhetsriktlinjer
 
 ### Fas 2: Kort sikt (Vecka 3-4)
-- [ ] Uppdatera föråldrade API-mönster
-- [ ] Lägg till typanteckningar i alla Python-filer
-- [ ] Lägg till CI/CD-arbetsflöden för kodkvalitet
-- [ ] Skapa arbetsflöde för säkerhetsskanning
+- [x] Uppdatera föråldrade API-mönster (Chat Completions → Responses API, Python + TypeScript)
+- [ ] Lägg till typanvisningar till alla Python-filer (gjort för den underhållna `shared/`-modulen; lektionsprover hålls enkla)
+- [x] Lägg till CI/CD-workflows för kodkvalitet
+- [x] Skapa säkerhetsskannings-workflow
 
 ### Fas 3: Medellång sikt (Månad 2-3)
 - [ ] Lägg till ny säkerhetslektion
-- [ ] Lägg till lektionsmodul för produktionssättning
-- [ ] Förbättra DevContainer-installation
+- [ ] Lägg till lektion om produktiondistribution
+- [x] Förbättra DevContainer-setup
 - [ ] Lägg till interaktiva demonstrationer
 
 ### Fas 4: Lång sikt (Månad 4+)
 - [ ] Lägg till avancerad RAG-lektion
 - [ ] Utöka språktäckningen
-- [ ] Lägg till komplett testsuite
+- [ ] Lägg till omfattande testsuite
 - [ ] Skapa certifieringsprogram
 
 ---
 
 ## Slutsats
 
-Denna vägkarta ger en strukturerad metod för att förbättra kursplanen Generativ AI för Nybörjare. Genom att adressera säkerhetsaspekter, modernisera API:er och lägga till pedagogiskt innehåll kommer kursen bättre förbereda studenter för verklig utveckling av AI-applikationer.
+Denna plan ger en strukturerad metod för att förbättra Generative AI for Beginners-kursplanen. Genom att adressera säkerhetsfrågor, modernisera API:er och lägga till pedagogiskt innehåll kommer kursen bättre förbereda studenter för verklig AI-applikationsutveckling.
 
-För frågor eller bidrag, vänligen öppna en issue i GitHub-repositoriet.
+För frågor eller bidrag, vänligen öppna ett ärende i GitHub-repot.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Ansvarsfriskrivning**:
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, var vänlig observera att automatiska översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess modersmål bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för några missförstånd eller feltolkningar som uppstår på grund av användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, var vänlig notera att automatiska översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess modersmål bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för några missförstånd eller feltolkningar som uppstår till följd av användningen av denna översättning.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
