@@ -9,31 +9,34 @@ Pelajaran ini akan merangkumi:
 
 ## Model Mistral
 
-Dalam pelajaran ini, kita akan meneroka 3 model Mistral yang berbeza:
+Dalam pelajaran ini, kami akan meneroka 3 model Mistral yang berbeza:
 **Mistral Large**, **Mistral Small** dan **Mistral Nemo**.
 
-Setiap model ini tersedia secara percuma di pasar Model GitHub. Kod dalam buku nota ini akan menggunakan model-model ini untuk menjalankan kod. Berikut adalah maklumat lanjut tentang menggunakan Model GitHub untuk [membuat prototaip dengan model AI](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Setiap model ini tersedia secara percuma di [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst). Kod dalam buku nota ini akan menggunakan model-model ini untuk menjalankan kod.
+
+> **Nota:** GitHub Models akan dihentikan pada akhir Julai 2026. Berikut adalah maklumat lanjut mengenai penggunaan [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) untuk prototaip dengan model AI.
+
 
 ## Mistral Large 2 (2407)
-Mistral Large 2 kini adalah model utama dari Mistral dan direka untuk kegunaan perusahaan.
+Mistral Large 2 kini merupakan model utama dari Mistral dan direka untuk kegunaan perusahaan.
 
-Model ini merupakan peningkatan kepada Mistral Large asal dengan menawarkan
-- Tetingkap Konteks Lebih Besar - 128k berbanding 32k
-- Prestasi lebih baik untuk Tugasan Matematik dan Pengkodan - ketepatan purata 76.9% berbanding 60.4%
-- Peningkatan prestasi berbilang bahasa - bahasa termasuk: Inggeris, Perancis, Jerman, Sepanyol, Itali, Portugis, Belanda, Rusia, Cina, Jepun, Korea, Arab, dan Hindi.
+Model ini adalah peningkatan kepada Mistral Large asal dengan menawarkan
+-  Tetingkap Konteks Lebih Besar - 128k berbanding 32k
+-  Prestasi lebih baik dalam Tugasan Matematik dan Pengaturcaraan - ketepatan purata 76.9% berbanding 60.4%
+-  Peningkatan prestasi pelbagai bahasa - bahasa termasuk: Inggeris, Perancis, Jerman, Sepanyol, Itali, Portugis, Belanda, Rusia, Cina, Jepun, Korea, Arab dan Hindi.
 
 Dengan ciri-ciri ini, Mistral Large cemerlang dalam
-- *Generasi Augmentasi Pemulihan (RAG)* - disebabkan oleh tetingkap konteks yang lebih besar
-- *Pemanggilan Fungsi* - model ini mempunyai pemanggilan fungsi asli yang membolehkan integrasi dengan alat dan API luaran. Panggilan ini boleh dibuat secara selari atau satu demi satu secara berurutan.
+- *Penghasilan Diperkaya Pengambilan (RAG)* - disebabkan oleh tetingkap konteks yang lebih besar
+- *Panggilan Fungsi* - model ini mempunyai panggilan fungsi asli yang membolehkan integrasi dengan alat dan API luaran. Panggilan ini boleh dibuat secara selari atau satu demi satu secara berurutan.
 - *Penjanaan Kod* - model ini cemerlang dalam penjanaan Python, Java, TypeScript dan C++.
 
 ### Contoh RAG menggunakan Mistral Large 2
 
 Dalam contoh ini, kami menggunakan Mistral Large 2 untuk menjalankan corak RAG ke atas dokumen teks. Soalan ditulis dalam bahasa Korea dan bertanya tentang aktiviti pengarang sebelum kolej.
 
-Ia menggunakan Model Embeddings Cohere untuk mencipta embeddings bagi dokumen teks serta soalan. Untuk contoh ini, ia menggunakan pakej Python faiss sebagai penyimpanan vektor.
+Ia menggunakan Model Penjanaan Cohere untuk mencipta penjanaan bagi dokumen teks serta soalan tersebut. Untuk sampel ini, ia menggunakan pakej Python faiss sebagai stor vektor.
 
-Arahan yang dihantar kepada model Mistral termasuk kedua-dua soalan dan bahagian yang diperoleh yang serupa dengan soalan tersebut. Model kemudian memberikan jawapan dalam bahasa semula jadi.
+Arahan yang dihantar ke model Mistral termasuk soalan dan potongan yang diperoleh yang serupa dengan soalan tersebut. Model kemudian menyediakan respon dalam bahasa semula jadi.
 
 ```python 
 pip install faiss-cpu
@@ -50,9 +53,10 @@ from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.inference import EmbeddingsClient
 
-endpoint = "https://models.inference.ai.azure.com"
+# Dapatkan ini dari halaman "Gambaran Keseluruhan" projek Microsoft Foundry anda
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-large"
-token = os.environ["GITHUB_TOKEN"]
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -130,28 +134,29 @@ print(chat_response.choices[0].message.content)
 ```
 
 ## Mistral Small
-Mistral Small adalah model lain dalam keluarga Mistral di bawah kategori premier/perusahaan. Seperti namanya, model ini adalah Model Bahasa Kecil (SLM). Kelebihan menggunakan Mistral Small adalah ia:
-- Penjimatan Kos berbanding LLM Mistral seperti Mistral Large dan NeMo - penurunan harga sebanyak 80%
+Mistral Small adalah satu lagi model dalam keluarga Model Mistral di bawah kategori utama/perusahaan. Seperti namanya, model ini adalah Model Bahasa Kecil (SLM). Kelebihan menggunakan Mistral Small adalah:
+- Penjimatan Kos berbanding LLM Mistral seperti Mistral Large dan NeMo - kejatuhan harga 80%
 - Latensi rendah - respons lebih pantas berbanding LLM Mistral
-- Fleksibel - boleh digunakan merentas persekitaran berbeza dengan kurang sekatan ke atas sumber yang diperlukan.
+- Fleksibel - boleh dideploy di pelbagai persekitaran dengan sekatan sumber yang kurang diperlukan.
 
-Mistral Small sesuai untuk:
-- Tugasan berasaskan teks seperti penjumlahan, analisis sentimen dan terjemahan.
-- Aplikasi dimana permintaan kerap dibuat kerana keberkesanan kosnya
-- Tugasan kod latensi rendah seperti ulasan dan cadangan kod
 
-## Membandingkan Mistral Small dan Mistral Large
+Mistral Small sangat sesuai untuk:
+- Tugasan berasaskan teks seperti ringkasan, analisis sentimen dan terjemahan.
+- Aplikasi yang kerap membuat permintaan kerana kosnya yang berkesan
+- Tugasan kod latensi rendah seperti semakan dan cadangan kod
+
+## Perbandingan Mistral Small dan Mistral Large
 
 Untuk menunjukkan perbezaan latensi antara Mistral Small dan Large, jalankan sel di bawah.
 
-Anda akan melihat perbezaan masa respons antara 3-5 saat. Juga perhatikan panjang dan gaya respons pada arahan yang sama.
+Anda akan melihat perbezaan masa respons antara 3-5 saat. Juga perhatikan panjang dan gaya respons untuk arahan yang sama.
 
 ```python 
 
 import os 
-endpoint = "https://models.inference.ai.azure.com"
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-small"
-token = os.environ["GITHUB_TOKEN"]
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -180,9 +185,9 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-endpoint = "https://models.inference.ai.azure.com"
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-large"
-token = os.environ["GITHUB_TOKEN"]
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -212,17 +217,18 @@ Ia dilihat sebagai peningkatan kepada LLM sumber terbuka terdahulu dari Mistral,
 
 Beberapa ciri lain model NeMo adalah:
 
-- *Tokenisasi lebih cekap:* Model ini menggunakan pengekod Tekken berbanding tiktoken yang lebih biasa digunakan. Ini membolehkan prestasi yang lebih baik merentas lebih banyak bahasa dan kod.
+- *Tokenisasi lebih cekap:* Model ini menggunakan penanda Tekken berbanding tiktoken yang lebih biasa digunakan. Ini membolehkan prestasi lebih baik untuk lebih banyak bahasa dan kod.
 
-- *Penghalusan:* Model asas tersedia untuk penghalusan. Ini membolehkan lebih fleksibiliti untuk kes penggunaan di mana penghalusan mungkin diperlukan.
+- *Pelarasan Halus (Finetuning):* Model asas tersedia untuk pelarasan halus. Ini memberikan lebih fleksibiliti untuk kes penggunaan yang memerlukan pelarasan halus.
 
-- *Pemanggilan Fungsi Asli* - Seperti Mistral Large, model ini telah dilatih untuk pemanggilan fungsi. Ini menjadikannya unik sebagai salah satu model sumber terbuka pertama yang melakukan perkara ini.
+- *Panggilan Fungsi Asli* - Seperti Mistral Large, model ini telah dilatih untuk panggilan fungsi. Ini menjadikannya unik sebagai salah satu model sumber terbuka pertama yang berbuat demikian.
 
-### Membandingkan Pengekod Token
 
-Dalam contoh ini, kita akan melihat bagaimana Mistral NeMo mengendalikan tokenisasi berbanding dengan Mistral Large.
+### Perbandingan Penanda Token
 
-Kedua-dua contoh mengambil arahan yang sama tetapi anda akan melihat NeMo mengembalikan token yang lebih sedikit daripada Mistral Large.
+Dalam sampel ini, kita akan lihat bagaimana Mistral NeMo mengendalikan tokenisasi berbanding Mistral Large.
+
+Kedua-dua sampel mengambil arahan yang sama tetapi anda akan melihat bahawa NeMo mengembalikan token yang lebih sedikit berbanding Mistral Large.
 
 ```bash
 pip install mistral-common
@@ -240,13 +246,13 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Muatkan pentoken Mistral
+# Muatkan penukar token Mistral
 
 model_name = "open-mistral-nemo"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Tokenkan senarai mesej
+# Tukar senarai mesej kepada token
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -296,13 +302,13 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Muatkan pengekod Mistral
+# Muatkan penukar kata Mistral
 
 model_name = "mistral-large-latest"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Tokenkan senarai mesej
+# Tukar senarai mesej kepada token
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -336,17 +342,17 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# Hitung bilangan token
+# Kira bilangan token
 print(len(tokens))
 ```
 
 ## Pembelajaran tidak berhenti di sini, teruskan perjalanan
 
-Selepas melengkapkan pelajaran ini, lihat koleksi [Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk terus meningkatkan pengetahuan AI Generatif anda!
+Selepas menyelesaikan pelajaran ini, lihat koleksi [Pembelajaran AI Generatif](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk terus meningkatkan pengetahuan AI Generatif anda!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Penafian**:
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya hendaklah dianggap sebagai sumber yang sahih. Untuk maklumat penting, terjemahan profesional oleh manusia adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau tafsiran yang salah yang timbul daripada penggunaan terjemahan ini.
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang sahih. Untuk maklumat penting, terjemahan oleh manusia profesional adalah disyorkan. Kami tidak bertanggungjawab terhadap sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

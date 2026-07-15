@@ -1,10 +1,10 @@
-# Peta Jalan Ciri dan Penambahbaikan Dipertingkatkan
+# Ciri Canggih dan Peta Jalan Penambahbaikan
 
-Dokumen ini menggariskan penambahbaikan dan peningkatan yang disyorkan untuk kurikulum Generative AI untuk Pemula, berdasarkan ulasan kod yang menyeluruh dan analisis amalan terbaik industri.
+Dokumen ini menggariskan penambahbaikan dan peningkatan yang disyorkan untuk kurikulum Generative AI for Beginners, berdasarkan ulasan kod menyeluruh dan analisis amalan terbaik industri.
 
 ## Ringkasan Eksekutif
 
-Pangkalan kod telah dianalisis dari segi keselamatan, kualiti kod, dan keberkesanan pendidikan. Dokumen ini menyediakan cadangan untuk pembaikan segera, penambahbaikan jangka dekat, dan penambahbaikan masa depan.
+Pangkalan kod telah dianalisis dari segi keselamatan, kualiti kod, dan keberkesanan pendidikan. Dokumen ini memberikan cadangan untuk pembaikan segera, penambahbaikan jangka pendek, dan peningkatan masa depan.
 
 ---
 
@@ -14,25 +14,25 @@ Pangkalan kod telah dianalisis dari segi keselamatan, kualiti kod, dan keberkesa
 
 | Isu | Fail Terjejas | Status |
 |-------|----------------|--------|
-| SECRET_KEY yang dikod keras | `05-advanced-prompts/python/aoai-solution.py` | Diperbaiki |
-| Kekurangan pengesahan env | Pelbagai fail JS/TS | Diperbaiki |
+| SECRET_KEY yang dikodkan keras | `05-advanced-prompts/python/aoai-solution.py` | Diperbaiki |
+| Tiada pengesahan env | Pelbagai fail JS/TS | Diperbaiki |
 | Panggilan fungsi tidak selamat | `11-integrating-with-function-calling/js-githubmodels/app.js` | Diperbaiki |
 | Kebocoran pemegang fail | `08-building-search-applications/scripts/` | Diperbaiki |
-| Kekurangan timeout permintaan | `09-building-image-applications/python/` | Diperbaiki |
+| Tiada had masa permintaan | `09-building-image-applications/python/` | Diperbaiki |
 
-### 1.2 Ciri Keselamatan Tambahan Disyorkan
+### 1.2 Ciri Keselamatan Tambahan yang Disyorkan
 
-1. **Contoh Hadkan Kadar**
-   - Tambah kod contoh menunjukkan cara melaksanakan had kadar untuk panggilan API
-   - Tunjukkan corak backoff eksponen
+1. **Contoh Had Laju**
+   - Tambah kod contoh menunjukkan cara melaksanakan had laju untuk panggilan API
+   - Demonstrasi corak pemulaan semula eksponen
 
-2. **Pusingan Kunci API**
-   - Tambah dokumentasi amalan terbaik untuk memusingkan kunci API
+2. **Putaran Kunci API**
+   - Tambah dokumentasi amalan terbaik untuk putaran kunci API
    - Sertakan contoh menggunakan Azure Key Vault atau perkhidmatan serupa
 
 3. **Integrasi Keselamatan Kandungan**
    - Tambah contoh menggunakan Azure Content Safety API
-   - Tunjukkan corak moderasi input/output
+   - Demonstrasi corak moderasi input/output
 
 ---
 
@@ -42,29 +42,29 @@ Pangkalan kod telah dianalisis dari segi keselamatan, kualiti kod, dan keberkesa
 
 | Fail | Tujuan |
 |------|---------|
-| `.eslintrc.json` | Peraturan linting JavaScript/TypeScript |
-| `.prettierrc` | Standard pemformatan kod |
-| `pyproject.toml` | Konfigurasi alat Python (Black, Ruff, mypy) |
+| `.eslintrc.json` | Peraturan lintingan JavaScript/TypeScript |
+| `.prettierrc` | Standard format kod |
+| `pyproject.toml` | Konfigurasi alatan Python (Black, Ruff, mypy) |
 
 ### 2.2 Utiliti Berkongsi Dibuat
 
-Modul `shared/python/` baru dengan:
-- `env_utils.py` - Pengendalian pemboleh ubah persekitaran
+Modul baru `shared/python/` dengan:
+- `env_utils.py` - Pengendalian pembolehubah persekitaran
 - `input_validation.py` - Pengesahan dan sanitasi input
 - `api_utils.py` - Pembalut permintaan API yang selamat
 
-### 2.3 Penambahbaikan Kod Disyorkan
+### 2.3 Penambahbaikan Kod yang Disyorkan
 
-1. **Liputan Petunjuk Jenis**
-   - Tambah petunjuk jenis ke semua fail Python
-   - Aktifkan mod strict TypeScript dalam semua projek TS
+1. **Liputan Hint Jenis**
+   - Tambah hint jenis ke semua fail Python
+   - Aktifkan mod TypeScript ketat dalam semua projek TS
 
 2. **Standard Dokumentasi**
-   - Tambah docstrings ke semua fungsi Python
-   - Tambah komen JSDoc ke semua fungsi JavaScript/TypeScript
+   - Tambah docstring ke semua fungsi Python
+   - Tambah ulasan JSDoc ke semua fungsi JavaScript/TypeScript
 
 3. **Rangka Kerja Ujian**
-   - Tambah konfigurasi pytest dan ujian contoh
+   - Tambah konfigurasi pytest dan ujian contoh _(selesai: konfigurasi pytest dalam `pyproject.toml`; ujian contoh untuk utiliti berkongsi dalam [`tests/`](../../../tests) dijalankan dalam CI)_
    - Tambah konfigurasi Jest untuk JavaScript/TypeScript
 
 ---
@@ -73,62 +73,67 @@ Modul `shared/python/` baru dengan:
 
 ### 3.1 Topik Pelajaran Baru
 
-1. **Keselamatan dalam Aplikasi AI** (Cadangan Pelajaran 22)
-   - Serangan dan pertahanan suntikan prompt
+1. **Keselamatan dalam Aplikasi AI** (Pelajaran Cadangan 22)
+   - Serangan suntikan arahan dan pertahanan
    - Pengurusan kunci API
    - Moderasi kandungan
-   - Hadkan kadar dan pencegahan penyalahgunaan
+   - Had laju dan pencegahan penyalahgunaan
 
-2. **Pengeluaran Pengeluaran** (Cadangan Pelajaran 23)
-   - Penggunaan kontena dengan Docker
+2. **Pengeluaran Produksi** (Pelajaran Cadangan 23)
+   - Pengkonteineraan dengan Docker
    - Saluran CI/CD
-   - Pemantauan dan log
+   - Pemantauan dan perekodan log
    - Pengurusan kos
 
-3. **Teknik RAG Lanjutan** (Cadangan Pelajaran 24)
+3. **Teknik RAG Lanjutan** (Pelajaran Cadangan 24)
    - Carian hibrid (kata kunci + semantik)
-   - Strategi pengimbangan semula
-   - RAG pelbagai mod
-   - Metod evaluasi
+   - Strategi penyusunan semula
+   - RAG berbilang modal
+   - Metodik penilaian
 
 ### 3.2 Penambahbaikan Pelajaran Sedia Ada
 
-| Pelajaran | Penambahbaikan Disyorkan |
+| Pelajaran | Penambahbaikan yang Disyorkan |
 |--------|------------------------|
-| 06 - Penjanaan Teks | Tambah contoh respons streaming |
+| 06 - Penjanaan Teks | Tambah contoh respons penstriman |
 | 07 - Aplikasi Sembang | Tambah corak memori perbualan |
 | 08 - Aplikasi Carian | Tambah perbandingan pangkalan data vektor |
-| 09 - Penjanaan Imej | Tambah contoh penyuntingan/variasi imej |
+| 09 - Penjanaan Gambar | Tambah contoh penyuntingan/variasi imej |
 | 11 - Panggilan Fungsi | Tambah panggilan fungsi selari |
 | 15 - RAG | Tambah perbandingan strategi pemecahan |
-| 17 - Ejen AI | Tambah orkestrasi multi-ejen |
+| 17 - Ejen AI | Tambah orkestrasi ejen berganda |
 
 ---
 
 ## 4. Pemodenan API
 
-### 4.1 Corak API Usang yang Perlu Dikemas Kini
+### 4.1 Corak API Yang Digugurkan (Migrasi Selesai)
 
-| Corak Lama | Corak Baru | Fail Terjejas |
-|-------------|-------------|----------------|
-| `openai.api_type = "azure"` | Klien `AzureOpenAI()` | Pelbagai skrip dalam `08-building-search-applications/` |
-| `openai.ChatCompletion.create()` | `client.chat.completions.create()` | Pelbagai buku nota |
-| `df.append()` (pandas) | `pd.concat()` | Buku nota RAG |
+Semua contoh **sembang** Python dan TypeScript telah dipindahkan dari Chat Completions API ke **Responses API** (`client.responses.create(...)` → `response.output_text`).
 
-### 4.2 Ciri API Baru untuk Ditunjukkan
+| Corak Lama | Corak Baru | Status |
+|-------------|-------------|--------|
+| `openai.api_type = "azure"` / `AzureOpenAI()` (sembang) | `OpenAI(base_url="<endpoint>/openai/v1/")` (Responses API) | Selesai |
+| `openai.ChatCompletion.create()` / `client.chat.completions.create()` | `client.responses.create(input=...)` → `response.output_text` | Selesai |
+| `@azure/openai` `OpenAIClient.getChatCompletions()` (TypeScript) | `openai` pakej `client.responses.create()` → `response.output_text` | Selesai |
+| `df.append()` (pandas) | `pd.concat()` | Selesai |
+
+> **Nota:** Contoh Microsoft Foundry Models yang menggunakan SDK `azure-ai-inference` / `@azure-rest/ai-inference` (`client.complete()`) kekal pada Model Inference API, yang tidak menyokong Responses API. `AzureOpenAI()` sengaja dikekalkan di tempat yang masih sah (embedding dan penjanaan imej).
+
+### 4.2 Ciri API Baru Untuk Demonstrasi
 
 1. **Output Berstruktur** (OpenAI)
    - Mod JSON
    - Panggilan fungsi dengan skema ketat
 
-2. **Kebolehan Visi**
-   - Analisis imej dengan GPT-4V
-   - Prompt pelbagai mod
+2. **Keupayaan Visi**
+   - Analisis imej dengan GPT-4o (visi)
+   - Prompt berbilang modal
 
-3. **API Pembantu**
-   - Interpreter kod
+3. **Alatan Terbina Dalam Responses API** (menggantikan Assistants API lama)
+   - Penterjemah kod
    - Carian fail
-   - Alat khusus
+   - Carian web dan alatan tersuai
 
 ---
 
@@ -136,7 +141,7 @@ Modul `shared/python/` baru dengan:
 
 ### 5.1 Penambahbaikan CI/CD
 
-Aliran kerja semasa mengendalikan pengesahan markdown. Tambahan disyorkan:
+Dilaksanakan dalam [`.github/workflows/code-quality.yml`](../../../.github/workflows/code-quality.yml): linting/formatting Python (Ruff + Black) **dikuatkuasakan** pada modul utiliti `shared/` yang diselenggara dan dijalankan secara **nasihat** merentasi seluruh kurikulum, serta laluan ESLint nasihat untuk JavaScript/TypeScript. Garis dasar ilustrasi adalah:
 
 ```yaml
 # .github/workflows/code-quality.yml
@@ -169,6 +174,8 @@ jobs:
 
 ### 5.2 Pengimbasan Keselamatan
 
+Dilaksanakan dalam [`.github/workflows/security.yml`](../../../.github/workflows/security.yml): analisis CodeQL untuk Python dan JavaScript/TypeScript (semasa push, pull request, dan jadual mingguan) serta ulasan kebergantungan pada pull request. Garis dasar ilustrasi adalah:
+
 ```yaml
 # .github/workflows/security.yml
 name: Security Scan
@@ -198,7 +205,7 @@ jobs:
 
 ### 6.1 Penambahbaikan DevContainer
 
-Kemas kini `.devcontainer/devcontainer.json`:
+Dilaksanakan dalam [`.devcontainer/devcontainer.json`](../../../.devcontainer/devcontainer.json) dan [`.devcontainer/post-create.sh`](../../../.devcontainer/post-create.sh): kontena kini membekalkan Pylance, pemformat Black, Ruff, ESLint, Prettier, dan peluasan Copilot, mengaktifkan format-on-save yang dipautkan kepada konfigurasi Black/Prettier repo, dan memasang alatan pembangun (`ruff`, `black`, `mypy`, `pytest`) supaya [alur kerja kualiti kod](../../../.github/workflows/code-quality.yml) dapat dihasilkan semula secara tempatan. Imej asas `mcr.microsoft.com/devcontainers/universal` telah pun membundel Python dan Node, jadi tiada ciri tambahan diperlukan. Garis dasar ilustrasi adalah:
 
 ```json
 {
@@ -232,10 +239,10 @@ Kemas kini `.devcontainer/devcontainer.json`:
 }
 ```
 
-### 6.2 Playground Interaktif
+### 6.2 Tempat Permainan Interaktif
 
 Pertimbangkan untuk menambah:
-- Nota Jupyter dengan kunci API yang telah diisi (melalui persekitaran)
+- Buku nota Jupyter dengan kunci API telah diisi (melalui persekitaran)
 - Demo Gradio/Streamlit untuk pelajar visual
 - Kuiz interaktif untuk penilaian pengetahuan
 
@@ -248,33 +255,33 @@ Pertimbangkan untuk menambah:
 | Teknologi | Pelajaran Diliputi | Status |
 |------------|-----------------|--------|
 | Python | Semua | Lengkap |
-| TypeScript | 06-09, 11 | Sebahagian |
-| JavaScript | 06-08, 11 | Sebahagian |
-| .NET/C# | Beberapa | Sebahagian |
+| TypeScript | 06-09, 11 | Separuh |
+| JavaScript | 06-08, 11 | Separuh |
+| .NET/C# | Beberapa | Separuh |
 
-### 7.2 Tambahan Disyorkan
+### 7.2 Penambahan Disyorkan
 
-1. **Go** - Berkembang dalam alat AI/ML
-2. **Rust** - Aplikasi kritikal prestasi
-3. **Java/Kotlin** - Aplikasi enterprise
+1. **Go** - Berkembang dalam alatan AI/ML
+2. **Rust** - Aplikasi yang kritikal kepada prestasi
+3. **Java/Kotlin** - Aplikasi perusahaan
 
 ---
 
-## 8. Pengoptimalan Prestasi
+## 8. Pengoptimuman Prestasi
 
-### 8.1 Pengoptimalan Tahap Kod
+### 8.1 Pengoptimuman Peringkat Kod
 
 1. **Corak Async/Await**
    - Tambah contoh async untuk pemprosesan kelompok
-   - Tunjukkan panggilan API serentak
+   - Demonstrasi panggilan API serentak
 
 2. **Strategi Caching**
    - Tambah contoh caching embedding
-   - Tunjukkan corak caching respons
+   - Demonstrasi corak caching respons
 
 3. **Pengoptimuman Token**
    - Tambah contoh penggunaan tiktoken
-   - Tunjukkan teknik pemampatan prompt
+   - Demonstrasi teknik pemampatan prompt
 
 ### 8.2 Contoh Pengoptimuman Kos
 
@@ -285,24 +292,21 @@ Tambah contoh menunjukkan:
 
 ---
 
-## 9. Kebolehcapaian dan Internasionalisasi
+## 9. Kebolehcapaian dan Pengantarabangsaan
 
 ### 9.1 Status Terjemahan Semasa
 
-| Bahasa | Status |
-|----------|--------|
-| Inggeris | Lengkap |
-| Cina (Ringkas) | Lengkap |
-| Jepun | Lengkap |
-| Korea | Lengkap |
-| Sepanyol | Sebahagian |
-| Portugis | Sebahagian |
-| Turki | Sebahagian |
-| Poland | Sebahagian |
+Semua terjemahan adalah **lengkap** dan dihasilkan secara automatik oleh [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst), yang menghasilkan dan mengekalkan lebih 50 versi bahasa kurikulum selari dengan sumber bahasa Inggeris. Kandungan terjemahan berada di bawah `translations/` dan imej diterjemah di bawah `translated_images/`; senarai penuh bahasa yang tersedia diterbitkan di atas README repositori.
+
+| Aspek | Status |
+|--------|--------|
+| Liputan terjemahan | Lengkap — 50+ bahasa, semua pelajaran |
+| Kaedah terjemahan | Automatik melalui [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst) |
+| Disegerakkan dengan sumber Inggeris | Ya — dijana semula secara automatik |
 
 ### 9.2 Penambahbaikan Kebolehcapaian
 
-1. Tambah teks alt ke semua imej
+1. Tambah teks alt kepada semua imej
 2. Pastikan contoh kod mempunyai penyorotan sintaks yang betul
 3. Tambah transkrip video untuk semua kandungan video
 4. Pastikan kontras warna memenuhi garis panduan WCAG
@@ -314,38 +318,38 @@ Tambah contoh menunjukkan:
 ### Fasa 1: Segera (Minggu 1-2)
 - [x] Betulkan isu keselamatan kritikal
 - [x] Tambah konfigurasi kualiti kod
-- [x] Cipta utiliti berkongsi
-- [x] Dokumentasikan garis panduan keselamatan
+- [x] Buat utiliti berkongsi
+- [x] Dokumen panduan keselamatan
 
 ### Fasa 2: Jangka Pendek (Minggu 3-4)
-- [ ] Kemas kini corak API usang
-- [ ] Tambah petunjuk jenis ke semua fail Python
-- [ ] Tambah aliran kerja CI/CD untuk kualiti kod
-- [ ] Cipta aliran kerja pengimbasan keselamatan
+- [x] Kemas kini corak API yang digugurkan (Chat Completions → Responses API, Python + TypeScript)
+- [ ] Tambah hint jenis ke semua fail Python (selesai untuk modul `shared/` yang diselenggara; contoh pelajaran dikekalkan mudah)
+- [x] Tambah alur kerja CI/CD untuk kualiti kod
+- [x] Buat alur kerja imbasan keselamatan
 
 ### Fasa 3: Jangka Sederhana (Bulan 2-3)
 - [ ] Tambah pelajaran keselamatan baru
-- [ ] Tambah pelajaran pengeluaran pengeluaran
-- [ ] Tingkatkan persediaan DevContainer
+- [ ] Tambah pelajaran pengeluaran produksi
+- [x] Perbaiki persediaan DevContainer
 - [ ] Tambah demo interaktif
 
 ### Fasa 4: Jangka Panjang (Bulan 4+)
 - [ ] Tambah pelajaran RAG lanjutan
 - [ ] Kembangkan liputan bahasa
 - [ ] Tambah suite ujian menyeluruh
-- [ ] Cipta program pensijilan
+- [ ] Buat program pensijilan
 
 ---
 
 ## Kesimpulan
 
-Peta jalan ini menyediakan pendekatan berstruktur untuk memperbaiki kurikulum Generative AI untuk Pemula. Dengan menangani kebimbangan keselamatan, memodenkan API, dan menambah kandungan pendidikan, kursus ini akan lebih baik menyediakan pelajar untuk pembangunan aplikasi AI dunia sebenar.
+Peta jalan ini menyediakan pendekatan berstruktur untuk memperbaiki kurikulum Generative AI for Beginners. Dengan menangani kebimbangan keselamatan, memodenkan API, dan menambah kandungan pendidikan, kursus ini akan menyediakan pelajar dengan lebih baik untuk pembangunan aplikasi AI dunia sebenar.
 
-Untuk sebarang pertanyaan atau penyumbangan, sila buka isu di repositori GitHub.
+Untuk sebarang pertanyaan atau sumbangan, sila buka isu di repositori GitHub.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi ralat atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber rujukan yang sah. Untuk maklumat penting, terjemahan profesional oleh manusia adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau penafsiran yang salah yang timbul daripada penggunaan terjemahan ini.
+**Penafian**:
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang sahih. Untuk maklumat penting, terjemahan oleh manusia profesional adalah disyorkan. Kami tidak bertanggungjawab terhadap sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

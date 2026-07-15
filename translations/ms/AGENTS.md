@@ -1,59 +1,59 @@
-# AGENTS.md
+# AGEN
 
 ## Gambaran Projek
 
-Repositori ini mengandungi kurikulum 21 pelajaran yang komprehensif untuk mengajar asas AI Generatif dan pembangunan aplikasi. Kursus ini direka untuk pemula dan merangkumi segala-galanya daripada konsep asas hingga membina aplikasi yang sedia untuk pengeluaran.
+Repositori ini mengandungi kurikulum 21 pelajaran yang komprehensif yang mengajar asas Generative AI dan pembangunan aplikasi. Kursus ini direka untuk pemula dan merangkumi segala-galanya dari konsep asas hingga membina aplikasi sedia produksi.
 
 **Teknologi Utama:**
 - Python 3.9+ dengan perpustakaan: `openai`, `python-dotenv`, `tiktoken`, `azure-ai-inference`, `pandas`, `numpy`, `matplotlib`
-- TypeScript/JavaScript dengan Node.js dan perpustakaan: `@azure/openai`, `@azure-rest/ai-inference`, `openai`
-- Azure OpenAI Service, OpenAI API, dan Model GitHub
+- TypeScript/JavaScript dengan Node.js dan perpustakaan: `openai` (Azure OpenAI melalui titik akhir v1 + API Respons), `@azure-rest/ai-inference` (Model Microsoft Foundry)
+- Perkhidmatan Azure OpenAI, API OpenAI, dan Model Microsoft Foundry (GitHub Models akan ditutup pada akhir Julai 2026)
 - Jupyter Notebooks untuk pembelajaran interaktif
 - Dev Containers untuk persekitaran pembangunan yang konsisten
 
 **Struktur Repositori:**
 - 21 direktori pelajaran bernombor (00-21) yang mengandungi README, contoh kod, dan tugasan
-- Pelbagai implementasi: Python, TypeScript, dan kadangkala contoh .NET
-- Direktori terjemahan dengan lebih daripada 40 versi bahasa
-- Konfigurasi berpusat melalui fail `.env` (gunakan `.env.copy` sebagai templat)
+- Pelbagai pelaksanaan: Python, TypeScript, dan kadang-kadang contoh .NET
+- Direktori terjemahan dengan lebih 40 versi bahasa
+- Konfigurasi pusat melalui fail `.env` (gunakan `.env.copy` sebagai templat)
 
-## Perintah Persediaan
+## Arahan Persediaan
 
 ### Persediaan Awal Repositori
 
 ```bash
-# Clone the repository
+# Klon repositori
 git clone https://github.com/microsoft/generative-ai-for-beginners.git
 cd generative-ai-for-beginners
 
-# Copy environment template
+# Salin templat persekitaran
 cp .env.copy .env
-# Edit .env with your API keys and endpoints
+# Edit .env dengan kunci API dan titik akhir anda
 ```
 
 ### Persediaan Persekitaran Python
 
 ```bash
-# Create virtual environment
+# Buat persekitaran maya
 python3 -m venv venv
 
-# Activate virtual environment
-# On macOS/Linux:
+# Aktifkan persekitaran maya
+# Pada macOS/Linux:
 source venv/bin/activate
-# On Windows:
+# Pada Windows:
 venv\Scripts\activate
 
-# Install dependencies
+# Pasang kebergantungan
 pip install -r requirements.txt
 ```
 
 ### Persediaan Node.js/TypeScript
 
 ```bash
-# Install root-level dependencies (for documentation tooling)
+# Pasang kebergantungan pada tahap root (untuk alat dokumentasi)
 npm install
 
-# For individual lesson TypeScript examples, navigate to the specific lesson:
+# Untuk contoh TypeScript pelajaran individu, navigasi ke pelajaran tertentu:
 cd 06-text-generation-apps/typescript/recipe-app
 npm install
 ```
@@ -62,11 +62,11 @@ npm install
 
 Repositori ini termasuk konfigurasi `.devcontainer` untuk GitHub Codespaces atau VS Code Dev Containers:
 
-1. Buka repositori dalam GitHub Codespaces atau VS Code dengan sambungan Dev Containers
+1. Buka repositori di GitHub Codespaces atau VS Code dengan sambungan Dev Containers
 2. Dev Container akan secara automatik:
-   - Memasang kebergantungan Python daripada `requirements.txt`
-   - Menjalankan skrip selepas penciptaan (`.devcontainer/post-create.sh`)
-   - Menyediakan kernel Jupyter
+   - Pasang kebergantungan Python dari `requirements.txt`
+   - Jalankan skrip post-create (`.devcontainer/post-create.sh`)
+   - Sediakan kernel Jupyter
 
 ## Aliran Kerja Pembangunan
 
@@ -74,52 +74,53 @@ Repositori ini termasuk konfigurasi `.devcontainer` untuk GitHub Codespaces atau
 
 Semua pelajaran yang memerlukan akses API menggunakan pembolehubah persekitaran yang ditakrifkan dalam `.env`:
 
-- `OPENAI_API_KEY` - Untuk OpenAI API
-- `AZURE_OPENAI_API_KEY` - Untuk Azure OpenAI Service
-- `AZURE_OPENAI_ENDPOINT` - URL titik akhir Azure OpenAI
-- `AZURE_OPENAI_DEPLOYMENT` - Nama penyebaran model penyelesaian chat
-- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Nama penyebaran model embeddings
-- `AZURE_OPENAI_API_VERSION` - Versi API (lalai: `2024-02-01`)
+- `OPENAI_API_KEY` - Untuk API OpenAI
+- `AZURE_OPENAI_API_KEY` - Untuk Azure OpenAI dalam Microsoft Foundry (Perkhidmatan Azure OpenAI kini sebahagian daripada Microsoft Foundry: https://ai.azure.com)
+- `AZURE_OPENAI_ENDPOINT` - URL titik akhir Azure OpenAI (titik akhir sumber Foundry)
+- `AZURE_OPENAI_DEPLOYMENT` - Nama pelaksanaan model penyelesaian chat
+- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Nama pelaksanaan model embeding
+- `AZURE_OPENAI_API_VERSION` - Versi API (lalai: `2024-10-21`)
 - `HUGGING_FACE_API_KEY` - Untuk model Hugging Face
-- `GITHUB_TOKEN` - Untuk Model GitHub
+- `AZURE_INFERENCE_ENDPOINT` - Titik akhir Model Microsoft Foundry (katalog model pelbagai penyedia)
+- `AZURE_INFERENCE_CREDENTIAL` - Kunci API Model Microsoft Foundry (menggantikan `GITHUB_TOKEN` yang akan ditutup)
 
 ### Menjalankan Contoh Python
 
 ```bash
-# Navigate to lesson directory
+# Navigasi ke direktori pelajaran
 cd 06-text-generation-apps/python
 
-# Run a Python script
+# Jalankan skrip Python
 python aoai-app.py
 ```
 
 ### Menjalankan Contoh TypeScript
 
 ```bash
-# Navigate to TypeScript app directory
+# Navigasi ke direktori aplikasi TypeScript
 cd 06-text-generation-apps/typescript/recipe-app
 
-# Build the TypeScript code
+# Bina kod TypeScript
 npm run build
 
-# Run the application
+# Jalankan aplikasi
 npm start
 ```
 
 ### Menjalankan Jupyter Notebooks
 
 ```bash
-# Start Jupyter in the repository root
+# Mulakan Jupyter di akar repositori
 jupyter notebook
 
-# Or use VS Code with Jupyter extension
+# Atau gunakan VS Code dengan sambungan Jupyter
 ```
 
 ### Bekerja dengan Jenis Pelajaran Berbeza
 
 - **Pelajaran "Learn"**: Fokus pada dokumentasi README.md dan konsep
 - **Pelajaran "Build"**: Termasuk contoh kod berfungsi dalam Python dan TypeScript
-- Setiap pelajaran mempunyai README.md dengan teori, panduan kod, dan pautan ke kandungan video
+- Setiap pelajaran mempunyai README.md dengan teori, penceritaan kod, dan pautan ke kandungan video
 
 ## Garis Panduan Gaya Kod
 
@@ -127,144 +128,144 @@ jupyter notebook
 
 - Gunakan `python-dotenv` untuk pengurusan pembolehubah persekitaran
 - Import perpustakaan `openai` untuk interaksi API
-- Gunakan `pylint` untuk linting (beberapa contoh termasuk `# pylint: disable=all` untuk kesederhanaan)
-- Ikuti konvensyen penamaan PEP 8
-- Simpan kelayakan API dalam fail `.env`, jangan pernah dalam kod
+- Gunakan `pylint` untuk linting (beberapa contoh menggunakan `# pylint: disable=all` untuk kesederhanaan)
+- Ikut konvensyen penamaan PEP 8
+- Simpan kelayakan API dalam fail `.env`, jangan dalam kod
 
 ### TypeScript
 
 - Gunakan pakej `dotenv` untuk pembolehubah persekitaran
 - Konfigurasi TypeScript dalam `tsconfig.json` untuk setiap aplikasi
-- Gunakan `@azure/openai` atau `@azure-rest/ai-inference` untuk perkhidmatan Azure
-- Gunakan `nodemon` untuk pembangunan dengan auto-reload
+- Gunakan pakej `openai` untuk Azure OpenAI (arah pelanggan di titik akhir `/openai/v1/` dan panggil `client.responses.create`); guna `@azure-rest/ai-inference` untuk Model Microsoft Foundry
+- Gunakan `nodemon` untuk pembangunan dengan muat semula automatik
 - Bina sebelum menjalankan: `npm run build` kemudian `npm start`
 
-### Konvensyen Umum
+### Konvensyen Am
 
-- Pastikan contoh kod mudah dan mendidik
+- Kekalkan contoh kod sederhana dan pendidikan
 - Sertakan komen yang menerangkan konsep utama
-- Kod setiap pelajaran harus berdiri sendiri dan boleh dijalankan
-- Gunakan penamaan yang konsisten: awalan `aoai-` untuk Azure OpenAI, `oai-` untuk OpenAI API, `githubmodels-` untuk Model GitHub
+- Kod setiap pelajaran harus berdikari dan boleh dijalankan
+- Gunakan penamaan konsisten: awalan `aoai-` untuk Azure OpenAI, `oai-` untuk API OpenAI, `githubmodels-` untuk Model Microsoft Foundry (awalan warisan dari era GitHub Models)
 
 ## Garis Panduan Dokumentasi
 
 ### Gaya Markdown
 
-- Semua URL mesti dibungkus dalam format `[teks](../../url)` tanpa ruang tambahan
+- Semua URL mesti dibungkus dalam format `[text](../../url)` tanpa ruang tambahan
 - Pautan relatif mesti bermula dengan `./` atau `../`
-- Semua pautan ke domain Microsoft mesti termasuk ID penjejakan: `?WT.mc_id=academic-105485-koreyst`
-- Tiada lokal khusus negara dalam URL (elakkan `/en-us/`)
+- Semua pautan ke domain Microsoft mesti menyertakan ID penjejakan: `?WT.mc_id=academic-105485-koreyst`
+- Tiada setempat khusus negara dalam URL (elakkan `/en-us/`)
 - Imej disimpan dalam folder `./images` dengan nama yang deskriptif
-- Gunakan aksara Inggeris, nombor, dan tanda hubung dalam nama fail
+- Gunakan aksara Inggeris, nombor, dan tanda sengkang dalam nama fail
 
 ### Sokongan Terjemahan
 
-- Repositori menyokong lebih daripada 40 bahasa melalui GitHub Actions automatik
-- Terjemahan disimpan dalam direktori `translations/`
-- Jangan serahkan terjemahan separa
+- Repositori menyokong lebih 40 bahasa melalui GitHub Actions automatik
+- Terjemahan disimpan di direktori `translations/`
+- Jangan hantar terjemahan separa
 - Terjemahan mesin tidak diterima
-- Imej terjemahan disimpan dalam direktori `translated_images/`
+- Imej diterjemah disimpan dalam direktori `translated_images/`
 
 ## Ujian dan Pengesahan
 
-### Semakan Sebelum Penyerahan
+### Pemeriksaan Pra-hantar
 
-Repositori ini menggunakan GitHub Actions untuk pengesahan. Sebelum menyerahkan PR:
+Repositori ini menggunakan GitHub Actions untuk pengesahan. Sebelum menghantar PR:
 
-1. **Semak Pautan Markdown**:
+1. **Periksa Pautan Markdown**:
    ```bash
-   # The validate-markdown.yml workflow checks:
-   # - Broken relative paths
-   # - Missing tracking IDs on paths
-   # - Missing tracking IDs on URLs
-   # - URLs with country locale
-   # - Broken external URLs
+   # Aliran kerja validate-markdown.yml memeriksa:
+   # - Laluan relatif yang rosak
+   # - ID penjejakan yang hilang pada laluan
+   # - ID penjejakan yang hilang pada URL
+   # - URL dengan lokal negara
+   # - URL luaran yang rosak
    ```
 
 2. **Ujian Manual**:
    - Uji contoh Python: Aktifkan venv dan jalankan skrip
    - Uji contoh TypeScript: `npm install`, `npm run build`, `npm start`
-   - Pastikan pembolehubah persekitaran dikonfigurasi dengan betul
-   - Semak bahawa kunci API berfungsi dengan contoh kod
+   - Sahkan pembolehubah persekitaran dikonfigurasi dengan betul
+   - Periksa kekunci API berfungsi dengan contoh kod
 
 3. **Contoh Kod**:
    - Pastikan semua kod berjalan tanpa ralat
-   - Uji dengan kedua-dua Azure OpenAI dan OpenAI API apabila berkenaan
-   - Pastikan contoh berfungsi dengan Model GitHub di mana disokong
+   - Uji dengan kedua-dua Azure OpenAI dan API OpenAI bila sesuai
+   - Sahkan contoh berfungsi dengan Model Microsoft Foundry bila disokong
 
 ### Tiada Ujian Automatik
 
 Ini adalah repositori pendidikan yang fokus pada tutorial dan contoh. Tiada ujian unit atau ujian integrasi untuk dijalankan. Pengesahan adalah terutamanya:
 - Ujian manual contoh kod
 - GitHub Actions untuk pengesahan Markdown
-- Semakan komuniti kandungan pendidikan
+- Semakan komuniti untuk kandungan pendidikan
 
 ## Garis Panduan Pull Request
 
-### Sebelum Menyerahkan
+### Sebelum Menghantar
 
-1. Uji perubahan kod dalam kedua-dua Python dan TypeScript apabila berkenaan
-2. Jalankan pengesahan Markdown (dicetuskan secara automatik pada PR)
-3. Pastikan ID penjejakan ada pada semua URL Microsoft
-4. Semak bahawa pautan relatif adalah sah
-5. Pastikan imej dirujuk dengan betul
+1. Uji perubahan kod dalam Python dan TypeScript bila sesuai
+2. Jalankan pengesahan Markdown (dijalankan secara automatik pada PR)
+3. Pastikan ID penjejakan hadir pada semua URL Microsoft
+4. Semak pautan relatif sah
+5. Sahkan imej dirujuk dengan betul
 
 ### Format Tajuk PR
 
-- Gunakan tajuk deskriptif: `[Lesson 06] Betulkan typo contoh Python` atau `Kemas kini README untuk pelajaran 08`
-- Rujuk nombor isu apabila berkenaan: `Fixes #123`
+- Gunakan tajuk yang deskriptif: `[Pelajaran 06] Betulkan typo contoh Python` atau `Kemas kini README untuk pelajaran 08`
+- Rujuk nombor isu bila sesuai: `Betulkan #123`
 
 ### Penerangan PR
 
-- Terangkan apa yang diubah dan mengapa
-- Pautkan ke isu berkaitan
-- Untuk perubahan kod, nyatakan contoh mana yang diuji
+- Terangkan apa yang diubah dan sebabnya
+- Paut ke isu berkaitan
+- Untuk perubahan kod, nyatakan contoh yang diuji
 - Untuk PR terjemahan, sertakan semua fail untuk terjemahan lengkap
 
 ### Keperluan Sumbangan
 
-- Tandatangani Microsoft CLA (automatik pada PR pertama)
+- Tandatangani CLA Microsoft (automatik pada PR pertama)
 - Fork repositori ke akaun anda sebelum membuat perubahan
-- Satu PR untuk setiap perubahan logik (jangan gabungkan pembetulan yang tidak berkaitan)
-- Kekalkan PR fokus dan kecil apabila boleh
+- Satu PR bagi setiap perubahan logik (jangan gabungkan pembetulan tidak berkaitan)
+- Kekalkan PR fokus dan kecil jika boleh
 
 ## Aliran Kerja Biasa
 
 ### Menambah Contoh Kod Baru
 
 1. Navigasi ke direktori pelajaran yang sesuai
-2. Cipta contoh dalam subdirektori `python/` atau `typescript/`
-3. Ikuti konvensyen penamaan: `{provider}-{example-name}.{py|ts|js}`
+2. Buat contoh dalam subdirektori `python/` atau `typescript/`
+3. Ikut konvensyen penamaan: `{provider}-{example-name}.{py|ts|js}`
 4. Uji dengan kelayakan API sebenar
-5. Dokumentasikan sebarang pembolehubah persekitaran baru dalam README pelajaran
+5. Dokumenkan sebarang pembolehubah persekitaran baru dalam README pelajaran
 
 ### Mengemas Kini Dokumentasi
 
 1. Edit README.md dalam direktori pelajaran
-2. Ikuti garis panduan Markdown (ID penjejakan, pautan relatif)
-3. Kemas kini terjemahan dikendalikan oleh GitHub Actions (jangan edit secara manual)
+2. Ikut garis panduan Markdown (ID penjejakan, pautan relatif)
+3. Kemas kini terjemahan dikendalikan oleh GitHub Actions (jangan sunting secara manual)
 4. Uji semua pautan adalah sah
 
 ### Bekerja dengan Dev Containers
 
 1. Repositori termasuk `.devcontainer/devcontainer.json`
-2. Skrip selepas penciptaan memasang kebergantungan Python secara automatik
-3. Sambungan untuk Python dan Jupyter telah dikonfigurasi
+2. Skrip post-create memasang kebergantungan Python secara automatik
+3. Sambungan untuk Python dan Jupyter telah diprapasang
 4. Persekitaran berdasarkan `mcr.microsoft.com/devcontainers/universal:2.11.2`
 
-## Penerbitan dan Penyebaran
+## Penghantaran dan Penerbitan
 
-Ini adalah repositori pembelajaran - tiada proses penyebaran. Kurikulum digunakan oleh:
+Ini adalah repositori pembelajaran - tiada proses penghantaran. Kurikulum dimanfaatkan oleh:
 
-1. **Repositori GitHub**: Akses langsung kepada kod dan dokumentasi
-2. **GitHub Codespaces**: Persekitaran pembangunan segera dengan persediaan yang telah dikonfigurasi
-3. **Microsoft Learn**: Kandungan mungkin disindikasikan ke platform pembelajaran rasmi
-4. **docsify**: Laman dokumentasi dibina daripada Markdown (lihat `docsifytopdf.js` dan `package.json`)
+1. **Repositori GitHub**: Akses langsung ke kod dan dokumentasi
+2. **GitHub Codespaces**: Persekitaran dev segera dengan persediaan prakonfigurasi
+3. **Microsoft Learn**: Kandungan mungkin disintesis ke platform pembelajaran rasmi
+4. **docsify**: Laman dokumentasi dibina dari Markdown (lihat `docsifytopdf.js` dan `package.json`)
 
-### Membina Laman Dokumentasi
+### Membangun Laman Dokumentasi
 
 ```bash
-# Generate PDF from documentation (if needed)
+# Jana PDF dari dokumentasi (jika perlu)
 npm run convert
 ```
 
@@ -275,43 +276,45 @@ npm run convert
 **Ralat Import Python**:
 - Pastikan persekitaran maya diaktifkan
 - Jalankan `pip install -r requirements.txt`
-- Semak versi Python adalah 3.9+
+- Periksa versi Python adalah 3.9+
 
 **Ralat Pembinaan TypeScript**:
 - Jalankan `npm install` dalam direktori aplikasi tertentu
-- Semak versi Node.js adalah serasi
+- Periksa versi Node.js serasi
 - Kosongkan `node_modules` dan pasang semula jika perlu
 
 **Ralat Pengesahan API**:
-- Pastikan fail `.env` wujud dan mempunyai nilai yang betul
-- Semak kunci API adalah sah dan tidak tamat tempoh
-- Pastikan URL titik akhir adalah betul untuk rantau anda
+- Sahkan fail `.env` wujud dan mempunyai nilai yang betul
+- Periksa kekunci API sah dan tidak tamat tempoh
+- Pastikan URL titik akhir betul untuk rantau anda
 
 **Pembolehubah Persekitaran Hilang**:
 - Salin `.env.copy` ke `.env`
-- Isi semua nilai yang diperlukan untuk pelajaran yang sedang anda kerjakan
-- Mulakan semula aplikasi anda selepas mengemas kini `.env`
+- Isikan semua nilai diperlukan untuk pelajaran yang anda kerjakan
+- Mulakan semula aplikasi anda selepas mengemaskini `.env`
 
 ## Sumber Tambahan
 
 - [Panduan Persediaan Kursus](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
-- [Garis Panduan Penyumbangan](./CONTRIBUTING.md)
+- [Garis Panduan Menyumbang](./CONTRIBUTING.md)
 - [Kod Etika](./CODE_OF_CONDUCT.md)
-- [Dasar Keselamatan](./SECURITY.md)
+- [Polisi Keselamatan](./SECURITY.md)
 - [Azure AI Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 - [Koleksi Contoh Kod Lanjutan](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
 
 ## Nota Khusus Projek
 
-- Ini adalah repositori **pendidikan** yang fokus pada pembelajaran, bukan kod pengeluaran
-- Contoh sengaja dibuat mudah dan fokus pada pengajaran konsep
+- Ini adalah **repositori pendidikan** yang tertumpu pada pembelajaran, bukan kod produksi
+- Contoh adalah sengaja ringkas dan berfokus pada pengajaran konsep
 - Kualiti kod seimbang dengan kejelasan pendidikan
-- Setiap pelajaran berdiri sendiri dan boleh diselesaikan secara bebas
-- Repositori menyokong pelbagai penyedia API: Azure OpenAI, OpenAI, dan Model GitHub
-- Kandungan adalah pelbagai bahasa dengan aliran kerja terjemahan automatik
-- Komuniti aktif di Discord untuk soalan dan sokongan
+- Setiap pelajaran berdikari dan boleh disiapkan secara bebas
+- Repositori menyokong pelbagai penyedia API: Azure OpenAI, OpenAI, Model Microsoft Foundry, dan penyedia luar talian seperti Foundry Local dan Ollama
+- Kandungan adalah berbilang bahasa dengan aliran kerja terjemahan automatik
+- Komuniti aktif di Discord untuk pertanyaan dan sokongan
 
 ---
 
-**Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Penafian**:
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang sahih. Untuk maklumat penting, terjemahan oleh manusia profesional adalah disyorkan. Kami tidak bertanggungjawab terhadap sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

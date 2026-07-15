@@ -1,58 +1,61 @@
-# Pagtatayo Gamit ang Mga Modelo ng Pamilyang Meta
+# Pagtatayo Gamit ang Mga Modelo ng Pamilya Meta
 
 ## Panimula
 
-Tatalakayin sa araling ito:
+Tatalakayin ng araling ito:
 
-- Pagsusuri sa dalawang pangunahing modelo ng pamilyang Meta - Llama 3.1 at Llama 3.2
+- Pagsusuri sa dalawang pangunahing modelo ng pamilya Meta - Llama 3.1 at Llama 3.2
 - Pag-unawa sa mga gamit at senaryo para sa bawat modelo
-- Halimbawang kodigo upang ipakita ang mga natatanging katangian ng bawat modelo
+- Halimbawa ng code upang ipakita ang natatanging mga tampok ng bawat modelo
 
-## Ang Pamilyang Meta ng Mga Modelo
 
-Sa araling ito, susuriin natin ang 2 modelo mula sa pamilyang Meta o "Llama Herd" - Llama 3.1 at Llama 3.2.
+## Ang Pamilya ng Mga Modelo ng Meta
 
-Ang mga modelong ito ay may iba't ibang bersyon at makukuha sa GitHub Model marketplace. Narito ang karagdagang detalye sa paggamit ng GitHub Models para sa [pagsubok gamit ang mga AI model](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Sa araling ito, susuriin natin ang 2 modelo mula sa pamilya Meta o "Llama Herd" - Llama 3.1 at Llama 3.2.
 
-Mga Bersyon ng Modelo:
+Ang mga modelong ito ay may iba't ibang variant at makukuha sa [Microsoft Foundry Models catalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
+
+> **Tandaan:** Ang GitHub Models ay magtatapos sa katapusan ng Hulyo 2026. Narito ang higit pang detalye sa paggamit ng [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) upang mag-prototype gamit ang mga AI model.
+
+Mga Variant ng Modelo:
 - Llama 3.1 - 70B Instruct
 - Llama 3.1 - 405B Instruct
 - Llama 3.2 - 11B Vision Instruct
 - Llama 3.2 - 90B Vision Instruct
 
-*Paalala: Ang Llama 3 ay available rin sa GitHub Models ngunit hindi tatalakayin sa araling ito*
+*Tandaan: Ang Llama 3 ay magagamit din sa Microsoft Foundry Models ngunit hindi ito tatalakayin sa araling ito*
 
 ## Llama 3.1
 
 Sa 405 Bilyong Parameter, ang Llama 3.1 ay kabilang sa kategorya ng open source LLM.
 
-Ang modelo ay isang upgrade mula sa naunang Llama 3 sa pamamagitan ng pag-aalok ng:
+Ang modelo ay isang upgrade sa mas maagang bersyon na Llama 3 sa pamamagitan ng pag-alok ng:
 
 - Mas malaking context window - 128k tokens kumpara sa 8k tokens
 - Mas malaking Max Output Tokens - 4096 kumpara sa 2048
 - Mas mahusay na Multilingual Support - dahil sa pagtaas ng training tokens
 
-Pinapayagan nito ang Llama 3.1 na hawakan ang mas kumplikadong mga gamit sa paggawa ng GenAI applications kabilang ang:
-- Native Function Calling - ang kakayahang tumawag sa mga external na kasangkapan at function na hiwalay sa LLM workflow
-- Mas mahusay na RAG Performance - dahil sa mas mataas na context window
-- Synthetic Data Generation - ang kakayahang lumikha ng epektibong data para sa mga gawain tulad ng fine-tuning
+Pinahihintulutan nitong harapin ng Llama 3.1 ang mas kumplikadong mga gamit sa paggawa ng GenAI na mga aplikasyon kabilang ang:
+- Native Function Calling - ang kakayahang tumawag ng mga panlabas na tool at function sa labas ng workflow ng LLM
+- Mas mahusay na RAG Performance - dahil sa mas malaking context window
+- Synthetic Data Generation - ang kakayahang gumawa ng epektibong data para sa mga gawain tulad ng fine-tuning
 
 ### Native Function Calling
 
-Ang Llama 3.1 ay na-fine tune upang maging mas epektibo sa paggawa ng function o tool calls. Mayroon din itong dalawang built-in na kasangkapan na maaaring tuklasin ng modelo na kailangang gamitin batay sa prompt ng gumagamit. Ang mga kasangkapang ito ay:
+Ang Llama 3.1 ay na-fine-tune upang maging mas epektibo sa paggawa ng mga tawag sa function o tool. Mayroon itong dalawang built-in na mga tool na maaaring kilalanin ng modelo bilang kailangang gamitin batay sa prompt mula sa user. Ang mga tool na ito ay:
 
-- **Brave Search** - Maaaring gamitin upang makuha ang napapanahong impormasyon tulad ng panahon sa pamamagitan ng web search
-- **Wolfram Alpha** - Maaaring gamitin para sa mas komplikadong kalkulasyon sa matematika kaya hindi na kailangang magsulat ng sarili mong mga function.
+- **Brave Search** - Maaaring gamitin para makakuha ng napapanahong impormasyon gaya ng panahon sa pamamagitan ng pagsasagawa ng web search
+- **Wolfram Alpha** - Maaaring gamitin para sa mas kumplikadong mga kalkulasyon sa matematika kaya hindi na kailangang magsulat ng sariling mga function.
 
-Maaari ka ring gumawa ng sarili mong custom na mga kasangkapan na maaaring tawagin ng LLM.
+Maaari ka ring gumawa ng sariling custom na mga tool na maaaring tawagin ng LLM.
 
-Sa halimbawang kodigo sa ibaba:
+Sa halimbawa ng code sa ibaba:
 
-- Dinideklara namin ang mga available na kasangkapan (brave_search, wolfram_alpha) sa system prompt.
-- Nagpapadala ng user prompt na nagtatanong tungkol sa panahon sa isang lungsod.
-- Tutugon ang LLM gamit ang tool call sa Brave Search tool na magiging ganito `<|python_tag|>brave_search.call(query="Stockholm weather")`
+- Ipe-define namin ang mga available na tool (brave_search, wolfram_alpha) sa system prompt.
+- Magpapadala ng user prompt na nagtatanong tungkol sa panahon sa isang partikular na lungsod.
+- Ang LLM ay sasagot gamit ang tool call sa Brave Search tool na magiging ganito `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*Paalala: Ang halimbawang ito ay gumagawa lamang ng tool call, kung nais mong makuha ang mga resulta, kailangan mong gumawa ng libreng account sa Brave API page at ideklara ang mismong function.
+*Tandaan: Ang halimbawa na ito ay gumagawa lamang ng tawag sa tool, kung nais mong makuha ang mga resulta, kailangan mong gumawa ng libreng account sa Brave API page at i-define ang mismong function.
 
 ```python 
 import os
@@ -60,9 +63,10 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import AssistantMessage, SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-token = os.environ["GITHUB_TOKEN"]
-endpoint = "https://models.inference.ai.azure.com"
-model_name = "meta-llama-3.1-405b-instruct"
+# Kunin ito mula sa "Overview" na pahina ng iyong Microsoft Foundry na proyekto
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
+model_name = "Meta-Llama-3.1-405B-Instruct"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -94,15 +98,16 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-Sa kabila ng pagiging LLM, isang limitasyon ng Llama 3.1 ay ang kakulangan nito sa multimodality. Ibig sabihin, hindi nito magamit ang iba't ibang uri ng input tulad ng mga larawan bilang mga prompt at magbigay ng tugon. Ang kakayahang ito ay isa sa mga pangunahing tampok ng Llama 3.2. Kasama sa mga tampok na ito:
+Bagaman ito ay isang LLM, isa sa limitasyon ng Llama 3.1 ay ang kakulangan nito sa multimodality. Ibig sabihin, ang kawalan ng kakayahan na gumamit ng iba't ibang uri ng input tulad ng mga larawan bilang mga prompt at magbigay ng mga tugon. Ang kakayahang ito ay isa sa mga pangunahing tampok ng Llama 3.2. Kasama rin sa mga tampok na ito ang:
 
-- Multimodality - may kakayahang magsuri ng parehong text at image prompts
-- Maliit hanggang katamtamang laki ng mga bersyon (11B at 90B) - nagbibigay ito ng flexible na mga pagpipilian sa deployment,
-- Mga text-only na bersyon (1B at 3B) - nagbibigay-daan ito sa modelo na mai-deploy sa mga edge/mobile devices at may mababang latency
+- Multimodality - may kakayahang suriin ang parehong text at image prompt
+- Small to Medium size variations (11B at 90B) - nagbibigay ito ng flexible na mga pagpipilian sa deployment,
+- Text-only variations (1B at 3B) - pinapayagan ang modelo na ideploy sa edge / mobile devices at nagbibigay ng mababang latency
 
-Ang suporta sa multimodal ay isang malaking hakbang sa mundo ng mga open source na modelo. Ang halimbawang kodigo sa ibaba ay tumatanggap ng parehong larawan at text prompt upang makakuha ng pagsusuri ng larawan mula sa Llama 3.2 90B.
+Ang suporta sa multimodal ay isang malaking hakbang sa mundo ng mga open source na modelo. Ang halimbawa ng code sa ibaba ay kumukuha ng parehong larawan at text prompt upang makakuha ng pagsusuri ng larawan mula sa Llama 3.2 90B.
 
-### Multimodal Support sa Llama 3.2
+
+### Suporta sa Multimodal gamit ang Llama 3.2
 
 ```python 
 import os
@@ -117,8 +122,9 @@ from azure.ai.inference.models import (
 )
 from azure.core.credentials import AzureKeyCredential
 
-token = os.environ["GITHUB_TOKEN"]
-endpoint = "https://models.inference.ai.azure.com"
+# Kunin ito mula sa pahina ng "Overview" ng iyong Microsoft Foundry proyekto
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Llama-3.2-90B-Vision-Instruct"
 
 client = ChatCompletionsClient(
@@ -149,13 +155,13 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Hindi dito nagtatapos ang pag-aaral, ipagpatuloy ang iyong paglalakbay
+## Hindi dito nagtatapos ang pag-aaral, ipagpatuloy ang paglalakbay
 
-Pagkatapos makumpleto ang araling ito, tingnan ang aming [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) upang ipagpatuloy ang pagpapalawak ng iyong kaalaman sa Generative AI!
+Pagkatapos matapos ang araling ito, tingnan ang aming [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para ipagpatuloy ang pagpapalawak ng iyong kaalaman sa Generative AI!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Paunawa**:
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat pinagsisikapan naming maging tumpak ang salin, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga mali o hindi pagkakatugma. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na opisyal na sanggunian. Para sa mga mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na nagmula sa paggamit ng salin na ito.
+**Pagtatanggi**:
+Ang dokumentong ito ay isinalin gamit ang serbisyo ng AI translation na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't nagsusumikap kami para sa katumpakan, pakatandaan na ang awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na pangunahing sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang maling pagkakaintindi o maling interpretasyon na nagmula sa paggamit ng pagsasaling ito.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

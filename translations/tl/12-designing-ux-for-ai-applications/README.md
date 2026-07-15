@@ -1,125 +1,127 @@
 # Pagdidisenyo ng UX para sa mga AI Application
 
-[![Pagdidisenyo ng UX para sa mga AI Application](../../../translated_images/tl/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Designing UX for AI Applications](../../../translated_images/tl/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
-> _(I-click ang imahe sa itaas para mapanood ang video ng araling ito)_
+> _(I-click ang larawan sa itaas upang mapanood ang video ng leksyon na ito)_
 
-Ang karanasan ng gumagamit ay napakahalagang aspeto sa paggawa ng mga app. Kailangang magamit ng mga gumagamit ang iyong app nang epektibo upang maisagawa ang mga gawain. Ang pagiging epektibo ay isang bagay, ngunit kailangan mo ring magdisenyo ng mga app upang magamit ng lahat, upang gawing _accessible_ ang mga ito. Ang kabanatang ito ay magtutuon sa lugar na ito upang sana ay makagawa ka ng app na magagamit at gugustuhin ng mga tao.
+Mahalaga ang karanasan ng gumagamit sa pagbuo ng mga app. Kailangan ng mga gumagamit na magamit ang iyong app nang mahusay upang maisagawa ang mga gawain. Ang pagiging mahusay ay isang bagay ngunit kailangan mo ring idisenyo ang mga app upang magamit ng lahat, upang maging _accessible_ ito. Sa kabanatang ito, tututukan natin ang bahagi na ito upang sana ay makabuo ka ng app na gusto at kayang gamitin ng mga tao.
 
 ## Panimula
 
-Ang karanasan ng gumagamit ay kung paano nakikipag-ugnayan at gumagamit ang isang tao ng isang partikular na produkto o serbisyo, maging ito ay isang sistema, tool, o disenyo. Kapag gumagawa ng mga AI application, hindi lamang nakatuon ang mga developer sa pagtiyak na epektibo ang karanasan ng gumagamit kundi pati na rin etikal. Sa araling ito, tatalakayin natin kung paano bumuo ng mga Artificial Intelligence (AI) application na tumutugon sa mga pangangailangan ng gumagamit.
+Ang karanasan ng gumagamit ay kung paano nakikipag-interact at gumagamit ang isang tao ng partikular na produkto o serbisyo, maging ito man ay sistema, kasangkapan, o disenyo. Sa pagde-develop ng mga AI application, hindi lamang tinututukan ng mga developer ang pagiging epektibo ng karanasan ng gumagamit kundi pati na rin ang pagiging etikal nito. Sa leksyon na ito, tatalakayin natin kung paano bumuo ng mga Artificial Intelligence (AI) application na tumutugon sa pangangailangan ng mga gumagamit.
 
-Ang aralin ay tatalakayin ang mga sumusunod na paksa:
+Saklaw ng leksyon ang mga sumusunod na bahagi:
 
 - Panimula sa Karanasan ng Gumagamit at Pag-unawa sa mga Pangangailangan ng Gumagamit
-- Pagdidisenyo ng mga AI Application para sa Tiwala at Transparency
-- Pagdidisenyo ng mga AI Application para sa Pakikipagtulungan at Feedback
+- Pagdidisenyo ng AI Application para sa Tiwala at Transparensiya
+- Pagdidisenyo ng AI Application para sa Pakikipagtulungan at Feedback
 
 ## Mga Layunin sa Pagkatuto
 
-Pagkatapos ng araling ito, magagawa mong:
+Pagkatapos kunin ang leksyon na ito, magagawa mong:
 
-- Maunawaan kung paano bumuo ng mga AI application na tumutugon sa mga pangangailangan ng gumagamit.
+- Maunawaan kung paano bumuo ng AI application na tumutugon sa pangangailangan ng mga gumagamit.
 - Magdisenyo ng mga AI application na nagtataguyod ng tiwala at pakikipagtulungan.
 
 ### Paunang Kaalaman
 
-Maglaan ng oras upang magbasa pa tungkol sa [karanasan ng gumagamit at design thinking.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
+Maglaan ng oras upang basahin pa tungkol sa [karanasan ng gumagamit at design thinking.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
 
 ## Panimula sa Karanasan ng Gumagamit at Pag-unawa sa mga Pangangailangan ng Gumagamit
 
-Sa aming kathang-isip na startup sa edukasyon, mayroon kaming dalawang pangunahing gumagamit, mga guro at mag-aaral. Ang bawat isa sa dalawang gumagamit ay may natatanging pangangailangan. Ang disenyo na nakasentro sa gumagamit ay inuuna ang gumagamit upang matiyak na ang mga produkto ay may kaugnayan at kapaki-pakinabang para sa mga ito.
+Sa aming kathang-isip na education startup, mayroon kaming dalawang pangunahing gumagamit, mga guro at mag-aaral. Bawat isa sa dalawang gumagamit ay may natatanging pangangailangan. Ang isang user-centered design ay inuuna ang gumagamit upang matiyak na ang mga produkto ay may kaugnayan at kapaki-pakinabang para sa mga taong nilalayon nito.
 
-Ang application ay dapat na **kapaki-pakinabang, maaasahan, accessible, at kaaya-aya** upang magbigay ng magandang karanasan ng gumagamit.
+Ang aplikasyon ay dapat **kapaki-pakinabang, maaasahan, accessible at kaaya-aya** upang magbigay ng magandang karanasan sa gumagamit.
 
-### Usability
+### Kagamitan (Usability)
 
-Ang pagiging kapaki-pakinabang ay nangangahulugan na ang application ay may functionality na tumutugma sa layunin nito, tulad ng pag-automate ng proseso ng pagmamarka o pagbuo ng mga flashcard para sa pag-aaral. Ang isang application na nag-automate ng proseso ng pagmamarka ay dapat na tumpak at mahusay na magtalaga ng mga marka sa mga gawain ng mag-aaral batay sa mga paunang natukoy na pamantayan. Gayundin, ang isang application na bumubuo ng mga flashcard para sa pag-aaral ay dapat na makalikha ng mga kaugnayan at magkakaibang tanong batay sa data nito.
+Ang pagiging kapaki-pakinabang ay nangangahulugang ang aplikasyon ay may mga kakayahan na akma sa layunin nito, tulad ng pag-automate ng proseso ng pag-grade o paglikha ng mga flashcard para sa pag-uulit. Ang isang aplikasyon na nag-a-automate ng proseso ng pag-grade ay dapat makahati ng mga grado nang tumpak at mahusay sa gawa ng mga estudyante batay sa mga paunang itinakdang pamantayan. Ganoon din, ang isang aplikasyon na gumagawa ng mga flashcard para sa pag-uulit ay dapat makalikha ng mga kaugnay at iba't-ibang tanong base sa datos nito.
 
-### Reliability
+### Maaasahan (Reliability)
 
-Ang pagiging maaasahan ay nangangahulugan na ang application ay maaaring magsagawa ng gawain nito nang tuloy-tuloy at walang mga error. Gayunpaman, ang AI tulad ng mga tao ay hindi perpekto at maaaring magkamali. Ang mga application ay maaaring makaranas ng mga error o hindi inaasahang sitwasyon na nangangailangan ng interbensyon o pagwawasto ng tao. Paano mo haharapin ang mga error? Sa huling bahagi ng araling ito, tatalakayin natin kung paano idinisenyo ang mga sistema at application ng AI para sa pakikipagtulungan at feedback.
+Ang pagiging maaasahan ay nangangahulugang ang aplikasyon ay makapagpapatupad ng gawain nang tuloy-tuloy at walang mga error. Gayunpaman, tulad ng tao, hindi perpekto ang AI at maaari itong magkamali. Maaaring makaranas ang mga aplikasyon ng mga error o hindi inaasahang sitwasyon na nangangailangan ng interbensyon o pagwawasto ng tao. Paano ka hahawak sa mga error? Sa huling bahagi ng leksyon na ito, tatalakayin natin kung paano dinisenyo ang mga AI system at aplikasyon para sa pakikipagtulungan at feedback.
 
-### Accessibility
+### Accessibilidad (Accessibility)
 
-Ang pagiging accessible ay nangangahulugan ng pagpapalawak ng karanasan ng gumagamit sa mga gumagamit na may iba't ibang kakayahan, kabilang ang mga may kapansanan, upang matiyak na walang maiiwan. Sa pamamagitan ng pagsunod sa mga alituntunin at prinsipyo ng accessibility, ang mga solusyon ng AI ay nagiging mas inklusibo, magagamit, at kapaki-pakinabang para sa lahat ng gumagamit.
+Ang pagiging accessible ay nangangahulugang pinalalawak ang karanasan ng gumagamit sa mga gumagamit na may iba't ibang kakayahan, kabilang ang mga may kapansanan, upang matiyak na walang maiiwan. Sa pagsunod sa mga alituntunin at prinsipyo ng accessibility, nagiging mas inklusibo, magagamit, at kapaki-pakinabang para sa lahat ng gumagamit ang mga solusyon ng AI.
 
-### Pleasant
+### Kaaya-aya (Pleasant)
 
-Ang pagiging kaaya-aya ay nangangahulugan na ang application ay masaya gamitin. Ang isang kaakit-akit na karanasan ng gumagamit ay maaaring magkaroon ng positibong epekto sa gumagamit, na hinihikayat silang bumalik sa application at nagpapataas ng kita ng negosyo.
+Ang pagiging kaaya-aya ay nangangahulugang ang aplikasyon ay masaya gamitin. Ang isang kaakit-akit na karanasan ng gumagamit ay maaaring magkaroon ng positibong epekto sa gumagamit na naghihikayat sa kanila na bumalik sa aplikasyon at dagdagan ang kita ng negosyo.
 
-![larawan na naglalarawan ng mga konsiderasyon sa UX sa AI](../../../translated_images/tl/uxinai.d5b4ed690f5cefff.webp)
+![image illustrating UX considerations in AI](../../../translated_images/tl/uxinai.d5b4ed690f5cefff.webp)
 
-Hindi lahat ng hamon ay maaaring malutas gamit ang AI. Ang AI ay pumapasok upang mapahusay ang karanasan ng gumagamit, maging ito ay pag-automate ng mga manu-manong gawain, o pag-personalize ng mga karanasan ng gumagamit.
+Hindi lahat ng suliranin ay malulutas gamit ang AI. Ang AI ay pumapasok upang dagdagan ang iyong karanasan sa gumagamit, maging ito man ay pag-automate ng mga manu-manong gawain, o pagpapersonalisa ng karanasan ng gumagamit.
 
-## Pagdidisenyo ng mga AI Application para sa Tiwala at Transparency
+## Pagdisenyo ng AI Application para sa Tiwala at Transparensiya
 
-Ang pagbuo ng tiwala ay mahalaga kapag nagdidisenyo ng mga AI application. Ang tiwala ay nagsisiguro na ang isang gumagamit ay kumpiyansa na ang application ay magagawa ang gawain, maghahatid ng mga resulta nang tuloy-tuloy, at ang mga resulta ay kung ano ang kailangan ng gumagamit. Ang isang panganib sa lugar na ito ay ang kawalan ng tiwala at sobrang tiwala. Ang kawalan ng tiwala ay nangyayari kapag ang isang gumagamit ay may kaunti o walang tiwala sa isang sistema ng AI, na humahantong sa pagtanggi ng gumagamit sa iyong application. Ang sobrang tiwala ay nangyayari kapag ang isang gumagamit ay labis na tinatantiya ang kakayahan ng isang sistema ng AI, na humahantong sa mga gumagamit na masyadong nagtitiwala sa sistema ng AI. Halimbawa, ang isang automated grading system sa kaso ng sobrang tiwala ay maaaring humantong sa guro na hindi suriin ang ilang mga papel upang matiyak na gumagana nang maayos ang grading system. Maaari itong magresulta sa hindi patas o hindi tumpak na mga marka para sa mga mag-aaral, o mga napalampas na pagkakataon para sa feedback at pagpapabuti.
+Napakahalaga ng pagtatayo ng tiwala kapag nagdidisenyo ng mga AI application. Ang tiwala ang nagsisiguro na ang gumagamit ay kumpiyansa na ang aplikasyon ay gagawa ng trabaho, magbibigay ng mga resulta nang tuloy-tuloy, at ang resulta ay naaayon sa pangangailangan ng gumagamit. Isang panganib sa bahaging ito ay ang kawalan ng tiwala at sobra-sobrang tiwala. Nangyayari ang kawalan ng tiwala kapag ang isang gumagamit ay kulang o walang tiwala sa isang AI system, na nagreresulta sa pagtanggi sa iyong aplikasyon. Nangyayari naman ang sobra-sobrang tiwala kapag sobra ang pagtingin ng gumagamit sa kakayahan ng AI system, kaya labis nilang pinagkakatiwalaan ang AI system. Halimbawa, sa kaso ng sobra-sobrang tiwala, maaaring hindi na i-proofread ng guro ang ilang papel para matiyak na maayos ang grading system. Maaari itong magresulta sa hindi patas o hindi tumpak na mga grado para sa mga mag-aaral, o sa mga naiwang pagkakataon para sa feedback at pagpapabuti.
 
-Dalawang paraan upang matiyak na ang tiwala ay inilalagay sa gitna ng disenyo ay ang explainability at control.
+Dalawang paraan upang matiyak na ang tiwala ay nasa sentro ng disenyo ay ang explainability at control.
 
 ### Explainability
 
-Kapag ang AI ay tumutulong sa paggawa ng mga desisyon tulad ng pagbibigay ng kaalaman sa mga susunod na henerasyon, mahalaga para sa mga guro at magulang na maunawaan kung paano ginagawa ang mga desisyon ng AI. Ito ang explainability - ang pag-unawa kung paano gumagawa ng desisyon ang mga AI application. Ang pagdidisenyo para sa explainability ay kinabibilangan ng pagdaragdag ng mga detalye na nagha-highlight kung paano nakarating ang AI sa output. Kailangang malaman ng audience na ang output ay nabuo ng AI at hindi ng tao. Halimbawa, sa halip na sabihin "Simulan ang pakikipag-chat sa iyong tutor ngayon" sabihin "Gamitin ang AI tutor na umaangkop sa iyong mga pangangailangan at tumutulong sa iyong matuto sa iyong bilis."
+Kapag ang AI ay tumutulong sa pagpapasya tulad ng pagpapasa ng kaalaman sa mga susunod na henerasyon, mahalaga para sa mga guro at magulang na maunawaan kung paano ginagawa ang mga desisyon ng AI. Ito ang explainability - ang pag-unawa kung paano gumagawa ng desisyon ang mga AI application. Kasama sa pagdisenyo para sa explainability ang pagdagdag ng detalye na nagpapakita kung paano nakarating ang AI sa output. Dapat malaman ng audience na ang output ay ginawa ng AI at hindi ng tao. Halimbawa, sa halip na sabihing "Simulan ang pag-chat sa iyong tutor ngayon" sabihin "Gamitin ang AI tutor na umaangkop sa iyong pangangailangan at tumutulong sa iyong matuto sa iyong sariling bilis."
 
-![isang landing page ng app na may malinaw na ilustrasyon ng explainability sa mga AI application](../../../translated_images/tl/explanability-in-ai.134426a96b498fbf.webp)
+![an app landing page with clear illustration of explainability in AI applications](../../../translated_images/tl/explanability-in-ai.134426a96b498fbf.webp)
 
-Isa pang halimbawa ay kung paano ginagamit ng AI ang data ng gumagamit at personal na data. Halimbawa, ang isang gumagamit na may persona na mag-aaral ay maaaring magkaroon ng mga limitasyon batay sa kanilang persona. Ang AI ay maaaring hindi makapagbigay ng mga sagot sa mga tanong ngunit maaaring tumulong na gabayan ang gumagamit kung paano nila malulutas ang isang problema.
+Isa pang halimbawa ay kung paano ginagamit ng AI ang user at personal na data. Halimbawa, ang isang gumagamit na may persona na estudyante ay maaaring may mga limitasyon base sa kanilang persona. Maaaring hindi maibigay ng AI ang mga sagot sa mga tanong ngunit maaaring tulungan ang gumagamit na mag-isip kung paano nila malulutas ang isang problema.
 
-![AI na sumasagot sa mga tanong batay sa persona](../../../translated_images/tl/solving-questions.b7dea1604de0cbd2.webp)
+![AI replying to questions based on persona](../../../translated_images/tl/solving-questions.b7dea1604de0cbd2.webp)
 
-Ang isa pang mahalagang bahagi ng explainability ay ang pagpapasimple ng mga paliwanag. Ang mga mag-aaral at guro ay maaaring hindi mga eksperto sa AI, kaya't ang mga paliwanag kung ano ang magagawa o hindi magagawa ng application ay dapat na simple at madaling maunawaan.
+Ang huling mahalagang bahagi ng explainability ay ang pagpapasimple ng mga paliwanag. Maaaring hindi eksperto sa AI ang mga estudyante at guro, kaya ang mga paliwanag tungkol sa kaya o hindi kaya ng aplikasyon ay dapat gawing simple at madaling maintindihan.
 
-![mga pinasimpleng paliwanag sa mga kakayahan ng AI](../../../translated_images/tl/simplified-explanations.4679508a406c3621.webp)
+![simplified explanations on AI capabilities](../../../translated_images/tl/simplified-explanations.4679508a406c3621.webp)
 
 ### Control
 
-Ang Generative AI ay lumilikha ng pakikipagtulungan sa pagitan ng AI at ng gumagamit, kung saan halimbawa ang isang gumagamit ay maaaring baguhin ang mga prompt para sa iba't ibang resulta. Bukod pa rito, kapag nabuo ang isang output, dapat magawa ng mga gumagamit na baguhin ang mga resulta na nagbibigay sa kanila ng pakiramdam ng kontrol. Halimbawa, kapag gumagamit ng Bing, maaari mong i-tailor ang iyong prompt batay sa format, tono, at haba. Bukod pa rito, maaari kang magdagdag ng mga pagbabago sa iyong output at baguhin ang output tulad ng ipinapakita sa ibaba:
+Ang Generative AI ay lumilikha ng pakikipagtulungan sa pagitan ng AI at ng gumagamit, kung saan halimbawa ay maaaring baguhin ng gumagamit ang mga prompt para sa iba't ibang resulta. Bukod dito, kapag na-generate na ang output, dapat magkaroon ng kakayahan ang mga gumagamit na baguhin ang mga resulta na nagbibigay sa kanila ng pakiramdam ng kontrol. Halimbawa, kapag ginagamit ang Microsoft Copilot (na dating Bing Chat), maaari mong i-customize ang iyong prompt base sa format, tono, at haba. Pwede ka ring magdagdag ng mga pagbabago sa iyong output at baguhin ito gaya ng ipinapakita sa ibaba:
 
-![Mga resulta ng paghahanap sa Bing na may mga opsyon upang baguhin ang prompt at output](../../../translated_images/tl/bing1.293ae8527dbe2789.webp)
+![Bing search results with options to modify the prompt and output](../../../translated_images/tl/bing1.293ae8527dbe2789.webp)
 
-Isa pang tampok sa Bing na nagbibigay-daan sa isang gumagamit na magkaroon ng kontrol sa application ay ang kakayahang mag-opt in at mag-opt out sa data na ginagamit ng AI. Para sa isang application sa paaralan, maaaring gustuhin ng isang mag-aaral na gamitin ang kanilang mga tala pati na rin ang mga mapagkukunan ng guro bilang materyal sa pag-aaral.
+Isa pang tampok sa Microsoft Copilot na nagbibigay kontrol sa gumagamit ay ang kakayahang mag-opt in at mag-opt out sa mga datos na ginagamit ng AI. Para sa isang school application, maaaring nais ng isang estudyante na gamitin ang kanilang mga notes pati ang mga resources ng mga guro bilang materyal sa pag-uulit.
 
-![Mga resulta ng paghahanap sa Bing na may mga opsyon upang baguhin ang prompt at output](../../../translated_images/tl/bing2.309f4845528a88c2.webp)
+![Bing search results with options to modify the prompt and output](../../../translated_images/tl/bing2.309f4845528a88c2.webp)
 
-> Kapag nagdidisenyo ng mga AI application, mahalaga ang intensyonalidad upang matiyak na ang mga gumagamit ay hindi masyadong nagtitiwala na nagtatakda ng hindi makatotohanang mga inaasahan sa mga kakayahan nito. Isang paraan upang gawin ito ay sa pamamagitan ng paglikha ng friction sa pagitan ng mga prompt at mga resulta. Paalalahanan ang gumagamit na ito ay AI at hindi isang kapwa tao.
+> Kapag nagdidisenyo ng AI application, mahalaga ang intensyon upang matiyak na hindi sobra ang pagtitiwala ng mga gumagamit na nagse-set ng hindi realistiko na mga inaasahan sa kakayahan nito. Isang paraan para gawin ito ay sa pamamagitan ng paglikha ng friction sa pagitan ng mga prompt at mga resulta. Paalalahanan ang gumagamit na ito ay AI at hindi isang kapwa tao.
 
-## Pagdidisenyo ng mga AI Application para sa Pakikipagtulungan at Feedback
+## Pagdidisenyo ng AI Application para sa Pakikipagtulungan at Feedback
 
-Tulad ng nabanggit kanina, ang generative AI ay lumilikha ng pakikipagtulungan sa pagitan ng gumagamit at AI. Karamihan sa mga pakikipag-ugnayan ay sa isang gumagamit na naglalagay ng prompt at ang AI ay bumubuo ng output. Paano kung mali ang output? Paano hinahawakan ng application ang mga error kung mangyari ang mga ito? Sisisihin ba ng AI ang gumagamit o maglalaan ng oras upang ipaliwanag ang error?
+Tulad ng naunang nabanggit, ang generative AI ay lumilikha ng pakikipagtulungan sa pagitan ng gumagamit at AI. Karamihan sa interaksyon ay sa pamamagitan ng pag-input ng prompt ng gumagamit at pag-generate ng output ng AI. Paano kung mali ang output? Paano hinahandle ng aplikasyon ang mga error kapag nangyari? Sinasabi ba ng AI na ang mali ay sa gumagamit o binibigyan nito ng paliwanag ang error?
 
-Ang mga AI application ay dapat na idisenyo upang makatanggap at magbigay ng feedback. Hindi lamang nito tinutulungan ang sistema ng AI na mapabuti kundi nagtatayo rin ng tiwala sa mga gumagamit. Ang isang feedback loop ay dapat na isama sa disenyo, ang isang halimbawa ay maaaring isang simpleng thumbs up o down sa output.
+Dapat bumuo ang mga AI application upang makatanggap at magbigay ng feedback. Hindi lang ito nakakatulong para sa pagpapabuti ng AI system kundi nagtatayo rin ng tiwala sa mga gumagamit. Dapat may feedback loop sa disenyo, halimbawa ay simpleng thumbs up o down sa output.
 
-Isa pang paraan upang harapin ito ay ang malinaw na iparating ang mga kakayahan at limitasyon ng sistema. Kapag ang isang gumagamit ay nagkamali sa paghingi ng isang bagay na lampas sa kakayahan ng AI, dapat ding magkaroon ng paraan upang harapin ito, tulad ng ipinapakita sa ibaba.
+Isa pang paraan upang hawakan ito ay malinaw na komunikasyon ng mga kakayahan at limitasyon ng sistema. Kapag gumawa ang gumagamit ng error sa paghingi ng bagay na lampas sa kakayahan ng AI, dapat mayroon ding paraan upang hawakan ito, tulad ng ipinapakita sa ibaba.
 
-![Pagbibigay ng feedback at paghawak ng mga error](../../../translated_images/tl/feedback-loops.7955c134429a9466.webp)
+![Giving feedback and handling errors](../../../translated_images/tl/feedback-loops.7955c134429a9466.webp)
 
-Ang mga error sa sistema ay karaniwan sa mga application kung saan maaaring kailanganin ng gumagamit ang tulong sa impormasyon na lampas sa saklaw ng AI o ang application ay maaaring may limitasyon sa kung gaano karaming mga tanong/paksa ang maaaring makabuo ng mga buod ng gumagamit. Halimbawa, ang isang AI application na sinanay sa data sa limitadong mga paksa tulad ng History at Math ay maaaring hindi makayanan ang mga tanong tungkol sa Geography. Upang mabawasan ito, maaaring magbigay ang sistema ng AI ng tugon tulad ng: "Paumanhin, ang aming produkto ay sinanay sa data sa mga sumusunod na paksa....., hindi ko kayang sagutin ang tanong na iyong tinanong."
+Karaniwan ang mga error sa sistema sa mga aplikasyon kung saan maaaring kailanganin ng gumagamit ng tulong para sa impormasyon na wala sa saklaw ng AI, o maaaring may limitasyon ang aplikasyon kung ilan ang tanong/paksang pwedeng gawing buod ng gumagamit. Halimbawa, ang isang AI application na tinrain sa mga data tungkol sa limitadong mga paksa tulad ng History at Math ay maaaring hindi makasagot sa mga tanong tungkol sa Geography. Upang maiwasan ito, maaaring magbigay ang AI system ng tugon tulad ng: "Paumanhin, ang aming produkto ay tinrain gamit ang datos sa mga sumusunod na paksa....., hindi ko kaya na sagutin ang tanong na iyong tinanong."
 
-Ang mga AI application ay hindi perpekto, kaya't sila ay tiyak na magkakamali. Kapag nagdidisenyo ng iyong mga application, dapat mong tiyakin na lumikha ng espasyo para sa feedback mula sa mga gumagamit at paghawak ng error sa paraang simple at madaling maunawaan.
+Hindi perpekto ang mga AI application, kaya inaasahan ang mga pagkakamali. Kapag dinisenyo ang iyong mga aplikasyon, dapat mong tiyakin na mayroong puwang para sa feedback mula sa mga gumagamit at paghawak sa mga error sa paraang simple at madaling maipaliwanag.
 
-## Takdang-Aralin
+## Takdang Aralin
 
-Kunin ang anumang AI apps na nagawa mo na, isaalang-alang ang pagpapatupad ng mga sumusunod na hakbang sa iyong app:
+Kunin ang anumang AI app na iyong nabuo hanggang ngayon, isaalang-alang ang pagpapatupad ng mga sumusunod na hakbang sa iyong app:
 
-- **Kaaya-aya:** Isaalang-alang kung paano mo mapapaganda ang iyong app. Nagdaragdag ka ba ng mga paliwanag sa bawat bahagi? Hinihikayat mo ba ang gumagamit na mag-explore? Paano mo binibigkas ang iyong mga mensahe ng error?
+- **Kaaya-aya:** Isipin kung paano mo mapapaganda ang karanasan sa paggamit ng iyong app. Nagsasama ka ba ng mga paliwanag sa lahat ng dako? Hinikayat mo ba ang gumagamit na mag-explore? Paano mo binubuo ang iyong mga mensahe ng error?
 
-- **Usability:** Gumagawa ng web app. Siguraduhin na ang iyong app ay maaaring i-navigate gamit ang parehong mouse at keyboard.
+- **Kagamitang mabisa:** Nagtatayo ka ba ng web app? Siguraduhin na ang iyong app ay napaglalakaran gamit ang mouse at keyboard.
 
-- **Tiwala at transparency:** Huwag lubos na magtiwala sa AI at sa output nito, isaalang-alang kung paano mo idadagdag ang tao sa proseso upang i-verify ang output. Gayundin, isaalang-alang at ipatupad ang iba pang mga paraan upang makamit ang tiwala at transparency.
+- **Tiwala at transparensiya:** Huwag labis na magtiwala sa AI at sa output nito, isipin kung paano mo idaragdag ang isang tao sa proseso para beripikahin ang output. Isaalang-alang at ipatupad ang iba pang paraan upang makamit ang tiwala at transparensiya.
 
-- **Control:** Bigyan ang gumagamit ng kontrol sa data na kanilang ibinibigay sa application. Magpatupad ng paraan kung paano maaaring mag-opt-in at mag-opt-out ang isang gumagamit sa koleksyon ng data sa AI application.
+- **Kontrol:** Bigyan ang gumagamit ng kontrol sa data na kanilang ibinibigay sa aplikasyon. Magpatupad ng paraan para makapag-opt in at opt out ang gumagamit sa pangangalap ng data sa AI application.
 
 <!-- ## [Post-lecture quiz](../../../12-designing-ux-for-ai-applications/quiz-url) -->
 
-## Ipagpatuloy ang Iyong Pag-aaral!
+## Ipagpatuloy ang Iyong Pagkatuto!
 
-Pagkatapos makumpleto ang araling ito, tingnan ang aming [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) upang patuloy na mapalawak ang iyong kaalaman sa Generative AI!
+Pagkatapos makumpleto ang leksyon na ito, silipin ang aming [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) upang ipagpatuloy ang pagpapalawak ng iyong kaalaman tungkol sa Generative AI!
 
-Pumunta sa Aralin 13, kung saan tatalakayin natin kung paano [siguraduhin ang seguridad ng mga AI application](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Pumunta sa Leksiyon 13, kung saan tatalakayin natin kung paano [pangalagaan ang mga AI application](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat sinisikap naming maging tumpak, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na pinagmulan. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Pagtatanggi**:
+Ang dokumentong ito ay isinalin gamit ang serbisyo ng AI translation na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't nagsusumikap kami para sa katumpakan, pakatandaan na ang awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na pangunahing sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang maling pagkakaintindi o maling interpretasyon na nagmula sa paggamit ng pagsasaling ito.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
