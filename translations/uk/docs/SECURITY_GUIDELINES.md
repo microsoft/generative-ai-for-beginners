@@ -1,17 +1,17 @@
-# Керівні принципи безпеки для застосунків генеративного ШІ
+# Рекомендації з безпеки для застосунків генеративного штучного інтелекту
 
-Цей документ містить найкращі практики безпеки для створення застосунків генеративного ШІ, засновані на поширених вразливостях, виявлених у навчальних прикладах коду.
+У цьому документі викладені найкращі практики безпеки для створення застосунків генеративного ШІ на основі поширених вразливостей, виявлених у навчальних прикладах коду.
 
 ## Зміст
 
-1. [Управління змінними середовища](../../../docs)
-2. [Перевірка та санітизація введення](../../../docs)
-3. [Безпека API](../../../docs)
-4. [Запобігання ін’єкціям у запити](../../../docs)
-5. [Безпека HTTP-запитів](../../../docs)
-6. [Обробка помилок](../../../docs)
-7. [Операції з файлами](../../../docs)
-8. [Інструменти контролю якості коду](../../../docs)
+1. [Управління змінними середовища](#управління-змінними-середовища)
+2. [Перевірка та очищення введення](#codeblock2)
+3. [Безпека API](#текстові-дані)
+4. [Запобігання інжекції підказок](#створення-клієнта-openaiazure-openai)
+5. [Безпека HTTP-запитів](#запобігання-інжекції-підказок)
+6. [Обробка помилок](#безпека-http-запитів)
+7. [Операції з файлами](#codeblock11)
+8. [Інструменти якості коду](#не-фіксуйте-конфіденційну-інформацію)
 
 ---
 
@@ -37,28 +37,28 @@ api_key = get_required_env("OPENAI_API_KEY")
 ```
 
 ```javascript
-// Добре: Валідовувати змінні оточення у JavaScript
-const token = process.env["GITHUB_TOKEN"];
+// Добре: Перевіряти змінні оточення у JavaScript
+const token = process.env["AZURE_INFERENCE_CREDENTIAL"];
 if (!token) {
-    throw new Error("GITHUB_TOKEN environment variable is required");
+    throw new Error("AZURE_INFERENCE_CREDENTIAL environment variable is required");
 }
 ```
 
-### Що уникати
+### Чого уникати
 
 ```python
 # Погано: Використання os.environ[] без перевірки
-api_key = os.environ["OPENAI_API_KEY"]  # Викликає KeyError, якщо відсутній
+api_key = os.environ["OPENAI_API_KEY"]  # Викидає KeyError, якщо відсутній
 
-# Погано: Жорстко зашиті секрети
-app.config['SECRET_KEY'] = 'secret_key'  # НІКОЛИ цього не робіть!
+# Погано: Жорстко закодовані секрети
+app.config['SECRET_KEY'] = 'secret_key'  # НІКОЛИ так не робіть!
 ```
 
 ---
 
-## Перевірка та санітизація введення
+## Перевірка та очищення введення
 
-### Числовий ввід
+### Числові дані
 
 ```python
 def validate_number_input(value: str, min_val: int = 1, max_val: int = 100) -> int:
@@ -72,7 +72,7 @@ def validate_number_input(value: str, min_val: int = 1, max_val: int = 100) -> i
         raise ValueError(f"Please enter a valid number between {min_val} and {max_val}")
 ```
 
-### Текстовий ввід
+### Текстові дані
 
 ```python
 import re
@@ -82,7 +82,7 @@ def validate_text_input(value: str, max_length: int = 500) -> str:
     if len(value) > max_length:
         raise ValueError(f"Input too long. Maximum {max_length} characters allowed.")
 
-    # Видаліть потенційно небезпечні символи
+    # Видалити потенційно небезпечні символи
     sanitized = re.sub(r'[<>{}[\]|\\`]', '', value)
 
     return sanitized.strip()
@@ -95,30 +95,31 @@ def validate_text_input(value: str, max_length: int = 500) -> str:
 ### Створення клієнта OpenAI/Azure OpenAI
 
 ```python
-from openai import AzureOpenAI
+from openai import OpenAI
 
-def create_azure_client() -> AzureOpenAI:
-    """Create Azure OpenAI client with proper configuration."""
+def create_azure_client() -> OpenAI:
+    """Create an Azure OpenAI (Microsoft Foundry) client with proper configuration."""
     endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
     api_key = os.getenv("AZURE_OPENAI_API_KEY")
 
     if not endpoint or not api_key:
         raise ValueError("Azure OpenAI credentials are required")
 
-    return AzureOpenAI(
-        azure_endpoint=endpoint,
+    # API відповідей обслуговується з кінцевої точки Azure OpenAI v1, тому ми вказуємо
+    # клієнту OpenAI адресу <endpoint>/openai/v1/ (версія api_version не потрібна).
+    return OpenAI(
         api_key=api_key,
-        api_version="2024-02-01"
+        base_url=f"{endpoint.rstrip('/')}/openai/v1/",
     )
 ```
 
-### Обробка API ключів у URL (Уникати!)
+### Обробка API ключів у URL (уникати!)
 
 ```typescript
-// Погано: Ключ API в параметрах URL-запиту
-const url = `${baseUrl}?key=${apiKey}`;  // Відкритий у логах!
+// Погано: API-ключ у параметрі запиту URL
+const url = `${baseUrl}?key=${apiKey}`;  // Відкрито в логах!
 
-// Краще: Використовуйте заголовки для автентифікації
+// Краще: Використовуйте заголовки для аутентифікації
 const response = await axios.get(url, {
     headers: {
         'Authorization': `Bearer ${apiKey}`
@@ -128,14 +129,14 @@ const response = await axios.get(url, {
 
 ---
 
-## Запобігання ін’єкціям у запити
+## Запобігання інжекції підказок
 
 ### Проблема
 
-Користувацький ввід, безпосередньо вставлений у запити, може дозволити зловмисникам змінити поведінку ШІ:
+Безпосереднє вставляння введених користувачем даних у підказки може дозволити зловмисникам маніпулювати поведінкою ШІ:
 
 ```python
-# Уразливий до ін’єкцій команд
+# Вразливий до ін’єкції підказок
 user_input = input("Enter query: ")
 prompt = f"Answer this question: {user_input}"  # НЕБЕЗПЕЧНО!
 ```
@@ -144,11 +145,11 @@ prompt = f"Answer this question: {user_input}"  # НЕБЕЗПЕЧНО!
 
 ### Стратегії пом’якшення
 
-1. **Санітизація введення**:
+1. **Очищення введення**:
 ```python
 def sanitize_prompt_input(value: str) -> str:
     """Remove potentially dangerous patterns from user input."""
-    # Видалити шаблонні патерни інжекції
+    # Видалити шаблонні патерни ін’єкції
     sanitized = re.sub(r'\{\{.*?\}\}', '', value)
     sanitized = re.sub(r'\${.*?}', '', sanitized)
     return sanitized
@@ -162,18 +163,18 @@ messages = [
 ]
 ```
 
-3. **Фільтрація вмісту**: Використовуйте вбудовану фільтрацію вмісту від провайдера ШІ, коли вона доступна.
+3. **Фільтрація вмісту**: Використовуйте вбудований фільтр вмісту від провайдера ШІ, якщо він доступний.
 
 ---
 
 ## Безпека HTTP-запитів
 
-### Завжди використовуйте таймаути
+### Завжди використовуйте тайм-аути
 
 ```python
 import requests
 
-# Погано: Без тайм-ауту (може зависнути назавжди)
+# Погано: Немає тайм-ауту (може зависнути назавжди)
 response = requests.get(url)
 
 # Добре: З тайм-аутом і обробкою помилок
@@ -184,7 +185,7 @@ except requests.exceptions.RequestException as e:
     print(f"Request failed: {e}")
 ```
 
-### Перевірка URL
+### Перевіряйте URL-адреси
 
 ```python
 from urllib.parse import urlparse
@@ -205,7 +206,7 @@ def is_valid_https_url(url: str) -> bool:
 ### Обробка конкретних виключень
 
 ```python
-# Погано: Вилов усіх виключень
+# Погано: Вловлювання всіх виключень
 try:
     result = api_call()
 except Exception as e:
@@ -215,17 +216,17 @@ except Exception as e:
 from openai import OpenAIError, RateLimitError
 
 try:
-    result = client.chat.completions.create(...)
+    result = client.responses.create(...)
 except RateLimitError:
     print("Rate limit exceeded. Please wait and try again.")
 except OpenAIError as e:
     print(f"API error occurred: {e.message}")
 ```
 
-### Не логуйте конфіденційну інформацію
+### Не фіксуйте конфіденційну інформацію
 
 ```python
-# Погано: Логування повної помилки, яка може містити ключі/токени API
+# Погано: Логувати повну помилку, яка може містити ключі/токени API
 logger.error(f"Error: {error}")
 
 # Добре: Логувати лише безпечну інформацію
@@ -236,18 +237,18 @@ logger.error(f"API request failed with status {error.status_code}")
 
 ## Операції з файлами
 
-### Використання контекстних менеджерів
+### Використовуйте менеджери контексту
 
 ```python
-# Погано: дескриптор файлу може бути некоректно закритий
+# Погано: Можливе неправильне закриття файлового дескриптора
 json.dump(data, open(filename, "w"))
 
-# Добре: використовуйте менеджер контексту
+# Добре: Використовуйте менеджер контексту
 with open(filename, "w", encoding="utf-8") as f:
     json.dump(data, f)
 ```
 
-### Запобігання обходу шляхів
+### Запобігайте атакам path traversal
 
 ```python
 import os
@@ -266,23 +267,23 @@ def safe_file_path(base_dir: str, user_filename: str) -> str:
 
 ---
 
-## Інструменти контролю якості коду
+## Інструменти якості коду
 
 ### Рекомендовані інструменти
 
 | Інструмент | Мова | Призначення |
-|------------|------|-------------|
-| ESLint     | JavaScript/TypeScript | Статичний аналіз коду |
-| Prettier   | JavaScript/TypeScript | Форматування коду |
-| Black      | Python | Форматування коду |
-| Ruff       | Python | Швидкий аналіз коду |
-| mypy       | Python | Перевірка типів |
-| Bandit     | Python | Лінтинг з безпеки |
+|------|----------|---------|
+| ESLint | JavaScript/TypeScript | Статичний аналіз коду |
+| Prettier | JavaScript/TypeScript | Форматування коду |
+| Black | Python | Форматування коду |
+| Ruff | Python | Швидкий лінтинг |
+| mypy | Python | Перевірка типів |
+| Bandit | Python | Лінтинг безпеки |
 
 ### Запуск перевірок безпеки
 
 ```bash
-# Перевірка безпеки Python
+# Лінтування безпеки Python
 pip install bandit
 bandit -r ./python/
 
@@ -293,23 +294,23 @@ npx eslint --ext .js,.ts .
 
 ---
 
-## Підсумковий список перевірки
+## Підсумковий чеклист
 
-Перед розгортанням застосунків ШІ переконайтеся, що:
+Перед розгортанням застосунків ШІ перевірте:
 
-- [ ] Всі API ключі завантажені зі змінних середовища
-- [ ] Користувацьке введення перевірене та санітизоване
-- [ ] HTTP-запити мають таймаути
-- [ ] Операції з файлами виконуються через контекстні менеджери
-- [ ] Запобігання обходу шляхів реалізовано
-- [ ] Виключення обробляються специфічно
-- [ ] Конфіденційні дані не логуються
-- [ ] URL перевірені перед використанням
-- [ ] Виклики функцій із ШІ перевірені за дозволеним списком
+- [ ] Усі API-ключі завантажені зі змінних середовища
+- [ ] Введення користувача перевірене та очищене
+- [ ] HTTP-запити мають тайм-аути
+- [ ] Операції з файлами виконується за допомогою менеджерів контексту
+- [ ] Запобігають path traversal
+- [ ] Конкретна обробка виключень
+- [ ] Конфіденційні дані не логуются
+- [ ] URL-адреси перевірені перед використанням
+- [ ] Виклики функцій від ШІ перевірені відповідно до білого списку
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Відмова від відповідальності**:  
-Цей документ було перекладено за допомогою сервісу машинного перекладу [Co-op Translator](https://github.com/Azure/co-op-translator). Хоча ми прагнемо до точності, зверніть увагу, що автоматизовані переклади можуть містити помилки або неточності. Оригінальний документ рідною мовою слід вважати авторитетним джерелом. Для критично важливої інформації рекомендується звертатися до професійного людського перекладу. Ми не несемо відповідальності за будь-які непорозуміння чи неправильне тлумачення, що виникли внаслідок використання цього перекладу.
+**Відмова від відповідальності**:
+Цей документ було перекладено за допомогою сервісу штучного інтелекту для перекладу [Co-op Translator](https://github.com/Azure/co-op-translator). Хоча ми прагнемо до точності, будь ласка, майте на увазі, що автоматичні переклади можуть містити помилки або неточності. Оригінальний документ рідною мовою слід вважати авторитетним джерелом. Для критично важливої інформації рекомендується професійний людський переклад. Ми не несемо відповідальності за будь-які непорозуміння або неправильні тлумачення, що виникли внаслідок використання цього перекладу.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

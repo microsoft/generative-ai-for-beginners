@@ -1,14 +1,14 @@
 # Підготовка даних транскрипції
 
-Скрипти підготовки даних транскрипції завантажують транскрипти відео з YouTube і готують їх для використання з прикладом Semantic Search з OpenAI Embeddings та Functions.
+Скрипти підготовки даних транскрипції завантажують транскрипти відео з YouTube та готують їх для використання з прикладом Semantic Search with OpenAI Embeddings and Functions.
 
-Скрипти підготовки даних транскрипції були протестовані на останніх версіях Windows 11, macOS Ventura та Ubuntu 22.04 (і новіших).
+Скрипти підготовки даних транскрипції були протестовані на останніх версіях Windows 11, macOS Ventura та Ubuntu 22.04 (та вище).
 
-## Створення необхідних ресурсів Azure OpenAI Service
+## Створіть потрібні ресурси Azure OpenAI Service
 
 > [!IMPORTANT]
 > Рекомендуємо оновити Azure CLI до останньої версії для забезпечення сумісності з OpenAI
-> Дивіться [Документацію](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
+> Див. [Документацію](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Створіть групу ресурсів
 
@@ -28,7 +28,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Отримайте endpoint та ключі для використання в цьому додатку
+1. Отримайте кінцеву точку (endpoint) і ключі для використання в цьому додатку
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -38,8 +38,8 @@ az cognitiveservices account keys list --name semantic-video-openai \
 ```
 
 1. Розгорніть наступні моделі:
-   - `text-embedding-ada-002` версії `2` або вище, з назвою `text-embedding-ada-002`
-   - `gpt-35-turbo` версії `0613` або вище, з назвою `gpt-35-turbo`
+   - `text-embedding-ada-002` версії `2` чи вище, з ім'ям `text-embedding-ada-002`
+   - `gpt-4o-mini` з ім'ям `gpt-4o-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,26 +53,25 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-35-turbo \
-    --model-name gpt-35-turbo \
-    --model-version "0613"  \
+    --deployment-name gpt-4o-mini \
+    --model-name gpt-4o-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
 ```
 
-## Необхідне програмне забезпечення
+## Потрібне програмне забезпечення
 
 - [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) або новіша версія
 
 ## Змінні середовища
 
-Для запуску скриптів підготовки даних транскрипції YouTube потрібні наступні змінні середовища.
+Наступні змінні середовища потрібні для запуску скриптів підготовки даних транскрипції YouTube.
 
 ### У Windows
 
-Рекомендується додати змінні до змінних середовища користувача.
-`Пуск Windows` > `Змінити системні змінні середовища` > `Змінні середовища` > `Змінні користувача` для [USER] > `Створити`.
+Рекомендуємо додати змінні до ваших `user` змінних середовища.
+`Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` для [USER] > `New`.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -81,11 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
+<!-- Ви можете додати змінні середовища до вашого профілю PowerShell.
 
+```powershell
+$env:AZURE_OPENAI_API_KEY = "<ваш ключ API Azure OpenAI Service>"
+$env:AZURE_OPENAI_ENDPOINT = "<ваш endpoint Azure OpenAI Service>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<ваше ім'я розгортання моделі Azure OpenAI Service>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<ваш ключ API розробника Google>"
+``` -->
 
 ### У Linux та macOS
 
-Рекомендується додати наступні експорти у файл `~/.bashrc` або `~/.zshrc`.
+Рекомендуємо додати наступні експорти до вашого файлу `~/.bashrc` або `~/.zshrc`.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -94,10 +100,10 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## Встановлення необхідних бібліотек Python
+## Встановлення потрібних бібліотек Python
 
 1. Встановіть [git клієнт](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), якщо він ще не встановлений.
-1. У вікні `Терміналу` склонуйте приклад у бажану папку репозиторію.
+1. У вікні `Terminal` склонуйте приклад у вашу бажану папку репозиторію.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -109,7 +115,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. Створіть віртуальне середовище Python.
+1. Створіть віртуальне Python середовище.
 
     У Windows:
 
@@ -123,7 +129,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     python3 -m venv .venv
     ```
 
-1. Активуйте віртуальне середовище Python.
+1. Активуйте віртуальне Python середовище.
 
    У Windows:
 
@@ -137,7 +143,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    source .venv/bin/activate
    ```
 
-1. Встановіть необхідні бібліотеки.
+1. Встановіть потрібні бібліотеки.
 
    У Windows:
 
@@ -165,5 +171,9 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ./transcripts_prepare.sh
 ```
 
-**Відмова від відповідальності**:  
-Цей документ було перекладено за допомогою сервісу автоматичного перекладу [Co-op Translator](https://github.com/Azure/co-op-translator). Хоча ми прагнемо до точності, будь ласка, майте на увазі, що автоматичні переклади можуть містити помилки або неточності. Оригінальний документ рідною мовою слід вважати авторитетним джерелом. Для критично важливої інформації рекомендується звертатися до професійного людського перекладу. Ми не несемо відповідальності за будь-які непорозуміння або неправильні тлумачення, що виникли внаслідок використання цього перекладу.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Відмова від відповідальності**:
+Цей документ було перекладено за допомогою сервісу штучного інтелекту для перекладу [Co-op Translator](https://github.com/Azure/co-op-translator). Хоча ми прагнемо до точності, будь ласка, майте на увазі, що автоматичні переклади можуть містити помилки або неточності. Оригінальний документ рідною мовою слід вважати авторитетним джерелом. Для критично важливої інформації рекомендується професійний людський переклад. Ми не несемо відповідальності за будь-які непорозуміння або неправильні тлумачення, що виникли внаслідок використання цього перекладу.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

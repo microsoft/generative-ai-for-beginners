@@ -1,44 +1,47 @@
-# Kūrimas su Mistral modeliais
+# Kūrimas su Mistral modeliais 
 
-## Įvadas
+## Įvadas 
 
-Ši pamoka apims:  
-- Skirtingų Mistral modelių tyrinėjimą  
-- Supratimą apie kiekvieno modelio naudojimo atvejus ir scenarijus  
-- Kodo pavyzdžių, rodančių kiekvieno modelio unikalias savybes, tyrinėjimą.
+Šiame pamokoje aptarsime: 
+- Skirtingų Mistral modelių tyrimą 
+- Supratimą apie kiekvieno modelio panaudojimo atvejus ir scenarijus 
+- Kodo pavyzdžių tyrimą, kurie demonstruoja kiekvieno modelio unikalias savybes. 
 
-## Mistral modeliai
+## Mistral modeliai 
 
-Šioje pamokoje tyrinėsime 3 skirtingus Mistral modelius:  
-**Mistral Large**, **Mistral Small** ir **Mistral Nemo**.
+Šioje pamokoje pažvelgsime į 3 skirtingus Mistral modelius: 
+**Mistral Large**, **Mistral Small** ir **Mistral Nemo**. 
 
-Kiekvienas iš šių modelių yra nemokamai prieinamas GitHub Model rinkoje. Šio užrašų knygutės kodas naudos šiuos modelius vykdymui. Daugiau informacijos apie GitHub Modelių naudojimą [kuriant su AI modeliais](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst) rasite nuorodoje.
+Kiekvienas iš šių modelių yra nemokamai prieinamas [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) platformoje. Šioje užrašų knygoje naudojami šie modeliai kodui vykdyti.
 
-## Mistral Large 2 (2407)  
-Mistral Large 2 šiuo metu yra pagrindinis Mistral modelis ir skirtas verslo naudojimui.
+> **Pastaba:** GitHub modeliai bus nutraukti 2026 metų liepos pabaigoje. Daugiau informacijos apie [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) naudojimą prototipavimui su AI modeliais rasite čia. 
 
-Modelis yra patobulinimas prie originalaus Mistral Large, siūlantis  
-- Didesnį konteksto langą – 128k prieš 32k  
-- Geresnį našumą matematikos ir programavimo užduotyse – 76,9 % vidutinė tikslumas prieš 60,4 %  
-- Padidintą daugiakalbį našumą – kalbos apima: anglų, prancūzų, vokiečių, ispanų, italų, portugalų, olandų, rusų, kinų, japonų, korėjiečių, arabų ir hindi.
 
-Su šiomis savybėmis Mistral Large pasižymi  
-- *Retrieval Augmented Generation (RAG)* – dėl didesnio konteksto lango  
-- *Funkcijų kvietimu* – šis modelis turi gimtąjį funkcijų kvietimą, leidžiantį integruotis su išorinėmis priemonėmis ir API. Šie kvietimai gali būti atliekami tiek lygiagrečiai, tiek vienas po kito seka.  
-- *Kodo generavimu* – modelis puikiai veikia generuojant Python, Java, TypeScript ir C++ kodą.
+## Mistral Large 2 (2407)
+Mistral Large 2 šiuo metu yra pagrindinis Mistral modelis, sukurtas verslo naudojimui. 
 
-### RAG pavyzdys naudojant Mistral Large 2
+Modelis yra patobulinimas originaliam Mistral Large, siūlant: 
+- Didesnį konteksto langą - 128k prieš 32k 
+- Geresnį našumą matematikos ir programavimo užduotyse - 76,9% vidutinis tikslumas prieš 60,4% 
+- Padidintą daugiakalbį našumą - kalbos apima: anglų, prancūzų, vokiečių, ispanų, italų, portugalų, olandų, rusų, kinų, japonų, korėjiečių, arabų ir hindi.
 
-Šiame pavyzdyje naudojame Mistral Large 2, kad vykdytume RAG modelį teksto dokumentui. Klausimas yra parašytas korėjiečių kalba ir klausia apie autoriaus veiklas prieš kolegiją.
+Su šiomis savybėmis Mistral Large pasižymi 
+- *Paieškos papildytą generavimą (RAG)* - dėl didesnio konteksto lango
+- *Funkcijų kvietimą* - šis modelis turi gimtą funkcijų kvietimą, leidžiantį integraciją su išoriniais įrankiais ir API. Šie kvietimai gali būti atliekami tiek lygiagrečiai, tiek vienas po kito sekos tvarka. 
+- *Kodo generavimą* - šis modelis puikiai veikia generuojant Python, Java, TypeScript ir C++ kodą. 
 
-Jis naudoja Cohere embeddings modelį, kad sukurtų įterpimus (embeddings) teksto dokumentui ir klausimui. Šiame pavyzdyje naudojama faiss Python biblioteka kaip vektorių saugykla.
+### RAG pavyzdys naudojant Mistral Large 2 
 
-Pranešimas, siunčiamas Mistral modeliui, apima tiek klausimus, tiek panašias į klausimą rastas teksto dalis. Modelis tada pateikia natūralios kalbos atsakymą.
+Šiame pavyzdyje naudojame Mistral Large 2 vykdyti RAG modelio šabloną teksto dokumentui. Klausimas yra parašytas korėjiečių kalba ir klausia apie autoriaus veiklas prieš koledžą. 
+
+Naudojamas Cohere Embeddings modelis kuriant teksto dokumento ir klausimo įterpimus. Šiame pavyzdyje kaip vektorinė saugykla naudojama faiss Python biblioteka. 
+
+Į modelį siunčiamas prašymas apima tiek klausimus, tiek gautus fragmentus, kurie yra panašūs į klausimą. Tada modelis pateikia natūralios kalbos atsakymą. 
 
 ```python 
 pip install faiss-cpu
 ```
-  
+
 ```python 
 import requests
 import numpy as np
@@ -50,9 +53,10 @@ from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.inference import EmbeddingsClient
 
-endpoint = "https://models.inference.ai.azure.com"
+# Gaukite juos iš savo Microsoft Foundry projekto "Apžvalga" puslapio
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-large"
-token = os.environ["GITHUB_TOKEN"]
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -129,30 +133,30 @@ chat_response = client.complete(
 print(chat_response.choices[0].message.content)
 ```
 
+## Mistral Small 
+Mistral Small yra kitas modelis iš Mistral šeimos pagal premier/verslo kategoriją. Kaip rodo pavadinimas, tai yra Mažas Kalbos Modelis (SLM). Naudos naudojant Mistral Small yra tokios: 
+- Kainų taupymas palyginti su Mistral LLM, tokiais kaip Mistral Large ir NeMo - kaina sumažėja 80%
+- Mažas vėlinimas - greitesnis atsakymas palyginti su Mistral LLM
+- Lankstus - gali būti diegiamas skirtingose aplinkose su mažesniais ribojimais reikalaujamų išteklių atžvilgiu. 
 
-## Mistral Small  
-Mistral Small yra dar vienas modelis Mistral modelių šeimoje, priklausantis premier/enterprise kategorijai. Kaip rodo pavadinimas, šis modelis yra mažas kalbos modelis (SLM). Pagrindiniai Mistral Small pranašumai yra:  
-- Sąnaudų taupymas, palyginti su Mistral didžiaisiais modeliais, tokiais kaip Mistral Large ir NeMo – 80 % kainos sumažėjimas  
-- Mažas delsimas – greitesnis atsakymas, palyginti su Mistral LLM  
-- Lankstumas – gali būti diegiamas skirtingose aplinkose su mažesniais reikalavimais resursams.
 
-Mistral Small puikiai tinka:  
-- Teksto pagrindu atliktoms užduotims, tokioms kaip santraukos sudarymas, nuotaikų analizė ir vertimas  
-- Programėlėms, kuriose dažnai atliekami užklausimai dėl kaštų efektyvumo  
-- Žemo delsimo kodo užduotims, tokioms kaip apžvalga ir kodo pasiūlymai
+Mistral Small puikiai tinka: 
+- Tekstinėms užduotims, tokioms kaip santraukos rengimas, nuotaikos analizė ir vertimas. 
+- Programėlėms, kur dažnai atliekami užklausimai dėl jo ekonomiškumo 
+- Mažo vėlinimo kodo užduotims, tokioms kaip kodo peržiūra ir pasiūlymai 
 
-## Mistral Small ir Mistral Large palyginimas
+## Mistral Small ir Mistral Large palyginimas 
 
-Norėdami parodyti delsimo skirtumus tarp Mistral Small ir Large, vykdykite žemiau esančias ląsteles.
+Norėdami pamatyti vėlinimo skirtumus tarp Mistral Small ir Large, paleiskite žemiau esančias ląsteles. 
 
-Turėtumėte pamatyti atsakymo laiko skirtumą nuo 3 iki 5 sekundžių. Taip pat atkreipkite dėmesį į atsakymų ilgį ir stilių pagal tą patį užklausą.
+Turėtumėte pastebėti atsakymo laikų skirtumą nuo 3 iki 5 sekundžių. Taip pat atkreipkite dėmesį į atsakymų ilgius ir stilių to paties prašymo metu.  
 
 ```python 
 
 import os 
-endpoint = "https://models.inference.ai.azure.com"
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-small"
-token = os.environ["GITHUB_TOKEN"]
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -173,7 +177,7 @@ response = client.complete(
 print(response.choices[0].message.content)
 
 ```
-  
+
 ```python 
 
 import os
@@ -181,9 +185,9 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-endpoint = "https://models.inference.ai.azure.com"
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-large"
-token = os.environ["GITHUB_TOKEN"]
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -205,31 +209,31 @@ print(response.choices[0].message.content)
 
 ```
 
-
 ## Mistral NeMo
 
-Lyginant su kitais dviem šiame pamokoje aptartais modeliais, Mistral NeMo yra vienintelis nemokamas modelis su Apache2 licencija.
+Palyginti su dviem kitais šiame pamokoje aptartais modeliais, Mistral NeMo yra vienintelis nemokamas modelis su Apache2 licencija. 
 
-Jis vertinamas kaip atnaujinimas ankstesniam atvirojo kodo LLM iš Mistral, Mistral 7B.
+Jis laikomas atnaujinimu ankstesniam atviro kodo Mistral modeliui, Mistral 7B. 
 
-Kitos NeMo modelio savybės:
+Kai kurios kitos NeMo modelio savybės yra: 
 
-- *Efektyvesnė tokenizacija:* Šis modelis naudoja Tekken tokenizatorių, o ne dažniausiai naudojamą tiktoken. Tai leidžia geriau veikti su daugiau kalbų ir kodo.
+- *Efektyvesnė tokenizacija:* Šis modelis naudoja Tekken tokenizatorių vietoje dažniau naudojamo tiktoken. Tai leidžia geresnį našumą daugiau kalbų ir kodų atžvilgiu. 
 
-- *Finetuning:* Bazinis modelis prieinamas derinimui (finetune). Tai suteikia didesnį lankstumą atvejams, kai reikalingas derinimas.
+- *Modelio tobulinimas (finetuning):* Bazinis modelis yra prieinamas tobulinimui. Tai suteikia daugiau lankstumo panaudojimo atvejams, kai gali prireikti tobulinimo. 
 
-- *Gimtasis funkcijų kvietimas* – kaip ir Mistral Large, šis modelis buvo apmokytas funkcijų kvietimui. Tai daro jį unikaliu, kaip vieną iš pirmųjų atvirojo kodo modelių, turinčių tokią funkciją.
+- *Gimtasis funkcijų kvietimas* - Kaip ir Mistral Large, šis modelis buvo išmokytas funkcijų kvietimui. Tai padaro jį unikaliu kaip vieną iš pirmųjų atviro kodo modelių, turinčių šią savybę. 
 
-### Tokenizatorių palyginimas
 
-Šiame pavyzdyje pažvelgsime, kaip Mistral NeMo atlieka tokenizaciją, palyginti su Mistral Large.
+### Tokenizatorių palyginimas 
 
-Abu pavyzdžiai naudoja tą patį užklausą, bet turėtumėte matyti, kad NeMo grąžina mažiau tokenų nei Mistral Large.
+Šiame pavyzdyje pažiūrėsime, kaip Mistral NeMo tvarko tokenizaciją palyginti su Mistral Large. 
+
+Abu pavyzdžiai naudoja tą patį prašymą, tačiau turėtumėte pastebėti, kad NeMo grąžina mažiau tokenų nei Mistral Large. 
 
 ```bash
 pip install mistral-common
 ```
-  
+
 ```python 
 # Importuokite reikalingas paketas:
 from mistral_common.protocol.instruct.messages import (
@@ -242,13 +246,13 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Įkelkite Mistral žodžių skaidytuvą
+# Įkelkite Mistral žodžių daliklių
 
 model_name = "open-mistral-nemo"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Atlikite žinučių sąrašo tokenizavimą
+# Išskaidykite žinučių sąrašą į žodžių dalis
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -282,12 +286,12 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# Suskaičiuokite žodžių skaičių
+# Suskaičiuokite žodžių dalių skaičių
 print(len(tokens))
 ```
-  
+
 ```python
-# Importuokite reikalingas paketas:
+# Importuoti reikalingas paketas:
 from mistral_common.protocol.instruct.messages import (
     UserMessage,
 )
@@ -298,13 +302,13 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Įkelkite Mistral žodžių skaidyklę
+# Įkelti Mistral žodyną
 
 model_name = "mistral-large-latest"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Paskaidykite žinučių sąrašą į žodžius
+# Sužodžiuoti žinučių sąrašą
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -338,18 +342,17 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# Suskaičiuokite žodžių skaičių
+# Suskaičiuoti žodžių skaičių
 print(len(tokens))
 ```
 
-
 ## Mokymasis čia nesibaigia, tęskite kelionę
 
-Baigę šią pamoką, apsilankykite mūsų [Generatyvios AI mokymosi kolekcijoje](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), kad toliau keltumėte savo žinias apie Generatyvią AI!
+Pabaigę šią pamoką, peržiūrėkite mūsų [Generatyvios AI mokymosi kolekciją](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), kad toliau kelkite savo generatyvios AI žinias!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Atsakomybės apribojimas**:
-Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, atkreipkite dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Pirminis dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojama naudotis profesionalių vertėjų paslaugomis. Mes neprisiimame atsakomybės už bet kokius nesusipratimus ar klaidų interpretuotes, kylančias dėl šio vertimo naudojimo.
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojama naudoti profesionalų žmogiškąjį vertimą. Mes neatsakome už jokius nesusipratimus ar neteisingą interpretaciją, kilusią naudojantis šiuo vertimu.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

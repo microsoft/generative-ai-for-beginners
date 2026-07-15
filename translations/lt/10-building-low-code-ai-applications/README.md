@@ -1,246 +1,282 @@
-# Kuriame mažo kodo AI programas
+# Žemo kodo DI programų kūrimas
 
-[![Kuriame mažo kodo AI programas](../../../translated_images/lt/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
+[![Žemo kodo DI programų kūrimas](../../../translated_images/lt/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
-> _(Spustelėkite aukščiau esančią nuotrauką, kad peržiūrėtumėte šios pamokos vaizdo įrašą)_
+> _(Spustelėkite aukščiau esantį paveikslėlį, jei norite peržiūrėti šios pamokos vaizdo įrašą)_
 
 ## Įvadas
 
-Dabar, kai išmokome kurti vaizdus generuojančias programas, pakalbėkime apie mažą kodą. Generatyvinis AI gali būti naudojamas įvairiose srityse, įskaitant mažą kodą, bet kas yra mažas kodas ir kaip galime pridėti AI prie jo?
+Kadangi jau sužinojome, kaip kurti vaizdą generuojančias programas, pakalbėkime apie žemo kodo sprendimus. Generuojamą DI galima naudoti įvairiose srityse, įskaitant žemo kodo kūrimą, bet kas yra žemas kodas ir kaip prie jo pridėti DI?
 
-Programų ir sprendimų kūrimas tapo lengvesnis tiek tradiciniams programuotojams, tiek neprogramuotojams naudojant mažo kodo kūrimo platformas. Mažo kodo kūrimo platformos leidžia kurti programas ir sprendimus su minimaliu arba visai be kodo. Tai pasiekiama suteikiant vizualią kūrimo aplinką, kurioje galima vilkti ir mesti komponentus, kad būtų sukurtos programos ir sprendimai. Tai leidžia kurti programas ir sprendimus greičiau ir su mažesniais ištekliais. Šioje pamokoje gilinamės į tai, kaip naudoti mažą kodą ir kaip pagerinti mažo kodo kūrimą su AI naudojant „Power Platform“.
+Programėlių ir sprendimų kūrimas tapo lengvesnis tradiciniams programuotojams ir neprogramuotojams, naudojant žemo kodo kūrimo platformas. Žemo kodo kūrimo platformos leidžia kurti programas ir sprendimus naudojant mažai arba visai be kodo. Tai pasiekiama suteikiant vizualią kūrimo aplinką, kurioje objektus galima vilkti ir mesti, kad būtų sukurtos programėlės ir sprendimai. Tai leidžia kurti programas ir sprendimus greičiau ir su mažesniais resursais. Šioje pamokoje gilinsimės į žemo kodo naudojimą ir kaip patobulinti žemo kodo kūrimą su DI naudojant Power Platform.
 
-„Power Platform“ suteikia organizacijoms galimybę įgalinti savo komandas kurti savo sprendimus intuityvioje mažo kodo arba be kodo aplinkoje. Ši aplinka padeda supaprastinti sprendimų kūrimo procesą. Naudojant „Power Platform“, sprendimai gali būti sukurti per kelias dienas ar savaites, o ne mėnesius ar metus. „Power Platform“ sudaro penki pagrindiniai produktai: „Power Apps“, „Power Automate“, „Power BI“, „Power Pages“ ir „Copilot Studio“.
+Power Platform suteikia organizacijoms galimybę suteikti savo komandoms galią kurti savo sprendimus per intuityvią žemo kodo arba be kodo aplinką. Ši aplinka supaprastina sprendimų kūrimo procesą. Naudojant Power Platform, sprendimus galima sukurti per kelias dienas ar savaites, o ne mėnesius ar metus. Power Platform susideda iš penkių pagrindinių produktų: Power Apps, Power Automate, Power BI, Power Pages ir Copilot Studio.
 
-Šioje pamokoje aptariama:
+Ši pamoka apima:
 
-- Generatyvinio AI pristatymas „Power Platform“
-- „Copilot“ pristatymas ir kaip jį naudoti
-- Generatyvinio AI naudojimas kuriant programas ir srautus „Power Platform“
-- AI modelių supratimas „Power Platform“ su „AI Builder“
+- Generuojamo DI įvadas Power Platform
+- Įvadas apie Copilot ir kaip jį naudoti
+- Generuojamo DI naudojimas aplikacijų ir srautų kūrimui Power Platform
+- DI modelių Power Platform ir AI Builder supratimas
+- Intelektualių agentų kūrimas naudojant Microsoft Copilot Studio
 
 ## Mokymosi tikslai
 
-Pamokos pabaigoje galėsite:
+Baigę šią pamoką galėsite:
 
-- Suprasti, kaip veikia „Copilot“ „Power Platform“.
+- Suprasti, kaip veikia Copilot Power Platform.
 
-- Sukurti studentų užduočių sekimo programą mūsų švietimo startuoliui.
+- Sukurti Studentų užduočių sekimo programėlę mūsų švietimo startuoliui.
 
-- Sukurti sąskaitų apdorojimo srautą, kuris naudoja AI informacijai iš sąskaitų išgauti.
+- Sukurti sąskaitų apdorojimo srautą, kuris naudoja DI informacijai iš sąskaitų išgauti.
 
-- Taikyti geriausią praktiką naudojant „Create Text with GPT AI Model“.
+- Taikyti geriausias praktikas naudojant sukurti tekstą su GPT DI modeliu.
 
-Pamokoje naudosite šiuos įrankius ir technologijas:
+- Suprasti, kas yra Microsoft Copilot Studio ir kaip sukurti intelektualius agentus.
 
-- **Power Apps**, skirtą studentų užduočių sekimo programai, kuri suteikia mažo kodo kūrimo aplinką programoms kurti, kad būtų galima sekti, valdyti ir sąveikauti su duomenimis.
+Šios pamokos įrankiai ir technologijos, kuriuos naudosite, yra:
 
-- **Dataverse**, skirtą studentų užduočių sekimo programos duomenų saugojimui, kur „Dataverse“ suteiks mažo kodo duomenų platformą programos duomenims saugoti.
+- **Power Apps**, skirtas Studentų užduočių sekimo programėlei, suteikia žemo kodo kūrimo aplinką programoms, skirtoms stebėti, valdyti ir bendrauti su duomenimis.
 
-- **Power Automate**, skirtą sąskaitų apdorojimo srautui, kur turėsite mažo kodo kūrimo aplinką darbo eigoms kurti, kad automatizuotumėte sąskaitų apdorojimo procesą.
+- **Dataverse**, skirtas saugoti Studentų užduočių sekimo programėlės duomenims, kur Dataverse suteikia žemo kodo duomenų platformą šios programėlės duomenų saugojimui.
 
-- **AI Builder**, skirtą sąskaitų apdorojimo AI modeliui, kur naudosite iš anksto sukurtus AI modelius sąskaitoms apdoroti mūsų startuoliui.
+- **Power Automate**, skirtas Sąskaitų apdorojimo srautui, kur bus žemo kodo kūrimo aplinka darbo srautams kurti ir sąskaitų apdorojimo procesui automatizuoti.
 
-## Generatyvinis AI „Power Platform“
+- **AI Builder**, skirtas Sąskaitų apdorojimo DI modeliui, kur Naudosite iš anksto paruoštus DI modelius mūsų startuolio sąskaitų apdorojimui.
 
-Mažo kodo kūrimo ir programų tobulinimas generatyviniu AI yra pagrindinė „Power Platform“ sritis. Tikslas yra suteikti galimybę visiems kurti AI pagrįstas programas, svetaines, ataskaitų lentas ir automatizuoti procesus su AI, _nereikalaujant jokių duomenų mokslo žinių_. Šis tikslas pasiekiamas integruojant generatyvinį AI į mažo kodo kūrimo patirtį „Power Platform“ kaip „Copilot“ ir „AI Builder“.
+## Generuojamas DI Power Platform
+
+Žemo kodo kūrimo ir aplikacijų tobulinimas su generuojamu DI yra svarbi Power Platform sritis. Tikslas yra leisti visiems kurti DI varomas programas, svetaines, skydelius ir automatizuoti procesus su DI, _nereikalaujant duomenų mokslo žinių_. Šis tikslas pasiekiamas integruojant generuojamą DI į žemo kodo kūrimo patirtį Power Platform per Copilot ir AI Builder.
 
 ### Kaip tai veikia?
 
-„Copilot“ yra AI asistentas, kuris leidžia kurti „Power Platform“ sprendimus aprašant jūsų reikalavimus per pokalbių žingsnius naudojant natūralią kalbą. Pavyzdžiui, galite nurodyti savo AI asistentui, kokius laukus jūsų programa naudos, ir jis sukurs tiek programą, tiek pagrindinį duomenų modelį, arba galite nurodyti, kaip nustatyti srautą „Power Automate“.
+Copilot yra DI asistentas, leidžiantis kurti Power Platform sprendimus, aprašant savo reikalavimus serijoje pokalbių žingsnių naudojant natūralią kalbą. Pavyzdžiui, galite nurodyti savo DI asistentui, kokius laukus naudos jūsų programa, ir jis sukurs tiek programą, tiek pagrindinį duomenų modelį, arba galite nurodyti, kaip nustatyti srautą Power Automate.
 
-„Copilot“ funkcijas galite naudoti kaip funkciją savo programos ekranuose, kad vartotojai galėtų atrasti įžvalgas per pokalbių sąveikas.
+Copilot pagrįstas funkcionalumas gali būti įtrauktas į jūsų programos ekranus, leidžiant vartotojams atrasti įžvalgas per pokalbius ir sąveikas.
 
-„AI Builder“ yra mažo kodo AI galimybė, prieinama „Power Platform“, kuri leidžia naudoti AI modelius, kad padėtų automatizuoti procesus ir prognozuoti rezultatus. Naudodami „AI Builder“ galite įtraukti AI į savo programas ir srautus, kurie jungiasi prie jūsų duomenų „Dataverse“ arba įvairiuose debesų duomenų šaltiniuose, tokiuose kaip „SharePoint“, „OneDrive“ ar „Azure“.
+AI Builder yra žemo kodo DI galimybė Power Platform, leidžianti naudoti DI modelius procesų automatizavimui ir rezultatų prognozėms. Naudodami AI Builder galite pritaikyti DI savo programoms ir srautams, kurie jungiasi prie jūsų duomenų Dataverse arba įvairiuose debesies duomenų šaltiniuose, tokiuose kaip SharePoint, OneDrive ar Azure.
 
-„Copilot“ yra prieinamas visuose „Power Platform“ produktuose: „Power Apps“, „Power Automate“, „Power BI“, „Power Pages“ ir „Power Virtual Agents“. „AI Builder“ yra prieinamas „Power Apps“ ir „Power Automate“. Šioje pamokoje mes sutelksime dėmesį į tai, kaip naudoti „Copilot“ ir „AI Builder“ „Power Apps“ ir „Power Automate“, kad sukurtume sprendimą mūsų švietimo startuoliui.
+Copilot prieinamas visuose Power Platform produktuose: Power Apps, Power Automate, Power BI, Power Pages ir Copilot Studio (ankčiau Power Virtual Agents). AI Builder yra prieinamas Power Apps ir Power Automate. Šioje pamokoje sutelksime dėmesį, kaip naudoti Copilot ir AI Builder Power Apps ir Power Automate, kad sukurtume sprendimą mūsų švietimo startuoliui.
 
-### „Copilot“ „Power Apps“
+### Copilot Power Apps
 
-Kaip „Power Platform“ dalis, „Power Apps“ suteikia mažo kodo kūrimo aplinką programoms kurti, kad būtų galima sekti, valdyti ir sąveikauti su duomenimis. Tai programų kūrimo paslaugų rinkinys su mastelio duomenų platforma ir galimybe prisijungti prie debesų paslaugų ir vietinių duomenų. „Power Apps“ leidžia kurti programas, kurios veikia naršyklėse, planšetiniuose kompiuteriuose ir telefonuose, ir gali būti dalijamasi su kolegomis. „Power Apps“ supaprastina vartotojų įsitraukimą į programų kūrimą su paprasta sąsaja, kad kiekvienas verslo vartotojas ar profesionalus programuotojas galėtų kurti pritaikytas programas. Programų kūrimo patirtis taip pat pagerinama generatyviniu AI per „Copilot“.
+Kaip Power Platform dalis, Power Apps suteikia žemo kodo kūrimo aplinką programoms kurti, kad būtų galima stebėti, valdyti ir bendrauti su duomenimis. Tai programėlių kūrimo paslaugų rinkinys su keičiamu duomenų platformu ir galimybe jungtis prie debesies paslaugų ir vidinių duomenų šaltinių. Power Apps leidžia kurti programas, veikiančias naršyklėse, planšetėse ir telefonuose, kurias galima bendrinti su kolegomis. Power Apps supaprastina programėlių kūrimą su paprasta sąsaja, kad kiekvienas verslo vartotojas ar profesionalas galėtų kurti individualias programas. Programų kūrimo patirtis taip pat yra pagerinta naudojant generuojamą DI per Copilot.
 
-„Copilot“ AI asistento funkcija „Power Apps“ leidžia aprašyti, kokios programos jums reikia ir kokią informaciją norite, kad jūsų programa sektų, rinktų ar rodytų. „Copilot“ tada sugeneruoja interaktyvią „Canvas“ programą pagal jūsų aprašymą. Tada galite pritaikyti programą pagal savo poreikius. „AI Copilot“ taip pat generuoja ir siūlo „Dataverse“ lentelę su laukais, kurių jums reikia norint saugoti norimus sekti duomenis, ir pateikia pavyzdinius duomenis. Vėliau pamokoje aptarsime, kas yra „Dataverse“ ir kaip ją galite naudoti „Power Apps“. Tada galite pritaikyti lentelę pagal savo poreikius naudodami „AI Copilot“ asistento funkciją per pokalbių žingsnius. Ši funkcija yra lengvai pasiekiama iš „Power Apps“ pagrindinio ekrano.
+Copilot DI asistento funkcija Power Apps leidžia aprašyti, kokios programėlės jums reikia ir kokią informaciją ji turėtų stebėti, rinkti ar rodyti. Copilot tada sugeneruoja reaguojančią Canvas programėlę pagal jūsų aprašymą. Tada galite pritaikyti programėlę pagal savo poreikius. DI Copilot taip pat sukuria ir siūlo Dataverse lentelę su laukais, kurių reikia norint saugoti jūsų norimus stebėti duomenis ir keletą pavyzdinių duomenų. Šioje pamokoje vėliau apžvelgsime, kas yra Dataverse ir kaip jį naudoti Power Apps. Tada galite pritaikyti lentelę pagal savo poreikius naudodamiesi DI Copilot asistento funkcija per pokalbių žingsnius. Ši funkcija yra lengvai pasiekiama Power Apps pradiniame ekrane.
 
-### „Copilot“ „Power Automate“
+### Copilot Power Automate
 
-Kaip „Power Platform“ dalis, „Power Automate“ leidžia vartotojams kurti automatizuotas darbo eigas tarp programų ir paslaugų. Tai padeda automatizuoti pasikartojančius verslo procesus, tokius kaip komunikacija, duomenų rinkimas ir sprendimų patvirtinimai. Paprasta sąsaja leidžia vartotojams su įvairiais techniniais įgūdžiais (nuo pradedančiųjų iki patyrusių programuotojų) automatizuoti darbo užduotis. Darbo eigos kūrimo patirtis taip pat pagerinama generatyviniu AI per „Copilot“.
+Kaip Power Platform dalis, Power Automate leidžia vartotojams kurti automatizuotus darbo srautus tarp programėlių ir paslaugų. Tai padeda automatizuoti pasikartojančius verslo procesus, tokius kaip komunikacija, duomenų rinkimas ir sprendimų patvirtinimai. Paprasta sąsaja leidžia vartotojams nepriklausomai nuo techninių žinių (nuo pradedančiųjų iki patyrusių kūrėjų) automatizuoti darbo užduotis. Darbo srauto kūrimo patirtis taip pat pagerinta naudojant generuojamą DI per Copilot.
 
-„Copilot“ AI asistento funkcija „Power Automate“ leidžia aprašyti, kokio srauto jums reikia ir kokius veiksmus norite, kad jūsų srautas atliktų. „Copilot“ tada sugeneruoja srautą pagal jūsų aprašymą. Tada galite pritaikyti srautą pagal savo poreikius. „AI Copilot“ taip pat generuoja ir siūlo veiksmus, kurių jums reikia norint atlikti norimą automatizuoti užduotį. Vėliau pamokoje aptarsime, kas yra srautai ir kaip juos galite naudoti „Power Automate“. Tada galite pritaikyti veiksmus pagal savo poreikius naudodami „AI Copilot“ asistento funkciją per pokalbių žingsnius. Ši funkcija yra lengvai pasiekiama iš „Power Automate“ pagrindinio ekrano.
+Copilot DI asistento funkcija Power Automate leidžia aprašyti, kokio srauto jums reikia ir kokias veiklas jūsų srautas turi atlikti. Copilot tada sukuria srautą pagal jūsų aprašymą. Tada galite pritaikyti srautą pagal savo poreikius. DI Copilot taip pat kuria ir siūlo veiklas, kurių jums reikia norint automatizuoti užduotį. Šioje pamokoje vėliau apžvelgsime, kas yra darbo srautai ir kaip juos naudoti Power Automate. Tada galite pritaikyti veiklas pagal savo poreikius naudodamiesi DI Copilot asistento funkcija per pokalbių žingsnius. Ši funkcija yra lengvai pasiekiama Power Automate pradiniame ekrane.
 
-## Užduotis: Valdykite studentų užduotis ir sąskaitas mūsų startuoliui, naudodami „Copilot“
+## Intelektualių agentų kūrimas su Microsoft Copilot Studio
 
-Mūsų startuolis teikia internetinius kursus studentams. Startuolis sparčiai augo ir dabar sunkiai susidoroja su kursų paklausa. Startuolis pasamdė jus kaip „Power Platform“ kūrėją, kad padėtumėte sukurti mažo kodo sprendimą, kuris padėtų valdyti studentų užduotis ir sąskaitas. Sprendimas turėtų padėti sekti ir valdyti studentų užduotis per programą ir automatizuoti sąskaitų apdorojimo procesą per darbo eigą. Jums buvo pavesta naudoti generatyvinį AI sprendimui sukurti.
+[Microsoft Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/fundamentals-what-is-copilot-studio?WT.mc_id=academic-105485-koreyst) (anksčiau Power Virtual Agents) yra žemo kodo Power Platform narys, skirtas kurti **DI agentus** – pokalbių asistetus, kurie gali atsakyti į klausimus, atlikti veiksmus ir automatizuoti užduotis jūsų vartotojų naudai. Kaip ir visa Power Platform dalis, šiuos agentus kuriate per vizualią, natūralios kalbos pagrindą turinčią patirtį: aprašote, ką norite, kad agentas darytų, o Copilot Studio padeda sukurti jo nurodymus, žinias ir veiksmus.
 
-Pradėdami naudoti „Copilot“, galite naudoti [„Power Platform Copilot Prompt Library“](https://github.com/pnp/powerplatform-prompts?WT.mc_id=academic-109639-somelezediko), kad pradėtumėte naudoti raginimus. Ši biblioteka apima raginimų sąrašą, kurį galite naudoti kuriant programas ir srautus su „Copilot“. Taip pat galite naudoti bibliotekos raginimus, kad gautumėte idėjų, kaip aprašyti savo reikalavimus „Copilot“.
+Mūsų švietimo startuoliui galėtumėte sukurti agentą, kuris atsakinėja studentų klausimus apie kursus, tikrina užduočių terminus ir net siunčia el. laiškus dėstytojui – visa tai be programavimo.
 
-### Sukurkite studentų užduočių sekimo programą mūsų startuoliui
+Štai keletas naujausių galimybių, dėl kurių Copilot Studio yra galingas:
 
-Mūsų startuolio pedagogai sunkiai sekė studentų užduotis. Jie naudojo skaičiuoklę užduotims sekti, tačiau tai tapo sunku valdyti, kai studentų skaičius padidėjo. Jie paprašė jūsų sukurti programą, kuri padėtų jiems sekti ir valdyti studentų užduotis. Programa turėtų leisti jiems pridėti naujas užduotis, peržiūrėti užduotis, atnaujinti užduotis ir ištrinti užduotis. Programa taip pat turėtų leisti pedagogams ir studentams peržiūrėti įvertintas ir neįvertintas užduotis.
+- **Generuojami atsakymai iš jūsų žinių**. Vietoj to, kad rankiniu būdu kurtumėte kiekvieną pokalbį, galite prijungti **žinių šaltinius** – viešas svetaines, SharePoint, OneDrive, Dataverse, įkeliamus failus ar įmonės duomenis per jungtis – ir agentas sugeneruoja pagrįstus atsakymus iš jų.
 
-Programą sukursite naudodami „Copilot“ „Power Apps“, atlikdami šiuos veiksmus:
+- **Generuojamas orkestravimas**. Vietoj standžių komandų, agentas naudoja DI suprasti užklausą ir dinamiškai nuspręsti, kokias žinias, temas ir veiksmus sujungti užklausa įvykdyti, įskaitant kelių žingsnių grandinę.
 
-1. Eikite į [„Power Apps“](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst) pagrindinį ekraną.
+- **Veiksmai ir jungtys**. Agentai gali *daryti* dalykus, ne tik kalbėtis. Galite suteikti agentui veiksmus, pagrįstus daugiau nei 1500 paruoštų Power Platform jungčių, Power Automate srautų, pasirinktinių REST API, komandų ar **Model Context Protocol (MCP)** serverių.
 
-1. Naudokite teksto lauką pagrindiniame ekrane, kad aprašytumėte programą, kurią norite sukurti. Pavyzdžiui, **_Noriu sukurti programą studentų užduotims sekti ir valdyti_**. Spustelėkite mygtuką **Siųsti**, kad išsiųstumėte raginimą „AI Copilot“.
+- **Autonominiai agentai**. Agentai nėra apriboti tik atsakyti pokalbių lange. Galite sukurti **autonominius agentus**, kurie yra aktyvuojami įvykių – pvz., naujas el. laiškas, naujas įrašas Dataverse ar įkeltas failas – ir tada veikia užkulisiuose, kad atliktų užduotį.
 
-![Aprašykite programą, kurią norite sukurti](../../../translated_images/lt/copilot-chat-prompt-powerapps.84250f341d060830.webp)
+- **Daugiagentinis orkestravimas**. Agentai gali kvieti kitus agentus. Copilot Studio agentas gali perduoti darbą arba būti išplėstas kitų agentų, įskaitant agentus, paskelbtus Microsoft 365 Copilot, ir agentus, sukurtus Microsoft Foundry.
 
-1. „AI Copilot“ pasiūlys „Dataverse“ lentelę su laukais, kurių jums reikia norint saugoti norimus sekti duomenis, ir pateiks pavyzdinius duomenis. Tada galite pritaikyti lentelę pagal savo poreikius naudodami „AI Copilot“ asistento funkciją per pokalbių žingsnius.
+- **Modelių pasirinkimas**. Be įmontuotų modelių, galite naudoti Microsoft Foundry modelių katalogą, kad pritaikytumėte agento mąstymą ir atsakymų stilių.
 
-   > **Svarbu**: „Dataverse“ yra pagrindinė „Power Platform“ duomenų platforma. Tai mažo kodo duomenų platforma programos duomenims saugoti. Tai visiškai valdomas paslaugų rinkinys, kuris saugiai saugo duomenis „Microsoft Cloud“ ir yra įdiegtas jūsų „Power Platform“ aplinkoje. Ji turi įmontuotas duomenų valdymo galimybes, tokias kaip duomenų klasifikacija, duomenų kilmė, smulkių detalių prieigos kontrolė ir kt. Daugiau apie „Dataverse“ galite sužinoti [čia](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
+- **Publikavimas bet kur**. Sukūrę agentą, galite jį publikuoti keliuose kanaluose – Microsoft Teams, Microsoft 365 Copilot, svetainėje ar pasirinktinėje programėlėje – su saugumu, autentifikacija ir analizės funkcijomis valdoma per Power Platform administravimo patirtį.
 
-   ![Siūlomi laukai jūsų naujoje lentelėje](../../../translated_images/lt/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp)
+Pirmąjį agentą galite pradėti kurti adresu [copilotstudio.microsoft.com](https://copilotstudio.microsoft.com?WT.mc_id=academic-105485-koreyst) ir sužinoti daugiau [Microsoft Copilot Studio dokumentacijoje](https://learn.microsoft.com/microsoft-copilot-studio/?WT.mc_id=academic-105485-koreyst).
 
-1. Pedagogai nori siųsti el. laiškus studentams, kurie pateikė savo užduotis, kad informuotų juos apie jų užduočių eigą. Galite naudoti „Copilot“, kad pridėtumėte naują lauką lentelėje studento el. paštui saugoti. Pavyzdžiui, galite naudoti šį raginimą, kad pridėtumėte naują lauką lentelėje: **_Noriu pridėti stulpelį studento el. paštui saugoti_**. Spustelėkite mygtuką **Siųsti**, kad išsiųstumėte raginimą „AI Copilot“.
+## Užduotis: valdyti studentų užduotis ir sąskaitas mūsų startuoliui naudojant Copilot
 
-![Pridedamas naujas laukas](../../../translated_images/lt/copilot-new-column.35e15ff21acaf274.webp)
+Mūsų startuolis teikia internetinius kursus studentams. Startuolis sparčiai augo ir dabar sunkiai spėja patenkinti kursų paklausą. Jie samdė jus kaip Power Platform kūrėją, kad padėtumėte jiems sukurti žemo kodo sprendimą studentų užduotims ir sąskaitoms valdyti. Jų sprendimas turi leisti stebėti ir valdyti studentų užduotis per programėlę ir automatizuoti sąskaitų apdorojimo procesą per darbo srautą. Jums buvo pavesta naudoti generuojamą DI sprendimui sukurti.
 
-1. „AI Copilot“ sugeneruos naują lauką, kurį galėsite pritaikyti pagal savo poreikius.
+Pradėjus naudoti Copilot, galite naudoti [Power Platform Copilot Prompt Library](https://github.com/pnp/powerplatform-prompts?WT.mc_id=academic-109639-somelezediko), kad pradėtumėte naudotis komandų biblioteka. Ši biblioteka pateikia komandų sąrašą, kurį galite naudoti kuriant programas ir srautus su Copilot. Taip pat naudodamiesi biblioteka galite gauti idėją, kaip aprašyti savo reikalavimus Copilot.
 
-1. Kai baigsite darbą su lentele, spustelėkite mygtuką **Sukurti programą**, kad sukurtumėte programą.
+### Sukurkite Studentų užduočių sekimo programėlę mūsų startuoliui
 
-1. „AI Copilot“ sugeneruos interaktyvią „Canvas“ programą pagal jūsų aprašymą. Tada galite pritaikyti programą pagal savo poreikius.
+Mūsų startuolio mokytojai sunkiai sekė studentų užduotis. Jie naudojo skaičiuoklę stebėti užduotis, bet tai tapo sunku tvarkyti, nes studentų skaičius išaugo. Jie paprašė jūsų sukurti programėlę, kuri padėtų jiems stebėti ir valdyti studentų užduotis. Programėlė turi leisti jiems pridėti naujas užduotis, peržiūrėti užduotis, atnaujinti užduotis ir ištrinti užduotis. Taip pat programėlė turi leisti mokytojams ir studentams peržiūrėti įvertintas ir neįvertintas užduotis.
 
-1. Kad pedagogai galėtų siųsti el. laiškus studentams, galite naudoti „Copilot“, kad pridėtumėte naują ekraną programoje. Pavyzdžiui, galite naudoti šį raginimą, kad pridėtumėte naują ekraną programoje: **_Noriu pridėti ekraną el. laiškams siųsti studentams_**. Spustelėkite mygtuką **Siųsti**, kad išsiųstumėte raginimą „AI Copilot“.
+Programėlę kursite naudodami Copilot Power Apps pagal žemiau nurodytus žingsnius:
 
-![Pridedamas naujas ekranas per raginimo instrukciją](../../../translated_images/lt/copilot-new-screen.2e0bef7132a17392.webp)
+1. Eikite į [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst) pradžios ekraną.
 
-1. „AI Copilot“ sugeneruos naują ekraną, kurį galėsite pritaikyti pagal savo poreikius.
+1. Naudokite teksto lauką pradžios ekrane, kad aprašytumėte norimą kurti programėlę. Pavyzdžiui, **_Noriu sukurti programėlę studentų užduotims sekti ir valdyti_**. Spustelėkite mygtuką **Siųsti**, kad išsiųstumėte komandą DI Copilot.
 
-1. Kai baigsite darbą su programa, spustelėkite mygtuką **Išsaugoti**, kad išsaugotumėte programą.
+![Aprašykite norimą sukurti programėlę](../../../translated_images/lt/copilot-chat-prompt-powerapps.84250f341d060830.webp)
 
-1. Norėdami pasidalinti programa su pedagogais, spustelėkite mygtuką **Dalintis**, o tada dar kartą spustelėkite mygtuką **Dalintis**. Tada galite pasidalinti programa su pedagogais, įvesdami jų el. pašto adresus.
+1. DI Copilot pasiūlys Dataverse lentelę su laukais duomenims saugoti, kuriuos norite stebėti ir keletą pavyzdinių duomenų. Tada galite pritaikyti lentelę pagal savo poreikius, naudodami DI Copilot asistento funkciją per pokalbyje pateiktus žingsnius.
 
-> **Jūsų namų darbas**: Ką tik sukurta programa yra geras pradžia, tačiau ją galima patobulinti. Su el. pašto funkcija pedagogai gali siųsti el. laiškus studentams tik rankiniu būdu, įvesdami jų el. paštus. Ar galite naudoti „Copilot“, kad sukurtumėte automatizavimą, kuris leistų pedagogams automatiškai siųsti el. laiškus studentams, kai jie pateikia savo užduotis? Jūsų užuomina yra ta, kad su tinkamu raginimu galite naudoti „Copilot“ „Power Automate“, kad tai sukurtumėte.
+   > **Svarbu**: Dataverse yra pagrindinė duomenų platforma Power Platform. Tai žemo kodo duomenų platforma programėlės duomenims saugoti. Tai visiškai valdomas servisą, kuris saugiai laiko duomenis Microsoft debesyje ir yra priskirtas jūsų Power Platform aplinkai. Jis turi įmontuotas duomenų valdymo galimybes, tokias kaip duomenų klasifikacija, duomenų kilmė, smulkus prieigos valdymas ir daugiau. Daugiau apie Dataverse galite sužinoti [čia](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
+
+   ![Siūlomi laukeliai jūsų naujoje lentelėje](../../../translated_images/lt/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp)
+
+1. Mokytojai nori siųsti el. laiškus studentams, kurie pateikė savo užduotis, kad juos informuotų apie jų užduočių pažangą. Galite naudoti Copilot, kad pridėtumėte naują lauką lentelėje, kuriame būtų saugomas studento el. pašto adresas. Pavyzdžiui, galite naudoti tokią komandą, kad pridėtumėte naują lauką: **_Noriu pridėti stulpelį studento el. paštui saugoti_**. Spustelėkite mygtuką **Siųsti**, kad išsiųstumėte komandą DI Copilot.
+
+![Pridedamas naujas laukelis](../../../translated_images/lt/copilot-new-column.35e15ff21acaf274.webp)
+
+1. DI Copilot sukurs naują lauką, o jūs galėsite pritaikyti lauką pagal savo poreikius.
+
+
+1. Kai baigsite su lentele, spustelėkite mygtuką **Create app**, kad sukurtumėte programėlę.
+
+1. AI Copilot pagal jūsų aprašymą sugeneruos reaguojančią Canvas programėlę. Tada galite pritaikyti programėlę, kad ji atitiktų jūsų poreikius.
+
+1. Mokytojams, norintiems siųsti el. laiškus studentams, galite naudoti Copilot, kad pridėtumėte naują ekraną programėlėje. Pavyzdžiui, galite naudoti šią užklausą, kad pridėtumėte naują ekraną programėlėje: **_Noriu pridėti ekraną el. laiškų siuntimui studentams_**. Spustelėkite mygtuką **Send**, kad išsiųstumėte užklausą AI Copilot.
+
+![Adding a new screen via a prompt instruction](../../../translated_images/lt/copilot-new-screen.2e0bef7132a17392.webp)
+
+1. AI Copilot sugeneruos naują ekraną, kurį vėliau galėsite pritaikyti pagal savo poreikius.
+
+1. Kai baigsite dirbti su programėle, spustelėkite mygtuką **Save**, kad ją išsaugotumėte.
+
+1. Norėdami pasidalinti programėle su mokytojais, spustelėkite mygtuką **Share**, tada vėl spustelėkite **Share**. Galėsite pasidalinti programėle su mokytojais įvesti jų el. pašto adresus.
+
+> **Jūsų namų darbas**: Sukurta programėlė yra puiki pradžia, tačiau ją galima patobulinti. Su el. pašto funkcija mokytojai gali siųsti el. laiškus studentams tik rankiniu būdu įvesdami jų el. pašto adresus. Ar galite naudoti Copilot sukurti automatizavimą, kuris leistų mokytojams automatiškai siųsti el. laiškus studentams, kai šie pateikia užduotis? Užuomina: su tinkama užklausa galite naudoti Copilot Power Automate programoje tai sukurti.
 
 ### Sukurkite sąskaitų informacijos lentelę mūsų startuoliui
 
-Mūsų startuolio finansų komanda sunkiai sekė sąskaitas. Jie naudojo skaičiuoklę sąskaitoms sekti, tačiau tai tapo sunku valdyti, kai sąskaitų skaičius padidėjo. Jie paprašė jūsų sukurti lentelę, kuri padėtų saugoti, sekti ir valdyti gautų sąskaitų informaciją. Lentelė turėtų būti naudojama kuriant automatizavimą, kuris išgautų visą sąskaitų informaciją ir saugotų ją lentelėje. Lentelė taip pat turėtų leisti finansų komand
-Kodėl verta naudoti „Dataverse“ mūsų startuoliui? Standartinės ir pritaikytos lentelės „Dataverse“ suteikia saugią ir debesų technologija pagrįstą duomenų saugojimo galimybę. Lentelės leidžia saugoti įvairių tipų duomenis, panašiai kaip naudojant kelis darbalapius viename „Excel“ darbaknygėje. Galite naudoti lenteles, kad saugotumėte duomenis, kurie yra specifiniai jūsų organizacijos ar verslo poreikiams. Kai kurie privalumai, kuriuos mūsų startuolis gaus naudodamas „Dataverse“, apima, bet neapsiriboja:
+Mūsų startuolio finansų komanda sunkiai sekė sąskaitas. Jie naudojo skaičiuoklę, kad sektų sąskaitas, tačiau valdyti tai tapo sudėtinga, nes sąskaitų skaičius išaugo. Jie paprašė jūsų sukurti lentelę, kuri padėtų saugoti, stebėti ir valdyti gautų sąskaitų informaciją. Šią lentelę turėtų būti galima naudoti automatizavimui, kuris išrašo visą sąskaitų informaciją ir saugo ją lentelėje. Taip pat lentelė turėtų leisti finansų komandai matyti, kurios sąskaitos apmokėtos, o kurios – ne.
 
-- **Lengva valdyti**: Tiek metaduomenys, tiek duomenys saugomi debesyje, todėl jums nereikia rūpintis, kaip jie saugomi ar valdomi. Galite susitelkti į savo programų ir sprendimų kūrimą.
+Power Platform turi pagrindinę duomenų platformą, vadinamą Dataverse, kuri leidžia saugoti duomenis jūsų programėlėms ir sprendimams. Dataverse suteikia žemo kodo lygio duomenų platformą programėlės duomenų saugojimui. Tai visiškai valdomas servisas, kuris saugiai saugo duomenis Microsoft debesyje ir yra priskirtas jūsų Power Platform aplinkai. Jis turi įdiegtas duomenų valdymo galimybes, tokias kaip duomenų klasifikacija, duomenų kilmė, smulkus prieigos valdymas ir dar daugiau. Daugiau apie Dataverse galite sužinoti [čia](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko).
 
-- **Saugumas**: „Dataverse“ suteikia saugią ir debesų technologija pagrįstą duomenų saugojimo galimybę. Galite kontroliuoti, kas turi prieigą prie jūsų lentelėse esančių duomenų ir kaip jie gali būti pasiekiami, naudodami vaidmenimis pagrįstą saugumą.
+Kodėl turėtume naudoti Dataverse mūsų startuoliui? Standartinės ir pasirinktinos lentelės Dataverse suteikia saugų ir debesyje pagrįstą duomenų saugojimą. Lentelės leidžia saugoti įvairių tipų duomenis, panašiai kaip naudotumėte kelis darbalapius viename Excel darbalapyje. Galite naudoti lenteles saugoti duomenis, specifinius jūsų organizacijai ar verslo poreikiams. Kai kurios naudos mūsų startuoliui, naudojant Dataverse, yra bet neapsiriboja:
 
-- **Turtingi metaduomenys**: Duomenų tipai ir ryšiai naudojami tiesiogiai „Power Apps“.
+- **Lengva valdyti**: Tiek metaduomenys, tiek duomenys saugomi debesyje, todėl jums nereikia rūpintis, kaip jie yra saugomi ar tvarkomi. Galite koncentruotis į programėlių ir sprendimų kūrimą.
 
-- **Logika ir validacija**: Galite naudoti verslo taisykles, skaičiuojamus laukus ir validacijos taisykles, kad užtikrintumėte verslo logiką ir duomenų tikslumą.
+- **Saugumas**: Dataverse suteikia saugų debesyje saugyklą jūsų duomenims. Galite kontroliuoti, kas turi prieigą prie jūsų lentelių duomenų ir kaip jie gali prie jų prieiti, naudodami vaidmenimis pagrįstą saugumą.
 
-Dabar, kai žinote, kas yra „Dataverse“ ir kodėl verta jį naudoti, pažvelkime, kaip galite naudoti „Copilot“, kad sukurtumėte lentelę „Dataverse“, atitinkančią mūsų finansų komandos reikalavimus.
+- **Turtingi metaduomenys**: Duomenų tipai ir ryšiai naudojami tiesiogiai Power Apps aplinkoje
 
-> **Note**: Šią lentelę naudosite kitame skyriuje, kad sukurtumėte automatizavimą, kuris ištrauks visą sąskaitų faktūrų informaciją ir saugos ją lentelėje.
+- **Logika ir patikrinimai**: Galite naudoti verslo taisykles, apskaičiuotus laukus ir patvirtinimo taisykles, kad užtikrintumėte verslo logiką ir duomenų tikslumą.
 
-Norėdami sukurti lentelę „Dataverse“ naudodami „Copilot“, atlikite šiuos veiksmus:
+Dabar, kai žinote, kas yra Dataverse ir kodėl jį verta naudoti, pažvelkime, kaip galite naudoti Copilot, kad sukurtumėte lentelę Dataverse pagal mūsų finansų komandos reikalavimus.
 
-1. Eikite į [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst) pagrindinį ekraną.
+> **Pastaba** : Šią lentelę naudosite kitame skyriuje, kad sukurtumėte automatizavimą, kuris išrašo visą sąskaitų informaciją ir saugo ją lentelėje.
 
-2. Kairėje navigacijos juostoje pasirinkite **Tables** ir tada spustelėkite **Describe the new Table**.
+Kad sukurtumėte lentelę Dataverse naudodami Copilot, atlikite šiuos veiksmus:
 
-![Pasirinkite naują lentelę](../../../translated_images/lt/describe-new-table.0792373eb757281e.webp)
+1. Eikite į [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst) pradinį ekraną.
 
-3. Ekrane **Describe the new Table** naudokite teksto lauką, kad aprašytumėte lentelę, kurią norite sukurti. Pavyzdžiui, **_Noriu sukurti lentelę sąskaitų faktūrų informacijai saugoti_**. Spustelėkite **Send** mygtuką, kad išsiųstumėte užklausą AI „Copilot“.
+2. Kairėje navigacijos juostoje pasirinkite **Tables**, tada spustelėkite **Describe the new Table**.
 
-![Aprašykite lentelę](../../../translated_images/lt/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp)
+![Select new table](../../../translated_images/lt/describe-new-table.0792373eb757281e.webp)
 
-4. AI „Copilot“ pasiūlys „Dataverse“ lentelę su laukais, reikalingais saugoti norimus duomenis, ir pateiks pavyzdinius duomenis. Tada galite pritaikyti lentelę pagal savo poreikius, naudodami AI „Copilot“ asistento funkciją per pokalbių žingsnius.
+1. Ekrane **Describe the new Table** naudokite tekstinį lauką, kad aprašytumėte lentelę, kurią norite sukurti. Pavyzdžiui, **_Noriu sukurti lentelę, kurioje saugočiau sąskaitų informaciją_**. Spustelėkite mygtuką **Send**, kad išsiųstumėte užklausą AI Copilot.
 
-![Siūloma „Dataverse“ lentelė](../../../translated_images/lt/copilot-dataverse-table.b3bc936091324d9d.webp)
+![Describe the table](../../../translated_images/lt/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp)
 
-5. Finansų komanda nori išsiųsti el. laišką tiekėjui, kad informuotų apie dabartinę jų sąskaitos faktūros būseną. Galite naudoti „Copilot“, kad pridėtumėte naują lauką lentelėje tiekėjo el. paštui saugoti. Pavyzdžiui, galite naudoti šią užklausą, kad pridėtumėte naują lauką lentelėje: **_Noriu pridėti stulpelį tiekėjo el. paštui saugoti_**. Spustelėkite **Send** mygtuką, kad išsiųstumėte užklausą AI „Copilot“.
+1. AI Copilot pasiūlys Dataverse lentelę su laukais, kurių jums reikia duomenų saugojimui ir kelių pavyzdinių duomenų. Tada galite pritaikyti lentelę pagal savo poreikius, naudodami AI Copilot asistento funkciją pokalbių metu.
 
-6. AI „Copilot“ sugeneruos naują lauką, kurį galėsite pritaikyti pagal savo poreikius.
+![Suggested Dataverse table](../../../translated_images/lt/copilot-dataverse-table.b3bc936091324d9d.webp)
 
-7. Kai baigsite kurti lentelę, spustelėkite **Create** mygtuką, kad sukurtumėte lentelę.
+1. Finansų komanda nori siųsti el. laišką tiekėjui, kad atnaujintų juos apie sąskaitos statusą. Galite naudoti Copilot, kad pridėtumėte naują lauką lentelėje tiekėjo el. pašto saugojimui. Pavyzdžiui, galite naudoti tokią užklausą: **_Noriu pridėti stulpelį tiekėjo el. pašto saugojimui_**. Spustelėkite mygtuką **Send**, kad išsiųstumėte užklausą AI Copilot.
 
-## AI modeliai „Power Platform“ su „AI Builder“
+1. AI Copilot sugeneruos naują lauką, kurį galėsite pritaikyti pagal savo poreikius.
 
-„AI Builder“ yra mažo kodo AI galimybė, prieinama „Power Platform“, leidžianti naudoti AI modelius procesams automatizuoti ir rezultatams prognozuoti. Naudodami „AI Builder“ galite integruoti AI į savo programas ir srautus, kurie jungiasi su jūsų duomenimis „Dataverse“ arba įvairiuose debesų duomenų šaltiniuose, tokiuose kaip „SharePoint“, „OneDrive“ ar „Azure“.
+1. Kai baigsite su lentele, spustelėkite mygtuką **Create**, kad sukurtumėte lentelę.
 
-## Paruošti AI modeliai ir pritaikyti AI modeliai
+## AI modeliai Power Platform su AI Builder
 
-„AI Builder“ siūlo dviejų tipų AI modelius: paruoštus AI modelius ir pritaikytus AI modelius. Paruošti AI modeliai yra paruošti naudoti AI modeliai, kuriuos apmokė „Microsoft“ ir kurie yra prieinami „Power Platform“. Jie padeda pridėti intelektą prie jūsų programų ir srautų, nereikalaujant rinkti duomenų, kurti, mokyti ir publikuoti savo modelių. Šiuos modelius galite naudoti procesams automatizuoti ir rezultatams prognozuoti.
+AI Builder yra žemo kodo AI galimybė Power Platform, kuri leidžia naudoti AI modelius, kad padėtų automatizuoti procesus ir prognozuoti rezultatus. Naudodami AI Builder galite integruoti AI į savo programėles ir srautus, kurie jungiasi prie jūsų duomenų Dataverse ar įvairiuose debesų duomenų šaltiniuose, tokiuose kaip SharePoint, OneDrive ar Azure.
 
-Kai kurie paruošti AI modeliai, prieinami „Power Platform“, apima:
+## Iš anksto paruošti AI modeliai ir individualūs AI modeliai
 
-- **Pagrindinių frazių ištraukimas**: Šis modelis ištraukia pagrindines frazes iš teksto.
-- **Kalbos atpažinimas**: Šis modelis nustato teksto kalbą.
-- **Nuotaikos analizė**: Šis modelis nustato teigiamą, neigiamą, neutralią ar mišrią teksto nuotaiką.
-- **Vizitinių kortelių skaitytuvas**: Šis modelis ištraukia informaciją iš vizitinių kortelių.
-- **Teksto atpažinimas**: Šis modelis ištraukia tekstą iš vaizdų.
-- **Objektų atpažinimas**: Šis modelis atpažįsta ir ištraukia objektus iš vaizdų.
-- **Dokumentų apdorojimas**: Šis modelis ištraukia informaciją iš formų.
-- **Sąskaitų faktūrų apdorojimas**: Šis modelis ištraukia informaciją iš sąskaitų faktūrų.
+AI Builder suteikia du AI modelių tipus: iš anksto paruoštus AI modelius ir individualius AI modelius. Iš anksto paruošti AI modeliai yra Microsoft apmokyti ir Power Platform prieinami modeliai, paruošti naudojimui. Jie padeda pridėti intelektą į jūsų programėles ir srautus nereikalaujant rinkti duomenų, tuomet kurti, apmokyti ir publikuoti savo modelius. Šių modelių galite naudoti procesų automatizavimui ir rezultatų prognozavimui.
 
-Naudodami pritaikytus AI modelius galite įtraukti savo modelį į „AI Builder“, kad jis veiktų kaip bet kuris pritaikytas „AI Builder“ modelis, leidžiantis mokyti modelį naudojant savo duomenis. Šiuos modelius galite naudoti procesams automatizuoti ir rezultatams prognozuoti tiek „Power Apps“, tiek „Power Automate“. Naudojant savo modelį, taikomi tam tikri apribojimai. Daugiau apie šiuos [apribojimus](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst).
+Kai kurie iš anksto paruošti AI modeliai, prieinami Power Platform:
 
-![AI Builder modeliai](../../../translated_images/lt/ai-builder-models.8069423b84cfc47f.webp)
+- **Pagrindinių frazių ištrauka**: modelis ištraukia pagrindines frazes iš teksto.
+- **Kalbos atpažinimas**: modelis nustato teksto kalbą.
+- **Nuotaikos analizė**: modelis nustato teigiamą, neigiamą, neutralią ar mišrią nuotaiką tekste.
+- **Vizitinės kortelės skaitytuvas**: modelis ištraukia informaciją iš vizitinių kortelių.
+- **Teksto atpažinimas**: modelis ištraukia tekstą iš nuotraukų.
+- **Objektų aptikimas**: modelis aptinka ir ištraukia objektus iš nuotraukų.
+- **Dokumentų apdorojimas**: modelis ištraukia informaciją iš formų.
+- **Sąskaitų apdorojimas**: modelis ištraukia informaciją iš sąskaitų.
 
-## Užduotis Nr. 2 - Sukurkite sąskaitų faktūrų apdorojimo srautą mūsų startuoliui
+Naudodami individualius AI modelius, galite įkelti savo modelį į AI Builder, kad jis veiktų kaip bet kuris kitas AI Builder individualus modelis, leidžiantis apmokyti modelį naudodami savo duomenis. Šiuos modelius galite naudoti procesų automatizavimui ir rezultatų prognozavimui tiek Power Apps, tiek Power Automate. Naudojant savo modelį taikomi tam tikri apribojimai. Daugiau apie šiuos [apribojimus](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst) skaitykite.
 
-Finansų komandai sunku apdoroti sąskaitas faktūras. Jie naudojo skaičiuoklę sąskaitoms faktūroms sekti, tačiau tai tapo sudėtinga, kai sąskaitų faktūrų skaičius padidėjo. Jie paprašė jūsų sukurti darbo eigą, kuri padėtų jiems apdoroti sąskaitas faktūras naudojant AI. Darbo eiga turėtų leisti ištraukti informaciją iš sąskaitų faktūrų ir saugoti informaciją „Dataverse“ lentelėje. Darbo eiga taip pat turėtų leisti išsiųsti el. laišką finansų komandai su ištraukta informacija.
+![AI builder models](../../../translated_images/lt/ai-builder-models.8069423b84cfc47f.webp)
 
-Dabar, kai žinote, kas yra „AI Builder“ ir kodėl verta jį naudoti, pažvelkime, kaip galite naudoti „Invoice Processing AI Model“ „AI Builder“, kurį aptarėme anksčiau, kad sukurtumėte darbo eigą, kuri padėtų finansų komandai apdoroti sąskaitas faktūras.
+## Užduotis #2 - Sukurkite Sąskaitų apdorojimo srautą mūsų startuoliui
 
-Norėdami sukurti darbo eigą, kuri padėtų finansų komandai apdoroti sąskaitas faktūras naudojant „Invoice Processing AI Model“ „AI Builder“, atlikite šiuos veiksmus:
+Finansų komanda sunkiai apdoroja sąskaitas. Jie naudojo skaičiuoklę sekdami sąskaitas, tačiau valdyti tai tapo sudėtinga, kai sąskaitų skaičius išaugo. Jie paprašė sukurti darbo eigą, padėsiančią apdoroti sąskaitas naudojant AI. Darbo eiga turi leisti išgauti informaciją iš sąskaitų ir saugoti ją Dataverse lentelėje. Taip pat darbo eiga turi leisti siųsti el. laišką finansų komandai su išgauta informacija.
 
-1. Eikite į [Power Automate](https://make.powerautomate.com?WT.mc_id=academic-105485-koreyst) pagrindinį ekraną.
+Dabar, kai žinote, kas yra AI Builder ir kodėl verta jį naudoti, pažvelkime, kaip galite naudoti Sąskaitų apdorojimo AI modelį AI Builder, kurį aptarėme anksčiau, kurdami darbo eigą, padėsiančią finansų komandai apdoroti sąskaitas.
 
-2. Naudokite teksto lauką pagrindiniame ekrane, kad aprašytumėte darbo eigą, kurią norite sukurti. Pavyzdžiui, **_Apdoroti sąskaitą faktūrą, kai ji atkeliauja į mano pašto dėžutę_**. Spustelėkite **Send** mygtuką, kad išsiųstumėte užklausą AI „Copilot“.
+Norėdami sukurti darbo eigą, padėsiančią finansų komandai apdoroti sąskaitas, naudodami Sąskaitų apdorojimo AI modelį AI Builder, atlikite šiuos veiksmus:
+
+1. Eikite į [Power Automate](https://make.powerautomate.com?WT.mc_id=academic-105485-koreyst) pradinį ekraną.
+
+2. Naudokite teksto lauką pradžios ekrane aprašyti kūrimą darbo eigą. Pavyzdžiui, **_Apdoroti sąskaitą, kai ji atkeliauja į mano pašto dėžutę_**. Spustelėkite mygtuką **Send**, kad išsiųstumėte užklausą AI Copilot.
 
    ![Copilot power automate](../../../translated_images/lt/copilot-chat-prompt-powerautomate.f377e478cc8412de.webp)
 
-3. AI „Copilot“ pasiūlys veiksmus, kuriuos reikia atlikti norint automatizuoti užduotį. Galite spustelėti **Next** mygtuką, kad pereitumėte prie kitų žingsnių.
+3. AI Copilot pasiūlys veiksmus, kuriuos turite atlikti, kad automatizuotumėte norimą užduotį. Galite spustelėti mygtuką **Next**, kad pereitumėte prie kitų žingsnių.
 
-4. Kitame žingsnyje „Power Automate“ paragins jus nustatyti ryšius, reikalingus srautui. Kai baigsite, spustelėkite **Create flow** mygtuką, kad sukurtumėte srautą.
+4. Kitame žingsnyje Power Automate paprašys nustatyti srautui reikalingus ryšius. Baigę spustelėkite mygtuką **Create flow**, kad sukurtumėte srautą.
 
-5. AI „Copilot“ sugeneruos srautą, kurį galėsite pritaikyti pagal savo poreikius.
+5. AI Copilot sugeneruos srautą, kurį galėsite pritaikyti pagal savo poreikius.
 
-6. Atnaujinkite srauto trigerį ir nustatykite **Folder** į aplanką, kuriame bus saugomos sąskaitos faktūros. Pavyzdžiui, galite nustatyti aplanką į **Inbox**. Spustelėkite **Show advanced options** ir nustatykite **Only with Attachments** į **Yes**. Tai užtikrins, kad srautas veiks tik tada, kai el. laiškas su priedu bus gautas į aplanką.
+6. Atnaujinkite srauto trigerį ir nustatykite **Folder** kaip aplanką, kuriame bus saugomos sąskaitos. Pavyzdžiui, nustatykite aplanką kaip **Inbox**. Spustelėkite **Show advanced options** ir nustatykite **Only with Attachments** į **Yes**. Tai užtikrins, kad srautas veiks tik gavus el. laišką su prisegtu failu tame aplanke.
 
-7. Pašalinkite šiuos veiksmus iš srauto: **HTML to text**, **Compose**, **Compose 2**, **Compose 3** ir **Compose 4**, nes jų nenaudosite.
+7. Iš srauto pašalinkite šiuos veiksmus: **HTML to text**, **Compose**, **Compose 2**, **Compose 3** ir **Compose 4**, nes jų nenaudosite.
 
-8. Pašalinkite **Condition** veiksmą iš srauto, nes jo nenaudosite. Tai turėtų atrodyti kaip šis ekrano vaizdas:
+8. Pašalinkite veiksmą **Condition** iš srauto, nes jo nenaudosite. Turėtumėte pamatyti tokį vaizdą:
 
-   ![power automate, pašalinkite veiksmus](../../../translated_images/lt/powerautomate-remove-actions.7216392fe684ceba.webp)
+   ![power automate, remove actions](../../../translated_images/lt/powerautomate-remove-actions.7216392fe684ceba.webp)
 
-9. Spustelėkite **Add an action** mygtuką ir ieškokite **Dataverse**. Pasirinkite **Add a new row** veiksmą.
+9. Spustelėkite mygtuką **Add an action** ir paieškos laukelyje įveskite **Dataverse**. Pasirinkite veiksmą **Add a new row**.
 
-10. Veiksme **Extract Information from invoices** atnaujinkite **Invoice File**, kad jis nurodytų **Attachment Content** iš el. laiško. Tai užtikrins, kad srautas ištrauks informaciją iš sąskaitos faktūros priedo.
+10. Veiksme **Extract Information from invoices** atnaujinkite lauką **Invoice File**, kad nurodytumėte **Attachment Content** iš el. laiško. Tai užtikrins, kad srautas ištrauks informaciją iš sąskaitos prisegto failo.
 
-11. Pasirinkite lentelę, kurią sukūrėte anksčiau. Pavyzdžiui, galite pasirinkti lentelę **Invoice Information**. Pasirinkite dinaminį turinį iš ankstesnio veiksmo, kad užpildytumėte šiuos laukus:
+11. Pasirinkite lentelę, kurią sukūrėte anksčiau. Pavyzdžiui, galite pasirinkti lentelę **Invoice Information**. Pasirinkite dinaminį turinį iš ankstesnio veiksmo ir užpildykite šiuos laukus:
 
     - ID
-    - Suma
-    - Data
-    - Pavadinimas
-    - Būsena - Nustatykite **Status** į **Pending**.
-    - Tiekėjo el. paštas - Naudokite **From** dinaminį turinį iš **When a new email arrives** trigerio.
+    - Amount
+    - Date
+    - Name
+    - Status - nustatykite **Status** reikšmę į **Pending**.
+    - Supplier Email - naudokite dinaminį turinį **From** iš trigerio **When a new email arrives**.
 
-    ![power automate pridėti eilutę](../../../translated_images/lt/powerautomate-add-row.5edce45e5dd3d51e.webp)
+    ![power automate add row](../../../translated_images/lt/powerautomate-add-row.5edce45e5dd3d51e.webp)
 
-12. Kai baigsite srautą, spustelėkite **Save** mygtuką, kad išsaugotumėte srautą. Tada galite išbandyti srautą, išsiųsdami el. laišką su sąskaita faktūra į aplanką, kurį nurodėte trigerio nustatymuose.
+12. Baigę su srautu spustelėkite mygtuką **Save**, kad jį išsaugotumėte. Galite išbandyti srautą siųsdami el. laišką su sąskaita į aplanką, kurį nurodėte trigerio metu.
 
-> **Jūsų namų darbas**: Srautas, kurį ką tik sukūrėte, yra gera pradžia, dabar turite pagalvoti, kaip galite sukurti automatizavimą, kuris leistų mūsų finansų komandai išsiųsti el. laišką tiekėjui, kad informuotų apie dabartinę jų sąskaitos faktūros būseną. Jūsų užuomina: srautas turi veikti, kai sąskaitos faktūros būsena pasikeičia.
+> **Jūsų namų darbas**: Sukurtas srautas yra gera pradžia, dabar pagalvokite, kaip sukurti automatizavimą, kuris leistų mūsų finansų komandai siųsti el. laišką tiekėjui, informuojant apie sąskaitos esamą statusą. Užuomina: srautas turi veikti, kai pasikeičia sąskaitos statusas.
 
-## Naudokite teksto generavimo AI modelį „Power Automate“
+## Naudokite Teksto generavimo AI modelį Power Automate
 
-„Create Text with GPT AI Model“ „AI Builder“ leidžia generuoti tekstą pagal užklausą ir yra pagrįstas „Microsoft Azure OpenAI Service“. Naudodami šią galimybę galite integruoti GPT (Generative Pre-Trained Transformer) technologiją į savo programas ir srautus, kad sukurtumėte įvairius automatizuotus srautus ir įžvalgius sprendimus.
+AI Builder siūlo modelį Create Text with GPT, kuris leidžia generuoti tekstą pagal užklausą ir veikia Microsoft Azure OpenAI paslaugos pagrindu. Su šia galimybe galite integruoti GPT (Generative Pre-Trained Transformer) technologiją į savo programėles ir srautus, kad sukurtumėte įvairias automatizuotas darbo eigas ir informatyvias programėles.
 
-GPT modeliai yra intensyviai mokomi didžiuliais duomenų kiekiais, leidžiant jiems generuoti tekstą, kuris labai panašus į žmogaus kalbą, kai pateikiama užklausa. Integravus su darbo eigos automatizavimu, AI modeliai, tokie kaip GPT, gali būti naudojami įvairioms užduotims supaprastinti ir automatizuoti.
+GPT modeliai yra plačiai mokomi dideliais duomenų kiekiais, leidžiančiais generuoti tekstą, kuris labai primena žmogaus kalbą pateikus užklausą. Integruoti į darbo eigas, GPT modeliai gali būti panaudoti įvairioms užduotims automatizuoti ir supaprastinti.
 
-Pavyzdžiui, galite sukurti srautus, kurie automatiškai generuoja tekstą įvairiems naudojimo atvejams, tokiems kaip: el. laiškų juodraščiai, produktų aprašymai ir kt. Taip pat galite naudoti modelį tekstui generuoti įvairioms programoms, tokioms kaip pokalbių robotai ir klientų aptarnavimo programos, leidžiančios klientų aptarnavimo agentams efektyviai ir veiksmingai atsakyti į klientų užklausas.
+Pavyzdžiui, galite kurti srautus automatiškai generuoti tekstą įvairiems atvejams, tokiems kaip: el. laiškų juodraščiai, produktų aprašymai ir kt. Taip pat galite naudoti modelį tekstui generuoti įvairiems programų tipams, pavyzdžiui, pokalbių robotams ar klientų aptarnavimo programoms, leidžiančioms agentams efektyviai ir greitai atsakyti į klientų užklausas.
 
-![sukurkite užklausą](../../../translated_images/lt/create-prompt-gpt.69d429300c2e870a.webp)
+![create a prompt](../../../translated_images/lt/create-prompt-gpt.69d429300c2e870a.webp)
 
-Norėdami sužinoti, kaip naudoti šį AI modelį „Power Automate“, peržiūrėkite [Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) modulį.
+
+Norėdami sužinoti, kaip naudoti šį DI modelį Power Automate, peržiūrėkite modulį [Pridėkite intelektą su AI Builder ir GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko).
 
 ## Puikus darbas! Tęskite mokymąsi
 
-Baigę šią pamoką, peržiūrėkite mūsų [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), kad toliau gilintumėte savo žinias apie generatyvinį AI!
+Baigę šią pamoką, peržiūrėkite mūsų [Generatyvinio DI mokymosi kolekciją](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), kad toliau gilintumėte savo žinias apie generatyvinį DI!
 
-Eikite į 11 pamoką, kurioje aptarsime, kaip [integruoti generatyvinį AI su funkcijų iškvietimu](../11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst)!
+Norite pritaikyti ir daugiau išnaudoti Copilot? Ištirkite [Awesome Copilot](https://github.com/github/awesome-copilot?WT.mc_id=academic-105485-koreyst) — bendruomenės sukurtą instrukcijų, agentų, įgūdžių ir konfigūracijų rinkinį, kuris padės kuo geriau išnaudoti GitHub Copilot.
+
+Eikite į 11-ąją pamoką, kur apžvelgsime, kaip [integruoti generatyvinį DI su funkcijų kvietimu](../11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors stengiamės užtikrinti tikslumą, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudoti profesionalų žmogaus vertimą. Mes neprisiimame atsakomybės už nesusipratimus ar neteisingus aiškinimus, atsiradusius dėl šio vertimo naudojimo.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Atsakomybės apribojimas**:
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojama naudoti profesionalų žmogiškąjį vertimą. Mes neatsakome už jokius nesusipratimus ar neteisingą interpretaciją, kilusią naudojantis šiuo vertimu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

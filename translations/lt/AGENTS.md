@@ -1,317 +1,320 @@
-# AGENTS.md
+# AGENTAI.md
 
 ## Projekto apžvalga
 
-Šiame saugykloje pateikiama išsami 21 pamokos mokymo programa, skirta Generatyvinio AI pagrindams ir taikymų kūrimui. Kursas sukurtas pradedantiesiems ir apima viską nuo pagrindinių sąvokų iki gamybai paruoštų taikymų kūrimo.
+Šiame saugykloje yra išsamus 21 pamokos kursas, mokantis Generatyvinio DI pagrindų ir taikomųjų programų kūrimo. Kursas skirtas pradedantiesiems ir apima viską nuo pagrindinių koncepcijų iki gamybai paruoštų programų kūrimo.
 
 **Pagrindinės technologijos:**
 - Python 3.9+ su bibliotekomis: `openai`, `python-dotenv`, `tiktoken`, `azure-ai-inference`, `pandas`, `numpy`, `matplotlib`
-- TypeScript/JavaScript su Node.js ir bibliotekomis: `@azure/openai`, `@azure-rest/ai-inference`, `openai`
-- Azure OpenAI Service, OpenAI API ir GitHub Models
-- Jupyter Notebooks interaktyviam mokymuisi
+- TypeScript/JavaScript su Node.js ir bibliotekomis: `openai` (Azure OpenAI per v1 pabaigos tašką + Responses API), `@azure-rest/ai-inference` (Microsoft Foundry Modeliai)
+- Azure OpenAI paslauga, OpenAI API ir Microsoft Foundry Modeliai (GitHub Modeliai nutraukiami 2026 m. liepos pabaigoje)
+- Jupyter užrašų knygelės interaktyviam mokymuisi
 - Dev Containers nuosekliai kūrimo aplinkai
 
-**Saugyklos struktūra:**
-- 21 numeruotas pamokų katalogas (00-21), kuriuose yra README failai, kodo pavyzdžiai ir užduotys
-- Keli įgyvendinimai: Python, TypeScript ir kartais .NET pavyzdžiai
-- Vertimų katalogas su daugiau nei 40 kalbų versijomis
+**Saugomos struktūra:**
+- 21 sunumeruotų pamokų katalogai (00–21), kuriuose yra README failai, kodo pavyzdžiai ir užduotys
+- Keli įgyvendinimai: Python, TypeScript, o kartais ir .NET pavyzdžiai
+- Vertimų katalogas su daugiau nei 40 kalbų versijų
 - Centralizuota konfigūracija per `.env` failą (naudokite `.env.copy` kaip šabloną)
 
-## Nustatymo komandos
+## Konfigūracijos komandos
 
-### Pradinis saugyklos nustatymas
+### Pradinis saugyklos paruošimas
 
 ```bash
-# Clone the repository
+# Nuklonuokite saugyklą
 git clone https://github.com/microsoft/generative-ai-for-beginners.git
 cd generative-ai-for-beginners
 
-# Copy environment template
+# Nukopijuokite aplinkos šabloną
 cp .env.copy .env
-# Edit .env with your API keys and endpoints
+# Redaguokite .env su savo API raktų ir endpoint'ų informacija
 ```
 
-### Python aplinkos nustatymas
+### Python aplinkos paruošimas
 
 ```bash
-# Create virtual environment
+# Sukurti virtualią aplinką
 python3 -m venv venv
 
-# Activate virtual environment
-# On macOS/Linux:
+# Aktyvuoti virtualią aplinką
+# macOS/Linux sistemoje:
 source venv/bin/activate
-# On Windows:
+# Windows sistemoje:
 venv\Scripts\activate
 
-# Install dependencies
+# Įdiegti priklausomybes
 pip install -r requirements.txt
 ```
 
-### Node.js/TypeScript nustatymas
+### Node.js/TypeScript paruošimas
 
 ```bash
-# Install root-level dependencies (for documentation tooling)
+# Įdiekite pagrindines priklausomybes (dokumentacijos įrankiams)
 npm install
 
-# For individual lesson TypeScript examples, navigate to the specific lesson:
+# Norėdami peržiūrėti atskirų pamokų TypeScript pavyzdžius, eikite į konkrečią pamoką:
 cd 06-text-generation-apps/typescript/recipe-app
 npm install
 ```
 
-### Dev Container nustatymas (rekomenduojama)
+### Dev konteinerio paruošimas (rekomenduojama)
 
-Saugykla apima `.devcontainer` konfigūraciją, skirtą GitHub Codespaces arba VS Code Dev Containers:
+Saugykloje įtraukta `.devcontainer` konfigūracija GitHub Codespaces arba VS Code Dev Containers naudojimui:
 
 1. Atidarykite saugyklą GitHub Codespaces arba VS Code su Dev Containers plėtiniu
-2. Dev Container automatiškai:
-   - Įdiegs Python priklausomybes iš `requirements.txt`
-   - Paleis post-create skriptą (`.devcontainer/post-create.sh`)
-   - Nustatys Jupyter kernelį
+2. Dev konteineris automatiškai:
+   - Įdiegia Python priklausomybes iš `requirements.txt`
+   - Paleidžia po sukūrimo scenarijų (`.devcontainer/post-create.sh`)
+   - Paruošia Jupyter branduolį
 
-## Kūrimo darbo eiga
+## Vystymo procesas
 
 ### Aplinkos kintamieji
 
-Visose pamokose, kuriose reikalinga API prieiga, naudojami aplinkos kintamieji, apibrėžti `.env` faile:
+Visos pamokos, kurioms reikalingas API prieigos raktas, naudoja `.env` faile apibrėžtus aplinkos kintamuosius:
 
-- `OPENAI_API_KEY` - OpenAI API
-- `AZURE_OPENAI_API_KEY` - Azure OpenAI Service
-- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI paslaugos URL
+- `OPENAI_API_KEY` - OpenAI API raktas
+- `AZURE_OPENAI_API_KEY` - Azure OpenAI Microsoft Foundry paslaugai (Azure OpenAI Service dabar yra Microsoft Foundry dalis: https://ai.azure.com)
+- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI pabaigos taško URL (Foundry paslaugos pabaigos taškas)
 - `AZURE_OPENAI_DEPLOYMENT` - Pokalbių modelio diegimo pavadinimas
 - `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Embedding modelio diegimo pavadinimas
-- `AZURE_OPENAI_API_VERSION` - API versija (numatytoji: `2024-02-01`)
-- `HUGGING_FACE_API_KEY` - Hugging Face modeliams
-- `GITHUB_TOKEN` - GitHub Models
+- `AZURE_OPENAI_API_VERSION` - API versija (numatytoji: `2024-10-21`)
+- `HUGGING_FACE_API_KEY` - Hugging Face modelių API raktas
+- `AZURE_INFERENCE_ENDPOINT` - Microsoft Foundry Modelių pabaigos taškas (daugelio tiekėjų modelių katalogas)
+- `AZURE_INFERENCE_CREDENTIAL` - Microsoft Foundry Modelių API raktas (pakeičia nutraukiamą `GITHUB_TOKEN`)
 
 ### Python pavyzdžių paleidimas
 
 ```bash
-# Navigate to lesson directory
+# Eiti į pamokos katalogą
 cd 06-text-generation-apps/python
 
-# Run a Python script
+# Vykdyti Python skriptą
 python aoai-app.py
 ```
 
 ### TypeScript pavyzdžių paleidimas
 
 ```bash
-# Navigate to TypeScript app directory
+# Eikite į TypeScript programos katalogą
 cd 06-text-generation-apps/typescript/recipe-app
 
-# Build the TypeScript code
+# Sukurkite TypeScript kodą
 npm run build
 
-# Run the application
+# Paleiskite programą
 npm start
 ```
 
-### Jupyter Notebooks paleidimas
+### Jupyter užrašų knygelių paleidimas
 
 ```bash
-# Start Jupyter in the repository root
+# Paleiskite Jupyter saugyklos šaknyje
 jupyter notebook
 
-# Or use VS Code with Jupyter extension
+# Arba naudokite VS Code su Jupyter plėtiniu
 ```
 
-### Darbas su skirtingais pamokų tipais
+### Darbas su skirtingomis pamokų rūšimis
 
-- **"Learn" pamokos**: Dėmesys README.md dokumentacijai ir sąvokoms
-- **"Build" pamokos**: Apima veikiančius kodo pavyzdžius Python ir TypeScript
-- Kiekviena pamoka turi README.md su teorija, kodo apžvalga ir nuorodomis į vaizdo turinį
+- **„Learn“ pamokos**: dėmesys README.md dokumentacijai ir koncepcijoms
+- **„Build“ pamokos**: įtraukti veikiantys kodo pavyzdžiai Python ir TypeScript kalbomis
+- Kiekvienoje pamokoje yra README.md su teorija, kodo apžvalgomis ir nuorodomis į vaizdo įrašus
 
 ## Kodo stiliaus gairės
 
 ### Python
 
-- Naudokite `python-dotenv` aplinkos kintamųjų valdymui
+- Naudokite `python-dotenv` aplinkos kintamiesiems valdyti
 - Importuokite `openai` biblioteką API sąveikai
-- Naudokite `pylint` kodo tikrinimui (kai kurie pavyzdžiai apima `# pylint: disable=all` dėl paprastumo)
-- Laikykitės PEP 8 pavadinimų konvencijų
-- API kredencialus saugokite `.env` faile, niekada kode
+- Naudokite `pylint` kodui tikrinti (kai kurie pavyzdžiai naudoja `# pylint: disable=all` paprastumui)
+- Laikykitės PEP 8 vardų konvencijų
+- API duomenys saugomi `.env` faile, niekada nečiuo Kodas
 
 ### TypeScript
 
 - Naudokite `dotenv` paketą aplinkos kintamiesiems
-- TypeScript konfigūracija `tsconfig.json` kiekvienai programai
-- Naudokite `@azure/openai` arba `@azure-rest/ai-inference` Azure paslaugoms
-- Naudokite `nodemon` kūrimui su automatinio perkrovimo funkcija
-- Prieš paleidžiant: `npm run build`, tada `npm start`
+- TypeScript konfiguracija faile `tsconfig.json` kiekvienai programai
+- Naudokite `openai` paketą Azure OpenAI (kreipkitės į `/openai/v1/` pabaigos tašką ir iškvieskite `client.responses.create`); naudokite `@azure-rest/ai-inference` Microsoft Foundry Modeliams
+- Naudokite `nodemon` vystymui su automatinio perkrovimo funkcija
+- Statykite prieš paleidžiant: `npm run build` tada `npm start`
 
 ### Bendros konvencijos
 
-- Kodo pavyzdžiai turi būti paprasti ir edukaciniai
-- Įtraukite komentarus, paaiškinančius pagrindines sąvokas
+- Laikykite kodo pavyzdžius paprastus ir mokomuosius
+- Įtraukite komentarus, paaiškinančius svarbias koncepcijas
 - Kiekvienos pamokos kodas turi būti savarankiškas ir paleidžiamas
-- Naudokite nuoseklius pavadinimus: `aoai-` Azure OpenAI, `oai-` OpenAI API, `githubmodels-` GitHub Models
+- Naudokite nuoseklius vardus: `aoai-` prefiksas Azure OpenAI, `oai-` prefiksas OpenAI API, `githubmodels-` Microsoft Foundry Modeliams (paliktas senasis prefiksas iš GitHub Modelių eros)
 
 ## Dokumentacijos gairės
 
 ### Markdown stilius
 
-- Visos URL turi būti apgaubtos `[tekstą](../../url)` formatu be papildomų tarpų
-- Santykinės nuorodos turi prasidėti `./` arba `../`
+- Visos URL turi būti įvyniotos į formą `[text](../../url)` be papildomų tarpų
+- Santykinės nuorodos turi prasidėti nuo `./` arba `../`
 - Visos nuorodos į Microsoft domenus turi turėti sekimo ID: `?WT.mc_id=academic-105485-koreyst`
-- Nenaudokite šalių specifinių lokalizacijų URL (vengti `/en-us/`)
-- Vaizdai saugomi `./images` kataloge su aprašomaisiais pavadinimais
-- Failų pavadinimuose naudokite anglų simbolius, skaičius ir brūkšnelius
+- Nedėkite apskrities tikslių lokalizacijų URL (venkite `/en-us/`)
+- Vaizdai saugomi `./images` aplanke su aprašomais pavadinimais
+- Failų pavadinimuose naudokite anglų raides, skaičius ir brūkšnelius
 
-### Vertimo palaikymas
+### Vertimų palaikymas
 
-- Saugykla palaiko daugiau nei 40 kalbų per automatizuotus GitHub Actions
+- Saugykla palaiko daugiau nei 40 kalbų per automatinį GitHub Actions
 - Vertimai saugomi `translations/` kataloge
-- Nepateikite dalinių vertimų
-- Mašininiai vertimai nepriimami
-- Išversti vaizdai saugomi `translated_images/` kataloge
+- Neskelbkite dalinių vertimų
+- Mašininių vertimų nepriimame
+- Išverstų vaizdų saugojimas `translated_images/` kataloge
 
-## Testavimas ir validacija
+## Testavimas ir patvirtinimas
 
-### Prieš pateikimą
+### Prieš pateikiant tikrinimus
 
-Ši saugykla naudoja GitHub Actions validacijai. Prieš pateikiant PR:
+Ši saugykla naudoja GitHub Actions patikrinimams. Prieš pateikiant PR:
 
 1. **Patikrinkite Markdown nuorodas**:
    ```bash
-   # The validate-markdown.yml workflow checks:
-   # - Broken relative paths
-   # - Missing tracking IDs on paths
-   # - Missing tracking IDs on URLs
-   # - URLs with country locale
-   # - Broken external URLs
+   # validate-markdown.yml darbo eiga tikrina:
+   # - Sugadintas santykinis kelias
+   # - Trūkstami sekimo identifikatoriai keliuose
+   # - Trūkstami sekimo identifikatoriai URL adresuose
+   # - URL su šalies lokalizacija
+   # - Sugadinti išoriniai URL adresaiv
    ```
 
 2. **Rankinis testavimas**:
-   - Testuokite Python pavyzdžius: aktyvuokite venv ir paleiskite skriptus
-   - Testuokite TypeScript pavyzdžius: `npm install`, `npm run build`, `npm start`
-   - Patikrinkite, ar aplinkos kintamieji tinkamai sukonfigūruoti
+   - Išbandykite Python pavyzdžius: suaktyvinkite venv ir paleiskite skriptus
+   - Išbandykite TypeScript pavyzdžius: `npm install`, `npm run build`, `npm start`
+   - Patikrinkite, ar yra tinkamai sukonfigūruoti aplinkos kintamieji
    - Įsitikinkite, kad API raktai veikia su kodo pavyzdžiais
 
 3. **Kodo pavyzdžiai**:
    - Įsitikinkite, kad visas kodas veikia be klaidų
-   - Testuokite su Azure OpenAI ir OpenAI API, kai taikoma
-   - Patikrinkite, ar pavyzdžiai veikia su GitHub Models, kur tai palaikoma
+   - Išbandykite tiek su Azure OpenAI, tiek su OpenAI API, kai taikoma
+   - Patikrinkite pavyzdžius su Microsoft Foundry Modeliais, kur palaikoma
 
-### Nėra automatizuotų testų
+### Nėra automatinių testų
 
-Tai edukacinė saugykla, orientuota į pamokas ir pavyzdžius. Nėra vienetinių ar integracinių testų. Validacija daugiausia:
+Tai edukacinė saugykla, orientuota į pamokas ir pavyzdžius. Nėra vienetinių ar integracinių testų. Patvirtinimas daugiausia:
 - Rankinis kodo pavyzdžių testavimas
-- GitHub Actions Markdown validacijai
-- Bendruomenės peržiūra edukacinio turinio
+- GitHub Actions – Markdown validacija
+- Bendruomenės atsiliepimai apie mokomąją medžiagą
 
-## Pull Request gairės
+## „Pull Request“ gairės
 
-### Prieš pateikimą
+### Prieš pateikiant
 
-1. Testuokite kodo pakeitimus tiek Python, tiek TypeScript, kai taikoma
-2. Paleiskite Markdown validaciją (automatiškai paleidžiama PR metu)
-3. Įsitikinkite, kad sekimo ID yra visose Microsoft URL
-4. Patikrinkite, ar santykinės nuorodos galioja
+1. Išbandykite kodo pakeitimus Python ir TypeScript kalbomis, kai taikoma
+2. Paleiskite Markdown validaciją (automatiškai, pateikus PR)
+3. Įsitikinkite, kad visose Microsoft URL yra sekimo ID
+4. Patikrinkite, ar santykinės nuorodos yra galiojančios
 5. Patikrinkite, ar vaizdai tinkamai nurodyti
 
 ### PR pavadinimo formatas
 
-- Naudokite aprašomuosius pavadinimus: `[Pamoka 06] Taisymas Python pavyzdžio klaidos` arba `Atnaujinti README pamokai 08`
-- Nurodykite problemų numerius, kai taikoma: `Taiso #123`
+- Naudokite apibūdinančius pavadinimus: `[Lesson 06] Sutvarkytas Python pavyzdžio rašybos klaida` arba `Atnaujintas README 08 pamokai`
+- Nurodykite numerį susijusių problemų atveju: `Fixes #123`
 
 ### PR aprašymas
 
 - Paaiškinkite, kas buvo pakeista ir kodėl
-- Nuorodos į susijusias problemas
-- Kodo pakeitimams nurodykite, kurie pavyzdžiai buvo testuoti
-- Vertimo PR atveju įtraukite visus failus, kad vertimas būtų pilnas
+- Nuoroda į susijusias problemas
+- Pakeitimams kode nurodykite, kurie pavyzdžiai buvo išbandyti
+- Vertimo PR atveju pateikite visus failus už pilną vertimą
 
-### Reikalavimai prisidėjimui
+### Indėlio reikalavimai
 
-- Pasirašykite Microsoft CLA (automatiškai pirmame PR)
-- Prieš atlikdami pakeitimus, fork'inkite saugyklą į savo paskyrą
-- Vienas PR per logišką pakeitimą (nesujunkite nesusijusių taisymų)
-- PR turi būti koncentruoti ir maži, kai įmanoma
+- Pasirašykite Microsoft CLA (automatiškai pirmam PR)
+- Šakinkite saugyklą į savo paskyrą prieš darydami pakeitimus
+- Vienas PR vienam logiškam pakeitimui (nesujunkite nesusijusių pataisų)
+- PR stenkitės daryti tiksliais ir mažais
 
-## Dažnos darbo eigos
+## Dažniausi darbo srautai
 
 ### Naujo kodo pavyzdžio pridėjimas
 
-1. Eikite į atitinkamą pamokos katalogą
-2. Sukurkite pavyzdį `python/` arba `typescript/` subkataloge
-3. Laikykitės pavadinimų konvencijos: `{provider}-{example-name}.{py|ts|js}`
-4. Testuokite su tikrais API kredencialais
-5. Dokumentuokite naujus aplinkos kintamuosius pamokos README
+1. Eikite į atitinkamo pamokos katalogą
+2. Sukurkite pavyzdį `python/` arba `typescript/` posistemyje
+3. Laikykitės vardų konvencijos: `{provider}-{example-name}.{py|ts|js}`
+4. Išbandykite su tikrais API raktais
+5. Užregistruokite naujus aplinkos kintamuosius pamokos README faile
 
 ### Dokumentacijos atnaujinimas
 
 1. Redaguokite README.md pamokos kataloge
 2. Laikykitės Markdown gairių (sekimo ID, santykinės nuorodos)
-3. Vertimų atnaujinimus tvarko GitHub Actions (neredaguokite rankiniu būdu)
-4. Testuokite, ar visos nuorodos galioja
+3. Vertimų atnaujinimai tvarkomi GitHub Actions (nerašykite ranka)
+4. Patikrinkite, ar visos nuorodos galioja
 
-### Darbas su Dev Containers
+### Darbas su Dev konteineriais
 
-1. Saugykla apima `.devcontainer/devcontainer.json`
-2. Post-create skriptas automatiškai įdiegia Python priklausomybes
-3. Python ir Jupyter plėtiniai yra iš anksto sukonfigūruoti
+1. Saugykloje yra `.devcontainer/devcontainer.json`
+2. Po sukūrimo scenarijus automatiškai įdiegia Python priklausomybes
+3. Iš anksto sukonfigūruoti Python ir Jupyter plėtiniai
 4. Aplinka pagrįsta `mcr.microsoft.com/devcontainers/universal:2.11.2`
 
-## Diegimas ir publikavimas
+## Diegimas ir paskelbimas
 
-Tai mokymosi saugykla - nėra diegimo proceso. Mokymo programa naudojama:
+Tai mokymosi saugykla – nėra diegimo proceso. Kursas yra pasiekiamas per:
 
-1. **GitHub saugykla**: Tiesioginė prieiga prie kodo ir dokumentacijos
-2. **GitHub Codespaces**: Momentinė kūrimo aplinka su iš anksto sukonfigūruotu nustatymu
-3. **Microsoft Learn**: Turinys gali būti platinamas oficialioje mokymosi platformoje
-4. **docsify**: Dokumentacijos svetainė, sukurta iš Markdown (žr. `docsifytopdf.js` ir `package.json`)
+1. **GitHub saugykla**: tiesioginis prieigos kodas ir dokumentacija
+2. **GitHub Codespaces**: momentinė kūrimo aplinka su iš anksto sukonfigūruota aplinka
+3. **Microsoft Learn**: turinys gali būti paskelbtas oficialioje mokymosi platformoje
+4. **docsify**: dokumentacijos svetainė kuriama iš Markdown (žiūrėkite `docsifytopdf.js` ir `package.json`)
 
 ### Dokumentacijos svetainės kūrimas
 
 ```bash
-# Generate PDF from documentation (if needed)
+# Sugeneruoti PDF iš dokumentacijos (jei reikalinga)
 npm run convert
 ```
 
-## Trikčių šalinimas
+## Problemų šalinimas
 
 ### Dažnos problemos
 
 **Python importavimo klaidos**:
-- Įsitikinkite, kad virtuali aplinka aktyvuota
+- Įsitikinkite, kad virtuali aplinka suaktyvinta
 - Paleiskite `pip install -r requirements.txt`
-- Patikrinkite, ar Python versija yra 3.9+
+- Patikrinkite, ar Python versija yra 3.9 ar naujesnė
 
-**TypeScript kūrimo klaidos**:
-- Paleiskite `npm install` konkretaus programos kataloge
-- Patikrinkite, ar Node.js versija suderinama
-- Išvalykite `node_modules` ir iš naujo įdiekite, jei reikia
+**TypeScript kompiliavimo klaidos**:
+- Paleiskite `npm install` toje pačioje programos direktorijoje
+- Patikrinkite Node.js suderinamumą
+- Išvalykite `node_modules` ir perinstaliuokite, jei reikia
 
 **API autentifikavimo klaidos**:
-- Patikrinkite, ar `.env` failas egzistuoja ir turi teisingas reikšmes
+- Patikrinkite, ar egzistuoja `.env` failas su teisingomis reikšmėmis
 - Patikrinkite, ar API raktai galioja ir nėra pasibaigę
-- Įsitikinkite, kad URL yra teisingi jūsų regionui
+- Įsitikinkite, kad pabaigos taško URL yra teisingas jūsų regionui
 
 **Trūksta aplinkos kintamųjų**:
 - Nukopijuokite `.env.copy` į `.env`
-- Užpildykite visas reikalingas reikšmes pamokai, su kuria dirbate
-- Perkraukite savo programą po `.env` atnaujinimo
+- Užpildykite visus reikalingus laukus pagal pamoką, kurioje dirbate
+- Po atnaujinimo perkraukite programą
 
 ## Papildomi ištekliai
 
-- [Kurso nustatymo vadovas](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
-- [Prisidėjimo gairės](./CONTRIBUTING.md)
+- [Kurso paruošimo vadovas](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
+- [Indėlio gairės](./CONTRIBUTING.md)
 - [Elgesio kodeksas](./CODE_OF_CONDUCT.md)
 - [Saugumo politika](./SECURITY.md)
-- [Azure AI Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
-- [Išplėstinių kodo pavyzdžių kolekcija](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
+- [Azure DI Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
+- [Pažangių kodo pavyzdžių rinkinys](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
 
 ## Projekto specifinės pastabos
 
-- Tai yra **edukacinė saugykla**, orientuota į mokymąsi, o ne gamybos kodą
-- Pavyzdžiai yra tyčia paprasti ir orientuoti į sąvokų mokymą
-- Kodo kokybė subalansuota su edukaciniu aiškumu
-- Kiekviena pamoka yra savarankiška ir gali būti baigta nepriklausomai
-- Saugykla palaiko kelis API tiekėjus: Azure OpenAI, OpenAI ir GitHub Models
-- Turinys yra daugiakalbis su automatizuotais vertimo darbo srautais
-- Aktyvi bendruomenė Discord platformoje klausimams ir pagalbai
+- Tai **edukacinė saugykla** skirta mokymuisi, o ne gamybos kodui
+- Pavyzdžiai sąmoningai paprasti ir orientuoti į koncepcijų mokymąsi
+- Kodo kokybė derinama su edukaciniu aiškumu
+- Kiekviena pamoka yra savarankiška ir gali būti užbaigta nepriklausomai
+- Saugykla palaiko kelis API tiekėjus: Azure OpenAI, OpenAI, Microsoft Foundry Modelius ir neprisijungimo tiekėjus kaip Foundry Local ir Ollama
+- Turinys daugiakalbis su automatizuotais vertimo procesais
+- Aktyvi bendruomenė „Discord“ klausimams ir palaikymui
 
 ---
 
-**Atsakomybės atsisakymas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors stengiamės užtikrinti tikslumą, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudoti profesionalų žmogaus vertimą. Mes neprisiimame atsakomybės už nesusipratimus ar neteisingus interpretavimus, atsiradusius dėl šio vertimo naudojimo.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Atsakomybės apribojimas**:
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojama naudoti profesionalų žmogiškąjį vertimą. Mes neatsakome už jokius nesusipratimus ar neteisingą interpretaciją, kilusią naudojantis šiuo vertimu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
