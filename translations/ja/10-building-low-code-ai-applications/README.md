@@ -2,277 +2,277 @@
 
 [![ローコードAIアプリケーションの構築](../../../translated_images/ja/10-lesson-banner.a01ac8fe3fd86310.webp)](https://youtu.be/1vzq3Nd8GBA?si=h6LHWJXdmqf6mhDg)
 
-> _(上記の画像をクリックすると、このレッスンのビデオが見られます)_
+> _(このレッスンのビデオを見るには、上の画像をクリックしてください)_
 
 ## はじめに
 
-画像生成アプリケーションの作り方を学んだので、今度はローコードについて話しましょう。生成AIはローコードを含むさまざまな分野で使用できますが、ローコードとは何で、それにAIをどのように追加できるのでしょうか？
+画像生成アプリケーションの構築方法を学んだので、次はローコードについて話しましょう。生成AIはローコードを含むさまざまな分野で活用できますが、ローコードとは何で、どのようにAIを組み込むことができるのでしょうか？
 
-従来の開発者や非開発者にとっても、ローコード開発プラットフォームの利用によりアプリやソリューションの構築が簡単になりました。ローコード開発プラットフォームは、ほとんどコードを書かずにアプリやソリューションを構築できる環境を提供します。これは、コンポーネントをドラッグアンドドロップで組み立てるビジュアル開発環境によって実現されます。これにより、より早く、少ないリソースでアプリやソリューションを作成できます。本レッスンでは、ローコードの使い方とPower Platformを用いてAIでローコード開発を強化する方法を詳細に解説します。
+ローコード開発プラットフォームの利用により、従来の開発者と非開発者の両方がアプリやソリューションをより簡単に作成できるようになりました。ローコード開発プラットフォームは、ほとんどまたは全くコードを書かずにアプリやソリューションを構築することを可能にします。これを実現するのが、コンポーネントをドラッグ＆ドロップしてアプリやソリューションを構築できるビジュアル開発環境です。このため、より少ないリソースで迅速にアプリやソリューションを作成できます。本レッスンでは、ローコードの使い方とPower Platformを使ってAIによるローコード開発の強化方法を詳しく学びます。
 
-Power Platformは、組織がチームに直感的なローコードまたはノーコード環境を提供し、自らソリューションを構築できる機会をもたらします。この環境はソリューション構築のプロセスを簡素化します。Power Platformを使えば、ソリューションを月単位や年単位ではなく、数日または数週間で構築できます。Power Platformは、Power Apps、Power Automate、Power BI、Power Pages、Copilot Studioの5つの主要製品で構成されています。
+Power Platformは、組織が自分たちのチームに直感的なローコードまたはノーコード環境で自分たちのソリューションを構築する力を与える機会を提供します。この環境はソリューション構築のプロセスを簡単にします。Power Platformを使えば、ソリューションを数カ月や数年ではなく、数日または数週間で構築可能です。Power Platformは5つの主要な製品で構成されています：Power Apps、Power Automate、Power BI、Power Pages、そしてCopilot Studioです。
 
-本レッスンの内容は以下の通りです：
+このレッスンでは以下を扱います：
 
 - Power Platformにおける生成AIの紹介
 - Copilotの紹介と使い方
-- 生成AIを利用したPower Platformでのアプリとフローの構築
-- AI Builderを利用したPower PlatformのAIモデルの理解
+- Power Platformで生成AIを使ってアプリやフローを構築する方法
+- AI Builderを使ったPower PlatformのAIモデルの理解
 - Microsoft Copilot Studioを使ったインテリジェントエージェントの構築
 
 ## 学習目標
 
-このレッスンの終了時には、次のことができるようになります：
+このレッスンを終える頃には、以下ができるようになります：
 
-- Power PlatformでCopilotがどのように機能するか理解する。
+- Power PlatformでのCopilotの働き方を理解する。
 
-- 教育スタートアップ向けに学生課題管理アプリを構築する。
+- 教育系スタートアップのための学生課題追跡アプリを構築する。
 
-- インボイスから情報を抽出するAIを使った請求書処理フローを構築する。
+- 請求書から情報を抽出するためにAIを使う請求書処理フローを構築する。
 
-- GPTのテキスト生成AIモデル利用時のベストプラクティスを適用する。
+- GPT AIモデルを使用した「テキスト作成」時のベストプラクティスを適用する。
 
-- Microsoft Copilot Studioとは何か、そしてそれを使ってインテリジェントエージェントを構築する方法を理解する。
+- Microsoft Copilot Studioとは何か、そしてそれを使ったインテリジェントエージェントの構築方法を理解する。
 
-本レッスンで使用するツールと技術：
+このレッスンで使用するツールと技術は以下の通りです：
 
-- **Power Apps**：学生課題管理アプリ用のローコード開発環境で、データの追跡、管理、操作のためのアプリ構築に利用。
+- **Power Apps**：学生課題追跡アプリ用のローコード開発環境で、データの追跡、管理、操作を行うアプリを構築します。
 
-- **Dataverse**：学生課題管理アプリのデータ保存用で、アプリのデータを格納するローコードデータプラットフォーム。
+- **Dataverse**：学生課題追跡アプリのデータを保存するための低コードデータプラットフォームです。
 
-- **Power Automate**：請求書処理フロー用のローコード開発環境で、請求書処理のワークフロー自動化に利用。
+- **Power Automate**：請求書処理フロー用の低コード開発環境で、請求書処理のワークフローを自動化します。
 
-- **AI Builder**：請求書処理AIモデル用で、スタートアップの請求書処理にプリビルトAIモデルを活用。
+- **AI Builder**：請求書処理AIモデル用の事前構築されたAIモデルを使い、請求書を処理します。
 
-## Power Platformの生成AI
+## Power Platformにおける生成AI
 
-生成AIによるローコード開発とアプリケーションの強化は、Power Platformの重要な焦点です。目標は、データサイエンスの専門知識なしに、誰もがAI搭載のアプリ、サイト、ダッシュボードの構築やAIによるプロセスの自動化を可能にすることです。この目標は、Power Platformのローコード開発体験に、CopilotとAI Builderという形で生成AIを統合することで達成されます。
+生成AIによるローコード開発とアプリケーションの強化は、Power Platformの重要な注力分野です。目標は、誰もがデータサイエンスの専門知識なしで、AI搭載のアプリ、サイト、ダッシュボードを構築し、AIによるプロセス自動化を可能にすることです。この目標は、Power Platformのローコード開発体験にCopilotとAI Builderとして統合された生成AIにより達成されています。
 
-### どのように機能するのか？
+### これはどのように機能するのでしょうか？
 
-CopilotはAIアシスタントで、自然言語による一連の対話形式で要件を説明することで、Power Platformソリューションを構築できます。例えば、アプリ内で使うフィールドを指定すれば、アプリとその基となるデータモデルの両方を作成し、またはPower Automateでのフローの設定方法を指定できます。
+Copilotは自然言語による一連の対話ステップで要件を説明することでPower Platformソリューションを構築できるAIアシスタントです。例えば、アプリで使用するフィールドを指定すると、そのアプリと基盤となるデータモデルを作成したり、Power Automateでのフローの設定方法を指示したりできます。
 
-Copilot駆動の機能をアプリ画面に搭載することで、ユーザーが会話形式で洞察を発見するのを可能にできます。
+ユーザーが対話的に洞察を得られるように、アプリ画面にCopilot駆動の機能を組み込むことも可能です。
 
-AI BuilderはPower Platformで利用可能なローコードAI機能で、AIモデルを利用してプロセスの自動化や結果予測を支援します。AI Builderにより、DataverseやSharePoint、OneDrive、Azureなどのクラウドデータソースに接続するアプリやフローにAIを導入できます。
+AI BuilderはPower Platformで利用可能なローコードAI機能で、AIモデルを使いプロセスの自動化や結果の予測を支援します。AI Builderにより、DataverseやSharePoint、OneDrive、Azureなどのクラウドデータソースに接続するアプリやフローにAIを組み込めます。
 
-CopilotはPower Apps、Power Automate、Power BI、Power Pages、Copilot Studio（旧Power Virtual Agents）すべてで利用可能です。AI BuilderはPower AppsとPower Automateで利用可能です。本レッスンでは、教育スタートアップ向けソリューション構築に関して、Power AppsおよびPower AutomateでのCopilotとAI Builderの使い方に焦点を当てます。
+CopilotはPower Apps、Power Automate、Power BI、Power Pages、Copilot Studio（旧Power Virtual Agents）の全製品に搭載されています。AI BuilderはPower AppsとPower Automateで利用可能です。このレッスンでは、教育系スタートアップ向けのソリューション構築でPower AppsとPower AutomateにおけるCopilotとAI Builderの使い方に焦点を当てます。
 
 ### Power AppsのCopilot
 
-Power Platformの一環であるPower Appsは、データの追跡、管理、操作のためのアプリを構築するローコード開発環境を提供します。スケーラブルなデータプラットフォームとクラウドサービスやオンプレミスデータへの接続機能を備えたアプリ開発サービスのスイートです。Power Appsでは、ブラウザ、タブレット、携帯電話で動作するアプリを構築し、同僚と共有できます。シンプルなインターフェースにより、ビジネスユーザーやプロ開発者がカスタムアプリを構築しやすくなっています。生成AIによるCopilotを使用してアプリ開発体験が強化されています。
+Power Platformの一部であるPower Appsは、データの追跡、管理、操作を行うアプリを構築するためのローコード開発環境を提供します。これはスケーラブルなデータプラットフォームとクラウドサービスやオンプレミスデータへの接続機能を備えたアプリ開発サービス群で、ブラウザ、タブレット、携帯電話で実行するアプリを構築し、共有できます。操作が簡単なため、ビジネスユーザーもプロ開発者もカスタムアプリを作成可能です。さらにCopilotによる生成AIでアプリ開発体験が強化されています。
 
-Power Apps内のCopilot AIアシスタント機能を使うと、どのようなアプリが必要で、追跡・収集・表示したい情報を記述するだけで、応答性の高いCanvasアプリを生成します。その後、アプリをカスタマイズして要件に合わせられます。AI Copilotは、追跡するデータを保存するために必要なフィールドを持つDataverseテーブルとサンプルデータも生成・提案します。本レッスンの後半でDataverseの説明とPower Appsでの利用方法を学びます。対話形式でAI Copilotアシスタント機能を使ってテーブルをカスタマイズできます。この機能はPower Appsのホーム画面からすぐに利用可能です。
+Power AppsのCopilot AIアシスタント機能では、どのようなアプリを必要とし、追跡・収集・表示したい情報を記述すると、その説明に基づくレスポンシブなCanvasアプリを生成します。生成後、ニーズに合わせてカスタマイズ可能です。AI Copilotは必要なデータを格納するためのDataverseテーブルのフィールドやサンプルデータも提案し生成します。本レッスンの後半でDataverseとは何か、Power Appsでの使い方を学びます。対話的な手順でCopilotアシスタント機能を通じてテーブルのカスタマイズも可能です。この機能はPower Appsのホーム画面からすぐに利用できます。
 
 ### Power AutomateのCopilot
 
-Power Platformの一部であるPower Automateは、アプリやサービス間で自動化ワークフローを作成できます。コミュニケーション、データ収集、決裁承認などの繰り返しビジネスプロセスの自動化を支援します。初心者から経験豊富な開発者まで全技術レベルのユーザー向けにシンプルなインターフェースを提供し、作業を自動化できます。ワークフロー開発も生成AIのCopilotで強化されています。
+Power Platformの一部であるPower Automateは、アプリやサービス間で自動化されたワークフローを作成するための製品です。通信、データ収集、承認などの反復的な業務プロセスの自動化を支援します。初心者から経験豊富な開発者までの幅広い技術レベルのユーザーがワークタスクを自動化できるシンプルなインターフェイスを備えています。フロー開発体験もCopilotによる生成AIで強化されています。
 
-Power Automate内のCopilot AIアシスタント機能を使うと、どのようなフローが必要で、実行したいアクションを記述するだけで、フローを生成します。その後、カスタマイズして要件に合わせられます。AI Copilotは自動化したいタスクを実行するのに必要なアクションも生成・提案します。本レッスンの後半でフローの説明とPower Automateでの使い方を学びます。対話形式のAI Copilotアシスタント機能を使ってアクションをカスタマイズできます。この機能はPower Automateのホーム画面からすぐに利用可能です。
+Power AutomateのCopilot AIアシスタント機能では、必要なフローの内容や実行したいアクションを記述すると、その説明に基づくフローを生成します。生成後、ニーズに合わせカスタマイズ可能です。AI Copilotはタスクを自動化するために必要なアクションも提案し生成します。本レッスンの後半でフローとは何か、Power Automateでの使い方を学びます。対話的な手順でアクションのカスタマイズもCopilotアシスタント機能から可能です。この機能はPower Automateのホーム画面からすぐに利用できます。
 
 ## Microsoft Copilot Studioを使ったインテリジェントエージェントの構築
 
-[Microsoft Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/fundamentals-what-is-copilot-studio?WT.mc_id=academic-105485-koreyst)（旧Power Virtual Agents）は、Power Platformのローコードメンバーで、**AIエージェント** — 会話型コパイロットを構築できます。これらはユーザーに代わって質問に答え、操作を行い、タスクを自動化します。Power Platformの他の製品と同様、視覚的かつ自然言語優先の体験でエージェントを構築します：エージェントにやってほしいことを記述すると、Copilot Studioが指示、知識、操作の足場を支援します。
+[Microsoft Copilot Studio](https://learn.microsoft.com/microsoft-copilot-studio/fundamentals-what-is-copilot-studio?WT.mc_id=academic-105485-koreyst)（旧Power Virtual Agents）は、Power Platformのローコード製品であり、**AIエージェント**——ユーザーの質問に答え、操作を行い、タスクを自動化する対話型コパイロットを作成できます。Power Platformの他の製品と同様に、ビジュアルで自然言語中心の体験でこれらのエージェントを構築します。やりたいことを記述すると、Copilot Studioが指示、知識、アクションの枠組み作りを支援します。
 
-教育スタートアップ向けには、コードを書かずにコースに関する学生の質問に答え、課題の締切を確認し、さらには講師へメール送信ができるエージェントを構築できます。
+教育系スタートアップのために、学生のコースに関する質問に答え、課題の締切を確認し、講師にメールを送るようなエージェントをノーコードで作成できます。
 
-Copilot Studioの強力な最新機能のいくつか：
+Copilot Studioを強力にする最新の機能には以下が含まれます：
 
-- <strong>知識から生成される回答</strong>。すべての会話を手動で作成する代わりに、<strong>知識ソース</strong> — 公共ウェブサイト、SharePoint、OneDrive、Dataverse、アップロードしたファイル、あるいはコネクター経由の企業データ — に接続して、そこから根拠のある回答を生成します。
+- <strong>知識からの生成的回答</strong>。全ての会話を手作業で作成する代わりに、<strong>知識ソース</strong>（公開サイト、SharePoint、OneDrive、Dataverse、アップロード済みファイル、コネクタ経由の企業データ）を接続し、エージェントがそれらから根拠のある回答を生成します。
 
-- <strong>生成的オーケストレーション</strong>。厳格なトリガーフレーズに依存せず、リクエストをAIが理解し、知識、トピック、アクションを動的に組み合わせて実行し、複数ステップの連鎖も可能です。
+- <strong>生成的オーケストレーション</strong>。堅牢なトリガーフレーズに頼らず、要求をAIで理解し、必要な知識、トピック、アクションを動的に組み合わせて遂行、複数ステップを連結することも可能です。
 
-- <strong>アクションとコネクター</strong>。エージェントはチャットだけでなく「操作」も行えます。Power Platformの1,500以上のプリビルトコネクター、Power Automateフロー、カスタムREST API、プロンプト、あるいは<strong>モデルコンテキストプロトコル(MCP)</strong>サーバーによって動作するアクションを与えられます。
+- <strong>アクションとコネクタ</strong>。エージェントはチャットだけでなく行動も可能です。1500以上の事前構築Power Platformコネクタ、Power Automateフロー、カスタムREST API、プロンプト、<strong>モデルコンテキストプロトコル（MCP）</strong>サーバーに支えられたアクションを付与できます。
 
-- <strong>自律エージェント</strong>。エージェントはチャットウィンドウに限定されず、新しいメール、新規Dataverseレコード、ファイルアップロードなどのイベントでトリガーされ、バックグラウンドでタスクを完遂する<strong>自律エージェント</strong>を構築できます。
+- <strong>自律エージェント</strong>。エージェントはチャットウィンドウ限定ではありません。新しいメール、Dataverseの新規レコード、ファイルのアップロードなどのイベントでトリガーされ、バックグラウンドでタスクを完了する<strong>自律エージェント</strong>も作れます。
 
-- <strong>マルチエージェントオーケストレーション</strong>。エージェント同士が呼び出し合えます。Copilot StudioのエージェントはMicrosoft 365 Copilotに公開された他のエージェントやMicrosoft Foundryで構築されたエージェントに引き継ぎ・拡張できます。
+- <strong>マルチエージェントオーケストレーション</strong>。エージェントは他のエージェントを呼び出せます。Copilot Studioエージェントは他のエージェントへの引継ぎや拡張が可能で、Microsoft 365 Copilotに公開されたエージェントやMicrosoft Foundryで構築されたエージェントも含まれます。
 
-- <strong>モデル選択</strong>。組み込みモデルを超え、Microsoft Foundryのモデルカタログからモデルを持ち込み、エージェントの推論や応答をカスタマイズ可能です。
+- <strong>モデル選択</strong>。組み込みモデルに加え、Microsoft Foundryモデルカタログのモデルを利用して、エージェントの推論や応答の調整が可能です。
 
-- <strong>あらゆる場所への公開</strong>。構築したエージェントはMicrosoft Teams、Microsoft 365 Copilot、ウェブサイトやカスタムアプリなど複数のチャネルに公開でき、Power Platform管理エクスペリエンスでセキュリティ、認証、分析を管理します。
+- <strong>どこでも公開可能</strong>。構築後、エージェントはMicrosoft Teams、Microsoft 365 Copilot、ウェブサイトやカスタムアプリなど複数チャネルに公開でき、セキュリティ、認証、分析はPower Platform管理画面で管理されます。
 
-最初のエージェントは [copilotstudio.microsoft.com](https://copilotstudio.microsoft.com?WT.mc_id=academic-105485-koreyst) で構築開始でき、詳細は [Microsoft Copilot Studio ドキュメント](https://learn.microsoft.com/microsoft-copilot-studio/?WT.mc_id=academic-105485-koreyst) を参照してください。
+[copilotstudio.microsoft.com](https://copilotstudio.microsoft.com?WT.mc_id=academic-105485-koreyst)で最初のエージェント作成を始め、[Microsoft Copilot Studioドキュメント](https://learn.microsoft.com/microsoft-copilot-studio/?WT.mc_id=academic-105485-koreyst)で詳細を学べます。
 
-## 課題：Copilotを使って学生の課題と請求書を管理するスタートアップ用ソリューション構築
+## 課題：Copilotを使ってスタートアップの学生課題と請求書を管理する
 
-当社のスタートアップはオンラインコースを学生に提供しています。急成長によりコースの需要に追いつけなくなっており、Power Platform開発者としてあなたに学生課題と請求書管理のためのローコードソリューション構築を依頼しました。アプリで学生課題の追跡・管理を支援し、ワークフローで請求書処理を自動化する必要があります。生成AIを活用してソリューション開発を行うことが求められています。
+私たちのスタートアップは学生にオンラインコースを提供しています。急成長によりコースの需要が高まり、対応が難しくなっています。Power Platform開発者として、学生課題管理アプリと請求書処理ワークフローをローコードソリューションで構築する支援を依頼されました。生成AIを使ってソリューションを開発してください。
 
-Copilotの使い始めには、[Power Platform Copilot Prompt Library](https://github.com/pnp/powerplatform-prompts?WT.mc_id=academic-109639-somelezediko)を活用してプロンプトを入手できます。このライブラリはCopilotでアプリやフロー構築に使えるプロンプトのリストを含み、要件をCopilotに説明する方法の参考にもなります。
+Copilotを使い始める際は、[Power Platform Copilot Prompt Library](https://github.com/pnp/powerplatform-prompts?WT.mc_id=academic-109639-somelezediko)のプロンプト集が役立ちます。このライブラリにはCopilotでアプリやフローを構築するためのプロンプト例が含まれており、要件をどう説明するかのヒントも得られます。
 
-### スタートアップ向け学生課題管理アプリを構築する
+### スタートアップ向け学生課題追跡アプリの構築
 
-スタートアップの教育者は学生課題の管理に苦労しており、これまでスプレッドシートで追跡してきましたが、学生数の増加により扱いが困難になっています。課題の追加、表示、更新、削除ができるアプリを作ってほしいとの依頼です。また、教育者と学生が評価済みの課題と未評価の課題を確認できるようにします。
+スタートアップの教育者は学生課題の管理に苦労しています。課題の追跡にスプレッドシートを使用していましたが、学生数の増加に伴い管理が難しくなっています。彼らから課題を追跡・管理できるアプリの作成依頼がありました。アプリは課題の追加、表示、更新、削除ができ、評価済みと未評価の課題の区別も可能にします。
 
-Power AppsのCopilotを使い、以下の手順でアプリを構築します：
+以下の手順でPower AppsのCopilotを使ってアプリを作ります：
 
-1. [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst) のホーム画面に移動します。
+1. [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst)のホーム画面にアクセスします。
 
-1. ホーム画面のテキストエリアに、作りたいアプリを説明します。例：**_学生課題の追跡と管理を行うアプリを作りたい_**。<strong>送信</strong>ボタンをクリックして、プロンプトをAI Copilotに送ります。
+1. ホーム画面のテキストエリアに作りたいアプリを説明します。例えば、<strong>_学生課題を追跡・管理するアプリを作りたい_</strong>などです。<strong>送信</strong>ボタンをクリックしてAI Copilotにプロンプトを送ります。
 
 ![作りたいアプリを説明する](../../../translated_images/ja/copilot-chat-prompt-powerapps.84250f341d060830.webp)
 
-1. AI Copilotは追跡したいデータを保存するために必要なフィールドを持つDataverseテーブルとサンプルデータを提案します。対話形式のAI Copilotアシスタント機能を使ってテーブルをカスタマイズ可能です。
+1. AI Copilotは必要なデータを保存するためのDataverseテーブルのフィールドとサンプルデータを提案します。その後、対話ステップを通じてAI Copilotアシスタント機能でテーブルをカスタマイズできます。
 
-   > <strong>重要</strong>：DataverseはPower Platformの基盤となるデータプラットフォームです。アプリのデータ保存用のローコードデータプラットフォームであり、Microsoftクラウドに安全にデータを保存する完全マネージドサービスで、Power Platform環境内にプロビジョニングされます。データ分類、データ系統、詳細アクセス制御などの組み込みデータガバナンス機能を備えています。詳細は[こちら](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko)を参照してください。
+   > <strong>重要</strong>：DataverseはPower Platformの基盤となるデータプラットフォームです。アプリのデータを保存するためのローコードデータプラットフォームで、Microsoftクラウド内で安全に管理され、Power Platform環境内にプロビジョニングされます。データ分類、データ系統、詳細なアクセス制御などのデータガバナンス機能も備えています。詳細は[こちら](https://learn.microsoft.com/power-apps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko)をご覧ください。
 
-   ![新しいテーブルの提案されたフィールド](../../../translated_images/ja/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp)
+   ![新しいテーブルに提案されたフィールド](../../../translated_images/ja/copilot-dataverse-table-powerapps.f4cc07b5d5f9327b.webp)
 
-1. 教育者は課題を提出した学生にメールを送って進捗を知らせたいと考えています。Copilotを使って学生のメールを保存するための新しいフィールドをテーブルに追加できます。例：<strong>_学生メールを保存するための列を追加したい_</strong>というプロンプトを送ってください。<strong>送信</strong>ボタンをクリックしてAI Copilotに送ります。
+1. 教育者は課題を提出した学生に進捗状況をメールで伝えたいと考えています。Copilotを使って学生のメールを保存する新しいフィールドをテーブルに追加できます。例えば、<strong>_学生のメールを保存する列を追加したい_</strong>とプロンプトして、<strong>送信</strong>ボタンをクリックします。
 
 ![新しいフィールドの追加](../../../translated_images/ja/copilot-new-column.35e15ff21acaf274.webp)
 
-1. AI Copilotが新しいフィールドを生成し、その後ニーズに合わせてフィールドをカスタマイズできます。
+1. AI Copilotが新しいフィールドを生成し、その後あなたのニーズに合わせてフィールドをカスタマイズできます。
 
 
-1. テーブルの作成が完了したら、<strong>アプリの作成</strong>ボタンをクリックしてアプリを作成します。
+1. テーブルの編集が完了したら、**Create app** ボタンをクリックしてアプリを作成します。
 
-1. AI Copilot があなたの説明に基づいてレスポンシブな Canvas アプリを生成します。その後、ニーズに応じてアプリをカスタマイズできます。
+1. AI Copilot があなたの説明に基づいてレスポンシブな Canvas アプリを生成します。その後、ニーズに合わせてアプリをカスタマイズできます。
 
-1. 教育者が学生にメールを送るために、Copilot を使ってアプリに新しい画面を追加できます。例えば、次のプロンプトを使ってアプリに新しい画面を追加できます：**_学生にメールを送るための画面を追加したい_**。<strong>送信</strong>ボタンをクリックしてプロンプトを AI Copilot に送信します。
+1. 教育者が学生にメールを送るために、Copilot を使ってアプリに新しい画面を追加できます。たとえば、次のプロンプトを使ってアプリに新しい画面を追加できます：**_学生にメールを送る画面を追加したい_**。**Send** ボタンをクリックしてプロンプトを AI Copilot に送信します。
 
 ![Adding a new screen via a prompt instruction](../../../translated_images/ja/copilot-new-screen.2e0bef7132a17392.webp)
 
-1. AI Copilot が新しい画面を生成し、その後ニーズに応じて画面をカスタマイズできます。
+1. AI Copilot が新しい画面を生成し、その後、あなたのニーズに合わせて画面をカスタマイズできます。
 
-1. アプリの作成が完了したら、<strong>保存</strong>ボタンをクリックしてアプリを保存します。
+1. アプリの作成が完了したら、**Save** ボタンをクリックしてアプリを保存します。
 
-1. 教育者とアプリを共有するには、<strong>共有</strong>ボタンをクリックしてからもう一度<strong>共有</strong>ボタンをクリックします。教育者のメールアドレスを入力してアプリを共有できます。
+1. 教育者とアプリを共有するには、**Share** ボタンをクリックし、その後再度 **Share** ボタンをクリックします。次に、教育者のメールアドレスを入力してアプリを共有できます。
 
-> <strong>宿題</strong>: いま作成したアプリは良いスタートですが、改善の余地があります。メール機能では、教育者は学生にメールアドレスを手動で入力して送信するしかありません。Copilot を使って、教育者が課題を提出したときに自動で学生にメールを送信できる自動化を作成できますか？ヒントとして、適切なプロンプトを使えば、Power Automate の Copilot でこれを構築できます。
+> <strong>宿題</strong>: いま作成したアプリは良い出発点ですが、改善の余地があります。メール機能では、教育者が学生のメールアドレスを手入力して手動でメールを送るしかありません。Copilot を使って、学生が課題を提出したときに教育者が自動的にメールを送れるような自動化を構築できますか？ヒントとして、適切なプロンプトを使えば、Power Automate の Copilot でこれを構築できます。
 
-### 当社スタートアップ向けの請求書情報テーブルの構築
+### スタートアップのための請求書情報テーブルの作成
 
-当社スタートアップの財務チームは請求書の管理に苦労しています。請求書の追跡にスプレッドシートを使っていますが、請求書の数が増えるにつれて管理が困難になってきました。彼らは、受け取った請求書の情報を格納、追跡、管理できるテーブルを作成するよう依頼しました。このテーブルは、全ての請求書情報を抽出してテーブルに保存する自動化を構築するために使用されるべきです。また、財務チームが支払済みと未払いの請求書を確認できるようにする必要があります。
+私たちのスタートアップの財務チームは請求書の管理に苦労しています。彼らはいまスプレッドシートを使って請求書を追跡していますが、請求書の数が増えるにつれて管理が難しくなっています。彼らは請求書の情報を保存、追跡、管理するためのテーブルの作成を依頼しました。このテーブルは、すべての請求書情報を抽出して保存する自動化を構築するために使用されるべきです。また、支払い済みの請求書と未払いの請求書を財務チームが閲覧できるようにする必要があります。
 
-Power Platform には Dataverse と呼ばれる基盤データプラットフォームがあり、アプリやソリューションのデータを保存できます。Dataverse は低コードのデータプラットフォームを提供し、Microsoft Cloud 内で安全にデータを保存し、Power Platform 環境内で利用可能です。データ分類、データラインエージ、細かなアクセス制御などのデータガバナンス機能が組み込まれています。[こちらで Dataverse の詳細を学べます](https://docs.microsoft.com/powerapps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko)。
+Power Platform には Dataverse という基盤データプラットフォームがあり、アプリやソリューションのデータを保存できます。Dataverse は低コードのデータプラットフォームで、アプリのデータを安全にマイクロソフトクラウドに保存し、Power Platform 環境内でプロビジョニングされるフルマネージドサービスです。データ分類、データ系統、細かいアクセス制御などの組み込みのデータガバナンス機能も備えています。[Dataverse についての詳細はこちら](https://learn.microsoft.com/power-apps/maker/data-platform/data-platform-intro?WT.mc_id=academic-109639-somelezediko)をご覧ください。
 
-なぜ当社スタートアップで Dataverse を使うべきでしょうか？Dataverse の標準テーブルとカスタムテーブルは、安全かつクラウドベースのデータ格納手段を提供します。テーブルは、単一の Excel ワークブックで複数のワークシートを使い分けるように、異なる種類のデータを保存できます。組織やビジネスのニーズに特化したデータを保存するためにテーブルを使用できます。当社スタートアップが Dataverse を利用する主な利点は次のとおりです（以下に挙げる以外にもあります）：
+なぜスタートアップのために Dataverse を使うべきなのでしょうか？Dataverse の標準およびカスタムテーブルは、安全なクラウドベースのデータ保存オプションを提供します。テーブルは、複数の Excel ワークブックのシートのように、異なるタイプのデータを保存できます。組織やビジネスのニーズに特化したデータを保存するためにテーブルを使えます。スタートアップが Dataverse を使うことで得られるメリットには以下のようなものがありますが、これに限りません：
 
-- <strong>管理が簡単</strong>：メタデータとデータはクラウドに保存されるため、保存方法や管理方法を気にする必要はありません。アプリやソリューションの構築に集中できます。
+- <strong>管理が容易</strong>: メタデータもデータもクラウドに保存されるため、保存や管理の細部を気にする必要がありません。アプリやソリューションの構築に集中できます。
 
-- <strong>安全</strong>：Dataverse はデータを安全にクラウド保存し、テーブル内のデータへのアクセスをロールベースのセキュリティで制御できます。
+- <strong>安全</strong>: Dataverse は安全なクラウドベースの保存オプションを提供します。役割ベースのセキュリティにより、誰がどのようにデータにアクセスできるかを制御できます。
 
-- <strong>豊富なメタデータ</strong>：データ型やリレーションシップが Power Apps 内で直接使用されます。
+- <strong>リッチなメタデータ</strong>: データ型やリレーションシップが Power Apps 内で直接使われます。
 
-- <strong>ロジックと検証</strong>：ビジネスルール、計算フィールド、検証ルールを用いてビジネスロジックを適用し、データの正確性を保てます。
+- <strong>論理と検証</strong>: ビジネスルール、計算フィールド、検証ルールを使ってビジネスロジックを適用し、データの正確性を保てます。
 
-Dataverse とは何か、なぜ使うべきかが分かったところで、次に Copilot を使って財務チームの要件に合う Dataverse テーブルを作成する方法を見てみましょう。
+Dataverse とは何か、なぜ使うべきかがわかったところで、財務チームの要件を満たすために Copilot を使って Dataverse にテーブルを作成する方法を見てみましょう。
 
-> <strong>注意</strong>：このテーブルは次のセクションで、全ての請求書情報を抽出してテーブルに保存する自動化を構築する際に使用します。
+> <strong>注意</strong> : 次のセクションで、このテーブルを使ってすべての請求書情報を抽出しテーブルに保存する自動化を構築します。
 
-Copilot を使って Dataverse にテーブルを作成するには、以下の手順を実行します：
+Copilot を使って Dataverse にテーブルを作成するには、以下の手順に従います：
 
-1. [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst) のホーム画面にアクセスします。
+1. [Power Apps](https://make.powerapps.com?WT.mc_id=academic-105485-koreyst) ホーム画面に移動します。
 
-2. 左側のナビゲーションバーで <strong>テーブル</strong> を選択し、次に <strong>新しいテーブルを説明する</strong> をクリックします。
+2. 左のナビゲーションバーで **Tables** を選択し、続いて **Describe the new Table** をクリックします。
 
 ![Select new table](../../../translated_images/ja/describe-new-table.0792373eb757281e.webp)
 
-1. <strong>新しいテーブルを説明する</strong> 画面で、テーブルにしたい内容をテキストエリアに記述します。例えば、**_請求書情報を保存するテーブルを作成したい_** です。<strong>送信</strong>ボタンをクリックしてプロンプトを AI Copilot に送信します。
+1. **Describe the new Table** 画面で、作成したいテーブルの説明をテキストエリアに入力します。たとえば、**_請求書情報を保存するテーブルを作成したい_** と入力します。**Send** ボタンをクリックしてプロンプトを AI Copilot に送信します。
 
 ![Describe the table](../../../translated_images/ja/copilot-chat-prompt-dataverse.feb2f81e5872b9d2.webp)
 
-1. AI Copilot が、追跡したいデータを保存するために必要なフィールドとサンプルデータを備えた Dataverse テーブルを提案します。その後、会話形式で AI Copilot アシスタントを使ってテーブルをカスタマイズできます。
+1. AI Copilot が、追跡したいデータを保存するために必要なフィールドを備えた Dataverse テーブルを提案し、サンプルデータも提供します。その後、対話形式の AI Copilot アシスタント機能を使ってテーブルをカスタマイズできます。
 
 ![Suggested Dataverse table](../../../translated_images/ja/copilot-dataverse-table.b3bc936091324d9d.webp)
 
-1. 財務チームは、請求書の現在の状況を業者にメールで通知したいと考えています。Copilot を使ってテーブルに業者メールを保存する新しいフィールドを追加できます。例えば、次のプロンプトを使えます：**_業者メールを保存する列を追加したい_**。<strong>送信</strong>ボタンをクリックしてプロンプトを AI Copilot に送信します。
+1. 財務チームはサプライヤーに請求書の状況をメールで通知したいと考えています。Copilot を使って、サプライヤーのメールアドレスを保存する新しいフィールドをテーブルに追加できます。たとえば、次のプロンプトを使います：**_サプライヤーのメールを保存する列を追加したい_**。**Send** ボタンをクリックしてプロンプトを AI Copilot に送信します。
 
-1. AI Copilot が新しいフィールドを生成し、その後ニーズに応じてフィールドをカスタマイズできます。
+1. AI Copilot が新しいフィールドを生成し、その後、ニーズに応じてフィールドをカスタマイズできます。
 
-1. テーブルの作成が完了したら、<strong>作成</strong>ボタンをクリックしてテーブルを作成します。
+1. テーブルの編集が完了したら、**Create** ボタンをクリックしてテーブルを作成します。
 
-## Power Platform の AI Builder における AI モデル
+## Power Platform における AI モデルと AI Builder
 
-AI Builder は Power Platform に搭載されたローコードの AI 機能で、AI モデルを使ってプロセスの自動化や結果の予測が可能です。AI Builder を使えば、Dataverse や SharePoint、OneDrive、Azure などのクラウドデータソースに接続されたアプリやフローに AI を組み込めます。
+AI Builder は Power Platform で利用できる低コード AI 機能で、AI モデルを使ってプロセスの自動化や結果予測を行えます。AI Builder により、Dataverse や SharePoint、OneDrive、Azure などのクラウドデータソースに接続しているアプリやフローに AI を組み込めます。
 
-## 事前構築済み AI モデルとカスタム AI モデルの違い
+## 既製 AI モデルとカスタム AI モデルの違い
 
-AI Builder は二種類の AI モデルを提供しています：事前構築済み AI モデルとカスタム AI モデルです。事前構築済み AI モデルは、Microsoft によってトレーニングされ、Power Platform で利用可能な使い捨て可能な AI モデルです。これによってデータを集めて独自モデルを構築・トレーニング・公開することなく、アプリやフローにインテリジェンスを追加可能です。プロセスの自動化や結果予測に使えます。
+AI Builder には 2 種類の AI モデルがあります：既製 AI モデルとカスタム AI モデルです。既製 AI モデルは Microsoft によって訓練され、Power Platform で利用できるすぐに使えるモデルです。これにより、自分でデータを収集し、モデルを構築、訓練、公開することなく、アプリやフローにインテリジェンスを追加できます。自動化や結果予測に利用可能です。
 
-Power Platform で利用できる事前構築済み AI モデルの例は：
+Power Platform で利用可能な既製 AI モデルの例には以下があります：
 
-- <strong>キーフレーズ抽出</strong>：テキストからキーフレーズを抽出します。
-- <strong>言語検出</strong>：テキストの言語を検出します。
-- <strong>感情分析</strong>：テキストに含まれる肯定的、否定的、中立的、混合的な感情を検出します。
-- <strong>名刺リーダー</strong>：名刺から情報を抽出します。
-- <strong>テキスト認識</strong>：画像からテキストを抽出します。
-- <strong>物体検出</strong>：画像から物体を検出・抽出します。
-- <strong>ドキュメント処理</strong>：フォームから情報を抽出します。
-- <strong>請求書処理</strong>：請求書から情報を抽出します。
+- <strong>キーフレーズ抽出</strong>: テキストからキーフレーズを抽出します。
+- <strong>言語検出</strong>: テキストの言語を検出します。
+- <strong>感情分析</strong>: テキストの感情がポジティブ、ネガティブ、ニュートラル、混合のどれかを検出します。
+- <strong>名刺リーダー</strong>: 名刺から情報を抽出します。
+- <strong>テキスト認識</strong>: 画像からテキストを抽出します。
+- <strong>物体検出</strong>: 画像から物体を検出し抽出します。
+- <strong>ドキュメント処理</strong>: フォームから情報を抽出します。
+- <strong>請求書処理</strong>: 請求書から情報を抽出します。
 
-カスタム AI モデルでは、自分のモデルを AI Builder に持ち込んで任意の AI Builder カスタムモデルのように機能させられ、独自データを使ってトレーニング可能です。これらのモデルは Power Apps と Power Automate の両方でプロセスの自動化や結果予測に使用できます。独自モデルの利用には制限があります。詳細は[こちらの制限事項](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst)をご覧ください。
+カスタム AI モデルでは、自分のモデルを AI Builder に導入し、AI Builder のカスタムモデルとして機能させ、自分のデータで訓練できます。これにより、Power Apps や Power Automate でプロセスの自動化や結果予測が可能です。自分のモデルを使う場合はいくつか制限が適用されます。これらの[制限の詳細](https://learn.microsoft.com/ai-builder/byo-model#limitations?WT.mc_id=academic-105485-koreyst)を参照してください。
 
 ![AI builder models](../../../translated_images/ja/ai-builder-models.8069423b84cfc47f.webp)
 
-## 課題 #2 - 当社スタートアップ向け請求書処理フローの構築
+## 課題 #2 - スタートアップのための請求書処理フローの構築
 
-財務チームは請求書の処理に苦労しています。請求書の追跡にスプレッドシートを使っていますが、請求書の数が増えるにつれて管理が困難になりました。彼らは、AI を使って請求書を処理するワークフローを構築するよう依頼しました。このワークフローは請求書から情報を抽出して Dataverse のテーブルに保存し、抽出した情報を含むメールを財務チームに送信できる必要があります。
+財務チームは請求書の処理に苦労しています。請求書を追跡するためにスプレッドシートを使用していましたが、請求書の数が増え管理が難しくなっています。AI を使って請求書処理を支援するワークフローの構築を依頼されました。このワークフローは、請求書から情報を抽出し Dataverse テーブルに保存できるようにする必要があります。また、抽出した情報を含むメールを財務チームに送信できるようにする必要もあります。
 
-AI Builder とは何か、なぜ使うべきかが分かったところで、先に紹介した請求書処理 AI モデルを使って、財務チームの請求書処理を支援するワークフローを作成する方法を見てみましょう。
+AI Builder が何であるか、なぜ使うべきかがわかったので、前述の請求書処理 AI モデルを使って財務チームの請求書処理を支援するワークフローをどのように構築するか見てみましょう。
 
-請求書処理 AI モデルを使って財務チームを支援するワークフローを構築するには、以下の手順に従います：
+請求書処理 AI モデルを使ってワークフローを構築するには、以下の手順に従います：
 
-1. [Power Automate](https://make.powerautomate.com?WT.mc_id=academic-105485-koreyst) のホーム画面にアクセスします。
+1. [Power Automate](https://make.powerautomate.com?WT.mc_id=academic-105485-koreyst) ホーム画面に移動します。
 
-2. ホーム画面のテキストエリアに構築したいワークフローの説明を入力します。例えば、<strong>_自分の受信トレイに請求書が届いたら処理する_</strong>です。<strong>送信</strong>ボタンをクリックしてプロンプトを AI Copilot に送信します。
+2. ホーム画面のテキストエリアに作成したいワークフローの説明を入力します。例えば、**_受信トレイに請求書が届いたら請求書を処理する_** と入力します。**Send** ボタンをクリックしてプロンプトを AI Copilot に送信します。
 
    ![Copilot power automate](../../../translated_images/ja/copilot-chat-prompt-powerautomate.f377e478cc8412de.webp)
 
-3. AI Copilot が自動化するために必要なアクションを提案します。<strong>次へ</strong>ボタンをクリックして次のステップに進みます。
+3. AI Copilot は自動化したいタスクを実現するためのアクションを提案します。**Next** ボタンをクリックして次のステップを進めます。
 
-4. 次のステップで、Power Automate がフローの接続設定を促します。設定が終わったら、<strong>フローを作成</strong>ボタンをクリックしてフローを作成します。
+4. 次のステップで Power Automate はフローに必要な接続設定を促します。設定が完了したら、**Create flow** ボタンをクリックしてフローを作成します。
 
-5. AI Copilot がフローを生成し、その後ニーズに応じてフローをカスタマイズできます。
+5. AI Copilot によりフローが生成され、その後ニーズに合わせてカスタマイズできます。
 
-6. フローのトリガーを更新し、請求書が保存されるフォルダを <strong>フォルダー</strong> に設定します。例えば、<strong>受信トレイ</strong> に設定します。<strong>詳細オプションを表示</strong>をクリックし、<strong>添付ファイルのみ</strong> を <strong>はい</strong> に設定します。これにより、添付ファイル付きのメールが受信トレイに届いたときのみフローが実行されます。
+6. フローのトリガーを更新し、請求書が保存されるフォルダーを **Folder** に設定します。例えば、**Inbox** に設定します。**Show advanced options** をクリックして **Only with Attachments** を **Yes** に設定します。これにより、添付ファイル付きのメールがフォルダーに届いた時のみフローが動作します。
 
-7. 次のアクションをフローから削除します：**HTMLをテキストに変換**、**Compose**、**Compose 2**、**Compose 3**、**Compose 4**。これらは使用しないためです。
+7. 次のアクションをフローから削除します：**HTML to text**、**Compose**、**Compose 2**、**Compose 3**、**Compose 4**。これらは使用しません。
 
-8. <strong>条件</strong>アクションもフローから削除します。次のスクリーンショットのようになります：
+8. **Condition** アクションもフローから削除してください。以下のスクリーンショットのようになります：
 
    ![power automate, remove actions](../../../translated_images/ja/powerautomate-remove-actions.7216392fe684ceba.webp)
 
-9. <strong>アクションの追加</strong>ボタンをクリックし、**Dataverse** を検索します。<strong>新しい行を追加</strong>アクションを選択します。
+9. **Add an action** ボタンをクリックし **Dataverse** を検索します。**Add a new row** アクションを選択します。
 
-10. <strong>請求書から情報を抽出する</strong>アクションで、<strong>請求書ファイル</strong> をメールの <strong>添付ファイルの内容</strong> に設定します。これにより、添付された請求書から情報が抽出されます。
+10. **Extract Information from invoices** アクションで、**Invoice File** をメールの **Attachment Content** を指すように更新します。これにより、請求書の添付ファイルから情報を抽出します。
 
-11. 先ほど作成した <strong>テーブル</strong> を選択します。例えば、<strong>請求書情報</strong> テーブルを選択します。前のアクションから動的コンテンツを選択して、次のフィールドを入力します：
+11. 先ほど作成した **Table** を選択します。例えば **Invoice Information** テーブルを選べます。前のアクションからの動的コンテンツを使い以下のフィールドを設定します：
 
     - ID
-    - 金額
-    - 日付
-    - 名前
-    - ステータス - <strong>ステータス</strong> を <strong>保留中</strong> に設定します。
-    - 業者メール - <strong>新しいメールが届いたとき</strong> トリガーの <strong>差出人</strong> の動的コンテンツを使用します。
+    - Amount
+    - Date
+    - Name
+    - Status - **Status** を **Pending** に設定します。
+    - Supplier Email - **When a new email arrives** トリガーの **From** 動的コンテンツを使用します。
 
     ![power automate add row](../../../translated_images/ja/powerautomate-add-row.5edce45e5dd3d51e.webp)
 
-12. フローの作成が完了したら、<strong>保存</strong>ボタンをクリックしてフローを保存します。トリガーで指定したフォルダに請求書付きのメールを送信してフローをテストできます。
+12. フローの編集が完了したら、**Save** ボタンをクリックしてフローを保存します。トリガーで指定したフォルダーに請求書付きのメールを送信してフローをテストできます。
 
-> <strong>宿題</strong>: いま作成したフローは良いスタートですが、次は財務チームが業者に請求書の現在状況をメールで更新できる自動化を作成してください。ヒント：請求書のステータスが変わったときにフローが実行される必要があります。
+> <strong>宿題</strong>: 今構築したフローは良い出発点です。次に、財務チームが請求書の現在の状況をサプライヤーにメールで通知できる自動化をどのように作成できるか考えてください。ヒント：請求書のステータスが変わったときにフローが実行される必要があります。
 
-## Power Automate でのテキスト生成 AI モデルの使用
+## Power Automate でテキスト生成 AI モデルを使う
 
-AI Builder の GPT テキスト生成 AI モデルは、プロンプトに基づいてテキストを生成でき、Microsoft Azure OpenAI サービスにより動作します。この機能を使えば、GPT（Generative Pre-Trained Transformer）技術をアプリやフローに組み込み、多様な自動化フローや高度なアプリケーションを構築できるようになります。
+AI Builder の GPT テキスト生成 AI モデルは、プロンプトに基づいてテキストを生成し、Microsoft Azure OpenAI サービスを利用しています。この機能により、GPT（Generative Pre-Trained Transformer）技術をアプリやフローに組み込み、さまざまな自動化フローや有益なアプリケーションを構築できます。
 
-GPT モデルは大量のデータで広範な学習を行っており、プロンプトを与えると人間の言語に非常に近いテキストを生成できます。ワークフローの自動化に統合すると、GPT のような AI モデルは多様なタスクを効率化し自動化するために活用可能です。
+GPT モデルは膨大なデータで学習されており、プロンプトに応じて人間の言語に似たテキストを生成できます。ワークフロー自動化と統合することで、GPT のような AI モデルは多様なタスクの効率化と自動化に活用可能です。
 
-例えば、メールの下書きや商品説明など多様なケースで自動テキスト生成フローを構築できます。また、チャットボットやカスタマーサービスアプリなど、問い合わせに効率的に対応する顧客サービス向けアプリにテキスト生成モデルを活用できます。
+例えば、メールの下書きや商品説明など、さまざまな用途向けに自動でテキストを生成するフローを構築できます。また、チャットボットやカスタマーサービスアプリで、顧客の問い合わせに効果的かつ効率的に対応できるようにするためのテキスト生成にも利用可能です。
 
 ![create a prompt](../../../translated_images/ja/create-prompt-gpt.69d429300c2e870a.webp)
 
 
-Power Automate でこの AI モデルの使い方を学ぶには、[Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) モジュールを参照してください。
+Power AutomateでこのAIモデルの使い方を学ぶには、[Add intelligence with AI Builder and GPT](https://learn.microsoft.com/training/modules/ai-builder-text-generation/?WT.mc_id=academic-109639-somelezediko) モジュールを通して学習してください。
 
 ## 素晴らしい！学習を続けましょう
 
-このレッスンを終えたら、[Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) をチェックして、生成 AI の知識をさらにレベルアップさせましょう！
+このレッスンを終えたら、[Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) をチェックして、生成AIの知識をさらに高めましょう！
 
-Copilot をカスタマイズしてもっと活用したいですか？コミュニティが貢献する指示、エージェント、スキル、設定のコレクションである [Awesome Copilot](https://github.com/github/awesome-copilot?WT.mc_id=academic-105485-koreyst) を探検して、GitHub Copilot を最大限に活用しましょう。
+Copilotをカスタマイズしてもっと活用したいですか？GitHub Copilotを最大限に活用するための指示、エージェント、スキル、設定が集まったコミュニティ貢献のコレクション [Awesome Copilot](https://github.com/github/awesome-copilot?WT.mc_id=academic-105485-koreyst) をご覧ください。
 
-第11レッスンでは、[Generative AI を Function Calling と統合する方法](../11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) を見ていきます！
+レッスン11に進み、[Function Callingとの統合で生成AIを活用する方法](../11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) を見ていきましょう！
 
 ---
 

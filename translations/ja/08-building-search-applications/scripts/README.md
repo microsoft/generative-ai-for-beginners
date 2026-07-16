@@ -1,21 +1,21 @@
-# 転写データ準備
+# 文字起こしデータの準備
 
-転写データ準備スクリプトは、YouTubeの動画転写をダウンロードし、Semantic Search with OpenAI Embeddings and Functions サンプルで使用できるように準備します。
+文字起こしデータ準備スクリプトは、YouTubeの動画文字起こしをダウンロードし、Semantic Search with OpenAI Embeddings and Functionsサンプルで使用できるように準備します。
 
-転写データ準備スクリプトは、最新リリースのWindows 11、macOS Ventura、およびUbuntu 22.04（以降）でテストされています。
+文字起こしデータ準備スクリプトは、最新リリースのWindows 11、macOS Ventura、およびUbuntu 22.04（以降）でテスト済みです。
 
 ## 必要なAzure OpenAIサービスリソースの作成
 
 > [!IMPORTANT]
-> OpenAIとの互換性を確保するために、Azure CLIを最新バージョンに更新することを推奨します
-> 詳細は[ドキュメント](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)を参照してください
+> Azure CLIを最新バージョンに更新して、OpenAIとの互換性を確保することをお勧めします
+> 詳細は[ドキュメント](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)をご覧ください
 
-1. リソースグループを作成します
+1. リソースグループを作成する
 
 > [!NOTE]
-> この手順では、「semantic-video-search」という名前のリソースグループを東米リージョンで使用しています。
+> この手順では、東米（East US）にある「semantic-video-search」という名前のリソースグループを使用しています。
 > リソースグループ名は変更可能ですが、リソースの場所を変更する場合は、
-> [モデルの利用可能性テーブル](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst)を確認してください。
+> [モデル対応表](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst)を確認してください。
 
 ```console
 az group create --name semantic-video-search --location eastus
@@ -28,7 +28,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. このアプリケーションで使用するためにエンドポイントとキーを取得します
+1. このアプリケーションで使用するため、エンドポイントとキーを取得します
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -39,7 +39,7 @@ az cognitiveservices account keys list --name semantic-video-openai \
 
 1. 以下のモデルをデプロイします:
    - `text-embedding-ada-002` バージョン `2` 以上、名前は `text-embedding-ada-002`
-   - `gpt-4o-mini` 名前は `gpt-4o-mini`
+   - `gpt-5-mini` 名前は `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,8 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -66,11 +66,11 @@ az cognitiveservices account deployment create \
 
 ## 環境変数
 
-YouTubeの転写データ準備スクリプトを実行するには、次の環境変数が必要です。
+YouTube文字起こしデータ準備スクリプトを実行するには、以下の環境変数が必要です。
 
 ### Windowsの場合
 
-変数は`ユーザー`環境変数に追加することを推奨します。
+変数をユーザー環境変数に追加することをお勧めします。
 `Windows スタート` > `システム環境変数の編集` > `環境変数` > [USER] の `ユーザー変数` > `新規`。
 
 ```text
@@ -80,7 +80,7 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-<!-- 環境変数をPowerShellプロファイルに追加することも可能です。
+<!-- 環境変数をPowerShellプロファイルに追加することもできます。
 
 ```powershell
 $env:AZURE_OPENAI_API_KEY = "<your Azure OpenAI Service API key>"
@@ -89,9 +89,9 @@ $env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<your Azure OpenAI Service model depl
 $env:GOOGLE_DEVELOPER_API_KEY = "<your Google developer API key>"
 ``` -->
 
-### LinuxおよびmacOSの場合
+### Linux および macOSの場合
 
-`~/.bashrc` または `~/.zshrc` ファイルに以下のエクスポートを追加することを推奨します。
+以下のエクスポートを `~/.bashrc` または `~/.zshrc` ファイルに追加することをお勧めします。
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -102,8 +102,8 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## 必要なPythonライブラリのインストール
 
-1. まだインストールしていない場合は、[gitクライアント](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst)をインストールします。
-1. `ターミナル`ウィンドウから、サンプルを任意のリポジトリフォルダーにクローンします。
+1. もし未インストールなら、[gitクライアント](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst)をインストールします。
+1. `Terminal` ウィンドウから、このサンプルをお好みのリポジトリフォルダーにcloneします。
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -115,7 +115,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. Python仮想環境を作成します。
+1. Pythonの仮想環境を作成します。
 
     Windowsの場合:
 
@@ -157,7 +157,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## YouTube転写データ準備スクリプトの実行
+## YouTube文字起こしデータ準備スクリプトの実行
 
 ### Windowsの場合
 

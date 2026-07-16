@@ -2,61 +2,61 @@
 
 ## はじめに
 
-AIエージェントは、生成AIのエキサイティングな進展を示しており、大規模言語モデル（LLM）が単なるアシスタントから、実際にアクションを起こすことができるエージェントへと進化することを可能にします。AIエージェントフレームワークは、開発者がLLMにツールや状態管理へのアクセスを提供するアプリケーションを作成できるようにします。これらのフレームワークはさらに可視性を高め、ユーザーや開発者がLLMの計画したアクションを監視できるようにして、体験管理を改善します。
+AI エージェントは、生成AIのエキサイティングな進展を表しており、大規模言語モデル（LLM）がアシスタントから実際にアクションを起こせるエージェントへと進化することを可能にします。AIエージェントのフレームワークは、開発者がLLMにツールや状態管理へのアクセスを提供できるアプリケーションを作成することを可能にします。また、これらのフレームワークは可視性を高め、ユーザーや開発者がLLMによって計画されたアクションを監視できるようにし、体験管理を改善します。
 
-本レッスンでは以下の領域をカバーします：
+本レッスンでは以下の内容をカバーします：
 
-- AIエージェントとは何かを理解する - AIエージェントとは具体的に何か？
-- 5つの異なるAIエージェントフレームワークの探求 - それぞれの独自性は？
-- さまざまなユースケースへのAIエージェントの応用 - いつAIエージェントを使うべきか？
+- AIエージェントとは何かを理解する - AIエージェントとは正確には何か？
+- 5つの異なるAIエージェントフレームワークを探る - それぞれの特徴は？
+- これらのAIエージェントを異なるユースケースに適用する - いつAIエージェントを使うべきか？
 
 ## 学習目標
 
-このレッスンを終了すると、以下ができるようになります：
+本レッスンを修了後には、以下のことができるようになります：
 
-- AIエージェントとは何か、そしてどのように使えるかを説明できる。
-- 人気のあるいくつかのAIエージェントフレームワークの違いを理解できる。
-- AIエージェントの機能を理解し、それを使ってアプリケーションを構築できる。
+- AIエージェントとは何か、どのように使われるか説明できる。
+- 人気のあるAIエージェントフレームワークの違いと特徴を理解する。
+- AIエージェントの機能を理解し、それを使ったアプリケーションを構築できる。
 
-## AIエージェントとは何か？
+## AIエージェントとは？
 
-AIエージェントは生成AIの分野で非常にエキサイティングな領域です。この興奮とともに用語や適用の混乱も生じることがあります。シンプルにし、AIエージェントと呼ばれるほとんどのツールを包括できるように、次の定義を使います：
+AIエージェントは生成AIの世界で非常にエキサイティングな分野です。この興奮には用語やその応用の混乱が伴う場合があります。多くのAIエージェントと呼ばれるツールを包括的かつシンプルに扱うために、以下の定義を使用します：
 
-AIエージェントは、大規模言語モデル（LLM）に<strong>状態</strong>と<strong>ツール</strong>へのアクセスを与えることで、タスクを実行できるようにします。
+AIエージェントは大規模言語モデル（LLM）に<strong>状態</strong>と<strong>ツール</strong>へのアクセスを与えることでタスクを実行できるようにします。
 
-![Agent Model](../../../translated_images/ja/what-agent.21f2893bdfd01e6a.webp)
+![エージェントモデル](../../../translated_images/ja/what-agent.21f2893bdfd01e6a.webp)
 
 これらの用語を定義しましょう：
 
-<strong>大規模言語モデル</strong> - 本コースで言及されるモデルで、GPT-3.5、GPT-4、Llama-2などが含まれます。
+<strong>大規模言語モデル</strong> - 本コースで言及されるモデルで、GPT-5、GPT-4o、Llama 3.3などがあります。
 
-<strong>状態</strong> - これはLLMが動作するコンテキストを指します。LLMは過去のアクションと現在のコンテキストを利用して、その後の行動の意思決定を導きます。AIエージェントフレームワークはこのコンテキストの管理を開発者がしやすくします。
+<strong>状態</strong> - LLMが作業しているコンテキストを指します。LLMは過去のアクションの文脈と現在の文脈を利用し、その後のアクションの意思決定を導きます。AIエージェントフレームワークはこのコンテキストの管理を容易にします。
 
-<strong>ツール</strong> - ユーザーが要求し、LLMが計画したタスクを完遂するために、LLMはツールへのアクセスが必要です。例としてはデータベース、API、外部アプリケーション、あるいは別のLLMなどがあります！
+<strong>ツール</strong> - ユーザーが要求しLLMが計画したタスクを完了するために、LLMはツールへアクセスする必要があります。ツールの例としてはデータベース、API、外部アプリケーション、または別のLLMも含まれます。
 
-これらの定義が、今後実装例を見る際の良い基盤となることを願っています。いくつかの異なるAIエージェントフレームワークを探ってみましょう：
+これらの定義は、これからの実装を理解する上で基礎となるでしょう。さまざまなAIエージェントフレームワークを見てみましょう：
 
-## LangChain Agents
+## LangChain エージェント
 
-[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst)は前述の定義を実装したものです。
+[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) は上記定義の実装例です。
 
-<strong>状態</strong>を管理するために、`AgentExecutor`という組み込み関数を使います。これは定義された`agent`と利用可能な`tools`を受け入れます。
+<strong>状態</strong> を管理するために、組み込みの `AgentExecutor` 関数を使用します。これは定義された `agent` と利用可能な `tools` を受け入れます。
 
-`AgentExecutor`はチャット履歴も保存し、チャットのコンテキストを提供します。
+`AgentExecutor` はチャット履歴も保存し、チャットの文脈を提供します。
 
-![Langchain Agents](../../../translated_images/ja/langchain-agents.edcc55b5d5c43716.webp)
+![Langchain エージェント](../../../translated_images/ja/langchain-agents.edcc55b5d5c43716.webp)
 
-LangChainは、LLMがアクセスできるツールをコミュニティやLangChainチームが作成した[ツールカタログ](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst)として提供しています。
+LangChainはLLMがアクセスできるコミュニティおよびLangChainチームによる[ツールカタログ](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst)を提供しています。
 
-これらのツールを定義し、`AgentExecutor`に渡すことができます。
+これらのツールを定義し、`AgentExecutor` に渡すことができます。
 
-AIエージェントにおいてもう一つ重要な側面は可視性です。アプリケーション開発者にとって、LLMがどのツールをなぜ使っているのか理解することが重要です。そのためLangChainチームはLangSmithを開発しました。
+可視性はAIエージェントを語る上で重要な要素です。開発者がLLMがどのツールをなぜ使っているのか理解することが重要です。そのためLangChainチームはLangSmithを開発しました。
 
 ## AutoGen
 
-次に紹介するAIエージェントフレームワークは[AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst)です。AutoGenは会話に注力しています。エージェントは<strong>会話可能</strong>で<strong>カスタマイズ可能</strong>です。
+次に紹介するAIエージェントフレームワークは [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst)です。AutoGenの主な焦点は会話であり、エージェントは<strong>対話可能</strong>かつ<strong>カスタマイズ可能</strong>です。
 
-<strong>会話可能</strong> - LLMは他のLLMと会話を開始し継続して、タスクを完遂できます。これは`AssistantAgents`を作成し特定のシステムメッセージを与えることで行います。
+<strong>対話可能</strong> - LLMは別のLLMと会話を開始し、継続してタスクを完了できます。これは `AssistantAgents` を作成し、特定のシステムメッセージを与えることで実現します。
 
 ```python
 
@@ -64,7 +64,7 @@ autogen.AssistantAgent( name="Coder", llm_config=llm_config, ) pm = autogen.Assi
 
 ```
 
-<strong>カスタマイズ可能</strong> - エージェントはLLMだけでなくユーザーやツールとしても定義できます。開発者はフィードバックを得るためにユーザーとやり取りする`UserProxyAgent`を定義可能です。このフィードバックはタスクの継続または中止に使われます。
+<strong>カスタマイズ可能</strong> - エージェントはLLMだけでなくユーザーやツールとして定義できます。開発者は `UserProxyAgent` を定義し、ユーザーからのフィードバックを受け取りタスクの進行を継続または停止させることができます。
 
 ```python
 user_proxy = UserProxyAgent(name="user_proxy")
@@ -72,9 +72,9 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 ### 状態とツール
 
-状態を変更・管理するために、アシスタントエージェントはタスクを完了するPythonコードを生成します。
+状態を変更し管理するために、Assistant AgentはPythonコードを生成してタスクを完遂します。
 
-こちらはそのプロセスの例です：
+プロセスの例は以下の通りです：
 
 ![AutoGen](../../../translated_images/ja/autogen.dee9a25a45fde584.webp)
 
@@ -84,7 +84,7 @@ user_proxy = UserProxyAgent(name="user_proxy")
 system_message="For weather related tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done."
 ```
 
-このシステムメッセージは特定のLLMにどの関数がタスクに関連するか指示します。AutoGenでは、異なるシステムメッセージで複数のAssistantAgentsを定義できます。
+このシステムメッセージは特定のLLMにどの機能がタスクに関係しているかを指示します。AutoGenでは異なるシステムメッセージを持つ複数のAssistantAgentsを定義できます。
 
 #### ユーザーによってチャットが開始される
 
@@ -93,9 +93,9 @@ user_proxy.initiate_chat( chatbot, message="I am planning a trip to NYC next wee
 
 ```
 
-ユーザープロキシ（人間）からのこのメッセージが、エージェントが実行すべき関数を探り始めるきっかけになります。
+user_proxy（人間）からのこのメッセージがAgentが実行すべき関数を探るプロセスを始めます。
 
-#### 関数実行
+#### 関数が実行される
 
 ```bash
 chatbot (to user_proxy):
@@ -106,23 +106,23 @@ chatbot (to user_proxy):
 
 ```
 
-初期チャット処理後、エージェントは呼び出すべきツールを提案します。この例では`get_weather`という関数です。設定によって、この関数は自動で実行され結果をエージェントが受け取るか、またはユーザー入力に応じて実行されます。
+初期チャットの処理後、Agentは呼び出す提案ツールを送信します。ここでは `get_weather` という関数です。設定によってはこの関数は自動で実行されAgentに読み取られるか、ユーザーの入力に基づき実行されます。
 
-[AutoGenのコードサンプル](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst)でさらに開始方法を探ることができます。
+[AutoGenのコードサンプル](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst)も参照し、構築方法をさらに探索できます。
 
 ## Microsoft Agent Framework
 
-[Microsoft Agent Framework](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst)はMicrosoftのオープンソースSDKで、<strong>Python</strong>と<strong>.NET</strong>でAIエージェントやマルチエージェントシステムを構築できます。Microsoftの２つのプロジェクトの強みを融合しており、<strong>Semantic Kernel</strong>の企業向け機能と<strong>AutoGen</strong>のマルチエージェント調整機能をひとつにまとめた、今新しいエージェントプロジェクトを始める際の推奨フレームワークです。
+[Microsoft Agent Framework](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst) はMicrosoftのオープンソースSDKで、<strong>Python</strong>と<strong>.NET</strong>の両方でAIエージェントやマルチエージェントシステムの構築が可能です。これは以前のMicrosoftプロジェクトの強みである<strong>Semantic Kernel</strong>の企業向け機能と<strong>AutoGen</strong>のマルチエージェントオーケストレーションを統合した単一のサポートされるフレームワークです。新しいエージェントプロジェクトを始めるなら、AutoGenの推奨後継とされています。
 
-このフレームワークは、単一の<strong>チャットエージェント</strong>から複雑な<strong>マルチエージェントワークフロー</strong>までスケールし、Microsoft Foundry、Azure OpenAI、OpenAIと直接統合します。OpenTelemetryによる組み込みの可観測性も提供し、エージェントの動作をトレースできます。
+フレームワークは単一の<strong>チャットエージェント</strong>から複雑な<strong>マルチエージェントワークフロー</strong>まで拡張可能で、Microsoft Foundry、Azure OpenAI、OpenAIと直接統合します。OpenTelemetryによる組み込みの可観測性も提供し、エージェントの動作を正確に追跡できます。
 
 ### 状態とツール
 
-<strong>状態</strong> - フレームワークは<strong>スレッド</strong>を通じて対話コンテキストを管理します。エージェントはメッセージ履歴（ユーザーリクエスト、ツール呼び出し、結果）を記録し、それに基づいてターンごとに進めます。スレッドは永続化可能で、会話を一時中断し再開できます。
+<strong>状態</strong> - フレームワークは<strong>スレッド</strong>を通じて会話のコンテキストを管理します。エージェントはメッセージ履歴（ユーザーの要求、ツール呼び出し、それらの結果）を追跡し、各ターンが前のターンに基づいて積み重なります。スレッドは永続化可能で、会話を中断して再開できます。
 
-<strong>ツール</strong> - エージェントにツールを与えるには、単純なPython関数を渡します。型注釈付きのパラメーターはスキーマに変換され、モデルはいつどのように呼び出すかを把握します（関数呼び出し）。フレームワークはModel Context Protocol (MCP)サーバーやコードインタープリターのようなホストされたツールもサポートします。
+<strong>ツール</strong> - エージェントにツールを渡すには、通常のPython関数を渡します。型アノテーションされたパラメーターは自動的にスキーマに変換され、モデルがどのようにいつ呼び出すかを知ることができます（関数呼び出し）。また、Model Context Protocol (MCP) サーバーやコードインタプリタのようなホストされたツールもサポートしています。
 
-こちらはカスタムツールを備えた単一エージェントの例です：
+カスタムツールを持つ単一エージェントの例はこちらです：
 
 ```python
 import asyncio
@@ -154,14 +154,14 @@ async def main():
 asyncio.run(main())
 ```
 
-Microsoft FoundryのAzure OpenAIに接続する場合は、エンドポイントと認証情報をクライアントに渡します：
+Microsoft FoundryでAzure OpenAIに接続するには、エンドポイントと資格情報をクライアントに渡します：
 
 ```python
 from azure.identity.aio import AzureCliCredential
 from agent_framework.openai import OpenAIChatClient
 
 client = OpenAIChatClient(
-    model="my-gpt-4o-deployment",
+    model="my-gpt-5-mini-deployment",
     azure_endpoint="https://my-resource.openai.azure.com",
     credential=AzureCliCredential(),
 )
@@ -169,19 +169,19 @@ client = OpenAIChatClient(
 
 ### マルチエージェントワークフロー
 
-フレームワークが真に優れているのは複数のエージェントの調整です。例えば、エージェントを順次実行（それぞれコンテキストを次に渡す）したり、複数のエージェントを並列に動かして結果を集約したりできます：
+フレームワークの真価は複数のエージェントをオーケストレーションする点にあります。例として、エージェントを順番に実行し（それぞれがコンテキストを次に渡す）、または複数のエージェントを並列で実行して結果を集約できます。
 
 ```python
 from agent_framework.orchestrations import SequentialBuilder, ConcurrentBuilder
 
-# 会話のコンテキストをチェーンに沿って渡しながら、エージェントを順番に実行する
+# エージェントを順番に実行し、会話のコンテキストをチェーンに沿って渡す
 sequential = SequentialBuilder(participants=[researcher, writer, editor]).build()
 
-# エージェントに並列で処理を分散し、その応答を集約する
+# エージェントに並列でファンアウトし、それから彼らの応答を集約する
 concurrent = ConcurrentBuilder(participants=[analyst_a, analyst_b, analyst_c]).build()
 ```
 
-インストールして始めるには：
+フレームワークのインストールと開始方法：
 
 ```bash
 pip install agent-framework-core
@@ -190,57 +190,57 @@ pip install agent-framework-openai       # OpenAI と Azure OpenAI
 pip install agent-framework-foundry      # Microsoft Foundry
 ```
 
-詳しくは[Microsoft Agent Frameworkリポジトリ](https://github.com/microsoft/agent-framework?WT.mc_id=academic-105485-koreyst)と[公式ドキュメント](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst)を参照してください。
+[Microsoft Agent Frameworkリポジトリ](https://github.com/microsoft/agent-framework?WT.mc_id=academic-105485-koreyst)や[公式ドキュメント](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst)も参照してください。
 
 ## Taskweaver
 
-次に探るエージェントフレームワークは[Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst)です。これは「コードファースト」エージェントとして知られています。単に`文字列`を扱うだけでなく、PythonのDataFrameを扱えるため、データ解析や生成タスクに非常に役立ちます。これはグラフやチャートの作成、乱数生成などが含まれます。
+次に紹介するエージェントフレームワークは [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst) です。これは "コードファースト" エージェントとして知られており、`strings` だけでなくPythonのDataFrameを扱えるため、データ分析や生成タスクに非常に有用です。グラフやチャートの作成、乱数生成などが可能です。
 
 ### 状態とツール
 
-会話の状態管理にTaskWeaverは`Planner`の概念を使います。`Planner`はユーザーからのリクエストを受け、完了すべきタスクをマッピングするLLMです。
+会話の状態管理には `Planner` の概念を使います。`Planner` はユーザーのリクエストを受け取り、そのリクエストを満たすために完了すべきタスクをマッピングするLLMです。
 
-タスクを完了するために、`Planner`は`Plugins`と呼ばれるツール群にアクセスします。これらはPythonクラスや一般的なコードインタープリターであり、プラグインは埋め込みとして保存され、LLMが適切なプラグインを検索しやすくなっています。
+タスクを完了するために、`Planner` は `Plugins` と呼ばれるツールのコレクションにアクセスします。これはPythonクラスや一般的なコードインタプリタです。プラグインは埋め込み（embeddings）として保存され、LLMが正しいプラグインをより良く検索できるようにしています。
 
 ![Taskweaver](../../../translated_images/ja/taskweaver.da8559999267715a.webp)
 
-こちらは異常検知を扱うプラグインの例です：
+異常検知を扱うプラグインの例：
 
 ```python
 class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_col_name: str, value_col_name: str):
 ```
 
-コードは実行前に検証されます。Taskweaverのコンテキスト管理のもうひとつの特徴は`experience`です。Experienceは会話のコンテキストを長期にわたりYAMLファイルに保存でき、これによりLLMが過去の会話を活かして時間をかけて特定のタスクで改善できます。
+コードは実行前に検証されます。Taskweaverでコンテキスト管理を助けるもう一つの機能が `experience` です。Experienceは会話のコンテキストをYAMLファイルに長期保存でき、設定によりLLMは過去の会話を通じて特定タスクを時間とともに改善します。
 
 ## JARVIS
 
-最後に探るエージェントフレームワークは[JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file&WT.mc_id=academic-105485-koreyst)です。JARVISの特徴は、LLMが会話の`状態`を管理し、`ツール`が他のAIモデルである点です。各AIモデルは物体検出、文字起こし、画像キャプション生成など特定のタスクを専門に実行します。
+最後に紹介するエージェントフレームワークは [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file&WT.mc_id=academic-105485-koreyst) です。特徴として、JARVISは会話の `state` を管理するのにLLMを使用し、`tools` は他のAIモデルになっています。各AIモデルは物体検出、文字起こし、画像キャプション付けなど特定のタスクを専門的に実行します。
 
 ![JARVIS](../../../translated_images/ja/jarvis.762ddbadbd1a3a33.webp)
 
-汎用モデルであるLLMはユーザーからのリクエストを受け取り、特定のタスクと、タスク完了に必要な引数やデータを特定します。
+汎用モデルであるLLMはユーザーのリクエストを受け取り、特定のタスクと完遂に必要な引数／データを特定します。
 
 ```python
 [{"task": "object-detection", "id": 0, "dep": [-1], "args": {"image": "e1.jpg" }}]
 ```
 
-LLMは専門AIモデルが解釈可能な形式（JSONなど）でリクエストをフォーマットします。AIモデルがタスクに基づく予測を返すと、LLMはその応答を受け取ります。
+次に、LLMはAIモデルが解釈可能な形式（JSONなど）でリクエストを整形します。AIモデルがタスクに基づく予測を返したら、そのレスポンスをLLMが受け取ります。
 
-タスクに複数モデルが必要な場合、LLMはそれらモデルの応答も解釈し、それらを組み合わせてユーザーへの応答を生成します。
+複数のモデルがタスク完遂に必要な場合は、それらのレスポンスを解釈しまとめてユーザーへの応答を生成します。
 
-以下の例は、ユーザーが画像内の物体の説明と数を要求したときの動作例です：
+下記の例は、ユーザーが画像内の物体の説明と数を要求した場合の動作例です：
 
 ## 課題
 
-AIエージェントの学習を続けるために、Microsoft Agent Frameworkで次のようなアプリケーションを作成できます：
+AIエージェントの学習を続けるためMicrosoft Agent Frameworkで構築できます：
 
-- 教育系スタートアップの異なる部門が集うビジネスミーティングをシミュレートするアプリケーション
-- LLMに異なるペルソナや優先事項を理解させるシステムメッセージを作成し、ユーザーが新しい製品アイデアを提案できるようにする
-- 各部門からのフォローアップ質問をLLMが生成し、ピッチや製品アイデアを洗練・改善させる
+- 教育系スタートアップの各部門とのビジネス会議をシミュレートするアプリケーション。
+- LLMが異なるペルソナや優先事項を理解するためのシステムメッセージを作成し、ユーザーが新商品のアイデアを提案できるようにする。
+- その後、LLMが各部門からのフォローアップ質問を生成し、提案や製品アイデアを改良・精緻化する。
 
-## 学習はここで終わりません、旅を続けましょう
+## 学びはここで終わりません、学習を続けましょう
 
-このレッスンを終えたら、[生成AI学習コレクション](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)をチェックして、生成AIの知識をさらにレベルアップしましょう！
+本レッスンを修了したら、[Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)をチェックして生成AIの知識レベルをさらに高めましょう！
 
 ---
 
