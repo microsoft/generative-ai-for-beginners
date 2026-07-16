@@ -1,34 +1,34 @@
-# การเตรียมข้อมูลการถอดเสียง
+# การเตรียมข้อมูลการถอดความ
 
-สคริปต์การเตรียมข้อมูลการถอดเสียงจะดาวน์โหลดบทรองรับวิดีโอ YouTube และเตรียมข้อมูลเหล่านั้นเพื่อใช้กับตัวอย่าง Semantic Search ด้วย OpenAI Embeddings และ Functions
+สคริปต์การเตรียมข้อมูลการถอดความจะดาวน์โหลดการถอดความวิดีโอ YouTube และเตรียมข้อมูลสำหรับใช้งานกับตัวอย่าง Semantic Search ด้วย OpenAI Embeddings และ Functions
 
-สคริปต์การเตรียมข้อมูลการถอดเสียงได้รับการทดสอบบน Windows 11, macOS Ventura และ Ubuntu 22.04 (และสูงกว่า) เวอร์ชันล่าสุดแล้ว
+สคริปต์การเตรียมข้อมูลการถอดความได้รับการทดสอบบน Windows 11, macOS Ventura และ Ubuntu 22.04 (และรุ่นล่าสุด) แล้ว
 
-## สร้างทรัพยากร Azure OpenAI Service ที่จำเป็น
+## สร้างทรัพยากรของ Azure OpenAI Service ที่ต้องการ
 
 > [!IMPORTANT]
-> เราแนะนำให้คุณอัปเดต Azure CLI เป็นเวอร์ชันล่าสุดเพื่อให้แน่ใจว่าสามารถทำงานร่วมกับ OpenAI ได้
-> ดูที่ [เอกสาร](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
+> เราแนะนำให้คุณอัปเดต Azure CLI เป็นเวอร์ชันล่าสุดเพื่อให้แน่ใจว่ามีความเข้ากันได้กับ OpenAI
+> ดูได้ที่ [Documentation](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
-1. สร้างกลุ่มทรัพยากร
+1. สร้าง resource group
 
 > [!NOTE]
-> สำหรับคำแนะนำเหล่านี้ เราใช้กลุ่มทรัพยากรชื่อ "semantic-video-search" ในภาคตะวันออกของสหรัฐอเมริกา
-> คุณสามารถเปลี่ยนชื่อกลุ่มทรัพยากรได้ แต่เมื่อเปลี่ยนตำแหน่งสำหรับทรัพยากร,
-> ตรวจสอบ [ตารางความพร้อมใช้งานของโมเดล](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst)
+> สำหรับคำแนะนำนี้ เราใช้ resource group ที่ชื่อว่า "semantic-video-search" ใน East US
+> คุณสามารถเปลี่ยนชื่อของ resource group ได้ แต่ถ้าเปลี่ยนตำแหน่งที่ตั้งของทรัพยากร,
+> โปรดตรวจสอบตาราง [ความพร้อมใช้งานของโมเดล](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst)
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. สร้างทรัพยากร Azure OpenAI Service
+1. สร้าง Azure OpenAI Service resource
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. รับ endpoint และกุญแจสำหรับใช้งานในแอปพลิเคชันนี้
+1. รับ endpoint และ keys สำหรับใช้งานในแอปพลิเคชันนี้
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -37,9 +37,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. ติดตั้งโมเดลดังต่อไปนี้:
-   - `text-embedding-ada-002` เวอร์ชัน `2` ขึ้นไป ชื่อ `text-embedding-ada-002`
-   - `gpt-4o-mini` ชื่อ `gpt-4o-mini`
+1. ปล่อยใช้โมเดลต่อไปนี้:
+   - `text-embedding-ada-002` เวอร์ชัน `2` หรือสูงกว่า ชื่อ `text-embedding-ada-002`
+   - `gpt-5-mini` ชื่อ `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,24 +53,24 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
 ```
 
-## ซอฟต์แวร์ที่จำเป็น
+## ซอฟต์แวร์ที่ต้องใช้
 
 - [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) หรือสูงกว่า
 
-## ตัวแปรสภาพแวดล้อม
+## ตัวแปรแวดล้อม (Environment variables)
 
-ตัวแปรสภาพแวดล้อมต่อไปนี้จำเป็นสำหรับการรันสคริปต์การเตรียมข้อมูลการถอดเสียง YouTube
+ตัวแปรแวดล้อมต่อไปนี้จำเป็นสำหรับการรันสคริปต์เตรียมข้อมูลการถอดความจาก YouTube
 
 ### บน Windows
 
-แนะนำให้เพิ่มตัวแปรไปยังตัวแปรสภาพแวดล้อมของ `user` ของคุณ
+แนะนำให้เพิ่มตัวแปรเหล่านี้ในตัวแปรแวดล้อม `user`
 `Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` สำหรับ [USER] > `New`
 
 ```text
@@ -80,18 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-<!-- คุณสามารถเพิ่มตัวแปรสภาพแวดล้อมลงในโปรไฟล์ PowerShell ของคุณได้
+<!-- คุณสามารถเพิ่มตัวแปรแวดล้อมลงในโปรไฟล์ PowerShell ของคุณได้
 
 ```powershell
-$env:AZURE_OPENAI_API_KEY = "<คีย์ API ของ Azure OpenAI Service ของคุณ>"
-$env:AZURE_OPENAI_ENDPOINT = "<endpoint ของ Azure OpenAI Service ของคุณ>"
-$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<ชื่อโมเดลที่ติดตั้งของ Azure OpenAI Service ของคุณ>"
-$env:GOOGLE_DEVELOPER_API_KEY = "<คีย์ API ของ Google developer ของคุณ>"
+$env:AZURE_OPENAI_API_KEY = "<your Azure OpenAI Service API key>"
+$env:AZURE_OPENAI_ENDPOINT = "<your Azure OpenAI Service endpoint>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<your Azure OpenAI Service model deployment name>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<your Google developer API key>"
 ``` -->
 
 ### บน Linux และ macOS
 
-แนะนำให้เพิ่ม exports เหล่านี้ในไฟล์ `~/.bashrc` หรือ `~/.zshrc` ของคุณ
+แนะนำให้เพิ่มการส่งออกตัวแปรดังต่อไปนี้ในไฟล์ `~/.bashrc` หรือ `~/.zshrc` ของคุณ
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -109,13 +109,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
     ```
 
-1. ไปยังโฟลเดอร์ `data_prep`
+1. ไปที่โฟลเดอร์ `data_prep`
 
    ```bash
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. สร้างสภาพแวดล้อม Python แบบเสมือน
+1. สร้าง Python virtual environment
 
     บน Windows:
 
@@ -129,7 +129,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     python3 -m venv .venv
     ```
 
-1. เปิดใช้งานสภาพแวดล้อม Python แบบเสมือน
+1. เปิดใช้งาน Python virtual environment
 
    บน Windows:
 
@@ -145,7 +145,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. ติดตั้งไลบรารีที่จำเป็น
 
-   บน windows:
+   บน Windows:
 
    ```powershell
    pip install -r requirements.txt
@@ -157,9 +157,9 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## รันสคริปต์การเตรียมข้อมูลการถอดเสียง YouTube
+## รันสคริปต์เตรียมข้อมูลการถอดความจาก YouTube
 
-### บน windows
+### บน Windows
 
 ```powershell
 .\transcripts_prepare.ps1
