@@ -1,167 +1,172 @@
-# Teksti genereerimise rakenduste loomine
+# Tekstigeneratsiooni rakenduste loomine
 
-[![Teksti genereerimise rakenduste loomine](../../../translated_images/et/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Tekstigeneratsiooni rakenduste loomine](../../../translated_images/et/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
-> _(Klõpsa ülaloleval pildil, et vaadata selle õppetunni videot)_
+> _(Klõpsake ülaloleval pildil, et vaadata selle tunni videot)_
 
-Selles õppekavas olete seni näinud, et on olemas põhikontseptsioone, nagu sisendid (prompts) ja isegi terve distsipliin nimega "sisendite inseneeria". Paljud tööriistad, nagu ChatGPT, Office 365, Microsoft Power Platform ja teised, võimaldavad teil kasutada sisendeid, et midagi saavutada.
+Sa oled selle õppekava jooksul näinud, et on olemas põhikontseptsioonid nagu promptid ja isegi terve distsipliin nimega "prompti inseneritöö". Paljud tööriistad, millega saad suhelda, nagu ChatGPT, Office 365, Microsoft Power Platform ja teised, toetavad sind promptide kasutamisel mingi ülesande täitmiseks.
 
-Kui soovite sellist kogemust oma rakendusse lisada, peate mõistma kontseptsioone nagu sisendid, tulemused ja valima sobiva teegi, millega töötada. Just seda õpite selles peatükis.
+Selleks, et lisada selline kogemus rakendusse, pead sa mõistma selliseid mõisteid nagu prompt, täitmised ja valima sobiva teegi, millega töötada. Just seda sa selles peatükis õpid.
 
 ## Sissejuhatus
 
-Selles peatükis õpite:
+Selles peatükis sa:
 
-- Tutvuma openai teegiga ja selle põhikontseptsioonidega.
-- Looma teksti genereerimise rakendust, kasutades openai.
-- Mõistma, kuidas kasutada kontseptsioone nagu sisend, temperatuur ja tokenid, et luua teksti genereerimise rakendus.
+- Õpid tundma openai teeki ja selle põhikontseptsioone.
+- Ehita tekstigeneratsiooni rakendus openai abil.
+- Mõistad, kuidas kasutada selliseid mõisteid nagu prompt, temperatuur ja tokenid, et ehitada tekstigeneratsiooni rakendus.
 
 ## Õpieesmärgid
 
-Selle õppetunni lõpuks suudate:
+Selle tunni lõpetamisel oskad sa:
 
-- Selgitada, mis on teksti genereerimise rakendus.
-- Luua teksti genereerimise rakendust, kasutades openai.
-- Konfigureerida oma rakendust kasutama rohkem või vähem tokeneid ning muuta temperatuuri, et saada erinevaid tulemusi.
+- Selgitada, mis on tekstigeneratsiooni rakendus.
+- Ehita tekstigeneratsiooni rakendus openai abil.
+- Konfigureerida oma rakendust nii, et kasutatakse rohkem või vähem tokeneid ja muuta ka temperatuuri, et saada varieeruvat väljundit.
 
-## Mis on teksti genereerimise rakendus?
+## Mis on tekstigeneratsiooni rakendus?
 
-Tavaliselt on rakendusel mingi liides, näiteks:
+Tavaliselt, kui ehitad rakendust, on sellel mingi kasutajaliides, mis võib olla näiteks:
 
-- Käsupõhine. Konsolirakendused on tüüpilised rakendused, kus sisestate käsu ja see täidab ülesande. Näiteks `git` on käsupõhine rakendus.
-- Kasutajaliides (UI). Mõnel rakendusel on graafilised kasutajaliidesed (GUI), kus klõpsate nuppudel, sisestate teksti, valite valikuid ja palju muud.
+- Käskluspõhine. Konsoolirakendused on tüüpilised rakendused, kus sa kirjutad käsu ja see täidab ülesande. Näiteks `git` on käskluspõhine rakendus.
+- Kasutajaliides (UI). Mõnel rakendusel on graafiline kasutajaliides (GUI), kus sa klõpsad nuppe, sisestad teksti, valid valikuid ja muud.
 
-### Konsoli- ja kasutajaliidesega rakenduste piirangud
+### Konsooli- ja kasutajaliideserakendused on piiratud
 
-Võrrelge seda käsupõhise rakendusega, kus sisestate käsu:
+Võrrelge seda käskluspõhise rakendusega, kus sa kirjutad käsu:
 
-- **See on piiratud**. Te ei saa sisestada lihtsalt suvalist käsku, vaid ainult neid, mida rakendus toetab.
-- **Keele spetsiifilisus**. Mõned rakendused toetavad mitut keelt, kuid vaikimisi on rakendus loodud konkreetse keele jaoks, isegi kui saate lisada rohkem keeletoetust.
+- **See on piiratud**. Sa ei saa lihtsalt kirjutada suvalist käsku, vaid ainult neid, mida rakendus toetab.
+- **Keelepõhine**. Mõned rakendused toetavad mitut keelt, kuid vaikimisi on rakendus loodud konkreetse keele jaoks, isegi kui saad lisada rohkem keelte tuge.
 
-### Teksti genereerimise rakenduste eelised
+### Tekstigeneratsiooni rakenduste eelised
 
-Kuidas erineb teksti genereerimise rakendus?
+Kuidas on tekstigeneratsiooni rakendus teistmoodi?
 
-Teksti genereerimise rakenduses on teil rohkem paindlikkust, te ei ole piiratud kindlate käskude või konkreetse sisendkeelega. Selle asemel saate rakendusega suhelda loomuliku keele abil. Teine eelis on see, et suhtlete juba andmeallikaga, mis on treenitud suurel hulgal informatsioonil, samas kui traditsiooniline rakendus võib piirduda ainult andmebaasis oleva teabega.
+Tekstigeneratsiooni rakenduses on sul rohkem paindlikkust, sa ei ole piiratud etteantud käskude komplektiga ega kindla sisendkeelega. Selle asemel saad kasutada loomulikku keelt rakendusega suhtlemiseks. Teine eelis on see, et sa suhtled juba andmeallikaga, mis on väljaõpetatud suurel hulgal teavet, samas kui traditsiooniline rakendus võib olla piiratud andmebaasis oleva teabega.
 
-### Mida saab teksti genereerimise rakendusega luua?
+### Mida ma saan tekstigeneratsiooni rakendusega ehitada?
 
-Võimalusi on palju. Näiteks:
+Võid ehitada väga erinevaid asju. Näiteks:
 
-- **Vestlusrobot**. Vestlusrobot, mis vastab küsimustele teemade kohta, nagu teie ettevõte ja selle tooted, võib olla hea valik.
-- **Abiline**. LLM-id on suurepärased tekstide kokkuvõtete tegemisel, tekstist ülevaadete saamisel, CV-de ja muu teksti loomisel.
-- **Koodiassistent**. Sõltuvalt kasutatavast keelemudelist saate luua koodiassistendi, mis aitab teil koodi kirjutada. Näiteks saate kasutada selliseid tooteid nagu GitHub Copilot ja ChatGPT, et aidata teil koodi kirjutada.
+- **Vestlusrobot**. Vestlusrobot, mis vastab küsimustele teemadel nagu sinu ettevõte ja selle tooted, võiks olla väga sobiv.
+- **Abiline**. Suured keelemudelid (LLM) on suurepärased tekstide kokkuvõtmisel, tekstist info saamisel, tekstide loomisel nagu CV-d ja palju muud.
+- **Koodi assistent**. Sõltuvalt kasutatavast keelemudelist saad ehitada koodi assistendi, mis aitab sul koodi kirjutada. Näiteks võid kasutada toodet nagu GitHub Copilot ja samuti ChatGPT oma koodi kirjutamise abistamiseks.
 
 ## Kuidas alustada?
 
-Peate leidma viisi, kuidas integreeruda LLM-iga, mis tavaliselt hõlmab kahte lähenemist:
+Pead leidma viisi, kuidas integreeruda LLM-iga, mis tavaliselt tähendab kahte lähenemist:
 
-- Kasutada API-d. Siin koostate veebipäringuid oma sisendiga ja saate tagasi genereeritud teksti.
-- Kasutada teeki. Teegid aitavad API-kõnesid kapseldada ja muudavad nende kasutamise lihtsamaks.
+- Kasutada API-t. Siin koostad veebipäringuid oma promptidega ja saad tagasi genereeritud teksti.
+- Kasutada teeki. Teegid aitavad kapseldada API kõnesid ja muudavad nende kasutamise lihtsamaks.
 
 ## Teegid/SDK-d
 
-On mitmeid tuntud teeke, mis töötavad LLM-idega, näiteks:
+On mõned tuntud teegid LLM-idega töötamiseks nagu:
 
-- **openai**, see teek muudab mudeliga ühenduse loomise ja sisendite saatmise lihtsaks.
+- **openai**, see teek teeb lihtsaks mudeliga ühenduse loomise ja promptide edastamise.
 
-Samuti on olemas kõrgema taseme teegid, nagu:
+Siis on teegid, mis toimivad kõrgemal tasemel nagu:
 
-- **Langchain**. Langchain on hästi tuntud ja toetab Pythonit.
+- **Langchain**. Langchain on tuntud ja toetab Pythoni.
 - **Semantic Kernel**. Semantic Kernel on Microsofti teek, mis toetab keeli C#, Python ja Java.
 
-## Esimene rakendus, kasutades openai
+## Esimene rakendus openai kasutades
 
-Vaatame, kuidas saame luua oma esimese rakenduse, milliseid teeke vajame, kui palju on vaja ja nii edasi.
+Vaatame, kuidas saame ehitada oma esimese rakenduse, milliseid teeke vajame, kui palju on vaja ja nii edasi.
 
-### openai paigaldamine
+### Paigalda openai
 
-OpenAI või Azure OpenAI-ga suhtlemiseks on palju teeke. Võimalik on kasutada ka mitmeid programmeerimiskeeli, nagu C#, Python, JavaScript, Java ja palju muud. Oleme valinud `openai` Python teegi, seega kasutame selle paigaldamiseks `pip`.
+On palju teeke OpenAI või Azure OpenAI-ga suhtlemiseks. Võid kasutada ka mitmeid programmeerimiskeeli nagu C#, Python, JavaScript, Java ja teised. Me valisime kasutada `openai` Pythoni teeki, nii et paigaldame selle `pip` abil.
 
 ```bash
 pip install openai
 ```
 
-### Ressursi loomine
+### Loo ressurss
 
-Peate tegema järgmised sammud:
+Pead tegema järgnevad sammud:
 
-- Looge konto Azure'is [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- Saage juurdepääs Azure OpenAI-le. Minge [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) ja taotlege juurdepääsu.
+- Loo konto Azure'is [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
+- Hangi ligipääs Azure OpenAI-le. Mine lehele [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) ja taotle ligipääsu.
 
   > [!NOTE]
-  > Kirjutamise ajal peate taotlema juurdepääsu Azure OpenAI-le.
+  > Kirjutamise ajal pead taotlema ligipääsu Azure OpenAI-le.
 
-- Paigaldage Python <https://www.python.org/>
-- Looge Azure OpenAI teenuse ressurss. Vaadake seda juhendit, kuidas [ressurssi luua](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- Paigalda Python <https://www.python.org/>
+- Loo Azure OpenAI teenuse ressurss. Vaata juhendit, kuidas [luua ressurssi](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
-### API võtme ja lõpp-punkti leidmine
+### Leia API võti ja lõpp-punkt
 
-Praegusel hetkel peate oma `openai` teegile ütlema, millist API võtit kasutada. API võtme leidmiseks minge oma Azure OpenAI ressursi "Keys and Endpoint" sektsiooni ja kopeerige "Key 1" väärtus.
+Nüüd pead ütlema oma `openai` teegile, millist API võtit kasutada. Oma API võtme leidmiseks mine oma Azure OpenAI ressursi jaotisse "Keys and Endpoint" ning kopeeri sealt "Key 1" väärtus.
 
-![Keys and Endpoint ressursi vaade Azure portaalis](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+![Võtmed ja lõpp-punkt Azure portaalis](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-Nüüd, kui olete selle teabe kopeerinud, juhendame teeke seda kasutama.
+Nüüd, kui sul on need andmed kopeeritud, juhime teegid nende kasutamiseks.
 
 > [!NOTE]
-> Tasub eraldada oma API võti koodist. Seda saate teha, kasutades keskkonnamuutujaid.
+> On soovitatav hoida API võti koodist eraldi. Seda saab teha keskkonnamuutujate abil.
 >
-> - Määrake keskkonnamuutuja `OPENAI_API_KEY` oma API võtmele.
+> - Sea keskkonnamuutujaks `OPENAI_API_KEY` oma API võtme väärtus.
 >   `export OPENAI_API_KEY='sk-...'`
 
-### Azure'i konfiguratsiooni seadistamine
+### Seadista konfiguratsioon Azure'is
 
-Kui kasutate Azure OpenAI-d, siis siin on, kuidas konfiguratsiooni seadistada:
+Kui kasutad Azure OpenAI-d (nüüd Microsoft Foundry osa), siis nii seadistad konfiguratsiooni. Kasutame tavalist `OpenAI` klienti, mis on suunatud Azure OpenAI `/openai/v1/` lõpp-punktile, mis töötab Responses API-ga ega vaja `api_version`-it:
 
 ```python
-openai.api_type = 'azure'
-openai.api_key = os.environ["OPENAI_API_KEY"]
-openai.api_version = '2023-05-15'
-openai.api_base = os.getenv("API_BASE")
+import os
+from openai import OpenAI
+
+client = OpenAI(
+    api_key=os.environ["AZURE_OPENAI_API_KEY"],
+    base_url=f"{os.environ['AZURE_OPENAI_ENDPOINT'].rstrip('/')}/openai/v1/",
+)
 ```
 
-Ülaltoodud koodis määrame järgmised parameetrid:
+Ülal seadistame järgmised asjad:
 
-- `api_type` väärtuseks `azure`. See ütleb teegile, et kasutada Azure OpenAI-d, mitte OpenAI-d.
-- `api_key`, see on teie API võti, mille leiate Azure portaalist.
-- `api_version`, see on API versioon, mida soovite kasutada. Kirjutamise ajal on uusim versioon `2023-05-15`.
-- `api_base`, see on API lõpp-punkt. Selle leiate Azure portaalist oma API võtme kõrval.
+- `api_key`, see on sinu Azure portaali või Microsoft Foundry portaali API võti.
+- `base_url`, see on sinu Foundry ressursi lõpp-punkt, mille lõppu on lisatud `/openai/v1/`. Stabiilne v1 lõpp-punkt toimib nii OpenAI kui Azure OpenAI puhul ilma `api_version` halduseta.
 
-> [!NOTE] > `os.getenv` on funktsioon, mis loeb keskkonnamuutujaid. Seda saab kasutada keskkonnamuutujate, nagu `OPENAI_API_KEY` ja `API_BASE`, lugemiseks. Määrake need keskkonnamuutujad oma terminalis või kasutades teeki nagu `dotenv`.
+> [!NOTE] > `os.environ` loeb keskkonnamuutujaid. Seda saab kasutada selliste keskkonnamuutujate lugemiseks nagu `AZURE_OPENAI_API_KEY` ja `AZURE_OPENAI_ENDPOINT`. Määra need keskkonnamuutujad oma terminalis või kasuta teeki nagu `dotenv`.
 
 ## Teksti genereerimine
 
-Teksti genereerimiseks kasutatakse `Completion` klassi. Siin on näide:
+Teksti genereerimiseks kasutatakse Responses API-d meetodi `responses.create` kaudu. Näide:
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
 
-completion = openai.Completion.create(model="davinci-002", prompt=prompt)
-print(completion.choices[0].text)
+response = client.responses.create(
+    model="gpt-4o-mini",  # see on teie mudeli kasutuselevõtu nimi
+    input=prompt,
+    store=False,
+)
+print(response.output_text)
 ```
 
-Ülaltoodud koodis loome completion objekti ja anname sellele mudeli, mida soovime kasutada, ning sisendi. Seejärel prindime genereeritud teksti.
+Ülaltoodud koodis loome vastuse, edastame kasutatava mudeli ja prompti. Siis trükime genereeritud teksti `response.output_text` kaudu.
 
-### Vestluse tulemused
+### Mitmevoorulised vestlused
 
-Siiani olete näinud, kuidas me kasutasime `Completion` klassi teksti genereerimiseks. Kuid on olemas ka teine klass nimega `ChatCompletion`, mis sobib paremini vestlusrobotite jaoks. Siin on näide selle kasutamisest:
+Responses API sobib nii ühevooruliseks tekstigeneratsiooniks kui ka mitmevoorulisteks vestlusrobotiteks - sa annad sõnumite nimekirja `input`-ina, et vestlust üles ehitada:
 
 ```python
-import openai
+from openai import OpenAI
 
-openai.api_key = "sk-..."
+client = OpenAI(api_key="sk-...")
 
-completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
-print(completion.choices[0].message.content)
+response = client.responses.create(model="gpt-4o-mini", input="Hello world", store=False)
+print(response.output_text)
 ```
 
-Rohkem sellest funktsionaalsusest järgmises peatükis.
+Selle funktsionaalsuse kohta tuleb rohkem peatükis.
 
-## Harjutus - teie esimene teksti genereerimise rakendus
+## Harjutus - sinu esimene tekstigeneratsiooni rakendus
 
-Nüüd, kui oleme õppinud, kuidas openai seadistada ja konfigureerida, on aeg luua oma esimene teksti genereerimise rakendus. Rakenduse loomiseks järgige neid samme:
+Nüüd, kui me õppisime, kuidas openai seadistada ja konfigureerida, on aeg ehitada oma esimene tekstigeneratsiooni rakendus. Selleks tee järgmist:
 
-1. Looge virtuaalne keskkond ja paigaldage openai:
+1. Loo virtuaalne keskkond ja paigalda openai:
 
    ```bash
    python -m venv venv
@@ -170,38 +175,37 @@ Nüüd, kui oleme õppinud, kuidas openai seadistada ja konfigureerida, on aeg l
    ```
 
    > [!NOTE]
-   > Kui kasutate Windowsi, sisestage `venv\Scripts\activate` asemel `source venv/bin/activate`.
+   > Kui kasutad Windowsi, kirjuta `venv\Scripts\activate` asemel `source venv/bin/activate`.
 
    > [!NOTE]
-   > Leidke oma Azure OpenAI võti, minnes [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst), otsige `Open AI` ja valige `Open AI resource`, seejärel valige `Keys and Endpoint` ja kopeerige `Key 1` väärtus.
+   > Leia oma Azure OpenAI võti, minnes lehele [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) ja otsi `Open AI`, vali `Open AI resource` ja siis vali `Keys and Endpoint` ning kopeeri `Key 1` väärtus.
 
-1. Looge _app.py_ fail ja lisage sellele järgmine kood:
+1. Loo _app.py_ fail ja kirjuta sinna järgmine kood:
 
    ```python
-   import openai
+   import os
+   from openai import OpenAI
 
-   openai.api_key = "<replace this value with your open ai key or Azure OpenAI key>"
-
-   openai.api_type = 'azure'
-   openai.api_version = '2023-05-15'
-   openai.api_base = "<endpoint found in Azure Portal where your API key is>"
+   client = OpenAI(
+       api_key="<replace this value with your Azure OpenAI key>",
+       base_url="<endpoint found in Azure Portal>/openai/v1/",
+   )
    deployment_name = "<deployment name>"
 
-   # add your completion code
+   # lisa oma lõpetamiskood
    prompt = "Complete the following: Once upon a time there was a"
-   messages = [{"role": "user", "content": prompt}]
 
-   # make completion
-   completion = openai.chat.completions.create(model=deployment_name, messages=messages)
+   # tee päring kasutades Responses API-d
+   response = client.responses.create(model=deployment_name, input=prompt, store=False)
 
-   # print response
-   print(completion.choices[0].message.content)
+   # prindi vastus
+   print(response.output_text)
    ```
 
    > [!NOTE]
-   > Kui kasutate Azure OpenAI-d, peate määrama `api_type` väärtuseks `azure` ja `api_key` oma Azure OpenAI võtmele.
+   > Kui kasutad tavalist OpenAI-d (mitte Azure), kasuta `client = OpenAI(api_key="<asenda see oma OpenAI võtmega>")` (ilma `base_url`ita) ja edasta mudeli nimeks näiteks `gpt-4o-mini` deploy'nime asemel.
 
-   Peaksite nägema väljundit, mis näeb välja umbes selline:
+   Sa peaksid nägema väljastust, mis on järgmine:
 
    ```output
     very unhappy _____.
@@ -209,25 +213,25 @@ Nüüd, kui oleme õppinud, kuidas openai seadistada ja konfigureerida, on aeg l
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## Erinevat tüüpi sisendid erinevateks ülesanneteks
+## Erinevat tüüpi promptid erinevateks asjadeks
 
-Nüüd olete näinud, kuidas sisendi abil teksti genereerida. Teil on isegi programm, mida saate muuta ja kohandada, et genereerida erinevat tüüpi teksti.
+Nüüd, kui oled näinud, kuidas teksti genereerida prompti abil. Sul on isegi programm käivitatud ja valmis, mida saad muuta, et genereerida erinevat tüüpi tekste.
 
-Sisendeid saab kasutada igasuguste ülesannete jaoks. Näiteks:
+Prompte võib kasutada igasugusteks ülesanneteks. Näiteks:
 
-- **Teksti genereerimine**. Näiteks saate luua luuletusi, viktoriiniküsimusi jne.
-- **Teabe otsimine**. Sisendeid saab kasutada teabe otsimiseks, näiteks "Mida tähendab CORS veebiarenduses?".
-- **Koodi genereerimine**. Sisendeid saab kasutada koodi genereerimiseks, näiteks e-posti valideerimiseks mõeldud regulaaravaldiste loomiseks või miks mitte terve programmi, näiteks veebirakenduse, loomiseks?
+- **Teksti genereerimine**. Näiteks võid genereerida luuletuse, viktoriiniküsimusi jms.
+- **Info otsimine**. Sa võid kasutada promte info otsimiseks nagu näiteks "Mida tähendab CORS veebiarenduses?".
+- **Koodi genereerimine**. Võid kasutada promte koodi genereerimiseks, näiteks regulaarexpressioni tegemiseks, et valideerida e-kirju või miks mitte genereerida terve programm, näiteks veebirakendus?
 
-## Praktilisem näide: retsepti generaator
+## Praktilisem kasutusjuht: retseptide generaator
 
-Kujutage ette, et teil on kodus mõned koostisosad ja soovite midagi süüa teha. Selleks vajate retsepti. Üks viis retseptide leidmiseks on kasutada otsingumootorit või võite kasutada LLM-i.
+Kujuta ette, et sul on kodus koostisosad ja tahad midagi kokata. Selleks vajad retsepti. Retseptide leidmiseks võid kasutada otsingumootorit või kasutada LLM-i.
 
-Võite kirjutada sisendi järgmiselt:
+Sa võiksid kirjutada sellise prompti:
 
-> "Näita mulle 5 retsepti roogade jaoks, milles on järgmised koostisosad: kana, kartul ja porgand. Iga retsepti puhul loetle kõik kasutatud koostisosad."
+> "Näita mulle 5 retsepti roale järgnevate koostisosadega: kana, kartulid ja porgandid. Koostisosade lõikes loetle iga retsepti puhul kõik kasutatud koostisosad."
 
-Antud sisendi põhjal võite saada vastuse, mis on sarnane järgmisega:
+Selle prompdi põhjal võid saada vastuse sarnane järgmisele:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -291,16 +295,16 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-See tulemus on suurepärane, ma tean, mida süüa teha. Sel hetkel võiks kasulikud täiustused olla:
+See tulemus on suurepärane, ma tean, mida kokata. Selles punktis võiks kasulikud täiustused olla:
 
-- Koostisosade filtreerimine, mida ma ei armasta või mille suhtes olen allergiline.
-- Ostunimekirja koostamine juhuks, kui mul pole kõiki koostisosi kodus.
+- Koostisosade filtreerimine, mida ma ei salli või mille suhtes olen allergiline.
+- Ostunimekirja koostamine juhuks, kui mul kõiki koostisosi kodus ei ole.
 
-Ülaltoodud juhtumite jaoks lisame täiendava sisendi:
+Ülaltoodud juhtude jaoks lisame täiendava prompti:
 
-> "Palun eemaldage retseptid, milles on küüslauk, kuna olen selle suhtes allergiline, ja asendage see millegi muuga. Samuti koostage ostunimekiri retseptide jaoks, arvestades, et mul on kodus juba kana, kartul ja porgand."
+> "Palun eemalda retseptidest küüslauk, sest olen allergiline, ja asenda see millegi muuga. Samuti palun tee ostunimekiri retseptide jaoks, arvestades, et mul on juba kodus kana, kartulid ja porgandid."
 
-Nüüd saate uue tulemuse, nimelt:
+Nüüd on sul uus tulemus, nimelt:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -367,20 +371,20 @@ Shopping List:
 - Pepper
 ```
 
-Need on teie viis retsepti, kus küüslauku ei mainita, ja teil on ka ostunimekiri, arvestades, mis teil kodus juba olemas on.
+Need on sinu viis retsepti, milles pole mainitud küüslauku ja sul on ka ostunimekiri, arvestades seda, mis sul juba kodus on.
 
-## Harjutus - retsepti generaatori loomine
+## Harjutus - ehita retseptide generaator
 
-Nüüd, kui oleme stsenaariumi läbi mänginud, kirjutame koodi, mis vastab näidatud stsenaariumile. Selleks järgige neid samme:
+Nüüd, kui me oleme stsenaariumi läbi mänginud, kirjutame koodi, mis vastab demonstreeritud stsenaariumile. Selleks tee järgmist:
 
-1. Kasutage olemasolevat _app.py_ faili lähtepunktina.
-1. Leidke `prompt` muutuja ja muutke selle koodi järgmiseks:
+1. Kasuta olemasolevat _app.py_ faili lähtepunktina
+1. Leia muutuja `prompt` ja muuda selle koodi järgmiseks:
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   Kui nüüd koodi käivitate, peaksite nägema väljundit, mis on sarnane järgmisega:
+   Kui sa nüüd koodi jooksutad, peaks ehk sarnane väljund olema:
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -392,22 +396,22 @@ Nüüd, kui oleme stsenaariumi läbi mänginud, kirjutame koodi, mis vastab näi
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > MÄRKUS, teie LLM on mittelineaarne, seega võite iga kord programmi käivitamisel saada erinevaid tulemusi.
+   > MÄRKUS, sinu LLM on mittedeterministlik, seega võid saada igal käivitamisel erinevaid tulemusi.
 
-   Suurepärane, vaatame, kuidas saame asju parandada. Parandamiseks tahame veenduda, et kood oleks paindlik, et koostisosi ja retseptide arvu saaks parandada ja muuta.
+   Suurepärane, vaatame, kuidas saame asju parandada. Parandamiseks tahame tagada, et kood oleks paindlik, nii et koostisosad ja retseptide arv oleks hõlpsasti muudetavad.
 
-1. Muutke koodi järgmiselt:
+1. Muudame koodi järgmiselt:
 
    ```python
    no_recipes = input("No of recipes (for example, 5): ")
 
    ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
 
-   # interpolate the number of recipes into the prompt an ingredients
+   # interpoleeri retseptide arv prompti ja koostisosadesse
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   Koodi testimine võib välja näha järgmiselt:
+   Testkäivituse jaoks võiks kood välja näha selline:
 
    ```output
    No of recipes (for example, 5): 3
@@ -418,13 +422,13 @@ Nüüd, kui oleme stsenaariumi läbi mänginud, kirjutame koodi, mis vastab näi
    -Strawberry milk: milk, strawberries, sugar, vanilla extract
    ```
 
-### Parandamine, lisades filtri ja ostunimekirja
+### Paranda lisades filter ja ostunimekiri
 
-Nüüd on meil töötav rakendus, mis suudab retsepte luua ja on paindlik, kuna see tugineb kasutaja sisenditele, nii retseptide arvu kui ka kasutatavate koostisosade osas.
+Nüüd on meil toimiv rakendus, mis suudab genereerida retsepte ja on paindlik, sest see sõltub kasutaja sisenditest, nii retseptide arvu kui ka koostisosade kohta.
 
-Edasiseks täiustamiseks tahame lisada järgmised funktsioonid:
+Veel parendamiseks tahame lisada järgmise:
 
-- **Koostisosade filtreerimine**. Tahame olla võimelised filtreerima koostisosi, mida me ei armasta või mille suhtes oleme allergilised. Selle muudatuse saavutamiseks saame redigeerida olemasolevat sisendit ja lisada filtri tingimuse selle lõppu järgmiselt:
+- **Filtreeri koostisosad välja**. Tahame võimaldada koostisosade väljasõelumist, mida me ei soovi või mille suhtes oleme allergilised. Selleks muudatuseks saame oma olemasoleva prompti lõppu lisada filtertingimuse nii:
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -432,9 +436,9 @@ Edasiseks täiustamiseks tahame lisada järgmised funktsioonid:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  Ülaltoodud koodis lisame `{filter}` sisendi lõppu ja salvestame kasutajalt saadud filtri väärtuse.
+  Ülal lisame prompti lõppu `{filter}` ja võtame ka kasutajalt filtri väärtuse.
 
-  Näiteks programmi käivitamise sisend võib nüüd välja näha järgmiselt:
+  Näiteks võib programmi sisend välja näha järgmiselt:
 
   ```output
   No of recipes (for example, 5): 3
@@ -501,41 +505,42 @@ Edasiseks täiustamiseks tahame lisada järgmised funktsioonid:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  Nagu näete, on kõik retseptid, milles on piim, välja filtreeritud. Kuid kui olete laktoositalumatu, võiksite filtreerida ka retseptid, milles on juust, seega on oluline olla selge.
+  Nagu näha, on kõik retseptid, kus on piim, välja filtreeritud. Kuid kui sul on laktoositalumatus, sooviksid ehk filtreerida ka juustu sisaldavad retseptid, seega tuleb olla täpne.
 
-- **Ostunimekirja koostamine**. Tahame koostada ostunimekirja, arvestades, mis meil kodus juba olemas on.
 
-  Selle funktsionaalsuse jaoks võiksime proovida lahendada kõik ühe sisendiga või jagada see kaheks sisendiks. Proovime viimast lähenemist. Siin soovitame lisada täiendava sisendi, kuid selleks, et see töötaks, peame lisama esimese sisendi tulemuse kontekstina teisele sisendile.
+- **Koosta ostunimekiri**. Tahame koostada ostunimekirja, arvestades seda, mis meil kodus juba olemas on.
 
-  Leidke koodiosa, mis prindib välja esimese sisendi tulemuse, ja lisage sellele järgmine kood:
+  Selle funktsionaalsuse jaoks võiksime proovida lahendada kõik ühe promptiga või jagada see kaheks promptiks. Proovime viimast lähenemist. Siin soovitame lisada täiendava prompti, kuid selleks, et see toimiks, peame esimese prompti tulemuse lisama teise prompti kontekstiks.
+
+  Leia koodist osa, mis prindib välja esimese prompti tulemuse, ja lisa alljärgnev kood sellele alla:
+
   ```python
-  old_prompt_result = completion.choices[0].message.content
+  old_prompt_result = response.output_text
   prompt = "Produce a shopping list for the generated recipes and please don't include ingredients that I already have."
 
   new_prompt = f"{old_prompt_result} {prompt}"
-  messages = [{"role": "user", "content": new_prompt}]
-  completion = openai.Completion.create(engine=deployment_name, messages=messages, max_tokens=1200)
+  response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
 
-  # print response
+  # kuva vastus
   print("Shopping list:")
-  print(completion.choices[0].message.content)
+  print(response.output_text)
   ```
 
-  Pange tähele järgmist:
+  Pane tähele järgmist:
 
-  1. Loome uue viipa, lisades esimese viipa tulemuse uuele viipale:
+  1. Koostame uue prompti, lisades esimese prompti tulemuse uude prompti:
 
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  1. Teeme uue päringu, kuid arvestame ka esimese viipa jaoks küsitud tokenite arvu, seega määrame seekord `max_tokens` väärtuseks 1200.
+  1. Teeme uue päringu, võttes arvesse ka esimese prompti korral küsitud tokenite arvu, seega seekord määrame `max_output_tokens` väärtuseks 1200.
 
      ```python
-     completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
+     response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
      ```
 
-     Selle koodi katsetamisel jõuame nüüd järgmise väljundini:
+     Kui seda koodi proovile panna, saame järgmise väljundi:
 
      ```output
      No of recipes (for example, 5): 2
@@ -551,9 +556,9 @@ Edasiseks täiustamiseks tahame lisada järgmised funktsioonid:
 
 ## Paranda oma seadistust
 
-Praegune kood töötab, kuid on mõned muudatused, mida võiksime teha, et asju veelgi paremaks muuta. Mõned soovitused:
+Seni on meil toimiv kood, kuid mõned täiendused võiksid asja veelgi paremaks muuta. Mõned asjad, mida peaksime tegema:
 
-- **Eralda saladused koodist**, näiteks API võti. Saladused ei kuulu koodi ja need tuleks hoida turvalises kohas. Saladuste eraldamiseks koodist saame kasutada keskkonnamuutujaid ja selliseid teeke nagu `python-dotenv`, et laadida need failist. Näiteks näeks see koodis välja nii:
+- **Eralda saladused koodist**, näiteks API võti. Saladused ei kuulu koodi ning neid tuleks hoida turvalises kohas. Saladuste eraldamiseks koodist võime kasutada keskkonnamuutujaid ja teeke nagu `python-dotenv`, et laadida need failist. Koodis näeks see välja järgmiselt:
 
   1. Loo `.env` fail järgmise sisuga:
 
@@ -561,57 +566,59 @@ Praegune kood töötab, kuid on mõned muudatused, mida võiksime teha, et asju 
      OPENAI_API_KEY=sk-...
      ```
 
-     > Märkus: Azure'i jaoks peate määrama järgmised keskkonnamuutujad:
+     > Märkus, Azure OpenAI Microsoft Foundry jaoks tuleb määrata hoopis järgmised keskkonnamuutujad:
 
      ```bash
-     OPENAI_API_TYPE=azure
-     OPENAI_API_VERSION=2023-05-15
-     OPENAI_API_BASE=<replace>
+     AZURE_OPENAI_API_KEY=<replace>
+     AZURE_OPENAI_ENDPOINT=<replace>
+     AZURE_OPENAI_API_VERSION=2024-10-21
      ```
 
-     Koodis laadiksite keskkonnamuutujad järgmiselt:
+     Koodis laadiksid keskkonnamuutujad selliselt:
 
      ```python
+     import os
      from dotenv import load_dotenv
+     from openai import OpenAI
 
      load_dotenv()
 
-     openai.api_key = os.environ["OPENAI_API_KEY"]
+     client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
      ```
 
-- **Märkus tokenite pikkuse kohta**. Peaksime arvestama, kui palju tokeneid on vaja teksti genereerimiseks, mida soovime. Tokenid maksavad raha, seega peaksime võimaluse korral püüdma kasutada võimalikult vähe tokeneid. Näiteks, kas saame viipa sõnastada nii, et saaksime kasutada vähem tokeneid?
+- **Sõna tokenite pikkusest**. Me peaksime arvestama, kui palju tokeneid vajame soovitud teksti genereerimiseks. Tokenid maksavad raha, seega tuleb võimalusel kasutada tokeneid säästlikult. Näiteks — kas saaksime prompti sõnastada nii, et kasutaksime vähem tokeneid?
 
-  Tokenite arvu muutmiseks saate kasutada `max_tokens` parameetrit. Näiteks, kui soovite kasutada 100 tokenit, teeksite järgmist:
-
-  ```python
-  completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=100)
-  ```
-
-- **Temperatuuri katsetamine**. Temperatuur on midagi, mida me pole seni maininud, kuid see on oluline kontekst programmi toimimise jaoks. Mida kõrgem on temperatuuri väärtus, seda juhuslikum on väljund. Vastupidi, mida madalam on temperatuuri väärtus, seda ennustatavam on väljund. Mõelge, kas soovite oma väljundis varieeruvust või mitte.
-
-  Temperatuuri muutmiseks saate kasutada `temperature` parameetrit. Näiteks, kui soovite kasutada temperatuuri 0.5, teeksite järgmist:
+  Tokenite arvu muutmiseks saab kasutada `max_output_tokens` parameetrit. Näiteks kui soovid kasutada 100 tokenit, teeksid nii:
 
   ```python
-  completion = client.chat.completions.create(model=deployment, messages=messages, temperature=0.5)
+  response = client.responses.create(model=deployment, input=prompt, max_output_tokens=100, store=False)
   ```
 
-  > Märkus: mida lähemal 1.0-le, seda mitmekesisem on väljund.
+- **Katsetamine temperatuuriga**. Temperatuur on asi, millest me siiani pole rääkinud, kuid see on oluline kontekst programmi töö mõistmiseks. Mida kõrgem on temperatuuri väärtus, seda juhuslikum on väljund. Mida madalam temperatuuri väärtus, seda ennustatavam on väljund. Mõtle, kas soovid väljundis varieeruvust või mitte.
+
+  Temperatuuri muutmiseks saab kasutada `temperature` parameetrit. Näiteks kui soovid kasutada temperatuuri 0.5, teeksid nii:
+
+  ```python
+  response = client.responses.create(model=deployment, input=prompt, temperature=0.5, store=False)
+  ```
+
+  > Märkus, mida lähemal 1.0-le, seda varieeruvam on väljund.
 
 ## Ülesanne
 
-Selle ülesande jaoks saate valida, mida ehitada.
+Selle ülesande puhul võid valida, mida ehitada.
 
 Siin on mõned soovitused:
 
-- Kohandage retseptigeneraatori rakendust, et seda veelgi paremaks muuta. Katsetage temperatuuri väärtusi ja viipasid, et näha, mida suudate välja mõelda.
-- Looge "õppekaaslane". See rakendus peaks suutma vastata küsimustele teema kohta, näiteks Python. Võiksite kasutada viipasid nagu "Mis on teatud teema Pythoni kohta?" või viipa, mis ütleb, näita mulle koodi teatud teema kohta jne.
-- Ajaloo bot, tehke ajalugu elavaks, juhendage boti mängima teatud ajaloolist tegelast ja esitage talle küsimusi tema elu ja aja kohta.
+- Paranda veelgi retsepigeneraatori rakendust. Mängi temperatuuri väärtustega ja promptidega, et vaadata, mida suudad luua.
+- Ehita "õpimitt". See rakendus peaks suutma vastata küsimustele teema kohta, näiteks Python; võid lisada promptid nagu "Mis on kindel teema Pythonis?", või prompti, mis ütleb: näita mulle koodi kindla teema kohta jne.
+- Ajaloo-bot, too ajalugu ellu, käsu botil mängida kindlat ajaloolist tegelast ja ära temalt küsimusi tema elu ja ajastu kohta.
 
 ## Lahendus
 
-### Õppekaaslane
+### Õpimitt
 
-Allpool on algviip, vaadake, kuidas saate seda kasutada ja oma soovidele vastavaks kohandada.
+Allpool on stardiprompt, vaata, kuidas sa saad seda kasutada ja oma äranägemise järgi kohandada.
 
 ```text
 - "You're an expert on the Python language
@@ -624,9 +631,9 @@ Allpool on algviip, vaadake, kuidas saate seda kasutada ja oma soovidele vastava
     - exercise in code with solutions"
 ```
 
-### Ajaloo bot
+### Ajaloo-bot
 
-Siin on mõned viipad, mida võiksite kasutada:
+Siin on mõned promptid, mida võid kasutada:
 
 ```text
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
@@ -637,23 +644,25 @@ Siin on mõned viipad, mida võiksite kasutada:
 
 ## Teadmiste kontroll
 
-Mida teeb temperatuuri kontseptsioon?
+Mida teeb mõiste temperatuur?
 
-1. See kontrollib, kui juhuslik on väljund.
-1. See kontrollib, kui suur on vastus.
+1. See kontrollib, kui juhuslik väljund on.
+1. See kontrollib, kui suur vastus on.
 1. See kontrollib, kui palju tokeneid kasutatakse.
 
 ## 🚀 Väljakutse
 
-Ülesande kallal töötades proovige temperatuuri varieerida, proovige määrata see väärtustele 0, 0.5 ja 1. Pidage meeles, et 0 on kõige vähem varieeruv ja 1 on kõige rohkem. Milline väärtus sobib teie rakendusele kõige paremini?
+Ülesande juures proovi varieerida temperatuuri, seadistades selle väärtusteks 0, 0.5 ja 1. Pea meeles, et 0 on kõige vähem varieeruv ja 1 kõige rohkem. Milline väärtus sobib su rakendusele kõige paremini?
 
-## Suurepärane töö! Jätkake õppimist
+## Tubli töö! Jätka õppimist
 
-Pärast selle õppetunni lõpetamist vaadake meie [Generatiivse tehisintellekti õppekollektsiooni](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata oma generatiivse tehisintellekti teadmiste arendamist!
+Pärast selle õppetüki lõpetamist vaata meie [Generatiivse tehisintellekti õppe kogumikku](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata oma Generatiivse tehisintellekti teadmiste taseme tõstmist!
 
-Liikuge edasi 7. õppetundi, kus vaatame, kuidas [luua vestlusrakendusi](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Mine edasi õppetüki 7 juurde, kus vaatleme, kuidas [ehitada vestlusrakendusi](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Lahtiütlus**:  
-See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palun olge teadlik, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul on soovitatav kasutada professionaalset inimtõlget. Me ei vastuta arusaamatuste või valesti tõlgenduste eest, mis võivad tekkida selle tõlke kasutamise tõttu.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Lahtiütlus**:
+See dokument on tõlgitud kasutades AI tõlketeenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi me püüdleme täpsuse poole, palun pange tähele, et automatiseeritud tõlgetes võib esineda vigu või ebatäpsusi. Originaaldokument selle emakeeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta selle tõlkega seotud eksimustest või valesti mõistmistest.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,183 +1,194 @@
-# Panimula sa Maliit na mga Modelo ng Wika para sa Generative AI para sa mga Baguhan  
-Ang Generative AI ay isang kawili-wiling larangan ng artipisyal na intelihensiya na nakatuon sa paglikha ng mga sistema na may kakayahang bumuo ng bagong nilalaman. Ang nilalamang ito ay maaaring mula sa teksto at mga larawan hanggang sa musika at maging sa buong virtual na mga kapaligiran. Isa sa mga pinaka-kapana-panabik na aplikasyon ng generative AI ay sa larangan ng mga modelo ng wika.
+# Panimula sa Maliit na Modelo ng Wika para sa Generative AI para sa mga Nagsisimula
+Ang Generative AI ay isang kahanga-hangang larangan ng artipisyal na intelihensiya na nakatuon sa paglikha ng mga sistema na may kakayahang lumikha ng bagong nilalaman. Ang nilalamang ito ay maaaring mula sa teksto at larawan hanggang sa musika at maging buong virtual na mga kapaligiran. Isa sa pinaka kapana-panabik na aplikasyon ng generative AI ay nasa larangan ng mga modelong pangwika.
 
-## Ano ang Maliit na mga Modelo ng Wika?
+## Ano ang Maliit na Mga Modelo ng Wika?
 
-Ang Maliit na Modelo ng Wika (SLM) ay kumakatawan sa isang pinaikling bersyon ng isang malaking modelo ng wika (LLM), na ginagamit ang maraming prinsipyo at teknikal na pamamaraan ng LLMs, habang nagpapakita ng makabuluhang mas maliit na gamit sa kompyutasyon.
+Ang Maliit na Modelo ng Wika (SLM) ay kumakatawan sa isang pinaikling bersyon ng malaking modelo ng wika (LLM), gamit ang maraming mga prinsipyo at teknolohiya ng LLM, habang nagpapakita ng malakiang pagbawas sa pangangailangang computational. 
 
-Ang mga SLM ay subset ng mga modelo ng wika na dinisenyo upang makabuo ng tekstong kahawig ng tao. Hindi tulad ng kanilang mas malalaking katumbas, tulad ng GPT-4, ang mga SLM ay mas compact at episyente, na ginagawa silang angkop para sa mga aplikasyon kung saan limitado ang mga computational resources. Sa kabila ng kanilang mas maliit na sukat, maaari pa rin silang magsagawa ng iba't ibang mga gawain. Karaniwan, ang mga SLM ay binubuo sa pamamagitan ng pag-compress o pag-distill ng mga LLM, na naglalayong mapanatili ang malaking bahagi ng orihinal na kakayahan ng modelo at mga kasanayan sa lingguwistika. Ang pagbawas sa laki ng modelo ay nagpapababa ng kabuuang komplikasyon, na ginagawang mas episyente ang mga SLM sa paggamit ng memorya at kinakailangang kapangyarihan sa kompyutasyon. Sa kabila ng mga optimisasyong ito, ang mga SLM ay maaari pa ring magsagawa ng malawak na hanay ng mga gawain sa natural na pagproseso ng wika (NLP):
+Ang mga SLM ay isang bahagi ng mga modelo ng wika na idinisenyo upang makagawa ng teksto na kahalintulad ng tao. Hindi tulad ng kanilang mas malalaking katapat, tulad ng GPT-4, ang mga SLM ay mas compact at mahusay, kaya angkop sila para sa mga aplikasyon kung saan limitado ang mga computational na yaman. Sa kabila ng kanilang mas maliit na sukat, kaya pa rin nilang magsagawa ng iba't ibang gawain. Karaniwan, ang mga SLM ay binubuo sa pamamagitan ng pag-compress o pag-distila ng mga LLM, na naglalayong panatilihin ang malaking bahagi ng orihinal na kakayahan at lingguwistikong mga katangian ng modelo. Ang pagbawas na ito sa laki ng modelo ay nagpapababa sa kabuuang komplikasyon, na ginagawang mas mahusay ang mga SLM sa paggamit ng memorya at mga kinakailangang computational. Sa kabila ng mga optimisasyong ito, kaya pa rin ng mga SLM na magsagawa ng malawak na uri ng mga gawain sa natural na pagproseso ng wika (NLP):
 
-- Paggawa ng Teksto: Paglikha ng magkakaugnay at kontekstwal na angkop na mga pangungusap o talata.  
-- Pagkumpleto ng Teksto: Paghula at pagkompleto ng mga pangungusap base sa ibinigay na prompt.  
-- Pagsasalin: Paglilipat ng teksto mula sa isang wika patungo sa iba.  
-- Pagbubuod: Pagpapaikli ng mahahabang teksto sa mas maikli at mas madaling intindihin na mga buod.
+- Pagbuo ng Teksto: Paglikha ng magkakaugnay at kontekstwalyang angkop na mga pangungusap o talata.
+- Kumpletong Teksto: Paghula at pag-kompleto ng mga pangungusap batay sa ibinigay na prompt.
+- Pagsasalin: Paglilipat ng teksto mula sa isang wika patungo sa iba.
+- Pagbubuod: Pagpapaikli ng mahahabang piraso ng teksto sa mas maiikling buod na madaling maintindihan.
 
-Bagamat may ilang kompromiso sa pagganap o lalim ng pag-unawa kumpara sa malalaking mga katumbas.
+Bagaman may kaunting pagbabawas sa pagganap o lalim ng pag-unawa kumpara sa kanilang mas malalaking katapat. 
 
-## Paano Gumagana ang Maliit na mga Modelo ng Wika?  
-Ang mga SLM ay sinasanay gamit ang napakaraming datos ng teksto. Sa panahon ng pagsasanay, natututuhan nila ang mga pattern at istruktura ng wika, na nagpapahintulot sa kanila na bumuo ng tekstong gramatikal na tama at kontekstwal na angkop. Kasama sa proseso ng pagsasanay ang:
+## Paano Gumagana ang Maliit na mga Modelo ng Wika?
+Ang mga SLM ay sinasanay gamit ang napakalaking dami ng datos ng teksto. Sa panahon ng pagsasanay, natututuhan nila ang mga pattern at istruktura ng wika, na nagbibigay-daan sa kanila upang makabuo ng teksto na parehong gramatikal na tama at kontekstwalyang angkop. Ang proseso ng pagsasanay ay kinabibilangan ng:
 
-- Koleksyon ng Datos: Pangangalap ng malalaking dataset ng teksto mula sa iba't ibang pinagmulan.  
-- Preprocessing: Paglilinis at pag-oorganisa ng datos upang maging angkop para sa pagsasanay.  
-- Pagsasanay: Paggamit ng mga algorithm sa machine learning para turuan ang modelo kung paano unawain at bumuo ng teksto.  
-- Fine-tuning: Pagsasaayos ng modelo upang mapabuti ang pagganap nito sa mga partikular na gawain.
+- Pangangalap ng Datos: Pagtipon ng malalaking dataset ng teksto mula sa iba't ibang mga pinanggalingan.
+- Preprocessing: Paglilinis at pag-oorganisa ng datos upang maging angkop para sa pagsasanay.
+- Pagsasanay: Paggamit ng mga algorithm ng machine learning upang turuan ang modelo kung paano maunawaan at makabuo ng teksto.
+- Fine-Tuning: Pag-aayos ng modelo upang mapabuti ang pagganap nito sa mga partikular na gawain.
 
-Ang pagbuo ng mga SLM ay nakaayon sa lumalaking pangangailangan para sa mga modelong maaring i-deploy sa mga kapaligirang may limitadong resources, gaya ng mga mobile devices o mga edge computing platform, kung saan ang buong-sukat na LLMs ay maaaring hindi praktikal dahil sa matitinding pangangailangan sa resources. Sa pagtuon sa episyensya, pinipili ng mga SLM ang balanse sa pagitan ng pagganap at access, na nagpapahintulot ng mas malawak na aplikasyon sa iba't ibang larangan.
+Ang pag-develop ng SLM ay naaayon sa tumataas na pangangailangan para sa mga modelong maaaring i-deploy sa mga kapaligirang may limitadong yaman, tulad ng mga mobile device o mga plataporma ng edge computing, kung saan maaaring hindi praktikal ang buong saklaw na mga LLM dahil sa mabibigat nitong pangangailangan sa yaman. Sa pamamagitan ng pagtutok sa kahusayan, binabalanse ng mga SLM ang pagganap at accessibility, na nagpapahintulot sa mas malawak na aplikasyon sa iba't ibang larangan.
 
 ![slm](../../../translated_images/tl/slm.4058842744d0444a.webp)
 
 ## Mga Layunin sa Pagkatuto
 
-Sa leksyon na ito, inaasahan naming ipakilala ang kaalaman tungkol sa SLM at pagsamahin ito sa Microsoft Phi-3 upang matutunan ang iba't ibang senaryo sa nilalaman ng teksto, paningin, at MoE.
+Sa araling ito, nais naming ipakilala ang kaalaman tungkol sa SLM at pagsamahin ito sa Microsoft Phi-3 upang matutunan ang iba't ibang mga senaryo sa nilalaman ng teksto, pananaw, at MoE.
 
-Sa pagtatapos ng leksyon, dapat mong masagot ang mga sumusunod na tanong:
+Sa pagtatapos ng araling ito, dapat mong masagot ang mga sumusunod na tanong:
 
-- Ano ang SLM?  
-- Ano ang pagkakaiba ng SLM at LLM?  
-- Ano ang Microsoft Phi-3/3.5 Family?  
+- Ano ang SLM?
+- Ano ang pagkakaiba ng SLM at LLM?
+- Ano ang Microsoft Phi-3/3.5 Family?
 - Paano magpatakbo ng inference gamit ang Microsoft Phi-3/3.5 Family?
 
-Handa ka na ba? Magsimula na tayo.
+Handa ka na ba? Magsimula tayo.
 
-## Ang Pagkakaiba ng Malalaking Modelo ng Wika (LLMs) at Maliit na Modelo ng Wika (SLMs)
+## Ang Pagkakaiba sa pagitan ng Malaking Modelo ng Wika (LLMs) at Maliit na Modelo ng Wika (SLMs)
 
-Ang parehong LLMs at SLMs ay itinayo sa mga pundamental na prinsipyo ng probabilistic machine learning, sumusunod sa magkatulad na mga pamamaraan sa arkitekturang disenyo, metodolohiya ng pagsasanay, proseso ng pagbuo ng datos, at mga teknik sa pag-evaluate ng modelo. Subalit, may ilang mahahalagang pagkakaiba na naghihiwalay sa dalawang uri ng modelong ito.
+Ang parehong LLM at SLM ay itinayo gamit ang mga pundasyong prinsipyo ng probabilistic na machine learning, sumusunod sa magkakatulad na mga pamamaraan sa kanilang disenyo ng arkitektura, mga metodolohiya sa pagsasanay, mga proseso ng pagbuo ng datos, at mga pamamaraan ng ebalwasyon ng modelo. Gayunpaman, may ilang mahahalagang mga salik na nag-iiba sa dalawang uri ng mga modelong ito.
 
-## Mga Aplikasyon ng Maliit na mga Modelo ng Wika
+## Mga Aplikasyon ng Maliit na Modelo ng Wika
 
-Malawak ang aplikasyon ng mga SLM, kabilang ang:
+Ang mga SLM ay may malawak na hanay ng mga aplikasyon, kabilang ang:
 
-- Chatbots: Pagbibigay ng suporta sa kostumer at pakikipag-ugnayan sa mga gumagamit sa paraan ng pag-uusap.  
-- Paglikha ng Nilalaman: Tulong sa mga manunulat sa pagbuo ng mga ideya o kahit buong mga artikulo.  
-- Edukasyon: Pagtulong sa mga estudyante sa mga takdang pagsusulat o pag-aaral ng bagong mga wika.  
-- Accessibility: Paglikha ng mga kagamitan para sa mga indibidwal na may kapansanan, tulad ng mga sistema ng text-to-speech.
+- Chatbots: Pagbibigay ng suporta sa customer at pakikipag-ugnayan sa mga gumagamit sa paraang conversational.
+- Paglikha ng Nilalaman: Pagtulong sa mga manunulat sa pamamagitan ng paglikha ng mga ideya o kahit pagbuo ng buong artikulo.
+- Edukasyon: Pagtulong sa mga estudyante sa pagsulat ng mga takdang-aralin o pag-aaral ng mga bagong wika.
+- Accessibility: Paglikha ng mga kasangkapan para sa mga indibidwal na may kapansanan, tulad ng mga sistema ng teksto-sa-pagsasalita.
 
-**Laki**
+**Sukat**
+  
+Isang pangunahing pagkakaiba sa pagitan ng LLM at SLM ay nasa sukat ng mga modelo. Ang mga LLM, tulad ng ChatGPT (GPT-4), ay maaaring magkaroon ng tinatayang 1.76 trilyong mga parameter, habang ang mga open-source na SLM tulad ng Mistral 7B ay dinisenyo na may mas kaunting mga parameter—mga 7 bilyon. Ang pagkakaibang ito ay pangunahing sanhi ng pagkakaiba sa arkitektura ng modelo at mga proseso ng pagsasanay. Halimbawa, ang ChatGPT ay gumagamit ng self-attention mechanism sa loob ng encoder-decoder na balangkas, samantalang ang Mistral 7B ay gumagamit ng sliding window attention, na nagpapahintulot sa mas epektibong pagsasanay sa isang decoder-only na modelo. Ang pagkakaibang arkitekturang ito ay may malalim na epekto sa komplikasyon at pagganap ng mga modelong ito.
 
-Isang pangunahing pagkakaiba ng LLMs at SLMs ay nasa sukat ng mga modelo. Ang LLMs, tulad ng ChatGPT (GPT-4), ay maaaring magkaroon ng tinatayang 1.76 trilyong parameters, habang ang open-source na mga SLM tulad ng Mistral 7B ay dinisenyo na may mas kakaunting parameters—humigit-kumulang 7 bilyon. Ang pagkakaibang ito ay pangunahing dahilan ng kaibahan sa arkitektura at proseso ng pagsasanay ng modelo. Halimbawa, gumagamit ang ChatGPT ng self-attention mechanism sa loob ng encoder-decoder na framework, samantalang ang Mistral 7B ay gumagamit ng sliding window attention, na nagpapahintulot sa mas episyenteng pagsasanay sa loob ng decoder-only na modelo. Ang kaibahan sa arkitekturang ito ay may malalim na epekto sa komplikasyon at pagganap ng mga modelong ito.
+**Pagkaunawa**
 
-**Pag-unawa**
+Ang mga SLM ay karaniwang optimized para sa pagganap sa mga partikular na domain, kaya sila ay lubhang espesyal pero maaaring limitado sa kanilang kakayahang magbigay ng malawak na kontekstuwal na pag-unawa sa maraming larangan ng kaalaman. Sa kabilang banda, ang LLM ay nagtuturing na mag-modelo ng katalinuhan na kahalintulad ng tao sa mas malawak na antas. Sinanay sa malawak at magkakaibang dataset, ang LLM ay idinisenyo upang mag-perform nang mahusay sa iba’t ibang domain, na nag-aalok ng mas malaking versatility at adaptability. Dahil dito, ang mga LLM ay mas angkop para sa mas malawak na saklaw ng mga downstream na gawain, tulad ng natural language processing at programming.
 
-Ang mga SLM ay karaniwang na-optimize para sa pagganap sa partikular na mga domain, na ginagawa silang mas espesyalisado ngunit potensyal na limitado sa kakayahang magbigay ng malawak na kontekstong pag-unawa sa iba’t ibang larangan ng kaalaman. Sa kabilang banda, ang mga LLM ay naglalayong gayahin ang katalinuhan ng tao sa mas malawak na antas. Sinaanay sa malalaki at magkakaibang dataset, ang mga LLM ay disenyo upang magbigay ng mataas na pagganap sa iba't ibang domain, na nag-aalok ng mas malaking versatility at adaptability. Dahil dito, ang mga LLM ay mas angkop para sa mas malawak na hanay ng mga downstream na gawain, tulad ng natural na pagproseso ng wika at programming.
+**Pagkompyut**
 
-**Kompyutasyon**
+Ang pagsasanay at pag-deploy ng mga LLM ay mabigat na proseso sa yaman, madalas na nangangailangan ng malawakang imprastruktura sa kompyutasyon, kabilang ang malalaking GPU clusters. Halimbawa, ang pagsasanay sa isang modelong tulad ng ChatGPT mula sa simula ay maaaring mangailangan ng libu-libong GPU sa mahabang panahon. Sa kabilang banda, ang mga SLM, na may mas maliit na bilang ng mga parameter, ay mas accessible sa mga tuntunin ng mga yaman sa kompyutasyon. Ang mga modelong tulad ng Mistral 7B ay maaaring sanayin at patakbuhin sa mga lokal na makina na may katamtamang kapasidad ng GPU, bagaman ang pagsasanay ay nangangailangan pa rin ng ilang oras gamit ang maraming GPU.
 
-Ang pagsasanay at pag-deploy ng mga LLM ay nangangailangan ng malalaking resources, madalas nangangailangan ng malawakang kompiyuter o GPU clusters. Halimbawa, ang pagsasanay ng modelong tulad ng ChatGPT mula sa simula ay maaaring mangailangan ng libu-libong GPU sa mahabang panahon. Sa kabilang dako, ang mga SLM, dahil sa mas maliit na bilang ng mga parameter, ay mas madaling ma-access sa pananaw ng computational resources. Ang mga modelong tulad ng Mistral 7B ay maaari nang sanayin at patakbuhin sa mga lokal na makina na may katamtamang GPU kakayahan, bagaman ang pagsasanay ay nangangailangan pa rin ng ilang oras sa maraming GPU.
+**Bias**
 
-**Pagkiling (Bias)**
-
-Ang bias ay kilalang isyu sa mga LLM, pangunahing dahil sa likas ng data ng pagsasanay. Kadalasang umaasa ang mga modelong ito sa raw, bukas na datos mula sa internet, na maaaring kulang o maling nagrerepresenta ng ilang mga grupo, naglalaman ng maling label, o nagpapakita ng lingguwistikong bias na dulot ng dialekto, heograpikal na pagkakaiba, at mga patakaran sa gramatika. Bukod pa rito, ang komplikado ng arkitektura ng LLM ay maaaring hindi sinasadyang magpalala ng bias, na maaaring hindi mapansin nang walang maingat na fine-tuning. Sa kabilang banda, ang mga SLM na sinasanay sa mas kontrolado at domain-specific na mga dataset ay likas na mas hindi gaanong apektado ng ganitong mga bias, bagaman hindi sila ganap na immune dito.
+Ang bias ay isang kilalang isyu sa LLM, pangunahing dahil sa kalikasan ng data ng pagsasanay. Madalas na umaasa ang mga modelong ito sa raw, malayang magagamit na datos mula sa internet, na maaaring hindi kabilang o mali ang pagrepresenta sa ilang mga grupo, magpakilala ng maling pag-label, o magpakita ng lingguwistikong mga bias na naiimpluwensiyahan ng diyalekto, heograpikal na pagkakaiba, at mga tuntunin sa gramatika. Bukod pa rito, ang komplikasyon ng mga arkitektura ng LLM ay maaaring hindi sinasadyang magpalala ng bias, na maaaring hindi mapansin nang walang maingat na fine-tuning. Sa kabilang banda, ang mga SLM, na sinanay sa mas limitadong, domain-specific na mga dataset, ay likas na hindi gaanong madaling maapektuhan ng ganitong mga bias, bagaman hindi sila ganap na immune dito.
 
 **Inference**
 
-Ang mas maliit na sukat ng mga SLM ay nagbibigay sa kanila ng malaking bentaha sa bilis ng inference, na nagpapahintulot sa mabilis na pagbuo ng output sa lokal na hardware nang hindi nangangailangan ng malawakang parallel processing. Samantalang ang LLM, dahil sa kanilang laki at komplikasyon, ay madalas na nangangailangan ng malalaking parallel computational resources upang makamit ang katanggap-tanggap na mga oras ng inference. Ang presensya ng maraming sabay-sabay na gumagamit ay lalo pang nagpapabagal sa reaksyon ng LLM, lalo na kapag ginagamit sa malawakang scale.
+Ang nabawasang sukat ng mga SLM ay nagbibigay ng malaking bentahe sa bilis ng inference, na nagpapahintulot sa kanila na makabuo ng mga output nang mahusay sa lokal na hardware nang hindi nangangailangan ng malawakang parallel na pagproseso. Sa kabilang banda, ang mga LLM, dahil sa kanilang laki at komplikasyon, ay madalas na nangangailangan ng malalaking parallel na mga yaman sa kompyutasyon upang makamit ang katanggap-tanggap na mga oras ng inference. Ang presensya ng maraming kasabay na gumagamit ay lalo pang nagpapabagal sa mga response time ng LLM, lalo na kapag inilalapat sa malawakang sukat.
 
-Sa kabuuan, habang ang parehong LLM at SLM ay may pundamental na base sa machine learning, malaki ang kanilang pagkakaiba sa laki ng modelo, pangangailangan sa resources, kontekstwal na pag-unawa, pagiging sensitibo sa bias, at bilis ng inference. Ang mga pagkakaibang ito ay nagrereplekta ng kanilang angkop na paggamit sa iba’t ibang kaso, kung saan ang LLM ay mas versatile ngunit mabigat sa resources, at ang SLM ay nag-aalok ng mas espesipikong episyensya sa domain na may mas mababang pangangailangan sa kompyutasyon.
+Sa kabuuan, bagaman ang parehong LLM at SLM ay may pundasyong batayan sa machine learning, sila ay malaki ang pagkakaiba sa laki ng modelo, mga kinakailangan sa yaman, kontekstuwal na pag-unawa, pagiging bulnerable sa bias, at bilis ng inference. Ang mga pagkakaibang ito ay nagpapakita ng kani-kanilang angkop na paggamit, kung saan ang LLM ay mas versatile ngunit mabigat ang pangangailangan sa yaman, at ang SLM ay nag-aalok ng mas mabisang kahusayan sa tiyak na domain na may nabawasang pangangailangan sa kompyutasyon.
 
-***Tandaan: Sa leksyon na ito, ipakikilala namin ang SLM gamit ang Microsoft Phi-3 / 3.5 bilang halimbawa.***
+***Tandaan: Sa araling ito, ipakikilala namin ang SLM gamit ang Microsoft Phi-3 / 3.5 bilang halimbawa.***
 
 ## Ipakilala ang Phi-3 / Phi-3.5 Family
 
-Ang Phi-3 / 3.5 Family ay pangunahing nakatuon sa mga aplikasyon sa teksto, paningin, at Agent (MoE):
+Pangunahing tinatarget ng Phi-3 / 3.5 Family ang mga senaryo ng aplikasyon sa teksto, pananaw, at Agent (MoE):
 
 ### Phi-3 / 3.5 Instruct
 
-Pangunahing para sa paggawa ng teksto, kumpletong chat, at pagkuha ng impormasyon mula sa nilalaman, atbp.
+Pangunahing para sa pagbuo ng teksto, kumpletong chat, at pagkuha ng impormasyon sa nilalaman, atbp.
 
 **Phi-3-mini**
 
-Ang 3.8B na modelo ng wika ay available sa Microsoft Azure AI Studio, Hugging Face, at Ollama. Ang mga Phi-3 model ay malaki ang nalalampasan na performance laban sa mga modelo ng pantay o mas malaki ang sukat sa mga pangunahing benchmark (tingnan ang benchmark na numero sa ibaba, mas mataas ang mas maganda). Ang Phi-3-mini ay lumalampas sa mga modelong doble ang laki nito, samantalang ang Phi-3-small at Phi-3-medium ay lumalampas sa mas malalaking modelo, kabilang ang GPT-3.5.
+Ang 3.8B na modelo ng wika ay available sa Microsoft Foundry, Hugging Face, at Ollama. Ang mga Phi-3 na modelo ay malaki ang nalalampasan sa pagganap kumpara sa mga modelong pareho at mas malaki ang sukat sa mga pangunahing benchmark (tingnan ang mga numero ng benchmark sa ibaba, mas mataas na numero ay mas maganda). Ang Phi-3-mini ay nalalampasan ang mga modelong doble ang laki nito, habang ang Phi-3-small at Phi-3-medium ay nalalampasan ang mas malalaking modelo, kabilang ang GPT-3.5.
 
 **Phi-3-small at medium**
 
-Sa 7B parameters lang, pinapalampas ng Phi-3-small ang GPT-3.5T sa iba't ibang benchmark sa wika, pangangatwiran, coding, at matematika.  
+Sa 7B na mga parameter, tinatalo ng Phi-3-small ang GPT-3.5T sa iba't ibang mga benchmark sa wika, pangangatwiran, coding, at matematika.
 
-Ang Phi-3-medium na may 14B parameters ay nagpapatuloy sa trend na ito at lumalampas sa Gemini 1.0 Pro.
+Ang Phi-3-medium na may 14B na mga parameter ay nagpapatuloy ng trend na ito at nalalampasan ang Gemini 1.0 Pro.
 
 **Phi-3.5-mini**
 
-Maari natin itong iisipin bilang upgrade ng Phi-3-mini. Bagaman nananatili ang bilang ng parameters, pinapalakas nito ang kakayahan upang suportahan ang maraming wika (sumusuporta sa higit sa 20 wika: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish, French, German, Hebrew, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, Ukrainian) at nagpapalakas ng suporta para sa mahabang konteksto.
+Maaari natin itong isipin bilang pag-upgrade ng Phi-3-mini. Habang nananatili ang bilang ng mga parameter, pinapabuti nito ang kakayahan na suportahan ang maraming wika (sumusuporta sa 20+ na wika: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish, French, German, Hebrew, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, Ukrainian) ​​at nagdaragdag ng mas matibay na suporta para sa mahabang konteksto.
 
-Ang Phi-3.5-mini na may 3.8B parameters ay lumalampas sa mga modelo ng parehong laki at kapantay ng mga modelo na doble ang laki.
+Ang Phi-3.5-mini na may 3.8B parameter ay nalalampasan ang mga modelong wika na may kaparehong laki at katumbas ng mga modelo ng doble ang laki nito.
 
 ### Phi-3 / 3.5 Vision
 
-Maari nating isipin ang Instruct model ng Phi-3/3.5 bilang kakayahan ng Phi sa pag-unawa, at ang Vision naman ang nagbibigay kay Phi ng mga mata para maunawaan ang mundo.
+Maaari nating isipin ang Instruct na modelo ng Phi-3/3.5 bilang kakayahan ng Phi na umunawa, at ang Vision ay ang nagbibigay ng mga mata kay Phi para maintindihan ang mundo.
+
 
 **Phi-3-Vision**
 
-Ang Phi-3-vision, na may 4.2B parameters lang, ay nagpapatuloy sa trend na ito at lumalampas sa mas malalaking modelo gaya ng Claude-3 Haiku at Gemini 1.0 Pro V sa mga pangkalahatang gawain sa visual reasoning, OCR, at pag-unawa sa mga table at diagram.
+Ang Phi-3-vision, na may 4.2B lamang na parameter, ay nagpapatuloy ng trend na ito at nalalampasan ang mas malalaking modelo tulad ng Claude-3 Haiku at Gemini 1.0 Pro V sa mga pangkalahatang gawain sa pangangatwiran ng biswal, OCR, at pag-unawa sa mga talahanayan at diagram.
+
 
 **Phi-3.5-Vision**
 
-Ang Phi-3.5-Vision ay upgrade ng Phi-3-Vision, na nagdadagdag ng suporta para sa maraming larawan. Maaari mo itong isipin bilang pagpapabuti sa vision, hindi lang nakikita ang mga larawan kundi pati mga video rin.
+Ang Phi-3.5-Vision ay isang pag-upgrade rin ng Phi-3-Vision, na nagdaragdag ng suporta para sa maraming mga larawan. Maaari mo itong isipin bilang pagpapabuti sa pananaw; hindi lamang nakikita mo ang mga larawan, kundi pati na rin ang mga video.
 
-Ang Phi-3.5-vision ay lumalampas sa mas malalaking modelo gaya ng Claude-3.5 Sonnet at Gemini 1.5 Flash sa OCR, pag-unawa sa mga table at chart, at kapantay nila sa pangkalahatang visual knowledge reasoning. Sinusuportahan ang multi-frame input, ibig sabihin, gumagawa ng pangangatwiran sa maraming input na larawan.
+Nalalampasan ng Phi-3.5-vision ang mas malalaking modelo tulad ng Claude-3.5 Sonnet at Gemini 1.5 Flash sa OCR, pag-unawa sa mga talahanayan at tsart, at pantay sa mga gawain sa pangkalahatang pangangatwiran ng biswal na kaalaman. Sumusuporta sa multi-frame input, ibig sabihin ay pagbibigay ng pangangatwiran sa maraming input na mga larawan
+
 
 ### Phi-3.5-MoE
 
-***Mixture of Experts (MoE)*** ay nagpapahintulot sa mga modelo na ma-pretrain gamit ang mas kaunting compute, na nangangahulugan na maaari mong malaki ang scale ng modelo o laki ng dataset gamit ang parehong compute budget bilang isang dense na modelo. Sa partikular, ang isang MoE model ay dapat makamit ang parehong kalidad tulad ng dense counterpart nito nang mas mabilis sa panahon ng pretraining.
+***Mixture of Experts (MoE)*** ay nagpapahintulot sa mga modelong ma-pretrain gamit ang mas kaunting compute, na ibig sabihin ay maaari mong palakihin nang malaki ang laki ng modelo o dataset gamit ang parehong budget sa compute tulad ng dense model. Partikular, ang isang MoE na modelo ay dapat makamit ang parehong kalidad tulad ng dense counterpart nito nang mas mabilis sa panahon ng pretraining.
 
-Ang Phi-3.5-MoE ay binubuo ng 16x3.8B expert modules. Ang Phi-3.5-MoE na may 6.6B active parameters lang ay nakakamit ng katulad na antas ng pangangatwiran, pag-unawa sa wika, at matematika tulad ng mas malalaking mga modelo.
+Binubuo ang Phi-3.5-MoE ng 16x3.8B expert modules. Ang Phi-3.5-MoE, na may 6.6B lamang na aktibong parameter, ay nakakamit ng katulad na antas ng pangangatwiran, pag-unawa sa wika, at matematika tulad ng mas malalaking mga modelo.
 
-Maaari nating gamitin ang Phi-3/3.5 Family na modelo base sa iba't ibang mga senaryo. Hindi tulad ng LLM, maaari mong i-deploy ang Phi-3/3.5-mini o Phi-3/3.5-Vision sa mga edge device.
+Maaari nating gamitin ang modelong Phi-3/3.5 Family base sa iba't ibang mga senaryo. Hindi tulad ng LLM, maaari mong i-deploy ang Phi-3/3.5-mini o Phi-3/3.5-Vision sa mga edge device.
 
-## Paano Gamitin ang mga Modelo ng Phi-3/3.5 Family
 
-Nais naming gamitin ang Phi-3/3.5 sa iba't ibang mga senaryo. Susunod, gagamitin natin ang Phi-3/3.5 base sa iba't ibang mga senaryo.
+## Paano Gamitin ang Mga Modelong Phi-3/3.5 Family
+
+Nais naming gamitin ang Phi-3/3.5 sa iba't ibang mga senaryo. Susunod, gagamitin natin ang Phi-3/3.5 batay sa iba't ibang mga senaryo.
 
 ![phi3](../../../translated_images/tl/phi3.655208c3186ae381.webp)
 
 ### Inference sa pamamagitan ng Cloud APIs
 
-**GitHub Models**
+**Microsoft Foundry Models**
 
-Ang GitHub Models ang pinaka-direktang paraan. Maaari mong mabilis na ma-access ang Phi-3/3.5-Instruct model sa pamamagitan ng GitHub Models. Kasama ang Azure AI Inference SDK / OpenAI SDK, maari mong ma-access ang API gamit ang code upang makumpleto ang tawag sa Phi-3/3.5-Instruct. Maaari ka ring magsubok ng iba't ibang mga epekto gamit ang Playground.
+> **Tandaan:** Ang GitHub Models ay magreretire sa katapusan ng Hulyo 2026. Ang [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) ang direktang kapalit.
 
-- Demo: Paghahambing ng mga epekto ng Phi-3-mini at Phi-3.5-mini sa mga senaryo sa Chinese
+Ang Microsoft Foundry Models ang pinakadirektang paraan. Maaari kang mabilis na makakuha ng access sa Phi-3/3.5-Instruct model sa pamamagitan ng Foundry model catalog. Pinagsama sa Azure AI Inference SDK / OpenAI SDK, maaari mong i-access ang API sa pamamagitan ng code upang kumpletuhin ang tawag sa Phi-3/3.5-Instruct. Maaari mo ring subukan ang iba't ibang epekto sa pamamagitan ng Playground.
+
+- Demo: Paghahambing ng epekto ng Phi-3-mini at Phi-3.5-mini sa mga senaryong Tsino
 
 ![phi3](../../../translated_images/tl/gh1.126c6139713b622b.webp)
 
 ![phi35](../../../translated_images/tl/gh2.07d7985af66f178d.webp)
 
-**Azure AI Studio**
 
-O kung nais mong gamitin ang vision at MoE na mga modelo, maaari mong gamitin ang Azure AI Studio upang makumpleto ang tawag. Kung interesado ka, maaari mong basahin ang Phi-3 Cookbook upang matutunan kung paano tawagin ang Phi-3/3.5 Instruct, Vision, MoE gamit ang Azure AI Studio [I-click ang link na ito](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst)
+**Microsoft Foundry**
+
+O kung nais nating gamitin ang mga modelo sa vision at MoE, maaari mong gamitin ang Microsoft Foundry para kumpletuhin ang tawag. Kung interesado ka, maaari mong basahin ang Phi-3 Cookbook para matutunan kung paano tawagan ang Phi-3/3.5 Instruct, Vision, MoE sa pamamagitan ng Microsoft Foundry [Pindutin ang link na ito](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst)
+
 
 **NVIDIA NIM**
 
-Bukod sa cloud-based Model Catalog solutions na iniaalok ng Azure at GitHub, maaari mo ring gamitin ang [NVIDIA NIM](https://developer.nvidia.com/nim?WT.mc_id=academic-105485-koreyst) upang makumpleto ang mga kaugnay na tawag. Maaari mong bisitahin ang NVIDIA NIM upang gawin ang API calls para sa Phi-3/3.5 Family. Ang NVIDIA NIM (NVIDIA Inference Microservices) ay isang set ng mga pinabilis na inference microservices na idinisenyo upang tulungan ang mga developer na mabilis na i-deploy ang AI models sa iba't ibang mga kapaligiran, kabilang ang mga cloud, data centers, at workstations.
+Bilang karagdagan sa cloud-based na Microsoft Foundry Models catalog, maaari mo ring gamitin ang [NVIDIA NIM](https://developer.nvidia.com/nim?WT.mc_id=academic-105485-koreyst) upang makumpleto ang mga kaugnay na tawag. Maaari mong bisitahin ang NVIDIA NIM upang kumpletuhin ang mga tawag sa API ng Phi-3/3.5 Family. Ang NVIDIA NIM (NVIDIA Inference Microservices) ay isang set ng mga pabilisin na inference microservices na dinisenyo upang tulungan ang mga developer mag-deploy ng mga AI model nang mahusay sa iba't ibang mga kapaligiran, kabilang ang mga cloud, data centers, at workstations.
 
-Narito ang ilang mga pangunahing tampok ng NVIDIA NIM:
-- **Daliang I-deploy:** Pinapayagan ng NIM ang deployment ng mga AI model gamit ang isang command lamang, ginagawa itong madali upang isama sa mga umiiral na workflows.
-- **Optimizadong Performance:** Ginagamit nito ang pre-optimized inference engines ng NVIDIA, tulad ng TensorRT at TensorRT-LLM, upang matiyak ang mababang latency at mataas na throughput.
-- **Scalability:** Sinusuportahan ng NIM ang autoscaling sa Kubernetes, na nagpapahintulot na epektibong mahawakan ang iba't ibang workload.
-- **Seguridad at Kontrol:** Maaaring mapanatili ng mga organisasyon ang kontrol sa kanilang data at aplikasyon sa pamamagitan ng self-hosting ng NIM microservices sa kanilang sariling managed infrastructure.
-- **Standard na APIs:** Nagbibigay ang NIM ng industry-standard APIs, na nagpapadali sa paggawa at pag-integrate ng mga AI application tulad ng chatbots, AI assistants, at marami pang iba.
+Narito ang ilan sa mga pangunahing tampok ng NVIDIA NIM:
 
-Ang NIM ay bahagi ng NVIDIA AI Enterprise, na nilalayon na gawing simple ang deployment at operationalization ng mga AI model, na tinitiyak na magpapatakbo ang mga ito nang mahusay sa NVIDIA GPUs.
+- **Dali ng Pag-deploy:** Pinapayagan ng NIM ang pag-deploy ng mga AI model gamit ang isang utos lang, na ginagawang madali itong ipasok sa mga umiiral na workflow.
+
+- **Pinahusay na Pagganap:** Ginagamit nito ang NVIDIA’s pre-optimized inference engines, tulad ng TensorRT at TensorRT-LLM, upang matiyak ang mababang latency at mataas na throughput.
+- **Scalability:** Sinusuportahan ng NIM ang autoscaling sa Kubernetes, na nagpapahintulot dito na epektibong hawakan ang iba't ibang workload.
+- **Seguridad at Kontrol:** Maaaring panatilihin ng mga organisasyon ang kontrol sa kanilang data at mga aplikasyon sa pamamagitan ng self-hosting ng NIM microservices sa kanilang sariling pinamamahalaang imprastruktura.
+- **Standard APIs:** Nagbibigay ang NIM ng mga industry-standard na API, kaya madaling bumuo at mag-integrate ng mga aplikasyon ng AI tulad ng mga chatbot, AI assistants, at iba pa.
+
+Bahagi ang NIM ng NVIDIA AI Enterprise, na naglalayong gawing mas simple ang pagpapatupad at operasyon ng mga modelo ng AI, na tinitiyak na tumatakbo sila nang mahusay sa NVIDIA GPUs.
 
 - Demo: Paggamit ng NVIDIA NIM upang tawagan ang Phi-3.5-Vision-API  [[I-click ang link na ito](./python/Phi-3-Vision-Nividia-NIM.ipynb?WT.mc_id=academic-105485-koreyst)]
 
 
 ### Pagpapatakbo ng Phi-3/3.5 Nang Lokal
-Ang inference kaugnay ng Phi-3, o anumang language model tulad ng GPT-3, ay tumutukoy sa proseso ng paglikha ng mga tugon o prediksyon batay sa input na natatanggap nito. Kapag nagbigay ka ng prompt o tanong sa Phi-3, ginagamit nito ang kanyang sinanay na neural network upang hulaan ang pinaka-malamang at kaugnay na tugon sa pamamagitan ng pag-aanalisa ng mga pattern at relasyon sa data kung saan ito sinanay.
+Ang inference kaugnay ng Phi-3, o anumang language model tulad ng GPT-3, ay tumutukoy sa proseso ng paggawa ng mga tugon o prediksyon batay sa input na natatanggap nito. Kapag nagbigay ka ng prompt o tanong sa Phi-3, ginagamit nito ang kanyang sinanay na neural network upang mahinuha ang pinaka-posible at may kaugnayang sagot sa pamamagitan ng pagsusuri sa mga pattern at relasyon sa data na pinag-aralan nito.
 
-**Hugging Face Transformer**  
-Ang Hugging Face Transformers ay isang makapangyarihang library na dinisenyo para sa natural language processing (NLP) at iba pang machine learning na gawain. Narito ang ilang mahahalagang punto tungkol dito:
+**Hugging Face Transformer**
+Ang Hugging Face Transformers ay isang makapangyarihang library na dinisenyo para sa natural language processing (NLP) at iba pang mga gawain sa machine learning. Narito ang ilang mahahalagang punto tungkol dito:
 
-1. **Mga Pretrained na Modelo**: Nagbibigay ito ng libu-libong pretrained models na maaaring gamitin para sa iba't ibang gawain tulad ng text classification, named entity recognition, question answering, summarization, translation, at text generation.
+1. **Pretrained Models**: Nagbibigay ito ng libu-libong pretrained models na maaaring gamitin para sa iba't ibang gawain tulad ng text classification, named entity recognition, question answering, summarization, translation, at text generation.
 
-2. **Interoperability ng Frameworks**: Sinusuportahan ng library ang maraming deep learning frameworks, kabilang ang PyTorch, TensorFlow, at JAX. Pinapayagan ka nitong mag-train ng modelo sa isang framework at gamitin ito sa iba.
+2. **Framework Interoperability**: Sinusuportahan ng library ang maraming deep learning frameworks, kabilang ang PyTorch, TensorFlow, at JAX. Ito ay nagpapahintulot sa iyo na magsanay ng modelo sa isang framework at gamitin ito sa iba.
 
-3. **Multimodal na Kakayahan**: Bukod sa NLP, sinusuportahan rin ng Hugging Face Transformers ang mga gawain sa computer vision (hal., image classification, object detection) at audio processing (hal., speech recognition, audio classification).
+3. **Multimodal Capabilities**: Bukod sa NLP, sinusuportahan din ng Hugging Face Transformers ang mga gawain sa computer vision (hal., image classification, object detection) at audio processing (hal., speech recognition, audio classification).
 
-4. **Kadalian ng Paggamit**: Nagbibigay ang library ng APIs at mga tool upang madaling ma-download at ma-fine tune ang mga modelo, kaya madaling ma-access ng mga baguhan at eksperto.
+4. **Kadalian ng Paggamit**: Nag-aalok ang library ng mga API at tool upang madaliang mag-download at mag-fine-tune ng mga modelo, na ginagawang accessible para sa mga baguhan at eksperto.
 
-5. **Komunidad at Mga Resources**: May masiglang komunidad ang Hugging Face at malawak na dokumentasyon, mga tutorial, at mga gabay upang tulungan ang mga gumagamit na magsimula at magamit nang husto ang library.  
+5. **Komunidad at Mga Mapagkukunan**: May buhay na komunidad ang Hugging Face at malawak na dokumentasyon, mga tutorial, at mga gabay upang matulungan ang mga gumagamit na makapagsimula at magamit nang husto ang library.
 [opisyal na dokumentasyon](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) o ang kanilang [GitHub repository](https://github.com/huggingface/transformers?WT.mc_id=academic-105485-koreyst).
 
-Ito ang pinaka-karaniwang ginagamit na paraan, ngunit nangangailangan din ito ng GPU acceleration. Sa katunayan, ang mga scenario tulad ng Vision at MoE ay nangangailangan ng maraming kalkulasyon, na magiging mabagal sa CPU kung hindi ito na-quantize.
+Ito ang pinaka-karaniwang paraan ng paggamit, ngunit nangangailangan din ito ng GPU acceleration. Pagkatapos ng lahat, ang mga senaryo tulad ng Vision at MoE ay nangangailangan ng maraming kalkulasyon, na magiging napakabagal kung CPU lang ang gagamitin kung hindi ito na-quantize.
+
 
 - Demo: Paggamit ng Transformer upang tawagan ang Phi-3.5-Instruct [I-click ang link na ito](./python/phi35-instruct-demo.ipynb?WT.mc_id=academic-105485-koreyst)
 
@@ -185,8 +196,9 @@ Ito ang pinaka-karaniwang ginagamit na paraan, ngunit nangangailangan din ito ng
 
 - Demo: Paggamit ng Transformer upang tawagan ang Phi-3.5-MoE [I-click ang link na ito](./python/phi35_moe_demo.ipynb?WT.mc_id=academic-105485-koreyst)
 
-**Ollama**  
-[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) ay isang platform na idinisenyo upang gawing mas madali ang pagpapatakbo ng malalaking language models (LLMs) nang lokal sa iyong makina. Sinusuportahan nito ang iba't ibang modelo tulad ng Llama 3.1, Phi 3, Mistral, at Gemma 2, at iba pa. Pinapasimple ng platform ang proseso sa pamamagitan ng pagsasama-sama ng mga timbang ng modelo, configuration, at data sa isang package, na nagpapadali sa mga gumagamit na i-customize at lumikha ng kanilang sariling mga modelo. Magagamit ang Ollama para sa macOS, Linux, at Windows. Isang maganda itong kasangkapan kung nais mong mag-eksperimento o mag-deploy ng LLM nang hindi umaasa sa cloud services. Ang Ollama ang pinaka-direktang paraan, kailangan mo lang patakbuhin ang sumusunod na command.
+**Ollama**
+[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) ay isang platform na dinisenyo upang gawing mas madali ang pagpapatakbo ng malalaking language model (LLMs) nang lokal sa iyong makina. Sinusuportahan nito ang iba't ibang modelo tulad ng Llama 3.1, Phi 3, Mistral, at Gemma 2, bukod sa iba pa. Pinapasimple ng platform ang proseso sa pamamagitan ng pagsasama-sama ng model weights, configuration, at data sa isang pakete, na ginagawang mas accessible para sa mga gumagamit na i-customize at gumawa ng kanilang sariling mga modelo. Available ang Ollama para sa macOS, Linux, at Windows. Ito ay isang mahusay na tool kung nais mong mag-eksperimento o mag-deploy ng LLMs nang hindi umaasa sa mga cloud service. Ang Ollama ang pinaka-direktang paraan, kailangan mo lang patakbuhin ang sumusunod na utos.
+
 
 ```bash
 
@@ -194,41 +206,67 @@ ollama run phi3.5
 
 ```
 
+**Foundry Local**
+
+[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) ay offline, on-device runtime ng Microsoft para sa pagpapatakbo ng mga modelo tulad ng Phi nang ganap sa sarili mong hardware - hindi kailangan ng Azure subscription, API key, o koneksyon sa network. Awtomatikong pinipili nito ang pinakamahusay na execution provider na available (NPU, GPU, o CPU) at nag-eexpose ng OpenAI-compatible endpoint, kaya ang umiiral na `openai`/Azure AI Inference SDK code ay maaaring tumuro dito nang may kaunting pagbabago lamang. Tingnan ang [Foundry Local documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) upang makapagsimula.
+
+```bash
+
+winget install Microsoft.FoundryLocal
+foundry model run phi-3.5-mini
+
+```
+
+O gamitin ang SDK nang direkta sa Python:
+
+```bash
+
+pip install foundry-local-sdk
+
+```
+
+```python
+
+from foundry_local import FoundryLocalManager
+
+manager = FoundryLocalManager("phi-3.5-mini")
+print(manager.endpoint, manager.api_key)
+
+```
 
 **ONNX Runtime para sa GenAI**
 
-[ONNX Runtime](https://github.com/microsoft/onnxruntime-genai?WT.mc_id=academic-105485-koreyst) ay isang cross-platform inference at training machine-learning accelerator. Ang ONNX Runtime para sa Generative AI (GENAI) ay isang makapangyarihang kasangkapan na tumutulong sa iyo na magpatakbo ng mga generative AI model nang mahusay sa iba't ibang platform. 
+[ONNX Runtime](https://github.com/microsoft/onnxruntime-genai?WT.mc_id=academic-105485-koreyst) ay isang cross-platform inference at training machine-learning accelerator. Ang ONNX Runtime para sa Generative AI (GENAI) ay isang makapangyarihang tool na tumutulong sa iyo na patakbuhin nang mahusay ang mga generative AI models sa iba't ibang plataporma.
 
-## Ano ang ONNX Runtime?  
-Ang ONNX Runtime ay isang open-source na proyekto na nagpapagana ng high-performance inference ng machine learning models. Sinusuportahan nito ang mga modelo sa Open Neural Network Exchange (ONNX) format, na isang pamantayan para sa representasyon ng machine learning models. Ang ONNX Runtime inference ay makapagbibigay ng mas mabilis na karanasan para sa customer at mas mababang gastos, sinusuportahan ang mga modelo mula sa mga deep learning frameworks tulad ng PyTorch at TensorFlow/Keras pati na rin ang mga klasikong machine learning libraries tulad ng scikit-learn, LightGBM, XGBoost, at iba pa. Compatible ang ONNX Runtime sa iba't ibang hardware, drivers, at operating systems, at nagbibigay ng optimal performance sa pamamagitan ng paggamit ng hardware accelerators kapag naaangkop kasabay ng graph optimizations at transforms.
+## Ano ang ONNX Runtime?
+Ang ONNX Runtime ay isang open-source na proyekto na nagbibigay-daan sa mataas na performance na inference ng mga machine learning models. Sinusuportahan nito ang mga modelo sa Open Neural Network Exchange (ONNX) format, na isang standard para sa representasyon ng mga modelo sa machine learning. Ang ONNX Runtime inference ay maaaring magbigay ng mas mabilis na karanasan sa customer at mas mababang gastos, sinusuportahan ang mga modelo mula sa deep learning frameworks tulad ng PyTorch at TensorFlow/Keras pati na rin sa mga klasikong machine learning libraries tulad ng scikit-learn, LightGBM, XGBoost, atbp. Compatible ang ONNX Runtime sa iba't ibang hardware, drivers, at operating systems, at nagbibigay ng optimal na performance sa pamamagitan ng paggamit ng hardware accelerators kung saan angkop pati na rin ang graph optimizations at transforms.
 
-## Ano ang Generative AI?  
-Ang Generative AI ay tumutukoy sa mga AI system na kayang gumawa ng bagong nilalaman, gaya ng teksto, mga imahe, o musika, batay sa data na kanilang sinanay. Mga halimbawa nito ay mga language models tulad ng GPT-3 at mga image generation models tulad ng Stable Diffusion. Nagbibigay ang ONNX Runtime para sa GenAI library ng generative AI loop para sa ONNX models, kabilang ang inference gamit ang ONNX Runtime, logits processing, search at sampling, at KV cache management.
+## Ano ang Generative AI?
+Ang Generative AI ay tumutukoy sa mga sistema ng AI na kayang gumawa ng bagong nilalaman, tulad ng teksto, mga larawan, o musika, batay sa mga data na pinag-aralan nila. Halimbawa nito ang mga language models tulad ng GPT-3 at mga image generation models tulad ng Stable Diffusion. Nagbibigay ang ONNX Runtime para sa GenAI library ng generative AI loop para sa ONNX models, kabilang ang inference gamit ang ONNX Runtime, logits processing, search at sampling, at KV cache management.
 
-## ONNX Runtime para sa GENAI  
-Pinalalawak ng ONNX Runtime para sa GENAI ang kakayahan ng ONNX Runtime para suportahan ang mga generative AI models. Narito ang ilang mga pangunahing katangian:
+## ONNX Runtime para sa GENAI
+Pinalalawak ng ONNX Runtime para sa GENAI ang mga kakayahan ng ONNX Runtime upang suportahan ang mga generative AI models. Narito ang ilang mahahalagang tampok:
 
 - **Malawak na Suporta sa Platform:** Gumagana ito sa iba't ibang platform, kabilang ang Windows, Linux, macOS, Android, at iOS.
-- **Suporta sa Modelo:** Sinusuportahan nito ang maraming sikat na generative AI models, gaya ng LLaMA, GPT-Neo, BLOOM, at iba pa.
-- **Optimizasyon sa Performance:** May mga optimizations ito para sa iba't ibang hardware accelerators tulad ng NVIDIA GPUs, AMD GPUs, at iba pa.
-- **Kadalian ng Paggamit:** Nagbibigay ito ng mga API para sa madaling integrasyon sa mga aplikasyon, na nagpapahintulot sa iyo na gumawa ng teksto, mga imahe, at iba pang nilalaman gamit ang kakaunting code.
-- Maaaring tawagan ng mga user ang mataas na antas na generate() method, o paganahin ang bawat pag-ikot ng modelo sa isang loop, na gumagawa ng isang token sa isang pagkakataon, at opsyonal na ina-update ang mga parameter ng generation sa loob ng loop.
-- Sinusuportahan din ng ONNX runtime ang greedy/beam search at TopP, TopK sampling upang gumawa ng mga token sequence at built-in na logits processing tulad ng repetition penalties. Madali ka ring makakapagdagdag ng custom na scoring.
+- **Suporta sa Modelo:** Sinusuportahan nito ang maraming tanyag na generative AI models, tulad ng LLaMA, GPT-Neo, BLOOM, at iba pa.
+- **Pag-optimize ng Performance:** May kasamang optimizations para sa iba't ibang hardware accelerators tulad ng NVIDIA GPUs, AMD GPUs, at iba pa2.
+- **Kadalian ng Paggamit:** Nagbibigay ito ng mga API para sa madaling integrasyon sa mga aplikasyon, na nagpapahintulot sa iyo na gumawa ng teksto, mga larawan, at iba pang nilalaman gamit ang kaunting code lang.
+- Maaaring tawagan ng mga gumagamit ang mataas na antas na generate() method, o patakbuhin ang bawat iterasyon ng modelo sa isang loop, na bumubuo ng isang token sa bawat pagkakataon, at opsyonal na ina-update ang mga generation parameters sa loob ng loop.
+- Ang ONNX runtime ay may suporta rin para sa greedy/beam search at TopP, TopK sampling upang gumawa ng mga token sequences at may built-in na logits processing tulad ng repetition penalties. Maaari ka ring madaling magdagdag ng custom scoring.
 
-## Paano Magsimula  
-Upang makapagsimula sa ONNX Runtime para sa GENAI, maaari mong sundan ang mga hakbang na ito:
+## Pagsisimula
+Upang makapagsimula sa ONNX Runtime para sa GENAI, maaari mong sundin ang mga hakbang na ito:
 
-### Mag-install ng ONNX Runtime:  
+### I-install ang ONNX Runtime:
 ```Python
 pip install onnxruntime
 ```
-  
-### Mag-install ng Generative AI Extensions:  
+### I-install ang Generative AI Extensions:
 ```Python
 pip install onnxruntime-genai
 ```
-  
-### Patakbuhin ang Modelo: Narito ang simpleng halimbawa sa Python:  
+
+### Patakbuhin ang isang Modelo: Narito ang simpleng halimbawa sa Python:
 ```Python
 import onnxruntime_genai as og
 
@@ -246,8 +284,7 @@ output_text = tokenizer.decode(output_tokens)
 
 print(output_text) 
 ```
-  
-### Demo:Paggamit ng ONNX Runtime GenAI upang tawagan ang Phi-3.5-Vision  
+### Demo:Paggamit ng ONNX Runtime GenAI upang tawagan ang Phi-3.5-Vision
 
 
 ```python
@@ -301,18 +338,18 @@ while not generator.is_done():
 ```
 
 
-**Iba Pa**  
+**Iba pa**
 
-Bukod sa mga reference method ng ONNX Runtime at Ollama, maaari rin nating kumpletuhin ang mga reference ng quantitative models batay sa mga reference method ng modelo na ibinibigay ng iba't ibang manufacturer. Gaya ng Apple MLX framework na may Apple Metal, Qualcomm QNN na may NPU, Intel OpenVINO na may CPU/GPU, atbp. Maaari ka ring makakuha ng higit pang nilalaman mula sa [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst)
+Bukod sa ONNX Runtime, Ollama, at Foundry Local na mga reference methods, maaari rin nating kompletuhin ang reference ng quantitative models batay sa mga model reference methods na ibinigay ng iba't ibang mga tagagawa. Tulad ng Apple MLX framework na may Apple Metal, Qualcomm QNN na may NPU, Intel OpenVINO na may CPU/GPU, atbp. Maaari ka ring makakuha ng higit pang nilalaman mula sa [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst)
 
 
-## Higit Pa  
+## Higit Pa
 
-Natutunan na natin ang mga batayan ng Phi-3/3.5 Family, ngunit upang matuto pa tungkol sa SLM kailangan natin ng mas malalim na kaalaman. Makakahanap ka ng mga sagot sa Phi-3 Cookbook. Kung nais mong matuto pa, bisitahin ang [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst).
+Napag-aralan na natin ang mga batayan ng Phi-3/3.5 Family, ngunit upang matutunan pa ang tungkol sa SLM kailangan natin ng mas maraming kaalaman. Maaari mong makita ang mga sagot sa Phi-3 Cookbook. Kung nais mong matuto pa, mangyaring bisitahin ang [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst).
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Paunawa**:
-Ang dokumentong ito ay isinalin gamit ang AI na serbisyo sa pagsasalin na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat nagsusumikap kami para sa katumpakan, pakatandaan na ang awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang sariling wika ang dapat ituring na opisyal na sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang pagsasalin ng isang propesyonal na tagasalin na tao. Hindi kami mananagot sa anumang maling pagkaunawa o maling interpretasyon na nagmumula sa paggamit ng pagsasaling ito.
+**Pagtatanggi**:
+Ang dokumentong ito ay isinalin gamit ang serbisyo ng AI translation na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't nagsusumikap kami para sa katumpakan, pakatandaan na ang awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na pangunahing sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang maling pagkakaintindi o maling interpretasyon na nagmula sa paggamit ng pagsasaling ito.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,51 +1,53 @@
-# Configurare în cloud ☁️ – GitHub Codespaces
+# Configurare Cloud ☁️ – GitHub Codespaces
 
 **Folosește acest ghid dacă nu vrei să instalezi nimic local.**  
-Codespaces îți oferă gratuit o instanță VS Code direct în browser, cu toate dependențele deja instalate.
+Codespaces îți oferă o instanță VS Code gratuită, în browser, cu toate dependențele preinstalate.
 
 ---
 
-## 1.  De ce Codespaces?
+## 1. De ce Codespaces?
 
 | Beneficiu | Ce înseamnă pentru tine |
-|-----------|------------------------|
-| ✅ Fără instalări | Funcționează pe Chromebook, iPad, PC-uri din laboratorul școlii… |
-| ✅ Container de dezvoltare preconfigurat | Python 3, Node.js, .NET, Java sunt deja incluse |
-| ✅ Cotă gratuită | Conturile personale primesc **120 core-hours / 60 GB-hours pe lună** |
+|---------|--------------------------|
+| ✅ Fără instalări | Funcționează pe Chromebook, iPad, PC-uri de laborator școlar… |
+| ✅ Container dev preconstruit | Python 3, Node.js, .NET, Java deja incluse |
+| ✅ Cotă gratuită | Conturile personale primesc **120 ore CPU / 60 GB-oră pe lună** |
 
-> 💡 **Tip**  
-> Menține-ți cota în limite oprind sau ștergând codespaces nefolosite  
-> (View ▸ Command Palette ▸ *Codespaces: Stop Codespace*).
+> 💡 **Sfat**  
+> Menține-ți cota sănătoasă prin **oprirea** sau **ștergerea** codespaces inactivi  
+> (Vizualizează ▸ Command Palette ▸ *Codespaces: Stop Codespace*).
 
 ---
 
-## 2.  Creează un Codespace (un singur click)
+## 2. Creează un Codespace (un singur clic)
 
-1. **Fork-uiește** acest repo (butonul **Fork** din dreapta sus).  
-2. În fork-ul tău, apasă **Code ▸ Codespaces ▸ Create codespace on main**.  
-   ![Dialog care arată butoanele pentru crearea unui codespace](../../../00-course-setup/images/who-will-pay.webp)
+1. **Fork** acest repo (butonul **Fork** din dreapta sus).  
+2. În forkul tău, apasă **Code ▸ Codespaces ▸ Create codespace on main**.  
+   ![Dialog care arată butoanele pentru crearea unui codespace](../../../translated_images/ro/who-will-pay.4c0609b1c7780f44.webp)
 
-✅ Se va deschide o fereastră VS Code în browser și containerul de dezvoltare va începe să se construiască.
-Prima dată durează **~2 minute**.
+✅ Se deschide o fereastră VS Code în browser și începe construirea containerului dev.
+Acest proces durează **~2 minute** prima dată.
 
-## 3. Adaugă cheia ta API (în siguranță)
+## 3. Adaugă cheia API (în mod sigur)
 
-### Opțiunea A Secrete Codespaces — Recomandat
+### Opțiunea A Secrets Codespaces — Recomandat
 
-1. ⚙️ Iconița de setări -> Command Palette-> Codespaces : Manage user secret -> Add a new secret.
+1. ⚙️ Iconița setări -> Command Palette-> Codespaces : Manage user secret -> Add a new secret.
 2. Nume: OPENAI_API_KEY
-3. Valoare: lipește cheia ta → Add secret
+3. Valoare: lipește cheia → Add secret
 
-Gata—codul nostru o va detecta automat.
+Gata—codul nostru o va prelua automat.
 
-### Opțiunea B Fișier .env (dacă chiar ai nevoie)
+### Opțiunea B fișier .env (doar dacă chiar ai nevoie)
 
 ```bash
 cp .env.copy .env
-code .env         # fill in OPENAI_API_KEY=your_key_here
+code .env         # completați OPENAI_API_KEY=cheia_dumneavoastră_aici
 ```
 
 ---
 
-**Declarație de responsabilitate**:
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original, în limba sa nativă, trebuie considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de oameni. Nu ne asumăm răspunderea pentru eventuale neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Declinare a responsabilității**:
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). În timp ce ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă trebuie considerat sursa autorizată. Pentru informații critice, se recomandă traducerea profesională realizată de un om. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care decurg din utilizarea acestei traduceri.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

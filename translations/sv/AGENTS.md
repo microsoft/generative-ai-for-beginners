@@ -2,70 +2,70 @@
 
 ## Projektöversikt
 
-Det här arkivet innehåller en omfattande kurs med 21 lektioner som lär ut grunderna i Generativ AI och applikationsutveckling. Kursen är utformad för nybörjare och täcker allt från grundläggande koncept till att bygga produktionsklara applikationer.
+Detta arkiv innehåller en omfattande kursplan med 21 lektioner som lär ut grunderna i Generativ AI och applikationsutveckling. Kursen är utformad för nybörjare och täcker allt från grundläggande koncept till att bygga produktionsklara applikationer.
 
 **Nyckelteknologier:**
 - Python 3.9+ med bibliotek: `openai`, `python-dotenv`, `tiktoken`, `azure-ai-inference`, `pandas`, `numpy`, `matplotlib`
-- TypeScript/JavaScript med Node.js och bibliotek: `@azure/openai`, `@azure-rest/ai-inference`, `openai`
-- Azure OpenAI Service, OpenAI API och GitHub Models
+- TypeScript/JavaScript med Node.js och bibliotek: `openai` (Azure OpenAI via v1-endpoint + Responses API), `@azure-rest/ai-inference` (Microsoft Foundry Models)
+- Azure OpenAI Service, OpenAI API och Microsoft Foundry Models (GitHub Models fasas ut i slutet av juli 2026)
 - Jupyter Notebooks för interaktivt lärande
-- Dev Containers för en konsekvent utvecklingsmiljö
+- Dev Containers för enhetlig utvecklingsmiljö
 
 **Arkivstruktur:**
-- 21 numrerade lektionskataloger (00-21) som innehåller README-filer, kodexempel och uppgifter
+- 21 numrerade lektionskataloger (00-21) med README-filer, kodexempel och uppgifter
 - Flera implementationer: Python, TypeScript och ibland .NET-exempel
-- Översättningskatalog med versioner på över 40 språk
+- Katalog för översättningar med 40+ språkversioner
 - Centraliserad konfiguration via `.env`-fil (använd `.env.copy` som mall)
 
 ## Installationskommandon
 
-### Initial inställning av arkivet
+### Initial uppsättning av arkivet
 
 ```bash
-# Clone the repository
+# Klona repositoriet
 git clone https://github.com/microsoft/generative-ai-for-beginners.git
 cd generative-ai-for-beginners
 
-# Copy environment template
+# Kopiera miljömall
 cp .env.copy .env
-# Edit .env with your API keys and endpoints
+# Redigera .env med dina API-nycklar och slutpunkter
 ```
 
-### Inställning av Python-miljö
+### Python-miljösetup
 
 ```bash
-# Create virtual environment
+# Skapa virtuell miljö
 python3 -m venv venv
 
-# Activate virtual environment
-# On macOS/Linux:
+# Aktivera virtuell miljö
+# På macOS/Linux:
 source venv/bin/activate
-# On Windows:
+# På Windows:
 venv\Scripts\activate
 
-# Install dependencies
+# Installera beroenden
 pip install -r requirements.txt
 ```
 
-### Inställning av Node.js/TypeScript
+### Node.js/TypeScript-setup
 
 ```bash
-# Install root-level dependencies (for documentation tooling)
+# Installera beroenden på rot-nivå (för dokumentationsverktyg)
 npm install
 
-# For individual lesson TypeScript examples, navigate to the specific lesson:
+# För individuella TypeScript-exempel för lektioner, navigera till den specifika lektionen:
 cd 06-text-generation-apps/typescript/recipe-app
 npm install
 ```
 
-### Inställning av Dev Container (rekommenderas)
+### Dev Container-setup (rekommenderat)
 
-Arkivet innehåller en `.devcontainer`-konfiguration för GitHub Codespaces eller VS Code Dev Containers:
+Arkivet inkluderar en `.devcontainer`-konfiguration för GitHub Codespaces eller VS Code Dev Containers:
 
-1. Öppna arkivet i GitHub Codespaces eller VS Code med Dev Containers-tillägget
+1. Öppna arkivet i GitHub Codespaces eller i VS Code med Dev Containers-tillägget
 2. Dev Container kommer automatiskt att:
    - Installera Python-beroenden från `requirements.txt`
-   - Köra post-create-skriptet (`.devcontainer/post-create.sh`)
+   - Köra post-create-script (`.devcontainer/post-create.sh`)
    - Ställa in Jupyter-kärnan
 
 ## Utvecklingsarbetsflöde
@@ -75,67 +75,68 @@ Arkivet innehåller en `.devcontainer`-konfiguration för GitHub Codespaces elle
 Alla lektioner som kräver API-åtkomst använder miljövariabler definierade i `.env`:
 
 - `OPENAI_API_KEY` - För OpenAI API
-- `AZURE_OPENAI_API_KEY` - För Azure OpenAI Service
-- `AZURE_OPENAI_ENDPOINT` - URL för Azure OpenAI endpoint
-- `AZURE_OPENAI_DEPLOYMENT` - Namn på chat completion-modellens distribution
-- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Namn på embeddings-modellens distribution
-- `AZURE_OPENAI_API_VERSION` - API-version (standard: `2024-02-01`)
+- `AZURE_OPENAI_API_KEY` - För Azure OpenAI i Microsoft Foundry (Azure OpenAI Service är nu del av Microsoft Foundry: https://ai.azure.com)
+- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI-endpoint URL (Foundry-resurs endpoint)
+- `AZURE_OPENAI_DEPLOYMENT` - Namn på Chat completion-modellens distribution
+- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Namn på embeddingsmodellens distribution
+- `AZURE_OPENAI_API_VERSION` - API-version (standard: `2024-10-21`)
 - `HUGGING_FACE_API_KEY` - För Hugging Face-modeller
-- `GITHUB_TOKEN` - För GitHub Models
+- `AZURE_INFERENCE_ENDPOINT` - Microsoft Foundry Models endpoint (flerproviders modellkatalog)
+- `AZURE_INFERENCE_CREDENTIAL` - Microsoft Foundry Models API-nyckel (ersätter den utgående `GITHUB_TOKEN`)
 
 ### Köra Python-exempel
 
 ```bash
-# Navigate to lesson directory
+# Navigera till lektionsmappen
 cd 06-text-generation-apps/python
 
-# Run a Python script
+# Kör ett Python-skript
 python aoai-app.py
 ```
 
 ### Köra TypeScript-exempel
 
 ```bash
-# Navigate to TypeScript app directory
+# Navigera till TypeScript-appmappen
 cd 06-text-generation-apps/typescript/recipe-app
 
-# Build the TypeScript code
+# Bygg TypeScript-koden
 npm run build
 
-# Run the application
+# Kör applikationen
 npm start
 ```
 
 ### Köra Jupyter Notebooks
 
 ```bash
-# Start Jupyter in the repository root
+# Starta Jupyter i rotmappen för förvaret
 jupyter notebook
 
-# Or use VS Code with Jupyter extension
+# Eller använd VS Code med Jupyter-tillägg
 ```
 
-### Arbeta med olika lektionsformat
+### Arbeta med olika lektionstyper
 
-- **"Learn"-lektioner**: Fokus på README.md-dokumentation och koncept
-- **"Build"-lektioner**: Innehåller fungerande kodexempel i Python och TypeScript
+- **"Learn"-lektioner**: Fokuserar på README.md-dokumentation och koncept
+- **"Build"-lektioner**: Inkluderar fungerande kodexempel i Python och TypeScript
 - Varje lektion har en README.md med teori, kodgenomgångar och länkar till videoinnehåll
 
-## Kodstilsguider
+## Kodstilriktlinjer
 
 ### Python
 
 - Använd `python-dotenv` för hantering av miljövariabler
-- Importera `openai`-biblioteket för API-interaktioner
-- Använd `pylint` för linting (vissa exempel inkluderar `# pylint: disable=all` för enkelhetens skull)
-- Följ PEP 8-namngivningskonventioner
-- Spara API-uppgifter i `.env`-filen, aldrig i koden
+- Importera `openai`-bibliotek för API-interaktioner
+- Använd `pylint` för linting (vissa exempel inkluderar `# pylint: disable=all` för enkelhet)
+- Följ PEP 8:s namngivningskonventioner
+- Spara API-uppgifter i `.env`-fil, aldrig i koden
 
 ### TypeScript
 
 - Använd `dotenv`-paketet för miljövariabler
 - TypeScript-konfiguration i `tsconfig.json` för varje app
-- Använd `@azure/openai` eller `@azure-rest/ai-inference` för Azure-tjänster
+- Använd `openai`-paketet för Azure OpenAI (rikta klienten mot `/openai/v1/`-endpointen och kalla `client.responses.create`); använd `@azure-rest/ai-inference` för Microsoft Foundry Models
 - Använd `nodemon` för utveckling med automatisk omladdning
 - Bygg innan körning: `npm run build` följt av `npm start`
 
@@ -144,97 +145,97 @@ jupyter notebook
 - Håll kodexempel enkla och pedagogiska
 - Inkludera kommentarer som förklarar nyckelkoncept
 - Varje lektions kod ska vara självständig och körbar
-- Använd konsekvent namngivning: `aoai-` prefix för Azure OpenAI, `oai-` för OpenAI API, `githubmodels-` för GitHub Models
+- Använd konsekvent namngivning: `aoai-` prefix för Azure OpenAI, `oai-` för OpenAI API, `githubmodels-` för Microsoft Foundry Models (gammalt prefix från GitHub Models-tiden bevaras)
 
-## Dokumentationsguider
+## Dokumentationsriktlinjer
 
 ### Markdown-stil
 
-- Alla URL:er måste vara inslagna i `[text](../../url)`-format utan extra mellanslag
+- Alla URL:er måste vara omslutna med `[text](../../url)`-format utan extra mellanslag
 - Relativa länkar måste börja med `./` eller `../`
-- Alla länkar till Microsoft-domäner måste inkludera spårnings-ID: `?WT.mc_id=academic-105485-koreyst`
-- Inga landsspecifika lokaler i URL:er (undvik `/en-us/`)
-- Bilder lagras i `./images`-mappen med beskrivande namn
+- Alla länkar till Microsoft-domäner ska inkludera spårnings-ID: `?WT.mc_id=academic-105485-koreyst`
+- Inga landspecifika lokaliseringsvägar i URL:er (undvik `/en-us/`)
+- Bilder lagras i mappen `./images` med beskrivande namn
 - Använd engelska tecken, siffror och bindestreck i filnamn
 
-### Översättningsstöd
+### Support för översättning
 
-- Arkivet stödjer över 40 språk via automatiserade GitHub Actions
-- Översättningar lagras i `translations/`-katalogen
-- Skicka inte in ofullständiga översättningar
+- Arkivet stöder 40+ språk via automatiserade GitHub Actions
+- Översättningar lagras i katalogen `translations/`
+- Skicka inte in partiella översättningar
 - Maskinöversättningar accepteras inte
-- Översatta bilder lagras i `translated_images/`-katalogen
+- Översatta bilder lagras i katalogen `translated_images/`
 
 ## Testning och validering
 
-### Kontroll före inlämning
+### Kontroller före inskickning
 
-Det här arkivet använder GitHub Actions för validering. Innan du skickar in PRs:
+Detta arkiv använder GitHub Actions för validering. Innan du skickar PR:
 
 1. **Kontrollera Markdown-länkar**:
    ```bash
-   # The validate-markdown.yml workflow checks:
-   # - Broken relative paths
-   # - Missing tracking IDs on paths
-   # - Missing tracking IDs on URLs
-   # - URLs with country locale
-   # - Broken external URLs
+   # Arbetsflödet validate-markdown.yml kontrollerar:
+   # - Trasiga relativa sökvägar
+   # - Saknade spårnings-ID:n på sökvägar
+   # - Saknade spårnings-ID:n på URL:er
+   # - URL:er med landslokal
+   # - Trasiga externa URL:er
    ```
 
 2. **Manuell testning**:
    - Testa Python-exempel: Aktivera venv och kör skript
    - Testa TypeScript-exempel: `npm install`, `npm run build`, `npm start`
-   - Kontrollera att miljövariabler är korrekt konfigurerade
+   - Verifiera att miljövariabler är korrekt konfigurerade
    - Kontrollera att API-nycklar fungerar med kodexemplen
 
 3. **Kodexempel**:
    - Säkerställ att all kod körs utan fel
-   - Testa med både Azure OpenAI och OpenAI API när det är tillämpligt
-   - Kontrollera att exemplen fungerar med GitHub Models där det stöds
+   - Testa med både Azure OpenAI och OpenAI API när tillämpligt
+   - Verifiera att exemplen fungerar med Microsoft Foundry Models där det stöds
 
 ### Inga automatiserade tester
 
-Det här är ett utbildningsarkiv som fokuserar på handledningar och exempel. Det finns inga enhetstester eller integrationstester att köra. Validering sker främst genom:
+Detta arkiv är utbildningsfokuserat och inriktat på handledningar och exempel. Det finns inga enhetstester eller integrationstester att köra. Validering sker främst genom:
 - Manuell testning av kodexempel
 - GitHub Actions för Markdown-validering
 - Gemenskapsgranskning av utbildningsinnehåll
 
-## Riktlinjer för pull requests
+## Riktlinjer för Pull Requests
 
-### Innan inlämning
+### Innan inskickning
 
-1. Testa kodändringar i både Python och TypeScript när det är tillämpligt
-2. Kör Markdown-validering (utlöses automatiskt vid PR)
-3. Säkerställ att spårnings-ID finns på alla Microsoft-URL:er
+1. Testa kodändringar i både Python och TypeScript när tillämpligt
+2. Kör Markdown-validering (triggas automatiskt vid PR)
+3. Se till att spårnings-ID finns på alla Microsoft-URL:er
 4. Kontrollera att relativa länkar är giltiga
-5. Kontrollera att bilder är korrekt refererade
+5. Verifiera att bilder är korrekt refererade
 
-### Format för PR-titlar
+### PR-titelformat
 
 - Använd beskrivande titlar: `[Lesson 06] Fix Python example typo` eller `Update README for lesson 08`
-- Referera till ärendenummer när det är tillämpligt: `Fixes #123`
+- Referera till ärendenummer när det är relevant: `Fixes #123`
 
 ### PR-beskrivning
 
-- Förklara vad som ändrades och varför
+- Förklara vad som ändrats och varför
 - Länka till relaterade ärenden
 - För kodändringar, specificera vilka exempel som testades
-- För översättnings-PRs, inkludera alla filer för en komplett översättning
+- För översättnings-PR, inkludera alla filer för en komplett översättning
 
 ### Krav för bidrag
 
-- Signera Microsoft CLA (automatiskt vid första PR)
+- Skriv under Microsoft CLA (automatiskt vid första PR)
 - Forka arkivet till ditt konto innan du gör ändringar
-- En PR per logisk ändring (kombinera inte orelaterade fixar)
-- Håll PRs fokuserade och små när det är möjligt
+- En PR per logisk ändring (kombinera ej orelaterade fixar)
+- Håll PR:er fokuserade och små när det är möjligt
 
 ## Vanliga arbetsflöden
 
 ### Lägga till ett nytt kodexempel
 
-1. Navigera till rätt lektionskatalog
-2. Skapa exempel i `python/` eller `typescript/` underkatalogen
-3. Följ namngivningskonventionen: `{provider}-{example-name}.{py|ts|js}`
+1. Navigera till lämplig lektionskatalog
+2. Skapa exempel i `python/` eller `typescript/` undermapp
+3. Följ namngivningskonvention: `{provider}-{example-name}.{py|ts|js}`
 4. Testa med faktiska API-uppgifter
 5. Dokumentera eventuella nya miljövariabler i lektions-README
 
@@ -247,24 +248,24 @@ Det här är ett utbildningsarkiv som fokuserar på handledningar och exempel. D
 
 ### Arbeta med Dev Containers
 
-1. Arkivet inkluderar `.devcontainer/devcontainer.json`
-2. Post-create-skriptet installerar Python-beroenden automatiskt
+1. Arkivet innehåller `.devcontainer/devcontainer.json`
+2. Post-create-script installerar Python-beroenden automatiskt
 3. Tillägg för Python och Jupyter är förkonfigurerade
 4. Miljön baseras på `mcr.microsoft.com/devcontainers/universal:2.11.2`
 
 ## Distribution och publicering
 
-Det här är ett utbildningsarkiv - det finns ingen distributionsprocess. Kursen används av:
+Detta är ett utbildningsarkiv - det finns inget distributionsflöde. Kursplanen tas emot via:
 
-1. **GitHub-arkiv**: Direkt åtkomst till kod och dokumentation
-2. **GitHub Codespaces**: Omedelbar utvecklingsmiljö med förkonfigurerad inställning
-3. **Microsoft Learn**: Innehåll kan syndikeras till den officiella lärplattformen
-4. **docsify**: Dokumentationssida byggd från Markdown (se `docsifytopdf.js` och `package.json`)
+1. **GitHub Repository**: Direktåtkomst till kod och dokumentation
+2. **GitHub Codespaces**: Omedelbar utvecklingsmiljö med förkonfigurerad setup
+3. **Microsoft Learn**: Innehåll kan distribueras till officiell lärplattform
+4. **docsify**: Dokumentationssajt byggd från Markdown (se `docsifytopdf.js` och `package.json`)
 
-### Bygga dokumentationssida
+### Bygga dokumentationssajten
 
 ```bash
-# Generate PDF from documentation (if needed)
+# Generera PDF från dokumentation (om nödvändigt)
 npm run convert
 ```
 
@@ -272,46 +273,48 @@ npm run convert
 
 ### Vanliga problem
 
-**Importfel i Python**:
-- Kontrollera att den virtuella miljön är aktiverad
+**Python-importfel**:
+- Säkerställ att virtuella miljön är aktiverad
 - Kör `pip install -r requirements.txt`
-- Kontrollera att Python-versionen är 3.9+
+- Kontrollera Python-version 3.9+
 
-**Byggfel i TypeScript**:
-- Kör `npm install` i den specifika appkatalogen
-- Kontrollera att Node.js-versionen är kompatibel
+**TypeScript-byggfel**:
+- Kör `npm install` i aktuell app-mapp
+- Kontrollera att Node.js-version är kompatibel
 - Rensa `node_modules` och installera om vid behov
 
-**Autentiseringsfel för API**:
-- Kontrollera att `.env`-filen finns och har korrekta värden
-- Kontrollera att API-nycklar är giltiga och inte har gått ut
+**API-autentiseringsfel**:
+- Verifiera att `.env`-fil finns och har korrekta värden
+- Kontrollera att API-nycklar är giltiga och inte utgångna
 - Säkerställ att endpoint-URL:er är korrekta för din region
 
 **Saknade miljövariabler**:
 - Kopiera `.env.copy` till `.env`
-- Fyll i alla nödvändiga värden för lektionen du arbetar med
-- Starta om din applikation efter att ha uppdaterat `.env`
+- Fyll i alla nödvändiga värden för aktuell lektion
+- Starta om applikationen efter att ha uppdaterat `.env`
 
 ## Ytterligare resurser
 
-- [Kursens installationsguide](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
+- [Kursuppsättningsguide](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
 - [Riktlinjer för bidrag](./CONTRIBUTING.md)
 - [Uppförandekod](./CODE_OF_CONDUCT.md)
 - [Säkerhetspolicy](./SECURITY.md)
 - [Azure AI Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 - [Samling av avancerade kodexempel](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
 
-## Projekt-specifika anteckningar
+## Projektspecifika anteckningar
 
-- Detta är ett **utbildningsarkiv** som fokuserar på lärande, inte produktionskod
-- Exemplen är avsiktligt enkla och fokuserade på att lära ut koncept
-- Kodkvaliteten balanseras med pedagogisk tydlighet
+- Detta är ett **utbildningsarkiv** fokuserat på lärande, inte produktionskod
+- Exempel är medvetet enkla och fokuserade på att lära ut koncept
+- Kodkvalitet balanseras med pedagogisk tydlighet
 - Varje lektion är självständig och kan genomföras oberoende
-- Arkivet stödjer flera API-leverantörer: Azure OpenAI, OpenAI och GitHub Models
-- Innehållet är flerspråkigt med automatiserade översättningsarbetsflöden
+- Arkivet stödjer flera API-leverantörer: Azure OpenAI, OpenAI, Microsoft Foundry Models och offline-leverantörer som Foundry Local och Ollama
+- Innehåll är flerspråkigt med automatiserade översättningsarbetsflöden
 - Aktiv gemenskap på Discord för frågor och support
 
 ---
 
-**Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess originalspråk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Ansvarsfriskrivning**:
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, var vänlig notera att automatiska översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess modersmål bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för några missförstånd eller feltolkningar som uppstår till följd av användningen av denna översättning.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

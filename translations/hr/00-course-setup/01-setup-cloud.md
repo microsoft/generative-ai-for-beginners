@@ -1,51 +1,53 @@
-# Postavljanje u oblaku ☁️ – GitHub Codespaces
+# Cloud postavljanje ☁️ – GitHub Codespaces
 
-**Koristi ovaj vodič ako ne želiš ništa instalirati lokalno.**  
-Codespaces ti omogućuje besplatno korištenje VS Code-a u pregledniku, sa svim unaprijed instaliranim ovisnostima.
+**Koristite ovaj vodič ako ne želite ništa instalirati lokalno.**  
+Codespaces vam daje besplatnu VS Code instancu u pregledniku sa svim unaprijed instaliranim ovisnostima.
 
 ---
 
 ## 1.  Zašto Codespaces?
 
-| Prednost | Što to znači za tebe |
-|----------|---------------------|
-| ✅ Bez instalacija | Radi na Chromebooku, iPadu, školskim računalima… |
-| ✅ Unaprijed pripremljen dev container | Python 3, Node.js, .NET, Java su već unutra |
-| ✅ Besplatna kvota | Osobni računi dobivaju **120 core-sati / 60 GB-sati mjesečno** |
+| Prednost | Što to znači za vas |
+|---------|----------------------|
+| ✅ Nema instalacija | Radi na Chromebooku, iPadu, školskim računalima… |
+| ✅ Unaprijed izgrađeni razvojni kontejner | Python 3, Node.js, .NET, Java već unutra |
+| ✅ Besplatna kvota | Osobni računi imaju **120 sati procesora / 60 GB-sati mjesečno** |
 
 > 💡 **Savjet**  
-> Očuvaj svoju kvotu tako da **zaustaviš** ili **obrišeš** neaktivne codespaceove  
-> (Pogledaj ▸ Command Palette ▸ *Codespaces: Stop Codespace*).
+> Održavajte svoju kvotu zdravom **zaustavljanjem** ili **brisanje** neaktivnih codespacesa  
+> (Pogledajte ▸ Command Palette ▸ *Codespaces: Stop Codespace*).
 
 ---
 
-## 2.  Kreiraj Codespace (jedan klik)
+## 2.  Kreirajte Codespace (jedan klik)
 
-1. **Forkaj** ovaj repozitorij (gore desno gumb **Fork**).  
-2. U svom forku klikni **Code ▸ Codespaces ▸ Create codespace on main**.  
-   ![Dijalog s gumbima za kreiranje codespacea](../../../00-course-setup/images/who-will-pay.webp)
+1. **Forkajte** ovaj repozitorij (gore desno dugme **Fork**).  
+2. U svom forku kliknite **Code ▸ Codespaces ▸ Create codespace on main**.  
+   ![Dijalog koji pokazuje gumbe za kreiranje codespacea](../../../translated_images/hr/who-will-pay.4c0609b1c7780f44.webp)
 
-✅ Otvorit će se VS Code prozor u pregledniku i dev container će se početi graditi.
-Prvi put ovo traje **oko 2 minute**.
+✅ Otvara se VS Code prozor u pregledniku i razvojni kontejner počinje se graditi.
+Ovo traje **~2 minute** prvi put.
 
-## 3. Dodaj svoj API ključ (na siguran način)
+## 3. Dodajte svoj API ključ (siguran način)
 
 ### Opcija A Codespaces Secrets — Preporučeno
 
-1. ⚙️ Ikona zupčanika -> Command Pallete-> Codespaces : Manage user secret -> Add a new secret.
+1. ⚙️ Ikona zupčanika -> Command Palette -> Codespaces : Manage user secret -> Dodaj novi secret.
 2. Naziv: OPENAI_API_KEY
-3. Vrijednost: zalijepi svoj ključ → Add secret
+3. Vrijednost: zalijepite svoj ključ → Dodaj secret
 
-To je to—naš kod će ga automatski prepoznati.
+To je to—naš će kod automatski pročitati ključ.
 
-### Opcija B .env datoteka (ako ti stvarno treba)
+### Opcija B .env datoteka (ako vam baš treba)
 
 ```bash
 cp .env.copy .env
-code .env         # fill in OPENAI_API_KEY=your_key_here
+code .env         # unesite OPENAI_API_KEY=vaš_kljuć_ovdje
 ```
 
 ---
 
-**Odricanje od odgovornosti**:  
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo osigurati točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati mjerodavnim izvorom. Za ključne informacije preporučuje se profesionalni ljudski prijevod. Ne preuzimamo odgovornost za bilo kakve nesporazume ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Napomena**:
+Ovaj dokument je preveden korištenjem AI prevoditeljskog servisa [Co-op Translator](https://github.com/Azure/co-op-translator). Iako težimo točnosti, imajte na umu da automatski prijevodi mogu sadržavati greške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za važne informacije preporuča se profesionalni ljudski prijevod. Nismo odgovorni za bilo kakva nesporazumevanja ili pogrešne interpretacije koje proizlaze iz korištenja ovog prijevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,8 +1,8 @@
-# Transkriptionsdataförberedelse
+# Förberedelse av transkriptionsdata
 
-Skript för transkriptionsdataförberedelse laddar ner YouTube-videotranskript och förbereder dem för användning med exemplet Semantic Search med OpenAI Embeddings och Functions.
+Skripten för förberedelse av transkriptionsdata laddar ner transkript från YouTube-videor och förbereder dem för användning med provexemplet Semantic Search med OpenAI-embeddings och funktioner.
 
-Skripten för transkriptionsdataförberedelse har testats på de senaste versionerna av Windows 11, macOS Ventura och Ubuntu 22.04 (och senare).
+Skripten för förberedelse av transkriptionsdata har testats på de senaste versionerna av Windows 11, macOS Ventura och Ubuntu 22.04 (och senare).
 
 ## Skapa nödvändiga Azure OpenAI Service-resurser
 
@@ -14,8 +14,8 @@ Skripten för transkriptionsdataförberedelse har testats på de senaste version
 
 > [!NOTE]
 > För dessa instruktioner använder vi resursgruppen med namnet "semantic-video-search" i East US.
-> Du kan ändra namnet på resursgruppen, men om du ändrar platsen för resurserna,
-> kontrollera [modellens tillgänglighetstabell](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> Du kan ändra namnet på resursgruppen, men när du ändrar plats för resurserna,
+> kontrollera [tabellen för tillgänglighet av modeller](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
@@ -38,8 +38,8 @@ az cognitiveservices account keys list --name semantic-video-openai \
 ```
 
 1. Distribuera följande modeller:
-   - `text-embedding-ada-002` version `2` eller högre, med namnet `text-embedding-ada-002`
-   - `gpt-35-turbo` version `0613` eller högre, med namnet `gpt-35-turbo`
+   - `text-embedding-ada-002` version `2` eller senare, namngiven `text-embedding-ada-002`
+   - `gpt-4o-mini` namngiven `gpt-4o-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,9 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-35-turbo \
-    --model-name gpt-35-turbo \
-    --model-version "0613"  \
+    --deployment-name gpt-4o-mini \
+    --model-name gpt-4o-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -67,12 +66,12 @@ az cognitiveservices account deployment create \
 
 ## Miljövariabler
 
-Följande miljövariabler krävs för att köra skripten för YouTube-transkriptionsdataförberedelse.
+Följande miljövariabler krävs för att köra skripten för förberedelse av transkriptionsdata från YouTube.
 
 ### På Windows
 
-Vi rekommenderar att du lägger till variablerna i dina `user`-miljövariabler.
-`Windows Start` > `Redigera systemets miljövariabler` > `Miljövariabler` > `Användarvariabler` för [USER] > `Ny`.
+Rekommenderas att lägga till variablerna till dina `user`-miljövariabler.
+`Windows Start` > `Redigera systemmiljövariabler` > `Miljövariabler` > `Användarvariabler` för [USER] > `Ny`.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -81,11 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
+<!-- Du kan lägga till miljövariablerna i din PowerShell-profil.
 
+```powershell
+$env:AZURE_OPENAI_API_KEY = "<din Azure OpenAI Service API-nyckel>"
+$env:AZURE_OPENAI_ENDPOINT = "<din Azure OpenAI Service endpoint>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<namnet på din Azure OpenAI Service modellutplacering>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<din Google developer API-nyckel>"
+``` -->
 
 ### På Linux och macOS
 
-Vi rekommenderar att du lägger till följande exports i din `~/.bashrc` eller `~/.zshrc`-fil.
+Rekommenderar att lägga till följande export-kommandon i din `~/.bashrc` eller `~/.zshrc`-fil.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -94,10 +100,10 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## Installera nödvändiga Python-bibliotek
+## Installera de nödvändiga Python-biblioteken
 
 1. Installera [git-klienten](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) om den inte redan är installerad.
-1. Från ett `Terminal`-fönster, klona exemplet till din föredragna mapp för repo.
+1. Från ett `Terminal`-fönster, klona exemplet till din föredragna mapp för versionhantering.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -109,7 +115,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. Skapa en Python-virtuell miljö.
+1. Skapa en Python virtuell miljö.
 
     På Windows:
 
@@ -123,7 +129,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     python3 -m venv .venv
     ```
 
-1. Aktivera den virtuella Python-miljön.
+1. Aktivera den Python virtuella miljön.
 
    På Windows:
 
@@ -151,7 +157,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## Kör skripten för YouTube-transkriptionsdataförberedelse
+## Kör skripten för förberedelse av YouTube transkriptionsdata
 
 ### På Windows
 
@@ -165,5 +171,9 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ./transcripts_prepare.sh
 ```
 
-**Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen observera att automatiska översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess modersmål bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för några missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Ansvarsfriskrivning**:
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, var vänlig notera att automatiska översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess modersmål bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för några missförstånd eller feltolkningar som uppstår till följd av användningen av denna översättning.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -2,167 +2,168 @@
 
 ## Přehled projektu
 
-Tento repozitář obsahuje komplexní učební plán o 21 lekcích, který učí základy generativní AI a vývoj aplikací. Kurz je určen pro začátečníky a pokrývá vše od základních konceptů až po tvorbu aplikací připravených pro produkci.
+Tento repozitář obsahuje komplexní kurikulum se 21 lekcemi, které učí základy Generativní AI a vývoj aplikací. Kurz je určen pro začátečníky a pokrývá vše od základních konceptů až po tvorbu aplikací připravených pro produkci.
 
 **Klíčové technologie:**
 - Python 3.9+ s knihovnami: `openai`, `python-dotenv`, `tiktoken`, `azure-ai-inference`, `pandas`, `numpy`, `matplotlib`
-- TypeScript/JavaScript s Node.js a knihovnami: `@azure/openai`, `@azure-rest/ai-inference`, `openai`
-- Azure OpenAI Service, OpenAI API a GitHub Models
+- TypeScript/JavaScript s Node.js a knihovnami: `openai` (Azure OpenAI přes v1 endpoint + Responses API), `@azure-rest/ai-inference` (Microsoft Foundry Models)
+- Azure OpenAI Service, OpenAI API a Microsoft Foundry Models (GitHub Models bude ukončen koncem července 2026)
 - Jupyter Notebooks pro interaktivní učení
-- Dev Containers pro konzistentní vývojové prostředí
+- Dev kontejnery pro konzistentní vývojové prostředí
 
 **Struktura repozitáře:**
-- 21 očíslovaných adresářů lekcí (00-21) obsahujících README, příklady kódu a úkoly
-- Více implementací: Python, TypeScript a někdy i příklady v .NET
+- 21 číslovaných adresářů lekcí (00-21) obsahujících README, příklady kódu a úkoly
+- Více implementací: Python, TypeScript a někdy příklady .NET
 - Adresář překladů s více než 40 jazykovými verzemi
-- Centralizovaná konfigurace prostřednictvím souboru `.env` (použijte `.env.copy` jako šablonu)
+- Centralizovaná konfigurace přes `.env` soubor (použijte `.env.copy` jako šablonu)
 
 ## Příkazy pro nastavení
 
 ### Počáteční nastavení repozitáře
 
 ```bash
-# Clone the repository
+# Naklonujte repozitář
 git clone https://github.com/microsoft/generative-ai-for-beginners.git
 cd generative-ai-for-beginners
 
-# Copy environment template
+# Zkopírujte šablonu prostředí
 cp .env.copy .env
-# Edit .env with your API keys and endpoints
+# Upravte .env se svými klíči API a koncovými body
 ```
 
-### Nastavení prostředí Python
+### Nastavení Python prostředí
 
 ```bash
-# Create virtual environment
+# Vytvořit virtuální prostředí
 python3 -m venv venv
 
-# Activate virtual environment
-# On macOS/Linux:
+# Aktivovat virtuální prostředí
+# Na macOS/Linuxu:
 source venv/bin/activate
-# On Windows:
+# Na Windows:
 venv\Scripts\activate
 
-# Install dependencies
+# Nainstalovat závislosti
 pip install -r requirements.txt
 ```
 
 ### Nastavení Node.js/TypeScript
 
 ```bash
-# Install root-level dependencies (for documentation tooling)
+# Nainstalujte závislosti na úrovni root (pro nástroje dokumentace)
 npm install
 
-# For individual lesson TypeScript examples, navigate to the specific lesson:
+# Pro jednotlivé příklady TypeScript lekcí přejděte do konkrétní lekce:
 cd 06-text-generation-apps/typescript/recipe-app
 npm install
 ```
 
-### Nastavení Dev Container (doporučeno)
+### Nastavení Dev kontejneru (doporučeno)
 
-Repozitář obsahuje konfiguraci `.devcontainer` pro GitHub Codespaces nebo VS Code Dev Containers:
+Repozitář obsahuje konfiguraci `.devcontainer` pro GitHub Codespaces nebo VS Code Dev kontejnery:
 
-1. Otevřete repozitář v GitHub Codespaces nebo VS Code s rozšířením Dev Containers
-2. Dev Container automaticky:
-   - Nainstaluje Python závislosti ze souboru `requirements.txt`
-   - Spustí skript po vytvoření (`.devcontainer/post-create.sh`)
+1. Otevřete repozitář v GitHub Codespaces nebo ve VS Code s rozšířením Dev Containers
+2. Dev kontejner automaticky:
+   - Nainstaluje Python závislosti z `requirements.txt`
+   - Spustí post-create skript (`.devcontainer/post-create.sh`)
    - Nastaví Jupyter kernel
 
-## Vývojový pracovní postup
+## Vývojový workflow
 
-### Proměnné prostředí
+### Environment Variables
 
 Všechny lekce vyžadující přístup k API používají proměnné prostředí definované v `.env`:
 
 - `OPENAI_API_KEY` - Pro OpenAI API
-- `AZURE_OPENAI_API_KEY` - Pro Azure OpenAI Service
-- `AZURE_OPENAI_ENDPOINT` - URL endpointu Azure OpenAI
-- `AZURE_OPENAI_DEPLOYMENT` - Název nasazení modelu pro chat completion
-- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Název nasazení modelu pro embeddings
-- `AZURE_OPENAI_API_VERSION` - Verze API (výchozí: `2024-02-01`)
+- `AZURE_OPENAI_API_KEY` - Pro Azure OpenAI v Microsoft Foundry (Azure OpenAI Service je nyní součástí Microsoft Foundry: https://ai.azure.com)
+- `AZURE_OPENAI_ENDPOINT` - URL koncového bodu Azure OpenAI (Foundry resource endpoint)
+- `AZURE_OPENAI_DEPLOYMENT` - Název deploymentu modelu pro chat completions
+- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Název deploymentu modelu embeddings
+- `AZURE_OPENAI_API_VERSION` - Verze API (výchozí: `2024-10-21`)
 - `HUGGING_FACE_API_KEY` - Pro modely Hugging Face
-- `GITHUB_TOKEN` - Pro GitHub Models
+- `AZURE_INFERENCE_ENDPOINT` - Endpoint Microsoft Foundry Models (katalog modelů od více poskytovatelů)
+- `AZURE_INFERENCE_CREDENTIAL` - API klíč Microsoft Foundry Models (nahrazuje ukončený `GITHUB_TOKEN`)
 
 ### Spouštění Python příkladů
 
 ```bash
-# Navigate to lesson directory
+# Přejděte do adresáře lekce
 cd 06-text-generation-apps/python
 
-# Run a Python script
+# Spusťte skript Pythonu
 python aoai-app.py
 ```
 
 ### Spouštění TypeScript příkladů
 
 ```bash
-# Navigate to TypeScript app directory
+# Přejděte do adresáře aplikace TypeScript
 cd 06-text-generation-apps/typescript/recipe-app
 
-# Build the TypeScript code
+# Sestavte kód TypeScript
 npm run build
 
-# Run the application
+# Spusťte aplikaci
 npm start
 ```
 
 ### Spouštění Jupyter Notebooks
 
 ```bash
-# Start Jupyter in the repository root
+# Spusťte Jupyter v kořenovém adresáři repozitáře
 jupyter notebook
 
-# Or use VS Code with Jupyter extension
+# Nebo použijte VS Code s rozšířením Jupyter
 ```
 
 ### Práce s různými typy lekcí
 
-- **Lekce "Learn"**: Zaměřují se na dokumentaci README.md a koncepty
-- **Lekce "Build"**: Obsahují funkční příklady kódu v Pythonu a TypeScriptu
-- Každá lekce má README.md s teorií, průvodcem kódem a odkazy na video obsah
+- **Lekce typu "Learn"**: Zaměřují se na dokumentaci README.md a koncepty
+- **Lekce typu "Build"**: Obsahují funkční příklady v Pythonu a TypeScriptu
+- Každá lekce má README.md s teorií, průchodem kódu a odkazy na video obsah
 
-## Pokyny pro styl kódu
+## Směrnice pro styl kódu
 
 ### Python
 
 - Používejte `python-dotenv` pro správu proměnných prostředí
-- Importujte knihovnu `openai` pro interakce s API
-- Používejte `pylint` pro lintování (některé příklady obsahují `# pylint: disable=all` pro zjednodušení)
-- Dodržujte konvence pojmenování podle PEP 8
-- Uchovávejte API přihlašovací údaje v souboru `.env`, nikdy v kódu
+- Importujte knihovnu `openai` pro interakci s API
+- Používejte `pylint` pro linting (některé příklady obsahují `# pylint: disable=all` pro zjednodušení)
+- Dodržujte pojmenovací konvence PEP 8
+- Ukládejte API přihlašovací údaje do `.env` souboru, nikdy přímo v kódu
 
 ### TypeScript
 
 - Používejte balíček `dotenv` pro proměnné prostředí
-- Konfigurace TypeScriptu v `tsconfig.json` pro každou aplikaci
-- Používejte `@azure/openai` nebo `@azure-rest/ai-inference` pro služby Azure
-- Používejte `nodemon` pro vývoj s automatickým reloadem
-- Před spuštěním sestavte: `npm run build` a poté `npm start`
+- Konfigurace TypeScriptu je v `tsconfig.json` pro každou aplikaci
+- Používejte balíček `openai` pro Azure OpenAI (klienta směřujte na endpoint `/openai/v1/` a volejte `client.responses.create`); použijte `@azure-rest/ai-inference` pro Microsoft Foundry Models
+- Používejte `nodemon` pro vývoj s automatickým restartem
+- Před spuštěním spusťte sestavení: `npm run build` a poté `npm start`
 
 ### Obecné konvence
 
 - Udržujte příklady kódu jednoduché a vzdělávací
-- Zahrňte komentáře vysvětlující klíčové koncepty
+- Přidávejte komentáře vysvětlující klíčové koncepty
 - Kód každé lekce by měl být samostatný a spustitelný
-- Používejte konzistentní pojmenování: prefix `aoai-` pro Azure OpenAI, `oai-` pro OpenAI API, `githubmodels-` pro GitHub Models
+- Používejte konzistentní pojmenování: prefix `aoai-` pro Azure OpenAI, `oai-` pro OpenAI API, `githubmodels-` pro Microsoft Foundry Models (zachovaný legacy prefix z éry GitHub Models)
 
-## Pokyny pro dokumentaci
+## Směrnice pro dokumentaci
 
-### Styl Markdown
+### Markdown styl
 
-- Všechny URL musí být obaleny ve formátu `[text](../../url)` bez dalších mezer
+- Všechny URL adresy musí být zabaleny v `[text](../../url)` formátu bez mezer navíc
 - Relativní odkazy musí začínat `./` nebo `../`
 - Všechny odkazy na domény Microsoftu musí obsahovat tracking ID: `?WT.mc_id=academic-105485-koreyst`
-- Žádné lokální specifické URL (vyhněte se `/en-us/`)
-- Obrázky uložené ve složce `./images` s popisnými názvy
+- Žádné lokalizace specifické pro zemi v URL adrese (vyhněte se `/en-us/`)
+- Obrázky jsou uloženy ve složce `./images` s popisnými názvy
 - Používejte anglické znaky, čísla a pomlčky v názvech souborů
 
 ### Podpora překladů
 
 - Repozitář podporuje více než 40 jazyků prostřednictvím automatizovaných GitHub Actions
 - Překlady jsou uloženy v adresáři `translations/`
-- Nepodávejte částečné překlady
-- Strojové překlady nejsou přijímány
+- Neposílejte částečné překlady
+- Strojové překlady nejsou akceptovány
 - Přeložené obrázky jsou uloženy v adresáři `translated_images/`
 
 ## Testování a validace
@@ -171,100 +172,100 @@ jupyter notebook
 
 Tento repozitář používá GitHub Actions pro validaci. Před odesláním PR:
 
-1. **Kontrola odkazů v Markdown**:
+1. **Zkontrolujte Markdown odkazy**:
    ```bash
-   # The validate-markdown.yml workflow checks:
-   # - Broken relative paths
-   # - Missing tracking IDs on paths
-   # - Missing tracking IDs on URLs
-   # - URLs with country locale
-   # - Broken external URLs
+   # Workflow validate-markdown.yml kontroluje:
+   # - Poškozené relativní cesty
+   # - Chybějící sledovací ID na cestách
+   # - Chybějící sledovací ID na URL adresách
+   # - URL adresy s místním nastavením země
+   # - Poškozené externí URL adresy
    ```
 
-2. **Ruční testování**:
-   - Testujte Python příklady: Aktivujte venv a spusťte skripty
-   - Testujte TypeScript příklady: `npm install`, `npm run build`, `npm start`
-   - Ověřte, že proměnné prostředí jsou správně nakonfigurovány
+2. **Manuální testování**:
+   - Otestujte Python příklady: Aktivujte venv a spusťte skripty
+   - Otestujte TypeScript příklady: `npm install`, `npm run build`, `npm start`
+   - Ověřte správné nastavení proměnných prostředí
    - Zkontrolujte, že API klíče fungují s příklady kódu
 
 3. **Příklady kódu**:
-   - Ujistěte se, že všechny kódy běží bez chyb
-   - Testujte s Azure OpenAI i OpenAI API, pokud je to možné
-   - Ověřte, že příklady fungují s GitHub Models, kde je to podporováno
+   - Zajistěte, že celý kód běží bez chyb
+   - Testujte s oběma: Azure OpenAI a OpenAI API, pokud je to možné
+   - Ověřte, že příklady fungují s Microsoft Foundry Models tam, kde je podpora
 
 ### Žádné automatizované testy
 
-Toto je vzdělávací repozitář zaměřený na tutoriály a příklady. Neexistují žádné jednotkové nebo integrační testy. Validace je primárně:
-- Ruční testování příkladů kódu
+Toto je vzdělávací repozitář zaměřený na tutoriály a příklady. Nejsou zde žádné jednotkové nebo integrační testy k spuštění. Validace zahrnuje především:
+- Manuální testování příkladů kódu
 - GitHub Actions pro validaci Markdown
-- Komunitní recenze vzdělávacího obsahu
+- Komunitní kontrola vzdělávacího obsahu
 
-## Pokyny pro pull requesty
+## Směrnice pro Pull Requesty
 
 ### Před odesláním
 
-1. Testujte změny kódu v Pythonu i TypeScriptu, pokud je to relevantní
-2. Spusťte validaci Markdown (automaticky spuštěno při PR)
-3. Ujistěte se, že všechny Microsoft URL obsahují tracking ID
+1. Otestujte změny kódu v Pythonu i TypeScriptu, pokud je to možné
+2. Spusťte validaci Markdown (automaticky spuštěno na PR)
+3. Ujistěte se, že tracking ID jsou na všech Microsoft URL adresách
 4. Zkontrolujte, že relativní odkazy jsou platné
-5. Ověřte, že obrázky jsou správně odkazovány
+5. Ověřte správné odkazy na obrázky
 
 ### Formát názvu PR
 
-- Používejte popisné názvy: `[Lekce 06] Oprava překlepu v Python příkladu` nebo `Aktualizace README pro lekci 08`
-- Odkazujte na čísla problémů, pokud je to relevantní: `Fixes #123`
+- Používejte popisné názvy: `[Lesson 06] Fix Python example typo` nebo `Update README for lesson 08`
+- Pokud je to vhodné, odkazujte na čísla issue: `Fixes #123`
 
 ### Popis PR
 
 - Vysvětlete, co bylo změněno a proč
-- Odkazujte na související problémy
-- U změn kódu specifikujte, které příklady byly testovány
-- U překladů PR zahrňte všechny soubory pro kompletní překlad
+- Přidejte odkazy na související issues
+- U kódových změn uveďte, které příklady byly testovány
+- U překladových PR zahrňte všechny soubory pro kompletní překlad
 
 ### Požadavky na příspěvky
 
-- Podepište Microsoft CLA (automaticky při prvním PR)
-- Forkujte repozitář do svého účtu před provedením změn
-- Jeden PR na jednu logickou změnu (nekombinujte nesouvisející opravy)
-- Udržujte PR zaměřené a co nejmenší
+- Podepište Microsoft CLA (automatické při prvním PR)
+- Před úpravami proveďte fork repozitáře na svůj účet
+- Jeden PR na jednu logickou změnu (neslučujte nesouvisející opravy)
+- Pokud možno držte PR malé a zaměřené
 
-## Běžné pracovní postupy
+## Běžné workflow
 
 ### Přidání nového příkladu kódu
 
-1. Přejděte do příslušného adresáře lekce
+1. Přejděte do odpovídajícího adresáře lekce
 2. Vytvořte příklad v podadresáři `python/` nebo `typescript/`
-3. Dodržujte konvenci pojmenování: `{provider}-{example-name}.{py|ts|js}`
-4. Testujte s aktuálními API přihlašovacími údaji
-5. Dokumentujte nové proměnné prostředí v README lekce
+3. Dodržujte pojmenovací konvenci: `{provider}-{example-name}.{py|ts|js}`
+4. Otestujte s aktuálními API přihlašovacími údaji
+5. Zdokumentujte nové proměnné prostředí v README lekce
 
 ### Aktualizace dokumentace
 
 1. Upravte README.md v adresáři lekce
-2. Dodržujte pokyny pro Markdown (tracking ID, relativní odkazy)
-3. Aktualizace překladů jsou zpracovány GitHub Actions (neupravujte ručně)
-4. Testujte, že všechny odkazy jsou platné
+2. Dodržujte Markdown směrnice (tracking ID, relativní odkazy)
+3. Aktualizace překladů zajišťují GitHub Actions (neupravujte ručně)
+4. Otestujte, že všechny odkazy jsou platné
 
-### Práce s Dev Containers
+### Práce s Dev kontejnery
 
 1. Repozitář obsahuje `.devcontainer/devcontainer.json`
-2. Skript po vytvoření automaticky nainstaluje Python závislosti
-3. Rozšíření pro Python a Jupyter jsou předem nakonfigurována
+2. Post-create skript automaticky instaluje Python závislosti
+3. Rozšíření pro Python a Jupyter jsou přednastavená
 4. Prostředí je založeno na `mcr.microsoft.com/devcontainers/universal:2.11.2`
 
-## Nasazení a publikování
+## Deployment a publikace
 
-Toto je vzdělávací repozitář - neexistuje proces nasazení. Učební plán je využíván:
+Toto je vzdělávací repozitář – žádný proces nasazení neexistuje. Kurikulum je využíváno:
 
 1. **GitHub Repozitář**: Přímý přístup ke kódu a dokumentaci
-2. **GitHub Codespaces**: Okamžité vývojové prostředí s předem nakonfigurovaným nastavením
+2. **GitHub Codespaces**: Okamžité vývojové prostředí s předkonfigurovaným nastavením
 3. **Microsoft Learn**: Obsah může být syndikován na oficiální vzdělávací platformu
-4. **docsify**: Dokumentační web vytvořený z Markdown (viz `docsifytopdf.js` a `package.json`)
+4. **docsify**: Dokumentační web postavený na Markdownu (viz `docsifytopdf.js` a `package.json`)
 
-### Vytvoření dokumentačního webu
+### Tvorba dokumentačního webu
 
 ```bash
-# Generate PDF from documentation (if needed)
+# Vygenerujte PDF z dokumentace (pokud je potřeba)
 npm run convert
 ```
 
@@ -272,46 +273,48 @@ npm run convert
 
 ### Běžné problémy
 
-**Chyby importu Pythonu**:
+**Chyby importu v Pythonu**:
 - Ujistěte se, že je aktivováno virtuální prostředí
 - Spusťte `pip install -r requirements.txt`
 - Zkontrolujte, že verze Pythonu je 3.9+
 
-**Chyby sestavení TypeScriptu**:
+**Chyby při sestavování TypeScriptu**:
 - Spusťte `npm install` ve specifickém adresáři aplikace
-- Zkontrolujte, že verze Node.js je kompatibilní
-- Vymažte `node_modules` a znovu nainstalujte, pokud je to nutné
+- Zkontrolujte kompatibilní verzi Node.js
+- Vymažte `node_modules` a znovu nainstalujte, pokud je potřeba
 
-**Chyby autentizace API**:
-- Ověřte, že soubor `.env` existuje a má správné hodnoty
+**Chyby autentifikace API**:
+- Ověřte, že `.env` soubor existuje a obsahuje správné hodnoty
 - Zkontrolujte, že API klíče jsou platné a nevypršely
-- Ujistěte se, že URL endpointů jsou správné pro váš region
+- Ujistěte se, že endpoint URL jsou správné pro váš region
 
 **Chybějící proměnné prostředí**:
-- Zkopírujte `.env.copy` do `.env`
+- Zkopírujte `.env.copy` na `.env`
 - Vyplňte všechny požadované hodnoty pro lekci, na které pracujete
-- Restartujte aplikaci po aktualizaci `.env`
+- Po aktualizaci `.env` restartujte aplikaci
 
 ## Další zdroje
 
 - [Průvodce nastavením kurzu](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
-- [Pokyny pro přispívání](./CONTRIBUTING.md)
+- [Směrnice pro příspěvky](./CONTRIBUTING.md)
 - [Kodex chování](./CODE_OF_CONDUCT.md)
-- [Bezpečnostní politika](./SECURITY.md)
+- [Zásady bezpečnosti](./SECURITY.md)
 - [Azure AI Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
-- [Sbírka pokročilých příkladů kódu](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
+- [Sbírka pokročilých ukázek kódu](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
 
 ## Poznámky specifické pro projekt
 
 - Toto je **vzdělávací repozitář** zaměřený na učení, nikoli produkční kód
-- Příklady jsou záměrně jednoduché a zaměřené na výuku konceptů
-- Kvalita kódu je vyvážena srozumitelností pro vzdělávací účely
+- Příklady jsou úmyslně jednoduché a zaměřené na výuku konceptů
+- Kvalita kódu je vyvážena s jasností pro vzdělávání
 - Každá lekce je samostatná a může být dokončena nezávisle
-- Repozitář podporuje více poskytovatelů API: Azure OpenAI, OpenAI a GitHub Models
-- Obsah je vícejazyčný s automatizovanými pracovními postupy překladu
+- Repozitář podporuje více API poskytovatelů: Azure OpenAI, OpenAI, Microsoft Foundry Models a offline poskytovatele jako Foundry Local a Ollama
+- Obsah je vícejazyčný s automatizovanými překladatelskými workflowy
 - Aktivní komunita na Discordu pro dotazy a podporu
 
 ---
 
-**Prohlášení**:  
-Tento dokument byl přeložen pomocí služby AI pro překlady [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Prohlášení o omezení odpovědnosti**:
+Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). Přestože usilujeme o co největší přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Originální dokument v jeho mateřském jazyce by měl být považován za autoritativní zdroj. Pro kritické informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za jakékoli nedorozumění nebo nesprávné interpretace vzniklé použitím tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

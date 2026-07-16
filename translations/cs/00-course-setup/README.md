@@ -1,8 +1,8 @@
 # Začínáme s tímto kurzem
 
-Jsme velmi nadšení, že začínáte tento kurz a uvidíte, co vás inspiruje vytvořit s Generativní AI!
+Jsme velmi nadšeni, že jste se rozhodli začít tento kurz a uvidíte, co vás inspiruje k tvorbě s Generativní AI!
 
-Abychom zajistili váš úspěch, tato stránka popisuje kroky nastavení, technické požadavky a kde získat pomoc, pokud bude potřeba.
+Abychom zajistili váš úspěch, tato stránka uvádí kroky nastavení, technické požadavky a kde získat pomoc, pokud ji budete potřebovat.
 
 ## Kroky nastavení
 
@@ -10,39 +10,40 @@ Pro zahájení tohoto kurzu budete muset dokončit následující kroky.
 
 ### 1. Vytvořte fork tohoto repozitáře
 
-[Vytvořte fork celého tohoto repozitáře](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) do svého vlastního účtu GitHub, abyste mohli měnit kód a dokončit úkoly. Také můžete [repozitář označit hvězdičkou (🌟)](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst), abyste jej a související repozitáře snáze našli.
+[Vytvořte fork celého tohoto repozitáře](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) na svůj vlastní GitHub účet, abyste mohli měnit jakýkoli kód a plnit výzvy. Můžete také [označit (🌟) tento repozitář hvězdičkou](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst), abyste jej a související repozitáře snáze našli.
 
 ### 2. Vytvořte codespace
 
-Aby nedocházelo k problémům se závislostmi při spouštění kódu, doporučujeme spouštět tento kurz v [GitHub Codespaces](https://github.com/features/codespaces?WT.mc_id=academic-105485-koreyst).
+Aby nedocházelo k problémům se závislostmi při spouštění kódu, doporučujeme spustit tento kurz v [GitHub Codespaces](https://github.com/features/codespaces?WT.mc_id=academic-105485-koreyst).
 
-Ve vašem forku: **Code -> Codespaces -> New on main**
+Ve svém fork repozitáři: **Code -> Codespaces -> New on main**
 
-![Dialog showing buttons to create a codespace](../../../translated_images/cs/who-will-pay.4c0609b1c7780f44.webp)
+![Dialog s tlačítky pro vytvoření codespace](../../../translated_images/cs/who-will-pay.4c0609b1c7780f44.webp)
 
-#### 2.1 Přidejte tajný klíč
+#### 2.1 Přidejte secret
 
-1. ⚙️ Klikněte na ikonu ozubeného kola -> Command Pallette -> Codespaces : Manage user secret -> Přidat nový tajný klíč.
-2. Pojmenujte ho OPENAI_API_KEY, vložte svůj klíč, Uložit.
+1. ⚙️ Ikona ozubeného kola -> Command Pallete -> Codespaces : Manage user secret -> Add a new secret.
+2. Název OPENAI_API_KEY, vložte svůj klíč, Uložit.
 
 ### 3. Co dál?
 
-| Chci…               | Jít do…                                                                |
-|---------------------|------------------------------------------------------------------------|
+| Chci…              | Jít do…                                                                 |
+|---------------------|-------------------------------------------------------------------------|
 | Začít Lekci 1       | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
 | Pracovat offline    | [`setup-local.md`](02-setup-local.md)                                   |
-| Nastavit poskytovatele LLM | [`providers.md`](03-providers.md)                                        |
-| Setkat se s ostatními studenty | [Připojit se k našemu Discordu](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
+| Nastavit poskytovatele LLM | [`providers.md`](03-providers.md)                                   |
+| Setkat se s ostatními studenty | [Připojit se na náš Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) |
 
 ## Řešení problémů
 
-| Příznak                                      | Řešení                                                           |
-|----------------------------------------------|------------------------------------------------------------------|
-| Stavba kontejneru trvá déle než 10 minut    | **Codespaces ➜ “Rebuild Container”**                             |
-| `python: command not found`                  | Terminál není připojen; klikněte na **+** ➜ *bash*              |
-| `401 Unauthorized` od OpenAI                 | Nesprávný / expirující `OPENAI_API_KEY`                          |
-| VS Code ukazuje “Dev container mounting…”   | Obnovte záložku prohlížeče – Codespaces někdy ztratí spojení     |
-| Absence jádra notebooku                      | Menu notebooku ➜ **Kernel ▸ Select Kernel ▸ Python 3**          |
+
+| Příznak                                  | Řešení                                                         |
+|-----------------------------------------|-----------------------------------------------------------------|
+| Build kontejneru trvá déle než 10 min   | **Codespaces ➜ „Rebuild Container“**                            |
+| `python: command not found`               | Terminál se nepřipojil; klikněte na **+** ➜ *bash*              |
+| `401 Unauthorized` od OpenAI              | Špatný / expirovaný `OPENAI_API_KEY`                            |
+| VS Code zobrazuje „Dev container mounting…“ | Obnovte záložku prohlížeče—Codespaces někdy ztratí spojení        |
+| Chybí kernel v notebooku                 | Menu notebooku ➜ **Kernel ▸ Vybrat kernel ▸ Python 3**          |
 
    Unixové systémy:
 
@@ -56,15 +57,18 @@ Ve vašem forku: **Code -> Codespaces -> New on main**
    echo . > .env
    ```
 
-3. **Upravte soubor `.env`**: Otevřete soubor `.env` v textovém editoru (např. VS Code, Notepad++ nebo jiný editor). Přidejte následující řádek do souboru, kde `your_github_token_here` nahraďte svým skutečným GitHub tokenem:
+3. **Upravte soubor `.env`**: Otevřete soubor `.env` v textovém editoru (např. VS Code, Notepad++ nebo jakémkoli jiném editoru). Přidejte do souboru následující řádky, přičemž nahraďte zástupné symboly vlastním koncovým bodem a klíčem Microsoft Foundry Models (viz [`providers.md`](03-providers.md) pro informace, jak je získat):
+
+   > **Poznámka:** GitHub Models (a jeho proměnná `GITHUB_TOKEN`) bude ukončen ke konci července 2026. Používejte místo toho [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
 
    ```env
-   GITHUB_TOKEN=your_github_token_here
+   AZURE_INFERENCE_ENDPOINT=your_foundry_endpoint_here
+   AZURE_INFERENCE_CREDENTIAL=your_foundry_api_key_here
    ```
 
 4. **Uložte soubor**: Uložte změny a zavřete textový editor.
 
-5. **Nainstalujte `python-dotenv`**: Pokud jste tak ještě neučinili, budete potřebovat nainstalovat balíček `python-dotenv` pro načítání proměnných prostředí ze souboru `.env` do vaší Python aplikace. Můžete jej nainstalovat pomocí `pip`:
+5. **Nainstalujte `python-dotenv`**: Pokud jste tak ještě neučinili, budete muset nainstalovat balíček `python-dotenv`, který načte proměnné prostředí ze souboru `.env` do vaší Python aplikace. Instalaci provedete pomocí `pip`:
 
    ```bash
    pip install python-dotenv
@@ -79,41 +83,42 @@ Ve vašem forku: **Code -> Codespaces -> New on main**
    # Načíst proměnné prostředí ze souboru .env
    load_dotenv()
 
-   # Přístup k proměnné GITHUB_TOKEN
-   github_token = os.getenv("GITHUB_TOKEN")
+   # Přístup k proměnným Microsoft Foundry Models
+   endpoint = os.getenv("AZURE_INFERENCE_ENDPOINT")
+   token = os.getenv("AZURE_INFERENCE_CREDENTIAL")
 
-   print(github_token)
+   print(endpoint)
    ```
 
-To je vše! Úspěšně jste vytvořili `.env` soubor, přidali svůj GitHub token a načetli ho do vaší Python aplikace.
+Hotovo! Úspěšně jste vytvořili soubor `.env`, přidali své přihlašovací údaje Microsoft Foundry Models a načetli je do své Python aplikace.
 
-## Jak spustit lokálně na vašem počítači
+## Jak spustit lokálně na svém počítači
 
-Pro lokální spuštění kódu na vašem počítači budete potřebovat mít nainstalovanou nějakou verzi [Pythonu](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
+Pro spuštění kódu lokálně na svém počítači budete potřebovat mít nainstalovanou nějakou verzi [Pythonu](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
 
-Pro použití repozitáře je pak potřeba ho naklonovat:
+Pro použití repozitáře jej musíte naklonovat:
 
 ```shell
 git clone https://github.com/microsoft/generative-ai-for-beginners
 cd generative-ai-for-beginners
 ```
 
-Jakmile máte všechno stažené, můžete začít!
+Jakmile máte vše stažené, můžete začít!
 
 ## Nepovinné kroky
 
 ### Instalace Minicondy
 
-[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) je lehký instalátor pro instalaci [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Pythonu a několika balíčků. 
+[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) je lehký instalátor pro instalaci [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Pythonu a několika balíčků.
 Conda je správce balíčků, který usnadňuje nastavení a přepínání mezi různými Python [**virtuálními prostředími**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) a balíčky. Je také užitečný pro instalaci balíčků, které nejsou dostupné přes `pip`.
 
-Můžete postupovat podle [návodu na instalaci Minicondy](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) k jejímu nastavení.
+Můžete postupovat podle [návodu k instalaci MiniCondy](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst).
 
-Po instalaci Minicondy je třeba naklonovat [repozitář](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) (pokud jste to ještě neudělali).
+Po instalaci Minicondy naklonujte [repozitář](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) (pokud jste tak již neučinili).
 
-Poté je potřeba vytvořit virtuální prostředí. Pro Conda to uděláte vytvořením souboru prostředí (_environment.yml_). Pokud pracujete v Codespaces, vytvořte jej uvnitř adresáře `.devcontainer`, tedy `.devcontainer/environment.yml`.
+Dále je potřeba vytvořit virtuální prostředí. U Condy vytvořte nový soubor prostředí (_environment.yml_). Pokud projekt sledujete v Codespaces, vytvořte jej ve složce `.devcontainer`, tedy `.devcontainer/environment.yml`.
 
-Soubor prostředí naplňte následujícím kódem:
+Naplňte svůj soubor prostředí následujícím snippetem:
 
 ```yml
 name: <environment-name>
@@ -129,38 +134,38 @@ dependencies:
       - azure-ai-ml
 ```
 
-Pokud narazíte na chyby při použití condy, můžete ručně nainstalovat Microsoft AI knihovny pomocí následujícího příkazu v terminálu.
+Pokud se Vám při použití Condy objevují chyby, můžete ručně nainstalovat Microsoft AI knihovny pomocí následujícího příkazu v terminálu.
 
 ```
 conda install -c microsoft azure-ai-ml
 ```
 
-Soubor prostředí specifikuje závislosti, které potřebujeme. `<environment-name>` označuje název, který chcete použít pro své Conda prostředí, a `<python-version>` je verze Pythonu, kterou chcete použít, např. `3` je nejnovější hlavní verze Pythonu.
+Soubor prostředí specifikuje závislosti, které potřebujeme. `<environment-name>` označuje název, který chcete použít pro své Conda prostředí, a `<python-version>` je verze Pythonu, kterou chcete použít, například `3` je nejnovější hlavní verze Pythonu.
 
-Po dokončení můžete vytvořit Conda prostředí tak, že v příkazové řádce/terminálu spustíte následující příkazy:
+Poté můžete vytvořit své Conda prostředí spuštěním níže uvedených příkazů v příkazovém řádku / terminálu.
 
 ```bash
-conda env create --name ai4beg --file .devcontainer/environment.yml # Podcesta .devcontainer platí pouze pro nastavení Codespace
+conda env create --name ai4beg --file .devcontainer/environment.yml # Podcesta .devcontainer se používá pouze u nastavení Codespace
 conda activate ai4beg
 ```
 
-Pokud narazíte na potíže, podívejte se do [návodu na správu Conda prostředí](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst).
+V případě problémů se podívejte na [návod k prostředím Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst).
 
-### Použití Visual Studio Code s rozšířením podpory Pythonu
+### Použití Visual Studio Code s rozšířením pro Python
 
-Pro tento kurz doporučujeme používat editor [Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) s nainstalovaným [rozšířením podpory Pythonu](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst). Toto je však spíše doporučení než definitivní požadavek.
+Doporučujeme pro tento kurz používat editor [Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) s nainstalovaným [rozšířením pro podporu Pythonu](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst). Toto je však spíše doporučení než striktní požadavek.
 
-> **Poznámka**: Po otevření repozitáře kurzu ve VS Code máte možnost nastavit projekt uvnitř kontejneru díky [speciálnímu adresáři `.devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) v repozitáři kurzu. O tom více později.
+> **Poznámka**: Při otevření repozitáře kurzu ve VS Code máte možnost nastavit projekt uvnitř kontejneru. Je to díky speciální složce [`.devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) uvnitř repozitáře kurzu. O tomto si povíme více později.
 
-> **Poznámka**: Jakmile naklonujete a otevřete adresář ve VS Code, automaticky vám bude nabídnuto nainstalovat rozšíření podpory Pythonu.
+> **Poznámka**: Po naklonování a otevření složky ve VS Code vám editor automaticky nabídne instalaci rozšíření pro Python.
 
-> **Poznámka**: Pokud VS Code doporučí znovu otevřít repozitář v kontejneru, odmítněte tuto žádost, chcete-li používat lokálně nainstalovanou verzi Pythonu.
+> **Poznámka**: Pokud vám VS Code doporučí znovu otevřít repozitář v kontejneru, tuto volbu odmítněte, pokud chcete použít lokálně nainstalovanou verzi Pythonu.
 
 ### Použití Jupyter v prohlížeči
 
-Můžete také pracovat na projektu pomocí prostředí [Jupyter](https://jupyter.org?WT.mc_id=academic-105485-koreyst) přímo ve svém prohlížeči. Jak klasický Jupyter, tak [Jupyter Hub](https://jupyter.org/hub?WT.mc_id=academic-105485-koreyst) poskytují příjemné vývojové prostředí s funkcemi jako automatické dokončování, zvýraznění kódu apod.
+Projekt můžete také rozvíjet pomocí prostředí [Jupyter](https://jupyter.org?WT.mc_id=academic-105485-koreyst) přímo ve webovém prohlížeči. Jak klasický Jupyter, tak [Jupyter Hub](https://jupyter.org/hub?WT.mc_id=academic-105485-koreyst) nabízí příjemné prostředí s funkcemi jako automatické dokončování, zvýraznění kódu atd.
 
-Pro spuštění Jupytera lokálně přejděte do terminálu/příkazového řádku, přejděte do adresáře kurzu a spusťte:
+Pro spuštění Jupytera lokálně otevřete terminál / příkazový řádek, přejděte do složky kurzu a spusťte:
 
 ```bash
 jupyter notebook
@@ -172,60 +177,63 @@ nebo
 jupyterhub
 ```
 
-Tím spustíte instanci Jupytera a URL pro přístup k ní bude zobrazeno v okně příkazové řádky.
+Tím se spustí instance Jupytera a její URL bude zobrazeno v příkazovém okně.
 
-Po vstupu na tuto URL byste měli vidět osnovu kurzu a být schopni přistupovat k libovolnému souboru `*.ipynb`. Například `08-building-search-applications/python/oai-solution.ipynb`.
+Po přístupu na uvedenou adresu uvidíte osnovu kurzu a budete moci navigovat k jakémukoli souboru `*.ipynb`, například `08-building-search-applications/python/oai-solution.ipynb`.
 
-### Spouštění v kontejneru
+### Spuštění v kontejneru
 
-Alternativou k nastavení všeho na vašem počítači nebo v Codespace je použití [kontejneru](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst). Speciální složka `.devcontainer` v repozitáři kurzu umožňuje VS Code nastavit projekt uvnitř kontejneru. Mimo Codespaces to vyžaduje instalaci Dockeru a upřímně řečeno, je to trochu práce, proto to doporučujeme pouze těm, kdo mají zkušenosti s kontejnery.
+Alternativou k nastavení všeho na vašem počítači nebo v Codespace je použití [kontejneru](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). Speciální složka `.devcontainer` v repozitáři kurzu umožňuje VS Code nastavit projekt uvnitř kontejneru. Mimo Codespaces to vyžaduje instalaci Dockeru a vyžaduje to trochu práce, proto to doporučujeme jen zkušeným uživatelům kontejnerů.
 
-Jedním z nejlepších způsobů, jak zabezpečit své API klíče při používání GitHub Codespaces, je použití Codespace Secrets. Podrobnosti naleznete v průvodci [Codespaces secrets management](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst).
+Jedním z nejlepších způsobů, jak zabezpečit své API klíče při použití GitHub Codespaces, je využití Codespace Secrets. Přečtěte si prosím [návod na správu tajemství v Codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst), kde se o tom dozvíte více.
+
 
 ## Lekce a technické požadavky
 
-Kurz má 6 koncepčních lekcí a 6 lekcí s kódováním.
+Kurz obsahuje 6 konceptuálních lekcí a 6 lekcí s kódováním.
 
-Pro lekce s kódováním používáme Azure OpenAI Service. Budete potřebovat přístup k Azure OpenAI službě a API klíč pro spuštění tohoto kódu. O přístup můžete požádat [vyplněním této žádosti](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst).
+Pro lekce s kódováním používáme Azure OpenAI Service. Budete potřebovat přístup k Azure OpenAI služby a API klíč, abyste mohli tento kód spustit. Můžete požádat o přístup vyplněním [kéžadosti](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst).
 
-Zatímco čekáte na vyřízení vaší žádosti, každá lekce s kódováním obsahuje také soubor `README.md`, kde můžete zobrazit kód a výstupy.
+Zatímco čekáte na zpracování žádosti, každá lekce s kódováním obsahuje také soubor `README.md`, kde si můžete prohlédnout kód a výstupy.
 
-## Použití Azure OpenAI Service poprvé
+## Poprvé používáte Azure OpenAI Service
 
-Pokud s Azure OpenAI službou pracujete poprvé, postupujte podle tohoto návodu, jak [vytvořit a nasadit Azure OpenAI Service zdroj.](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
+Pokud Azure OpenAI Service používáte poprvé, postupujte podle tohoto průvodce, jak [vytvořit a nasadit zdroj Azure OpenAI Service.](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
 
-## Použití OpenAI API poprvé
+## Poprvé používáte OpenAI API
 
-Pokud pracujete s OpenAI API poprvé, postupujte podle návodu, jak [vytvořit a používat rozhraní.](https://platform.openai.com/docs/quickstart?context=pythont&WT.mc_id=academic-105485-koreyst)
+Pokud OpenAI API používáte poprvé, přečtěte si průvodce, jak [vytvořit a používat Interface.](https://platform.openai.com/docs/quickstart?context=pythont&WT.mc_id=academic-105485-koreyst)
 
-## Setkejte se s ostatními studenty
+## Seznamte se s ostatními studenty
 
-Vytvořili jsme kanály v našem oficiálním [AI Community Discord serveru](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) pro setkání s ostatními studenty. Je to skvělý způsob, jak navázat kontakty s dalšími podobně smýšlejícími podnikateli, vývojáři, studenty a kýmkoliv, kdo se chce posunout v generativní AI.
+Vytvořili jsme kanály na našem oficiálním [AI Community Discord serveru](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) pro seznamování s ostatními studenty. Je to skvělý způsob, jak navázat kontakty s ostatními podnikateli, tvůrci, studenty a kýmkoli, kdo chce zlepšit své znalosti v oblasti Generativní AI.
 
-[![Join discord channel](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
+[![Připojit se na discord kanál](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
-Projektový tým bude také na tomto Discord serveru, aby pomáhal všem studentům.
+Tým projektu bude také na tomto Discord serveru k dispozici pro pomoc všem studentům.
 
-## Přispívejte
+## Přispějte
 
-Tento kurz je otevřený open-source projekt. Pokud vidíte oblasti ke zlepšení nebo problémy, vytvořte prosím [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) nebo nahlaste [GitHub issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst).
+Tento kurz je iniciativa s otevřeným zdrojovým kódem. Pokud uvidíte možnosti zlepšení nebo chyby, vytvořte prosím [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) nebo nahlaste [GitHub issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst).
 
-Projektový tým bude sledovat všechny příspěvky. Přispívání do open source je skvělý způsob, jak budovat svou kariéru v oblasti Generativní AI.
+Tým projektu bude sledovat všechny příspěvky. Přispívání do open source je skvělý způsob, jak budovat svou kariéru v oblasti Generativní AI.
 
-Většina příspěvků vyžaduje souhlas s Licenční smlouvou přispěvatele (Contributor License Agreement, CLA), která potvrzuje, že máte právo a skutečně nám udělujete práva používat váš příspěvek. Pro detaily navštivte [web CLA, Contributor License Agreement](https://cla.microsoft.com?WT.mc_id=academic-105485-koreyst).
+Většina příspěvků vyžaduje souhlas s Contributor License Agreement (CLA), který prohlašuje, že máte právo a skutečně nám udělujete práva k použití svého příspěvku. Podrobnosti najdete na [webu CLA, Contributor License Agreement](https://cla.microsoft.com?WT.mc_id=academic-105485-koreyst).
 
-Důležité: při překladu textu v tomto repozitáři prosím nepoužívejte strojový překlad. Překlady budou ověřovány komunitou, proto se přihlašujte pouze k překladům do jazyků, ve kterých jste zdatní.
+Důležité: při překládání textu v tomto repozitáři prosím nepoužívejte strojový překlad. Překlady budeme ověřovat prostřednictvím komunity, proto prosím překládejte pouze do jazyků, ve kterých jste odborně zdatní.
 
-Při odeslání pull requestu automaticky CLA-bot zjistí, zda je potřeba dodat CLA a příslušně označí PR (např. štítek, komentář). Stačí následovat pokyny bota. Toto budete muset udělat pouze jednou napříč všemi repozitáři, které používají naše CLA.
+Při odeslání pull requestu automaticky CLA-bot zjistí, zda je potřeba dodat CLA a podle toho PR označí (např. štítkem, komentářem). Stačí postupovat podle pokynů bota. Toto je potřeba udělat jen jednou u všech repozitářů používajících náš CLA.
 
-Tento projekt přijal [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst). Pro více informací si přečtěte FAQ k pravidlům chování nebo kontaktujte [Email opencode](opencode@microsoft.com) s dalšími dotazy či komentáři.
 
-## Pojďme začít!
-Nyní, když jste dokončili potřebné kroky k dokončení tohoto kurzu, pojďme začít tím, že získáme [úvod do Generativní AI a LLM](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
+Tento projekt přijal [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst). Pro více informací si přečtěte Často kladené otázky ke Kodexu chování nebo kontaktujte [Email opencode](opencode@microsoft.com) s jakýmikoli dalšími dotazy či připomínkami.
+
+## Začněme
+
+Nyní, když jste dokončili potřebné kroky k dokončení tohoto kurzu, pojďme začít se [seznámením s Generativní AI a LLM](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Prohlášení o vyloučení odpovědnosti**:  
-Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). I když usilujeme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho mateřském jazyce by měl být považován za autoritativní zdroj. Pro kritické informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za jakékoliv nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.
+**Prohlášení o omezení odpovědnosti**:
+Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). Přestože usilujeme o co největší přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Originální dokument v jeho mateřském jazyce by měl být považován za autoritativní zdroj. Pro kritické informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za jakékoli nedorozumění nebo nesprávné interpretace vzniklé použitím tohoto překladu.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

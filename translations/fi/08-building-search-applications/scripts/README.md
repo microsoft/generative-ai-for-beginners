@@ -1,10 +1,10 @@
-# Puheen tekstitysdataprep
+# Puheen tunnistuksen datan valmistelu
 
-Puheen tekstitysdataprep-skriptit lataavat YouTube-videoiden tekstitykset ja valmistavat ne käytettäväksi Semantic Search with OpenAI Embeddings and Functions -esimerkin kanssa.
+Puheen tunnistuksen datan valmisteluskriptit lataavat YouTube-videoiden tekstitykset ja valmistelevat ne Semanttista hakua OpenAI-mallien ja Funktioiden näytettä varten.
 
-Puheen tekstitysdataprep-skriptejä on testattu uusimmilla Windows 11-, macOS Ventura- ja Ubuntu 22.04 (ja uudemmilla) versioilla.
+Puheen tunnistuksen datan valmisteluskriptit on testattu uusimmilla Windows 11-, macOS Ventura- ja Ubuntu 22.04 (ja sitä uudemmilla) julkaisuilla.
 
-## Luo tarvittavat Azure OpenAI Service -resurssit
+## Luo tarvittavat Azure OpenAI -palveluresurssit
 
 > [!IMPORTANT]
 > Suosittelemme päivittämään Azure CLI:n uusimpaan versioon yhteensopivuuden varmistamiseksi OpenAI:n kanssa
@@ -13,22 +13,22 @@ Puheen tekstitysdataprep-skriptejä on testattu uusimmilla Windows 11-, macOS Ve
 1. Luo resurssiryhmä
 
 > [!NOTE]
-> Näissä ohjeissa käytämme "semantic-video-search" nimistä resurssiryhmää East US -alueella.
-> Voit vaihtaa resurssiryhmän nimeä, mutta jos vaihdat resurssien sijaintia,
+> Näissä ohjeissa käytämme "semantic-video-search" -nimistä resurssiryhmää East US -alueella.
+> Voit muuttaa resurssiryhmän nimeä, mutta kun vaihdat resurssien sijaintia,
 > tarkista [mallien saatavuustaulukko](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. Luo Azure OpenAI Service -resurssi.
+1. Luo Azure OpenAI -palveluresurssi.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Hanki tämän sovelluksen käyttöön tarvittavat päätepiste ja avaimet
+1. Hae tämän sovelluksen käyttöön päätepiste ja avaimet
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -39,7 +39,7 @@ az cognitiveservices account keys list --name semantic-video-openai \
 
 1. Ota käyttöön seuraavat mallit:
    - `text-embedding-ada-002` versio `2` tai uudempi, nimeltään `text-embedding-ada-002`
-   - `gpt-35-turbo` versio `0613` tai uudempi, nimeltään `gpt-35-turbo`
+   - `gpt-4o-mini` nimeltään `gpt-4o-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,9 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-35-turbo \
-    --model-name gpt-35-turbo \
-    --model-version "0613"  \
+    --deployment-name gpt-4o-mini \
+    --model-name gpt-4o-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -67,9 +66,9 @@ az cognitiveservices account deployment create \
 
 ## Ympäristömuuttujat
 
-Seuraavat ympäristömuuttujat ovat pakollisia YouTube-tekstitysdatan valmisteluskriptien suorittamiseen.
+Seuraavat ympäristömuuttujat ovat pakollisia YouTube-puheentunnistusdatan valmisteluskriptien suorittamiseen.
 
-### Windowsilla
+### Windowsissa
 
 Suosittelemme lisäämään muuttujat käyttäjän ympäristömuuttujiin.
 `Windowsin Käynnistä` > `Muokkaa järjestelmän ympäristömuuttujia` > `Ympäristömuuttujat` > `Käyttäjämuuttujat` kohdalla [USER] > `Uusi`.
@@ -81,11 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
+<!-- Voit myös lisätä ympäristömuuttujat PowerShell-profiiliisi.
 
+```powershell
+$env:AZURE_OPENAI_API_KEY = "<Azure OpenAI -palvelun API-avain>"
+$env:AZURE_OPENAI_ENDPOINT = "<Azure OpenAI -palvelun päätepiste>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<Azure OpenAI -palvelun mallin käyttöönoton nimi>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<Google-kehittäjän API-avain>"
+``` -->
 
 ### Linuxilla ja macOS:llä
 
-Suosittelemme lisäämään seuraavat export-komennot tiedostoon `~/.bashrc` tai `~/.zshrc`.
+Suosittelemme lisäämään seuraavat vientikomennot `~/.bashrc` tai `~/.zshrc` tiedostoon.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -96,22 +102,22 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## Asenna tarvittavat Python-kirjastot
 
-1. Asenna [git-asiakasohjelma](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), jos sitä ei ole jo asennettu.
-1. Avaa `Terminal`-ikkuna ja kloonaa esimerkkikansio haluamaasi repositorioon.
+1. Asenna [git-asiakas](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), jos sitä ei ole jo asennettu.
+1. Avaa `Terminal`-ikkuna ja kloonaa näyte haluamaasi repositoriokansioon.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
     ```
 
-1. Siirry `data_prep`-kansioon.
+1. Siirry `data_prep` -kansioon.
 
    ```bash
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. Luo Python-virtuaaliympäristö.
+1. Luo Pythonin virtuaaliympäristö.
 
-    Windowsilla:
+    Windowsissa:
 
     ```powershell
     python -m venv .venv
@@ -123,9 +129,9 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     python3 -m venv .venv
     ```
 
-1. Aktivoi Python-virtuaaliympäristö.
+1. Aktivoi Pythonin virtuaaliympäristö.
 
-   Windowsilla:
+   Windowsissa:
 
    ```powershell
    .venv\Scripts\activate
@@ -139,7 +145,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Asenna tarvittavat kirjastot.
 
-   Windowsilla:
+   Windowsissa:
 
    ```powershell
    pip install -r requirements.txt
@@ -151,9 +157,9 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## Suorita YouTube-tekstitysdatan valmisteluskriptit
+## Suorita YouTube-puheentunnistusdatan valmisteluskriptit
 
-### Windowsilla
+### Windowsissa
 
 ```powershell
 .\transcripts_prepare.ps1
@@ -165,5 +171,9 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ./transcripts_prepare.sh
 ```
 
-**Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattikäännöksissä saattaa esiintyä virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää virallisena lähteenä. Tärkeissä tiedoissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vastuuvapauslauseke**:
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, otathan huomioon, että automaattiset käännökset saattavat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäiskielellä on virallinen lähde. Tärkeissä asioissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

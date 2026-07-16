@@ -1,74 +1,77 @@
-# Mengintegrasikan dengan Pemanggilan Fungsi
+# Integrasi dengan pemanggilan fungsi
 
-[![Mengintegrasikan dengan Pemanggilan Fungsi](../../../translated_images/id/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integrasi dengan pemanggilan fungsi](../../../translated_images/id/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
-Anda telah mempelajari cukup banyak sejauh ini dalam pelajaran sebelumnya. Namun, kita masih bisa meningkatkan lebih jauh. Beberapa hal yang dapat kita perbaiki adalah bagaimana kita bisa mendapatkan format respons yang lebih konsisten agar lebih mudah bekerja dengan respons di tahap selanjutnya. Selain itu, kita mungkin ingin menambahkan data dari sumber lain untuk memperkaya aplikasi kita.
+Anda telah belajar cukup banyak sejauh ini dalam pelajaran sebelumnya. Namun, kita bisa meningkatkan lebih jauh. Beberapa hal yang bisa kita atasi adalah bagaimana kita dapat memperoleh format respons yang lebih konsisten agar lebih mudah bekerja dengan respons tersebut di tahap berikutnya. Selain itu, kita mungkin ingin menambahkan data dari sumber lain untuk memperkaya aplikasi kita.
 
-Masalah yang disebutkan di atas adalah apa yang akan dibahas dalam bab ini.
+Masalah yang disebutkan di atas adalah apa yang ingin diselesaikan bab ini.
 
 ## Pendahuluan
 
-Pelajaran ini akan mencakup:
+Pelajaran ini akan membahas:
 
 - Menjelaskan apa itu pemanggilan fungsi dan kasus penggunaannya.
-- Membuat pemanggilan fungsi menggunakan Azure OpenAI.
-- Cara mengintegrasikan pemanggilan fungsi ke dalam aplikasi.
+- Membuat panggilan fungsi menggunakan Azure OpenAI.
+- Cara mengintegrasikan pemanggilan fungsi ke dalam sebuah aplikasi.
 
 ## Tujuan Pembelajaran
 
-Pada akhir pelajaran ini, Anda akan dapat:
+Pada akhir pelajaran ini, Anda akan mampu:
 
-- Menjelaskan tujuan menggunakan pemanggilan fungsi.
-- Menyiapkan Pemanggilan Fungsi menggunakan Azure OpenAI Service.
+- Menjelaskan tujuan penggunaan pemanggilan fungsi.
+- Mengatur Pemanggilan Fungsi menggunakan Azure OpenAI Service.
 - Merancang pemanggilan fungsi yang efektif untuk kasus penggunaan aplikasi Anda.
 
 ## Skenario: Meningkatkan chatbot kita dengan fungsi
 
-Untuk pelajaran ini, kita ingin membangun fitur untuk startup pendidikan kita yang memungkinkan pengguna menggunakan chatbot untuk menemukan kursus teknis. Kami akan merekomendasikan kursus yang sesuai dengan tingkat keterampilan mereka, peran saat ini, dan teknologi yang diminati.
+Untuk pelajaran ini, kita ingin membangun fitur untuk startup pendidikan kita yang memungkinkan pengguna menggunakan chatbot untuk menemukan kursus teknis. Kita akan merekomendasikan kursus yang sesuai dengan tingkat keterampilan mereka, peran saat ini, dan teknologi yang diminati.
 
 Untuk menyelesaikan skenario ini, kita akan menggunakan kombinasi:
 
-- `Azure OpenAI` untuk menciptakan pengalaman chat bagi pengguna.
-- `Microsoft Learn Catalog API` untuk membantu pengguna menemukan kursus berdasarkan permintaan mereka.
-- `Pemanggilan Fungsi` untuk mengambil kueri pengguna dan mengirimkannya ke fungsi untuk membuat permintaan API.
+- `Azure OpenAI` untuk membuat pengalaman chat bagi pengguna.
+- `Microsoft Learn Catalog API` untuk membantu pengguna menemukan kursus berdasarkan permintaan pengguna.
+- `Pemanggilan Fungsi` untuk mengambil query pengguna dan mengirimkannya ke fungsi untuk membuat permintaan API.
 
-Untuk memulai, mari kita lihat mengapa kita ingin menggunakan pemanggilan fungsi sejak awal:
+Untuk memulai, mari kita melihat mengapa kita ingin menggunakan pemanggilan fungsi sejak awal:
 
 ## Mengapa Pemanggilan Fungsi
 
-Sebelum pemanggilan fungsi, respons dari LLM tidak terstruktur dan tidak konsisten. Pengembang harus menulis kode validasi yang kompleks untuk memastikan mereka dapat menangani setiap variasi respons. Pengguna tidak dapat mendapatkan jawaban seperti "Bagaimana cuaca saat ini di Stockholm?". Hal ini karena model terbatas pada waktu data dilatih.
+Sebelum adanya pemanggilan fungsi, respons dari LLM bersifat tidak terstruktur dan tidak konsisten. Pengembang harus menulis kode validasi kompleks untuk memastikan mereka dapat menangani setiap variasi respons. Pengguna tidak bisa mendapatkan jawaban seperti "Apa cuaca saat ini di Stockholm?". Ini karena model dibatasi oleh waktu saat data dilatih.
 
 Pemanggilan Fungsi adalah fitur dari Azure OpenAI Service untuk mengatasi keterbatasan berikut:
 
-- **Format respons yang konsisten**. Jika kita dapat mengontrol format respons dengan lebih baik, kita dapat lebih mudah mengintegrasikan respons ke sistem lain.
-- **Data eksternal**. Kemampuan menggunakan data dari sumber lain dalam aplikasi dalam konteks chat.
+- **Format respons yang konsisten**. Jika kita dapat lebih mengontrol format respons, kita dapat lebih mudah mengintegrasikan respons tersebut ke sistem lain.
+- **Data eksternal**. Kemampuan menggunakan data dari sumber lain dalam konteks chat.
 
 ## Mengilustrasikan masalah melalui skenario
 
-> Kami merekomendasikan Anda menggunakan [notebook yang disertakan](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) jika Anda ingin menjalankan skenario di bawah ini. Anda juga dapat membaca penjelasan ini untuk memahami masalah yang dapat diatasi dengan fungsi.
+> Kami menyarankan Anda menggunakan [notebook yang disertakan](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) jika Anda ingin menjalankan skenario di bawah ini. Anda juga bisa hanya membacanya sembari kami mencoba mengilustrasikan masalah dimana fungsi dapat membantu mengatasi masalah tersebut.
 
 Mari kita lihat contoh yang mengilustrasikan masalah format respons:
 
-Misalkan kita ingin membuat database data siswa sehingga kita dapat menyarankan kursus yang tepat kepada mereka. Di bawah ini ada dua deskripsi siswa yang sangat mirip dalam data yang mereka miliki.
+Katakanlah kita ingin membuat database data siswa agar dapat menyarankan kursus yang tepat bagi mereka. Di bawah ini kami memiliki dua deskripsi siswa yang sangat mirip dalam data yang mereka miliki.
 
-1. Membuat koneksi ke sumber daya Azure OpenAI kita:
+1. Buat koneksi ke sumber daya Azure OpenAI kita:
 
    ```python
    import os
    import json
-   from openai import AzureOpenAI
+   from openai import OpenAI
    from dotenv import load_dotenv
    load_dotenv()
 
-   client = AzureOpenAI(
-   api_key=os.environ['AZURE_OPENAI_API_KEY'],  # this is also the default, it can be omitted
-   api_version = "2023-07-01-preview"
+   # API Respons disajikan dari Azure OpenAI (Microsoft Foundry) v1
+   # endpoint, jadi kami mengarahkan klien OpenAI ke <your-endpoint>/openai/v1/.
+   endpoint = os.environ['AZURE_OPENAI_ENDPOINT']
+   client = OpenAI(
+   api_key=os.environ['AZURE_OPENAI_API_KEY'],
+   base_url=f"{endpoint.rstrip('/')}/openai/v1/",
    )
 
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   Di bawah ini adalah beberapa kode Python untuk mengonfigurasi koneksi kita ke Azure OpenAI di mana kita mengatur `api_type`, `api_base`, `api_version`, dan `api_key`.
+   Di bawah ini adalah kode Python untuk mengonfigurasi koneksi kita ke Azure OpenAI. Karena kita menggunakan endpoint v1, kita hanya perlu mengatur `api_key` dan `base_url` (tidak perlu `api_version`).
 
 1. Membuat dua deskripsi siswa menggunakan variabel `student_1_description` dan `student_2_description`.
 
@@ -78,9 +81,9 @@ Misalkan kita ingin membuat database data siswa sehingga kita dapat menyarankan 
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   Kami ingin mengirim deskripsi siswa di atas ke LLM untuk memproses data. Data ini nantinya dapat digunakan dalam aplikasi kami dan dikirim ke API atau disimpan dalam database.
+   Kita ingin mengirim deskripsi siswa di atas ke LLM untuk mem-parsing data. Data ini nantinya bisa digunakan dalam aplikasi dan dikirim ke API atau disimpan dalam database.
 
-1. Mari kita buat dua prompt identik di mana kita menginstruksikan LLM tentang informasi apa yang kita minati:
+1. Mari kita buat dua prompt identik di mana kita menginstruksikan LLM tentang informasi apa yang ingin kita dapatkan:
 
    ```python
    prompt1 = f'''
@@ -112,31 +115,33 @@ Misalkan kita ingin membuat database data siswa sehingga kita dapat menyarankan 
 
    Prompt di atas menginstruksikan LLM untuk mengekstrak informasi dan mengembalikan respons dalam format JSON.
 
-1. Setelah mengatur prompt dan koneksi ke Azure OpenAI, sekarang kita akan mengirimkan prompt ke LLM menggunakan `openai.ChatCompletion`. Kami menyimpan prompt dalam variabel `messages` dan menetapkan peran sebagai `user`. Hal ini untuk meniru pesan dari pengguna yang ditulis ke chatbot.
+1. Setelah menyiapkan prompt dan koneksi ke Azure OpenAI, sekarang kita kirim prompt ke LLM dengan menggunakan `client.responses.create`. Kita simpan prompt di variabel `input` dan menetapkan peran sebagai `user`. Ini meniru pesan yang ditulis pengguna ke chatbot.
 
    ```python
-   # response from prompt one
-   openai_response1 = client.chat.completions.create(
+   # respons dari prompt satu
+   openai_response1 = client.responses.create(
    model=deployment,
-   messages = [{'role': 'user', 'content': prompt1}]
+   input = [{'role': 'user', 'content': prompt1}],
+   store=False,
    )
-   openai_response1.choices[0].message.content
+   openai_response1.output_text
 
-   # response from prompt two
-   openai_response2 = client.chat.completions.create(
+   # respons dari prompt dua
+   openai_response2 = client.responses.create(
    model=deployment,
-   messages = [{'role': 'user', 'content': prompt2}]
+   input = [{'role': 'user', 'content': prompt2}],
+   store=False,
    )
-   openai_response2.choices[0].message.content
+   openai_response2.output_text
    ```
 
-Sekarang kita dapat mengirim kedua permintaan ke LLM dan memeriksa respons yang kita terima dengan menemukannya seperti ini `openai_response1['choices'][0]['message']['content']`.
+Sekarang kita dapat mengirim kedua permintaan ke LLM dan memeriksa respons yang diterima dengan melihatnya seperti `openai_response1.output_text`.
 
 1. Terakhir, kita dapat mengonversi respons ke format JSON dengan memanggil `json.loads`:
 
    ```python
-   # Loading the response as a JSON object
-   json_response1 = json.loads(openai_response1.choices[0].message.content)
+   # Memuat respon sebagai objek JSON
+   json_response1 = json.loads(openai_response1.output_text)
    json_response1
    ```
 
@@ -164,59 +169,60 @@ Sekarang kita dapat mengirim kedua permintaan ke LLM dan memeriksa respons yang 
    }
    ```
 
-   Meskipun promptnya sama dan deskripsinya mirip, kita melihat nilai properti `Grades` diformat secara berbeda, seperti kadang-kadang kita mendapatkan format `3.7` atau `3.7 GPA` misalnya.
+   Meskipun prompt sama dan deskripsinya mirip, kita melihat nilai dari properti `Grades` diformat berbeda, karena kadang kita mendapatkan format `3.7` atau `3.7 GPA` misalnya.
 
-   Hasil ini terjadi karena LLM mengambil data tidak terstruktur dalam bentuk prompt tertulis dan juga mengembalikan data yang tidak terstruktur. Kita perlu memiliki format yang terstruktur sehingga kita tahu apa yang diharapkan saat menyimpan atau menggunakan data ini.
+   Hasil ini terjadi karena LLM menerima data tidak terstruktur dalam bentuk prompt tertulis dan juga mengembalikan data tidak terstruktur. Kita membutuhkan format yang terstruktur agar kita tahu apa yang diharapkan saat menyimpan atau menggunakan data ini.
 
-Jadi bagaimana kita menyelesaikan masalah format ini? Dengan menggunakan pemanggilan fungsi, kita dapat memastikan bahwa kita menerima data yang terstruktur kembali. Saat menggunakan pemanggilan fungsi, LLM sebenarnya tidak memanggil atau menjalankan fungsi apa pun. Sebaliknya, kita membuat struktur untuk diikuti LLM dalam responsnya. Kami kemudian menggunakan respons terstruktur tersebut untuk mengetahui fungsi apa yang harus dijalankan dalam aplikasi kami.
+Jadi bagaimana kita menyelesaikan masalah format ini? Dengan menggunakan pemanggilan fungsi, kita dapat memastikan bahwa kita menerima data yang terstruktur kembali. Ketika menggunakan pemanggilan fungsi, LLM tidak benar-benar memanggil atau menjalankan fungsi. Sebagai gantinya, kita membuat struktur yang harus diikuti LLM untuk responsnya. Kemudian kita menggunakan respons terstruktur itu untuk mengetahui fungsi mana yang harus dijalankan dalam aplikasi kita.
 
 ![alur fungsi](../../../translated_images/id/Function-Flow.083875364af4f4bb.webp)
 
-Kami kemudian dapat mengambil apa yang dikembalikan dari fungsi dan mengirimkannya kembali ke LLM. LLM kemudian akan merespons menggunakan bahasa alami untuk menjawab kueri pengguna.
+Kita kemudian dapat mengambil apa yang dikembalikan dari fungsi dan mengirimkannya kembali ke LLM. LLM kemudian akan merespon menggunakan bahasa alami untuk menjawab pertanyaan pengguna.
 
-## Kasus Penggunaan Pemanggilan Fungsi
+## Kasus penggunaan untuk menggunakan pemanggilan fungsi
 
-Ada banyak kasus penggunaan berbeda di mana pemanggilan fungsi dapat meningkatkan aplikasi Anda seperti:
+Ada banyak kasus dimana pemanggilan fungsi dapat meningkatkan aplikasi Anda, seperti:
 
-- **Memanggil Alat Eksternal**. Chatbot sangat baik dalam memberikan jawaban atas pertanyaan dari pengguna. Dengan menggunakan pemanggilan fungsi, chatbot dapat menggunakan pesan dari pengguna untuk menyelesaikan tugas tertentu. Misalnya, seorang siswa dapat meminta chatbot untuk "Kirim email ke instruktur saya yang mengatakan saya membutuhkan lebih banyak bantuan dengan subjek ini". Ini dapat membuat pemanggilan fungsi ke `send_email(to: string, body: string)`.
+- **Memanggil Alat Eksternal**. Chatbot sangat baik memberikan jawaban atas pertanyaan pengguna. Dengan menggunakan pemanggilan fungsi, chatbot dapat menggunakan pesan dari pengguna untuk menyelesaikan tugas tertentu. Misalnya, seorang siswa bisa meminta chatbot "Kirim email ke instruktur saya bahwa saya butuh bantuan lebih banyak dengan mata pelajaran ini". Ini dapat membuat pemanggilan fungsi ke `send_email(to: string, body: string)`
 
-- **Membuat Permintaan API atau Database**. Pengguna dapat menemukan informasi menggunakan bahasa alami yang dikonversi menjadi kueri terformat atau permintaan API. Contohnya adalah seorang guru yang meminta "Siapa siswa yang menyelesaikan tugas terakhir" yang dapat memanggil fungsi bernama `get_completed(student_name: string, assignment: int, current_status: string)`.
+- **Membuat Query API atau Database**. Pengguna dapat menemukan informasi menggunakan bahasa alami yang kemudian diubah menjadi query atau permintaan API yang terformat. Contohnya bisa saja guru yang meminta "Siapa saja siswa yang menyelesaikan tugas terakhir" yang dapat memanggil fungsi bernama `get_completed(student_name: string, assignment: int, current_status: string)`
 
-- **Membuat Data Terstruktur**. Pengguna dapat mengambil blok teks atau CSV dan menggunakan LLM untuk mengekstrak informasi penting darinya. Misalnya, seorang siswa dapat mengonversi artikel Wikipedia tentang perjanjian damai untuk membuat kartu flash AI. Hal ini dapat dilakukan dengan menggunakan fungsi yang disebut `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`.
+- **Membuat Data Terstruktur**. Pengguna dapat mengambil blok teks atau CSV dan menggunakan LLM untuk mengekstrak informasi penting darinya. Misalnya, seorang siswa bisa mengubah artikel Wikipedia tentang perjanjian damai untuk membuat flashcard AI. Ini bisa dilakukan dengan menggunakan fungsi bernama `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`
 
-## Membuat Pemanggilan Fungsi Pertama Anda
+## Membuat Panggilan Fungsi Pertama Anda
 
-Proses membuat pemanggilan fungsi mencakup 3 langkah utama:
+Proses membuat panggilan fungsi meliputi 3 langkah utama:
 
-1. **Memanggil** API Chat Completions dengan daftar fungsi Anda dan pesan pengguna.
-2. **Membaca** respons model untuk melakukan tindakan, misalnya menjalankan fungsi atau permintaan API.
-3. **Melakukan** panggilan lain ke API Chat Completions dengan respons dari fungsi Anda untuk menggunakan informasi tersebut untuk membuat respons kepada pengguna.
+1. **Memanggil** Responses API dengan daftar fungsi (alat) Anda dan pesan pengguna.
+2. **Membaca** respons model untuk melakukan tindakan, misalnya menjalankan fungsi atau melakukan Panggilan API.
+3. **Membuat** panggilan lain ke Responses API dengan respons dari fungsi Anda untuk menggunakan informasi itu guna membuat respons ke pengguna.
 
 ![Alur LLM](../../../translated_images/id/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### Langkah 1 - membuat pesan
 
-Langkah pertama adalah membuat pesan pengguna. Ini dapat ditetapkan secara dinamis dengan mengambil nilai input teks atau Anda dapat menetapkan nilai di sini. Jika ini adalah pertama kalinya Anda bekerja dengan API Chat Completions, kita perlu mendefinisikan `role` dan `content` dari pesan.
+Langkah pertama adalah membuat pesan pengguna. Ini bisa diberikan secara dinamis dengan mengambil nilai dari input teks atau Anda dapat menetapkan nilainya di sini. Jika ini adalah pertama kali Anda bekerja dengan Responses API, kita perlu mendefinisikan `role` dan `content` dari pesan.
 
-`Role` dapat berupa `system` (membuat aturan), `assistant` (model), atau `user` (pengguna akhir). Untuk pemanggilan fungsi, kita akan menetapkannya sebagai `user` dan pertanyaan contoh.
+`role` bisa berupa `system` (membuat aturan), `assistant` (model) atau `user` (pengguna akhir). Untuk pemanggilan fungsi, kita tetapkan sebagai `user` dan sebuah contoh pertanyaan.
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Dengan menetapkan peran yang berbeda, menjadi jelas bagi LLM apakah itu sistem yang mengatakan sesuatu atau pengguna, yang membantu membangun riwayat percakapan yang dapat dikembangkan oleh LLM.
+Dengan menetapkan peran berbeda, LLM dibuat jelas apakah yang berbicara adalah sistem atau pengguna, yang membantu membangun sejarah percakapan yang bisa dibangun oleh LLM.
 
 ### Langkah 2 - membuat fungsi
 
-Selanjutnya, kita akan mendefinisikan sebuah fungsi dan parameter dari fungsi tersebut. Kita akan menggunakan satu fungsi saja di sini yang disebut `search_courses`, tetapi Anda dapat membuat beberapa fungsi.
+Selanjutnya, kita akan mendefinisikan fungsi dan parameter dari fungsi itu. Kita akan menggunakan hanya satu fungsi bernama `search_courses` tapi Anda bisa membuat beberapa fungsi.
 
-> **Penting**: Fungsi disertakan dalam pesan sistem ke LLM dan akan dihitung dalam jumlah token yang tersedia.
+> **Penting** : Fungsi dimasukkan dalam pesan sistem ke LLM dan akan dihitung dalam jumlah token yang tersedia.
 
-Di bawah ini, kami membuat fungsi sebagai array item. Setiap item adalah fungsi dan memiliki properti `name`, `description`, dan `parameters`:
+Di bawah ini, kita membuat fungsi sebagai array item. Setiap item adalah alat dalam format Responses API datar, dengan properti `type`, `name`, `description`, dan `parameters`:
 
 ```python
 functions = [
    {
+      "type":"function",
       "name":"search_courses",
       "description":"Retrieves courses from the search index based on the parameters provided",
       "parameters":{
@@ -243,75 +249,76 @@ functions = [
 ]
 ```
 
-Mari kita jelaskan setiap instance fungsi lebih detail di bawah ini:
+Mari kita jelaskan setiap contoh fungsi dengan lebih rinci berikut:
 
 - `name` - Nama fungsi yang ingin kita panggil.
-- `description` - Ini adalah deskripsi tentang cara kerja fungsi. Di sini penting untuk spesifik dan jelas.
-- `parameters` - Daftar nilai dan format yang ingin Anda modelkan untuk menghasilkan responsnya. Array parameter terdiri dari item di mana item memiliki properti berikut:
-  1.  `type` - Tipe data tempat properti akan disimpan.
-  1.  `properties` - Daftar nilai spesifik yang akan digunakan model untuk responsnya.
-      1. `name` - Kunci adalah nama properti yang akan digunakan model dalam respons terformatnya, misalnya, `product`.
-      1. `type` - Tipe data dari properti ini, misalnya, `string`.
-      1. `description` - Deskripsi properti spesifik.
+- `description` - Deskripsi tentang cara kerja fungsi. Di sini penting untuk spesifik dan jelas.
+- `parameters` - Daftar nilai dan format yang ingin Anda hasilkan model dalam responsnya. Parameter terdiri dari item dengan properti berikut:
+  1.  `type` - Tipe data dari properti yang akan disimpan.
+  1.  `properties` - Daftar nilai spesifik yang digunakan model dalam responsnya
+      1. `name` - Kunci adalah nama properti yang digunakan model dalam respons formatnya, misal `product`.
+      1. `type` - Tipe data dari properti ini, misalnya `string`.
+      1. `description` - Deskripsi dari properti spesifik.
 
-Ada juga properti opsional `required` - properti yang diperlukan agar pemanggilan fungsi dapat diselesaikan.
+Ada juga properti opsional `required` - properti yang wajib ada agar panggilan fungsi berhasil.
 
-### Langkah 3 - Melakukan pemanggilan fungsi
+### Langkah 3 - Melakukan panggilan fungsi
 
-Setelah mendefinisikan fungsi, sekarang kita perlu menyertakannya dalam panggilan ke Chat Completion API. Kita melakukan ini dengan menambahkan `functions` ke permintaan. Dalam hal ini `functions=functions`.
+Setelah mendefinisikan fungsi, sekarang kita perlu menyertakannya dalam panggilan ke Responses API. Kita melakukannya dengan menambah `tools` ke permintaan. Dalam hal ini `tools=functions`.
 
-Ada juga opsi untuk mengatur `function_call` ke `auto`. Ini berarti kita akan membiarkan LLM memutuskan fungsi mana yang harus dipanggil berdasarkan pesan pengguna daripada menetapkannya sendiri.
+Ada juga opsi untuk menetapkan `tool_choice` ke `auto`. Ini berarti kita membiarkan LLM memutuskan fungsi mana yang harus dipanggil berdasarkan pesan pengguna, bukan kita yang menetapkannya.
 
-Berikut adalah beberapa kode di bawah ini di mana kita memanggil `ChatCompletion.create`, perhatikan bagaimana kita mengatur `functions=functions` dan `function_call="auto"` sehingga memberikan LLM pilihan kapan harus memanggil fungsi yang kita sediakan:
+Berikut kode di bawah di mana kita memanggil `client.responses.create`, perhatikan bagaimana kita menetapkan `tools=functions` dan `tool_choice="auto"` sehingga memberi LLM pilihan kapan memanggil fungsi yang kita sediakan:
 
 ```python
-response = client.chat.completions.create(model=deployment,
-                                        messages=messages,
-                                        functions=functions,
-                                        function_call="auto")
+response = client.responses.create(model=deployment,
+                                        input=messages,
+                                        tools=functions,
+                                        tool_choice="auto",
+                                        store=False)
 
-print(response.choices[0].message)
+print(response.output)
 ```
 
-Respons yang kembali sekarang terlihat seperti ini:
+Respons yang diterima sekarang menyertakan item `function_call` dalam `response.output` yang terlihat seperti ini:
 
 ```json
 {
-  "role": "assistant",
-  "function_call": {
-    "name": "search_courses",
-    "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
-  }
+  "type": "function_call",
+  "name": "search_courses",
+  "call_id": "call_abc123",
+  "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
 }
 ```
 
-Di sini kita dapat melihat bagaimana fungsi `search_courses` dipanggil dan dengan argumen apa, seperti yang tercantum dalam properti `arguments` dalam respons JSON.
+Di sini kita bisa lihat bagaimana fungsi `search_courses` dipanggil dan dengan argumen apa saja, yang tercantum dalam properti `arguments` di respons JSON.
 
-Kesimpulannya, LLM mampu menemukan data yang sesuai dengan argumen fungsi karena mengekstraknya dari nilai yang diberikan ke parameter `messages` dalam panggilan penyelesaian chat. Di bawah ini adalah pengingat nilai `messages`:
+Kesimpulannya LLM mampu menemukan data yang sesuai dengan argumen fungsi karena mengekstraknya dari nilai yang diberikan ke parameter `input` dalam panggilan Responses API. Di bawah ini pengingat nilai `messages`:
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Seperti yang Anda lihat, `student`, `Azure`, dan `beginner` diekstraksi dari `messages` dan diatur sebagai input ke fungsi. Menggunakan fungsi dengan cara ini adalah cara yang bagus untuk mengekstrak informasi dari prompt tetapi juga untuk memberikan struktur kepada LLM dan memiliki fungsionalitas yang dapat digunakan kembali.
+Seperti yang Anda lihat, `student`, `Azure`, dan `beginner` diekstrak dari `messages` dan disetel sebagai input untuk fungsi. Menggunakan fungsi dengan cara ini adalah cara bagus untuk mengekstrak informasi dari prompt sekaligus memberikan struktur kepada LLM dan memiliki fungsionalitas yang dapat digunakan ulang.
 
-Selanjutnya, kita perlu melihat bagaimana kita dapat menggunakan ini dalam aplikasi kita.
+Selanjutnya, kita perlu melihat bagaimana cara menggunakan ini dalam aplikasi kita.
 
-## Mengintegrasikan Pemanggilan Fungsi ke dalam Aplikasi
+## Mengintegrasikan Panggilan Fungsi ke dalam Aplikasi
 
 Setelah kita menguji respons terformat dari LLM, sekarang kita dapat mengintegrasikannya ke dalam aplikasi.
 
 ### Mengelola alur
 
-Untuk mengintegrasikan ini ke dalam aplikasi kita, mari kita lakukan langkah-langkah berikut:
+Untuk mengintegrasikannya ke dalam aplikasi kita, mari lakukan langkah-langkah berikut:
 
-1. Pertama, mari kita lakukan panggilan ke layanan OpenAI dan simpan pesan dalam variabel yang disebut `response_message`.
+1. Pertama, mari buat panggilan ke layanan OpenAI dan ambil item panggilan fungsi dari respons `output`.
 
    ```python
-   response_message = response.choices[0].message
+   response_items = response.output
+   tool_calls = [item for item in response_items if item.type == "function_call"]
    ```
 
-1. Sekarang kita akan mendefinisikan fungsi yang akan memanggil Microsoft Learn API untuk mendapatkan daftar kursus:
+1. Sekarang kita definisikan fungsi yang akan memanggil Microsoft Learn API untuk mendapatkan daftar kursus:
 
    ```python
    import requests
@@ -333,65 +340,57 @@ Untuk mengintegrasikan ini ke dalam aplikasi kita, mari kita lakukan langkah-lan
      return str(results)
    ```
 
-   Perhatikan bagaimana kita sekarang membuat fungsi Python yang sebenarnya yang sesuai dengan nama fungsi yang diperkenalkan dalam variabel `functions`. Kita juga membuat panggilan API eksternal nyata untuk mengambil data yang kita butuhkan. Dalam hal ini, kita menggunakan Microsoft Learn API untuk mencari modul pelatihan.
+   Perhatikan bagaimana kita sekarang membuat fungsi Python sebenarnya yang memetakan ke nama fungsi yang diperkenalkan dalam variabel `functions`. Kita juga membuat panggilan API eksternal nyata untuk mengambil data yang kita butuhkan. Dalam hal ini, kita menggunakan Microsoft Learn API untuk mencari modul pelatihan.
 
-Baik, jadi kita telah membuat variabel `functions` dan fungsi Python yang sesuai, bagaimana kita memberi tahu LLM cara memetakan keduanya sehingga fungsi Python kita dipanggil?
+Baik, kita telah membuat variabel `functions` dan fungsi Python yang sesuai, bagaimana cara memberi tahu LLM bagaimana memetakan keduanya agar fungsi Python tersebut dipanggil?
 
-1. Untuk melihat apakah kita perlu memanggil fungsi Python, kita perlu melihat respons LLM dan melihat apakah `function_call` adalah bagian darinya dan memanggil fungsi yang ditunjuk. Berikut adalah cara Anda dapat melakukan pemeriksaan yang disebutkan di bawah ini:
+1. Untuk mengetahui apakah kita perlu memanggil fungsi Python, kita harus melihat respons LLM apakah ada item `function_call` dan memanggil fungsi tersebut. Berikut adalah cara Anda bisa melakukan pengecekan tersebut:
 
    ```python
-   # Check if the model wants to call a function
-   if response_message.function_call.name:
-    print("Recommended Function call:")
-    print(response_message.function_call.name)
-    print()
+   # Periksa jika model ingin memanggil sebuah fungsi
+   if tool_calls:
+    for tool_call in tool_calls:
+     print("Recommended Function call:")
+     print(tool_call.name)
+     print()
 
-    # Call the function.
-    function_name = response_message.function_call.name
+     # Panggil fungsi tersebut.
+     function_name = tool_call.name
 
-    available_functions = {
-            "search_courses": search_courses,
-    }
-    function_to_call = available_functions[function_name]
+     available_functions = {
+             "search_courses": search_courses,
+     }
+     function_to_call = available_functions[function_name]
 
-    function_args = json.loads(response_message.function_call.arguments)
-    function_response = function_to_call(**function_args)
+     function_args = json.loads(tool_call.arguments)
+     function_response = function_to_call(**function_args)
 
-    print("Output of function call:")
-    print(function_response)
-    print(type(function_response))
+     print("Output of function call:")
+     print(function_response)
+     print(type(function_response))
 
-
-    # Add the assistant response and function response to the messages
-    messages.append( # adding assistant response to messages
-        {
-            "role": response_message.role,
-            "function_call": {
-                "name": function_name,
-                "arguments": response_message.function_call.arguments,
-            },
-            "content": None
-        }
-    )
-    messages.append( # adding function response to messages
-        {
-            "role": "function",
-            "name": function_name,
-            "content":function_response,
-        }
-    )
+     # Tambahkan panggilan fungsi dan hasilnya kembali ke percakapan.
+     # Item function_call dari model harus ditambahkan sebelum outputnya.
+     messages.append(tool_call)  # item function_call dari asisten
+     messages.append( # hasil fungsi
+         {
+             "type": "function_call_output",
+             "call_id": tool_call.call_id,
+             "output": function_response,
+         }
+     )
    ```
 
-   Ketiga baris ini memastikan kita mengekstrak nama fungsi, argumen, dan melakukan panggilan:
+   Ketiga baris ini memastikan kita mengekstrak nama fungsi, argumen dan melakukan panggilan:
 
    ```python
    function_to_call = available_functions[function_name]
 
-   function_args = json.loads(response_message.function_call.arguments)
+   function_args = json.loads(tool_call.arguments)
    function_response = function_to_call(**function_args)
    ```
 
-   Di bawah ini adalah output dari menjalankan kode kita:
+   Di bawah ini output dari menjalankan kode kita:
 
    **Output**
 
@@ -412,52 +411,60 @@ Baik, jadi kita telah membuat variabel `functions` dan fungsi Python yang sesuai
    <class 'str'>
    ```
 
-1. Sekarang kita akan mengirimkan pesan yang diperbarui, `messages` ke LLM sehingga kita dapat menerima respons bahasa alami alih-alih respons terformat JSON API.
+1. Sekarang kita kirim pesan yang diperbarui, `messages` ke LLM agar kita bisa menerima respons dalam bahasa alami daripada respons format JSON API.
 
    ```python
    print("Messages in next request:")
    print(messages)
    print()
 
-   second_response = client.chat.completions.create(
-      messages=messages,
+   second_response = client.responses.create(
+      input=messages,
       model=deployment,
-      function_call="auto",
-      functions=functions,
-      temperature=0
-         )  # get a new response from GPT where it can see the function response
+      tool_choice="auto",
+      tools=functions,
+      temperature=0,
+      store=False,
+         )  # dapatkan respons baru dari model di mana ia dapat melihat respons fungsi
 
 
-   print(second_response.choices[0].message)
+   print(second_response.output_text)
    ```
 
    **Output**
 
-   ```python
-   {
-     "role": "assistant",
-     "content": "I found some good courses for beginner students to learn Azure:\n\n1. [Describe concepts of cryptography] (https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)\n2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)\n3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)\n4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)\n5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)\n\nYou can click on the links to access the courses."
-   }
+   ```text
+   I found some good courses for beginner students to learn Azure:
 
+   1. [Describe concepts of cryptography](https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)
+   2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)
+   3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)
+   4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)
+   5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)
+
+   You can click on the links to access the courses.
    ```
 
 ## Tugas
 
-Untuk melanjutkan pembelajaran Anda tentang Azure OpenAI Function Calling, Anda dapat membuat:
+Untuk melanjutkan pembelajaran Azure OpenAI Function Calling Anda dapat membuat:
 
-- Parameter fungsi yang lebih banyak yang mungkin membantu pelajar menemukan lebih banyak kursus.
-- Membuat pemanggilan fungsi lain yang mengambil lebih banyak informasi dari pelajar seperti bahasa asli mereka.
-- Buat penanganan kesalahan ketika pemanggilan fungsi dan/atau pemanggilan API tidak mengembalikan kursus yang sesuai
+- Lebih banyak parameter fungsi yang dapat membantu pelajar menemukan lebih banyak kursus.
 
-Petunjuk: Ikuti halaman [dokumentasi referensi API Learn](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) untuk melihat bagaimana dan di mana data ini tersedia.
+- Buat panggilan fungsi lain yang mengambil lebih banyak informasi dari pelajar seperti bahasa asli mereka
+- Buat penanganan kesalahan ketika panggilan fungsi dan/atau panggilan API tidak mengembalikan kursus yang sesuai
 
-## Kerja Hebat! Lanjutkan Perjalanan
+Petunjuk: Ikuti halaman [Dokumentasi referensi API Learn](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) untuk melihat bagaimana dan di mana data ini tersedia.
 
-Setelah menyelesaikan pelajaran ini, lihat koleksi [Pembelajaran AI Generatif](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk terus meningkatkan pengetahuan Anda tentang AI Generatif!
+## Kerja Bagus! Lanjutkan Perjalanan
 
-Lanjutkan ke Pelajaran 12, di mana kita akan membahas cara [merancang UX untuk aplikasi AI](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Setelah menyelesaikan pelajaran ini, lihat koleksi [Pembelajaran AI Generatif](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk melanjutkan meningkatkan pengetahuan AI Generatif Anda!
+
+Langsung ke Pelajaran 12, di mana kita akan melihat bagaimana [merancang UX untuk aplikasi AI](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang penting, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau interpretasi yang keliru yang timbul dari penggunaan terjemahan ini.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Penafian**:
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk mencapai akurasi, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang sah. Untuk informasi penting, disarankan menggunakan terjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

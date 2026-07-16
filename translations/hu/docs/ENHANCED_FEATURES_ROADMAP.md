@@ -1,62 +1,62 @@
-# Fejlesztett funkciók és fejlesztési ütemterv
+# Továbbfejlesztett funkciók és fejlesztési ütemterv
 
-Ez a dokumentum a Generatív AI kezdőknek tananyaghoz javasolt fejlesztéseket és javításokat vázolja fel, átfogó kódáttekintés és iparági legjobb gyakorlatok elemzése alapján.
+Ez a dokumentum a Generative AI for Beginners tananyagra vonatkozó javasolt fejlesztéseket és fejlesztéseket vázolja fel, egy átfogó kódáttekintés és az iparági legjobb gyakorlatok elemzése alapján.
 
 ## Vezetői összefoglaló
 
-A kódalap biztonságát, kódminőségét és oktatási hatékonyságát elemeztük. Ez a dokumentum javaslatokat nyújt az azonnali javításokra, rövid távú fejlesztésekre és hosszú távú fejlesztésekre.
+A kódbázist biztonság, kódminőség és oktatási hatékonyság szempontjából elemeztük. Ez a dokumentum ajánlásokat nyújt az azonnali javításokra, rövid távú fejlesztésekre és jövőbeni fejlesztésekre.
 
 ---
 
 ## 1. Biztonsági fejlesztések (Prioritás: Kritikus)
 
-### 1.1 Azonnali javítások (Teljesítve)
+### 1.1 Azonnali javítások (Elkészült)
 
 | Probléma | Érintett fájlok | Állapot |
-|----------|-----------------|---------|
+|-------|----------------|--------|
 | Keménykódolt SECRET_KEY | `05-advanced-prompts/python/aoai-solution.py` | Javítva |
-| Hiányzó környezeti validáció | Több JS/TS fájl | Javítva |
-| Biztonságtalan függvényhívások | `11-integrating-with-function-calling/js-githubmodels/app.js` | Javítva |
-| Fájllekérdezési szivárgások | `08-building-search-applications/scripts/` | Javítva |
-| Hiányzó kérések időkorlátja | `09-building-image-applications/python/` | Javítva |
+| Hiányzó környezeti változó ellenőrzés | Több JS/TS fájl | Javítva |
+| Nem biztonságos függvényhívások | `11-integrating-with-function-calling/js-githubmodels/app.js` | Javítva |
+| Fájlkezelő szivárgások | `08-building-search-applications/scripts/` | Javítva |
+| Hiányzó kérési timeoutok | `09-building-image-applications/python/` | Javítva |
 
-### 1.2 Javasolt további biztonsági funkciók
+### 1.2 Ajánlott további biztonsági funkciók
 
-1. **Korlátozási példák**
-   - Példakód hozzáadása az API hívások korlátozására
-   - Exponenciális visszaléptetési minták bemutatása
+1. **Ratelimiting példák**
+   - Példakód hozzáadása az API hívásokratelimitelésének megvalósítására
+   - Exponenciális visszalépési minták bemutatása
 
 2. **API kulcs forgatás**
-   - Dokumentáció hozzáadása az API kulcsok legjobb forgatási gyakorlatairól
-   - Azure Key Vault vagy hasonló szolgáltatások használatának példái
+   - Dokumentáció az API kulcsok forgatásának legjobb gyakorlatairól
+   - Példák Azure Key Vault vagy hasonló szolgáltatások használatára
 
-3. **Tartalombiztonsági integráció**
-   - Példák hozzáadása az Azure Content Safety API használatára
-   - Bemenet/kimenet moderációs minták demonstrálása
+3. **Tartalom-biztonság integráció**
+   - Példák Azure Content Safety API használatára
+   - Bemenet/kimenet moderációs minták bemutatása
 
 ---
 
-## 2. Kódminőség javítások
+## 2. Kódminőség fejlesztések
 
 ### 2.1 Konfigurációs fájlok hozzáadva
 
 | Fájl | Cél |
-|-------|-----|
-| `.eslintrc.json` | JavaScript/TypeScript lintelési szabályok |
+|------|---------|
+| `.eslintrc.json` | JavaScript/TypeScript lint szabályok |
 | `.prettierrc` | Kódformázási szabványok |
 | `pyproject.toml` | Python eszközkonfiguráció (Black, Ruff, mypy) |
 
 ### 2.2 Megosztott segédprogramok létrehozva
 
 Új `shared/python/` modul:
-- `env_utils.py` - Környezeti változók kezelése
+- `env_utils.py` - Környezeti változó kezelése
 - `input_validation.py` - Bemenet érvényesítés és tisztítás
-- `api_utils.py` - Biztonságos API kéréscsomagok
+- `api_utils.py` - Biztonságos API kérés wrapper-ek
 
-### 2.3 Javasolt kódfejlesztések
+### 2.3 Ajánlott kódfejlesztések
 
-1. **Típusjelölések lefedettsége**
-   - Típusjelölések hozzáadása minden Python fájlhoz
+1. **Típusjelzések lefedettsége**
+   - Típusjelzések hozzáadása minden Python fájlhoz
    - Szigorú TypeScript mód engedélyezése minden TS projektben
 
 2. **Dokumentációs szabványok**
@@ -64,7 +64,7 @@ A kódalap biztonságát, kódminőségét és oktatási hatékonyságát elemez
    - JSDoc kommentek hozzáadása minden JavaScript/TypeScript függvényhez
 
 3. **Tesztelési keretrendszer**
-   - Pytest konfiguráció és példatesztek hozzáadása
+   - pytest konfiguráció és példa tesztek hozzáadása _(elvégezve: pytest konfiguráció a `pyproject.toml`-ban; példa tesztek a megosztott segédprogramokhoz a [`tests/`](../../../tests) mappában, CI-ben futtatva)_
    - Jest konfiguráció hozzáadása JavaScript/TypeScript-hez
 
 ---
@@ -73,62 +73,67 @@ A kódalap biztonságát, kódminőségét és oktatási hatékonyságát elemez
 
 ### 3.1 Új lecketémák
 
-1. **Biztonság az AI alkalmazásokban** (javasolt 22. lecke)
-   - Prompt injekciós támadások és védekezések
+1. **Biztonság az AI alkalmazásokban** (Javasolt 22. lecke)
+   - Prompt befecskendezési támadások és védekezések
    - API kulcs kezelés
    - Tartalom moderáció
-   - Korlátozás és visszaélés-megelőzés
+   - Ratelimit a visszaélések megelőzésére
 
-2. **Termelési környezet telepítése** (javasolt 23. lecke)
-   - Konténerizáció Dockerrel
+2. **Produktív környezetbe telepítés** (Javasolt 23. lecke)
+   - Docker konténerizáció
    - CI/CD folyamatok
-   - Monitorozás és naplózás
-   - Költségkezelés
+   - Monitoring és naplózás
+   - Költségmenedzsment
 
-3. **Haladó RAG technikák** (javasolt 24. lecke)
+3. **Haladó RAG technikák** (Javasolt 24. lecke)
    - Hibrid keresés (kulcsszó + szemantikus)
-   - Újrangsorolási stratégiák
+   - Újrarangsorolási stratégiák
    - Többmodalitású RAG
-   - Értékelési mutatók
+   - Értékelési metrikák
 
 ### 3.2 Meglévő lecke fejlesztések
 
-| Lecke | Javasolt fejlesztés |
-|--------|---------------------|
+| Lecke | Ajánlott fejlesztés |
+|--------|------------------------|
 | 06 - Szöveg generálás | Streaming válasz példák hozzáadása |
-| 07 - Csevegőalkalmazások | Beszélgetésmemória minták hozzáadása |
-| 08 - Keresőalkalmazások | Vektoradatbázis összehasonlítás hozzáadása |
-| 09 - Kép generálás | Kép szerkesztési/variációs példák hozzáadása |
+| 07 - Csevegőalkalmazások | Beszélgetés memória minták hozzáadása |
+| 08 - Keresőalkalmazások | Vektor adatbázis összehasonlítás hozzáadása |
+| 09 - Kép generálás | Kép szerkesztési/változtatási példák hozzáadása |
 | 11 - Függvényhívás | Párhuzamos függvényhívás hozzáadása |
-| 15 - RAG | Darabolási stratégia összehasonlítás hozzáadása |
-| 17 - AI Ügynökök | Többügynökös koordináció hozzáadása |
+| 15 - RAG | Bontási stratégia összehasonlítás hozzáadása |
+| 17 - AI ügynökök | Többügynökös koordináció hozzáadása |
 
 ---
 
 ## 4. API modernizáció
 
-### 4.1 Frissítendő elavult API minták
+### 4.1 Elavult API minták (Migráció elkészült)
 
-| Régi minta | Új minta | Érintett fájlok |
-|------------|----------|-----------------|
-| `openai.api_type = "azure"` | `AzureOpenAI()` kliens | Több szkript a `08-building-search-applications/` könyvtárban |
-| `openai.ChatCompletion.create()` | `client.chat.completions.create()` | Több jegyzetfüzet |
-| `df.append()` (pandas) | `pd.concat()` | RAG jegyzetfüzet |
+Minden Python és TypeScript **chat** példa át lett migrálva a Chat Completions API-ról a **Responses API**-ra (`client.responses.create(...)` → `response.output_text`).
 
-### 4.2 Új API funkciók bemutatása
+| Régi minta | Új minta | Állapot |
+|-------------|-------------|--------|
+| `openai.api_type = "azure"` / `AzureOpenAI()` (chat) | `OpenAI(base_url="<endpoint>/openai/v1/")` (Responses API) | Elkészült |
+| `openai.ChatCompletion.create()` / `client.chat.completions.create()` | `client.responses.create(input=...)` → `response.output_text` | Elkészült |
+| `@azure/openai` `OpenAIClient.getChatCompletions()` (TypeScript) | `openai` csomag `client.responses.create()` → `response.output_text` | Elkészült |
+| `df.append()` (pandas) | `pd.concat()` | Elkészült |
+
+> **Megjegyzés:** A Microsoft Foundry Modellek, amelyek az `azure-ai-inference` / `@azure-rest/ai-inference` SDK-t (`client.complete()`) használják, megmaradnak a Model Inference API-n, amely nem támogatja a Responses API-t. Az `AzureOpenAI()` szándékosan megtartva ott, ahol még érvényes (beágyazások és képalkotás).
+
+### 4.2 Bemutatandó új API funkciók
 
 1. **Strukturált kimenetek** (OpenAI)
    - JSON mód
-   - Függvényhívás szigorú sémákkal
+   - Szigorú séma szerinti függvényhívás
 
 2. **Látási képességek**
-   - Kép elemzés GPT-4V-vel
+   - Kép elemzés GPT-4o (látás) használatával
    - Többmodalitású promptok
 
-3. **Asszisztensek API**
-   - Kódértelmező
+3. **Responses API beépített eszközei** (felváltja a régi Assistants API-t)
+   - Kód interpreter
    - Fájlkeresés
-   - Egyedi eszközök
+   - Webkeresés és egyéni eszközök
 
 ---
 
@@ -136,7 +141,7 @@ A kódalap biztonságát, kódminőségét és oktatási hatékonyságát elemez
 
 ### 5.1 CI/CD fejlesztések
 
-A jelenlegi munkafolyamatok markdown érvényesítést végeznek. Javasolt kiegészítések:
+Megvalósítva a [`.github/workflows/code-quality.yml`](../../../.github/workflows/code-quality.yml) fájlban: Python lintelés/formázás (Ruff + Black) **kötelező** a karbantartott `shared/` segédprogram modulon, és **ajánlott** a tananyag többi részén, plusz egy ajánlott ESLint áttekintés JavaScript/TypeScript-re. Az illusztratív alapvonal:
 
 ```yaml
 # .github/workflows/code-quality.yml
@@ -169,6 +174,8 @@ jobs:
 
 ### 5.2 Biztonsági vizsgálat
 
+Megvalósítva a [`.github/workflows/security.yml`](../../../.github/workflows/security.yml) fájlban: CodeQL elemzés Python és JavaScript/TypeScript nyelvekre (push, pull kérés, és heti ütemezés szerint), valamint függőségellenőrzés pull kéréskor. Az illusztratív alapvonal:
+
 ```yaml
 # .github/workflows/security.yml
 name: Security Scan
@@ -194,11 +201,11 @@ jobs:
 
 ---
 
-## 6. Fejlesztői élmény javítások
+## 6. Fejlesztői élmény fejlesztések
 
 ### 6.1 DevContainer fejlesztések
 
-Frissítés `.devcontainer/devcontainer.json` fájlban:
+Megvalósítva a [`.devcontainer/devcontainer.json`](../../../.devcontainer/devcontainer.json) és [`.devcontainer/post-create.sh`](../../../.devcontainer/post-create.sh) fájlokban: a konténer most már tartalmazza a Pylance-t, a Black formázót, Ruffot, ESLint-et, Prettier-t és Copilot kiterjesztéseket, engedélyezi a mentéskor formázást, amely össze van kötve a repo Black/Prettier konfigurációjával, és telepíti a fejlesztői eszközöket (`ruff`, `black`, `mypy`, `pytest`), így a [code-quality workflow](../../../.github/workflows/code-quality.yml) helyileg reprodukálható. Az `mcr.microsoft.com/devcontainers/universal` alap kép már tartalmazza a Pythont és Node-ot, így további funkciók nem szükségesek. Az illusztratív alapvonal:
 
 ```json
 {
@@ -232,12 +239,12 @@ Frissítés `.devcontainer/devcontainer.json` fájlban:
 }
 ```
 
-### 6.2 Interaktív játszótér
+### 6.2 Interaktív játéktér
 
-Érdemes megfontolni:
-- Jupyter jegyzetfüzetek előre kitöltött API kulcsokkal (környezeti változókon keresztül)
+Érdemes fontolóra venni a következőket:
+- Jupyter notebookok előre kitöltött API kulcsokkal (környezeti változókon keresztül)
 - Gradio/Streamlit demók vizuális tanulók számára
-- Interaktív kvízek tudásfelméréshez
+- Interaktív kvízek a tudás felmérésére
 
 ---
 
@@ -246,15 +253,15 @@ Frissítés `.devcontainer/devcontainer.json` fájlban:
 ### 7.1 Jelenlegi nyelvi lefedettség
 
 | Technológia | Lefedett leckék | Állapot |
-|-------------|-----------------|---------|
+|------------|-----------------|--------|
 | Python | Mind | Teljes |
 | TypeScript | 06-09, 11 | Részleges |
 | JavaScript | 06-08, 11 | Részleges |
 | .NET/C# | Néhány | Részleges |
 
-### 7.2 Javasolt kiegészítések
+### 7.2 Ajánlott kiegészítések
 
-1. **Go** - Növekvő AI/ML eszköztámogatás
+1. **Go** - Növekvő AI/ML eszközökkel
 2. **Rust** - Teljesítménykritikus alkalmazások
 3. **Java/Kotlin** - Vállalati alkalmazások
 
@@ -265,51 +272,48 @@ Frissítés `.devcontainer/devcontainer.json` fájlban:
 ### 8.1 Kód szintű optimalizálások
 
 1. **Async/Await minták**
-   - Async példák hozzáadása tömeges feldolgozáshoz
-   - Párhuzamos API hívások demonstrálása
+   - Async példák hozzáadása kötegelt feldolgozásra
+   - Párhuzamos API hívások bemutatása
 
 2. **Gyorsítótárazási stratégiák**
-   - Egyedi beágyazás gyorsítótár példák hozzáadása
-   - Válaszgyorsítótárazási minták bemutatása
+   - Beágyazás gyorsítótárazási példák hozzáadása
+   - Válasz gyorsítótárazási minták bemutatása
 
 3. **Token optimalizálás**
-   - Tiktoken használati példák hozzáadása
+   - tiktoken használati példák hozzáadása
    - Prompt tömörítési technikák bemutatása
 
-### 8.2 Költségoptimalizációs példák
+### 8.2 Költségoptimalizálási példák
 
-Példák hozzáadása:
-- Modellek kiválasztása a feladat összetettsége alapján
-- Prompt tervezés a tokenhatékonyság érdekében
-- Tömeges feldolgozás a költségek csökkentésére
+Példák hozzáadása, amelyek bemutatják:
+- Modell kiválasztása a feladat komplexitása alapján
+- Prompt mérnökség a token hatékonyság érdekében
+- Kötegelt feldolgozás nagy mennyiségű művelethez
 
 ---
 
-## 9. Akadálymentesítés és internacionalizáció
+## 9. Akadálymentesítés és nemzetköziesítés
 
 ### 9.1 Jelenlegi fordítási állapot
 
-| Nyelv | Állapot |
-|--------|---------|
-| Angol | Teljes |
-| Kínai (egyszerűsített) | Teljes |
-| Japán | Teljes |
-| Koreai | Teljes |
-| Spanyol | Részleges |
-| Portugál | Részleges |
-| Török | Részleges |
-| Lengyel | Részleges |
+Minden fordítás **készen áll** és automatikusan készül az [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst) segítségével, amely több mint 50 nyelvű verzióban tartja szinkronban a tananyagot az angol forrással. A fordított tartalom a `translations/` alatt található, a lokalizált képek pedig a `translated_images/` mappában; az elérhető nyelvek teljes listája a repository README-jének tetején található.
+
+| Szempont | Állapot |
+|--------|--------|
+| Fordítás lefedettség | Teljes — 50+ nyelv, minden lecke |
+| Fordítási módszer | Automatikus, az [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst) által |
+| Szinkron az angol forrással | Igen — automatikusan újragenerálva |
 
 ### 9.2 Akadálymentesítési fejlesztések
 
-1. Minden képhez alt szöveg hozzáadása
-2. Kódrészletek megfelelő szintaxiskiemelése
-3. Videótartalmakhoz átiratok hozzáadása
-4. Színkontraszt megfeleltetése WCAG irányelveknek
+1. Alt szöveg hozzáadása minden képhez
+2. Biztosítani, hogy a kódpéldák megfelelő szintaxiskiemeléssel rendelkezzenek
+3. Videó átiratok hozzáadása minden videós tartalomhoz
+4. A színkontraszt megfeleltetése a WCAG irányelveknek
 
 ---
 
-## 10. Megvalósítási prioritások
+## 10. Megvalósítási prioritás
 
 ### 1. fázis: Azonnali (1-2. hét)
 - [x] Kritikus biztonsági problémák javítása
@@ -317,35 +321,35 @@ Példák hozzáadása:
 - [x] Megosztott segédprogramok létrehozása
 - [x] Biztonsági irányelvek dokumentálása
 
-### 2. fázis: Rövid távú (3-4. hét)
-- [ ] Elavult API minták frissítése
-- [ ] Típusjelölések hozzáadása minden Python fájlhoz
-- [ ] CI/CD munkafolyamatok hozzáadása kódminőséghez
-- [ ] Biztonsági vizsgálati munkafolyamat létrehozása
+### 2. fázis: Rövid táv (3-4. hét)
+- [x] Elavult API minták frissítése (Chat Completions → Responses API, Python + TypeScript)
+- [ ] Minden Python fájlhoz típusjelzések hozzáadása (elvégezve a karbantartott `shared/` modulon; a leckeminták egyszerűek maradtak)
+- [x] CI/CD munkafolyamatok hozzáadása a kódminőségért
+- [x] Biztonsági vizsgálati munkafolyamat létrehozása
 
-### 3. fázis: Középtávú (2-3. hónap)
+### 3. fázis: Középtáv (2-3. hónap)
 - [ ] Új biztonsági lecke hozzáadása
-- [ ] Termelési környezet telepítési lecke hozzáadása
-- [ ] DevContainer beállítás fejlesztése
+- [ ] Termelési környezetbe telepítés leckéje
+- [x] DevContainer beállítás javítása
 - [ ] Interaktív demók hozzáadása
 
-### 4. fázis: Hosszú távú (4. hónap+)
+### 4. fázis: Hosszú táv (4. hónap+)
 - [ ] Haladó RAG lecke hozzáadása
 - [ ] Nyelvi lefedettség bővítése
-- [ ] Átfogó tesztcsomag létrehozása
-- [ ] Tanúsítási program kidolgozása
+- [ ] Átfogó tesztcsomag hozzáadása
+- [ ] Tanúsítási program létrehozása
 
 ---
 
-## Összefoglalás
+## Összegzés
 
-Ez az ütemterv strukturált megközelítést nyújt a Generatív AI kezdőknek tananyag fejlesztéséhez. A biztonsági problémák kezelése, az API-k modernizálása és az oktatási tartalom bővítése révén a kurzus jobban felkészíti a tanulókat a valós AI alkalmazásfejlesztésre.
+Ez az ütemterv strukturált megközelítést kínál a Generative AI for Beginners tananyag fejlesztésére. A biztonsági kérdések kezelése, az API-k modernizálása és az oktatási tartalom bővítése révén a kurzus jobban fel fogja készíteni a diákokat a valós AI alkalmazásfejlesztésre.
 
-Kérdések vagy hozzájárulások esetén kérjük, nyisson egy issue-t a GitHub tárházban.
+Kérdések vagy hozzájárulások esetén kérjük, nyisson egy issue-t a GitHub tárolóban.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Felmentés**:
-Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) mesterséges intelligencia fordító szolgáltatás segítségével készült. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások tartalmazhatnak hibákat vagy pontatlanságokat. Az eredeti dokumentum az anyanyelvén tekintendő hivatalos forrásnak. Fontos információk esetén profi, emberi fordítást javaslunk. Nem vállalunk felelősséget az ezen fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
+**Jogi nyilatkozat**:
+Ez a dokumentum az AI fordítási szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár az pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén professzionális emberi fordítást javasolunk. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely ebből a fordításból ered.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

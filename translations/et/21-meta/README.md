@@ -1,58 +1,61 @@
-# Meta perekonna mudelitega ehitamine
+# Ehitus Meta pere mudelitega 
 
-## Sissejuhatus
+## Sissejuhatus 
 
-Selles õppetükis käsitletakse:
+See õppetund käsitleb: 
 
-- Kaht peamist Meta perekonna mudelit - Llama 3.1 ja Llama 3.2
-- Iga mudeli kasutusjuhtumite ja stsenaariumide mõistmist
-- Koodi näidist, mis demonstreerib iga mudeli unikaalseid omadusi
+- Kaks peamist Meta pere mudelit - Llama 3.1 ja Llama 3.2 avastamine 
+- Iga mudeli kasutusjuhtude ja stsenaariumide mõistmine 
+- Koodinäide iga mudeli ainulaadsete funktsioonide demonstreerimiseks 
 
-## Meta perekonna mudelid
 
-Selles õppetükis uurime kahte Meta perekonna ehk "Llama karja" mudelit - Llama 3.1 ja Llama 3.2.
+## Meta mudelite perekond 
 
-Need mudelid on saadaval erinevates variatsioonides ja on kättesaadavad GitHub Modeli turul. Siit leiad lisateavet GitHubi mudelite kasutamise kohta [AI mudelite prototüüpimiseks](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Selles õppetunnis uurime kahte mudelit Meta perekonnast ehk "Llama karjast" - Llama 3.1 ja Llama 3.2.
 
-Mudeli variandid:
-- Llama 3.1 - 70B Instruct
-- Llama 3.1 - 405B Instruct
-- Llama 3.2 - 11B Vision Instruct
-- Llama 3.2 - 90B Vision Instruct
+Need mudelid on erinevates variatsioonides ning on saadaval [Microsoft Foundry Models kataloogis](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
 
-*Märkus: Llama 3 on samuti saadaval GitHub Models, kuid seda õppetükis ei käsitleta*
+> **Märkus:** GitHubi mudelid lõpetavad töö 2026. aasta juuli lõpus. Siin on rohkem teavet [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) kasutamise kohta AI mudelite prototüüpimiseks.
 
-## Llama 3.1
+Mudeli variandid: 
+- Llama 3.1 - 70B juhendatud 
+- Llama 3.1 - 405B juhendatud 
+- Llama 3.2 - 11B nägemise juhendatud 
+- Llama 3.2 - 90B nägemise juhendatud 
 
-405 miljardi parameetriga on Llama 3.1 avatud lähtekoodiga LLM kategoorias.
+*Märkus: Llama 3 on samuti saadaval Microsoft Foundry Models’is, kuid seda õppetundi ei käsitleta*
 
-Mudelit on uuendatud võrreldes varasema Llama 3 versiooniga ning see pakub:
+## Llama 3.1 
 
-- Suuremat kontekstiakent - 128k märki võrreldes 8k märgiga
-- Suuremat maksimaalset väljundmärki - 4096 vs 2048
-- Parem-mitmekeelsus - tänu treeningmärksõnade arvu suurenemisele
+405 miljardi parameetriga kuulub Llama 3.1 avatud lähtekoodiga LLM kategooriasse. 
 
-Need võimaldavad Llama 3.1-l käsitleda keerukamaid kasutusjuhtumeid GenAI rakenduste loomisel, sealhulgas:
-- Natiivne funktsioonikõne - võime kutsuda väliseid tööriistu ja funktsioone väljaspool LLM-i töövoogu
-- Parem RAG tulemuslikkus - tänu suuremale kontekstiaknale
-- Sünteetilise andmete genereerimine - võime luua efektiivseid andmeid ülesannete nagu peenhäälestuse jaoks
+Mudel on täiendatud varasemast Llama 3 väljandest, pakkudes: 
 
-### Natiivne funktsioonikõne
+- Suurem kontekstiaken - 128k tokenit versus 8k tokenit 
+- Suurem maksimaalne väljundtokenite arv - 4096 vs 2048 
+- Parem mitmekeelne tugi - tänu treeningtokenite arvu kasvule 
 
-Llama 3.1 on peenhäälestatud, et olla efektiivsem funktsioonide või tööriistade kutsmisel. Mudelil on ka kaks sisseehitatud tööriista, mida mudel võib identifitseerida vastavalt kasutaja promptile. Need tööriistad on:
+Need võimaldavad Llama 3.1-l käsitleda keerukamaid kasutusjuhte GenAI rakenduste loomisel, sealhulgas: 
+- Looduslik funktsioonide kutsumine - võime kutsuda välistööriistu ja funktsioone väljaspool LLM töövoogu
+- Parem RAG sooritus - tänu suuremale kontekstiaknale 
+- Sünteetilise andmete genereerimine - võime luua efektiivseid andmeid ülesannete, nagu peenhäälestus, jaoks 
 
-- **Brave Search** - saab kasutada värske info saamiseks näiteks ilma kohta, tehes veebipäringu
-- **Wolfram Alpha** - saab kasutada keerukamate matemaatiliste arvutuste tegemiseks, seega pole oma funktsioonide kirjutamine vajalik
+### Looduslik funktsioonide kutsumine 
 
-Sa võid ka luua oma kohandatud tööriistu, mida LLM saab kutsuda.
+Llama 3.1 on peenhäälestatud, et olla funktsioonide või tööriistade kutsumise osas tõhusam. Sellel on ka kaks sisseehitatud tööriista, mida mudel saab tuvastada ja mida tuleb kasutada vastavalt kasutaja sisendile. Need tööriistad on: 
 
-Järgmises koodi näites:
+- **Brave Search** - saab kasutada ajakohase teabe, näiteks ilma kohta veebipäringuga 
+- **Wolfram Alpha** - saab kasutada keerukamate matemaatiliste arvutuste tegemiseks, seega pole vaja oma funktsioone kirjutada. 
 
-- Määratleme süsteempromptis saadaval olevad tööriistad (brave_search, wolfram_alpha).
-- Saadame kasutajaprompti, kus küsitakse ilmateadet kindlast linnast.
-- LLM vastab tööriistakutsega Brave Search tööriista, mis näeb välja selline `<|python_tag|>brave_search.call(query="Stockholm weather")`
+Samuti saate luua oma kohandatud tööriistu, mida LLM saab kutsuda. 
 
-*Märkus: See näide kutsub ainult tööriista, kui soovid tulemusi saada, pead looma tasuta konto Brave API lehel ja määratlema funktsiooni ise.*
+Allolevas koodinäites: 
+
+- Määratleme süsteemipõhiselt olemasolevad tööriistad (brave_search, wolfram_alpha). 
+- Saadame kasutaja sisendi, mis küsib teatud linna ilma kohta. 
+- LLM vastab tööriistakutsena Brave Search tööriistale, mis näeb välja selline `<|python_tag|>brave_search.call(query="Stockholm weather")` 
+
+*Märkus: see näide teeb vaid tööriistakutse, kui soovite tulemusi saada, peate looma tasuta konto Brave API lehel ja määratlema funktsiooni ise.
 
 ```python 
 import os
@@ -60,9 +63,10 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import AssistantMessage, SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-token = os.environ["GITHUB_TOKEN"]
-endpoint = "https://models.inference.ai.azure.com"
-model_name = "meta-llama-3.1-405b-instruct"
+# Saate need oma Microsoft Foundry projekti "Ülevaade" lehelt
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
+model_name = "Meta-Llama-3.1-405B-Instruct"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -92,17 +96,18 @@ response = client.complete(messages=messages, model=model_name)
 print(response.choices[0].message.content)
 ```
 
-## Llama 3.2
+## Llama 3.2 
 
-Kuigi Llama 3.1 on LLM, on selleks piiranguks multimodaalsuse puudumine. See tähendab, et mudel ei saa kasutada erinevat tüüpi sisendit nagu pildid promptidena ega anda vastuseid. See võimekus on üks peamisi Llama 3.2 omadusi. Need omadused hõlmavad ka:
+Kuigi Llama 3.1 on LLM, on selle piiranguks mitmemodaalsuse puudumine. See tähendab võimet kasutada erinevat tüüpi sisendeid nagu pildid käsutustele ning pakkuda vastuseid. See võime on üks Llama 3.2 peamistest omadustest. Need omadused hõlmavad ka: 
 
-- Multimodaalsus - suudab töödelda nii teksti kui ka piltide promte
-- Väikesed kuni keskmise suurusega variandid (11B ja 90B) - pakuvad paindlikke juurutamisvõimalusi
-- Ainult tekstipõhised variandid (1B ja 3B) - võimaldavad mudelit juurutada serva- ja mobiilseadmetes ning tagavad madala latentsuse
+- Mitmemodaalsus - võime hinnata nii teksti kui ka piltide käske 
+- Väike kuni keskmise suurusega variatsioonid (11B ja 90B) - see pakub paindlikke juurutamisvõimalusi, 
+- Ainult tekstivariandid (1B ja 3B) - võimaldab mudelit juurutada äärtes / mobiilseadmetes ning tagab madala latentsuse 
 
-Multimodaalne tugi tähistab suurt sammu avatud lähtekoodiga mudelite maailmas. Järgmine koodi näide võtab sisendiks nii pildi kui teksti prompti, et saada Llama 3.2 90B mudelilt pildi analüüs.
+Mitmemodaalne tugi tähistab suurt sammu avatud lähtekoodiga mudelite maailmas. Allolev koodinäide võtab nii pildi kui ka tekstikäskluse, et saada analüüs Llama 3.2 90B mudelilt. 
 
-### Multimodaalne tugi Llama 3.2-ga
+
+### Mitmemodaalne tugi Llama 3.2-ga
 
 ```python 
 import os
@@ -117,8 +122,9 @@ from azure.ai.inference.models import (
 )
 from azure.core.credentials import AzureKeyCredential
 
-token = os.environ["GITHUB_TOKEN"]
-endpoint = "https://models.inference.ai.azure.com"
+# Saate need oma Microsoft Foundry projekti "Ülevaade" lehelt
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Llama-3.2-90B-Vision-Instruct"
 
 client = ChatCompletionsClient(
@@ -149,13 +155,13 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Õppimine siin ei peatu, jätka teekonda
+## Õppimine ei peatu siin, jätka teekonda
 
-Pärast selle õppetüki lõpetamist vaata meie [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata oma Generative AI teadmiste täiendamist!
+Pärast selle õppetunni lõpetamist tutvuge meie [Generative AI õppimise kogumikuga](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata oma genereeriva AI teadmiste taseme tõstmist!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Lahtiütlus**:
-See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palun arvestage, et automatiseeritud tõlked võivad sisaldada vigu või ebatäpsusi. Originaaldokument selle emakeeles peaks olema autoriteetne allikas. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti mõistmiste eest.
+See dokument on tõlgitud kasutades AI tõlketeenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi me püüdleme täpsuse poole, palun pange tähele, et automatiseeritud tõlgetes võib esineda vigu või ebatäpsusi. Originaaldokument selle emakeeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta selle tõlkega seotud eksimustest või valesti mõistmistest.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

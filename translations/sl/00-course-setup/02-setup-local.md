@@ -1,17 +1,17 @@
-# Lokalna namestitev 🖥️
+# Lokalna nastavitev 🖥️
 
-**Uporabite ta vodič, če želite vse poganjati na svojem prenosniku.**  
+**Uporabite ta vodič, če želite vse poganjati na svojem prenosniku.**   
 Imate dve poti: **(A) izvorni Python + virtualno okolje** ali **(B) VS Code Dev Container z Dockerjem**.  
-Izberite tisto, ki vam je lažja – obe vodita do istih lekcij.
+Izberite tisto, kar vam je bolj enostavno – obe vodita do istih lekcij.
 
 ## 1.  Predpogoji
 
-| Orodje             | Verzija / Opombe                                                                    |
-|--------------------|------------------------------------------------------------------------------------|
-| **Python**         | 3.10 + (prenesite na <https://python.org>)                                         |
-| **Git**            | Najnovejši (priložen z Xcode / Git za Windows / upravitelj paketov za Linux)        |
-| **VS Code**        | Neobvezno, a priporočeno <https://code.visualstudio.com>                            |
-| **Docker Desktop** | *Samo* za možnost B. Brezplačna namestitev: <https://docs.docker.com/desktop/>      |
+| Orodje             | Verzija / Opombe                                                                      |
+|--------------------|--------------------------------------------------------------------------------------|
+| **Python**         | 3.10 + (pridobite ga iz <https://python.org>)                                        |
+| **Git**            | Najnovejša (priložena z Xcode / Git za Windows / upravitelj paketov za Linux)         |
+| **VS Code**        | Neobvezno, a priporočeno <https://code.visualstudio.com>                             |
+| **Docker Desktop** | *Samo* za možnost B. Brezplačna namestitev: <https://docs.docker.com/desktop/>       |
 
 > 💡 **Namig** – Preverite orodja v terminalu:  
 > `python --version`, `git --version`, `docker --version`, `code --version`  
@@ -33,7 +33,7 @@ source .venv/bin/activate     # macOS / Linux
 .\.venv\Scripts\activate      # Windows PowerShell
 ```
 
-✅ Poziv naj se zdaj začne z (.venv) – to pomeni, da ste znotraj okolja.
+✅ Poziv naj se sedaj začne z (.venv) – to pomeni, da ste znotraj okolja.
 
 ### Korak 3 Namestite odvisnosti
 
@@ -41,39 +41,39 @@ source .venv/bin/activate     # macOS / Linux
 pip install -r requirements.txt
 ```
 
-Preskočite na razdelek 3 o [API ključih](../../../00-course-setup)
+Preskočite na poglavje 3 o [API ključih](#3-dodajte-svoje-api-ključe)
 
 ## 2. Možnost B – VS Code Dev Container (Docker)
 
-Ta repozitorij in tečaj smo nastavili z [razvojnim kontejnerjem](https://containers.dev?WT.mc_id=academic-105485-koreyst), ki ima univerzalno okolje za izvajanje, ki podpira Python3, .NET, Node.js in Java razvoj. Sorodna konfiguracija je definirana v datoteki `devcontainer.json`, ki se nahaja v mapi `.devcontainer/` v korenu tega repozitorija.
+Ta repozitorij in tečaj smo pripravili z [razvojnim kontejnerjem](https://containers.dev?WT.mc_id=academic-105485-koreyst), ki ima univerzalno runtime okolje, ki podpira Python3, .NET, Node.js in Java razvoj. Sorodno konfiguracijo določa datoteka `devcontainer.json`, ki se nahaja v mapi `.devcontainer/` v korenu tega repozitorija.
 
->**Zakaj izbrati to?**  
->Enako okolje kot Codespaces; brez odstopanj v odvisnostih.
+>**Zakaj izbrati to?**
+>Enako okolje kot Codespaces; brez odvisnostnih drifta.
 
 ### Korak 0 Namestite dodatke
 
-Docker Desktop – preverite, da ```docker --version``` deluje.  
-Razširitev VS Code Remote – Containers (ID: ms-vscode-remote.remote-containers).
+Docker Desktop – preverite, da ukaz ```docker --version``` deluje.
+VS Code Remote – Containers razširitev (ID: ms-vscode-remote.remote-containers).
 
 ### Korak 1 Odprite repozitorij v VS Code
 
 Datoteka ▸ Odpri mapo…  → generative-ai-for-beginners
 
-VS Code zazna .devcontainer/ in prikaže poziv.
+VS Code zazna `.devcontainer/` in pojavi se poziv.
 
-### Korak 2 Ponovno odprite v kontejnerju
+### Korak 2 Odprite v kontejnerju
 
-Kliknite “Reopen in Container”. Docker zgradi sliko (≈ 3 min prvič).  
-Ko se pojavi terminalski poziv, ste znotraj kontejnerja.
+Kliknite "Reopen in Container". Docker zgradi sliko (≈ 3 minute prvič).
+Ko se pokaže poziv v terminalu, ste znotraj kontejnerja.
 
 ## 2.  Možnost C – Miniconda
 
-[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) je lahek namestitveni program za namestitev [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Pythona in nekaj paketov.  
-Conda je upravitelj paketov, ki omogoča enostavno nastavitev in preklapljanje med različnimi Python [**virtualnimi okolji**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) in paketi. Prav tako je uporaben za namestitev paketov, ki niso na voljo preko `pip`.
+[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) je lahek namestitveni program za namestitev [Conde](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Pythona, ter nekaj paketov.
+Conda sama je upravitelj paketov, ki olajša nastavitev in preklapljanje med različnimi Python [**virtualnimi okolji**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) in paketi. Uporabna je tudi za namestitev paketov, ki niso na voljo preko `pip`.
 
 ### Korak 0  Namestite Minicondo
 
-Sledite [MiniConda namestitvenemu vodiču](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) za nastavitev.
+Sledite [MiniConda namestitvenemu vodiču](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) za njeno postavitev.
 
 ```bash
 conda --version
@@ -81,11 +81,11 @@ conda --version
 
 ### Korak 1 Ustvarite virtualno okolje
 
-Ustvarite novo datoteko okolja (*environment.yml*). Če sledite navodilom v Codespaces, jo ustvarite v mapi `.devcontainer`, torej `.devcontainer/environment.yml`.
+Ustvarite novo datoteko okolja (*environment.yml*). Če sledite iz Codespaces, jo ustvarite znotraj `.devcontainer` imenika, torej `.devcontainer/environment.yml`.
 
 ### Korak 2  Izpolnite datoteko okolja
 
-Dodajte naslednji odlomek v vašo datoteko `environment.yml`
+Dodajte naslednjo kodo v `environment.yml`
 
 ```yml
 name: <environment-name>
@@ -104,23 +104,23 @@ dependencies:
 
 ### Korak 3 Ustvarite Conda okolje
 
-Zaženite spodnje ukaze v ukazni vrstici/terminalu
+Zaženite spodnje ukaze v vašem ukaznem pozivu/terminalu
 
 ```bash 
 conda env create --name ai4beg --file .devcontainer/environment.yml # Podpot .devcontainer velja samo za nastavitve Codespace
 conda activate ai4beg
 ```
 
-Če naletite na težave, si oglejte [vodič za Conda okolja](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst).
+Za več informacij glejte [vodnik za Conda okolja](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst), če naletite na težave.
 
-## 2  Možnost D – Klasični Jupyter / Jupyter Lab (v brskalniku)
+## 2  Možnost D – Klasični Jupyter / Jupyter Lab (v vašem brskalniku)
 
-> **Za koga je to?**  
-> Za vse, ki imajo radi klasični Jupyter vmesnik ali želijo poganjati zvezke brez VS Code.
+> **Komu je namenjeno?**  
+> Vsem, ki imajo radi klasičen Jupyter vmesnik ali želijo izvajati zvezke brez VS Code.  
 
-### Korak 1  Preverite, da je Jupyter nameščen
+### Korak 1  Preverite, ali je Jupyter nameščen
 
-Za zagon Jupyter lokalno odprite terminal/ukazno vrstico, pojdite v mapo tečaja in izvedite:
+Za zagon Jupytra lokalno odprite terminal/ukazno vrstico, pojdite v direktorij tečaja in izvedite:
 
 ```bash
 jupyter notebook
@@ -132,22 +132,24 @@ ali
 jupyterhub
 ```
 
-To bo zagnalo Jupyter instanco in URL za dostop bo prikazan v ukazni vrstici.
+To bo zagnalo Jupyter instanco in URL za dostop bo prikazan v ukaznem oknu.
 
-Ko dostopate do URL-ja, bi morali videti oris tečaja in lahko dostopate do katere koli datoteke `*.ipynb`. Na primer, `08-building-search-applications/python/oai-solution.ipynb`.
+Ko dostopate do URL-ja, boste videli vsebino tečaja in lahko krmarili do vsake datoteke z `*.ipynb`. Na primer, `08-building-search-applications/python/oai-solution.ipynb`.
 
 ## 3. Dodajte svoje API ključe
 
-Pomembno je, da so vaši API ključi varni in zaščiteni pri gradnji katere koli aplikacije. Priporočamo, da ne shranjujete API ključev neposredno v vašo kodo. Če te podatke potisnete v javni repozitorij, lahko pride do varnostnih težav in celo nezaželenih stroškov, če jih uporabi zlonamerna oseba.  
-Tukaj je korak za korakom vodič, kako ustvariti `.env` datoteko za Python in dodati `GITHUB_TOKEN`:
+Za varnost vaših API ključev je pomembno, da jih ne shranjujete neposredno v kodi. Če jih potisnete v javni repozitorij, lahko to povzroči varnostne težave in celo nezaželene stroške, če jih uporabi nekdo zlonameren.
+Tukaj je korak-po-korak vodič, kako ustvariti datoteko `.env` za Python in dodati poverilnice za Microsoft Foundry Models:
 
-1. **Pojdite v mapo vašega projekta**: Odprite terminal ali ukazno vrstico in pojdite v korensko mapo vašega projekta, kjer želite ustvariti `.env` datoteko.
+> **Opomba:** GitHub Models (in njegova spremenljivka `GITHUB_TOKEN`) se upokaja konec julija 2026. Ta vodič uporablja [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst). Raje delate popolnoma brez povezave? Oglejte si [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst).
+
+1. **Pojdite v Mapa Projekta**: Odprite terminal ali ukazno vrstico in se pomaknite v glavno mapo vašega projekta, kjer želite ustvariti `.env` datoteko.
 
    ```bash
    cd path/to/your/project
    ```
 
-2. **Ustvarite `.env` datoteko**: Uporabite svoj najljubši urejevalnik besedila za ustvarjanje nove datoteke z imenom `.env`. Če uporabljate ukazno vrstico, lahko uporabite `touch` (na Unix sistemih) ali `echo` (na Windows):
+2. **Ustvarite `.env` datoteko**: Uporabite svoj najljubši urejevalnik besedil za ustvarjanje nove datoteke z imenom `.env`. Če uporabljate ukazno vrstico, lahko uporabite `touch` (na Unix sistemih) ali `echo` (na Windows):
 
    Unix sistemi:
 
@@ -161,21 +163,22 @@ Tukaj je korak za korakom vodič, kako ustvariti `.env` datoteko za Python in do
    echo . > .env
    ```
 
-3. **Uredite `.env` datoteko**: Odprite `.env` datoteko v urejevalniku besedila (npr. VS Code, Notepad++ ali katerem koli drugem urejevalniku). Dodajte naslednjo vrstico v datoteko, pri čemer `your_github_token_here` zamenjajte z vašim dejanskim GitHub žetonom:
+3. **Uredite `.env` datoteko**: Odprite `.env` datoteko v besedilnem urejevalniku (npr. VS Code, Notepad++ ali katerikoli drug urejevalnik). Dodajte naslednje vrstice, pri čemer zamenjajte vrednosti s svojim Microsoft Foundry končnim točko in API ključem:
 
    ```env
-   GITHUB_TOKEN=your_github_token_here
+   AZURE_INFERENCE_ENDPOINT=your_foundry_endpoint_here
+   AZURE_INFERENCE_CREDENTIAL=your_foundry_api_key_here
    ```
 
-4. **Shranjevanje datoteke**: Shranite spremembe in zaprite urejevalnik besedila.
+4. **Shrani datoteko**: Shrani spremembe in zapri urejevalnik.
 
-5. **Namestite `python-dotenv`**: Če ga še niste, morate namestiti paket `python-dotenv`, da naložite spremenljivke okolja iz `.env` datoteke v vašo Python aplikacijo. Namestite ga lahko z `pip`:
+5. **Namestite `python-dotenv`**: Če še niste, morate namestiti paket `python-dotenv`, da naložite spremenljivke okolja iz `.env` datoteke v vašo Python aplikacijo. Namestite ga lahko z `pip`:
 
    ```bash
    pip install python-dotenv
    ```
 
-6. **Naložite spremenljivke okolja v vaš Python skript**: V vašem Python skriptu uporabite paket `python-dotenv`, da naložite spremenljivke okolja iz `.env` datoteke:
+6. **Naložite spremenljivke okolja v Python skripti**: V vaši Python skripti uporabite paket `python-dotenv`, da naložite spremenljivke okolja iz `.env` datoteke:
 
    ```python
    from dotenv import load_dotenv
@@ -184,40 +187,41 @@ Tukaj je korak za korakom vodič, kako ustvariti `.env` datoteko za Python in do
    # Naloži okoljske spremenljivke iz datoteke .env
    load_dotenv()
 
-   # Dostop do spremenljivke GITHUB_TOKEN
-   github_token = os.getenv("GITHUB_TOKEN")
+   # Dostopaj do spremenljivk Microsoft Foundry Models
+   endpoint = os.getenv("AZURE_INFERENCE_ENDPOINT")
+   token = os.getenv("AZURE_INFERENCE_CREDENTIAL")
 
-   print(github_token)
+   print(endpoint)
    ```
 
-To je to! Uspešno ste ustvarili `.env` datoteko, dodali vaš GitHub žeton in ga naložili v vašo Python aplikacijo.
+To je to! Uspešno ste ustvarili `.env` datoteko, dodali poverilnice za Microsoft Foundry Models in jih naložili v svojo Python aplikacijo.
 
-🔐 Nikoli ne potiskajte .env – že je v .gitignore.  
-Celotna navodila ponudnika so v [`providers.md`](03-providers.md).
+🔐 Datoteke .env nikoli ne komitirajte – že je v .gitignore.
+Celotna navodila za ponudnike so v [`providers.md`](03-providers.md).
 
 ## 4. Kaj sledi?
 
-| Želim…             | Pojdi na…                                                               |
-|--------------------|-------------------------------------------------------------------------|
-| Začni lekcijo 1    | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
-| Nastavi LLM ponudnika | [`providers.md`](03-providers.md)                                     |
-| Spoznaj druge učence | [Pridruži se našemu Discordu](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) |
+| Želim…              | Pojdi na…                                                              |
+|---------------------|-------------------------------------------------------------------------|
+| Začeti Lekcijo 1    | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
+| Nastaviti LLM ponudnika | [`providers.md`](03-providers.md)                                       |
+| Spoznati druge učence | [Pridruži se našemu Discordu](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)  |
 
 ## 5. Reševanje težav
 
-| Simptom                                   | Popravek                                                        |
-|-------------------------------------------|----------------------------------------------------------------|
-| `python not found`                        | Dodajte Python v PATH ali ponovno odprite terminal po namestitvi |
-| `pip` ne more sestaviti koles (Windows)  | `pip install --upgrade pip setuptools wheel` in poskusite znova. |
-| `ModuleNotFoundError: dotenv`             | Zaženite `pip install -r requirements.txt` (okolje ni bilo nameščeno). |
-| Docker build ne uspe *Ni več prostora*    | Docker Desktop ▸ *Settings* ▸ *Resources* → povečajte velikost diska. |
-| VS Code stalno zahteva ponovno odpiranje  | Morda imate aktivni obe možnosti; izberite eno (venv **ali** kontejner) |
-| OpenAI 401 / 429 napake                   | Preverite vrednost `OPENAI_API_KEY` / omejitve hitrosti zahtevkov. |
-| Napake pri uporabi Conca                  | Namestite Microsoft AI knjižnice z `conda install -c microsoft azure-ai-ml` |
+| Simptom                                    | Popravek                                                         |
+|--------------------------------------------|-----------------------------------------------------------------|
+| `python ni najden`                        | Dodajte Python v PATH ali znova odprite terminal po namestitvi. |
+| `pip` ne more zgraditi koles (Windows)   | `pip install --upgrade pip setuptools wheel` nato poskusite znova.|
+| `ModuleNotFoundError: dotenv`              | Zaženite `pip install -r requirements.txt` (okolje ni bilo nameščeno).|
+| Docker build spodleti *Ni prostora*        | Docker Desktop ▸ *Settings* ▸ *Resources* → povečajte velikost diska.|
+| VS Code vas stalno poziva k ponovnemu odpiranju | Morda imate aktivni oba možnosti; izberite eno (venv **ali** kontejner)|
+| OpenAI 401 / 429 napake                    | Preverite vrednost `OPENAI_API_KEY` / omejitve zahtevkov.         |
+| Napake pri uporabi Conde                   | Namestite Microsoft AI knjižnice z `conda install -c microsoft azure-ai-ml`|
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Omejitev odgovornosti**:
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas opozarjamo, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku velja za avtoritativni vir. Za ključne informacije priporočamo strokovni človeški prevod. Za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda, ne odgovarjamo.
+Ta dokument je bil preveden z uporabo AI prevajalske storitve [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za kritične informacije je priporočljiv strokovni človeški prevod. Ne odgovarjamo za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,51 +1,53 @@
-# Cloud Setup ☁️ – GitHub Codespaces
+# Pengaturan Cloud ☁️ – GitHub Codespaces
 
-**Gunakan panduan ini jika kamu tidak ingin menginstal apa pun di komputer lokal.**  
-Codespaces memberikanmu VS Code berbasis browser secara gratis dengan semua dependensi sudah terpasang.
+**Gunakan panduan ini jika Anda tidak ingin menginstal apa pun secara lokal.**  
+Codespaces memberi Anda instance VS Code berbasis browser gratis dengan semua dependensi sudah terpasang.
 
 ---
 
-## 1.  Kenapa Codespaces?
+## 1.  Mengapa Codespaces?
 
-| Keuntungan | Artinya untukmu |
-|------------|-----------------|
-| ✅ Tanpa instalasi | Bisa digunakan di Chromebook, iPad, PC lab sekolah… |
-| ✅ Dev container sudah siap pakai | Python 3, Node.js, .NET, Java sudah tersedia di dalamnya |
-| ✅ Kuota gratis | Akun personal mendapat **120 core-jam / 60 GB-jam per bulan** |
+| Manfaat | Apa artinya untuk Anda |
+|---------|----------------------|
+| ✅ Tanpa instalasi | Berfungsi di Chromebook, iPad, PC lab sekolah… |
+| ✅ Kontainer dev pra-bangun | Python 3, Node.js, .NET, Java sudah termasuk |
+| ✅ Kuota gratis | Akun pribadi mendapatkan **120 core-hours / 60 GB-hours per bulan** |
 
 > 💡 **Tip**  
-> Jaga kuotamu tetap aman dengan **menghentikan** atau **menghapus** codespace yang tidak digunakan  
-> (View ▸ Command Palette ▸ *Codespaces: Stop Codespace*).
+> Jaga kesehatan kuota Anda dengan **menghentikan** atau **menghapus** codespaces yang tidak aktif  
+> (Lihat ▸ Command Palette ▸ *Codespaces: Stop Codespace*).
 
 ---
 
-## 2.  Buat Codespace (satu klik)
+## 2.  Membuat Codespace (satu klik)
 
-1. **Fork** repo ini (tombol **Fork** di kanan atas).  
-2. Di repo hasil fork, klik **Code ▸ Codespaces ▸ Create codespace on main**.  
-   ![ialog showing buttons to create a codespace](../../../00-course-setup/images/who-will-pay.webp)
+1. **Fork** repo ini (tombol **Fork** kanan atas).  
+2. Di fork Anda, klik **Code ▸ Codespaces ▸ Create codespace on main**.  
+   ![Dialog showing buttons to create a codespace](../../../translated_images/id/who-will-pay.4c0609b1c7780f44.webp)
 
-✅ Jendela VS Code di browser akan terbuka dan dev container mulai dibangun.
-Proses ini memakan waktu **sekitar 2 menit** untuk pertama kali.
+✅ Jendela VS Code di browser terbuka dan kontainer dev mulai dibuat.
+Ini memakan waktu sekitar **~2 menit** untuk pertama kali.
 
-## 3. Tambahkan API key-mu (cara aman)
+## 3. Tambahkan kunci API Anda (dengan cara aman)
 
-### Opsi A Codespaces Secrets — Direkomendasikan
+### Opsi A Rahasia Codespaces — Direkomendasikan
 
-1. ⚙️ Ikon gear -> Command Pallete-> Codespaces : Manage user secret -> Add a new secret.
+1. ⚙️ Ikon gear -> Command Palette -> Codespaces : Manage user secret -> Tambah rahasia baru.
 2. Nama: OPENAI_API_KEY
-3. Nilai: tempelkan key-mu → Add secret
+3. Nilai: tempel kunci Anda → Tambah rahasia
 
-Selesai—kode kita akan otomatis mendeteksinya.
+Selesai—kode kami akan mengaksesnya secara otomatis.
 
-### Opsi B File .env (jika memang perlu)
+### Opsi B file .env (jika benar-benar diperlukan)
 
 ```bash
 cp .env.copy .env
-code .env         # fill in OPENAI_API_KEY=your_key_here
+code .env         # isi dengan OPENAI_API_KEY=kunci_anda_di_sini
 ```
 
 ---
 
-**Disclaimer**:
-Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan terjemahan yang akurat, harap diketahui bahwa terjemahan otomatis dapat mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemah profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang timbul dari penggunaan terjemahan ini.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Penafian**:
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk mencapai akurasi, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang sah. Untuk informasi penting, disarankan menggunakan terjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

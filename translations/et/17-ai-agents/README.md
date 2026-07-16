@@ -2,61 +2,61 @@
 
 ## Sissejuhatus
 
-AI agentid esindavad põnevat arengut generatiivses tehisintellektis, võimaldades suurte keelemudelite (LLM-id) areneda assistentidest agentideks, kes suudavad toiminguid teha. AI agentide raamistikud võimaldavad arendajatel luua rakendusi, mis annavad LLM-idele juurdepääsu tööriistadele ja olekuhaldussüsteemile. Need raamistikud parandavad ka nähtavust, võimaldades kasutajatel ja arendajatel jälgida LLM-ide kavandatud toiminguid, parandades seeläbi kasutajakogemust.
+Tehisintellekti agendid tähistavad põnevat arengut generatiivses tehisintellektis, võimaldades suurte keelemudelitel (LLMid) areneda assistentidest agentideks, kes suudavad tegutseda. AI agentide raamistikud võimaldavad arendajatel luua rakendusi, mis annavad LLM-idele ligipääsu tööriistadele ja oleku haldamisele. Need raamistikud suurendavad ka nähtavust, võimaldades kasutajatel ja arendajatel jälgida LLM-ide kavandatud tegevusi, parandades sellega kasutajakogemuse haldamist.
 
-Õppetükk katab järgmised teemad:
+Õppetund hõlmab järgmisi valdkondi:
 
-- Arusaamine, mis on AI agent – mis täpselt on AI agent?
-- Nelja erineva AI agentide raamistikuga tutvumine – mis teeb need unikaalseks?
-- Nende AI agentide rakendamine erinevates kasutusjuhtumites – millal peaks AI agente kasutama?
+- AI agendi mõistmine – mis täpselt on AI agent?
+- Viie erineva AI agendi raamistikuga tutvumine – mis teeb need ainulaadseks?
+- Nende AI agentide rakendamine erinevates kasutusjuhtudes – millal peaksime kasutama AI agente?
 
 ## Õpieesmärgid
 
-Pärast selle õppetüki läbimist suudad:
+Pärast selle õppetunni läbimist suudad:
 
-- Selgitada, mis on AI agentid ja kuidas neid saab kasutada.
-- Mõista mõningate populaarsete AI agentide raamistikute erinevusi ja erisusi.
-- Mõista, kuidas AI agentid toimivad, et nendega rakendusi ehitada.
+- Selgitada, mis on AI agendid ja kuidas neid saab kasutada.
+- Mõista mõningate populaarsete AI agentide raamistikude erinevusi ja nende omapära.
+- Mõista, kuidas AI agendid toimivad, et nendega rakendusi ehitada.
 
-## Mis on AI agentid?
+## Mis on AI Agendid?
 
-AI agentid on väga põnev valdkond generatiivse tehisintellekti maailmas. Selle põnevuse kõrval võib ilmneda mõnede terminite ja nende rakenduste segadus. Et hoida asjad lihtsana ja kaasata enamik tööriistu, mis viitavad AI agentidele, kasutame järgmist definitsiooni:
+AI agendid on väga põnev valdkond generatiivse tehisintellekti maailmas. Selle põnevusega kaasneb mõnikord terminite ja nende rakenduste segadus. Lihtsuse ja enamikule AI agenditele viitavate tööriistade kaasamiseks kasutame järgmist definitsiooni:
 
-AI agentid võimaldavad suurte keelemudelite (LLM-ide) täita ülesandeid, andes neile juurdepääsu **olekule** ja **tööriistadele**.
+AI agendid võimaldavad suurte keelemudelite (LLM-idel) täita ülesandeid, andes neile ligipääsu **olekule** ja **tööriistadele**.
 
 ![Agent Model](../../../translated_images/et/what-agent.21f2893bdfd01e6a.webp)
 
 Määratleme need terminid:
 
-**Suured keelemudelid** – need on selles kursuses mainitud mudelid nagu GPT-3.5, GPT-4, Llama-2 jmt.
+**Suured keelemudelid** – need on selle kursuse jooksul viidatud mudelid, nagu GPT-3.5, GPT-4, Llama-2 jpt.
 
-**Olek** – see viitab kontekstile, milles LLM töötab. LLM kasutab oma varasemate toimingute ja praeguse konteksti teavet, mis juhib tema otsuseid edasiste toimingute kohta. AI agentide raamistikud võimaldavad arendajatel selle konteksti lihtsamalt hallata.
+**Olek** – See viitab kontekstile, milles LLM töötab. LLM kasutab oma varasemate tegevuste konteksti ja käesolevat konteksti, suunates oma otsuste tegemist järgmiste tegevuste puhul. AI agentide raamistikud võimaldavad arendajatel selle konteksti hõlpsamini hallata.
 
-**Tööriistad** – kasutaja soovitud ja LLM-i kavandatud ülesande täitmiseks peab LLM-l olema juurdepääs tööriistadele. Mõned näited tööriistadest võivad olla andmebaas, API, väline rakendus või isegi teine LLM!
+**Tööriistad** – Et täita kasutaja soovitud ülesannet ja mille LLM on planeerinud, vajab LLM ligipääsu tööriistadele. Mõned tööriistade näited võivad olla andmebaas, API, väline rakendus või isegi mõni teine LLM!
 
-Need definitsioonid annavad loodetavasti hea aluse, kui vaatame nende teostust. Tutvume mõne erineva AI agentide raamistikuga:
+Need määratlused annavad sulle loodanavalt hea aluse edasi liikudes, kui vaatame neid rakendamas. Uurime mõningaid erinevaid AI agentide raamistikke:
 
-## LangChaini agentid
+## LangChaini agendid
 
-[LangChaini agentid](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) on ülaltoodud definitsioonide rakendus.
+[LangChaini agendid](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) on ülaltoodud määratluste rakendus.
 
-**Olek** haldamiseks kasutatakse sisseehitatud funktsiooni `AgentExecutor`, mis võtab vastu määratletud `agent`i ja sellele kättesaadavad `tööriistad`.
+**Olek** haldamiseks kasutatakse sisseehitatud funktsiooni nimega `AgentExecutor`. See aktsepteerib defineeritud `agenti` ja saadaval olevaid `tööriistu`.
 
 `AgentExecutor` salvestab ka vestluse ajaloo, et pakkuda vestluse konteksti.
 
 ![Langchain Agents](../../../translated_images/et/langchain-agents.edcc55b5d5c43716.webp)
 
-LangChain pakub [tööriistade kataloogi](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), mida saab teie rakendusse importida, võimaldades LLM-il nendele ligi pääseda. Need on loodud kogukonna ja LangChaini meeskonna poolt.
+LangChain pakub [tööriistade kataloogi](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), mida saab sinu rakendusse importida, millele LLM saab ligipääsu. Need on loodud kogukonna ja LangChaini meeskonna poolt.
 
-Seejärel saate need tööriistad määratleda ja anda need `AgentExecutor`ile.
+Saad need tööriistad defineerida ja need seejärel ette anda `AgentExecutor`-ile.
 
-Nähtavus on AI agentide puhul oluline. Rakenduste arendajatel on tähtis mõista, millist tööriista LLM kasutab ja miks. Selleks on LangChaini meeskond välja töötanud LangSmithi.
+Nähtavus on teine oluline aspekt AI agentidest rääkides. Rakenduse arendajatel on oluline mõista, millist tööriista LLM kasutab ja miks. Selleks on LangChaini meeskond välja töötanud LangSmithi.
 
 ## AutoGen
 
-Järgmine AI agentide raamistik, mida arutame, on [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). AutoGeni peamine fookus on vestlused. Agendid on nii **vestlevad** kui ka **kohandatavad**.
+Järgmine AI agentide raamistik, mida käsitleme, on [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). AutoGeni peamine fookus on vestlustel. Agendid on nii **vestlevad** kui ka **kohandatavad**.
 
-**Vestlevad -** LLM-id saavad alustada ja jätkata vestlust teise LLM-iga ülesande täitmiseks. Seda tehakse, luues `AssistantAgent`e ja andes neile kindla süsteemisõnumi.
+**Vestlevad** – LLM-id saavad alustada ja jätkata vestlust teise LLM-iga, et ülesanne täita. Seda tehakse `AssistantAgents` loomisega ja neile konkreetse süsteemisõnumi andmisega.
 
 ```python
 
@@ -64,7 +64,7 @@ autogen.AssistantAgent( name="Coder", llm_config=llm_config, ) pm = autogen.Assi
 
 ```
 
-**Kohandatavad** – agente saab määratleda mitte ainult LLM-idena, vaid ka kasutajana või tööriistana. Arendajana võid määratleda `UserProxyAgent`i, kes vastutab kasutajalt tagasiside kogumise eest ülesande täitmisel. See tagasiside võib kas jätkata ülesande täitmist või seda peatada.
+**Kohandatavad** – Agente saab defineerida mitte ainult LLM-idena, vaid ka kasutajana või tööriistana. Arendajana saad defineerida `UserProxyAgent`i, kes vastutab kasutajaga suhtlemise eest tagasiside saamiseks ülesande täitmisel. See tagasiside võib kas jätkata ülesande täitmist või selle peatada.
 
 ```python
 user_proxy = UserProxyAgent(name="user_proxy")
@@ -72,28 +72,28 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 ### Olek ja tööriistad
 
-Olekut muutmiseks ja haldamiseks genereerib abistav agent Python-koodi ülesande täitmiseks.
+Oleku muutmiseks ja haldamiseks genereerib assistent-agent Python-koodi ülesande täitmiseks.
 
 Siin on protsessi näide:
 
 ![AutoGen](../../../translated_images/et/autogen.dee9a25a45fde584.webp)
 
-#### LLM määratletud süsteemisõnumiga
+#### LLM defineeritud süsteemisõnumiga
 
 ```python
 system_message="For weather related tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done."
 ```
 
-See süsteemisõnum juhib seda konkreetset LLM-i, millised funktsioonid on tema ülesande jaoks olulised. AutoGenis võid määratleda mitmeid erinevaid AssistantAgent’e erinevate süsteemisõnumitega.
+See süsteemisõnum juhib seda konkreetset LLM-i, millised funktsioonid on tema ülesande jaoks olulised. Pidage meeles, et AutoGeniga võid määratleda mitu erineva süsteemisõnumiga AssistantAgenti.
 
-#### Vestlus algatatud kasutaja poolt
+#### Vestlus algatatakse kasutaja poolt
 
 ```python
 user_proxy.initiate_chat( chatbot, message="I am planning a trip to NYC next week, can you help me pick out what to wear? ", )
 
 ```
 
-See sõnum `user_proxy`lt (inimeselt) alustab agenti, et uurida võimalikke funktsioone, mida tuleks täita.
+See sõnum user_proxy (inimene) poolt alustab agendi protsessi uurida, milliseid funktsioone võiks käivitada.
 
 #### Funktsioon täidetakse
 
@@ -106,63 +106,145 @@ chatbot (to user_proxy):
 
 ```
 
-Kui esmane vestlus on töödeldud, saadab agent soovitatava tööriista kutse, antud juhul funktsioon `get_weather`. Sõltuvalt teie konfiguratsioonist võib see funktsioon automaatselt täituda ja agent seda lugeda või täidetakse see kasutaja sisendi alusel.
+Kui algse vestluse töötlemine lõpeb, saadab agent soovitatud tööriista kutse. Antud juhul on see funktsioon nimega `get_weather`. Sõltuvalt sinu seadistusest saab seda funktsiooni automaatselt täita ja lugeda agendi poolt või täita kasutaja sisendi põhjal.
 
-Leiad nimekirja [AutoGen koodinäidetest](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst), et veelgi paremini alustada rakenduste ehitamist.
+Saad [AutoGeni koodi näidiseid](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) uurida, et õppida ehitamisega alustamist.
 
-## Taskweaver
+## Microsoft Agent Framework
 
-Järgmine agentide raamistik, mida vaatleme, on [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). Seda tuntakse kui "code-first" agenti, sest selle asemel, et töötada rangelt `string`idega, saab see töötada DataFrame’idega Pythoni keeles. See on eriti kasulik andmeanalüüsi ja genereerimise ülesannetes, näiteks graafikute ja diagrammide loomisel või juhuslike arvude genereerimisel.
+[Microsoft Agent Framework](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst) on Microsofti avatud lähtekoodiga SDK AI agentide ja mitmeagendi süsteemide loomiseks nii **Pythonis** kui **.NETis**. See ühendab kahe varasema Microsofti projekti tugevused — ettevõtete funktsioonid **Semantic Kernel**-ist ja mitmeagendi orkestreerimise **AutoGen**-ist — üheks toetatud raamistikuks. Kui alustad täna uut agendiprojekti, on see AutoGeni soovitatud asendus.
+
+Raamistik skaleerub ühest **vestlusagendist** kuni keerukate **mitmeagendi töövoodeni**, ning see integreerub otse Microsoft Foundry, Azure OpenAI ja OpenAI-ga. See pakub ka sisseehitatud jälgitavust OpenTelemetry kaudu, et saaksid täpselt jälgida, mida su agendid teevad.
 
 ### Olek ja tööriistad
 
-Vestluse oleku haldamiseks kasutab TaskWeaver mõistet `Planner`. `Planner` on LLM, mis võtab kasutajate taotluse ja kavandab ülesanded, mis tuleb täita taotluse rahuldamiseks.
+**Olek** – raamistik haldab vestluse konteksti sinu eest **liinide** kaudu. Agent jälgib sõnumite ajalugu (kasutaja päringud, tööriistakutsed ja nende tulemused), nii et iga käik loob aluse eelnevatele. Liine saab salvestada, võimaldades vestlust peatada ja hiljem jätkata.
 
-Ülesannete täitmiseks kasutab `Planner` tööriistade kogu nimega `Plugins`. Need võivad olla Python klassid või üldine kooditõlgendaja. Need pluginad salvestatakse embedding’utena, et LLM saaks paremini otsida õiget lisa.
+**Tööriistad** – Sa annad agendile tööriistad, edastades tavalisi Pythoni funktsioone. Tüübimärgistusega parameetrid teisendatakse automaatselt skeemiks, nii et mudel teab, kuidas ja millal neid kutsuda (funktsioonikutsed). Raamistik toetab ka Model Context Protocol (MCP) servereid ja hostitud tööriistu, näiteks kooditõlgendajat.
+
+Siin on näide ühest agendist kohandatud tööriistaga:
+
+```python
+import asyncio
+from typing import Annotated
+
+from pydantic import Field
+from agent_framework import Agent
+from agent_framework.openai import OpenAIChatClient
+
+
+def get_weather(
+    location: Annotated[str, Field(description="The location to get the weather for.")],
+) -> str:
+    """Get the weather for a given location."""
+    return f"The weather in {location} is sunny with a high of 22°C."
+
+
+async def main():
+    agent = Agent(
+        client=OpenAIChatClient(),
+        instructions="You are a helpful assistant that can answer weather questions.",
+        tools=[get_weather],
+    )
+
+    response = await agent.run("What's the weather in Amsterdam?")
+    print(response)
+
+
+asyncio.run(main())
+```
+
+Microsoft Foundry-s Azure OpenAI-iga ühenduse loomiseks edasta kliendile oma endpoint ja mandaadid:
+
+```python
+from azure.identity.aio import AzureCliCredential
+from agent_framework.openai import OpenAIChatClient
+
+client = OpenAIChatClient(
+    model="my-gpt-4o-deployment",
+    azure_endpoint="https://my-resource.openai.azure.com",
+    credential=AzureCliCredential(),
+)
+```
+
+### Mitmeagendi töövood
+
+Raamistik silma paistab eriti mitme agendi koos orkestrimisel. Näiteks võid käivitada agente ükshaaval (igaüks annab üle oma konteksti järgmisele) või vallata mitme agendi peale paralleelselt ja koguda nende tulemusi:
+
+```python
+from agent_framework.orchestrations import SequentialBuilder, ConcurrentBuilder
+
+# Käivitage agendid järjestikku, edastades vestluse konteksti koos kettaga
+sequential = SequentialBuilder(participants=[researcher, writer, editor]).build()
+
+# Jaotage agendid paralleelselt, seejärel koguge nende vastused kokku
+concurrent = ConcurrentBuilder(participants=[analyst_a, analyst_b, analyst_c]).build()
+```
+
+Raamistik paigaldamiseks ja alustamiseks:
+
+```bash
+pip install agent-framework-core
+# Valikulised integratsioonid
+pip install agent-framework-openai       # OpenAI ja Azure OpenAI
+pip install agent-framework-foundry      # Microsoft Foundry
+```
+
+Rohkem saad uurida [Microsoft Agent Frameworki hoidlas](https://github.com/microsoft/agent-framework?WT.mc_id=academic-105485-koreyst) ja [ametlikus dokumentatsioonis](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst).
+
+## Taskweaver
+
+Järgmine agentide raamistik, mida uurime, on [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). Seda tuntakse kui "koodi-esimene" agenti, sest ta ei kasuta rangelt `strings`, vaid suudab töötada Pythonis DataFrame’idega. See muutub äärmiselt kasulikuks andmeanalüüsi ja genereerimistööde jaoks, nagu graafikute ja diagrammide loomine või juhuslike arvude genereerimine.
+
+### Olek ja tööriistad
+
+Vestluse oleku haldamiseks kasutab TaskWeaver `Planner`i kontseptsiooni. `Planner` on LLM, mis võtab kasutajate päringu ja kaardistab ülesanded, mis tuleb selle päringu täitmiseks lõpule viia.
+
+Ülesannete täitmiseks on `Planner`il ligipääs tööriistade kogule nimega `Plugins`. Need võivad olla Python klassid või üldine kooditõlk. Need pluginad salvestatakse embed’itena, et LLM saaks paremini leida õiget pluginat.
 
 ![Taskweaver](../../../translated_images/et/taskweaver.da8559999267715a.webp)
 
-Siin on näide pistikprogrammist anomaaliate tuvastamiseks:
+Näide ainult lisandmoodulist anomaaliate tuvastamiseks:
 
 ```python
 class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_col_name: str, value_col_name: str):
 ```
 
-Kood kontrollitakse enne täitmist. Teine TaskWeaveris konteksti haldava funktsioonina kasutatakse `experience`i. Experience võimaldab vestluse konteksti pikaajaliselt salvestada YAML-faili. Seda saab konfigureerida nii, et LLM paraneb aja jooksul teatud ülesannetes, tuginedes varasematele vestlustele.
+Kood kontrollitakse enne täitmist üle. Teine Taskweaveri konteksti haldamise funktsioon on `experience`. Experience võimaldab vestluse konteksti pikemas perspektiivis YAML-faili salvestada. See saab olla seadistatav nii, et LLM paraneb aja jooksul teatud ülesannetes, kui ta on varasematele vestlustele ligipääsuga.
 
 ## JARVIS
 
-Viimane agentide raamistik, mida uurime, on [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file&WT.mc_id=academic-105485-koreyst). JARVISi unikaalsus seisneb selles, et see kasutab LLM-i vestluse `oleku` haldamiseks ning `tööriistad`eks on teised AI mudelid. Iga AI mudel on spetsialiseerunud konkreetsete ülesannete täitmisele nagu objekti tuvastamine, transkriptsioon või pildi kirjeldus.
+Viimane agentide raamistik, mida uurime, on [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file&WT.mc_id=academic-105485-koreyst). JARVISi unuikaalsus seisneb selles, et ta kasutab LLM-i vestluse `oleku` haldamiseks ja `tööriistad` on teised AI mudelid. Iga AI mudel on spetsialiseerunud konkreetsele ülesandele, nagu objektide tuvastamine, transkriptsioon või pildikirjeldus.
 
 ![JARVIS](../../../translated_images/et/jarvis.762ddbadbd1a3a33.webp)
 
-LLM, mis on üldotstarbeline mudel, võtab kasutajalt taotluse, tuvastab konkreetse ülesande ja kõik vajalikud argumendid/andmed ülesande täitmiseks.
+LLM, olles üldotstarbeline mudel, võtab vastu kasutaja päringu, tuvastab konkreetse ülesande ja kõik argumendid/andmed, mis on ülesande täitmiseks vajalikud.
 
 ```python
 [{"task": "object-detection", "id": 0, "dep": [-1], "args": {"image": "e1.jpg" }}]
 ```
 
-Seejärel vormindab LLM taotluse nii, et spetsialiseerunud AI mudel seda suudab tõlgendada, näiteks JSON-vormingus. Kui AI mudel on vastuse ülesande põhjal tagastanud, saab LLM vastuse.
+Seejärel vormindab LLM päringu selliselt, et spetsialiseeritud AI mudel seda mõistaks, näiteks JSON-vormingus. Kui AI mudel on ülesande põhjal oma prognoosi tagastanud, saab sellest vastuse LLM.
 
-Kui ülesande täitmiseks on vaja mitut mudelit, tõlgendab LLM ka nende mudelite vastuseid ning koondab need kokku, et genereerida kasutajale vastus.
+Kui ülesande täitmiseks on vajalik mitu mudelit, tõlgib LLM ka nende mudelite vastused, enne kui toob need kokku ja genereerib vastuse kasutajale.
 
-Järgmine näide näitab, kuidas see toimiks, kui kasutaja palub pilti kirjeldada ja selles olevaid objekte lugeda:
+Järgmine näide näitab, kuidas see toimiks, kui kasutaja soovib kirjeldust ja objektide arvu pildil:
 
 ## Ülesanne
 
-Enda AI agentide õppimise jätkamiseks saad AutoGeniga ehitada:
+AI agentide õppimise jätkamiseks võid luua Microsoft Agent Frameworkiga:
 
-- Rakenduse, mis simuleerib ärikoosolekut haridusstartup’i erinevate osakondade vahel.
-- Loo süsteemisõnumid, mis juhendavad LLM-e mõistma erinevaid isikupärasid ja prioriteete ning võimaldavad kasutajal esitada uut tooteideed.
-- LLM peaks seejärel genereerima edasiarenduslikke küsimusi igalt osakonnalt, et täpsustada ja parandada esitust ning tooteideed.
+- Rakendus, mis simuleerib ärikoosolekut haridusstartup’i erinevate osakondade vahel.
+- Loo süsteemisõnumeid, mis juhendavad LLM-e erinevate isiksuste ja prioriteetide mõistmisel ning võimaldavad kasutajal esitada uue tooteidee.
+- LLM peaks seejärel genereerima iga osakonna poolt järgnevaid küsimusi, et täiustada ja parandada pakkumist ja tooteideed.
 
 ## Õppimine siin ei peatu, jätka teekonda
 
-Pärast selle õppetüki lõpetamist vaata meie [Generatiivse tehisintellekti õppematerjalide kollektsiooni](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata oma generatiivse AI teadmiste tõstmist!
+Pärast selle õppetunni lõpetamist vaata meie [Generatiivse AI õppimiskogu](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata oma generatiivse AI teadmiste arendamist!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Vastutusest loobumine**:
-See dokument on tõlgitud kasutades tehisintellekti tõlketeenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi pingutame täpsuse nimel, palun arvestage, et automatiseeritud tõlgetes võib esineda vigu või ebatäpsusi. Originaaldokument selle emakeeles tuleks pidada autoriteetseks allikaks. Kriitilise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või väärtõlgenduste eest.
+**Lahtiütlus**:
+See dokument on tõlgitud kasutades AI tõlketeenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi me püüdleme täpsuse poole, palun pange tähele, et automatiseeritud tõlgetes võib esineda vigu või ebatäpsusi. Originaaldokument selle emakeeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta selle tõlkega seotud eksimustest või valesti mõistmistest.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

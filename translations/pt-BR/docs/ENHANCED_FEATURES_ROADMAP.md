@@ -1,10 +1,10 @@
-# Roteiro de Recursos Aprimorados e Melhorias
+# Roteiro de Recursos e Melhorias Aprimorados
 
-Este documento descreve melhorias recomendadas para o currículo Generative AI for Beginners, com base em uma revisão abrangente de código e análise das melhores práticas do setor.
+Este documento descreve as melhorias recomendadas para o currículo Generative AI for Beginners, com base numa revisão abrangente do código e na análise das melhores práticas da indústria.
 
 ## Resumo Executivo
 
-O código foi analisado quanto à segurança, qualidade e eficácia educacional. Este documento fornece recomendações para correções imediatas, melhorias de curto prazo e aprimoramentos futuros.
+A base de código foi analisada para segurança, qualidade do código e efetividade educacional. Este documento fornece recomendações para correções imediatas, melhorias de curto prazo e aprimoramentos futuros.
 
 ---
 
@@ -13,22 +13,22 @@ O código foi analisado quanto à segurança, qualidade e eficácia educacional.
 ### 1.1 Correções Imediatas (Concluídas)
 
 | Problema | Arquivos Afetados | Status |
-|----------|-------------------|--------|
+|-------|----------------|--------|
 | SECRET_KEY codificada | `05-advanced-prompts/python/aoai-solution.py` | Corrigido |
-| Validação de ambiente ausente | Vários arquivos JS/TS | Corrigido |
-| Chamadas de função inseguras | `11-integrating-with-function-calling/js-githubmodels/app.js` | Corrigido |
-| Vazamentos de manipuladores de arquivos | `08-building-search-applications/scripts/` | Corrigido |
-| Falta de timeouts em requisições | `09-building-image-applications/python/` | Corrigido |
+| Validação de ambiente ausente | Múltiplos arquivos JS/TS | Corrigido |
+| Chamadas de funções inseguras | `11-integrating-with-function-calling/js-githubmodels/app.js` | Corrigido |
+| Vazamento de handles de arquivo | `08-building-search-applications/scripts/` | Corrigido |
+| Tempo limite de requisição ausente | `09-building-image-applications/python/` | Corrigido |
 
-### 1.2 Recursos de Segurança Adicionais Recomendados
+### 1.2 Recursos Adicionais Recomendados para Segurança
 
-1. **Exemplos de Limitação de Taxa**
-   - Adicionar código de exemplo mostrando como implementar limitação de taxa para chamadas de API
-   - Demonstrar padrões de retrocesso exponencial
+1. **Exemplos de Rate Limiting**
+   - Adicionar código exemplo mostrando como implementar rate limiting para chamadas de API
+   - Demonstrar padrões de recuo exponencial
 
 2. **Rotação de Chaves de API**
    - Adicionar documentação sobre melhores práticas para rotação de chaves de API
-   - Incluir exemplos usando Azure Key Vault ou serviços similares
+   - Incluir exemplos de uso do Azure Key Vault ou serviços similares
 
 3. **Integração de Segurança de Conteúdo**
    - Adicionar exemplos usando a API Azure Content Safety
@@ -40,8 +40,8 @@ O código foi analisado quanto à segurança, qualidade e eficácia educacional.
 
 ### 2.1 Arquivos de Configuração Adicionados
 
-| Arquivo | Finalidade |
-|---------|------------|
+| Arquivo | Propósito |
+|------|---------|
 | `.eslintrc.json` | Regras de lint para JavaScript/TypeScript |
 | `.prettierrc` | Padrões de formatação de código |
 | `pyproject.toml` | Configuração de ferramentas Python (Black, Ruff, mypy) |
@@ -51,92 +51,97 @@ O código foi analisado quanto à segurança, qualidade e eficácia educacional.
 Novo módulo `shared/python/` com:
 - `env_utils.py` - Manipulação de variáveis de ambiente
 - `input_validation.py` - Validação e sanitização de entrada
-- `api_utils.py` - Wrappers seguros para requisições de API
+- `api_utils.py` - Wrappers seguros para requisições API
 
 ### 2.3 Melhorias Recomendadas no Código
 
-1. **Cobertura de Anotações de Tipo**
-   - Adicionar anotações de tipo a todos os arquivos Python
-   - Habilitar modo estrito do TypeScript em todos os projetos TS
+1. **Cobertura de Anotação de Tipos**
+   - Adicionar anotações de tipo em todos os arquivos Python
+   - Habilitar modo estrito de TypeScript em todos os projetos TS
 
 2. **Padrões de Documentação**
-   - Adicionar docstrings a todas as funções Python
-   - Adicionar comentários JSDoc a todas as funções JavaScript/TypeScript
+   - Adicionar docstrings em todas as funções Python
+   - Adicionar comentários JSDoc em todas as funções JavaScript/TypeScript
 
 3. **Framework de Testes**
-   - Adicionar configuração do pytest e testes de exemplo
-   - Adicionar configuração do Jest para JavaScript/TypeScript
+   - Adicionar configuração de pytest e testes de exemplo _(feito: configuração pytest em `pyproject.toml`; testes exemplo para utilitários compartilhados em [`tests/`](../../../tests) rodando em CI)_
+   - Adicionar configuração Jest para JavaScript/TypeScript
 
 ---
 
-## 3. Melhorias Educacionais
+## 3. Aprimoramentos Educacionais
 
 ### 3.1 Novos Tópicos de Aula
 
 1. **Segurança em Aplicações de IA** (Proposta Aula 22)
-   - Ataques e defesas contra injeção de prompt
+   - Ataques e defesas contra prompt injection
    - Gerenciamento de chaves de API
    - Moderação de conteúdo
-   - Limitação de taxa e prevenção de abuso
+   - Rate limiting e prevenção de abuso
 
 2. **Implantação em Produção** (Proposta Aula 23)
    - Containerização com Docker
-   - Pipelines CI/CD
+   - Pipelines de CI/CD
    - Monitoramento e logging
    - Gerenciamento de custos
 
 3. **Técnicas Avançadas de RAG** (Proposta Aula 24)
    - Busca híbrida (palavra-chave + semântica)
-   - Estratégias de re-ranqueamento
+   - Estratégias de reranking
    - RAG multimodal
    - Métricas de avaliação
 
-### 3.2 Melhorias nas Aulas Existentes
+### 3.2 Melhorias em Aulas Existentes
 
 | Aula | Melhoria Recomendada |
-|-------|---------------------|
+|--------|------------------------|
 | 06 - Geração de Texto | Adicionar exemplos de respostas em streaming |
-| 07 - Aplicações de Chat | Adicionar padrões de memória de conversa |
+| 07 - Aplicações de Chat | Adicionar padrões de memória de conversação |
 | 08 - Aplicações de Busca | Adicionar comparação de bancos de dados vetoriais |
-| 09 - Geração de Imagens | Adicionar exemplos de edição/variação de imagem |
-| 11 - Chamada de Funções | Adicionar chamadas de função paralelas |
-| 15 - RAG | Adicionar comparação de estratégia de chunking |
+| 09 - Geração de Imagem | Adicionar exemplos de edição/variação de imagens |
+| 11 - Chamada de Funções | Adicionar chamada de funções paralelas |
+| 15 - RAG | Adicionar comparação de estratégias de chunking |
 | 17 - Agentes de IA | Adicionar orquestração multiagente |
 
 ---
 
 ## 4. Modernização da API
 
-### 4.1 Padrões de API Obsoletos para Atualizar
+### 4.1 Padrões de API Obsoletos (Migração Concluída)
 
-| Padrão Antigo | Novo Padrão | Arquivos Afetados |
-|---------------|-------------|-------------------|
-| `openai.api_type = "azure"` | Cliente `AzureOpenAI()` | Vários scripts em `08-building-search-applications/` |
-| `openai.ChatCompletion.create()` | `client.chat.completions.create()` | Vários notebooks |
-| `df.append()` (pandas) | `pd.concat()` | Notebook RAG |
+Todos os exemplos de **chat** em Python e TypeScript foram migrados da API Chat Completions para a **Responses API** (`client.responses.create(...)` → `response.output_text`).
+
+| Padrão Antigo | Padrão Novo | Status |
+|-------------|-------------|--------|
+| `openai.api_type = "azure"` / `AzureOpenAI()` (chat) | `OpenAI(base_url="<endpoint>/openai/v1/")` (Responses API) | Concluído |
+| `openai.ChatCompletion.create()` / `client.chat.completions.create()` | `client.responses.create(input=...)` → `response.output_text` | Concluído |
+| `@azure/openai` `OpenAIClient.getChatCompletions()` (TypeScript) | pacote `openai` `client.responses.create()` → `response.output_text` | Concluído |
+| `df.append()` (pandas) | `pd.concat()` | Concluído |
+
+> **Nota:** Exemplos Microsoft Foundry Models que usam o SDK `azure-ai-inference` / `@azure-rest/ai-inference` (`client.complete()`) permanecem na Model Inference API, que não suporta a Responses API. O `AzureOpenAI()` é mantido intencionalmente onde ainda é válido (embeddings e geração de imagens).
 
 ### 4.2 Novos Recursos de API para Demonstrar
 
 1. **Saídas Estruturadas** (OpenAI)
    - Modo JSON
-   - Chamada de função com esquemas rigorosos
+   - Chamada de função com esquemas rígidos
 
-2. **Capacidades Visuais**
-   - Análise de imagem com GPT-4V
+2. **Capacidades de Visão**
+   - Análise de imagem com GPT-4o (visão)
    - Prompts multimodais
 
-3. **API Assistentes**
+3. **Ferramentas Integradas na Responses API** (substitui a Assistants API legada)
    - Interpretador de código
-   - Busca por arquivo
-   - Ferramentas customizadas
+   - Busca de arquivos
+   - Busca web e ferramentas personalizadas
 
 ---
 
-## 5. Melhorias na Infraestrutura
+## 5. Melhorias de Infraestrutura
 
 ### 5.1 Aprimoramentos CI/CD
 
-Fluxos de trabalho atuais lidam com validação markdown. Adições recomendadas:
+Implementado em [`.github/workflows/code-quality.yml`](../../../.github/workflows/code-quality.yml): lint e formatação Python (Ruff + Black) são **impostos** no módulo de utilitários mantido `shared/` e rodados **aconselhados** no restante do currículo, além de uma execução aconselhada do ESLint para JavaScript/TypeScript. A linha base ilustrativa foi:
 
 ```yaml
 # .github/workflows/code-quality.yml
@@ -167,7 +172,9 @@ jobs:
       - run: npx eslint .
 ```
 
-### 5.2 Escaneamento de Segurança
+### 5.2 Análise de Segurança
+
+Implementado em [`.github/workflows/security.yml`](../../../.github/workflows/security.yml): análise CodeQL para Python e JavaScript/TypeScript (no push, pull request e programação semanal) além de revisão de dependências em pull requests. A linha base ilustrativa foi:
 
 ```yaml
 # .github/workflows/security.yml
@@ -198,7 +205,7 @@ jobs:
 
 ### 6.1 Aprimoramentos no DevContainer
 
-Atualizar `.devcontainer/devcontainer.json`:
+Implementado em [`.devcontainer/devcontainer.json`](../../../.devcontainer/devcontainer.json) e [`.devcontainer/post-create.sh`](../../../.devcontainer/post-create.sh): o container agora traz as extensões Pylance, Black formatter, Ruff, ESLint, Prettier e Copilot, habilita format-on-save conectado à configuração Black/Prettier do repositório e instala as ferramentas de desenvolvimento (`ruff`, `black`, `mypy`, `pytest`) para que o [workflow de qualidade de código](../../../.github/workflows/code-quality.yml) possa ser reproduzido localmente. A imagem base `mcr.microsoft.com/devcontainers/universal` já inclui Python e Node, portanto nenhuma funcionalidade extra é necessária. A linha base ilustrativa foi:
 
 ```json
 {
@@ -234,28 +241,28 @@ Atualizar `.devcontainer/devcontainer.json`:
 
 ### 6.2 Playground Interativo
 
-Considerar adicionar:
-- Notebooks Jupyter com chaves API pré-configuradas (via ambiente)
+Considere adicionar:
+- Notebooks Jupyter com chaves API pré-preenchidas (via ambiente)
 - Demos Gradio/Streamlit para aprendizes visuais
-- Questionários interativos para avaliação de conhecimento
+- Quizzes interativos para avaliação de conhecimento
 
 ---
 
 ## 7. Suporte Multilíngue
 
-### 7.1 Cobertura Atual de Linguagens
+### 7.1 Cobertura Atual de Idiomas
 
 | Tecnologia | Aulas Cobertas | Status |
-|------------|----------------|--------|
+|------------|-----------------|--------|
 | Python | Todas | Completo |
 | TypeScript | 06-09, 11 | Parcial |
 | JavaScript | 06-08, 11 | Parcial |
 | .NET/C# | Algumas | Parcial |
 
-### 7.2 Adições Recomendadas
+### 7.2 Recomendações de Inclusão
 
 1. **Go** - Crescente em ferramentas de IA/ML
-2. **Rust** - Aplicações de alta performance
+2. **Rust** - Aplicações de alta performance crítica
 3. **Java/Kotlin** - Aplicações empresariais
 
 ---
@@ -265,7 +272,7 @@ Considerar adicionar:
 ### 8.1 Otimizações a Nível de Código
 
 1. **Padrões Async/Await**
-   - Adicionar exemplos async para processamento em lote
+   - Adicionar exemplos async para processamento em lotes
    - Demonstrar chamadas de API concorrentes
 
 2. **Estratégias de Cache**
@@ -281,7 +288,7 @@ Considerar adicionar:
 Adicionar exemplos demonstrando:
 - Seleção de modelo baseada na complexidade da tarefa
 - Engenharia de prompt para eficiência de tokens
-- Processamento em lote para operações em massa
+- Processamento em lotes para operações em massa
 
 ---
 
@@ -289,63 +296,60 @@ Adicionar exemplos demonstrando:
 
 ### 9.1 Status Atual das Traduções
 
-| Idioma | Status |
+Todas as traduções estão **completas** e são geradas automaticamente pelo [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst), que produz e mantém mais de 50 versões do currículo sincronizadas com a fonte em inglês. O conteúdo traduzido fica em `translations/` e as imagens localizadas em `translated_images/`; a lista completa de idiomas disponíveis é publicada no topo do README do repositório.
+
+| Aspecto | Status |
 |--------|--------|
-| Inglês | Completo |
-| Chinês (Simplificado) | Completo |
-| Japonês | Completo |
-| Coreano | Completo |
-| Espanhol | Parcial |
-| Português | Parcial |
-| Turco | Parcial |
-| Polonês | Parcial |
+| Cobertura da tradução | Completa — 50+ idiomas, todas as aulas |
+| Método de tradução | Automatizado via [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst) |
+| Mantido sincronizado com a fonte em inglês | Sim — regenerado automaticamente |
 
-### 9.2 Melhorias em Acessibilidade
+### 9.2 Melhorias de Acessibilidade
 
-1. Adicionar texto alternativo a todas as imagens
+1. Adicionar textos alternativos em todas as imagens
 2. Garantir que exemplos de código tenham realce de sintaxe apropriado
 3. Adicionar transcrições para todos os vídeos
-4. Garantir contraste de cor conforme diretrizes WCAG
+4. Garantir contraste de cores conforme as diretrizes WCAG
 
 ---
 
 ## 10. Prioridade de Implementação
 
 ### Fase 1: Imediata (Semana 1-2)
-- [x] Corrigir questões críticas de segurança
+- [x] Corrigir problemas críticos de segurança
 - [x] Adicionar configuração de qualidade de código
 - [x] Criar utilitários compartilhados
 - [x] Documentar diretrizes de segurança
 
 ### Fase 2: Curto prazo (Semana 3-4)
-- [ ] Atualizar padrões de API obsoletos
-- [ ] Adicionar anotações de tipo a todos os arquivos Python
-- [ ] Adicionar workflows CI/CD para qualidade de código
-- [ ] Criar workflow de escaneamento de segurança
+- [x] Atualizar padrões obsoletos da API (Chat Completions → Responses API, Python + TypeScript)
+- [ ] Adicionar anotações de tipo em todos os arquivos Python (feito para o módulo mantido `shared/`; amostras de aula mantidas simples)
+- [x] Adicionar workflows CI/CD para qualidade de código
+- [x] Criar workflow de análise de segurança
 
-### Fase 3: Médio prazo (Meses 2-3)
+### Fase 3: Médio prazo (Mês 2-3)
 - [ ] Adicionar nova aula de segurança
 - [ ] Adicionar aula de implantação em produção
-- [ ] Melhorar configuração do DevContainer
-- [ ] Adicionar demos interativos
+- [x] Melhorar setup do DevContainer
+- [ ] Adicionar demos interativas
 
 ### Fase 4: Longo prazo (Mês 4+)
 - [ ] Adicionar aula avançada de RAG
-- [ ] Expandir cobertura de linguagens
-- [ ] Adicionar suíte abrangente de testes
+- [ ] Ampliar cobertura de idiomas
+- [ ] Adicionar suíte completa de testes
 - [ ] Criar programa de certificação
 
 ---
 
 ## Conclusão
 
-Este roteiro oferece uma abordagem estruturada para melhorar o currículo Generative AI for Beginners. Ao abordar questões de segurança, modernizar APIs e adicionar conteúdo educacional, o curso preparará melhor os alunos para o desenvolvimento de aplicações reais de IA.
+Este roteiro oferece uma abordagem estruturada para aprimorar o currículo Generative AI for Beginners. Ao abordar questões de segurança, modernizar APIs e adicionar conteúdo educacional, o curso preparará melhor os alunos para o desenvolvimento real de aplicações de IA.
 
 Para dúvidas ou contribuições, por favor abra uma issue no repositório GitHub.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução automática [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para alcançar precisão, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original, em sua língua nativa, deve ser considerado a fonte autoritária. Para informações críticas, recomenda-se tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
+**Aviso Legal**:
+Este documento foi traduzido usando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, por favor, esteja ciente de que traduções automatizadas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,196 +1,197 @@
-# Kuchunguza na kulinganisha LLM tofauti
+# Kuchunguza na kulinganisha aina tofauti za LLMs
 
-[![Kuchunguza na kulinganisha LLM tofauti](../../../translated_images/sw/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Kuchunguza na kulinganisha aina tofauti za LLMs](../../../translated_images/sw/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
-> _Bonyeza picha hapo juu kutazama video ya somo hili_
+> _Bofya picha hapo juu kutazama video ya somo hili_
 
-Katika somo lililopita, tumeona jinsi AI ya kizazi inavyobadilisha taswira ya teknolojia, jinsi Large Language Models (LLMs) zinavyofanya kazi, na jinsi biashara - kama kampuni yetu ya kuanza - inaweza kuzitumia kwa matumizi yao na kukua! Katika sura hii, tunatazamia kulinganisha na kutofautisha aina tofauti za LLM ili kuelewa faida na hasara zake.
+Kwa somo lililopita, tumeona jinsi AI ya Kizazi inavyobadilisha mazingira ya teknolojia, jinsi Modeli Kubwa za Lugha (LLMs) zinavyofanya kazi na jinsi biashara - kama kampuni yetu ya kuanzisha - inaweza kuzitumia kwa matumizi yao na kukua! Katika sura hii, tunatafuta kulinganisha na kutofautisha aina tofauti za modeli kubwa za lugha (LLMs) ili kuelewa faida na hasara zao.
 
-Hatua inayofuata katika safari ya kampuni yetu ya kuanza ni kuchunguza taswira ya sasa ya LLM na kuelewa ni zipi zinazofaa kwa matumizi yetu.
+Hatua inayofuata katika safari ya kuanzisha ni kuchunguza mazingira ya sasa ya LLMs na kuelewa ni zipi zinazofaa kwa matumizi yetu.
 
 ## Utangulizi
 
-Somo hili litashughulikia:
+Somo hili litajumuisha:
 
-- Aina tofauti za LLM katika taswira ya sasa.
-- Kupima, kurudia, na kulinganisha mifano tofauti kwa matumizi yako katika Azure.
+- Aina tofauti za LLMs katika mazingira ya sasa.
+- Kujaribu, kurudia, na kulinganisha modeli tofauti kwa matumizi yako katika Azure.
 - Jinsi ya kupeleka LLM.
 
 ## Malengo ya Kujifunza
 
-Baada ya kukamilisha somo hili, utaweza:
+Baada ya kumaliza somo hili, utaweza:
 
-- Kuchagua mfano sahihi kwa matumizi yako.
-- Kuelewa jinsi ya kupima, kurudia, na kuboresha utendaji wa mfano wako.
-- Kujua jinsi biashara zinavyoweka mifano.
+- Kuchagua modeli sahihi kwa matumizi yako.
+- Kuelewa jinsi ya kujaribu, kurudia, na kuboresha utendaji wa modeli yako.
+- Kujua jinsi biashara zinavyopunguza modeli.
 
-## Kuelewa aina tofauti za LLM
+## Elewa aina tofauti za LLMs
 
-LLM zinaweza kuwa na makundi mbalimbali kulingana na muundo wake, data ya mafunzo, na matumizi. Kuelewa tofauti hizi kutasaidia kampuni yetu kuchagua mfano sahihi kwa hali hiyo, na kuelewa jinsi ya kupima, kurudia, na kuboresha utendaji.
+LLMs zinaweza kuwa na aina nyingi kulingana na usanifu wao, data za mafunzo, na matumizi. Kuelewa tofauti hizi kutasaidia kampuni yetu ya kuanzisha kuchagua modeli sahihi kwa tukio, na kuelewa jinsi ya kujaribu, kurudia, na kuboresha utendaji.
 
-Kuna aina nyingi tofauti za mifano ya LLM, chaguo lako la mfano linategemea unacholenga kutumia kwa, data yako, kiasi unachotaka kulipia na zaidi.
+Kuna aina nyingi tofauti za modeli za LLM, uchaguzi wako wa modeli unategemea unachotaka kuzitumia kwa, data yako, kiasi unachotaka kulipa na zaidi.
 
-Kutegemea kama unalenga kutumia mifano kwa maandishi, sauti, video, uzalishaji wa picha na kadhalika, unaweza kuchagua aina tofauti ya mfano.
+Kulingana na kama unataka kutumia modeli kwa maandishi, sauti, video, uzalishaji picha n.k., unaweza kuchagua aina tofauti ya modeli.
 
-- **Utambuzi wa sauti na hotuba**. Kwa kusudi hili, mifano ya aina ya Whisper ni chaguo bora kwani ni ya matumizi ya jumla na inalenga utambuzi wa hotuba. Imefundishwa kwa sauti mbalimbali na inaweza kufanya utambuzi wa hotuba wa lugha nyingi. Jifunze zaidi kuhusu [mifano ya aina ya Whisper hapa](https://platform.openai.com/docs/models/whisper?WT.mc_id=academic-105485-koreyst).
+- **Utambuzi wa sauti na kuzungumza**. Modeli za mtindo wa Whisper bado ni muhimu kama modeli za jumla za utambuzi sauti, lakini chaguzi za uzalishaji sasa pia ni pamoja na modeli mpya za sauti-kwenda-maandishi kama `gpt-4o-transcribe`, `gpt-4o-mini-transcribe`, na aina za diarization. Tathmini usambazaji wa lugha, diarization, msaada wa wakati halisi, kuchelewa, na gharama kwa tukio lako. Jifunze zaidi katika [nyaraka za OpenAI za sauti-kwenda-maandishi](https://platform.openai.com/docs/guides/speech-to-text?WT.mc_id=academic-105485-koreyst).
 
-- **Uzalishaji wa picha**. Kwa uzalishaji wa picha, DALL-E na Midjourney ni chaguo mbili maarufu sana. DALL-E inatolewa na Azure OpenAI. [Soma zaidi kuhusu DALL-E hapa](https://platform.openai.com/docs/models/dall-e?WT.mc_id=academic-105485-koreyst) na pia katika Sura ya 9 ya mtaala huu.
+- **Uzalishaji picha**. DALL-E na Midjourney ni chaguzi maarufu za uzalishaji picha, lakini API za picha za OpenAI sasa zinazingatia modeli za Picha za GPT kama `gpt-image-2`, wakati Stable Diffusion, Imagen, Flux, na familia nyingine za modeli pia ni chaguo maarufu. Linganisha ufuataji wa maelekezo, msaada wa uhariri, udhibiti wa mtindo, mahitaji ya usalama, na leseni. Jifunze zaidi katika [mwongozo wa uzalishaji picha wa OpenAI](https://platform.openai.com/docs/guides/images?WT.mc_id=academic-105485-koreyst) na Sura ya 9 ya mtaala huu.
 
-- **Uzalishaji wa maandishi**. Mifano mingi imefundishwa kwa uzalishaji wa maandishi na una chaguo nyingi kutoka GPT-3.5 hadi GPT-4. Zinakuja kwa gharama tofauti na GPT-4 ikiwa ya gharama kubwa zaidi. Inafaa kuangalia [Azure OpenAI playground](https://oai.azure.com/portal/playground?WT.mc_id=academic-105485-koreyst) kutathmini ni mifano gani inayofaa mahitaji yako kwa uwezo na gharama.
+- **Uzalishaji maandishi**. Modeli za maandishi sasa zina uwanja wa modeli za mbele, modeli za hoja, modeli ndogo za kuleta matokeo haraka, na modeli za uzito wazi. Mifano ya sasa ni pamoja na modeli za OpenAI GPT-5.x, modeli za Anthropic Claude 4.x, modeli za Google Gemini 3.x, modeli za Meta Llama 4, na modeli za Mistral. Usichague tu kwa tarehe ya kutolewa au bei; linganisha ubora wa kazi, ucheleweshaji, dirisha la muktadha, matumizi ya zana, tabia za usalama, upatikanaji wa kanda, na jumla ya gharama. [Orodha ya modeli ya Microsoft Foundry](https://ai.azure.com/catalog?WT.mc_id=academic-105485-koreyst) ni mahali pazuri pa kulinganisha modeli zilizopo Azure.
 
-- **Multi-modality**. Ikiwa unatafuta kushughulikia aina nyingi za data katika pembejeo na matokeo, unaweza kutaka kuangalia mifano kama [gpt-4 turbo na vision au gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models#gpt-4-and-gpt-4-turbo-models?WT.mc_id=academic-105485-koreyst) - matoleo ya hivi karibuni ya mifano ya OpenAI - ambayo yana uwezo wa kuchanganya usindikaji wa lugha asilia na uelewa wa kuona, kuwezesha mwingiliano kupitia interface za multi-modal.
+- **Modality nyingi**. Modeli nyingi za sasa zinaweza kushughulikia zaidi ya maandishi. Baadhi hushughulikia picha, sauti, au video; baadhi wanaweza kuita zana; na modeli maalum zinaweza kuzalisha picha, sauti, au video. Kwa mfano, modeli za sasa za OpenAI zinaunga mkono input ya maandishi na picha, modeli za Gemini zinaweza kuunga mkono maandishi, msimbo, picha, sauti, na video kulingana na aina, na Llama 4 Scout na Maverick ni modeli za uzito wazi za asili za modality nyingi. Kila wakati angalia kadi ya modeli kupata modaliti zinazoungwa mkono kwa input na output kabla ya kujenga mtiririko.
 
-Kuchagua mfano inamaanisha unapata uwezo wa msingi, ambao huenda usitoshe hata hivyo. Mara nyingi una data maalum ya kampuni ambayo kwa namna fulani unahitaji kuijulisha LLM. Kuna chaguo kadhaa tofauti juu ya jinsi ya kukabiliana na hilo, zaidi juu ya hilo katika sehemu zijazo.
+Kuchagua modeli kunamaanisha unapata uwezo wa msingi, ingawa huenda hautoshi. Mara nyingi una data maalum za kampuni unazohitaji kumweleza LLM. Kuna chaguzi kadhaa tofauti za kukabiliana na hilo, zaidi hapo katika sehemu zinazofuata.
 
-### Mifano ya Msingi dhidi ya LLM
+### Modeli za Msingi dhidi ya LLMs
 
-Neno Mfano wa Msingi lilianzishwa na [watafiti wa Stanford](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) na kufafanuliwa kama mfano wa AI unaofuata vigezo fulani, kama vile:
+Neno la Modeli ya Msingi lilitengenezwa na [watafiti wa Stanford](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) na lilifafanuliwa kama modeli ya AI inayofuata vigezo fulani, kama:
 
-- **Zinapewa mafunzo kwa kutumia kujifunza bila usimamizi au kujifunza kwa kujisimamia**, ikimaanisha zinapewa mafunzo kwa data isiyo na lebo ya multi-modal, na hazihitaji maelezo ya binadamu au kuweka lebo ya data kwa mchakato wao wa mafunzo.
-- **Ni mifano mikubwa sana**, inayotegemea mitandao ya neva yenye kina kirefu iliyofundishwa kwa mamilioni ya vigezo.
-- **Kwa kawaida zinalenga kutumika kama ‘msingi’ wa mifano mingine**, ikimaanisha zinaweza kutumika kama msingi wa mifano mingine kujengwa juu yake, ambayo inaweza kufanywa kwa kurekebisha.
+- **Zinafundishwa kwa kutumia ujifunzaji usio na msimamizi au ujifunzaji wa kujisimamia**, maana zinafundishwa kwa data zisizo na lebo za modality nyingi, na hazihitaji ufafanuzi au lebo ya binadamu kwa mchakato wa mafunzo yao.
+- **Ni modeli kubwa sana**, zinazotegemea mitandao ya neva ya kina sana iliyofundishwa kwa mabilioni ya vigezo.
+- **Kwa kawaida zinakusudiwa kutumika kama ‘msingi’ kwa modeli nyingine**, maana zinaweza kutumika kama msingi wa kujengewa modeli nyingine juu yake, ambacho kinaweza kufanyika kwa kusahihisha vipimo.
 
-![Mifano ya Msingi dhidi ya LLM](../../../translated_images/sw/FoundationModel.e4859dbb7a825c94.webp)
+![Modeli za Msingi dhidi ya LLMs](../../../translated_images/sw/FoundationModel.e4859dbb7a825c94.webp)
 
-Chanzo cha picha: [Mwongozo Muhimu wa Mifano ya Msingi na LLM | na Babar M Bhatti | Medium
+Chanzo cha picha: [Mwongozo Muhimu wa Modeli za Msingi na Modeli Kubwa za Lugha | na Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
-Ili kufafanua zaidi tofauti hii, hebu tuchukue ChatGPT kama mfano. Ili kujenga toleo la kwanza la ChatGPT, mfano uitwao GPT-3.5 ulitumika kama mfano wa msingi. Hii inamaanisha kuwa OpenAI ilitumia data maalum ya mazungumzo kuunda toleo lililorekebishwa la GPT-3.5 ambalo lilikuwa maalum kwa kufanya vizuri katika hali za mazungumzo, kama vile chatbots.
+Ili kufafanua zaidi tofauti hii, tuchukue ChatGPT kama mfano wa kihistoria. Toleo za awali za ChatGPT zilitumia GPT-3.5 kama modeli ya msingi. OpenAI kisha ilitumia data maalum ya mazungumzo na mbinu za kulinganisha kuunda toleo lililorekebishwa ambalo lilifanya vyema zaidi katika mazingira ya mazungumzo, kama vile chatbots. Huduma za kisasa za AI mara nyingi zinapita kati ya aina kadhaa za modeli, kwa hivyo jina la huduma na jina la modeli ya msingi si mara zote vitu sawa.
 
-![Mfano wa Msingi](../../../translated_images/sw/Multimodal.2c389c6439e0fc51.webp)
+![Modeli ya Msingi](../../../translated_images/sw/Multimodal.2c389c6439e0fc51.webp)
 
 Chanzo cha picha: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
-### Mifano ya Chanzo Huria dhidi ya Mifano ya Kibiashara
+### Modeli za Uzito-Uwazi/Open-Source dhidi ya Modeli za Mali Binafsi
 
-Njia nyingine ya kuainisha LLM ni ikiwa ni chanzo huria au ya kibiashara.
+Njia nyingine ya kukategorisha LLM ni kama ni uzito-uwazi, chanzo-wazi, au mila binafsi.
 
-Mifano ya chanzo huria ni mifano ambayo inapatikana kwa umma na inaweza kutumiwa na yeyote. Mara nyingi hutolewa na kampuni iliyoiunda, au na jamii ya utafiti. Mifano hii inaruhusiwa kuchunguzwa, kurekebishwa, na kuboreshwa kwa matumizi mbalimbali katika LLM. Hata hivyo, hazijaboreshwa kila mara kwa matumizi ya uzalishaji, na huenda zisifanye kazi vizuri kama mifano ya kibiashara. Zaidi ya hayo, ufadhili wa mifano ya chanzo huria unaweza kuwa mdogo, na huenda zisihifadhiwe kwa muda mrefu au zisisasishwe na utafiti wa hivi karibuni. Mifano maarufu ya chanzo huria ni pamoja na [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst), [Bloom](https://huggingface.co/bigscience/bloom) na [LLaMA](https://llama.meta.com).
+Modeli za chanzo wazi na uzito wazi hufanya mafaili ya modeli kupatikana kwa uhakiki, kupakua, au kubinafsisha, lakini leseni zao zinatofautiana. Baadhi ni chanzo wazi kabisa, wakati nyingine ni modeli za uzito wazi zilizo na vizuizi vya matumizi. Hizi zinaweza kusaidia wakati biashara inahitaji udhibiti zaidi juu ya utoaji, eneo la data, gharama, au ubinafsishaji. Hata hivyo, timu bado zinahitaji kupitia masharti ya leseni, gharama za kuwasilisha, matengenezo, masasisho ya usalama, na ubora wa tathmini kabla ya kuzitumia uzalishaji. Mifano ni pamoja na [Meta Llama 4](https://ai.meta.com/blog/llama-4-multimodal-intelligence/?WT.mc_id=academic-105485-koreyst), baadhi ya [modeli za Mistral](https://docs.mistral.ai/models/overview?WT.mc_id=academic-105485-koreyst), na modeli nyingi zinazohifadhiwa kwenye [Hugging Face](https://huggingface.co/models?WT.mc_id=academic-105485-koreyst).
 
-Mifano ya kibiashara ni mifano inayomilikiwa na kampuni na haipatikani kwa umma. Mifano hii mara nyingi imeboreshwa kwa matumizi ya uzalishaji. Hata hivyo, haziruhusiwi kuchunguzwa, kurekebishwa, au kuboreshwa kwa matumizi tofauti. Zaidi ya hayo, hazipatikani kila mara bila malipo, na huenda zikahitaji usajili au malipo ili kutumia. Pia, watumiaji hawana udhibiti juu ya data inayotumika kufundisha mfano, ambayo inamaanisha wanapaswa kuamini mmiliki wa mfano kuhakikisha kujitolea kwa faragha ya data na matumizi ya AI kwa uwajibikaji. Mifano maarufu ya kibiashara ni pamoja na [OpenAI models](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-koreyst), [Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst) au [Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-koreyst).
+Modeli za mali binafsi zinamilikiwa na kuhudumiwa na muuzaji. Modeli hizi mara nyingi zimeboreshwa kwa matumizi ya uzalishaji yaliyoendeshwa na hutoa msaada mzuri, mifumo ya usalama, ujumuishaji wa zana, na upanuzi. Hata hivyo, wateja kawaida hawawezi kuangalia au kubadilisha uzito wa modeli, na wanapaswa kupitia masharti ya muuzaji kuhusu faragha, uhifadhi, ufuatiliaji, na matumizi yanayokubalika. Mifano ni pamoja na [modeli za OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst), [Google Gemini](https://deepmind.google/models/gemini/pro/?WT.mc_id=academic-105485-koreyst), na [Anthropic Claude](https://platform.claude.com/docs/en/about-claude/models/overview?WT.mc_id=academic-105485-koreyst).
 
-### Embedding dhidi ya Uzalishaji wa Picha dhidi ya Uzalishaji wa Maandishi na Nambari
+### Uingiliano dhidi ya Uzalishaji Picha dhidi ya Uzalishaji wa Maandishi na Msimbo
 
-LLM pia zinaweza kuainishwa kulingana na matokeo wanayozalisha.
+LLMs pia zinaweza kukategorishwa kwa mujibu wa matokeo yanayotengeneza.
 
-Embeddings ni seti ya mifano inayoweza kubadilisha maandishi kuwa fomu ya nambari, inayoitwa embedding, ambayo ni uwakilishi wa nambari wa maandishi ya pembejeo. Embeddings hufanya iwe rahisi kwa mashine kuelewa uhusiano kati ya maneno au sentensi na inaweza kutumiwa kama pembejeo na mifano mingine, kama mifano ya uainishaji, au mifano ya clustering ambayo ina utendaji bora kwenye data ya nambari. Mifano ya embedding mara nyingi hutumiwa kwa kujifunza uhamisho, ambapo mfano hujengwa kwa kazi mbadala ambayo kuna wingi wa data, na kisha uzito wa mfano (embeddings) hutumiwa tena kwa kazi nyingine za chini. Mfano wa kategoria hii ni [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
+Uingiliano ni seti ya modeli zinazoweza kubadilisha maandishi kuwa fomu nambari, inayoitwa embedding, ambayo ni uwakilishi wa nambari wa maandishi ya pembejeo. Uingiliano hufanya iwe rahisi kwa mashine kuelewa mahusiano kati ya maneno au sentensi na inaweza kutumika kama pembejeo na modeli nyingine, kama modeli za utambuzi au za upangaji ambazo zina utendaji bora kwenye data ya nambari. Modeli za embedding mara nyingi hutumika kwa ujifunzaji wa uhamisho, ambapo modeli inajengwa kwa kazi mbadala ambayo kuna data nyingi, na kisha uzito wa modeli (embedding) hutumika tena kwa kazi nyingine. Mfano katika kundi hili ni [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Embedding](../../../translated_images/sw/Embedding.c3708fe988ccf760.webp)
+![Uingiliano](../../../translated_images/sw/Embedding.c3708fe988ccf760.webp)
 
-Mifano ya uzalishaji wa picha ni mifano inayozalisha picha. Mifano hii mara nyingi hutumiwa kwa uhariri wa picha, usanisi wa picha, na tafsiri ya picha. Mifano ya uzalishaji wa picha mara nyingi hufundishwa kwa seti kubwa za data za picha, kama [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), na inaweza kutumika kuzalisha picha mpya au kuhariri picha zilizopo kwa mbinu za inpainting, super-resolution, na colorization. Mifano ni pamoja na [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) na [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
+Modeli za uzalishaji picha ni modeli zinazozalisha picha. Modeli hizi mara nyingi hutumika kwa uhariri wa picha, usanisi wa picha, na utafsiri wa picha. Modeli za uzalishaji picha mara nyingi hufundishwa kwa seti kubwa za picha, kama [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), na zinaweza kutumika kuzalisha picha mpya au kuhariri picha zilizopo kwa mbinu za kuchora tena, azimio la juu, na kupiga rangi. Mifano ni pamoja na [modeli za GPT Image](https://platform.openai.com/docs/guides/images?WT.mc_id=academic-105485-koreyst), [modeli za Stable Diffusion](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst), na modeli za Imagen.
 
-![Uzalishaji wa Picha](../../../translated_images/sw/Image.349c080266a763fd.webp)
+![Uzalishaji picha](../../../translated_images/sw/Image.349c080266a763fd.webp)
 
-Mifano ya uzalishaji wa maandishi na nambari ni mifano inayozalisha maandishi au nambari. Mifano hii mara nyingi hutumiwa kwa muhtasari wa maandishi, tafsiri, na kujibu maswali. Mifano ya uzalishaji wa maandishi mara nyingi hufundishwa kwa seti kubwa za data za maandishi, kama [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), na inaweza kutumika kuzalisha maandishi mapya, au kujibu maswali. Mifano ya uzalishaji wa nambari, kama [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), mara nyingi hufundishwa kwa seti kubwa za data za nambari, kama GitHub, na inaweza kutumika kuzalisha nambari mpya, au kurekebisha hitilafu katika nambari zilizopo.
+Modeli za uzalishaji maandishi na msimbo ni modeli zinazozalisha maandishi au msimbo. Modeli hizi mara nyingi hutumika kwa muhtasari wa maandishi, tafsiri, na kujibu maswali. Modeli za uzalishaji maandishi mara nyingi hufundishwa kwa seti kubwa za maandishi, kama [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), na zinaweza kutumika kuzalisha maandishi mapya, au kujibu maswali. Modeli za uzalishaji msimbo, kama [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), mara nyingi hufundishwa kwa seti kubwa za msimbo, kama GitHub, na zinaweza kutumika kuzalisha msimbo mpya, au kurekebisha hitilafu kwenye msimbo uliopo.
 
-![Uzalishaji wa Maandishi na Nambari](../../../translated_images/sw/Text.a8c0cf139e5cc2a0.webp)
+![Uzalishaji maandishi na msimbo](../../../translated_images/sw/Text.a8c0cf139e5cc2a0.webp)
 
-### Encoder-Decoder dhidi ya Decoder-only
+### Encoder-Decoder dhidi ya Decoder-peke yake
 
-Ili kuzungumzia aina tofauti za miundo ya LLM, hebu tutumie mfano.
+Ili kuzungumzia aina tofauti za usanifu wa LLMs, tuchukue mfano.
 
-Fikiria meneja wako amekupa kazi ya kuandika jaribio kwa wanafunzi. Una wenzako wawili; mmoja anasimamia kuunda maudhui na mwingine anasimamia kuyapitia.
+Fikiria meneja wako alikupa kazi ya kuandika mtihani wa maswali kwa wanafunzi. Una wenzako wawili; mmoja anasimamia uundaji wa maudhui na mwingine anasimamia kupitia hayo.
 
-Mwandishi wa maudhui ni kama mfano wa Decoder pekee, anaweza kuangalia mada na kuona ulichokwisha kuandika kisha anaweza kuandika kozi kulingana na hayo. Wana uwezo mzuri wa kuandika maudhui ya kuvutia na ya kuelimisha, lakini hawana uwezo mzuri wa kuelewa mada na malengo ya kujifunza. Baadhi ya mifano ya Decoder ni familia ya mifano ya GPT, kama GPT-3.
+Mjenzi wa maudhui ni kama modeli ya decoder-peke yake: anaweza kuangalia mada, kuona uliyoiandika tayari, na kisha kuendelea kuunda maudhui kulingana na muktadha huo. Wao ni wazuri sana kuandika maudhui ya kuvutia na yenye taarifa, lakini siyo kila wakati chaguo bora wakati kazi ni kutambua, kupata au kuweka taarifa. Mifano ya familia za modeli za decoder-peke ni GPT na modeli za Llama.
 
-Mhakiki ni kama mfano wa Encoder pekee, anaangalia kozi iliyoandikwa na majibu, akiona uhusiano kati yao na kuelewa muktadha, lakini hana uwezo mzuri wa kuunda maudhui. Mfano wa Encoder pekee ni BERT.
+Mkaguzi ni kama modeli ya encoder peke, wanaangalia kozi iliyotengenezwa na majibu, kutambua uhusiano kati yao na kuelewa muktadha, lakini si wazuri katika kuzalisha maudhui. Mfano wa modeli ya encoder peke ni BERT.
 
-Fikiria tunaweza kuwa na mtu pia ambaye anaweza kuunda na kupitia jaribio, huyu ni mfano wa Encoder-Decoder. Baadhi ya mifano ni BART na T5.
+Fikiria kwamba tuna mtu pia ambaye anaweza kuunda na kukagua mtihani, hii ni modeli ya Encoder-Decoder. Mifano ni BART na T5.
 
-### Huduma dhidi ya Mfano
+### Huduma dhidi ya Modeli
 
-Sasa, hebu tuzungumzie tofauti kati ya huduma na mfano. Huduma ni bidhaa inayotolewa na Mtoa Huduma wa Wingu, na mara nyingi ni mchanganyiko wa mifano, data, na vipengele vingine. Mfano ni kipengele cha msingi cha huduma, na mara nyingi ni mfano wa msingi, kama LLM.
+Sasa, tuelezee tofauti kati ya huduma na modeli. Huduma ni bidhaa inayotolewa na Mtoa Huduma wa Mawingu, na mara nyingi ni mchanganyiko wa modeli, data, na vipengele vingine. Modeli ni sehemu kuu ya huduma, na mara nyingi ni modeli ya msingi, kama LLM.
 
-Huduma mara nyingi zimeboreshwa kwa matumizi ya uzalishaji na mara nyingi ni rahisi kutumia kuliko mifano, kupitia interface ya mtumiaji ya picha. Hata hivyo, huduma hazipatikani kila mara bila malipo, na huenda zikahitaji usajili au malipo ili kutumia, badala ya kutumia vifaa na rasilimali za mmiliki wa huduma, kupunguza gharama na kupanua kwa urahisi. Mfano wa huduma ni [Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), ambayo inatoa mpango wa malipo kulingana na matumizi, ikimaanisha watumiaji wanatozwa kulingana na kiasi wanachotumia huduma. Pia, Azure OpenAI Service inatoa usalama wa daraja la biashara na mfumo wa AI wa uwajibikaji juu ya uwezo wa mifano.
+Huduma mara nyingi zimeboreshwa kwa matumizi ya uzalishaji na mara nyingi ni rahisi kutumia zaidi kuliko modeli, kupitia interface ya mtumiaji yenye picha. Hata hivyo, huduma si za bure kila wakati, na zinaweza kuhitaji usajili au malipo ili kuzitumia, kwa kubadilishana na kutumia vifaa na rasilimali za mmiliki wa huduma, kuboresha gharama na urahisi wa kupanua. Mfano wa huduma ni [Huduma ya Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), ambayo hutoa mpango wa malipo kwa matumizi, maana watumiaji hulipishwa kulingana na kiasi wanachotumia huduma. Huduma ya Azure OpenAI pia hutoa usalama wa daraja la biashara na mfumo wa AI unaowajibika juu ya uwezo wa modeli.
 
-Mifano ni tu Mtandao wa Neva, na vigezo, uzito, na vingine. Kuruhusu kampuni kuendesha ndani, hata hivyo, ingehitaji kununua vifaa, kujenga muundo wa kupanua na kununua leseni au kutumia mfano wa chanzo huria. Mfano kama LLaMA unapatikana kutumiwa, ukihitaji nguvu ya kompyuta kuendesha mfano.
+Modeli ni mafaili ya mtandao wa neva: vigezo, uzito, usanifu, tokenizer, na usanidi unaounga mkono. Kuendesha modeli kwa mtaa au katika mazingira binafsi kunahitaji vifaa vinavyofaa, miundombinu ya utoaji, ufuatiliaji, na leseni inayofaa ya chanzo wazi/uzito-uwazi au leseni ya kibiashara. Modeli za uzito wazi kama Llama 4 au modeli za Mistral zinaweza kuendeshwa binafsi, lakini bado zinahitaji nguvu ya kompyuta na ujuzi wa kiutendakazi.
 
-## Jinsi ya kupima na kurudia na mifano tofauti kuelewa utendaji kwenye Azure
+## Jinsi ya kujaribu na kurudia na modeli tofauti ili kuelewa utendaji katika Azure
 
-Mara timu yetu inapochunguza taswira ya sasa ya LLM na kutambua wagombea wazuri kwa hali zao, hatua inayofuata ni kuwapima kwenye data yao na mzigo wa kazi. Hii ni mchakato wa kurudia, unaofanywa kwa majaribio na vipimo.
-Mifano mingi ya modeli tuliyotaja katika aya zilizopita (modeli za OpenAI, modeli za chanzo huria kama Llama2, na transformers za Hugging Face) zinapatikana katika [Model Catalog](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview?WT.mc_id=academic-105485-koreyst) ndani ya [Azure AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst).
 
-[Azure AI Studio](https://learn.microsoft.com/azure/ai-studio/what-is-ai-studio?WT.mc_id=academic-105485-koreyst) ni jukwaa la wingu lililoundwa kwa ajili ya watengenezaji kujenga programu za AI za kizazi na kusimamia mzunguko mzima wa maendeleo - kuanzia majaribio hadi tathmini - kwa kuunganisha huduma zote za Azure AI katika kituo kimoja chenye GUI rahisi. Katalogi ya Modeli katika Azure AI Studio inamwezesha mtumiaji:
+Mara timu yetu itakapochunguza mazingira ya LLM za sasa na kubaini wagombea wazuri kwa hali zao, hatua inayofuata ni kuzijaribu kwenye data zao na kwa mzigo wao wa kazi. Huu ni mchakato wa kurudia, unaofanywa kupitia majaribio na vipimo.
+Mifano mingi tuliyotaja katika aya za awali (mifano ya OpenAI, mifano yenye uzito wazi kama Llama 4 na Mistral, na mifano ya Hugging Face) inapatikana katika [Microsoft Foundry Models](https://learn.microsoft.com/azure/foundry/concepts/foundry-models-overview?WT.mc_id=academic-105485-koreyst).
 
-- Kupata Modeli ya Msingi ya kuvutia katika katalogi - iwe ni ya wamiliki au chanzo huria, kwa kuchuja kulingana na kazi, leseni, au jina. Ili kuboresha utafutaji, modeli zimepangwa katika makusanyo, kama vile mkusanyiko wa Azure OpenAI, mkusanyiko wa Hugging Face, na zaidi.
+[Microsoft Foundry](https://learn.microsoft.com/azure/foundry/what-is-foundry?WT.mc_id=academic-105485-koreyst), hapo awali Azure AI Studio/Azure AI Foundry, ni jukwaa la Azure lililounganishwa kwa ajili ya kujenga programu na mawakala wa AI. Husaidia waendelezaji kusimamia mzunguko wa maisha kutoka kwa majaribio na tathmini hadi utekelezaji, ufuatiliaji, na udhibiti. Katalogi ya modeli katika Microsoft Foundry inamruhusu mtumiaji:
 
-![Model catalog](../../../translated_images/sw/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
+- Kupata mfano wa msingi wa umuhimu katika katalogi, ikijumuisha mifano inayouzwa na Azure na mifano kutoka kwa washirika na watoa huduma wa jamii. Watumiaji wanaweza kuchuja kwa kazi, mtoa huduma, leseni, chaguo la utekelezaji, au jina.
 
-- Kukagua kadi ya modeli, ikiwa ni pamoja na maelezo ya kina ya matumizi yaliyokusudiwa na data ya mafunzo, sampuli za msimbo na matokeo ya tathmini kwenye maktaba ya tathmini ya ndani.
+![Katalogi ya mfano](../../../translated_images/sw/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
 
-![Model card](../../../translated_images/sw/ModelCard.598051692c6e400d.webp)
+- Pitia kadi ya mfano, ikijumuisha maelezo ya kina ya matumizi yaliyokusudiwa na data ya mafunzo, mifano ya msimbo na matokeo ya tathmini kwenye maktaba ya tathmini za ndani.
 
-- Kulinganisha viwango vya utendaji kati ya modeli na seti za data zinazopatikana katika sekta ili kutathmini ni ipi inayokidhi hali ya biashara, kupitia paneli ya [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
+![Kadi ya mfano](../../../translated_images/sw/ModelCard.598051692c6e400d.webp)
 
-![Model benchmarks](../../../translated_images/sw/ModelBenchmarks.254cb20fbd06c03a.webp)
+- Linganisha vikasha vya kumbukumbu kati ya mifano na seti za data zinazopatikana katika sekta ili kutathmini ni ipi inayokidhi hali ya biashara, kupitia jopo la [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
 
-- Kuboresha modeli kwa kutumia data ya mafunzo ya kibinafsi ili kuboresha utendaji wa modeli katika mzigo maalum wa kazi, kwa kutumia uwezo wa majaribio na ufuatiliaji wa Azure AI Studio.
+![Vikasha vya mfano](../../../translated_images/sw/ModelBenchmarks.254cb20fbd06c03a.webp)
 
-![Model fine-tuning](../../../translated_images/sw/FineTuning.aac48f07142e36fd.webp)
+- Rekebisha mifano inayounga mkono kwa data ya mafunzo maalum ili kuboresha utendakazi wa mfano katika mzigo maalum wa kazi, ukitumia uwezo wa majaribio na ufuatiliaji wa Microsoft Foundry.
 
-- Kuweka modeli ya awali iliyofunzwa au toleo lililoboreshwa kwa utabiri wa wakati halisi wa mbali - kompyuta inayosimamiwa - au mwisho wa api isiyo na seva - [kulipa kadri unavyotumia](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - ili kuwezesha programu kuitumia.
+![Kurekebisha mfano](../../../translated_images/sw/FineTuning.aac48f07142e36fd.webp)
 
-![Model deployment](../../../translated_images/sw/ModelDeploy.890da48cbd0bccdb.webp)
+- Tekeleza mfano wa awali uliotengenezwa awali au toleo lililorekebishwa kwenye sehemu ya ufanisi ya wakati halisi ya mbali, ukitumia chaguzi za kompyuta zinazosimamiwa au utekelezaji usio na seva, ili kufanya programu zielewe.
+
+![Utekelezaji wa mfano](../../../translated_images/sw/ModelDeploy.890da48cbd0bccdb.webp)
 
 > [!NOTE]
-> Sio modeli zote katika katalogi zinapatikana kwa sasa kwa kuboreshwa na/au kuwekwa kwa kulipa kadri unavyotumia. Angalia kadi ya modeli kwa maelezo kuhusu uwezo na mipaka ya modeli.
+> Sio mifano yote katika katalogi inapatikana kwa sasa kwa ajili ya kurekebisha na/au utekelezaji wa malipo-kama-unavyo-tumia. Angalia kadi ya mfano kwa maelezo juu ya uwezo na mipaka ya mfano.
 
-## Kuboresha matokeo ya LLM
+## Kuboresha Matokeo ya LLM
 
-Tumeshirikiana na timu yetu ya kuanzisha kuchunguza aina tofauti za LLM na Jukwaa la Wingu (Azure Machine Learning) linalotuwezesha kulinganisha modeli tofauti, kuzitathmini kwa data ya majaribio, kuboresha utendaji na kuzitumia kwenye vituo vya utabiri.
+Tumepitia na timu yetu ya kuanzisha aina tofauti za LLMs na jukwaa la wingu (Microsoft Foundry) linalotuwezesha kulinganisha mifano tofauti, kuitathmini kwenye data za majaribio, kuboresha utendakazi, na kuzipeleka kwenye sehemu za kutabiri.
 
-Lakini ni lini wanapaswa kuzingatia kuboresha modeli badala ya kutumia ile iliyofunzwa tayari? Je, kuna njia nyingine za kuboresha utendaji wa modeli katika mzigo maalum wa kazi?
+Lakini lini wanapaswa kuzingatia kurekebisha mfano badala ya kutumia ule uliotengenezwa awali? Je, kuna mbinu nyingine za kuboresha utendakazi wa mfano kwenye mzigo maalum wa kazi?
 
-Kuna njia kadhaa biashara inaweza kutumia kupata matokeo wanayohitaji kutoka kwa LLM. Unaweza kuchagua aina tofauti za modeli zenye viwango tofauti vya mafunzo wakati wa kuweka LLM katika uzalishaji, na viwango tofauti vya ugumu, gharama, na ubora. Hapa kuna njia tofauti:
+Kuna mbinu kadhaa ambazo biashara inaweza kutumia kupata matokeo wanayohitaji kutoka kwenye LLM. Unaweza kuchagua aina tofauti za mifano zilizo na viwango tofauti vya mafunzo wakati wa kupeleka LLM katika uzalishaji, zikiwa na ngazi tofauti za ugumu, gharama, na ubora. Hapa kuna mbinu tofauti:
 
-- **Uhandisi wa maelekezo na muktadha**. Wazo ni kutoa muktadha wa kutosha wakati wa kutoa maelekezo ili kuhakikisha unapata majibu unayohitaji.
+- **Uhandisi wa prompt kwa muktadha**. Wazo ni kutoa muktadha wa kutosha unapotoa prompt ili kuhakikisha unapata majibu unayohitaji.
 
-- **Uzalishaji Ulioimarishwa na Urejeshaji, RAG**. Data yako inaweza kuwepo katika hifadhidata au mwisho wa wavuti kwa mfano, ili kuhakikisha data hii, au sehemu yake, inajumuishwa wakati wa kutoa maelekezo, unaweza kuchukua data husika na kuifanya kuwa sehemu ya maelekezo ya mtumiaji.
+- **Uzazi ulioimarishwa kwa kupata taarifa, RAG**. Data yako inaweza kuwepo katika hifadhidata au sehemu ya mtandao kwa mfano, ili kuhakikisha data hii, au sehemu yake ndogo, inajumuishwa wakati wa kutoa prompt, unaweza kuchukua data husika na kuifanya sehemu ya prompt ya mtumiaji.
 
-- **Modeli iliyoboreshwa**. Hapa, unafundisha modeli zaidi kwa data yako mwenyewe ambayo husababisha modeli kuwa sahihi zaidi na kujibu mahitaji yako lakini inaweza kuwa ghali.
+- **Mfano uliorekebishwa**. Hapa, umefunza mfano zaidi kwa data yako mwenyewe ambayo ilisababisha mfano kuwa sahihi zaidi na unaojibu mahitaji yako lakini inaweza kuwa na gharama kubwa.
 
-![LLMs deployment](../../../translated_images/sw/Deploy.18b2d27412ec8c02.webp)
+![Utekelezaji wa LLMs](../../../translated_images/sw/Deploy.18b2d27412ec8c02.webp)
 
-Chanzo cha picha: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
+Chanzo cha picha: [Njia Nne Ambazo Biashara Zinazoweka LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 
-### Uhandisi wa Maelekezo na Muktadha
+### Uhandisi wa Prompt kwa Muktadha
 
-LLM zilizofunzwa tayari hufanya kazi vizuri sana katika kazi za lugha asilia za jumla, hata kwa kuzitumia na maelekezo mafupi, kama sentensi ya kukamilisha au swali – inayoitwa “ujifunzaji wa sifuri.”
+LLMs zilizotengenezwa awali hufanya kazi vizuri sana kwa kazi za lugha asilia za jumla, hata kwa kuwaita na prompt fupi, kama sentensi ya kukamilisha au swali – inayoitwa kujifunza “zero-shot.”
 
-Hata hivyo, kadri mtumiaji anavyoweza kuunda swali lake, kwa ombi la kina na mifano – Muktadha – ndivyo jibu litakavyokuwa sahihi zaidi na karibu na matarajio ya mtumiaji. Katika kesi hii, tunazungumzia “ujifunzaji wa mara moja” ikiwa maelekezo yanajumuisha mfano mmoja tu na “ujifunzaji wa mifano michache” ikiwa yanajumuisha mifano mingi.
-Uhandisi wa maelekezo na muktadha ni njia ya gharama nafuu zaidi kuanza nayo.
+Hata hivyo, kadri mtumiaji anavyoweza kuweka muktadha kwa maombi yao, kwa ombi la kina na mifano – Muktadha – ndivyo jibu litakavyokuwa sahihi zaidi na karibu zaidi na matarajio ya mtumiaji. Katika kesi hii, tunazungumzia “one-shot” kujifunza ikiwa prompt ina mfano mmoja tu na “few-shot learning” ikiwa ina mifano mingi.
+Uhandisi wa prompt kwa muktadha ni njia yenye gharama nafuu zaidi ya kuanza nayo.
 
-### Uzalishaji Ulioimarishwa na Urejeshaji (RAG)
+### Uzazi ulioimarishwa kwa Kupata Taarifa (RAG)
 
-LLM zina kikwazo kwamba zinaweza kutumia tu data ambayo imetumika wakati wa mafunzo yao kutoa jibu. Hii inamaanisha kuwa hawajui chochote kuhusu ukweli uliofanyika baada ya mchakato wao wa mafunzo, na hawawezi kufikia taarifa zisizo za umma (kama data ya kampuni).
-Hili linaweza kushughulikiwa kupitia RAG, mbinu inayoongeza maelekezo kwa data ya nje kwa njia ya vipande vya nyaraka, ikizingatia mipaka ya urefu wa maelekezo. Hii inaungwa mkono na zana za hifadhidata ya Vector (kama [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)) ambazo hurejesha vipande muhimu kutoka kwa vyanzo vya data vilivyotangulia na kuviweka katika Muktadha wa maelekezo.
+LLMs zina kikomo cha kutumia data tu ambayo imetumika wakati wa mafunzo yao kutoa jibu. Hii ina maana kwamba hazijui chochote kuhusu matukio yaliyojiri baada ya mchakato wao wa mafunzo, na hawawezi kupata taarifa zisizo za umma (kama data ya kampuni).
+Hii inaweza kushughulikiwa kupitia RAG, mbinu inayoongeza prompt kwa data za nje katika sehemu za nyaraka, ikizingatia kikomo cha urefu wa prompt. Hii inasaidiwa na zana za Hifadhidata za Vector (kama [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)) ambazo huchukua sehemu muhimu kutoka kwa vyanzo vya data vilivyotangazwa awali na kuviweka kwenye Muktadha wa prompt.
 
-Mbinu hii ni muhimu sana wakati biashara haina data ya kutosha, muda wa kutosha, au rasilimali za kuboresha LLM, lakini bado inataka kuboresha utendaji katika mzigo maalum wa kazi na kupunguza hatari za uzushi, yaani, kupotosha ukweli au maudhui yenye madhara.
+Mbinu hii ni msaada sana wakati biashara haina data ya kutosha, wakati wa kutosha, au rasilimali za kurekebisha LLM, lakini bado inataka kuboresha utendakazi kwenye mzigo maalum wa kazi na kupunguza hatari za majibu yanayodanganya, zamani, au yasiyoungwa mkono.
 
-### Modeli iliyoboreshwa
+### Mfano uliorekebishwa
 
-Kuboresha modeli ni mchakato unaotumia ujifunzaji wa uhamisho ‘kurekebisha’ modeli kwa kazi ya chini au kutatua tatizo maalum. Tofauti na ujifunzaji wa mifano michache na RAG, husababisha modeli mpya kuundwa, yenye uzito na upendeleo uliosasishwa. Inahitaji seti ya mifano ya mafunzo inayojumuisha pembejeo moja (maelekezo) na matokeo yake yanayohusiana (ukamilishaji).
-Hii itakuwa njia inayopendekezwa ikiwa:
+Kurekebisha ni mchakato unaotumia kujifunza kwa uhamisho ‘kurekebisha’ mfano kwa kazi ndogo au kutatua tatizo maalum. Tofauti na few-shot learning na RAG, inasababisha mfano mpya kutengenezwa, wenye uzito na upendeleo uliosasishwa. Inahitaji seti ya mifano ya mafunzo inayojumuisha ingizo moja (prompt) na matokeo yake yaliyoambatana (ukamilishaji).
+Hii itakuwa njia inayopendelewa ikiwa:
 
-- **Kutumia modeli zilizoboreshwa**. Biashara ingependa kutumia modeli zilizoboreshwa zenye uwezo mdogo (kama modeli za embedding) badala ya modeli zenye utendaji wa juu, na kusababisha suluhisho la gharama nafuu na la haraka.
+- **Kutumia mifano midogo ya kazi maalum**. Biashara ingeweza kutaka kurekebisha mfano mdogo kwa kazi nyembamba badala ya kuendelea kutoa prompt kwa mfano mkubwa zaidi, na kusababisha suluhisho zuri zaidi kwa gharama nafuu na kwa haraka.
 
-- **Kuzingatia ucheleweshaji**. Ucheleweshaji ni muhimu kwa kesi maalum ya matumizi, kwa hivyo haiwezekani kutumia maelekezo marefu sana au idadi ya mifano ambayo inapaswa kujifunzwa kutoka kwa modeli haifai na kikomo cha urefu wa maelekezo.
+- **Kuzingatia ucheleweshaji**. Ucheleweshaji ni muhimu kwa matumizi maalum, kwa hivyo siwezi kutumia prompt ndefu sana au idadi ya mifano ambayo inapaswa kujifunzwa na mfano haifai kwa kikomo cha urefu wa prompt.
 
-- **Kuwa na taarifa za kisasa**. Biashara ina data nyingi za hali ya juu na lebo za ukweli wa msingi na rasilimali zinazohitajika kudumisha data hii kuwa ya kisasa kwa muda.
+- **Kurekebisha tabia thabiti**. Biashara ina mifano mingi yenye ubora wa juu na inataka mfano ufuate mfululizo wa kazi, muundo wa uzalishaji, mtindo wa ton, au mtindo maalum wa sekta. Ikiwa tatizo kuu ni ukweli mpya au ujuzi binafsi unaobadilika mara kwa mara, tumia RAG badala ya kutegemea kurekebisha tu.
 
-### Modeli iliyofunzwa
+### Mfano uliotengenezwa
 
-Kufundisha LLM kutoka mwanzo bila shaka ni njia ngumu zaidi na yenye changamoto kubwa ya kuchukua, ikihitaji kiasi kikubwa cha data, rasilimali zenye ujuzi, na nguvu ya kompyuta inayofaa. Chaguo hili linapaswa kuzingatiwa tu katika hali ambapo biashara ina kesi ya matumizi maalum ya uwanja na kiasi kikubwa cha data inayohusiana na uwanja huo.
+Kufunza LLM kutoka mwanzoni ni bila shaka njia ngumu zaidi na tata zaidi kuchukua, inahitaji kiasi kikubwa cha data, rasilimali zenye ujuzi, na nguvu ya kompyuta inayofaa. Chaguo hili linapaswa kuzingatiwa tu katika hali ambapo biashara ina matumizi maalum ya sekta na data kubwa inayolenga sekta hiyo.
 
-## Ukaguzi wa Maarifa
+## Angalia maarifa
 
-Je, ni njia gani nzuri ya kuboresha matokeo ya ukamilishaji wa LLM?
+Je, njia gani inaweza kuwa nzuri ya kuboresha matokeo ya ukamilishaji wa LLM?
 
-1. Uhandisi wa maelekezo na muktadha  
-1. RAG  
-1. Modeli iliyoboreshwa  
+1. Uhandisi wa prompt kwa muktadha
+1. RAG
+1. Mfano uliorekebishwa
 
-A:3, ikiwa una muda na rasilimali pamoja na data ya hali ya juu, kuboresha ni chaguo bora kubaki na taarifa za kisasa. Hata hivyo, ikiwa unatafuta kuboresha mambo na huna muda, inafaa kuzingatia RAG kwanza.
+J: Zote tatu zinaweza kusaidia. Anza na uhandisi wa prompt na muktadha kwa maboresho ya haraka, na tumia RAG wakati mfano unahitaji ukweli wa sasa au data binafsi ya biashara. Chagua kurekebisha model ikiwa una mifano ya kutosha yenye ubora wa juu na unahitaji mfano ufuate mfululizo wa kazi, muundo, ton, au mtindo wa sekta.
 
 ## 🚀 Changamoto
 
@@ -198,11 +199,13 @@ Soma zaidi kuhusu jinsi unavyoweza [kutumia RAG](https://learn.microsoft.com/azu
 
 ## Kazi Nzuri, Endelea Kujifunza
 
-Baada ya kukamilisha somo hili, angalia [Mkusanyiko wa Kujifunza AI ya Kizazi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kuongeza maarifa yako ya AI ya Kizazi!
+Baada ya kumaliza somo hili, tembelea [Mkusanyiko wa Kujifunza AI Inayozalisha](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kuongeza maarifa yako juu ya AI Inayozalisha!
 
-Nenda kwenye Somo la 3 ambapo tutatazama jinsi ya [kujenga na AI ya Kizazi kwa Uwajibikaji](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
+Nenda kwenye Sura ya 3 ambapo tutaangalia jinsi ya [kujenga na AI Inayozalisha kwa Uwajibikaji](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Kionyozo**:
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kupata usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake halisi inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inapendekezwa. Hatutojibu kwa kuelewa vibaya au tafsiri potofu zinazotokea kutokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

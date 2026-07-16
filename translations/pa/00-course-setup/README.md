@@ -1,51 +1,51 @@
-# ਇਸ ਕੋਰਸ ਨਾਲ ਸ਼ੁਰੂਆਤ
+# ਇਸ ਕੋਰਸ ਨਾਲ ਸ਼ੁਰੂਆਤ ਕਰਨਾ
 
-ਅਸੀਂ ਬਹੁਤ ਉਤਸ਼ਾਹਿਤ ਹਾਂ ਕਿ ਤੁਸੀਂ ਇਹ ਕੋਰਸ ਸ਼ੁਰੂ ਕਰੋ ਅਤੇ ਵੇਖੋ ਕਿ ਤੁਸੀਂ ਜੇਨੇਰੇਟਿਵ AI ਨਾਲ ਕੀ ਬਣਾਉਣ ਲਈ ਪ੍ਰੇਰਿਤ ਹੋ!
+ਅਸੀਂ ਬਹੁਤ ਖੁਸ਼ ਹਾਂ ਕਿ ਤੁਸੀਂ ਇਹ ਕੋਰਸ ਸ਼ੁਰੂ ਕਰ ਰਹੇ ਹੋ ਅਤੇ ਵੈਖ ਰਹੇ ਹੋ ਕਿ ਤੁਸੀਂਡੀ ਜਨਰੇਟਿਵ ਏਆਈ ਨਾਲ ਕੀ ਬਣਾਉਣ ਲਈ ਪ੍ਰੇਰਿਤ ਹੁੰਦੇ ਹੋ!
 
-ਤੁਹਾਡੇ ਸਫਲਤਾ ਨੂੰ ਯਕੀਨੀ ਬਣਾਉਣ ਲਈ, ਇਹ ਪੰਨਾ ਸੈੱਟਅਪ ਕਦਮ, ਤਕਨੀਕੀ ਲੋੜਾਂ ਅਤੇ ਜਰੂਰਤ ਪੈਣ 'ਤੇ ਸਹਾਇਤਾ ਕਿੱਥੇ ਮਿਲੇਗੀ, ਇਹ ਦਰਸਾਉਂਦਾ ਹੈ।
+ਤੁਹਾਡੀ ਸਫਲਤਾ ਨੂੰ ਯਕੀਨੀ ਬਣਾਉਣ ਲਈ, ਇਹ ਪੰਨਾ ਸੈਟਅੱਪ ਦੇ ਕਦਮ, ਤਕਨੀਕੀ ਲੋੜਾਂ ਅਤੇ ਜੇ ਲੋੜ ਪਏ ਤਾਂ ਮਦਦ ਕਿੱਥੋਂ ਲੈਣੀ ਹੈ, ਨੂੰ ਦਰਸਾਉਂਦਾ ਹੈ।
 
-## ਸੈੱਟਅਪ ਕਦਮ
+## ਸੈਟਅੱਪ ਕਦਮ
 
-ਇਸ ਕੋਰਸ ਨੂੰ ਲੈਣ ਲਈ, ਤੁਹਾਨੂੰ ਹੇਠ ਲਿਖੇ ਕਦਮ ਪੂਰੇ ਕਰਨ ਦੀ ਲੋੜ ਹੋਵੇਗੀ।
+ਇਸ ਕੋਰਸ ਨੂੰ ਲੈਣਾ ਸ਼ੁਰੂ ਕਰਨ ਲਈ, ਤੁਹਾਨੂੰ ਹੇਠ ਲਿਖੇ ਕਦਮ ਪੂਰੇ ਕਰਨ ਦੀ ਲੋੜ ਹੋਏਗੀ।
 
 ### 1. ਇਸ ਰੇਪੋ ਨੂੰ ਫੋਰਕ ਕਰੋ
 
-[ਇਸ ਪੂਰੇ ਰੇਪੋ ਨੂੰ ਫੋਰਕ ਕਰੋ](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) ਆਪਣੇ ਖੁਦ ਦੇ GitHub ਅਕਾਊਂਟ ਵਿੱਚ ਤਾਂ ਜੋ ਕੋਈ ਵੀ ਕੋਡ ਬਦਲ ਸਕੋ ਅਤੇ ਚੈਲੰਜ ਪੂਰੇ ਕਰ ਸਕੋ। ਤੁਸੀਂ ਇਸ ਰੇਪੋ ਨੂੰ [ਸਿਤਾਰਾ (🌟)](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) ਵੀ ਦੇ ਸਕਦੇ ਹੋ ਤਾਂ ਜੋ ਇਸ ਨੂੰ ਅਤੇ ਸੰਬੰਧਿਤ ਰੇਪੋਜ਼ ਨੂੰ ਆਸਾਨੀ ਨਾਲ ਲੱਭ ਸਕੋ।
+[ਇਸ ਸਾਰੇ ਰੇਪੋ ਨੂੰ ਆਪਣੇ GitHub ਖਾਤੇ ਵਿੱਚ ਫੋਰਕ ਕਰੋ](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) ਤਾਂ ਜੋ ਤੁਸੀਂ ਕੋਈ ਵੀ ਕੋਡ ਬਦਲ ਸਕੋ ਅਤੇ ਚੈਲੈਂਜ ਪੂਰੇ ਕਰ ਸਕੋ। ਤੁਸੀਂ ਇਸ ਰੇਪੋ ਨੂੰ [ਸਟਾਰ (🌟) ਵੀ ਦੇ ਸਕਦੇ ਹੋ](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) ਤਾਂ ਜੋ ਇਸਨੂੰ ਅਤੇ ਸਬੰਧਤ ਰੇਪੋਜ਼ ਨੂੰ ਆਸਾਨੀ ਨਾਲ ਲੱਭ ਸਕੋ।
 
-### 2. ਇੱਕ ਕੋਡਸਪੇਸ ਬਣਾਓ
+### 2. ਕੋਡਸਪੇਸ ਬਣਾਓ
 
-ਕੋਡ ਚਲਾਉਂਦੇ ਸਮੇਂ ਕਿਸੇ ਵੀ ਡਿਪੈਂਡੈਂਸੀ ਸਮੱਸਿਆ ਤੋਂ ਬਚਣ ਲਈ, ਅਸੀਂ ਸੁਝਾਅ ਦਿੰਦੇ ਹਾਂ ਕਿ ਇਸ ਕੋਰਸ ਨੂੰ [GitHub Codespaces](https://github.com/features/codespaces?WT.mc_id=academic-105485-koreyst) ਵਿੱਚ ਚਲਾਇਆ ਜਾਵੇ।
+ਕੋਡ ਨੂੰ ਚਲਾਉਂਦੇ ਸਮੇਂ ਕਿਸੇ ਵੀ ਡਿਪੈਂਡੈਂਸੀ ਸਮੱਸਿਆ ਤੋਂ ਬਚਣ ਲਈ, ਅਸੀਂ ਸੁਝਾਅ ਦਿੰਦੇ ਹਾਂ ਕਿ ਤੁਸੀਂ ਇਸ ਕੋਰਸ ਨੂੰ [GitHub Codespaces](https://github.com/features/codespaces?WT.mc_id=academic-105485-koreyst) ਵਿੱਚ ਚਲਾਓ।
 
 ਆਪਣੇ ਫੋਰਕ ਵਿੱਚ: **Code -> Codespaces -> New on main**
 
 ![Dialog showing buttons to create a codespace](../../../translated_images/pa/who-will-pay.4c0609b1c7780f44.webp)
 
-#### 2.1 ਇੱਕ ਗੁਪਤ ਸ਼ਬਦ ਜੋੜੋ
+#### 2.1 ਇੱਕ ਸਿਕ੍ਰੇਟ ਜੋੜੋ
 
-1. ⚙️ ਗੀਅਰ ਆਈਕਨ -> Command Pallete-> Codespaces : Manage user secret -> Add a new secret.
-2. ਨਾਮ OPENAI_API_KEY ਰੱਖੋ, ਆਪਣਾ ਕੀ ਪੇਸਟ ਕਰੋ, ਸੇਵ ਕਰੋ।
+1. ⚙️ ਗੀਅਰ ਆਇਕਨ -> Command Palette -> Codespaces : Manage user secret -> Add a new secret.
+2. ਨਾਮ OPENAI_API_KEY, ਆਪਣੀ ਕੁੰਜੀ ਪੇਸਟ ਕਰੋ, Save ਕਰੋ।
 
-### 3. ਅਗਲਾ ਕਿਹੜਾ ਕਦਮ?
+### 3. ਅਗਲਾ ਕੀ?
 
-| ਮੈਂ ਚਾਹੁੰਦਾ ਹਾਂ…         | ਜਾਵਾਂ…                                                                  |
-|--------------------------|-------------------------------------------------------------------------|
-| ਪਹਿਲਾ ਪਾਠ ਸ਼ੁਰੂ ਕਰੋ      | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
-| ਅੱਫਲਾਈਨ ਕੰਮ ਕਰੋ        | [`setup-local.md`](02-setup-local.md)                                   |
-| ਇੱਕ LLM ਪ੍ਰਦਾਤਾ ਸੈੱਟਅਪ ਕਰੋ | [`providers.md`](03-providers.md)                                        |
-| ਹੋਰ ਸਿੱਖਣ ਵਾਲਿਆਂ ਨਾਲ ਮਿਲੋ | [ਸਾਡੀ Discord ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
+| ਮੈਂ ਚਾਹੁੰਦਾ ਹਾਂ… | ਜਾਓ…                                                               |
+|---------------------|-------------------------------------------------------------------------|
+| Seek Lesson 1      | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
+| ਆਫਲਾਈਨ ਕੰਮ ਕਰੋ      | [`setup-local.md`](02-setup-local.md)                                   |
+| ਇੱਕ LLM ਪ੍ਰੋਵਾਈਡਰ ਸੈੱਟਅੱਪ ਕਰੋ | [`providers.md`](03-providers.md)                                        |
+| ਹੋਰ ਸਿੱਖਣ ਵਾਲੇ ਮਿਲੋ   | [ਸਾਡੀ Discord ਨਾਲ ਜੁੜੋ](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
 
-## ਸਮੱਸਿਆ ਸਲਝਾਉਣਾ
+## ਸਮੱਸਿਆ ਦਾ ਹੱਲ
 
 
-| ਲੱਛਣ                              | ਸਹੀ ਕਰਨ ਦਾ ਤਰੀਕਾ                                                 |
-|------------------------------------|------------------------------------------------------------------|
-| ਕੰਟੇਨਰ ਬਿਲਡ 10 ਮਿੰਟ ਤੋਂ ਵੱਧ ਫੱਸਿਆ | **Codespaces ➜ “Rebuild Container”**                            |
-| `python: command not found`         | ਟਰਮੀਨਲ ਜੁੜਿਆ ਨਹੀਂ; **+** ਤੇ ਕਲਿੱਕ ਕਰੋ ➜ *bash*                  |
-| OpenAI ਤੋਂ `401 Unauthorized`        | ਗਲਤ / ਸਮਾਪਤ ਹੋਇਆ `OPENAI_API_KEY`                              |
-| VS Code "Dev container mounting…" ਦਿਖਾਉਂਦਾ ਹੈ | ਬ੍ਰਾਊਜ਼ਰ ਟੈਬ ਨੂੰ ਰੀਫ੍ਰੈਸ਼ ਕਰੋ—ਕੋਡਸਪੇਸ ਕਦੇ ਕਦੇ ਕਨੈਕਸ਼ਨ ਗੁੰਮ ਕਰਦਾ ਹੈ  |
-| ਨੋਟਬੁੱਕ ਕਰਨਲ ਗੁੰਮ ਹੋ ਗਿਆ           | ਨੋਟਬੁੱਕ ਮੀਨੂ ➜ **Kernel ▸ Select Kernel ▸ Python 3**           |
+| ਲੱਛਣ                                    | ਹੱਲ                                                               |
+|-------------------------------------------|-----------------------------------------------------------------|
+| ਕੰਟੇਨੇਰ ਬਣਾਉਣਾ 10 ਮਿੰਟ ਤੋਂ ਵੱਧ ਫਸ ਗਿਆ | **Codespaces ➜ “Rebuild Container”**                            |
+| `python: command not found`               | ਟਰਮੀਨਲ ਨਹੀਂ ਜੁੜਿਆ; ਕਲਿੱਕ ਕਰੋ **+** ➜ *bash*                    |
+| OpenAI ਤੋਂ `401 Unauthorized`            | ਗਲਤ / ਮਿਆਦ ਖਤਮ ਹੋਈ `OPENAI_API_KEY`                                |
+| VS Code "Dev container mounting…" ਦਿਖਾਉਂਦਾ ਹੈ   | ਬਰਾਊਜ਼ਰ ਟੈਬ ਨੂੰ ਰੀਫ੍ਰੈਸ਼ ਕਰੋ—Codespaces ਕਦੇ ਕਦੇ ਕਨੈਕਸ਼ਨ ਗੁਆ ਲੈਂਦਾ ਹੈ   |
+| ਨੋਟਬੁਕ ਕਰਨਲ ਨਹੀਂ ਮਿਲਿਆ                 | ਨੋਟਬੁਕ ਮੀਨੂ ➜ **Kernel ▸ Select Kernel ▸ Python 3**           |
 
-   ਯੂਨਿਕਸ-ਆਧਾਰਿਤ ਸਿਸਟਮ:
+   ਯੂਨਿਕਸ ਆਧਾਰਿਤ ਸਿਸਟਮ:
 
    ```bash
    touch .env
@@ -57,64 +57,68 @@
    echo . > .env
    ```
 
-3. **`.env` ਫਾਈਲ ਨੂੰ ਸੰਪਾਦਿਤ ਕਰੋ**: `.env` ਫਾਈਲ ਨੂੰ ਕਿਸੇ ਟੈਕਸਟ ਐਡੀਟਰ ਵਿੱਚ ਖੋਲ੍ਹੋ (ਜਿਵੇਂ VS ਕੋਡ, ਨੋਟਪੈਡ++, ਜਾਂ ਕੋਈ ਹੋਰ ਐਡੀਟਰ)। ਫਾਈਲ ਵਿੱਚ ਹੇਠ ਲਿਖੀ ਲਾਈਨ ਸ਼ਾਮਲ ਕਰੋ, `your_github_token_here` ਨੂੰ ਆਪਣੀ ਅਸਲ GitHub ਟੋਕਨ ਨਾਲ ਬਦਲ ਕੇ:
+3. **`.env` ਫਾਇਲ ਸੋਧੋ**: ਕਿਸੇ ਟੈਕਸਟ ਏਡੀਟਰ (ਜਿਵੇਂ VS Code, Notepad++ ਵਗੈਰਾ) ਵਿੱਚ `.env` ਫਾਇਲ ਖੋਲ੍ਹੋ। ਹੇਠਾਂ ਦਿੱਤੀਆਂ ਲਾਈਨਾਂ ਨੂੰ ਫਾਇਲ ਵਿੱਚ ਜੋੜੋ, ਆਪਣਾ Microsoft Foundry Models ਖਾਤਾ ਅਤੇ ਕੀ ਦਿਓ (ਵੇਖੋ [`providers.md`](03-providers.md) ਕਿ ਇਹ ਕਿਵੇਂ ਪ੍ਰਾਪਤ ਕਰਣੇ ਹਨ):
+
+   > **ਨੋਟ:** GitHub Models (ਅਤੇ ਇਸਦਾ `GITHUB_TOKEN` ਵੈਰੀਏਬਲ) ਜੁਲਾਈ 2026 ਦੇ ਅੰਤ ਵਿੱਚ ਬੰਦ ਹੋ ਰਿਹਾ ਹੈ। ਬਦਲੇ ਵਿੱਚ [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) ਵਰਤੋਂ।
 
    ```env
-   GITHUB_TOKEN=your_github_token_here
+   AZURE_INFERENCE_ENDPOINT=your_foundry_endpoint_here
+   AZURE_INFERENCE_CREDENTIAL=your_foundry_api_key_here
    ```
 
-4. **ਫਾਈਲ ਸੇਵ ਕਰੋ**: ਤਬਦੀਲੀਆਂ ਸੇਵ ਕਰੋ ਅਤੇ ਟੈਕਸਟ ਐਡੀਟਰ ਬੰਦ ਕਰੋ।
+4. **ਫਾਇਲ ਸੇਵ ਕਰੋ**: ਬਦਲਾਵਾਂ ਨੂੰ ਸੇਵ ਕਰੋ ਅਤੇ ਟੈਕਸਟ ਏਡੀਟਰ ਬੰਦ ਕਰੋ।
 
-5. **`python-dotenv` ਇੰਸਟਾਲ ਕਰੋ**: ਜੇ ਤੁਹਾਡੇ ਕੋਲ ਹਾਲੇ ਤੱਕ ਨਹੀਂ ਹੈ, ਤਾਂ ਤੁਹਾਨੂੰ ਆਪਣੇ Python ਐਪਲੀਕੇਸ਼ਨ ਵਿੱਚ `.env` ਫਾਈਲ ਤੋਂ ਵਾਤਾਵਰਣ ਵੈਰੀਏਬਲ ਲੋਡ ਕਰਨ ਲਈ `python-dotenv` ਪੈਕੇਜ ਨੂੰ ਇੰਸਟਾਲ ਕਰਨਾ ਪਵੇਗਾ। ਤੁਸੀਂ ਇਸਨੂੰ `pip` ਨਾਲ ਇੰਸਟਾਲ ਕਰ ਸਕਦੇ ਹੋ:
+5. **`python-dotenv` ਇੰਸਟਾਲ ਕਰੋ**: ਜੇ ਤੁਸੀਂ ਹੁਣ ਤੱਕ ਨਹੀਂ ਕੀਤਾ, ਤਾਂ `.env` ਫਾਇਲ ਤੋਂ ਵਾਤਾਵਰਣ ਵੈਰੀਏਬਲਾਂ ਨੂੰ ਤੁਹਾਡੇ ਪਾਇਥਨ ਐਪਲੀਕੇਸ਼ਨ ਵਿੱਚ ਲੋਡ ਕਰਨ ਲਈ `python-dotenv` ਪੈਕੇਜ ਇੰਸਟਾਲ ਕਰੋ। ਇਸ ਨੂੰ `pip` ਨਾਲ ਇੰਸਟਾਲ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ:
 
    ```bash
    pip install python-dotenv
    ```
 
-6. **ਆਪਣੇ Python ਸਕ੍ਰਿਪਟ ਵਿੱਚ ਵਾਤਾਵਰਣ ਵੈਰੀਏਬਲ ਲੋਡ ਕਰੋ**: ਆਪਣੇ Python ਸਕ੍ਰਿਪਟ ਵਿੱਚ, `.env` ਫਾਈਲ ਤੋਂ ਵਾਤਾਵਰਣ ਵੈਰੀਏਬਲ ਲੋਡ ਕਰਨ ਲਈ `python-dotenv` ਪੈਕੇਜ ਦਾ ਉਪਯੋਗ ਕਰੋ:
+6. **ਆਪਣੇ ਪਾਇਥਨ ਸਕ੍ਰਿਪਟ ਵਿੱਚ ਵਾਤਾਵਰਨ ਵੈਰੀਏਬਲ ਲੋਡ ਕਰੋ**: ਆਪਣੇ ਪਾਇਥਨ ਸਕ੍ਰਿਪਟ ਵਿੱਚ, `python-dotenv` ਪੈਕੇਜ ਵਰਤੋ ਤਾਂ ਜੋ `.env` ਫਾਇਲ ਤੋਂ ਵਾਤਾਵਰਨ ਵੈਰੀਏਬਲ ਲੋਡ ਹੋ ਜਾਣ:
 
    ```python
    from dotenv import load_dotenv
    import os
 
-   # .env ਫਾਈਲ ਤੋਂ ਵਾਤਾਵਰਣ ਵੈਰੀਏਬਲ ਲੋਡ ਕਰੋ
+   # .env ਫਾਈਲ ਤੋਂ ਵਾਤਾਵਰਣ ਦੇ ਬਦਲਾਂ ਲੋਡ ਕਰੋ
    load_dotenv()
 
-   # GITHUB_TOKEN ਵੈਰੀਏਬਲ ਤੱਕ ਪਹੁੰਚ ਕਰੋ
-   github_token = os.getenv("GITHUB_TOKEN")
+   # Microsoft Foundry ਮਾਡਲ ਬਦਲਾਂ ਤੱਕ ਪਹੁੰਚ ਕਰੋ
+   endpoint = os.getenv("AZURE_INFERENCE_ENDPOINT")
+   token = os.getenv("AZURE_INFERENCE_CREDENTIAL")
 
-   print(github_token)
+   print(endpoint)
    ```
 
-ਇੰਝ ਕੀਤਾ! ਤੁਸੀਂ ਸਫਲਤਾਪੂਰਵਕ `.env` ਫਾਈਲ ਬਣਾਈ, ਆਪਣੀ GitHub ਟੋਕਨ ਜੋੜੀ, ਅਤੇ ਇਸਨੂੰ ਆਪਣੇ Python ਐਪਲੀਕੇਸ਼ਨ ਵਿੱਚ ਲੋਡ ਕੀਤਾ।
+ਐਨਾ ਹੀ! ਤੁਸੀਂ સફળਤਾਪੂਰਵਕ `.env` ਫਾਇਲ ਬਣਾਈ, ਆਪਣੀਆਂ Microsoft Foundry Models ਦੀਆਂ ਸੂਚੀਆਂ ਜੋੜੀਆਂ, ਅਤੇ ਉਹਨਾਂ ਨੂੰ ਆਪਣੇ ਪਾਇਥਨ ਐਪਲੀਕੇਸ਼ਨ ਵਿੱਚ ਲੋਡ ਕੀਤਾ।
 
-## ਆਪਣੇ ਕੰਪਿਊਟਰ 'ਤੇ ਲੋਕਲੀ ਚਲਾਉਣ ਦਾ ਤਰੀਕਾ
+## ਕਿਵੇਂ ਆਪਣੇ ਕੰਪਿਊਟਰ 'ਤੇ ਸਥਾਨਕ ਤੌਰ 'ਤੇ ਚਲਾਇਆ ਜਾਵੇ
 
-ਕੋਡ ਨੂੰ ਆਪਣੇ ਕੰਪਿਊਟਰ 'ਤੇ ਲੋਕਲੀ ਚਲਾਉਣ ਲਈ, ਤੁਹਾਨੂੰ ਕੁਝ ਵਰਜਨ ਦਾ [Python ਇੰਸਟਾਲ ਹੋਣਾ](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) ਜ਼ਰੂਰੀ ਹੈ।
+ਕੋਡ ਨੂੰ ਆਪਣੇ ਕੰਪਿਊਟਰ 'ਤੇ ਸਥਾਨਕ ਤੌਰ 'ਤੇ ਚਲਾਉਣ ਲਈ, ਤੁਹਾਡੇ ਕੋਲ ਕੋਈ ਨਾ ਕੋਈ [Python ਦਾ ਵਰਜਨ ਇੰਸਟਾਲ ਹੋਣਾ](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) ਜਰੂਰੀ ਹੈ।
 
-ਫਿਰ ਰੇਪੋ ਦਾ ਇਸਤੇਮਾਲ ਕਰਨ ਲਈ, ਤੁਹਾਨੂੰ ਇਸਨੂੰ ਕਲੋਨ ਕਰਨਾ ਪਵੇਗਾ:
+ਫਿਰ ਰੇਪੋਜ਼ਟਰੀ ਵਰਤਣ ਲਈ, ਤੁਹਾਨੂੰ ਇਸ ਨੂੰ ਕਲੋਨ ਕਰਨਾ ਪਵੇਗਾ:
 
 ```shell
 git clone https://github.com/microsoft/generative-ai-for-beginners
 cd generative-ai-for-beginners
 ```
 
-ਜਦੋਂ ਤੁਸੀਂ ਸਾਰਾ ਕੁਝ ਚੈੱਕ ਆਉਟ ਕਰ ਲੈਂਦੇ ਹੋ, ਤਾਂ ਤੁਰੰਤ ਸ਼ੁਰੂ ਕਰੋ!
+ਸਭ ਕੁਝ ਚੈੱਕ ਆਉਟ ਹੋਣ ਤੋਂ ਬਾਅਦ, ਤੁਸੀਂ ਸ਼ੁਰੂ ਕਰ ਸਕਦੇ ਹੋ!
 
 ## ਵਿਕਲਪਿਕ ਕਦਮ
 
-### ਮਿਨੀਕਾਂਡਾ ਦੀ ਸਥਾਪਨਾ
+### ਮਿਨੀਕੋੰਡਾ ਇੰਸਟਾਲ ਕਰਨਾ
 
-[ਮਿਨੀਕਾਂਡਾ](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) ਇੱਕ ਲਾਈਟਵੇਟ ਇੰਸਟਾਲਰ ਹੈ ਜੋ ਤੁਹਾਨੂੰ [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python, ਅਤੇ ਕੁਝ ਹੋਰ ਪੈਕੇਜਾਂ ਨੂੰ ਇੰਸਟਾਲ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।
-Conda ਖੁਦ ਇੱਕ ਪੈਕੇਜ ਮੈਨੇਜਰ ਹੈ, ਜੋ ਵੱਖ-ਵੱਖ Python [**ਵਰਚੁਅਲ ਵਾਤਾਵਰਣਾਂ**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) ਅਤੇ ਪੈਕੇਜਾਂ ਦੇ ਵਿਚਕਾਰ ਸੈਟਅਪ ਅਤੇ ਸਵਿੱਚ ਕਰਨਾ ਆਸਾਨ ਬਣਾਉਂਦਾ ਹੈ। ਇਹ ਉਹਨਾ ਪੈਕੇਜਾਂ ਨੂੰ ਇੰਸਟਾਲ ਕਰਨ ਵਿੱਚ ਵੀ ਮਦਦ ਕਰਦਾ ਹੈ ਜੋ `pip` ਰਾਹੀਂ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।
+[ਮਿਨੀਕੋੰਡਾ](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) ਇੱਕ ਹਲਕੀ-ਫੁਲਕੀ ਇੰਸਟਾਲਰ ਹੈ ਜੋ [ਕੋੰਡਾ](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python ਅਤੇ ਕੁਝ ਹੋਰ ਪੈਕੇਜਾਂ ਨੂੰ ਇੰਸਟਾਲ ਕਰਦਾ ਹੈ।
+ਕੋੰਡਾ ਖੁਦ ਇੱਕ ਪੈਕੇਜ ਮੈਨੇਜਰ ਹੈ ਜੋ ਵੱਖ-ਵੱਖ Python ਦੇ [**ਵਰਚੁਅਲ ਵਾਤਾਵਰਨਾਂ**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) ਅਤੇ ਪੈਕੇਜਾਂ ਦੇ ਵਿਚਕਾਰ ਆਸਾਨੀ ਨਾਲ ਸਵਿੱਚ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ। ਇਹ `pip` ਦੇ ਰਾਹੀਂ ਉਪਲਬਧ ਨਾ ਹੋਣ ਵਾਲੇ ਪੈਕੇਜਾਂ ਨੂੰ ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਵੀ ਬਹੁਤ ਲਾਭਦਾਇਕ ਹੈ।
 
-ਤੁਸੀਂ [MiniConda ਇੰਸਟਾਲੇਸ਼ਨ ਗਾਈਡ](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) ਦੀ ਪਾਲਨਾ ਕਰਕੇ ਇਸਨੂੰ ਸੈਟਅਪ ਕਰ ਸਕਦੇ ਹੋ।
+ਤੁਸੀਂ [MiniConda ਇੰਸਟਾਲੇਸ਼ਨ ਗਾਈਡ](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) ਦੀ ਪਾਲਣਾ ਕਰ ਸਕਦੇ ਹੋ।
 
-ਮਿਨੀਕਾਂਡਾ ਇੰਸਟਾਲ ਕਰਨ ਦੇ ਬਾਅਦ, ਤੁਹਾਨੂੰ [ਰੇਪੋ](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) ਕਲੋਨ ਕਰਨ ਦੀ ਲੋੜ ਹੈ (ਜੇ ਤੁਸੀਂ ਪਹਿਲਾਂ ਨਹੀਂ ਕੀਤਾ)।
+ਮਿਨੀਕੋੰਡਾ ਦੇ ਇੰਸਟਾਲ ਹੋਣ ਤੋਂ ਬਾਅਦ, ਤੁਹਾਨੂੰ [ਰੇਪੋਜ਼ਟਰੀ](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) ਕਲੋਨ ਕਰਨੀ ਪਵੇਗੀ (ਜੇ ਅਜੇ ਤੱਕ ਨਹੀਂ ਕੀਤੀ)
 
-ਅਗਲਾ, ਤੁਹਾਨੂੰ ਇੱਕ ਵਰਚੁਅਲ ਵਾਤਾਵਰਨ ਬਣਾਉਣਾ ਪਵੇਗਾ। ਇਹCondਾ ਨਾਲ ਕਰਨ ਲਈ, ਨਵਾਂ ਵਾਤਾਵਰਨ ਫਾਈਲ (_environment.yml_) ਬਣਾਓ। ਜੇ ਤੁਸੀਂ Codespaces ਦੀ ਵਰਤੋਂ ਕਰ ਰਹੇ ਹੋ, ਤਾਂ ਇਸਨੂੰ `.devcontainer` ਡਾਇਰੈਕਟਰੀ ਵਿੱਚ ਬਣਾਓ, ਉਦਾਹਰਣ ਲਈ `.devcontainer/environment.yml`।
+ਅਗਲੇ ਕਦਮ ਵਿੱਚ, ਤੁਹਾਨੂੰ ਇੱਕ ਵਰਚੁਅਲ ਵਾਤਾਵਰਨ ਬਣਾਉਣਾ ਪਵੇਗਾ। ਕੋੰਡਾ ਨਾਲ ਇਹ ਕਰਨ ਲਈ, ਇਕ ਨਵੀਂ ਵਾਤਾਵਰਨ ਫਾਇਲ (_environment.yml_) ਬਣਾਓ। ਜੇ ਤੁਸੀਂ Codespaces ਵਰਤ ਰਹੇ ਹੋ ਤਾਂ ਇਹ `.devcontainer` ਡਾਇਰੈਕਟਰੀ ਵਿਚ ਬਣਾਓ, ਜਿਵੇਂ `.devcontainer/environment.yml`।
 
-ਆਪਣੇ ਵਾਤਾਵਰਨ ਫਾਈਲ ਨੂੰ ਹੇਠ ਲਿਖੇ ਸ੍ਰੋਤ ਕੋਡ ਨਾਲ ਭਰੋ:
+ਆਪਣੀ ਵਾਤਾਵਰਨ ਫਾਇਲ ਹੇਠਾਂ ਦਿੱਤੇ ਸਨਿੱਪਟ ਨਾਲ ਪੂਰੀ ਕਰੋ:
 
 ```yml
 name: <environment-name>
@@ -130,38 +134,38 @@ dependencies:
       - azure-ai-ml
 ```
 
-ਜੇ ਤੁਹਾਨੂੰ ਕਾਂਡਾ ਵਰਤਣ ਦੌਰਾਨ ਗਲਤੀਆਂ ਮਿਲ ਰਹੀਆਂ ਹਨ, ਤਾਂ ਤੁਸੀਂ ਟਰਮੀਨਲ ਵਿੱਚ ਹੇਠਾਂ ਦਿੱਤਾ ਕਮਾਂਡ ਚਲਾ ਕੇ ਮੈਨੂਅਲੀ Microsoft AI ਲਾਇਬ੍ਰੇਰੀਜ਼ ਇੰਸਟਾਲ ਕਰ ਸਕਦੇ ਹੋ।
+ਜੇ ਤੁਸੀਂ ਕੋੰਡਾ ਵਰਤਦੇ ਸਮੇਂ ਕੋਈ ਗਲਤੀਆਂ ਵੇਖਦੇ ਹੋ ਤਾਂ ਤੁਸੀਂ ਮਾਈਕ੍ਰੋਸੌਫਟ AI ਲਾਇਬ੍ਰੇਰੀਆਂ ਹੱਥੋਂ ਹੱਥ ਇੰਸਟਾਲ ਕਰ ਸਕਦੇ ਹੋ ਹੇਠਾਂ ਦਿੱਤੇ ਕਮਾਂਡ ਨਾਲ ਟਰਮੀਨਲ ਵਿੱਚ:
 
 ```
 conda install -c microsoft azure-ai-ml
 ```
 
-ਵਾਤਾਵਰਨ ਫਾਈਲ ਉਹ dependencies ਦਰਸਾਉਂਦੀ ਹੈ ਜੋ ਸਾਨੂੰ ਲੋੜੀਂਦੇ ਹਨ। `<environment-name>` ਤੁਹਾਡੀ ਚਾਹਵੀਂ ਕਾਂਡਾ ਵਾਤਾਵਰਨ ਦਾ ਨਾਮ ਹੈ, ਅਤੇ `<python-version>` ਉਹ Python ਸੰਸਕਰਣ ਹੈ ਜੋ ਤੁਸੀਂ ਵਰਤਣਾ ਚਾਹੁੰਦੇ ਹੋ, ਉਦਾਹਰਣ ਵੱਜੋਂ, `3` Python ਦੀ ਨਵੀਂ ਮੁੱਖ ਸੰਸਕਰਣ ਹੈ।
+ਵਾਤਾਵਰਨ ਫਾਇਲ ਉਹ ਨਿਰਭਰਤਾਵਾਂ ਦਰਸਾਉਂਦੀ ਹੈ ਜੋ ਸਾਨੂੰ ਚਾਹੀਦੀ ਹੈ। `<environment-name>` ਤੁਹਾਡੇ ਚੁਣੇ ਹੋਏ ਕੋੰਡਾ ਵਾਤਾਵਰਨ ਦਾ ਨਾਮ ਹੈ, ਅਤੇ `<python-version>` ਉਸ ਪਾਇਥਨ ਦਾ ਵਰਜਨ ਹੈ ਜੋ ਤੁਸੀਂ ਵਰਤਣਾ ਚਾਹੁੰਦੇ ਹੋ, ਜਿਵੇਂ ਕਿ `3` ਸਭ ਤੋਂ ਨਵਾਂ ਵੱਡਾ ਵਰਜਨ ਹੈ।
 
-ਇਹ ਕਰ ਲੈਣ ਤੋਂ ਬਾਅਦ, ਤੁਸੀਂ ਹੇਠਾਂ ਲਿਖੀਆਂ ਕਮਾਂਡਾਂ ਚਲਾ ਕੇ ਆਪਣਾ ਕਾਂਡਾ ਵਾਤਾਵਰਨ ਬਣਾ ਸਕਦੇ ਹੋ:
+ਇਹ ਸਮਾਪਤ ਹੋਣ 'ਤੇ, ਆਪਣੇ ਕਮਾਂਡ ਲਾਈਨ/ਟਰਮੀਨਲ ਵਿੱਚ ਹੇਠਾਂ ਦਿੱਤੀਆਂ ਕਮਾਂਡਾਂ ਚਲਾ ਕੇ ਆਪਣਾ ਕੋੰਡਾ ਵਾਤਾਵਰਨ ਬਣਾਓ
 
 ```bash
-conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer ਸਬ ਪਾਥ ਸਿਰਫ਼ ਕੋਡਸਪੇਸ ਸੈਟਅਪਸ ਲਈ ਲਾਗੂ ਹੁੰਦਾ ਹੈ
+conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer ਸਬ ਪਾਥ ਸਿਰਫ Codespace ਸੈਟਅਪ ਲਈ ਲਾਗੂ ਹੁੰਦਾ ਹੈ
 conda activate ai4beg
 ```
 
-ਜੇ ਕਿਸੇ ਸਮੱਸਿਆ ਦਾ ਸਾਹਮਣਾ ਕਰਨਾ ਪਵੇ, ਤਾਂ [Conda environments guide](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) ਨੂੰ ਦੇਖੋ।
+ਜੇ ਕਿਸੇ ਸਮੱਸਿਆ ਦਾ ਸਾਹਮਣਾ ਕਰਨਾ ਪਏ ਤਾਂ [Conda ਵਾਤਾਵਰਨ ਗਾਈਡ](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) ਵੇਖੋ।
 
-### Visual Studio Code ਦੇ ਨਾਲ Python ਸਹਾਇਤਾ ਐਕਸਟੈਂਸ਼ਨ ਦੀ ਵਰਤੋਂ
+### Python ਸਹਾਇਤਾ ਵਿਸ਼ਤਾਰ ਨਾਲ Visual Studio Code ਦਾ ਉਪਯੋਗ
 
-ਅਸੀਂ [Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) ਐਡਿਟਰ ਦੀ ਸਿਫਾਰਸ਼ ਕਰਦੇ ਹਾਂ ਜਿਸ ਵਿੱਚ [Python ਸਹਾਇਤਾ ਐਕਸਟੈਂਸ਼ਨ](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) ਇੰਸਟਾਲ ਹੋਇਆ ਹੋਵੇ, ਇਸ ਕੋਰਸ ਲਈ। ਇਹ ਸਿਫਾਰਸ਼ ਹੈ, ਪਰ ਜ਼ਰੂਰੀ ਨਹੀਂ।
+ਅਸੀਂ ਇਸ ਕੋਰਸ ਲਈ [Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) ਸੰਪਾਦਕ ਨਾਲ [Python ਸਹਾਇਤਾ ਵਿਸ਼ਤਾਰ](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) ਇੰਸਟਾਲ ਕਰਨ ਦੀ ਸਿਫ਼ਾਰਿਸ਼ ਕਰਦੇ ਹਾਂ। ਇਹ ਸਿਰਫ ਸਿਫ਼ਾਰਿਸ਼ ਹੈ, ਲਾਜ਼ਮੀ ਨਹੀਂ।
 
-> **ਨੋਟ**: ਕੋਰਸ ਰੇਪੋਜ਼ਿਟਰੀ ਨੂੰ VS Code ਵਿੱਚ ਖੋਲ੍ਹ ਕੇ, ਤੁਹਾਡੇ ਕੋਲ ਪ੍ਰੋਜੈਕਟ ਨੂੰ ਕਿਸੇ ਕੰਟੇਨਰ ਵਿੱਚ ਸੈੱਟਅਪ ਕਰਨ ਦਾ ਵਿਕਲਪ ਹੈ। ਇਹ ਇਸ ਲਈ ਹੈ ਕਿਉਂਕਿ ਕੋਰਸ ਰੇਪੋਜ਼ਿਟਰੀ ਵਿੱਚ ਇੱਕ ਖਾਸ `.devcontainer` ਡਾਇਰੈਕਟਰੀ ਹੁੰਦੀ ਹੈ। ਇਸ ਬਾਰੇ ਬਾਅਦ ਵਿੱਚ ਹੋਰ ਜਾਣਕਾਰੀ ਮਿਲੇਗੀ।
+> **ਨੋਟ**: ਕੋਰਸ ਰੇਪੋਜ਼ਟਰੀ ਨੂੰ VS Code ਵਿੱਚ ਖੋਲ੍ਹ ਕੇ, ਤੁਹਾਡੀ ਪਜੈਕਟ ਨੂੰ 컨ਟੇਨਰ ਵਿੱਚ ਸੈਟਅੱਪ ਕਰਨ ਦਾ ਵਿਕਲਪ ਹੈ। ਇਹ ਇਸ ਕਾਰਨ ਹੈ ਕਿ ਕੋਰਸ ਰੇਪੋਜ਼ਟਰੀ ਵਿੱਚ [ਖ਼ਾਸ `.devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) ਡਾਇਰੈਕਟਰੀ ਹੈ। ਅੱਗੇ ਇਸ ਬਾਰੇ ਹੋਰ ਜਾਣਕਾਰੀ ਦਿੱਤੀ ਜਾਵੇਗੀ।
 
-> **ਨੋਟ**: ਜਦੋਂ ਤੁਸੀਂ ਇਹ ਡਾਇਰੈਕਟਰੀ VS Code ਵਿੱਚ ਖੋਲ੍ਹਦੇ ਹੋ, ਤਾਂ ਇਹ ਤੁਹਾਨੂੰ ਆਟੋਮੈਟਿਕ ਉਸ Python ਸਹਾਇਤਾ ਐਕਸਟੈਂਸ਼ਨ ਨੂੰ ਇੰਸਟਾਲ ਕਰਨ ਦਾ ਸੁਝਾਅ ਦੇਵੇਗਾ।
+> **ਨੋਟ**: ਜਿਵੇਂ ਹੀ ਤੁਸੀਂ ਰੇਪੋਜ਼ਟਰੀ ਨੂੰ ਕਲੋਨ ਅਤੇ VS Code ਵਿੱਚ ਖੋਲ੍ਹਦੇ ਹੋ, ਇਹ ਆਪਣੇ ਆਪ ਤੁਹਾਨੂੰ Python ਸਹਾਇਤਾ ਵਿਸ਼ਤਾਰ ਇੰਸਟਾਲ ਕਰਨ ਦੀ ਸਿਫਾਰਿਸ਼ ਕਰੇਗਾ।
 
-> **ਨੋਟ**: ਜੇ VS Code ਤੁਹਾਨੂੰ ਰੇਪੋਜ਼ਿਟਰੀ ਨੂੰ ਕੰਟੇਨਰ ਵਿੱਚ ਦੁਬਾਰਾ ਖੋਲ੍ਹਣ ਦਾ ਸੁਝਾਅ ਦੇਵੇ, ਤਾਂ ਇਸ ਪ੍ਰਸਤਾਵ ਨੂੰ ਇਨਕਾਰ ਕਰੋ ਤਾਂ ਜੋ ਤੁਸੀਂ ਆਪਣੇ ਲੋਕਲ ਇੰਸਟਾਲ ਕੀਤਾ Python ਵਰਜਨ ਵਰਤ ਸਕੋ।
+> **ਨੋਟ**: ਜੇ VS Code ਤੁਹਾਨੂੰ ਰੇਪੋਜ਼ਟਰੀ ਨੂੰ ਕੰਟੇਨਰ ਵਿੱਚ ਦੁਬਾਰਾ ਖੋਲ੍ਹਨ ਦੀ ਸਿੱਫਾਰਸ਼ ਕਰਦਾ ਹੈ, ਤਾਂ ਇਸ ਨੂੰ ਇਨਕਾਰ ਕਰੋ ਤਾਂ ਜੋ ਤੁਸੀਂ ਆਪਣੀ ਸਥਾਨਕ ਇੰਸਟਾਲ ਕੀਤੀ ਹੋਈ Python ਵਰਜਨ ਨੂੰ ਵਰਤੋਂ।
 
-### ਬ੍ਰਾਉਜ਼ਰ ਵਿੱਚ Jupyter ਦੀ ਵਰਤੋਂ
+### ਬ੍ਰਾਊਜ਼ਰ ਵਿੱਚ Jupyter ਵਰਤਣਾ
 
-ਤੁਸੀਂ ਇਸ ਪ੍ਰੋਜੈਕਟ ਉੱਤੇ ਬ੍ਰਾਉਜ਼ਰ ਵਿੱਚ ਸਿੱਧਾ [Jupyter ਇਨਵਾਇਰਨਮੈਂਟ](https://jupyter.org?WT.mc_id=academic-105485-koreyst) ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਵੀ ਕੰਮ ਕਰ ਸਕਦੇ ਹੋ। ਕਲਾਸਿਕ Jupyter ਅਤੇ [Jupyter Hub](https://jupyter.org/hub?WT.mc_id=academic-105485-koreyst) ਦੋਹਾਂ ਵੀ ਬਹੁਤ ਸੋਹਣਾ ਵਿਕਾਸ ਵਰਤੌ ਦਾ ਮਾਹੌਲ ਦਿੰਦੇ ਹਨ, ਜਿਵੇਂ ਕਿ ਆਟੋ-ਕੰਪਲੀਸ਼ਨ, ਕੋਡ ਹਾਈਲਾਈਟਿੰਗ, ਆਦਿ।
+ਤੁਸੀਂ ਆਪਣੇ ਪ੍ਰੋਜੇਕਟ 'ਤੇ ਬ੍ਰਾਊਜ਼ਰ ਵਿੱਚ ਸੀਧਾ [Jupyter ਵਾਤਾਵਰਨ](https://jupyter.org?WT.mc_id=academic-105485-koreyst) ਤੋਂ ਕੰਮ ਵੀ ਕਰ ਸਕਦੇ ਹੋ। ਦੋਹਾਂ ਕਲਾਸਿਕ Jupyter ਅਤੇ [Jupyter Hub](https://jupyter.org/hub?WT.mc_id=academic-105485-koreyst) ਇਕ ਸੁਖਦ ਸੁਵਿਧਾਜਨਕ ਵਿਕਾਸ ਵਾਤਾਵਰਨ ਦਿੰਦੇ ਹਨ, ਜਿਵੇਂ ਕਿ ਆਟੋ-ਕੰਪਲੀਸ਼ਨ, ਕੋਡ ਹਾਈਲਾਈਟਿੰਗ ਆਦਿ।
 
-Jupyter ਲੋਕਲ ਚਲਾਉਣ ਲਈ, ਟਰਮੀਨਲ / ਕਮਾਂਡ ਲਾਈਨ ਤੇ ਜਾਵੋ, ਕੋਰਸ ਡਾਇਰੈਕਟਰੀ ਵਿੱਚ ਜਾਓ ਅਤੇ ਚਲਾਓ:
+ਸਥਾਨਕ ਤੌਰ 'ਤੇ Jupyter ਸ਼ੁਰੂ ਕਰਨ ਲਈ, ਟਰਮੀਨਲ/ਕਮਾਂਡ ਲਾਈਨ ਤੇ ਜਾਓ, ਕੋਰਸ ਡਾਇਰੈਕਟਰੀ ਵਿੱਚ ਜਾਓ, ਅਤੇ ਹੇਠਾਂ ਦਿੱਤੀ ਕਮਾਂਡ ਚਲਾਓ:
 
 ```bash
 jupyter notebook
@@ -173,60 +177,63 @@ jupyter notebook
 jupyterhub
 ```
 
-ਇਸ ਨਾਲ ਇੱਕ Jupyter ਇੰਸਟੈਂਸ ਸ਼ੁਰੂ ਹੋਵੇਗਾ ਅਤੇ ਇਸਦਾ URL ਕਮਾਂਡ ਲਾਈਨ ਵਿੰਡੋ ਵਿੱਚ ਦਿਖਾਇਆ ਜਾਵੇਗਾ।
+ਇਹ Jupyter ਇਨਸਟੈਂਸ ਸ਼ੁਰੂ ਕਰੇਗਾ ਅਤੇ ਕਮਾਂਡ ਲਾਈਨ ਵਿਂਡੋ ਵਿੱਚ ਇਸ ਨੂੰ ਪਹੁੰਚਣ ਲਈ URL ਦਿਖਾਏਗਾ।
 
-ਜਦੋਂ ਤੁਸੀਂ ਇਸ URL ਤੱਕ ਪਹੁੰਚੋਗੇ, ਤੁਹਾਨੂੰ ਕੋਰਸ ਢਾਂਚਾ ਦਿਖਾਈ ਦੇਵੇਗਾ ਅਤੇ ਤੁਸੀਂ ਕਿਸੇ ਵੀ `*.ipynb` ਫਾਈਲ ਤੇ ਜਾ ਸਕਦੇ ਹੋ, ਉਦਾਹਰਣ ਲਈ, `08-building-search-applications/python/oai-solution.ipynb`।
+ਜਿਵੇਂ ਹੀ ਤੁਸੀਂ URL ਲਈ ਪਹੁੰਚ ਕਰਦੇ ਹੋ, ਤੁਸੀਂ ਕੋਰਸ ਖਾਕਾ ਵੇਖ ਸਕੋਗੇ ਅਤੇ ਕਿਸੇ ਵੀ `*.ipynb` ਫਾਇਲ 'ਤੇ ਜਾ ਸਕੋਗੇ। ਉਦਾਹਰਣ ਲਈ, `08-building-search-applications/python/oai-solution.ipynb`।
 
-### ਇੱਕ ਕੰਟੇਨਰ ਵਿੱਚ ਚਲਾਉਣਾ
+### ਕੰਟੇਨਰ ਵਿੱਚ ਚਲਾਉਣਾ
 
-ਆਪਣੇ ਕੰਪਿਊਟਰ ਜਾਂ ਕੋਡਸਪੇਸ ਉੱਤੇ ਸਾਰਾ ਕੰਮ ਸੈੱਟਅਪ ਕਰਨ ਦੇ ਵਿਕਲਪ ਵਜੋਂ, ਤੁਸੀਂ [ਕন্টੇਨਰ](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst) ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦੇ ਹੋ। ਕੋਰਸ ਰੇਪੋਜ਼ਿਟਰੀ ਦੇ ਅੰਦਰ ਖਾਸ `.devcontainer` ਫੋਲਡਰ VS Code ਨੂੰ ਪ੍ਰੋਜੈਕਟ ਨੂੰ ਕੰਟੇਨਰ ਵਿੱਚ ਸੈੱਟਅਪ ਕਰਨ ਲਈ ਸਹੂਲਤ ਦਿੰਦਾ ਹੈ। Codespaces ਤੋਂ ਬਾਹਰ, ਇਸ ਲਈ ਡੋਕਰ ਦੀ ਇੰਸਟਾਲੇਸ਼ਨ ਜ਼ਰੂਰੀ ਹੈ, ਅਤੇ ਖੁੱਲ ਕੇ ਕਹਿਣਾ, ਇਹ ਕਾਫੀ ਮੁਸ਼ਕਲ ਹੈ, ਇਸ ਲਈ ਅਸੀਂ ਇਹ ਸਿਫਾਰਸ਼ ਸਿਰਫ ਉਹਨਾਂ ਨੂੰ ਕਰਦੇ ਹਾਂ ਜਿਨ੍ਹਾਂ ਕੋਡਸਪੇਸ ਅਤੇ ਕੰਟੇਨਰ ਵਰਗੇ ਤਜਰਬੇ ਹਨ।
+ਆਪਣੇ ਕੰਪਿਊਟਰ ਜਾਂ Codespace 'ਤੇ ਸਾਰਾ ਕੁਝ ਸੈਟਅੱਪ ਕਰਨ ਦੇ ਬਦਲੇ, ਤੁਸੀਂ ਇੱਕ [ਕੰਟੇਨਰ](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>) ਵਰਤ ਸਕਦੇ ਹੋ। ਕੋਰਸ ਰੇਪੋਜ਼ਟਰੀ ਵਿੱਚ ਖ਼ਾਸ `.devcontainer` ਫੋਲਡਰ VS Code ਨੂੰ ਪ੍ਰੋਜੇਕਟ ਨੂੰ ਕੰਟੇਨਰ ਵਿੱਚ ਸੈਟਅੱਪ ਕਰਨ ਦੇ ਯੋਗ ਬਣਾਉਂਦਾ ਹੈ। Codespaces ਤੋਂ ਬਾਹਰ, ਇਸ ਲਈ Docker ਦੀ ਇੰਸਟਾਲੇਸ਼ਨ ਦੀ ਲੋੜ ਹੋਏਗੀ, ਅਤੇ ਇੱਥੇ ਕੁਝ ਕਾਫੀ ਕੰਮ ਸ਼ਾਮਲ ਹੈ, ਇਸ ਲਈ ਅਸੀਂ ਸਿਫ਼ਾਰਸ਼ ਕਰਦੇ ਹਾਂ ਕਿ ਇਹ ਸਿਰਫ ਉਹਨਾਂ ਲਈ ਜਿਨ੍ਹਾਂ ਦੀ ਕੰਟੇਨਰਾਂ ਨਾਲ ਅਨੁਭਵ ਹੈ।
 
-GitHub Codespaces ਵਰਤਦੇ ਸਮੇਂ ਆਪਣੇ API ਕੁੰਜੀਆਂ ਨੂੰ ਸੁਰੱਖਿਅਤ ਰੱਖਣ ਲਈ Codespace Secrets ਦੀ ਵਰਤੋਂ ਬਹੁਤ ਚੰਗਾ ਤਰੀਕਾ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ [Codespaces secrets management](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) ਗਾਈਡ ਨੂੰ ਫਾਲੋ ਕਰੋ।
+GitHub Codespaces ਵਿਚ ਆਪਣੇ API ਕੀਜ਼ ਨੂੰ ਸੁਰੱਖਿਅਤ ਰੱਖਣ ਲਈ ਸਭ ਤੋਂ ਵਧੀਆ ਤਰੀਕੇ ਵਿੱਚੋਂ ਇੱਕ ਹੈ Codespace Secrets ਦਾ ਪ੍ਰਯੋਗ। ਕਿਰਪਾ ਕਰਕੇ [Codespaces secrets management](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) ਗਾਈਡ ਪਾਲਣਾ ਕਰੋ ਇਸ ਬਾਰੇ ਵਧੇਰੇ ਜਾਣਨ ਲਈ।
+
 
 ## ਪਾਠ ਅਤੇ ਤਕਨੀਕੀ ਲੋੜਾਂ
 
-ਕੋਰਸ ਵਿੱਚ 6 ਸੰਕਲਪਕ ਪਾਠ ਅਤੇ 6 ਕੋਡਿੰਗ ਪਾਠ ਹਨ।
+ਕੋਰਸ ਵਿੱਚ 6 ਸੰਕਲਪ ਪਾਠ ਅਤੇ 6 ਕੋਡਿੰਗ ਪਾਠ ਹਨ।
 
-ਕੋਡਿੰਗ ਪਾਠਾਂ ਵਾਸਤੇ, ਅਸੀਂ Azure OpenAI ਸੇਵਾ ਦੀ ਵਰਤੋਂ ਕਰ ਰਹੇ ਹਾਂ। ਤੁਹਾਨੂੰ Azure OpenAI ਸੇਵਾ ਤਕ ਪਹੁੰਚ ਅਤੇ API ਕੁੰਜੀ ਦੀ ਲੋੜ ਹੋਵੇਗੀ ਤਾਂ ਜੋ ਇਹ ਕੋਡ ਚਲਾਇਆ ਜਾ ਸਕੇ। ਤੁਸੀਂ ਇਸ ਪਹੁੰਚ ਲਈ [ਇਹ ਅਰਜ਼ੀ ਫਰਮਾਈਸਕਰੀ ਰਾਹੀਂ ਪ੍ਰਾਪਤ ਕਰ ਸਕਦੇ ਹੋ](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst)।
+ਕੋਡਿੰਗ ਪਾਠਾਂ ਲਈ, ਅਸੀਂ Azure OpenAI Service ਵਰਤ ਰਹੇ ਹਾਂ। ਤੁਹਾਨੂੰ Azure OpenAI ਸੇਵਾ ਦੀ ਪਹੁੰਚ ਅਤੇ ਇਸ ਕੋਡ ਨੂੰ ਚਲਾਉਣ ਲਈ API ਕੀ ਦੀ ਲੋੜ ਹੋਏਗੀ। ਤੁਸੀਂ ਇਸ ਦੀ ਪਹੁੰਚ ਲਈ [ਇਹ ਅਰਜ਼ੀ](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst) ਪੂਰੀ ਕਰਕੇ ਅਰਜ਼ੀ ਦੇ ਸਕਦੇ ਹੋ।
 
-ਜਦੋਂ ਤੁਸੀਂ ਆਪਣੀ ਅਰਜ਼ੀ ਦੀ ਕਾਰਵਾਈ ਲਈ ਉਡੀਕ ਕਰ ਰਹੇ ਹੋ, ਹਰ ਕੋਡਿੰਗ ਪਾਠ ਵਿੱਚ ਇੱਕ `README.md` ਫਾਈਲ ਸ਼ਾਮਲ ਹੈ ਜਿੱਥੇ ਤੁਸੀਂ ਕੋਡ ਅਤੇ ਨਤੀਜੇ ਵੇਖ ਸਕਦੇ ਹੋ।
+ਜਦ ਤੁਸੀਂ ਆਪਣੀ ਅਰਜ਼ੀ ਦੇ ਪ੍ਰਕਿਰਿਆ ਹੋਣ ਦਾ ਇੰਤਜ਼ਾਰ ਕਰ ਰਹੇ ਹੋ, ਹਰ ਕੋਡਿੰਗ ਪਾਠ ਵਿੱਚ ਇਹ ਵੀ ਇੱਕ `README.md` ਫਾਇਲ ਸ਼ਾਮਲ ਹੁੰਦੀ ਹੈ ਜਿੱਥੇ ਤੁਸੀਂ ਕੋਡ ਅਤੇ ਆਉਟਪੁਟ ਵੇਖ ਸਕਦੇ ਹੋ।
 
-## Azure OpenAI ਸੇਵਾ ਨੂੰ ਪਹਿਲੀ ਵਾਰੀ ਵਰਤਣਾ
+## ਪਹਿਲੀ ਵਾਰ Azure OpenAI ਸੇਵਾ ਵਰਤਣਾ
 
-ਜੇ ਇਹ ਤੁਹਾਡਾ Azure OpenAI ਸੇਵਾ ਨਾਲ ਪਹਿਲਾ ਤਜਰਬਾ ਹੈ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਇਹ ਗਾਈਡ ਪਾਲਣਾ ਕਰੋ ਕਿਵੇਂ [Azure OpenAI Service ਰਿਸੋਰਸ ਬਣਾਉਣ ਅਤੇ ਤੈਨਾਤ ਕਰਨ ਦੀ ਟਿਪ](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)।
+ਜੇ ਇਹ ਪਹਿਲੀ ਵਾਰ ਹੈ ਕਿ ਤੁਸੀਂ Azure OpenAI ਸੇਵਾ ਨਾਲ ਕੰਮ ਕਰ ਰਹੇ ਹੋ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਮਾਰਗਦਰਸ਼ਨ ਨੂੰ ਫਾਲੋ ਕਰੋ ਕਿ ਕਿਵੇਂ [Azure OpenAI Service ਰਿਸੋਰਸ ਬਣਾਉਣਾ ਅਤੇ ਤੈਨਾਤ ਕਰਨਾ ਹੈ।](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
 
-## OpenAI API ਨੂੰ ਪਹਿਲੀ ਵਾਰੀ ਵਰਤਣਾ
+## ਪਹਿਲੀ ਵਾਰ OpenAI API ਵਰਤਣਾ
 
-ਜੇ ਇਹ ਤੁਹਾਡਾ OpenAI API ਨਾਲ ਪਹਿਲਾ ਤਜਰਬਾ ਹੈ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਇਹ ਗਾਈਡ ਪਾਠੋ ਕਿ ਕਿਵੇਂ [ਇੰਟਰਫੇਸ ਬਣਾਉਣ ਅਤੇ ਵਰਤਣ](https://platform.openai.com/docs/quickstart?context=pythont&WT.mc_id=academic-105485-koreyst) ਕਰਨਾ ਹੈ।
+ਜੇ ਇਹ ਤੁਹਾਡੀ ਪਹਿਲੀ ਵਾਰ ਹੈ ਕਿ ਤੁਸੀਂ OpenAI API ਵਰਤ ਰਹੇ ਹੋ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਮਾਰਗਦਰਸ਼ਨ ਦੀ ਪਾਲਣਾ ਕਰੋ ਕਿ ਕਿਵੇਂ [ਇੰਟਰਫੇਸ ਬਣਾਉਣਾ ਅਤੇ ਵਰਤਣਾ ਹੈ।](https://platform.openai.com/docs/quickstart?context=pythont&WT.mc_id=academic-105485-koreyst)
 
 ## ਹੋਰ ਸਿੱਖਣ ਵਾਲਿਆਂ ਨਾਲ ਮਿਲੋ
 
-ਅਸੀਂ ਆਪਣੇ ਅਧਿਕਾਰਿਕ [AI Community Discord ਸਰਵਰ](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) ਵਿੱਚ ਚੈਨਲ ਬਣਾਏ ਹਨ ਤਾਂ ਜੋ ਹੋਰ ਸਿੱਖਣ ਵਾਲਿਆਂ ਨਾਲ ਮਿਲਕੇ ਸੰਪਰਕ ਕੀਤਾ ਜਾ ਸਕੇ। ਇਹ ਹੋਰ ਉਦਯੋਗਪਤੀਆਂ, ਨਿਰਮਾਤਾਵਾਂ, ਵਿਦਿਆਰਥੀਆਂ ਅਤੇ ਜੇਨੇਰੇਟਿਵ AI ਵਿੱਚ ਆਪਣੇ ਵਿਕਾਸ ਲਈ ਉਤਸ਼ਾਹੀ ਲੋਕਾਂ ਨਾਲ ਜਾਲ ਬਣਾਉਣ ਦਾ ਚੰਗਾ ਤਰੀਕਾ ਹੈ।
+ਅਸੀਂ ਆਪਣੇ ਅਧਿਕਾਰਿਕ [AI Community Discord ਸਰਵਰ](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) ਵਿੱਚ ਹੋਰ ਸਿੱਖਣ ਵਾਲਿਆਂ ਨਾਲ ਮਿਲਣ ਲਈ ਚੈਨਲ ਬਣਾਏ ਹਨ। ਇਹ ਜਨਰੇਟਿਵ ਏਆਈ ਵਿਚ ਤਜਰਬਾ ਕਾਰ, ਨਿਰਮاتا, ਵਿਦਿਆਰਥੀ ਅਤੇ ਉਹਨਾਂ ਲਈ ਸ਼ਾਨਦਾਰ ਜਗ੍ਹਾ ਹੈ ਜੋ ਅੱਗੇ ਵਧਣਾ ਚਾਹੁੰਦੇ ਹਨ।
 
 [![Join discord channel](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
-ਪ੍ਰੋਜੈਕਟ ਟੀਮ ਵੀ ਇਸ Discord ਸਰਵਰ 'ਤੇ ਹੋਵੇਗੀ ਤਾਂ ਜੋ ਕਿਸੇ ਵੀ ਸਿੱਖਿਆਰਥੀ ਦੀ ਮਦਦ ਕਰ ਸਕੇ।
+ਪ੍ਰੋਜੇਕਟ ਟੀਮ ਵੀ ਇਸ Discord ਸਰਵਰ ਤੇ ਸਿੱਖਣ ਵਾਲਿਆਂ ਦੀ ਮਦਦ ਲਈ ਮੌਜੂਦ ਹੋਏਗੀ।
 
-## ਯੋਗਦਾਨ ਪਾਉਣਾ
+## ਯੋਗਦਾਨ ਪਾਓ
 
-ਇਹ ਕੋਰਸ ਇੱਕ ਖੁੱਲ੍ਹਾ ਸੋਰਸ ਪਹਿਲਕਦਮੀ ਹੈ। ਜੇ ਤੁਸੀਂ ਸੁਧਾਰ ਜਾਂ ਸਮੱਸਿਆਵਾਂ ਵੇਖੋ, ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ [ਪੁਲ ਰਿਕਵੇਸਟ](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) ਬਣਾਓ ਜਾਂ ਇੱਕ [GitHub ਮੁੱਦਾ](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) ਦਰਜ ਕਰੋ।
+ਇਹ ਕੋਰਸ ਖੁੱਲਾ ਸਰੋਤ ਉਦਯਮ ਹੈ। ਜੇ ਤੁਸੀਂ ਸੁਧਾਰ ਦੇ ਖੇਤਰ ਜਾਂ ਸਮੱਸਿਆਵਾਂ ਵੇਖਦੇ ਹੋ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ [ਪੁਲ ਰਿਕਵੇਸਟ ਬਣਾਓ](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) ਜਾਂ [GitHub ਇਸ਼ੂ ਲੱਗਾਓ](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst)।
 
-ਪ੍ਰੋਜੈਕਟ ਟੀਮ ਸਾਰੇ ਯੋਗਦਾਨਾਂ ਦਾ ਟਰੈਕ ਰੱਖੇਗੀ। ਖੁੱਲ੍ਹੇ ਸਰੋਤ ਵਿੱਚ ਯੋਗਦਾਨ ਕਰਨਾ ਜੇਨੇਰੇਟਿਵ AI ਵਿੱਚ ਆਪਣੇ ਕਰੀਅਰ ਨੂੰ ਬਣਾਉਣ ਦਾ ਸ਼ਾਨਦਾਰ ਤਰੀਕਾ ਹੈ।
+ਪ੍ਰੋਜੇਕਟ ਟੀਮ ਸਾਰੇ ਯੋਗਦਾਨਾਂ ਨੂੰ ਟ੍ਰੈਕ ਕਰੇਗੀ। ਓਪਨ ਸੋਰਸ ਵਿੱਚ ਯੋਗਦਾਨ ਦੇਣਾ ਜਨਰੇਟਿਵ ਏਆਈ ਵਿੱਚ ਆਪਣੇ ਕਰੀਅਰ ਨੂੰ ਤਿਆਰ ਕਰਨ ਦਾ ਸ਼ਾਨਦਾਰ ਤਰੀਕਾ ਹੈ।
 
-ਜ਼ਿਆਦਾਤਰ ਯੋਗਦਾਨਾਂ ਵਾਸਤੇ ਤੁਹਾਡੇ ਨਾਲ Contributor License Agreement (CLA) ਦਾ ਸਮਝੌਤਾ ਕੀਤਾ ਜਾਵੇਗਾ ਕਿ ਤੁਹਾਡੇ ਕੋਲ ਅਧਿਕਾਰ ਹਨ ਅਤੇ ਤੁਸੀਂ ਸਾਨੂੰ ਤੁਹਾਡੇ ਯੋਗਦਾਨ ਦੀ ਵਰਤੋਂ ਕਰਨ ਦੇ ਅਧਿਕਾਰ ਦੇ ਰਹੇ ਹੋ। ਵੇਰਵਾ ਲਈ, [CLA, Contributor License Agreement ਵੈੱਬਸਾਈਟ](https://cla.microsoft.com?WT.mc_id=academic-105485-koreyst) ਵੇਖੋ।
+ਜ਼ਿਆਦਾਤਰ ਯੋਗਦਾਨਾਂ ਲਈ ਤੁਹਾਨੂੰ Contributor License Agreement (CLA) 'ਤੇ ਸਹਿਮਤ ਹੋਣਾ ਪੈਂਦਾ ਹੈ ਜੋ ਇਹ ਘੋਸ਼ਣਾ ਕਰਦਾ ਹੈ ਕਿ ਤੁਹਾਡੇ ਕੋਲ ਹੱਕ ਹਨ ਅਤੇ ਤੁਸੀਂ ਹਕੀਕਤ ਵਿੱਚ ਸਾਨੂੰ ਆਪਣੇ ਯੋਗਦਾਨ ਨੂੰ ਵਰਤਣ ਦੀ ਇਜਾਜ਼ਤ ਦਿੰਦੇ ਹੋ। ਵੇਰਵੇ ਲਈ, ਵੇਖੋ [CLA, Contributor License Agreement ਵੈਬਸਾਈਟ](https://cla.microsoft.com?WT.mc_id=academic-105485-koreyst)।
 
-ਮਹਤਵਪੂਰਨ: ਇਸ ਰੇਪੋ ਵਿੱਚ ਟੈਕਸਟ ਦਾ ਅਨੁਵਾਦ ਕਰਦੇ ਸਮੇਂ, ਕਿਰਪਾ ਕਰਕੇ ਮਸ਼ੀਨੀ ਅਨੁਵਾਦ ਦੀ ਵਰਤੋਂ ਨਾ ਕਰੋ। ਅਸੀਂ ਅਨੁਵਾਦਾਂ ਨੂੰ ਕਮਿਊਨਿਟੀ ਰਾਹੀਂ ਜਾਂਚਾਂਗੇ, ਇਸ ਲਈ ਸਿਰਫ ਉਹ ਭਾਸ਼ਾਵਾਂ ਲਈ ਅਨੁਵਾਦ ਕਰਨ ਦੀ ਸੇਵਾ ਕਰੋ ਜਿਨ੍ਹਾਂ ਵਿੱਚ ਤੁਸੀਂ ਮਾਹਿਰ ਹੋ।
+ਮਹੱਤਵਪੂਰਨ: ਇਸ ਰੇਪੋ ਵਿੱਚ ਟੈਕਸਟ ਦਾ ਅਨੁਵਾਦ ਕਰਦੇ ਸਮੇਂ, ਕਿਰਪਾ ਕਰਕੇ ਇਹ ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਤੁਸੀਂ ਮਸ਼ੀਨ ਅਨੁਵਾਦ ਨਹੀਂ ਵਰਤਦੇ। ਅਸੀਂ ਤਰਜਮਿਆਂ ਦੀ ਸਮੁਦਾਇਕ ਜਾਂਚ ਕਰਾਂਗੇ, ਇਸ ਲਈ ਸਿਰਫ ਉਹ ਭਾਸ਼ਾਵਾਂ ਲਈ ਅਨੁਵਾਦ ਵਿੱਚ ਸਹਾਇਤਾ ਦਿਓ ਜਿਨ੍ਹਾਂ ਵਿੱਚ ਤੁਸੀਂ ਪ੍ਰਵੀਣ ਹੋ।
 
-ਜਦੋਂ ਤੁਸੀਂ ਇੱਕ ਪੁਲ ਰਿਕਵੇਸਟ ਜਮ੍ਹਾਂ ਕਰਦੇ ਹੋ, ਇੱਕ CLA-ਬੋਟ ਆਪਣੇ ਆਪ ਤੈਅ ਕਰੇਗਾ ਕਿ ਤੁਹਾਨੂੰ CLA ਦਿੰਣਾ ਹੈ ਜਾਂ ਨਹੀਂ ਅਤੇ PR ਨੂੰ ਠੀਕ ਤਰੀਕੇ ਨਾਲ ਲੇਬਲ ਅਤੇ ਟਿੱਪਣੀ ਨਾਲ ਸਜਾਵੇਗਾ। ਸਿਰਫ਼ ਬੋਟ ਵੱਲੋਂ ਦਿੱਤੇ ਹੁਕਮਾਂ ਦੀ ਪਾਲਨਾ ਕਰੋ। ਤੁਹਾਨੂੰ ਇਹ ਸਾਰੀਆਂ ਰੇਪੋਜ਼ਿਟਰੀਆਂ 'ਤੇ ਇੱਕ ਵਾਰੀ ਹੀ ਕਰਨਾ ਪਵੇਗਾ ਜਿਹੜੀਆਂ ਸਾਡਾ CLA ਵਰਤਦੀਆਂ ਹਨ।
+ਜਦੋਂ ਤੁਸੀਂ ਪੁਲ ਰਿਕਵੇਸਟ ਸਬਮਿਟ ਕਰਦੇ ਹੋ, ਇੱਕ CLA-ਬੌਟ ਆਪਣੇ ਆਪ ਇਹ ਫੈਸਲਾ ਕਰੇਗਾ ਕਿ ਕੀ ਤੁਹਾਨੂੰ CLA ਪ੍ਰਦਾਨ ਕਰਨ ਦੀ ਲੋੜ ਹੈ ਅਤੇ PR ਨੂੰ ਢੰਗ ਨਾਲ ਲੇਬਲ, ਟਿੱਪਣੀ ਨਾਲ ਸ਼ਿੰਗਾਰੇਗਾ। ਸਿਰਫ ਬੌਟ ਵੱਲੋਂ ਦਿੱਤੇ ਨਿਰਦੇਸ਼ਾਂ ਦੀ ਪਾਲਣਾ ਕਰੋ। ਤੁਸੀਂ ਸਿਰਫ ਇੱਕ ਵਾਰੀ ਸਾਰੇ ਰੇਪੋਜ਼ਟਰੀਜ਼ ਵਿੱਚ ਸਾਡੀ CLA ਵਰਤਣ ਲਈ ਇਹ ਕਰਨਗੇ।
 
-ਇਸ ਪ੍ਰੋਜੈਕਟ ਨੇ [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst) ਅਪਨਾਇਆ ਹੈ। ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ Code of Conduct FAQ ਪੜ੍ਹੋ ਜਾਂ ਕਿਸੇ ਵੀ ਹੋਰ ਸਵਾਲ ਜਾਂ ਟਿੱਪਣੀ ਲਈ [Email opencode](opencode@microsoft.com) ਨਾਲ ਸੰਪਰਕ ਕਰੋ।
 
-## ਚਲੋ ਸ਼ੁਰੂ ਕਰੀਏ!
-ਹੁਣ ਜਦੋਂ ਤੁਸੀਂ ਇਸ ਕੋਰਸ ਨੂੰ ਕੰਪਲੀਟ ਕਰਨ ਲਈ ਲੋੜੀਂਦੇ ਕਦਮ ਪੂਰੇ ਕਰ ਲਏ ਹਨ, ਆਓ ਸ਼ੁਰੂ ਕਰੀਏ [ਜਨਰੇਟਿਵ ਏਆਈ ਅਤੇ ਐਲਐਲਐਮਜ਼ ਦਾ ਪਰਿਚય](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst) ਪ੍ਰਾਪਤ ਕਰਕੇ।
+ਇਸ ਪ੍ਰੋਜੈਕਟ ਨੇ [Microsoft ਖੁੱਲ੍ਹਾ ਸਰੋਤ ਕੋਡ ਆਚਰਨ ਸੰਹਿਤਾ](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst) ਨੂੰ ਅਪਣਾਇਆ ਹੈ। ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ ਕੋਡ ਆਚਰਨ ਏਫ਼ਏਕਿਊ ਪੜ੍ਹੋ ਜਾਂ ਕਿਸੇ ਵੀ ਅਤਿਰਿਕਤ ਸਵਾਲਾਂ ਜਾਂ ਟਿੱਪਣੀਆਂ ਲਈ [Email opencode](opencode@microsoft.com) ਨਾਲ ਸੰਪਰਕ ਕਰੋ।
+
+## ਚਲੋ ਸ਼ੁਰੂ ਕਰੀਏ
+
+ਹੁਣ ਜਦੋਂ ਤੁਸੀਂ ਇਸ ਕੋਰਸ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਜ਼ਰੂਰੀ ਕਦਮ ਲੈ ਚੁੱਕੇ ਹੋ, ਚਲੋ ਸ਼ੁਰੂ ਕਰੀਏ [ਜਨਰੇਟਿਵ AI ਅਤੇ LLMs ਦਾ ਪਰਿਚਯ](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst) ਲੈ ਕੇ।
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**ਦੱਸਣਯੋਗ ਗੱਲ**:  
-ਇਹ ਦਸਤਾਵੇਜ਼ AI ਅਨੁਵਾਦ ਸੇਵਾ [Co-op Translator](https://github.com/Azure/co-op-translator) ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਅਨੁਵਾਦ ਕੀਤਾ ਗਿਆ ਹੈ। ਜਦੋਂ ਕਿ ਅਸੀਂ ਸਹੀਅਤਾ ਲਈ ਕੋਸ਼ਿਸ਼ ਕਰਦੇ ਹਾਂ, ਕਿਰਪਾ ਕਰਕੇ ਯਾਦ ਰੱਖੋ ਕਿ ਆਟੋਮੇਟਿਕ ਅਨੁਵਾਦਾਂ ਵਿੱਚ ਗਲਤੀਆਂ ਜਾਂ ਅਸਪਸ਼ਟਤਾਵਾਂ ਹੋ ਸਕਦੀਆਂ ਹਨ। ਮੂਲ ਦਸਤਾਵੇਜ਼ ਦੀ ਆਪਣੀ ਮੂਲ ਭਾਸ਼ਾ ਵਿੱਚ ਪਾਈਆਂ ਜਾਣ ਵਾਲੀ ਵਰਜਨ ਹੀ ਪ੍ਰਮੁੱਖ ਸੂਤਰ ਮੰਨੀ ਜਾਣੀ ਚਾਹੀਦੀ ਹੈ। ਅਹਿਮ ਜਾਣਕਾਰੀ ਲਈ, ਪੇਸ਼ੇਵਰ ਮਨੁੱਖੀ ਅਨੁਵਾਦ ਦੀ ਸਿਫ਼ਾਰਿਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। ਅਸੀਂ ਇਸ ਅਨੁਵਾਦ ਦੇ ਇਸਤਾਮਾਲ ਤੋਂ ਪੈਦਾ ਹੋਣ ਵਾਲੇ ਕਿਸੇ ਵੀ ਗਲਤਫਹਿਮੀ ਜਾਂ ਗਲਤ ਵਿਆਖਿਆਵਾਂ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹਾਂ।
+**ਅਸਵੀਕਾਰੋਪਣ**:
+ਇਸ ਦਸਤਾਵੇਜ਼ ਦਾ ਅਨੁਵਾਦ ਏਆਈ ਅਨੁਵਾਦ ਸੇਵਾ [Co-op Translator](https://github.com/Azure/co-op-translator) ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਕੀਤਾ ਗਿਆ ਹੈ। ਜਦੋਂ ਕਿ ਅਸੀਂ ਸਹੀਤਾਵਾਂ ਲਈ ਯਤਨਸ਼ੀਲ ਹਾਂ, ਕਿਰਪਾ ਕਰਕੇ ਧਿਆਨ ਰੱਖੋ ਕਿ ਸਵੈਚਾਲਿਤ ਅਨੁਵਾਦਾਂ ਵਿੱਚ ਗਲਤੀਆਂ ਜਾਂ ਅਸਮੱਤਿਆਵਾਂ ਹੋ ਸਕਦੀਆਂ ਹਨ। ਮੂਲ ਦਸਤਾਵੇਜ਼ ਆਪਣੀ ਮੂਲ ਭਾਸ਼ਾ ਵਿੱਚ ਅਧਿਕਾਰਕ ਸਰੋਤ ਮੰਨਿਆ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ। ਜਰੂਰੀ ਜਾਣਕਾਰੀ ਲਈ, ਪੇਸ਼ੇਵਰ ਮਨੁੱਖੀ ਅਨੁਵਾਦ ਦੀ ਸਿਫ਼ਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। ਅਸੀਂ ਇਸ ਅਨੁਵਾਦ ਦੇ ਉਪਯੋਗ ਤੋਂ ਪੈਦਾ ਹੋਣ ਵਾਲੀਆਂ ਕਿਸੇ ਵੀ ਗਲਤਫਹਿਮੀਆਂ ਜਾਂ ਗਲਤ ਵਿਆਖਿਆਵਾਂ ਲਈ ਜਵਾਬਦੇਹ ਨਹੀਂ ਹਾਂ।
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

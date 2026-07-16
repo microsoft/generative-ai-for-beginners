@@ -1,76 +1,79 @@
-# Integracija z uporabo klicev funkcij
+# Integracija z klicem funkcij
 
-[![Integracija z uporabo klicev funkcij](../../../translated_images/sl/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integracija z klicem funkcij](../../../translated_images/sl/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
-V prejšnjih lekcijah ste se že veliko naučili. Vendar pa lahko še izboljšamo stvari. Nekatere težave, ki jih lahko naslovimo, vključujejo, kako pridobiti bolj dosleden format odgovorov, da bi olajšali nadaljnjo obdelavo odgovorov. Prav tako bi morda želeli dodati podatke iz drugih virov, da bi še bolj obogatili našo aplikacijo.
+Do zdaj ste se v prejšnjih lekcijah veliko naučili. Vendar se lahko še dodatno izboljšamo. Nekaj stvari, ki jih lahko obravnavamo, je, kako pridobiti bolj konsistenten format odziva, da bo lažje delati z odzivom v nadaljnjih korakih. Prav tako bomo morda želeli dodati podatke iz drugih virov za nadaljnje obogatitev naše aplikacije.
 
-Te težave bomo obravnavali v tem poglavju.
+Zgoraj omenjene težave so tisto, čemur se ta poglavje posveča.
 
 ## Uvod
 
 Ta lekcija bo zajemala:
 
-- Razlago, kaj je klic funkcij in kakšni so njegovi primeri uporabe.
+- Razlago, kaj je klic funkcije in njegovi primeri uporabe.
 - Ustvarjanje klica funkcije z uporabo Azure OpenAI.
 - Kako integrirati klic funkcije v aplikacijo.
 
 ## Cilji učenja
 
-Na koncu te lekcije boste lahko:
+Do konca te lekcije boste lahko:
 
-- Razložili namen uporabe klicev funkcij.
-- Nastavili klic funkcije z uporabo storitve Azure OpenAI.
-- Oblikovali učinkovite klice funkcij za potrebe vaše aplikacije.
+- Razložiti namen uporabe klica funkcij.
+- Nastaviti klic funkcije z uporabo Azure OpenAI Service.
+- Oblikovati učinkovite klice funkcij za primer uporabe vaše aplikacije.
 
-## Scenarij: Izboljšanje našega klepetalnika s funkcijami
+## Scenarij: Izboljšanje našega klepetalnega robota s funkcijami
 
-V tej lekciji želimo zgraditi funkcijo za naš startup na področju izobraževanja, ki uporabnikom omogoča uporabo klepetalnika za iskanje tehničnih tečajev. Priporočili bomo tečaje, ki ustrezajo njihovi ravni znanja, trenutni vlogi in zanimanju za tehnologijo.
+Za to lekcijo želimo zgraditi funkcijo za naš izobraževalni startup, ki uporabnikom omogoča uporabo klepetalnega robota za iskanje tehničnih tečajev. Priporočali bomo tečaje, ki ustrezajo njihovi ravni znanja, trenutni vlogi in zanimanju za tehnologijo.
 
 Za dokončanje tega scenarija bomo uporabili kombinacijo:
 
-- `Azure OpenAI` za ustvarjanje klepetalne izkušnje za uporabnika.
-- `Microsoft Learn Catalog API` za pomoč uporabnikom pri iskanju tečajev na podlagi njihovih zahtev.
-- `Klic funkcij` za obdelavo uporabniških poizvedb in pošiljanje teh funkcijam za izvedbo API zahtev.
+- `Azure OpenAI` za ustvarjanje klepetalnega doživetja za uporabnika.
+- `Microsoft Learn Catalog API` za pomoč uporabnikom pri iskanju tečajev glede na uporabniško zahtevo.
+- `Function Calling` za prevzem uporabniških poizvedb in pošiljanje funkciji za izvedbo API zahteve.
 
-Za začetek si poglejmo, zakaj bi sploh želeli uporabiti klic funkcij:
+Za začetek si oglejmo, zakaj bi želeli uporabljati klic funkcij:
 
 ## Zakaj klic funkcij
 
-Pred klicem funkcij so bili odgovori iz LLM (velikih jezikovnih modelov) nestrukturirani in nedosledni. Razvijalci so morali pisati zapletene kode za validacijo, da so lahko obdelali vsako različico odgovora. Uporabniki niso mogli dobiti odgovorov, kot je "Kakšno je trenutno vreme v Stockholmu?". To je zato, ker so bili modeli omejeni na čas, ko so bili podatki usposobljeni.
+Pred klicem funkcij so odgovori iz LLM bili nestrukturirani in nekonsistentni. Razvijalci so morali pisati kompleksno kodo za validacijo, da so lahko obdelali vsako različico odgovora. Uporabniki niso mogli dobiti odgovorov na vprašanja, kot je "Kakšno je trenutno vreme v Stockholmu?". To je zato, ker so bili modeli omejeni na čas, ko so bili podatki naučeni.
 
-Klic funkcij je funkcionalnost storitve Azure OpenAI, ki premaga naslednje omejitve:
+Klic funkcij je funkcija storitve Azure OpenAI, ki odpravlja naslednje omejitve:
 
-- **Dosleden format odgovorov**. Če lahko bolje nadzorujemo format odgovorov, jih lahko lažje integriramo v druge sisteme.
+- **Konsistenten format odgovora**. Če lahko bolje nadzorujemo format odgovora, lahko lažje integriramo odgovor v druge sisteme.
 - **Zunanji podatki**. Možnost uporabe podatkov iz drugih virov aplikacije v kontekstu klepeta.
 
-## Prikaz problema skozi scenarij
+## Ponazoritev problema s scenarijem
 
-> Priporočamo, da uporabite [priloženo beležnico](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst), če želite izvesti spodnji scenarij. Lahko pa tudi samo preberete, saj želimo prikazati problem, ki ga lahko funkcije pomagajo rešiti.
+> Priporočamo uporabo [priloženega zvezka](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst), če želite zagnati spodnji scenarij. Lahko pa preprosto berete naprej, saj poskušamo prikazati problem, ki ga lahko funkcije pomagajo rešiti.
 
-Poglejmo primer, ki ponazarja problem formata odgovorov:
+Poglejmo primer, ki prikazuje težavo formata odgovora:
 
-Recimo, da želimo ustvariti bazo podatkov o študentih, da bi jim lahko predlagali ustrezne tečaje. Spodaj imamo dva opisa študentov, ki sta si zelo podobna glede na podatke, ki jih vsebujeta.
+Recimo, da želimo ustvariti podatkovno bazo podatkov študentov, da jim lahko predlagamo pravi tečaj. Spodaj imamo dva opisa študentov, ki sta zelo podobna glede podatkov, ki jih vsebujeta.
 
-1. Ustvarimo povezavo z našim virom Azure OpenAI:
+1. Ustvarite povezavo do našega vira Azure OpenAI:
 
    ```python
    import os
    import json
-   from openai import AzureOpenAI
+   from openai import OpenAI
    from dotenv import load_dotenv
    load_dotenv()
 
-   client = AzureOpenAI(
-   api_key=os.environ['AZURE_OPENAI_API_KEY'],  # this is also the default, it can be omitted
-   api_version = "2023-07-01-preview"
+   # API za Odzive je na voljo preko Azure OpenAI (Microsoft Foundry) v1
+   # končne točke, zato OpenAI odjemalca usmerimo na <your-endpoint>/openai/v1/.
+   endpoint = os.environ['AZURE_OPENAI_ENDPOINT']
+   client = OpenAI(
+   api_key=os.environ['AZURE_OPENAI_API_KEY'],
+   base_url=f"{endpoint.rstrip('/')}/openai/v1/",
    )
 
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   Spodaj je nekaj Python kode za konfiguracijo naše povezave z Azure OpenAI, kjer nastavimo `api_type`, `api_base`, `api_version` in `api_key`.
+   Spodaj je nekaj Pythonske kode za konfiguracijo naše povezave do Azure OpenAI. Ker uporabljamo v1 endpoint, moramo nastaviti samo `api_key` in `base_url` (ni potrebna verzija `api_version`).
 
-1. Ustvarimo dva opisa študentov z uporabo spremenljivk `student_1_description` in `student_2_description`.
+1. Ustvarjanje dveh opisov študentov z uporabo spremenljivk `student_1_description` in `student_2_description`.
 
    ```python
    student_1_description="Emily Johnson is a sophomore majoring in computer science at Duke University. She has a 3.7 GPA. Emily is an active member of the university's Chess Club and Debate Team. She hopes to pursue a career in software engineering after graduating."
@@ -78,9 +81,9 @@ Recimo, da želimo ustvariti bazo podatkov o študentih, da bi jim lahko predlag
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   Zgornje opise študentov želimo poslati LLM, da bi analizirali podatke. Te podatke lahko kasneje uporabimo v naši aplikaciji in jih pošljemo API-ju ali shranimo v bazo podatkov.
+   Želimo poslati zgoraj navedene opise študentov LLM, da razčleni podatke. Te podatke bomo pozneje uporabili v naši aplikaciji in jih poslali v API ali shranili v bazo podatkov.
 
-1. Ustvarimo dve identični pozivi, v katerih LLM-ju povemo, katere informacije nas zanimajo:
+1. Ustvarimo dva enaka poziva, v katerih navodimo LLM, katere informacije nas zanimajo:
 
    ```python
    prompt1 = f'''
@@ -110,33 +113,35 @@ Recimo, da želimo ustvariti bazo podatkov o študentih, da bi jim lahko predlag
    '''
    ```
 
-   Zgornji pozivi LLM-ju naročajo, naj izlušči informacije in vrne odgovor v formatu JSON.
+   Zgornji pozivi navodijo LLM, naj izlušči informacije in vrne odgovor v formatu JSON.
 
-1. Po nastavitvi pozivov in povezave z Azure OpenAI bomo zdaj poslali pozive LLM z uporabo `openai.ChatCompletion`. Poziv shranimo v spremenljivko `messages` in dodelimo vlogo `user`. To simulira sporočilo, ki ga uporabnik napiše klepetalniku.
+1. Po nastavitvi pozivov in povezave do Azure OpenAI bomo zdaj poslali pozive LLM z uporabo `client.responses.create`. Shranimo poziv v spremenljivko `input` in nastavimo vlogo na `user`. To je za simulacijo sporočila uporabnika, ki je poslano klepetalnemu robotu.
 
    ```python
-   # response from prompt one
-   openai_response1 = client.chat.completions.create(
+   # odgovor iz prvega poziva
+   openai_response1 = client.responses.create(
    model=deployment,
-   messages = [{'role': 'user', 'content': prompt1}]
+   input = [{'role': 'user', 'content': prompt1}],
+   store=False,
    )
-   openai_response1.choices[0].message.content
+   openai_response1.output_text
 
-   # response from prompt two
-   openai_response2 = client.chat.completions.create(
+   # odgovor iz drugega poziva
+   openai_response2 = client.responses.create(
    model=deployment,
-   messages = [{'role': 'user', 'content': prompt2}]
+   input = [{'role': 'user', 'content': prompt2}],
+   store=False,
    )
-   openai_response2.choices[0].message.content
+   openai_response2.output_text
    ```
 
-Zdaj lahko pošljemo obe zahtevi LLM in preučimo odgovor, ki ga prejmemo, tako da ga najdemo, na primer, kot `openai_response1['choices'][0]['message']['content']`.
+Zdaj lahko pošljemo obe zahtevi LLM in preučimo prejeti odgovor z iskanjem npr. `openai_response1.output_text`.
 
-1. Na koncu lahko odgovor pretvorimo v format JSON z uporabo `json.loads`:
+1. Nazadnje lahko odgovor pretvorimo v format JSON z uporabo `json.loads`:
 
    ```python
-   # Loading the response as a JSON object
-   json_response1 = json.loads(openai_response1.choices[0].message.content)
+   # Nalaganje odgovora kot JSON objekt
+   json_response1 = json.loads(openai_response1.output_text)
    json_response1
    ```
 
@@ -164,59 +169,60 @@ Zdaj lahko pošljemo obe zahtevi LLM in preučimo odgovor, ki ga prejmemo, tako 
    }
    ```
 
-   Čeprav so pozivi enaki in so opisi podobni, vidimo, da so vrednosti lastnosti `Grades` formatirane različno, saj včasih dobimo format `3.7` ali `3.7 GPA`.
+   Čeprav so pozivi enaki in so opisi podobni, vidimo, da so vrednosti lastnosti `Grades` formatirane različno, saj lahko včasih dobimo format `3.7` ali pa denimo `3.7 GPA`.
 
-   Ta rezultat je posledica dejstva, da LLM obdeluje nestrukturirane podatke v obliki napisanega poziva in prav tako vrne nestrukturirane podatke. Potrebujemo strukturiran format, da vemo, kaj pričakovati pri shranjevanju ali uporabi teh podatkov.
+   Ta rezultat je posledica tega, da LLM vzame nestrukturirane podatke v obliki napisanega poziva in vrne prav tako nestrukturirane podatke. Potrebujemo strukturiran format, da vemo, kaj pričakovati pri shranjevanju ali uporabi teh podatkov.
 
-Kako torej rešimo problem formatiranja? Z uporabo klicev funkcij lahko zagotovimo, da prejmemo strukturirane podatke. Pri uporabi klicev funkcij LLM dejansko ne kliče ali izvaja nobenih funkcij. Namesto tega ustvarimo strukturo, ki ji LLM sledi pri svojih odgovorih. Nato te strukturirane odgovore uporabimo za določitev, katero funkcijo bomo zagnali v naših aplikacijah.
+Kako torej rešiti težavo oblikovanja? Z uporabo klica funkcij lahko zagotovimo, da prejmemo nazaj strukturirane podatke. Pri uporabi klica funkcij LLM dejansko ne kliče ali izvaja nobenih funkcij. Namesto tega ustvarimo strukturo, ki jo LLM sledi za svoje odgovore. Nato te strukturirane odgovore uporabimo za določanje, katero funkcijo naj izvede naša aplikacija.
 
 ![potek funkcije](../../../translated_images/sl/Function-Flow.083875364af4f4bb.webp)
 
-Nato lahko vzamemo, kar funkcija vrne, in to pošljemo nazaj LLM. LLM bo nato odgovoril z naravnim jezikom, da odgovori na uporabnikovo poizvedbo.
+Nato lahko vzamemo, kar funkcija vrne, in to pošljemo nazaj LLM. LLM bo nato odgovoril v naravnem jeziku in odgovoril na uporabnikovo poizvedbo.
 
 ## Primeri uporabe klicev funkcij
 
 Obstaja veliko različnih primerov uporabe, kjer lahko klici funkcij izboljšajo vašo aplikacijo, na primer:
 
-- **Klicanje zunanjih orodij**. Klepetalniki so odlični za odgovarjanje na vprašanja uporabnikov. Z uporabo klicev funkcij lahko klepetalniki uporabijo sporočila uporabnikov za izvedbo določenih nalog. Na primer, študent lahko klepetalniku reče: "Pošlji e-pošto mojemu inštruktorju, da potrebujem več pomoči pri tej temi." To lahko sproži klic funkcije `send_email(to: string, body: string)`.
+- **Klicanje zunanjih orodij**. Klepetalni roboti so odlični pri zagotavljanju odgovorov na vprašanja uporabnikov. Z uporabo klica funkcij lahko klepetalni roboti uporabijo sporočila uporabnikov za izvedbo določenih nalog. Na primer, študent lahko vpraša klepetalnega robota, naj "Pošlje e-pošto mojemu inštruktorju in pove, da potrebujem več pomoči pri tem predmetu". To lahko sproži klic funkcije `send_email(to: string, body: string)`.
 
-- **Ustvarjanje API ali poizvedb v bazi podatkov**. Uporabniki lahko najdejo informacije z uporabo naravnega jezika, ki se pretvori v formatirano poizvedbo ali API zahtevo. Na primer, učitelj lahko vpraša: "Kateri študenti so zaključili zadnjo nalogo," kar lahko sproži funkcijo `get_completed(student_name: string, assignment: int, current_status: string)`.
+- **Ustvarjanje API ali poizvedb v bazi podatkov**. Uporabniki lahko najdejo informacije z uporabo naravnega jezika, ki se nato pretvori v formatirano poizvedbo ali API zahtevo. Primer tega je učitelj, ki vpraša "Kdo so študentje, ki so opravili zadnjo domačo nalogo", kar lahko kliče funkcijo `get_completed(student_name: string, assignment: int, current_status: string)`.
 
-- **Ustvarjanje strukturiranih podatkov**. Uporabniki lahko vzamejo blok besedila ali CSV in uporabijo LLM za izluščenje pomembnih informacij. Na primer, študent lahko pretvori članek iz Wikipedije o mirovnih sporazumih v AI kartice za učenje. To lahko stori z uporabo funkcije `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`.
+- **Ustvarjanje strukturiranih podatkov**. Uporabniki lahko vzamejo besedilni blok ali CSV in uporabijo LLM za izluščitev pomembnih informacij. Na primer, študent lahko pretvori Wikipedijin članek o mirovnih sporazumih v AI flash kartice. To lahko stori z uporabo funkcije z imenom `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`.
 
-## Ustvarjanje vašega prvega klica funkcije
+## Ustvarjanje prvega klica funkcije
 
 Postopek ustvarjanja klica funkcije vključuje 3 glavne korake:
 
-1. **Klicanje** API-ja za klepet s seznamom vaših funkcij in uporabniškim sporočilom.
-2. **Branje** odgovora modela za izvedbo dejanja, tj. izvedbo funkcije ali API klica.
-3. **Izvedba** še enega klica API-ju za klepet z odgovorom vaše funkcije, da uporabniku posredujete odgovor.
+1. **Klicanje** Responses API z seznamom vaših funkcij (orodij) in sporočilom uporabnika.
+2. **Branje** odgovora modela za izvedbo dejanja, npr. izvršitev funkcije ali API klica.
+3. **Izvedba** dodatnega klica na Responses API z odgovorom vaše funkcije, da uporabite informacije za ustvarjanje odgovora uporabniku.
 
 ![Potek LLM](../../../translated_images/sl/LLM-Flow.3285ed8caf4796d7.webp)
 
 ### Korak 1 - ustvarjanje sporočil
 
-Prvi korak je ustvariti uporabniško sporočilo. To lahko dinamično dodelite z vrednostjo vnosa besedila ali pa vrednost dodelite tukaj. Če prvič delate z API-jem za klepet, moramo definirati `role` in `content` sporočila.
+Prvi korak je ustvariti sporočilo uporabnika. To je mogoče dinamično dodeliti s prejemom vrednosti vnosnega polja ali pa tukaj določite vrednost. Če to počnete prvič z Responses API, moramo definirati `role` in `content` sporočila.
 
-Vloga `role` je lahko `system` (ustvarjanje pravil), `assistant` (model) ali `user` (končni uporabnik). Za klic funkcij bomo to nastavili kot `user` in dodali primer vprašanja.
+`role` je lahko `system` (določa pravila), `assistant` (model) ali `user` (končni uporabnik). Za klic funkcije bomo dodelili `user` in primer vprašanja.
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Z dodelitvijo različnih vlog je LLM-ju jasno, ali nekaj govori sistem ali uporabnik, kar pomaga pri gradnji zgodovine pogovora, na kateri lahko LLM temelji.
+Z dodeljevanjem različnih vlog LLM jasno sporočimo, ali nekaj govori sistem ali uporabnik, kar pomaga ustvariti zgodovino pogovora, na katero se lahko LLM sklicuje.
 
 ### Korak 2 - ustvarjanje funkcij
 
-Nato bomo definirali funkcijo in parametre te funkcije. Tukaj bomo uporabili samo eno funkcijo, imenovano `search_courses`, vendar lahko ustvarite več funkcij.
+Nato bomo definirali funkcijo in njene parametre. Tukaj bomo uporabili le eno funkcijo imenovano `search_courses`, lahko pa ustvarite več funkcij.
 
-> **Pomembno**: Funkcije so vključene v sistemsko sporočilo za LLM in bodo vključene v število razpoložljivih žetonov, ki jih imate na voljo.
+> **Pomembno** : Funkcije so vključene v sistemsko sporočilo za LLM in se štejejo v razpoložljive tokene.
 
-Spodaj ustvarimo funkcije kot niz elementov. Vsak element je funkcija in ima lastnosti `name`, `description` in `parameters`:
+Spodaj ustvarjamo funkcije kot niz elementov. Vsak element je orodje v ploskem Responses API formatu, z lastnostmi `type`, `name`, `description` in `parameters`:
 
 ```python
 functions = [
    {
+      "type":"function",
       "name":"search_courses",
       "description":"Retrieves courses from the search index based on the parameters provided",
       "parameters":{
@@ -243,75 +249,76 @@ functions = [
 ]
 ```
 
-Podrobneje opišimo vsako instanco funkcije spodaj:
+Podrobneje opišimo posamezne funkcije:
 
-- `name` - Ime funkcije, ki jo želimo poklicati.
-- `description` - Opis, kako funkcija deluje. Tukaj je pomembno biti specifičen in jasen.
-- `parameters` - Seznam vrednosti in format, ki ga želimo, da model ustvari v svojem odgovoru. Seznam parametrov je sestavljen iz elementov, kjer imajo elementi naslednje lastnosti:
-  1.  `type` - Tip podatkov, v katerem bodo shranjene lastnosti.
-  1.  `properties` - Seznam specifičnih vrednosti, ki jih bo model uporabil za svoj odgovor.
-      1. `name` - Ključ je ime lastnosti, ki jo bo model uporabil v svojem formatiranem odgovoru, na primer `product`.
-      1. `type` - Tip podatkov te lastnosti, na primer `string`.
+- `name` - Ime funkcije, ki jo želimo klicati.
+- `description` - Opis delovanja funkcije. Tu je pomembno biti specifičen in jasen.
+- `parameters` - Seznam vrednosti in formata, ki jih želi model vrniti v svojem odgovoru. Polje parametrov vsebuje elemente z naslednjimi lastnostmi:
+  1. `type` - Podatkovni tip lastnosti, ki jo bo shranjeno.
+  1. `properties` - Seznam specifičnih vrednosti, ki jih bo model uporabil v oblikovanem odgovoru.
+      1. `name` - Ključ je ime lastnosti, ki jo bo model uporabil v svojem formatiranem odgovoru, npr. `product`.
+      1. `type` - Podatkovni tip te lastnosti, npr. `string`.
       1. `description` - Opis specifične lastnosti.
 
-Obstaja tudi neobvezna lastnost `required` - zahtevana lastnost za dokončanje klica funkcije.
+Obstaja tudi neobvezna lastnost `required` - obvezna lastnost za dokončanje klica funkcije.
 
-### Korak 3 - Izvedba klica funkcije
+### Korak 3 - izvedba klica funkcije
 
-Po definiranju funkcije jo moramo zdaj vključiti v klic API-ja za klepet. To storimo z dodajanjem `functions` v zahtevo. V tem primeru `functions=functions`.
+Po definiranju funkcije jo moramo vključiti v klic na Responses API. To naredimo tako, da dodamo parameter `tools` zahtevku. V tem primeru `tools=functions`.
 
-Obstaja tudi možnost nastavitve `function_call` na `auto`. To pomeni, da bomo LLM-ju prepustili odločitev, katero funkcijo naj pokliče na podlagi uporabniškega sporočila, namesto da bi jo sami določili.
+Na voljo je tudi možnost nastavitve `tool_choice` na `auto`. To pomeni, da bomo dovolili LLM, da odloči, katero funkcijo mora poklicati na podlagi sporočila uporabnika, namesto da bi jo sami določili.
 
-Spodaj je nekaj kode, kjer kličemo `ChatCompletion.create`. Opazite, kako nastavimo `functions=functions` in `function_call="auto"`, s čimer LLM-ju omogočimo izbiro, kdaj naj pokliče ponujene funkcije:
+Spodaj je koda, kjer kliče `client.responses.create`, opazujte, kako nastavimo `tools=functions` in `tool_choice="auto"`, kar LLM omogoči, da se odloči, kdaj poklicati funkcije, ki jih nudimo:
 
 ```python
-response = client.chat.completions.create(model=deployment,
-                                        messages=messages,
-                                        functions=functions,
-                                        function_call="auto")
+response = client.responses.create(model=deployment,
+                                        input=messages,
+                                        tools=functions,
+                                        tool_choice="auto",
+                                        store=False)
 
-print(response.choices[0].message)
+print(response.output)
 ```
 
-Odgovor, ki ga zdaj prejmemo, izgleda takole:
+V povratnem odgovoru zdaj prejmete element `function_call` v `response.output`, ki izgleda takole:
 
 ```json
 {
-  "role": "assistant",
-  "function_call": {
-    "name": "search_courses",
-    "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
-  }
+  "type": "function_call",
+  "name": "search_courses",
+  "call_id": "call_abc123",
+  "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
 }
 ```
 
-Tukaj lahko vidimo, kako je bila funkcija `search_courses` poklicana in s katerimi argumenti, kot je navedeno v lastnosti `arguments` v JSON odgovoru.
+Tukaj vidimo, kako je bila funkcija `search_courses` klicana in s kakšnimi argumenti, kot je navedeno v lastnosti `arguments` v JSON odgovoru.
 
-Zaključek je, da je LLM lahko našel podatke, ki ustrezajo argumentom funkcije, saj jih je izluščil iz vrednosti, ki je bila podana parametru `messages` v klicu API-ja za klepet. Spodaj je opomnik vrednosti `messages`:
+Zaključek je, da je LLM lahko našel podatke, ki ustrezajo argumentom funkcije, saj jih je izvlekel iz vrednosti podane v parametru `input` v klicu Responses API. Spodaj je opomnik vrednosti `messages`:
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Kot lahko vidite, so bili `student`, `Azure` in `beginner` izluščeni iz `messages` in nastavljeni kot vhodni podatki za funkcijo. Uporaba funkcij na ta način je odličen način za izluščenje informacij iz poziva, hkrati pa zagotavlja strukturo LLM-ju in omogoča ponovno uporabo funkcionalnosti.
+Kot vidite, sta `student`, `Azure` in `beginner` bila izvlečena iz `messages` in uporabljena kot vhod za funkcijo. Uporaba funkcij na tak način je odličen način za izvleček informacij iz poziva, pa tudi za strukturiranje LLM in ponovno uporabno funkcionalnost.
 
-Naslednji korak je, kako to uporabiti v naši aplikaciji.
+Naslednji korak je, da vidimo, kako to uporabiti v naši aplikaciji.
 
 ## Integracija klicev funkcij v aplikacijo
 
-Ko smo preizkusili formatiran odgovor LLM, ga lahko zdaj integriramo v našo aplikacijo.
+Ko smo preizkusili oblikovan odgovor iz LLM, ga lahko integriramo v aplikacijo.
 
 ### Upravljanje poteka
 
-Za integracijo v našo aplikacijo sledimo naslednjim korakom:
+Za integracijo v aplikacijo sledimo naslednjim korakom:
 
-1. Najprej izvedimo klic storitvam OpenAI in shranimo sporočilo v spremenljivko `response_message`.
+1. Najprej izvedemo klic na OpenAI storitve in iz odziva `output` izvlečemo elemente klica funkcije.
 
    ```python
-   response_message = response.choices[0].message
+   response_items = response.output
+   tool_calls = [item for item in response_items if item.type == "function_call"]
    ```
 
-1. Zdaj bomo definirali funkcijo, ki bo klicala Microsoft Learn API za pridobitev seznama tečajev:
+1. Nato definiramo funkcijo, ki bo klicala Microsoft Learn API za pridobitev seznama tečajev:
 
    ```python
    import requests
@@ -333,67 +340,59 @@ Za integracijo v našo aplikacijo sledimo naslednjim korakom:
      return str(results)
    ```
 
-   Opazite, kako zdaj ustvarimo dejansko Python funkcijo, ki se ujema z imeni funkcij, predstavljenimi v spremenljivki `functions`. Prav tako izvajamo resnične zunanje API klice za pridobitev potrebnih podatkov. V tem primeru uporabljamo Microsoft Learn API za iskanje učnih modulov.
+   Opazujte, kako ustvarjamo dejansko Python funkcijo, ki je povezana z imeni funkcij v spremenljivki `functions`. Prav tako izvajamo zunanje API klice za pridobitev potrebnih podatkov. V tem primeru kličemo Microsoft Learn API za iskanje učnih modulov.
 
-Ok, ustvarili smo spremenljivke `functions` in ustrezno Python funkcijo, kako pa povemo LLM-ju, kako te dve povezati, da se naša Python funkcija pokliče?
+V redu, ustvarili smo spremenljivko `functions` in ustrezno Python funkcijo, kako pa povemo LLM, kako ju povežemo, da se pokliče naša Python funkcija?
 
-1. Da preverimo, ali moramo poklicati Python funkcijo, moramo pogledati v odgovor LLM in preveriti, ali je `function_call` del odgovora, ter poklicati določeno funkcijo. Tukaj je, kako lahko izvedete omenjeno preverjanje spodaj:
+1. Da vidimo, ali moramo klicati Python funkcijo, pregledamo odgovor LLM in preverimo, če je del odgovora `function_call`, ter kličemo označeno funkcijo. Tukaj je, kako to preverjanje izvedemo spodaj:
 
    ```python
-   # Check if the model wants to call a function
-   if response_message.function_call.name:
-    print("Recommended Function call:")
-    print(response_message.function_call.name)
-    print()
+   # Preveri, ali model želi poklicati funkcijo
+   if tool_calls:
+    for tool_call in tool_calls:
+     print("Recommended Function call:")
+     print(tool_call.name)
+     print()
 
-    # Call the function.
-    function_name = response_message.function_call.name
+     # Pokliči funkcijo.
+     function_name = tool_call.name
 
-    available_functions = {
-            "search_courses": search_courses,
-    }
-    function_to_call = available_functions[function_name]
+     available_functions = {
+             "search_courses": search_courses,
+     }
+     function_to_call = available_functions[function_name]
 
-    function_args = json.loads(response_message.function_call.arguments)
-    function_response = function_to_call(**function_args)
+     function_args = json.loads(tool_call.arguments)
+     function_response = function_to_call(**function_args)
 
-    print("Output of function call:")
-    print(function_response)
-    print(type(function_response))
+     print("Output of function call:")
+     print(function_response)
+     print(type(function_response))
 
-
-    # Add the assistant response and function response to the messages
-    messages.append( # adding assistant response to messages
-        {
-            "role": response_message.role,
-            "function_call": {
-                "name": function_name,
-                "arguments": response_message.function_call.arguments,
-            },
-            "content": None
-        }
-    )
-    messages.append( # adding function response to messages
-        {
-            "role": "function",
-            "name": function_name,
-            "content":function_response,
-        }
-    )
+     # Dodaj klic funkcije in njen rezultat nazaj v pogovor.
+     # Element function_call modela je treba dodati pred njegov izhod.
+     messages.append(tool_call)  # element function_call pomočnika
+     messages.append( # rezultat funkcije
+         {
+             "type": "function_call_output",
+             "call_id": tool_call.call_id,
+             "output": function_response,
+         }
+     )
    ```
 
-   Te tri vrstice zagotavljajo, da izluščimo ime funkcije, argumente in izvedemo klic:
+   Ti trije stavki zagotovijo, da izvlečemo ime funkcije, argumente in izvedemo klic:
 
    ```python
    function_to_call = available_functions[function_name]
 
-   function_args = json.loads(response_message.function_call.arguments)
+   function_args = json.loads(tool_call.arguments)
    function_response = function_to_call(**function_args)
    ```
 
-   Spodaj je izpis našega kode:
+   Spodaj je izhod pri zagonu naše kode:
 
-   **Izpis**
+   **Izhod**
 
    ```Recommended Function call:
    {
@@ -412,52 +411,60 @@ Ok, ustvarili smo spremenljivke `functions` in ustrezno Python funkcijo, kako pa
    <class 'str'>
    ```
 
-1. Zdaj bomo posodobili sporočilo `messages` in ga poslali LLM, da prejmemo odgovor v naravnem jeziku namesto API JSON formatiranega odgovora.
+1. Sedaj pošljemo posodobljeno sporočilo `messages` nazaj LLM, da dobimo naravnlazni odgovor namesto JSON formatiranega odgovora API.
 
    ```python
    print("Messages in next request:")
    print(messages)
    print()
 
-   second_response = client.chat.completions.create(
-      messages=messages,
+   second_response = client.responses.create(
+      input=messages,
       model=deployment,
-      function_call="auto",
-      functions=functions,
-      temperature=0
-         )  # get a new response from GPT where it can see the function response
+      tool_choice="auto",
+      tools=functions,
+      temperature=0,
+      store=False,
+         )  # pridobite nov odziv iz modela, kjer lahko vidi odziv funkcije
 
 
-   print(second_response.choices[0].message)
+   print(second_response.output_text)
    ```
 
-   **Izpis**
+   **Izhod**
 
-   ```python
-   {
-     "role": "assistant",
-     "content": "I found some good courses for beginner students to learn Azure:\n\n1. [Describe concepts of cryptography] (https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)\n2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)\n3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)\n4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)\n5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)\n\nYou can click on the links to access the courses."
-   }
+   ```text
+   I found some good courses for beginner students to learn Azure:
 
+   1. [Describe concepts of cryptography](https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)
+   2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)
+   3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)
+   4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)
+   5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)
+
+   You can click on the links to access the courses.
    ```
 
 ## Naloga
 
-Za nadaljevanje učenja o Azure OpenAI klicih funkcij lahko ustvarite:
+Za nadaljevanje učenja Azure OpenAI Function Calling lahko ustvarite:
 
-- Več parametrov funkcije, ki bi lahko pomagali učencem najti več tečajev.
-- Ustvarite še en klic funkcije, ki upošteva več informacij o učencu, na primer njegov materni jezik.
-- Ustvarite obravnavo napak, ko klic funkcije in/ali klic API-ja ne vrne nobenih ustreznih tečajev
+- Več parametrov funkcije, ki lahko pomagajo učečim najti več tečajev.
 
-Namig: Sledite strani [Learn API referenčna dokumentacija](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst), da vidite, kako in kje so ti podatki na voljo.
+- Ustvarite še en klic funkcije, ki od uporabnika zahteva več informacij, kot je njihov materni jezik
+- Ustvarite obdelavo napak, ko klic funkcije in/ali klic API-ja ne vrneta primernih tečajev
+
+Namig: Sledite strani [Learn API reference documentation](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst), da vidite, kako in kje so ti podatki na voljo.
 
 ## Odlično delo! Nadaljujte potovanje
 
-Po zaključku te lekcije si oglejte našo [Zbirko učenja o generativni umetni inteligenci](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), da še naprej nadgrajujete svoje znanje o generativni umetni inteligenci!
+Po končani tej lekciji si oglejte našo [zbirko za učenje generativne umetne inteligence](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), da nadaljujete z nadgrajevanjem svojega znanja generativne umetne inteligence!
 
-Pojdite na Lekcijo 12, kjer bomo pogledali, kako [oblikovati UX za aplikacije z umetno inteligenco](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Pojdite na Lekcijo 12, kjer si bomo ogledali, kako [načrtovati UX za AI aplikacije](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje AI [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku naj se šteje za avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne odgovarjamo za morebitna nesporazumevanja ali napačne razlage, ki izhajajo iz uporabe tega prevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Omejitev odgovornosti**:
+Ta dokument je bil preveden z uporabo AI prevajalske storitve [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za kritične informacije je priporočljiv strokovni človeški prevod. Ne odgovarjamo za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

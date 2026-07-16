@@ -1,38 +1,38 @@
 # Načrt izboljšav in nadgradenj
 
-Ta dokument podrobno opisuje priporočene nadgradnje in izboljšave kurikuluma Generativna umetna inteligenca za začetnike, na podlagi obsežnega pregleda kode in analize najboljših praks v industriji.
+Ta dokument povzema priporočene izboljšave in nadgradnje učnega načrta Generative AI for Beginners, temelječe na celovitem pregledu kode in analizi najboljših praks v industriji.
 
-## Povzetek
+## Povzetek za vodstvo
 
-Koda je bila analizirana glede varnosti, kakovosti kode in izobraževalne učinkovitosti. Ta dokument vsebuje priporočila za takojšnje popravke, kratkoročne izboljšave in prihodnje nadgradnje.
+Koda je bila analizirana glede varnosti, kakovosti kode in izobraževalne učinkovitosti. Ta dokument poda priporočila za takojšnje popravke, izboljšave na kratki rok in prihodnje nadgradnje.
 
 ---
 
-## 1. Izboljšave varnosti (Prioriteta: Kritično)
+## 1. Varnostne izboljšave (Prednost: Kritično)
 
-### 1.1 Tekoči popravki (Dokončano)
+### 1.1 Tekoči popravki (Zaključeno)
 
 | Težava | Vplivane datoteke | Status |
-|--------|-------------------|--------|
-| Vnaprej določena SECRET_KEY | `05-advanced-prompts/python/aoai-solution.py` | Popravljeno |
-| Manjkajoča validacija okolja | Več datotek JS/TS | Popravljeno |
+|-------|----------------|--------|
+| Trdo kodiran SECRET_KEY | `05-advanced-prompts/python/aoai-solution.py` | Popravljeno |
+| Manjkajoča validacija okolja | Več JS/TS datotek | Popravljeno |
 | Nevarni klici funkcij | `11-integrating-with-function-calling/js-githubmodels/app.js` | Popravljeno |
-| Puščanje datotečnih ročajev | `08-building-search-applications/scripts/` | Popravljeno |
-| Manjkajoči request timeouti | `09-building-image-applications/python/` | Popravljeno |
+| Izpusti ročajev datotek | `08-building-search-applications/scripts/` | Popravljeno |
+| Manjkajoči zahtevi za timeout | `09-building-image-applications/python/` | Popravljeno |
 
 ### 1.2 Priporočene dodatne varnostne funkcije
 
 1. **Primeri omejevanja hitrosti**
-   - Dodati primer kode, ki prikazuje, kako uvesti omejevanje hitrosti za API klice
-   - Prikazati vzorce eksponentnega vračanja nazaj (exponential backoff)
+   - Dodajte primer kode, ki prikazuje, kako uvesti omejevanje hitrosti za API klice
+   - Prikažite vzorce eksponentnega vračanja nazaj
 
 2. **Rotacija API ključev**
-   - Dodati dokumentacijo o najboljših praksah za rotacijo API ključev
-   - Vključiti primere uporabe Azure Key Vault ali podobnih storitev
+   - Dodajte dokumentacijo o najboljših praksah za rotacijo API ključev
+   - Vključite primere uporabe Azure Key Vault ali podobnih storitev
 
 3. **Integracija varnosti vsebine**
-   - Dodati primere uporabe Azure Content Safety API
-   - Prikazati vzorce moderacije vhodnih/izhodnih podatkov
+   - Dodajte primere uporabe Azure Content Safety API
+   - Prikažite vzorce moderiranja vhodnih/izhodnih podatkov
 
 ---
 
@@ -41,94 +41,99 @@ Koda je bila analizirana glede varnosti, kakovosti kode in izobraževalne učink
 ### 2.1 Dodane konfiguracijske datoteke
 
 | Datoteka | Namen |
-|----------|-------|
+|------|---------|
 | `.eslintrc.json` | Pravila za lintanje JavaScript/TypeScript |
 | `.prettierrc` | Standardi oblikovanja kode |
 | `pyproject.toml` | Konfiguracija orodij za Python (Black, Ruff, mypy) |
 
-### 2.2 Ustvarjene skupne pomožne funkcije
+### 2.2 Ustvarjene deljene pripomočke
 
-Nov modul `shared/python/` z:
-- `env_utils.py` - upravljanje z okoljskimi spremenljivkami
-- `input_validation.py` - validacija in čiščenje vhodnih podatkov
-- `api_utils.py` - varni ovoji za API zahteve
+Novi modul `shared/python/` z:
+- `env_utils.py` - Upravljanje okoljskih spremenljivk
+- `input_validation.py` - Validacija in sanacija vhodnih podatkov
+- `api_utils.py` - Varnostni ovoji za klice API
 
 ### 2.3 Priporočene izboljšave kode
 
-1. **Pokritost z oznakami tipov**
-   - Dodati oznake tipov v vse Python datoteke
-   - Omogočiti strog režim TypeScript v vseh TS projektih
+1. **Pokritost s tipi**
+   - Dodajte tipizirane napovedi v vse Python datoteke
+   - Omogočite strogi način TypeScript za vse TS projekte
 
 2. **Standardi dokumentacije**
-   - Dodati docstrings v vse Python funkcije
-   - Dodati JSDoc komentarje v vse JavaScript/TypeScript funkcije
+   - Dodajte docstring-e v vse Python funkcije
+   - Dodajte JSDoc komentarje v vse JavaScript/TypeScript funkcije
 
 3. **Testni okvir**
-   - Dodati konfiguracijo za pytest in primere testov
-   - Dodati konfiguracijo Jest za JavaScript/TypeScript
+   - Dodajte konfiguracijo pytest in primere testov _(izvedeno: pytest konfiguracija v `pyproject.toml`; primeri testov za deljene pripomočke v [`tests/`](../../../tests) se izvajajo v CI)_
+   - Dodajte konfiguracijo Jest za JavaScript/TypeScript
 
 ---
 
-## 3. Izobraževalne nadgradnje
+## 3. Izobraževalne izboljšave
 
 ### 3.1 Nove teme lekcij
 
 1. **Varnost v AI aplikacijah** (Predlagana lekcija 22)
-   - Napadi in zaščite pred vbrizgavanjem promptov (prompt injection)
+   - Napadi in obrambe pred vbrizgavanjem promptov
    - Upravljanje API ključev
-   - Moderacija vsebin
+   - Moderiranje vsebine
    - Omejevanje hitrosti in preprečevanje zlorab
 
-2. **Produktivna implementacija** (Predlagana lekcija 23)
+2. **Produkcijska uvedba** (Predlagana lekcija 23)
    - Kontejnerizacija z Dockerjem
-   - CI/CD cevovodi
+   - CI/CD pipeline-i
    - Nadzor in beleženje
    - Upravljanje stroškov
 
 3. **Napredne RAG tehnike** (Predlagana lekcija 24)
    - Hibridno iskanje (ključna beseda + semantično)
-   - Strategije ponovnega razvrščanja (re-ranking)
+   - Strategije ponovnega razvrščanja
    - Večmodalni RAG
-   - Merila ocenjevanja
+   - Merjenje učinkovitosti
 
 ### 3.2 Izboljšave obstoječih lekcij
 
 | Lekcija | Priporočena izboljšava |
-|---------|-----------------------|
-| 06 - Generiranje besedila | Dodati primere pretočnih odzivov (streaming) |
-| 07 - Klepetalne aplikacije | Dodati vzorce pomnilnika pogovora |
-| 08 - Iskalne aplikacije | Dodati primerjavo vektorskih baz podatkov |
-| 09 - Generiranje slik | Dodati primere urejanja/varijacij slik |
-| 11 - Klicanje funkcij | Dodati vzporedno klicanje funkcij |
-| 15 - RAG | Dodati primerjavo strategij razdeljevanja vsebine |
-| 17 - AI agenti | Dodati orkestracijo več agentov |
+|--------|------------------------|
+| 06 - Generiranje besedila | Dodajte primere pretočnih odzivov |
+| 07 - Chat aplikacije | Dodajte vzorce pogovorne memorije |
+| 08 - Iskalne aplikacije | Dodajte primerjavo vektorskih baz podatkov |
+| 09 - Generiranje slik | Dodajte primere urejanja/variacij slik |
+| 11 - Klic funkcij | Dodajte vzporedni klic funkcij |
+| 15 - RAG | Dodajte primerjavo strategije razdelitve |
+| 17 - AI agenti | Dodajte orkestracijo več agentov |
 
 ---
 
-## 4. Posodobitev API-jev
+## 4. Modernizacija API
 
-### 4.1 Zastarele API vzorce posodobiti
+### 4.1 Zastareli vzorci API (Migracija zaključena)
 
-| Stari vzorec | Novi vzorec | Vplivane datoteke |
-|--------------|------------|-------------------|
-| `openai.api_type = "azure"` | klient `AzureOpenAI()` | Več skript v `08-building-search-applications/` |
-| `openai.ChatCompletion.create()` | `client.chat.completions.create()` | Več zvezkov (notebookov) |
-| `df.append()` (pandas) | `pd.concat()` | RAG notebook |
+Vsi Python in TypeScript **chat** primeri so bili migrirani iz Chat Completions API na **Responses API** (`client.responses.create(...)` → `response.output_text`).
 
-### 4.2 Nove API funkcionalnosti za demonstracijo
+| Stari vzorec | Nov vzorec | Status |
+|-------------|-------------|--------|
+| `openai.api_type = "azure"` / `AzureOpenAI()` (chat) | `OpenAI(base_url="<endpoint>/openai/v1/")` (Responses API) | Zaključeno |
+| `openai.ChatCompletion.create()` / `client.chat.completions.create()` | `client.responses.create(input=...)` → `response.output_text` | Zaključeno |
+| `@azure/openai` `OpenAIClient.getChatCompletions()` (TypeScript) | `openai` paket `client.responses.create()` → `response.output_text` | Zaključeno |
+| `df.append()` (pandas) | `pd.concat()` | Zaključeno |
+
+> **Opomba:** Primeri Microsoft Foundry Models, ki uporabljajo `azure-ai-inference` / `@azure-rest/ai-inference` SDK (`client.complete()`), ostajajo na Model Inference API, ki ne podpira Responses API. `AzureOpenAI()` je namensko ohranjen tam, kjer je še veljaven (vdelave in generiranje slik).
+
+### 4.2 Nove funkcije API za demonstracijo
 
 1. **Strukturirani izhodi** (OpenAI)
    - JSON način
-   - Klicanje funkcij z natančnimi shemami
+   - Klic funkcij z natančnimi shemami
 
-2. **Zmožnosti vida**
-   - Analiza slik z GPT-4V
+2. **Vidne zmožnosti**
+   - Analiza slik z GPT-4o (vision)
    - Večmodalni prompti
 
-3. **API za asistente**
-   - Koder za kodo (code interpreter)
+3. **Orodja vgrajena v Responses API** (nadomešča zastareli Assistants API)
+   - Interpreter kode
    - Iskanje datotek
-   - Prilagojena orodja
+   - Iskanje po spletu in prilagojena orodja
 
 ---
 
@@ -136,7 +141,7 @@ Nov modul `shared/python/` z:
 
 ### 5.1 Izboljšave CI/CD
 
-Trenutni poteki dela preverjajo markdown validacijo. Priporočene dopolnitve:
+Implementirano v [`.github/workflows/code-quality.yml`](../../../.github/workflows/code-quality.yml): Python lintanje/formatiranje (Ruff + Black) je **prisilno** za vzdrževani modul `shared/` in se izvaja **svetovalno** za preostanek učnega načrta, poleg tega je svetovalni prehod ESLint za JavaScript/TypeScript. Ilustrativna izhodiščna točka je bila:
 
 ```yaml
 # .github/workflows/code-quality.yml
@@ -167,7 +172,9 @@ jobs:
       - run: npx eslint .
 ```
 
-### 5.2 Varnostno skeniranje
+### 5.2 Varnostno pregledovanje
+
+Implementirano v [`.github/workflows/security.yml`](../../../.github/workflows/security.yml): analiza CodeQL za Python in JavaScript/TypeScript (ob push-u, pull requestu in tedenskih urnikih) ter pregled odvisnosti pri pull requestih. Ilustrativna izhodiščna točka je bila:
 
 ```yaml
 # .github/workflows/security.yml
@@ -194,11 +201,11 @@ jobs:
 
 ---
 
-## 6. Izboljšave za razvijalce
+## 6. Izboljšave izkušnje razvijalcev
 
 ### 6.1 Izboljšave DevContainer
 
-Posodobitev `.devcontainer/devcontainer.json`:
+Implementirano v [`.devcontainer/devcontainer.json`](../../../.devcontainer/devcontainer.json) in [`.devcontainer/post-create.sh`](../../../.devcontainer/post-create.sh): container zdaj vključuje razširitve Pylance, Black, Ruff, ESLint, Prettier in Copilot, omogoča oblikovanje ob shranjevanju povezano s konfiguracijo Black/Prettier iz repozitorija ter namesti orodja za razvoj (`ruff`, `black`, `mypy`, `pytest`), da je [workflow za kakovost kode](../../../.github/workflows/code-quality.yml) mogoče reproducirati lokalno. Osnovna slika `mcr.microsoft.com/devcontainers/universal` že vsebuje Python in Node, zato dodatnih funkcij ni potrebno. Ilustrativna izhodiščna točka je bila:
 
 ```json
 {
@@ -232,11 +239,11 @@ Posodobitev `.devcontainer/devcontainer.json`:
 }
 ```
 
-### 6.2 Interaktivni poligon
+### 6.2 Interaktivno igrališče
 
-Razmisliti o dodajanju:
-- Jupyter zvezkov s prednaloženimi API ključi (prek okolja)
-- Demo predstavitev z Gradio/Streamlit za vizualne učence
+Razmislite o dodajanju:
+- Jupiter zvezkov z vnaprej izpolnjenimi API ključi (prek okolja)
+- Demo-ja Gradio/Streamlit za vizualne učence
 - Interaktivnih kvizov za ocenjevanje znanja
 
 ---
@@ -246,17 +253,17 @@ Razmisliti o dodajanju:
 ### 7.1 Trenutna pokritost jezikov
 
 | Tehnologija | Pokrite lekcije | Status |
-|-------------|-----------------|--------|
+|------------|-----------------|--------|
 | Python | Vse | Popolno |
 | TypeScript | 06-09, 11 | Delno |
 | JavaScript | 06-08, 11 | Delno |
 | .NET/C# | Nekatere | Delno |
 
-### 7.2 Priporočene dodatne podprti jeziki
+### 7.2 Priporočene dopolnitve
 
-1. **Go** - Naraščajoča podpora za AI/ML orodja
-2. **Rust** - Aplikacije z zahtevno zmogljivostjo
-3. **Java/Kotlin** - Podjetniške aplikacije
+1. **Go** - rast orodij za AI/ML
+2. **Rust** - aplikacije, kritične za zmogljivost
+3. **Java/Kotlin** - poslovne aplikacije
 
 ---
 
@@ -265,23 +272,23 @@ Razmisliti o dodajanju:
 ### 8.1 Optimizacije na nivoju kode
 
 1. **Vzorec Async/Await**
-   - Dodati asinh primere za obdelavo množic (batch processing)
-   - Prikazati vzorce vzporednih API klicev
+   - Dodajte asinhrone primere za obdelavo serij
+   - Pokažite vzporedne klice API
 
 2. **Strategije predpomnjenja**
-   - Dodati primere predpomnjenja vdelav (embedding caching)
-   - Prikazati vzorce predpomnjenja odzivov
+   - Dodajte primere predpomnjenja vdelav
+   - Prikažite vzorce predpomnjenja odgovorov
 
-3. **Optimizacija števila tokenov**
-   - Dodati primere uporabe tiktoken
-   - Prikazati tehnike stiskanja promptov
+3. **Optimizacija tokenov**
+   - Dodajte primere uporabe tiktoken
+   - Prikažite tehnike stiskanja promptov
 
 ### 8.2 Primeri optimizacije stroškov
 
-Dodati primere, ki prikazujejo:
-- Izbiro modela glede na kompleksnost naloge
-- Oblikovanje promptov za učinkovito porabo tokenov
-- Batch obdelavo za množične operacije
+Dodajte primere, ki prikazujejo:
+- Izbiro modela glede na zahtevnost naloge
+- Inženiring promptov za učinkovito rabo tokenov
+- Serijsko obdelavo za količinske operacije
 
 ---
 
@@ -289,63 +296,60 @@ Dodati primere, ki prikazujejo:
 
 ### 9.1 Trenutni status prevodov
 
-| Jezik | Status |
-|-------|--------|
-| Angleščina | Popolno |
-| Kitajščina (poenostavljena) | Popolno |
-| Japonščina | Popolno |
-| Korejščina | Popolno |
-| Španščina | Delno |
-| Portugalščina | Delno |
-| Turščina | Delno |
-| Poljščina | Delno |
+Vsi prevodi so **popolni** in avtomatsko ustvarjeni z [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst), ki ohranja več kot 50 jezikov učnega načrta skladno z izvirnikom v angleščini. Prevedena vsebina je shranjena pod `translations/`, lokalizirane slike pod `translated_images/`; celoten seznam razpoložljivih jezikov je objavljen na vrhu README v repozitoriju.
+
+| Vidik | Status |
+|--------|--------|
+| Pokritost prevodov | Popolno — več kot 50 jezikov, vse lekcije |
+| Metoda prevoda | Avtomatizirano prek [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst) |
+| Sinhronizacija z angleškim izvirnikom | Da — samodejno obnovljeno |
 
 ### 9.2 Izboljšave dostopnosti
 
-1. Dodati alt besedilo v vse slike
-2. Zagotoviti pravilno označevanje sintakse v primerih kode
-3. Dodati transkripte videov za vso video vsebino
-4. Zagotoviti kontrast barv po smernicah WCAG
+1. Dodajte alt besedilo v vse slike
+2. Zagotovite pravilno osvetlitev sintakse v primerih kode
+3. Dodajte prepis videov za vse video vsebine
+4. Zagotovite barvni kontrast po WCAG smernicah
 
 ---
 
-## 10. Prioriteta izvedbe
+## 10. Prednostna izvedba
 
-### Faza 1: Tekoče (1.-2. teden)
-- [x] Popraviti kritične varnostne težave
-- [x] Dodati konfiguracijo za kakovost kode
-- [x] Ustvariti skupne pomožne funkcije
-- [x] Dokumentirati varnostne smernice
+### Faza 1: Takojšnje (1-2 teden)
+- [x] Popravite kritične varnostne težave
+- [x] Dodajte konfiguracijo kakovosti kode
+- [x] Ustvarite deljene pripomočke
+- [x] Dokumentirajte varnostna navodila
 
-### Faza 2: Kratkoročno (3.-4. teden)
-- [ ] Posodobiti zastarele API vzorce
-- [ ] Dodati oznake tipov v vse Python datoteke
-- [ ] Dodati CI/CD poteke za kakovost kode
-- [ ] Ustvariti potek za varnostno skeniranje
+### Faza 2: Kratkoročno (3-4 teden)
+- [x] Posodobite zastarele vzorce API (Chat Completions → Responses API, Python + TypeScript)
+- [ ] Dodajte tipizirane napovedi v vse Python datoteke (izvedeno za vzdrževani modul `shared/`; primeri lekcij so ostali preprosti)
+- [x] Dodajte CI/CD workflow-e za kakovost kode
+- [x] Ustvarite workflow za varnostno pregledovanje
 
-### Faza 3: Srednjeročno (2.-3. mesec)
-- [ ] Dodati novo varnostno lekcijo
-- [ ] Dodati lekcijo o produkcijski implementaciji
-- [ ] Izboljšati DevContainer nastavitve
-- [ ] Dodati interaktivne demonstracije
+### Faza 3: Srednjeročno (2-3 mesec)
+- [ ] Dodajte novo lekcijo o varnosti
+- [ ] Dodajte lekcijo o produkcijski uvedbi
+- [x] Izboljšajte nastavitev DevContainer
+- [ ] Dodajte interaktivne demoje
 
-### Faza 4: Dolgoročno (4. mesec in naprej)
-- [ ] Dodati napredno RAG lekcijo
-- [ ] Razširiti pokritost jezikov
-- [ ] Dodati obsežen testni paket
-- [ ] Ustvariti program certificiranja
+### Faza 4: Dolgoročno (4+ mesec)
+- [ ] Dodajte napredno lekcijo o RAG
+- [ ] Razširite jezikovno pokritost
+- [ ] Dodajte obsežen testni paket
+- [ ] Ustvarite certifikacijski program
 
 ---
 
 ## Zaključek
 
-Ta načrt ponuja strukturiran pristop za izboljšanje kurikuluma Generativna umetna inteligenca za začetnike. Z reševanjem varnostnih vprašanj, modernizacijo API-jev in dodajanjem izobraževalnih vsebin bo tečaj bolje pripravil študente za razvoj AI aplikacij v resničnem svetu.
+Ta načrt predstavlja strukturiran pristop k izboljšanju učnega načrta Generative AI for Beginners. Z reševanjem varnostnih vprašanj, modernizacijo API-jev in dodajanjem izobraževalne vsebine bo tečaj bolje pripravil študente na razvoj AI aplikacij v resničnem svetu.
 
-Za vprašanja ali prispevke, prosimo, odprite težavo (issue) v GitHub repozitoriju.
+Za vprašanja ali prispevke odprite težavo v GitHub repozitoriju.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Omejitev odgovornosti**:
-Ta dokument je bil preveden z uporabo AI prevajalske storitve [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, upoštevajte, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v naročnem jeziku naj se šteje za avtoritativni vir. Za ključne informacije priporočamo strokovni človeški prevod. Nismo odgovorni za morebitna nesporazume ali napačne razlage, ki izhajajo iz uporabe tega prevoda.
+Ta dokument je bil preveden z uporabo AI prevajalske storitve [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za kritične informacije je priporočljiv strokovni človeški prevod. Ne odgovarjamo za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

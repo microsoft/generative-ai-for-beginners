@@ -1,317 +1,320 @@
 # AGENTS.md
 
-## סקירת הפרויקט
+## סקירה כללית של הפרויקט
 
-מאגר זה מכיל תוכנית לימודים מקיפה בת 21 שיעורים המלמדת את יסודות הבינה המלאכותית הגנרטיבית ופיתוח יישומים. הקורס מיועד למתחילים ומכסה הכל, החל ממושגים בסיסיים ועד לבניית יישומים מוכנים לייצור.
+מאגר זה מכיל תכנית לימודים מקיפה בעלת 21 שיעורים המלמדת יסודות של בינה מלאכותית יוצרת ופיתוח יישומים. הקורס מיועד למתחילים וכולל הכל, מרעיונות בסיסיים ועד לבניית יישומים מוכנים לייצור.
 
 **טכנולוגיות מרכזיות:**
 - Python 3.9+ עם ספריות: `openai`, `python-dotenv`, `tiktoken`, `azure-ai-inference`, `pandas`, `numpy`, `matplotlib`
-- TypeScript/JavaScript עם Node.js וספריות: `@azure/openai`, `@azure-rest/ai-inference`, `openai`
-- שירות Azure OpenAI, OpenAI API ודגמי GitHub
-- Jupyter Notebooks ללמידה אינטראקטיבית
-- Dev Containers לסביבת פיתוח עקבית
+- TypeScript/JavaScript עם Node.js וספריות: `openai` (Azure OpenAI דרך נקודת קצה v1 + Responses API), `@azure-rest/ai-inference` (Microsoft Foundry Models)
+- שירות Azure OpenAI, API של OpenAI, ומודלים של Microsoft Foundry (GitHub Models יסגר בסוף יולי 2026)
+- מחברות Jupyter ללמידה אינטראקטיבית
+- מכולות פיתוח לסביבת פיתוח עקבית
 
 **מבנה המאגר:**
-- 21 תיקיות שיעורים ממוספרות (00-21) המכילות קבצי README, דוגמאות קוד ומשימות
-- יישומים מרובים: Python, TypeScript ולעיתים דוגמאות .NET
-- תיקיית תרגומים עם גרסאות ב-40+ שפות
-- קונפיגורציה מרכזית באמצעות קובץ `.env` (השתמש ב-`.env.copy` כתבנית)
+- 21 תיקיות שיעורים ממוספרות (00-21) המכילות README, דוגמאות קוד, ומשימות
+- יישומים מרובים: דוגמאות ב-Python, TypeScript, ולעיתים גם דוגמאות ב-.NET
+- תיקיית תרגומים עם מעל 40 גרסאות שפה
+- קונפיגורציה מרכזית דרך קובץ `.env` (שימוש בתבנית `.env.copy`)
 
 ## פקודות התקנה
 
-### התקנה ראשונית של המאגר
+### התקנת המאגר הראשוני
 
 ```bash
-# Clone the repository
+# שכפל את המאגר
 git clone https://github.com/microsoft/generative-ai-for-beginners.git
 cd generative-ai-for-beginners
 
-# Copy environment template
+# העתק את תבנית הסביבה
 cp .env.copy .env
-# Edit .env with your API keys and endpoints
+# ערוך את .env עם מפתחות ה-API והנקודות הקצה שלך
 ```
 
-### התקנת סביבת Python
+### הגדרת סביבה ב-Python
 
 ```bash
-# Create virtual environment
+# ליצור סביבה וירטואלית
 python3 -m venv venv
 
-# Activate virtual environment
-# On macOS/Linux:
+# להפעיל את הסביבה הוירטואלית
+# במאק או לינוקס:
 source venv/bin/activate
-# On Windows:
+# בוינדוס:
 venv\Scripts\activate
 
-# Install dependencies
+# להתקין את התלויות
 pip install -r requirements.txt
 ```
 
-### התקנת Node.js/TypeScript
+### הגדרת Node.js/TypeScript
 
 ```bash
-# Install root-level dependencies (for documentation tooling)
+# התקן תלותיות ברמת השורש (לכלי תיעוד)
 npm install
 
-# For individual lesson TypeScript examples, navigate to the specific lesson:
+# עבור לדוגמאות TypeScript של שיעור בודד, נווט לשיעור הספציפי:
 cd 06-text-generation-apps/typescript/recipe-app
 npm install
 ```
 
-### התקנת Dev Container (מומלץ)
+### הגדרת מכולת פיתוח (מומלץ)
 
-המאגר כולל קונפיגורציה `.devcontainer` עבור GitHub Codespaces או VS Code Dev Containers:
+המאגר כולל קובץ קונפיגורציה `.devcontainer` לשימוש ב-GitHub Codespaces או VS Code עם תוספת Dev Containers:
 
-1. פתח את המאגר ב-GitHub Codespaces או VS Code עם הרחבת Dev Containers
-2. Dev Container יתקין באופן אוטומטי:
-   - תלות Python מתוך `requirements.txt`
-   - יריץ סקריפט לאחר יצירה (`.devcontainer/post-create.sh`)
-   - יגדיר את Jupyter kernel
+1. פתח את המאגר ב-GitHub Codespaces או ב-VS Code עם הרחבת Dev Containers
+2. מכולת הפיתוח תבצע אוטומטית:
+   - התקנת תלותיות Python מתוך `requirements.txt`
+   - הרצת סקריפט לאחר יצירה (`.devcontainer/post-create.sh`)
+   - הקמת kerner ל-Jupyter
 
-## זרימת עבודה בפיתוח
+## תהליך הפיתוח
 
 ### משתני סביבה
 
-כל השיעורים הדורשים גישה ל-API משתמשים במשתני סביבה המוגדרים ב-`.env`:
+כל השיעורים הדורשים גישה ל-API משתמשים במשתני סביבה המוגדרים בקובץ `.env`:
 
 - `OPENAI_API_KEY` - עבור OpenAI API
-- `AZURE_OPENAI_API_KEY` - עבור שירות Azure OpenAI
-- `AZURE_OPENAI_ENDPOINT` - כתובת URL של נקודת הקצה של Azure OpenAI
+- `AZURE_OPENAI_API_KEY` - עבור Azure OpenAI ב-Microsoft Foundry (שירות Azure OpenAI הוא כעת חלק מ-Microsoft Foundry: https://ai.azure.com)
+- `AZURE_OPENAI_ENDPOINT` - URL של נקודת הקצה של Azure OpenAI (נקודת קצה של Foundry)
 - `AZURE_OPENAI_DEPLOYMENT` - שם פריסת מודל השלמת שיחה
-- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - שם פריסת מודל הטמעה
-- `AZURE_OPENAI_API_VERSION` - גרסת API (ברירת מחדל: `2024-02-01`)
-- `HUGGING_FACE_API_KEY` - עבור דגמי Hugging Face
-- `GITHUB_TOKEN` - עבור דגמי GitHub
+- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - שם פריסת מודל ההטמעה
+- `AZURE_OPENAI_API_VERSION` - גרסת ה-API (ברירת מחדל: `2024-10-21`)
+- `HUGGING_FACE_API_KEY` - עבור מודלים של Hugging Face
+- `AZURE_INFERENCE_ENDPOINT` - נקודת הקצה של מודלים ב-Microsoft Foundry (קטלוג מודלים מרובת ספקים)
+- `AZURE_INFERENCE_CREDENTIAL` - מפתח API של Microsoft Foundry Models (מחליף את `GITHUB_TOKEN` שייצא)
 
-### הרצת דוגמאות Python
+### הפעלת דוגמאות Python
 
 ```bash
-# Navigate to lesson directory
+# נווט לתיקיית השיעור
 cd 06-text-generation-apps/python
 
-# Run a Python script
+# הרץ סקריפט פייתון
 python aoai-app.py
 ```
 
-### הרצת דוגמאות TypeScript
+### הפעלת דוגמאות TypeScript
 
 ```bash
-# Navigate to TypeScript app directory
+# נווט לספריית האפליקציה של TypeScript
 cd 06-text-generation-apps/typescript/recipe-app
 
-# Build the TypeScript code
+# בנה את קוד ה-TypeScript
 npm run build
 
-# Run the application
+# הרץ את האפליקציה
 npm start
 ```
 
-### הרצת Jupyter Notebooks
+### הפעלת מחברות Jupyter
 
 ```bash
-# Start Jupyter in the repository root
+# התחלת Jupyter בשורש המאגר
 jupyter notebook
 
-# Or use VS Code with Jupyter extension
+# או להשתמש ב-VS Code עם הרחבת Jupyter
 ```
 
 ### עבודה עם סוגי שיעורים שונים
 
-- **שיעורי "Learn"**: מתמקדים בתיעוד README.md ובמושגים
-- **שיעורי "Build"**: כוללים דוגמאות קוד עובדות ב-Python וב-TypeScript
-- לכל שיעור יש README.md עם תיאוריה, סקירות קוד וקישורים לתוכן וידאו
+- **שיעורי "למד"**: התמקדות בתיעוד README.md ובמושגים
+- **שיעורי "בנה"**: כוללים דוגמאות קוד עובדות ב-Python ו-TypeScript
+- בכל שיעור יש README.md עם תיאוריה, הסברים של הקוד, וקישורים לתוכן וידאו
 
-## הנחיות לסגנון קוד
+## הנחיות לסגנון הקוד
 
 ### Python
 
 - השתמש ב-`python-dotenv` לניהול משתני סביבה
-- ייבא את ספריית `openai` לאינטראקציות API
-- השתמש ב-`pylint` לבדיקת קוד (חלק מהדוגמאות כוללות `# pylint: disable=all` לפשטות)
-- עקוב אחר מוסכמות השמות של PEP 8
+- ייבא את ספריית `openai` לאינטראקציות עם ה-API
+- השתמש ב-`pylint` ללינטינג (בחלק מהדוגמאות מופיע `# pylint: disable=all` להקלות)
+- עקוב אחרי קונבנציות שמות של PEP 8
 - אחסן אישורי API בקובץ `.env`, לעולם לא בקוד
 
 ### TypeScript
 
-- השתמש בחבילת `dotenv` עבור משתני סביבה
+- השתמש בחבילת `dotenv` עבור משתני הסביבה
 - קונפיגורציית TypeScript ב-`tsconfig.json` לכל אפליקציה
-- השתמש ב-`@azure/openai` או `@azure-rest/ai-inference` עבור שירותי Azure
-- השתמש ב-`nodemon` לפיתוח עם טעינה אוטומטית
-- בנה לפני הרצה: `npm run build` ואז `npm start`
+- השתמש בחבילת `openai` עבור Azure OpenAI (הפנה את הקליינט לנקודת הקצה `/openai/v1/` וקרא ל-`client.responses.create`); השתמש ב-`@azure-rest/ai-inference` עבור Microsoft Foundry Models
+- השתמש ב-`nodemon` לפיתוח עם טעינה אוטומטית מחדש
+- רוץ בניה לפני הפעלה: `npm run build` ואז `npm start`
 
-### מוסכמות כלליות
+### קונבנציות כלליות
 
-- שמור על דוגמאות קוד פשוטות וחינוכיות
-- כלול הערות המסבירות מושגים מרכזיים
-- קוד של כל שיעור צריך להיות עצמאי וניתן להרצה
-- השתמש בשמות עקביים: `aoai-` עבור Azure OpenAI, `oai-` עבור OpenAI API, `githubmodels-` עבור דגמי GitHub
+- שמור דוגמאות קוד פשוטות וחינוכיות
+- הוסף הערות המסבירות מושגים מרכזיים
+- הקוד של כל שיעור אמור להיות עצמאי והרצתו אמורה להיות אפשרית
+- השתמש בשמות עקביים: קידומת `aoai-` עבור Azure OpenAI, `oai-` עבור OpenAI API, `githubmodels-` עבור Microsoft Foundry Models (קידומת ישנה שנשמרה מתקופת GitHub Models)
 
 ## הנחיות לתיעוד
 
 ### סגנון Markdown
 
-- כל כתובות ה-URL חייבות להיות עטופות בפורמט `[text](../../url)` ללא רווחים נוספים
-- קישורים יחסיים חייבים להתחיל ב-`./` או `../`
-- כל הקישורים לדומיינים של Microsoft חייבים לכלול מזהה מעקב: `?WT.mc_id=academic-105485-koreyst`
-- אין להשתמש בלוקאלים ספציפיים למדינה בכתובות URL (להימנע מ-`/en-us/`)
-- תמונות מאוחסנות בתיקיית `./images` עם שמות תיאוריים
-- השתמש בתווים באנגלית, מספרים ומקפים בשמות קבצים
+- כל כתובות ה-URL צריכות להיות בתוך פורמט `[text](../../url)` ללא רווחים מיותרים
+- קישורים יחסיים צריכים להתחיל ב-`./` או `../`
+- כל הקישורים לדומיינים של מיקרוסופט חייבים לכלול מזהה מעקב: `?WT.mc_id=academic-105485-koreyst`
+- אין להשתמש במקומות ספציפיים למדינה בכתובות URL (הימנע מ-`/en-us/`)
+- תמונות נשמרות בתיקיית `./images` עם שמות תיאוריים
+- השתמש בתווים באנגלית, מספרים ומקפים בשמות הקבצים
 
 ### תמיכה בתרגום
 
-- המאגר תומך ב-40+ שפות באמצעות GitHub Actions אוטומטי
-- תרגומים מאוחסנים בתיקיית `translations/`
+- המאגר תומך ב-40+ שפות באמצעות GitHub Actions אוטומטיים
+- תרגומים נשמרים בתיקיית `translations/`
 - אין להגיש תרגומים חלקיים
-- תרגומים מכונה אינם מתקבלים
-- תמונות מתורגמות מאוחסנות בתיקיית `translated_images/`
+- תרגום ממוחשב אינו מתקבל
+- תמונות מתורגמות נשמרות בתיקיית `translated_images/`
 
 ## בדיקות ואימות
 
 ### בדיקות לפני הגשה
 
-מאגר זה משתמש ב-GitHub Actions לאימות. לפני הגשת PRs:
+מאגר זה משתמש ב-GitHub Actions לאימות. לפני הגשת PR:
 
 1. **בדוק קישורי Markdown**:
    ```bash
-   # The validate-markdown.yml workflow checks:
-   # - Broken relative paths
-   # - Missing tracking IDs on paths
-   # - Missing tracking IDs on URLs
-   # - URLs with country locale
-   # - Broken external URLs
+   # זרימת העבודה validate-markdown.yml בודקת:
+   # - נתיבים יחסיים שבורים
+   # - מזהי מעקב חסרים בנתיבים
+   # - מזהי מעקב חסרים בכתובות URL
+   # - כתובות URL עם מיקום מדינה
+   # - כתובות URL חיצוניות שבורות
    ```
 
 2. **בדיקות ידניות**:
-   - בדוק דוגמאות Python: הפעל venv והרץ סקריפטים
+   - בדוק דוגמאות Python: הפעל venv והריץ סקריפטים
    - בדוק דוגמאות TypeScript: `npm install`, `npm run build`, `npm start`
-   - ודא שמשתני הסביבה מוגדרים כראוי
-   - בדוק שמפתחות API עובדים עם דוגמאות הקוד
+   - ודא שמשתני הסביבה מוגדרים נכונה
+   - בדוק שמפתחות API פועלים עם דוגמאות הקוד
 
 3. **דוגמאות קוד**:
    - ודא שכל הקוד רץ ללא שגיאות
-   - בדוק עם Azure OpenAI וגם OpenAI API כאשר רלוונטי
-   - ודא שהדוגמאות עובדות עם דגמי GitHub כאשר נתמך
+   - בדוק עם Azure OpenAI ו-OpenAI API כאשר רלוונטי
+   - ודא שדוגמאות עובדות עם Microsoft Foundry Models במקומות שמתמכים
 
 ### אין בדיקות אוטומטיות
 
-זהו מאגר חינוכי המתמקד במדריכים ודוגמאות. אין בדיקות יחידה או בדיקות אינטגרציה להרצה. האימות מתבצע בעיקר:
-- בדיקות ידניות של דוגמאות קוד
+זהו מאגר חינוכי שמתרכז במדריכים ודוגמאות. אין בדיקות יחידה או בדיקות אינטגרציה להפעלה. האימות נעשה בעיקר על ידי:
+- בדיקות ידניות של דוגמאות הקוד
 - GitHub Actions לאימות Markdown
-- סקירת תוכן חינוכי על ידי הקהילה
+- ביקורת קהילתית על התוכן החינוכי
 
-## הנחיות להגשת Pull Request
+## הנחיות להעלאת בקשות משיכה
 
-### לפני הגשה
+### לפני ההגשה
 
-1. בדוק שינויים בקוד גם ב-Python וגם ב-TypeScript כאשר רלוונטי
-2. הרץ אימות Markdown (מופעל אוטומטית ב-PR)
-3. ודא שמזהי מעקב קיימים בכל כתובות ה-URL של Microsoft
+1. בדוק שינויים בקוד גם ב-Python וגם ב-TypeScript כאשר אפשרי
+2. הרץ אימות Markdown (מופעל אוטומטית על PR)
+3. ודא שמזהי מעקב קיימים בכל כתובות ה-Microsoft
 4. בדוק שקישורים יחסיים תקינים
-5. ודא שהתמונות מתייחסות כראוי
+5. ודא שהתמונות מופנות כראוי
 
 ### פורמט כותרת PR
 
-- השתמש בכותרות תיאוריות: `[Lesson 06] Fix Python example typo` או `Update README for lesson 08`
+- השתמש בכותרות מתארות: `[Lesson 06] תיקון שגיאת הקלדה בדוגמת Python` או `עדכן README לשיעור 08`
 - התייחס למספרי בעיות כאשר רלוונטי: `Fixes #123`
 
 ### תיאור PR
 
 - הסבר מה שונה ולמה
-- קישור לבעיות קשורות
-- עבור שינויים בקוד, ציין אילו דוגמאות נבדקו
-- עבור PRs של תרגום, כלול את כל הקבצים לתרגום מלא
+- הוסף קישורים לבעיות קשורות
+- עבור שינויים בקוד, פרט אילו דוגמאות נבדקו
+- עבור PR תרגום, כללו את כל הקבצים לתרגום מלא
 
 ### דרישות לתרומה
 
 - חתום על Microsoft CLA (אוטומטי ב-PR הראשון)
 - בצע Fork למאגר לחשבונך לפני ביצוע שינויים
-- PR אחד לכל שינוי לוגי (אל תשלב תיקונים לא קשורים)
-- שמור על PRs ממוקדים וקטנים כאשר אפשרי
+- בקשה אחת לכל שינוי לוגי (לא לשלב תיקונים לא קשורים)
+- שמור את ה-PR ממוקד וקטן כשאפשרי
 
-## זרימות עבודה נפוצות
+## תהליכים נפוצים
 
 ### הוספת דוגמת קוד חדשה
 
-1. נווט לתיקיית השיעור המתאימה
-2. צור דוגמה בתיקיית `python/` או `typescript/`
-3. עקוב אחר מוסכמת השמות: `{provider}-{example-name}.{py|ts|js}`
+1. נווט לתיקיית השיעור הרלוונטית
+2. צור דוגמה בתיקיית `python/` או `typescript/` המשנית
+3. עקוב אחרי שיטת השמות: `{provider}-{example-name}.{py|ts|js}`
 4. בדוק עם אישורי API אמיתיים
-5. תעד כל משתני סביבה חדשים ב-README של השיעור
+5. תעד כל משתנה סביבה חדש ב-README של השיעור
 
-### עדכון תיעוד
+### עדכון התיעוד
 
-1. ערוך את README.md בתיקיית השיעור
-2. עקוב אחר הנחיות Markdown (מזהי מעקב, קישורים יחסיים)
-3. עדכון תרגומים מתבצע על ידי GitHub Actions (אל תערוך ידנית)
+1. ערוך README.md בתיקיית השיעור
+2. עקוב אחרי הנחיות Markdown (מזהי מעקב, קישורים יחסיים)
+3. עדכון התרגומים מנוהל על ידי GitHub Actions (לא לערוך ידנית)
 4. בדוק שכל הקישורים תקינים
 
-### עבודה עם Dev Containers
+### עבודה עם מכולות פיתוח
 
 1. המאגר כולל `.devcontainer/devcontainer.json`
-2. סקריפט לאחר יצירה מתקין תלות Python באופן אוטומטי
-3. הרחבות עבור Python ו-Jupyter מוגדרות מראש
+2. סקריפט לאחר יצירה מתקין אוטומטית תלותיות Python
+3. הרחבות ל-Python ו-Jupyter מוגדרות מראש
 4. הסביבה מבוססת על `mcr.microsoft.com/devcontainers/universal:2.11.2`
 
 ## פריסה ופרסום
 
-זהו מאגר לימודי - אין תהליך פריסה. התוכנית נצרכת על ידי:
+זהו מאגר למידה - אין תהליך פריסה. תכנית הלימודים נגישה באמצעות:
 
 1. **מאגר GitHub**: גישה ישירה לקוד ולתיעוד
-2. **GitHub Codespaces**: סביבת פיתוח מיידית עם הגדרות מראש
-3. **Microsoft Learn**: תוכן עשוי להיות מסונכרן לפלטפורמת הלמידה הרשמית
-4. **docsify**: אתר תיעוד שנבנה מ-Markdown (ראה `docsifytopdf.js` ו-`package.json`)
+2. **GitHub Codespaces**: סביבת פיתוח מיידית עם הגדרות מוכנות מראש
+3. **Microsoft Learn**: התוכן עשוי להיות משודר לפלטפורמת הלמידה הרשמית
+4. **docsify**: אתר תיעוד הנבנה מ-Markdown (ראה `docsifytopdf.js` ו-`package.json`)
 
 ### בניית אתר תיעוד
 
 ```bash
-# Generate PDF from documentation (if needed)
+# ליצור PDF מהתיעוד (אם נדרש)
 npm run convert
 ```
 
 ## פתרון בעיות
 
-### בעיות נפוצות
+### תקלות נפוצות
 
-**שגיאות ייבוא Python**:
-- ודא שסביבת העבודה הווירטואלית מופעלת
+**שגיאות ייבוא ב-Python**:
+- ודא שסביבת הפיתוח הווירטואלית מופעלת
 - הרץ `pip install -r requirements.txt`
 - בדוק שגרסת Python היא 3.9+
 
-**שגיאות בנייה TypeScript**:
+**שגיאות בניית TypeScript**:
 - הרץ `npm install` בתיקיית האפליקציה הספציפית
-- בדוק שגרסת Node.js תואמת
-- נקה `node_modules` והתקן מחדש אם נדרש
+- בדוק שתוכנת Node.js תואמת
+- נקה את תיקיית `node_modules` והתקן מחדש במידת הצורך
 
 **שגיאות אימות API**:
-- ודא שקובץ `.env` קיים ויש בו ערכים נכונים
-- בדוק שמפתחות API תקפים ולא פגי תוקף
-- ודא שכתובות URL של נקודות הקצה נכונות לאזור שלך
+- ודא שקובץ `.env` קיים ושיש בו ערכים נכונים
+- בדוק שמפתחות ה-API תקפים ולא פגו תוקף
+- ודא ש-URLs של נקודות הקצה נכונים לאזור שלך
 
 **משתני סביבה חסרים**:
-- העתק את `.env.copy` ל-`.env`
-- מלא את כל הערכים הנדרשים עבור השיעור שאתה עובד עליו
+- העתק `.env.copy` ל-`.env`
+- מלא את כל הערכים הדרושים עבור השיעור שבו אתה עובד
 - הפעל מחדש את האפליקציה לאחר עדכון `.env`
 
 ## משאבים נוספים
 
 - [מדריך התקנת הקורס](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
 - [הנחיות לתרומה](./CONTRIBUTING.md)
-- [קוד התנהגות](./CODE_OF_CONDUCT.md)
+- [קוד ההתנהגות](./CODE_OF_CONDUCT.md)
 - [מדיניות אבטחה](./SECURITY.md)
-- [Discord של Azure AI](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
+- [שרת דיסקורד של Azure AI](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 - [אוסף דוגמאות קוד מתקדמות](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
 
 ## הערות ספציפיות לפרויקט
 
-- זהו **מאגר חינוכי** המתמקד בלמידה, לא בקוד ייצור
-- דוגמאות הן פשוטות בכוונה ומתמקדות בהוראת מושגים
+- זהו **מאגר חינוכי** המתמקד בלמידה, לא בקוד לשימוש ייצור
+- הדוגמאות פשוטות במכוון וממוקדות בלימוד מושגים
 - איכות הקוד מאוזנת עם בהירות חינוכית
-- כל שיעור הוא עצמאי וניתן להשלמה בנפרד
-- המאגר תומך במספר ספקי API: Azure OpenAI, OpenAI ודגמי GitHub
-- התוכן הוא רב-לשוני עם זרימות עבודה אוטומטיות לתרגום
-- קהילה פעילה ב-Discord לשאלות ותמיכה
+- כל שיעור עצמאי וניתן להשלים אותו בנפרד
+- המאגר תומך במספר ספקי API: Azure OpenAI, OpenAI, Microsoft Foundry Models, וספקים לא מקוונים כגון Foundry Local ו-Ollama
+- התוכן רב-לשוני עם תהליכי תרגום אוטומטיים
+- קהילה פעילה בדיסקורד לשאלות ותמיכה
 
 ---
 
-**כתב ויתור**:  
-מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עשויים להכיל שגיאות או אי דיוקים. המסמך המקורי בשפתו המקורית צריך להיחשב כמקור סמכותי. עבור מידע קריטי, מומלץ להשתמש בתרגום מקצועי על ידי אדם. איננו נושאים באחריות לאי הבנות או לפרשנויות שגויות הנובעות משימוש בתרגום זה.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**כתב ויתור**:
+מסמך זה תורגם באמצעות שירות תרגום אוטומטי [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עלולים להכיל שגיאות או אי-דיוקים. יש להחשיב את המסמך המקורי בשפתו הטבעית כמקור הסמכות. למידע קריטי מומלץ להשתמש בתרגום מקצועי על ידי מתרגם אדם. אנו לא אחראים לכל אי-הבנה או פירוש שגוי הנובע מהשימוש בתרגום זה.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

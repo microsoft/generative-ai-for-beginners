@@ -2,17 +2,17 @@
 
 [![Merancang UX untuk Aplikasi AI](../../../translated_images/id/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
-> _(Klik gambar di atas untuk menonton video pelajaran ini)_
+> _(Klik gambar di atas untuk melihat video pelajaran ini)_
 
-Pengalaman pengguna adalah aspek yang sangat penting dalam membangun aplikasi. Pengguna harus dapat menggunakan aplikasi Anda dengan cara yang efisien untuk menyelesaikan tugas. Efisiensi adalah satu hal, tetapi Anda juga perlu merancang aplikasi agar dapat digunakan oleh semua orang, sehingga menjadi _aksesibel_. Bab ini akan berfokus pada area ini agar Anda dapat merancang aplikasi yang dapat dan ingin digunakan oleh banyak orang.
+Pengalaman pengguna adalah aspek yang sangat penting dalam membangun aplikasi. Pengguna perlu dapat menggunakan aplikasi Anda secara efektif untuk melakukan tugas. Efisiensi adalah satu hal tetapi Anda juga perlu merancang aplikasi agar dapat digunakan oleh semua orang, agar _dapat diakses_. Bab ini akan berfokus pada area ini sehingga Anda diharapkan dapat merancang aplikasi yang dapat dan ingin digunakan oleh orang.
 
 ## Pendahuluan
 
-Pengalaman pengguna adalah cara seorang pengguna berinteraksi dengan dan menggunakan produk atau layanan tertentu, baik itu sistem, alat, atau desain. Saat mengembangkan aplikasi AI, pengembang tidak hanya fokus pada memastikan pengalaman pengguna yang efektif tetapi juga etis. Dalam pelajaran ini, kita akan membahas cara membangun aplikasi Kecerdasan Buatan (AI) yang memenuhi kebutuhan pengguna.
+Pengalaman pengguna adalah bagaimana pengguna berinteraksi dengan dan menggunakan produk atau layanan tertentu baik itu sistem, alat, atau desain. Saat mengembangkan aplikasi AI, pengembang tidak hanya fokus memastikan pengalaman pengguna efektif tetapi juga etis. Dalam pelajaran ini, kami membahas cara membangun aplikasi Kecerdasan Buatan (AI) yang memenuhi kebutuhan pengguna.
 
-Pelajaran ini akan mencakup area berikut:
+Pelajaran ini akan membahas area berikut:
 
-- Pengantar Pengalaman Pengguna dan Memahami Kebutuhan Pengguna
+- Pendahuluan tentang Pengalaman Pengguna dan Memahami Kebutuhan Pengguna
 - Merancang Aplikasi AI untuk Kepercayaan dan Transparansi
 - Merancang Aplikasi AI untuk Kolaborasi dan Umpan Balik
 
@@ -25,101 +25,103 @@ Setelah mengikuti pelajaran ini, Anda akan dapat:
 
 ### Prasyarat
 
-Luangkan waktu untuk membaca lebih lanjut tentang [pengalaman pengguna dan pemikiran desain.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
+Luangkan waktu dan baca lebih lanjut tentang [pengalaman pengguna dan design thinking.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
 
-## Pengantar Pengalaman Pengguna dan Memahami Kebutuhan Pengguna
+## Pendahuluan tentang Pengalaman Pengguna dan Memahami Kebutuhan Pengguna
 
-Dalam startup pendidikan fiktif kita, ada dua pengguna utama, yaitu guru dan siswa. Masing-masing pengguna memiliki kebutuhan yang unik. Desain yang berpusat pada pengguna memprioritaskan pengguna, memastikan produk relevan dan bermanfaat bagi mereka yang dituju.
+Dalam startup pendidikan fiksi kami, kami memiliki dua pengguna utama, guru dan siswa. Masing-masing dari dua pengguna tersebut memiliki kebutuhan unik. Desain yang berpusat pada pengguna memprioritaskan pengguna dengan memastikan produk relevan dan bermanfaat bagi mereka yang ditujukan.
 
-Aplikasi harus **berguna, dapat diandalkan, aksesibel, dan menyenangkan** untuk memberikan pengalaman pengguna yang baik.
+Aplikasi harus **berguna, andal, dapat diakses, dan menyenangkan** untuk memberikan pengalaman pengguna yang baik.
 
 ### Kegunaan
 
-Menjadi berguna berarti aplikasi memiliki fungsi yang sesuai dengan tujuan yang dimaksudkan, seperti mengotomatisasi proses penilaian atau membuat kartu flash untuk revisi. Aplikasi yang mengotomatisasi proses penilaian harus dapat memberikan skor secara akurat dan efisien berdasarkan kriteria yang telah ditentukan. Demikian pula, aplikasi yang membuat kartu flash revisi harus dapat menghasilkan pertanyaan yang relevan dan beragam berdasarkan datanya.
+Berguna berarti aplikasi memiliki fungsi yang sesuai dengan tujuan yang dimaksud, seperti mengotomatiskan proses penilaian atau menghasilkan kartu flash untuk revisi. Aplikasi yang mengotomatiskan proses penilaian harus dapat memberikan skor secara akurat dan efisien pada pekerjaan siswa berdasarkan kriteria yang telah ditentukan. Demikian juga, aplikasi yang menghasilkan kartu flash untuk revisi harus dapat membuat pertanyaan yang relevan dan beragam berdasarkan data yang dimilikinya.
 
 ### Keandalan
 
-Menjadi dapat diandalkan berarti aplikasi dapat menjalankan tugasnya secara konsisten dan tanpa kesalahan. Namun, AI seperti halnya manusia tidak sempurna dan mungkin rentan terhadap kesalahan. Aplikasi mungkin menghadapi kesalahan atau situasi tak terduga yang memerlukan intervensi atau koreksi manusia. Bagaimana Anda menangani kesalahan? Di bagian terakhir pelajaran ini, kita akan membahas bagaimana sistem dan aplikasi AI dirancang untuk kolaborasi dan umpan balik.
+Andal berarti aplikasi dapat menjalankan tugasnya secara konsisten dan tanpa kesalahan. Namun, AI seperti halnya manusia tidak sempurna dan mungkin rentan terhadap kesalahan. Aplikasi mungkin mengalami kesalahan atau situasi tak terduga yang memerlukan intervensi atau koreksi manusia. Bagaimana Anda menangani kesalahan? Pada bagian terakhir dari pelajaran ini, kami akan membahas bagaimana sistem dan aplikasi AI dirancang untuk kolaborasi dan umpan balik.
 
 ### Aksesibilitas
 
-Menjadi aksesibel berarti memperluas pengalaman pengguna kepada pengguna dengan berbagai kemampuan, termasuk mereka yang memiliki disabilitas, memastikan tidak ada yang tertinggal. Dengan mengikuti pedoman dan prinsip aksesibilitas, solusi AI menjadi lebih inklusif, dapat digunakan, dan bermanfaat bagi semua pengguna.
+Dapat diakses berarti memperluas pengalaman pengguna ke pengguna dengan berbagai kemampuan, termasuk mereka yang berkebutuhan khusus, memastikan tidak ada yang tertinggal. Dengan mengikuti pedoman dan prinsip aksesibilitas, solusi AI menjadi lebih inklusif, dapat digunakan, dan bermanfaat untuk semua pengguna.
 
 ### Menyenangkan
 
-Menjadi menyenangkan berarti aplikasi mudah digunakan dan memberikan pengalaman yang menarik. Pengalaman pengguna yang menarik dapat memberikan dampak positif pada pengguna, mendorong mereka untuk kembali menggunakan aplikasi dan meningkatkan pendapatan bisnis.
+Menyenangkan berarti aplikasi menyenangkan untuk digunakan. Pengalaman pengguna yang menarik dapat memberikan dampak positif pada pengguna yang mendorong mereka kembali ke aplikasi dan meningkatkan pendapatan bisnis.
 
 ![gambar yang menggambarkan pertimbangan UX dalam AI](../../../translated_images/id/uxinai.d5b4ed690f5cefff.webp)
 
-Tidak setiap tantangan dapat diselesaikan dengan AI. AI hadir untuk meningkatkan pengalaman pengguna, baik itu mengotomatisasi tugas manual atau mempersonalisasi pengalaman pengguna.
+Tidak semua tantangan dapat diselesaikan dengan AI. AI hadir untuk meningkatkan pengalaman pengguna Anda, baik dengan mengotomatiskan tugas manual, atau mempersonalisasi pengalaman pengguna.
 
 ## Merancang Aplikasi AI untuk Kepercayaan dan Transparansi
 
-Membangun kepercayaan sangat penting saat merancang aplikasi AI. Kepercayaan memastikan pengguna yakin bahwa aplikasi akan menyelesaikan pekerjaan, memberikan hasil secara konsisten, dan hasilnya sesuai dengan kebutuhan pengguna. Risiko dalam area ini adalah ketidakpercayaan dan kepercayaan berlebihan. Ketidakpercayaan terjadi ketika pengguna memiliki sedikit atau tidak ada kepercayaan pada sistem AI, yang menyebabkan pengguna menolak aplikasi Anda. Kepercayaan berlebihan terjadi ketika pengguna melebih-lebihkan kemampuan sistem AI, yang menyebabkan pengguna terlalu percaya pada sistem AI. Misalnya, sistem penilaian otomatis dalam kasus kepercayaan berlebihan mungkin membuat guru tidak memeriksa beberapa pekerjaan siswa untuk memastikan sistem penilaian bekerja dengan baik. Hal ini dapat mengakibatkan nilai yang tidak adil atau tidak akurat bagi siswa, atau peluang untuk umpan balik dan perbaikan yang terlewatkan.
+Membangun kepercayaan sangat penting saat merancang aplikasi AI. Kepercayaan memastikan pengguna yakin bahwa aplikasi akan menyelesaikan pekerjaan, memberikan hasil secara konsisten dan hasil tersebut adalah apa yang dibutuhkan pengguna. Risiko di area ini adalah ketidakpercayaan dan kepercayaan berlebihan. Ketidakpercayaan terjadi ketika pengguna memiliki sedikit atau tidak ada kepercayaan pada sistem AI, ini menyebabkan pengguna menolak aplikasi Anda. Kepercayaan berlebihan terjadi saat pengguna melebih-lebihkan kemampuan sistem AI, yang menyebabkan pengguna terlalu percaya pada sistem AI. Misalnya, sistem penilaian otomatis dalam kasus kepercayaan berlebihan mungkin menyebabkan guru tidak memeriksa kembali beberapa tugas untuk memastikan sistem penilaian bekerja dengan baik. Ini dapat menghasilkan nilai yang tidak adil atau tidak akurat bagi siswa, atau kehilangan kesempatan untuk umpan balik dan perbaikan.
 
-Dua cara untuk memastikan bahwa kepercayaan menjadi pusat desain adalah keterjelasan dan kontrol.
+Dua cara untuk memastikan kepercayaan ditempatkan tepat di pusat desain adalah keterjelasan dan kontrol.
 
 ### Keterjelasan
 
-Ketika AI membantu menginformasikan keputusan seperti memberikan pengetahuan kepada generasi mendatang, sangat penting bagi guru dan orang tua untuk memahami bagaimana keputusan AI dibuat. Inilah yang disebut keterjelasan - memahami bagaimana aplikasi AI membuat keputusan. Merancang untuk keterjelasan mencakup penambahan detail yang menyoroti bagaimana AI mencapai hasil. Audiens harus menyadari bahwa hasil tersebut dihasilkan oleh AI dan bukan manusia. Misalnya, daripada mengatakan "Mulai mengobrol dengan tutor Anda sekarang" katakan "Gunakan tutor AI yang beradaptasi dengan kebutuhan Anda dan membantu Anda belajar sesuai kecepatan Anda."
+Saat AI membantu memberi informasi keputusan seperti memberikan pengetahuan kepada generasi masa depan, penting bagi guru dan orang tua untuk memahami bagaimana keputusan AI dibuat. Inilah keterjelasan - memahami bagaimana aplikasi AI membuat keputusan. Merancang untuk keterjelasan meliputi menambahkan detail yang menyoroti bagaimana AI sampai pada keluaran. Audiens harus sadar bahwa keluaran dihasilkan oleh AI dan bukan manusia. Misalnya, daripada mengatakan "Mulailah mengobrol dengan tutor Anda sekarang" katakan "Gunakan tutor AI yang menyesuaikan dengan kebutuhan Anda dan membantu Anda belajar sesuai kecepatan Anda."
 
-![halaman awal aplikasi dengan ilustrasi yang jelas tentang keterjelasan dalam aplikasi AI](../../../translated_images/id/explanability-in-ai.134426a96b498fbf.webp)
+![halaman awal aplikasi dengan ilustrasi jelas keterjelasan di aplikasi AI](../../../translated_images/id/explanability-in-ai.134426a96b498fbf.webp)
 
-Contoh lainnya adalah bagaimana AI menggunakan data pengguna dan data pribadi. Misalnya, seorang pengguna dengan persona siswa mungkin memiliki batasan berdasarkan persona mereka. AI mungkin tidak dapat memberikan jawaban langsung tetapi dapat membantu membimbing pengguna untuk berpikir bagaimana mereka dapat menyelesaikan masalah.
+Contoh lain adalah bagaimana AI menggunakan data pengguna dan pribadi. Misalnya, seorang pengguna dengan persona siswa mungkin memiliki batasan berdasarkan persona mereka. AI mungkin tidak dapat mengungkapkan jawaban atas pertanyaan tetapi dapat membantu membimbing pengguna untuk berpikir bagaimana mereka bisa menyelesaikan masalah.
 
-![AI merespons pertanyaan berdasarkan persona](../../../translated_images/id/solving-questions.b7dea1604de0cbd2.webp)
+![AI menjawab pertanyaan berdasarkan persona](../../../translated_images/id/solving-questions.b7dea1604de0cbd2.webp)
 
-Bagian penting terakhir dari keterjelasan adalah penyederhanaan penjelasan. Siswa dan guru mungkin bukan ahli AI, oleh karena itu penjelasan tentang apa yang dapat atau tidak dapat dilakukan oleh aplikasi harus disederhanakan dan mudah dipahami.
+Bagian penting terakhir dari keterjelasan adalah penyederhanaan penjelasan. Siswa dan guru mungkin bukan ahli AI, oleh karena itu penjelasan tentang apa yang dapat atau tidak dapat dilakukan aplikasi harus disederhanakan dan mudah dipahami.
 
-![penjelasan yang disederhanakan tentang kemampuan AI](../../../translated_images/id/simplified-explanations.4679508a406c3621.webp)
+![penjelasan sederhana tentang kemampuan AI](../../../translated_images/id/simplified-explanations.4679508a406c3621.webp)
 
 ### Kontrol
 
-AI generatif menciptakan kolaborasi antara AI dan pengguna, di mana misalnya pengguna dapat memodifikasi prompt untuk mendapatkan hasil yang berbeda. Selain itu, setelah hasil dihasilkan, pengguna harus dapat memodifikasi hasil tersebut sehingga mereka merasa memiliki kendali. Misalnya, saat menggunakan Bing, Anda dapat menyesuaikan prompt Anda berdasarkan format, nada, dan panjang. Selain itu, Anda dapat menambahkan perubahan pada hasil Anda dan memodifikasi hasil tersebut seperti yang ditunjukkan di bawah ini:
+Generative AI menciptakan kolaborasi antara AI dan pengguna, di mana misalnya pengguna dapat memodifikasi prompt untuk hasil yang berbeda. Selain itu, setelah keluaran dihasilkan, pengguna harus dapat memodifikasi hasil tersebut memberi mereka rasa kontrol. Misalnya, saat menggunakan Microsoft Copilot (sebelumnya Bing Chat), Anda dapat menyesuaikan prompt berdasarkan format, nada, dan panjang. Selain itu, Anda dapat menambahkan perubahan pada keluaran Anda dan memodifikasi keluaran seperti yang ditunjukkan di bawah ini:
 
-![hasil pencarian Bing dengan opsi untuk memodifikasi prompt dan hasil](../../../translated_images/id/bing1.293ae8527dbe2789.webp)
+![Hasil pencarian Bing dengan opsi untuk memodifikasi prompt dan keluaran](../../../translated_images/id/bing1.293ae8527dbe2789.webp)
 
-Fitur lain di Bing yang memungkinkan pengguna memiliki kendali atas aplikasi adalah kemampuan untuk memilih masuk dan keluar dari data yang digunakan AI. Untuk aplikasi sekolah, seorang siswa mungkin ingin menggunakan catatan mereka serta sumber daya guru sebagai bahan revisi.
+Fitur lain di Microsoft Copilot yang memungkinkan pengguna mengontrol aplikasi adalah kemampuan untuk opt in dan opt out dari data yang digunakan AI. Untuk aplikasi sekolah, seorang siswa mungkin ingin menggunakan catatan mereka serta sumber daya guru sebagai bahan revisi.
 
-![hasil pencarian Bing dengan opsi untuk memodifikasi prompt dan hasil](../../../translated_images/id/bing2.309f4845528a88c2.webp)
+![Hasil pencarian Bing dengan opsi untuk memodifikasi prompt dan keluaran](../../../translated_images/id/bing2.309f4845528a88c2.webp)
 
-> Saat merancang aplikasi AI, penting untuk memastikan pengguna tidak terlalu percaya sehingga menetapkan ekspektasi yang tidak realistis terhadap kemampuannya. Salah satu cara untuk melakukan ini adalah dengan menciptakan friksi antara prompt dan hasil. Mengingatkan pengguna bahwa ini adalah AI dan bukan manusia.
+> Saat merancang aplikasi AI, niat yang jelas adalah kunci dalam memastikan pengguna tidak terlalu percaya dengan menetapkan ekspektasi yang tidak realistis terhadap kemampuannya. Salah satu caranya adalah dengan menciptakan hambatan antara prompt dan hasil. Mengingatkan pengguna, bahwa ini AI dan bukan sesama manusia.
 
 ## Merancang Aplikasi AI untuk Kolaborasi dan Umpan Balik
 
-Seperti yang telah disebutkan sebelumnya, AI generatif menciptakan kolaborasi antara pengguna dan AI. Sebagian besar interaksi melibatkan pengguna yang memasukkan prompt dan AI menghasilkan hasil. Bagaimana jika hasilnya salah? Bagaimana aplikasi menangani kesalahan jika terjadi? Apakah AI menyalahkan pengguna atau meluangkan waktu untuk menjelaskan kesalahan?
+Seperti yang telah disebutkan sebelumnya, generative AI menciptakan kolaborasi antara pengguna dan AI. Sebagian besar interaksi adalah pengguna memasukkan prompt dan AI menghasilkan keluaran. Bagaimana jika hasilnya salah? Bagaimana aplikasi menangani kesalahan jika terjadi? Apakah AI menyalahkan pengguna atau meluangkan waktu untuk menjelaskan kesalahan?
 
-Aplikasi AI harus dirancang untuk menerima dan memberikan umpan balik. Hal ini tidak hanya membantu sistem AI untuk berkembang tetapi juga membangun kepercayaan dengan pengguna. Sebuah loop umpan balik harus dimasukkan dalam desain, contohnya bisa berupa tombol jempol ke atas atau ke bawah pada hasil.
+Aplikasi AI harus dibangun agar dapat menerima dan memberikan umpan balik. Ini tidak hanya membantu sistem AI menjadi lebih baik tetapi juga membangun kepercayaan dengan pengguna. Siklus umpan balik harus dimasukkan dalam desain, contohnya dapat berupa jempol ke atas atau ke bawah pada keluaran.
 
-Cara lain untuk menangani ini adalah dengan secara jelas mengkomunikasikan kemampuan dan keterbatasan sistem. Ketika pengguna membuat kesalahan dengan meminta sesuatu di luar kemampuan AI, harus ada cara untuk menangani hal ini, seperti yang ditunjukkan di bawah ini.
+Cara lain untuk menangani ini adalah dengan mengkomunikasikan secara jelas kemampuan dan keterbatasan sistem. Ketika pengguna melakukan kesalahan meminta sesuatu yang berada di luar kemampuan AI, harus ada cara untuk menangani ini, seperti yang ditunjukkan di bawah.
 
-![Memberikan umpan balik dan menangani kesalahan](../../../translated_images/id/feedback-loops.7955c134429a9466.webp)
+![Memberi umpan balik dan menangani kesalahan](../../../translated_images/id/feedback-loops.7955c134429a9466.webp)
 
-Kesalahan sistem adalah hal yang umum pada aplikasi di mana pengguna mungkin membutuhkan bantuan dengan informasi di luar cakupan AI atau aplikasi mungkin memiliki batasan pada berapa banyak pertanyaan/subjek yang dapat dihasilkan ringkasannya oleh pengguna. Misalnya, aplikasi AI yang dilatih dengan data pada subjek terbatas seperti Sejarah dan Matematika mungkin tidak dapat menangani pertanyaan tentang Geografi. Untuk mengatasi ini, sistem AI dapat memberikan respons seperti: "Maaf, produk kami telah dilatih dengan data dalam subjek berikut....., saya tidak dapat menjawab pertanyaan yang Anda ajukan."
+Kesalahan sistem umum terjadi pada aplikasi di mana pengguna mungkin membutuhkan bantuan dengan informasi di luar cakupan AI atau aplikasi mungkin memiliki batas berapa banyak pertanyaan/mata pelajaran yang dapat dibuatkan ringkasannya oleh pengguna. Misalnya, aplikasi AI yang dilatih dengan data pada mata pelajaran terbatas seperti Sejarah dan Matematika mungkin tidak dapat menangani pertanyaan tentang Geografi. Untuk mengatasi ini, sistem AI dapat memberikan respons seperti: "Maaf, produk kami telah dilatih dengan data dalam mata pelajaran berikut....., saya tidak dapat merespon pertanyaan yang Anda ajukan."
 
-Aplikasi AI tidak sempurna, oleh karena itu, mereka pasti akan membuat kesalahan. Saat merancang aplikasi Anda, Anda harus memastikan untuk menciptakan ruang untuk umpan balik dari pengguna dan penanganan kesalahan dengan cara yang sederhana dan mudah dipahami.
+Aplikasi AI tidak sempurna, oleh karena itu, mereka pasti akan membuat kesalahan. Saat merancang aplikasi Anda, pastikan Anda menciptakan ruang untuk umpan balik dari pengguna dan penanganan kesalahan dengan cara yang sederhana dan mudah dijelaskan.
 
 ## Tugas
 
-Ambil aplikasi AI apa pun yang telah Anda buat sejauh ini, pertimbangkan untuk menerapkan langkah-langkah berikut dalam aplikasi Anda:
+Ambil aplikasi AI apa pun yang telah Anda buat sejauh ini, pertimbangkan untuk menerapkan langkah-langkah berikut di aplikasi Anda:
 
-- **Menyenangkan:** Pertimbangkan bagaimana Anda dapat membuat aplikasi Anda lebih menyenangkan. Apakah Anda menambahkan penjelasan di setiap tempat? Apakah Anda mendorong pengguna untuk mengeksplorasi? Bagaimana Anda menyusun pesan kesalahan Anda?
+- **Menyenangkan:** Pertimbangkan bagaimana Anda dapat membuat aplikasi Anda lebih menyenangkan. Apakah Anda menambahkan penjelasan di mana-mana? Apakah Anda mendorong pengguna untuk menjelajah? Bagaimana Anda merumuskan pesan kesalahan Anda?
 
-- **Kegunaan:** Jika Anda membangun aplikasi web, pastikan aplikasi Anda dapat dinavigasi baik dengan mouse maupun keyboard.
+- **Kegunaan:** Membangun aplikasi web. Pastikan aplikasi Anda dapat dinavigasi dengan mouse maupun keyboard.
 
-- **Kepercayaan dan transparansi:** Jangan sepenuhnya percaya pada AI dan hasilnya, pertimbangkan bagaimana Anda akan menambahkan manusia ke dalam proses untuk memverifikasi hasil. Juga, pertimbangkan dan terapkan cara lain untuk mencapai kepercayaan dan transparansi.
+- **Kepercayaan dan transparansi:** Jangan sepenuhnya percaya pada AI dan hasilnya, pertimbangkan bagaimana Anda akan menambahkan manusia dalam proses untuk memverifikasi hasil. Juga, pertimbangkan dan terapkan cara lain untuk mencapai kepercayaan dan transparansi.
 
-- **Kontrol:** Berikan pengguna kendali atas data yang mereka berikan kepada aplikasi. Terapkan cara agar pengguna dapat memilih untuk ikut serta atau keluar dari pengumpulan data dalam aplikasi AI.
+- **Kontrol:** Berikan pengguna kontrol atas data yang mereka berikan ke aplikasi. Terapkan cara bagi pengguna untuk opt-in dan opt-out dari pengumpulan data dalam aplikasi AI.
 
-<!-- ## [Kuis setelah pelajaran](../../../12-designing-ux-for-ai-applications/quiz-url) -->
+<!-- ## [Post-lecture quiz](../../../12-designing-ux-for-ai-applications/quiz-url) -->
 
 ## Lanjutkan Pembelajaran Anda!
 
-Setelah menyelesaikan pelajaran ini, lihat [koleksi pembelajaran Generative AI kami](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) untuk terus meningkatkan pengetahuan Anda tentang Generative AI!
+Setelah menyelesaikan pelajaran ini, lihat koleksi [Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk terus meningkatkan pengetahuan Generative AI Anda!
 
-Lanjutkan ke Pelajaran 13, di mana kita akan membahas tentang [mengamankan aplikasi AI](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Lanjutkan ke Pelajaran 13, di mana kita akan membahas bagaimana cara [mengamankan aplikasi AI](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan penerjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk memberikan hasil yang akurat, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang penting, disarankan menggunakan jasa penerjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau interpretasi yang salah yang timbul dari penggunaan terjemahan ini.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Penafian**:
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk mencapai akurasi, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang sah. Untuk informasi penting, disarankan menggunakan terjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

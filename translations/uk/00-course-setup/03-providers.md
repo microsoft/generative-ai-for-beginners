@@ -1,122 +1,155 @@
-# Вибір і налаштування провайдера LLM 🔑
+# Вибір і конфігурація постачальника LLM 🔑
 
-Завдання **можуть** також бути налаштовані для роботи з одним або кількома розгортаннями великих мовних моделей (LLM) через підтримуваного провайдера послуг, такого як OpenAI, Azure або Hugging Face. Вони надають _хостингову кінцеву точку_ (API), до якої ми можемо програмно звертатися з правильними обліковими даними (API-ключ або токен). У цьому курсі ми розглядаємо таких провайдерів:
+Завдання **можуть** також бути налаштовані для роботи з одним або декількома розгортаннями великих мовних моделей (LLM) через підтримуваного постачальника сервісів, такого як OpenAI, Azure або Hugging Face. Вони надають _хостингований кінцевий пункт_ (API), до якого ми можемо звертатися програмно з необхідними обліковими даними (ключем API або токеном). У цьому курсі ми розглядаємо таких постачальників:
 
- - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) з різноманітними моделями, включно з основною серією GPT.
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) для моделей OpenAI з акцентом на готовність для підприємств
- - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) для відкритих моделей і сервера висновків
+ - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) з різноманітними моделями, включаючи основну серію GPT.
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) для моделей OpenAI з орієнтацією на підприємницькі потреби.
+ - [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) для єдиного кінцевого пункту та ключа API для доступу до сотень моделей від OpenAI, Meta, Mistral, Cohere, Microsoft та інших (замінює GitHub Models, які будуть припинені в кінці липня 2026 року).
+ - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) для відкритих моделей та сервера висновку.
+ - [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) або [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst), якщо ви хочете запускати моделі повністю офлайн на власному пристрої без підписки на хмару.
 
-**Для цих вправ вам потрібно використовувати власні облікові записи**. Завдання є необов’язковими, тому ви можете вибрати налаштувати одного, усіх або жодного з провайдерів залежно від ваших інтересів. Деякі поради щодо реєстрації:
+**Ви маєте використовувати власні облікові записи для цих вправ**. Вправи є необов’язковими, тож ви можете обрати налаштувати одного, усіх або жодного з постачальників за власним розсудом. Нижче наведено деякі рекомендації щодо реєстрації:
 
-| Реєстрація | Вартість | API-ключ | Пісочниця | Коментарі |
+| Реєстрація | Вартість | Ключ API | Платформа | Коментарі |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Ціни](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [На основі проєкту](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Без коду, веб](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Доступно кілька моделей |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Ціни](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [Швидкий старт SDK](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Швидкий старт Studio](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Потрібно заздалегідь подати заявку на доступ](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Ціни](https://huggingface.co/pricing) | [Токени доступу](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat має обмежену кількість моделей](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Ціни](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [За проєктом](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Без коду, Веб](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Доступно кілька моделей |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Ціни](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [Швидкий старт SDK](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Студія швидкого старту](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Потрібна попередня реєстрація](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) | [Ціни](https://azure.microsoft.com/pricing/details/ai-foundry/?WT.mc_id=academic-105485-koreyst) | [Сторінка огляду проєкту](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) | [Foundry Playground](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) | Доступний безкоштовний рівень; один кінцевий пункт + ключ для багатьох постачальників моделей |
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Ціни](https://huggingface.co/pricing) | [Токени доступу](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat має обмежені моделі](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) | Безкоштовно (запускається на вашому пристрої) | Не потрібен | [Локальний CLI/SDK](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) | Повністю офлайн, сумісний з OpenAI кінцевий пункт |
 | | | | | |
 
-Дотримуйтесь інструкцій нижче, щоб _налаштувати_ цей репозиторій для роботи з різними провайдерами. Завдання, які вимагають конкретного провайдера, міститимуть один із цих тегів у назві файлу:
+Дотримуйтесь інструкцій нижче, щоб _налаштувати_ цей репозиторій для роботи з різними постачальниками. Завдання, що потребують певного постачальника, матимуть один із цих тегів у назві файлу:
 
-- `aoai` - вимагає кінцеву точку Azure OpenAI, ключ
-- `oai` - вимагає кінцеву точку OpenAI, ключ
-- `hf` - вимагає токен Hugging Face
+- `aoai` - потребує кінцевий пункт і ключ Azure OpenAI
+- `oai` - потребує кінцевий пункт і ключ OpenAI
+- `hf` - потребує токен Hugging Face
+- `githubmodels` - потребує кінцевий пункт і ключ Microsoft Foundry Models (GitHub Models буде припинено в кінці липня 2026)
 
-Ви можете налаштувати одного, жодного або всіх провайдерів. Пов’язані завдання просто видадуть помилку при відсутності облікових даних.
+Ви можете налаштувати одного, жодного або всіх постачальників. Завдання, які пов’язані з відсутніми обліковими даними, просто видадуть помилку.
 
-## Створення файлу `.env`
+## Створіть файл `.env`
 
-Припускаємо, що ви вже прочитали наведені вище рекомендації, зареєструвалися у відповідного провайдера та отримали необхідні облікові дані для автентифікації (API_KEY або токен). У випадку Azure OpenAI припускаємо, що у вас також є дійсне розгортання служби Azure OpenAI (кінцева точка) з принаймні однією моделлю GPT, розгорнутою для чат-завдань.
+Ми припускаємо, що ви вже ознайомилися з вище наведеними вказівками, зареєструвалися у відповідного постачальника і отримали потрібні облікові дані для автентифікації (API_KEY або токен). У випадку з Azure OpenAI, ми припускаємо, що у вас також є дійсне розгортання служби Azure OpenAI (кінцевий пункт) з наявною принаймні однією моделлю GPT для чат-завершення.
 
-Наступний крок — налаштувати ваші **локальні змінні середовища** таким чином:
+Наступний крок — налаштування ваших **локальних змінних середовища** наступним чином:
 
-1. Знайдіть у кореневій папці файл `.env.copy`, який має вміст приблизно такий:
+1. Знайдіть у кореневій папці файл `.env.copy`, що має приблизно такий вміст:
 
    ```bash
    # Постачальник OpenAI
    OPENAI_API_KEY='<add your OpenAI API key here>'
 
-   ## Azure OpenAI
-   AZURE_OPENAI_API_VERSION='2024-02-01' # За замовчуванням встановлено!
-   AZURE_OPENAI_API_KEY='<add your AOAI key here>'
-   AZURE_OPENAI_ENDPOINT='<add your AOIA service endpoint here>'
-   AZURE_OPENAI_DEPLOYMENT='<add your chat completion model name here>' 
-   AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='<add your embeddings model name here>'
+   ## Azure OpenAI у Microsoft Foundry
+   ## (Azure OpenAI Service тепер є частиною Microsoft Foundry: https://ai.azure.com)
+   AZURE_OPENAI_API_VERSION='2024-10-21' # За замовчуванням встановлено! (поточна стабільна версія GA API)
+   AZURE_OPENAI_API_KEY='<add your Foundry resource key here>'
+   AZURE_OPENAI_ENDPOINT='<add your Foundry resource endpoint here, e.g. https://<resource-name>.openai.azure.com>'
+   AZURE_OPENAI_DEPLOYMENT='<add your chat completion model deployment name here, e.g. gpt-4o-mini>'
+   AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='<add your embeddings model deployment name here, e.g. text-embedding-3-small>'
+
+   ## Моделі Microsoft Foundry (каталог моделей з багатьма постачальниками, замінює GitHub Models, який припиняє підтримку наприкінці липня 2026 року)
+   AZURE_INFERENCE_ENDPOINT='<add your Microsoft Foundry project endpoint here>'
+   AZURE_INFERENCE_CREDENTIAL='<add your Microsoft Foundry Models API key here>'
 
    ## Hugging Face
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. Скопіюйте цей файл у `.env` за допомогою наведеної нижче команди. Цей файл _ігнорується git_, що забезпечує безпеку секретів.
+2. Скопіюйте цей файл у `.env` за допомогою команди нижче. Цей файл _ігнорується в git_, щоб зберігати секрети в безпеці.
 
    ```bash
    cp .env.copy .env
    ```
 
-3. Заповніть значення (замініть заповнювачі праворуч від `=`) відповідно до опису в наступному розділі.
+3. Заповніть значення (замініть заповнювачі праворуч від `=`) як описано в наступному розділі.
 
-4. (Опційно) Якщо ви використовуєте GitHub Codespaces, у вас є можливість зберегти змінні середовища як _секрети Codespaces_, пов’язані з цим репозиторієм. У такому разі вам не потрібно налаштовувати локальний файл .env. **Однак зауважте, що ця опція працює лише якщо ви використовуєте GitHub Codespaces.** Якщо ви використовуєте Docker Desktop, вам все одно потрібно налаштувати файл .env.
+4. (Опційно) Якщо ви використовуєте GitHub Codespaces, у вас є можливість зберегти змінні середовища як _тайни Codespaces_, пов'язані з цим репозиторієм. У такому випадку вам не потрібно налаштовувати локальний файл .env. **Проте зверніть увагу, що ця опція працює лише, якщо ви використовуєте GitHub Codespaces.** Якщо ви використовуєте Docker Desktop, файл .env треба налаштувати.
 
 ## Заповнення файлу `.env`
 
-Давайте швидко розглянемо назви змінних, щоб зрозуміти, що вони означають:
+Розглянемо коротко назви змінних і що вони означають:
 
 | Змінна  | Опис  |
 | :--- | :--- |
 | HUGGING_FACE_API_KEY | Це токен доступу користувача, який ви налаштували у своєму профілі |
-| OPENAI_API_KEY | Це ключ авторизації для використання сервісу не-Azure OpenAI |
-| AZURE_OPENAI_API_KEY | Це ключ авторизації для використання цього сервісу |
-| AZURE_OPENAI_ENDPOINT | Це розгорнута кінцева точка ресурсу Azure OpenAI |
-| AZURE_OPENAI_DEPLOYMENT | Це кінцева точка розгортання моделі _генерації тексту_ |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Це кінцева точка розгортання моделі _векторних вбудовувань тексту_ |
+| OPENAI_API_KEY | Це ключ авторизації для використання сервісу не через Azure OpenAI |
+| AZURE_OPENAI_API_KEY | Це ключ авторизації для використання сервісу Azure OpenAI |
+| AZURE_OPENAI_ENDPOINT | Це розгорнутий кінцевий пункт ресурсу Azure OpenAI |
+| AZURE_OPENAI_DEPLOYMENT | Це кінцевий пункт розгортання моделі для _генерації тексту_ |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Це кінцевий пункт розгортання моделі для _векторних представлень тексту_ |
+| AZURE_INFERENCE_ENDPOINT | Це кінцевий пункт для вашого проєкту Microsoft Foundry, використовується для Microsoft Foundry Models |
+| AZURE_INFERENCE_CREDENTIAL | Це ключ API для вашого проєкту Microsoft Foundry |
 | | |
 
-Примітка: Останні дві змінні Azure OpenAI відображають модель за замовчуванням для чат-завдань (генерація тексту) та пошуку векторів (вбудовування) відповідно. Інструкції щодо їх налаштування будуть визначені у відповідних завданнях.
+Примітка: Дві останні змінні Azure OpenAI відповідають моделі за замовчуванням для чат-завершення (генерації тексту) і векторного пошуку (вбудов) відповідно. Інструкції щодо їх налаштування будуть у відповідних завданнях.
 
-## Налаштування Azure: через портал
+## Налаштування Azure OpenAI: Через портал
 
-Значення кінцевої точки та ключа Azure OpenAI можна знайти в [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), тож почнемо звідти.
+> **Примітка:** Послуга Azure OpenAI тепер є частиною [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst). Ресурси та розгортання все ще знаходяться в Azure Portal, але щоденне керування моделями (розгортання, майданчик, моніторинг) тепер відбувається через портал Foundry, а не через стару автономну "Azure OpenAI Studio".
+
+Значення кінцевого пункту Azure OpenAI та ключа можна знайти в [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), тож почнемо звідти.
 
 1. Перейдіть до [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
-1. Клікніть опцію **Keys and Endpoint** у бічному меню (зліва).
-1. Клікніть **Show Keys** — ви побачите: KEY 1, KEY 2 та Endpoint.
+1. Натисніть опцію **Keys and Endpoint** у бічному меню (зліва).
+1. Натисніть **Show Keys** - має з'явитися наступне: KEY 1, KEY 2 та Endpoint.
 1. Використайте значення KEY 1 для AZURE_OPENAI_API_KEY
 1. Використайте значення Endpoint для AZURE_OPENAI_ENDPOINT
 
 Далі нам потрібні кінцеві точки для конкретних моделей, які ми розгорнули.
 
-1. Клікніть опцію **Model deployments** у бічному меню (зліва) для ресурсу Azure OpenAI.
-1. На сторінці призначення натисніть **Manage Deployments**
+1. Натисніть опцію **Model deployments** у бічному меню (ліворуч) для ресурсу Azure OpenAI.
+1. На сторінці призначення натисніть **Go to Microsoft Foundry portal** (або **Manage Deployments**, залежно від типу ресурсу).
 
-Це перенаправить вас на вебсайт Azure OpenAI Studio, де ми знайдемо інші значення, як описано нижче.
+Це приведе вас до порталу Microsoft Foundry, де ми знайдемо інші значення, описані нижче.
 
-## Налаштування Azure: через Studio
+## Налаштування Azure OpenAI: Через портал Microsoft Foundry
 
-1. Перейдіть до [Azure OpenAI Studio](https://oai.azure.com?WT.mc_id=academic-105485-koreyst) **з вашого ресурсу**, як описано вище.
-1. Клікніть вкладку **Deployments** (бічне меню, зліва), щоб переглянути поточні розгортання моделей.
-1. Якщо потрібна модель не розгорнута, використайте **Create new deployment** для її розгортання.
-1. Вам потрібна модель _text-generation_ — рекомендуємо: **gpt-35-turbo**
-1. Вам потрібна модель _text-embedding_ — рекомендуємо **text-embedding-ada-002**
+1. Перейдіть до [порталу Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) **з вашого ресурсу**, як описано вище.
+1. Натисніть вкладку **Deployments** (бічне меню ліворуч), щоб переглянути поточні розгорнуті моделі.
+1. Якщо бажаної моделі немає, використайте **Deploy model** для розгортання з [каталогу моделей](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
+1. Вам потрібна модель _генерації тексту_ — радимо: **gpt-4o-mini**
+1. Вам потрібна модель _векторних представлень тексту_ — радимо **text-embedding-3-small**
 
-Тепер оновіть змінні середовища, щоб відобразити використану _назву розгортання_. Зазвичай це така сама назва, як у моделі, якщо ви явно її не змінювали. Наприклад, у вас може бути:
+Тепер оновіть змінні середовища, щоб вони відображали _ім'я розгортання_ (Deployment name), яке використовувалося. Зазвичай це буде таке ж, як ім'я моделі, якщо ви явно його не змінювали. Наприклад, можна мати:
 
 ```bash
-AZURE_OPENAI_DEPLOYMENT='gpt-35-turbo'
-AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-ada-002'
+AZURE_OPENAI_DEPLOYMENT='gpt-4o-mini'
+AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-3-small'
 ```
 
-**Не забудьте зберегти файл .env після внесення змін**. Тепер ви можете закрити файл і повернутися до інструкцій для запуску ноутбука.
+**Не забудьте зберегти файл .env після редагування**. Тепер можете закрити файл і повернутися до інструкцій щодо запуску блокноту.
 
-## Налаштування OpenAI: через профіль
+## Налаштування OpenAI: З профілю
 
-Ваш API-ключ OpenAI можна знайти у вашому [акаунті OpenAI](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Якщо у вас його немає, ви можете зареєструватися та створити API-ключ. Після отримання ключа ви можете використати його для заповнення змінної `OPENAI_API_KEY` у файлі `.env`.
+Ваш ключ API OpenAI можна знайти у вашому [обліковому записі OpenAI](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Якщо у вас його немає, можете зареєструвати обліковий запис і створити ключ API. Після отримання ключа використайте його для заповнення змінної `OPENAI_API_KEY` у файлі `.env`.
 
-## Налаштування Hugging Face: через профіль
+## Налаштування Hugging Face: З профілю
 
-Ваш токен Hugging Face можна знайти у вашому профілі в розділі [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Не публікуйте і не діліться ними публічно. Натомість створіть новий токен для використання в цьому проєкті і скопіюйте його у файл `.env` у змінну `HUGGING_FACE_API_KEY`. _Примітка:_ Технічно це не API-ключ, але використовується для автентифікації, тому ми зберігаємо цю назву для узгодженості.
+Ваш токен Hugging Face можна знайти у вашому профілі на сторінці [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Не публікуйте та не діліться ним публічно. Краще створіть новий токен для використання в цьому проєкті і скопіюйте його у файл `.env` у змінну `HUGGING_FACE_API_KEY`. _Примітка:_ Технічно це не ключ API, але використовується для автентифікації, тому ми зберігаємо таку назву змінної для узгодженості.
+
+## Налаштування Microsoft Foundry Models: Через портал
+
+> **Примітка:** GitHub Models буде припинено в кінці липня 2026. Microsoft Foundry Models є прямою заміною, пропонуючи той самий каталог моделей з безкоштовним пробним доступом і досвід з Azure AI Inference SDK / OpenAI SDK.
+
+1. Перейдіть до [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) і створіть (або відкрийте) проєкт Foundry.
+1. Перегляньте [каталог моделей](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) і розгорніть модель, наприклад `gpt-4o-mini`.
+1. На сторінці **Overview** проєкту скопіюйте **endpoint** і **ключ API**.
+1. Використайте значення endpoint для `AZURE_INFERENCE_ENDPOINT` та ключ API для `AZURE_INFERENCE_CREDENTIAL` у файлі `.env`.
+
+## Офлайн / локальні постачальники
+
+Якщо ви зовсім не хочете використовувати хмарну підписку, ви можете запускати сумісні відкриті моделі безпосередньо на власному пристрої:
+
+- **[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst)** - рантайм від Microsoft на пристрої. Він автоматично обирає найкращий виконавчий провайдер (NPU, GPU або CPU) і забезпечує сумісний з OpenAI кінцевий пункт, тому ви можете повторно використовувати більшість прикладів коду з цього курсу з мінімальними змінами. Див. [документацію Foundry Local](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) для початку, або встановіть через `winget install Microsoft.FoundryLocal` (Windows) / `brew install microsoft/foundrylocal/foundrylocal` (macOS).
+- **[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst)** - популярна альтернатива для запуску відкритих моделей, таких як Llama, Phi, Mistral і Gemma локально.
+
+
+Дивіться [Урок 19: Побудова за допомогою SLM](../19-slm/README.md?WT.mc_id=academic-105485-koreyst) для прикладів практичного застосування обох варіантів.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Відмова від відповідальності**:  
-Цей документ було перекладено за допомогою сервісу автоматичного перекладу [Co-op Translator](https://github.com/Azure/co-op-translator). Хоча ми прагнемо до точності, будь ласка, майте на увазі, що автоматичні переклади можуть містити помилки або неточності. Оригінальний документ рідною мовою слід вважати авторитетним джерелом. Для критично важливої інформації рекомендується звертатися до професійного людського перекладу. Ми не несемо відповідальності за будь-які непорозуміння або неправильні тлумачення, що виникли внаслідок використання цього перекладу.
+**Відмова від відповідальності**:
+Цей документ було перекладено за допомогою сервісу штучного інтелекту для перекладу [Co-op Translator](https://github.com/Azure/co-op-translator). Хоча ми прагнемо до точності, будь ласка, майте на увазі, що автоматичні переклади можуть містити помилки або неточності. Оригінальний документ рідною мовою слід вважати авторитетним джерелом. Для критично важливої інформації рекомендується професійний людський переклад. Ми не несемо відповідальності за будь-які непорозуміння або неправильні тлумачення, що виникли внаслідок використання цього перекладу.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

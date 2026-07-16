@@ -1,24 +1,24 @@
 # Yerel Kurulum 🖥️
 
-**Her şeyi kendi dizüstü bilgisayarınızda çalıştırmayı tercih ediyorsanız bu kılavuzu kullanın.**  
+**Her şeyi kendi dizüstü bilgisayarınızda çalıştırmayı tercih ediyorsanız bu rehberi kullanın.**   
 İki yolunuz var: **(A) yerel Python + virtual-env** veya **(B) Docker ile VS Code Geliştirme Konteyneri**.  
-Hangisi daha kolay geliyorsa onu seçin—ikisi de aynı derslere götürür.
+Hangisi daha kolay gelirse onu seçin—ikisi de aynı derslere götürür.
 
-## 1.  Ön Koşullar
+## 1. Önkoşullar
 
-| Araç               | Sürüm / Notlar                                                                      |
-|--------------------|------------------------------------------------------------------------------------|
-| **Python**         | 3.10 + (<https://python.org> adresinden alın)                                      |
-| **Git**            | En son sürüm (Xcode / Windows için Git / Linux paket yöneticisi ile gelir)          |
-| **VS Code**        | İsteğe bağlı ama önerilir <https://code.visualstudio.com>                           |
-| **Docker Desktop** | *Sadece* Seçenek B için. Ücretsiz kurulum: <https://docs.docker.com/desktop/>      |
+| Araç               | Sürüm / Notlar                                                                        |
+|--------------------|--------------------------------------------------------------------------------------|
+| **Python**         | 3.10 + (<https://python.org> adresinden edinin)                                      |
+| **Git**            | En son sürüm (Xcode / Windows için Git / Linux paket yöneticisi ile gelir)            |
+| **VS Code**        | Opsiyonel ama tavsiye edilir <https://code.visualstudio.com>                         |
+| **Docker Desktop** | *Sadece* Seçenek B için. Ücretsiz kurulum: <https://docs.docker.com/desktop/>        |
 
-> 💡 **İpucu** – Araçları terminalde doğrulayın:  
+> 💡 **İpucu** – Araçları terminalden doğrulayın:  
 > `python --version`, `git --version`, `docker --version`, `code --version`  
 
-## 2.  Seçenek A – Yerel Python (en hızlı)
+## 2. Seçenek A – Yerel Python (en hızlı)
 
-### Adım 1  Bu repoyu klonlayın
+### Adım 1 Bu repoyu klonlayın
 
 ```bash
 git clone https://github.com/<your-github>/generative-ai-for-beginners
@@ -33,7 +33,7 @@ source .venv/bin/activate     # macOS / Linux
 .\.venv\Scripts\activate      # Windows PowerShell
 ```
 
-✅ Komut istemi artık (.venv) ile başlamalı—bu, ortamın içinde olduğunuz anlamına gelir.
+✅ Komut satırı şimdi (.venv) ile başlamalı—bu, ortamın içinde olduğunuz anlamına gelir.
 
 ### Adım 3 Bağımlılıkları yükleyin
 
@@ -41,47 +41,47 @@ source .venv/bin/activate     # macOS / Linux
 pip install -r requirements.txt
 ```
 
-[API anahtarları](../../../00-course-setup) bölümüne geçin
+[API anahtarları](#3-api-anahtarlarınızı-ekleyin) bölümüne geçin
 
 ## 2. Seçenek B – VS Code Geliştirme Konteyneri (Docker)
 
-Bu depo ve kurs, Python3, .NET, Node.js ve Java geliştirmeyi destekleyen Evrensel bir çalışma zamanı içeren bir [geliştirme konteyneri](https://containers.dev?WT.mc_id=academic-105485-koreyst) ile ayarlandı. İlgili yapılandırma, bu deponun kök dizinindeki `.devcontainer/` klasöründe bulunan `devcontainer.json` dosyasında tanımlanmıştır.
+Bu depo ve kurs, Python3, .NET, Node.js ve Java geliştirmeyi destekleyen Evrensel çalışma zamanı olan bir [geliştirme konteyneri](https://containers.dev?WT.mc_id=academic-105485-koreyst) ile kuruldu. İlgili yapılandırma, bu deponun kökündeki `.devcontainer/` klasöründe bulunan `devcontainer.json` dosyasında tanımlanmıştır.
 
->**Neden bunu seçmelisiniz?**  
->Codespaces ile aynı ortam; bağımlılık sürüklenmesi yok.
+>**Neden bunu seçmelisiniz?**
+>Codespaces ile aynı ortam; bağımlılık kayması yok.
 
 ### Adım 0 Ekstraları yükleyin
 
-Docker Desktop – ```docker --version``` komutunun çalıştığını doğrulayın.  
-VS Code Remote – Containers eklentisi (ID: ms-vscode-remote.remote-containers).
+Docker Desktop – ```docker --version``` çalıştığını doğrulayın.
+VS Code Remote – Containers uzantısı (ID: ms-vscode-remote.remote-containers).
 
-### Adım 1 Repoyu VS Code’da açın
+### Adım 1 Repoyu VS Code'da açın
 
-Dosya ▸ Klasör Aç…  → generative-ai-for-beginners
+Dosya ▸ Klasör Aç… → generative-ai-for-beginners
 
-VS Code `.devcontainer/` klasörünü algılar ve bir istem çıkarır.
+VS Code `.devcontainer/` klasörünü algılar ve bir açılır pencere gösterir.
 
-### Adım 2 Konteyner içinde yeniden açın
+### Adım 2 Konteyner içinde tekrar açın
 
-“Reopen in Container”a tıklayın. Docker imajı oluşturur (ilk sefer ≈ 3 dk).  
-Terminal istemi göründüğünde konteyner içindesiniz demektir.
+“Konteyner içinde tekrar aç”a tıklayın. Docker imajı oluşturur (ilk sefer yaklaşık 3 dk).
+Terminal istemi görünce konteyner içindesiniz demektir.
 
-## 2.  Seçenek C – Miniconda
+## 2. Seçenek C – Miniconda
 
-[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst), [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python ve birkaç paketi kurmak için hafif bir yükleyicidir.  
-Conda, farklı Python [**sanal ortamları**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) ve paketler arasında kolayca geçiş yapmayı sağlayan bir paket yöneticisidir. Ayrıca `pip` ile bulunmayan paketleri kurmak için de kullanışlıdır.
+[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst), [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python ve bazı paketleri yüklemek için hafif bir yükleyicidir.
+Conda, farklı Python [**sanal ortamlarını**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) ve paketleri kurmayı ve aralarında geçiş yapmayı kolaylaştıran bir paket yöneticisidir. Ayrıca `pip` ile yüklenemeyen paketler için çok işe yarar.
 
-### Adım 0  Miniconda’yı yükleyin
+### Adım 0 Miniconda'yı yükleyin
 
-Kurulum için [MiniConda kurulum kılavuzunu](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) takip edin.
+Kurmak için [MiniConda kurulum kılavuzunu](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) izleyin.
 
 ```bash
 conda --version
 ```
 
-### Adım 1 Sanal ortam oluşturun
+### Adım 1 Bir sanal ortam oluşturun
 
-Yeni bir ortam dosyası oluşturun (*environment.yml*). Codespaces kullanıyorsanız, bunu `.devcontainer` dizini içinde, yani `.devcontainer/environment.yml` olarak oluşturun.
+Yeni bir ortam dosyası oluşturun (*environment.yml*). Codespaces kullanıyorsanız, bunu `.devcontainer` dizini içinde oluşturun, yani `.devcontainer/environment.yml`.
 
 ### Adım 2 Ortam dosyanızı doldurun
 
@@ -104,23 +104,23 @@ dependencies:
 
 ### Adım 3 Conda ortamınızı oluşturun
 
-Aşağıdaki komutları komut satırınızda/terminalinizde çalıştırın
+Komut satırı/terminalde aşağıdaki komutları çalıştırın
 
 ```bash 
-conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer alt yolu yalnızca Codespace kurulumları için geçerlidir
+conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer alt yolu yalnızca Codespace kurulumlarına uygulanır
 conda activate ai4beg
 ```
 
-Herhangi bir sorun yaşarsanız [Conda ortamları kılavuzuna](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) bakabilirsiniz.
+Herhangi bir sorunla karşılaşırsanız [Conda ortamları rehberine](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) bakabilirsiniz.
 
-## 2  Seçenek D – Klasik Jupyter / Jupyter Lab (tarayıcınızda)
+## 2 Seçenek D – Klasik Jupyter / Jupyter Lab (tarayıcınızda)
 
 > **Kimler için?**  
-> Klasik Jupyter arayüzünü seven veya not defterlerini VS Code olmadan çalıştırmak isteyen herkes.
+> Klasik Jupyter arayüzünü seven veya defterleri VS Code olmadan çalıştırmak isteyen herkes için.  
 
-### Adım 1  Jupyter’ın kurulu olduğundan emin olun
+### Adım 1 Jupyter'in kurulu olduğundan emin olun
 
-Jupyter’ı yerel başlatmak için terminale/komut satırına gidin, kurs dizinine geçin ve şu komutu çalıştırın:
+Jupyter’i yerel başlatmak için terminal/komut satırına gidin, kurs dizinine geçin ve şu komutu çalıştırın:
 
 ```bash
 jupyter notebook
@@ -132,22 +132,24 @@ veya
 jupyterhub
 ```
 
-Bu, bir Jupyter örneği başlatacak ve erişim URL’si komut satırı penceresinde gösterilecektir.
+Bu, bir Jupyter örneği başlatacak ve erişim için URL, komut satırı penceresinde gösterilecektir.
 
-URL’ye eriştiğinizde kurs içeriğini görmeli ve herhangi bir `*.ipynb` dosyasına gidebilmelisiniz. Örneğin, `08-building-search-applications/python/oai-solution.ipynb`.
+URL'ye eriştiğinizde kurs dökümünü görmeli ve herhangi bir `*.ipynb` dosyasına gidebilmelisiniz. Örnek olarak, `08-building-search-applications/python/oai-solution.ipynb`.
 
 ## 3. API Anahtarlarınızı Ekleyin
 
-Herhangi bir uygulama geliştirirken API anahtarlarınızı güvenli tutmak önemlidir. API anahtarlarını doğrudan kodunuzda saklamamanızı öneririz. Bu bilgileri herkese açık bir depoya göndermek güvenlik sorunlarına ve kötü niyetli kişiler tarafından kullanılması durumunda istenmeyen maliyetlere yol açabilir.  
-Python için bir `.env` dosyası oluşturma ve `GITHUB_TOKEN` ekleme adım adım rehberi:
+API anahtarlarınızı güvenli tutmak, herhangi bir uygulama geliştirirken önemlidir. API anahtarlarını doğrudan kodunuzda saklamamanızı öneririz. Bu ayrıntıların herkese açık bir depoya yüklenmesi güvenlik sorunlarına ve kötü niyetli kullanım halinde istenmeyen maliyetlere yol açabilir.
+İşte Python için bir `.env` dosyası oluşturup Microsoft Foundry Modelleri kimlik bilgilerinizi nasıl ekleyeceğinize dair adım adım rehber:
 
-1. **Proje Dizininize Gidin**: Terminal veya komut istemcisini açın ve `.env` dosyasını oluşturmak istediğiniz projenizin kök dizinine gidin.
+> **Not:** GitHub Modelleri (ve `GITHUB_TOKEN` değişkeni) Temmuz 2026 sonunda kullanımdan kalkacaktır. Bu rehber bunun yerine [Microsoft Foundry Modelleri](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) kullanır. Tamamen çevrimdışı çalışmak mı istiyorsunuz? [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) adresine bakın.
+
+1. **Proje Dizinize Gidin**: Terminal veya komut istemcisini açın ve `.env` dosyasını oluşturmak istediğiniz projenizin kök dizinine gidin.
 
    ```bash
    cd path/to/your/project
    ```
 
-2. **`.env` Dosyasını Oluşturun**: Tercih ettiğiniz metin düzenleyici ile `.env` adlı yeni bir dosya oluşturun. Komut satırı kullanıyorsanız, Unix tabanlı sistemlerde `touch`, Windows’ta `echo` kullanabilirsiniz:
+2. **`.env` Dosyasını Oluşturun**: Tercih ettiğiniz metin düzenleyiciyle `.env` adlı yeni dosya oluşturun. Komut satırı kullanıyorsanız, Unix tabanlı sistemlerde `touch` veya Windows’ta `echo` kullanabilirsiniz:
 
    Unix tabanlı sistemler:
 
@@ -161,21 +163,22 @@ Python için bir `.env` dosyası oluşturma ve `GITHUB_TOKEN` ekleme adım adım
    echo . > .env
    ```
 
-3. **`.env` Dosyasını Düzenleyin**: `.env` dosyasını bir metin düzenleyicide (örneğin VS Code, Notepad++ veya başka bir editör) açın. Aşağıdaki satırı dosyaya ekleyin, `your_github_token_here` kısmını gerçek GitHub tokenınızla değiştirin:
+3. **`.env` Dosyasını Düzenleyin**: `.env` dosyasını bir metin düzenleyicide (örneğin, VS Code, Notepad++ veya başka bir düzenleyici) açın. Aşağıdaki satırları, yer tutucuları gerçek Microsoft Foundry proje uç noktası ve API anahtarınızla değiştirerek ekleyin:
 
    ```env
-   GITHUB_TOKEN=your_github_token_here
+   AZURE_INFERENCE_ENDPOINT=your_foundry_endpoint_here
+   AZURE_INFERENCE_CREDENTIAL=your_foundry_api_key_here
    ```
 
 4. **Dosyayı Kaydedin**: Değişiklikleri kaydedin ve metin düzenleyiciyi kapatın.
 
-5. **`python-dotenv` Paketini Yükleyin**: Henüz yüklemediyseniz, `.env` dosyasından ortam değişkenlerini Python uygulamanıza yüklemek için `python-dotenv` paketini yüklemeniz gerekir. Bunu `pip` ile yapabilirsiniz:
+5. **`python-dotenv` Yükleyin**: Henüz yüklemediyseniz, `.env` dosyasındaki ortam değişkenlerini Python uygulamanıza yüklemek için `python-dotenv` paketini kurmanız gerekir. Bunu `pip` ile yükleyebilirsiniz:
 
    ```bash
    pip install python-dotenv
    ```
 
-6. **Python Scriptinizde Ortam Değişkenlerini Yükleyin**: Python scriptinizde, `.env` dosyasından ortam değişkenlerini yüklemek için `python-dotenv` paketini kullanın:
+6. **Python Scriptinizde Ortam Değişkenlerini Yükleyin**: Python scriptinizde, `.env` dosyasındaki ortam değişkenlerini yüklemek için `python-dotenv` paketini kullanın:
 
    ```python
    from dotenv import load_dotenv
@@ -184,40 +187,41 @@ Python için bir `.env` dosyası oluşturma ve `GITHUB_TOKEN` ekleme adım adım
    # .env dosyasından ortam değişkenlerini yükle
    load_dotenv()
 
-   # GITHUB_TOKEN değişkenine eriş
-   github_token = os.getenv("GITHUB_TOKEN")
+   # Microsoft Foundry Modelleri değişkenlerine erişim sağla
+   endpoint = os.getenv("AZURE_INFERENCE_ENDPOINT")
+   token = os.getenv("AZURE_INFERENCE_CREDENTIAL")
 
-   print(github_token)
+   print(endpoint)
    ```
 
-Hepsi bu! Başarıyla bir `.env` dosyası oluşturdunuz, GitHub tokenınızı eklediniz ve Python uygulamanıza yüklediniz.
+İşte bu kadar! `.env` dosyası oluşturdunuz, Microsoft Foundry Modelleri kimlik bilgilerinizi eklediniz ve Python uygulamanıza yüklediniz.
 
-🔐 `.env` dosyasını asla commit etmeyin—zaten `.gitignore` içinde.  
-Tüm sağlayıcı talimatları [`providers.md`](03-providers.md) dosyasında bulunur.
+🔐 `.env` dosyasını asla commit etmeyin—zaten `.gitignore` içinde.
+Sağlayıcıya özel talimatlar [`providers.md`](03-providers.md) dosyasında mevcut.
 
-## 4. Sonraki Adımlar?
+## 4. Sonraki Adım?
 
-| Yapmak istiyorum…   | Gitmek istediğim yer…                                                    |
+| Ne yapmak istiyorum…  | Gitmek istediğim yer…                                                   |
 |---------------------|-------------------------------------------------------------------------|
-| Ders 1’e başla      | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
+| Ders 1'e başla       | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
 | Bir LLM Sağlayıcısı Kur | [`providers.md`](03-providers.md)                                       |
-| Diğer öğrenenlerle tanış | [Discord’umuza katıl](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
+| Diğer öğrenenlerle tanış | [Discordımıza Katıl](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) |
 
 ## 5. Sorun Giderme
 
-| Belirti                                   | Çözüm                                                             |
-|-------------------------------------------|------------------------------------------------------------------|
-| `python not found`                        | Python’u PATH’e ekleyin veya kurulum sonrası terminali yeniden açın |
-| `pip` tekerlekleri oluşturamıyor (Windows) | `pip install --upgrade pip setuptools wheel` komutunu çalıştırıp tekrar deneyin. |
-| `ModuleNotFoundError: dotenv`             | `pip install -r requirements.txt` komutunu çalıştırın (ortam kurulmamış). |
-| Docker build başarısız *No space left*    | Docker Desktop ▸ *Ayarlar* ▸ *Kaynaklar* → disk boyutunu artırın. |
-| VS Code sürekli yeniden açmayı öneriyor   | Her iki Seçenek de aktif olabilir; birini seçin (venv **veya** konteyner) |
-| OpenAI 401 / 429 hataları                  | `OPENAI_API_KEY` değerini ve istek hız sınırlarını kontrol edin.  |
-| Conda kullanırken hatalar                   | Microsoft AI kütüphanelerini `conda install -c microsoft azure-ai-ml` ile yükleyin |
+| Belirti                                 | Çözüm                                                             |
+|-----------------------------------------|-----------------------------------------------------------------|
+| `python bulunamadı`                     | Python'u PATH'e ekleyin veya kurulumu takiben terminali yeniden açın |
+| `pip` tekerlekler oluşturamıyor (Windows) | `pip install --upgrade pip setuptools wheel` komutunu çalıştırıp tekrar deneyin. |
+| `ModuleNotFoundError: dotenv`           | `pip install -r requirements.txt` çalıştırın (ortam kurulmamış).  |
+| Docker build hatası *Boş alan kalmadı* | Docker Desktop ▸ *Ayarlar* ▸ *Kaynaklar* → disk boyutunu artırın.  |
+| VS Code sürekli yeniden açma isteği     | Her iki seçeneği birden etkin olabilir; birini seçin (venv **veya** konteyner) |
+| OpenAI 401 / 429 hataları                | `OPENAI_API_KEY` değerini ve istek oran limitlerini kontrol edin.  |
+| Conda kullanırken hatalar                | Microsoft AI kitaplıklarını `conda install -c microsoft azure-ai-ml` ile yükleyin |
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Feragatname**:  
-Bu belge, AI çeviri servisi [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba gösterilse de, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayın. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu oluşabilecek yanlış anlamalar veya yorum hatalarından sorumlu değiliz.
+**Feragatname**:
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba sarf etsek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu ortaya çıkabilecek yanlış anlamalardan veya yanlış yorumlamalardan sorumlu değiliz.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

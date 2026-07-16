@@ -1,209 +1,211 @@
-# Istraživanje i poređenje različitih LLM-ova
+# Истраживање и упоређивање различитих LLM-ова
 
-[![Istraživanje i poređenje različitih LLM-ova](../../../translated_images/sr/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Истраживање и упоређивање различитих LLM-ова](../../../translated_images/sr/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
-> _Kliknite na sliku iznad da pogledate video lekcije_
+> _Кликните на горњу слику да бисте погледали видео о овој лекцији_
 
-U prethodnoj lekciji videli smo kako generativna veštačka inteligencija menja tehnološki pejzaž, kako funkcionišu veliki jezički modeli (LLM-ovi) i kako ih jedna kompanija - poput našeg startapa - može primeniti na svoje slučajeve upotrebe i rasti! U ovom poglavlju ćemo uporediti i suprotstaviti različite vrste velikih jezičkih modela (LLM-ova) kako bismo razumeli njihove prednosti i mane.
+У претходној лекцији видели смо како Генеративна вештачка интелигенција мења технолошки пејзаж, како функционишу Велики језички модели (LLM) и како их један посао - као наш стартап - може применити за своје случајеве употребе и расти! У овом поглављу ћемо упоредити и разликовати различите типове великих језичких модела (LLM) да бисмо разумели њихове предности и мане.
 
-Sledeći korak u razvoju našeg startapa je istraživanje trenutnog pejzaža LLM-ova i razumevanje koji su pogodni za naš slučaj upotrebe.
+Следећи корак у путовању нашег стартапа је истраживање тренутног пејзажа LLM-ова и разумевање који су погодни за наш случај употребе.
 
-## Uvod
+## Увод
 
-Ova lekcija će obuhvatiti:
+Ова лекција ће обухватити:
 
-- Različite vrste LLM-ova u trenutnom pejzažu.
-- Testiranje, iteraciju i poređenje različitih modela za vaš slučaj upotrebe u Azure-u.
-- Kako implementirati LLM.
+- Различите типове LLM у тренутном пејзажу.
+- Тестирање, итерацију и упоређивање различитих модела за ваш случај употребе у Azure-у.
+- Како распоредити LLM.
 
-## Ciljevi učenja
+## Циљеви учења
 
-Nakon završetka ove lekcije, moći ćete:
+Након завршетка ове лекције, моћи ћете да:
 
-- Izabrati pravi model za vaš slučaj upotrebe.
-- Razumeti kako testirati, iterirati i poboljšati performanse vašeg modela.
-- Znati kako kompanije implementiraju modele.
+- Изаберете прави модел за ваш случај употребе.
+- Разумете како да тестирате, итерате и побољшате перформансе вашег модела.
+- Знате како послови распоређују моделе.
 
-## Razumevanje različitih vrsta LLM-ova
+## Разумети различите типове LLM-ова
 
-LLM-ovi se mogu klasifikovati na više načina, u zavisnosti od njihove arhitekture, podataka za obuku i slučaja upotrebe. Razumevanje ovih razlika pomoći će našem startapu da izabere pravi model za scenario i razume kako testirati, iterirati i poboljšati performanse.
+LLM-ови могу имати више категоризација заснованих на њиховој архитектури, подацима за обуку и случају употребе. Разумевање ових разлика ће помоћи нашем стартапу да изабере прави модел за сценарио и схвати како да тестирамо, итерамо и побољшамо перформансе.
 
-Postoji mnogo različitih vrsta LLM modela, a vaš izbor modela zavisi od toga za šta ih nameravate koristiti, vaših podataka, budžeta i drugih faktora.
+Постоји много различитих типова LLM модела, избор модела зависи од тога за шта их планирате користити, од ваших података, колико сте спремни да платите и других фактора.
 
-U zavisnosti od toga da li nameravate koristiti modele za generisanje teksta, zvuka, videa, slika i slično, možda ćete se odlučiti za različite vrste modela.
+У зависности од тога да ли планирате да користите моделе за текст, аудио, видео, генерисање слика и слично, можда ћете изабрати другачији тип модела.
 
-- **Prepoznavanje zvuka i govora**. Za ovu svrhu, modeli tipa Whisper su odličan izbor jer su univerzalni i namenjeni prepoznavanju govora. Trenirani su na raznovrsnim audio podacima i mogu obavljati prepoznavanje govora na više jezika. Saznajte više o [modelima tipa Whisper ovde](https://platform.openai.com/docs/models/whisper?WT.mc_id=academic-105485-koreyst).
+- **Аудио и препознавање говора**. Модели у стилу Whisper-а су и даље корисни општи модели за препознавање говора, али избор за продукцију сада укључује и новије моделе за говор у текст, као што су `gpt-4o-transcribe`, `gpt-4o-mini-transcribe` и варијанте за дијаризацију. Процените покриће језика, дијаризацију, подршку у реалном времену, латентност и трошкове за ваш сценарио. Сазнајте више у [OpenAI документацији за говор у текст](https://platform.openai.com/docs/guides/speech-to-text?WT.mc_id=academic-105485-koreyst).
 
-- **Generisanje slika**. Za generisanje slika, DALL-E i Midjourney su dva veoma poznata izbora. DALL-E nudi Azure OpenAI. [Pročitajte više o DALL-E ovde](https://platform.openai.com/docs/models/dall-e?WT.mc_id=academic-105485-koreyst) i takođe u 9. poglavlju ovog kurikuluma.
+- **Генерисање слика**. DALL-E и Midjourney су добро познате опције за генерисање слика, али тренутни OpenAI API-ји за слике фокусирани су на GPT Image моделе као што је `gpt-image-2`, док су Stable Diffusion, Imagen, Flux и друге породице модела такође чести избори. Упоредите придржавање упита, подршку за уређивање, контролу стила, безбедносне захтеве и лиценцирање. Сазнајте више у [OpenAI водичу за генерисање слика](https://platform.openai.com/docs/guides/images?WT.mc_id=academic-105485-koreyst) и Поглављу 9 овог наставног плана.
 
-- **Generisanje teksta**. Većina modela je trenirana za generisanje teksta i imate veliki izbor od GPT-3.5 do GPT-4. Oni dolaze sa različitim troškovima, pri čemu je GPT-4 najskuplji. Vredi pogledati [Azure OpenAI playground](https://oai.azure.com/portal/playground?WT.mc_id=academic-105485-koreyst) kako biste procenili koji modeli najbolje odgovaraju vašim potrebama u smislu sposobnosti i troškova.
+- **Генерисање текста**. Текстуални модели сада обухватају моделе из прве линије, моделе за расуђивање, мање моделе са ниском латенцијом и отворене моделе са тежинама. Тренутни примери укључују OpenAI GPT-5.x моделе, Anthropic Claude 4.x моделе, Google Gemini 3.x моделе, Meta Llama 4 моделе и Mistral моделе. Не бирајте само по датуму издавања или цени; упоредите квалитет задатка, латенцију, прозор контекста, коришћење алата, безбедносно понашање, регионалну доступност и укупне трошкове. Каталог модела [Microsoft Foundry](https://ai.azure.com/catalog?WT.mc_id=academic-105485-koreyst) је добро место за упоређивање модела доступних на Azure-у.
 
-- **Multimodalnost**. Ako želite da radite sa više vrsta podataka u ulazu i izlazu, možda biste želeli da istražite modele poput [gpt-4 turbo sa vizijom ili gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models#gpt-4-and-gpt-4-turbo-models?WT.mc_id=academic-105485-koreyst) - najnovije verzije OpenAI modela - koji su sposobni da kombinuju obradu prirodnog jezika sa vizuelnim razumevanjem, omogućavajući interakcije kroz multimodalne interfejse.
+- **Мултимодалност**. Многи тренутни модели могу обрађивати више од текста. Неки прихватају улазне податке у виду слика, аудио или видео; неки могу позивати алате; а специјализовани модели могу генерисати слике, звук или видео. На пример, тренутни OpenAI модели подржавају текст и слике као улаз, Gemini модели могу подржати улаз текста, кода, слика, звука и видеа у зависности од варијанте, а Llama 4 Scout и Maverick су отворени мултимодални модели. Увек проверите сваку карту модела за подржане улазне и излазне модалитете пре него што изградите радни ток око њих.
 
-Izbor modela znači da dobijate osnovne sposobnosti, koje možda neće biti dovoljne. Često imate specifične podatke za kompaniju koje nekako morate preneti LLM-u. Postoji nekoliko različitih pristupa kako to učiniti, o čemu ćemo više govoriti u narednim odeljcima.
+Избор модела значи да добијате неке основне способности, али то можда није довољно. Често имате податке специфичне за компанију о којима требате на неки начин обавестити LLM. Постоји неколико различитих опција како да приступите томе, више о томе у наредним секцијама.
 
-### Osnovni modeli naspram LLM-ova
+### Основни модели у односу на LLM
 
-Termin Osnovni model (Foundation Model) je [skovao tim istraživača sa Stanforda](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) i definisan je kao AI model koji ispunjava određene kriterijume, kao što su:
+Термин Основни модел је [кован од стране истраживача са Стенфорда](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) и дефинисан као AI модел који испуњава неке критеријуме, као што су:
 
-- **Trenirani su koristeći nesupervizirano učenje ili samostalno supervizirano učenje**, što znači da su trenirani na nepovezanim multimodalnim podacima i ne zahtevaju ljudsku anotaciju ili označavanje podataka za proces obuke.
-- **To su veoma veliki modeli**, zasnovani na veoma dubokim neuronskim mrežama treniranim na milijardama parametara.
-- **Obično su namenjeni da služe kao 'osnova' za druge modele**, što znači da se mogu koristiti kao polazna tačka za izgradnju drugih modela, što se može postići finim podešavanjem.
+- **Обучени су коришћењем ненадзираог учења или самонадзираог учења**, што значи да су обучени на мултимодалним непозначењеним подацима и да им није потребна људска анотација или означавање података за процес обуке.
+- **То су веома велики модели**, базирани на веома дубоким неуронским мрежама обученим на милијардама параметара.
+- **Обично су намењени да служе као ‘основа’ за друге моделе**, што значи да могу послужити као полазна основа на коју се могу надоградити други модели путем фино подешавања.
 
-![Osnovni modeli naspram LLM-ova](../../../translated_images/sr/FoundationModel.e4859dbb7a825c94.webp)
+![Основни модели у односу на LLM](../../../translated_images/sr/FoundationModel.e4859dbb7a825c94.webp)
 
-Izvor slike: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
+Извор слике: [Основни водич за основне и велике језичке моделе | аутор Бабар М Бхати | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
-Da dodatno pojasnimo ovu razliku, uzmimo ChatGPT kao primer. Za izgradnju prve verzije ChatGPT-a, model nazvan GPT-3.5 služio je kao osnovni model. To znači da je OpenAI koristio neke podatke specifične za razgovor kako bi stvorio prilagođenu verziju GPT-3.5 koja je specijalizovana za dobro funkcionisanje u scenarijima razgovora, poput chatbotova.
+Да бисмо још боље разјаснили ову разлику, узмимо ChatGPT као историјски пример. Ране верзије ChatGPT користиле су GPT-3.5 као основни модел. Затим је OpenAI користио податке специфичне за разговор и технике усаглашавања да би креирао подешену верзију која је боље функционисала у сценаријима конверзације, као што су чатботови. Савремене AI услуге често обрађују неколико варијанти модела, тако да име услуге и основни модел нису увек иста ствар.
 
-![Osnovni model](../../../translated_images/sr/Multimodal.2c389c6439e0fc51.webp)
+![Основни модел](../../../translated_images/sr/Multimodal.2c389c6439e0fc51.webp)
 
-Izvor slike: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
+Извор слике: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
-### Otvoreni kod naspram vlasničkih modela
+### Отворени тежински/отворен извор у односу на власничке моделе
 
-Još jedan način za kategorizaciju LLM-ova je da li su otvorenog koda ili vlasnički.
+Још један начин да се категоришу LLM је да ли су отворених тежина, отвореног кода или власнички.
 
-Modeli otvorenog koda su modeli koji su dostupni javnosti i mogu ih koristiti svi. Često ih objavljuje kompanija koja ih je kreirala ili istraživačka zajednica. Ovi modeli mogu biti pregledani, modifikovani i prilagođeni za različite slučajeve upotrebe u LLM-ovima. Međutim, nisu uvek optimizovani za proizvodnu upotrebu i možda nisu tako performantni kao vlasnički modeli. Pored toga, finansiranje za modele otvorenog koda može biti ograničeno, možda neće biti dugoročno održavani ili ažurirani najnovijim istraživanjima. Primeri popularnih modela otvorenog koda uključuju [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst), [Bloom](https://huggingface.co/bigscience/bloom) i [LLaMA](https://llama.meta.com).
+Отворени и отворени тежински модели омогућавају приступ артифактима модела ради инспекције, преузимања или прилагођавања, али им лиценце варирају. Неки су потпуно отвореног кода, док су други отворени тежински модели са ограничењима коришћења. Корисни су када посао треба већу контролу над делењем, локалитетом података, трошковима или прилагођавањем. Међутим, тимови и даље морају да прегледају услове лиценцирања, трошкове сервиса, одржавање, безбедносне исправке и квалитет процене пре употребе у производњи. Примери укључују [Meta Llama 4](https://ai.meta.com/blog/llama-4-multimodal-intelligence/?WT.mc_id=academic-105485-koreyst), неке [Mistral моделе](https://docs.mistral.ai/models/overview?WT.mc_id=academic-105485-koreyst) и многе моделе хостоване на [Hugging Face](https://huggingface.co/models?WT.mc_id=academic-105485-koreyst).
 
-Vlasnički modeli su modeli koji su u vlasništvu kompanije i nisu dostupni javnosti. Ovi modeli su često optimizovani za proizvodnu upotrebu. Međutim, nije dozvoljeno da se pregledaju, modifikuju ili prilagođavaju za različite slučajeve upotrebe. Pored toga, nisu uvek dostupni besplatno i mogu zahtevati pretplatu ili plaćanje za korišćenje. Takođe, korisnici nemaju kontrolu nad podacima koji se koriste za obuku modela, što znači da treba da veruju vlasniku modela da će se pridržavati obaveza o privatnosti podataka i odgovornoj upotrebi AI. Primeri popularnih vlasničkih modela uključuju [OpenAI modele](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-koreyst), [Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst) ili [Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-koreyst).
+Власнички модели су у власништву и хостују их провајдери. Често су оптимизовани за управљану продукцију и могу понудити снажну подршку, безбедносне системе, интеграцију алата и скалирање. Међутим, корисници обично не могу да прегледају или мењају тежине модела и морају да прегледају услове провајдера у вези са приватношћу, чувањем података, усаглашеношћу и прихватљивом употребом. Примери укључују [OpenAI моделе](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst), [Google Gemini](https://deepmind.google/models/gemini/pro/?WT.mc_id=academic-105485-koreyst) и [Anthropic Claude](https://platform.claude.com/docs/en/about-claude/models/overview?WT.mc_id=academic-105485-koreyst).
 
-### Ugrađivanje naspram generisanja slika naspram generisanja teksta i koda
+### Ембединг у односу на генерисање слика у односу на генерисање текста и кода
 
-LLM-ovi se takođe mogu kategorizovati prema izlazu koji generišu.
+LLM-ови се такође могу категорисати по излазу који генеришу.
 
-Ugrađivanja su skup modela koji mogu konvertovati tekst u numerički oblik, nazvan ugrađivanje, što je numerička reprezentacija ulaznog teksta. Ugrađivanja olakšavaju mašinama razumevanje odnosa između reči ili rečenica i mogu se koristiti kao ulazi za druge modele, poput modela za klasifikaciju ili klasterovanje koji imaju bolje performanse na numeričkim podacima. Modeli ugrađivanja se često koriste za transferno učenje, gde se model gradi za zamenski zadatak za koji postoji obilje podataka, a zatim se težine modela (ugrađivanja) ponovo koriste za druge zadatke. Primer ove kategorije je [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
+Ембединг су скуп модела који могу претворити текст у нумерички облик, назван ембединг, што је нумеричка репрезентација улазног текста. Ембединг омогућава машинама да боље разумеју односе између речи или реченица и могу се користити као улаз за друге моделе, као што су модели за класификацију или кластеринг који боље раде са нумеричким подацима. Модели ембединга се често користе за пренос учења, где се модел гради за сурогат задатак за који има много података, а онда се тежине модела (ембединг) поново користе за друге задатке. Пример ове категорије су [OpenAI ембединг](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Ugrađivanje](../../../translated_images/sr/Embedding.c3708fe988ccf760.webp)
+![Ембединг](../../../translated_images/sr/Embedding.c3708fe988ccf760.webp)
 
-Modeli za generisanje slika su modeli koji generišu slike. Ovi modeli se često koriste za uređivanje slika, sintezu slika i prevođenje slika. Modeli za generisanje slika se često treniraju na velikim skupovima podataka slika, kao što je [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), i mogu se koristiti za generisanje novih slika ili za uređivanje postojećih slika tehnikama poput inpainting-a, super-rezolucije i kolorizacije. Primeri uključuju [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) i [Stable Diffusion modele](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
+Модели за генерисање слика су модели који генеришу слике. Ови модели се често користе за уређивање слика, синтезу слика и превођење слика. Модели за генерисање слика се често обучавају на великим скуповима слика, као што је [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), и могу се користити за генерисање нових слика или за уређивање постојећих слика коришћењем техника као што су inpејнтинг, супер-резолуција и колоризација. Примери укључују [GPT Image моделе](https://platform.openai.com/docs/guides/images?WT.mc_id=academic-105485-koreyst), [Stable Diffusion моделе](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst) и Imagen моделе.
 
-![Generisanje slika](../../../translated_images/sr/Image.349c080266a763fd.webp)
+![Генерисање слика](../../../translated_images/sr/Image.349c080266a763fd.webp)
 
-Modeli za generisanje teksta i koda su modeli koji generišu tekst ili kod. Ovi modeli se često koriste za sažimanje teksta, prevođenje i odgovaranje na pitanja. Modeli za generisanje teksta se često treniraju na velikim skupovima podataka teksta, kao što je [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), i mogu se koristiti za generisanje novog teksta ili za odgovaranje na pitanja. Modeli za generisanje koda, poput [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), često se treniraju na velikim skupovima podataka koda, kao što je GitHub, i mogu se koristiti za generisanje novog koda ili za ispravljanje grešaka u postojećem kodu.
+Модели за генерисање текста и кода су модели који генеришу текст или код. Ови модели се често користе за сумирање текста, превођење и одговарање на питања. Модели за генерисање текста обучавају се на великим скупова текстова, као што је [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), и могу се користити за генерисање новог текста или за одговарање на питања. Модели за генерисање кода, као што је [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), често се обучавају на великим скупова кода, као што је GitHub, и могу се користити за генерисање новог кода или за исправљање грешака у постојећем коду.
 
-![Generisanje teksta i koda](../../../translated_images/sr/Text.a8c0cf139e5cc2a0.webp)
+![Генерисање текста и кода](../../../translated_images/sr/Text.a8c0cf139e5cc2a0.webp)
 
-### Encoder-Decoder naspram samo Decoder
+### Енкодер-Декодер у односу на само Декодер
 
-Da bismo razgovarali o različitim vrstama arhitektura LLM-ova, koristimo analogiju.
+Да бисмо говорили о различитим типовима архитектура LLM-ова, користимо аналогју.
 
-Zamislite da vam je menadžer dao zadatak da napišete kviz za studente. Imate dva kolege; jedan je zadužen za kreiranje sadržaja, a drugi za pregled.
+Замислите да вам је менаџер дао задатак да направите квиз за студенте. Имате два колеге; један је задужен за креирање садржаја, а други за преглед.
 
-Kreator sadržaja je poput modela samo Decoder, može pogledati temu i videti šta ste već napisali, a zatim može napisati kurs na osnovu toga. Oni su veoma dobri u pisanju zanimljivog i informativnog sadržaja, ali nisu baš dobri u razumevanju teme i ciljeva učenja. Neki primeri modela samo Decoder su modeli iz GPT porodice, kao što je GPT-3.
+Креатор садржаја је као модел који је само декодер: они могу да погледају тему, виде шта сте већ написали, па наставе да генеришу садржај на основу тог контекста. Веома су добри у писању ангажујућег и информативног садржаја, али нису увек најбољи избор када је задатак само класификација, преузимање или кодирање информација. Примери породица модела само декодера укључују GPT и Llama моделе.
 
-Recenzent je poput modela samo Encoder, gleda kurs koji je napisan i odgovore, primećujući odnos između njih i razumevajući kontekst, ali nije dobar u generisanju sadržaja. Primer modela samo Encoder bio bi BERT.
+Прегледач је као модел само енкодер, они гледају написани курс и одговоре, уочавају односе између њих и разумеју контекст, али нису добри у генерисању садржаја. Пример модела само енкодера је BERT.
 
-Zamislite da imamo nekoga ko bi mogao i da kreira i da pregleda kviz, to je model Encoder-Decoder. Neki primeri su BART i T5.
+Замислите да можемо имати некога ко би и креирао и прегледао квиз, то је енкодер-декодер модел. Неки примери су BART и T5.
 
-### Servis naspram modela
+### Услуга у односу на модел
 
-Sada, hajde da razgovaramo o razlici između servisa i modela. Servis je proizvod koji nudi provajder usluga u oblaku i često je kombinacija modela, podataka i drugih komponenti. Model je osnovna komponenta servisa i često je osnovni model, kao što je LLM.
+Сада, хајде да говоримо о разлици између услуге и модела. Услуга је производ који нуди добављач облачних услуга и често је комбинација модела, података и других компоненти. Модел је језгро услуге и обично је основни модел, као што је LLM.
 
-Servisi su često optimizovani za proizvodnu upotrebu i često su lakši za upotrebu od modela, putem grafičkog korisničkog interfejsa. Međutim, servisi nisu uvek dostupni besplatno i mogu zahtevati pretplatu ili plaćanje za korišćenje, u zamenu za korišćenje opreme i resursa vlasnika servisa, optimizaciju troškova i lako skaliranje. Primer servisa je [Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), koji nudi plan plaćanja po korišćenju, što znači da se korisnici naplaćuju proporcionalno koliko koriste servis. Takođe, Azure OpenAI Service nudi sigurnost na nivou preduzeća i okvir za odgovornu upotrebu AI-a uz mogućnosti modela.
+Услуге су често оптимизоване за продукцијску употребу и обично су лакше за коришћење него модели, преко графичког корисничког интерфејса. Међутим, услуге нису увек доступне бесплатно и могу захтевати претплату или плаћање за коришћење, у замену за коришћење опреме и ресурса власника услуге, оптимизацију трошкова и лако скалирање. Пример услуге је [Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), која нуди тарифни план по стварној употреби, што значи да се корисници наплаћују пропорционално колико користе услугу. Azure OpenAI Service такође нуди корпоративни безбедносни ниво и одговорни оквир за AI на врху способности модела.
 
-Modeli su samo neuronske mreže, sa parametrima, težinama i ostalim. Omogućavaju kompanijama da ih pokreću lokalno, međutim, potrebno je kupiti opremu, izgraditi strukturu za skaliranje i kupiti licencu ili koristiti model otvorenog koda. Model poput LLaMA je dostupan za korišćenje, ali zahteva računske resurse za pokretanje modela.
+Модели су артифакти неуронских мрежа: параметри, тежине, архитектура, токенизер и конфигурација која их подржава. Покретање модела локално или у приватном окружењу захтева одговарајући хардвер, инфраструктуру за сервисање, праћење и или компатибилну лиценцу отвореног кода/отворених тежина или комерцијалну лиценцу. Отворени тежински модели као што су Llama 4 или Mistral модели могу се сами хостовати, али ипак захтевају обрачунску снагу и оперативну експертизу.
 
-## Kako testirati i iterirati sa različitim modelima kako biste razumeli performanse na Azure-u
+## Како тестирати и итератирати са различитим моделима да бисте разумели перформансе на Azure-у
 
-Kada naš tim istraži trenutni pejzaž LLM-ova i identifikuje neke dobre kandidate za svoje scenarije, sledeći korak je testiranje na njihovim podacima i radnom opterećenju. Ovo je iterativni proces, koji se sprovodi kroz eksperimente i merenja.
-Većina modela koje smo pomenuli u prethodnim paragrafima (OpenAI modeli, modeli otvorenog koda poput Llama2 i Hugging Face transformeri) dostupni su u [Model Catalog](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview?WT.mc_id=academic-105485-koreyst) u [Azure AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst).
 
-[Azure AI Studio](https://learn.microsoft.com/azure/ai-studio/what-is-ai-studio?WT.mc_id=academic-105485-koreyst) je Cloud platforma dizajnirana za programere da kreiraju aplikacije generativne veštačke inteligencije i upravljaju celokupnim razvojnim ciklusom - od eksperimentisanja do evaluacije - kombinujući sve Azure AI usluge u jedan centar sa praktičnim grafičkim interfejsom. Model Catalog u Azure AI Studio omogućava korisnicima da:
+Када наш тим истражи тренутни пејзаж LLM-ова и идентификује добре кандидате за своје сценарије, следећи корак је тестирање тих модела на њиховим подацима и оптерећењу. Ово је итеративни процес који се обавља кроз експерименте и мерења.
+Већина модела које смо поменули у претходним пасусима (OpenAI модели, модели са отвореном тежином као што су Llama 4 и Mistral, и Hugging Face модели) доступни су у [Microsoft Foundry Models](https://learn.microsoft.com/azure/foundry/concepts/foundry-models-overview?WT.mc_id=academic-105485-koreyst).
 
-- Pronađu osnovni model od interesa u katalogu - bilo vlasnički ili otvorenog koda, filtrirajući po zadatku, licenci ili imenu. Da bi se poboljšala pretraga, modeli su organizovani u kolekcije, poput Azure OpenAI kolekcije, Hugging Face kolekcije i drugih.
+[Microsoft Foundry](https://learn.microsoft.com/azure/foundry/what-is-foundry?WT.mc_id=academic-105485-koreyst), раније Azure AI Studio/Azure AI Foundry, је јединствена Azure платформа за креирање AI апликација и агената. Помаже програмерима да управљају животним циклусом од експериментисања и евалуације до имплементације, праћења и управљања. Каталог модела у Microsoft Foundry омогућава кориснику да:
+
+- Пронађе основни модел од интереса у каталогу, укључујући моделе које продаје Azure и моделе од партнера и провајдера из заједнице. Корисници могу филтрирати по задатку, провајдеру, лиценци, опцији имплементације или имену.
 
 ![Model catalog](../../../translated_images/sr/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
 
-- Pregledaju karticu modela, uključujući detaljan opis namene i podataka za obuku, uzorke koda i rezultate evaluacije iz interne biblioteke evaluacija.
+- Прегледа модел-картицу, укључујући детаљан опис намењене употребе и података за обуку, примере кода и резултате евалуације у унутрашњој библиотеци евалуација.
 
 ![Model card](../../../translated_images/sr/ModelCard.598051692c6e400d.webp)
 
-- Uporede rezultate testiranja između modela i dostupnih datasetova u industriji kako bi procenili koji model najbolje odgovara poslovnom scenariju, putem [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) panela.
+- Упореди референтне вредности преко модела и скупова података доступних у индустрији како би се проценило који одговара пословном сценарију, кроз панел [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst).
 
 ![Model benchmarks](../../../translated_images/sr/ModelBenchmarks.254cb20fbd06c03a.webp)
 
-- Prilagode model na osnovu sopstvenih podataka za obuku kako bi poboljšali performanse modela u specifičnom radnom opterećenju, koristeći mogućnosti eksperimentisanja i praćenja u Azure AI Studio.
+- Фино подеси подржане моделе на прилагођеним подацима за обуку да би се унапредиле перформансе модела у одређеном оптерећењу, користећи могућности експериментисања и праћења Microsoft Foundry.
 
 ![Model fine-tuning](../../../translated_images/sr/FineTuning.aac48f07142e36fd.webp)
 
-- Postave originalni unapred obučeni model ili prilagođenu verziju za udaljenu inferenciju u realnom vremenu - upravljano računanje - ili serverless API endpoint - [pay-as-you-go](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - kako bi aplikacije mogle da ga koriste.
+- Имплементира оригинални пред-тренинг модел или фино подешену верзију на удаљени крајњи сервис за реално-времено извођење, користећи управљане компјутерске или безсерверске опције, како би апликације могле да га користе.
 
 ![Model deployment](../../../translated_images/sr/ModelDeploy.890da48cbd0bccdb.webp)
 
 > [!NOTE]
-> Nisu svi modeli u katalogu trenutno dostupni za prilagođavanje i/ili pay-as-you-go postavljanje. Proverite karticu modela za detalje o mogućnostima i ograničenjima modela.
+> Ни сви модели у каталогу тренутно нису доступни за фино подешавање и/или имплементацију по принципу плаћања по коришћењу. Погледајте модел-картицу за детаље о могућностима и ограничењима модела.
 
-## Poboljšanje rezultata LLM-a
+## Унапређивање резултата LLM модела
 
-Istražili smo sa našim startup timom različite vrste LLM-ova i Cloud platformu (Azure Machine Learning) koja nam omogućava da uporedimo različite modele, evaluiramo ih na test podacima, poboljšamo performanse i postavimo ih na inferencione endpointove.
+Истражили смо са нашим стартап тимом различите врсте LLM модела и cloud платформу (Microsoft Foundry) која нам омогућава да упоредимо различите моделе, евалуирамо их на тест подацима, унапредимо перформансе и имплементирамо их на крајње енде за извлачење.
 
-Ali kada treba razmotriti prilagođavanje modela umesto korišćenja unapred obučenog? Postoje li drugi pristupi za poboljšanje performansi modela u specifičnim radnim opterećenjima?
+Али када би требало да размотре фино подешавање модела уместо коришћења већ пред-тренингованог? Постоје ли друге методе за унапређење перформанси модела на специфичним оптерећењима?
 
-Postoji nekoliko pristupa koje preduzeće može koristiti da bi dobilo željene rezultate od LLM-a. Možete odabrati različite vrste modela sa različitim stepenima obuke prilikom postavljanja LLM-a u produkciju, sa različitim nivoima složenosti, troškova i kvaliteta. Evo nekoliko različitih pristupa:
+Постоји неколико приступа које посао може да користи да добије потребне резултате од LLM модела. Можете одабрати различите типове модела са различитим степеном обуке приликом имплементације LLM у продукцију, са различитим нивоима сложености, трошкова и квалитета. Ево неколико различитих приступа:
 
-- **Inženjering upita sa kontekstom**. Ideja je da se obezbedi dovoljno konteksta prilikom postavljanja upita kako bi se dobili željeni odgovori.
+- **Инжењеринг упита са контекстом**. Идеја је пружити довољно контекста кад унесете упит како бисте добили потребне одговоре.
 
-- **Generacija uz podršku pretrage (RAG)**. Vaši podaci mogu postojati u bazi podataka ili na web endpointu, na primer, kako bi se osiguralo da su ti podaci, ili njihov podskup, uključeni u trenutku postavljanja upita, možete dohvatiti relevantne podatke i učiniti ih delom korisničkog upita.
+- **Retrieval Augmented Generation, RAG**. Ваши подаци могу постојати у бази података или веб крајњој тачки, на пример, како бисте осигурали да ти подаци, или њихов подскуп, буду укључени у време уноса упита, можете прибавити релевантне податке и укључити их у кориснички упит.
 
-- **Prilagođeni model**. Ovde se model dodatno obučava na vašim sopstvenim podacima, što dovodi do toga da model bude precizniji i odgovara vašim potrebama, ali može biti skupo.
+- **Фино подешен модел**. Овде сте додатно обучили модел на својим подацима што је довело до тога да модел буде прецизнији и одзивнији вашим потребама, али може бити скупо.
 
 ![LLMs deployment](../../../translated_images/sr/Deploy.18b2d27412ec8c02.webp)
 
-Izvor slike: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
+Извор слике: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 
-### Inženjering upita sa kontekstom
+### Инжењеринг упита са контекстом
 
-Unapred obučeni LLM-ovi vrlo dobro funkcionišu na generalizovanim zadacima prirodnog jezika, čak i kada se pozivaju sa kratkim upitom, poput rečenice za dovršavanje ili pitanja – takozvano „zero-shot“ učenje.
+Пред-тренинговани LLM модели врло добро функционишу на општим задацима природног језика, чак и са кратким упитом, као што је реченица за довршавање или питање – такозвано „zero-shot“ учење.
 
-Međutim, što korisnik bolje može da oblikuje svoj upit, sa detaljnim zahtevom i primerima – Kontekstom – to će odgovor biti tačniji i bliži očekivanjima korisnika. U ovom slučaju govorimo o „one-shot“ učenju ako upit uključuje samo jedan primer i „few-shot učenju“ ako uključuje više primera. Inženjering upita sa kontekstom je najisplativiji pristup za početak.
+Међутим, што корисник више може да оквирно дефинише свој упит, са детаљним захтевом и примерима – Контекстом – то ће одговор бити прецизнији и ближи очекивањима корисника. У овом случају, говоримо о „one-shot“ учењу ако упит укључује само један пример и „few-shot“ учењу ако укључује више примера.
+Инжењеринг упита са контекстом је приступ који је најисплативији за почетак.
 
-### Generacija uz podršku pretrage (RAG)
+### Retrieval Augmented Generation (RAG)
 
-LLM-ovi imaju ograničenje da mogu koristiti samo podatke koji su korišćeni tokom njihove obuke za generisanje odgovora. To znači da ne znaju ništa o činjenicama koje su se dogodile nakon procesa obuke i ne mogu pristupiti ne-javnim informacijama (poput podataka kompanije). 
+LLM модели имају ограничење да могу користити само податке који су коришћени током њихове обуке да би генерисали одговор. То значи да немају знање о чињеницама које су се догодиле након процеса обуке, и не могу приступити непубличним информацијама (као што су подаци компаније).
+Ово се може превазићи кроз RAG, технику која допуњује упит спољним подацима у облику сегмената докумената, узимајући у обзир ограничења дужине упита. Ово подржавају алати за векторске базе података (као што је [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)) који враћају корисне сегменте из различитих унапред дефинисаних извора података и додају их у контекст упита.
 
-Ovo se može prevazići kroz RAG, tehniku koja proširuje upit spoljnim podacima u obliku delova dokumenata, uzimajući u obzir ograničenja dužine upita. Ovo podržavaju alati za pretragu vektora (poput [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)) koji pronalaze korisne delove iz različitih unapred definisanih izvora podataka i dodaju ih u kontekst upita.
+Ова техника је веома корисна када посао нема довољно података, времена или ресурса за фино подешавање LLM-а, али ипак жели да унапреди перформансе на специфичном оптерећењу и смањи ризике од халуцинација, застарелих или неподржаних одговора.
 
-Ova tehnika je veoma korisna kada preduzeće nema dovoljno podataka, vremena ili resursa za prilagođavanje LLM-a, ali ipak želi da poboljša performanse u specifičnom radnom opterećenju i smanji rizik od izmišljanja, tj. iskrivljavanja stvarnosti ili štetnog sadržaja.
+### Фино подешен модел
 
-### Prilagođeni model
+Фино подешавање је процес који користи трансфер учење да „прилагоди“ модел одређеном задацима или проблему. За разлику од few-shot учења и RAG-а, резултује генерисањем новог модела са ажурираним тежинама и предрасудама. Захтева скуп примера за обуку који се састоји од улаза (упита) и придруженог излаза (одговора).
+Ово би био пожељан приступ ако:
 
-Prilagođavanje je proces koji koristi transferno učenje za „prilagođavanje“ modela određenom zadatku ili rešavanju specifičnog problema. Za razliku od few-shot učenja i RAG-a, rezultira generisanjem novog modela, sa ažuriranim težinama i pristrasnostima. Zahteva skup primera za obuku koji se sastoje od jednog ulaza (upita) i njegovog povezanog izlaza (rezultata).
+- **Користите мање моделе специфичне за задатак**. Посао жели да фино подеси мањи модел за специфичан задатак уместо да више пута користи већи модел са ферона, што је исплатљивије и брже решење.
 
-Ovo bi bio preferirani pristup ako:
+- **Узимајући у обзир латенцију**. Латенција је важна за одређену примену, па није могуће користити врло дуге упите или број примера који модел треба да научи не одговара ограничењу дужине упита.
 
-- **Korišćenje prilagođenih modela**. Preduzeće želi da koristi prilagođene manje sposobne modele (poput modela za ugrađivanje) umesto modela visokih performansi, što rezultira isplativijim i bržim rešenjem.
+- **Адаптирање стабилног понашања**. Посао има много примера високог квалитета и жели да модел доследно прати образац задатка, формат излаза, тон или стил специфичан за домен. Ако је главни проблем свеже чињенице или приватно знање које се често мења, користите RAG уместо ослањања само на фино подешавање.
 
-- **Razmatranje latencije**. Latencija je važna za određeni slučaj upotrebe, pa nije moguće koristiti veoma duge upite ili broj primera koji treba da se nauče od modela ne odgovara ograničenju dužine upita.
+### Тренирани модел
 
-- **Održavanje ažurnosti**. Preduzeće ima mnogo visokokvalitetnih podataka i oznaka istine i resurse potrebne za održavanje ovih podataka ažurnim tokom vremena.
+Обука LLM-а од нуле је без сумње најтежи и најсложенији приступ, који захтева огромне количине података, стручне ресурсе и одговарајућу рачунарску снагу. Ова опција треба да се разматра само у сценарију где посао има доменски специфичан случај употребе и велику количину доменски центрираних података.
 
-### Obučeni model
+## Провера знања
 
-Obuka LLM-a od nule je bez sumnje najteži i najsloženiji pristup za usvajanje, zahtevajući ogromne količine podataka, stručne resurse i odgovarajuću računalnu moć. Ova opcija treba da se razmatra samo u scenariju gde preduzeće ima slučaj upotrebe specifičan za određenu oblast i veliku količinu podataka vezanih za tu oblast.
+Који би био добар приступ за унапређење резултата LLM завршетака?
 
-## Provera znanja
+1. Инжењеринг упита са контекстом
+1. RAG
+1. Фино подешен модел
 
-Koji bi mogao biti dobar pristup za poboljšanje rezultata LLM-a?
+О: Сва три приступа могу помоћи. Почните са инжењерингом упита и контекстом за брза побољшања, и користите RAG када модел треба актуелне чињенице или приватне пословне податке. Изаберите фино подешавање када имате довољно примера високог квалитета и треба да модел доследно прати задатак, формат, тон или образац домена.
 
-1. Inženjering upita sa kontekstom  
-1. RAG  
-1. Prilagođeni model  
+## 🚀 Изазов
 
-Odgovor: 3, ako imate vremena, resurse i visokokvalitetne podatke, prilagođavanje je bolja opcija za održavanje ažurnosti. Međutim, ako želite da poboljšate stvari, a nemate dovoljno vremena, vredi prvo razmotriti RAG.
+Прочитајте више о томе како можете [користити RAG](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst) за свој посао.
 
-## 🚀 Izazov
+## Одличан рад, наставите са учењем
 
-Pročitajte više o tome kako možete [koristiti RAG](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst) za vaše poslovanje.
+Након завршетка ове лекције, погледајте нашу [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) да бисте наставили да унапређујете своје знање о генеративној вештачкој интелигенцији!
 
-## Odlično urađeno, nastavite sa učenjem
-
-Nakon što završite ovu lekciju, pogledajte našu [Generative AI Learning kolekciju](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kako biste nastavili da unapređujete svoje znanje o generativnoj veštačkoj inteligenciji!
-
-Pređite na Lekciju 3 gde ćemo razmotriti kako [odgovorno koristiti generativnu veštačku inteligenciju](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
+Пређите на Лекцију 3 где ћемо погледати како да [градимо са генеративном вештачком интелигенцијом одговорно](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Одрицање од одговорности**:  
-Овај документ је преведен помоћу услуге за превођење вештачке интелигенције [Co-op Translator](https://github.com/Azure/co-op-translator). Иако настојимо да обезбедимо тачност, молимо вас да имате у виду да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитативним извором. За критичне информације препоручује се професионални превод од стране људи. Не преузимамо одговорност за било каква погрешна тумачења или неспоразуме који могу настати услед коришћења овог превода.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Изјава о одрицању одговорности**:
+Овај документ је преведен коришћењем услуге за аутоматски превод [Co-op Translator](https://github.com/Azure/co-op-translator). Иако тежимо тачности, имајте у виду да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитативним извором. За критичне информације препоручује се професионални људски превод. Нисмо одговорни за било каква неспоразума или погрешна тумачења која произилазе из коришћења овог превода.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

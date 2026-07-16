@@ -1,24 +1,24 @@
-# Utforsking og sammenligning av ulike LLM-er
+# Utforske og sammenligne forskjellige LLM-er
 
-[![Utforsking og sammenligning av ulike LLM-er](../../../translated_images/no/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Utforske og sammenligne forskjellige LLM-er](../../../translated_images/no/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
-> _Klikk på bildet over for å se videoen til denne leksjonen_
+> _Klikk på bildet over for å se video av denne leksjonen_
 
-I forrige leksjon så vi hvordan generativ AI endrer teknologilandskapet, hvordan store språkmodeller (LLM-er) fungerer, og hvordan en bedrift – som vår oppstart – kan bruke dem til sine formål og vokse! I dette kapittelet skal vi sammenligne og kontrastere ulike typer store språkmodeller (LLM-er) for å forstå deres fordeler og ulemper.
+Med forrige leksjon har vi sett hvordan Generativ AI forandrer teknologi-landskapet, hvordan store språkmodeller (LLM-er) fungerer og hvordan en bedrift - som vår oppstart - kan bruke dem i sine bruksområder og vokse! I dette kapitlet ser vi på å sammenligne og kontrastere ulike typer store språkmodeller (LLM-er) for å forstå deres fordeler og ulemper.
 
-Neste steg i vår oppstartsreise er å utforske det nåværende landskapet av LLM-er og forstå hvilke som passer for vårt brukstilfelle.
+Neste steg i oppstartens reise er å utforske dagens landskap av LLM-er og forstå hvilke som passer til vårt brukstilfelle.
 
 ## Introduksjon
 
 Denne leksjonen vil dekke:
 
 - Ulike typer LLM-er i dagens landskap.
-- Testing, iterering og sammenligning av ulike modeller for ditt brukstilfelle i Azure.
+- Testing, iterasjon og sammenligning av ulike modeller for ditt brukstilfelle i Azure.
 - Hvordan distribuere en LLM.
 
 ## Læringsmål
 
-Etter å ha fullført denne leksjonen, vil du kunne:
+Etter å ha fullført denne leksjonen vil du kunne:
 
 - Velge riktig modell for ditt brukstilfelle.
 - Forstå hvordan du tester, itererer og forbedrer ytelsen til modellen din.
@@ -26,182 +26,186 @@ Etter å ha fullført denne leksjonen, vil du kunne:
 
 ## Forstå ulike typer LLM-er
 
-LLM-er kan kategoriseres på flere måter basert på deres arkitektur, treningsdata og brukstilfelle. Å forstå disse forskjellene vil hjelpe vår oppstart med å velge riktig modell for scenarioet, samt forstå hvordan man tester, itererer og forbedrer ytelsen.
+LLM-er kan kategoriseres på flere måter basert på arkitektur, treningsdata og brukstilfelle. Å forstå disse forskjellene vil hjelpe vår oppstart med å velge riktig modell for scenariet, og forstå hvordan man tester, itererer og forbedrer ytelsen.
 
-Det finnes mange forskjellige typer LLM-modeller, og valget av modell avhenger av hva du ønsker å bruke dem til, dataene dine, hvor mye du er villig til å betale, og mer.
+Det finnes mange forskjellige typer LLM-modeller; valget av modell avhenger av hva du har som mål å bruke dem til, dine data, hvor mye du er villig til å betale og mer.
 
-Avhengig av om du ønsker å bruke modellene til tekst, lyd, video, bildegenerering og så videre, kan du velge en annen type modell.
+Avhengig av om du ønsker å bruke modellene til tekst, lyd, video, bildegenerering osv., kan du velge en annen type modell.
 
-- **Lyd- og talegjenkjenning**. For dette formålet er Whisper-typen modeller et godt valg, da de er allsidige og rettet mot talegjenkjenning. De er trent på variert lyd og kan utføre flerspråklig talegjenkjenning. Lær mer om [Whisper-typen modeller her](https://platform.openai.com/docs/models/whisper?WT.mc_id=academic-105485-koreyst).
+- **Lyd- og talegjenkjenning**. Whisper-stil modeller er fortsatt nyttige allmenn-talegjenkjenningsmodeller, men valg for produksjon inkluderer nå også nyere tale-til-tekst modeller som `gpt-4o-transcribe`, `gpt-4o-mini-transcribe` og diariseringsvarianter. Vurder språkdekning, diariseringsstøtte, sanntidsstøtte, latenstid og kostnad for ditt scenario. Les mer i [OpenAI tale-til-tekst dokumentasjon](https://platform.openai.com/docs/guides/speech-to-text?WT.mc_id=academic-105485-koreyst).
 
-- **Bildegenerering**. For bildegenerering er DALL-E og Midjourney to svært kjente valg. DALL-E tilbys av Azure OpenAI. [Les mer om DALL-E her](https://platform.openai.com/docs/models/dall-e?WT.mc_id=academic-105485-koreyst) og også i kapittel 9 av dette pensumet.
+- **Bildefremstilling**. DALL-E og Midjourney er velkjente alternativer for bildeopprettelse, men nåværende OpenAI bilde-APIer sentrerer rundt GPT Image-modeller som `gpt-image-2`, mens Stable Diffusion, Imagen, Flux og andre modellfamilier også er vanlige valg. Sammenlign prompt-overholdelse, redigeringsstøtte, stilkontroll, sikkerhetskrav og lisensiering. Les mer i [OpenAI bildegenereringsguide](https://platform.openai.com/docs/guides/images?WT.mc_id=academic-105485-koreyst) og kapittel 9 i dette læreplanen.
 
-- **Tekstgenerering**. De fleste modeller er trent på tekstgenerering, og du har et stort utvalg av alternativer fra GPT-3.5 til GPT-4. De har ulike kostnader, der GPT-4 er den dyreste. Det er verdt å se på [Azure OpenAI-lekeplassen](https://oai.azure.com/portal/playground?WT.mc_id=academic-105485-koreyst) for å evaluere hvilke modeller som best passer dine behov når det gjelder kapasitet og kostnad.
+- **Tekstgenerering**. Tekstmodeller spenner nå fra toppmodeller, resonneringsmodeller, mindre lav-latenstid modeller, og åpne vekt-modeller. Nåværende eksempler inkluderer OpenAI GPT-5.x modeller, Anthropic Claude 4.x modeller, Google Gemini 3.x modeller, Meta Llama 4 modeller og Mistral modeller. Ikke velg kun basert på utgivelsesdato eller pris; sammenlign oppgavekvalitet, latenstid, kontekstvindu, verktøybruk, sikkerhetsatferd, regional tilgjengelighet og totale kostnader. [Microsoft Foundry modellkatalog](https://ai.azure.com/catalog?WT.mc_id=academic-105485-koreyst) er et godt sted å sammenligne modeller tilgjengelig på Azure.
 
-- **Multimodalitet**. Hvis du ønsker å håndtere flere typer data i input og output, kan du vurdere modeller som [gpt-4 turbo med visjon eller gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models#gpt-4-and-gpt-4-turbo-models?WT.mc_id=academic-105485-koreyst) – de nyeste utgivelsene av OpenAI-modeller – som er i stand til å kombinere naturlig språkbehandling med visuell forståelse, og muliggjør interaksjoner gjennom multimodale grensesnitt.
+- **Multimodalitet**. Mange nåværende modeller kan prosessere mer enn tekst. Noen aksepterer bilde-, lyd- eller videoinndata; noen kan kalle verktøy; og spesialiserte modeller kan generere bilder, lyd eller video. For eksempel, nåværende OpenAI-modeller støtter tekst- og bildeinput, Gemini-modeller kan støtte tekst, kode, bilde, lyd og video, avhengig av variant, og Llama 4 Scout og Maverick er åpne vekt nativt multimodale modeller. Sjekk alltid hver modellkort for støttede inndata- og utdata-modaliteter før du bygger en arbeidsflyt rundt den.
 
-Å velge en modell gir deg noen grunnleggende funksjoner, men det er kanskje ikke nok. Ofte har du bedriftsspesifikke data som du på en eller annen måte må informere LLM-en om. Det finnes flere ulike tilnærminger til dette, mer om det i de kommende seksjonene.
+Å velge en modell betyr at du får noen grunnleggende kapasitet, som kanskje ikke er nok. Ofte har du bedrifts-spesifikke data som du på en eller annen måte må informere LLM-en om. Det finnes noen ulike valg for hvordan man kan nærme seg det, mer om dette i de kommende seksjonene.
 
-### Grunnmodeller versus LLM-er
+### Foundation-modeller versus LLM-er
 
-Begrepet Grunnmodell ble [skapt av forskere ved Stanford](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) og definert som en AI-modell som oppfyller visse kriterier, som:
+Begrepet Foundation Model ble [myntet av Stanford-forskere](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) og definert som en AI-modell som følger noen kriterier, slik som:
 
-- **De er trent ved bruk av usupervisert læring eller selv-supervisert læring**, noe som betyr at de er trent på umerkede multimodale data og ikke krever menneskelig annotering eller merking av data for treningsprosessen.
-- **De er svært store modeller**, basert på svært dype nevrale nettverk trent på milliarder av parametere.
-- **De er vanligvis ment å tjene som et ‘grunnlag’ for andre modeller**, noe som betyr at de kan brukes som et utgangspunkt for å bygge andre modeller, som kan gjøres ved finjustering.
+- **De trenes ved hjelp av usupervised eller selvsupervisert læring**, som betyr at de trenes på umerkede multimodale data, og de krever ikke menneskelig annotering eller merking av data for treningsprosessen.
+- **De er svært store modeller**, basert på veldig dype nevrale nettverk trent på milliarder av parametere.
+- **De er normalt ment å tjene som en 'grunnmur' for andre modeller**, noe som betyr at de kan brukes som et utgangspunkt for at andre modeller bygges på toppen av, som kan gjøres ved finjustering.
 
-![Grunnmodeller versus LLM-er](../../../translated_images/no/FoundationModel.e4859dbb7a825c94.webp)
+![Foundation Models versus LLMs](../../../translated_images/no/FoundationModel.e4859dbb7a825c94.webp)
 
 Bildekilde: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
-For å tydeliggjøre dette skillet, la oss ta ChatGPT som et eksempel. For å bygge den første versjonen av ChatGPT, fungerte en modell kalt GPT-3.5 som grunnmodellen. Dette betyr at OpenAI brukte noen chat-spesifikke data for å lage en finjustert versjon av GPT-3.5 som var spesialisert på å prestere godt i samtalescenarier, som chatboter.
+For å klargjøre skillelinjen ytterligere, la oss ta ChatGPT som et historisk eksempel. Tidlige versjoner av ChatGPT brukte GPT-3.5 som en foundation-modell. OpenAI brukte deretter chatt-spesifikke data og tilpasningsteknikker for å lage en justert versjon som presterte bedre i samtalescenarier, slik som chatbots. Moderne AI-tjenester ruter ofte mellom flere modellvarianter, så tjenestenavnet og den underliggende modellens navn er ikke alltid det samme.
 
-![Grunnmodell](../../../translated_images/no/Multimodal.2c389c6439e0fc51.webp)
+![Foundation Model](../../../translated_images/no/Multimodal.2c389c6439e0fc51.webp)
 
 Bildekilde: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
-### Åpen kildekode versus proprietære modeller
+### Åpne-vekt/åpen-kilde versus proprietære modeller
 
-En annen måte å kategorisere LLM-er på er om de er åpen kildekode eller proprietære.
+En annen måte å kategorisere LLM-er på er om de er åpne-vekt, åpen-kilde, eller proprietære.
 
-Modeller med åpen kildekode er modeller som gjøres tilgjengelige for offentligheten og kan brukes av hvem som helst. De gjøres ofte tilgjengelige av selskapet som opprettet dem, eller av forskningsmiljøet. Disse modellene kan inspiseres, modifiseres og tilpasses for ulike brukstilfeller i LLM-er. De er imidlertid ikke alltid optimalisert for produksjonsbruk og kan være mindre ytelsesdyktige enn proprietære modeller. I tillegg kan finansiering for modeller med åpen kildekode være begrenset, og de kan ikke vedlikeholdes på lang sikt eller oppdateres med den nyeste forskningen. Eksempler på populære modeller med åpen kildekode inkluderer [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst), [Bloom](https://huggingface.co/bigscience/bloom) og [LLaMA](https://llama.meta.com).
+Åpen-kilde og åpne-vekt modeller gjør modellartefakter tilgjengelige for inspeksjon, nedlasting eller tilpasning, men lisensene deres varierer. Noen er fullstendig åpen kildekode, mens andre er åpne-vekt modeller med bruksbegrensninger. De kan være nyttige når en bedrift trenger mer kontroll over distribusjon, datalokalisering, kostnader eller tilpasning. Likevel må team fortsatt gå gjennom lisensbetingelser, serveringskostnader, vedlikehold, sikkerhetsoppdateringer og evalueringskvalitet før bruk i produksjon. Eksempler inkluderer [Meta Llama 4](https://ai.meta.com/blog/llama-4-multimodal-intelligence/?WT.mc_id=academic-105485-koreyst), noen [Mistral-modeller](https://docs.mistral.ai/models/overview?WT.mc_id=academic-105485-koreyst) og mange modeller hostet på [Hugging Face](https://huggingface.co/models?WT.mc_id=academic-105485-koreyst).
 
-Proprietære modeller er modeller som eies av et selskap og ikke gjøres tilgjengelige for offentligheten. Disse modellene er ofte optimalisert for produksjonsbruk. De kan imidlertid ikke inspiseres, modifiseres eller tilpasses for ulike brukstilfeller. I tillegg er de ikke alltid gratis tilgjengelige og kan kreve abonnement eller betaling for bruk. Brukere har heller ikke kontroll over dataene som brukes til å trene modellen, noe som betyr at de må stole på at modelleieren sikrer forpliktelse til databeskyttelse og ansvarlig bruk av AI. Eksempler på populære proprietære modeller inkluderer [OpenAI-modeller](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-koreyst), [Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst) eller [Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-koreyst).
+Proprietære modeller eies og hostes av en tilbyder. Disse modellene er ofte optimalisert for administrert produksjonsbruk og kan tilby sterk støtte, sikkerhetssystemer, verktøyintegrasjon og skalerbarhet. Likevel kan kunder vanligvis ikke inspisere eller endre modellvektene, og må gjennomgå tilbyderens vilkår for personvern, oppbevaring, samsvar og akseptabel bruk. Eksempler inkluderer [OpenAI-modeller](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst), [Google Gemini](https://deepmind.google/models/gemini/pro/?WT.mc_id=academic-105485-koreyst), og [Anthropic Claude](https://platform.claude.com/docs/en/about-claude/models/overview?WT.mc_id=academic-105485-koreyst).
 
-### Innebygging versus bildegenerering versus tekst- og kodegenerering
+### Embedding versus bildegenerering versus tekst- og kodegenerering
 
-LLM-er kan også kategoriseres etter outputen de genererer.
+LLM-er kan også kategoriseres etter hvilken type output de genererer.
 
-Innebygginger er et sett med modeller som kan konvertere tekst til en numerisk form, kalt innebygging, som er en numerisk representasjon av input-teksten. Innebygginger gjør det enklere for maskiner å forstå forholdet mellom ord eller setninger og kan brukes som input av andre modeller, som klassifiseringsmodeller eller klyngemodeller som har bedre ytelse på numeriske data. Innebyggingsmodeller brukes ofte til overføringslæring, der en modell bygges for en surrogatoppgave som det finnes rikelig med data for, og deretter gjenbrukes modellvektene (innebyggingene) for andre oppgaver. Et eksempel på denne kategorien er [OpenAI innebygginger](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
+Embeddings er en gruppe modeller som kan konvertere tekst til en numerisk form, kalt embedding, som er en numerisk representasjon av inngangsteksten. Embeddings gjør det enklere for maskiner å forstå relasjonene mellom ord eller setninger og kan brukes som input for andre modeller, slik som klassifiseringsmodeller eller klyngemodeller som har bedre ytelse på numeriske data. Embedding-modeller brukes ofte for transfer learning, der en modell bygges for en surrogatoppgave med rikelig data, og deretter gjenbrukes modellvektene (embeddingene) for andre nedstrømsoppgaver. Et eksempel på denne kategorien er [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Innebygging](../../../translated_images/no/Embedding.c3708fe988ccf760.webp)
+![Embedding](../../../translated_images/no/Embedding.c3708fe988ccf760.webp)
 
-Bildegenereringsmodeller er modeller som genererer bilder. Disse modellene brukes ofte til bildebehandling, bildesyntese og bildetransformasjon. Bildegenereringsmodeller trenes ofte på store datasett av bilder, som [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), og kan brukes til å generere nye bilder eller redigere eksisterende bilder med teknikker som inpainting, superoppløsning og fargelegging. Eksempler inkluderer [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) og [Stable Diffusion-modeller](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
+Bildegenereringsmodeller er modeller som genererer bilder. Disse modellene brukes ofte til bildebehandling, bildesyntese og bildeoversettelse. Bildgenereringsmodeller trenes ofte på store datasett av bilder, slik som [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), og kan brukes til å generere nye bilder eller redigere eksisterende bilder med teknikker som inpainting, superoppløsning og fargelegging. Eksempler inkluderer [GPT Image-modeller](https://platform.openai.com/docs/guides/images?WT.mc_id=academic-105485-koreyst), [Stable Diffusion-modeller](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst) og Imagen-modeller.
 
-![Bildegenerering](../../../translated_images/no/Image.349c080266a763fd.webp)
+![Image generation](../../../translated_images/no/Image.349c080266a763fd.webp)
 
-Tekst- og kodegenereringsmodeller er modeller som genererer tekst eller kode. Disse modellene brukes ofte til tekstsammendrag, oversettelse og spørsmål-svar. Tekstgenereringsmodeller trenes ofte på store datasett av tekst, som [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), og kan brukes til å generere ny tekst eller svare på spørsmål. Kodegenereringsmodeller, som [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), trenes ofte på store datasett av kode, som GitHub, og kan brukes til å generere ny kode eller fikse feil i eksisterende kode.
+Tekst- og kodegenereringsmodeller er modeller som genererer tekst eller kode. Disse modellene brukes ofte til tekstoppsummering, oversettelse og spørsmål-svar. Tekstgenereringsmodeller trenes ofte på store tekstdatasett, slik som [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), og kan brukes til å generere ny tekst eller svare på spørsmål. Kodegenereringsmodeller, som [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), trenes ofte på store kode-datasett, slik som GitHub, og kan brukes til å generere ny kode eller rette feil i eksisterende kode.
 
-![Tekst- og kodegenerering](../../../translated_images/no/Text.a8c0cf139e5cc2a0.webp)
+![Text and code generation](../../../translated_images/no/Text.a8c0cf139e5cc2a0.webp)
 
-### Encoder-Decoder versus kun Decoder
+### Encoder-Decoder versus Kun dekoder
 
-For å snakke om de ulike typene arkitekturer for LLM-er, la oss bruke en analogi.
+For å snakke om ulike arkitekturtyper av LLM-er, la oss bruke en analogi.
 
-Tenk deg at sjefen din ga deg en oppgave med å lage en quiz for studentene. Du har to kolleger; én som har ansvar for å lage innholdet og en annen som har ansvar for å gjennomgå det.
+Forestill deg sjefen din ga deg en oppgave om å skrive en quiz til studentene. Du har to kollegaer; en som lager innholdet, og en annen som gjennomgår det.
 
-Innholdsskaperen er som en modell som kun er en Decoder, de kan se på emnet og det du allerede har skrevet, og deretter skrive et kurs basert på det. De er veldig gode til å skrive engasjerende og informativt innhold, men de er ikke veldig gode til å forstå emnet og læringsmålene. Noen eksempler på Decoder-modeller er GPT-familien, som GPT-3.
+Innholdsskaperen er som en kun dekoder-modell: de kan se på temaet, se hva du allerede har skrevet, og fortsette å generere innhold basert på denne konteksten. De er veldig gode til å skrive engasjerende og informativt innhold, men ikke alltid best egnet når oppgaven bare er å klassifisere, hente eller kode informasjon. Eksempler på kun dekoder modellfamilier er GPT og Llama-modeller.
 
-Gjennomleseren er som en modell som kun er en Encoder, de ser på kurset som er skrevet og svarene, legger merke til forholdet mellom dem og forstår konteksten, men de er ikke gode til å generere innhold. Et eksempel på en Encoder-modell ville være BERT.
+Gjennomgangspersonen er som en kun encoder-modell, de ser på den skrevne materialet og svarene, legger merke til forholdet mellom dem og forstår kontekst, men er ikke gode til å generere innhold. Et eksempel på kun encoder-modell er BERT.
 
-Tenk deg at vi også kan ha noen som både kan lage og gjennomgå quizen, dette er en Encoder-Decoder-modell. Noen eksempler ville være BART og T5.
+Tenk at vi kan ha noen som både kunne lage og gjennomgå quizzen, dette er en encoder-decoder modell. Noen eksempler er BART og T5.
 
 ### Tjeneste versus Modell
 
-La oss nå snakke om forskjellen mellom en tjeneste og en modell. En tjeneste er et produkt som tilbys av en skyleverandør, og er ofte en kombinasjon av modeller, data og andre komponenter. En modell er kjernen i en tjeneste, og er ofte en grunnmodell, som en LLM.
+Nå, la oss snakke om forskjellen på en tjeneste og en modell. En tjeneste er et produkt som tilbys av en sky-leverandør, og er ofte en kombinasjon av modeller, data og andre komponenter. En modell er kjernen i en tjeneste, og er ofte en grunnmur-modell, slik som en LLM.
 
-Tjenester er ofte optimalisert for produksjonsbruk og er ofte enklere å bruke enn modeller, via et grafisk brukergrensesnitt. Tjenester er imidlertid ikke alltid gratis tilgjengelige og kan kreve abonnement eller betaling for bruk, i bytte mot å utnytte tjenesteeierens utstyr og ressurser, optimalisere utgifter og skalere enkelt. Et eksempel på en tjeneste er [Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), som tilbyr en betalingsplan basert på bruk, noe som betyr at brukere belastes proporsjonalt med hvor mye de bruker tjenesten. I tillegg tilbyr Azure OpenAI Service sikkerhet på bedriftsnivå og et ansvarlig AI-rammeverk på toppen av modellens funksjoner.
+Tjenester er ofte optimalisert for produksjonsbruk og er ofte enklere å bruke enn modeller, via en grafisk brukergrensesnitt. Likevel er tjenester ikke alltid gratis tilgjengelige, og kan kreve abonnement eller betaling for bruk, til gjengjeld for å benytte tjenesteeierens utstyr og ressurser, optimalisere kostnader og skalere enkelt. Et eksempel på en tjeneste er [Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), som tilbyr en betalingsmodell basert på forbruk, noe som betyr at brukere betaler proporsjonalt med tjenestebruk. Azure OpenAI Service tilbyr også bedriftsgradert sikkerhet og en ansvarlig AI-rammeverk på toppen av modellens kapasiteter.
 
-Modeller er bare det nevrale nettverket, med parametere, vekter og andre komponenter. Dette gjør det mulig for selskaper å kjøre dem lokalt, men de må kjøpe utstyr, bygge en struktur for skalering og kjøpe en lisens eller bruke en modell med åpen kildekode. En modell som LLaMA er tilgjengelig for bruk, men krever datakraft for å kjøre modellen.
+Modeller er nevrale nettverk-artefakter: parametere, vekter, arkitektur, tokenizer og støttende konfigurasjon. Å kjøre en modell lokalt eller i et privat miljø krever egnet maskinvare, serverinfrastruktur, overvåking, og enten en kompatibel åpen-kilde/åpen-vekt lisens eller en kommersiell lisens. Åpne-vekt modeller som Llama 4 eller Mistral-modeller kan hostes selv, men krever fortsatt regnekraft og operasjonell kompetanse.
 
-## Hvordan teste og iterere med ulike modeller for å forstå ytelse i Azure
+## Hvordan teste og iterere med ulike modeller for å forstå ytelse på Azure
 
-Når teamet vårt har utforsket det nåværende LLM-landskapet og identifisert noen gode kandidater for sine scenarier, er neste steg å teste dem på deres data og arbeidsbelastning. Dette er en iterativ prosess, utført gjennom eksperimenter og målinger.
-De fleste av modellene vi nevnte i tidligere avsnitt (OpenAI-modeller, åpen kildekode-modeller som Llama2 og Hugging Face-transformers) er tilgjengelige i [Model Catalog](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview?WT.mc_id=academic-105485-koreyst) i [Azure AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst).
 
-[Azure AI Studio](https://learn.microsoft.com/azure/ai-studio/what-is-ai-studio?WT.mc_id=academic-105485-koreyst) er en skyplattform designet for utviklere som ønsker å bygge generative AI-applikasjoner og administrere hele utviklingssyklusen – fra eksperimentering til evaluering – ved å kombinere alle Azure AI-tjenester i ett enkelt knutepunkt med et brukervennlig grensesnitt. Modellkatalogen i Azure AI Studio gjør det mulig for brukeren å:
+Når teamet vårt har utforsket det nåværende landskapet for LLM-er og identifisert noen gode kandidater for deres scenarier, er neste steg å teste dem på deres data og arbeidsbelastning. Dette er en iterativ prosess, utført gjennom eksperimenter og målinger.
+De fleste av modellene vi nevnte i tidligere avsnitt (OpenAI-modeller, åpne vektsmodeller som Llama 4 og Mistral, og Hugging Face-modeller) er tilgjengelige i [Microsoft Foundry Models](https://learn.microsoft.com/azure/foundry/concepts/foundry-models-overview?WT.mc_id=academic-105485-koreyst).
 
-- Finne Foundation-modellen av interesse i katalogen – enten proprietær eller åpen kildekode – ved å filtrere etter oppgave, lisens eller navn. For å forbedre søkbarheten er modellene organisert i samlinger, som Azure OpenAI-samlingen, Hugging Face-samlingen og mer.
+[Microsoft Foundry](https://learn.microsoft.com/azure/foundry/what-is-foundry?WT.mc_id=academic-105485-koreyst), tidligere Azure AI Studio/Azure AI Foundry, er en sammenslått Azure-plattform for å bygge AI-apper og agenter. Den hjelper utviklere med å håndtere livssyklusen fra eksperimentering og evaluering til distribusjon, overvåking og styring. Modellkatalogen i Microsoft Foundry gjør det mulig for brukeren å:
+
+- Finne grunnlagsmodellen av interesse i katalogen, inkludert modeller solgt av Azure og modeller fra partnere og fellesskapsleverandører. Brukere kan filtrere på oppgave, leverandør, lisens, distribusjonsalternativ eller navn.
 
 ![Model catalog](../../../translated_images/no/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
 
-- Gå gjennom modellkortet, som inkluderer en detaljert beskrivelse av tiltenkt bruk og treningsdata, kodeeksempler og evalueringsresultater fra det interne evalueringsbiblioteket.
+- Gå gjennom modellkortet, inkludert en detaljert beskrivelse av tiltenkt bruk og treningsdata, kodeeksempler og evalueringsresultater på det interne evalueringsbiblioteket.
 
 ![Model card](../../../translated_images/no/ModelCard.598051692c6e400d.webp)
 
-- Sammenligne benchmarks på tvers av modeller og datasett tilgjengelig i bransjen for å vurdere hvilken som passer best til forretningsscenariet, via [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst)-panelet.
+- Sammenligne referansetester på tvers av modeller og datasett tilgjengelig i bransjen for å vurdere hvilken som oppfyller forretningsscenariet, gjennom [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst)-panelet.
 
 ![Model benchmarks](../../../translated_images/no/ModelBenchmarks.254cb20fbd06c03a.webp)
 
-- Finjustere modellen på egendefinerte treningsdata for å forbedre modellens ytelse i en spesifikk arbeidsbelastning, ved å utnytte eksperimenterings- og sporingsfunksjonene i Azure AI Studio.
+- Finjustere støttede modeller på egendata for å forbedre modellens ytelse i en spesifikk arbeidsbelastning, ved å utnytte eksperimenterings- og sporingsmulighetene til Microsoft Foundry.
 
 ![Model fine-tuning](../../../translated_images/no/FineTuning.aac48f07142e36fd.webp)
 
-- Distribuere den originale forhåndstrente modellen eller den finjusterte versjonen til en ekstern sanntidsinference – administrert databehandling – eller serverløs API-endepunkt – [pay-as-you-go](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) – for å gjøre det mulig for applikasjoner å bruke den.
+- Distribuere den opprinnelige forhåndstrente modellen eller den finjusterte versjonen til et eksternt sanntidsinferenzendepunkt, ved bruk av administrerte databehandlings- eller serverløse distribusjonsalternativer, for å gjøre det mulig for applikasjoner å konsumere den.
 
 ![Model deployment](../../../translated_images/no/ModelDeploy.890da48cbd0bccdb.webp)
 
 > [!NOTE]
-> Ikke alle modeller i katalogen er for øyeblikket tilgjengelige for finjustering og/eller pay-as-you-go-distribusjon. Sjekk modellkortet for detaljer om modellens funksjoner og begrensninger.
+> Ikke alle modellene i katalogen er for øyeblikket tilgjengelige for finjustering og/eller betaling etter bruk-distribusjon. Sjekk modellkortet for detaljer om modellens kapasiteter og begrensninger.
 
 ## Forbedring av LLM-resultater
 
-Vi har utforsket med vårt oppstartsteam ulike typer LLM-er og en skyplattform (Azure Machine Learning) som gjør det mulig for oss å sammenligne forskjellige modeller, evaluere dem på testdata, forbedre ytelsen og distribuere dem på inference-endepunkter.
+Vi har sammen med vårt oppstartsteam utforsket ulike typer LLM-er og en skyplattform (Microsoft Foundry) som gjør det mulig å sammenligne ulike modeller, evaluere dem på testdata, forbedre ytelsen og distribuere dem på inferensendepunkter.
 
-Men når bør de vurdere å finjustere en modell i stedet for å bruke en forhåndstrent? Finnes det andre tilnærminger for å forbedre modellens ytelse på spesifikke arbeidsbelastninger?
+Men når bør de vurdere å finjustere en modell i stedet for å bruke en forhåndstrent en? Finnes det andre tilnærminger for å forbedre modellens ytelse på spesifikke arbeidsbelastninger?
 
-Det finnes flere tilnærminger en bedrift kan bruke for å oppnå de resultatene de trenger fra en LLM. Du kan velge forskjellige typer modeller med ulike grader av trening når du distribuerer en LLM i produksjon, med forskjellige nivåer av kompleksitet, kostnad og kvalitet. Her er noen forskjellige tilnærminger:
+Det finnes flere tilnærminger en bedrift kan bruke for å få de resultatene de trenger fra en LLM. Du kan velge forskjellige typer modeller med ulike grader av trening når du distribuerer en LLM i produksjon, med forskjellige nivåer av kompleksitet, kostnad og kvalitet. Her er noen forskjellige tilnærminger:
 
-- **Prompt engineering med kontekst**. Ideen er å gi nok kontekst når du gir en prompt for å sikre at du får de svarene du trenger.
+- **Prompt engineering med kontekst**. Ideen er å gi nok kontekst når du gir instruksjoner for å sikre at du får svarene du trenger.
 
-- **Retrieval Augmented Generation, RAG**. Dataene dine kan for eksempel finnes i en database eller et web-endepunkt. For å sikre at disse dataene, eller en del av dem, inkluderes ved prompting, kan du hente relevante data og gjøre dem til en del av brukerens prompt.
+- **Retrieval Augmented Generation, RAG**. Dine data kan for eksempel eksistere i en database eller et webelement; for å sikre at disse dataene, eller et delsett av dem, inkluderes ved tidspunkt for prompten, kan du hente relevante data og gjøre dem til en del av brukerens prompt.
 
-- **Finjustert modell**. Her trener du modellen videre på dine egne data, noe som gjør modellen mer presis og responsiv til dine behov, men det kan være kostbart.
+- **Finjustert modell**. Her har du trent modellen videre på egne data, noe som gjør modellen mer presis og responsiv til dine behov, men det kan være kostbart.
 
 ![LLMs deployment](../../../translated_images/no/Deploy.18b2d27412ec8c02.webp)
 
-Bildekilde: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
+Bildets kilde: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 
 ### Prompt Engineering med Kontekst
 
-Forhåndstrente LLM-er fungerer veldig godt på generelle oppgaver innen naturlig språk, selv ved å kalle dem med en kort prompt, som en setning som skal fullføres eller et spørsmål – det såkalte "zero-shot"-læring.
+Forhåndstrente LLM-er fungerer veldig godt på generaliserte oppgaver innen naturlig språk, selv ved å kalle dem med en kort prompt, som en setning som skal fullføres eller et spørsmål – den såkalte «zero-shot» læringen.
 
-Jo mer brukeren kan ramme inn forespørselen sin med en detaljert forespørsel og eksempler – konteksten – desto mer nøyaktig og nærmere brukerens forventninger vil svaret være. I dette tilfellet snakker vi om "one-shot"-læring hvis prompten inneholder bare ett eksempel, og "few-shot"-læring hvis den inneholder flere eksempler. Prompt engineering med kontekst er den mest kostnadseffektive tilnærmingen å starte med.
+Jo mer brukeren kan ramme inn forespørselen med en detaljert anmodning og eksempler – konteksten – desto mer nøyaktig og nær brukerens forventninger vil svaret være. I dette tilfellet snakker vi om «one-shot» læring hvis prompten inneholder bare ett eksempel og «few-shot» læring hvis den inneholder flere eksempler.
+Prompt engineering med kontekst er den mest kostnadseffektive tilnærmingen å starte med.
 
 ### Retrieval Augmented Generation (RAG)
 
-LLM-er har begrensningen at de kun kan bruke dataene som ble brukt under treningen for å generere et svar. Dette betyr at de ikke vet noe om hendelser som skjedde etter treningsprosessen, og de kan ikke få tilgang til ikke-offentlig informasjon (som bedriftsdata).
-Dette kan overvinnes gjennom RAG, en teknikk som utvider prompten med eksterne data i form av dokumentbiter, med tanke på begrensninger i promptlengde. Dette støttes av verktøy for vektordatabaser (som [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)) som henter nyttige biter fra ulike forhåndsdefinerte datakilder og legger dem til promptens kontekst.
+LLM-er har den begrensningen at de kun kan bruke data som har blitt brukt under treningen for å generere et svar. Dette betyr at de ikke vet noe om faktiske hendelser som skjedde etter treningsprosessen, og de kan ikke få tilgang til ikke-offentlig informasjon (som bedriftsdata).
+Dette kan overvinnes gjennom RAG, en teknikk som utvider prompten med eksterne data i form av dokumentbiter, med tanke på promptens lengdebegrensninger. Dette støttes av verktøy for vektordatabaser (som [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)) som henter nyttige biter fra forskjellige forhåndsdefinerte datakilder og legger dem til som en del av prompt-konteksten.
 
-Denne teknikken er svært nyttig når en bedrift ikke har nok data, nok tid eller ressurser til å finjustere en LLM, men likevel ønsker å forbedre ytelsen på en spesifikk arbeidsbelastning og redusere risikoen for fabrikasjoner, det vil si forvrengning av virkeligheten eller skadelig innhold.
+Denne teknikken er svært nyttig når en bedrift ikke har nok data, tid eller ressurser til å finjustere en LLM, men likevel ønsker å forbedre ytelsen på en spesifikk arbeidsbelastning og redusere risikoen for hallusinerte, utdaterte eller ubegrunnede svar.
 
 ### Finjustert modell
 
-Finjustering er en prosess som utnytter overføringslæring for å "tilpasse" modellen til en nedstrømsoppgave eller for å løse et spesifikt problem. I motsetning til few-shot-læring og RAG resulterer det i en ny modell som genereres, med oppdaterte vekter og skjevheter. Det krever et sett med treningseksempler som består av en enkelt input (prompten) og dens tilhørende output (fullføringen).
+Finjustering er en prosess som utnytter transferlæring for å ‘tilpasse’ modellen til en påfølgende oppgave eller løse et spesifikt problem. I motsetning til few-shot læring og RAG, resulterer denne i at en ny modell genereres, med oppdaterte vekter og biaser. Den krever et sett med trenings-eksempler bestående av en enkelt inngang (prompten) og tilhørende utgang (fullføringen).
 Dette vil være den foretrukne tilnærmingen hvis:
 
-- **Bruk av finjusterte modeller**. En bedrift ønsker å bruke finjusterte mindre kapable modeller (som embedding-modeller) i stedet for høyytelsesmodeller, noe som resulterer i en mer kostnadseffektiv og rask løsning.
+- **Bruk av mindre oppgavespesifikke modeller**. En bedrift ønsker å finjustere en mindre modell for en smal oppgave i stedet for gjentatte ganger å gi prompt til en større grenseløs modell, noe som resulterer i en mer kostnadseffektiv og raskere løsning.
 
-- **Vurdering av latens**. Latens er viktig for en spesifikk brukstilfelle, så det er ikke mulig å bruke veldig lange promter eller antallet eksempler som modellen skal lære av, passer ikke med promptens lengdebegrensning.
+- **Vurdering av latenstid**. Latenstid er viktig for en spesifikk bruksområde, så det er ikke mulig å bruke veldig lange prompts, eller antall eksempler som modellen skal lære fra, passer ikke innenfor promptens lengdebegrensning.
 
-- **Holde seg oppdatert**. En bedrift har mye data av høy kvalitet og sannhetsdata, samt ressursene som kreves for å holde disse dataene oppdatert over tid.
+- **Tilpasning av stabil oppførsel**. En bedrift har mange høykvalitets eksempler og ønsker at modellen konsekvent følger en oppgave, utdataformat, tone eller domene-spesifikk stil. Hvis hovedproblemet er ferske fakta eller privat kunnskap som endres ofte, bør man heller bruke RAG enn å stole på finjustering alene.
 
 ### Trenet modell
 
-Å trene en LLM fra bunnen av er uten tvil den mest krevende og komplekse tilnærmingen å ta i bruk, og krever enorme mengder data, dyktige ressurser og passende datakraft. Dette alternativet bør kun vurderes i et scenario der en bedrift har en domenespesifikk brukstilfelle og en stor mengde domenesentriske data.
+Å trene en LLM fra bunnen av er uten tvil den vanskeligste og mest komplekse tilnærmingen å ta i bruk, som krever enorme mengder data, dyktige ressurser og passende datakraft. Dette alternativet bør bare vurderes i et scenario hvor en bedrift har et domenespesifikt bruksområde og store mengder domene-sentrerte data.
 
 ## Kunnskapssjekk
 
-Hva kan være en god tilnærming for å forbedre LLM-fullføringsresultater?
+Hva kan være en god tilnærming for å forbedre LLM fullføringsresultater?
 
 1. Prompt engineering med kontekst
 1. RAG
 1. Finjustert modell
 
-A:3, hvis du har tid og ressurser og data av høy kvalitet, er finjustering det bedre alternativet for å holde seg oppdatert. Men hvis du ser på å forbedre ting og mangler tid, er det verdt å vurdere RAG først.
+A: Alle tre kan hjelpe. Start med prompt engineering og kontekst for raske forbedringer, og bruk RAG når modellen trenger oppdaterte fakta eller privat bedriftsdata. Velg finjustering når du har nok høykvalitets eksempler og trenger at modellen konsekvent følger en oppgave, format, tone eller domenemønster.
 
 ## 🚀 Utfordring
 
-Les mer om hvordan du kan [bruke RAG](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst) for din bedrift.
+Les mer om hvordan du kan [bruke RAG](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst) i din virksomhet.
 
-## Flott arbeid, fortsett læringen din
+## Flott jobba, fortsett læringen din
 
-Etter å ha fullført denne leksjonen, sjekk ut vår [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) for å fortsette å øke kunnskapen din om Generative AI!
+Etter å ha fullført denne leksjonen, sjekk ut vår [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) for å fortsette å heve kunnskapen din om Generative AI!
 
-Gå videre til Leksjon 3 hvor vi skal se på hvordan man [bygger med Generative AI på en ansvarlig måte](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
+Gå videre til Leksjon 3 hvor vi vil se på hvordan man kan [bygge med Generative AI Ansvarlig](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Ansvarsfraskrivelse**:  
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi tilstreber nøyaktighet, vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det originale dokumentet på sitt opprinnelige språk bør anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Ansvarsfraskrivelse**:
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det opprinnelige dokumentet på originalspråket skal betraktes som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

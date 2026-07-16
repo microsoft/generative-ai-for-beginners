@@ -1,82 +1,82 @@
-# How to Build Text Generation Apps
+# Diwey Build Text Generation Applications
 
-[![How to Build Text Generation Apps](../../../translated_images/pcm/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Diwey Build Text Generation Applications](../../../translated_images/pcm/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
-> _(Click di image wey dey up to watch di video for dis lesson)_
+> _(Tap di picture wey dey above to watch video of dis lekson)_
 
-For dis curriculum wey you don dey see so far, e get core concepts like prompts and even one whole discipline wey dem dey call "prompt engineering". Plenty tools wey you fit use like ChatGPT, Office 365, Microsoft Power Platform and others, dey support you to use prompts do something.
+You don already see so far through dis kurs say dem get strong tins like prompts and even one whole discipline wey dem dey call "prompt engineering". Plenti tools wey you fit dey use like ChatGPT, Office 365, Microsoft Power Platform and others, dem dey help you use prompts to fit do sometin.
 
-If you wan add dis kain experience for app, you go need sabi concepts like prompts, completions and choose one library wey you go use. Na wetin you go learn for dis chapter be dat.
+To add dis kain tapiensh to one app, you gats sabi strong tins like prompts, completions and choose library to work with. Na wetin you go learn for dis chapter be dat one.
 
 ## Introduction
 
 For dis chapter, you go:
 
-- Learn about di openai library and di main concepts wey dey inside.
-- Build one text generation app wey dey use openai.
-- Understand how to use concepts like prompt, temperature, and tokens to build one text generation app.
+- Learn about di openai library and im main tins.
+- Build text generation app wey go dey use openai.
+- Understand how to use tins like prompt, temperature, and tokens to build text generation app.
 
-## Learning goals
+## Di tins wey you go learn
 
-By di time we finish dis lesson, you go fit:
+When dis lekson finish, you go fit:
 
 - Explain wetin text generation app be.
-- Build one text generation app wey dey use openai.
-- Configure your app to use more or less tokens and also change di temperature, to get different kain output.
+- Build text generation app with openai.
+- Configure your app to use more or less tokens and also change temperature, for different output.
 
 ## Wetin be text generation app?
 
-Normally, when you dey build app, e go get one kain interface like di ones wey dey below:
+Normally if you dey build app, e go get some kain interface like dis one:
 
-- Command-based. Console apps na di kind app wey you go type command and e go do di work. Example na `git` wey be command-based app.
-- User interface (UI). Some apps get graphical user interfaces (GUIs) wey you go fit click buttons, type text, choose options and more.
+- Command-based. Console apps na typical app where you go dey type command and e go do di task. For example, `git` na command-based app.
+- User interface (UI). Some app get graphical user interfaces (GUI) wey you go dey click buttons, put text, select options and more.
 
 ### Console and UI apps get limit
 
-Compare am to command-based app wey you go type command:
+Make you compare am with command-based app wey you dey type command:
 
-- **E get limit**. You no fit just type any command, na only di ones wey di app support you fit type.
-- **Language specific**. Some apps dey support plenty languages, but di app dey built for one specific language by default, even if you fit add more language support.
+- **E get limit**. You no fit type any command, only di one wey di app support.
+- **E dey for one language**. Some app fit support plenti languages, but by default e go dey for one language, even if you fit add more languages.
 
 ### Benefits of text generation apps
 
-So, how text generation app dey different?
+So how text generation app different?
 
-For text generation app, you get more freedom, you no dey limited to set of commands or one specific input language. Instead, you fit use natural language interact with di app. Another benefit be say you dey interact with one data source wey dem don train with plenty information, unlike traditional app wey fit dey limited to wetin dey inside database.
+For text generation app, you get more flexibility, no be only set commands or one specific input language. Instead, you fit use natural language talk to di app. Another benefit be say you dey interact with big data wey dem don train on many tins, but normal app fit get limit for wetin dey inside dia database.
 
-### Wetin I fit build with text generation app?
+### Wetin fit build with text generation app?
 
-Plenty things dey wey you fit build. Example:
+Plenti tins wey you fit build. For example:
 
-- **Chatbot**. Chatbot wey dey answer questions about topics, like your company and di products fit make sense.
-- **Helper**. LLMs dey good for things like summarizing text, getting insights from text, producing text like CVs and more.
-- **Code assistant**. Depending on di language model wey you dey use, you fit build code assistant wey go help you write code. Example na GitHub Copilot or ChatGPT wey fit help you write code.
+- **Chatbot**. Chatbot wey go fit answer questions about tins like your company and dia products go make brain.
+- **Helper**. LLMs good for tins like to summarize text, get insights from text, produce text like resume and more.
+- **Code assistant**. Depending on language model wey you use, you fit build code assistant wey go help you write code. For example, you fit use product like GitHub Copilot and ChatGPT to help write code.
 
-## How I go take start?
+## How to start?
 
-You go need find way to connect with LLM wey usually dey involve di two approaches wey dey below:
+You need to find better way to connect with LLM. Usually e get two ways:
 
-- Use API. For here, you go dey construct web requests with your prompt and get generated text back.
-- Use library. Libraries dey help make di API calls easier to use.
+- Use API. You go fit construct web requests with your prompt and get generated text back.
+- Use library. Libraries dey encapsulate API calls and make dem easy for use.
 
 ## Libraries/SDKs
 
-E get some popular libraries wey dey work with LLMs like:
+Some popular libraries for working with LLMs be:
 
-- **openai**, dis library dey make am easy to connect to your model and send prompts.
+- **openai**, dis library make e easy to connect to your model and send prompts.
 
-Then e get libraries wey dey operate for higher level like:
+Then some libraries dey wey dey operate at higher level like:
 
-- **Langchain**. Langchain dey popular and e dey support Python.
-- **Semantic Kernel**. Semantic Kernel na library wey Microsoft create wey dey support C#, Python, and Java.
+- **Langchain**. Langchain dey popular and e support Python.
+- **Semantic Kernel**. Semantic Kernel na library by Microsoft wey support C#, Python, and Java.
 
-## First app wey dey use openai
+## First app using openai
 
-Make we see how we fit build our first app, wetin we need, how much work e go take and so on.
+Make we see how to build our first app, which libraries we need, how much we need and so on.
 
 ### Install openai
 
-Plenty libraries dey wey you fit use to interact with OpenAI or Azure OpenAI. You fit use plenty programming languages like C#, Python, JavaScript, Java and more. We don choose to use `openai` Python library, so we go use `pip` install am.
+Plenty libraries dey for interacting with OpenAI or Azure OpenAI. You fit use many programming languages like C#, Python, JavaScript, Java and more. We choose to use `openai` Python library, so we go use `pip` to install am.
 
 ```bash
 pip install openai
@@ -84,82 +84,87 @@ pip install openai
 
 ### Create resource
 
-You go need do di steps wey dey below:
+You gots to do dis steps:
 
 - Create account for Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
 - Get access to Azure OpenAI. Go [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) and request access.
 
   > [!NOTE]
-  > As at di time wey dem write dis, you go need apply for access to Azure OpenAI.
+  > As I dey write dis, you gots to apply to get access for Azure OpenAI.
 
 - Install Python <https://www.python.org/>
-- Don create Azure OpenAI Service resource. See dis guide for how to [create resource](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- Have created Azure OpenAI Service resource. See guide on how to [create resource](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
-### Locate API key and endpoint
+### Find API key and endpoint
 
-For dis stage, you go need tell your `openai` library di API key wey e go use. To find your API key, go "Keys and Endpoint" section for your Azure OpenAI resource and copy di "Key 1" value.
+Now, you gots tell your `openai` library the API key to use. To find API key, go to "Keys and Endpoint" section on your Azure OpenAI resource and copy "Key 1".
 
 ![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-Now wey you don copy dis information, make we tell di libraries how to use am.
+Now that you get dis info copy, make we tell library to use am.
 
 > [!NOTE]
-> E good make you separate your API key from your code. You fit do am by using environment variables.
+> E better separate your API key from your code. You fit do am using environment variables.
 >
-> - Set di environment variable `OPENAI_API_KEY` to your API key.
+> - Set environment variable `OPENAI_API_KEY` to your API key.
 >   `export OPENAI_API_KEY='sk-...'`
 
-### Setup configuration Azure
+### Setup Azure config
 
-If you dey use Azure OpenAI, na so you go setup configuration:
+If you dey use Azure OpenAI (wey be part of Microsoft Foundry now), dis na how to setup config. We dey use standard `OpenAI` client wey point to Azure OpenAI `/openai/v1/` endpoint, wey dey work with Responses API and no need `api_version`:
 
 ```python
-openai.api_type = 'azure'
-openai.api_key = os.environ["OPENAI_API_KEY"]
-openai.api_version = '2023-05-15'
-openai.api_base = os.getenv("API_BASE")
+import os
+from openai import OpenAI
+
+client = OpenAI(
+    api_key=os.environ["AZURE_OPENAI_API_KEY"],
+    base_url=f"{os.environ['AZURE_OPENAI_ENDPOINT'].rstrip('/')}/openai/v1/",
+)
 ```
 
-For di code wey dey above, we dey set di following:
+We dey set dis as below:
 
-- `api_type` to `azure`. Dis one dey tell di library make e use Azure OpenAI and no be OpenAI.
-- `api_key`, na your API key wey dey Azure Portal.
-- `api_version`, na di version of di API wey you wan use. As at di time wey dem write dis, di latest version na `2023-05-15`.
-- `api_base`, na di endpoint of di API. You fit find am for Azure Portal near your API key.
+- `api_key`, na your Azure Portal or Microsoft Foundry portal API key.
+- `base_url`, na your Foundry resource endpoint with `/openai/v1/` added. Stable v1 endpoint dey work across OpenAI and Azure OpenAI with no `api_version` needed.
 
-> [!NOTE] > `os.getenv` na function wey dey read environment variables. You fit use am read environment variables like `OPENAI_API_KEY` and `API_BASE`. Set dis environment variables for your terminal or use library like `dotenv`.
+> [!NOTE] > `os.environ` dey read environment variables. You fit use am read environment variables like `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT`. Set dem in terminal or use library like `dotenv`.
 
 ## Generate text
 
-Di way to generate text na to use di `Completion` class. Example dey here:
+To generate text, you dey use Responses API by `responses.create` method. See example:
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
 
-completion = openai.Completion.create(model="davinci-002", prompt=prompt)
-print(completion.choices[0].text)
+response = client.responses.create(
+    model="gpt-4o-mini",  # na dis your model deployment name be dat
+    input=prompt,
+    store=False,
+)
+print(response.output_text)
 ```
 
-For di code wey dey above, we dey create one completion object and we dey pass di model wey we wan use and di prompt. Then we dey print di generated text.
+For code above, we create response and pass model we wan use plus prompt. Then we print generated text with `response.output_text`.
 
-### Chat completions
+### Multi-turn conversations
 
-So far, you don see how we dey use `Completion` to generate text. But e get another class wey dem dey call `ChatCompletion` wey dey more suitable for chatbots. Example of how to use am dey here:
+Responses API good for both single-turn text generation and multi-turn chatbots - you provide list of messages inside `input` to build conversation:
 
 ```python
-import openai
+from openai import OpenAI
 
-openai.api_key = "sk-..."
+client = OpenAI(api_key="sk-...")
 
-completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
-print(completion.choices[0].message.content)
+response = client.responses.create(model="gpt-4o-mini", input="Hello world", store=False)
+print(response.output_text)
 ```
 
-We go talk more about dis functionality for di next chapter.
+More about dis functionality go come for next chapter.
 
 ## Exercise - your first text generation app
 
-Now wey we don learn how to setup and configure openai, e don reach time to build your first text generation app. To build your app, follow di steps wey dey below:
+Now we don learn how to set up and configure openai, na time to build your first text generation app. To build, follow steps:
 
 1. Create virtual environment and install openai:
 
@@ -173,35 +178,34 @@ Now wey we don learn how to setup and configure openai, e don reach time to buil
    > If you dey use Windows, type `venv\Scripts\activate` instead of `source venv/bin/activate`.
 
    > [!NOTE]
-   > Find your Azure OpenAI key by going to [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) and search for `Open AI` then select `Open AI resource` and then select `Keys and Endpoint` and copy di `Key 1` value.
+   > Find your Azure OpenAI key by going [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst), search `Open AI`, select `Open AI resource`, then select `Keys and Endpoint` and copy `Key 1`.
 
-1. Create _app.py_ file and put di code wey dey below inside:
+1. Create _app.py_ file and put this code inside:
 
    ```python
-   import openai
+   import os
+   from openai import OpenAI
 
-   openai.api_key = "<replace this value with your open ai key or Azure OpenAI key>"
-
-   openai.api_type = 'azure'
-   openai.api_version = '2023-05-15'
-   openai.api_base = "<endpoint found in Azure Portal where your API key is>"
+   client = OpenAI(
+       api_key="<replace this value with your Azure OpenAI key>",
+       base_url="<endpoint found in Azure Portal>/openai/v1/",
+   )
    deployment_name = "<deployment name>"
 
    # add your completion code
    prompt = "Complete the following: Once upon a time there was a"
-   messages = [{"role": "user", "content": prompt}]
 
-   # make completion
-   completion = openai.chat.completions.create(model=deployment_name, messages=messages)
+   # make a request using the Responses API
+   response = client.responses.create(model=deployment_name, input=prompt, store=False)
 
    # print response
-   print(completion.choices[0].message.content)
+   print(response.output_text)
    ```
 
    > [!NOTE]
-   > If you dey use Azure OpenAI, you go need set di `api_type` to `azure` and set di `api_key` to your Azure OpenAI key.
+   > If you dey use plain OpenAI (no Azure), use `client = OpenAI(api_key="<replace this value with your OpenAI key>")` (no `base_url`) and pass model name like `gpt-4o-mini` instead deployment name.
 
-   You go see output like di one wey dey below:
+   You go see output like dis:
 
    ```output
     very unhappy _____.
@@ -209,25 +213,25 @@ Now wey we don learn how to setup and configure openai, e don reach time to buil
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## Different types of prompts, for different things
+## Different types of prompts, for different tins
 
-Now you don see how to generate text using prompt. You even get program wey dey run wey you fit modify and change to generate different kain text.
+Now you don see how to generate text with prompt. You even get program wey don start run wey you fit change to generate different text type.
 
-Prompts fit dey used for plenty tasks. Example:
+Prompts fit use for plenty task. For example:
 
-- **Generate one type of text**. Example, you fit generate poem, questions for quiz etc.
-- **Find information**. You fit use prompts find information like dis example 'Wetin CORS mean for web development?'.
-- **Generate code**. You fit use prompts generate code, example na to develop regular expression wey dey validate emails or even generate one whole program, like web app.
+- **Generate type of text**. For example, you fit generate poem, quiz questions etc.
+- **Lookup information**. You fit use prompts to find info like example 'What does CORS mean in web development?'.
+- **Generate code**. You fit use prompts to generate code, example develop regular expression to validate emails or even generate whole program, like web app?
 
-## One practical use case: recipe generator
+## More practical use case: recipe generator
 
-Imagine say you get ingredients for house and you wan cook something. For dat, you go need recipe. One way to find recipes na to use search engine or you fit use LLM.
+Imagine say you get ingredients for house and you wan cook sometin. For dat, you need recipe. One way to find recipe na use search engine or you fit use LLM.
 
 You fit write prompt like dis:
 
-> "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
+> "Show me 5 recipes for dish with these ingredients: chicken, potatoes, and carrots. For each recipe, list all ingredients used"
 
-Based on di prompt wey dey above, you fit get response like dis:
+If you give prompt like dis, you fit get response like:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -291,16 +295,16 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-Dis result dey good, I don sabi wetin to cook. For dis stage, wetin fit make sense na:
+Dis result good well well, I sabi wetin to cook. Now wetin fit make am better be:
 
-- Remove ingredients wey I no like or wey I dey allergic to.
-- Create shopping list, in case I no get all di ingredients for house.
+- Filter ingredients wey I no like or wey I dey allergic to.
+- Make shopping list, if I no get all ingredients for house.
 
-For di cases wey dey above, make we add another prompt:
+For dis cases, make we add one more prompt:
 
-> "Please remove recipes with garlic as I'm allergic and replace it with something else. Also, please produce a shopping list for the recipes, considering I already have chicken, potatoes and carrots at home."
+> "Please remove recipes with garlic as I dey allergic and replace am with something else. Also, please produce shopping list for recipes, considering say I get chicken, potatoes and carrots for house."
 
-Now you go get new result, wey be:
+Now you get new result, as e be so:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -367,20 +371,20 @@ Shopping List:
 - Pepper
 ```
 
-Na your five recipes be dat, garlic no dey inside and you don get shopping list wey consider wetin you already get for house.
+Dis na your five recipes, no garlic inside and you get shopping list based on wetin you get for house.
 
 ## Exercise - build recipe generator
 
-Now wey we don play out one scenario, make we write code wey go match di scenario wey we don show. To do am, follow di steps wey dey below:
+Now we don act one scenario, make we write code wey match di scenario. Follow steps below:
 
-1. Use di existing _app.py_ file as starting point
-1. Find di `prompt` variable and change di code to di one wey dey below:
+1. Use di _app.py_ file wey you get as start point
+1. Find `prompt` variable and change im code to dis:
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   If you run di code now, you go see output wey go look like:
+   If you run code now, you go see output like dis:
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -392,22 +396,22 @@ Now wey we don play out one scenario, make we write code wey go match di scenari
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > NOTE, your LLM no dey predictable, so you fit dey get different results anytime you run di program.
+   > NOTE, your LLM fit give different results every time because e no dey deterministic.
 
-   E good, make we see how we fit improve di code. To improve am, we wan make sure say di code dey flexible, so ingredients and number of recipes fit dey improved and changed.
+   Correct, make we see how to improve tins. To improve, we wan make sure code flexible, so ingredients and number of recipes fit change.
 
-1. Make we change di code like dis:
+1. Make we change code like dis:
 
    ```python
    no_recipes = input("No of recipes (for example, 5): ")
 
    ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
 
-   # interpolate the number of recipes into the prompt an ingredients
+   # put di number of recipes join inside di prompt an ingredients
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   If you test di code, e fit look like dis:
+   Test code fit look like dis:
 
    ```output
    No of recipes (for example, 5): 3
@@ -420,11 +424,11 @@ Now wey we don play out one scenario, make we write code wey go match di scenari
 
 ### Improve by adding filter and shopping list
 
-We don get working app wey fit produce recipes and e dey flexible as e dey depend on user inputs, both for di number of recipes and di ingredients wey dem wan use.
+We get working app wey fit produce recipes and e flexible as e dey rely on user input, number of recipes and ingredients.
 
-To improve am, we wan add di following:
+To make am better, we wan add dis ones:
 
-- **Remove ingredients**. We wan fit remove ingredients wey we no like or wey we dey allergic to. To do dis change, we fit edit di existing prompt and add filter condition for di end like dis:
+- **Filter ingredients wey we no like**. We wan fit filter ingredients we no like or allergic to. To do dis, we fit edit prompt and add filter instruction at end like dis:
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -432,9 +436,9 @@ To improve am, we wan add di following:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  For di code wey dey above, we dey add `{filter}` for di end of di prompt and we dey also collect di filter value from di user.
+  For above, we add `{filter}` at end of prompt and also catch filter value from user.
 
-  Example input wey go run di program fit look like dis:
+  Example input running program fit be like dis:
 
   ```output
   No of recipes (for example, 5): 3
@@ -501,41 +505,42 @@ To improve am, we wan add di following:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  As you fit see, any recipes wey get milk don comot. But, if you no dey fit chop milk, you fit wan remove recipes wey get cheese too, so e dey important to dey clear.
+  You fit see any recipes with milk don filter out. But if you lactose intolerant, you fit also want filter recipes wey get cheese, so you gots be clear.
 
-- **Create shopping list**. We wan create shopping list wey go consider wetin we already get for house.
 
-  For dis functionality, we fit try solve everything for one prompt or we fit divide am into two prompts. Make we try di second option. For here, we dey suggest make we add another prompt, but for dat to work, we go need add di result of di first prompt as context to di second prompt.
+- **Make one shopping list**. We wan make one shopping list, dey look wetin we don get for house.
 
-  Find di part for di code wey dey print di result from di first prompt and add di code wey dey below:
+  For dis work, we fit try solve everything for one prompt or split am into two prompts. Make we try di second waka. Here we dey suggest add one more prompt, but for dat to work, we gats add di result of di first prompt as info for di second prompt.
+
+  Find di part wey dey code wey dey print result from di first prompt, den add dis code down below:
+
   ```python
-  old_prompt_result = completion.choices[0].message.content
+  old_prompt_result = response.output_text
   prompt = "Produce a shopping list for the generated recipes and please don't include ingredients that I already have."
 
   new_prompt = f"{old_prompt_result} {prompt}"
-  messages = [{"role": "user", "content": new_prompt}]
-  completion = openai.Completion.create(engine=deployment_name, messages=messages, max_tokens=1200)
+  response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
 
-  # print response
+  # print di response
   print("Shopping list:")
-  print(completion.choices[0].message.content)
+  print(response.output_text)
   ```
 
-  Make sure say you sabi dis:
+  Make you watch di following:
 
-  1. We dey build new prompt by adding di result wey we get from di first prompt to di new prompt:
+  1. We dey form one new prompt by adding di result wey come from di first prompt inside di new prompt:
 
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  1. We go make new request, but we go also think about di number of tokens we ask for inside di first prompt, so dis time we go set `max_tokens` to 1200.
+  1. We dey make one new request, but also dey check di number of tokens we ask for in di first prompt, so dis time we talk say `max_output_tokens` na 1200.
 
      ```python
-     completion = openai.Completion.create(engine=deployment_name, prompt=new_prompt, max_tokens=1200)
+     response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
      ```
 
-     As we dey test dis code, we don reach di following output:
+     If you run dis code, di output we go get na dis one:
 
      ```output
      No of recipes (for example, 5): 2
@@ -551,67 +556,69 @@ To improve am, we wan add di following:
 
 ## Make your setup beta
 
-Di code wey we don get so far dey work, but e get some small changes wey we fit do to make am beta. Some of di things wey we suppose do na:
+Wetin we get so far na code wey dey work, but some small corrections fit make am beta. Some tins we gats do be like dis:
 
-- **Keep secrets separate from code**, like di API key. Secrets no suppose dey inside code, dem suppose dey for safe place. To keep secrets separate from code, we fit use environment variables and libraries like `python-dotenv` to load dem from file. Dis na how e go look for code:
+- **Separate secret tins from code**, like API key. Secret tins no supposed dey inside code, dem suppose dey for safe place. To separate secret tins from code, we fit use environment variables and tools like `python-dotenv` to load dem from file. Dis na how e go be for code:
 
-  1. Create `.env` file wey get dis content:
+  1. Create `.env` file wey get dis tins:
 
      ```bash
      OPENAI_API_KEY=sk-...
      ```
 
-     > Make sure say for Azure, you go set di following environment variables:
+     > Note, for Azure OpenAI for Microsoft Foundry, you gats set dis environment variables instead:
 
      ```bash
-     OPENAI_API_TYPE=azure
-     OPENAI_API_VERSION=2023-05-15
-     OPENAI_API_BASE=<replace>
+     AZURE_OPENAI_API_KEY=<replace>
+     AZURE_OPENAI_ENDPOINT=<replace>
+     AZURE_OPENAI_API_VERSION=2024-10-21
      ```
 
-     For code, you go load di environment variables like dis:
+     For code, you go load dem environment variables like dis:
 
      ```python
+     import os
      from dotenv import load_dotenv
+     from openai import OpenAI
 
      load_dotenv()
 
-     openai.api_key = os.environ["OPENAI_API_KEY"]
+     client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
      ```
 
-- **Talk about token length**. We suppose think about how many tokens we need to generate di text wey we want. Tokens dey cost money, so if e possible, we suppose try reduce di number of tokens we dey use. For example, we fit arrange di prompt so we go use less tokens.
+- **Talk about token length**. We suppose consider how many tokens we need to make text we want. Tokens dey cost money, so if we fit, make we try reduce di number of tokens we dey use. Example, fit talk di prompt to make e use less tokens?
 
-  To change di tokens wey we dey use, you fit use di `max_tokens` parameter. For example, if you want use 100 tokens, you go do am like dis:
-
-  ```python
-  completion = client.chat.completions.create(model=deployment, messages=messages, max_tokens=100)
-  ```
-
-- **Try temperature settings**. Temperature na something we never talk about before but e dey important for how our program go perform. Di higher di temperature value, di more random di output go be. Di lower di temperature value, di more predictable di output go be. Think about whether you want variation for your output or not.
-
-  To change di temperature, you fit use di `temperature` parameter. For example, if you want use temperature of 0.5, you go do am like dis:
+  To change how many tokens, you fit use `max_output_tokens` parameter. Example, if you want make e use 100 tokens, you go do:
 
   ```python
-  completion = client.chat.completions.create(model=deployment, messages=messages, temperature=0.5)
+  response = client.responses.create(model=deployment, input=prompt, max_output_tokens=100, store=False)
   ```
 
-  > Make sure say you sabi, di closer to 1.0, di more varied di output go be.
+- **Try different temperature level**. Temperature na one thing we no talk before but e important for how our program go perform. If temperature too high, output go dey more random. If temperature low, output go dey more predictable. Think if you want change your output or no.
+
+  To change temperature, you fit use `temperature` parameter. Example, if you want set temperature to 0.5, you go do:
+
+  ```python
+  response = client.responses.create(model=deployment, input=prompt, temperature=0.5, store=False)
+  ```
+
+  > Note, if temperature near 1.0, output go dey more different.
 
 ## Assignment
 
-For dis assignment, you fit choose wetin you wan build.
+For dis assignment, you fit decide wetin you go build.
 
-Here na some ideas:
+Here be some ideas:
 
-- Adjust di recipe generator app to make am beta. Play with di temperature values, and di prompts to see wetin you fit get.
-- Build "study buddy". Dis app suppose fit answer questions about one topic like Python. You fit get prompts like "Wetin be dis topic for Python?", or you fit get prompt wey talk say, show me code for dis topic etc.
-- History bot, make history dey alive, tell di bot to act like one historical character and ask am questions about di person life and time.
+- Make di recipe generator app better. Play with temperature values and prompts to see wetin fit come out.
+- Build "study buddy". Dis app suppose fit answer questions about one topic, like Python. You fit get prompts like "Wetin be certain topic for Python?", or one prompt wey talk say, show me code for this topic.
+- History bot, make history come alive, tell di bot make e act like one historical person and ask am questions about e life and time.
 
 ## Solution
 
 ### Study buddy
 
-Below na one starter prompt, see how you fit use am and adjust am to your style.
+Dis na one starter prompt, see how you fit use am and change am to your liking.
 
 ```text
 - "You're an expert on the Python language
@@ -626,7 +633,7 @@ Below na one starter prompt, see how you fit use am and adjust am to your style.
 
 ### History bot
 
-Here na some prompts wey you fit dey use:
+Here be some prompts you fit use:
 
 ```text
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
@@ -637,25 +644,25 @@ Here na some prompts wey you fit dey use:
 
 ## Knowledge check
 
-Wetin di concept temperature dey do?
+Wetin di temperature concept dey do?
 
-1. E dey control how random di output go be.
-1. E dey control how big di response go be.
+1. E dey control how random di output dey.
+1. E dey control how big di answer go be.
 1. E dey control how many tokens we go use.
 
 ## 🚀 Challenge
 
-As you dey work on di assignment, try to change di temperature, try set am to 0, 0.5, and 1. Remember say 0 na di least varied and 1 na di most. Which value go work well for your app?
+When you dey do di assignment, try change di temperature. Try put am for 0, 0.5, and 1. Remember say 0 na di least change and 1 na di most. Which one better for your app?
 
-## Good Job! Continue to Learn
+## Great Work! Continue Your Learning
 
-After you finish dis lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue to sabi more about Generative AI!
+After you finish dis lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue dey learn more about Generative AI!
 
-Go Lesson 7 where we go look how to [build chat applications](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Head go Lesson 7 where we go waka look how to [build chat applications](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:  
-Dis dokyument don use AI transle-shon service [Co-op Translator](https://github.com/Azure/co-op-translator) do di transle-shon. Even as we dey try make am accurate, abeg make you sabi say AI transle-shon fit get mistake or no dey correct well. Di original dokyument for im native language na di one wey you go take as di correct source. For important mata, e good make professional human transle-shon dey use. We no go fit take blame for any misunderstanding or wrong interpretation wey fit happen because you use dis transle-shon.
+**Disclaimer**:
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even tho we dey try make am correct, abeg make you know say automated translation fit get errors or mistakes. Di original document for dia own language na im be di correct source. For important info, make person wey sabi human translation do am. We no go responsible for any misunderstanding or wrong understanding wey fit happen because of dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,192 +1,203 @@
-# Įvadas į mažus kalbos modelius generatyviai AI pradedantiesiems
-Generatyvi AI yra įdomi dirbtinio intelekto sritis, kuri susitelkia ties sistemų kūrimu, gebančiomis generuoti naują turinį. Šis turinys gali būti nuo teksto ir vaizdų iki muzikos ar net visų virtualių aplinkų. Viena įdomiausių generatyvios AI taikymo sričių yra kalbos modeliai.
+# Įvadas į mažus kalbos modelius generatyviajai dirbtinio intelekto sričiai pradedantiesiems
+Generatyvioji DI yra įdomi dirbtinio intelekto sritis, kuri koncentruojasi į sistemų, gebančių generuoti naują turinį, kūrimą. Šis turinys gali būti įvairus – nuo teksto ir vaizdų iki muzikos ir net visų virtualių aplinkų. Viena įdomiausių generatyviosios DI taikymo sričių yra kalbos modeliai.
 
-## Kas yra mažieji kalbos modeliai?
+## Kas yra Maži kalbos modeliai?
 
-Mažasis kalbos modelis (SLM) yra sumažinta didžiojo kalbos modelio (LLM) versija, panaudojanti daugelį LLM architektūrinių principų ir technikų, tačiau turinti žymiai mažesnį skaičiavimo pėdsaką. 
+Mažas kalbos modelis (SLM) yra sumažinta didelio kalbos modelio (LLM) versija, naudojanti daugelį architektūrinių principų ir technikų iš LLM, bet turinti ženkliai mažesnį skaičiavimo pėdsaką.
 
-SLM yra kalbos modelių pogrupis, skirtas generuoti žmogaus kalbai panašų tekstą. Priešingai nei jų didesni kolegos, tokie kaip GPT-4, SLM yra kompaktiškesni ir efektyvesni, todėl idealiai tinka programoms, kur riboti skaičiavimo ištekliai. Nors jie yra mažesni, vis tiek gali atlikti įvairias užduotis. Paprastai SLM kuriami suspaudžiant arba distiliuojant LLM, siekiant išlaikyti didelę dalį pradinio modelio funkcionalumo ir kalbinių gebėjimų. Modelio dydžio sumažinimas sumažina bendrą sudėtingumą, todėl SLM yra efektyvesni tiek atminties naudojimu, tiek skaičiavimo reikalavimais. Nepaisant šių optimizacijų, SLM vis dar gali atlikti platų natūralios kalbos apdorojimo (NLP) užduočių spektrą:
+SLM yra kalbos modelių poaibis, sukurtas generuoti žmogui panašų tekstą. Skirtingai nuo didesnių modelių, tokių kaip GPT-4, SLM yra kompaktiškesni ir efektyvesni, todėl idealiai tinka programoms, kur ribotos skaičiavimo ištekliai. Nepaisant mažesnio dydžio, jie gali atlikti įvairias užduotis. Paprastai SLM susidaromi suspaudžiant ar distiliuojant LLM, siekiant išlaikyti didelę dalį originalaus modelio funkcionalumo ir lingvistinių gebėjimų. Modelio dydžio sumažinimas mažina bendrą sudėtingumą, todėl SLM yra efektyvesni tiek atminties naudojimo, tiek skaičiavimo reikalavimų atžvilgiu. Nepaisant šių optimizacijų, SLM gali atlikti daug įvairių natūralios kalbos apdorojimo (NLP) užduočių:
 
-- Teksto generavimas: kurti nuoseklias ir kontekstualiai tinkamas sakinius ar pastraipas.
-- Teksto pabaiga: prognozuoti ir užbaigti sakinius pagal pateiktą užuominą.
-- Vertimas: konvertuoti tekstą iš vienos kalbos į kitą.
-- Santraukų sudarymas: sutrumpinti ilgus tekstus į trumpesnes, lengviau suvokiamas santraukas.
+- Teksto generavimas: Kurti nuoseklias ir kontekstualiai tinkamas sakinių ar pastraipų sekas.
+- Teksto užbaigimas: Prognozuoti ir užbaigti sakinius pagal pateiktą pradžią.
+- Vertimas: Konvertuoti tekstą iš vienos kalbos į kitą.
+- Santrauka: Trumpinti ilgus tekstus į trumpesnes, įprasminamas santraukas.
 
-Tačiau kai kuriais atvejais pasitaiko kompromisų atliekant gilesnius suvokimo veiksmus ar našumą, palyginti su didesniais modeliais.
+Nors tai daroma su tam tikrais kompromisais našume ar supratimo gilumoje, palyginti su didesniais modeliais.
 
-## Kaip veikia mažieji kalbos modeliai?
-SLM mokomi didžiuliais teksto duomenų kiekiais. Mokymo metu jie įsisavina kalbos modelius ir struktūras, leidžiančias generuoti tekstą, kuris yra tiek gramatiniu požiūriu taisyklingas, tiek kontekstualiai tinkamas. Mokymo procesas apima:
+## Kaip veikia Maži kalbos modeliai?
+SLM mokomi naudojant didžiulius teksto duomenų kiekius. Mokymo metu jie mokosi kalbos struktūras ir modelius, leidžiančius generuoti gramatiškai taisyklingą ir kontekstualiai tinkamą tekstą. Mokymo procesas apima:
 
-- Duomenų rinkimą: renkant dideles teksto duomenų bazes iš įvairių šaltinių.
-- Duomenų paruošimą: duomenų švarinimą ir organizavimą, kad jie būtų tinkami mokymui.
-- Mokymą: naudojant mašininio mokymosi algoritmus mokyti modelį suprasti ir generuoti tekstą.
-- Smulkiąją korekciją: modelio pritaikymą, siekiant pagerinti jo veikimą konkrečiose užduotyse.
+- Duomenų rinkimą: surinkti didelius teksto duomenų rinkinius iš įvairių šaltinių.
+- Išankstinį apdorojimą: išvalyti ir organizuoti duomenis, paruošiant juos mokymui.
+- Mokymą: naudojant mašininio mokymosi algoritmus išmokyti modelį suprasti ir generuoti tekstą.
+- Tolesnį tobulinimą: modelio pritaikymą, siekiant pagerinti jo našumą konkrečiose užduotyse.
 
-SLM vystymas dera su augančiu poreikiu modeliams, kuriuos galima įdiegti aplinkose su ribotais ištekliais, tokiuose kaip mobilūs įrenginiai ar krašto skaičiavimo platformos, kur pilnai išplėtoti LLM gali būti nepatogu dėl didelio resursų poreikio. Sutelkiant dėmesį į efektyvumą, SLM subalansuoja našumą ir prieinamumą, leidžiant platų pritaikymą įvairiose srityse.
+SLM kūrimas atitinka didėjantį poreikį modeliams, kuriuos galima diegti išteklių ribotose aplinkose, tokiose kaip mobilieji įrenginiai ar edge kompiuterijos platformos, kur pilno masto LLM gali būti nepraktiški dėl didelių išteklių poreikių. Dėl efektyvumo dėmesio, SLM suderina našumą su prieinamumu, leidžiančiu plačiau taikyti įvairiose srityse.
 
 ![slm](../../../translated_images/lt/slm.4058842744d0444a.webp)
 
 ## Mokymosi tikslai
 
-Šiame pamokoje bandysime supažindinti su SLM žiniomis ir sujungti jas su Microsoft Phi-3, kad išmoktumėme įvairius scenarijus teksto turiniui, vaizdui ir MoE.
+Šioje pamokoje tikimės pristatyti žinias apie SLM ir kartu su Microsoft Phi-3 sužinoti apie skirtingus scenarijus teksto turinyje, vaizduose ir MoE.
 
 Pamokos pabaigoje turėtumėte sugebėti atsakyti į šiuos klausimus:
 
 - Kas yra SLM?
-- Kuo skiriasi SLM ir LLM?
+- Kuo SLM skiriasi nuo LLM?
 - Kas yra Microsoft Phi-3/3.5 šeima?
-- Kaip vykdyti išvedimą naudojant Microsoft Phi-3/3.5 šeimą?
+- Kaip atlikti inferenciją naudojant Microsoft Phi-3/3.5 šeimą?
 
 Pasiruošę? Pradėkime.
 
-## Skirtumai tarp didžiųjų kalbos modelių (LLM) ir mažųjų kalbos modelių (SLM)
+## Didelių kalbos modelių (LLM) ir mažų kalbos modelių (SLM) skirtumai
 
-Tiek LLM, tiek SLM statomi pagal tikimybinio mašininio mokymosi pagrindinius principus, naudodami panašius metodus architektūrai, mokymo metodikoms, duomenų generavimo ir modelio vertinimo technikoms. Tačiau keletas esminių veiksnių šiuos modelius skiria.
+Tiek LLM, tiek SLM yra sukurti remiantis tikėtinosios mašininio mokymosi pagrindais, jų architektūros dizainas, mokymo metodikos, duomenų generavimo procesai ir modelių vertinimo metodai yra panašūs. Tačiau keli svarbūs veiksniai skiria šiuos du modelių tipus.
 
-## Mažųjų kalbos modelių taikymai
+## Mažų kalbos modelių taikymas
 
-SLM turi platų taikymą, įskaitant:
+SLM naudojami įvairiose srityse, įskaitant:
 
-- Pokalbių robotai: teikia klientų palaikymą ir bendrauja su vartotojais pokalbių forma.
-- Turinys kūrimas: padeda rašytojams generuoti idėjas ar net kurti visus straipsnius.
-- Švietimas: padeda studentams rašymo užduotyse ar mokantis naujų kalbų.
-- Prieinamumas: kuria įrankius žmonėms su negalia, pavyzdžiui, teksto į kalbą sistemas.
+- Pokalbių robotai: teikti klientų palaikymą ir bendrauti su naudotojais pokalbio forma.
+- Turinys kūrimas: padėti rašytojams generuoti idėjas arba net rengti visus straipsnius.
+- Švietimas: padėti studentams rašymo užduotyse ar mokantis naujų kalbų.
+- Prieinamumas: kurti įrankius neįgaliesiems, pavyzdžiui, teksto į kalbą sistemas.
 
 **Dydis**
   
-Pagrindinis skirtumas tarp LLM ir SLM yra modelių dydžio mastas. LLM, pavyzdžiui, ChatGPT (GPT-4), gali turėti apie 1,76 trilijonus parametrų, tuo tarpu atviro kodo SLM, tokių kaip Mistral 7B, yra sukurti su žymiai mažesniu parametrų skaičiumi – apie 7 milijardus. Šis skirtumas daugiausia kyla dėl architektūros ir mokymo procesų skirtumų. Pavyzdžiui, ChatGPT naudoja savęs dėmesio mechanizmą enkoderio-dekoderio struktūroje, o Mistral 7B - slenkamojo lango dėmesį, leidžiantį efektyviau mokytis naudojant tik dekoderio modelį. Šis architektūrinis skirtumas turi didelę įtaką modelių sudėtingumui ir veikimui.
+Pagrindinis skirtumas tarp LLM ir SLM yra modelių mastas. LLM, kaip ChatGPT (GPT-4), gali turėti apie 1,76 trilijono parametrų, o atviro kodo SLM, tokie kaip Mistral 7B, sukurti su ženkliai mažesniu parametrų skaičiumi – maždaug 7 milijardais. Šis skirtumas daugiausia kyla iš architektūros ir mokymo procesų skirtumų. Pavyzdžiui, ChatGPT naudoja savidėmes mechanizmą koderio-dekoderio pagrindu, o Mistral 7B naudoja slenkamąjį lango dėmesį, leidžiantį efektyviau mokytis dekoderio modeliui. Šis architektūrinis skirtumas turi gilių pasekmių modelių sudėtingumui ir našumui.
 
-**Suvokimas**
+**Supratimas**
 
-SLM dažniausiai optimizuojami veikti konkrečiose srityse, todėl yra labai specializuoti, bet gali būti riboti plačiai kontekstinei supratimui įvairiose žinių srityse. Priešingai, LLM siekia imituoti žmogaus intelektą visapusiškiau. Mokomi didelėse ir įvairiose duomenų bazėse, LLM gali gerai veikti daugelyje sričių, todėl yra universalesni ir pritaikomi. Todėl LLM labiau tinka įvairioms tolimesnėms užduotims, tokioms kaip natūrali kalbos apdorojimas ir programavimas.
+SLM įprastai optimizuojami veikimui specifinėse srityse, todėl tampa labai specializuoti, bet galimai riboti plačiai kontekstinei informacijai iš skirtingų žinių sričių. Priešingai, LLM siekia imituoti žmogaus intelektą platesniu mastu. Mokomi didelių ir įvairių duomenų rinkinių, LLM sukurti taip, kad gerai veiktų įvairiose srityse, pasižymi daugiau universalumo ir prisitaikymo galimybių. Dėl to LLM labiau tinkami platesnėms užduotims, pavyzdžiui, natūralios kalbos apdorojimui ir programavimui.
 
-**Skaičiavimas**
+**Skaičiavimai**
 
-LLM mokymas ir diegimas yra išteklius reikalaujantys procesai, dažnai reikalingos didelės skaičiavimo infrastruktūros, įskaitant plataus masto GPU klasterius. Pavyzdžiui, mokyti modelį kaip ChatGPT nuo nulio gali prireikti tūkstančių GPU ilgą laiką. Priešingai, SLM su mažesniu parametrų skaičiumi yra labiau prieinami išteklių požiūriu. Tokius modelius kaip Mistral 7B galima mokyti ir vykdyti vietinėse mašinose su vidutinės galios GPU, nors mokymas vis tiek reikalauja kelių valandų per kelis GPU.
+LLM mokymas ir diegimas reikalauja daug resursų, dažnai reikia didelės skaičiavimo infrastruktūros, įskaitant dideles GPU klasterių sistemas. Pavyzdžiui, visiškas ChatGPT mokymas gali reikalauti tūkstančių GPU per ilgą laiką. Priešingai, SLM, su mažesniu parametrų skaičiumi, yra prieinamesni naudojant mažesnius skaičiavimo išteklius. Tokius modelius kaip Mistral 7B galima mokyti ir vykdyti vietinėse mašinose su vidutinėmis GPU galimybėmis, nors mokymas užtrunka kelias valandas keliose GPU.
 
 **Šališkumas**
 
-Šališkumas yra gerai žinoma problema LLM dėl mokymo duomenų pobūdžio. Šie modeliai dažnai naudoja žalius, atvirus internetinius duomenis, kurie gali nepakankamai atspindėti ar netinkamai atspindėti tam tikras grupes, įvesti klaidingą žymėjimą ar atspindėti lingvistines šališkumus, sukeltus dialekto, geografinių skirtumų ir gramatikos taisyklių. Be to, LLM sudėtinga architektūra gali netyčia padidinti šališkumą, kuris gali likti nepastebėtas be kruopštaus smulkiojo derinimo. Kita vertus, SLM, mokomi labiau ribotose sritinėse duomenų bazėse, yra mažiau linkę į tokius šališkumus, nors vis tiek nėra nuo jų apsaugoti.
+Šališkumas yra žinoma problema LLM, daugiausia dėl mokymo duomenų pobūdžio. Šie modeliai dažnai remiasi neapdorotais viešai prieinamais internetiniais duomenimis, kurie gali nepakankamai ar klaidingai atstovauti tam tikras grupes, įvesti klaidingą ženklinimą ar atspindėti lingvistines šališkumo formas, susijusias su dialektu, geografiniais skirtumais ir gramatinėmis taisyklėmis. Be to, sudėtinga LLM architektūra gali netyčia stiprinti šališkumą, kuris gali likti nepastebėtas be kruopštaus tobulinimo. Kitoje pusėje, SLM, būdami mokyti iš labiau apribotų ir sritinių duomenų rinkinių, yra mažiau linkę į tokias šališkumo formas, tačiau ir jie nėra visiškai apsaugoti nuo jų.
 
-**Išvedimas**
+**Inferencija**
 
-Mažesnis SLM dydis suteikia svarbų privalumą išvedimo greičio atžvilgiu, leidžiant efektyviai generuoti rezultatus vietinėje aparatinėje įrangoje be didelio lygiagretaus apdorojimo poreikio. Priešingai, LLM dėl savo dydžio ir sudėtingumo dažnai reikalauja didelių lygiagrečių skaičiavimo išteklių, kad pasiektų priimtiną išvedimo laiką. Daug vartotojų, naudojančių modelius vienu metu, dar labiau sulėtina LLM atsakymų laiką, ypač kai jie naudojami dideliame mastelyje.
+Mažesnis SLM dydis suteikia jiems reikšmingą pranašumą inferencijos greičio atžvilgiu, leidžiant efektyviai generuoti rezultatus vietinėje technikoje be reikalo naudoti didelį lygiagretų apdorojimą. Priešingai, LLM, dėl dydžio ir sudėtingumo, dažnai reikalauja reikšmingų lygiagrečių skaičiavimo išteklių priimtino inferencijos laiko pasiekimui. Daug naudotojų vienu metu apsunkina LLM reakcijos laiką, ypač diegiant didelio masto sistemose.
 
-Apibendrinant, nors tiek LLM, tiek SLM dalijasi mašininiam mokymu pagrįstu pagrindu, jie ženkliai skiriasi modelio dydžiu, išteklių poreikiais, kontekstiniu supratimu, atsparumu šališkumui ir išvedimo greičiu. Šie skirtumai atspindi jų tinkamumą skirtingiems panaudojimo atvejams, kai LLM yra universalesni, bet reikalauja daugiau resursų, o SLM – specializuoti ir efektyvūs su mažesniu skaičiavimo poreikiu.
+Apibendrinant, nors tiek LLM, tiek SLM yra mašininio mokymosi pagrindais, jie ženkliai skiriasi modelio dydžiu, išteklių poreikiais, kontekstiniu supratimu, polinkiu į šališkumą ir inferencijos greičiu. Šie skirtumai atspindi jų tinkamumą įvairiems naudojimo atvejams, LLM būdami universalesni, bet skaičiavimo išteklius reikalaujantys, o SLM suteikia efektyvumą pagal sritis su mažesniais techniniais reikalavimais.
 
-***Pastaba: šioje pamokoje SLM pateiksime naudodami Microsoft Phi-3 / 3.5 pavyzdį.***
+***Pastaba: šioje pamokoje SLM supažindinsime naudojant Microsoft Phi-3 / 3.5 pavyzdį.***
 
 ## Phi-3 / Phi-3.5 šeimos pristatymas
 
-Phi-3 / 3.5 šeima daugiausia orientuota į teksto, vaizdo ir agentų (MoE) taikymo scenarijus:
+Phi-3 / 3.5 šeima daugiausia orientuota į teksto, vaizdų ir Agent (MoE) taikymo scenarijus:
 
 ### Phi-3 / 3.5 Instruct
 
-Pagrinde skirta teksto generavimui, pokalbių užbaigimui ir turinio informacijos išgavimui.
+Pagrindinės paskirtys: teksto generavimas, pokalbių užbaigimas, turinio informacijos išgavimas ir pan.
 
 **Phi-3-mini**
 
-3,8 mlrd. parametrų kalbos modelis pasiekiamas per Microsoft Azure AI Studio, Hugging Face ir Ollama. Phi-3 modeliai žymiai lenkia lygiaverčius ar didesnius kalbos modelius pagrindiniuose testuose (žr. žemiau pateiktus rezultatus, aukštesni skaičiai yra geresni). Phi-3-mini lenkia dvigubai didesnius modelius, tuo tarpu Phi-3-small ir Phi-3-medium lenkia net didesnius modelius, įskaitant GPT-3.5.
+3.8B kalbos modelis prieinamas Microsoft Foundry, Hugging Face ir Ollama platformose. Phi-3 modeliai reikšmingai pranoksta savo lygio ir net didesnius kalbos modelius pagrindiniuose etalonų testuose (žr. žemiau esančius etalonų skaičius, didesni skaičiai – geriau). Phi-3-mini pranoksta modelius, turinčius dvigubai daugiau parametrų, o Phi-3-small ir Phi-3-medium lenkia dar didesnius modelius, įskaitant GPT-3.5.
 
 **Phi-3-small ir medium**
 
-Su vos 7 mlrd. parametrų Phi-3-small geriau veikia nei GPT-3.5T įvairiuose kalbos, loginio mąstymo, programavimo ir matematikos testuose.
+Phi-3-small su vos 7B parametrais lenkia GPT-3.5T įvairiuose kalbos, samprotavimo, programavimo ir matematikos etalonuose.
 
-Phi-3-medium su 14 mlrd. parametrų tęsia šią tendenciją ir lenkia Gemini 1.0 Pro.
+Phi-3-medium su 14B parametrais tęsia šią tendenciją ir lenkia Gemini 1.0 Pro.
 
 **Phi-3.5-mini**
 
-Galime apibūdinti kaip Phi-3-mini atnaujinimą. Parametrų skaičius lieka toks pat, tačiau pagerėja gebėjimas palaikyti daugybę kalbų (palaiko daugiau nei 20 kalbų: arabų, kinų, čekų, danų, olandų, anglų, suomių, prancūzų, vokiečių, hebrajų, vengrų, italų, japonų, korėjiečių, norvegų, lenkų, portugalų, rusų, ispanų, švedų, tailandiečių, turkų, ukrainiečių) ir sustiprintas palaikymas ilgesniam kontektstui.
+Galima laikyti tai Phi-3-mini atnaujinimu. Parametrų skaičius lieka tas pats, bet pagerėja kelias kalbas palaikanti funkcija (palaiko 20+ kalbų: arabų, kinų, čekų, danų, olandų, anglų, suomių, prancūzų, vokiečių, hebrajų, vengrų, italų, japonų, korėjiečių, norvegų, lenkų, portugalų, rusų, ispanų, švedų, tajų, turkų, ukrainiečių) ir pridedama stipresnė ilgų kontekstų palaikymo galimybė.
 
-Phi-3.5-mini su 3,8 mlrd. parametrais lenkia tokio paties dydžio kalbos modelius ir beveik prilygsta dvigubai didesniems modeliams.
+Phi-3.5-mini su 3.8B parametrais pranoksta tokio paties dydžio kalbos modelius ir yra lygiavertis modeliams, turintiems dvigubai daugiau parametrų.
 
 ### Phi-3 / 3.5 Vision
 
-Galime įsivaizduoti Phi-3/3.5 Instruct modelį kaip Phi sugebėjimą suprasti, o Vision suteikia Phi akis, kad jis galėtų suvokti pasaulį.
+Galima manyti, kad Phi-3/3.5 Instruct modelis atspindi Phi gebėjimą suprasti, o Vision suteikia Phi akis, kad jis galėtų suprasti pasaulį.
+
 
 **Phi-3-Vision**
 
-Phi-3-Vision, turintis tik 4,2 mlrd. parametrų, tęsia šią tendenciją ir lenkia didesnius modelius, tokius kaip Claude-3 Haiku ir Gemini 1.0 Pro V bendrųjų vizualiųjų užduočių, OCR, lentelių ir diagramų supratimo srityse.
+Phi-3-Vision, turintis tik 4.2B parametrų, tęsia šią tendenciją ir pranoksta didesnius modelius, tokius kaip Claude-3 Haiku ir Gemini 1.0 Pro V, bendrose vizualinio samprotavimo, OCR, lentelių ir diagramų supratimo užduotyse.
+
 
 **Phi-3.5-Vision**
 
-Phi-3.5-Vision yra Phi-3-Vision atnaujinimas, suteikiantis daugialypę vaizdų palaikymą. Jį galima laikyti regos patobulinimu – ne tik matote paveikslėlius, bet ir vaizdo įrašus.
+Phi-3.5-Vision taip pat yra Phi-3-Vision atnaujinimas, pridedantis palaikymą kelioms nuotraukoms. Tai galima laikyti regėjimo pagerinimu – ne tik gali matyti paveikslėlius, bet ir vaizdo įrašus.
 
-Phi-3.5-Vision lenkia didesnius modelius, tokius kaip Claude-3.5 Sonnet ir Gemini 1.5 Flash OCR, lentelių ir diagramų supratimo užduotyse, ir prilygsta jiems bendro vizualinio žinių mąstymo srityse. Palaiko daugialypį įėjimą, t. y. geba analizuoti kelis įeinančius vaizdus.
+Phi-3.5-Vision pranoksta didesnius modelius, tokius kaip Claude-3.5 Sonnet ir Gemini 1.5 Flash, OCR, lentelių ir diagramų supratimo užduotyse, ir yra lygiavertis bendro vizualinio žinių samprotavimo užduotyse. Palaiko kelių kadrų įvestį, t.y., atlieka samprotavimą pagal kelis įvaizdinius įrašus.
+
 
 ### Phi-3.5-MoE
 
-***Mišrių ekspertų sistema (MoE)*** leidžia modeliams būti iš anksto apmokytiems su žymiai mažiau skaičiavimo resursų, todėl galima ženkliai padidinti modelio ar duomenų rinkinį naudojant tą patį skaičiavimo biudžetą kaip tankius modelius. Ypač MoE modelis turėtų pasiekti tokią pat kokybę kaip tankio atitikmuo daug greičiau per mokymą.
+***Ekspertų mišinys (MoE)*** leidžia modeliams būti išankstiniam mokymui su žymiai mažesnėmis skaičiavimo išlaidomis, o tai reiškia, kad galite žymiai išplėsti modelio ar duomenų rinkinio dydį naudojant tą patį skaičiavimo biudžetą kaip tankus modelis. Ypač, MoE modelis turėtų pasiekti tokį pat kokybės lygį kaip ir jo tankus analogas daug greičiau išankstinio mokymo metu.
 
-Phi-3.5-MoE sudaro 16 ekspertų modulių po 3,8 mlrd. parametrų. Phi-3.5-MoE su tik 6,6 mlrd. aktyvių parametrų pasiekia panašų lygį mąstymo, kalbos supratimo ir matematikos srityse kaip daug didesni modeliai.
+Phi-3.5-MoE sudarytas iš 16x3.8B ekspertų modulių. Phi-3.5-MoE su vos 6.6B aktyvių parametrų pasiekia panašų samprotavimo, kalbos supratimo ir matematikos lygį kaip daug didesni modeliai.
 
-Galime naudoti Phi-3/3.5 šeimos modelius skirtingiems scenarijams. Skirtingai nuo LLM, Phi-3/3.5-mini arba Phi-3/3.5-Vision modelius galima diegti krašto įrenginiuose.
+Galime naudoti Phi-3/3.5 šeimos modelį atsižvelgdami į skirtingus scenarijus. Skirtingai nuo LLM, Phi-3/3.5-mini arba Phi-3/3.5-Vision galima diegti kraštiniuose įrenginiuose.
+
 
 ## Kaip naudoti Phi-3/3.5 šeimos modelius
 
-Mes norime naudoti Phi-3/3.5 skirtinguose scenarijuose. Toliau naudosime Phi-3/3.5 atsižvelgiant į skirtingus scenarijus.
+Tikimės naudoti Phi-3/3.5 skirtinguose scenarijuose. Toliau naudosime Phi-3/3.5 pagal skirtingas situacijas.
 
 ![phi3](../../../translated_images/lt/phi3.655208c3186ae381.webp)
 
-### Išvedimas per debesų API
+### Inferencija per debesijos API
 
-**GitHub modeliai**
+**Microsoft Foundry Modeliai**
 
-GitHub modeliai yra tiesioginis būdas. Galite greitai pasiekti Phi-3/3.5-Instruct modelį per GitHub modelius. Kartu su Azure AI Inference SDK / OpenAI SDK galite pasiekti API per kodą, kad atliktumėte Phi-3/3.5-Instruct kvietimą. Taip pat galite išbandyti skirtingus veikimo variantus per Playground.
+> **Pastaba:** GitHub Modeliai bus nutraukti iki 2026 m. liepos pabaigos. [Microsoft Foundry Modeliai](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) yra tiesioginė pakeitimo alternatyva.
 
-- Demonstracija: Phi-3-mini ir Phi-3.5-mini poveikio palyginimas kinų kalbos scenarijuose
+Microsoft Foundry Modeliai yra tiesiausias būdas. Per Foundry modelių katalogą galite greitai pasiekti Phi-3/3.5-Instruct modelį. Kombinuojant su Azure AI Inference SDK / OpenAI SDK, API pasiekiama per kodą, atliekant Phi-3/3.5-Instruct užklausą. Taip pat galite išbandyti įvairius efektus per Playground.
+
+- Demo: Phi-3-mini ir Phi-3.5-mini efektų palyginimas kinų kalbos scenarijuose
 
 ![phi3](../../../translated_images/lt/gh1.126c6139713b622b.webp)
 
 ![phi35](../../../translated_images/lt/gh2.07d7985af66f178d.webp)
 
-**Azure AI Studio**
 
-Arba jei norime naudoti vaizdo ir MoE modelius, galite naudoti Azure AI Studio kvietimams atlikti. Jei domina, galite perskaityti Phi-3 Vadovą, kaip iškviesti Phi-3/3.5 Instruct, Vision, MoE per Azure AI Studio [Spauskite šią nuorodą](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst)
+**Microsoft Foundry**
+
+Jei norite naudoti vizijos ir MoE modelius, taip pat galite naudoti Microsoft Foundry užklausai atlikti. Jei domina, galite perskaityti Phi-3 Cookbook, kaip atlikti Phi-3/3.5 Instruct, Vision, MoE užklausas per Microsoft Foundry [Spustelėkite čia](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst)
+
 
 **NVIDIA NIM**
 
-Be debesų pagrindu veikiančių modelių katalogo sprendimų, kuriuos siūlo Azure ir GitHub, galite naudoti ir [NVIDIA NIM](https://developer.nvidia.com/nim?WT.mc_id=academic-105485-koreyst) kvietimams atlikti. Galite apsilankyti NVIDIA NIM, kad įvykdytumėte Phi-3/3.5 šeimos API kvietimus. NVIDIA NIM (NVIDIA Inference Microservices) yra rinkinys spartinančių išvedimo mikropaslaugų, skirtų padėti kūrėjams efektyviai diegti AI modelius įvairiose aplinkose, įskaitant debesis, duomenų centrus ir darbo vietas.
+Be debesijos pagrindu veikiančio Microsoft Foundry Modelių katalogo, taip pat galite naudoti [NVIDIA NIM](https://developer.nvidia.com/nim?WT.mc_id=academic-105485-koreyst) užklausoms atlikti. NVIDIA NIM (NVIDIA Inference Microservices) yra pagreitintų inferencijos mikroservisų rinkinys, sukurtas padėti kūrėjams efektyviai diegti DI modelius įvairiose aplinkose, įskaitant debesijas, duomenų centrus ir darbo stotis.
 
-Čia pateikiamos kai kurios pagrindinės NVIDIA NIM savybės:
-- **Diegimo paprastumas:** NIM leidžia įdiegti dirbtinio intelekto modelius vienu komandos įsakymu, todėl jį lengva integruoti į esamus darbo procesus.
-- **Optimizuotas našumas:** Naudojamos NVIDIA iš anksto optimizuotos interpretavimo sistemos, tokios kaip TensorRT ir TensorRT-LLM, užtikrinančios mažą delsą ir didelį pralaidumą.
-- **Mastelio keitimas:** NIM palaiko automatinį mastelio keitimą Kubernetes aplinkoje, leidžiantį efektyviai tvarkyti skirtingas darbo apkrovas.
-- **Saugumas ir kontrolė:** Organizacijos gali išlaikyti kontrolę savo duomenims ir programoms, savarankiškai talpindamos NIM mikropaslaugas savo valdomoje infrastruktūroje.
-- **Standartizuoti API:** NIM teikia pramonės standartus atitinkančius API, palengvinančius dirbtinio intelekto programų, tokių kaip pokalbių robotai, DI asistentai ir kt., kūrimą bei integraciją.
+Štai keletas svarbių NVIDIA NIM funkcijų:
 
-NIM yra NVIDIA AI Enterprise dalis, kurios tikslas – supaprastinti dirbtinio intelekto modelių diegimą ir eksploatavimą, užtikrinant efektyvų veikimą NVIDIA GPU.
+- **Paprastas diegimas:** NIM leidžia diegti DI modelius vienu komandos paleidimu, todėl lengva integruoti į esamus darbo srautus.
 
-- Demonstracija: Kaip naudoti NVIDIA NIM norint iškviesti Phi-3.5-Vision-API  [[Spustelėkite šią nuorodą](./python/Phi-3-Vision-Nividia-NIM.ipynb?WT.mc_id=academic-105485-koreyst)]
+- **Optimizuotas našumas:** Jis naudoja NVIDIA iš anksto optimizuotus apdorojimo variklius, tokius kaip TensorRT ir TensorRT-LLM, užtikrindamas mažą vėlavimą ir didelį pralaidumą.
+- **Mastelio keitimas:** NIM palaiko automatinį mastelio keitimą Kubernetes, leidžiantį efektyviai tvarkyti kintančias apkrovas.
+- **Saugumas ir valdymas:** Organizacijos gali išlaikyti kontrolę savo duomenims ir programoms savarankiškai diegdamos NIM mikroservisus savo valdomoje infrastruktūroje.
+- **Standartiniai API:** NIM teikia pramonės standartus atitinkančius API, todėl lengva kurti ir integruoti AI programas, tokias kaip pokalbių robotai, AI asistentai ir kt.
+
+NIM yra NVIDIA AI Enterprise dalis, kurios tikslas – supaprastinti AI modelių diegimą ir eksploatavimą, užtikrinant efektyvų jų veikimą NVIDIA GPU.
+
+- Demonstracija: NVIDIA NIM naudojimas Phi-3.5-Vision-API kvietimui [[Spauskite čia](./python/Phi-3-Vision-Nividia-NIM.ipynb?WT.mc_id=academic-105485-koreyst)]
 
 
 ### Phi-3/3.5 paleidimas lokaliai
-Interpretavimas, susijęs su Phi-3 arba bet kokiu kalbos modeliu, pvz., GPT-3, reiškia atsakymų ar prognozių generavimo procesą, remiantis pateiktu įvesties duomenimis. Kai pateikiate Phi-3 užklausą ar klausimą, jis naudoja išmokytą neuroninį tinklą, kad, analizuodamas duomenų modelius ir ryšius, išvestų tikėtiniausią ir aktualiausią atsakymą.
+Apdorojimas, susijęs su Phi-3 ar bet kuriuo kalbos modeliu, tokiu kaip GPT-3, reiškia atsakymų ar prognozių generavimo procesą remiantis įvestimi. Kai pateikiate užklausą arba klausimą Phi-3, jis naudoja savo išmokytą neuroninį tinklą, kad prognozuotų tikėtiniausią ir aktualiausią atsakymą, analizuodamas modelio treniravimo duomenų šablonus ir ryšius.
 
 **Hugging Face Transformer**
-Hugging Face Transformers yra galinga biblioteka, skirta natūralios kalbos apdorojimo (NLP) ir kitoms mašininio mokymosi užduotims. Štai keletas svarbių aspektų apie ją:
+Hugging Face Transformers yra galinga biblioteka, skirta natūralios kalbos apdorojimui (NLP) ir kitoms mašininio mokymosi užduotims. Štai keletas svarbiausių jos aspektų:
 
-1. **Iš anksto apmokyti modeliai:** Teikia tūkstančius iš anksto apmokytų modelių įvairioms užduotims, tokioms kaip teksto klasifikavimas, vardų atpažinimas, klausimų atsakymas, santraukų sudarymas, vertimas ir teksto generavimas.
+1. **Iš anksto apmokyti modeliai:** Biblioteka teikia tūkstančius iš anksto apmokytų modelių, skirtų įvairioms užduotims, tokioms kaip teksto klasifikavimas, atpažinimo vardinių objektų, klausimų-atsakymų, santraukų sudarymo, vertimo ir teksto generavimo.
 
-2. **Suderinamumas su sistemomis:** Biblioteka palaiko kelis gilų mokymąsi pagrindžiančius framework’us, tokius kaip PyTorch, TensorFlow ir JAX. Tai leidžia apmokyti modelį vienoje aplinkoje ir naudoti kitoje.
+2. **Sistemų tarpusavio suderinamumas:** Biblioteka palaiko kelis giluminio mokymo karkasus, įskaitant PyTorch, TensorFlow ir JAX. Tai leidžia viename karkase treniruoti modelį ir naudoti jį kitame.
 
-3. **Multimodalinės galimybės:** Be NLP, Hugging Face Transformers palaiko užduotis kompiuterinėje vizijoje (pvz., vaizdų klasifikacija, objektų aptikimas) ir garso apdorojime (pvz., balso atpažinimas, garso klasifikacija).
+3. **Daugiapoliai gebėjimai:** Be NLP, Hugging Face Transformers taip pat palaiko užduotis kompiuterinėje vizijoje (pvz., vaizdų klasifikacija, objektų atpažinimas) ir garso apdorojime (pvz., kalbos atpažinimas, garso klasifikacija).
 
-4. **Patogumas naudoti:** Biblioteka siūlo API ir įrankius, leidžiančius lengvai parsisiųsti ir derinti modelius, todėl prieinama tiek pradedantiesiems, tiek ekspertams.
+4. **Paprastas naudojimas:** Biblioteka siūlo API ir įrankius patogiam modelių atsisiuntimui ir derinimui, todėl ji prieinama tiek pradedantiesiems, tiek ekspertams.
 
-5. **Bendruomenė ir ištekliai:** Hugging Face turi aktyvią bendruomenę, išsamią dokumentaciją, pamokas ir vadovus, padedančius vartotojams pradėti ir maksimaliai išnaudoti biblioteką.
+5. **Bendruomenė ir ištekliai:** Hugging Face turi gyvybingą bendruomenę ir išsamią dokumentaciją, mokomuosius ir gidus, kurie padeda pradėti darbą ir pilnai išnaudoti biblioteką.
 [oficiali dokumentacija](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) arba jų [GitHub saugykla](https://github.com/huggingface/transformers?WT.mc_id=academic-105485-koreyst).
 
-Tai dažniausiai naudojamas metodas, bet reikalauja GPU pagreičio. Juk tokios užduotys kaip Vision ir MoE reikalauja daug skaičiavimų, kurie be kiekiavimo būtų labai lėti CPU.
+Tai dažniausiai naudojamas metodas, tačiau jis taip pat reikalauja GPU pagreitinto apdorojimo. Galų gale, tokios situacijos kaip Vision ir MoE reikalauja daug skaičiavimų, kurie be kiekybinimo CPU būtų labai lėti.
 
-- Demonstracija: Naudojant Transformer iškviesti Phi-3.5-Instruct [Spustelėkite šią nuorodą](./python/phi35-instruct-demo.ipynb?WT.mc_id=academic-105485-koreyst)
 
-- Demonstracija: Naudojant Transformer iškviesti Phi-3.5-Vision [Spustelėkite šią nuorodą](./python/phi35-vision-demo.ipynb?WT.mc_id=academic-105485-koreyst)
+- Demonstracija: Transformer naudojimas Phi-3.5-Instruct kvietimui [Spauskite čia](./python/phi35-instruct-demo.ipynb?WT.mc_id=academic-105485-koreyst)
 
-- Demonstracija: Naudojant Transformer iškviesti Phi-3.5-MoE [Spustelėkite šią nuorodą](./python/phi35_moe_demo.ipynb?WT.mc_id=academic-105485-koreyst)
+- Demonstracija: Transformer naudojimas Phi-3.5-Vision kvietimui [Spauskite čia](./python/phi35-vision-demo.ipynb?WT.mc_id=academic-105485-koreyst)
+
+- Demonstracija: Transformer naudojimas Phi-3.5-MoE kvietimui [Spauskite čia](./python/phi35_moe_demo.ipynb?WT.mc_id=academic-105485-koreyst)
 
 **Ollama**
-[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) yra platforma, skirta palengvinti didžiųjų kalbos modelių (LLM) paleidimą lokaliai jūsų kompiuteryje. Ji palaiko įvairius modelius, tokius kaip Llama 3.1, Phi 3, Mistral ir Gemma 2. Platforma supaprastina procesą sujungdama modelio svorius, konfigūraciją ir duomenis į vieną paketą, todėl vartotojams lengviau pritaikyti ir kurti savo modelius. Ollama veikia macOS, Linux ir Windows sistemose. Tai puikus įrankis eksperimentuoti arba diegti LLM nepasižymint nuo debesies paslaugų. Ollama yra pats tiesiausias kelias, tereikia įvykdyti šią komandą.
+[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) yra platforma, skirta palengvinti didelių kalbos modelių (LLM) paleidimą lokaliai jūsų kompiuteryje. Ji palaiko įvairius modelius, tokius kaip Llama 3.1, Phi 3, Mistral ir Gemma 2 bei kitus. Platforma supaprastina procesą sujungdama modelio svorius, konfigūraciją ir duomenis į vieną paketą, todėl vartotojams lengviau pritaikyti ir kurti savo modelius. Ollama prieinama macOS, Linux ir Windows sistemoms. Tai puikus įrankis tiems, kurie nori eksperimentuoti arba diegti LLM be debesų paslaugų. Ollama yra tiesiausias kelias, tereikia vykdyti šią komandą.
 
 
 ```bash
@@ -195,40 +206,67 @@ ollama run phi3.5
 
 ```
 
+**Foundry Local**
 
-**ONNX Runtime for GenAI**
+[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) yra Microsoft neprisijungimo režimo vykdymo aplinka modeliams, tokiems kaip Phi, veikti visiškai jūsų pačių aparatinėje įrangoje – nereikia Azure prenumeratos, API rakto ar tinklo ryšio. Jis automatiškai pasirenka geriausiai prieinamą vykdymo tiekėją (NPU, GPU arba CPU) ir pateikia OpenAI suderinamą galinį tašką, tad esamas `openai`/Azure AI Inference SDK kodas gali jį naudoti su minimaliais pakeitimais. Daugiau informacijos rasite [Foundry Local dokumentacijoje](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst).
 
-[ONNX Runtime](https://github.com/microsoft/onnxruntime-genai?WT.mc_id=academic-105485-koreyst) yra daugiaplatformė interpretavimo ir mokymo akceleratoriaus priemonė mašininio mokymosi modeliui. ONNX Runtime for Generative AI (GENAI) yra galingas įrankis, padedantis efektyviai vykdyti generatyviuosius DI modelius įvairiose platformose.
+```bash
+
+winget install Microsoft.FoundryLocal
+foundry model run phi-3.5-mini
+
+```
+
+Arba naudokite SDK tiesiogiai Python kalboje:
+
+```bash
+
+pip install foundry-local-sdk
+
+```
+
+```python
+
+from foundry_local import FoundryLocalManager
+
+manager = FoundryLocalManager("phi-3.5-mini")
+print(manager.endpoint, manager.api_key)
+
+```
+
+**ONNX Runtime generatyviai AI**
+
+[ONNX Runtime](https://github.com/microsoft/onnxruntime-genai?WT.mc_id=academic-105485-koreyst) yra daugiaplatformė mašininio mokymosi greitinimo aplinka inferencijai ir treniravimui. ONNX Runtime generatyviai AI (GENAI) yra galingas įrankis, padedantis efektyviai vykdyti generatyvių AI modelių inferenciją įvairiose platformose.
 
 ## Kas yra ONNX Runtime?
-ONNX Runtime yra atviro kodo projektas, leidžiantis greitai interpretuoti mašininio mokymosi modelius. Jis palaiko modelius Open Neural Network Exchange (ONNX) formatu, kuris yra standartas mašininio mokymosi modeliui atvaizduoti. ONNX Runtime interpretavimas gali pagreitinti klientų patirtį ir sumažinti kaštus, palaikydamas modelius iš gilaus mokymosi sistemų kaip PyTorch ir TensorFlow/Keras bei klasikinių mašininio mokymosi bibliotekų kaip scikit-learn, LightGBM, XGBoost ir kt. ONNX Runtime suderinamas su įvairia įranga, tvarkyklėmis ir operacinėmis sistemomis, suteikdamas optimalią našumo kokybę pasinaudodamas įrenginių akceleratoriais bei grafikų optimizacijomis ir transformacijomis.
+ONNX Runtime yra atviro kodo projektas, leidžiantis aukšto našumo mašininio mokymosi modelių inferenciją. Jis palaiko modelius Open Neural Network Exchange (ONNX) formatu, kuris yra standartas mašininio mokymosi modelių atvaizdavimui. ONNX Runtime inferencija leidžia greičiau aptarnauti klientus ir sumažinti išlaidas, palaikydama modelius iš giluminio mokymosi karkasų, tokių kaip PyTorch ir TensorFlow/Keras, taip pat klasikinių mašininio mokymosi bibliotekų, tokių kaip scikit-learn, LightGBM, XGBoost ir kt. ONNX Runtime suderinamas su skirtinga aparatine įranga, tvarkyklėmis ir operacinėmis sistemomis, siūlydamas optimalų našumą naudodamas aparatinio spartinimo galimybes kartu su grafų optimizacijomis ir transformacijomis.
 
-## Kas yra generatyvioji DI?
-Generatyvioji DI yra DI sistemos, galinčios generuoti naują turinį, pvz., tekstą, vaizdus ar muziką, remiantis išmoktais duomenimis. Pavyzdžiai – kalbos modeliai, tokie kaip GPT-3, ir vaizdų generavimo modeliai, tokie kaip Stable Diffusion. ONNX Runtime for GenAI biblioteka teikia generatyviąją DI ciklą ONNX modeliams, įskaitant interpretavimo su ONNX Runtime, logitų apdorojimą, paiešką ir atranką, bei KV talpyklos valdymą.
+## Kas yra Generatyvi AI?
+Generatyvi AI reiškia AI sistemas, gebančias generuoti naują turinį – pvz., tekstą, vaizdus ar muziką – remiantis jomis apmokytais duomenimis. Pavyzdžiai apima kalbos modelius, tokius kaip GPT-3, ir vaizdų generavimo modelius, tokius kaip Stable Diffusion. ONNX Runtime for GenAI biblioteka teikia generatyvios AI ciklą ONNX modeliams, įskaitant inferenciją su ONNX Runtime, logitų apdorojimą, paiešką ir mėginių ėmimą bei KV talpyklos valdymą.
 
-## ONNX Runtime skirta GENAI
-ONNX Runtime skirta GENAI plečia ONNX Runtime galimybes, kad palaikytų generatyviuosius DI modelius. Štai keletas pagrindinių funkcijų:
+## ONNX Runtime for GENAI
+ONNX Runtime for GENAI išplečia ONNX Runtime galimybes, palaikydama generatyvius AI modelius. Štai keletas pagrindinių funkcijų:
 
-- **Platus platformų palaikymas:** Veikia įvairiose platformose, įskaitant Windows, Linux, macOS, Android ir iOS.
-- **Modelių palaikymas:** Palaiko daug populiarių generatyvių DI modelių, tokių kaip LLaMA, GPT-Neo, BLOOM ir kitus.
-- **Našumo optimizavimas:** Apima optimizacijas skirtingiems įrenginių akceleratoriams, tokiems kaip NVIDIA GPU, AMD GPU ir kt.
-- **Patogumas naudoti:** Teikia API paprastai integracijai į programas, leidžia generuoti tekstą, vaizdus ir kitą turinį su minimaliu kodu
-- Naudotojai gali kviesti aukšto lygio generate() metodą arba vykdyti modelio iteracijas cikle, generuodami po vieną žetoną vienu metu, ir pageidaujant atnaujinti generavimo parametrus ciklo viduje.
-- ONNX Runtime taip pat palaiko godžią/ spindulinę paiešką bei TopP, TopK atranką žetonų sekų generavimui ir vidinį logitų apdorojimą, pvz., pakartojimo bausmes. Taip pat galima lengvai pridėti pasirinktinius įvertinimus.
+- **Plati platformų palaikymas:** Veikia įvairiose platformose, įskaitant Windows, Linux, macOS, Android ir iOS.
+- **Modelių palaikymas:** Palaiko daugelį populiarių generatyvių AI modelių, tokių kaip LLaMA, GPT-Neo, BLOOM ir kt.
+- **Našumo optimizavimas:** Apima optimizacijas įvairiems aparatūros spartintuvams, tokiems kaip NVIDIA GPU, AMD GPU ir kiti.
+- **Paprastas naudojimas:** Teikia API patogiam integravimui į programas, leidžiančias generuoti tekstą, vaizdus ir kitą turinį su minimaliu kodo kiekiu.
+- Vartotojai gali iškviesti aukšto lygio generate() metodą arba vykdyti kiekvieną modelio iteraciją cikle, generuodami po vieną ženklą ir, esant reikalui, keisdami generavimo parametrus ciklo viduje.
+- ONNX Runtime taip pat palaiko godžią (greedy)/spindulių paiešką (beam search) ir TopP, TopK mėginių ėmimą ženklų sekų generavimui bei įmontuotą logitų apdorojimą, pvz., kartojimų bausmes. Taip pat galite lengvai pridėti savo įvertinimus.
 
 ## Pradžia
-Norėdami pradėti naudoti ONNX Runtime skirta GENAI, galite atlikti šiuos veiksmus:
+Norėdami pradėti naudoti ONNX Runtime for GENAI, atlikite šiuos veiksmus:
 
 ### Įdiekite ONNX Runtime:
 ```Python
 pip install onnxruntime
 ```
-### Įdiekite Generatyviosios DI plėtinius:
+### Įdiekite Generatyvios AI plėtinius:
 ```Python
 pip install onnxruntime-genai
 ```
 
-### Paleiskite modelį: štai paprastas pavyzdys Python kalba:
+### Paleiskite modelį: Štai paprastas pavyzdys Python kalboje:
 ```Python
 import onnxruntime_genai as og
 
@@ -246,7 +284,7 @@ output_text = tokenizer.decode(output_tokens)
 
 print(output_text) 
 ```
-### Demonstracija: Kaip naudoti ONNX Runtime GenAI iškviesti Phi-3.5-Vision
+### Demonstracija: ONNX Runtime GenAI naudojimas Phi-3.5-Vision kvietimui
 
 
 ```python
@@ -300,17 +338,18 @@ while not generator.is_done():
 ```
 
 
-**Kita**
+**Kiti**
 
-Be ONNX Runtime ir Ollama referencinių metodų, galime papildyti kiekybinių modelių referenciją pagal skirtingų gamintojų pateiktus modelių referencinius metodus. Pavyzdžiui, Apple MLX framework su Apple Metal, Qualcomm QNN su NPU, Intel OpenVINO su CPU/GPU ir kt. Daugiau informacijos rasite [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst).
+Be ONNX Runtime, Ollama ir Foundry Local referencinių metodų, taip pat galime papildyti kiekybinių modelių pavyzdžius pagal įvairių gamintojų pateiktus modelių referencinius metodus. Pavyzdžiui, Apple MLX karkasas su Apple Metal, Qualcomm QNN su NPU, Intel OpenVINO su CPU/GPU ir kt. Daugiau informacijos rasite [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst)
+
 
 ## Daugiau
 
-Išmokome Phi-3/3.5 šeimos pagrindus, tačiau norint sužinoti daugiau apie SLM, reikia daugiau žinių. Atsakymus rasite Phi-3 Cookbook. Jei norite daugiau sužinoti, apsilankykite [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst).
+Mes išmokome Phi-3/3.5 šeimos pagrindus, tačiau norint sužinoti daugiau apie SLM, reikia daugiau žinių. Atsakymus galite rasti Phi-3 Cookbook. Jei norite sužinoti daugiau, apsilankykite [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst).
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Atsakomybės apribojimas**:
-Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors stengiamės užtikrinti tikslumą, prašome atsižvelgti, kad automatizuoti vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojamas profesionalus žmogiškas vertimas. Mes neatsakome už bet kokius nesusipratimus ar neteisingus interpretavimus, atsiradusius dėl šio vertimo naudojimo.
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojama naudoti profesionalų žmogiškąjį vertimą. Mes neatsakome už jokius nesusipratimus ar neteisingą interpretaciją, kilusią naudojantis šiuo vertimu.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

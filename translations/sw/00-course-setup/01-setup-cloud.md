@@ -1,51 +1,53 @@
-# Mpangilio wa Wingu ☁️ – GitHub Codespaces
+# Usanidi wa Wingu ☁️ – GitHub Codespaces
 
-**Tumia mwongozo huu kama hutaki kusanidi chochote kwenye kompyuta yako.**  
-Codespaces inakupa toleo la VS Code kupitia kivinjari, tayari na utegemezi wote umewekwa.
+**Tumia mwongozo huu ikiwa hutaki kusakinisha chochote ndani ya mfumo wako.**  
+Codespaces inakupa toleo la VS Code linalotumia kivinjari, lisilo na malipo, lenye utegemezi wote tayari kusakinishwa.
 
 ---
 
 ## 1.  Kwa nini Codespaces?
 
-| Faida | Maana yake kwako |
+| Faida | Inamaanisha nini kwako |
 |---------|----------------------|
-| ✅ Hakuna usakinishaji | Inafanya kazi kwenye Chromebook, iPad, PC za maabara ya shule… |
-| ✅ Kontena la maendeleo limejengwa tayari | Python 3, Node.js, .NET, Java vipo tayari ndani |
-| ✅ Kipimo cha bure | Akaunti binafsi zinapata **masaa 120 ya msingi / masaa 60 ya GB kwa mwezi** |
+| ✅ Hakuna usakinishaji | Inaweza kutumika kwenye Chromebook, iPad, kompyuta za maabara shuleni… |
+| ✅ Kontena la maendeleo lililojengiwa tayari | Python 3, Node.js, .NET, Java tayari ndani |
+| ✅ Kiasi cha bure cha matumizi | Akaunti binafsi hupata **masaa 120 ya cores / masaa 60 ya GB kwa mwezi** |
 
-> 💡 **Kidokezo**  
-> Linda kipimo chako kwa **kusimamisha** au **kufuta** codespaces ambazo hazitumiki  
+> 💡 **Shauri**  
+> Weka kiasi chako kuwa kizuri kwa **kusitisha** au **kufuta** codespaces zisizotumika  
 > (Tazama ▸ Command Palette ▸ *Codespaces: Stop Codespace*).
 
 ---
 
-## 2.  Tengeneza Codespace (bonyeza mara moja)
+## 2.  Tengeneza Codespace (bonyeza moja)
 
-1. **Fork** repozitori hii (kitufe cha juu kulia cha **Fork**).  
-2. Kwenye fork yako, bonyeza **Code ▸ Codespaces ▸ Create codespace on main**.  
-   ![ialog showing buttons to create a codespace](../../../00-course-setup/images/who-will-pay.webp)
+1. **Fanya Fork** kwenye repo hii (kitufe cha juu-kulia **Fork**).  
+2. Katika fork yako, bonyeza **Code ▸ Codespaces ▸ Create codespace on main**.  
+   ![Dialog showing buttons to create a codespace](../../../translated_images/sw/who-will-pay.4c0609b1c7780f44.webp)
 
-✅ Dirisha la VS Code kwenye kivinjari linafunguka na kontena la maendeleo linaanza kujengwa.
-Hii huchukua **~dakika 2** mara ya kwanza.
+✅ Dirisha la VS Code katika kivinjari linafunguka na kontena la maendeleo linaanza kujengwa.
+Hili huchukua takriban **dakika 2** mara ya kwanza.
 
-## 3. Ongeza API key yako (njia salama)
+## 3. Ongeza ufunguo wako wa API (njia salama)
 
 ### Chaguo A Siri za Codespaces — Inapendekezwa
 
-1. ⚙️ Piga alama ya gia -> Command Pallete-> Codespaces : Manage user secret -> Ongeza siri mpya.
+1. ⚙️ Ikoni ya gia -> Command Palette -> Codespaces : Manage user secret -> Ongeza siri mpya.
 2. Jina: OPENAI_API_KEY
 3. Thamani: bandika ufunguo wako → Ongeza siri
 
-Basi—msimbo wetu utaitambua moja kwa moja.
+Hilo ndilo tu—msimbo wetu utaichukua moja kwa moja.
 
-### Chaguo B Faili la .env (kama kweli unahitaji)
+### Chaguo B Faili la .env (ikiwa unahitaji kwa dhati)
 
 ```bash
 cp .env.copy .env
-code .env         # fill in OPENAI_API_KEY=your_key_here
+code .env         # jaza OPENAI_API_KEY=ufunguo_wako_hapa
 ```
 
 ---
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya kutafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, inashauriwa kutumia huduma ya utafsiri wa binadamu wa kitaalamu. Hatutawajibika kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Kionyozo**:
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kupata usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake halisi inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inapendekezwa. Hatutojibu kwa kuelewa vibaya au tafsiri potofu zinazotokea kutokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

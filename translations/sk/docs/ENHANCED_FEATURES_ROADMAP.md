@@ -1,38 +1,38 @@
-# Cesta rozvoja rozšírených funkcií a vylepšení
+# Plán rozvoja vylepšených funkcií a vylepšení
 
-Tento dokument načrtáva odporúčané vylepšenia a zdokonalenia pre kurz Generatívnej AI pre Začiatočníkov, založené na komplexnom preskúmaní kódu a analýze najlepších priemyselných praktík.
+Tento dokument načrtáva odporúčané vylepšenia a zlepšenia pre učebný program Generatívnej AI pre začiatočníkov, založené na komplexnej kontrole kódu a analýze najlepších priemyselných postupov.
 
 ## Výkonný súhrn
 
-Kódová základňa bola analyzovaná z hľadiska bezpečnosti, kvality kódu a vzdelávacej efektívnosti. Tento dokument obsahuje odporúčania pre okamžité opravy, krátkodobé vylepšenia a budúce rozšírenia.
+Kódová základňa bola analyzovaná z hľadiska bezpečnosti, kvality kódu a vzdelávacej efektívnosti. Tento dokument poskytuje odporúčania pre okamžité opravy, krátkodobé vylepšenia a budúce rozšírenia.
 
 ---
 
-## 1. Bezpečnostné vylepšenia (Priorita: Kritická)
+## 1. Vylepšenia bezpečnosti (Priorita: Kritická)
 
-### 1.1 Okamžité opravy (dokončené)
+### 1.1 Okamžité opravy (Dokončené)
 
-| Problém | Súbory, ktoré sa týkajú | Stav |
-|---------|-------------------------|------|
-| Pevne zadaný SECRET_KEY | `05-advanced-prompts/python/aoai-solution.py` | Opravené |
-| Chýbajúca validácia env | Viaceré JS/TS súbory | Opravené |
-| Neisté volania funkcií | `11-integrating-with-function-calling/js-githubmodels/app.js` | Opravené |
-| Úniky súborových handlerov | `08-building-search-applications/scripts/` | Opravené |
-| Chýbajúce timeouty požiadaviek | `09-building-image-applications/python/` | Opravené |
+| Problém | Ovlivnené súbory | Stav |
+|-------|----------------|--------|
+| Tvrdokódovaný SECRET_KEY | `05-advanced-prompts/python/aoai-solution.py` | Opravené |
+| Chýbajúca validácia prostredia | Viacero JS/TS súborov | Opravené |
+| Nezabezpečené volania funkcií | `11-integrating-with-function-calling/js-githubmodels/app.js` | Opravené |
+| Úniky spracovania súborov | `08-building-search-applications/scripts/` | Opravené |
+| Chýbajúce časové limity požiadaviek | `09-building-image-applications/python/` | Opravené |
 
-### 1.2 Odporúčané ďalšie bezpečnostné funkcie
+### 1.2 Odporúčané dodatočné bezpečnostné funkcie
 
-1. **Príklady obmedzenia rýchlosti (Rate Limiting)**
-   - Pridať príklady kódu ukazujúce implementáciu obmedzenia rýchlosti API volaní
-   - Demonštrovať vzory exponenciálneho spätného odkladu
+1. **Príklady obmedzenia rýchlosti**
+   - Pridajte ukážkový kód, ukazujúci implementáciu obmedzenia rýchlosti API volaní
+   - Demonštrácia vzorcov exponenciálneho zotavovania
 
 2. **Rotácia API kľúčov**
-   - Pridať dokumentáciu najlepších praktík pre rotáciu API kľúčov
-   - Zahŕňať príklady použitia Azure Key Vault alebo podobných služieb
+   - Pridajte dokumentáciu o najlepších praktikách rotácie API kľúčov
+   - Zahrňte príklady použitia Azure Key Vault alebo podobných služieb
 
 3. **Integrácia bezpečnosti obsahu**
-   - Pridať príklady využitia Azure Content Safety API
-   - Demonštrovať vzory moderovania vstupov/výstupov
+   - Pridajte príklady používania Azure Content Safety API
+   - Demonštrácia vzorcov moderovania vstupu/výstupu
 
 ---
 
@@ -41,94 +41,99 @@ Kódová základňa bola analyzovaná z hľadiska bezpečnosti, kvality kódu a 
 ### 2.1 Pridané konfiguračné súbory
 
 | Súbor | Účel |
-|-------|-------|
-| `.eslintrc.json` | Pravidlá lintovania JavaScriptu/TypeScriptu |
+|------|---------|
+| `.eslintrc.json` | Lintovacie pravidlá pre JavaScript/TypeScript |
 | `.prettierrc` | Štandardy formátovania kódu |
 | `pyproject.toml` | Konfigurácia nástrojov pre Python (Black, Ruff, mypy) |
 
-### 2.2 Vytvorené zdieľané utilitky
+### 2.2 Vytvorené zdieľané utility
 
-Nový modul `shared/python/` obsahujúci:
+Nový modul `shared/python/` s:
 - `env_utils.py` - Spracovanie environmentálnych premenných
 - `input_validation.py` - Validácia a sanitizácia vstupov
-- `api_utils.py` - Bezpečné obaly pre API požiadavky
+- `api_utils.py` - Bezpečné API požiadavky (wrapery)
 
-### 2.3 Odporúčané zlepšenia kódu
+### 2.3 Odporúčané vylepšenia kódu
 
-1. **Pokrytie type hintmi**
-   - Pridať type hinty do všetkých Python súborov
-   - Povoliť prísny režim pre TypeScript vo všetkých TS projektoch
+1. **Pokrytie typovými anotáciami**
+   - Pridajte typové anotácie do všetkých Python súborov
+   - Povoliť prísny režim TypeScript vo všetkých TS projektoch
 
 2. **Štandardy dokumentácie**
-   - Pridať docstringy ku všetkým Python funkciám
-   - Pridať JSDoc komentáre ku všetkým JavaScript/TypeScript funkciám
+   - Pridajte docstringy ku všetkým Python funkciám
+   - Pridajte JSDoc komentáre ku všetkým JavaScript/TypeScript funkciám
 
 3. **Testovací rámec**
-   - Pridať konfiguráciu pytest a príkladové testy
-   - Pridať konfiguráciu Jest pre JavaScript/TypeScript
+   - Pridajte pytest konfiguráciu a príkladové testy _(dokončené: pytest konfigurácia v `pyproject.toml`; príkladové testy pre zdieľané utility v [`tests/`](../../../tests) spustené v CI)_
+   - Pridajte Jest konfiguráciu pre JavaScript/TypeScript
 
 ---
 
-## 3. Vylepšenia vzdelávania
+## 3. Vzdelávacie rozšírenia
 
 ### 3.1 Nové témy lekcií
 
-1. **Bezpečnosť vo AI aplikáciách** (Navrhovaná lekcia 22)
-   - Útoky spojené s prompt injection a obrany proti nim
+1. **Bezpečnosť v AI aplikáciách** (Navrhovaná lekcia 22)
+   - Útoky na injektáž promptu a obrany
    - Správa API kľúčov
    - Moderovanie obsahu
    - Obmedzenie rýchlosti a prevencia zneužitia
 
-2. **Nasadenie do produkcie** (Navrhovaná lekcia 23)
+2. **Produkčné nasadenie** (Navrhovaná lekcia 23)
    - Kontajnerizácia s Dockerom
    - CI/CD pipeline
    - Monitorovanie a logovanie
    - Manažment nákladov
 
 3. **Pokročilé RAG techniky** (Navrhovaná lekcia 24)
-   - Hybridné vyhľadávanie (kľúčové slová + sémantické)
-   - Stratégie re-ranking-u
+   - Hybridné vyhľadávanie (kľúčové slová + sémantika)
+   - Stratégií pre reranking
    - Multi-modálny RAG
-   - Metódy hodnotenia
+   - Evaluačné metriky
 
-### 3.2 Zlepšenia existujúcich lekcií
+### 3.2 Vylepšenia existujúcich lekcií
 
 | Lekcia | Odporúčané vylepšenie |
-|--------|-----------------------|
-| 06 - Generovanie textu | Pridať príklady streamovanej odpovede |
-| 07 - Chatové aplikácie | Pridať vzory pre pamäť konverzácie |
-| 08 - Vyhľadávacie aplikácie | Pridať porovnanie vektorových databáz |
-| 09 - Generovanie obrázkov | Pridať príklady úprav/variantov obrázkov |
-| 11 - Volanie funkcií | Pridať paralelné volanie funkcií |
-| 15 - RAG | Pridať porovnanie stratégií chunkovania |
-| 17 - AI agenti | Pridať orchestráciu viacerých agentov |
+|--------|------------------------|
+| 06 - Generovanie textu | Pridajte príklady streamovania odpovedí |
+| 07 - Chatové aplikácie | Pridajte vzory pamäte konverzácie |
+| 08 - Vyhľadávacie aplikácie | Pridajte porovnanie vektorových databáz |
+| 09 - Generovanie obrázkov | Pridajte príklady úprav a variácií obrázkov |
+| 11 - Volanie funkcií | Pridajte paralelné volania funkcií |
+| 15 - RAG | Pridajte porovnanie stratégií delenia na bloky |
+| 17 - AI agenti | Pridajte viacagentovú orchestráciu |
 
 ---
 
 ## 4. Modernizácia API
 
-### 4.1 Zastarané API vzory na aktualizáciu
+### 4.1 Zastaralé API vzory (Migrácia dokončená)
 
-| Starý vzor | Nový vzor | Súbory, ktoré sa týkajú |
-|------------|-----------|------------------------|
-| `openai.api_type = "azure"` | klient `AzureOpenAI()` | Viaceré súbory v `08-building-search-applications/` |
-| `openai.ChatCompletion.create()` | `client.chat.completions.create()` | Viaceré notebooky |
-| `df.append()` (pandas) | `pd.concat()` | RAG notebook |
+Všetky Python a TypeScript **chat** ukážky boli migrované z Chat Completions API na **Responses API** (`client.responses.create(...)` → `response.output_text`).
+
+| Starý vzor | Nový vzor | Stav |
+|-------------|-------------|--------|
+| `openai.api_type = "azure"` / `AzureOpenAI()` (chat) | `OpenAI(base_url="<endpoint>/openai/v1/")` (Responses API) | Dokončené |
+| `openai.ChatCompletion.create()` / `client.chat.completions.create()` | `client.responses.create(input=...)` → `response.output_text` | Dokončené |
+| `@azure/openai` `OpenAIClient.getChatCompletions()` (TypeScript) | `openai` balík `client.responses.create()` → `response.output_text` | Dokončené |
+| `df.append()` (pandas) | `pd.concat()` | Dokončené |
+
+> **Poznámka:** Ukážky Microsoft Foundry Models používajúce `azure-ai-inference` / `@azure-rest/ai-inference` SDK (`client.complete()`) zostávajú na Model Inference API, ktoré nepodporuje Responses API. `AzureOpenAI()` je úmyselne zachované tam, kde je stále platné (embeddingy a generovanie obrázkov).
 
 ### 4.2 Nové API funkcie na demonštráciu
 
 1. **Štruktúrované výstupy** (OpenAI)
-   - Režim JSON
-   - Volanie funkcií so striktnými schémami
+   - JSON režim
+   - Volanie funkcií s prísnymi schémami
 
 2. **Vizuálne schopnosti**
-   - Analýza obrázkov s GPT-4V
-   - Multi-modálne prompty
+   - Analýza obrázkov s GPT-4o (vision)
+   - Multi-modálne promptové vzory
 
-3. **API asistenti**
+3. **Vstavané nástroje Responses API** (nahrádza legacy Assistants API)
    - Interpret kódu
    - Vyhľadávanie súborov
-   - Vlastné nástroje
+   - Webové vyhľadávanie a vlastné nástroje
 
 ---
 
@@ -136,7 +141,7 @@ Nový modul `shared/python/` obsahujúci:
 
 ### 5.1 Vylepšenia CI/CD
 
-Súčasné workflow zvládajú validáciu markdownu. Odporúčané prídavky:
+Implementované v [`.github/workflows/code-quality.yml`](../../../.github/workflows/code-quality.yml): Python lintovanie/formátovanie (Ruff + Black) je **vynútené** na udržiavanom module `shared/` utilít a beží **len odporúčajúco** v ostatnej časti kurzu, plus odporúčajúce ESLint prechádzanie pre JavaScript/TypeScript. Ilustratívny základ bol:
 
 ```yaml
 # .github/workflows/code-quality.yml
@@ -167,7 +172,9 @@ jobs:
       - run: npx eslint .
 ```
 
-### 5.2 Bezpečnostné skenovanie
+### 5.2 Skanning bezpečnosti
+
+Implementované v [`.github/workflows/security.yml`](../../../.github/workflows/security.yml): analýza CodeQL pre Python a JavaScript/TypeScript (pri push, pull requeste a týždenne) plus prehliadka závislostí pri pull requestoch. Ilustratívny základ bol:
 
 ```yaml
 # .github/workflows/security.yml
@@ -194,11 +201,11 @@ jobs:
 
 ---
 
-## 6. Vylepšenia vývoja
+## 6. Vylepšenia vývoja pre vývojárov
 
-### 6.1 Vylepšenia DevContainer
+### 6.1 Vylepšenia DevContaineru
 
-Aktualizovať `.devcontainer/devcontainer.json`:
+Implementované v [`.devcontainer/devcontainer.json`](../../../.devcontainer/devcontainer.json) a [`.devcontainer/post-create.sh`](../../../.devcontainer/post-create.sh): kontajner teraz obsahuje Pylance, Black formatter, Ruff, ESLint, Prettier a Copilot rozšírenia, povoluje formátovanie pri ukladaní previazané na konfiguráciu Black/Prettier repozitára a inštaluje vývojárske nástroje (`ruff`, `black`, `mypy`, `pytest`), aby sa [code-quality workflow](../../../.github/workflows/code-quality.yml) dal lokálne replikovať. Základný obraz `mcr.microsoft.com/devcontainers/universal` už obsahuje Python a Node, takže ďalšie featury nie sú potrebné. Ilustratívny základ bol:
 
 ```json
 {
@@ -232,30 +239,30 @@ Aktualizovať `.devcontainer/devcontainer.json`:
 }
 ```
 
-### 6.2 Interaktívne playgroundy
+### 6.2 Interaktívna herňa
 
-Zvážiť pridanie:
-- Jupyter notebookov s predvyplnenými API kľúčmi (cez env)
-- Gradio/Streamlit demá pre vizuálnych študentov
-- Interaktívne kvízy na overenie vedomostí
+Zvážte pridanie:
+- Jupyter notebookov s predvyplnenými API kľúčmi (cez prostredie)
+- Gradio/Streamlit demo pre vizuálnych študentov
+- Interaktívnych kvízov na overenie znalostí
 
 ---
 
 ## 7. Podpora viacerých jazykov
 
-### 7.1 Súčasné pokrytie jazykov
+### 7.1 Aktuálne pokrytie jazykov
 
 | Technológia | Pokryté lekcie | Stav |
-|-------------|----------------|------|
-| Python      | Všetky         | Kompletné |
-| TypeScript  | 06-09, 11      | Čiastočné |
-| JavaScript  | 06-08, 11      | Čiastočné |
-| .NET/C#     | Niektoré       | Čiastočné |
+|------------|-----------------|--------|
+| Python | Všetky | Dokončené |
+| TypeScript | 06-09, 11 | Čiastočné |
+| JavaScript | 06-08, 11 | Čiastočné |
+| .NET/C# | Niektoré | Čiastočné |
 
-### 7.2 Odporúčané rozšírenia
+### 7.2 Odporúčané doplnky
 
-1. **Go** - Rastuaci nástroj pre AI/ML
-2. **Rust** - Aplikácie citlivé na výkon
+1. **Go** - Rastúce v AI/ML nástrojoch
+2. **Rust** - Výkonovo kritické aplikácie
 3. **Java/Kotlin** - Podnikové aplikácie
 
 ---
@@ -265,47 +272,44 @@ Zvážiť pridanie:
 ### 8.1 Optimalizácie na úrovni kódu
 
 1. **Async/Await vzory**
-   - Pridať asynchrónne príklady pre spracovanie dávok
-   - Demonštrovať súbežné API volania
+   - Pridajte async príklady pre hromadné spracovanie
+   - Demonštrujte súbežné API volania
 
-2. **Stratégie cachovania**
-   - Pridať príklady cachovania embeddingov
-   - Demonštrovať vzory cachovania odpovedí
+2. **Caching stratégie**
+   - Pridajte príklady cachovania embeddingov
+   - Demonštrujte vzory cachovania odpovedí
 
 3. **Optimalizácia tokenov**
-   - Pridať príklady použitia tiktoken
-   - Demonštrovať techniky kompresie promptov
+   - Pridajte príklady použitia tiktoken
+   - Demonštrujte techniky kompresie promptov
 
 ### 8.2 Príklady optimalizácie nákladov
 
-Pridať príklady demonštrujúce:
-- Výber modelu na základe zložitosti úlohy
-- Prompt engineering pre efektívne tokeny
-- Spracovanie dávok pre hromadné operácie
+Pridajte príklady demonštrujúce:
+- Výber modelu podľa zložitosti úlohy
+- Prompt engineering pre efektívnosť tokenov
+- Hromadné spracovanie pre veľké operácie
 
 ---
 
 ## 9. Prístupnosť a internacionalizácia
 
-### 9.1 Súčasný stav prekladu
+### 9.1 Aktuálny stav prekladu
 
-| Jazyk      | Stav       |
-|------------|------------|
-| Angličtina | Kompletné  |
-| Čínština (zjednodušená) | Kompletné |
-| Japončina  | Kompletné  |
-| Kórejčina  | Kompletné  |
-| Španielčina| Čiastočné  |
-| Portugalčina | Čiastočné |
-| Turečtina  | Čiastočné  |
-| Poľština   | Čiastočné  |
+Všetky preklady sú **úplné** a generované automaticky pomocou [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst), ktorý udržiava viac ako 50 jazykových verzií kurzu synchronizovaných s anglickým zdrojom. Prekladaný obsah sa nachádza v `translations/` a lokalizované obrázky v `translated_images/`; zoznam dostupných jazykov je zverejnený v hornej časti README repozitára.
+
+| Aspekt | Stav |
+|--------|--------|
+| Pokrytie prekladom | Úplné — 50+ jazykov, všetky lekcie |
+| Metóda prekladu | Automatizované cez [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst) |
+| Synchronizované s anglickým zdrojom | Áno — automatická regenerácia |
 
 ### 9.2 Vylepšenia prístupnosti
 
-1. Pridať alt text ku všetkým obrázkom
-2. Zabezpečiť správne zvýraznenie syntaxe v ukážkach kódu
-3. Pridať prepisy videí ku všetkému video obsahu
-4. Zabezpečiť kontrast farieb podľa WCAG smerníc
+1. Pridajte alt text ku všetkým obrázkom
+2. Zabezpečte, aby ukážky kódu mali správne zvýraznenie syntaxe
+3. Pridajte prepisy videí ku všetkému video obsahu
+4. Zabezpečte farebný kontrast podľa smerníc WCAG
 
 ---
 
@@ -313,39 +317,39 @@ Pridať príklady demonštrujúce:
 
 ### Fáza 1: Okamžité (Týždeň 1-2)
 - [x] Opraviť kritické bezpečnostné problémy
-- [x] Pridať konfiguráciu na kvalitu kódu
-- [x] Vytvoriť zdieľané utilitky
-- [x] Zdokumentovať bezpečnostné pokyny
+- [x] Pridať konfiguráciu kvality kódu
+- [x] Vytvoriť zdieľané utility
+- [x] Zdokumentovať bezpečnostné smernice
 
 ### Fáza 2: Krátkodobé (Týždeň 3-4)
-- [ ] Aktualizovať zastarané API vzory
-- [ ] Pridať type hinty do všetkých Python súborov
-- [ ] Pridať CI/CD workflow pre kvalitu kódu
-- [ ] Vytvoriť workflow pre bezpečnostné skenovanie
+- [x] Aktualizovať zastarané API vzory (Chat Completions → Responses API, Python + TypeScript)
+- [ ] Pridať typové anotácie do všetkých Python súborov (dokončené pre udržiavaný modul `shared/`; študijné príklady zjednodušené)
+- [x] Pridať CI/CD workflow pre kvalitu kódu
+- [x] Vytvoriť workflow pre bezpečnostné skenovanie
 
 ### Fáza 3: Strednodobé (Mesiac 2-3)
-- [ ] Pridať novú lekciu o bezpečnosti
-- [ ] Pridať lekciu o nasadení do produkcie
-- [ ] Zlepšiť nastavenie DevContainer
+- [ ] Pridať novú bezpečnostnú lekciu
+- [ ] Pridať lekciu produkčného nasadenia
+- [x] Vylepšiť nastavenie DevContaineru
 - [ ] Pridať interaktívne demo
 
 ### Fáza 4: Dlhodobé (Mesiac 4+)
 - [ ] Pridať pokročilú lekciu RAG
 - [ ] Rozšíriť pokrytie jazykov
-- [ ] Pridať komplexnú testovaciu sadu
+- [ ] Pridať komplexnú testovaciu súpravu
 - [ ] Vytvoriť certifikačný program
 
 ---
 
 ## Záver
 
-Táto roadmapa poskytuje štruktúrovaný prístup k vylepšovaniu kurzu Generatívnej AI pre Začiatočníkov. Riešením bezpečnostných otázok, modernizáciou API a pridaním vzdelávacieho obsahu bude kurz lepšie pripravený na vývoj skutočných AI aplikácií.
+Tento plán rozvoja poskytuje štruktúrovaný prístup k zlepšovaniu učebného programu Generatívnej AI pre začiatočníkov. Riešením bezpečnostných otázok, modernizáciou API a rozšírením vzdelávacieho obsahu bude kurz lepšie pripravovať študentov na reálny vývoj AI aplikácií.
 
-Pre otázky alebo príspevky, prosím, otvorte issue na GitHub repozitári.
+Pre otázky alebo príspevky, prosím otvorte issue na GitHub repozitári.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Vyhlásenie o zodpovednosti**:  
-Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, majte, prosím, na pamäti, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Originálny dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre dôležité informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne výklady vyplývajúce z používania tohto prekladu.
+**Vyhlásenie o zodpovednosti**:
+Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, vezmite prosím na vedomie, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho natívnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

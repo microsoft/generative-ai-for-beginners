@@ -1,123 +1,127 @@
-# Designa användarupplevelse för AI-applikationer
+# Designa UX för AI-applikationer
 
-[![Designa användarupplevelse för AI-applikationer](../../../translated_images/sv/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Designa UX för AI-applikationer](../../../translated_images/sv/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
-> _(Klicka på bilden ovan för att se videon till denna lektion)_
+> _(Klicka på bilden ovan för att se video av denna lektion)_
 
-Användarupplevelse är en mycket viktig aspekt av att bygga appar. Användare måste kunna använda din app på ett effektivt sätt för att utföra uppgifter. Att vara effektiv är en sak, men du måste också designa appar så att de kan användas av alla, för att göra dem _tillgängliga_. Detta kapitel kommer att fokusera på detta område så att du förhoppningsvis kan designa en app som människor både kan och vill använda.
+Användarupplevelse är en mycket viktig aspekt när man bygger appar. Användarna behöver kunna använda din app på ett effektivt sätt för att utföra uppgifter. Att vara effektiv är en sak, men du behöver också designa appar så att alla kan använda dem, för att göra dem _tillgängliga_. Detta kapitel kommer att fokusera på detta område så att du förhoppningsvis slutar med att designa en app som människor kan och vill använda.
 
 ## Introduktion
 
-Användarupplevelse handlar om hur en användare interagerar med och använder en specifik produkt eller tjänst, vare sig det är ett system, ett verktyg eller en design. När man utvecklar AI-applikationer fokuserar utvecklare inte bara på att säkerställa att användarupplevelsen är effektiv utan också etisk. I denna lektion går vi igenom hur man bygger artificiella intelligens-applikationer (AI) som möter användarnas behov.
+Användarupplevelse är hur en användare interagerar med och använder en specifik produkt eller tjänst, vare sig det är ett system, ett verktyg eller en design. När man utvecklar AI-applikationer fokuserar utvecklare inte bara på att säkerställa att användarupplevelsen är effektiv utan också etisk. I denna lektion täcker vi hur man bygger artificiell intelligens (AI)-applikationer som möter användarnas behov.
 
-Lektionens innehåll:
+Lektionen kommer att täcka följande områden:
 
-- Introduktion till användarupplevelse och förståelse för användarbehov
+- Introduktion till användarupplevelse och förståelse för användarnas behov
 - Designa AI-applikationer för förtroende och transparens
-- Designa AI-applikationer för samarbete och feedback
+- Designa AI-applikationer för samarbete och återkoppling
 
 ## Lärandemål
 
-Efter att ha genomgått denna lektion kommer du att kunna:
+Efter att ha tagit denna lektion kommer du att kunna:
 
-- Förstå hur man bygger AI-applikationer som möter användarnas behov.
+- Förstå hur man bygger AI-applikationer som uppfyller användarnas behov.
 - Designa AI-applikationer som främjar förtroende och samarbete.
 
 ### Förkunskaper
 
-Ta dig tid att läsa mer om [användarupplevelse och design thinking.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
+Ta lite tid och läs mer om [användarupplevelse och design thinking.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
 
-## Introduktion till användarupplevelse och förståelse för användarbehov
+## Introduktion till användarupplevelse och förståelse för användarnas behov
 
-I vårt fiktiva utbildningsföretag har vi två primära användare, lärare och elever. Var och en av dessa användare har unika behov. En användarcentrerad design prioriterar användaren och säkerställer att produkterna är relevanta och fördelaktiga för dem de är avsedda för.
+I vår fiktiva utbildningsstart har vi två primära användare, lärare och elever. Varje användartyp har unika behov. En användarcentrerad design prioriterar användaren för att säkerställa att produkterna är relevanta och fördelaktiga för dem de är avsedda för.
 
-Applikationen bör vara **användbar, pålitlig, tillgänglig och trevlig** för att ge en bra användarupplevelse.
+Applikationen bör vara **användbar, pålitlig, tillgänglig och behaglig** för att ge en god användarupplevelse.
 
 ### Användbarhet
 
-Att vara användbar innebär att applikationen har funktioner som matchar dess avsedda syfte, såsom att automatisera betygsättningsprocessen eller generera flashcards för repetition. En applikation som automatiserar betygsättningsprocessen bör kunna tilldela poäng till elevers arbete korrekt och effektivt baserat på fördefinierade kriterier. På samma sätt bör en applikation som genererar repetitionskort kunna skapa relevanta och varierade frågor baserat på sin data.
+Att vara användbar innebär att applikationen har funktionalitet som matchar dess avsedda syfte, som att automatisera betygsättningsprocessen eller generera flashcards för repetition. En applikation som automatiserar betygsättningen ska kunna korrekt och effektivt tilldela poäng till elevers arbete baserat på fördefinierade kriterier. På samma sätt ska en applikation som genererar repetitionsflashcards kunna skapa relevanta och varierade frågor baserade på dess data.
 
 ### Pålitlighet
 
-Att vara pålitlig innebär att applikationen kan utföra sina uppgifter konsekvent och utan fel. Men AI, precis som människor, är inte perfekt och kan vara benägen att göra misstag. Applikationer kan stöta på fel eller oväntade situationer som kräver mänsklig inblandning eller korrigering. Hur hanterar du fel? I den sista delen av denna lektion kommer vi att gå igenom hur AI-system och applikationer designas för samarbete och feedback.
+Att vara pålitlig innebär att applikationen kan utföra sin uppgift konsekvent och utan fel. Dock är AI precis som människor inte perfekt och kan vara benägen att göra misstag. Applikationerna kan stöta på fel eller oväntade situationer som kräver mänsklig intervention eller korrigering. Hur hanterar du fel? I den sista delen av denna lektion kommer vi att ta upp hur AI-system och applikationer är designade för samarbete och återkoppling.
 
 ### Tillgänglighet
 
-Att vara tillgänglig innebär att utöka användarupplevelsen till användare med olika förmågor, inklusive de med funktionsnedsättningar, och säkerställa att ingen lämnas utanför. Genom att följa riktlinjer och principer för tillgänglighet blir AI-lösningar mer inkluderande, användbara och fördelaktiga för alla användare.
+Att vara tillgänglig innebär att utöka användarupplevelsen till användare med olika förmågor, inklusive personer med funktionsnedsättningar, för att säkerställa att ingen lämnas utanför. Genom att följa riktlinjer och principer för tillgänglighet blir AI-lösningar mer inkluderande, användbara och fördelaktiga för alla användare.
 
-### Trevlig
+### Behaglig
 
-Att vara trevlig innebär att applikationen är behaglig att använda. En tilltalande användarupplevelse kan ha en positiv inverkan på användaren, uppmuntra dem att återvända till applikationen och öka företagets intäkter.
+Att vara behaglig innebär att applikationen är trevlig att använda. En attraktiv användarupplevelse kan ha en positiv inverkan på användaren och uppmuntra denne att återvända till applikationen samt öka företagets intäkter.
 
-![bild som illustrerar UX-överväganden i AI](../../../translated_images/sv/uxinai.d5b4ed690f5cefff.webp)
+![bild som illustrerar UX-överväganden inom AI](../../../translated_images/sv/uxinai.d5b4ed690f5cefff.webp)
 
-Inte alla utmaningar kan lösas med AI. AI används för att förstärka användarupplevelsen, vare sig det handlar om att automatisera manuella uppgifter eller att anpassa användarupplevelser.
+Inte varje utmaning kan lösas med AI. AI kommer in för att förstärka din användarupplevelse, vare sig det gäller att automatisera manuella uppgifter eller personalisera användarupplevelser.
 
 ## Designa AI-applikationer för förtroende och transparens
 
-Att bygga förtroende är avgörande när man designar AI-applikationer. Förtroende säkerställer att en användare är säker på att applikationen kommer att utföra arbetet, leverera resultat konsekvent och att resultaten är vad användaren behöver. En risk i detta område är misstro och överdrivet förtroende. Misstro uppstår när en användare har lite eller inget förtroende för ett AI-system, vilket leder till att användaren avvisar din applikation. Överdrivet förtroende uppstår när en användare överskattar kapaciteten hos ett AI-system, vilket leder till att användare litar för mycket på AI-systemet. Till exempel kan ett automatiserat betygsättningssystem i fallet med överdrivet förtroende leda till att läraren inte granskar vissa av proven för att säkerställa att betygsättningssystemet fungerar korrekt. Detta kan resultera i orättvisa eller felaktiga betyg för eleverna, eller missade möjligheter till feedback och förbättring.
+Att bygga förtroende är avgörande när man designar AI-applikationer. Förtroende säkerställer att en användare är trygg med att applikationen utför uppgiften, levererar resultat konsekvent och att resultaten är vad användaren behöver. En risk i detta område är misstro och överförtroende. Misstro uppstår när en användare har lite eller inget förtroende för ett AI-system, vilket leder till att användaren avvisar din applikation. Överförtroende uppstår när en användare överskattar kapaciteten hos ett AI-system, vilket leder till att användare litar för mycket på AI-systemet. Till exempel kan ett automatiserat betygssystem i fallet med överförtroende leda till att läraren inte korrekturläser vissa arbeten för att säkerställa att betygssystemet fungerar väl. Detta kan resultera i orättvisa eller inexakta betyg för eleverna, eller missade möjligheter till återkoppling och förbättring.
 
-Två sätt att säkerställa att förtroende är centralt i designen är förklarbarhet och kontroll.
+Två sätt att säkerställa att förtroendet är i centrum för designen är förklarbarhet och kontroll.
 
 ### Förklarbarhet
 
-När AI hjälper till att fatta beslut, som att förmedla kunskap till framtida generationer, är det avgörande för lärare och föräldrar att förstå hur AI-beslut fattas. Detta är förklarbarhet - att förstå hur AI-applikationer fattar beslut. Att designa för förklarbarhet innebär att lägga till detaljer som belyser hur AI kom fram till resultatet. Publiken måste vara medveten om att resultatet genereras av AI och inte av en människa. Till exempel, istället för att säga "Börja chatta med din handledare nu", säg "Använd AI-handledare som anpassar sig till dina behov och hjälper dig att lära dig i din egen takt."
+När AI hjälper till att informera beslut som att förmedla kunskap till framtida generationer är det avgörande för lärare och föräldrar att förstå hur AI-beslut fattas. Detta kallas förklarbarhet - att förstå hur AI-applikationer fattar beslut. Design för förklarbarhet inkluderar att lägga till detaljer som lyfter fram hur AI kom fram till resultatet. Målgruppen måste vara medveten om att resultatet genereras av AI och inte av en människa. Till exempel, istället för att säga "Börja chatta med din handledare nu", säg "Använd AI-handledare som anpassar sig efter dina behov och hjälper dig att lära i din takt."
 
-![en app-landningssida med tydlig illustration av förklarbarhet i AI-applikationer](../../../translated_images/sv/explanability-in-ai.134426a96b498fbf.webp)
+![en appens landningssida med tydlig illustration av förklarbarhet i AI-applikationer](../../../translated_images/sv/explanability-in-ai.134426a96b498fbf.webp)
 
-Ett annat exempel är hur AI använder användar- och personuppgifter. Till exempel kan en användare med personan student ha begränsningar baserat på sin persona. AI:n kanske inte kan avslöja svar på frågor men kan hjälpa användaren att tänka igenom hur de kan lösa ett problem.
+Ett annat exempel är hur AI använder användar- och personuppgifter. Till exempel kan en användare med studentprofil ha begränsningar baserade på sin profil. AI:n kanske inte kan avslöja svar på frågor men kan hjälpa till att vägleda användaren att tänka igenom hur hen kan lösa ett problem.
 
-![AI svarar på frågor baserat på persona](../../../translated_images/sv/solving-questions.b7dea1604de0cbd2.webp)
+![AI som svarar på frågor baserat på persona](../../../translated_images/sv/solving-questions.b7dea1604de0cbd2.webp)
 
-En sista viktig del av förklarbarhet är förenkling av förklaringar. Elever och lärare kanske inte är experter på AI, därför bör förklaringar av vad applikationen kan eller inte kan göra förenklas och vara lätta att förstå.
+En sista viktig del av förklarbarhet är förenkling av förklaringar. Studenter och lärare är kanske inte AI-experter, därför bör förklaringar om vad applikationen kan eller inte kan göra vara förenklade och lätta att förstå.
 
-![förenklade förklaringar av AI-funktioner](../../../translated_images/sv/simplified-explanations.4679508a406c3621.webp)
+![förenklade förklaringar om AI:s kapabiliteter](../../../translated_images/sv/simplified-explanations.4679508a406c3621.webp)
 
 ### Kontroll
 
-Generativ AI skapar ett samarbete mellan AI och användaren, där användaren till exempel kan ändra uppmaningar för olika resultat. Dessutom, när ett resultat genereras, bör användare kunna ändra resultaten och därmed få en känsla av kontroll. Till exempel, när du använder Bing, kan du anpassa din uppmaning baserat på format, ton och längd. Dessutom kan du göra ändringar i ditt resultat och modifiera det som visas nedan:
+Generativ AI skapar ett samarbete mellan AI och användaren, där exempelvis en användare kan justera uppmaningar för olika resultat. Dessutom bör användare kunna modifiera resultaten när en output genererats, vilket ger dem en känsla av kontroll. Till exempel, när du använder Microsoft Copilot (tidigare Bing Chat), kan du anpassa din uppmaning baserat på format, ton och längd. Dessutom kan du göra ändringar i din output och modifiera den som visas nedan:
 
-![Bing-sökresultat med alternativ för att ändra uppmaning och resultat](../../../translated_images/sv/bing1.293ae8527dbe2789.webp)
+![Bing sökresultat med alternativ för att ändra prompt och output](../../../translated_images/sv/bing1.293ae8527dbe2789.webp)
 
-En annan funktion i Bing som ger användaren kontroll över applikationen är möjligheten att välja att delta eller avstå från den data som AI använder. För en skolapplikation kanske en elev vill använda sina anteckningar samt lärarens resurser som repetitionsmaterial.
+En annan funktion i Microsoft Copilot som ger användaren kontroll över applikationen är möjligheten att välja att delta i eller avstå från den data som AI:n använder. För en skolapplikation kan en elev vilja använda sina anteckningar såväl som lärarens resurser som repetitionsmaterial.
 
-![Bing-sökresultat med alternativ för att ändra uppmaning och resultat](../../../translated_images/sv/bing2.309f4845528a88c2.webp)
+![Bing sökresultat med alternativ för att ändra prompt och output](../../../translated_images/sv/bing2.309f4845528a88c2.webp)
 
-> När du designar AI-applikationer är det viktigt att vara medveten om att användare inte ska överdriva sitt förtroende för AI och dess kapacitet. Ett sätt att göra detta är att skapa en viss friktion mellan uppmaningarna och resultaten. Påminn användaren om att detta är AI och inte en annan människa.
+> När man designar AI-applikationer är avsiktlighet nyckeln för att säkerställa att användare inte överskattar och sätter orealistiska förväntningar på dess kapabiliteter. Ett sätt att göra detta är att skapa friktion mellan uppmaningarna och resultaten. Påminn användaren om att detta är AI och inte en medmänniska.
 
-## Designa AI-applikationer för samarbete och feedback
+## Designa AI-applikationer för samarbete och återkoppling
 
-Som tidigare nämnts skapar generativ AI ett samarbete mellan användaren och AI. De flesta interaktioner sker genom att en användare matar in en uppmaning och AI genererar ett resultat. Vad händer om resultatet är felaktigt? Hur hanterar applikationen fel om de uppstår? Skyller AI på användaren eller tar den sig tid att förklara felet?
+Som tidigare nämnts skapar generativ AI ett samarbete mellan användaren och AI:n. De flesta interaktioner är användare som anger en uppmaning och AI:n genererar en output. Vad händer om outputen är felaktig? Hur hanterar applikationen fel om de uppstår? Skyller AI på användaren eller tar tid att förklara felet?
 
-AI-applikationer bör vara utformade för att ta emot och ge feedback. Detta hjälper inte bara AI-systemet att förbättras utan bygger också förtroende hos användarna. En feedback-loop bör inkluderas i designen, ett exempel kan vara en enkel tumme upp eller ner på resultatet.
+AI-applikationer bör byggas för att ta emot och ge återkoppling. Detta hjälper inte bara AI-systemet att förbättras utan bygger också förtroende hos användarna. En återkopplingsslinga bör inkluderas i designen, ett exempel kan vara en enkel tumme upp eller ner på outputen.
 
-Ett annat sätt att hantera detta är att tydligt kommunicera systemets kapacitet och begränsningar. När en användare gör ett fel genom att begära något utanför AI:s kapacitet, bör det också finnas ett sätt att hantera detta, som visas nedan.
+Ett annat sätt att hantera detta är att tydligt kommunicera systemets kapabiliteter och begränsningar. När en användare gör ett misstag och begär något utanför AI:s kapacitet borde det också finnas ett sätt att hantera detta, som visas nedan.
 
-![Ge feedback och hantera fel](../../../translated_images/sv/feedback-loops.7955c134429a9466.webp)
+![Ge återkoppling och hantera fel](../../../translated_images/sv/feedback-loops.7955c134429a9466.webp)
 
-Systemfel är vanliga i applikationer där användaren kan behöva hjälp med information utanför AI:s räckvidd eller där applikationen kan ha en gräns för hur många frågor/ämnen en användare kan generera sammanfattningar för. Till exempel kan en AI-applikation som är tränad med data om begränsade ämnen, som historia och matematik, kanske inte kunna hantera frågor om geografi. För att mildra detta kan AI-systemet ge ett svar som: "Tyvärr, vår produkt har tränats med data inom följande ämnen....., jag kan inte svara på frågan du ställde."
+Systemfel är vanliga i applikationer där användaren kan behöva hjälp med information utanför AI:s omfattning eller applikationen kan ha en gräns på hur många frågor/ämnen en användare kan generera sammanfattningar för. Till exempel kan en AI-applikation tränad med data om begränsade ämnen som historia och matematik inte kunna hantera frågor om geografi. För att mildra detta kan AI-systemet ge ett svar som: "Tyvärr, vår produkt har tränats med data inom följande ämnen....., jag kan inte svara på din fråga."
 
-AI-applikationer är inte perfekta, därför är de benägna att göra misstag. När du designar dina applikationer bör du säkerställa att du skapar utrymme för feedback från användare och felhantering på ett sätt som är enkelt och lätt att förstå.
+AI-applikationer är inte perfekta, därför kommer de att göra misstag. När du designar dina applikationer bör du säkerställa att du skapar utrymme för användaråterkoppling och felhantering på ett sätt som är enkelt och lätt att förklara.
 
 ## Uppgift
 
-Ta en av de AI-appar du har byggt hittills och överväg att implementera följande steg i din app:
+Ta någon av de AI-appar du byggt hittills och överväg att implementera följande steg i din app:
 
-- **Trevlig:** Fundera på hur du kan göra din app mer trevlig. Lägger du till förklaringar överallt? Uppmuntrar du användaren att utforska? Hur formulerar du dina felmeddelanden?
+- **Behaglig:** Fundera på hur du kan göra din app trevligare. Lägger du till förklaringar överallt? Uppmuntrar du användaren att utforska? Hur formulerar du dina felmeddelanden?
 
-- **Användbarhet:** Bygg en webbapp. Se till att din app kan navigeras med både mus och tangentbord.
+- **Användbarhet:** Bygger en webbapp. Se till att din app är navigerbar både med mus och tangentbord.
 
-- **Förtroende och transparens:** Lita inte helt på AI och dess resultat, fundera på hur du skulle kunna lägga till en mänsklig kontroll för att verifiera resultaten. Överväg också och implementera andra sätt att uppnå förtroende och transparens.
+- **Förtroende och transparens:** Lita inte helt på AI och dess output, överväg hur du skulle lägga till en människa i processen för att verifiera outputen. Överväg och implementera även andra sätt att uppnå förtroende och transparens.
 
-- **Kontroll:** Ge användaren kontroll över de data de tillhandahåller till applikationen. Implementera ett sätt för användaren att välja att delta eller avstå från datainsamling i AI-applikationen.
+- **Kontroll:** Ge användaren kontroll över den data de tillhandahåller applikationen. Implementera ett sätt för en användare att välja att delta i eller avstå från datainsamling i AI-applikationen.
+
+<!-- ## [Quiz efter föreläsning](../../../12-designing-ux-for-ai-applications/quiz-url) -->
 
 ## Fortsätt ditt lärande!
 
-Efter att ha slutfört denna lektion, kolla in vår [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) för att fortsätta utveckla din kunskap om generativ AI!
+Efter att ha avslutat denna lektion, kolla in vår [Generativa AI-lärandekollektion](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) för att fortsätta utveckla din kunskap om Generativ AI!
 
-Gå vidare till Lektion 13, där vi kommer att titta på hur man [säkrar AI-applikationer](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Gå vidare till Lektion 13, där vi tittar på hur man [säkrar AI-applikationer](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Ansvarsfriskrivning**:  
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, bör det noteras att automatiserade översättningar kan innehålla fel eller felaktigheter. Det ursprungliga dokumentet på dess ursprungliga språk bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för eventuella missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Ansvarsfriskrivning**:
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, var vänlig notera att automatiska översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess modersmål bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för några missförstånd eller feltolkningar som uppstår till följd av användningen av denna översättning.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

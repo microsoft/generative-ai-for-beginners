@@ -1,34 +1,34 @@
 # הכנת נתוני תמלול
 
-סקריפטים להכנת נתוני תמלול מורידים תמלולים של סרטוני YouTube ומכינים אותם לשימוש עם דוגמת Semantic Search עם OpenAI Embeddings ו-Functions.
+סקריפטי הכנת נתוני התמלול מורידים תמלולים של סרטוני YouTube ומכינים אותם לשימוש עם דוגמת החיפוש הסמנטי עם הטמעות OpenAI ופונקציות.
 
-סקריפטים להכנת נתוני תמלול נבדקו על הגרסאות האחרונות של Windows 11, macOS Ventura ו-Ubuntu 22.04 (ומעלה).
+סקריפטי הכנת נתוני התמלול נבדקו בגרסאות האחרונות של Windows 11, macOS Ventura ו-Ubuntu 22.04 (ומעלה).
 
-## יצירת משאבי Azure OpenAI Service הנדרשים
+## צור משאבים נדרשים של שירות Azure OpenAI
 
 > [!IMPORTANT]
-> אנו ממליצים לעדכן את Azure CLI לגרסה העדכנית ביותר כדי להבטיח תאימות עם OpenAI
+> אנו ממליצים לעדכן את Azure CLI לגרסה האחרונה כדי להבטיח תאימות עם OpenAI
 > ראה [Documentation](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. צור קבוצת משאבים
 
 > [!NOTE]
-> בהוראות אלו אנו משתמשים בקבוצת המשאבים בשם "semantic-video-search" באזור East US.
-> ניתן לשנות את שם קבוצת המשאבים, אך כשמשנים את מיקום המשאבים,
-> יש לבדוק את [טבלת זמינות הדגמים](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> להוראות אלו אנו משתמשים בקבוצת המשאבים בשם "semantic-video-search" באזור East US.
+> ניתן לשנות את שם קבוצת המשאבים, אך כאשר משנים את מיקום המשאבים,
+> בדוק את [טבלת זמינות הדגמים](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. צור משאב Azure OpenAI Service.
+1. צור משאב שירות Azure OpenAI.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. קבל את נקודת הקצה והמפתחות לשימוש באפליקציה זו
+1. קבל את נקודת הקצה והמפתחות לשימוש ביישום זה
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -38,8 +38,8 @@ az cognitiveservices account keys list --name semantic-video-openai \
 ```
 
 1. פרוס את הדגמים הבאים:
-   - `text-embedding-ada-002` גרסה `2` ומעלה, בשם `text-embedding-ada-002`
-   - `gpt-35-turbo` גרסה `0613` ומעלה, בשם `gpt-35-turbo`
+   - `text-embedding-ada-002` גרסה `2` או גבוהה יותר, בשם `text-embedding-ada-002`
+   - `gpt-4o-mini` בשם `gpt-4o-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,9 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-35-turbo \
-    --model-name gpt-35-turbo \
-    --model-version "0613"  \
+    --deployment-name gpt-4o-mini \
+    --model-name gpt-4o-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -63,7 +62,7 @@ az cognitiveservices account deployment create \
 
 ## תוכנה נדרשת
 
-- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) ומעלה
+- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) או גרסה גבוהה יותר
 
 ## משתני סביבה
 
@@ -71,8 +70,8 @@ az cognitiveservices account deployment create \
 
 ### ב-Windows
 
-מומלץ להוסיף את המשתנים למשתני הסביבה של המשתמש.
-`Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` עבור [USER] > `New`.
+מומלץ להוסיף את המשתנים למשתני הסביבה של `user`.
+`Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` בשביל [USER] > `New`.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -81,9 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
+<!-- ניתן להוסיף את משתני הסביבה לפרופיל PowerShell שלך.
+
+```powershell
+$env:AZURE_OPENAI_API_KEY = "<מפתח API של שירות Azure OpenAI שלך>"
+$env:AZURE_OPENAI_ENDPOINT = "<נקודת הקצה של שירות Azure OpenAI שלך>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<שם פריסת המודל של שירות Azure OpenAI שלך>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<מפתח API של מפתח Google שלך>"
+``` -->
+
 ### ב-Linux ו-macOS
 
-מומלץ להוסיף את ה-exports הבאים לקובץ `~/.bashrc` או `~/.zshrc`.
+מומלץ להוסיף את הייצוא הבא לקובץ `~/.bashrc` או `~/.zshrc` שלך.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -92,9 +100,9 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## התקנת ספריות Python הנדרשות
+## התקן את ספריות הפייתון הנדרשות
 
-1. התקן את [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) אם הוא לא מותקן כבר.
+1. התקן את [לקוח git](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) אם הוא לא מותקן כבר.
 1. מחלון `Terminal`, שכפל את הדוגמה לתיקיית הריפו המועדפת עליך.
 
     ```bash
@@ -107,7 +115,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. צור סביבה וירטואלית של Python.
+1. צור סביבה וירטואלית של פייתון.
 
     ב-Windows:
 
@@ -121,7 +129,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     python3 -m venv .venv
     ```
 
-1. הפעל את הסביבה הווירטואלית של Python.
+1. הפעל את הסביבה הווירטואלית של פייתון.
 
    ב-Windows:
 
@@ -137,7 +145,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. התקן את הספריות הנדרשות.
 
-   ב-Windows:
+   ב-windows:
 
    ```powershell
    pip install -r requirements.txt
@@ -149,9 +157,9 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## הפעלת סקריפטי הכנת נתוני התמלול של YouTube
+## הפעל את סקריפטי הכנת נתוני התמלול של YouTube
 
-### ב-Windows
+### ב-windows
 
 ```powershell
 .\transcripts_prepare.ps1
@@ -163,5 +171,9 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ./transcripts_prepare.sh
 ```
 
-**כתב ויתור**:  
-מסמך זה תורגם באמצעות שירות תרגום מבוסס בינה מלאכותית [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון כי תרגומים אוטומטיים עלולים להכיל שגיאות או אי-דיוקים. המסמך המקורי בשפת המקור שלו נחשב למקור הסמכותי. למידע קריטי מומלץ להשתמש בתרגום מקצועי על ידי אדם. אנו לא נושאים באחריות לכל אי-הבנה או פרשנות שגויה הנובעת משימוש בתרגום זה.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**כתב ויתור**:
+מסמך זה תורגם באמצעות שירות תרגום אוטומטי [Co-op Translator](https://github.com/Azure/co-op-translator). למרות שאנו שואפים לדיוק, יש לקחת בחשבון שתרגומים אוטומטיים עלולים להכיל שגיאות או אי-דיוקים. יש להחשיב את המסמך המקורי בשפתו הטבעית כמקור הסמכות. למידע קריטי מומלץ להשתמש בתרגום מקצועי על ידי מתרגם אדם. אנו לא אחראים לכל אי-הבנה או פירוש שגוי הנובע מהשימוש בתרגום זה.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

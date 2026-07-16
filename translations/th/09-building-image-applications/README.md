@@ -2,100 +2,100 @@
 
 [![การสร้างแอปพลิเคชันสร้างภาพ](../../../translated_images/th/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
 
-LLMs ไม่ได้มีแค่การสร้างข้อความเท่านั้น แต่ยังสามารถสร้างภาพจากคำอธิบายข้อความได้อีกด้วย การมีภาพเป็นส่วนหนึ่งของการใช้งานสามารถเป็นประโยชน์ในหลายด้าน เช่น เทคโนโลยีทางการแพทย์ สถาปัตยกรรม การท่องเที่ยว การพัฒนาเกม และอื่นๆ ในบทนี้ เราจะมาดูโมเดลการสร้างภาพที่ได้รับความนิยมมากที่สุดสองตัว ได้แก่ DALL-E และ Midjourney
+มีมากกว่าการสร้างข้อความที่ LLMs ทำได้ ยังสามารถสร้างภาพจากคำอธิบายข้อความได้ด้วย การมีภาพเป็นรูปแบบข้อมูลนั้นมีประโยชน์มากในหลาย ๆ ด้าน เช่น MedTech สถาปัตยกรรม การท่องเที่ยว การพัฒนาเกม และอื่น ๆ ในบทนี้ เราจะดูสองโมเดลสร้างภาพที่ได้รับความนิยมมากที่สุด คือ DALL-E และ Midjourney
 
 ## บทนำ
 
 ในบทเรียนนี้ เราจะครอบคลุม:
 
-- การสร้างภาพและเหตุผลที่มันมีประโยชน์
-- DALL-E และ Midjourney คืออะไรและทำงานอย่างไร
-- วิธีการสร้างแอปพลิเคชันสร้างภาพ
+- การสร้างภาพและเหตุผลว่าทำไมมันถึงมีประโยชน์
+- DALL-E และ Midjourney คืออะไร และทำงานอย่างไร
+- วิธีสร้างแอปพลิเคชันสร้างภาพ
 
 ## เป้าหมายการเรียนรู้
 
-หลังจากจบบทเรียนนี้ คุณจะสามารถ:
+หลังจากเรียนบทนี้เสร็จ คุณจะสามารถ:
 
 - สร้างแอปพลิเคชันสร้างภาพ
 - กำหนดขอบเขตสำหรับแอปพลิเคชันของคุณด้วย meta prompts
-- ทำงานร่วมกับ DALL-E และ Midjourney
+- ใช้งานกับ DALL-E และ Midjourney
 
 ## ทำไมต้องสร้างแอปพลิเคชันสร้างภาพ?
 
-แอปพลิเคชันสร้างภาพเป็นวิธีที่ยอดเยี่ยมในการสำรวจความสามารถของ Generative AI สามารถนำไปใช้ในกรณีต่างๆ เช่น:
+แอปพลิเคชันสร้างภาพเป็นวิธีที่ยอดเยี่ยมในการสำรวจความสามารถของ Generative AI ตัวอย่างการใช้งานเช่น:
 
-- **การแก้ไขและการสังเคราะห์ภาพ** คุณสามารถสร้างภาพสำหรับการใช้งานหลากหลาย เช่น การแก้ไขภาพและการสังเคราะห์ภาพ
+- **การแก้ไขและสังเคราะห์ภาพ** คุณสามารถสร้างภาพสำหรับกรณีใช้งานหลายรูปแบบ เช่น การแก้ไขภาพและการสังเคราะห์ภาพ
 
-- **นำไปใช้ในหลากหลายอุตสาหกรรม** สามารถนำไปใช้สร้างภาพสำหรับอุตสาหกรรมต่างๆ เช่น เทคโนโลยีทางการแพทย์ การท่องเที่ยว การพัฒนาเกม และอื่นๆ
+- **นำไปใช้กับหลายอุตสาหกรรม** ยังสามารถใช้สร้างภาพสำหรับอุตสาหกรรมต่าง ๆ เช่น Medtech การท่องเที่ยว การพัฒนาเกม และอื่น ๆ
 
-## สถานการณ์: Edu4All
+## กรณีศึกษา: Edu4All
 
-ในบทเรียนนี้ เราจะทำงานร่วมกับสตาร์ทอัพของเรา Edu4All นักเรียนจะสร้างภาพสำหรับการประเมินของพวกเขา โดยภาพที่สร้างขึ้นขึ้นอยู่กับนักเรียน เช่น ภาพประกอบสำหรับนิทานของพวกเขา หรือสร้างตัวละครใหม่สำหรับเรื่องราว หรือช่วยให้พวกเขาเห็นภาพแนวคิดของพวกเขา
+ในบทเรียนนี้ เราจะทำงานต่อกับสตาร์ทอัพของเรา Edu4All นักเรียนจะสร้างภาพสำหรับการมอบหมายงานของพวกเขา ภาพเหล่านี้จะเป็นอะไรขึ้นอยู่กับนักเรียน เช่น ภาพประกอบนิทานของตนเอง สร้างตัวละครใหม่สำหรับเรื่องราว หรือช่วยให้เห็นภาพแนวคิดและไอเดียของพวกเขา
 
-ตัวอย่างเช่น นักเรียนของ Edu4All อาจสร้างภาพในชั้นเรียนเกี่ยวกับอนุสรณ์สถาน:
+ตัวอย่างที่นักเรียน Edu4All อาจสร้างเช่นเมื่อทำงานในชั้นเรียนเกี่ยวกับอนุสาวรีย์:
 
-![สตาร์ทอัพ Edu4All, ชั้นเรียนเกี่ยวกับอนุสรณ์สถาน, หอไอเฟล](../../../translated_images/th/startup.94d6b79cc4bb3f5a.webp)
+![สตาร์ทอัพ Edu4All, ชั้นเรียนเกี่ยวกับอนุสาวรีย์, หอไอเฟล](../../../translated_images/th/startup.94d6b79cc4bb3f5a.webp)
 
-โดยใช้ prompt เช่น
+ใช้คำสั่งเช่น
 
 > "สุนัขข้างหอไอเฟลในแสงแดดยามเช้า"
 
 ## DALL-E และ Midjourney คืออะไร?
 
-[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) และ [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) เป็นโมเดลการสร้างภาพที่ได้รับความนิยมมากที่สุดสองตัว ซึ่งช่วยให้คุณใช้ prompt ในการสร้างภาพได้
+[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) และ [Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) เป็นโมเดลสร้างภาพที่ได้รับความนิยมสองตัว ซึ่งช่วยให้คุณใช้คำสั่งเพื่อสร้างภาพได้
 
 ### DALL-E
 
-เริ่มต้นด้วย DALL-E ซึ่งเป็นโมเดล Generative AI ที่สร้างภาพจากคำอธิบายข้อความ
+เรามาเริ่มต้นกับ DALL-E ซึ่งเป็นโมเดล Generative AI ที่สร้างภาพจากคำอธิบายข้อความ
 
-> [DALL-E เป็นการรวมกันของสองโมเดล CLIP และ diffused attention](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst)
+> [DALL-E เป็นการรวมกันของสองโมเดล คือ CLIP และ diffused attention](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst)
 
-- **CLIP** เป็นโมเดลที่สร้าง embeddings ซึ่งเป็นการแสดงผลข้อมูลในรูปแบบตัวเลขจากภาพและข้อความ
+- **CLIP** เป็นโมเดลที่สร้าง embeddings ซึ่งเป็นการแทนข้อมูลในรูปแบบตัวเลขจากภาพและข้อความ
 
-- **Diffused attention** เป็นโมเดลที่สร้างภาพจาก embeddings DALL-E ได้รับการฝึกฝนด้วยชุดข้อมูลของภาพและข้อความ และสามารถใช้สร้างภาพจากคำอธิบายข้อความได้ เช่น DALL-E สามารถใช้สร้างภาพของแมวใส่หมวก หรือสุนัขที่มีทรงผมโมฮอว์ก
+- **Diffused attention** เป็นโมเดลที่สร้างภาพจาก embeddings DALL-E ถูกฝึกด้วยชุดข้อมูลภาพและข้อความ และใช้สร้างภาพจากคำอธิบายข้อความ ตัวอย่างเช่น DALL-E สามารถสร้างภาพแมวใส่หมวก หรือสุนัขมีทรงผม mohawk
 
 ### Midjourney
 
-Midjourney ทำงานในลักษณะเดียวกับ DALL-E โดยสร้างภาพจาก prompt ข้อความ Midjourney สามารถใช้สร้างภาพโดยใช้ prompt เช่น "แมวใส่หมวก" หรือ "สุนัขที่มีทรงผมโมฮอว์ก"
+Midjourney ทำงานในลักษณะคล้ายกับ DALL-E โดยสร้างภาพจากคำสั่งข้อความ Midjourney ยังสามารถสร้างภาพด้วยคำสั่งเช่น “แมวใส่หมวก” หรือ “สุนัขมีทรงผม mohawk”
 
 ![ภาพที่สร้างโดย Midjourney, นกพิราบกลไก](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
 _เครดิตภาพ Wikipedia, ภาพที่สร้างโดย Midjourney_
 
 ## DALL-E และ Midjourney ทำงานอย่างไร
 
-เริ่มต้นด้วย [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst) DALL-E เป็นโมเดล Generative AI ที่ใช้สถาปัตยกรรม transformer พร้อมกับ _autoregressive transformer_
+เริ่มต้นด้วย [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst) DALL-E เป็นโมเดล Generative AI ที่อิงกับสถาปัตยกรรม transformer โดยใช้ _autoregressive transformer_
 
-_autoregressive transformer_ กำหนดวิธีที่โมเดลสร้างภาพจากคำอธิบายข้อความ โดยสร้างทีละพิกเซล และใช้พิกเซลที่สร้างขึ้นเพื่อสร้างพิกเซลถัดไป ผ่านหลายชั้นในเครือข่ายประสาทเทียมจนกระทั่งภาพเสร็จสมบูรณ์
+_autoregressive transformer_ กำหนดวิธีที่โมเดลสร้างภาพจากคำอธิบายข้อความ โดยสร้างทีละพิกเซล จากนั้นใช้พิกเซลที่สร้างมาแล้วเพื่อสร้างพิกเซลถัดไป ผ่านเลเยอร์ต่าง ๆ ในเครือข่ายประสาท จนภาพสมบูรณ์
 
-ด้วยกระบวนการนี้ DALL-E สามารถควบคุมคุณลักษณะ วัตถุ ลักษณะ และอื่นๆ ในภาพที่สร้างขึ้น อย่างไรก็ตาม DALL-E 2 และ 3 มีการควบคุมภาพที่สร้างขึ้นได้มากกว่า
+ด้วยกระบวนการนี้ DALL-E ควบคุมลักษณะ วัตถุ คุณสมบัติ และอื่น ๆ ในภาพที่สร้าง อย่างไรก็ตาม DALL-E 2 และ 3 มีการควบคุมภาพที่สร้างได้มากขึ้น
 
-## การสร้างแอปพลิเคชันสร้างภาพครั้งแรกของคุณ
+## สร้างแอปพลิเคชันสร้างภาพแอปแรกของคุณ
 
-แล้วการสร้างแอปพลิเคชันสร้างภาพต้องใช้อะไรบ้าง? คุณต้องใช้ไลบรารีดังต่อไปนี้:
+แล้วจะต้องใช้อะไรบ้างเพื่อสร้างแอปพลิเคชันสร้างภาพ? คุณต้องใช้ไลบรารีดังนี้:
 
-- **python-dotenv** ขอแนะนำให้ใช้ไลบรารีนี้เพื่อเก็บข้อมูลลับในไฟล์ _.env_ แยกจากโค้ด
-- **openai** ไลบรารีนี้ใช้สำหรับโต้ตอบกับ OpenAI API
-- **pillow** สำหรับทำงานกับภาพใน Python
-- **requests** เพื่อช่วยในการทำ HTTP requests
+- **python-dotenv** แนะนำอย่างสูงให้ใช้ไลบรารีนี้เพื่อเก็บความลับของคุณในไฟล์ _.env_ แยกจากโค้ด
+- **openai** ไลบรารีนี้ใช้สำหรับติดต่อกับ OpenAI API
+- **pillow** สำหรับจัดการกับภาพใน Python
+- **requests** ช่วยให้ส่งคำขอ HTTP
 
 ## สร้างและปรับใช้โมเดล Azure OpenAI
 
-หากยังไม่ได้ทำ ให้ทำตามคำแนะนำในหน้า [Microsoft Learn](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal) 
-เพื่อสร้างทรัพยากรและโมเดล Azure OpenAI เลือก DALL-E 3 เป็นโมเดล  
+หากยังไม่ได้ทำ ให้ทำตามคำแนะนำในหน้า [Microsoft Learn](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
+เพื่อตั้งค่า Azure OpenAI resource และโมเดล เลือก **gpt-image-1** เป็นโมเดล (โมเดลภาพ Azure OpenAI รุ่นปัจจุบัน; DALL-E 3 เป็นรุ่นเก่าและไม่สามารถใช้งานสำหรับการปรับใช้ใหม่)
 
 ## สร้างแอป
 
-1. สร้างไฟล์ _.env_ ด้วยเนื้อหาดังนี้:
+1. สร้างไฟล์ _.env_ กับเนื้อหาดังนี้:
 
    ```text
    AZURE_OPENAI_ENDPOINT=<your endpoint>
    AZURE_OPENAI_API_KEY=<your key>
-   AZURE_OPENAI_DEPLOYMENT="dall-e-3"
+   AZURE_OPENAI_DEPLOYMENT="gpt-image-1"
    ```
 
-   ค้นหาข้อมูลนี้ใน Azure OpenAI Foundry Portal สำหรับทรัพยากรของคุณในส่วน "Deployments"
+   ค้นหาข้อมูลนี้ใน Azure OpenAI Foundry Portal สำหรับ resource ของคุณในส่วน "Deployments"
 
-1. รวบรวมไลบรารีข้างต้นในไฟล์ _requirements.txt_ ดังนี้:
+1. รวบรวมไลบรารีข้างต้นลงในไฟล์ชื่อ _requirements.txt_ ดังนี้:
 
    ```text
    python-dotenv
@@ -104,7 +104,7 @@ _autoregressive transformer_ กำหนดวิธีที่โมเดล
    requests
    ```
 
-1. จากนั้น สร้าง virtual environment และติดตั้งไลบรารี:
+1. ถัดไป สร้าง virtual environment และติดตั้งไลบรารี:
 
    ```bash
    python3 -m venv venv
@@ -112,14 +112,14 @@ _autoregressive transformer_ กำหนดวิธีที่โมเดล
    pip install -r requirements.txt
    ```
 
-   สำหรับ Windows ใช้คำสั่งต่อไปนี้เพื่อสร้างและเปิดใช้งาน virtual environment:
+   สำหรับ Windows ใช้คำสั่งดังนี้เพื่อสร้างและเปิดใช้งาน virtual environment
 
    ```bash
    python3 -m venv venv
    venv\Scripts\activate.bat
    ```
 
-1. เพิ่มโค้ดต่อไปนี้ในไฟล์ชื่อ _app.py_:
+1. เพิ่มโค้ดนี้ในไฟล์ชื่อ _app.py_:
 
     ```python
     import openai
@@ -132,48 +132,48 @@ _autoregressive transformer_ กำหนดวิธีที่โมเดล
     # import dotenv
     dotenv.load_dotenv()
     
-    # configure Azure OpenAI service client 
+    # กำหนดค่าลูกค้าบริการ Azure OpenAI
     client = AzureOpenAI(
       azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"],
       api_key=os.environ['AZURE_OPENAI_API_KEY'],
-      api_version = "2024-02-01"
+      api_version = "2024-10-21"
       )
     try:
-        # Create an image by using the image generation API
+        # สร้างภาพโดยใช้ API สำหรับการสร้างภาพ
         generation_response = client.images.generate(
                                 prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',
                                 size='1024x1024', n=1,
                                 model=os.environ['AZURE_OPENAI_DEPLOYMENT']
                               )
 
-        # Set the directory for the stored image
+        # ตั้งไดเร็กทอรีสำหรับเก็บภาพ
         image_dir = os.path.join(os.curdir, 'images')
 
-        # If the directory doesn't exist, create it
+        # หากไดเร็กทอรีไม่มีอยู่ ให้สร้างมันขึ้นมา
         if not os.path.isdir(image_dir):
             os.mkdir(image_dir)
 
-        # Initialize the image path (note the filetype should be png)
+        # กำหนดค่าเส้นทางภาพ (โปรดทราบไฟล์ต้องเป็น png)
         image_path = os.path.join(image_dir, 'generated-image.png')
 
-        # Retrieve the generated image
-        image_url = generation_response.data[0].url  # extract image URL from response
-        generated_image = requests.get(image_url).content  # download the image
+        # ดึงภาพที่สร้างขึ้นมา
+        image_url = generation_response.data[0].url  # ดึง URL ภาพจากการตอบกลับ
+        generated_image = requests.get(image_url).content  # ดาวน์โหลดภาพ
         with open(image_path, "wb") as image_file:
             image_file.write(generated_image)
 
-        # Display the image in the default image viewer
+        # แสดงภาพในโปรแกรมดูภาพเริ่มต้น
         image = Image.open(image_path)
         image.show()
 
-    # catch exceptions
-    except openai.InvalidRequestError as err:
+    # จับข้อผิดพลาด
+    except openai.BadRequestError as err:
         print(err)
    ```
 
-อธิบายโค้ดนี้:
+มาอธิบายโค้ดนี้:
 
-- เริ่มต้น เรานำเข้าไลบรารีที่เราต้องการ รวมถึงไลบรารี OpenAI ไลบรารี dotenv ไลบรารี requests และไลบรารี Pillow
+- ก่อนอื่น นำเข้าไลบรารีที่ต้องการ รวมถึงไลบรารี OpenAI, dotenv, requests และ Pillow
 
   ```python
   import openai
@@ -183,28 +183,28 @@ _autoregressive transformer_ กำหนดวิธีที่โมเดล
   import dotenv
   ```
 
-- ต่อมา เราโหลดตัวแปรสภาพแวดล้อมจากไฟล์ _.env_
+- จากนั้น โหลดตัวแปรแวดล้อมจากไฟล์ _.env_
 
   ```python
-  # import dotenv
+  # นำเข้า dotenv
   dotenv.load_dotenv()
   ```
 
-- หลังจากนั้น เรากำหนดค่าลูกค้า Azure OpenAI service 
+- ต่อไป กำหนดค่า Azure OpenAI service client
 
   ```python
-  # Get endpoint and key from environment variables
+  # รับ endpoint และ key จากตัวแปรสภาพแวดล้อม
   client = AzureOpenAI(
       azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"],
       api_key=os.environ['AZURE_OPENAI_API_KEY'],
-      api_version = "2024-02-01"
+      api_version = "2024-10-21"
       )
   ```
 
-- ต่อมา เราสร้างภาพ:
+- จากนั้น สร้างภาพ:
 
   ```python
-  # Create an image by using the image generation API
+  # สร้างภาพโดยใช้ API การสร้างภาพ
   generation_response = client.images.generate(
                         prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',
                         size='1024x1024', n=1,
@@ -212,9 +212,9 @@ _autoregressive transformer_ กำหนดวิธีที่โมเดล
                       )
   ```
 
-  โค้ดด้านบนตอบกลับด้วยวัตถุ JSON ที่มี URL ของภาพที่สร้างขึ้น เราสามารถใช้ URL เพื่อดาวน์โหลดภาพและบันทึกลงในไฟล์
+  โค้ดข้างต้นตอบกลับเป็นอ็อบเจกต์ JSON ที่มี URL ของภาพที่สร้าง เราสามารถใช้ URL นี้ดาวน์โหลดภาพและบันทึกลงไฟล์ได้
 
-- สุดท้าย เราเปิดภาพและใช้โปรแกรมดูภาพมาตรฐานเพื่อแสดงภาพ:
+- สุดท้าย เปิดภาพและใช้โปรแกรมดูภาพมาตรฐานเพื่อแสดงผล:
 
   ```python
   image = Image.open(image_path)
@@ -223,7 +223,7 @@ _autoregressive transformer_ กำหนดวิธีที่โมเดล
 
 ### รายละเอียดเพิ่มเติมเกี่ยวกับการสร้างภาพ
 
-มาดูโค้ดที่สร้างภาพในรายละเอียดเพิ่มเติม:
+มาดูโค้ดที่ใช้สร้างภาพอย่างละเอียดขึ้น:
 
    ```python
      generation_response = client.images.generate(
@@ -233,23 +233,23 @@ _autoregressive transformer_ กำหนดวิธีที่โมเดล
                            )
    ```
 
-- **prompt** คือข้อความที่ใช้ในการสร้างภาพ ในกรณีนี้ เราใช้ prompt "กระต่ายบนม้า ถืออมยิ้ม อยู่ในทุ่งหญ้าที่มีดอกแดฟโฟดิลขึ้นในหมอก"
-- **size** คือขนาดของภาพที่สร้างขึ้น ในกรณีนี้ เราสร้างภาพที่มีขนาด 1024x1024 พิกเซล
-- **n** คือจำนวนภาพที่สร้างขึ้น ในกรณีนี้ เราสร้างภาพสองภาพ
-- **temperature** เป็นพารามิเตอร์ที่ควบคุมความสุ่มของผลลัพธ์ของโมเดล Generative AI ค่า temperature อยู่ระหว่าง 0 ถึง 1 โดยที่ 0 หมายถึงผลลัพธ์เป็นแบบกำหนดแน่นอน และ 1 หมายถึงผลลัพธ์เป็นแบบสุ่ม ค่าเริ่มต้นคือ 0.7
+- **prompt** คือข้อความที่ใช้เพื่อสร้างภาพ ในกรณีนี้ เราใช้ข้อความว่า "Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils"
+- **size** คือขนาดของภาพที่สร้าง ในกรณีนี้เราสร้างภาพขนาด 1024x1024 พิกเซล
+- **n** คือจำนวนภาพที่สร้าง ในกรณีนี้เราสร้างสองภาพ
+- **temperature** เป็นพารามิเตอร์ที่ควบคุมความสุ่มของผลลัพธ์ของโมเดล Generative AI ค่า temperature มีช่วง 0 ถึง 1 โดย 0 หมายถึงผลลัพธ์เป็นแบบกำหนดได้ และ 1 หมายถึงผลลัพธ์เป็นแบบสุ่ม ค่าเริ่มต้น 0.7
 
-ยังมีสิ่งอื่นๆ ที่คุณสามารถทำได้กับภาพ ซึ่งเราจะครอบคลุมในส่วนถัดไป
+ยังมีสิ่งอื่น ๆ ที่คุณสามารถทำกับภาพอีกมาก ซึ่งเราจะพูดถึงในส่วนถัดไป
 
 ## ความสามารถเพิ่มเติมของการสร้างภาพ
 
-คุณได้เห็นแล้วว่าเราสามารถสร้างภาพได้ด้วยโค้ด Python เพียงไม่กี่บรรทัด อย่างไรก็ตาม ยังมีสิ่งอื่นๆ ที่คุณสามารถทำได้กับภาพ
+คุณเห็นแล้วว่าเราสามารถสร้างภาพด้วยไม่กี่บรรทัดใน Python อย่างไรก็ตาม ยังมีสิ่งอื่นที่ทำได้กับภาพ
 
-คุณยังสามารถทำสิ่งต่อไปนี้:
+คุณยังสามารถทำสิ่งต่อไปนี้ได้:
 
-- **แก้ไขภาพ** โดยการให้ภาพที่มีอยู่แล้ว หน้ากาก และ prompt คุณสามารถเปลี่ยนแปลงภาพได้ เช่น คุณสามารถเพิ่มบางสิ่งในส่วนหนึ่งของภาพ ลองนึกภาพกระต่ายของเรา คุณสามารถเพิ่มหมวกให้กระต่าย วิธีการทำคือการให้ภาพ หน้ากาก (ระบุส่วนที่ต้องการเปลี่ยนแปลง) และ prompt ข้อความเพื่อบอกว่าควรทำอะไร
-> หมายเหตุ: ฟีเจอร์นี้ไม่รองรับใน DALL-E 3
-
-ตัวอย่างเช่น การใช้ GPT Image:
+- **แก้ไขภาพ** โดยให้ภาพเดิม หน้ากาก และคำสั่งข้อความ คุณสามารถแก้ไขภาพได้ เช่น เพิ่มสิ่งของในส่วนที่ต้องการของภาพ ลองจินตนาการภาพกระต่ายของเรา คุณสามารถเพิ่มหมวกให้กระต่าย วิธีทำคือให้ภาพ หน้ากาก (ระบุส่วนที่ต้องการแก้ไข) และข้อความคำสั่งอธิบายสิ่งที่ต้องการทำ
+> หมายเหตุ: ฟังก์ชันนี้ไม่รองรับใน DALL-E 3
+ 
+ตัวอย่างต่อไปนี้ใช้ GPT Image:
 
    ```python
    response = client.images.edit(
@@ -261,7 +261,7 @@ _autoregressive transformer_ กำหนดวิธีที่โมเดล
    image_url = response.data[0].url
    ```
 
-  ภาพพื้นฐานจะมีเพียงเลานจ์ที่มีสระว่ายน้ำ แต่ภาพสุดท้ายจะมีนกฟลามิงโก:
+  ภาพพื้นฐานจะมีแค่เลานจ์กับสระว่ายน้ำ แต่ภาพสุดท้ายจะมีนกฟลามิงโก
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
   <img src="../../../translated_images/th/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
@@ -269,80 +269,81 @@ _autoregressive transformer_ กำหนดวิธีที่โมเดล
   <img src="../../../translated_images/th/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
-- **สร้างภาพแบบต่างๆ** แนวคิดคือการนำภาพที่มีอยู่แล้วและขอให้สร้างภาพแบบต่างๆ เพื่อสร้างภาพแบบต่างๆ คุณให้ภาพและ prompt ข้อความพร้อมโค้ดดังนี้:
+
+- **สร้างความหลากหลาย** แนวคิดคือนำภาพที่มีอยู่แล้วและขอให้สร้างความหลากหลายของภาพนั้น วิธีสร้างความหลากหลายทำได้โดยให้ภาพและข้อความคำสั่ง พร้อมโค้ดดังนี้:
 
   ```python
-  response = openai.Image.create_variation(
+  response = client.images.create_variation(
     image=open("bunny-lollipop.png", "rb"),
     n=1,
     size="1024x1024"
   )
-  image_url = response['data'][0]['url']
+  image_url = response.data[0].url
   ```
 
-  > หมายเหตุ ฟีเจอร์นี้รองรับเฉพาะใน OpenAI
+  > หมายเหตุ: ฟังก์ชันนี้รองรับเฉพาะโมเดล DALL-E 2 ของ OpenAI เท่านั้น ไม่ได้ใช้กับ gpt-image-1
 
-## Temperature
+## อุณหภูมิ (Temperature)
 
-Temperature เป็นพารามิเตอร์ที่ควบคุมความสุ่มของผลลัพธ์ของโมเดล Generative AI ค่า temperature อยู่ระหว่าง 0 ถึง 1 โดยที่ 0 หมายถึงผลลัพธ์เป็นแบบกำหนดแน่นอน และ 1 หมายถึงผลลัพธ์เป็นแบบสุ่ม ค่าเริ่มต้นคือ 0.7
+อุณหภูมิเป็นพารามิเตอร์ที่ควบคุมความสุ่มของผลลัพธ์ของโมเดล Generative AI ค่าอุณหภูมิอยู่ระหว่าง 0 ถึง 1 ซึ่ง 0 หมายถึงผลลัพธ์เป็นแบบกำหนดได้ และ 1 หมายถึงผลลัพธ์เป็นแบบสุ่ม ค่าเริ่มต้นคือ 0.7
 
-มาดูตัวอย่างว่า temperature ทำงานอย่างไร โดยการรัน prompt นี้สองครั้ง:
+มาดูตัวอย่างของการทำงานของอุณหภูมิ โดยใช้คำสั่งนี้สองครั้ง:
 
-> Prompt : "กระต่ายบนม้า ถืออมยิ้ม อยู่ในทุ่งหญ้าที่มีดอกแดฟโฟดิลขึ้นในหมอก"
+> คำสั่ง : "Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils"
 
-![กระต่ายบนม้าถืออมยิ้ม, เวอร์ชัน 1](../../../translated_images/th/v1-generated-image.a295cfcffa3c13c2.webp)
+![กระต่ายบนหลังม้า ถืออมยิ้ม](../../../translated_images/th/v1-generated-image.a295cfcffa3c13c2.webp)
 
-ตอนนี้ลองรัน prompt เดิมอีกครั้งเพื่อดูว่าเราจะไม่ได้ภาพเดิมสองครั้ง:
+ลองรันคำสั่งเดียวกันอีกครั้งเพื่อดูว่าเราจะไม่ได้ภาพเหมือนกันสองครั้ง:
 
 ![ภาพที่สร้างของกระต่ายบนม้า](../../../translated_images/th/v2-generated-image.33f55a3714efe61d.webp)
 
-คุณจะเห็นว่าภาพมีความคล้ายกัน แต่ไม่เหมือนกัน ลองเปลี่ยนค่า temperature เป็น 0.1 และดูผลลัพธ์:
+ดังที่เห็น ภาพมีความคล้ายคลึงกันแต่ไม่เหมือนกัน ลองเปลี่ยนอุณหภูมิเป็น 0.1 และดูผลลัพธ์:
 
 ```python
- generation_response = client.images.create(
-        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
+ generation_response = client.images.generate(
+        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # ป้อนข้อความพร้อมท์ของคุณที่นี่
         size='1024x1024',
         n=2
     )
 ```
 
-### การเปลี่ยนแปลง temperature
+### การเปลี่ยนอุณหภูมิ
 
-ลองทำให้ผลลัพธ์มีความกำหนดแน่นอนมากขึ้น เราสามารถสังเกตจากภาพสองภาพที่เราสร้างขึ้นว่าในภาพแรกมีกระต่าย และในภาพที่สองมีม้า ดังนั้นภาพจึงแตกต่างกันมาก
+ลองทำให้ผลตอบกลับเป็นแบบกำหนดได้มากขึ้น เราสังเกตได้จากภาพสองภาพที่สร้างว่าในภาพแรกมีตัวกระต่ายและในภาพที่สองมีม้า ดังนั้นภาพจึงต่างกันมาก
 
-ดังนั้นลองเปลี่ยนโค้ดของเราและตั้งค่า temperature เป็น 0 ดังนี้:
+ดังนั้นเราจึงเปลี่ยนโค้ดโดยตั้งค่าอุณหภูมิเป็น 0 ดังนี้:
 
 ```python
-generation_response = client.images.create(
-        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
+generation_response = client.images.generate(
+        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # ป้อนข้อความพร้อมท์ของคุณที่นี่
         size='1024x1024',
         n=2,
         temperature=0
     )
 ```
 
-เมื่อคุณรันโค้ดนี้ คุณจะได้ภาพสองภาพดังนี้:
+เมื่อรันโค้ดนี้ คุณจะได้สองภาพนี้:
 
-- ![Temperature 0, v1](../../../translated_images/th/v1-temp-generated-image.a4346e1d2360a056.webp)
-- ![Temperature 0 , v2](../../../translated_images/th/v2-temp-generated-image.871d0c920dbfb0f1.webp)
+- ![อุณหภูมิ 0, v1](../../../translated_images/th/v1-temp-generated-image.a4346e1d2360a056.webp)
+- ![อุณหภูมิ 0 , v2](../../../translated_images/th/v2-temp-generated-image.871d0c920dbfb0f1.webp)
 
-คุณจะเห็นได้ชัดเจนว่าภาพมีความคล้ายกันมากขึ้น
+ที่นี่คุณจะเห็นได้ชัดว่าภาพทั้งสองคล้ายกันมากขึ้น
 
-## วิธีการกำหนดขอบเขตสำหรับแอปพลิเคชันของคุณด้วย metaprompts
+## วิธีการกำหนดขอบเขตแอปพลิเคชันของคุณด้วย metaprompts
 
-ด้วยเดโมของเรา เราสามารถสร้างภาพให้ลูกค้าได้แล้ว อย่างไรก็ตาม เราจำเป็นต้องสร้างขอบเขตสำหรับแอปพลิเคชันของเรา
+กับเดโมของเรา เราสามารถสร้างภาพสำหรับลูกค้าได้แล้ว อย่างไรก็ตาม ต้องสร้างขอบเขตสำหรับแอปพลิเคชันของเรา
 
-ตัวอย่างเช่น เราไม่ต้องการสร้างภาพที่ไม่เหมาะสมสำหรับการทำงาน หรือไม่เหมาะสมสำหรับเด็ก
+ตัวอย่างเช่น เราไม่ต้องการสร้างภาพที่ไม่เหมาะสำหรับการทำงาน หรือไม่เหมาะสำหรับเด็ก
 
-เราสามารถทำได้ด้วย _metaprompts_ Metaprompts คือ prompt ข้อความที่ใช้ควบคุมผลลัพธ์ของโมเดล Generative AI ตัวอย่างเช่น เราสามารถใช้ metaprompts เพื่อควบคุมผลลัพธ์ และมั่นใจว่าภาพที่สร้างขึ้นเหมาะสมสำหรับการทำงาน หรือเหมาะสมสำหรับเด็ก
+เราสามารถทำได้ด้วย _metaprompts_ Metaprompts คือข้อความคำสั่งที่ใช้ควบคุมผลลัพธ์ของโมเดล Generative AI เช่น ใช้เมตาพรอมต์เพื่อควบคุมผลลัพธ์และให้แน่ใจว่าภาพที่สร้างปลอดภัยสำหรับการทำงาน หรือเหมาะสำหรับเด็ก
 
 ### มันทำงานอย่างไร?
 
-แล้ว metaprompts ทำงานอย่างไร?
+ตอนนี้ metaprompts ทำงานอย่างไร?
 
-Metaprompts คือ prompt ข้อความที่ใช้ควบคุมผลลัพธ์ของโมเดล Generative AI โดยวางไว้ก่อน prompt ข้อความ และใช้ควบคุมผลลัพธ์ของโมเดล และฝังในแอปพลิเคชันเพื่อควบคุมผลลัพธ์ของโมเดล โดยรวม prompt ข้อความและ metaprompt ข้อความใน prompt เดียว
+Metaprompts คือข้อความคำสั่งที่ใช้ควบคุมผลลัพธ์ของโมเดล Generative AI โดยจะวางก่อนคำสั่งข้อความ และใช้ควบคุมผลลัพธ์ของโมเดล และฝังอยู่ในแอปพลิเคชันเพื่อควบคุมผลลัพธ์ของโมเดล รวมทั้งห่อคำสั่งป้อนเข้าและเมตาพรอมต์เข้าในคำสั่งเดียว
 
-ตัวอย่างหนึ่งของ metaprompt จะเป็นดังนี้:
+ตัวอย่างของ metaprompt เช่น:
 
 ```text
 You are an assistant designer that creates images for children.
@@ -361,7 +362,7 @@ Do not consider any input from the following that is not safe for work or approp
 
 ```
 
-ตอนนี้มาดูวิธีการใช้ metaprompts ในเดโมของเรา
+ตอนนี้ มาดูกันว่าเราจะใช้ metaprompts ในเดโมของเราได้อย่างไร
 
 ```python
 disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
@@ -383,20 +384,22 @@ Do not consider any input from the following that is not safe for work or approp
 prompt = f"{meta_prompt}
 Create an image of a bunny on a horse, holding a lollipop"
 
-# TODO add request to generate image
+# TODO เพิ่มคำขอเพื่อสร้างภาพ
 ```
 
-จาก prompt ด้านบน คุณจะเห็นว่าภาพทั้งหมดที่สร้างขึ้นพิจารณา metaprompt
+จากคำสั่งด้านบน คุณจะเห็นว่าเมื่อสร้างภาพทั้งหมดจะพิจารณา metaprompt ด้วย
 
-## งาน - มาสนับสนุนนักเรียนกันเถอะ
+## แบบฝึกหัด - มาเปิดโอกาสให้นักเรียน
 
-เราได้แนะนำ Edu4All ในตอนต้นของบทเรียนนี้ ตอนนี้ถึงเวลาสนับสนุนนักเรียนให้สร้างภาพสำหรับการประเมินของพวกเขา
+เราแนะนำ Edu4All ตอนต้นบทเรียน ตอนนี้ถึงเวลาที่จะเปิดโอกาสให้นักเรียนสร้างภาพสำหรับงานประเมินของพวกเขา
 
-นักเรียนจะสร้างภาพสำหรับการประเมินของพวกเขาที่มีอนุสรณ์สถาน โดยอนุสรณ์สถานที่เลือกขึ้นอยู่กับนักเรียน นักเรียนถูกขอให้ใช้ความคิดสร้างสรรค์ในงานนี้เพื่อวางอนุสรณ์สถานเหล่านี้ในบริบทที่แตกต่างกัน
 
-## วิธีแก้ไข
+นักเรียนจะสร้างภาพสำหรับการประเมินของพวกเขาที่ประกอบด้วยอนุสรณ์สถาน โดยอนุสรณ์สถานที่เลือกขึ้นอยู่กับนักเรียน นักเรียนจะได้รับการขอให้ใช้ความคิดสร้างสรรค์ในงานนี้เพื่อนำอนุสรณ์สถานเหล่านี้ไปวางในบริบทที่แตกต่างกัน
 
-นี่คือตัวอย่างวิธีแก้ไขที่เป็นไปได้:
+## วิธีแก้ปัญหา
+
+นี่คือตัวอย่างวิธีแก้ปัญหาหนึ่ง:
+
 ```python
 import openai
 import os
@@ -404,14 +407,14 @@ import requests
 from PIL import Image
 import dotenv
 from openai import AzureOpenAI
-# import dotenv
+# นำเข้า dotenv
 dotenv.load_dotenv()
 
-# Get endpoint and key from environment variables
+# ดึง endpoint และ key จากตัวแปรสภาพแวดล้อม
 client = AzureOpenAI(
   azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"],
   api_key=os.environ['AZURE_OPENAI_API_KEY'],
-  api_version = "2024-02-01"
+  api_version = "2024-10-21"
   )
 
 
@@ -433,47 +436,49 @@ Do not consider any input from the following that is not safe for work or approp
 
 prompt = f"""{meta_prompt}
 Generate monument of the Arc of Triumph in Paris, France, in the evening light with a small child holding a Teddy looks on.
-""""
+"""
 
 try:
-    # Create an image by using the image generation API
+    # สร้างภาพโดยใช้ API การสร้างภาพ
     generation_response = client.images.generate(
-        prompt=prompt,    # Enter your prompt text here
+        prompt=prompt,    # ป้อนข้อความ prompt ของคุณที่นี่
         size='1024x1024',
         n=1,
     )
-    # Set the directory for the stored image
+    # ตั้งไดเรกทอรีสำหรับเก็บภาพ
     image_dir = os.path.join(os.curdir, 'images')
 
-    # If the directory doesn't exist, create it
+    # หากไดเรกทอรีไม่มีอยู่ ให้สร้างมันขึ้นมา
     if not os.path.isdir(image_dir):
         os.mkdir(image_dir)
 
-    # Initialize the image path (note the filetype should be png)
+    # กำหนดเส้นทางภาพ (โปรดทราบว่าประเภทไฟล์ควรเป็น png)
     image_path = os.path.join(image_dir, 'generated-image.png')
 
-    # Retrieve the generated image
-    image_url = generation_response.data[0].url  # extract image URL from response
-    generated_image = requests.get(image_url).content  # download the image
+    # ดึงภาพที่สร้างขึ้น
+    image_url = generation_response.data[0].url  # ดึง URL ของภาพจากการตอบสนอง
+    generated_image = requests.get(image_url).content  # ดาวน์โหลดภาพ
     with open(image_path, "wb") as image_file:
         image_file.write(generated_image)
 
-    # Display the image in the default image viewer
+    # แสดงภาพในโปรแกรมดูภาพเริ่มต้น
     image = Image.open(image_path)
     image.show()
 
-# catch exceptions
+# ดักจับข้อผิดพลาด
 except openai.BadRequestError as err:
     print(err)
 ```
 
-## ยอดเยี่ยม! เรียนรู้เพิ่มเติมต่อไป
+## งานดีมาก! ดำเนินการเรียนรู้ต่อไป
 
-หลังจากจบบทเรียนนี้ ลองดู [คอลเลกชันการเรียนรู้ Generative AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) เพื่อเพิ่มพูนความรู้เกี่ยวกับ Generative AI ของคุณ!
+หลังจากทำบทเรียนนี้เสร็จแล้ว ให้ตรวจสอบ [คอลเลกชันการเรียนรู้ Generative AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ของเราเพื่อพัฒนาความรู้ด้าน Generative AI ของคุณต่อไป!
 
-ไปที่บทเรียนที่ 10 ซึ่งเราจะมาดูวิธี [สร้างแอปพลิเคชัน AI ด้วย low-code](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+ไปที่บทเรียน 10 ซึ่งเราจะดูวิธีการ [สร้างแอปพลิเคชัน AI ด้วยโค้ดต่ำ](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
 
 ---
 
-**ข้อจำกัดความรับผิดชอบ**:  
-เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) แม้ว่าเราจะพยายามให้การแปลมีความถูกต้อง แต่โปรดทราบว่าการแปลโดยอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาดั้งเดิมควรถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลภาษามืออาชีพ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความผิดที่เกิดจากการใช้การแปลนี้
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**ปฏิเสธความรับผิดชอบ**:
+เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) ขณะที่เราพยายามให้ความถูกต้อง โปรดทราบว่าการแปลโดยอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาต้นทางควรถูกพิจารณาเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ แนะนำให้ใช้การแปลโดยมนุษย์มืออาชีพ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความที่ผิดพลาดที่เกิดขึ้นจากการใช้การแปลนี้
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

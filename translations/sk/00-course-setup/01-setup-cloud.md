@@ -1,51 +1,53 @@
 # Cloud Setup ☁️ – GitHub Codespaces
 
-**Použite tento návod, ak nechcete nič inštalovať na svoj počítač.**  
-Codespaces vám poskytuje bezplatné VS Code v prehliadači so všetkými závislosťami už predinštalovanými.
+**Použite tento návod, ak si nechcete nič inštalovať lokálne.**  
+Codespaces vám poskytuje bezplatnú inštanciu VS Code priamo v prehliadači so všetkými predinštalovanými závislosťami.
 
 ---
 
 ## 1.  Prečo Codespaces?
 
 | Výhoda | Čo to znamená pre vás |
-|--------|----------------------|
-| ✅ Žiadne inštalácie | Funguje na Chromebooku, iPade, školských PC… |
-| ✅ Predpripravený vývojársky kontajner | Python 3, Node.js, .NET, Java už sú súčasťou |
-| ✅ Bezplatná kvóta | Osobné účty majú **120 core-hodín / 60 GB-hodín mesačne** |
+|---------|----------------------|
+| ✅ Žiadne inštalácie | Funguje na Chromebooku, iPade, počítačoch v školskej učebni... |
+| ✅ Predpripravený vývojový kontajner | Python 3, Node.js, .NET, Java už vo vnútri |
+| ✅ Bezplatná kvóta | Osobné účty dostávajú **120 jadro-hodín / 60 GB-hodín mesačne** |
 
 > 💡 **Tip**  
-> Udržujte si kvótu v poriadku tým, že **zastavíte** alebo **vymažete** neaktívne codespaces  
-> (Zobraziť ▸ Príkazová paleta ▸ *Codespaces: Stop Codespace*).
+> Udržiavajte svoju kvótu zdravú tým, že **zastavíte** alebo **vymažete** nečinné codespace  
+> (Zobraziť ▸ Príkazovú paletu ▸ *Codespaces: Stop Codespace*).
 
 ---
 
 ## 2.  Vytvorte Codespace (jedným klikom)
 
-1. **Forknite** tento repozitár (vpravo hore tlačidlo **Fork**).  
+1. **Vytvorte fork** tohto repozitára (hore vpravo tlačidlo **Fork**).  
 2. Vo svojom forku kliknite na **Code ▸ Codespaces ▸ Create codespace on main**.  
-   ![Dialógové okno s tlačidlami na vytvorenie codespace](../../../00-course-setup/images/who-will-pay.webp)
+   ![Dialóg zobrazujúci tlačidlá na vytvorenie codespace](../../../translated_images/sk/who-will-pay.4c0609b1c7780f44.webp)
 
-✅ Otvorí sa okno VS Code v prehliadači a začne sa budovať vývojársky kontajner.
-Prvýkrát to trvá **približne 2 minúty**.
+✅ Otvorí sa okno VS Code v prehliadači a začne sa budovať vývojový kontajner.
+Tento proces prvýkrát trvá **~2 minúty**.
 
-## 3. Pridajte svoj API kľúč (bezpečne)
+## 3. Pridajte svoj API kľúč (bezpečná cesta)
 
-### Možnosť A Codespaces Secrets — Odporúčané
+### Možnosť A Tajomstvá Codespaces — Odporúčané
 
-1. ⚙️ Ikona ozubeného kolieska -> Príkazová paleta -> Codespaces : Manage user secret -> Pridať nový secret.
+1. ⚙️ Ikona ozubeného kolieska -> Príkazová paleta -> Codespaces : Spravovať používateľské tajomstvo -> Pridať nové tajomstvo.
 2. Názov: OPENAI_API_KEY
-3. Hodnota: vložte svoj kľúč → Pridať secret
+3. Hodnota: vložte svoj kľúč → Pridať tajomstvo
 
-Hotovo—náš kód ho automaticky rozpozná.
+To je všetko — náš kód ho automaticky načíta.
 
 ### Možnosť B .env súbor (ak ho naozaj potrebujete)
 
 ```bash
 cp .env.copy .env
-code .env         # fill in OPENAI_API_KEY=your_key_here
+code .env         # vyplňte OPENAI_API_KEY=vaš_klúč_tu
 ```
 
 ---
 
-**Vyhlásenie o zodpovednosti**:  
-Tento dokument bol preložený pomocou AI prekladovej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, upozorňujeme, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Za autoritatívny zdroj by sa mal považovať pôvodný dokument v jeho natívnom jazyku. Pre kritické informácie odporúčame profesionálny ľudský preklad. Nenesieme zodpovednosť za akékoľvek nedorozumenia alebo nesprávne interpretácie vzniknuté použitím tohto prekladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vyhlásenie o zodpovednosti**:
+Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, vezmite prosím na vedomie, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho natívnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

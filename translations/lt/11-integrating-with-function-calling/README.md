@@ -1,76 +1,79 @@
-# Integracija su funkcijų iškvietimu
+# Integracija su funkcijų kvietimais
 
-[![Integracija su funkcijų iškvietimu](../../../translated_images/lt/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Integracija su funkcijų kvietimais](../../../translated_images/lt/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
-Jūs jau nemažai išmokote ankstesnėse pamokose. Tačiau vis dar yra galimybių tobulėti. Kai kurie dalykai, kuriuos galime patobulinti, yra nuoseklesnis atsakymų formatas, kad būtų lengviau dirbti su atsakymais vėliau. Taip pat galbūt norėsime pridėti duomenų iš kitų šaltinių, kad dar labiau praturtintume savo programą.
+Iki šiol ankstesnėse pamokose išmokote gana daug. Tačiau galime tobulėti dar labiau. Kai kuriuos dalykus galime spręsti, kad gautume nuoseklesnį atsakymų formatą, kuris palengvintų darbą su atsakymu toliau. Taip pat galime norėti pridėti duomenų iš kitų šaltinių, kad dar labiau praturtintume mūsų programą.
 
-Šiame skyriuje bus sprendžiamos minėtos problemos.
+Aukščiau minėti iššūkiai yra tai, ką šiame skyriuje siekiama spręsti.
 
 ## Įvadas
 
-Šioje pamokoje aptarsime:
+Ši pamoka aptars:
 
-- Kas yra funkcijų iškvietimas ir jo naudojimo atvejai.
-- Funkcijos iškvietimo kūrimas naudojant Azure OpenAI.
-- Kaip integruoti funkcijos iškvietimą į programą.
+- Paaiškinti, kas yra funkcijų kvietimas ir kur jis taikomas.
+- Kaip sukurti funkcijos kvietimą naudojant Azure OpenAI.
+- Kaip integruoti funkcijos kvietimą į programą.
 
 ## Mokymosi tikslai
 
-Pamokos pabaigoje galėsite:
+Pamokos pabaigoje jūs sugebėsite:
 
-- Paaiškinti funkcijų iškvietimo naudojimo tikslą.
-- Nustatyti funkcijos iškvietimą naudojant Azure OpenAI paslaugą.
-- Sukurti efektyvius funkcijų iškvietimus, pritaikytus jūsų programos poreikiams.
+- Paaiškinti funkcijų kvietimo paskirtį.
+- Sukonfigūruoti funkcijos kvietimą naudojant Azure OpenAI paslaugą.
+- Suplanuoti veiksmingus funkcijų kvietimus pagal savo programos naudojimo atvejį.
 
-## Scenarijus: Tobuliname mūsų pokalbių robotą naudojant funkcijas
+## Scenario: Tobuliname mūsų pokalbių robotą su funkcijomis
 
-Šioje pamokoje norime sukurti funkciją mūsų švietimo startuoliui, kuri leistų vartotojams naudoti pokalbių robotą techninių kursų paieškai. Mes rekomenduosime kursus, kurie atitinka jų įgūdžių lygį, dabartinį vaidmenį ir dominančią technologiją.
+Šiai pamokai norime sukurti funkciją mūsų švietimo startuoliui, leidžiančią vartotojams naudotis pokalbių robotu, ieškant techninių kursų. Rekomenduosime kursus, atitinkančius jų įgūdžių lygį, esamą vaidmenį ir dominančią technologiją.
 
-Norėdami įgyvendinti šį scenarijų, naudosime:
+Šiam scenarijui įgyvendinti naudosime kombinaciją:
 
 - `Azure OpenAI`, kad sukurtume pokalbių patirtį vartotojui.
-- `Microsoft Learn Catalog API`, kad padėtume vartotojams rasti kursus pagal jų užklausą.
-- `Funkcijų iškvietimą`, kad vartotojo užklausą perduotume funkcijai, kuri atliks API užklausą.
+- `Microsoft Learn Catalog API`, padėti vartotojams rasti kursus pagal jų užklausas.
+- `Funkcijų kvietimą`, kad gautume vartotojo užklausą ir nusiųstume ją funkcijai atlikti API užklausą.
 
-Pradėkime nuo to, kodėl apskritai norėtume naudoti funkcijų iškvietimą:
+Kad pradėtume, pažiūrėkime, kodėl iš viso norėtume naudoti funkcijų kvietimą:
 
-## Kodėl funkcijų iškvietimas
+## Kodėl funkcijų kvietimas
 
-Prieš funkcijų iškvietimą, atsakymai iš LLM buvo nestruktūrizuoti ir nenuoseklūs. Kūrėjai turėjo rašyti sudėtingą validavimo kodą, kad galėtų apdoroti kiekvieną atsakymo variaciją. Vartotojai negalėjo gauti atsakymų, tokių kaip „Koks yra dabartinis oras Stokholme?“. Taip yra todėl, kad modeliai buvo apriboti duomenimis, kuriais jie buvo apmokyti.
+Prieš funkcijų kvietimą, atsakymai iš LLM buvo nestruktūruoti ir nesuderinti. Programuotojai turėjo rašyti sudėtingą patikros kodą, kad galėtų apdoroti kiekvieną atsakymo variantą. Vartotojai negalėjo gauti atsakymų į klausimus, pvz., „Koks šiuo metu oras Stokholme?“. Tai buvo dėl to, kad modeliai turėjo apribojimą pagal mokymo duomenų laiką.
 
-Funkcijų iškvietimas yra Azure OpenAI paslaugos funkcija, skirta įveikti šiuos apribojimus:
+Funkcijų kvietimas yra Azure OpenAI paslaugos funkcija, skirta įveikti šias ribas:
 
-- **Nuoseklus atsakymų formatas**. Jei galime geriau kontroliuoti atsakymų formatą, galime lengviau integruoti atsakymus į kitus sistemas.
-- **Išoriniai duomenys**. Galimybė naudoti duomenis iš kitų programos šaltinių pokalbių kontekste.
+- **Nuoseklus atsakymo formatas**. Jei galime geriau kontroliuoti atsakymo formatą, galime lengviau integruoti atsakymą į kitų sistemų veikimą.
+- **Išoriniai duomenys**. Galimybė naudoti duomenis iš kitų programos šaltinių pokalbio kontekste.
 
-## Problemos iliustravimas per scenarijų
+## Problemos iliustracija per scenarijų
 
-> Rekomenduojame naudoti [pridėtą užrašų knygelę](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst), jei norite vykdyti žemiau pateiktą scenarijų. Taip pat galite tiesiog perskaityti, nes mes stengiamės iliustruoti problemą, kurią galima išspręsti naudojant funkcijas.
+> Rekomenduojame naudoti [įtrauktą užrašų knygelę](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst), jei norite paleisti toliau pateiktą scenarijų. Taip pat galite tiesiog skaityti toliau, nes stengiamės iliustruoti problemą, kurią funkcijos gali padėti išspręsti.
 
-Pažvelkime į pavyzdį, kuris iliustruoja atsakymų formato problemą:
+Pažiūrėkime pavyzdį, iliustruojantį atsakymo formato problemą:
 
-Tarkime, norime sukurti studentų duomenų bazę, kad galėtume jiems rekomenduoti tinkamus kursus. Žemiau pateikiami du studentų aprašymai, kurie yra labai panašūs savo turiniu.
+Tarkime, norime sukurti studentų duomenų bazę, kad galėtume jiems pasiūlyti tinkamą kursą. Žemiau pateikiamos dvi studentų aprašymų versijos, kurios yra labai panašios savo duomenų turiniu.
 
-1. Sukurkime ryšį su mūsų Azure OpenAI resursu:
+1. Sukurkite ryšį su mūsų Azure OpenAI ištekliais:
 
    ```python
    import os
    import json
-   from openai import AzureOpenAI
+   from openai import OpenAI
    from dotenv import load_dotenv
    load_dotenv()
 
-   client = AzureOpenAI(
-   api_key=os.environ['AZURE_OPENAI_API_KEY'],  # this is also the default, it can be omitted
-   api_version = "2023-07-01-preview"
+   # Atsakymų API teikiama iš Azure OpenAI (Microsoft Foundry) v1
+   # pabaigos taško, todėl mes nurodome OpenAI klientą į <your-endpoint>/openai/v1/.
+   endpoint = os.environ['AZURE_OPENAI_ENDPOINT']
+   client = OpenAI(
+   api_key=os.environ['AZURE_OPENAI_API_KEY'],
+   base_url=f"{endpoint.rstrip('/')}/openai/v1/",
    )
 
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   Žemiau pateiktas Python kodas, skirtas sukonfigūruoti ryšį su Azure OpenAI, kur nustatome `api_type`, `api_base`, `api_version` ir `api_key`.
+   Žemiau pateiktas Python kodas konfigūruoja ryšį su Azure OpenAI. Kadangi naudojame v1 galinį tašką, reikia nustatyti tik `api_key` ir `base_url` (nereikia `api_version`).
 
-1. Sukurkime du studentų aprašymus, naudodami kintamuosius `student_1_description` ir `student_2_description`.
+1. Sukurkite du studentų aprašymus kintamuosiuose `student_1_description` ir `student_2_description`.
 
    ```python
    student_1_description="Emily Johnson is a sophomore majoring in computer science at Duke University. She has a 3.7 GPA. Emily is an active member of the university's Chess Club and Debate Team. She hopes to pursue a career in software engineering after graduating."
@@ -78,9 +81,9 @@ Tarkime, norime sukurti studentų duomenų bazę, kad galėtume jiems rekomenduo
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   Norime išsiųsti aukščiau pateiktus studentų aprašymus LLM, kad išanalizuotume duomenis. Šie duomenys vėliau gali būti naudojami mūsų programoje ir siunčiami į API arba saugomi duomenų bazėje.
+   Norime siųsti aukščiau pateiktus studentų aprašymus į LLM, kad jis išskaitų duomenis. Šie duomenys vėliau gali būti naudojami mūsų programoje ir siunčiami į API arba saugomi duomenų bazėje.
 
-1. Sukurkime du identiškus raginimus, kuriuose nurodome LLM, kokia informacija mus domina:
+1. Sukurkime du identiškus prašymus, kuriuose nurodome LLM, kokią informaciją norime gauti:
 
    ```python
    prompt1 = f'''
@@ -110,33 +113,35 @@ Tarkime, norime sukurti studentų duomenų bazę, kad galėtume jiems rekomenduo
    '''
    ```
 
-   Aukščiau pateikti raginimai nurodo LLM išgauti informaciją ir grąžinti atsakymą JSON formatu.
+   Aukščiau pateikti prašymai nurodo LLM išgauti informaciją ir grąžinti atsakymą JSON formatu.
 
-1. Nustačius raginimus ir ryšį su Azure OpenAI, dabar išsiųsime raginimus LLM, naudodami `openai.ChatCompletion`. Raginimą saugome kintamajame `messages` ir priskiriame rolę `user`. Tai imituoja vartotojo žinutę, parašytą pokalbių robotui.
+1. Sukonfigūravus prašymus ir ryšį su Azure OpenAI, dabar siųsime prašymus LLM naudodami `client.responses.create`. Užklausą saugome kintamajame `input` ir priskiriame vaidmenį `user`. Tai imituoja žinutę vartotojo, siunčiamą pokalbių robotui.
 
    ```python
-   # response from prompt one
-   openai_response1 = client.chat.completions.create(
+   # atsakymas iš pirmo užklausimo
+   openai_response1 = client.responses.create(
    model=deployment,
-   messages = [{'role': 'user', 'content': prompt1}]
+   input = [{'role': 'user', 'content': prompt1}],
+   store=False,
    )
-   openai_response1.choices[0].message.content
+   openai_response1.output_text
 
-   # response from prompt two
-   openai_response2 = client.chat.completions.create(
+   # atsakymas iš antro užklausimo
+   openai_response2 = client.responses.create(
    model=deployment,
-   messages = [{'role': 'user', 'content': prompt2}]
+   input = [{'role': 'user', 'content': prompt2}],
+   store=False,
    )
-   openai_response2.choices[0].message.content
+   openai_response2.output_text
    ```
 
-Dabar galime išsiųsti abi užklausas LLM ir patikrinti gautą atsakymą, surasdami jį kaip `openai_response1['choices'][0]['message']['content']`.
+Dabar galime išsiųsti abu prašymus LLM ir patikrinti gautus atsakymus, juos radę kaip `openai_response1.output_text`.
 
-1. Galiausiai galime konvertuoti atsakymą į JSON formatą, naudodami `json.loads`:
+1. Galiausiai galime paversti atsakymą JSON formatu, kviesdami `json.loads`:
 
    ```python
-   # Loading the response as a JSON object
-   json_response1 = json.loads(openai_response1.choices[0].message.content)
+   # Įkeliama atsakymas kaip JSON objektas
+   json_response1 = json.loads(openai_response1.output_text)
    json_response1
    ```
 
@@ -164,59 +169,60 @@ Dabar galime išsiųsti abi užklausas LLM ir patikrinti gautą atsakymą, suras
    }
    ```
 
-   Nors raginimai yra vienodi ir aprašymai panašūs, matome, kad `Grades` savybės reikšmės formatuojamos skirtingai, pavyzdžiui, kartais gauname formatą `3.7` arba `3.7 GPA`.
+   Nors prašymai yra tokie patys ir aprašymai panašūs, matome, kad `Grades` savybės reikšmės formatuojamos skirtingai, pvz., kartais gauname formatą `3.7`, o kartais `3.7 GPA`.
 
-   Šis rezultatas atsiranda dėl to, kad LLM priima nestruktūrizuotus duomenis rašytinio raginimo forma ir taip pat grąžina nestruktūrizuotus duomenis. Mums reikia struktūrizuoto formato, kad žinotume, ko tikėtis saugant ar naudojant šiuos duomenis.
+   Šis rezultatas atsiranda todėl, kad LLM turi nestruktūruotą duomenų įvestį žodiniu prašymu ir taip pat grąžina nestruktūruotus duomenis. Reikia turėti struktūruotą formatą, kad žinotume, ko tikėtis saugant ar naudojant šiuos duomenis.
 
-Taigi, kaip išspręsti formatavimo problemą? Naudodami funkcijų iškvietimą, galime užtikrinti, kad gautume struktūrizuotus duomenis. Naudojant funkcijų iškvietimą, LLM iš tikrųjų neįvykdo ir neįvykdo jokių funkcijų. Vietoj to, mes sukuriame struktūrą, kurios LLM laikosi savo atsakymuose. Tada naudojame tuos struktūrizuotus atsakymus, kad žinotume, kokią funkciją vykdyti mūsų programose.
+Taigi, kaip išspręsti formatavimo problemą? Naudodami funkcijų kvietimą, galime užtikrinti, kad gauname struktūruotus duomenis. Naudojant funkcijų kvietimą, LLM iš tiesų nekviečia ar nevykdo jokios funkcijos. Vietoje to sukuriame struktūrą, kurios LLM turi laikytis savo atsakymuose. Tuomet naudojame tuos struktūruotus atsakymus, kad žinotume, kokią funkciją vykdyti mūsų programose.
 
 ![funkcijų srautas](../../../translated_images/lt/Function-Flow.083875364af4f4bb.webp)
 
-Tada galime paimti tai, kas grąžinama iš funkcijos, ir išsiųsti tai atgal į LLM. Tada LLM atsakys natūralia kalba, kad atsakytų į vartotojo užklausą.
+Tuomet galime pasiimti tai, ką grąžino funkcija, ir nusiųsti atgal LLM. LLM atsakys natūralia kalba, atsakydamas į vartotojo užklausą.
 
-## Funkcijų iškvietimo naudojimo atvejai
+## Funkcijų kvietimų taikymo sritys
 
-Yra daug skirtingų naudojimo atvejų, kai funkcijų iškvietimas gali pagerinti jūsų programą, pavyzdžiui:
+Yra daugybė skirtingų situacijų, kur funkcijų kvietimai gali pagerinti jūsų programą, pvz.:
 
-- **Išorinių įrankių iškvietimas**. Pokalbių robotai puikiai tinka atsakyti į vartotojų klausimus. Naudodami funkcijų iškvietimą, pokalbių robotai gali naudoti vartotojų žinutes tam tikroms užduotims atlikti. Pavyzdžiui, studentas gali paprašyti pokalbių roboto: „Išsiųskite el. laišką mano dėstytojui, kad man reikia daugiau pagalbos šiuo klausimu“. Tai gali atlikti funkcijos iškvietimą `send_email(to: string, body: string)`.
+- **Išorinių įrankių kvietimas**. Pokalbių robotai puikiai teikia atsakymus į vartotojų klausimus. Naudodami funkcijų kvietimą, pokalbių robotai gali naudoti vartotojų žinutes tam tikriems uždaviniams atlikti. Pavyzdžiui, studentas gali paprašyti pokalbių roboto „Nusiųsti el. laišką mano dėstytojui, kad man reikia daugiau pagalbos šioje temoje“. Tai gali sukelti funkcijos kvietimą `send_email(to: string, body: string)`.
 
-- **API ar duomenų bazės užklausų kūrimas**. Vartotojai gali rasti informaciją, naudodami natūralią kalbą, kuri paverčiama į suformatuotą užklausą ar API užklausą. Pavyzdžiui, mokytojas gali paprašyti: „Kas yra studentai, kurie atliko paskutinę užduotį“, ir tai gali iškviesti funkciją `get_completed(student_name: string, assignment: int, current_status: string)`.
+- **Kurti API ar duomenų bazės užklausas**. Vartotojai gali rasti informaciją naudodami natūralią kalbą, kuri paverčiama į suformatuotą užklausą ar API užklausą. Pavyzdys galėtų būti mokytojas, kuris klausia „Kas yra studentai, kurie įvykdė paskutinį užduotį“ ir tai gali iškviesti funkciją `get_completed(student_name: string, assignment: int, current_status: string)`.
 
-- **Struktūrizuotų duomenų kūrimas**. Vartotojai gali paimti teksto bloką ar CSV ir naudoti LLM, kad išgautų svarbią informaciją iš jo. Pavyzdžiui, studentas gali konvertuoti Vikipedijos straipsnį apie taikos susitarimus, kad sukurtų AI mokymosi korteles. Tai galima padaryti naudojant funkciją `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`.
+- **Struktūruotų duomenų kūrimas**. Vartotojai gali paimti teksto bloką ar CSV ir naudoti LLM svarbios informacijos išgavimui. Pavyzdžiui, studentas gali perrašyti Wikipedijos straipsnį apie taikos sutartis, kad sukurtų AI flashcards. Tai galima padaryti naudojant funkciją `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`.
 
-## Pirmojo funkcijos iškvietimo kūrimas
+## Kaip sukurti pirmąjį funkcijos kvietimą
 
-Funkcijos iškvietimo kūrimo procesą sudaro 3 pagrindiniai žingsniai:
+Funkcijos kvietimo kūrimo procesas susideda iš 3 pagrindinių žingsnių:
 
-1. **Iškvietimas** Chat Completions API su funkcijų sąrašu ir vartotojo žinute.
-2. **Atsakymo skaitymas** iš modelio, kad būtų atliktas veiksmas, pvz., funkcijos ar API užklausos vykdymas.
-3. **Pakartotinis iškvietimas** Chat Completions API su funkcijos atsakymu, kad būtų sukurta atsakymo žinutė vartotojui.
+1. **Kvietimas** į Responses API su jūsų funkcijų (įrankių) sąrašu ir vartotojo žinute.
+2. **Atsakymo skaitymas** iš modelio, kad būtų atliktas veiksmas, t.y. vykdyti funkciją ar API kvietimą.
+3. **Kitas kvietimas** į Responses API su funkcijos atsakymu, kad šią informaciją panaudotume atsakymo vartotojui kūrimui.
 
 ![LLM srautas](../../../translated_images/lt/LLM-Flow.3285ed8caf4796d7.webp)
 
-### 1 žingsnis - žinučių kūrimas
+### 1 Žingsnis – žinučių kūrimas
 
-Pirmasis žingsnis yra sukurti vartotojo žinutę. Tai galima dinamiškai priskirti, paimant teksto įvesties reikšmę, arba priskirti reikšmę čia. Jei tai jūsų pirmas kartas dirbant su Chat Completions API, turime apibrėžti žinutės `role` ir `content`.
+Pirmasis žingsnis – sukurti vartotojo žinutę. Tai gali būti dinamiškai priskirta paimant tekstinio įvesties lauko reikšmę arba galite priskirti čia. Jei dirbate su Responses API pirmą kartą, turime apibrėžti žinutės `role` ir `content`.
 
-`Role` gali būti `system` (taisyklių kūrimas), `assistant` (modelis) arba `user` (galutinis vartotojas). Funkcijų iškvietimui priskirsime `user` ir pateiksime pavyzdinį klausimą.
+`role` gali būti `system` (kuria taisykles), `assistant` (modelis) arba `user` (galutinis vartotojas). Funkcijų kvietimui priskirsime `user` ir pavyzdinį klausimą.
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Priskirdami skirtingas roles, LLM aiškiai supranta, ar tai sistema, ar vartotojas, kas padeda sukurti pokalbio istoriją, kuria LLM gali remtis.
+Priskiriant skirtingus vaidmenis LLM aišku, ar tai sistema kalba, ar vartotojas, kas padeda kurti pokalbio istoriją, į kurią LLM gali atsižvelgti.
 
-### 2 žingsnis - funkcijų kūrimas
+### 2 Žingsnis – funkcijų kūrimas
 
-Toliau apibrėšime funkciją ir jos parametrus. Čia naudosime tik vieną funkciją, pavadintą `search_courses`, tačiau galite sukurti kelias funkcijas.
+Toliau apibrėšime funkciją ir jos parametrus. Naudosime tik vieną funkciją pavadinimu `search_courses`, tačiau galite sukurti kelias funkcijas.
 
-> **Svarbu**: Funkcijos įtraukiamos į sistemos žinutę LLM ir bus įtrauktos į turimų tokenų kiekį.
+> **Svarbu**: Funkcijos įtraukiamos į sistemos žinutę LLM ir įskaičiuojamos į turimų žetonų kiekį.
 
-Žemiau sukuriame funkcijas kaip elementų masyvą. Kiekvienas elementas yra funkcija ir turi savybes `name`, `description` ir `parameters`:
+Žemiau sukuriame funkcijas kaip elementų masyvą. Kiekvienas elementas yra įrankis Responses API formatu, turintis ypatybes `type`, `name`, `description` ir `parameters`:
 
 ```python
 functions = [
    {
+      "type":"function",
       "name":"search_courses",
       "description":"Retrieves courses from the search index based on the parameters provided",
       "parameters":{
@@ -243,75 +249,76 @@ functions = [
 ]
 ```
 
-Paaiškinkime kiekvieną funkcijos instanciją išsamiau:
+Žemiau aprašome kiekvieną funkcijos pavyzdį detaliau:
 
-- `name` - Funkcijos pavadinimas, kurią norime iškviesti.
-- `description` - Funkcijos veikimo aprašymas. Čia svarbu būti konkrečiam ir aiškiam.
-- `parameters` - Reikšmių sąrašas ir formatas, kurį modelis turėtų pateikti savo atsakyme. Parameters masyvas susideda iš elementų, kurių kiekvienas turi šias savybes:
-  1.  `type` - Savybių saugojimo duomenų tipas.
-  1.  `properties` - Konkrečių reikšmių sąrašas, kurį modelis naudos savo atsakyme.
-      1. `name` - Raktas yra savybės pavadinimas, kurį modelis naudos savo suformatuotame atsakyme, pavyzdžiui, `product`.
-      1. `type` - Šios savybės duomenų tipas, pavyzdžiui, `string`.
-      1. `description` - Konkrečios savybės aprašymas.
+- `name` - funkcijos pavadinimas, kurį norime kviesti.
+- `description` - aprašymas, kaip veikia funkcija. Čia svarbu būti tikslams ir aiškiems.
+- `parameters` - reikšmių ir formato sąrašas, kurį norite, kad modelis pateiktų atsakyme. Parameter masyvas turi elementus, kurie turi šias savybes:
+  1.  `type` - savybės duomenų tipas.
+  1.  `properties` - specifinių vertybių sąrašas, kurias modelis naudos atsakymui
+      1. `name` - raktas, tai yra savybės pavadinimas, kurį modelis naudos suformatuotame atsakyme, pvz., `product`.
+      1. `type` - šios savybės duomenų tipas, pvz., `string`.
+      1. `description` - specifinės savybės aprašymas.
 
-Taip pat yra neprivaloma savybė `required` - būtina savybė, kad funkcijos iškvietimas būtų užbaigtas.
+Taip pat yra neprivaloma savybė `required` – reikalinga savybė, kad funkcijos kvietimas būtų vykdomas sėkmingai.
 
-### 3 žingsnis - Funkcijos iškvietimas
+### 3 Žingsnis – funkcijos kvietimo vykdymas
 
-Apibrėžę funkciją, dabar turime ją įtraukti į Chat Completion API užklausą. Tai darome pridėdami `functions` prie užklausos. Šiuo atveju `functions=functions`.
+Apibrėžus funkciją, dabar ją reikia įtraukti į kvietimą Responses API. Tai daroma pridedant `tools` į užklausą. Šiuo atveju `tools=functions`.
 
-Taip pat yra galimybė nustatyti `function_call` kaip `auto`. Tai reiškia, kad leisime LLM nuspręsti, kurią funkciją iškviesti pagal vartotojo žinutę, o ne priskirti ją patiems.
+Taip pat yra galimybė nustatyti `tool_choice` reikšmei `auto`. Tai leidžia LLM nuspręsti, kurią funkciją kviesti, remiantis vartotojo žinute, o ne nustatant tai patiems.
 
-Žemiau pateiktas kodas, kuriame iškviečiame `ChatCompletion.create`, atkreipkite dėmesį, kaip nustatome `functions=functions` ir `function_call="auto"`, taip suteikdami LLM galimybę pasirinkti, kada iškviesti pateiktas funkcijas:
+Žemiau pateiktas kodas, kuriame kviečiame `client.responses.create`, atkreipkite dėmesį, kaip nustatome `tools=functions` ir `tool_choice="auto"`, taip suteikdami LLM pasirinkimą, kada kviesti mūsų pateiktas funkcijas:
 
 ```python
-response = client.chat.completions.create(model=deployment,
-                                        messages=messages,
-                                        functions=functions,
-                                        function_call="auto")
+response = client.responses.create(model=deployment,
+                                        input=messages,
+                                        tools=functions,
+                                        tool_choice="auto",
+                                        store=False)
 
-print(response.choices[0].message)
+print(response.output)
 ```
 
-Atsakymas, kuris grįžta, atrodo taip:
+Grįžtantis atsakymas dabar turi `function_call` elementą `response.output`, kuris atrodo taip:
 
 ```json
 {
-  "role": "assistant",
-  "function_call": {
-    "name": "search_courses",
-    "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
-  }
+  "type": "function_call",
+  "name": "search_courses",
+  "call_id": "call_abc123",
+  "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
 }
 ```
 
-Čia matome, kaip buvo iškviesta funkcija `search_courses` ir kokiais argumentais, kaip nurodyta `arguments` savybėje JSON atsakyme.
+Čia matome, kaip buvo iškviesta funkcija `search_courses` ir su kokiais argumentais, pateiktais `arguments` savybėje JSON atsakyme.
 
-LLM sugebėjo rasti duomenis, atitinkančius funkcijos argumentus, išgauti juos iš `messages` parametro vertės pokalbio užklausos iškvietime. Žemiau pateikiama `messages` vertės priminimas:
+Išvada: LLM sugebėjo rasti duomenis, atitinkančius funkcijos argumentus, nes juos ištraukė iš vertės, pateiktos `input` parametro užklausoje Responses API. Žemiau priminimas apie `messages` reikšmę:
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Kaip matote, `student`, `Azure` ir `beginner` buvo išgauti iš `messages` ir nustatyti kaip funkcijos įvestis. Naudojant funkcijas tokiu būdu, tai puikus būdas išgauti informaciją iš raginimo, bet taip pat suteikti LLM struktūrą ir turėti pakartotinai naudojamą funkcionalumą.
+Kaip matote, `student`, `Azure` ir `beginner` buvo išgauti iš `messages` ir nustatyti kaip įvestis funkcijai. Tokiu būdu naudojant funkcijas puiku išgauti informaciją iš prompto, suteikti struktūrą LLM ir turėti pernaudojamą funkcionalumą.
 
-Dabar turime pamatyti, kaip tai galime panaudoti savo programoje.
+Toliau pažiūrėsime, kaip tai galime naudoti mūsų programoje.
 
-## Funkcijų iškvietimo integravimas į programą
+## Funkcijų kvietimų integravimas į programą
 
-Išbandę suformatuotą atsakymą iš LLM, dabar galime integruoti tai į savo programą.
+Išbandžius struktūruotą atsakymą iš LLM, dabar galime integruoti tai į programą.
 
-### Srauto valdymas
+### Valdyti srautą
 
-Norėdami integruoti tai į savo programą, atlikime šiuos veiksmus:
+Norėdami integruoti tai į programą, atlikime šiuos veiksmus:
 
-1. Pirmiausia atlikime OpenAI paslaugų užklausą ir saugokime žinutę kintamajame `response_message`.
+1. Pirmiausia atlikime kvietimą į OpenAI paslaugas ir ištraukime funkcijos kvietimo elementus iš atsakymo `output`.
 
    ```python
-   response_message = response.choices[0].message
+   response_items = response.output
+   tool_calls = [item for item in response_items if item.type == "function_call"]
    ```
 
-1. Dabar apibrėžkime funkciją, kuri iškvies Microsoft Learn API, kad gautų kursų sąrašą:
+1. Dabar apibrėšime funkciją, kuri kvies Microsoft Learn API, kad gautume kursų sąrašą:
 
    ```python
    import requests
@@ -333,67 +340,59 @@ Norėdami integruoti tai į savo programą, atlikime šiuos veiksmus:
      return str(results)
    ```
 
-   Atkreipkite dėmesį, kaip dabar sukuriame tikrą Python funkciją, kuri atitinka funkcijų pavadinimus, pateiktus `functions` kintamajame. Taip pat atliekame tikras išorines API užklausas, kad gautume reikalingus duomenis. Šiuo atveju kreipiamės į Microsoft Learn API, kad ieškotume mokymo modulių.
+   Atkreipkite dėmesį, kaip sukūrėme tikrą Python funkciją, atitinkančią `functions` kintamajame nurodytus funkcijų pavadinimus. Taip pat darome tikrus išorinius API kvietimus, kad gautume reikiamus duomenis. Šiuo atveju kreipiamės į Microsoft Learn API ieškoti mokymo modulių.
 
-Gerai, sukūrėme `functions` kintamuosius ir atitinkamą Python funkciją, kaip pasakyti LLM, kaip susieti šiuos du, kad būtų iškviesta mūsų Python funkcija?
+Taigi, sukūrėme `functions` kintamąjį ir atitinkamą Python funkciją, kaip pasakyti LLM, kaip susieti šiuos du dalykus, kad mūsų Python funkcija būtų iškviesta?
 
-1. Norėdami pamatyti, ar reikia iškviesti Python funkciją, turime pažvelgti į LLM atsakymą ir patikrinti, ar jame yra `function_call`, ir iškviesti nurodytą funkciją. Štai kaip galite atlikti minėtą patikrinimą žemiau:
+1. Norėdami patikrinti, ar reikia kviesti Python funkciją, turime žiūrėti į LLM atsakymą, ar yra `function_call` elementas, ir iškviesti nurodytą funkciją. Žemiau matote, kaip tai galima padaryti:
 
    ```python
-   # Check if the model wants to call a function
-   if response_message.function_call.name:
-    print("Recommended Function call:")
-    print(response_message.function_call.name)
-    print()
+   # Patikrinkite, ar modelis nori iškviesti funkciją
+   if tool_calls:
+    for tool_call in tool_calls:
+     print("Recommended Function call:")
+     print(tool_call.name)
+     print()
 
-    # Call the function.
-    function_name = response_message.function_call.name
+     # Iškvieskite funkciją.
+     function_name = tool_call.name
 
-    available_functions = {
-            "search_courses": search_courses,
-    }
-    function_to_call = available_functions[function_name]
+     available_functions = {
+             "search_courses": search_courses,
+     }
+     function_to_call = available_functions[function_name]
 
-    function_args = json.loads(response_message.function_call.arguments)
-    function_response = function_to_call(**function_args)
+     function_args = json.loads(tool_call.arguments)
+     function_response = function_to_call(**function_args)
 
-    print("Output of function call:")
-    print(function_response)
-    print(type(function_response))
+     print("Output of function call:")
+     print(function_response)
+     print(type(function_response))
 
-
-    # Add the assistant response and function response to the messages
-    messages.append( # adding assistant response to messages
-        {
-            "role": response_message.role,
-            "function_call": {
-                "name": function_name,
-                "arguments": response_message.function_call.arguments,
-            },
-            "content": None
-        }
-    )
-    messages.append( # adding function response to messages
-        {
-            "role": "function",
-            "name": function_name,
-            "content":function_response,
-        }
-    )
+     # Pridėkite funkcijos kvietimą ir jo rezultatą atgal į pokalbį.
+     # Modelio function_call elementas turi būti pridėtas prieš jo išvestį.
+     messages.append(tool_call)  # asistento function_call elementas
+     messages.append( # funkcijos rezultatas
+         {
+             "type": "function_call_output",
+             "call_id": tool_call.call_id,
+             "output": function_response,
+         }
+     )
    ```
 
-   Šios trys eilutės užtikrina, kad išgautume funkcijos pavadinimą, argumentus ir atliktume iškvietimą:
+   Šios trys eilutės užtikrina, kad ištrauksime funkcijos pavadinimą, argumentus ir iškviesime funkciją:
 
    ```python
    function_to_call = available_functions[function_name]
 
-   function_args = json.loads(response_message.function_call.arguments)
+   function_args = json.loads(tool_call.arguments)
    function_response = function_to_call(**function_args)
    ```
 
-   Žemiau pateikiamas mūsų kodo vykdymo rezultatas:
+   Žemiau pateikiamas rezultatas, paleidus mūsų kodą:
 
-   **Rezultatas**
+**Rezultatas**
 
    ```Recommended Function call:
    {
@@ -412,52 +411,60 @@ Gerai, sukūrėme `functions` kintamuosius ir atitinkamą Python funkciją, kaip
    <class 'str'>
    ```
 
-1. Dabar išsiųsime atnaujintą žinutę, `messages`, LLM, kad gautume natūralios kalbos atsakymą, o ne API JSON formatuotą atsakymą.
+1. Dabar atsiųsime atnaujintą žinutę `messages` į LLM, kad gautume natūralios kalbos atsakymą, o ne API JSON formato atsakymą.
 
    ```python
    print("Messages in next request:")
    print(messages)
    print()
 
-   second_response = client.chat.completions.create(
-      messages=messages,
+   second_response = client.responses.create(
+      input=messages,
       model=deployment,
-      function_call="auto",
-      functions=functions,
-      temperature=0
-         )  # get a new response from GPT where it can see the function response
+      tool_choice="auto",
+      tools=functions,
+      temperature=0,
+      store=False,
+         )  # gaukite naują atsakymą iš modelio, kuris mato funkcijos atsakymą
 
 
-   print(second_response.choices[0].message)
+   print(second_response.output_text)
    ```
 
-   **Rezultatas**
+**Rezultatas**
 
-   ```python
-   {
-     "role": "assistant",
-     "content": "I found some good courses for beginner students to learn Azure:\n\n1. [Describe concepts of cryptography] (https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)\n2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)\n3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)\n4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)\n5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)\n\nYou can click on the links to access the courses."
-   }
+   ```text
+   I found some good courses for beginner students to learn Azure:
 
+   1. [Describe concepts of cryptography](https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)
+   2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)
+   3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)
+   4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)
+   5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)
+
+   You can click on the links to access the courses.
    ```
 
 ## Užduotis
 
-Norėdami tęsti mokymąsi apie Azure OpenAI funkcijų iškvietimą, galite sukurti:
+Norėdami tęsti mokymąsi apie Azure OpenAI funkcijų kvietimą, galite sukurti:
 
-- Daugiau funkcijos parametrų, kurie galėtų padėti mokiniams rasti daugiau kursų.
-- Sukurti kitą funkcijos iškvietimą, kuris paimtų daugiau informacijos iš
-- Sukurkite klaidų tvarkymą, kai funkcijos arba API iškvietimas negrąžina tinkamų kursų
+- Daugiau funkcijos parametrų, kurie gali padėti mokiniams rasti dar daugiau kursų.
 
-Patarimas: Peržiūrėkite [Learn API nuorodų dokumentaciją](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) puslapį, kad sužinotumėte, kaip ir kur šie duomenys yra pasiekiami.
+- Sukurkite kitą funkcijos kvietimą, kuris imtų daugiau informacijos iš besimokančiojo, pavyzdžiui, jų gimtąją kalbą
+- Sukurkite klaidų apdorojimą, kai funkcijos kvietimas ir/ar API kvietimas negrąžina tinkamų kursų
+
+Patarimas: Sekite [Learn API reference documentation](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) puslapį, kad pamatytumėte, kaip ir kur ši informacija yra prieinama.
 
 ## Puikus darbas! Tęskite kelionę
 
-Baigę šią pamoką, peržiūrėkite mūsų [Generatyvinio dirbtinio intelekto mokymosi kolekciją](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), kad toliau gilintumėte savo žinias apie generatyvinį dirbtinį intelektą!
+Baigę šią pamoką, peržiūrėkite mūsų [Generatyviosios AI mokymosi kolekciją](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), kad toliau gilintumėte savo Generatyviosios AI žinias!
 
-Eikite į 12 pamoką, kurioje aptarsime, kaip [kurti UX AI programoms](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Nukelkite į 12-ąją pamoką, kurioje apžvelgsime, kaip [kūrti UX AI programėlėms](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudoti profesionalų žmogaus vertimą. Mes neprisiimame atsakomybės už nesusipratimus ar neteisingus interpretavimus, atsiradusius dėl šio vertimo naudojimo.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Atsakomybės apribojimas**:
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojama naudoti profesionalų žmogiškąjį vertimą. Mes neatsakome už jokius nesusipratimus ar neteisingą interpretaciją, kilusią naudojantis šiuo vertimu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,10 +1,10 @@
-# Transcription data prep
+# Transcriptiegegevensvoorbereiding
 
-De scripts voor het voorbereiden van transcriptiegegevens downloaden YouTube-video-transcripten en maken deze klaar voor gebruik met het voorbeeld Semantic Search met OpenAI Embeddings en Functions.
+De transcriptiegegevensvoorbereidingsscripts downloaden transcripties van YouTube-video's en bereiden ze voor gebruik met het voorbeeld Semantic Search met OpenAI Embeddings en Functions.
 
-De scripts voor het voorbereiden van transcriptiegegevens zijn getest op de nieuwste versies van Windows 11, macOS Ventura en Ubuntu 22.04 (en hoger).
+De transcriptiegegevensvoorbereidingsscripts zijn getest op de nieuwste versies van Windows 11, macOS Ventura en Ubuntu 22.04 (en hoger).
 
-## Vereiste Azure OpenAI Service resources aanmaken
+## Maak de vereiste Azure OpenAI Service-resources aan
 
 > [!IMPORTANT]
 > We raden aan om de Azure CLI bij te werken naar de nieuwste versie om compatibiliteit met OpenAI te garanderen
@@ -14,21 +14,21 @@ De scripts voor het voorbereiden van transcriptiegegevens zijn getest op de nieu
 
 > [!NOTE]
 > Voor deze instructies gebruiken we de resourcegroep met de naam "semantic-video-search" in East US.
-> Je kunt de naam van de resourcegroep wijzigen, maar als je de locatie van de resources aanpast,
-> controleer dan de [modelbeschikbaarheidstabel](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> Je kunt de naam van de resourcegroep wijzigen, maar als je de locatie voor de resources verandert,
+> controleer dan de [beschikbaarheids- tabel voor modellen](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. Maak een Azure OpenAI Service resource aan.
+1. Maak een Azure OpenAI Service-resource aan.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Haal de endpoint en sleutels op voor gebruik in deze applicatie
+1. Haal het eindpunt en de sleutels op voor gebruik in deze applicatie
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -37,9 +37,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. Implementeer de volgende modellen:
+1. Zet de volgende modellen uit:
    - `text-embedding-ada-002` versie `2` of hoger, genaamd `text-embedding-ada-002`
-   - `gpt-35-turbo` versie `0613` of hoger, genaamd `gpt-35-turbo`
+   - `gpt-4o-mini` genaamd `gpt-4o-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,9 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-35-turbo \
-    --model-name gpt-35-turbo \
-    --model-version "0613"  \
+    --deployment-name gpt-4o-mini \
+    --model-name gpt-4o-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -67,11 +66,11 @@ az cognitiveservices account deployment create \
 
 ## Omgevingsvariabelen
 
-De volgende omgevingsvariabelen zijn vereist om de YouTube transcriptie data prep scripts uit te voeren.
+De volgende omgevingsvariabelen zijn vereist om de YouTube transcriptiegegevensvoorbereidingsscripts uit te voeren.
 
 ### Op Windows
 
-We raden aan om de variabelen toe te voegen aan je `user` omgevingsvariabelen.
+Het is aan te raden om de variabelen toe te voegen aan je `user` omgevingsvariabelen.
 `Windows Start` > `Systeemomgevingsvariabelen bewerken` > `Omgevingsvariabelen` > `Gebruikersvariabelen` voor [USER] > `Nieuw`.
 
 ```text
@@ -81,9 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
+<!-- Je kunt de omgevingsvariabelen toevoegen aan je PowerShell-profiel.
+
+```powershell
+$env:AZURE_OPENAI_API_KEY = "<je Azure OpenAI Service API-sleutel>"
+$env:AZURE_OPENAI_ENDPOINT = "<je Azure OpenAI Service eindpunt>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<je Azure OpenAI Service modeluitrolnaam>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<je Google developer API-sleutel>"
+``` -->
+
 ### Op Linux en macOS
 
-We raden aan om de volgende exports toe te voegen aan je `~/.bashrc` of `~/.zshrc` bestand.
+Het is aan te raden om de volgende exports toe te voegen aan je `~/.bashrc` of `~/.zshrc` bestand.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -92,10 +100,10 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## Installeer de vereiste Python bibliotheken
+## Installeer de vereiste Python-bibliotheken
 
-1. Installeer de [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) als deze nog niet geïnstalleerd is.
-1. Clone vanuit een `Terminal` venster de sample naar je gewenste repo map.
+1. Installeer de [git-client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) als die nog niet geïnstalleerd is.
+1. Kloneer vanuit een `Terminal`-venster de sample naar je gewenste repo-map.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -149,7 +157,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## Voer de YouTube transcriptie data prep scripts uit
+## Voer de YouTube transcriptiegegevensvoorbereidingsscripts uit
 
 ### Op Windows
 
@@ -163,5 +171,9 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ./transcripts_prepare.sh
 ```
 
-**Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsdienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u er rekening mee te houden dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet als de gezaghebbende bron worden beschouwd. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Disclaimer**:
+Dit document is vertaald met behulp van de AI vertaaldienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u er rekening mee te houden dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

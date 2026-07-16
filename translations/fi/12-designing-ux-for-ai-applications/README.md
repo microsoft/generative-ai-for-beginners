@@ -1,125 +1,127 @@
-# UX-suunnittelu tekoälysovelluksille
+# UX:n suunnittelu tekoälysovelluksille
 
-[![UX-suunnittelu tekoälysovelluksille](../../../translated_images/fi/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![UX:n suunnittelu tekoälysovelluksille](../../../translated_images/fi/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
-> _(Klikkaa yllä olevaa kuvaa nähdäksesi tämän oppitunnin videon)_
+> _(Napsauta yllä olevaa kuvaa nähdäksesi tämän oppitunnin videon)_
 
-Käyttäjäkokemus on erittäin tärkeä osa sovellusten rakentamista. Käyttäjien täytyy pystyä käyttämään sovellustasi tehokkaasti tehtäviensä suorittamiseen. Tehokkuus on yksi asia, mutta sovellukset täytyy myös suunnitella niin, että ne ovat kaikkien käytettävissä, eli _esteettömiä_. Tämä luku keskittyy tähän aiheeseen, jotta lopulta suunnittelet sovelluksen, jota ihmiset voivat ja haluavat käyttää.
+Käyttäjäkokemus on erittäin tärkeä osa sovellusten rakentamista. Käyttäjien on kyettävä käyttämään sovellustasi tehokkaasti suorittaakseen tehtäviä. Tehokkuus on yksi asia, mutta sinun on myös suunniteltava sovelluksia siten, että ne sopivat kaikille ja tekevät niistä _saavutettavia_. Tämä luku keskittyy tähän alueeseen, jotta lopputuloksena olisi sovellus, jota ihmiset voivat ja haluavat käyttää.
 
 ## Johdanto
 
-Käyttäjäkokemus tarkoittaa sitä, miten käyttäjä on vuorovaikutuksessa tietyn tuotteen tai palvelun kanssa, olipa kyseessä järjestelmä, työkalu tai suunnittelu. Tekoälysovelluksia kehitettäessä kehittäjät keskittyvät paitsi varmistamaan, että käyttäjäkokemus on tehokas, myös siihen, että se on eettinen. Tässä oppitunnissa käsittelemme, miten rakentaa tekoälysovelluksia, jotka vastaavat käyttäjien tarpeisiin.
+Käyttäjäkokemus tarkoittaa sitä, miten käyttäjä on vuorovaikutuksessa ja käyttää tiettyä tuotetta tai palvelua, olipa kyseessä järjestelmä, työkalu tai suunnittelu. Kehitettäessä tekoälysovelluksia kehittäjät keskittyvät paitsi käyttäjäkokemuksen tehokkuuteen myös eettisyyteen. Tässä oppitunnissa käsittelemme, kuinka rakentaa tekoälysovelluksia, jotka vastaavat käyttäjien tarpeita.
 
-Oppitunnilla käsitellään seuraavia aiheita:
+Oppitunti käsittelee seuraavia aihealueita:
 
-- Johdatus käyttäjäkokemukseen ja käyttäjien tarpeiden ymmärtäminen
-- Tekoälysovellusten suunnittelu luottamuksen ja läpinäkyvyyden näkökulmasta
-- Tekoälysovellusten suunnittelu yhteistyön ja palautteen näkökulmasta
+- Johdanto käyttäjäkokemukseen ja käyttäjätarpeiden ymmärtämiseen
+- Tekoälysovellusten suunnittelu luottamuksen ja läpinäkyvyyden edistämiseksi
+- Tekoälysovellusten suunnittelu yhteistyötä ja palautetta varten
 
 ## Oppimistavoitteet
 
-Tämän oppitunnin jälkeen osaat:
+Oppitunnin jälkeen osaat:
 
-- Ymmärtää, miten rakentaa tekoälysovelluksia, jotka vastaavat käyttäjien tarpeisiin.
+- Ymmärtää, miten rakentaa tekoälysovelluksia, jotka täyttävät käyttäjien tarpeet.
 - Suunnitella tekoälysovelluksia, jotka edistävät luottamusta ja yhteistyötä.
 
-### Esitietovaatimus
+### Esitiedot
 
-Tutustu tarkemmin [käyttäjäkokemukseen ja design-ajatteluun.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
+Käy lukemassa lisää [käyttäjäkokemuksesta ja design-ajattelusta.](https://learn.microsoft.com/training/modules/ux-design?WT.mc_id=academic-105485-koreyst)
 
-## Johdatus käyttäjäkokemukseen ja käyttäjien tarpeiden ymmärtäminen
+## Johdanto käyttäjäkokemukseen ja käyttäjätarpeiden ymmärtämiseen
 
-Kuvitteellisessa koulutusstartupissamme meillä on kaksi pääasiallista käyttäjäryhmää: opettajat ja opiskelijat. Molemmilla käyttäjäryhmillä on omat erityiset tarpeensa. Käyttäjäkeskeinen suunnittelu asettaa käyttäjän etusijalle varmistaen, että tuotteet ovat tarkoituksenmukaisia ja hyödyllisiä niille, joille ne on tarkoitettu.
+Kuvitteellisessa koulutusstart-upissamme on kaksi pääkäyttäjää, opettajat ja opiskelijat. Jokaisella käyttäjällä on omat ainutlaatuiset tarpeensa. Käyttäjäkeskeinen suunnittelu asettaa käyttäjän etusijalle varmistaen, että tuotteet ovat merkityksellisiä ja hyödyllisiä niille, joiden käyttöön ne on suunnattu.
 
-Sovelluksen tulisi olla **hyödyllinen, luotettava, esteetön ja miellyttävä**, jotta se tarjoaa hyvän käyttäjäkokemuksen.
+Sovelluksen tulisi olla **hyödyllinen, luotettava, saavutettava ja miellyttävä** tarjotakseen hyvän käyttäjäkokemuksen.
 
 ### Käytettävyys
 
-Hyödyllisyys tarkoittaa, että sovelluksella on toiminnallisuuksia, jotka vastaavat sen tarkoitusta, kuten arviointiprosessin automatisointi tai muistikorttien luominen kertausta varten. Sovelluksen, joka automatisoi arviointiprosessin, tulisi pystyä tarkasti ja tehokkaasti antamaan pisteitä opiskelijoiden töille ennalta määriteltyjen kriteerien perusteella. Vastaavasti sovelluksen, joka luo muistikortteja, tulisi pystyä tuottamaan relevantteja ja monipuolisia kysymyksiä datansa perusteella.
+Hyödyllisyys tarkoittaa, että sovelluksen toiminnallisuus vastaa sen tarkoitusta, kuten arviointiprosessin automatisointia tai muistikorttien luontia kertausta varten. Sovelluksen, joka automatisoi arvioinnin, tulee pystyä määrittämään tarkasti ja tehokkaasti pisteet opiskelijoiden töille ennalta määriteltyjen kriteerien perusteella. Vastaavasti sovelluksen, joka luo kertaavia muistikortteja, tulee pystyä tuottamaan aiheeseen liittyviä ja monipuolisia kysymyksiä datansa pohjalta.
 
 ### Luotettavuus
 
-Luotettavuus tarkoittaa, että sovellus pystyy suorittamaan tehtävänsä johdonmukaisesti ja virheettömästi. Kuitenkin, kuten ihmiset, tekoäly ei ole täydellinen ja voi olla altis virheille. Sovellukset voivat kohdata virheitä tai odottamattomia tilanteita, jotka vaativat ihmisen väliintuloa tai korjausta. Miten virheet käsitellään? Oppitunnin viimeisessä osassa käsittelemme, miten tekoälyjärjestelmät ja -sovellukset suunnitellaan yhteistyötä ja palautetta varten.
+Luotettavuus tarkoittaa, että sovellus pystyy suorittamaan tehtävänsä johdonmukaisesti ja virheettömästi. Tekoäly ei kuitenkaan ole täydellinen, kuten ihmisetkään, ja saattaa tehdä virheitä. Sovellukset voivat kohdata virheitä tai odottamattomia tilanteita, jotka vaativat ihmisen väliintuloa tai korjausta. Miten käsittelet virheitä? Tämän oppitunnin viimeisessä osassa käsittelemme, miten tekoälyjärjestelmät ja -sovellukset on suunniteltu yhteistyötä ja palautetta varten.
 
-### Esteettömyys
+### Saavutettavuus
 
-Esteettömyys tarkoittaa käyttäjäkokemuksen laajentamista erilaisille käyttäjille, mukaan lukien vammaiset, varmistaen, ettei ketään jätetä ulkopuolelle. Noudattamalla esteettömyysohjeita ja -periaatteita tekoälyratkaisuista tulee inklusiivisempia, käyttökelpoisempia ja hyödyllisempiä kaikille käyttäjille.
+Saavutettavuus tarkoittaa, että käyttäjäkokemus ulotetaan käyttäjiin, joilla on erilaisia kykyjä, mukaan lukien vammaiset, varmistaen, että kukaan ei jää ulkopuolelle. Noudattamalla saavutettavuusohjeita ja -periaatteita tekoälyratkaisut muuttuvat inklusiivisemmiksi, käytettäviksi ja hyödyllisemmiksi kaikille käyttäjille.
 
 ### Miellyttävyys
 
-Miellyttävyys tarkoittaa, että sovellusta on mukava käyttää. Houkutteleva käyttäjäkokemus voi vaikuttaa positiivisesti käyttäjään, kannustaen häntä palaamaan sovelluksen pariin ja lisäten liiketoiminnan tuottoa.
+Miellyttävyys tarkoittaa, että sovelluksen käyttö on nautittavaa. Houkutteleva käyttäjäkokemus voi vaikuttaa myönteisesti käyttäjään, kannustaen tätä palaamaan sovellukseen ja lisäämään liiketoiminnan tuottoa.
 
-![kuva, joka havainnollistaa UX-näkökulmia tekoälyssä](../../../translated_images/fi/uxinai.d5b4ed690f5cefff.webp)
+![kuva joka havainnollistaa UX-harkintoja tekoälyssä](../../../translated_images/fi/uxinai.d5b4ed690f5cefff.webp)
 
-Kaikkia haasteita ei voida ratkaista tekoälyllä. Tekoäly täydentää käyttäjäkokemusta, olipa kyseessä manuaalisten tehtävien automatisointi tai käyttäjäkokemuksen personointi.
+Kaikkeen ongelmaan ei löydy ratkaisua tekoälyn avulla. Tekoälyä käytetään täydentämään käyttäjäkokemusta, olipa kyseessä manuaalisten tehtävien automatisointi tai käyttäjäkokemuksen räätälöinti.
 
-## Tekoälysovellusten suunnittelu luottamuksen ja läpinäkyvyyden näkökulmasta
+## Tekoälysovellusten suunnittelu luottamuksen ja läpinäkyvyyden takaamiseksi
 
-Luottamuksen rakentaminen on kriittistä tekoälysovellusten suunnittelussa. Luottamus varmistaa, että käyttäjä on varma siitä, että sovellus hoitaa tehtävänsä, tuottaa johdonmukaisia tuloksia ja että tulokset vastaavat käyttäjän tarpeita. Tällä alueella riskinä on epäluottamus ja liiallinen luottamus. Epäluottamus syntyy, kun käyttäjällä on vähän tai ei lainkaan luottamusta tekoälyjärjestelmään, mikä johtaa sovelluksen hylkäämiseen. Liiallinen luottamus syntyy, kun käyttäjä yliarvioi tekoälyjärjestelmän kyvyt, mikä johtaa siihen, että käyttäjä luottaa liikaa tekoälyjärjestelmään. Esimerkiksi automatisoitu arviointijärjestelmä voi liiallisen luottamuksen tapauksessa johtaa siihen, että opettaja ei tarkista joitakin töitä varmistaakseen, että arviointijärjestelmä toimii hyvin. Tämä voisi johtaa epäoikeudenmukaisiin tai epätarkkoihin arvosanoihin opiskelijoille tai menetettyihin mahdollisuuksiin antaa palautetta ja parannusehdotuksia.
+Luottamuksen rakentaminen on ratkaisevan tärkeää tekoälysovellusten suunnittelussa. Luottamus varmistaa, että käyttäjä on vakuuttunut sovelluksen suorittavan työn, tuottavan tulokset johdonmukaisesti ja että tulokset vastaavat käyttäjän tarpeita. Kehityksen riskinä ovat epäluottamus ja liiallinen luottamus. Epäluottamus syntyy, kun käyttäjällä on vähän tai ei lainkaan luottamusta tekoälyjärjestelmään, mikä johtaa sovelluksen hylkäämiseen. Liiallinen luottamus puolestaan syntyy, kun käyttäjä yliarvioi tekoälyn kyvyt ja luottaa siihen liikaa. Esimerkiksi arviointijärjestelmässä liiallinen luottamus voi johtaa siihen, että opettaja ei tarkista kaikkia töitä varmistaakseen järjestelmän toimivuuden, mikä voi johtaa epäoikeudenmukaisiin tai epätarkkoihin arvosanoihin sekä menetettyihin palautteen ja kehityksen mahdollisuuksiin.
 
 Kaksi tapaa varmistaa, että luottamus on suunnittelun keskiössä, ovat selitettävyys ja hallinta.
 
 ### Selitettävyys
 
-Kun tekoäly auttaa päätöksenteossa, kuten tiedon siirtämisessä tuleville sukupolville, on kriittistä, että opettajat ja vanhemmat ymmärtävät, miten tekoäly tekee päätöksiä. Tämä on selitettävyys - ymmärrys siitä, miten tekoälysovellukset tekevät päätöksiä. Selitettävyys voidaan huomioida suunnittelussa lisäämällä yksityiskohtia, jotka korostavat, miten tekoäly päätyi tiettyyn lopputulokseen. Käyttäjien on oltava tietoisia siitä, että tulos on tekoälyn eikä ihmisen tuottama. Esimerkiksi sen sijaan, että sanottaisiin "Aloita keskustelu tutorisi kanssa nyt", voisi sanoa "Käytä tekoälytutoria, joka mukautuu tarpeisiisi ja auttaa sinua oppimaan omaan tahtiisi."
+Kun tekoäly auttaa päätöksenteossa, kuten tiedon välittämisessä tuleville sukupolville, on tärkeää, että opettajat ja vanhemmat ymmärtävät, miten tekoälyn tekemät päätökset syntyvät. Tämä on selitettävyys – ymmärrys siitä, miten tekoälysovellukset tekevät päätöksiä. Selitettävyyden suunnitteluun sisältyy yksityiskohtien lisääminen, jotka korostavat, miten tekoäly on päätynyt tulokseen. Katsojan täytyy olla tietoinen siitä, että tulos on tekoälyn generoima eikä ihmisen. Esimerkiksi sanan sijaan "Aloita keskustelu ohjaajasi kanssa nyt" sanotaan "Käytä tekoälyohjaajaa, joka mukautuu tarpeisiisi ja auttaa sinut oppimaan omaan tahtiisi."
 
-![sovelluksen aloitussivu, jossa selitetään tekoälysovellusten toimintaa](../../../translated_images/fi/explanability-in-ai.134426a96b498fbf.webp)
+![sovelluksen aloitussivu, jossa selitettävyys tekoälysovelluksissa on selkeästi havainnollistettu](../../../translated_images/fi/explanability-in-ai.134426a96b498fbf.webp)
 
-Toinen esimerkki on, miten tekoäly käyttää käyttäjän ja henkilökohtaisia tietoja. Esimerkiksi opiskelijapersoonalla voi olla rajoituksia, jotka perustuvat hänen rooliinsa. Tekoäly ei ehkä pysty paljastamaan vastauksia kysymyksiin, mutta voi auttaa käyttäjää pohtimaan, miten hän voi ratkaista ongelman.
+Toinen esimerkki on, kuinka tekoäly käyttää käyttäjä- ja henkilötietoja. Esimerkiksi käyttäjällä, jolla on opiskelijan rooli, voi olla rajoituksia roolinsa perusteella. Tekoäly ei välttämättä voi paljastaa vastauksia kysymyksiin, mutta voi auttaa ohjaamalla käyttäjää ajattelemaan, miten ongelman voi ratkaista.
 
-![Tekoäly vastaa kysymyksiin perustuen persoonaan](../../../translated_images/fi/solving-questions.b7dea1604de0cbd2.webp)
+![tekoäly vastaa kysymyksiin roolin perusteella](../../../translated_images/fi/solving-questions.b7dea1604de0cbd2.webp)
 
-Viimeinen tärkeä osa selitettävyydessä on selitysten yksinkertaistaminen. Opiskelijat ja opettajat eivät välttämättä ole tekoälyn asiantuntijoita, joten selitykset siitä, mitä sovellus voi tai ei voi tehdä, tulisi yksinkertaistaa ja tehdä helposti ymmärrettäviksi.
+Selitettävyyden viimeinen tärkeä osa-alue on selitysten yksinkertaistaminen. Opiskelijat ja opettajat eivät välttämättä ole tekoälyasiantuntijoita, joten selitysten siitä, mitä sovellus voi tai ei voi tehdä, tulisi olla yksinkertaisia ja helposti ymmärrettäviä.
 
 ![yksinkertaistetut selitykset tekoälyn kyvyistä](../../../translated_images/fi/simplified-explanations.4679508a406c3621.webp)
 
 ### Hallinta
 
-Generatiivinen tekoäly luo yhteistyötä tekoälyn ja käyttäjän välillä, jossa esimerkiksi käyttäjä voi muokata kehotteita saadakseen erilaisia tuloksia. Lisäksi, kun tulos on luotu, käyttäjien tulisi pystyä muokkaamaan tuloksia, mikä antaa heille tunteen hallinnasta. Esimerkiksi Bingissä voit muokata kehotettasi muodon, sävyn ja pituuden perusteella. Lisäksi voit tehdä muutoksia tulokseen ja muokata sitä, kuten alla on esitetty:
+Generatiivinen tekoäly luo yhteistyön tekoälyn ja käyttäjän välille, jossa esimerkiksi käyttäjä voi muokata pyyntöjä erilaisia tuloksia varten. Lisäksi, kun tulos on luotu, käyttäjien tulisi pystyä muokkaamaan tuloksia, mikä antaa heille hallinnan tunteen. Esimerkiksi käyttäessäsi Microsoft Copilotia (entinen Bing Chat), voit räätälöidä pyyntöäsi muodon, sävyn ja pituuden mukaan. Lisäksi voit lisätä muutoksia tulokseesi ja muokata sitä alla kuvatulla tavalla:
 
-![Bing-hakutulokset, joissa on vaihtoehtoja kehotteen ja tuloksen muokkaamiseen](../../../translated_images/fi/bing1.293ae8527dbe2789.webp)
+![Bing-hakutulokset, joissa on vaihtoehtoja muokata pyyntöä ja tulosta](../../../translated_images/fi/bing1.293ae8527dbe2789.webp)
 
-Toinen Bingin ominaisuus, joka antaa käyttäjälle hallinnan sovelluksesta, on mahdollisuus valita, haluaako käyttäjä antaa tekoälyn käyttää hänen dataansa vai ei. Esimerkiksi koulusovelluksessa opiskelija saattaa haluta käyttää muistiinpanojaan sekä opettajan materiaaleja kertaamiseen.
+Toinen ominaisuus Microsoft Copilotissa, joka antaa käyttäjälle hallintaa sovellukseen, on mahdollisuus valita, hyväksyykö vai hylkääkö tiedonkeruun tekoälylle. Koulusovelluksessa opiskelija saattaa haluta käyttää sekä omia muistiinpanojaan että opettajien materiaaleja kertausmateriaalina.
 
-![Bing-hakutulokset, joissa on vaihtoehtoja kehotteen ja tuloksen muokkaamiseen](../../../translated_images/fi/bing2.309f4845528a88c2.webp)
+![Bing-hakutulokset, joissa on vaihtoehtoja muokata pyyntöä ja tulosta](../../../translated_images/fi/bing2.309f4845528a88c2.webp)
 
-> Tekoälysovelluksia suunniteltaessa tarkoituksellisuus on avainasemassa, jotta käyttäjät eivät luota liikaa ja aseta epärealistisia odotuksia sen kyvyille. Yksi tapa tehdä tämä on luoda kitkaa kehotteiden ja tulosten välille. Muistuta käyttäjää, että kyseessä on tekoäly eikä toinen ihminen.
+> Suunnitellessasi tekoälysovelluksia tarkoituksenmukaisuus on avain siihen, etteivät käyttäjät luota liikaa asettaen epärealistisia odotuksia sen kyvyistä. Yksi tapa tehdä tämä on luoda kitkaa pyyntöjen ja tulosten välille. Muistuttaa käyttäjää, että kyseessä on tekoäly eikä ihminen.
 
-## Tekoälysovellusten suunnittelu yhteistyön ja palautteen näkökulmasta
+## Tekoälysovellusten suunnittelu yhteistyötä ja palautetta varten
 
-Kuten aiemmin mainittiin, generatiivinen tekoäly luo yhteistyötä käyttäjän ja tekoälyn välillä. Useimmat vuorovaikutukset tapahtuvat, kun käyttäjä syöttää kehotteen ja tekoäly tuottaa tuloksen. Entä jos tulos on virheellinen? Miten sovellus käsittelee virheitä, jos niitä ilmenee? Syyttääkö tekoäly käyttäjää vai selittääkö se virheen?
+Kuten aiemmin mainittiin, generatiivinen tekoäly luo yhteistyön käyttäjän ja tekoälyn välille. Useimmat vuorovaikutukset koostuvat käyttäjän syöttämästä pyynnöstä ja tekoälyn tuottamasta vastauksesta. Entä jos tulos on virheellinen? Miten sovellus käsittelee virheet, jos niitä ilmenee? Syyttääkö tekoäly käyttäjää vai käyttääkö se aikaa selittääkseen virheen?
 
-Tekoälysovellusten tulisi olla rakennettu vastaanottamaan ja antamaan palautetta. Tämä ei ainoastaan auta tekoälyjärjestelmää parantumaan, vaan myös rakentaa luottamusta käyttäjien kanssa. Palautesilmukka tulisi sisällyttää suunnitteluun, esimerkiksi yksinkertainen peukku ylös tai alas tuloksen kohdalla.
+Tekoälysovellukset tulisi rakentaa siten, että ne voivat vastaanottaa ja antaa palautetta. Tämä auttaa paitsi tekoälyjärjestelmän parantamista myös rakentaa luottamusta käyttäjien kanssa. Palautesilmukka tulisi ottaa suunnitteluun mukaan, esimerkiksi yksinkertainen peukku ylös tai alas tuloksesta.
 
-Toinen tapa käsitellä tätä on selkeästi viestiä järjestelmän kyvyt ja rajoitukset. Kun käyttäjä tekee virheen pyytäessään jotain, joka ylittää tekoälyn kyvyt, tulisi olla tapa käsitellä tämä, kuten alla on esitetty.
+Toinen tapa käsitellä tätä on selkeästi viestiä järjestelmän kyvyt ja rajoitukset. Kun käyttäjä tekee virheen pyytäen jotain tekoälyn kykyjen ulkopuolelta, pitäisi olla myös keino käsitellä tämä, kuten alla kuvataan.
 
 ![Palautteen antaminen ja virheiden käsittely](../../../translated_images/fi/feedback-loops.7955c134429a9466.webp)
 
-Järjestelmävirheet ovat yleisiä sovelluksissa, joissa käyttäjä saattaa tarvita apua tiedoissa, jotka ovat tekoälyn ulottumattomissa, tai sovelluksella voi olla rajoituksia siitä, kuinka monta kysymystä/aihetta käyttäjä voi luoda tiivistelmiä. Esimerkiksi tekoälysovellus, joka on koulutettu rajallisilla aiheilla, kuten historia ja matematiikka, ei ehkä pysty käsittelemään maantiedon kysymyksiä. Tämän lieventämiseksi tekoälyjärjestelmä voi antaa vastauksen, kuten: "Valitettavasti tuotteemme on koulutettu seuraavilla aiheilla....., en pysty vastaamaan kysymykseesi."
+Järjestelmävirheet ovat yleisiä sovelluksissa, joissa käyttäjä saattaa tarvita apua tekoälyn toiminnan ulkopuolella tai sovelluksella voi olla rajoitus siitä, kuinka monta kysymystä/aihetta käyttäjä voi tiivistää. Esimerkiksi tekoälysovellus, joka on koulutettu rajatulla määrällä aineistoa kuten Historiaa ja Matematiikkaa, ei välttämättä pysty käsittelemään maantietoon liittyviä kysymyksiä. Tämän välttämiseksi tekoälyjärjestelmä voi antaa vastauksen kuten: "Valitettavasti tuotteemme on koulutettu seuraavilla ainealueilla..., en pysty vastaamaan esittämääsi kysymykseen."
 
-Tekoälysovellukset eivät ole täydellisiä, joten ne ovat alttiita virheille. Kun suunnittelet sovelluksiasi, sinun tulisi varmistaa, että luot tilaa käyttäjien palautteelle ja virheiden käsittelylle tavalla, joka on yksinkertainen ja helposti ymmärrettävä.
+Tekoälysovellukset eivät ole täydellisiä, joten ne tekevät virheitä. Suunnitellessasi sovelluksiasi sinun tulisi varmistaa, että niissä on tilaa käyttäjäpalautteelle ja virheiden käsittelylle tavalla, joka on yksinkertainen ja helposti selitettävissä.
 
 ## Tehtävä
 
-Ota mikä tahansa tekoälysovellus, jonka olet tähän mennessä rakentanut, ja harkitse seuraavien vaiheiden toteuttamista sovelluksessasi:
+Ota mikä tahansa tähän mennessä rakentamasi tekoälysovellus ja harkitse seuraavien vaiheiden toteuttamista sovelluksessasi:
 
 - **Miellyttävyys:** Mieti, miten voit tehdä sovelluksestasi miellyttävämmän. Lisäätkö selityksiä kaikkialle? Kannustatko käyttäjää tutkimaan? Miten muotoilet virheilmoituksesi?
 
-- **Käytettävyys:** Rakennatko verkkosovellusta. Varmista, että sovelluksesi on navigoitavissa sekä hiirellä että näppäimistöllä.
+- **Käytettävyys:** Rakennatko web-sovellusta. Varmista, että sovellus on navigoitavissa sekä hiirellä että näppäimistöllä.
 
-- **Luottamus ja läpinäkyvyys:** Älä luota tekoälyyn täysin ja sen tuloksiin, mieti, miten voisit lisätä ihmisen prosessiin varmistamaan tulokset. Mieti ja toteuta myös muita tapoja saavuttaa luottamus ja läpinäkyvyys.
+- **Luottamus ja läpinäkyvyys:** Älä luota tekoälyyn ja sen tuloksiin täysin, mieti, miten lisäisit ihmisen prosessiin tulosten varmistaamiseksi. Pohdi ja toteuta myös muita tapoja saavuttaa luottamusta ja läpinäkyvyyttä.
 
-- **Hallinta:** Anna käyttäjälle hallinta siitä, mitä dataa hän antaa sovellukselle. Toteuta tapa, jolla käyttäjä voi valita, haluaako hän antaa datansa tekoälyn käyttöön vai ei.
+- **Hallinta:** Anna käyttäjälle mahdollisuus hallita sovellukselle antamiaan tietoja. Toteuta tapa, jolla käyttäjä voi halutessaan hyväksyä tai hylätä tiedonkeruun tekoälysovelluksessa.
 
-<!-- ## [Oppitunnin jälkeinen kysely](../../../12-designing-ux-for-ai-applications/quiz-url) -->
+<!-- ## [Luentotehtävän jälkeinen tietovisa](../../../12-designing-ux-for-ai-applications/quiz-url) -->
 
 ## Jatka oppimistasi!
 
-Kun olet suorittanut tämän oppitunnin, tutustu [Generatiivisen tekoälyn oppimiskokoelmaan](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi generatiivisen tekoälyn tietämyksesi kehittämistä!
+Oppitunnin suorittamisen jälkeen tutustu [Generatiivisen tekoälyn oppimiskokoelmaamme](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kehittääksesi generatiivista tekoälytietämystäsi edelleen!
 
-Siirry oppituntiin 13, jossa tarkastelemme [tekoälysovellusten suojaamista](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Suuntaa oppituntiin 13, jossa käsittelemme, miten [suojataan tekoälysovelluksia](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vastuuvapauslauseke**:
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, otathan huomioon, että automaattiset käännökset saattavat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäiskielellä on virallinen lähde. Tärkeissä asioissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,37 +1,37 @@
-# Patobulintų funkcijų ir patobulinimų gairių planas
+# Patobulintų funkcijų ir patobulinimų planas
 
-Šiame dokumente pateikiami rekomenduojami patobulinimai ir patobulinimai pradedantiesiems skirtam Generatyviosios dirbtinio intelekto kursui, remiantis išsamia kodo apžvalga ir pramonės geriausių praktikų analize.
+Šiame dokumente apžvelgiami rekomenduojami patobulinimai ir patobulinimai Generatyviosios AI pradedantiesiems kursui, remiantis išsamia kodo peržiūra ir pramonės gerosios praktikos analize.
 
 ## Santrauka
 
-Codebase buvo ištirtas dėl saugumo, kodo kokybės ir mokymo efektyvumo. Šiame dokumente pateikiamos rekomendacijos dėl skubių pataisymų, trumpalaikių patobulinimų ir ateities tobulinimų.
+Kodo bazė buvo analizuojama dėl saugumo, kodo kokybės ir mokomojo efektyvumo. Šiame dokumente pateikiamos rekomendacijos dėl skubaus taisymo, trumpalaikių patobulinimų ir ateities atnaujinimų.
 
 ---
 
 ## 1. Saugumo patobulinimai (Prioritetas: Kritinis)
 
-### 1.1 Skubios pataisos (įvykdytos)
+### 1.1 Skubūs pataisymai (Atlikta)
 
 | Problema | Paveikti failai | Būsena |
-|----------|-----------------|---------|
-| Įkoduotas SECRET_KEY | `05-advanced-prompts/python/aoai-solution.py` | Sutvarkyta |
-| Trūksta aplinkos kintamųjų validacijos | Keletas JS/TS failų | Sutvarkyta |
-| Nesaugūs funkcijų kvietimai | `11-integrating-with-function-calling/js-githubmodels/app.js` | Sutvarkyta |
-| Failų tvarkyklių nutekėjimas | `08-building-search-applications/scripts/` | Sutvarkyta |
-| Trūksta užklausų laiko limitų | `09-building-image-applications/python/` | Sutvarkyta |
+|-------|----------------|--------|
+| Užkoduotas SECRET_KEY | `05-advanced-prompts/python/aoai-solution.py` | Ištaisyta |
+| Trūksta aplinkos kintamųjų validacijos | Keli JS/TS failai | Ištaisyta |
+| Nesaugūs funkcijų kvietimai | `11-integrating-with-function-calling/js-githubmodels/app.js` | Ištaisyta |
+| Failų valdiklių nutekėjimas | `08-building-search-applications/scripts/` | Ištaisyta |
+| Trūksta užklausų laiko ribojimų | `09-building-image-applications/python/` | Ištaisyta |
 
 ### 1.2 Rekomenduojamos papildomos saugumo funkcijos
 
 1. **Ribojimo pavyzdžiai**
-   - Pridėti pavyzdinį kodą, rodantį, kaip įgyvendinti užklausų ribojimą API kvietimams
-   - Demonstruoti eksponentinio atsitraukimo (exponential backoff) modelius
+   - Pridėti pavyzdinį kodą, kaip įgyvendinti užklausų greičio ribojimą API kvietimams
+   - Demonstruoti eksponentinio atidėjimo (exponential backoff) modelius
 
-2. **API raktų sukimasis**
-   - Pridėti dokumentaciją apie geriausias praktikas API raktų sukimui
-   - Įtraukti pavyzdžių, naudojant Azure Key Vault ar panašias paslaugas
+2. **API raktų keitimas**
+   - Pridėti dokumentaciją apie gerąją praktiką API raktų keitimui
+   - Įtraukti pavyzdžius, kaip naudoti Azure Key Vault ar panašias paslaugas
 
-3. **Turinio saugumo integracija**
-   - Pridėti pavyzdžių su Azure Content Safety API naudojimu
+3. **Turinio saugos integracija**
+   - Pridėti pavyzdžius naudojant Azure Content Safety API
    - Demonstruoti įėjimo/išėjimo moderavimo modelius
 
 ---
@@ -41,17 +41,17 @@ Codebase buvo ištirtas dėl saugumo, kodo kokybės ir mokymo efektyvumo. Šiame
 ### 2.1 Pridėti konfigūracijos failai
 
 | Failas | Paskirtis |
-|--------|-----------|
-| `.eslintrc.json` | JavaScript/TypeScript lintingo taisyklės |
+|------|---------|
+| `.eslintrc.json` | JavaScript/TypeScript linterio taisyklės |
 | `.prettierrc` | Kodo formatavimo standartai |
 | `pyproject.toml` | Python įrankių konfigūracija (Black, Ruff, mypy) |
 
-### 2.2 Sukurti bendri įrankiai
+### 2.2 Sukurtos bendrinamos paslaugos
 
 Naujas `shared/python/` modulis su:
-- `env_utils.py` - aplinkos kintamųjų valdymas
-- `input_validation.py` - įvesties validacija ir sanitarizacija
-- `api_utils.py` - saugūs API užklausų įvyniojimai
+- `env_utils.py` - Aplinkos kintamųjų valdymas
+- `input_validation.py` - Įvesties validacija ir sanitizacija
+- `api_utils.py` - Saugūs API užklausų įvyniojimai
 
 ### 2.3 Rekomenduojami kodo patobulinimai
 
@@ -63,8 +63,8 @@ Naujas `shared/python/` modulis su:
    - Pridėti docstring’us visoms Python funkcijoms
    - Pridėti JSDoc komentarus visoms JavaScript/TypeScript funkcijoms
 
-3. **Testavimo sistema**
-   - Pridėti pytest konfigūraciją ir pavyzdinius testus
+3. **Testavimo karkasas**
+   - Pridėti pytest konfigūraciją ir pavyzdinius testus _(atlikta: pytest konfigūracija `pyproject.toml`; pavyzdiniai testai bendrinamoms paslaugoms [`tests/`](../../../tests), vykdomi CI aplinkoje)_
    - Pridėti Jest konfigūraciją JavaScript/TypeScript
 
 ---
@@ -73,62 +73,67 @@ Naujas `shared/python/` modulis su:
 
 ### 3.1 Naujos pamokų temos
 
-1. **Saugumas DI programose** (Siūloma 22 pamoka)
-   - Užklausų injekcijos atakos ir apsauga
+1. **Saugumas AI programose** (siūloma pamoka 22)
+   - Prompto įterpimo atakos ir gynyba
    - API raktų valdymas
    - Turinio moderavimas
-   - Užklausų ribojimas ir piktnaudžiavimo prevencija
+   - Greičio ribojimas ir piktnaudžiavimo prevencija
 
-2. **Produkcijos diegimas** (Siūloma 23 pamoka)
+2. **Produkcijos diegimas** (siūloma pamoka 23)
    - Docker konteinerizacija
-   - CI/CD vamzdynai
-   - Stebėjimas ir žurnalo pildymas
-   - Kaštų valdymas
+   - CI/CD pipingai
+   - Stebėjimas ir žurnalas
+   - Sąnaudų valdymas
 
-3. **Pažangios RAG technikos** (Siūloma 24 pamoka)
-   - Hibridinė paieška (raktažodžių + semantinė)
-   - Perklasifikavimo strategijos
-   - Daugiaplomė RAG
+3. **Išplėstiniai RAG metodai** (siūloma pamoka 24)
+   - Hibridinis paieška (raktažodis + semantika)
+   - Perreitingavimo strategijos
+   - Multimodalinė RAG
    - Vertinimo metrika
 
 ### 3.2 Esamų pamokų patobulinimai
 
 | Pamoka | Rekomenduojamas patobulinimas |
-|--------|-------------------------------|
+|--------|------------------------|
 | 06 - Teksto generavimas | Pridėti srautinio atsakymo pavyzdžius |
-| 07 - Pokalbių programos | Pridėti pokalbio atminties modelius |
-| 08 - Paieškos programos | Pridėti vektorių duomenų bazės palyginimą |
-| 09 - Vaizdų generavimas | Pridėti vaizdų redagavimo/variacijų pavyzdžius |
+| 07 - Pokalbių programos | Pridėti pokalbių atminties modelius |
+| 08 - Paieškos programos | Pridėti vektorinių duomenų bazių palyginimą |
+| 09 - Vaizdų generavimas | Pridėti vaizdų redagavimo/pokyčių pavyzdžius |
 | 11 - Funkcijų kvietimas | Pridėti lygiagretų funkcijų kvietimą |
-| 15 - RAG | Pridėti fragmentavimo strategijų palyginimą |
-| 17 - DI agentai | Pridėti daugiaagentinę orkestraciją |
+| 15 - RAG | Pridėti dalių (chunking) strategijų palyginimą |
+| 17 - AI agentai | Pridėti daugiaprogramių agentų koordinavimą |
 
 ---
 
 ## 4. API modernizavimas
 
-### 4.1 Pasenusių API modelių atnaujinimas
+### 4.1 Pasenę API modeliai (migracija atlikta)
 
-| Senas modelis | Naujas modelis | Paveikti failai |
-|---------------|---------------|-----------------|
-| `openai.api_type = "azure"` | `AzureOpenAI()` klientas | Keletas skriptų `08-building-search-applications/` |
-| `openai.ChatCompletion.create()` | `client.chat.completions.create()` | Keletas notebook’ų |
-| `df.append()` (pandas) | `pd.concat()` | RAG notebook’as |
+Visi Python ir TypeScript **chat** pavyzdžiai buvo perkelti nuo Chat Completions API prie **Responses API** (`client.responses.create(...)` → `response.output_text`).
 
-### 4.2 Naujos API funkcijos demonstravimas
+| Senasis modelis | Naujas modelis | Būsena |
+|-------------|-------------|--------|
+| `openai.api_type = "azure"` / `AzureOpenAI()` (chat) | `OpenAI(base_url="<endpoint>/openai/v1/")` (Responses API) | Atlikta |
+| `openai.ChatCompletion.create()` / `client.chat.completions.create()` | `client.responses.create(input=...)` → `response.output_text` | Atlikta |
+| `@azure/openai` `OpenAIClient.getChatCompletions()` (TypeScript) | `openai` paketas `client.responses.create()` → `response.output_text` | Atlikta |
+| `df.append()` (pandas) | `pd.concat()` | Atlikta |
 
-1. **Struktūruoti atsakymai** (OpenAI)
+> **Pastaba:** Microsoft Foundry Models pavyzdžiai, naudojantys `azure-ai-inference` / `@azure-rest/ai-inference` SDK (`client.complete()`) lieka naudoti Model Inference API, kuris nepalaiko Responses API. `AzureOpenAI()` yra tyčia paliktas ten, kur vis dar teisingas (embedding’ai ir vaizdų generavimas).
+
+### 4.2 Naujos API funkcijos demonstravimui
+
+1. **Struktūruotos išvestys** (OpenAI)
    - JSON režimas
-   - Funkcijų kvietimas su griežtomis schemomis
+   - Funkcijų kvietimas su griežtai apibrėžtomis schemomis
 
-2. **Vizio galimybės**
-   - Vaizdų analizė su GPT-4V
-   - Daugiaplomiai užklausos modeliai
+2. **Vizijos galimybės**
+   - Vaizdų analizė su GPT-4o (vizija)
+   - Multimodalūs promptai
 
-3. **Asistentų API**
+3. **Responses API įmontuoti įrankiai** (pakeičia senąjį Assistants API)
    - Kodo interpretatorius
    - Failų paieška
-   - Individualūs įrankiai
+   - Tinklo paieška ir pritaikyti įrankiai
 
 ---
 
@@ -136,7 +141,7 @@ Naujas `shared/python/` modulis su:
 
 ### 5.1 CI/CD patobulinimai
 
-Esami darbo srautai apdoroja markdown validaciją. Rekomenduojamos pridėtinės dalys:
+Įgyvendinta [`.github/workflows/code-quality.yml`](../../../.github/workflows/code-quality.yml): Python lintinimo/formatavimo (Ruff + Black) taisyklės yra **privalomos** palaikomame `shared/` modulyje ir vykdomos kaip **teisės patarimas** likusioje kurso dalyje, taip pat patarimų ESLint peržiūra JavaScript/TypeScript. Iliustracinė bazė buvo:
 
 ```yaml
 # .github/workflows/code-quality.yml
@@ -169,6 +174,8 @@ jobs:
 
 ### 5.2 Saugumo skenavimas
 
+Įgyvendinta [`.github/workflows/security.yml`](../../../.github/workflows/security.yml): CodeQL analizė Python ir JavaScript/TypeScript (push, pull request bei savaitinis tvarkaraštis) papildomai su priklausomybių peržiūra pull request metu. Iliustracinė bazė buvo:
+
 ```yaml
 # .github/workflows/security.yml
 name: Security Scan
@@ -198,7 +205,7 @@ jobs:
 
 ### 6.1 DevContainer patobulinimai
 
-Atnaujinti `.devcontainer/devcontainer.json`:
+Įgyvendinta [`.devcontainer/devcontainer.json`](../../../.devcontainer/devcontainer.json) ir [`.devcontainer/post-create.sh`](../../../.devcontainer/post-create.sh): konteineris dabar komplektuoja Pylance, Black formatavimo įrankį, Ruff, ESLint, Prettier ir Copilot plėtinius, įjungia formatavimą saugojimo metu susietą su repo Black/Prettier konfigūracija, ir įdiegia kūrėjo įrankius (`ruff`, `black`, `mypy`, `pytest`), kad [code-quality workflow](../../../.github/workflows/code-quality.yml) būtų galima pakartoti lokaliai. `mcr.microsoft.com/devcontainers/universal` bazinis paveikslėlis jau apima Python ir Node, tad papildomos funkcijos nereikalingos. Iliustracinė bazė buvo:
 
 ```json
 {
@@ -232,120 +239,117 @@ Atnaujinti `.devcontainer/devcontainer.json`:
 }
 ```
 
-### 6.2 Interaktyvus žaidimų laukas
+### 6.2 Interaktyvi pavyzdžių aplinka
 
-Rekomenduojama pridėti:
-- Jupyter notebook’us su iš anksto įrašytais API raktais (per aplinkos kintamuosius)
-- Gradio/Streamlit demonstracijas vizualiems mokymosi stiliams
-- Interaktyvias viktorinas žinių tikrinimui
+Siūloma pridėti:
+- Jupyter užrašų knygeles su iš anksto įkrautais API raktais (per aplinkos kintamuosius)
+- Gradio/Streamlit demonstracijas vizualiems mokiniams
+- Interaktyvias viktorinas žinių įvertinimui
 
 ---
 
 ## 7. Daugiakalbė palaikymas
 
-### 7.1 Dabartinis kalbų aprėptis
+### 7.1 Esama kalbų aprėptis
 
-| Technologija | Įtrauktos pamokos | Būsena |
-|--------------|-------------------|--------|
-| Python | Visos | Užbaigta |
+| Technologija | Apimtis pamokų | Būsena |
+|------------|-----------------|--------|
+| Python | Visos | Baigta |
 | TypeScript | 06-09, 11 | Iš dalies |
 | JavaScript | 06-08, 11 | Iš dalies |
 | .NET/C# | Kai kurios | Iš dalies |
 
-### 7.2 Rekomenduojamos papildomos kalbos
+### 7.2 Rekomenduojami papildymai
 
-1. **Go** - sparčiai auganti DI/ML įrankių kalba
-2. **Rust** - kritinėms našumo programoms
+1. **Go** - augantis AI/ML įrankių naudojimas
+2. **Rust** - našumo kritinėms programoms
 3. **Java/Kotlin** - verslo programoms
 
 ---
 
-## 8. Veikimo optimizavimai
+## 8. Veikimo optimizavimas
 
-### 8.1 Kodo lygio optimizacijos
+### 8.1 Kodo lygmens optimizacijos
 
 1. **Async/Await modeliai**
-   - Pridėti async pavyzdžius partijų apdorojimui
-   - Demonstruoti lygiagretinių API užklausų modelius
+   - Pridėti asinchroninių pavyzdžių partijų apdorojimui
+   - Demonstruoti lygiagrečius API kvietimus
 
 2. **Talpyklos strategijos**
-   - Pridėti įterpinių talpyklos pavyzdžius
-   - Demonstruoti atsakymų talpyklos modelius
+   - Pridėti įterpimų kešavimo pavyzdžius
+   - Demonstruoti atsakymų kešavimo modelius
 
-3. **Žetonų optimizavimas**
+3. **Tokenų optimizavimas**
    - Pridėti tiktoken naudojimo pavyzdžius
-   - Demonstruoti užklausų glaudinimo technikas
+   - Demonstruoti promptų suspaudimo technikas
 
-### 8.2 Kaštų optimizavimo pavyzdžiai
+### 8.2 Sąnaudų optimizavimo pavyzdžiai
 
-Pridėti pavyzdžius, rodant:
-- Modelių pasirinkimą pagal užduoties sudėtingumą
-- Užklausų inžineriją žetonų taupymui
-- Partijų apdorojimą masinėms operacijoms
+Pridėti pavyzdžius, demonstruojančius:
+- Modelio parinkimą pagal užduoties sudėtingumą
+- Promptų inžineriją dėl tokenų efektyvumo
+- Partišką apdorojimą didelėms operacijoms
 
 ---
 
 ## 9. Prieinamumas ir internacionalizacija
 
-### 9.1 Dabartinė vertimų būklė
+### 9.1 Esama vertimų būklė
 
-| Kalba | Būsena |
-|-------|--------|
-| Anglų | Užbaigta |
-| Kinų (supaprastinta) | Užbaigta |
-| Japonų | Užbaigta |
-| Korėjiečių | Užbaigta |
-| Ispanų | Iš dalies |
-| Portugalų | Iš dalies |
-| Turkų | Iš dalies |
-| Lenkų | Iš dalies |
+Visi vertimai yra **baigti** ir generuojami automatiškai naudojant [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst), kuris palaiko ir suderina daugiau nei 50 kalbų versijų kurso turinį su anglų šaltiniu. Išverstas turinys yra `translations/` kataloge, o lokalizuoti vaizdai – `translated_images/`; pilnas kalbų sąrašas paskelbtas repozitorijos README pradžioje.
 
-### 9.2 Prieinamumo gerinimai
+| Aspektas | Būsena |
+|--------|--------|
+| Vertimo aprėptis | Baigta — 50+ kalbų, visos pamokos |
+| Vertimo metodas | Automatizuotas per [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst) |
+| Sinchronizuojama su anglų šaltiniu | Taip — automatiškai regeneruojama |
 
-1. Pridėti alt tekstą visiems paveikslėliams
+### 9.2 Prieinamumo patobulinimai
+
+1. Pridėti alt tekstus visiems paveikslėliams
 2. Užtikrinti tinkamą sintaksės paryškinimą kodo pavyzdžiuose
-3. Pridėti vaizdo transkriptus visam vaizdo turiniui
+3. Pridėti vaizdo įrašų transkriptus visam vaizdo turiniui
 4. Užtikrinti spalvų kontrastą pagal WCAG gaires
 
 ---
 
 ## 10. Įgyvendinimo prioritetas
 
-### 1 etapas: Skubi (1-2 savaitės)
+### 1 fazė: Skubi (1–2 savaitės)
 - [x] Ištaisyti kritines saugumo problemas
 - [x] Pridėti kodo kokybės konfigūraciją
-- [x] Sukurti bendrus įrankius
+- [x] Sukurti bendrinamas paslaugas
 - [x] Dokumentuoti saugumo gaires
 
-### 2 etapas: Trumpalaikis (3-4 savaitės)
-- [ ] Atnaujinti pasenusius API modelius
-- [ ] Pridėti tipų anotacijas visiems Python failams
-- [ ] Pridėti CI/CD darbo srautus kodo kokybei
-- [ ] Sukurti saugumo skenavimo darbo srautą
+### 2 fazė: Trumpalaikė (3–4 savaitės)
+- [x] Atnaujinti pasenusius API modelius (Chat Completions → Responses API, Python + TypeScript)
+- [ ] Pridėti tipų anotacijas visiems Python failams (padaryta palaikomame `shared/` modulyje; pamokų pavyzdžiai palikti paprasti)
+- [x] Pridėti CI/CD darbo eigas kodo kokybei
+- [x] Sukurti saugumo skeno darbo eigą
 
-### 3 etapas: Vidutinis laikotarpis (2-3 mėn.)
+### 3 fazė: Vidutinės trukmės (2–3 mėnesiai)
 - [ ] Pridėti naują saugumo pamoką
-- [ ] Pridėti produkcijos diegimo pamoką
-- [ ] Pagerinti DevContainer nustatymą
+- [ ] Pridėti gamybos diegimo pamoką
+- [x] Patobulinti DevContainer konfigūraciją
 - [ ] Pridėti interaktyvias demonstracijas
 
-### 4 etapas: Ilgalaikis (4+ mėn.)
+### 4 fazė: Ilgalaikė (4 ir daugiau mėnesių)
 - [ ] Pridėti pažangią RAG pamoką
 - [ ] Išplėsti kalbų aprėptį
-- [ ] Pridėti išsamų testų rinkinį
+- [ ] Pridėti visapusišką testų rinkinį
 - [ ] Sukurti sertifikavimo programą
 
 ---
 
 ## Išvada
 
-Šis gairių planas pateikia struktūruotą požiūrį, kaip patobulinti Generatyviosios dirbtinio intelekto pradedantiesiems kursą. Sprendžiant saugumo problemas, modernizuojant API ir pridedant mokymo turinį, kursas geriau paruoš studentus realių DI programų kūrimui.
+Šis planas pateikia struktūruotą požiūrį į Generatyviosios AI pradedantiesiems kurso tobulinimą. Sprendžiant saugumo klausimus, modernizuojant API ir pridedant mokomąją medžiagą, kursas geriau pasiruoš kursantams realių AI programų kūrimui.
 
-Dėl klausimų ar indėlių prašome atidaryti problemą GitHub saugykloje.
+Dėl klausimų ar indėlių prašome atidaryti problemą GitHub repozitorijoje.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Atsakomybės atsisakymas**:  
-Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors stengiamės užtikrinti tikslumą, prašome turėti omenyje, kad automatizuoti vertimai gali turėti klaidų arba netikslumų. Originalus dokumentas gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojamas profesionalus žmogiškas vertimas. Mes neatsakome už jokius nesusipratimus ar neteisingą vertimą, kilusius naudojantis šiuo vertimu.
+**Atsakomybės apribojimas**:
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojama naudoti profesionalų žmogiškąjį vertimą. Mes neatsakome už jokius nesusipratimus ar neteisingą interpretaciją, kilusią naudojantis šiuo vertimu.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

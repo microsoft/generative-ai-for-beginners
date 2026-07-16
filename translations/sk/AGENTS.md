@@ -2,58 +2,58 @@
 
 ## Prehľad projektu
 
-Tento repozitár obsahuje komplexný 21-lekciový kurz, ktorý učí základy generatívnej AI a vývoj aplikácií. Kurz je určený pre začiatočníkov a pokrýva všetko od základných konceptov až po vytváranie aplikácií pripravených na produkciu.
+Tento repozitár obsahuje komplexný kurz s 21 lekciami, ktorý učí základy Generatívnej AI a vývoj aplikácií. Kurz je určený pre začiatočníkov a pokrýva všetko od základných konceptov až po vytváranie aplikácií pripravených na produkciu.
 
 **Kľúčové technológie:**
 - Python 3.9+ s knižnicami: `openai`, `python-dotenv`, `tiktoken`, `azure-ai-inference`, `pandas`, `numpy`, `matplotlib`
-- TypeScript/JavaScript s Node.js a knižnicami: `@azure/openai`, `@azure-rest/ai-inference`, `openai`
-- Azure OpenAI Service, OpenAI API a GitHub Models
-- Jupyter Notebooks pre interaktívne učenie
+- TypeScript/JavaScript s Node.js a knižnicami: `openai` (Azure OpenAI cez v1 endpoint + Responses API), `@azure-rest/ai-inference` (Microsoft Foundry Models)
+- Azure OpenAI Service, OpenAI API a Microsoft Foundry Models (GitHub Models budú ukončené koncom júla 2026)
+- Jupyter Notebooky pre interaktívne učenie
 - Dev Containery pre konzistentné vývojové prostredie
 
 **Štruktúra repozitára:**
-- 21 očíslovaných adresárov lekcií (00-21) obsahujúcich README súbory, príklady kódu a úlohy
-- Viacero implementácií: Python, TypeScript a občas .NET príklady
-- Adresár preklady s viac ako 40 jazykovými verziami
-- Centralizovaná konfigurácia cez súbor `.env` (použite `.env.copy` ako šablónu)
+- 21 adresárov s číslovanými lekciami (00-21) obsahujúcich README, príklady kódu a úlohy
+- Viaceré implementácie: príklady v Pythone, TypeScript a niekedy .NET
+- Adresár pre preklady s 40+ jazykovými verziami
+- Centralizovaná konfigurácia cez súbor `.env` (použiť `.env.copy` ako šablónu)
 
 ## Príkazy na nastavenie
 
 ### Počiatočné nastavenie repozitára
 
 ```bash
-# Clone the repository
+# Klonujte repozitár
 git clone https://github.com/microsoft/generative-ai-for-beginners.git
 cd generative-ai-for-beginners
 
-# Copy environment template
+# Skopírujte šablónu prostredia
 cp .env.copy .env
-# Edit .env with your API keys and endpoints
+# Upravte súbor .env s vašimi API kľúčmi a koncovými bodmi
 ```
 
 ### Nastavenie Python prostredia
 
 ```bash
-# Create virtual environment
+# Vytvorte virtuálne prostredie
 python3 -m venv venv
 
-# Activate virtual environment
-# On macOS/Linux:
+# Aktivujte virtuálne prostredie
+# Na macOS/Linux:
 source venv/bin/activate
-# On Windows:
+# Na Windows:
 venv\Scripts\activate
 
-# Install dependencies
+# Nainštalujte závislosti
 pip install -r requirements.txt
 ```
 
 ### Nastavenie Node.js/TypeScript
 
 ```bash
-# Install root-level dependencies (for documentation tooling)
+# Nainštalujte závislosti na úrovni root (pre dokumentačné nástroje)
 npm install
 
-# For individual lesson TypeScript examples, navigate to the specific lesson:
+# Pre jednotlivé príklady TypeScriptu z lekcií prejdite na konkrétnu lekciu:
 cd 06-text-generation-apps/typescript/recipe-app
 npm install
 ```
@@ -65,206 +65,207 @@ Repozitár obsahuje konfiguráciu `.devcontainer` pre GitHub Codespaces alebo VS
 1. Otvorte repozitár v GitHub Codespaces alebo VS Code s rozšírením Dev Containers
 2. Dev Container automaticky:
    - Nainštaluje Python závislosti zo súboru `requirements.txt`
-   - Spustí post-create skript (`.devcontainer/post-create.sh`)
+   - Spustí skript post-create (`.devcontainer/post-create.sh`)
    - Nastaví Jupyter kernel
 
-## Vývojový pracovný postup
+## Vývojový pracovný tok
 
 ### Premenné prostredia
 
 Všetky lekcie vyžadujúce prístup k API používajú premenné prostredia definované v `.env`:
 
 - `OPENAI_API_KEY` - Pre OpenAI API
-- `AZURE_OPENAI_API_KEY` - Pre Azure OpenAI Service
-- `AZURE_OPENAI_ENDPOINT` - URL endpointu Azure OpenAI
-- `AZURE_OPENAI_DEPLOYMENT` - Názov nasadenia modelu na dokončenie chatu
-- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Názov nasadenia modelu na embeddings
-- `AZURE_OPENAI_API_VERSION` - Verzia API (predvolené: `2024-02-01`)
-- `HUGGING_FACE_API_KEY` - Pre modely Hugging Face
-- `GITHUB_TOKEN` - Pre GitHub Models
+- `AZURE_OPENAI_API_KEY` - Pre Azure OpenAI v Microsoft Foundry (Azure OpenAI Service je teraz súčasťou Microsoft Foundry: https://ai.azure.com)
+- `AZURE_OPENAI_ENDPOINT` - URL endpoint Azure OpenAI (Foundry resource endpoint)
+- `AZURE_OPENAI_DEPLOYMENT` - Názov nasadenia modelu chat completion
+- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Názov nasadenia modelu embeddings
+- `AZURE_OPENAI_API_VERSION` - Verzia API (predvolené: `2024-10-21`)
+- `HUGGING_FACE_API_KEY` - Pre Hugging Face modely
+- `AZURE_INFERENCE_ENDPOINT` - Endpoint Microsoft Foundry Models (katalóg modelov od viacerých poskytovateľov)
+- `AZURE_INFERENCE_CREDENTIAL` - API kľúč pre Microsoft Foundry Models (nahrádza končiaci sa `GITHUB_TOKEN`)
 
-### Spúšťanie Python príkladov
+### Spustenie Python príkladov
 
 ```bash
-# Navigate to lesson directory
+# Prejdite do adresára lekcie
 cd 06-text-generation-apps/python
 
-# Run a Python script
+# Spustite Python skript
 python aoai-app.py
 ```
 
-### Spúšťanie TypeScript príkladov
+### Spustenie TypeScript príkladov
 
 ```bash
-# Navigate to TypeScript app directory
+# Prejdite do adresára aplikácie TypeScript
 cd 06-text-generation-apps/typescript/recipe-app
 
-# Build the TypeScript code
+# Zostavte kód TypeScript
 npm run build
 
-# Run the application
+# Spustite aplikáciu
 npm start
 ```
 
-### Spúšťanie Jupyter Notebooks
+### Spustenie Jupyter Notebookov
 
 ```bash
-# Start Jupyter in the repository root
+# Spustite Jupyter v koreňovom adresári repozitára
 jupyter notebook
 
-# Or use VS Code with Jupyter extension
+# Alebo použite VS Code s rozšírením Jupyter
 ```
 
 ### Práca s rôznymi typmi lekcií
 
 - **Lekcie "Learn"**: Zamerané na dokumentáciu README.md a koncepty
-- **Lekcie "Build"**: Obsahujú funkčné príklady kódu v Pythone a TypeScripte
+- **Lekcie "Build"**: Obsahujú funkčné príklady kódu v Pythone a TypeScript
 - Každá lekcia má README.md s teóriou, prehľadom kódu a odkazmi na video obsah
 
-## Štandardy kódu
+## Pravidlá štýlu kódu
 
 ### Python
 
 - Používajte `python-dotenv` na správu premenných prostredia
-- Importujte knižnicu `openai` na interakciu s API
+- Importujte knižnicu `openai` pre interakcie s API
 - Používajte `pylint` na lintovanie (niektoré príklady obsahujú `# pylint: disable=all` pre zjednodušenie)
-- Dodržiavajte konvencie pomenovania PEP 8
-- Uchovávajte prihlasovacie údaje API v súbore `.env`, nikdy nie v kóde
+- Dodržiavajte pomenovacie konvencie podľa PEP 8
+- Ukladajte API prihlasovacie údaje do súboru `.env`, nikdy nie priamo do kódu
 
 ### TypeScript
 
-- Používajte balík `dotenv` na premenné prostredia
+- Používajte balík `dotenv` pre premenné prostredia
 - Konfigurácia TypeScript v `tsconfig.json` pre každú aplikáciu
-- Používajte `@azure/openai` alebo `@azure-rest/ai-inference` pre služby Azure
-- Používajte `nodemon` na vývoj s automatickým načítaním
-- Pred spustením zostavte: `npm run build` a potom `npm start`
+- Používajte balík `openai` pre Azure OpenAI (nastavte klienta na endpoint `/openai/v1/` a volajte `client.responses.create`); používajte `@azure-rest/ai-inference` pre Microsoft Foundry Models
+- Používajte `nodemon` pre vývoj s automatickým znovunačítaním
+- Pred spustením najprv zostavte: `npm run build` potom `npm start`
 
 ### Všeobecné konvencie
 
-- Udržujte príklady kódu jednoduché a edukatívne
-- Zahrňte komentáre vysvetľujúce kľúčové koncepty
+- Udržiavajte príklady kódu jednoduché a vzdelávacie
+- Pridajte komentáre vysvetľujúce kľúčové koncepty
 - Kód každej lekcie by mal byť samostatný a spustiteľný
-- Používajte konzistentné pomenovanie: predpona `aoai-` pre Azure OpenAI, `oai-` pre OpenAI API, `githubmodels-` pre GitHub Models
+- Používajte konzistentné pomenovanie: prefix `aoai-` pre Azure OpenAI, `oai-` pre OpenAI API, `githubmodels-` pre Microsoft Foundry Models (legacy prefix z éry GitHub Models je zachovaný)
 
-## Štandardy dokumentácie
+## Pravidlá dokumentácie
 
 ### Štýl Markdown
 
-- Všetky URL musia byť obalené vo formáte `[text](../../url)` bez dodatočných medzier
-- Relatívne odkazy musia začínať `./` alebo `../`
-- Všetky odkazy na domény Microsoft musia obsahovať sledovacie ID: `?WT.mc_id=academic-105485-koreyst`
-- Žiadne krajiny špecifické lokality v URL (vyhnite sa `/en-us/`)
-- Obrázky uložené v priečinku `./images` s popisnými názvami
+- Všetky URL musia byť v tvare `[text](../../url)` bez pridaných medzier
+- Relatívne odkazy musia začínať na `./` alebo `../`
+- Všetky odkazy na Microsoft domény musia obsahovať sledovací ID: `?WT.mc_id=academic-105485-koreyst`
+- V URL neuvádzajte lokálne špecifické krajiny (vyhnite sa `/en-us/`)
+- Obrázky ukladajte v priečinku `./images` s popisnými názvami
 - Používajte anglické znaky, čísla a pomlčky v názvoch súborov
 
 ### Podpora prekladov
 
-- Repozitár podporuje viac ako 40 jazykov prostredníctvom automatizovaných GitHub Actions
-- Preklady sú uložené v adresári `translations/`
+- Repozitár podporuje 40+ jazykov cez automatizované GitHub Actions
+- Preklady sa ukladajú v priečinku `translations/`
 - Neposielajte čiastočné preklady
 - Strojové preklady nie sú akceptované
-- Preložené obrázky sú uložené v adresári `translated_images/`
+- Preložené obrázky sú v priečinku `translated_images/`
 
-## Testovanie a validácia
+## Testovanie a overovanie
 
 ### Kontroly pred odoslaním
 
-Tento repozitár používa GitHub Actions na validáciu. Pred odoslaním PR:
+Tento repozitár používa GitHub Actions na overovanie. Pred odoslaním PR:
 
-1. **Kontrola odkazov v Markdown**:
+1. **Skontrolujte Markdown odkazy**:
    ```bash
-   # The validate-markdown.yml workflow checks:
-   # - Broken relative paths
-   # - Missing tracking IDs on paths
-   # - Missing tracking IDs on URLs
-   # - URLs with country locale
-   # - Broken external URLs
+   # Pracovný tok validate-markdown.yml kontroluje:
+   # - Poškodené relatívne cesty
+   # - Chýbajúce identifikátory sledovania na cestách
+   # - Chýbajúce identifikátory sledovania na URL adresách
+   # - URL adresy s miestnou lokalizáciou krajiny
+   # - Poškodené externé URL adresy
    ```
 
 2. **Manuálne testovanie**:
-   - Testujte Python príklady: Aktivujte venv a spustite skripty
-   - Testujte TypeScript príklady: `npm install`, `npm run build`, `npm start`
-   - Overte, že premenné prostredia sú správne nakonfigurované
-   - Skontrolujte, že API kľúče fungujú s príkladmi kódu
+   - Otestujte Python príklady: Aktivujte venv a spustite skripty
+   - Otestujte TypeScript príklady: `npm install`, `npm run build`, `npm start`
+   - Overte, že premenné prostredia sú správne nastavené
+   - Skontrolujte, či API kľúče fungujú s príkladmi kódu
 
 3. **Príklady kódu**:
-   - Uistite sa, že všetok kód funguje bez chýb
-   - Testujte s Azure OpenAI aj OpenAI API, ak je to možné
-   - Overte, že príklady fungujú s GitHub Models, kde je to podporované
+   - Zabezpečte, aby celý kód bežal bez chýb
+   - Testujte s Azure OpenAI aj OpenAI API, keď je to možné
+   - Overte, že príklady fungujú s Microsoft Foundry Models, kde sú podporované
 
-### Žiadne automatizované testy
+### Bez automatizovaných testov
 
-Toto je edukatívny repozitár zameraný na tutoriály a príklady. Neexistujú žiadne jednotkové alebo integračné testy na spustenie. Validácia je primárne:
-- Manuálne testovanie príkladov kódu
+Toto je vzdelávací repozitár zameraný na tutoriály a príklady. Žiadne jednotkové ani integračné testy sa nespúšťajú. Overovanie prebieha hlavne:
+- Manuálnym testovaním príkladov kódu
 - GitHub Actions na validáciu Markdown
-- Komunitná kontrola edukatívneho obsahu
+- Komunitným hodnotením vzdelávacieho obsahu
 
-## Pokyny pre Pull Requesty
+## Pravidlá pre Pull Requesty
 
 ### Pred odoslaním
 
-1. Testujte zmeny kódu v Pythone aj TypeScripte, ak je to možné
-2. Spustite validáciu Markdown (automaticky spustené pri PR)
-3. Uistite sa, že sledovacie ID sú prítomné na všetkých Microsoft URL
-4. Skontrolujte, že relatívne odkazy sú platné
-5. Overte, že obrázky sú správne referencované
+1. Otestujte zmeny v kóde v Pythone a TypeScripte, keď je to možné
+2. Spustite validáciu Markdown (automaticky pri PR)
+3. Overte, že sledovacie ID sú na všetkých Microsoft URL
+4. Skontrolujte platnosť relatívnych odkazov
+5. Overte správne odkazy na obrázky
 
 ### Formát názvu PR
 
-- Používajte popisné názvy: `[Lekcia 06] Oprava preklepu v Python príklade` alebo `Aktualizácia README pre lekciu 08`
-- Odkazujte na čísla problémov, ak je to možné: `Fixes #123`
+- Používajte popisné názvy: `[Lesson 06] Oprav chybu v Python príklade` alebo `Aktualizácia README pre lekciu 08`
+- Používajte čísla issues, keď je to vhodné: `Fixes #123`
 
 ### Popis PR
 
-- Vysvetlite, čo bolo zmenené a prečo
-- Odkazujte na súvisiace problémy
-- Pri zmenách kódu špecifikujte, ktoré príklady boli testované
-- Pri prekladoch PR zahrňte všetky súbory pre kompletný preklad
+- Vysvetlite, čo sa zmenilo a prečo
+- Odkážte na súvisiace issues
+- Pri zmenách v kóde uveďte, ktoré príklady ste testovali
+- Pri PR prekladoch zahrňte všetky súbory pre úplný preklad
 
 ### Požiadavky na príspevky
 
 - Podpíšte Microsoft CLA (automaticky pri prvom PR)
-- Forknite repozitár do svojho účtu pred vykonaním zmien
-- Jeden PR na logickú zmenu (nekombinujte nesúvisiace opravy)
-- Udržujte PR zamerané a malé, ak je to možné
+- Vytvorte fork repozitára vo svojom účte pred zmenami
+- Jeden PR na logickú zmenu (nespájajte nesúvisiace opravy)
+- Snažte sa, aby PR boli zamerané a malé, keď je to možné
 
-## Bežné pracovné postupy
+## Bežné pracovné toky
 
 ### Pridanie nového príkladu kódu
 
 1. Prejdite do príslušného adresára lekcie
-2. Vytvorte príklad v podadresári `python/` alebo `typescript/`
-3. Dodržujte konvenciu pomenovania: `{provider}-{example-name}.{py|ts|js}`
-4. Testujte s aktuálnymi API prihlasovacími údajmi
-5. Dokumentujte všetky nové premenné prostredia v README lekcie
+2. Vytvorte príklad v podpriečinku `python/` alebo `typescript/`
+3. Dodržiavajte pomenovacie pravidlá: `{provider}-{example-name}.{py|ts|js}`
+4. Testujte s aktuálnymi API povereniami
+5. Dokumentujte nové premenné prostredia v README lekcie
 
 ### Aktualizácia dokumentácie
 
-1. Upravte README.md v adresári lekcie
-2. Dodržujte pokyny pre Markdown (sledovacie ID, relatívne odkazy)
-3. Aktualizácie prekladov sú spracované GitHub Actions (neupravujte manuálne)
-4. Testujte, že všetky odkazy sú platné
+1. Upraviť README.md v adresári lekcie
+2. Dodržiavať pravidlá Markdown (sledovacie ID, relatívne odkazy)
+3. Preklady sú spravované GitHub Actions (neupravovať manuálne)
+4. Otestovať platnosť všetkých odkazov
 
 ### Práca s Dev Containermi
 
 1. Repozitár obsahuje `.devcontainer/devcontainer.json`
-2. Post-create skript automaticky nainštaluje Python závislosti
+2. Skript post-create automaticky inštaluje Python závislosti
 3. Rozšírenia pre Python a Jupyter sú predkonfigurované
 4. Prostredie je založené na `mcr.microsoft.com/devcontainers/universal:2.11.2`
 
 ## Nasadenie a publikovanie
 
-Toto je vzdelávací repozitár - neexistuje proces nasadenia. Kurz je využívaný:
+Toto je učebný repozitár - neexistuje proces nasadenia. Kurz sa využíva cez:
 
 1. **GitHub Repozitár**: Priamy prístup ku kódu a dokumentácii
-2. **GitHub Codespaces**: Okamžité vývojové prostredie s predkonfigurovaným nastavením
-3. **Microsoft Learn**: Obsah môže byť syndikovaný na oficiálnu vzdelávaciu platformu
-4. **docsify**: Dokumentačná stránka vytvorená z Markdown (pozrite `docsifytopdf.js` a `package.json`)
+2. **GitHub Codespaces**: Okamžité vývojové prostredie s prednastavením
+3. **Microsoft Learn**: Obsah môže byť zverejňovaný na oficiálnej vzdelávacej platforme
+4. **docsify**: Dokumentačný web generovaný z Markdown (pozri `docsifytopdf.js` a `package.json`)
 
-### Vytvorenie dokumentačnej stránky
+### Tvorba dokumentačného webu
 
 ```bash
-# Generate PDF from documentation (if needed)
+# Vygenerujte PDF z dokumentácie (ak je to potrebné)
 npm run convert
 ```
 
@@ -272,46 +273,48 @@ npm run convert
 
 ### Bežné problémy
 
-**Chyby pri importe Pythonu**:
-- Uistite sa, že virtuálne prostredie je aktivované
+**Chyby importu Pythonu**:
+- Overte, či je aktivované virtuálne prostredie
 - Spustite `pip install -r requirements.txt`
-- Skontrolujte, že verzia Pythonu je 3.9+
+- Skontrolujte, či verzia Pythonu je 3.9+
 
-**Chyby pri zostavovaní TypeScriptu**:
-- Spustite `npm install` v konkrétnom adresári aplikácie
-- Skontrolujte, že verzia Node.js je kompatibilná
-- Vymažte `node_modules` a znovu nainštalujte, ak je to potrebné
+**Chyby kompilácie TypeScriptu**:
+- Spustite `npm install` v príslušnom adresári aplikácie
+- Skontrolujte kompatibilitu verzie Node.js
+- Vymažte `node_modules` a znova nainštalujte, ak je to potrebné
 
 **Chyby autentifikácie API**:
-- Overte, že súbor `.env` existuje a má správne hodnoty
-- Skontrolujte, že API kľúče sú platné a nevypršali
-- Uistite sa, že URL endpointov sú správne pre váš región
+- Overte existenciu a správne hodnoty súboru `.env`
+- Skontrolujte, či API kľúče sú platné a nevypršali
+- Overte, či sú URL endpointy správne pre váš región
 
 **Chýbajúce premenné prostredia**:
 - Skopírujte `.env.copy` do `.env`
-- Vyplňte všetky požadované hodnoty pre lekciu, na ktorej pracujete
-- Reštartujte aplikáciu po aktualizácii `.env`
+- Vyplňte všetky požadované hodnoty pre aktuálnu lekciu
+- Po aktualizácii `.env` reštartujte aplikáciu
 
 ## Ďalšie zdroje
 
-- [Príručka nastavenia kurzu](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
-- [Pokyny pre prispievanie](./CONTRIBUTING.md)
-- [Kódex správania](./CODE_OF_CONDUCT.md)
+- [Sprievodca nastavením kurzu](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
+- [Pravidlá príspevkov](./CONTRIBUTING.md)
+- [Kód správania](./CODE_OF_CONDUCT.md)
 - [Bezpečnostná politika](./SECURITY.md)
 - [Azure AI Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 - [Zbierka pokročilých príkladov kódu](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
 
-## Poznámky k projektu
+## Poznámky špecifické pre projekt
 
-- Toto je **vzdelávací repozitár** zameraný na učenie, nie produkčný kód
-- Príklady sú zámerne jednoduché a zamerané na výučbu konceptov
-- Kvalita kódu je vyvážená s edukatívnou jasnosťou
-- Každá lekcia je samostatná a môže byť dokončená nezávisle
-- Repozitár podporuje viacerých poskytovateľov API: Azure OpenAI, OpenAI a GitHub Models
-- Obsah je viacjazyčný s automatizovanými pracovnými postupmi pre preklady
+- Toto je **vzdelávací repozitár** zameraný na učenie, nie na produkčný kód
+- Príklady sú úmyselne jednoduché a zamerané na výučbu konceptov
+- Kvalita kódu je vyvážená s jasnosťou výučby
+- Každá lekcia je samostatná a dá sa dokončiť nezávisle
+- Repozitár podporuje viacerých poskytovateľov API: Azure OpenAI, OpenAI, Microsoft Foundry Models a offline poskytovateľov ako Foundry Local a Ollama
+- Obsah je viacjazyčný s automatizovanými prekladovými pracovnými tokmi
 - Aktívna komunita na Discorde pre otázky a podporu
 
 ---
 
-**Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nezodpovedáme za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vyhlásenie o zodpovednosti**:
+Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, vezmite prosím na vedomie, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho natívnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

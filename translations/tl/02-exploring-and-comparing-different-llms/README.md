@@ -1,208 +1,211 @@
-# Pagsusuri at Paghahambing ng Iba't Ibang LLM
+# Pagsasaliksik at paghahambing ng iba't ibang LLMs
 
-[![Pagsusuri at Paghahambing ng Iba't Ibang LLM](../../../translated_images/tl/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
+[![Exploring and comparing different LLMs](../../../translated_images/tl/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
-> _I-click ang imahe sa itaas upang mapanood ang video ng araling ito_
+> _I-click ang larawan sa itaas upang panoorin ang video ng araling ito_
 
-Sa nakaraang aralin, nakita natin kung paano binabago ng Generative AI ang teknolohikal na tanawin, kung paano gumagana ang Large Language Models (LLMs), at kung paano maaaring gamitin ng isang negosyo - tulad ng ating startup - ang mga ito sa kanilang mga kaso ng paggamit upang lumago! Sa kabanatang ito, tatalakayin natin ang iba't ibang uri ng LLMs upang maunawaan ang kanilang mga kalamangan at kahinaan.
+Sa nakaraang aralin, nakita natin kung paano binabago ng Generative AI ang tanawin ng teknolohiya, kung paano gumagana ang Large Language Models (LLMs) at kung paano ito maaaring gamitin ng isang negosyo - tulad ng aming startup - para sa kanilang mga gamit at paglago! Sa kabanatang ito, titingnan natin ang paghahambing at pag-iiba ng iba't ibang uri ng malalaking modelo ng wika (LLMs) upang maunawaan ang kanilang mga kalamangan at kahinaan.
 
-Ang susunod na hakbang sa paglalakbay ng ating startup ay ang paggalugad sa kasalukuyang tanawin ng LLMs at pag-unawa kung alin ang angkop para sa ating kaso ng paggamit.
+Ang susunod na hakbang sa paglalakbay ng aming startup ay ang pagsasaliksik ng kasalukuyang tanawin ng LLMs at pag-unawa kung alin ang angkop para sa aming gamit.
 
 ## Panimula
 
-Ang araling ito ay tatalakayin:
+SAKLAWIN NG ARALIN NA ITO:
 
 - Iba't ibang uri ng LLMs sa kasalukuyang tanawin.
-- Pagsubok, pag-ulit, at paghahambing ng iba't ibang modelo para sa iyong kaso ng paggamit sa Azure.
-- Paano mag-deploy ng LLM.
+- Pagsubok, pag-uulit, at paghahambing ng iba't ibang modelo para sa iyong gamit sa Azure.
+- Paano i-deploy ang isang LLM.
 
 ## Mga Layunin sa Pagkatuto
 
-Pagkatapos makumpleto ang araling ito, magagawa mo:
+Pagkatapos makumpleto ang araling ito, magagawa mong:
 
-- Piliin ang tamang modelo para sa iyong kaso ng paggamit.
-- Maunawaan kung paano subukan, ulitin, at pagbutihin ang pagganap ng iyong modelo.
-- Malaman kung paano nagde-deploy ang mga negosyo ng mga modelo.
+- Pumili ng tamang modelo para sa iyong gamit.
+- Maunawaan kung paano subukan, ulitin, at pagbutihin ang performance ng iyong modelo.
+- Alam kung paano i-deploy ng mga negosyo ang mga modelo.
 
-## Pag-unawa sa Iba't Ibang Uri ng LLMs
+## Unawain ang iba't ibang uri ng LLMs
 
-Ang LLMs ay maaaring ikategorya batay sa kanilang arkitektura, training data, at kaso ng paggamit. Ang pag-unawa sa mga pagkakaibang ito ay makakatulong sa ating startup na pumili ng tamang modelo para sa sitwasyon, at maunawaan kung paano subukan, ulitin, at pagbutihin ang pagganap.
+Ang LLMs ay maaaring magkaroon ng maraming kategorizasyon batay sa kanilang arkitektura, training data, at gamit. Ang pag-unawa sa mga pagkakaibang ito ay makakatulong sa aming startup na pumili ng tamang modelo para sa sitwasyon, at maunawaan kung paano subukan, ulitin, at pagbutihin ang performance.
 
-Maraming iba't ibang uri ng LLM models, at ang iyong pagpili ng modelo ay nakadepende sa kung ano ang layunin mong gamitin ang mga ito, sa iyong data, sa budget mo, at iba pa.
+Maraming iba't ibang uri ng LLM na modelo, ang pagpili mo ng modelo ay depende sa kung ano ang layunin mo sa paggamit nito, ang iyong datos, kung gaano ka handang magbayad atbp.
 
-Depende sa layunin mo, tulad ng paggamit ng mga modelo para sa text, audio, video, image generation, at iba pa, maaaring pumili ka ng ibang uri ng modelo.
+Depende kung gagamitin ang mga modelo para sa teksto, audio, video, pagbuo ng imahe atbp., maaaring pumili ka ng ibang uri ng modelo.
 
-- **Audio at speech recognition**. Para sa layuning ito, ang mga Whisper-type models ay mahusay na pagpipilian dahil general-purpose ang mga ito at nakatuon sa speech recognition. Ang mga ito ay sinanay sa iba't ibang audio at kayang magsagawa ng multilingual speech recognition. Alamin ang higit pa tungkol sa [Whisper type models dito](https://platform.openai.com/docs/models/whisper?WT.mc_id=academic-105485-koreyst).
+- **Pagkilala sa audio at pagsasalita**. Ang mga Whisper-style na modelo ay kapaki-pakinabang pa rin bilang general-purpose speech recognition models, ngunit ang mga produksyon ngayon ay may mga bagong speech-to-text na modelo katulad ng `gpt-4o-transcribe`, `gpt-4o-mini-transcribe`, at mga diarization variant. Suriin ang saklaw ng wika, diarization, real-time na suporta, latency, at gastos para sa iyong sitwasyon. Alamin pa sa [OpenAI speech-to-text documentation](https://platform.openai.com/docs/guides/speech-to-text?WT.mc_id=academic-105485-koreyst).
 
-- **Image generation**. Para sa image generation, ang DALL-E at Midjourney ay dalawang kilalang pagpipilian. Ang DALL-E ay inaalok ng Azure OpenAI. [Basahin ang higit pa tungkol sa DALL-E dito](https://platform.openai.com/docs/models/dall-e?WT.mc_id=academic-105485-koreyst) at sa Kabanata 9 ng kurikulum na ito.
+- **Pagbuo ng imahe**. Kilalang-kilala ang DALL-E at Midjourney para sa pagbuo ng mga imahe, ngunit ang kasalukuyang OpenAI image APIs ay nakatuon sa GPT Image models tulad ng `gpt-image-2`, habang ang Stable Diffusion, Imagen, Flux, at iba pang mga pamilya ng modelo ay karaniwang pagpipilian din. Ihambing ang pagsunod sa prompt, suporta sa pag-edit, kontrol sa estilo, mga kinakailangan sa kaligtasan, at lisensya. Alamin pa sa [OpenAI image generation guide](https://platform.openai.com/docs/guides/images?WT.mc_id=academic-105485-koreyst) at Kabanata 9 ng kurikulum na ito.
 
-- **Text generation**. Karamihan sa mga modelo ay sinanay para sa text generation at mayroon kang malawak na pagpipilian mula GPT-3.5 hanggang GPT-4. Ang mga ito ay may iba't ibang halaga, kung saan ang GPT-4 ang pinakamahal. Sulit na tingnan ang [Azure OpenAI playground](https://oai.azure.com/portal/playground?WT.mc_id=academic-105485-koreyst) upang masuri kung aling mga modelo ang pinakamahusay na akma sa iyong pangangailangan sa kakayahan at gastos.
+- **Pagbuo ng teksto**. Ang mga modelo ng teksto ay sumasaklaw ng mga frontier models, reasoning models, mas maliit at low-latency na mga modelo, at open-weight models. Kasalukuyang halimbawa ay ang OpenAI GPT-5.x models, Anthropic Claude 4.x models, Google Gemini 3.x models, Meta Llama 4 models, at Mistral models. Huwag pumili batay lamang sa petsa ng paglabas o presyo; ihambing ang kalidad ng gawain, latency, context window, paggamit ng tools, pag-uugali sa kaligtasan, availability sa rehiyon, at kabuuang gastos. Ang [Microsoft Foundry model catalog](https://ai.azure.com/catalog?WT.mc_id=academic-105485-koreyst) ay magandang lugar para ihambing ang mga modelo na available sa Azure.
 
-- **Multi-modality**. Kung nais mong magproseso ng iba't ibang uri ng data sa input at output, maaaring tingnan mo ang mga modelo tulad ng [gpt-4 turbo with vision o gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models#gpt-4-and-gpt-4-turbo-models?WT.mc_id=academic-105485-koreyst) - ang pinakabagong mga modelo ng OpenAI - na may kakayahang pagsamahin ang natural language processing sa visual understanding, na nagbibigay-daan sa interaksyon sa pamamagitan ng multi-modal interfaces.
+- **Multi-modality**. Maraming kasalukuyang modelo ang kayang magproseso ng higit pa sa teksto. Ang ilan ay tumatanggap ng imahe, audio, o video input; ang ilan ay maaaring tumawag ng tools; at ang mga espesyal na modelo ay nakaka-generate ng imahe, audio, o video. Halimbawa, kasalukuyang sinusuportahan ng OpenAI models ang teksto at imahe bilang input, maaaring suportahan ng Gemini models ang teksto, code, imahe, audio, at video depende sa uri, at ang Llama 4 Scout at Maverick ay open-weight natively multimodal models. Laging suriin ang bawat model card para sa mga sinusuportahang input at output modalities bago gumawa ng workflow tungkol dito.
 
-Ang pagpili ng modelo ay nagbibigay sa iyo ng ilang pangunahing kakayahan, ngunit maaaring hindi ito sapat. Madalas, mayroon kang data na partikular sa kumpanya na kailangan mong ipaalam sa LLM. May ilang iba't ibang paraan kung paano ito lapitan, higit pa tungkol dito sa mga susunod na seksyon.
+Ang pagpili ng modelo ay nangangahulugan na makukuha mo ang ilang mga pangunahing kakayahan, ngunit maaaring hindi iyon sapat. Kadalasan ay mayroong sariling datos ang kompanya na kailangang ipaalam sa LLM. May ilang iba't ibang pagpipilian kung paano ito lapitan, na tatalakayin pa sa mga susunod na bahagi.
 
-### Foundation Models kumpara sa LLMs
+### Foundation Models laban sa LLMs
 
-Ang terminong Foundation Model ay [binuo ng mga mananaliksik sa Stanford](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) at tinukoy bilang isang AI model na sumusunod sa ilang pamantayan, tulad ng:
+Ang terminong Foundation Model ay [nilikha ng mga mananaliksik sa Stanford](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) at tinukoy bilang isang AI model na sumusunod sa ilang mga pamantayan, tulad ng:
 
-- **Sinanay gamit ang unsupervised learning o self-supervised learning**, ibig sabihin, sinanay ang mga ito sa unlabeled multi-modal data, at hindi nangangailangan ng human annotation o labeling ng data para sa kanilang proseso ng pagsasanay.
-- **Napakalaking mga modelo**, batay sa napakalalim na neural networks na sinanay sa bilyun-bilyong parameters.
-- **Karaniwang nilalayon na magsilbing ‘foundation’ para sa ibang mga modelo**, ibig sabihin, maaari silang gamitin bilang panimulang punto para sa ibang mga modelo na maaaring itayo sa ibabaw nito, na maaaring gawin sa pamamagitan ng fine-tuning.
+- **Sila ay sinanay gamit ang unsupervised learning o self-supervised learning**, ibig sabihin ay sinanay sila sa unlabeled multi-modal na data, at hindi nangangailangan ng pag-annotate o pag-label ng tao para sa proseso ng pagsasanay.
+- **Sila ay napakalalaking modelo**, batay sa napakalalim na neural network na sinanay sa bilyon-bilyong parametro.
+- **Nakalaan sila upang magsilbing 'foundation' para sa ibang mga modelo**, ibig sabihin ay maaaring gamitin bilang panimulang punto para makabuo pa ng ibang mga modelo, na maaaring gawin sa pamamagitan ng fine-tuning.
 
-![Foundation Models kumpara sa LLMs](../../../translated_images/tl/FoundationModel.e4859dbb7a825c94.webp)
+![Foundation Models versus LLMs](../../../translated_images/tl/FoundationModel.e4859dbb7a825c94.webp)
 
-Pinagmulan ng imahe: [Essential Guide to Foundation Models and Large Language Models | ni Babar M Bhatti | Medium
+Pinagkunan ng larawan: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
-Upang higit pang linawin ang pagkakaibang ito, kunin natin ang ChatGPT bilang halimbawa. Upang mabuo ang unang bersyon ng ChatGPT, isang modelo na tinatawag na GPT-3.5 ang nagsilbing foundation model. Nangangahulugan ito na ginamit ng OpenAI ang ilang chat-specific data upang lumikha ng isang tuned na bersyon ng GPT-3.5 na espesyal na idinisenyo upang mahusay na gumana sa conversational scenarios, tulad ng chatbots.
+Upang higit pang linawin ang pagkakaibang ito, gamitin natin ang ChatGPT bilang makasaysayang halimbawa. Ang mga unang bersyon ng ChatGPT ay gumamit ng GPT-3.5 bilang foundation model. Ginamit ng OpenAI ang chat-specific data at alignment techniques upang makagawa ng na-tune na bersyon na mas mahusay sa mga senaryong pakikipag-usap, tulad ng chatbots. Madalas ang mga modernong AI service ay dumadaan sa iba't ibang variant ng mga modelo, kaya ang pangalan ng serbisyo at pangalan ng underlying model ay hindi palaging parehong bagay.
 
 ![Foundation Model](../../../translated_images/tl/Multimodal.2c389c6439e0fc51.webp)
 
-Pinagmulan ng imahe: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
+Pinagkunan ng larawan: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
-### Open Source kumpara sa Proprietary Models
+### Open-Weight/Open-Source laban sa Proprietary Models
 
-Isa pang paraan upang ikategorya ang LLMs ay kung open source o proprietary ang mga ito.
+Isa pang paraan upang uriin ang LLMs ay kung open-weight, open-source, o proprietary ang mga ito.
 
-Ang open-source models ay mga modelong ginawang available sa publiko at maaaring gamitin ng kahit sino. Karaniwang ginagawa itong available ng kumpanya na lumikha nito, o ng research community. Ang mga modelong ito ay maaaring inspeksyunin, baguhin, at i-customize para sa iba't ibang kaso ng paggamit sa LLMs. Gayunpaman, hindi palaging optimized ang mga ito para sa production use, at maaaring hindi kasing-performant ng proprietary models. Dagdag pa, ang pondo para sa open-source models ay maaaring limitado, at maaaring hindi ito mapanatili sa pangmatagalan o hindi ma-update sa pinakabagong pananaliksik. Mga halimbawa ng sikat na open-source models ay [Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html?WT.mc_id=academic-105485-koreyst), [Bloom](https://huggingface.co/bigscience/bloom) at [LLaMA](https://llama.meta.com).
+Ang mga open-source at open-weight models ay ginagawa available ang mga model artifacts para sa inspeksyon, pag-download, o pag-customize, ngunit iba-iba ang kanilang lisensya. May ilan na ganap na open source, habang ang iba ay open-weight models na may mga limitasyon sa paggamit. Kapaki-pakinabang ang mga ito kapag kailangang kontrolin ng negosyo ang deployment, data locality, gastos, o customization. Gayunpaman, kailangan pa ring suriin ng mga koponan ang mga termino sa lisensya, gastos sa serbisyo, maintenance, security updates, at kalidad ng ebalwasyon bago gamitin sa produksyon. Halimbawa ay [Meta Llama 4](https://ai.meta.com/blog/llama-4-multimodal-intelligence/?WT.mc_id=academic-105485-koreyst), ilang [Mistral models](https://docs.mistral.ai/models/overview?WT.mc_id=academic-105485-koreyst), at maraming modelo na naka-host sa [Hugging Face](https://huggingface.co/models?WT.mc_id=academic-105485-koreyst).
 
-Ang proprietary models ay mga modelong pagmamay-ari ng isang kumpanya at hindi ginagawang available sa publiko. Ang mga modelong ito ay karaniwang optimized para sa production use. Gayunpaman, hindi pinapayagan ang mga ito na inspeksyunin, baguhin, o i-customize para sa iba't ibang kaso ng paggamit. Dagdag pa, hindi palaging available ang mga ito nang libre, at maaaring mangailangan ng subscription o bayad upang magamit. Gayundin, ang mga gumagamit ay walang kontrol sa data na ginamit upang sanayin ang modelo, na nangangahulugang dapat nilang ipagkatiwala sa may-ari ng modelo ang pangako sa privacy ng data at responsableng paggamit ng AI. Mga halimbawa ng sikat na proprietary models ay [OpenAI models](https://platform.openai.com/docs/models/overview?WT.mc_id=academic-105485-koreyst), [Google Bard](https://sapling.ai/llm/bard?WT.mc_id=academic-105485-koreyst) o [Claude 2](https://www.anthropic.com/index/claude-2?WT.mc_id=academic-105485-koreyst).
+Ang mga proprietary na modelo ay pag-aari at inaasikaso ng isang provider. Karaniwan itong naka-optimize para sa managed production use at maaaring magbigay ng malakas na suporta, safety systems, tool integration, at scaling. Ngunit, hindi karaniwang maaaring suriin o baguhin ng mga customer ang mga timbang ng modelo, at kailangan nilang suriin ang mga termino ng provider para sa privacy, retention, compliance, at katanggap-tanggap na paggamit. Halimbawa ay [OpenAI models](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst), [Google Gemini](https://deepmind.google/models/gemini/pro/?WT.mc_id=academic-105485-koreyst), at [Anthropic Claude](https://platform.claude.com/docs/en/about-claude/models/overview?WT.mc_id=academic-105485-koreyst).
 
-### Embedding kumpara sa Image generation kumpara sa Text at Code generation
+### Embedding laban sa Image generation laban sa Text at Code generation
 
-Ang LLMs ay maaari ring ikategorya batay sa output na kanilang nililikha.
+Maaari ring uriin ang LLMs ayon sa output na kanilang nililikha.
 
-Ang embeddings ay isang set ng mga modelo na maaaring mag-convert ng text sa numerical form, na tinatawag na embedding, na isang numerical representation ng input text. Ang embeddings ay nagpapadali sa mga makina na maunawaan ang mga relasyon sa pagitan ng mga salita o pangungusap at maaaring magamit bilang input ng ibang mga modelo, tulad ng classification models, o clustering models na may mas mahusay na pagganap sa numerical data. Ang embedding models ay madalas na ginagamit para sa transfer learning, kung saan ang isang modelo ay binuo para sa isang surrogate task na may maraming data, at pagkatapos ay ang model weights (embeddings) ay muling ginagamit para sa ibang downstream tasks. Isang halimbawa ng kategoryang ito ay [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
+Ang Embeddings ay isang grupo ng mga modelo na nagko-convert ng teksto sa isang numerikal na anyo, na tinatawag na embedding, isang numerical na representasyon ng input text. Pinapadali ng embeddings ang pag-unawa ng makina sa mga relasyon ng mga salita o pangungusap at maaaring gamitin bilang input ng iba pang mga modelo, tulad ng classification models o clustering models na may mas mahusay na performance sa numerical data. Madalas ginagamit ang mga embedding models para sa transfer learning, kung saan isang modelo ang binubuo para sa surrogate na gawain na may maraming data, at ang mga model weights (embeddings) ay muling ginagamit para sa ibang mga gawain. Isang halimbawa sa kategoryang ito ang [OpenAI embeddings](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
 ![Embedding](../../../translated_images/tl/Embedding.c3708fe988ccf760.webp)
 
-Ang image generation models ay mga modelong lumilikha ng mga imahe. Ang mga modelong ito ay madalas na ginagamit para sa image editing, image synthesis, at image translation. Ang image generation models ay madalas na sinanay sa malalaking datasets ng mga imahe, tulad ng [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), at maaaring gamitin upang lumikha ng mga bagong imahe o i-edit ang mga umiiral na imahe gamit ang inpainting, super-resolution, at colorization techniques. Mga halimbawa ay [DALL-E-3](https://openai.com/dall-e-3?WT.mc_id=academic-105485-koreyst) at [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst).
+Ang mga modelong pang-image generation ay mga modelo na lumilikha ng mga larawan. Karaniwan itong ginagamit para sa pag-edit ng imahe, pagsintesis ng imahe, at pagsasalin ng imahe. Kadalasang sinasanay ang mga modelong ito sa malalaking dataset ng mga larawan tulad ng [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), at maaaring gamitin upang gumawa ng mga bagong larawan o mag-edit ng mga umiiral na larawan gamit ang mga teknik tulad ng inpainting, super-resolution, at colorization. Mga halimbawa ay [GPT Image models](https://platform.openai.com/docs/guides/images?WT.mc_id=academic-105485-koreyst), [Stable Diffusion models](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst), at Imagen models.
 
 ![Image generation](../../../translated_images/tl/Image.349c080266a763fd.webp)
 
-Ang text at code generation models ay mga modelong lumilikha ng text o code. Ang mga modelong ito ay madalas na ginagamit para sa text summarization, translation, at question answering. Ang text generation models ay madalas na sinanay sa malalaking datasets ng text, tulad ng [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), at maaaring gamitin upang lumikha ng bagong text, o upang sagutin ang mga tanong. Ang code generation models, tulad ng [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), ay madalas na sinanay sa malalaking datasets ng code, tulad ng GitHub, at maaaring gamitin upang lumikha ng bagong code, o upang ayusin ang mga bug sa umiiral na code.
+Ang mga modelong pang-text at code generation ay mga modelo na lumilikha ng teksto o code. Madalas itong gamitin para sa pagbuod ng teksto, pagsasalin, at pagsagot sa mga tanong. Kadalasang sinasanay ang mga text generation models sa malalaking dataset ng teksto tulad ng [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), at maaari itong gamitin upang bumuo ng bagong teksto o sumagot ng mga tanong. Ang mga code generation models, tulad ng [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), ay karaniwang sinasanay sa malalaking dataset ng code, tulad ng GitHub, at maaaring gamitin upang gumawa ng bagong code o ayusin ang mga bugs sa umiiral na code.
 
 ![Text and code generation](../../../translated_images/tl/Text.a8c0cf139e5cc2a0.webp)
 
-### Encoder-Decoder kumpara sa Decoder-only
+### Encoder-Decoder laban sa Decoder lamang
 
-Upang pag-usapan ang iba't ibang uri ng arkitektura ng LLMs, gamitin natin ang isang analogy.
+Upang mapag-usapan ang iba't ibang uri ng arkitektura ng LLMs, gamitin natin ang isang analohiya.
 
-Isipin na binigyan ka ng iyong manager ng gawain na gumawa ng isang quiz para sa mga estudyante. Mayroon kang dalawang kasamahan; ang isa ay namamahala sa paggawa ng content at ang isa ay namamahala sa pag-review nito.
+Isipin mo na ang manager mo ay nagbigay sayo ng gawain na gumawa ng isang pagsusulit para sa mga estudyante. Mayroon kang dalawang kasamahan; isa ang nangangasiwa sa paggawa ng nilalaman at ang isa naman ang nangangasiwa sa pagrerebyu nito.
 
-Ang content creator ay tulad ng isang Decoder-only model, maaari niyang tingnan ang topic at makita kung ano ang naisulat mo na, at pagkatapos ay maaari siyang magsulat ng kurso batay dito. Magaling sila sa pagsusulat ng engaging at informative na content, ngunit hindi sila mahusay sa pag-unawa sa topic at mga layunin sa pagkatuto. Ilang halimbawa ng Decoder models ay ang GPT family models, tulad ng GPT-3.
+Ang gumawa ng nilalaman ay parang decoder-only model: kaya nilang tingnan ang paksa, makita ang isinulat mo na, at magpatuloy sa paggawa ng nilalaman base sa konteksto. Mahusay silang gumawa ng kaakit-akit at nagbibigay-kaalaman na nilalaman, pero hindi sila laging pinakamainam kung ang gawain ay para lang magklasipika, mag-retrieve, o mag-encode ng impormasyon. Mga halimbawa ng decoder-only model families ay GPT at Llama models.
 
-Ang reviewer ay tulad ng isang Encoder-only model, tinitingnan nila ang kursong naisulat at ang mga sagot, napapansin ang relasyon sa pagitan ng mga ito at nauunawaan ang konteksto, ngunit hindi sila mahusay sa paggawa ng content. Isang halimbawa ng Encoder-only model ay ang BERT.
+Ang nagre-review naman ay parang Encoder-only model, tinitingnan nila ang kursong naisulat at ang mga sagot, pinapansin ang relasyon sa pagitan nila at nauunawaan ang konteksto, pero hindi sila magaling sa paggawa ng nilalaman. Isang halimbawa ng Encoder-only model ay BERT.
 
-Isipin na mayroon din tayong isang tao na maaaring gumawa at mag-review ng quiz, ito ay isang Encoder-Decoder model. Ilang halimbawa ay ang BART at T5.
+Isipin na maaari rin tayong magkaroon ng isang tao na kayang gumawa at mag-review ng pagsusulit, ito ang Encoder-Decoder model. Mga halimbawa ay BART at T5.
 
-### Serbisyo kumpara sa Modelo
+### Serbisyo laban sa Modelo
 
-Ngayon, pag-usapan natin ang pagkakaiba ng isang serbisyo at isang modelo. Ang serbisyo ay isang produkto na inaalok ng isang Cloud Service Provider, at madalas na kombinasyon ng mga modelo, data, at iba pang mga bahagi. Ang modelo ay ang pangunahing bahagi ng isang serbisyo, at madalas na isang foundation model, tulad ng isang LLM.
+Ngayon, pag-usapan natin ang pagkakaiba ng serbisyo at modelo. Ang serbisyo ay isang produkto na inaalok ng isang Cloud Service Provider, at madalas itong kombinasyon ng mga modelo, data, at iba pang bahagi. Ang modelo ang pangunahing bahagi ng serbisyo, at madalas itong foundation model, tulad ng LLM.
 
-Ang mga serbisyo ay madalas na optimized para sa production use at madalas na mas madaling gamitin kaysa sa mga modelo, sa pamamagitan ng graphical user interface. Gayunpaman, ang mga serbisyo ay hindi palaging available nang libre, at maaaring mangailangan ng subscription o bayad upang magamit, kapalit ng paggamit ng kagamitan at resources ng may-ari ng serbisyo, pag-optimize ng gastos, at madaling pag-scale. Isang halimbawa ng serbisyo ay ang [Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), na nag-aalok ng pay-as-you-go rate plan, ibig sabihin, ang mga gumagamit ay sinisingil nang proporsyonal sa kung gaano nila ginagamit ang serbisyo. Gayundin, ang Azure OpenAI Service ay nag-aalok ng enterprise-grade security at isang responsible AI framework sa ibabaw ng mga kakayahan ng mga modelo.
+Ang mga serbisyo ay kadalasang naka-optimize para sa production use at kadalasang mas madaling gamitin kaysa mga modelo, sa pamamagitan ng graphical user interface. Gayunpaman, hindi palaging libre ang mga serbisyo, at maaaring kailangan ng subscription o bayad upang magamit, kapalit ng paggamit ng kagamitan at resources ng may-ari ng serbisyo, na nagpapadali ng gastos at scaling. Isang halimbawa ng serbisyo ay ang [Azure OpenAI Service](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), na nag-aalok ng pay-as-you-go na rate plan, ibig sabihin ay sinisingil ang mga gumagamit based sa dami ng paggamit nila ng serbisyo. Nag-aalok din ang Azure OpenAI Service ng enterprise-grade security at isang responsible AI framework sa ibabaw ng kakayahan ng mga modelo.
 
-Ang mga modelo ay simpleng Neural Network, na may mga parameters, weights, at iba pa. Pinapayagan ang mga kumpanya na magpatakbo nang lokal, ngunit kakailanganin nilang bumili ng kagamitan, bumuo ng istruktura para sa pag-scale, at bumili ng lisensya o gumamit ng open-source model. Ang isang modelo tulad ng LLaMA ay available upang magamit, na nangangailangan ng computational power upang patakbuhin ang modelo.
+Ang mga modelo ay neural network artifacts: parameters, weights, architecture, tokenizer, at supporting configuration. Ang pagpapatakbo ng modelo nang lokal o sa isang pribadong kapaligiran ay nangangailangan ng angkop na hardware, serving infrastructure, monitoring, at alinman sa compatible na open-source/open-weight license o komersyal na lisensya. Ang open-weight models tulad ng Llama 4 o Mistral models ay maaaring i-self-host, ngunit nangangailangan pa rin ito ng computational power at operational na kasanayan.
 
-## Paano Subukan at Ulitin ang Iba't Ibang Modelo upang Maunawaan ang Pagganap sa Azure
+## Paano subukan at ulitin gamit ang iba't ibang modelo upang maunawaan ang performance sa Azure
 
-Kapag ang aming team ay nakapag-explore na sa kasalukuyang tanawin ng LLMs at nakapagtukoy ng ilang magagandang kandidato para sa kanilang mga sitwasyon, ang susunod na hakbang ay ang pagsubok sa mga ito gamit ang kanilang data at workload. Ito ay isang iterative na proseso, na ginagawa sa pamamagitan ng mga eksperimento at sukat.
-Karamihan sa mga modelong nabanggit natin sa mga nakaraang talata (mga modelo ng OpenAI, mga open source na modelo tulad ng Llama2, at Hugging Face transformers) ay makikita sa [Model Catalog](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview?WT.mc_id=academic-105485-koreyst) sa [Azure AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst).
 
-Ang [Azure AI Studio](https://learn.microsoft.com/azure/ai-studio/what-is-ai-studio?WT.mc_id=academic-105485-koreyst) ay isang Cloud Platform na idinisenyo para sa mga developer upang makabuo ng mga generative AI application at pamahalaan ang buong lifecycle ng development - mula sa eksperimento hanggang sa pagsusuri - sa pamamagitan ng pagsasama-sama ng lahat ng Azure AI services sa isang hub na may madaling gamiting GUI. Ang Model Catalog sa Azure AI Studio ay nagbibigay-daan sa user na:
+Kapag na-explore na ng aming koponan ang kasalukuyang tanawin ng LLMs at nakilala ang ilang magagandang kandidato para sa kanilang mga scenario, ang susunod na hakbang ay subukan ang mga ito gamit ang kanilang data at workload. Ito ay isang paulit-ulit na proseso, ginagawa sa pamamagitan ng mga eksperimento at pagsukat.
+Karamihan sa mga modelong nabanggit namin sa mga naunang talata (mga modelo ng OpenAI, mga open-weight na modelo tulad ng Llama 4 at Mistral, at mga modelo ng Hugging Face) ay available sa [Microsoft Foundry Models](https://learn.microsoft.com/azure/foundry/concepts/foundry-models-overview?WT.mc_id=academic-105485-koreyst).
 
-- Hanapin ang Foundation Model na interesado sa catalog - proprietary man o open source, gamit ang filter sa task, lisensya, o pangalan. Upang mapabuti ang kakayahang maghanap, ang mga modelo ay nakaayos sa mga koleksyon, tulad ng Azure OpenAI collection, Hugging Face collection, at iba pa.
+[Microsoft Foundry](https://learn.microsoft.com/azure/foundry/what-is-foundry?WT.mc_id=academic-105485-koreyst), na dating Azure AI Studio/Azure AI Foundry, ay isang pinag-isang Azure platform para sa pagbuo ng AI apps at mga ahente. Tinutulungan nito ang mga developer na pamahalaan ang lifecycle mula sa eksperimento at ebalwasyon hanggang sa deployment, pagmamanman, at pamamahala. Pinapayagan ng catalog ng modelo sa Microsoft Foundry ang gumagamit na:
+
+- Hanapin ang foundation model na interes sa catalog, kabilang ang mga modelong ibinenta ng Azure at mga modelong mula sa mga partner at mga tagapagbigay ng komunidad. Maaaring i-filter ng mga gumagamit ayon sa gawain, provider, lisensya, opsyon sa deployment, o pangalan.
 
 ![Model catalog](../../../translated_images/tl/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
 
-- Suriin ang model card, kabilang ang detalyadong paglalarawan ng layunin ng paggamit at training data, mga halimbawa ng code, at mga resulta ng pagsusuri mula sa internal evaluations library.
+- Suriin ang model card, kabilang ang detalyadong paglalarawan ng layunin ng paggamit at data sa pagsasanay, mga sample ng code, at mga resulta ng ebalwasyon sa internal evaluations library.
 
 ![Model card](../../../translated_images/tl/ModelCard.598051692c6e400d.webp)
 
-- Ihambing ang mga benchmark sa pagitan ng mga modelo at dataset na magagamit sa industriya upang masuri kung alin ang angkop sa business scenario, sa pamamagitan ng [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) pane.
+- Ihambing ang benchmarks sa iba't ibang mga modelo at dataset na available sa industriya upang matasa kung alin ang nakakatugon sa business scenario, sa pamamagitan ng [Model Benchmarks](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) pane.
 
 ![Model benchmarks](../../../translated_images/tl/ModelBenchmarks.254cb20fbd06c03a.webp)
 
-- I-fine-tune ang modelo gamit ang custom training data upang mapabuti ang performance ng modelo sa isang partikular na workload, gamit ang experimentation at tracking capabilities ng Azure AI Studio.
+- Mag-fine-tune ng mga suportadong modelo gamit ang custom training data upang pagbutihin ang performance ng modelo sa isang partikular na workload, gamit ang mga kakayahan sa eksperimento at pagsubaybay ng Microsoft Foundry.
 
 ![Model fine-tuning](../../../translated_images/tl/FineTuning.aac48f07142e36fd.webp)
 
-- I-deploy ang orihinal na pre-trained model o ang fine-tuned na bersyon nito sa remote real-time inference - managed compute - o serverless API endpoint - [pay-as-you-go](https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview#model-deployment-managed-compute-and-serverless-api-pay-as-you-go?WT.mc_id=academic-105485-koreyst) - upang magamit ito ng mga application.
+- I-deploy ang orihinal na pre-trained model o ang fine-tuned na bersyon sa isang remote real-time inference endpoint, gamit ang managed compute o serverless deployment options, upang payagan ang mga aplikasyon na gamitin ito.
 
 ![Model deployment](../../../translated_images/tl/ModelDeploy.890da48cbd0bccdb.webp)
 
 > [!NOTE]
-> Hindi lahat ng modelo sa catalog ay kasalukuyang magagamit para sa fine-tuning at/o pay-as-you-go deployment. Tingnan ang model card para sa mga detalye tungkol sa kakayahan at limitasyon ng modelo.
+> Hindi lahat ng modelo sa catalog ay kasalukuyang available para sa fine-tuning at/o pay-as-you-go deployment. Suriin ang model card para sa mga detalye tungkol sa mga kakayahan at limitasyon ng modelo.
 
 ## Pagpapabuti ng mga resulta ng LLM
 
-Nasuri namin kasama ang aming startup team ang iba't ibang uri ng LLMs at isang Cloud Platform (Azure Machine Learning) na nagbibigay-daan sa amin upang ihambing ang iba't ibang modelo, suriin ang mga ito gamit ang test data, mapabuti ang performance, at i-deploy ang mga ito sa inference endpoints.
+Nasubukan namin kasama ang aming startup team ang iba't ibang uri ng LLMs at isang cloud platform (Microsoft Foundry) na nagbibigay-daan sa amin na ikumpara ang iba't ibang mga modelo, suriin ang mga ito gamit ang test data, pagbutihin ang performance, at i-deploy ang mga ito sa mga inference endpoint.
 
-Kailan dapat isaalang-alang ang fine-tuning ng isang modelo kaysa sa paggamit ng pre-trained na modelo? Mayroon bang ibang mga paraan upang mapabuti ang performance ng modelo sa mga partikular na workload?
+Ngunit kailan nila dapat isaalang-alang ang pag-fine-tune ng isang modelo sa halip na gumamit ng pre-trained na isa? Mayroon bang ibang mga pamamaraan para mapabuti ang performance ng modelo sa mga partikular na workload?
 
-Mayroong ilang mga paraan na maaaring gamitin ng isang negosyo upang makuha ang mga resulta na kailangan nila mula sa isang LLM. Maaari kang pumili ng iba't ibang uri ng mga modelo na may iba't ibang antas ng training kapag nag-deploy ng LLM sa production, na may iba't ibang antas ng pagiging kumplikado, gastos, at kalidad. Narito ang ilang mga paraan:
+Mayroong ilang mga pamamaraan na maaring gamitin ng isang negosyo upang makuha ang mga resulta na kailangan nila mula sa isang LLM. Maaari kang pumili ng iba't ibang uri ng mga modelo na may iba't ibang antas ng pagsasanay kapag nagde-deploy ng isang LLM sa produksyon, na may iba't ibang antas ng komplikasyon, gastos, at kalidad. Narito ang ilang mga pamamaraan:
 
-- **Prompt engineering na may context**. Ang ideya ay magbigay ng sapat na context kapag nag-prompt upang matiyak na makukuha mo ang mga sagot na kailangan mo.
+- **Prompt engineering kasama ang konteksto**. Ang ideya ay magbigay ng sapat na konteksto kapag nagpi-prompt upang matiyak na makukuha mo ang mga sagot na kailangan mo.
 
-- **Retrieval Augmented Generation, RAG**. Ang iyong data ay maaaring nasa isang database o web endpoint, halimbawa, upang matiyak na ang data na ito, o isang subset nito, ay kasama sa oras ng pag-prompt, maaari mong kunin ang kaugnay na data at gawing bahagi ng prompt ng user.
+- **Retrieval Augmented Generation, RAG**. Maaaring ang iyong data ay nasa database o web endpoint halimbawa, upang matiyak na ang data na ito, o bahagi nito, ay kasama sa oras ng pag-prompt, maaari mong kunin ang kaugnay na data at gawin itong bahagi ng prompt ng gumagamit.
 
-- **Fine-tuned model**. Dito, mas pinahusay mo ang training ng modelo gamit ang sarili mong data na nagresulta sa mas eksaktong modelo na tumutugon sa iyong mga pangangailangan ngunit maaaring magastos.
+- **Fine-tuned na modelo**. Dito, sinanay mo pa ang modelo gamit ang iyong sariling data na nagdulot ng pagiging mas eksakto at responsive ng modelo sa iyong mga pangangailangan ngunit maaaring maging magastos.
 
 ![LLMs deployment](../../../translated_images/tl/Deploy.18b2d27412ec8c02.webp)
 
 Pinagmulan ng larawan: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 
-### Prompt Engineering na may Context
+### Prompt Engineering kasama ang Konteksto
 
-Ang mga pre-trained na LLMs ay mahusay sa mga pangkalahatang natural language tasks, kahit na tawagin sila gamit ang maikling prompt, tulad ng isang pangungusap na dapat tapusin o isang tanong – ang tinatawag na “zero-shot” learning.
+Ang mga pre-trained na LLM ay mahusay gumana sa mga generalized na gawain sa natural language, kahit na tawagin lang gamit ang maikling prompt, tulad ng isang pangungusap na kailangang kumpletuhin o isang tanong – ang tinatawag na “zero-shot” learning.
 
-Gayunpaman, mas maayos ang sagot at mas malapit sa inaasahan ng user kung mas ma-frame ng user ang kanilang query, gamit ang detalyadong request at mga halimbawa – ang Context. Sa ganitong kaso, tinatawag itong “one-shot” learning kung ang prompt ay may isang halimbawa lamang at “few-shot learning” kung mayroong maraming halimbawa.
-Ang prompt engineering na may context ang pinaka-matipid na paraan upang magsimula.
+Gayunpaman, kapag mas naipapakita ng gumagamit ang kanyang query, gamit ang detalyadong kahilingan at mga halimbawa – ang Konteksto – mas magiging tumpak at malapit sa inaasahan ng gumagamit ang sagot. Sa ganitong kaso, tinatawag itong “one-shot” learning kung may isang halimbawa lang ang prompt at “few shot learning” kung mayroong maraming halimbawa.
+Ang prompt engineering kasama ang konteksto ang pinaka-makatipid na paraan upang magsimula.
 
 ### Retrieval Augmented Generation (RAG)
 
-Ang mga LLMs ay may limitasyon na magagamit lamang ang data na ginamit sa kanilang training upang makabuo ng sagot. Nangangahulugan ito na wala silang alam tungkol sa mga katotohanan na nangyari pagkatapos ng kanilang training process, at hindi nila ma-access ang mga non-public na impormasyon (tulad ng data ng kumpanya).
-Maaaring malampasan ito sa pamamagitan ng RAG, isang teknik na nagdadagdag ng external na data sa prompt sa anyo ng mga chunks ng dokumento, isinasaalang-alang ang limitasyon ng haba ng prompt. Sinusuportahan ito ng mga tool sa Vector database (tulad ng [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)) na kumukuha ng mga kapaki-pakinabang na chunks mula sa iba't ibang pre-defined na data sources at idinadagdag ang mga ito sa prompt Context.
+May limitasyon ang mga LLM na maaari lamang nilang gamitin ang data na ginamit sa kanilang pagsasanay upang makabuo ng sagot. Ibig sabihin nito na wala silang kaalaman tungkol sa mga pangyayaring naganap pagkatapos ng kanilang pagsasanay, at hindi nila ma-access ang mga impormasyong hindi pampubliko (tulad ng data ng kumpanya).
+Ito ay maaaring malampasan sa pamamagitan ng RAG, isang teknikal na paraan na nagdadagdag ng panlabas na data sa prompt sa anyo ng mga bahagi ng dokumento, isinasaalang-alang ang limitasyon sa haba ng prompt. Sinusuportahan ito ng mga Vector database tools (tulad ng [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)) na kumukuha ng mga mahalagang bahagi mula sa iba't ibang mga paunang-depensang pinagmumulan ng data at idinadagdag ang mga ito sa Konteksto ng prompt.
 
-Ang teknik na ito ay napaka-kapaki-pakinabang kapag ang isang negosyo ay walang sapat na data, sapat na oras, o mga resources upang i-fine-tune ang isang LLM, ngunit nais pa rin nitong mapabuti ang performance sa isang partikular na workload at mabawasan ang panganib ng fabrications, i.e., mystification ng realidad o mapanganib na content.
+Ang teknik na ito ay napaka-kapaki-pakinabang kapag ang isang negosyo ay walang sapat na data, sapat na oras, o mga mapagkukunan upang mag-fine-tune ng LLM, ngunit nais pa ring pagbutihin ang performance sa isang partikular na workload at bawasan ang mga panganib ng mga hallucinated, lipas na, o hindi suportadong mga sagot.
 
-### Fine-tuned model
+### Fine-tuned na modelo
 
-Ang fine-tuning ay isang proseso na gumagamit ng transfer learning upang ‘i-adapt’ ang modelo sa isang downstream task o upang lutasin ang isang partikular na problema. Naiiba sa few-shot learning at RAG, nagreresulta ito sa isang bagong modelo na nabuo, na may updated na weights at biases. Nangangailangan ito ng set ng training examples na binubuo ng isang input (ang prompt) at ang kaugnay nitong output (ang completion).
-Ito ang mas pinipiling paraan kung:
+Ang fine-tuning ay isang proseso na gumagamit ng transfer learning upang ‘i-adapt’ ang modelo sa isang downstream task o upang lutasin ang isang partikular na problema. Naiiba ito sa few-shot learning at RAG, na nagreresulta sa pagbuo ng bagong modelo, na may mga updated na weights at biases. Nangangailangan ito ng isang set ng mga halimbawa sa pagsasanay na binubuo ng isang input (ang prompt) at ang kaugnay na output nito (ang completion).
+Ito ang magiging paboritong pamamaraan kung:
 
-- **Paggamit ng fine-tuned models**. Ang isang negosyo ay nais gumamit ng fine-tuned na mas hindi gaanong capable na mga modelo (tulad ng embedding models) kaysa sa high-performance models, na nagreresulta sa mas matipid at mabilis na solusyon.
+- **Paggamit ng mas maliit na task-specific models**. Nais ng isang negosyo na mag-fine-tune ng mas maliit na modelo para sa isang sikip na gawain sa halip na paulit-ulit na gamitin ang isang mas malaking frontier na modelo, na nagreresulta sa mas matipid at mabilis na solusyon.
 
-- **Pagsasaalang-alang sa latency**. Ang latency ay mahalaga para sa isang partikular na use-case, kaya’t hindi posible ang paggamit ng napakahabang mga prompt o ang dami ng mga halimbawa na dapat matutunan ng modelo ay hindi kasya sa limitasyon ng haba ng prompt.
+- **Isinasaalang-alang ang latency**. Mahalaga ang latency para sa isang partikular na gamit, kaya hindi maaaring gumamit ng napakahabang mga prompt o ang bilang ng mga halimbawang dapat matutunan ng modelo ay hindi kasya sa limitasyon ng haba ng prompt.
 
-- **Pagiging up-to-date**. Ang isang negosyo ay may maraming mataas na kalidad na data at ground truth labels at ang mga resources na kinakailangan upang mapanatili ang data na ito na up-to-date sa paglipas ng panahon.
+- **Pagsasaayos ng matatag na pag-uugali**. Mayroon ang negosyo ng maraming mataas na kalidad na halimbawa at nais nilang sundan ng modelo nang palagian ang pattern ng gawain, format ng output, tono, o istilo na partikular sa domain. Kung ang pangunahing problema ay mga sariwang kaalaman o pribadong impormasyon na madalas nagbabago, gamitin ang RAG sa halip na umasa lamang sa fine-tuning.
 
-### Trained model
+### Sinangayang modelo
 
-Ang pag-train ng isang LLM mula sa simula ay walang duda ang pinakamahirap at pinaka-komplikadong paraan na maaaring gamitin, na nangangailangan ng napakalaking dami ng data, skilled resources, at angkop na computational power. Ang opsyong ito ay dapat isaalang-alang lamang sa isang sitwasyon kung saan ang isang negosyo ay may domain-specific na use case at malaking dami ng domain-centric na data.
+Ang pagsasanay ng isang LLM mula sa simula ay walang dudang pinakamahirap at pinaka-komplikadong pamamaraan upang gawin, na nangangailangan ng napakaraming data, mahuhusay na tauhan, at angkop na computational power. Dapat ikonsidera lamang ang opsyong ito kapag may domain-specific use case ang negosyo at malaking dami ng domain-centric data.
 
-## Knowledge check
+## Pagsusulit sa Kaalaman
 
-Ano ang maaaring magandang paraan upang mapabuti ang mga resulta ng LLM completion?
+Ano ang maaaring magandang pamamaraan upang mapabuti ang mga resulta ng LLM completion?
 
-1. Prompt engineering na may context
+1. Prompt engineering kasama ang konteksto
 1. RAG
-1. Fine-tuned model
+1. Fine-tuned na modelo
 
-A:3, kung mayroon kang oras, resources, at mataas na kalidad na data, ang fine-tuning ang mas magandang opsyon upang manatiling up-to-date. Gayunpaman, kung nais mong mapabuti ang mga bagay-bagay at kulang ka sa oras, mas mainam na isaalang-alang muna ang RAG.
+A: Lahat ng tatlo ay makakatulong. Magsimula sa prompt engineering at konteksto para sa mabilisang pagpapabuti, at gamitin ang RAG kapag kailangan ng modelo ng kasalukuyang mga katotohanan o pribadong data ng negosyo. Piliin ang fine-tuning kapag mayroon kang sapat na mataas na kalidad na mga halimbawa at kailangan mo na sundan ng modelo nang palagian ang isang gawain, format, tono, o pattern ng domain.
 
 ## 🚀 Hamon
 
-Magbasa pa tungkol sa kung paano mo magagamit ang [RAG](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst) para sa iyong negosyo.
+Magbasa pa tungkol sa kung paano mo maaaring [gamitin ang RAG](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst) para sa iyong negosyo.
 
 ## Magaling na Trabaho, Ipagpatuloy ang Iyong Pag-aaral
 
-Matapos makumpleto ang araling ito, tingnan ang aming [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) upang patuloy na paunlarin ang iyong kaalaman sa Generative AI!
+Pagkatapos makumpleto ang araling ito, tingnan ang aming [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) upang ipagpatuloy ang pagpapalawak ng iyong kaalaman sa Generative AI!
 
-Pumunta sa Lesson 3 kung saan tatalakayin natin kung paano [gumawa gamit ang Generative AI nang Responsable](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
+Pumunta sa Lesson 3 kung saan titingnan natin kung paano [gumawa gamit ang Generative AI nang Responsable](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat sinisikap naming maging tumpak, mangyaring tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na pinagmulan. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Pagtatanggi**:
+Ang dokumentong ito ay isinalin gamit ang serbisyo ng AI translation na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't nagsusumikap kami para sa katumpakan, pakatandaan na ang awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na pangunahing sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang maling pagkakaintindi o maling interpretasyon na nagmula sa paggamit ng pagsasaling ito.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

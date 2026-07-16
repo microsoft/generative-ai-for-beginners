@@ -1,93 +1,94 @@
 [![Funkcióhívással való integráció](../../../translated_images/hu/14-lesson-banner.066d74a31727ac12.webp)](https://youtu.be/ewtQY_RJrzs?si=dyJ2bjiljH7UUHCh)
 
-# A generatív mesterséges intelligencia alkalmazásának életciklusa
+# A Generatív MI alkalmazás életciklusa
 
-Minden MI-alkalmazás számára fontos kérdés az MI-funkciók relevanciája, mivel az MI egy gyorsan fejlődő terület. Ahhoz, hogy alkalmazásod releváns, megbízható és robusztus maradjon, folyamatosan nyomon kell követned, értékelned és fejlesztened kell azt. Ebben segít a generatív MI életciklus.
+Egy fontos kérdés minden MI alkalmazás esetében az MI funkciók relevanciája, mivel az MI gyorsan fejlődő terület. Annak érdekében, hogy az alkalmazásod releváns, megbízható és robusztus maradjon, folyamatosan figyelnie, értékelnie és fejlesztenie kell azt. Itt lép be a generatív MI életciklusa.
 
-A generatív MI életciklus egy olyan keretrendszer, amely végigvezeti az alkalmazás fejlesztésének, bevezetésének és karbantartásának szakaszain. Segít meghatározni a céljaidat, mérni a teljesítményedet, azonosítani a kihívásokat és megvalósítani a megoldásokat. Emellett támogatja az alkalmazás összehangolását az adott terület etikai és jogi szabványaival, valamint az érintett felekkel. A generatív MI életciklus követésével biztosíthatod, hogy alkalmazásod mindig értéket nyújtson és elégedetté tegye a felhasználókat.
+A generatív MI életciklusa egy keretrendszer, amely végigvezet a generatív MI alkalmazás fejlesztésének, telepítésének és karbantartásának szakaszain. Segít meghatározni céljaidat, mérni a teljesítményedet, azonosítani a kihívásaidat, és megvalósítani a megoldásaidat. Továbbá segít az alkalmazásod összhangba hozni az adott terület és az érintettek etikai és jogi szabályaival. A generatív MI életciklus követésével biztosíthatod, hogy alkalmazásod mindig értéket nyújtson és elégedetté tegye a felhasználóidat.
 
 ## Bevezetés
 
-Ebben a fejezetben megtanulod:
+Ebben a fejezetben:
 
-- Megérteni az MLOps-ról LLMOps-ra történő paradigma váltást
-- Az LLM életciklust
-- Életciklus eszközöket
-- Életciklus metrikázást és értékelést
+- Megérted az MLOps-ról az LLMOps-ra való paradigmaváltást
+- Az LLM életciklusa
+- Eszközök az életciklus kezeléséhez
+- Életciklus metrikák és értékelés
 
-## Megérteni az MLOps-ról LLMOps-ra történő paradigma váltást
+## Megérteni az MLOps-ról az LLMOps-ra való paradigmaváltást
 
-Az LLM-ek az Mesterséges Intelligencia új eszközei, hihetetlenül erősek az elemző és generáló feladatokban, azonban ez az erő befolyásolja, hogyan optimalizáljuk az MI és a klasszikus gépi tanulás feladatokat.
+Az LLM-ek új eszközök a mesterséges intelligencia arzenáljában, hihetetlenül erősek az elemző és generáló feladatokban, azonban ez az erő következményekkel jár az MI és a klasszikus gépi tanulás feladatainak egyszerűsítésében.
 
-Ehhez új paradigma szükséges, amely dinamikusan alkalmazkodik ehhez az eszközhöz, a megfelelő ösztönzőkkel. Régebbi MI-alkalmazásokat "ML Apps"-ként, míg újabbakat "GenAI Apps"-ként vagy egyszerűen "AI Apps"-ként kategorizálhatunk, tükrözve az adott időszak népszerű technológiáit és módszereit. Ez többféleképpen módosítja a narratívánkat, tekintsük meg az alábbi összehasonlítást.
+Ezért egy új paradigma szükséges, hogy dinamikusan, a megfelelő ösztönzőkkel igazítsuk ezt az eszközt. A régebbi MI alkalmazásokat "ML alkalmazásokként", az újabbakat pedig "GenAI alkalmazásokként" vagy egyszerűen "MI alkalmazásokként" kategorizálhatjuk, tükrözve az adott időszakban alkalmazott fő technológiákat és technikákat. Ez a megközelítés több szempontból is módosítja a narratívánkat, lásd az alábbi összehasonlítást.
 
 ![LLMOps vs. MLOps összehasonlítás](../../../translated_images/hu/01-llmops-shift.29bc933cb3bb0080.webp)
 
-Figyeld meg, hogy az LLMOps során inkább az alkalmazásfejlesztőkre fókuszálunk, az integrációkat kulcspontként kezelve, "Models-as-a-Service" használatával és a következő szempontok alapján gondolkodva a metrikákról.
+Vegyük észre, hogy az LLMOps inkább az alkalmazásfejlesztőkre összpontosít, az integrációkat kulcspontként használva, a "Modellek mint szolgáltatások" szemléletet alkalmazva, és a következő metrikákra koncentrálva.
 
-- Minőség: válasz minősége
-- Káros hatás: felelős MI
-- Őszinteség: válasz megalapozottsága (Értelmes? Helyes?)
-- Költség: megoldás költségvetése
-- Késleltetés: átlagos válaszidő tokenenként
+- Minőség: Válasz minősége
+- Kár: Felelős MI
+- Őszinteség: Válasz megalapozottsága (Értelmes? Helyes?)
+- Költség: Megoldás költségvetése
+- Válaszidő: Átlagos idő tokenválaszra
 
 ## Az LLM életciklusa
 
-Először is, hogy megértsük az életciklust és a módosításokat, vegyük figyelembe a következő ábrát.
+Először is, az életciklus megértéséhez és a módosításokhoz nézzük meg a következő infografikát.
 
 ![LLMOps infografika](../../../translated_images/hu/02-llmops.70a942ead05a7645.webp)
 
-Mint látható, ez eltér az MLOps megszokott életciklusaitól. Az LLM-ek számos új követelménynek felelnek meg, mint a Prompting, különféle minőségjavító technikák (Finomhangolás, RAG, Meta-Promptok), más értékelési és felelősségi vonatkozások a felelős MI miatt, valamint új értékelési metrikák (Minőség, Káros hatás, Őszinteség, Költség és Késleltetés).
+Ahogy észreveheted, ez eltér a megszokott MLOps életciklusoktól. Az LLM-ek számos új követelményt támasztanak, mint a promptolás, különböző minőségjavító technikák (finomhangolás, RAG, meta-promptok), eltérő értékelés és felelősség a felelős MI kapcsán, valamint új értékelési metrikák (minőség, kár, őszinteség, költség és válaszidő).
 
-Például nézd meg, hogyan ötletelünk. Prompt engineering segítségével különböző LLM-ekkel kísérletezünk, hogy feltérképezzük a lehetőségeket és teszteljük, vajon a hipotézisünk helyes lehet-e.
+Például nézd meg, hogyan alkotunk ötleteket. Prompt mérnökséget használunk, hogy különböző LLM-ekkel kísérletezzünk, és felfedezzük a lehetőségeket, tesztelve, hogy a hipotézisünk helyes lehet-e.
 
-Fontos, hogy ez nem lineáris, hanem integrált ciklusokból, ismétlődő folyamatokból áll, egy átfogó ciklussal körülvéve.
+Jegyezd meg, hogy ez nem lineáris, hanem integrált ciklusokból áll, ismétlődő és egy átfogó ciklussal.
 
-Hogyan vizsgálhatnánk meg ezeket a lépéseket? Részletezzük, hogyan lehet életciklust építeni.
+Hogyan fedezhetjük fel ezeket a lépéseket? Nézzük meg részletesen, hogyan építhetünk életciklust.
 
 ![LLMOps munkafolyamat](../../../translated_images/hu/03-llm-stage-flows.3a1e1c401235a6cf.webp)
 
-Ez kicsit bonyolultnak tűnhet, fókuszáljunk először a három fő lépésre.
+Ez talán kissé bonyolultnak tűnhet, fókuszáljunk először a három nagy lépésre.
 
-1. Ötletelés/Felfedezés: Felfedezés, ahol üzleti igényeink szerint kísérletezhetünk. Prototípuskészítés, egy [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst) létrehozása és tesztelése, hogy eléggé hatékony-e a hipotézisünkhöz.
-1. Építés/Kibővítés: Megvalósítás, most nagyobb adatkészleteken értékeljük és implementálunk technikákat, mint a Finomhangolás és RAG, hogy ellenőrizzük megoldásunk robusztusságát. Ha nem működik, újra implementáljuk, új lépéseket adunk a folyamatunkhoz vagy átszervezzük az adatokat. Ha sikerül, és megfelelünk a metrikáknak, készen áll a következő lépésre.
-1. Üzemeltetés: Integráció, most figyelőrendszereket és riasztásokat adunk a rendszerünkhöz, telepítés és az alkalmazás integrálása.
+1. Ötletelés/Felfedezés: Felfedezés, itt üzleti igényeink szerint kutathatunk. Prototípus készítés, [PromptFlow](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst) létrehozása és tesztelése, hogy elég hatékony-e a hipotézisünkhöz.
+1. Építés/Bővítés: Megvalósítás, ekkor elkezdjük értékelni a nagyobb adatkészleteket, megvalósítunk technikákat, mint a finomhangolás és a RAG, hogy ellenőrizzük megoldásunk robusztusságát. Ha nem működik, újra megvalósíthatjuk, további lépéseket adhatunk a folyamatunkhoz vagy átszervezhetjük az adatokat. A folyamatunk és a skálázás tesztelése után, ha működik és az értékelő metrikák megfelelőek, készen áll a következő lépésre.
+1. Üzembe helyezés: Integráció, most hozzáadjuk a monitorozási és riasztási rendszereket a rendszerünkhöz, telepítjük és integráljuk az alkalmazásba.
 
-Aztán van egy átfogó menedzsment ciklus, amely a biztonságra, megfelelőségre és kormányzásra összpontosít.
+Ezután jön az átfogó menedzsment ciklus, amely a biztonságra, megfelelőségre és irányításra fókuszál.
 
-Gratulálunk, most már az AI-alkalmazásod készen áll az üzemeltetésre. Gyakorlati tapasztalatért nézd meg a [Contoso Chat Demo.](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst)
+Gratulálunk, most már készen áll az MI alkalmazásod az éles működésre. Gyakorlati tapasztalathoz nézd meg a [Contoso Chat Demo](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst) bemutatót.
 
-Most, milyen eszközöket használhatunk?
+Most pedig, milyen eszközöket használhatunk?
 
 ## Életciklus eszközök
 
-Az eszközökhöz a Microsoft biztosítja az [Azure AI Platformot](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreyst) és a [PromptFlow-t](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst), amelyek megkönnyítik és egyszerűvé teszik az életciklus bevezetését.
+Az eszközökhöz a Microsoft az [Azure AI Platformot](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreyst) és a [PromptFlow-t](https://microsoft.github.io/promptflow/index.html?WT.mc_id=academic-105485-koreyst) kínálja, amelyek megkönnyítik és egyben egyszerűvé teszik az életciklus megvalósítását.
 
-Az [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreyst) lehetőséget ad az [AI Studio](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst) használatára. Az AI Studio egy webes portál, ahol modelleket, példákat és eszközöket fedezhetsz fel. Erőforrásaidat kezelheted, vizuális fejlesztési folyamatokat végezhetsz és SDK/CLI opciókat használhatsz kódorientált fejlesztéshez.
+Az [Azure AI Platform](https://azure.microsoft.com/solutions/ai/?WT.mc_id=academic-105485-koreyst) lehetővé teszi a [Microsoft Foundry](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst) használatát. A Microsoft Foundry (korábban Azure AI Studio) egy webes portál, amely modellek, minták és eszközök felfedezését, erőforrások kezelését, UI fejlesztési folyamatokat és SDK/CLI opciókat kínál kód alapú fejlesztéshez.
 
 ![Azure AI lehetőségek](../../../translated_images/hu/04-azure-ai-platform.80203baf03a12fa8.webp)
 
-Az Azure AI segítségével több erőforrást használhatsz műveleteid, szolgáltatásaid, projektjeid, vektoros keresési és adatbázis igényeid kezelésére.
+Az Azure AI lehetővé teszi több erőforrás használatát az üzemeltetésedhez, szolgáltatásokhoz, projektekhez, vektor kereséshez és adatbázis igényekhez.
 
-![LLMOps Azure AI-val](../../../translated_images/hu/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp)
+![LLMOps az Azure AI-val](../../../translated_images/hu/05-llm-azure-ai-prompt.a5ce85cdbb494bdf.webp)
 
-Építs a Proof-of-Concept-től (POC) a nagyszabású alkalmazásokig a PromptFlow-val:
+Készíts proof-of-concepttől (POC) a nagyszabású alkalmazásokig a PromptFlow-val:
 
-- Tervezz és építs alkalmazásokat VS Code-ban, vizuális és funkcionális eszközökkel
-- Teszteld és finomhangold alkalmazásod a minőségi MI érdekében, könnyedén.
-- Használd az Azure AI Studiot az integrációhoz és iterációhoz a felhővel, gördülékeny integráció és gyors telepítés céljából.
+- Alkalmazások tervezése és fejlesztése VS Code-ból vizuális és funkcionális eszközökkel
+- Alkalmazások tesztelése és finomhangolása a minőségi MI érdekében, egyszerűen.
+- Használd a Microsoft Foundry-t a felhővel való integrációra és iterációra, gyors integráció érdekében tolás és telepítés.
 
-![LLMOps PromptFlow-val](../../../translated_images/hu/06-llm-promptflow.a183eba07a3a7fdf.webp)
+![LLMOps a PromptFlow-val](../../../translated_images/hu/06-llm-promptflow.a183eba07a3a7fdf.webp)
 
-## Nagyszerű! Folytasd a tanulást!
+## Szuper! Folytasd a tanulást!
 
-Csodálatos, most tanuld meg, hogyan strukturálunk egy alkalmazást a fogalmak használatához a [Contoso Chat App](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst) segítségével, hogy megtekinthesd, hogyan alkalmazza a Cloud Advocacy ezeket a fogalmakat bemutatókban. További tartalmakért nézd meg az [Ignite breakout szekciónkat!](https://www.youtube.com/watch?v=DdOylyrTOWg)
+Nagyszerű, most tanulj meg többet arról, hogyan épül fel egy alkalmazás, hogy alkalmazd a koncepciókat a [Contoso Chat App](https://nitya.github.io/contoso-chat/?WT.mc_id=academic-105485-koreyst) segítségével, ahol a Cloud Advocacy bemutatja ezeket a koncepciókat demonstráció során. Több tartalomért nézd meg az [Ignite breakout sessionünket!
+](https://www.youtube.com/watch?v=DdOylyrTOWg)
 
-Most pedig nézd meg a 15. leckét, hogy megértsd, hogyan hat az [Retrieval Augmented Generation és a Vektor adatbázisok](../15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst) a generatív MI-re és hogyan teheted még vonzóbbá az alkalmazásokat!
+Most pedig nézd meg a 15. leckét, hogy megértsd, hogyan befolyásolják a [Retrieval Augmented Generation és a Vektor Adatbázisok](../15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst) a generatív MI-t, és hogy még érdekesebb alkalmazásokat készíthess!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Felelősség kizárása**:
-Ez a dokumentum az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár igyekszünk pontosságra törekedni, kérjük, vegye figyelembe, hogy az automatikus fordítások tartalmazhatnak hibákat vagy pontatlanságokat. Az eredeti dokumentum az anyanyelvén tekinthető hivatalos forrásnak. Fontos információk esetén profi, emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy értelmezési problémákért.
+**Jogi nyilatkozat**:
+Ez a dokumentum az AI fordítási szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár az pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén professzionális emberi fordítást javasolunk. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely ebből a fordításból ered.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

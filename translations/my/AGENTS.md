@@ -1,298 +1,299 @@
 # AGENTS.md
 
-## ပရောဂျက်အကျဉ်းချုပ်
+## စီမံကိန်းအနှာရပ်
 
-ဤ repository တွင် Generative AI အခြေခံနှင့် အက်ပလီကေးရှင်းဖွံ့ဖြိုးတိုးတက်မှုကို သင်ကြားပေးသည့် 21-သင်ခန်းစာများပါဝင်သော သင်ခန်းစာအစီအစဉ်တစ်ခုပါဝင်သည်။ သင်ခန်းစာများသည် အခြေခံအကြောင်းအရာများမှ စတင်ပြီး ထုတ်လုပ်မှုအဆင့်အက်ပလီကေးရှင်းများတည်ဆောက်ခြင်းအထိ အဆင့်ဆင့်သင်ကြားပေးရန် ရည်ရွယ်ထားသည်။
+ဤ repository တွင် Generative AI အခြေခံနှင့် အပလီကေးရှင်းဖွံ့ဖြိုးမှုကို သင်ကြားသည့် အပတ် ၂၁ အပိုင်းများပါဝင်သော ကျယ်ပြန့်သော သင်တန်းအစီအစဉ်ရှိသည်။ သင်တန်းသည် စတင်သင်ယူသူများအတွက်ဒီဇိုင်းချပြီး အခြေခံအယူအဆများမှ ထုတ်လုပ်မှုအသင့်အပလီကေးရှင်းများ တည်ဆောက်ခြင်းအထိအားလုံးပါဝင်သည်။
 
-**အဓိကနည်းပညာများ:**
-- Python 3.9+ နှင့် `openai`, `python-dotenv`, `tiktoken`, `azure-ai-inference`, `pandas`, `numpy`, `matplotlib` စသည်တို့ပါဝင်သော libraries
-- TypeScript/JavaScript နှင့် Node.js libraries: `@azure/openai`, `@azure-rest/ai-inference`, `openai`
-- Azure OpenAI Service, OpenAI API, နှင့် GitHub Models
-- Jupyter Notebooks ကို interactive သင်ကြားမှုအတွက် အသုံးပြုခြင်း
-- Dev Containers ကို တူညီသော ဖွံ့ဖြိုးတိုးတက်မှုပတ်ဝန်းကျင်အတွက် အသုံးပြုခြင်း
+**အဓိက နည်းပညာများ:**
+- Python 3.9+ နှင့် စာကြည့်တမ်းများ - `openai`, `python-dotenv`, `tiktoken`, `azure-ai-inference`, `pandas`, `numpy`, `matplotlib`
+- TypeScript/JavaScript နှင့် Node.js စာကြည့်တမ်းများ - `openai` (Azure OpenAI v1 endpoint နှင့် Responses API များ), `@azure-rest/ai-inference` (Microsoft Foundry Models)
+- Azure OpenAI Service, OpenAI API နှင့် Microsoft Foundry Models (GitHub Models သည် 2026 ဇူလိုင်ကုန်တွင် ရပ်ဆိုင်းသည်)
+- အပြန်အလှန်သင်ယူနိုင်သော Jupyter Notebooks များ
+- တည်ငြိမ်သော ဖွံ့ဖြိုးရေးပတ်ဝန်းကျင်အတွက် Dev Containers များ
 
-**Repository ဖွဲ့စည်းမှု:**
-- 21 ခုသော သင်ခန်းစာ directories (00-21) တွင် README, code examples, နှင့် assignments ပါဝင်သည်
-- အမျိုးမျိုးသော အကောင်အထည်ဖော်မှုများ: Python, TypeScript, နှင့် တခါတရံ .NET examples
-- 40+ ဘာသာစကား version များပါဝင်သော Translations directory
-- `.env` ဖိုင်မှတစ်ဆင့် အချက်အလက်များကို စုစည်းထားခြင်း (`.env.copy` ကို template အဖြစ်အသုံးပြုပါ)
+**Repository ဖွဲ့စည်းပုံ:**
+- အပိုင်း ၂၁ များနှင့်အတူ စာတမ်းများ၊ ကုဒ်နမူနာများ၊ လေ့ကျင့်ခန်းများပါဝင်သော သင်ခန်းစာဖိုင်များ (00-21)
+- သုံးစွဲနိုင်မှုများစွာ - Python, TypeScript နှင့် တခါတလေ .NET နမူနာများပါဝင်သည်
+- ဘာသာပြန်စာမျက်နှာ 40+ ဘာသာများပါဝင်သည်
+- `.env` ဖိုင်မှတစ်ဆင့် ညှိနှိုင်းမှု ဖိုင် (`.env.copy` ကိုမူကြမ်းအဖြစ် အသုံးပြုပါ)
 
-## Setup Commands
+## စတင်အသုံးပြုရန် အမိန့်များ
 
-### Repository စတင်တပ်ဆင်ခြင်း
+### သောကြာ Repository စတင်ပြုပြင်ခြင်း
 
 ```bash
-# Clone the repository
+# ဂိုဏ်းသိုလှောင်မှုကို ကလုံးကူးပါ
 git clone https://github.com/microsoft/generative-ai-for-beginners.git
 cd generative-ai-for-beginners
 
-# Copy environment template
+# ပတ်ဝန်းကျင်ပုံစံကို ကူးယူပါ
 cp .env.copy .env
-# Edit .env with your API keys and endpoints
+# သင့် API key များနှင့် endpoint များဖြင့် .env ဖိုင်ကို တည်းဖြတ်ပါ
 ```
 
-### Python ပတ်ဝန်းကျင် Setup
+### Python ပတ်ဝန်းကျင်စင်ကြယ်ရေး
 
 ```bash
-# Create virtual environment
+# ကြားဝင်ပတ်ဝန်းကျင် ဖန်တီးပါ
 python3 -m venv venv
 
-# Activate virtual environment
-# On macOS/Linux:
+# ကြားဝင်ပတ်ဝန်းကျင်ကို ဖွင့်ပါ
+# macOS/Linux တွင်-
 source venv/bin/activate
-# On Windows:
+# Windows တွင်-
 venv\Scripts\activate
 
-# Install dependencies
+# အားထားဆော့ဖ်ဝဲများ တပ်ဆင်ပါ
 pip install -r requirements.txt
 ```
 
-### Node.js/TypeScript Setup
+### Node.js/TypeScript စတင်ပြုပြင်ခြင်း
 
 ```bash
-# Install root-level dependencies (for documentation tooling)
+# အခြေခံစနစ်များကို သွင်းယူပါ (စာတမ်းရေးကိရိယာများအတွက်)
 npm install
 
-# For individual lesson TypeScript examples, navigate to the specific lesson:
+# တစ်ခုချင်းစီ အတန်း TypeScript နမူနာများအတွက်၊ သီးခြား အတန်းသို့ သွားပါ။
 cd 06-text-generation-apps/typescript/recipe-app
 npm install
 ```
 
-### Dev Container Setup (အကြံပြုထားသည်)
+### Dev Container စတင်ပြင်ဆင်ခြင်း (အကြံပြု)
 
-ဤ repository တွင် GitHub Codespaces သို့မဟုတ် VS Code Dev Containers extension အတွက် `.devcontainer` configuration ပါဝင်သည်:
+Repository တွင် GitHub Codespaces သို့မဟုတ် VS Code Dev Containers အတွက် `.devcontainer` ဖိုင်ပါဝင်သည်။
 
-1. GitHub Codespaces သို့မဟုတ် VS Code တွင် repository ကို ဖွင့်ပါ
-2. Dev Container သည် အလိုအလျောက်:
-   - `requirements.txt` မှ Python dependencies များကို install လုပ်ပါမည်
-   - post-create script (`.devcontainer/post-create.sh`) ကို run လုပ်ပါမည်
-   - Jupyter kernel ကို setup လုပ်ပါမည်
+၁။ GitHub Codespaces သို့မဟုတ် VS Code ဖြင့် Dev Containers extension ဖြင့် ဖွင့်ပါ
+၂။ Dev Container မှ အလိုအလျောက် သုံးဆောင်လိမ့်မည် -
+   - `requirements.txt` မှ Python လိုအပ်ချက်များ ထည့်သွင်းသည်
+   - post-create script (`.devcontainer/post-create.sh`) ကို လည်ပတ်သည်
+   - Jupyter kernel ကို တပ်ဆင်သည်
 
-## ဖွံ့ဖြိုးတိုးတက်မှု Workflow
+## ဖွံ့ဖြိုးရေး လုပ်ငန်းစဉ်
 
-### Environment Variables
+### ပတ်ဝန်းကျင် ဗာရီးယာပ်များ
 
-API access လိုအပ်သော သင်ခန်းစာများအားလုံးသည် `.env` တွင် သတ်မှတ်ထားသော environment variables ကို အသုံးပြုသည်:
+API အသုံးပြုရန်လိုသော သင်ခန်းစာအားလုံးတွင် `.env` ဖိုင်တွင် ဖော်ပြထားသည့် ပတ်ဝန်းကျင်ဗာရီးယာပ်များကို အသုံးပြုသည်။
 
 - `OPENAI_API_KEY` - OpenAI API အတွက်
-- `AZURE_OPENAI_API_KEY` - Azure OpenAI Service အတွက်
-- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI endpoint URL
-- `AZURE_OPENAI_DEPLOYMENT` - Chat completion model deployment name
-- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Embeddings model deployment name
-- `AZURE_OPENAI_API_VERSION` - API version (default: `2024-02-01`)
-- `HUGGING_FACE_API_KEY` - Hugging Face models အတွက်
-- `GITHUB_TOKEN` - GitHub Models အတွက်
+- `AZURE_OPENAI_API_KEY` - Microsoft Foundry တွင် Azure OpenAI အတွက် (Azure OpenAI Service သည် Microsoft Foundry ၏ အစိတ်အပိုင်းဖြစ်သည်: https://ai.azure.com)
+- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI endpoint URL (Foundry resource endpoint)
+- `AZURE_OPENAI_DEPLOYMENT` - chat completion မော်ဒယ် deploy အမည်
+- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - embeddings မော်ဒယ် deploy အမည်
+- `AZURE_OPENAI_API_VERSION` - API ဗားရှင်း (အပေါ်ဆုံး: `2024-10-21`)
+- `HUGGING_FACE_API_KEY` - Hugging Face မော်ဒယ်များအတွက်
+- `AZURE_INFERENCE_ENDPOINT` - Microsoft Foundry Models endpoint (multi-provider မော်ဒယ်စာရင်း)
+- `AZURE_INFERENCE_CREDENTIAL` - Microsoft Foundry Models API key (ပျက်ကွက်မှု ဖြစ်နေသော `GITHUB_TOKEN` အစားထိုး)
 
-### Python Examples ကို run လုပ်ခြင်း
+### Python နမူနာများ လည်ပတ်ခြင်း
 
 ```bash
-# Navigate to lesson directory
+# သင်ခန်းစာဖိုင်တည်နေရာသို့ သွားပါ
 cd 06-text-generation-apps/python
 
-# Run a Python script
+# Python စာရင်းကို အကောင်အထည်ဖော်ပါ
 python aoai-app.py
 ```
 
-### TypeScript Examples ကို run လုပ်ခြင်း
+### TypeScript နမူနာများ လည်ပတ်ခြင်း
 
 ```bash
-# Navigate to TypeScript app directory
+# TypeScript အက်ပ်ဖိုဒါသို့ သွားပါ
 cd 06-text-generation-apps/typescript/recipe-app
 
-# Build the TypeScript code
+# TypeScript ကုဒ်ကို တည်ဆောက်ပါ
 npm run build
 
-# Run the application
+# အက်ပ်ကို စလုပ်ပါ
 npm start
 ```
 
-### Jupyter Notebooks ကို run လုပ်ခြင်း
+### Jupyter Notebooks အသုံးပြုခြင်း
 
 ```bash
-# Start Jupyter in the repository root
+# 저장소 루트에서 Jupyter를 시작합니다
 jupyter notebook
 
-# Or use VS Code with Jupyter extension
+# 또는 Jupyter 확장 프로그램이 있는 VS Code를 사용하세요
 ```
 
-### သင်ခန်းစာအမျိုးအစားများနှင့် အလုပ်လုပ်ခြင်း
+### သင်ခန်းစာအမျိုးအစားများနှင့် လုပ်ဆောင်ခြင်း
 
-- **"Learn" သင်ခန်းစာများ**: README.md documentation နှင့် အကြောင်းအရာများကို အဓိကထားသည်
-- **"Build" သင်ခန်းစာများ**: Python နှင့် TypeScript တွင် အလုပ်လုပ်နိုင်သော code examples များပါဝင်သည်
-- သင်ခန်းစာတစ်ခုစီတွင် theory, code walkthroughs, နှင့် video content link များပါဝင်သော README.md ပါဝင်သည်
+- **"Learn" သင်ခန်းစာများ**: README.md စာတမ်းနှင့် အယူအဆများ အာရုံစိုက်သည်
+- **"Build" သင်ခန်းစာများ**: Python နှင့် TypeScript ကို အသုံးပြုသည့် ကုဒ်နမူနာများပါဝင်သည်
+- သင်ခန်းစာတိုင်းတွင် သီအိုရီ၊ ကုဒ်ရှင်းလင်းချက်များနှင့် ဗွီဒီယိုလင့်များပါဝင်သည့် README.md ရှိသည်
 
-## Code Style Guidelines
+## ကုဒ်စတိုင် ညွှန်ကြားချက်များ
 
 ### Python
 
-- Environment variable management အတွက် `python-dotenv` ကို အသုံးပြုပါ
-- API interactions အတွက် `openai` library ကို import လုပ်ပါ
-- Linting အတွက် `pylint` ကို အသုံးပြုပါ (တချို့သော examples တွင် `# pylint: disable=all` ပါဝင်သည်)
-- PEP 8 naming conventions ကို လိုက်နာပါ
-- API credentials များကို `.env` ဖိုင်တွင် သိမ်းဆည်းပါ၊ code တွင် မထည့်ပါနှင့်
+- ပတ်ဝန်းကျင် ဗာရီးယာပ် မန်နေဂျ်မင့်အတွက် `python-dotenv` ကို အသုံးပြုပါ
+- API ဆက်သွယ်မှုအတွက် `openai` စာကြည့်တမ်းကို တင်သွင်းပါ
+- Linting အတွက် `pylint` ကို အသုံးပြုပါ (အချို့ နမူနာများတွင် အလွယ်ကူစေရန် `# pylint: disable=all` ပါဝင်သည်)
+- PEP 8 အမည်ပေးခြင်း စံနှုန်းများကို လိုက်နာပါ
+- API အချက်အလက်များကို code မှ မထားဘဲ `.env` ဖိုင်တွင် သိမ်းဆည်းပါ
 
 ### TypeScript
 
-- Environment variables အတွက် `dotenv` package ကို အသုံးပြုပါ
-- App တစ်ခုစီအတွက် `tsconfig.json` တွင် TypeScript configuration ကို သတ်မှတ်ပါ
-- Azure services အတွက် `@azure/openai` သို့မဟုတ် `@azure-rest/ai-inference` ကို အသုံးပြုပါ
-- Development အတွက် auto-reload အတွက် `nodemon` ကို အသုံးပြုပါ
-- Run လုပ်မီ build လုပ်ပါ: `npm run build` ထို့နောက် `npm start`
+- ပတ်ဝန်းကျင်ဗာရီးယာပ်များအတွက် `dotenv` package ကို အသုံးပြုပါ
+- app တစ်ခုစီအတွက် `tsconfig.json` ဖိုင်တွင် TypeScript ကို ဖော်ပြထားသည်
+- Azure OpenAI အတွက် `openai` package (client ကို `/openai/v1/` endpoint များနှင့် ခေါ်၍ `client.responses.create` ကို အသုံးပြုပါ); Microsoft Foundry Models အတွက် `@azure-rest/ai-inference` ကို အသုံးပြုပါ
+- auto-reload အတွက် `nodemon` ကို အသုံးပြုပါ
+- လည်ပတ်ရန် မတိုင်မီ `npm run build` ပြုလုပ်ပြီး `npm start` ကို ခေါ်ပါ
 
-### အထွေထွေသဘောတရားများ
+### ပုံမှန် စံနှုန်းများ
 
-- Code examples များကို ရိုးရှင်းပြီး သင်ကြားမှုအတွက် အကျိုးရှိအောင်ထားပါ
-- အဓိကအကြောင်းအရာများကို ရှင်းလင်းသော comments များထည့်ပါ
-- သင်ခန်းစာတစ်ခုစီ၏ code သည် self-contained ဖြစ်ပြီး run လုပ်နိုင်ရမည်
-- Consistent naming ကို အသုံးပြုပါ: Azure OpenAI အတွက် `aoai-`, OpenAI API အတွက် `oai-`, GitHub Models အတွက် `githubmodels-`
+- ကုဒ်နမူနာများကို ရိုးရှင်းပြီး သင်ကြားရေးအတွက်သင့်တော်အောင် စီစဉ်ပါ
+- အဓိကအယူအဆများကို သေချာရှင်းလင်း သည့် မှတ်ချက်များ ထည့်ပါ
+- သင်ခန်းစာတိုင်း၏ ကုဒ်များကို မိုဃ်းမှန်စွာ လည်ပတ်နိုင်ရန် ပြုလုပ်ပါ
+- အမည်ပေးခြင်း၌ သေချာတည်ငြိမ်မှုရှိထားရန် - Azure OpenAI အတွက် `aoai-` prefix, OpenAI API အတွက် `oai-`, Microsoft Foundry Models အတွက် `githubmodels-` (ယခင် GitHub Models အချိန်ကနေ ရှင်းထားခြင်း)
 
-## Documentation Guidelines
+## စာတမ်းရေးသားမှုဆိုင်ရာ လမ်းညွှန်ချက်များ
 
-### Markdown Style
+### Markdown စတိုင်း
 
-- URLs များကို `[text](../../url)` format ဖြင့် wrap လုပ်ထားရမည်၊ အပိုနေရာများမပါရ
-- Relative links များသည် `./` သို့မဟုတ် `../` ဖြင့် စတင်ရမည်
-- Microsoft domains သို့ link များတွင် tracking ID ပါဝင်ရမည်: `?WT.mc_id=academic-105485-koreyst`
-- URLs တွင် နိုင်ငံအလိုက် locales မပါရ (e.g., `/en-us/` မပါရ)
-- `./images` folder တွင် descriptive names ဖြင့် images များကို သိမ်းဆည်းပါ
-- ဖိုင်နာမည်များတွင် အင်္ဂလိပ်အက္ခရာများ၊ နံပါတ်များ၊ နှင့် dashes ကို အသုံးပြုပါ
+- URL များအားလုံးကို `[text](../../url)` ပုံစံဖြင့် ကျစ်လစ်စွာ ထည့်သွင်းရမည် ရှင်းလင်းမှုနှင့်တူသည်
+- တုန့်ပြန်နေသော လင့်ခ်များအားလုံးသည် `./` သို့မဟုတ် `../` ဖြင့် စတင်ရမည်
+- Microsoft ဒိုမိန်းများသို့ လင့်ခ်အားလုံးတွင် မဖြစ်မနေ tracking ID: `?WT.mc_id=academic-105485-koreyst` ပါရှိရမည်
+- နိုင်ငံအလိုက် စက်ဝိုင်း URL များ ကို ရှောင်ရှားပါ (ဥပမာ `/en-us/` မသုံးရန်)
+- ပုံများကို `./images` ဖိုလ်ဒါတွင် ဖိုင်အမည် သေချာ သတ်မှတ်၍ သိမ်းဆည်းထားပါ
+- ဖိုင်အမည်များတွင် အင်္ဂလိပ်စာလုံးများ၊ ဂဏန်းများနှင့် ဟိုရိုင်းဇွန်မြှားများသာ အသုံးပြုပြီး လုံးဝခရီးလမ်းမဟုတ်စေရန်
 
-### Translation Support
+### ဘာသာပြန် အထောက်အကူပြုချက်များ
 
-- Repository သည် GitHub Actions မှတစ်ဆင့် 40+ ဘာသာစကားများကို ပံ့ပိုးသည်
-- Translations များကို `translations/` directory တွင် သိမ်းဆည်းထားသည်
-- အစိတ်အပိုင်း translation များကို မတင်ပါနှင့်
-- Machine translations မလက်ခံပါ
-- Translated images များကို `translated_images/` directory တွင် သိမ်းဆည်းထားသည်
+- Repository သည် GitHub Actions ဖြင့် 40+ ဘာသာစကားများအထိ ထောက်ပံ့သည်
+- ဘာသာပြန်စာသားများကို `translations/` ဖိုလ်ဒါတွင် သိမ်းဆည်းထားသည်
+- အပိုင်းဖျက်ခြင်းမပြုပါနှင့်
+- စက်ဘာသာပြန်များကိုလက်မခံ
+- ဘာသာပြန် ထုတ္ဝေထားသည့် ပုံများကို `translated_images/` ဖိုလ်ဒါတွင် သိမ်းဆည်းသည်
 
-## Testing and Validation
+## စစ်ဆေးခြင်းနှင့် အတည်ပြုခြင်း
 
-### Pre-submission Checks
+### မတင်မီ စစ်ဆေးမှုများ
 
-ဤ repository သည် GitHub Actions ကို validation အတွက် အသုံးပြုသည်။ PR မတင်မီ:
+ဤ repository သည် GitHub Actions ဖြင့် အတည်ပြုမှုများ ပြုလုပ်သည်။ PR မတင်မီ -
 
-1. **Markdown Links ကို စစ်ဆေးပါ**:
+၁။ **Markdown Links စစ်ဆေးခြင်း**:
    ```bash
-   # The validate-markdown.yml workflow checks:
-   # - Broken relative paths
-   # - Missing tracking IDs on paths
-   # - Missing tracking IDs on URLs
-   # - URLs with country locale
-   # - Broken external URLs
+   # validate-markdown.yml workflow သည်အောက်ပါအချက်များကိုစစ်ဆေးသည်။
+   # - ပျက်စီးနေသော ဆက်စပ်လမ်းကြောင်းများ
+   # - လမ်းကြောင်းများပေါ်ရှိ မရှိသင့်သော လမ်းညွှန်မှတ်ပုံတင်အိုင်ဒီများ
+   # - URL များပေါ်ရှိ မရှိသင့်သော လမ်းညွှန်မှတ်ပုံတင်အိုင်ဒီများ
+   # - နိုင်ငံအခြေစိုက်ဒေသအလိုက် URL များ
+   # - ပျက်စီးနေသော ပြင်ပ URL များ
    ```
 
-2. **Manual Testing**:
-   - Python examples များကို စမ်းသပ်ပါ: venv ကို activate လုပ်ပြီး scripts များကို run လုပ်ပါ
-   - TypeScript examples များကို စမ်းသပ်ပါ: `npm install`, `npm run build`, `npm start`
-   - Environment variables များကို မှန်ကန်စွာ configure လုပ်ထားကြောင်း စစ်ဆေးပါ
-   - API keys များသည် code examples များနှင့် အလုပ်လုပ်ကြောင်း စစ်ဆေးပါ
+၂။ **လက်စစ် စမ်းသပ်မှု**:
+   - Python နမူနာများကို စမ်းသပ်ရန် venv ကို အရင်ဖွင့်ပြီး script များ လည်ပတ်ပါ
+   - TypeScript နမူနာများကို `npm install` ပြီး `npm run build`, `npm start` ကို လည်ပတ်ပါ
+   - ပတ်ဝန်းကျင် ဗာရီးယာပ်များ မှန်ကန်စွာ ထားရှိရာ စစ်ဆေးပါ
+   - API key များသည် ကုဒ်နမူနာများနှင့် လည်ပတ်နိုင်သည်ကို စစ်ဆေးပါ
 
-3. **Code Examples**:
-   - Code များသည် error မရှိဘဲ run လုပ်နိုင်ရမည်
-   - Azure OpenAI နှင့် OpenAI API နှစ်ခုစလုံးတွင် အလုပ်လုပ်ကြောင်း စမ်းသပ်ပါ
-   - GitHub Models ကို support လုပ်သောနေရာများတွင် စမ်းသပ်ပါ
+၃။ **ကုဒ်နမူနာများ**:
+   - အကုဒ်အားလုံး error မရှိဘဲ လည်ပတ်ရမည်
+   - Azure OpenAI နှင့် OpenAI API များဖြင့် စမ်းသပ်ပါ (လိုအပ်လျှင်)
+   - Microsoft Foundry Models ဖြင့်လည်း လုပ်ဆောင်နိုင်မှု စစ်ဆေးပါ
 
-### Automated Tests မပါဝင်ပါ
+### စက်ဆော့လ်စမ်းသပ်မှု မရှိပါ
 
-ဤသည်သည် သင်ကြားမှုနှင့် ဥပမာများအတွက် အဓိကထားသော repository ဖြစ်သည်။ Unit tests သို့မဟုတ် integration tests မပါဝင်ပါ။ Validation သည် အဓိကအားဖြင့်:
-- Code examples များကို လက်ဖြင့် စမ်းသပ်ခြင်း
-- Markdown validation အတွက် GitHub Actions
-- သင်ကြားမှုအကြောင်းအရာများကို Community review
+ဤသည် သင်ယူရေးနှင့် နမူနာများ အတွက် အေဂျင်စီဖြစ်၍ unit test သို့မဟုတ် integration test မပါရှိပါ။ အတည်ပြုသည် -
+- ကုဒ်နမူနာများကို လက်စစ်စမ်းသပ်ခြင်း
+- GitHub Actions ဖြင့် Markdown စစ်ဆေးခြင်း
+- သင်ကြားရေး ဖြစ်ရပ်များ အားလုံးကို လူထုစစ်ဆေးမည့် မှတ်ချက်များ
 
-## Pull Request Guidelines
+## Pull Request ညွှန်ကြားချက်များ
 
-### Submitting မတင်မီ
+### တင်သွင်းမည့်အရင်ကနေ
 
-1. Python နှင့် TypeScript နှစ်ခုစလုံးတွင် code changes များကို စမ်းသပ်ပါ
-2. Markdown validation ကို run လုပ်ပါ (PR တင်သောအခါ အလိုအလျောက် run လုပ်သည်)
-3. Microsoft URLs တွင် tracking IDs ပါဝင်ကြောင်း စစ်ဆေးပါ
-4. Relative links များသည် မှန်ကန်ကြောင်း စစ်ဆေးပါ
-5. Images များကို မှန်ကန်စွာ reference လုပ်ထားကြောင်း စစ်ဆေးပါ
+၁။ Python နှင့် TypeScript တို့တွင် အပြောင်းအလဲများ စမ်းသပ်ပါ (လက်ရှိပြီးသားအတိုင်း)
+၂။ Markdown validation ကို (PR ပေးလိုက်တိုင်း အလိုအလျောက်) အလုပ်လုပ်ပေးပါ
+၃။ Microsoft URL များတွင် tracking ID များ ပါရှိစေပါ
+၄။ အပြန်လင့်ခ်များကို မှန်ကန်ကြောင်း စစ်ဆေးပါ
+၅။ ပုံများသည် မှန်ကန်စွာ ရည်ညွှန်းထားခြင်းဖြစ်စေပါ
 
-### PR Title Format
+### PR ခေါင်းစဉ်ပုံစံ
 
-- ဖော်ပြချက်အကျဉ်းရင်း: `[Lesson 06] Fix Python example typo` သို့မဟုတ် `Update README for lesson 08`
-- အရေးပါသော issue နံပါတ်များကို ရည်ညွှန်းပါ: `Fixes #123`
+- ရှင်းလင်းသော ခေါင်းစဉ်များ သုံးပါ - `[Lesson 06] Fix Python example typo` သို့မဟုတ် `Update README for lesson 08`
+- လိုအပ်လျှင် issue ကိန်းဂဏန်းများအကို သတ်မှတ်ပါ - `Fixes #123`
 
-### PR Description
+### PR ဖော်ပြချက်
 
-- ပြင်ဆင်ထားသောအရာများနှင့် အကြောင်းရင်းကို ရှင်းပြပါ
-- ဆက်စပ်သော issues များ link လုပ်ပါ
-- Code changes များအတွက် စမ်းသပ်ထားသော examples များကို ဖော်ပြပါ
-- Translation PR များအတွက် အပြည့်အစုံသော translation ဖိုင်များကို ထည့်ပါ
+- ဘာတွေပြောင်းလဲခဲ့သည်၊ သဘာဝကို ရှင်းပြပါ
+- ဆက်စပ် issue များနှင့် လင့်ခ်ထည့်ပါ
+- ကုဒ်ပြောင်းလဲချက်များအတွက် စမ်းသပ်ခဲ့သည့် နမူနာများ ဖေါ်ပြပါ
+- ဘာသာပြန် PR များအတွက် အသေးစိတ် ဘာသာပြန်ဖိုင်များ ထည့်သွင်းပါ
 
-### Contribution Requirements
+### လှူဒါန်းမှုလိုအပ်ချက်များ
 
-- Microsoft CLA ကို လက်မှတ်ထိုးပါ (ပထမဆုံး PR တင်သောအခါ အလိုအလျောက်)
-- Repository ကို သင့်အကောင့်သို့ fork လုပ်ပြီး ပြင်ဆင်ပါ
-- Logical change တစ်ခုစီအတွက် PR တစ်ခု (မသက်ဆိုင်သော fixes များကို ပေါင်းစပ်မထားပါနှင့်)
-- PR များကို အလေးမရှိအောင်ထားပြီး အလေးအနက်ထားပါ
+- Microsoft CLA ကို လက်မှတ်ထိုးပါ (ပထမဆုံး PR မှာ အလိုအလျောက်)
+- ပြောင်းလဲမှု မပြုမီ repository ကို ကိုယ်ပိုင်အကောင့်သို့ fork ပြုလုပ်ပါ
+- တစ်ခုချင်းပြောင်းလဲချက်အတွက် PR တစ်ခုသာ (မဆက်စပ်သော ပြင်ဆင်မှုများ မပေါင်းစပ်ပါနှင့်)
+- PR များကို ဦးတည်ပြီး သေးငယ်စေလုပ်ပါ
 
-## Common Workflows
+## လူသုံးအများဆုံး လုပ်ငန်းစဉ်များ
 
-### Code Example အသစ်တစ်ခု ထည့်သွင်းခြင်း
+### ကုဒ်နမူနာအသစ် ထည့်ခြင်း
 
-1. သင့် lesson directory သို့ သွားပါ
-2. `python/` သို့မဟုတ် `typescript/` subdirectory တွင် example ကို ဖန်တီးပါ
-3. Naming convention ကို လိုက်နာပါ: `{provider}-{example-name}.{py|ts|js}`
-4. အမှန်တကယ် API credentials ဖြင့် စမ်းသပ်ပါ
-5. Lesson README တွင် အသစ်ထည့်သွင်းထားသော environment variables များကို documentation ပြုလုပ်ပါ
+၁။ သင့်တော်သော သင်ခန်းစာ ဖိုလ်ဒါသို့ သွားပါ
+၂။ `python/` သို့မဟုတ် `typescript/` စာဖိုလ်ဒါတွင် နမူနာ ဖန်တီးပါ
+၃။ အမည်ပေးခြင်း စံကိုလိုက်နာပါ - `{provider}-{example-name}.{py|ts|js}`
+၄။ စစ်ဆေးရန် အမှန်တကယ် API လက်မှတ်များနှင့် စမ်းသပ်ပါ
+၅။ သင်ခန်းစာ README တွင် ထည့်သွင်းသော အသစ်သော ပတ်ဝန်းကျင်ဗာရီးယာပ်များကို မှတ်တမ်းတင်ပါ
 
-### Documentation ကို Update လုပ်ခြင်း
+### စာတမ်းများ ပုံမှန်ပြင်ဆင်ခြင်း
 
-1. Lesson directory တွင် README.md ကို ပြင်ဆင်ပါ
-2. Markdown guidelines ကို လိုက်နာပါ (tracking IDs, relative links)
-3. Translation များကို GitHub Actions မှ handle လုပ်သည် (manual edit မလုပ်ပါနှင့်)
-4. Links များသည် မှန်ကန်ကြောင်း စမ်းသပ်ပါ
+၁။ သင်ခန်းစာဖိုလ်ဒါရှိ README.md ကို ပြင်ဆင်ပါ
+၂။ Markdown လမ်းညွှန်ချက်များ (tracking ID, relative links) ကို လိုက်နာပါ
+၃။ ဘာသာပြန်မပြန်ရေးရာ အလုပ်ကို GitHub Actions လုပ်သည် (လက်ဖြင့်အပ်ဒိတ်မလုပ်ပါ)
+၄။ လင့်ခ်အားလုံးသည် မှန်ကန်ကြောင်း စစ်ဆေးပါ
 
-### Dev Containers နှင့် အလုပ်လုပ်ခြင်း
+### Dev Containers နှင့် လက်တွေ့လုပ်ဆောင်မှုများ
 
-1. Repository တွင် `.devcontainer/devcontainer.json` ပါဝင်သည်
-2. Post-create script သည် Python dependencies များကို အလိုအလျောက် install လုပ်သည်
-3. Python နှင့် Jupyter အတွက် extensions များကို pre-configure လုပ်ထားသည်
-4. Environment သည် `mcr.microsoft.com/devcontainers/universal:2.11.2` အပေါ်မှာ အခြေခံထားသည်
+၁။ Repository တွင် `.devcontainer/devcontainer.json` ပါဝင်သည်
+၂။ post-create script က Python လိုအပ်ချက်များကို အလိုအလျောက် ထည့်သွင်းသည်
+၃။ Python နှင့် Jupyter extensions များ ယခင်မှတင်ထားပြီးပါက အသုံးပြုနိုင်သည်
+၄။ ပတ်ဝန်းကျင်သည် `mcr.microsoft.com/devcontainers/universal:2.11.2` အပေါ် အခြေခံသည်
 
-## Deployment နှင့် Publishing
+## ပြန်လည်ထုတ်ဝေခြင်းနှင့် စနစ်ဖော်ပြခြင်း
 
-ဤသည်သည် သင်ကြားမှု repository ဖြစ်သည် - deployment လုပ်ငန်းစဉ်မပါဝင်ပါ။ Curriculum ကို အောက်ပါနည်းလမ်းများဖြင့် အသုံးပြုသည်:
+ဤသည် သင်ယူရေး repository ဖြစ်ပြီး deployment လုပ်ငန်းစဉ် မရှိပါ။ သင်ခန်းစာကို -
 
-1. **GitHub Repository**: Code နှင့် documentation ကို တိုက်ရိုက် access လုပ်နိုင်သည်
-2. **GitHub Codespaces**: Pre-configured setup ဖြင့် dev environment ကို ချက်ချင်းအသုံးပြုနိုင်သည်
-3. **Microsoft Learn**: Content ကို တရားဝင်သင်ကြားမှု platform သို့ syndicate လုပ်နိုင်သည်
-4. **docsify**: Markdown မှ documentation site တည်ဆောက်ထားသည် (e.g., `docsifytopdf.js` နှင့် `package.json`)
+၁။ **GitHub Repository**: ကုဒ်နှင့် စာတမ်းများကို တိုက်ရိုက် ဝင်ရောက်အသုံးပြုနိုင်ခြင်း
+၂။ **GitHub Codespaces**: ကြိုတင်ပြင်ဆင်ထားသော dev ပတ်ဝန်းကျင်ဖြင့် ချက်ချင်းရေးသားမှု
+၃။ **Microsoft Learn**: အတည်ပြု ပညာဆိုင်ရာ စာမျက်နှာပေါ် တွဲဖက်တင်ပြနိုင်ခြင်း
+၄။ **docsify**: Markdown မှ တည်ဆောက်ထားသည့် စာတမ်းဆိုဒ် (ကြည့်ပါ `docsifytopdf.js` နှင့် `package.json`)
 
-### Documentation Site တည်ဆောက်ခြင်း
+### စာတမ်းဆိုဒ် တည်ဆောက်ခြင်း
 
 ```bash
-# Generate PDF from documentation (if needed)
+# စာရွက်စာတမ်းမှ PDF ထုတ်လုပ်ပါ (လိုအပ်လျှင်)
 npm run convert
 ```
 
-## Troubleshooting
+## ပြဿနာဖြေရှင်းခြင်း
 
-### အများဆုံးတွေ့ရသောပြဿနာများ
+### ရှိလေ့ရှိသော ပြဿနာများ
 
-**Python Import Errors**:
-- Virtual environment ကို activate လုပ်ထားကြောင်း သေချာပါ
-- `pip install -r requirements.txt` ကို run လုပ်ပါ
-- Python version သည် 3.9+ ဖြစ်ကြောင်း စစ်ဆေးပါ
+**Python Import မှားယွင်းချက်များ**:
+- virtual environment ဦးစီးဖွင့်လှစ်ထားကြောင်း မှတ်သားထားပါ
+- `pip install -r requirements.txt` ကို ပြုလုပ်ပါ
+- Python ဗားရှင်း 3.9+ ဖြစ်ကြောင်း စစ်ဆေးပါ
 
-**TypeScript Build Errors**:
-- App directory တွင် `npm install` ကို run လုပ်ပါ
-- Node.js version သည် အထောက်အပံ့ပေးနိုင်ကြောင်း စစ်ဆေးပါ
-- `node_modules` ကို ရှင်းပြီး ပြန် install လုပ်ပါ
+**TypeScript ဆောက်လုပ်မှားယွင်းချက်များ**:
+- application ဖိုလ်ဒါတွင် `npm install` ပြုလုပ်ပါ
+- Node.js ဗားရှင်း ကို ကိုက်ညီမှု ရှိကြောင်း စစ်ဆေးပါ
+- `node_modules` ကို ဖျက်ပြီး ပြန်တင်ပါ (လိုလျှင်)
 
-**API Authentication Errors**:
-- `.env` ဖိုင်ရှိကြောင်းနှင့် မှန်ကန်သော values များပါဝင်ကြောင်း စစ်ဆေးပါ
-- API keys သည် သက်တမ်းကုန်ဆုံးမထားကြောင်း စစ်ဆေးပါ
-- Endpoint URLs သည် region အတွက် မှန်ကန်ကြောင်း စစ်ဆေးပါ
+**API Authentication မှားယွင်းချက်များ**:
+- `.env` ဖိုင်ရှိကြောင်း နှင့် တန်ဖိုးမှန်ကန်ကြောင်း စစ်ဆေးပါ
+- API keys များ တိကျကောင်းမွန်ကြောင်း နှင့် သက်တမ်း မကုန်ဆုံးကြောင်း စစ်ဆေးပါ
+- သင့်ဒေသအတွက် Endpoint URL များ မှန်ကန်ကြောင်း အတည်ပြုပါ
 
-**Missing Environment Variables**:
-- `.env.copy` ကို `.env` သို့ copy လုပ်ပါ
-- သင်လုပ်နေသော lesson အတွက် လိုအပ်သော values များကို ဖြည့်ပါ
-- `.env` ကို update လုပ်ပြီး application ကို ပြန်စတင်ပါ
+**ပတ်ဝန်းကျင်ဗာရီးယာပ် ပျောက်ဆုံးခြင်း**:
+- `.env.copy` ကို `.env` သို့ ကူးယူပါ
+- သင့်သင်ခန်းစာအတွက် လိုအပ်သော တန်ဖိုးအားလုံး ဖြည့်ပါ
+- `.env` အသစ်ပြင်ဆင်ပြီးနောက် application ကို ပြန်စတင်ပါ
 
-## အပိုဆောင်းအရင်းအမြစ်များ
+## အပိုဆောင်း အရင်းအမြစ်များ
 
 - [Course Setup Guide](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
 - [Contributing Guidelines](./CONTRIBUTING.md)
@@ -301,17 +302,19 @@ npm run convert
 - [Azure AI Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 - [Collection of Advanced Code Samples](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
 
-## Project-Specific Notes
+## စီမံကိန်းအထူးမှတ်ချက်များ
 
-- ဤသည်သည် **သင်ကြားမှု repository** ဖြစ်ပြီး production code မဟုတ်ပါ
-- Examples များသည် ရိုးရှင်းပြီး သင်ကြားမှုအတွက် အဓိကထားသည်
-- Code quality ကို သင်ကြားမှုရှင်းလင်းမှုနှင့် အညီချိန်ညှိထားသည်
-- သင်ခန်းစာတစ်ခုစီသည် self-contained ဖြစ်ပြီး အချိန်မရွေး ပြီးစီးနိုင်သည်
-- Repository သည် API providers များစွာကို ပံ့ပိုးသည်: Azure OpenAI, OpenAI, နှင့် GitHub Models
-- Content သည် multilingual ဖြစ်ပြီး automated translation workflows ပါဝင်သည်
-- မေးခွန်းများနှင့် အထောက်အပံ့အတွက် Discord တွင် active community ရှိသည်
+- ယင်းသည် **ပညာရေးအတိုင်ပင်ခံ repository** ဖြစ်ပြီး ထုတ်လုပ်မှုကုဒ်အတွက် မဟုတ်ပါ
+- နမူနာများကို ရိုးရှင်းပြီး အယူအဆ သင်ကြားမှုအတွက် အထူးထားသည်
+- ကုဒ်အရည်အသွေးသည် ပညာရေးအကြောင်းအရာ သေချာမှုနှင့် ညီတက်သည်
+- သင်ခန်းစာတိုင်းကို ပုဂ္ဂိုလ်အလိုက် ကျွမ်းကျင်စွာ ပြီးမြောက်နိုင်သည်
+- Repository သည် တစ်ခုထက်မနည်း API ပံ့ပိုးသူများကို ထောက်ပံ့သည် - Azure OpenAI, OpenAI, Microsoft Foundry Models နှင့် Foundry Local, Ollama ကဲ့သို့ offline ပံ့ပိုးသူများလည်း ပါဝင်သည်
+- အကြောင်းအရာသည် ဘာသာစကားအမျိုးမျိုးဖြင့်ရှိပြီး အလိုအလျောက် ဘာသာပြန်လုပ်ငန်းစဉ်များ ပါရှိသည်
+- မေးခွန်းနှင့် သဘောတူညီချက်များအတွက် Discord တွင် ဖွင့်လင့်သော အဖွဲ့က အသက်ဝင်သည်
 
 ---
 
-**ဝန်ခံချက်**:  
-ဤစာရွက်စာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှန်ကန်မှုအတွက် ကြိုးစားနေပါသော်လည်း၊ အလိုအလျောက်ဘာသာပြန်ဆိုမှုများတွင် အမှားများ သို့မဟုတ် မမှန်ကန်မှုများ ပါဝင်နိုင်သည်ကို သတိပြုပါ။ မူလဘာသာစကားဖြင့် ရေးသားထားသော စာရွက်စာတမ်းကို အာဏာတည်သောရင်းမြစ်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်များမှ ဘာသာပြန်ဆိုမှုကို အကြံပြုပါသည်။ ဤဘာသာပြန်ကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော အလွဲသိမှားမှုများ သို့မဟုတ် အဓိပ္ပါယ်မှားမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**ပြောကြားချက်**
+ဤစာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှန်ကန်မှုအတွက် ကြိုးပမ်းနေသော်လည်း၊ စက်ကိရိယာဘာသာပြန်ခြင်းများတွင် အမှားများ သို့မဟုတ် မှားယွင်းချက်များ ပါဝင်နိုင်ကြောင်း သတိပြုပါရန် လိုအပ်ပါသည်။ မူလစာတမ်းကို မူရင်းဘာသာဖြင့်သာ ယုံကြည်စိတ်ချရသော အချက်အလက်အဖြစ် သတ်မှတ်သင့်သည်။ အရေးကြီးသည့် သတင်းအချက်အလက်များအတွက် ပရော်ဖက်ရှင်နယ် လူသားဘာသာပြန်သူဝန်ဆောင်မှုကို အကြံပြုပါသည်။ ဤဘာသာပြန်ချက်ကို အသုံးပြုခြင်းမှ ဖြစ်ပေါ်လာသော နားလည်မှုကွာခြားမှုများ သို့မဟုတ် မမှန်ကန်သော အသုံးပြုမှုများအတွက် ကျွန်ုပ်တို့ တာဝန်မခံပါ။
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

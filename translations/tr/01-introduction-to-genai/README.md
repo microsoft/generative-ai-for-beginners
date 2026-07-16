@@ -1,138 +1,144 @@
-# Üretken Yapay Zeka ve Büyük Dil Modellerine Giriş
+# Üretken Yapay Zekâ ve Büyük Dil Modellerine Giriş
 
-[![Üretken Yapay Zeka ve Büyük Dil Modellerine Giriş](../../../translated_images/tr/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
+[![Üretken Yapay Zekâ ve Büyük Dil Modellerine Giriş](../../../translated_images/tr/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
 _(Bu dersin videosunu izlemek için yukarıdaki görsele tıklayın)_
 
-Üretken Yapay Zeka, metin, görüntü ve diğer içerik türlerini oluşturabilen bir yapay zeka türüdür. Bu teknolojiyi harika kılan şey, yapay zekayı demokratikleştirmesidir; herkes yalnızca doğal bir dilde yazılmış bir cümle gibi basit bir metin istemiyle kullanabilir. Java veya SQL gibi bir dil öğrenmenize gerek yok; sadece kendi dilinizi kullanarak ne istediğinizi belirtin ve yapay zeka modelinden bir öneri alın. Bunun uygulamaları ve etkileri oldukça büyük; raporlar yazabilir veya anlayabilir, uygulamalar oluşturabilir ve daha fazlasını saniyeler içinde yapabilirsiniz.
+Üretken Yapay Zekâ, metin, resim ve diğer içerik türlerini üretebilen yapay zekadır. Onu harika bir teknoloji yapan şey, yapay zekâyı demokratikleştirmesidir; herkes, doğal bir dilde yazılmış kısa bir metin istemi ile kullanabilir. Java veya SQL gibi bir dili öğrenmeye gerek yoktur, yapmanız gereken tek şey kendi dilinizi kullanmak, ne istediğinizi belirtmek ve bir yapay zeka modelinden öneri almaktır. Bunun uygulama alanları ve etkisi büyüktür; raporlar yazabilir veya anlayabilir, uygulamalar yazabilir ve çok daha fazlasını saniyeler içinde yapabilirsiniz.
 
-Bu müfredatta, eğitim dünyasında yeni senaryoların kilidini açmak için girişimimizin üretken yapay zekayı nasıl kullandığını ve bunun sosyal etkileri ve teknolojik sınırlamalarıyla ilgili kaçınılmaz zorlukları nasıl ele aldığımızı keşfedeceğiz.
+Bu müfredatta, startup’ımızın eğitim dünyasında yeni senaryoları açmak için üretken yapay zekâyı nasıl kullandığını ve uygulama sosyal etkileri ile teknoloji sınırlamaları ile ilgili kaçınılmaz zorlukları nasıl ele aldığımızı keşfedeceğiz.
 
 ## Giriş
 
-Bu derste şunlar ele alınacak:
+Bu ders şunları kapsayacak:
 
-- İş senaryosuna giriş: girişim fikrimiz ve misyonumuz.
-- Üretken yapay zeka ve mevcut teknoloji manzarasına nasıl ulaştığımız.
-- Büyük dil modelinin iç işleyişi.
-- Büyük Dil Modellerinin ana yetenekleri ve pratik kullanım alanları.
+- İş senaryosuna giriş: startup fikrimiz ve misyonumuz.
+- Üretken Yapay Zekâ ve mevcut teknoloji ortamına nasıl geldiğimiz.
+- Büyük bir dil modelinin iç işleyişi.
+- Büyük Dil Modellerinin başlıca yetenekleri ve pratik kullanım durumları.
 
 ## Öğrenme Hedefleri
 
 Bu dersi tamamladıktan sonra şunları anlayacaksınız:
 
-- Üretken yapay zekanın ne olduğunu ve Büyük Dil Modellerinin nasıl çalıştığını.
-- Büyük dil modellerini farklı kullanım alanlarında, özellikle eğitim senaryolarında nasıl kullanabileceğinizi.
+- Üretken yapay zekânın ne olduğu ve Büyük Dil Modellerinin nasıl çalıştığı.
+- Büyük dil modellerini farklı kullanım durumları için nasıl kullanabileceğiniz, özellikle eğitim senaryolarına odaklanarak.
 
-## Senaryo: eğitim girişimimiz
+## Senaryo: eğitim alanındaki startup’ımız
 
-Üretken Yapay Zeka (AI), bir zamanlar imkansız olduğu düşünülen sınırları zorlayan AI teknolojisinin zirvesini temsil eder. Üretken yapay zeka modellerinin birçok yeteneği ve uygulaması vardır, ancak bu müfredatta, kurgusal bir girişim aracılığıyla eğitimi nasıl devrimleştirdiğini keşfedeceğiz. Bu girişime _girişimimiz_ olarak atıfta bulunacağız. Girişimimiz, eğitim alanında çalışıyor ve iddialı bir misyon bildirisine sahip:
+Üretken Yapay Zekâ (AI), AI teknolojisinin zirvesini temsil eder ve bir zamanlar imkansız sayılan sınırları zorlar. Üretken AI modellerinin birçok yeteneği ve uygulaması vardır, ancak bu müfredatta eğitimde devrim yaratan hayali bir startup üzerinden inceleyeceğiz. Bu startup’a _startup’ımız_ diyeceğiz. Startup’ımız, eğitim alanında çalışmakta ve iddialı bir misyon beyanına sahiptir:
 
-> _öğrenmede erişilebilirliği küresel ölçekte artırmak, eğitime eşit erişim sağlamak ve her öğrenicinin ihtiyaçlarına göre kişiselleştirilmiş öğrenme deneyimleri sunmak._
+> _öğrenmede erişilebilirliği küresel ölçekte artırmak, eğitime eşit erişim sağlamak ve her öğrenenin ihtiyaçlarına göre kişiselleştirilmiş öğrenme deneyimleri sunmak_.
 
-Girişim ekibimiz, bu hedefe modern zamanların en güçlü araçlarından biri olan Büyük Dil Modelleri (LLM'ler) olmadan ulaşamayacağımızın farkında.
+Startup ekibimiz, bu hedefe, modern zamanların en güçlü araçlarından biri olan Büyük Dil Modelleri (LLM'ler) olmadan ulaşamayacağımızın farkında.
 
-Üretken yapay zekanın, öğrencilerin 24 saat boyunca sanal öğretmenlere erişebildiği, büyük miktarda bilgi ve örnekler sunan ve öğretmenlerin öğrencilerini değerlendirmek ve geri bildirimde bulunmak için yenilikçi araçlardan yararlanabildiği günümüzde öğrenme ve öğretme biçimimizi devrimleştirmesi bekleniyor.
+Üretken Yapay Zekânın, bugün öğrenme ve öğretme biçimini devrim niteliğinde değiştirmesi bekleniyor; öğrenciler 7/24 erişebilecekleri sanal öğretmenlere sahip olacak, bu öğretmenler çok büyük miktarda bilgi ve örnek sunacak, öğretmenler ise öğrenci değerlendirmesi ve geri bildirimde bulunmada yenilikçi araçlar kullanabilecek.
 
-![Beş genç öğrenci bir monitöre bakıyor - DALLE2 tarafından oluşturulan görüntü](../../../translated_images/tr/students-by-DALLE2.b70fddaced1042ee.webp)
+![Bir monitöre bakan beş genç öğrenci - DALLE2 tarafından oluşturuldu](../../../translated_images/tr/students-by-DALLE2.b70fddaced1042ee.webp)
 
-Başlamak için, müfredat boyunca kullanacağımız bazı temel kavramları ve terminolojiyi tanımlayalım.
+Başlamak için, bu müfredat boyunca kullanacağımız bazı temel kavramları ve terminolojiyi tanımlayalım.
 
-## Üretken Yapay Zeka nasıl ortaya çıktı?
+## Üretken Yapay Zekâ’ya nasıl ulaştık?
 
-Son zamanlarda üretken yapay zeka modellerinin duyurulmasıyla yaratılan olağanüstü _hype_'a rağmen, bu teknoloji on yıllardır geliştiriliyor ve ilk araştırma çabaları 60'lara kadar uzanıyor. Şimdi, insan bilişsel yeteneklerine sahip bir yapay zeka noktasındayız; örneğin, [OpenAI ChatGPT](https://openai.com/chatgpt) veya [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst) gibi, Bing arama motoru sohbetlerinde GPT modelini kullanan sohbetler gibi.
+Yakın zamanda üretken yapay zeka modellerinin duyurulmasıyla oluşan olağanüstü _heyecan_ olsa da, bu teknoloji onlarca yıllık bir gelişimin ürünüdür ve ilk araştırma çabaları 60’lı yıllara kadar uzanır. Şu anda, yapay zeka, insanın bilişsel yeteneklerine sahip noktaya gelmiştir; örneğin [OpenAI ChatGPT](https://openai.com/chatgpt) veya GPT modelini kullanan [Microsoft Copilot](https://copilot.microsoft.com/?WT.mc_id=academic-105485-koreyst) gibi, sohbet edebilen web arama deneyimleri sunmaktadır.
 
-Biraz geriye gidersek, yapay zekanın ilk prototipleri, bir grup uzmandan çıkarılan ve bir bilgisayara temsil edilen bir bilgi tabanına dayanan yazılı sohbet botlarından oluşuyordu. Bilgi tabanındaki cevaplar, giriş metninde görünen anahtar kelimelerle tetikleniyordu. Ancak, yazılı sohbet botları kullanarak böyle bir yaklaşımın iyi ölçeklenmediği kısa sürede anlaşıldı.
+Biraz geriye gidersek, yapay zekânın ilk prototipleri, uzman gruplarından çıkarılan bilgi tabanına dayanan ve bilgisayarda temsil edilen daktilo yazılı sohbet botlarından oluşuyordu. Bilgi tabanındaki cevaplar, girdideki anahtar kelimeler tarafından tetikleniyordu.
+Ancak, bu yaklaşımın, daktilo yazılı sohbet botları kullanmanın, iyi ölçeklenmediği kısa sürede anlaşılmıştır.
 
-### Yapay Zekaya İstatistiksel Yaklaşım: Makine Öğrenimi
+### Yapay Zekâ için İstatistiksel Yaklaşım: Makine Öğrenimi
 
-90'larda metin analizine istatistiksel bir yaklaşımın uygulanmasıyla bir dönüm noktası geldi. Bu, açıkça programlanmadan verilerden desenler öğrenebilen yeni algoritmaların – makine öğrenimi olarak bilinen – geliştirilmesine yol açtı. Bu yaklaşım, makinelerin insan dilini anlama simülasyonunu mümkün kıldı: bir istatistiksel model, metin-etiket eşleştirmeleri üzerinde eğitilir ve modelin bir mesajın niyetini temsil eden önceden tanımlanmış bir etiketle bilinmeyen giriş metnini sınıflandırmasını sağlar.
+90’larda bir dönüm noktası yaşandı; metin analizine istatistiksel bir yaklaşım uygulandı. Bu, açıkça programlanmadan verilerden desenleri öğrenebilen yeni algoritmalar – makine öğrenimi olarak bilinen – geliştirilmesine yol açtı. Bu yaklaşım, makinelerin insan dil anlayışını taklit etmesini sağlar: istatistiksel bir model, metin-etiket eşleştirmeleri üzerinde eğitilir ve bilinmeyen girdileri, mesajın niyetini temsil eden önceden tanımlanmış bir etiketle sınıflandırabilir.
 
-### Sinir Ağları ve Modern Sanal Asistanlar
+### Sinir ağları ve modern sanal asistanlar
 
-Son yıllarda, daha büyük miktarda veri ve daha karmaşık hesaplamaları işleyebilen donanımın teknolojik evrimi, yapay zeka araştırmalarını teşvik etti ve sinir ağları veya derin öğrenme algoritmaları olarak bilinen gelişmiş makine öğrenimi algoritmalarının geliştirilmesine yol açtı.
+Son yıllarda, daha büyük veri ve daha karmaşık hesaplamaları işleyebilen donanımın teknoloji evrimi, yapay zeka araştırmalarını teşvik etti ve sinir ağları veya derin öğrenme algoritmaları olarak bilinen gelişmiş makine öğrenimi algoritmalarının geliştirilmesini sağladı.
 
-Sinir ağları (özellikle Tekrarlayan Sinir Ağları – RNN'ler), doğal dil işleme alanında önemli ölçüde ilerleme sağladı ve bir cümledeki bir kelimenin bağlamını değerlendirerek metnin anlamını daha anlamlı bir şekilde temsil etmeyi mümkün kıldı.
+Sinir ağları (özellikle Yinelemeli Sinir Ağları – RNN’ler), doğal dil işlemede önemli gelişmeler sağladı; kelimenin bir cümledeki bağlamını dikkate alarak metnin anlamını daha anlamlı biçimde temsil etmeye olanak tanıdı.
 
-Bu teknoloji, insan dilini yorumlama, bir ihtiyacı belirleme ve bunu karşılamak için bir eylem gerçekleştirme konusunda çok yetenekli olan, yüzyılın ilk on yılında doğan sanal asistanları güçlendirdi – örneğin, önceden tanımlanmış bir senaryo ile yanıt verme veya üçüncü taraf bir hizmeti kullanma gibi.
+Bu teknoloji, yeni yüzyılın ilk on yılında doğan sanal asistanları güçlendirdi; insan dilini yorumlamakta, ihtiyaçları tespit etmekte ve onu karşılamak için eylemde bulunmakta çok başarılıydılar—örneğin, önceden tanımlanmış senaryolarla yanıt vermek veya 3. taraf hizmetleri kullanmak gibi.
 
-### Günümüz, Üretken Yapay Zeka
+### Günümüz: Üretken Yapay Zekâ
 
-Böylece bugün Üretken Yapay Zeka'ya geldik, bu da derin öğrenmenin bir alt kümesi olarak görülebilir.
+İşte bugün Üretken Yapay Zekâ'ya nasıl geldik; bu teknoloji derin öğrenmenin bir alt kümesi olarak görülebilir.
 
-![AI, ML, DL ve Üretken Yapay Zeka](../../../translated_images/tr/AI-diagram.c391fa518451a40d.webp)
+![Yapay Zekâ, Makine Öğrenimi, Derin Öğrenme ve Üretken Yapay Zekâ](../../../translated_images/tr/AI-diagram.c391fa518451a40d.webp)
 
-Yapay zeka alanında on yıllarca süren araştırmalardan sonra, _Transformer_ adı verilen yeni bir model mimarisi, RNN'lerin sınırlarını aşarak çok daha uzun metin dizilerini giriş olarak almayı mümkün kıldı. Transformer'lar, aldığı girdilere farklı ağırlıklar veren dikkat mekanizmasına dayanır, metin dizisindeki sıralarına bakılmaksızın en alakalı bilginin yoğunlaştığı yerlere 'daha fazla dikkat eder'.
+Yapay zeka alanındaki onlarca yıllık araştırmanın ardından, _Transformer_ adı verilen yeni bir model mimarisi, RNN'lerin sınırlarını aşarak çok daha uzun metin dizilerini girdi olarak alabilme yeteneğine kavuştu. Transformerlar, modele aldığı girdilere farklı ağırlıklar verme olanağı sağlayan dikkat mekanizmasına dayanır; en ilgili bilgilerin yoğunlaştığı yere ‘daha fazla dikkat’ gösterir, metin dizisindeki sıralama önemli olmaksızın.
 
-Çoğu yeni üretken yapay zeka modeli – metinsel giriş ve çıkışlarla çalıştıkları için Büyük Dil Modelleri (LLM'ler) olarak da bilinir – aslında bu mimariye dayanmaktadır. Kitaplar, makaleler ve web siteleri gibi çeşitli kaynaklardan büyük miktarda etiketlenmemiş veri üzerinde eğitilen bu modellerin ilginç yanı, çok çeşitli görevlere uyarlanabilmeleri ve yaratıcı bir görünümle dilbilgisel olarak doğru metinler üretebilmeleridir. Yani, bir makinenin bir giriş metni 'anlama' kapasitesini inanılmaz bir şekilde artırmakla kalmadılar, aynı zamanda insan dilinde orijinal bir yanıt oluşturma kapasitesini de mümkün kıldılar.
+Son üretken yapay zeka modellerinin çoğu—metinsel giriş ve çıkışlarla çalışan Büyük Dil Modelleri (LLM'ler) olarak da bilinir—gerçekten de bu mimariye dayanmaktadır. Bu modellerin ilginç yanı, kitaplar, makaleler ve web siteleri gibi çeşitli kaynaklardan büyük miktarda etiketlenmemiş veri üzerinde eğitilmiş olmalarıdır. Böylece çok çeşitli görevlere uyarlanabilirler ve dil bilgisi açısından doğru, bir ölçüde yaratıcılık hissi veren metinler üretebilirler. Bu modeller yalnızca bir makinenin bir girdiyi ‘anlama’ kapasitesini inanılmaz derecede artırmakla kalmaz, aynı zamanda insan diliyle özgün bir yanıt oluşturabilme yeteneği kazandırır.
 
 ## Büyük dil modelleri nasıl çalışır?
 
-Bir sonraki bölümde farklı türde Üretken Yapay Zeka modellerini keşfedeceğiz, ancak şimdilik büyük dil modellerinin nasıl çalıştığına, özellikle OpenAI GPT (Generative Pre-trained Transformer) modellerine odaklanarak bir göz atalım.
+Sonraki bölümde farklı Üretken Yapay Zekâ modellerini araştıracağız, ancak şimdilik OpenAI GPT (Önceden Eğitilmiş Üretken Transformer) modellerine odaklanarak büyük dil modellerinin nasıl çalıştığına bakalım.
 
-- **Tokenizasyon, metni sayılara dönüştürme**: Büyük Dil Modelleri bir metni giriş olarak alır ve bir metni çıkış olarak üretir. Ancak, istatistiksel modeller oldukları için metin dizileri yerine sayılarla çok daha iyi çalışırlar. Bu nedenle, modelin çekirdeği tarafından kullanılmadan önce her giriş bir tokenizer tarafından işlenir. Bir token, değişken sayıda karakterden oluşan bir metin parçasıdır, bu nedenle tokenizer'ın ana görevi girişi bir token dizisine ayırmaktır. Daha sonra, her token bir token indeksine, yani orijinal metin parçasının tam sayı kodlamasına eşlenir.
+- **Tokenizer, metinden sayılara**: Büyük Dil Modelleri bir metni girdi olarak alır ve metin olarak çıktı üretir. Ancak istatistiksel modeller olduklarından, metin dizileri yerine sayılarla çok daha iyi çalışırlar. Bu nedenle her giriş, temel model tarafından kullanılmadan önce bir tokenizer (dizeleyici) tarafından işlenir. Bir token, değişken sayıda karakterden oluşan bir metin parçasıdır; tokenizer’ın temel görevi, girişi bir token dizisine bölmektir. Ardından, her token, orijinal metin parçasının tam sayı kodlaması olan bir token indeksiyle eşlenir.
 
-![Tokenizasyon örneği](../../../translated_images/tr/tokenizer-example.80a5c151ee7d1bd4.webp)
+![Tokenezime Örneği](../../../translated_images/tr/tokenizer-example.80a5c151ee7d1bd4.webp)
 
-- **Çıkış tokenlarını tahmin etme**: n token giriş olarak verildiğinde (maksimum n modelden modele değişir), model bir token çıkış olarak tahmin edebilir. Bu token, bir yanıt olarak bir (veya birden fazla) cümle almayı sağlayan genişleyen bir pencere modeliyle bir sonraki yinelemenin girişine dahil edilir. Bu, eğer ChatGPT ile oynadıysanız, bazen bir cümlenin ortasında duruyormuş gibi göründüğünü fark etmiş olabilirsiniz.
+- **Çıktı tokenlarını tahmin etme**: n adet token girdi olarak verildiğinde (max n modelden modele değişir), model bir token çıktı olarak tahmin eder. Bu token, bir sonraki iterasyonun girdisine, genişleyen bir pencere şeklinde dahil edilir, böylece bir (veya birden çok) cümlenin yanıt olarak alınması sağlanır. Bu nedenle, ChatGPT ile oynadıysanız, bazen cümlenin ortasında durduğunu fark etmiş olabilirsiniz.
 
-- **Seçim süreci, olasılık dağılımı**: Çıkış tokenı, model tarafından mevcut metin dizisinden sonra ortaya çıkma olasılığına göre seçilir. Bunun nedeni, modelin eğitimi temel alarak tüm olası 'sonraki tokenlar' üzerinde bir olasılık dağılımı tahmin etmesidir. Ancak, her zaman en yüksek olasılığa sahip token, sonuçta oluşan dağılımdan seçilmez. Bu seçime bir dereceye kadar rastgelelik eklenir, böylece model deterministik olmayan bir şekilde hareket eder - aynı giriş için tam olarak aynı çıktıyı almayız. Bu rastgelelik derecesi, yaratıcı düşünme sürecini simüle etmek için eklenir ve sıcaklık adı verilen bir model parametresi kullanılarak ayarlanabilir.
+- **Seçim süreci, olasılık dağılımı**: Çıktı tokenı, model tarafından mevcut metin dizisinden sonra oluşma olasılığına göre seçilir. Model, eğitim verilerine dayanarak tüm ‘sonraki tokenlar’ için bir olasılık dağılımı tahmin eder. Ancak her zaman dağılımdan en yüksek olasılığa sahip token seçilmez. Bu seçim sürecine rastgelelik derecesi eklenir; model, doğrusal olmayan davranır—aynı girdi için her zaman aynı çıktıyı vermez. Bu rastgelelik, yaratıcı düşünce sürecini simüle etmek için eklenir ve sıcaklık (temperature) adlı model parametresi ile ayarlanabilir.
 
-## Girişimimiz Büyük Dil Modellerinden nasıl yararlanabilir?
+## Startup’ımız Büyük Dil Modellerinden nasıl faydalanabilir?
 
-Artık büyük dil modelinin iç işleyişini daha iyi anladığımıza göre, iş senaryomuza odaklanarak en yaygın görevlerden bazılarını pratik örneklerle inceleyelim. Büyük Dil Modelinin ana yeteneğinin _doğal dilde yazılmış bir metinsel girişten başlayarak sıfırdan metin oluşturmak_ olduğunu söyledik.
+Büyük bir dil modelinin işleyişine dair daha iyi bir anlayışa sahip olduğumuza göre, iş senaryomuza odaklanarak en yaygın görevlerden bazılarını nasıl iyi gerçekleştirebileceklerine dair pratik örneklere bakalım.
+Büyük Dil Modelinin temel yeteneğinin _başlangıçta doğal dilde yazılmış bir metinsel girdi alarak baştan metin üretebilmek_ olduğunu söylemiştik.
 
-Peki, ne tür bir metinsel giriş ve çıkış?
-Büyük dil modelinin girişi bir istem olarak bilinirken, çıkışı bir tamamlama olarak bilinir; bu terim, modelin mevcut girişi tamamlamak için bir sonraki tokenı oluşturma mekanizmasına atıfta bulunur. Bir istemin ne olduğunu ve modelimizden en iyi şekilde yararlanmak için nasıl tasarlanacağını derinlemesine inceleyeceğiz. Ancak şimdilik, bir istemin şunları içerebileceğini söyleyelim:
+Peki hangi tür metin girdi ve çıktı olabilir?
+Büyük dil modelinin girdisine prompt (komut) denir; çıktısına ise completion (tamamlama) denir; bu terim, modelin mevcut girdiyi tamamlamak üzere bir sonraki tokenı üretme mekanizmasını ifade eder. Prompt'un ne olduğunu ve modelden en iyi sonucu almak için nasıl tasarlanacağını derinlemesine inceleyeceğiz. Şimdilik, bir prompt şu öğeleri içerebilir:
 
-- Modelden beklediğimiz çıktı türünü belirten bir **talimat**. Bu talimat bazen bazı örnekler veya ek veriler içerebilir.
+- Modelden beklediğimiz çıktı türünü belirten bir **talimat**. Bu talimat bazen örnekler veya ek veriler içerebilir.
 
-  1. Bir makale, kitap, ürün incelemeleri ve daha fazlasının özetlenmesi, yapılandırılmamış verilerden içgörülerin çıkarılması.
+  1. Bir makale, kitap, ürün incelemeleri vb. özetleme ve yapılandırılmamış verilerden çıkarımlar elde etme.
     
-    ![Özetleme örneği](../../../translated_images/tr/summarization-example.7b7ff97147b3d790.webp)
+    ![Özetleme Örneği](../../../translated_images/tr/summarization-example.7b7ff97147b3d790.webp)
   
-  2. Bir makale, deneme, ödev veya daha fazlasının yaratıcı fikir üretimi ve tasarımı.
+  2. Bir makale, deneme, ödev veya daha fazlasının yaratıcı tasarımı ve fikir üretimi.
       
-     ![Yaratıcı yazım örneği](../../../translated_images/tr/creative-writing-example.e24a685b5a543ad1.webp)
+     ![Yaratıcı Yazım Örneği](../../../translated_images/tr/creative-writing-example.e24a685b5a543ad1.webp)
 
-- Bir **soru**, bir ajanla yapılan bir sohbet şeklinde sorulmuş.
+- Bir **soru**, bir ajanla konuşma formunda sorulmuş.
   
-  ![Sohbet örneği](../../../translated_images/tr/conversation-example.60c2afc0f595fa59.webp)
+  ![Konuşma Örneği](../../../translated_images/tr/conversation-example.60c2afc0f595fa59.webp)
 
-- Tamamlanması gereken bir **metin parçası**, bu da dolaylı olarak yazma yardımı talebidir.
+- Yazım desteği için üstü açık bir talepte bulunan, tamamlanacak bir **metin parçası**.
   
-  ![Metin tamamlama örneği](../../../translated_images/tr/text-completion-example.cbb0f28403d42752.webp)
+  ![Metin Tamamlama Örneği](../../../translated_images/tr/text-completion-example.cbb0f28403d42752.webp)
 
-- Belirli bir görevi yerine getiren bir kod parçası oluşturma veya açıklama ve belgeleme talebiyle birlikte bir **kod parçası**.
+- Bir görevi yerine getiren bir kod parçası üretme, açıklama ve dokümantasyon isteme veya kod üretme talebinde bulunan bir yorum içeren **kod parçası**.
   
-  ![Kodlama örneği](../../../translated_images/tr/coding-example.50ebabe8a6afff20.webp)
+  ![Kodlama Örneği](../../../translated_images/tr/coding-example.50ebabe8a6afff20.webp)
 
-Yukarıdaki örnekler oldukça basittir ve Büyük Dil Modellerinin yeteneklerinin kapsamlı bir gösterimi olarak tasarlanmamıştır. Bunlar, üretken yapay zekanın, özellikle ancak eğitim bağlamlarıyla sınırlı olmamak üzere, kullanım potansiyelini göstermek için tasarlanmıştır.
+Yukarıdaki örnekler oldukça basittir ve Büyük Dil Modellerinin yeteneklerinin kapsamlı bir gösterimi değildir. Üretken yapay zekâ kullanım potansiyelini göstermek için verilmiştir, özellikle eğitim bağlamlarında, ancak bununla sınırlı değildir.
 
-Ayrıca, üretken yapay zeka modelinin çıktısı mükemmel değildir ve bazen modelin yaratıcılığı ona karşı çalışabilir, insan kullanıcının gerçekliğin bir mistifikasyonu olarak yorumlayabileceği kelimelerin bir kombinasyonu ile sonuçlanabilir veya saldırgan olabilir. Üretken yapay zeka zeki değildir - en kapsamlı zeka tanımını, eleştirel ve yaratıcı akıl yürütme veya duygusal zekayı içeren tanımı en azından karşılamaz; deterministik değildir ve güvenilir değildir, çünkü yanlış referanslar, içerikler ve ifadeler doğru bilgilerle birleştirilip ikna edici ve kendinden emin bir şekilde sunulabilir. Sonraki derslerde, tüm bu sınırlamalarla başa çıkacağız ve bunları hafifletmek için neler yapabileceğimizi göreceğiz.
+Ayrıca, üretken yapay zekâ modellerinin çıktısı kusursuz değildir ve bazen modelin yaratıcılığı aleyhinde çalışabilir; ortaya çıkan çıktı, insan kullanıcı tarafından gerçekliğin gizemli bir ifadesi olarak yorumlanabilir veya saldırgan olabilir. Üretken yapay zekâ, daha kapsamlı tanımıyla; kritik ve yaratıcı akıl yürütme ya da duygusal zekâ içeren zeki değildir; belirlenimci değildir ve güvenilir değildir; çünkü yanlış referanslar, içerikler ve ifadeler doğru bilgilerle birleştirilip ikna edici ve kendinden emin şekilde sunulabilir. Takip eden derslerde bu sınırlamalarla ilgileneceğiz ve bunları hafifletmek için neler yapabileceğimizi göreceğiz.
 
 ## Ödev
 
-Ödeviniz, [üretken yapay zeka](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) hakkında daha fazla bilgi edinmek ve bugün üretken yapay zekayı eklemek istediğiniz bir alan belirlemektir. Eski yöntemle yapmaktan farklı olarak etkisi nasıl olurdu, daha önce yapamadığınız bir şeyi yapabilir misiniz, yoksa daha mı hızlı olur? Hayalinizdeki yapay zeka girişiminin nasıl görüneceğini 300 kelimelik bir özetle yazın ve "Sorun", "Yapay Zekayı Nasıl Kullanırım", "Etkisi" ve isteğe bağlı olarak bir iş planı gibi başlıklar ekleyin.
+Ödeviniz, [üretken yapay zekâ](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) hakkında daha fazla araştırma yapmak ve üretken yapay zekânın henüz olmadığı bir alan belirleyip orada nasıl kullanılabileceğini düşünmektir. Etki eski yöntemle yapılana göre nasıl farklı olurdu, önce yapamadığınız bir şeyi yapabilir misiniz ya da daha mı hızlısınız? Hayalinizdeki yapay zeka startup’ının nasıl görüneceğine dair 300 kelimelik bir özet yazın ve “Problem”, “Yapay Zekâyı Nasıl Kullanırım”, “Etkisi” gibi başlıklar ile isteğe bağlı bir iş planı ekleyin.
 
-Bu görevi yerine getirdiyseniz, Microsoft'un kuluçka programına, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst) başvuruda bulunmaya bile hazır olabilirsiniz. Azure, OpenAI, mentorluk ve çok daha fazlası için kredi sunuyoruz, bir göz atın!
+Bu görevi yaptıysanız, Microsoft’un inkübatörüne, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst) başvurmaya bile hazırsınız demektir; burada Azure, OpenAI, mentorluk ve çok daha fazlası için krediler sunuyoruz, kontrol edin!
 
-## Bilgi Kontrolü
+## Bilgi kontrolü
 
-Büyük dil modelleri hakkında doğru olan nedir?
+Büyük dil modelleri ile ilgili hangisi doğrudur?
 
-1. Her seferinde tam olarak aynı yanıtı alırsınız.
-1. Her şeyi mükemmel yapar, sayı ekleme, çalışan kod üretme vb. konularda harikadır.
-1. Yanıt, aynı istemi kullanmanıza rağmen değişebilir. Ayrıca, ister metin ister kod olsun, bir şeyin ilk taslağını size vermekte harikadır. Ancak sonuçları geliştirmeniz gerekir.
+1. Her zaman tam olarak aynı yanıtı alırsınız.
+1. Mükemmel işler yapar, sayıları toplamakta, çalışan kod üretmekte harikadır.
+1. Aynı prompt kullanılsa da yanıt değişebilir. Bir metin veya kodın ilk taslağını vermede de iyidir, ancak sonuçları geliştirmeniz gerekir.
 
-C: 3, bir LLM deterministik değildir, yanıt değişir, ancak sıcaklık ayarı kullanılarak bu varyasyonu kontrol edebilirsiniz. Ayrıca, her şeyi mükemmel yapmasını beklememelisiniz, sizin için ağır işleri yapması için buradadır, bu da genellikle bir şeyin iyi bir ilk denemesini alacağınız anlamına gelir ve bunu kademeli olarak geliştirmeniz gerekir.
+Cevap: 3, LLM’ler deterministik değildir, yanıtlar değişir, ancak varyasyonu sıcaklık ayarı ile kontrol edebilirsiniz. Ayrıca mükemmel işler yapmasını beklememelisiniz, zira burada ağır işleri üstlenir ve genellikle üzerinde ilerleyebileceğiniz iyi bir ilk taslak sunar.
 
-## Harika İş! Yolculuğa Devam Edin
+## Harika İş! Yolculuğa Devam Et
 
-Bu dersi tamamladıktan sonra, Üretken Yapay Zeka bilginizi geliştirmeye devam etmek için [Üretken Yapay Zeka Öğrenme koleksiyonumuza](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) göz atın!
-Ders 2'ye geçin, burada [farklı LLM türlerini keşfetmeyi ve karşılaştırmayı](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst) inceleyeceğiz!
+Bu dersi tamamladıktan sonra, Üretken Yapay Zekâ bilginizi artırmak için [Üretken Yapay Zekâ Öğrenme koleksiyonumuza](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) göz atın!
+
+
+Farklı LLM türlerini [keşfetme ve karşılaştırma](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst) konusuna bakacağımız Ders 2'ye gidin!
 
 ---
 
-**Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalardan sorumlu değiliz.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Feragatname**:
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba sarf etsek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu ortaya çıkabilecek yanlış anlamalardan veya yanlış yorumlamalardan sorumlu değiliz.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

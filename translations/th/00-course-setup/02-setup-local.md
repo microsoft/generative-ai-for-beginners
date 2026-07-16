@@ -1,22 +1,22 @@
 # การตั้งค่าเครื่องท้องถิ่น 🖥️
 
-**ใช้คำแนะนำนี้หากคุณต้องการรันทุกอย่างบนแล็ปท็อปของคุณเอง**  
+**ใช้คู่มือนี้หากคุณต้องการรันทุกอย่างบนแล็ปท็อปของตัวเอง**  
 คุณมีสองทางเลือก: **(A) Python เนทีฟ + virtual-env** หรือ **(B) VS Code Dev Container กับ Docker**  
-เลือกวิธีที่คุณรู้สึกว่าง่ายกว่า—ทั้งสองวิธีนำไปสู่บทเรียนเดียวกัน
+เลือกวิธีที่รู้สึกว่าง่ายกว่า—ทั้งสองวิธีนำไปสู่บทเรียนเดียวกัน  
 
-## 1.  สิ่งที่ต้องเตรียม
+## 1. ข้อกำหนดเบื้องต้น
 
-| เครื่องมือ           | เวอร์ชัน / หมายเหตุ                                                                 |
+| เครื่องมือ            | เวอร์ชัน / หมายเหตุ                                                               |
 |--------------------|--------------------------------------------------------------------------------------|
-| **Python**         | 3.10 ขึ้นไป (ดาวน์โหลดได้ที่ <https://python.org>)                                   |
-| **Git**            | เวอร์ชันล่าสุด (มาพร้อมกับ Xcode / Git สำหรับ Windows / ตัวจัดการแพ็กเกจของ Linux)  |
-| **VS Code**        | ตัวเลือกเสริมแต่แนะนำ <https://code.visualstudio.com>                              |
-| **Docker Desktop** | *เฉพาะ* สำหรับตัวเลือก B ติดตั้งฟรี: <https://docs.docker.com/desktop/>             |
+| **Python**         | 3.10 ขึ้นไป (ดาวน์โหลดได้ที่ <https://python.org>)                                  |
+| **Git**            | เวอร์ชันล่าสุด (มากับ Xcode / Git สำหรับ Windows / ตัวจัดการแพ็กเกจใน Linux)        |
+| **VS Code**        | ทางเลือกแต่แนะนำ <https://code.visualstudio.com>                                   |
+| **Docker Desktop** | *สำหรับตัวเลือก B เท่านั้น* ติดตั้งฟรี: <https://docs.docker.com/desktop/>         |
 
 > 💡 **เคล็ดลับ** – ตรวจสอบเครื่องมือในเทอร์มินัล:  
 > `python --version`, `git --version`, `docker --version`, `code --version`  
 
-## 2.  ตัวเลือก A – Python เนทีฟ (เร็วที่สุด)
+## 2. ตัวเลือก A – Python เนทีฟ (เร็วที่สุด)
 
 ### ขั้นตอนที่ 1 โคลนรีโปนี้
 
@@ -28,12 +28,12 @@ cd generative-ai-for-beginners
 ### ขั้นตอนที่ 2 สร้างและเปิดใช้งาน virtual environment
 
 ```bash
-python -m venv .venv          # สร้างหนึ่งอัน
+python -m venv .venv          # สร้างหนึ่ง
 source .venv/bin/activate     # macOS / Linux
 .\.venv\Scripts\activate      # Windows PowerShell
 ```
 
-✅ พรอมต์ควรเริ่มต้นด้วย (.venv)—นั่นหมายความว่าคุณอยู่ในสภาพแวดล้อมแล้ว
+✅ ตอนนี้พรอมต์ควรขึ้นชื่อ (.venv)—แสดงว่าคุณอยู่ในสภาพแวดล้อมแล้ว
 
 ### ขั้นตอนที่ 3 ติดตั้ง dependencies
 
@@ -41,37 +41,37 @@ source .venv/bin/activate     # macOS / Linux
 pip install -r requirements.txt
 ```
 
-ข้ามไปที่ส่วนที่ 3 เกี่ยวกับ [API keys](../../../00-course-setup)
+ข้ามไปที่ส่วนที่ 3 สำหรับ [API keys](#3-เพิ่ม-api-keys-ของคุณ)
 
 ## 2. ตัวเลือก B – VS Code Dev Container (Docker)
 
-เราตั้งค่าที่เก็บนี้และคอร์สด้วย [development container](https://containers.dev?WT.mc_id=academic-105485-koreyst) ที่มี Universal runtime รองรับการพัฒนา Python3, .NET, Node.js และ Java การตั้งค่าที่เกี่ยวข้องถูกกำหนดไว้ในไฟล์ `devcontainer.json` ที่อยู่ในโฟลเดอร์ `.devcontainer/` ที่รูทของรีโปนี้
+เราตั้งค่ารีโพนี้และคอร์สด้วย [development container](https://containers.dev?WT.mc_id=academic-105485-koreyst) ที่มี Universal runtime รองรับ Python3, .NET, Node.js และการพัฒนา Java การตั้งค่าที่เกี่ยวข้องถูกกำหนดไว้ในไฟล์ `devcontainer.json` ในโฟลเดอร์ `.devcontainer/` ที่โฟลเดอร์รูทของรีโปนี้
 
->**ทำไมต้องเลือกวิธีนี้?**  
->สภาพแวดล้อมเหมือนกับ Codespaces; ไม่มีปัญหาการเปลี่ยนแปลง dependency
+>**ทำไมต้องเลือกวิธีนี้?**
+>สภาพแวดล้อมเหมือนกับ Codespaces; ไม่มีปัญหา dependency drift
 
-### ขั้นตอนที่ 0 ติดตั้งส่วนเสริม
+### ขั้นตอนที่ 0 ติดตั้งสิ่งที่ต้องใช้เพิ่มเติม
 
-Docker Desktop – ยืนยันว่า ```docker --version``` ใช้งานได้  
-ส่วนขยาย VS Code Remote – Containers (ID: ms-vscode-remote.remote-containers)
+Docker Desktop – ยืนยันว่า ```docker --version``` ใช้งานได้
+VS Code Remote – Containers extension (ID: ms-vscode-remote.remote-containers)
 
 ### ขั้นตอนที่ 1 เปิดรีโปใน VS Code
 
 File ▸ Open Folder…  → generative-ai-for-beginners
 
-VS Code จะตรวจจับ .devcontainer/ และแสดงพรอมต์ขึ้นมา
+VS Code จะตรวจสอบ .devcontainer/ และแสดงพรอมต์ขึ้นมา
 
 ### ขั้นตอนที่ 2 เปิดใหม่ใน container
 
-คลิก “Reopen in Container” Docker จะสร้างอิมเมจ (ประมาณ 3 นาทีครั้งแรก)  
-เมื่อพรอมต์เทอร์มินัลปรากฏขึ้น แสดงว่าคุณอยู่ใน container แล้ว
+คลิก “Reopen in Container” Docker จะสร้างอิมเมจ (ประมาณ 3 นาทีครั้งแรก)
+เมื่อพรอมต์เทอร์มินัลปรากฏขึ้น แสดงว่าคุณอยู่ในคอนเทนเนอร์แล้ว
 
-## 2.  ตัวเลือก C – Miniconda
+## 2. ตัวเลือก C – Miniconda
 
-[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) เป็นตัวติดตั้งขนาดเล็กสำหรับติดตั้ง [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python และแพ็กเกจบางตัว  
-Conda เองเป็นตัวจัดการแพ็กเกจที่ช่วยให้ตั้งค่าและสลับระหว่าง [virtual environments](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) และแพ็กเกจ Python ได้ง่าย นอกจากนี้ยังมีประโยชน์สำหรับติดตั้งแพ็กเกจที่ไม่มีใน `pip`
+[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) เป็นตัวติดตั้งขนาดเล็กสำหรับติดตั้ง [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python รวมถึงแพ็กเกจบางตัว
+Conda เองเป็นตัวจัดการแพ็กเกจที่ทำให้ง่ายต่อการตั้งค่าและสลับระหว่าง [**virtual environments**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) กับแพ็กเกจต่าง ๆ นอกจากนี้ยังเหมาะสำหรับติดตั้งแพ็กเกจที่ไม่มีใน `pip`
 
-### ขั้นตอนที่ 0  ติดตั้ง Miniconda
+### ขั้นตอนที่ 0 ติดตั้ง Miniconda
 
 ทำตาม [คู่มือการติดตั้ง MiniConda](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) เพื่อทำการติดตั้ง
 
@@ -81,11 +81,11 @@ conda --version
 
 ### ขั้นตอนที่ 1 สร้าง virtual environment
 
-สร้างไฟล์ environment ใหม่ (*environment.yml*) หากคุณใช้ Codespaces ให้สร้างไฟล์นี้ในไดเรกทอรี `.devcontainer` ดังนั้นจะเป็น `.devcontainer/environment.yml`
+สร้างไฟล์ environment ใหม่ (*environment.yml*) หากคุณใช้งานผ่าน Codespaces ให้สร้างในไดเรกทอรี `.devcontainer` ซึ่งจะได้เป็น `.devcontainer/environment.yml`
 
-### ขั้นตอนที่ 2  เติมข้อมูลในไฟล์ environment ของคุณ
+### ขั้นตอนที่ 2 เติมข้อมูลในไฟล์ environment
 
-เพิ่มโค้ดต่อไปนี้ในไฟล์ `environment.yml`
+เพิ่มโค้ดข้างล่างนี้ใน `environment.yml` ของคุณ
 
 ```yml
 name: <environment-name>
@@ -104,23 +104,23 @@ dependencies:
 
 ### ขั้นตอนที่ 3 สร้าง Conda environment ของคุณ
 
-รันคำสั่งด้านล่างในบรรทัดคำสั่ง/เทอร์มินัลของคุณ
+รันคำสั่งตามด้านล่างนี้ในคอมมานด์ไลน์/เทอร์มินัลของคุณ
 
 ```bash 
-conda env create --name ai4beg --file .devcontainer/environment.yml # เส้นทางย่อย .devcontainer ใช้กับการตั้งค่า Codespace เท่านั้น
+conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer โฟลเดอร์ย่อยนี้ใช้กับการตั้งค่า Codespace เท่านั้น
 conda activate ai4beg
 ```
 
-ดูคู่มือ [Conda environments guide](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) หากพบปัญหาใด ๆ
+ดูที่ [คู่มือสภาพแวดล้อม Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) หากพบปัญหาใด ๆ
 
-## 2  ตัวเลือก D – Jupyter / Jupyter Lab แบบคลาสสิก (ในเบราว์เซอร์ของคุณ)
+## 2  ตัวเลือก D – Jupyter คลาสสิก / Jupyter Lab (ในบราวเซอร์ของคุณ)
 
 > **เหมาะกับใคร?**  
-> ใครก็ตามที่ชอบอินเทอร์เฟซ Jupyter แบบคลาสสิก หรืออยากรันโน้ตบุ๊กโดยไม่ใช้ VS Code
+> คนที่ชอบอินเทอร์เฟซ Jupyter คลาสสิกหรืออยากรันโน้ตบุ๊กโดยไม่ใช้ VS Code  
 
-### ขั้นตอนที่ 1  ตรวจสอบว่า Jupyter ติดตั้งแล้ว
+### ขั้นตอนที่ 1 ตรวจสอบให้แน่ใจว่ามี Jupyter ติดตั้งแล้ว
 
-เพื่อเริ่ม Jupyter ในเครื่อง ให้ไปที่เทอร์มินัล/บรรทัดคำสั่ง, เข้าไปที่ไดเรกทอรีคอร์ส แล้วรัน:
+เพื่อเริ่มใช้ Jupyter ในเครื่อง เปิดเทอร์มินัล/คอมมานด์ไลน์ ไปที่โฟลเดอร์ของคอร์ส แล้วรัน:
 
 ```bash
 jupyter notebook
@@ -132,22 +132,24 @@ jupyter notebook
 jupyterhub
 ```
 
-จะเริ่มอินสแตนซ์ Jupyter และแสดง URL สำหรับเข้าถึงในหน้าต่างบรรทัดคำสั่ง
+สิ่งนี้จะเริ่มต้นอินสแตนซ์ Jupyter และ URL สำหรับเข้าถึงจะปรากฏในหน้าคอมมานด์ไลน์
 
-เมื่อคุณเข้าถึง URL แล้ว คุณจะเห็นโครงร่างคอร์สและสามารถเข้าไปยังไฟล์ `*.ipynb` ใดก็ได้ เช่น `08-building-search-applications/python/oai-solution.ipynb`
+เมื่อคุณเข้าถึง URL นี้ จะเห็นโครงร่างคอร์สและสามารถเข้าไฟล์ `*.ipynb` ใดก็ได้ เช่น `08-building-search-applications/python/oai-solution.ipynb`
 
 ## 3. เพิ่ม API Keys ของคุณ
 
-การเก็บ API keys ให้ปลอดภัยเป็นสิ่งสำคัญเมื่อสร้างแอปพลิเคชันใด ๆ เราแนะนำไม่ให้เก็บ API keys โดยตรงในโค้ดของคุณ การคอมมิตข้อมูลเหล่านี้ในรีโปสาธารณะอาจทำให้เกิดปัญหาด้านความปลอดภัยและค่าใช้จ่ายที่ไม่พึงประสงค์หากถูกใช้โดยผู้ไม่หวังดี  
-นี่คือคำแนะนำทีละขั้นตอนในการสร้างไฟล์ `.env` สำหรับ Python และเพิ่ม `GITHUB_TOKEN`:
+การรักษา API keys ให้ปลอดภัยเป็นสิ่งสำคัญเมื่อพัฒนาแอปพลิเคชันใดๆ เราแนะนำไม่ให้เก็บ API keys ไว้ในโค้ดโดยตรง การคอมมิตข้อมูลเหล่านั้นในรีโปสาธารณะอาจทำให้เกิดปัญหาด้านความปลอดภัยและค่าใช้จ่ายที่ไม่พึงประสงค์หากถูกใช้โดยผู้ไม่หวังดี
+นี่คือคำแนะนำทีละขั้นตอนเกี่ยวกับการสร้างไฟล์ `.env` สำหรับ Python และเพิ่มข้อมูลรับรอง Microsoft Foundry Models ของคุณ:
 
-1. **ไปที่ไดเรกทอรีโปรเจกต์ของคุณ**: เปิดเทอร์มินัลหรือพรอมต์คำสั่งและไปที่ไดเรกทอรีรูทของโปรเจกต์ที่คุณต้องการสร้างไฟล์ `.env`
+> **หมายเหตุ:** GitHub Models (และตัวแปร `GITHUB_TOKEN`) จะเลิกใช้สิ้นเดือนกรกฎาคม 2026 คู่มือนี้ใช้ [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) แทน หากต้องการทำงานแบบออฟไลน์เต็มตัว ให้ดูที่ [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst)
+
+1. **ไปที่ไดเรกทอรีโปรเจกต์ของคุณ**: เปิดเทอร์มินัลหรือพรอมต์คำสั่ง แล้วไปที่โฟลเดอร์หลักของโปรเจกต์ที่คุณต้องการสร้างไฟล์ `.env`
 
    ```bash
    cd path/to/your/project
    ```
 
-2. **สร้างไฟล์ `.env`**: ใช้โปรแกรมแก้ไขข้อความที่คุณชอบเพื่อสร้างไฟล์ใหม่ชื่อ `.env` หากใช้บรรทัดคำสั่ง คุณสามารถใช้ `touch` (บนระบบ Unix) หรือ `echo` (บน Windows):
+2. **สร้างไฟล์ `.env`**: ใช้แก้ไขข้อความที่คุณชื่นชอบเพื่อสร้างไฟล์ใหม่ชื่อ `.env` หากใช้คอมมานด์ไลน์ สามารถใช้ `touch` (บนระบบ Unix) หรือ `echo` (บน Windows):
 
    ระบบ Unix:
 
@@ -161,21 +163,22 @@ jupyterhub
    echo . > .env
    ```
 
-3. **แก้ไขไฟล์ `.env`**: เปิดไฟล์ `.env` ในโปรแกรมแก้ไขข้อความ (เช่น VS Code, Notepad++ หรือโปรแกรมอื่น ๆ) เพิ่มบรรทัดต่อไปนี้ในไฟล์ โดยแทนที่ `your_github_token_here` ด้วยโทเค็น GitHub จริงของคุณ:
+3. **แก้ไขไฟล์ `.env`**: เปิดไฟล์ `.env` ในตัวแก้ไขข้อความ (เช่น VS Code, Notepad++ หรือโปรแกรมอื่น ๆ) เพิ่มบรรทัดต่อไปนี้โดยแทนที่ค่าตัวแปรด้วย endpoint โปรเจกต์ Microsoft Foundry และ API key ของคุณจริง ๆ:
 
    ```env
-   GITHUB_TOKEN=your_github_token_here
+   AZURE_INFERENCE_ENDPOINT=your_foundry_endpoint_here
+   AZURE_INFERENCE_CREDENTIAL=your_foundry_api_key_here
    ```
 
-4. **บันทึกไฟล์**: บันทึกการเปลี่ยนแปลงและปิดโปรแกรมแก้ไขข้อความ
+4. **บันทึกไฟล์**: บันทึกการเปลี่ยนแปลงแล้วปิดตัวแก้ไขข้อความ
 
-5. **ติดตั้ง `python-dotenv`**: หากยังไม่ได้ติดตั้ง คุณต้องติดตั้งแพ็กเกจ `python-dotenv` เพื่อโหลดตัวแปรสภาพแวดล้อมจากไฟล์ `.env` เข้าสู่แอป Python ของคุณ คุณสามารถติดตั้งด้วย `pip`:
+5. **ติดตั้ง `python-dotenv`**: ถ้ายังไม่ได้ติดตั้ง จำเป็นต้องติดตั้งแพ็กเกจ `python-dotenv` เพื่อโหลดตัวแปรสภาพแวดล้อมจากไฟล์ `.env` เข้าในแอป Python ของคุณ โดยติดตั้งผ่าน `pip`:
 
    ```bash
    pip install python-dotenv
    ```
 
-6. **โหลดตัวแปรสภาพแวดล้อมในสคริปต์ Python ของคุณ**: ในสคริปต์ Python ให้ใช้แพ็กเกจ `python-dotenv` เพื่อโหลดตัวแปรสภาพแวดล้อมจากไฟล์ `.env`:
+6. **โหลดตัวแปรสภาพแวดล้อมในสคริปต์ Python ของคุณ**: ในสคริปต์ Python ใช้แพ็กเกจ `python-dotenv` เพื่อโหลดตัวแปรจากไฟล์ `.env`:
 
    ```python
    from dotenv import load_dotenv
@@ -184,40 +187,41 @@ jupyterhub
    # โหลดตัวแปรสภาพแวดล้อมจากไฟล์ .env
    load_dotenv()
 
-   # เข้าถึงตัวแปร GITHUB_TOKEN
-   github_token = os.getenv("GITHUB_TOKEN")
+   # เข้าถึงตัวแปร Microsoft Foundry Models
+   endpoint = os.getenv("AZURE_INFERENCE_ENDPOINT")
+   token = os.getenv("AZURE_INFERENCE_CREDENTIAL")
 
-   print(github_token)
+   print(endpoint)
    ```
 
-แค่นี้ก็เสร็จเรียบร้อย! คุณได้สร้างไฟล์ `.env` เพิ่มโทเค็น GitHub และโหลดเข้าแอป Python ของคุณเรียบร้อยแล้ว
+เสร็จเรียบร้อย! คุณได้สร้างไฟล์ `.env` เพิ่มข้อมูลรับรอง Microsoft Foundry Models และโหลดเข้าสู่แอป Python ของคุณแล้ว
 
-🔐 อย่าคอมมิตไฟล์ .env—ไฟล์นี้ถูกเพิ่มใน .gitignore แล้ว  
-คำแนะนำสำหรับผู้ให้บริการทั้งหมดอยู่ใน [`providers.md`](03-providers.md)
+🔐 อย่าคอมมิตไฟล์ .env—มันถูกเพิ่มไว้ใน .gitignore แล้ว
+คำแนะนำอย่างเต็มรูปแบบของผู้ให้บริการดูได้ที่ [`providers.md`](03-providers.md)
 
 ## 4. ต่อไปทำอะไรดี?
 
-| ฉันต้องการ…          | ไปที่…                                                                  |
+| ฉันต้องการ…          | ไปที่…                                                                 |
 |---------------------|-------------------------------------------------------------------------|
-| เริ่มบทเรียนที่ 1    | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
-| ตั้งค่า LLM Provider | [`providers.md`](03-providers.md)                                       |
-| พบปะผู้เรียนคนอื่น  | [เข้าร่วม Discord ของเรา](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
+| เริ่มบทเรียนที่ 1    | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)      |
+| ตั้งค่าผู้ให้บริการ LLM | [`providers.md`](03-providers.md)                                      |
+| พบปะผู้เรียนคนอื่น  | [เข้าร่วม Discord ของเรา](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) |
 
-## 5. การแก้ไขปัญหา
+## 5. การแก้ไขปัญหาเบื้องต้น
 
-| อาการ                                   | วิธีแก้ไข                                                        |
+| อาการ                                   | วิธีแก้ไข                                                         |
 |-----------------------------------------|-----------------------------------------------------------------|
-| `python not found`                      | เพิ่ม Python ใน PATH หรือเปิดเทอร์มินัลใหม่หลังติดตั้ง          |
-| `pip` สร้าง wheels ไม่ได้ (Windows)     | รัน `pip install --upgrade pip setuptools wheel` แล้วลองใหม่   |
-| `ModuleNotFoundError: dotenv`           | รัน `pip install -r requirements.txt` (ยังไม่ได้ติดตั้ง env)     |
-| Docker build ล้มเหลว *No space left*    | Docker Desktop ▸ *Settings* ▸ *Resources* → เพิ่มขนาดดิสก์      |
-| VS Code แจ้งให้เปิดใหม่ตลอดเวลา         | คุณอาจเปิดใช้งานทั้งสองตัวเลือกพร้อมกัน; เลือกอย่างใดอย่างหนึ่ง (venv **หรือ** container) |
-| OpenAI 401 / 429 errors                 | ตรวจสอบค่า `OPENAI_API_KEY` / อัตราการร้องขอ                    |
-| ข้อผิดพลาดเมื่อใช้ Conda                | ติดตั้งไลบรารี Microsoft AI ด้วย `conda install -c microsoft azure-ai-ml`|
+| `python not found`                      | เพิ่ม Python ลง PATH หรือเปิดเทอร์มินัลใหม่หลังติดตั้ง          |
+| `pip` สร้าง wheels ไม่สำเร็จ (Windows) | รัน `pip install --upgrade pip setuptools wheel` แล้วลองใหม่    |
+| `ModuleNotFoundError: dotenv`           | รัน `pip install -r requirements.txt` (ยังไม่ได้ติดตั้ง env)      |
+| สร้าง Docker ล้มเหลว *No space left*   | ใน Docker Desktop ▸ *Settings* ▸ *Resources* → เพิ่มขนาดดิสก์   |
+| VS Code แสดงพรอมต์ให้เปิดใหม่บ่อย   | อาจเปิดใช้งานทั้งสองตัวเลือกพร้อมกัน; เลือกเพียงอย่างใดอย่างหนึ่ง (venv **หรือ** container)|
+| ข้อผิดพลาด OpenAI 401 / 429            | ตรวจสอบค่า `OPENAI_API_KEY` / ขีดจำกัดอัตราการเรียก API        |
+| ข้อผิดพลาดในการใช้ Conda               | ติดตั้งไลบรารี AI ของไมโครซอฟท์ด้วย `conda install -c microsoft azure-ai-ml` |
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**ข้อจำกัดความรับผิดชอบ**:  
-เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษาอัตโนมัติ [Co-op Translator](https://github.com/Azure/co-op-translator) แม้เราจะพยายามให้ความถูกต้องสูงสุด แต่โปรดทราบว่าการแปลอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาต้นทางถือเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ ขอแนะนำให้ใช้บริการแปลโดยผู้เชี่ยวชาญมนุษย์ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความผิดใด ๆ ที่เกิดจากการใช้การแปลนี้
+**ปฏิเสธความรับผิดชอบ**:
+เอกสารนี้ได้รับการแปลโดยใช้บริการแปลภาษา AI [Co-op Translator](https://github.com/Azure/co-op-translator) ขณะที่เราพยายามให้ความถูกต้อง โปรดทราบว่าการแปลโดยอัตโนมัติอาจมีข้อผิดพลาดหรือความไม่ถูกต้อง เอกสารต้นฉบับในภาษาต้นทางควรถูกพิจารณาเป็นแหล่งข้อมูลที่เชื่อถือได้ สำหรับข้อมูลที่สำคัญ แนะนำให้ใช้การแปลโดยมนุษย์มืออาชีพ เราไม่รับผิดชอบต่อความเข้าใจผิดหรือการตีความที่ผิดพลาดที่เกิดขึ้นจากการใช้การแปลนี้
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

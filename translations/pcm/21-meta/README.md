@@ -1,19 +1,21 @@
-# Building Wit di Meta Family Models 
+# Building Wit de Meta Family Models 
 
 ## Introduction 
 
-Dis lesson go cover: 
+Dis lekshon go cover: 
 
-- Explorin di two main Meta family models - Llama 3.1 an Llama 3.2 
-- Understanding di use-cases an scenarios for each model 
-- Code sample to show di unique features of each model 
+- Exploring di two main Meta family models - Llama 3.1 and Llama 3.2 
+- Understanding di use-cases and scenarios for each model 
+- Code sample wey go show di unique features of each model 
 
 
 ## Di Meta Family of Models 
 
-For dis lesson, we go explore 2 models from di Meta family or "Llama Herd" - Llama 3.1 an Llama 3.2.
+For dis lekshon, we go explore 2 models from Meta family or "Llama Herd" - Llama 3.1 and Llama 3.2.
 
-Dem models dey come in different variants an dey available on top di GitHub Model marketplace. Here na more details on how to use GitHub Models to [prototype wit AI models](https://docs.github.com/en/github-models/prototyping-with-ai-models?WT.mc_id=academic-105485-koreyst).
+Dis models get different variants and dem dey for [Microsoft Foundry Models catalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
+
+> **Note:** GitHub Models dey retire for end of July 2026. Here get more info on how to use [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) take prototype wit AI models.
 
 Model Variants: 
 - Llama 3.1 - 70B Instruct 
@@ -21,39 +23,39 @@ Model Variants:
 - Llama 3.2 - 11B Vision Instruct 
 - Llama 3.2 - 90B Vision Instruct 
 
-*Note: Llama 3 still dey available for GitHub Models but we no go cover am for dis lesson*
+*Note: Llama 3 still dey available for Microsoft Foundry Models but we no go cover am for dis lekshon*
 
 ## Llama 3.1 
 
-Wit 405 Billion Parameters, Llama 3.1 dey fit inside di open source LLM category. 
+With 405 Billion Parameters, Llama 3.1 dey fit inside di open source LLM category. 
 
-Di model na upgrade to di earlier release Llama 3 by offering: 
+Di model be upgrade to di earlier release Llama 3 by coming with: 
 
-- Bigger context window - 128k tokens against 8k tokens 
-- Bigger Max Output Tokens - 4096 against 2048 
-- Better Multilingual Support - because di training tokens dem increase 
+- Bigger context window - 128k tokens compare to 8k tokens 
+- Bigger Max Output Tokens - 4096 compare to 2048 
+- Better Multilingual Support - because of increased training tokens 
 
 Dis ones make Llama 3.1 fit handle more complex use cases when you dey build GenAI applications like: 
-- Native Function Calling - di ability to call external tools an functions outside di LLM workflow
-- Better RAG Performance - because of di higher context window 
+- Native Function Calling - di power to call external tools and functions outside di LLM workflow
+- Better RAG Performance - because di bigger context window 
 - Synthetic Data Generation - di ability to create better data for tasks like fine-tuning 
 
 ### Native Function Calling 
 
-Llama 3.1 don dey fine-tuned to dey more effective when e come to making function or tool calls. E get two built-in tools wey di model fit sabi sey e need to use based on wetin di user talk. Dem tools be: 
+Llama 3.1 don fine-tune am make e dey more effective to make function or tool calls. E get two built-in tools weh di model fit sabi say e need use based on di prompt wey user give. Dis tools na: 
 
-- **Brave Search** - Fit use am to get up-to-date information like di weather by doing web search 
-- **Wolfram Alpha** - Fit use am for complex maths calculations so you no need to write your own functions. 
+- **Brave Search** - Fit use am find fresh information like weather by doing web search 
+- **Wolfram Alpha** - Fit use am for complex mathematical calculations make you no need write your own functions. 
 
-You fit create your own custom tools wey di LLM fit call too. 
+You fit still create your own custom tools wey di LLM fit call. 
 
-For di code example wey dey below: 
+For di code example below: 
 
 - We define di available tools (brave_search, wolfram_alpha) for di system prompt. 
-- Send user prompt wey ask about di weather for one particular city. 
-- Di LLM go respond with tool call to di Brave Search tool wey go look like dis `<|python_tag|>brave_search.call(query="Stockholm weather")` 
+- Send user prompt wey ask about weather for one particular city. 
+- Di LLM go respond wit tool call to Brave Search weh go be like this `<|python_tag|>brave_search.call(query="Stockholm weather")` 
 
-*Note: Dis example just dey make di tool call, if you want get di results, you go need create free account for di Brave API page an define di function itself.
+*Note: Dis example dey only do di tool call, if you wan get di results, you go need create free account for Brave API page and define di function yourself.
 
 ```python 
 import os
@@ -61,9 +63,10 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import AssistantMessage, SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-token = os.environ["GITHUB_TOKEN"]
-endpoint = "https://models.inference.ai.azure.com"
-model_name = "meta-llama-3.1-405b-instruct"
+# Collect dem from your Microsoft Foundry project "Overview" page
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
+model_name = "Meta-Llama-3.1-405B-Instruct"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -95,13 +98,13 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2 
 
-Even though e be LLM, one limitation of Llama 3.1 na say e no fit do multimodality. Meaning e no fit use different types of input like images as prompts and gimme responses. Dis ability na one of di main features of Llama 3.2. Dem features include: 
+Even though e be LLM, one limitation of Llama 3.1 na say e no get multimodality. That one mean say e no fit use different kinds of input like images as prompts and give response. Dis power na one of di main features of Llama 3.2. Dem features still get: 
 
-- Multimodality - fit evaluate both text and image prompts 
-- Small to Medium size variations (11B and 90B) - dis one give flexible deployment options, 
-- Text-only variations (1B and 3B) - dis one make e possible to deploy di model for edge / mobile devices and e give low latency 
+- Multimodality - e fit evaluate both text and image prompts 
+- Small to Medium size variations (11B and 90B) - dis one dey give flexible deployment options, 
+- Text-only variations (1B and 3B) - dis one allow di model deploy for edge / mobile devices and e dey provide low latency 
 
-Di multimodal support na big step for di world of open source models. Di code example wey dey below go take both image and text prompt to get analysis of di image from Llama 3.2 90B. 
+Di multimodal support na big step for open source models world. Di code example below dey take both image and text prompt to get analysis of di image from Llama 3.2 90B. 
 
 
 ### Multimodal Support wit Llama 3.2
@@ -119,8 +122,9 @@ from azure.ai.inference.models import (
 )
 from azure.core.credentials import AzureKeyCredential
 
-token = os.environ["GITHUB_TOKEN"]
-endpoint = "https://models.inference.ai.azure.com"
+# Comot dem from your Microsoft Foundry project "Overview" page
+token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
+endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Llama-3.2-90B-Vision-Instruct"
 
 client = ChatCompletionsClient(
@@ -151,13 +155,13 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Learning no stop for here, continue di journey
+## Learning no stop here, continue di journey
 
-After you don finish dis lesson, make you check our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue to dey level up your Generative AI knowledge!
+After you don finish dis lekshon, check our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue to level up your Generative AI knowledge!
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:
-Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we try make e correct, abeg sabi say automated translation fit get error or no too correct. The original document wey e dey come from na di correct source. For important tin dem, e better make human professional translate am. We no go take responsibility for any wrong understanding or wahala wey fit come from using dis translation.
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even tho we dey try make am correct, abeg make you know say automated translation fit get errors or mistakes. Di original document for dia own language na im be di correct source. For important info, make person wey sabi human translation do am. We no go responsible for any misunderstanding or wrong understanding wey fit happen because of dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

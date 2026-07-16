@@ -2,138 +2,143 @@
 
 [![Johdatus generatiiviseen tekoälyyn ja suuriin kielimalleihin](../../../translated_images/fi/01-lesson-banner.2424cfd092f43366.webp)](https://youtu.be/lFXQkBvEe0o?si=6ZBcQTwLJJDpnX0K)
 
-_(Klikkaa yllä olevaa kuvaa nähdäksesi tämän oppitunnin videon)_
+_(Napsauta yllä olevaa kuvaa katsellaksesi tämän oppitunnin videon)_
 
-Generatiivinen tekoäly on tekoälyä, joka pystyy tuottamaan tekstiä, kuvia ja muita sisältötyyppejä. Sen tekee hämmästyttäväksi teknologiaksi se, että se demokratisoi tekoälyn käyttöä – kuka tahansa voi käyttää sitä pelkällä tekstikehotteella, luonnollisella kielellä kirjoitetulla lauseella. Sinun ei tarvitse oppia ohjelmointikieliä kuten Javaa tai SQL:ää saavuttaaksesi jotain merkittävää; riittää, että käytät omaa kieltäsi, kerrot mitä haluat, ja tekoälymalli antaa sinulle ehdotuksen. Sovelluskohteet ja vaikutukset ovat valtavat: voit kirjoittaa tai ymmärtää raportteja, luoda sovelluksia ja paljon muuta sekunneissa.
+Generatiivinen tekoäly on tekoälyä, joka pystyy luomaan tekstiä, kuvia ja muita sisältötyyppejä. Se tekee teknologiasta hienon, koska se demokratisoi tekoälyn; kuka tahansa voi käyttää sitä pelkällä tekstikehotteella, luonnollisella kielellä kirjoitetulla lauseella. Sinun ei tarvitse oppia kieliä kuten Java tai SQL saadaksesi aikaan jotain merkityksellistä, tarvitset vain oman kielen, sanot mitä haluat ja saat ehdotuksen tekoälymallilta. Sovellukset ja vaikutukset ovat valtavia: kirjoitat tai ymmärrät raportteja, kirjoitat sovelluksia ja paljon muuta, kaikki sekunneissa.
 
-Tässä oppimateriaalissa tutkimme, kuinka startupimme hyödyntää generatiivista tekoälyä avatakseen uusia mahdollisuuksia koulutuksen maailmassa ja kuinka käsittelemme sen soveltamiseen liittyviä sosiaalisia haasteita sekä teknologian rajoituksia.
+Tässä opetussuunnitelmassa tutkimme, kuinka startup-yrityksemme hyödyntää generatiivista tekoälyä avataksesi uusia tilanteita koulutuksen maailmassa ja miten ratkaisemme väistämättömät haasteet sovelluksen yhteiskunnallisista vaikutuksista ja teknologian rajoituksista.
 
 ## Johdanto
 
 Tämä oppitunti kattaa:
 
-- Liiketoimintaskenaarion esittelyn: startup-ideamme ja missiomme.
-- Generatiivinen tekoäly ja nykyisen teknologiaympäristön kehitys.
-- Suuren kielimallin toimintaperiaatteet.
-- Suurten kielimallien pääominaisuudet ja käytännön sovelluskohteet.
+- Liiketoimintatilanneen esittelyn: startup-ideamme ja missiomme.
+- Generatiivinen tekoäly ja miten päädyimme nykyiseen teknologiseen maisemaan.
+- Suurten kielimallien sisäinen toiminta.
+- Suurten kielimallien pääominaisuudet ja käytännön käyttötapaukset.
 
 ## Oppimistavoitteet
 
-Tämän oppitunnin jälkeen ymmärrät:
+Oppitunnin suorittamisen jälkeen ymmärrät:
 
-- Mitä generatiivinen tekoäly on ja kuinka suuret kielimallit toimivat.
-- Kuinka voit hyödyntää suuria kielimalleja eri käyttötarkoituksiin, erityisesti koulutukseen liittyvissä skenaarioissa.
+- Mitä generatiivinen tekoäly on ja miten suuret kielimallit toimivat.
+- Kuinka voit hyödyntää suuria kielimalleja eri käyttötapauksiin, painottaen koulutusskenaarioita.
 
-## Skenaario: koulutukseen keskittyvä startupimme
+## Skenaario: koulutusstartup-yrityksemme
 
-Generatiivinen tekoäly edustaa tekoälyteknologian huippua, rikkoen rajoja, joita aiemmin pidettiin mahdottomina. Generatiivisilla tekoälymalleilla on lukuisia ominaisuuksia ja sovelluskohteita, mutta tässä oppimateriaalissa tutkimme, kuinka se mullistaa koulutuksen kuvitteellisen startupin kautta. Kutsumme tätä startupia nimellä _startupimme_. Startupimme toimii koulutusalalla kunnianhimoisella missiolla:
+Generatiivinen tekoäly (AI) edustaa tekoälyteknologian huippua, rikkoen aiemmin mahdottomiksi katsottuja rajoja. Generatiivisilla tekoälymalleilla on useita kykyjä ja sovelluksia, mutta tässä opetussuunnitelmassa tarkastelemme, kuinka se mullistaa koulutusta kuvitteellisen startup-yrityksen kautta. Tätä startup-yritystä kutsumme _meidän startuppiksemme_. Startuppimme toimii koulutusalalla kunnianhimoisella missiona,
 
-> _parantaa oppimisen saavutettavuutta maailmanlaajuisesti, varmistaa tasapuolinen pääsy koulutukseen ja tarjota jokaiselle oppijalle yksilöllisiä oppimiskokemuksia heidän tarpeidensa mukaan_.
+> _parantaa oppimisen saavutettavuutta maailmanlaajuisesti, varmistaen tasa-arvoisen pääsyn koulutukseen ja tarjoamalla jokaiselle oppijalle heidän tarpeidensa mukaiset henkilökohtaiset oppimiskokemukset_.
 
-Startupimme tiimi tiedostaa, että emme voi saavuttaa tätä tavoitetta ilman modernin ajan tehokkaimpia työkaluja – suuria kielimalleja (LLM).
+Startup-tiimimme on tietoinen siitä, etteivät tavoitteemme ole saavutettavissa ilman yhdestä modernin ajan tehokkaimmasta työkalusta – Suurista kielimalleista (LLM).
 
-Generatiivisen tekoälyn odotetaan mullistavan tapaa, jolla opimme ja opetamme nykyään. Opiskelijoilla on käytettävissään virtuaaliset opettajat 24 tuntia vuorokaudessa, jotka tarjoavat valtavia määriä tietoa ja esimerkkejä, ja opettajat voivat hyödyntää innovatiivisia työkaluja arvioidakseen oppilaitaan ja antaakseen palautetta.
+Generatiivisen tekoälyn odotetaan mullistavan nykyisen oppimis- ja opetustavan, tarjoten opiskelijoille virtuaalisia opettajia 24 tuntia vuorokaudessa, jotka tarjoavat valtavasti tietoa ja esimerkkejä, ja opettajien kykenevän käyttämään innovatiivisia työkaluja oppilaiden arviointiin ja palautteen antamiseen.
 
-![Viisi nuorta opiskelijaa katsomassa näyttöä - kuva DALLE2](../../../translated_images/fi/students-by-DALLE2.b70fddaced1042ee.webp)
+![Viisi nuorta oppilasta katsomassa näyttöä - kuva DALLE2:lta](../../../translated_images/fi/students-by-DALLE2.b70fddaced1042ee.webp)
 
-Aloitetaan määrittelemällä joitakin peruskäsitteitä ja terminologiaa, joita käytämme oppimateriaalin aikana.
+Aloitetaan määrittelemällä joitakin peruskäsitteitä ja termistöä, joita käytämme läpi opetussuunnitelman.
 
-## Miten generatiivinen tekoäly syntyi?
+## Miten Generatiivinen tekoäly kehittyi?
 
-Vaikka generatiivisten tekoälymallien julkistaminen on viime aikoina aiheuttanut valtavaa _hypetystä_, tämä teknologia on ollut kehitteillä vuosikymmeniä, ja ensimmäiset tutkimukset juontavat juurensa 1960-luvulle. Olemme nyt pisteessä, jossa tekoälyllä on ihmisen kognitiivisia kykyjä, kuten keskustelu, kuten esimerkiksi [OpenAI ChatGPT](https://openai.com/chatgpt) tai [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), joka käyttää GPT-mallia verkkohakuihin Bing-keskusteluissa.
+Huolimatta siitä poikkeuksellisesta _hypestä_, jota viime aikojen generatiivisten tekoälymallien julkistus on aiheuttanut, tämä teknologia on ollut kehityksessä vuosikymmeniä, ensimmäisten tutkimuspyrkimysten ajoittuessa 1960-luvulle. Nykyään tekoälyllä on ihmisen kognitiokykyjä, kuten keskustelukykyä, joita esittelevät esimerkiksi [OpenAI ChatGPT](https://openai.com/chatgpt) tai [Microsoft Copilot](https://copilot.microsoft.com/?WT.mc_id=academic-105485-koreyst), joka käyttää GPT-mallia myös keskustelupohjaisessa verkkohakukokemuksessa.
 
-Palataan hieman taaksepäin: tekoälyn ensimmäiset prototyypit koostuivat kirjoituskoneella toimivista chatbot-ohjelmista, jotka perustuivat asiantuntijoilta kerättyyn tietopohjaan ja tietokoneeseen tallennettuihin tietoihin. Tietopohjan vastaukset aktivoituivat syötetekstissä esiintyvien avainsanojen perusteella. Pian kuitenkin kävi selväksi, että tällainen lähestymistapa ei ollut skaalautuva.
+Aluksi tekoälyn prototyypit olivat kirjoitettuja chattibotteja, jotka perustuivat asiantuntijaryhmältä koostettuun tietokantaan, joka oli esitetty tietokoneessa. Tietokannassa olevat vastaukset laukaistiin avainsanojen perusteella käyttäjän tekstisyötteessä.
+Kuitenkin kävi pian ilmi, että tällainen lähestymistapa, jossa käytettiin kirjoitettuja chattibotteja, ei skaalautunut hyvin.
 
 ### Tilastollinen lähestymistapa tekoälyyn: koneoppiminen
 
-Merkittävä käännekohta saavutettiin 1990-luvulla, kun tilastollista lähestymistapaa alettiin soveltaa tekstianalyysiin. Tämä johti uusien algoritmien kehittämiseen – tunnetaan nimellä koneoppiminen – jotka pystyivät oppimaan kaavoja datasta ilman, että niitä ohjelmoitiin eksplisiittisesti. Tämä lähestymistapa mahdollisti koneiden simuloida ihmisen kielen ymmärtämistä: tilastollinen malli koulutettiin tekstin ja sen merkityksen yhdistelmillä, jolloin malli pystyi luokittelemaan tuntemattoman syötetekstin ennalta määritellyllä merkityksellä.
+Käännekohta tuli 1990-luvulla, kun sovellettiin tilastollista lähestymistapaa teksti-analyysiin. Tämä johti uusien algoritmien kehittämiseen – koneoppimiseen – joka kykenee oppimaan kuvioita datasta ilman että sitä ohjelmoidaan eksplisiittisesti. Tämä lähestymistapa sallii koneiden simuloida ihmisen kielen ymmärtämistä: tilastollinen malli koulutetaan tekstin ja siihen liittyvien tunnisteiden pareilla, mikä mahdollistaa mallin luokitella tuntemattoman syötteen ennalta määrätyllä tunnisteella, joka edustaa viestin tarkoitusta.
 
-### Neuroverkot ja modernit virtuaaliassistentit
+### Neuroverkot ja nykyaikaiset virtuaaliassistentit
 
-Viime vuosina laitteistojen teknologinen kehitys, joka mahdollistaa suurempien datamäärien ja monimutkaisempien laskelmien käsittelyn, on edistänyt tekoälytutkimusta ja johtanut kehittyneiden koneoppimisalgoritmien, kuten neuroverkkojen tai syväoppimisalgoritmien, kehittämiseen.
+Viime vuosina laitteiston teknologinen kehittyminen, joka on kykenevä käsittelemään suurempia tietomääriä ja monimutkaisempia laskutoimituksia, on kannustanut tekoälytutkimukseen, johtanut kehittyneisiin koneoppimisalgoritmeihin, tunnetaan myös neuroverkkoina tai syväoppimisalgoritmeina.
 
-Neuroverkot (erityisesti toistuvat neuroverkot – RNN:t) paransivat merkittävästi luonnollisen kielen käsittelyä, mahdollistaen tekstin merkityksen esittämisen merkityksellisemmällä tavalla, huomioiden sanan kontekstin lauseessa.
+Neuroverkot (erityisesti toistuvat neuroverkot – RNN:t) paransivat merkittävästi luonnollisen kielen käsittelyä, mahdollistaen tekstin merkityksen esittämisen merkityksellisemmällä tavalla, arvostaen sanan kontekstia lauseessa.
 
-Tämä teknologia mahdollisti virtuaaliassistenttien syntymisen 2000-luvun ensimmäisellä vuosikymmenellä. Nämä assistentit olivat erittäin taitavia tulkitsemaan ihmisen kieltä, tunnistamaan tarpeen ja suorittamaan toimenpiteen sen tyydyttämiseksi – kuten vastaamaan ennalta määritellyllä skriptillä tai käyttämään kolmannen osapuolen palvelua.
+Tämä on teknologia, joka käynnisti virtuaaliassistentit uuden vuosituhannen ensimmäisellä vuosikymmenellä, erittäin taitavia tulkitsemaan ihmiskieltä, tunnistamaan tarpeen ja suorittamaan toimenpiteen tarpeen tyydyttämiseksi – kuten vastaamalla ennalta määrätyllä skriptillä tai käyttämällä kolmannen osapuolen palvelua.
 
 ### Nykyhetki, generatiivinen tekoäly
 
-Näin olemme päätyneet nykyiseen generatiiviseen tekoälyyn, joka voidaan nähdä syväoppimisen alalajina.
+Näin siis päädyimme tämän päivän generatiiviseen tekoälyyn, jota voidaan pitää syväoppimisen alalajina.
 
-![AI, ML, DL ja generatiivinen tekoäly](../../../translated_images/fi/AI-diagram.c391fa518451a40d.webp)
+![AI, ML, DL ja Generatiivinen tekoäly](../../../translated_images/fi/AI-diagram.c391fa518451a40d.webp)
 
-Vuosikymmenten tekoälytutkimuksen jälkeen uusi mallirakenne – nimeltään _Transformer_ – ylitti RNN-mallien rajoitukset, sillä se pystyy käsittelemään paljon pidempiä tekstijonoja syötteenä. Transformerit perustuvat huomiointimekanismiin, joka mahdollistaa mallin antamaan eri painoarvoja vastaanottamilleen syötteille, 'kiinnittäen enemmän huomiota' kohtiin, joissa olennaisin tieto on keskittynyt, riippumatta niiden järjestyksestä tekstijonossa.
+Vuosisatojen tutkimuksen jälkeen tekoälyn alalla uusi malliarkkitehtuuri – kutsutaan _Transformeriksi_ – ylitti RNN:n rajat, pystyäkseen vastaanottamaan paljon pidempiä tekstisekvenssejä syötteenä. Transformerit perustuvat huomio-mekanismiin, joka mahdollistaa mallin antaa eri painotuksia vastaanottamilleen syötteille, ‘kiinnittäen enemmän huomiota’ siihen kohtaan, missä keskittyy eniten relevanttia tietoa, riippumatta niiden järjestyksestä tekstisekvenssissä.
 
-Useimmat viimeaikaiset generatiiviset tekoälymallit – tunnetaan myös nimellä suuret kielimallit (LLM:t), koska ne toimivat tekstisyötteiden ja -tulosteiden kanssa – perustuvat juuri tähän arkkitehtuuriin. Näitä malleja on koulutettu valtavilla määrillä monimuotoista, merkitsemätöntä dataa, kuten kirjoja, artikkeleita ja verkkosivustoja, ja ne voidaan mukauttaa monenlaisiin tehtäviin. Ne pystyvät tuottamaan kieliopillisesti oikeaa tekstiä, joka vaikuttaa luovalta. Ne eivät ainoastaan parantaneet koneiden kykyä 'ymmärtää' syötetekstiä, vaan myös mahdollistivat niiden kyvyn tuottaa alkuperäisiä vastauksia ihmiskielellä.
+Useimmat uudemmat generatiiviset tekoälymallit – tunnetaan myös nimellä Suuret kielimallit (LLM), koska ne käsittelevät tekstisyötteitä ja -tulosteita – perustuvat tällä arkkitehtuurilla. Mielenkiintoista näissä malleissa – jotka on koulutettu valtavalla määrällä tunnistamatonta dataa monista lähteistä kuten kirjoista, artikkeleista ja verkkosivustoista – on, että ne voidaan sovittaa monenlaisiin tehtäviin ja ne pystyvät tuottamaan kieliopillisesti oikein tekstiä luovuuden kaltaisella ilmeellä. Joten ne eivät ainoastaan parantaneet koneen kykyä ‘ymmärtää’ syötteen tekstiä, vaan mahdollistivat sen kyvyn luoda alkuperäinen vastaus ihmiskielellä.
 
-## Kuinka suuret kielimallit toimivat?
+## Miten suuret kielimallit toimivat?
 
-Seuraavassa luvussa tutkimme erilaisia generatiivisia tekoälymalleja, mutta tarkastellaan ensin, kuinka suuret kielimallit toimivat, keskittyen erityisesti OpenAI GPT (Generative Pre-trained Transformer) -malleihin.
+Seuraavassa luvussa tutkimme eri tyyppisiä generatiivisia tekoälymalleja, mutta tarkastellaan nyt suurten kielimallien toimintaa keskittyen OpenAI:n GPT (Generative Pre-trained Transformer) malleihin.
 
-- **Tokenisaattori, tekstistä numeroiksi**: Suuret kielimallit vastaanottavat tekstin syötteenä ja tuottavat tekstin tulosteena. Koska ne ovat tilastollisia malleja, ne toimivat paljon paremmin numeroiden kuin tekstijonojen kanssa. Siksi jokainen mallille annettu syöte käsitellään tokenisaattorilla ennen kuin se käytetään ydinosassa. Token on tekstin osa – koostuen vaihtelevasta määrästä merkkejä, joten tokenisaattorin päätehtävä on jakaa syöte tokenien taulukoksi. Sitten jokainen token yhdistetään token-indeksiin, joka on alkuperäisen tekstiosan kokonaislukukoodaus.
+- **Tokenisaattori, teksti numeroiksi**: Suuret kielimallit vastaanottavat tekstin syötteenä ja tuottavat tekstin tulosteena. Koska ne ovat tilastollisia malleja, ne toimivat paljon paremmin numeroiden kanssa kuin tekstisekvenssien kanssa. Siksi jokainen syöte käsitellään tokenisaattorin avulla ennen varsinaista mallin käyttöä. Token on tekstinpala – koostuen muuttuvasta määrästä merkkejä, joten tokenisaattorin päätehtävä on jakaa syöte tokenien taulukoksi. Sitten jokainen token yhdistetään token-indeksiin, joka on alkuperäisen tekstipalan kokonaislukukoodaus.
 
-![Tokenisaation esimerkki](../../../translated_images/fi/tokenizer-example.80a5c151ee7d1bd4.webp)
+![Esimerkki tokenisaatiosta](../../../translated_images/fi/tokenizer-example.80a5c151ee7d1bd4.webp)
 
-- **Tulostokenien ennustaminen**: Kun mallille annetaan n tokenia syötteenä (maksimi n vaihtelee mallista riippuen), se pystyy ennustamaan yhden tokenin tulosteena. Tämä token lisätään seuraavan iteraation syötteeseen, muodostaen laajenevan ikkunan, joka mahdollistaa paremman käyttäjäkokemuksen, kun vastauksena saadaan yksi (tai useampi) lause. Tämä selittää, miksi, jos olet koskaan käyttänyt ChatGPT:tä, olet saattanut huomata, että joskus se näyttää pysähtyvän kesken lauseen.
+- **Tulosten tokenien ennustaminen**: Kun annetaan n tokenia syötteeksi (maksimi n vaihtelee mallista toiseen), malli pystyy ennustamaan yhden tokenin tulosteen. Tämä token sisällytetään seuraavan silmukan syötteeseen laajenevassa ikkunamallissa, mahdollistaen paremman käyttökokemuksen, jossa saa yhden (tai useamman) lauseen vastauksen. Tämä selittää, miksi jos olet koskaan käyttänyt ChatGPT:tä, olet saattanut huomata sen joskus pysähtyvän keskellä lausetta.
 
-- **Valintaprosessi, todennäköisyysjakauma**: Malli valitsee tulostokenin sen todennäköisyyden perusteella, että se esiintyy nykyisen tekstijonon jälkeen. Tämä johtuu siitä, että malli ennustaa todennäköisyysjakauman kaikille mahdollisille 'seuraaville tokeneille', joka lasketaan sen koulutuksen perusteella. Kuitenkin, tokenia, jolla on korkein todennäköisyys, ei aina valita tuloksena olevasta jakaumasta. Valintaan lisätään tietty määrä satunnaisuutta, jotta malli toimisi ei-deterministisesti – emme saa täsmälleen samaa tulosta samalle syötteelle. Tämä satunnaisuuden aste lisätään simuloimaan luovaa ajattelua, ja sitä voidaan säätää mallin parametreilla, kuten lämpötilalla.
+- **Valintaprosessi, todennäköisyysjakauma**: Malli valitsee tulostokenin sen todennäköisyyden mukaan esiintyä nykyisen tekstisekvenssin jälkeen. Malli ennustaa todennäköisyysjakauman kaikista mahdollisista ‘seuraavista tokeneista’, laskettuna koulutuksen perusteella. Kuitenkaan ei aina valita suurimman todennäköisyyden tokenia lopullisesta jakaumasta. Valintaan lisätään satunnaisuutta, jolloin malli toimii epädeterministisesti – emme saa täsmälleen samaa tulosta samalle syötteelle. Tämä satunnaisuuden aste on tarkoitettu simuloimaan luovaa ajattelua ja sitä voidaan säätää mallin lämpötilaparametrilla.
 
-## Kuinka startupimme voi hyödyntää suuria kielimalleja?
+## Miten startupimme voi hyödyntää suuria kielimalleja?
 
-Nyt kun ymmärrämme paremmin suuren kielimallin toimintaperiaatteet, tarkastellaan joitakin käytännön esimerkkejä yleisimmistä tehtävistä, joita ne voivat suorittaa hyvin, keskittyen liiketoimintaskenaarioomme.
-Kuten mainitsimme, suuren kielimallin pääominaisuus on _tuottaa tekstiä tyhjästä, lähtien tekstisyötteestä, joka on kirjoitettu luonnollisella kielellä_.
+Nyt kun ymmärrämme paremmin suuren kielimallin sisäisen toiminnan, katsotaan käytännön esimerkkejä tavallisimmista tehtävistä, jotka ne suorittavat hyvin, liiketoimintamme näkökulmasta.
+Sanoimme, että suuren kielimallin pääkyky on _tekstin luominen alusta alkaen, tekstisyötteen perusteella, luonnollisella kielellä kirjoitettuna_.
 
-Mutta millainen tekstisyöte ja -tuloste?
-Suuren kielimallin syötettä kutsutaan kehotteeksi (prompt), kun taas tulostetta kutsutaan täydennykseksi (completion), termi, joka viittaa mallin mekanismiin tuottaa seuraava token nykyisen syötteen täydentämiseksi. Tarkastelemme tarkemmin, mitä kehotteet ovat ja kuinka ne suunnitellaan, jotta mallista saadaan paras mahdollinen hyöty. Mutta toistaiseksi sanottakoon, että kehotteeseen voi sisältyä:
+Mutta millaista tekstisyötettä ja -tulosta?
+Suuren kielimallin syöte tunnetaan nimellä prompt, ja tulos completion, termi joka viittaa mallin mekanismiin luoda seuraava token nykyisen syötteen täydentämiseksi. Sukellamme syvälle siihen, mitä prompt tarkoittaa ja miten sen suunnittelee saadakseen mallista parhaan hyödyn. Nyt sanotaan vain, että prompt voi sisältää:
 
-- **Ohje**, joka määrittää, millaista tulostetta mallilta odotetaan. Tämä ohje voi joskus sisältää esimerkkejä tai lisätietoja.
+- **Ohjeen**, jossa määritellään, millaista mallilta odotettua tulosta halutaan. Tämä ohje sisältää joskus esimerkkejä tai lisätietoja.
 
-  1. Artikkelin, kirjan, tuotearvostelujen ja muun tiivistäminen sekä oivallusten poimiminen jäsentämättömästä datasta.
+  1. Artikkelin, kirjan, tuotearvostelujen jne. tiivistelmä sekä oivallusten poiminta jäsentämättömästä datasta.
     
-    ![Tiivistämisen esimerkki](../../../translated_images/fi/summarization-example.7b7ff97147b3d790.webp)
+    ![Esimerkki tiivistelmästä](../../../translated_images/fi/summarization-example.7b7ff97147b3d790.webp)
   
-  2. Luova ideointi ja artikkelin, esseen, tehtävän tai muun suunnittelu.
+  2. Luova ideointi ja artikkelin, esseen, tehtävän tms. suunnittelu.
       
-     ![Luovan kirjoittamisen esimerkki](../../../translated_images/fi/creative-writing-example.e24a685b5a543ad1.webp)
+     ![Esimerkki luovasta kirjoittamisesta](../../../translated_images/fi/creative-writing-example.e24a685b5a543ad1.webp)
 
-- **Kysymys**, joka esitetään keskustelun muodossa agentille.
+- **Kysymyksen**, joka esitetään keskustelun muodossa agentin kanssa.
   
-  ![Keskustelun esimerkki](../../../translated_images/fi/conversation-example.60c2afc0f595fa59.webp)
+  ![Esimerkki keskustelusta](../../../translated_images/fi/conversation-example.60c2afc0f595fa59.webp)
 
-- **Tekstin osa täydennettäväksi**, joka implisiittisesti pyytää kirjoitusapua.
+- Palan **tekstiä, jota täydennetään**, joka implisiittisesti on pyyntö kirjoitusavusta.
   
-  ![Tekstin täydennyksen esimerkki](../../../translated_images/fi/text-completion-example.cbb0f28403d42752.webp)
+  ![Esimerkki tekstin täydentämisestä](../../../translated_images/fi/text-completion-example.cbb0f28403d42752.webp)
 
-- **Koodinpätkä**, johon liittyy pyyntö selittää ja dokumentoida se, tai kommentti, joka pyytää luomaan koodinpätkän tietyn tehtävän suorittamiseksi.
+- Palan **koodia** sekä pyyntö selittää ja dokumentoida sitä, tai kommentti, jossa pyydetään generoitavaksi koodinpätkä tietyn tehtävän suorittamiseksi.
   
   ![Koodiesimerkki](../../../translated_images/fi/coding-example.50ebabe8a6afff20.webp)
 
-Yllä olevat esimerkit ovat melko yksinkertaisia eivätkä ole tarkoitettu kattavaksi esittelyksi suurten kielimallien kyvyistä. Niiden tarkoituksena on osoittaa generatiivisen tekoälyn käyttömahdollisuuksia, erityisesti mutta ei rajoittuen koulutuskonteksteihin.
+Yllä olevat esimerkit ovat melko yksinkertaisia eivätkä pyri olemaan kattava demonstraatio suurten kielimallien kyvyistä. Ne on tarkoitettu näyttämään generatiivisen tekoälyn potentiaalia, erityisesti, mutta ei ainoastaan, koulutuskonteksteissa.
 
-Lisäksi generatiivisen tekoälymallin tuotos ei ole täydellinen, ja joskus mallin luovuus voi kääntyä sitä vastaan, jolloin tulos on sanojen yhdistelmä, jonka ihmiskäyttäjä voi tulkita todellisuuden vääristymäksi tai loukkaavaksi. Generatiivinen tekoäly ei ole älykäs – ainakaan laajemmassa älykkyyden määritelmässä, joka sisältää kriittisen ja luovan ajattelun tai tunneälyn; se ei ole deterministinen, eikä se ole luotettava, koska virheelliset viittaukset, sisältö ja väitteet voivat yhdistyä oikeaan tietoon ja esittää ne vakuuttavalla ja itsevarmalla tavalla. Seuraavissa oppitunneissa käsittelemme näitä rajoituksia ja näemme, mitä voimme tehdä niiden lieventämiseksi.
+Lisäksi generatiivisen tekoälyn tuloste ei ole täydellinen ja joskus mallin luovuus voi kääntyä sitä vastaan, tuloksena teksti joka voi ihmisestä vaikuttaa todellisuuden mystifikaatiolta tai loukkaavalta. Generatiivinen tekoäly ei ole älykäs – ainakaan laajemmassa älykkyyden määritelmässä, joka sisältää kriittisen ja luovan päättelyn tai tunneälyn; se ei ole deterministinen eikä luotettava, sillä virheelliset viittaukset, sisällöt ja väitteet voivat esiintyä yhdessä oikean tiedon kanssa ja esitetään vakuuttavasti ja itsevarmasti. Seuraavissa oppitunneissa käsittelemme kaikkia näitä rajoituksia ja katsomme, mitä voimme tehdä niiden lieventämiseksi.
 
 ## Tehtävä
 
-Tehtäväsi on lukea lisää [generatiivisesta tekoälystä](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) ja yrittää tunnistaa alue, jossa lisäisit generatiivista tekoälyä nykyään, mutta jossa sitä ei vielä ole. Miten vaikutus eroaisi "vanhan tavan" tekemisestä, voisitko tehdä jotain, mitä et ennen voinut, vai olisitko nopeampi? Kirjoita 300 sanan yhteenveto siitä, miltä unelmiesi tekoäly-startup näyttäisi, ja sisällytä otsikot kuten "Ongelma", "Kuinka käyttäisin tekoälyä", "Vaikutus" ja halutessasi liiketoimintasuunnitelma.
+Tehtäväsi on lukea lisää [generatiivisesta tekoälystä](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) ja yrittää tunnistaa alue, johon lisäisit generatiivisen tekoälyn tänään, mutta jossa sitä ei vielä ole. Miten vaikutus eroaisi "vanhan tavan" tekemiseen, voitko tehdä jotain, mitä et ennen pystynyt, vai oletko nopeampi? Kirjoita 300 sanan tiivistelmä unelmatekoälystartupistasi ja sisällytä otsikot kuten "Ongelma", "Miten käyttäisin tekoälyä", "Vaikutus" ja vaihtoehtoisesti myös liiketoimintasuunnitelma.
 
-Jos teet tämän tehtävän, saatat jopa olla valmis hakemaan Microsoftin inkubaattoriin, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst), jossa tarjoamme krediittejä Azureen, OpenAI:hin, mentorointiin ja paljon muuta – tutustu siihen!
+Jos teet tämän tehtävän, saatat olla valmis hakemaan Microsoftin kasvuyritysohjelmaan, [Microsoft for Startups Founders Hubiin](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst), jossa tarjoamme krediittejä sekä Azuren, OpenAI:n, mentoroinnin että paljon muun käyttöön, tutustu!
 
-## Tietotesti
+## Tiedon tarkistus
 
-Mikä pitää paikkansa suurista kielimalleista?
+Mikä seuraavista on totta suurista kielimalleista?
 
-1. Saat täsmälleen saman vastauksen joka kerta.
-1. Se tekee asiat täydellisesti, on loistava laskemaan numeroita, tuottamaan toimivaa koodia jne.
-1. Vastaus voi vaihdella, vaikka käytät samaa kehotetta. Se on myös loistava antamaan sinulle ensimmäisen luonnoksen jostain, olipa kyseessä teksti tai koodi. Mutta sinun täytyy parantaa tuloksia.
+1. Saat joka kerta täsmälleen saman vastauksen.
+1. Se tekee asiat täydellisesti, on erinomainen laskemaan, tuottamaan toimivan koodin jne.
+1. Vastaus voi vaihdella, vaikka käytät samaa promptia. Se on myös erinomainen antamaan ensimmäisen luonnoksen jostakin, olipa se tekstiä tai koodia. Mutta tuloksia pitää parantaa.
 
-V: 3, LLM ei ole deterministinen, vastaus vaihtelee, mutta sen vaihtelua voi hallita lämpötila-asetuksella. Sinun ei myöskään pitäisi odottaa sen tekevän asioita täydellisesti – se on täällä tekemässä raskasta työtä puolestasi, mikä usein tarkoittaa, että saat hyvän ensimmäisen yrityksen, jota sinun täytyy parantaa asteittain.
+Vastaus: 3, suuri kielimalli on epädeterministinen, vastaus vaihtelee, mutta voit säätää sen vaihtelua lämpötila-asetuksella. Sinun ei myöskään pitäisi odottaa sen tekevän asioita täydellisesti; se on täällä tekemässä raskastöitä, mikä usein tarkoittaa, että saat hyvän ensimmäisen version jostakin, jota tarvitsee parantaa vähitellen.
 
-## Hienoa työtä! Jatka matkaasi
+## Hienoa työtä! Jatka matkaa
 
-Tämän oppitunnin jälkeen tutustu [Generatiivisen tekoälyn oppimiskokoelmaan](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi generatiivisen tekoälyn tietämyksesi kehittämistä!
-Siirry oppituntiin 2, jossa tarkastelemme, kuinka [tutkia ja vertailla erilaisia LLM-tyyppejä](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
+Oppitunnin suorittamisen jälkeen tutustu [Generatiivisen tekoälyn oppimiskokoelmaamme](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi generatiivisen tekoälyn tuntemuksesi kehittämistä!
+
+
+Siirry kohtaan Oppitunti 2, jossa tarkastelemme, miten [tutkia ja vertailla erilaisia LLM-tyyppejä](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vastuuvapauslauseke**:
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, otathan huomioon, että automaattiset käännökset saattavat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäiskielellä on virallinen lähde. Tärkeissä asioissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

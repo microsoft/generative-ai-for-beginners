@@ -1,27 +1,27 @@
-# Oblikovanje uporabniške izkušnje za aplikacije z umetno inteligenco
+# Oblikovanje UX za AI aplikacije
 
-[![Oblikovanje uporabniške izkušnje za aplikacije z umetno inteligenco](../../../translated_images/sl/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
+[![Oblikovanje UX za AI aplikacije](../../../translated_images/sl/12-lesson-banner.c53c3c7c802e8f56.webp)](https://youtu.be/VKbCejSICA8?si=MKj7GQYHfXRZyWW6)
 
-> _(Kliknite zgornjo sliko za ogled videa te lekcije)_
+> _(Kliknite na zgornjo sliko za ogled videa te lekcije)_
 
-Uporabniška izkušnja je zelo pomemben vidik pri razvoju aplikacij. Uporabniki morajo vašo aplikacijo uporabljati na učinkovit način za izvajanje nalog. Biti učinkovit je ena stvar, vendar morate aplikacije oblikovati tudi tako, da jih lahko uporabljajo vsi, da so _dostopne_. To poglavje se bo osredotočilo na to področje, da boste na koncu oblikovali aplikacijo, ki jo ljudje lahko in želijo uporabljati.
+Uporabniška izkušnja je zelo pomemben vidik pri izdelavi aplikacij. Uporabniki morajo lahko vašo aplikacijo uporabljati učinkovito za izvajanje nalog. Učinkovitost je ena stvar, vendar morate tudi oblikovati aplikacije tako, da jih lahko uporabljajo vsi, da so _dostopne_. Ta poglavje se bo osredotočilo na to področje, da boste upajmo končali z oblikovanjem aplikacije, ki jo ljudje lahko in hočejo uporabljati.
 
 ## Uvod
 
-Uporabniška izkušnja je način, kako uporabnik komunicira z določenim izdelkom ali storitvijo, naj bo to sistem, orodje ali dizajn. Pri razvoju aplikacij z umetno inteligenco se razvijalci ne osredotočajo le na zagotavljanje učinkovite uporabniške izkušnje, temveč tudi na etičnost. V tej lekciji bomo obravnavali, kako zgraditi aplikacije z umetno inteligenco (AI), ki ustrezajo potrebam uporabnikov.
+Uporabniška izkušnja je način, kako uporabnik komunicira in uporablja določen izdelek ali storitev, naj bo to sistem, orodje ali oblikovanje. Pri razvoju AI aplikacij se razvijalci ne osredotočajo samo na učinkovito uporabniško izkušnjo, ampak tudi na etično. V tej lekciji bomo obravnavali, kako zgraditi aplikacije umetne inteligence (AI), ki zadovoljujejo potrebe uporabnikov.
 
-Lekcija bo obravnavala naslednja področja:
+Lekcija bo zajemala naslednja področja:
 
 - Uvod v uporabniško izkušnjo in razumevanje potreb uporabnikov
-- Oblikovanje aplikacij z umetno inteligenco za zaupanje in transparentnost
-- Oblikovanje aplikacij z umetno inteligenco za sodelovanje in povratne informacije
+- Oblikovanje AI aplikacij za zaupanje in preglednost
+- Oblikovanje AI aplikacij za sodelovanje in povratne informacije
 
 ## Cilji učenja
 
-Po zaključku te lekcije boste lahko:
+Po opravljenem tečaju boste lahko:
 
-- Razumeli, kako zgraditi aplikacije z umetno inteligenco, ki ustrezajo potrebam uporabnikov.
-- Oblikovali aplikacije z umetno inteligenco, ki spodbujajo zaupanje in sodelovanje.
+- Razumeli, kako zgraditi AI aplikacije, ki izpolnjujejo potrebe uporabnikov.
+- Oblikovali AI aplikacije, ki spodbujajo zaupanje in sodelovanje.
 
 ### Predpogoj
 
@@ -29,95 +29,99 @@ Vzemite si čas in preberite več o [uporabniški izkušnji in oblikovalskem raz
 
 ## Uvod v uporabniško izkušnjo in razumevanje potreb uporabnikov
 
-V našem izmišljenem izobraževalnem startupu imamo dva glavna uporabnika, učitelje in učence. Vsak od teh dveh uporabnikov ima edinstvene potrebe. Oblikovanje, osredotočeno na uporabnika, daje prednost uporabniku in zagotavlja, da so izdelki relevantni in koristni za tiste, za katere so namenjeni.
+V našem izmišljenem izobraževalnem start-upu imamo dva glavna uporabnika, učitelje in študente. Vsak od teh uporabnikov ima edinstvene potrebe. Dizajn, osredotočen na uporabnika, daje prednost uporabniku in zagotavlja, da so izdelki relevantni in koristni za tiste, za katere so namenjeni.
 
 Aplikacija mora biti **uporabna, zanesljiva, dostopna in prijetna**, da zagotovi dobro uporabniško izkušnjo.
 
 ### Uporabnost
 
-Biti uporaben pomeni, da ima aplikacija funkcionalnosti, ki ustrezajo njenemu namenu, kot je avtomatizacija procesa ocenjevanja ali ustvarjanje učnih kartic za ponavljanje. Aplikacija, ki avtomatizira proces ocenjevanja, mora biti sposobna natančno in učinkovito dodeliti ocene študentskim nalogam na podlagi vnaprej določenih kriterijev. Podobno mora aplikacija, ki ustvarja učne kartice za ponavljanje, ustvariti ustrezna in raznolika vprašanja na podlagi svojih podatkov.
+Biti uporaben pomeni, da ima aplikacija funkcionalnost, ki ustreza njenemu namenu, na primer avtomatizacijo postopka ocenjevanja ali generiranje kartic za ponavljanje. Aplikacija, ki avtomatizira proces ocenjevanja, mora biti zmožna natančno in učinkovito dodeljevati ocene študentskim delom na podlagi vnaprej določenih kriterijev. Podobno mora aplikacija, ki generira kartice za ponavljanje, ustvariti ustrezna in raznolika vprašanja na podlagi svojih podatkov.
 
 ### Zanesljivost
 
-Biti zanesljiv pomeni, da lahko aplikacija dosledno in brez napak opravlja svoje naloge. Vendar pa umetna inteligenca, tako kot ljudje, ni popolna in je lahko nagnjena k napakam. Aplikacije se lahko soočajo z napakami ali nepričakovanimi situacijami, ki zahtevajo človeško posredovanje ali popravek. Kako ravnate z napakami? V zadnjem delu te lekcije bomo obravnavali, kako so sistemi in aplikacije z umetno inteligenco zasnovani za sodelovanje in povratne informacije.
+Biti zanesljiv pomeni, da aplikacija nalogo izvaja dosledno in brez napak. Vendar pa AI, tako kot ljudje, ni popolna in je dovzetna za napake. Aplikacije lahko naletijo na napake ali nepričakovane situacije, ki zahtevajo človeško posredovanje ali popravek. Kako ravnate z napakami? V zadnjem delu te lekcije bomo obravnavali, kako so AI sistemi in aplikacije zasnovani za sodelovanje in povratne informacije.
 
 ### Dostopnost
 
-Biti dostopen pomeni razširiti uporabniško izkušnjo na uporabnike z različnimi sposobnostmi, vključno s tistimi z invalidnostmi, in zagotoviti, da nihče ni izključen. Z upoštevanjem smernic in načel dostopnosti postanejo rešitve z umetno inteligenco bolj vključujoče, uporabne in koristne za vse uporabnike.
+Biti dostopen pomeni razširiti uporabniško izkušnjo tudi na uporabnike z raznolikimi zmožnostmi, vključno z invalidnostmi, in zagotoviti, da nihče ni izključen. Sledenje smernicam in principom dostopnosti naredi AI rešitve bolj vključujoče, uporabne in koristne za vse uporabnike.
 
 ### Prijetnost
 
-Biti prijeten pomeni, da je aplikacijo užitek uporabljati. Privlačna uporabniška izkušnja lahko pozitivno vpliva na uporabnika, ga spodbuja k ponovni uporabi aplikacije in povečuje poslovne prihodke.
+Biti prijeten pomeni, da je uporaba aplikacije prijetna. Privlačna uporabniška izkušnja ima lahko pozitiven vpliv na uporabnika, ga spodbuja, da se vrne k aplikaciji, in povečuje poslovni prihodek.
 
-![slika, ki prikazuje vidike uporabniške izkušnje v AI](../../../translated_images/sl/uxinai.d5b4ed690f5cefff.webp)
+![slika, ki prikazuje razmisleke o UX pri AI](../../../translated_images/sl/uxinai.d5b4ed690f5cefff.webp)
 
-Vsak izziv ni mogoče rešiti z umetno inteligenco. Umetna inteligenca dopolnjuje vašo uporabniško izkušnjo, bodisi z avtomatizacijo ročnih nalog ali personalizacijo uporabniških izkušenj.
+Ne vsakega izziva ni mogoče rešiti z AI. AI pride v poštev za dopolnitev vaše uporabniške izkušnje, naj bo to avtomatizacija ročnih opravil ali personalizacija uporabniških izkušenj.
 
-## Oblikovanje aplikacij z umetno inteligenco za zaupanje in transparentnost
+## Oblikovanje AI aplikacij za zaupanje in preglednost
 
-Vzpostavljanje zaupanja je ključnega pomena pri oblikovanju aplikacij z umetno inteligenco. Zaupanje zagotavlja, da je uporabnik prepričan, da bo aplikacija opravila delo, dosledno dostavila rezultate in da so ti rezultati tisto, kar uporabnik potrebuje. Tveganje na tem področju sta nezaupanje in pretirano zaupanje. Nezaupanje se pojavi, ko uporabnik nima ali ima malo zaupanja v sistem umetne inteligence, kar vodi do zavrnitve vaše aplikacije. Pretirano zaupanje pa se pojavi, ko uporabnik preceni sposobnosti sistema umetne inteligence, kar vodi do prevelikega zaupanja v sistem. Na primer, avtomatiziran sistem ocenjevanja v primeru pretiranega zaupanja lahko povzroči, da učitelj ne preveri nekaterih nalog, da bi zagotovil pravilno delovanje sistema ocenjevanja. To lahko privede do nepravičnih ali netočnih ocen za učence ali zamujenih priložnosti za povratne informacije in izboljšave.
+Gradnja zaupanja je ključna pri oblikovanju AI aplikacij. Zaupanje zagotavlja, da uporabnik zaupa, da bo aplikacija opravila delo, dosledno dostavila rezultate in da rezultati ustrezajo potrebam uporabnika. Tveganje v tem področju predstavljata nezaupanje in preveliko zaupanje. Nezaupanje nastane, ko uporabnik zaupa malo ali nič v AI sistem, kar vodi do zavrnitve aplikacije. Preveliko zaupanje nastane, ko uporabnik preceni zmogljivost AI sistema, zaradi česar uporabniki preveč zaupajo AI sistemu. Na primer, avtomatiziran sistem ocenjevanja pri prevelikem zaupanju lahko privede do tega, da učitelj ne pregleda nekaterih nalog, da preveri, ali sistem ocenjevanja deluje dobro. To lahko povzroči nepravične ali netočne ocene za študente ali zamujene priložnosti za povratne informacije in izboljšave.
 
 Dva načina za zagotovitev, da je zaupanje postavljeno v središče oblikovanja, sta razložljivost in nadzor.
 
 ### Razložljivost
 
-Ko umetna inteligenca pomaga pri sprejemanju odločitev, kot je prenos znanja na prihodnje generacije, je ključnega pomena, da učitelji in starši razumejo, kako so odločitve sprejete. To je razložljivost - razumevanje, kako aplikacije z umetno inteligenco sprejemajo odločitve. Oblikovanje za razložljivost vključuje dodajanje podrobnosti, ki poudarjajo, kako je umetna inteligenca prišla do določenega rezultata. Občinstvo mora biti obveščeno, da je rezultat ustvarjen s strani umetne inteligence in ne človeka. Na primer, namesto "Začnite klepetati s svojim učiteljem zdaj" recite "Uporabite AI učitelja, ki se prilagaja vašim potrebam in vam pomaga učiti se v vašem tempu."
+Ko AI pomaga pri informiranju odločitev, na primer pri posredovanju znanja prihodnjim generacijam, je ključno, da učitelji in starši razumejo, kako so sprejete odločitve AI. To je razložljivost - razumevanje, kako AI aplikacije sprejemajo odločitve. Oblikovanje za razložljivost vključuje dodajanje podrobnosti, ki poudarjajo, kako je AI prišel do izida. Publika mora vedeti, da je izhod ustvaril AI in ne človek. Na primer, namesto «Začni zdaj klepetati s svojim tutorjem» recite «Uporabljaj AI tutorja, ki se prilagaja tvojim potrebam in ti pomaga učiti se s tvojim tempom.»
 
-![pristajalna stran aplikacije z jasnim prikazom razložljivosti v aplikacijah z umetno inteligenco](../../../translated_images/sl/explanability-in-ai.134426a96b498fbf.webp)
+![začetna stran aplikacije z jasno ilustracijo razložljivosti v AI aplikacijah](../../../translated_images/sl/explanability-in-ai.134426a96b498fbf.webp)
 
-Drug primer je, kako umetna inteligenca uporablja uporabniške in osebne podatke. Na primer, uporabnik s persono študenta ima lahko omejitve glede na svojo persono. Umetna inteligenca morda ne bo mogla razkriti odgovorov na vprašanja, lahko pa pomaga uporabniku razmisliti, kako lahko reši problem.
+Drug primer je, kako AI uporablja uporabniške in osebne podatke. Na primer, uporabnik s persono študenta lahko ima omejitve glede na svojo persono. AI morda ne more razkriti odgovorov na vprašanja, lahko pa pomaga uporabnika usmeriti, kako lahko reši problem.
 
-![AI odgovarja na vprašanja glede na persono](../../../translated_images/sl/solving-questions.b7dea1604de0cbd2.webp)
+![AI odgovarja na vprašanja na podlagi persone](../../../translated_images/sl/solving-questions.b7dea1604de0cbd2.webp)
 
-Še en ključni del razložljivosti je poenostavitev razlag. Študenti in učitelji morda niso strokovnjaki za umetno inteligenco, zato morajo biti razlage o tem, kaj aplikacija lahko ali ne more storiti, poenostavljene in enostavne za razumevanje.
+Zadnji ključen del razložljivosti je poenostavitev razlag. Študenti in učitelji morda niso AI strokovnjaki, zato morajo biti pojasnila o tem, kaj aplikacija lahko ali ne more narediti, poenostavljena in enostavna za razumevanje.
 
-![poenostavljene razlage o zmožnostih umetne inteligence](../../../translated_images/sl/simplified-explanations.4679508a406c3621.webp)
+![poenostavljene razlage zmogljivosti AI](../../../translated_images/sl/simplified-explanations.4679508a406c3621.webp)
 
 ### Nadzor
 
-Generativna umetna inteligenca ustvarja sodelovanje med umetno inteligenco in uporabnikom, kjer lahko uporabnik na primer spreminja pozive za različne rezultate. Poleg tega, ko je rezultat ustvarjen, bi morali uporabniki imeti možnost, da ga spremenijo, kar jim daje občutek nadzora. Na primer, pri uporabi Binga lahko prilagodite svoj poziv glede na format, ton in dolžino. Poleg tega lahko dodate spremembe svojemu rezultatu in ga prilagodite, kot je prikazano spodaj:
+Generativna AI ustvarja sodelovanje med AI in uporabnikom, kjer lahko na primer uporabnik spreminja pozive za različne rezultate. Poleg tega, ko je izhod ustvarjen, bi morali uporabniki lahko spreminjali rezultate in tako pridobili občutek nadzora. Na primer, pri uporabi Microsoft Copilot (prej Bing Chat) lahko prilagodite svoj poziv glede na obliko, ton in dolžino. Poleg tega lahko dodate spremembe svojemu izhodu in ga spreminjate, kot je prikazano spodaj:
 
-![Rezultati iskanja v Bingu z možnostmi za spreminjanje poziva in rezultata](../../../translated_images/sl/bing1.293ae8527dbe2789.webp)
+![Rezultati iskanja Bing z možnostmi za spremembo poziva in izhoda](../../../translated_images/sl/bing1.293ae8527dbe2789.webp)
 
-Druga funkcija v Bingu, ki uporabniku omogoča nadzor nad aplikacijo, je možnost, da se odloči za vključitev ali izključitev podatkov, ki jih umetna inteligenca uporablja. Za šolsko aplikacijo bi študent morda želel uporabiti svoje zapiske kot tudi učiteljeve vire kot učni material.
+Druga funkcija v Microsoft Copilot, ki uporabniku omogoča nadzor nad aplikacijo, je možnost vključitve in izključitve uporabe podatkov AI. Za šolsko aplikacijo bi študent morda želel uporabljati svoje zapiske ter tudi učiteljeve vire kot gradivo za ponavljanje.
 
-![Rezultati iskanja v Bingu z možnostmi za spreminjanje poziva in rezultata](../../../translated_images/sl/bing2.309f4845528a88c2.webp)
+![Rezultati iskanja Bing z možnostmi za spremembo poziva in izhoda](../../../translated_images/sl/bing2.309f4845528a88c2.webp)
 
-> Pri oblikovanju aplikacij z umetno inteligenco je ključna namernost, da se uporabnikom prepreči pretirano zaupanje, ki bi postavilo nerealna pričakovanja glede zmožnosti aplikacije. Eden od načinov za to je ustvarjanje trenja med pozivi in rezultati. Opominjanje uporabnika, da gre za umetno inteligenco in ne za človeka.
+> Pri oblikovanju AI aplikacij je nameren pristop ključnega pomena, da uporabniki ne zaupajo preveč in ne postavijo nerealnih pričakovanj glede zmogljivosti. En način je ustvariti trenje med pozivi in rezultati. Spomniti uporabnika, da gre za AI in ne za sogovornika človeka.
 
-## Oblikovanje aplikacij z umetno inteligenco za sodelovanje in povratne informacije
+## Oblikovanje AI aplikacij za sodelovanje in povratne informacije
 
-Kot je bilo že omenjeno, generativna umetna inteligenca ustvarja sodelovanje med uporabnikom in umetno inteligenco. Večina interakcij vključuje uporabnika, ki vnese poziv, in umetno inteligenco, ki ustvari rezultat. Kaj pa, če je rezultat napačen? Kako aplikacija obravnava napake, če se pojavijo? Ali umetna inteligenca krivi uporabnika ali si vzame čas za razlago napake?
+Kot je bilo že omenjeno, generativna AI ustvarja sodelovanje med uporabnikom in AI. Največ interakcij je, ko uporabnik vnese poziv, AI pa generira izhod. Kaj pa, če je izhod napačen? Kako aplikacija ravna z napakami, če se pojavijo? Ali AI krivi uporabnika ali si vzame čas, da pojasni napako?
 
-Aplikacije z umetno inteligenco bi morale biti zasnovane tako, da sprejemajo in dajejo povratne informacije. To ne pomaga le izboljšati sistem umetne inteligence, temveč tudi gradi zaupanje z uporabniki. Povratna zanka bi morala biti vključena v oblikovanje, primer je lahko preprosto všečkanje ali nevšečkanje rezultata.
+AI aplikacije bi morale biti zasnovane tako, da prejmejo in dajo povratne informacije. To ne pomaga le izboljšati AI sistem, ampak tudi gradi zaupanje z uporabniki. V oblikovanje je treba vključiti povratno zanko, kot je enostavna palec gor ali dol ocena za izhod.
 
-Drug način za obravnavo tega je jasno komuniciranje zmožnosti in omejitev sistema. Ko uporabnik naredi napako in zahteva nekaj, kar presega zmožnosti umetne inteligence, bi moral obstajati način za obravnavo tega, kot je prikazano spodaj.
+Drugi način za reševanje tega je jasno komuniciranje zmogljivosti in omejitev sistema. Ko uporabnik naredi napako z zahtevkom, ki presega zmogljivosti AI, mora biti tudi način za spopadanje s tem, kot je prikazano spodaj.
 
-![Dajanje povratnih informacij in obravnavanje napak](../../../translated_images/sl/feedback-loops.7955c134429a9466.webp)
+![Dajanje povratnih informacij in ravnanje z napakami](../../../translated_images/sl/feedback-loops.7955c134429a9466.webp)
 
-Sistemske napake so pogoste pri aplikacijah, kjer uporabnik morda potrebuje pomoč z informacijami, ki so zunaj obsega umetne inteligence, ali pa ima aplikacija omejitev glede števila vprašanj/predmetov, za katere lahko uporabnik ustvari povzetke. Na primer, aplikacija z umetno inteligenco, ki je usposobljena z omejenimi podatki o določenih predmetih, na primer zgodovini in matematiki, morda ne bo mogla obravnavati vprašanj o geografiji. Da bi to omilili, lahko sistem umetne inteligence poda odgovor, kot je: "Oprostite, naš izdelek je bil usposobljen z podatki o naslednjih predmetih....., ne morem odgovoriti na vprašanje, ki ste ga postavili."
+Sistemske napake so pogoste pri aplikacijah, kjer uporabnik potrebuje pomoč z informacijami izven obsega AI ali pa aplikacija omejuje, koliko vprašanj/predmetov lahko uporabnik generira povzetke za. Na primer, AI aplikacija, usposobljena z podatki o omejenih predmetih, na primer zgodovini in matematiki, morda ne zmore odgovoriti na vprašanja iz geografije. Za omilitev tega lahko AI sistem odgovori: "Oprostite, naš izdelek je bil usposobljen z podatki za naslednje predmete....., ne morem odgovoriti na vaše vprašanje."
 
-Aplikacije z umetno inteligenco niso popolne, zato so nagnjene k napakam. Pri oblikovanju vaših aplikacij morate zagotoviti, da ustvarite prostor za povratne informacije uporabnikov in obravnavo napak na način, ki je preprost in enostaven za razumevanje.
+AI aplikacije niso popolne, zato bodo zagotovo naredile napake. Pri oblikovanju svojih aplikacij morate zagotoviti prostor za povratne informacije uporabnikov in načine ravnanja z napakami na preprost in razumljiv način.
 
 ## Naloga
 
-Vzemite katero koli aplikacijo z umetno inteligenco, ki ste jo doslej razvili, in razmislite o implementaciji spodnjih korakov v vaši aplikaciji:
+Vzemite katero koli AI aplikacijo, ki ste jo do zdaj zgradili, in razmislite o uvedbi spodnjih korakov v vaši aplikaciji:
 
-- **Prijetnost:** Razmislite, kako lahko naredite svojo aplikacijo bolj prijetno. Ali povsod dodajate razlage? Ali spodbujate uporabnika k raziskovanju? Kako oblikujete svoja sporočila o napakah?
+- **Prijetnost:** Razmislite, kako lahko naredite svojo aplikacijo bolj prijetno. Ali dodajate povsod razlage? Ali spodbujate uporabnika k raziskovanju? Kako oblikujete sporočila o napakah?
 
-- **Uporabnost:** Če gradite spletno aplikacijo, poskrbite, da bo vaša aplikacija dostopna tako z miško kot s tipkovnico.
+- **Uporabnost:** Gradite spletno aplikacijo. Poskrbite, da bo vašo aplikacijo mogoče upravljati tako z miško kot tipkovnico.
 
-- **Zaupanje in transparentnost:** Ne zaupajte umetni inteligenci popolnoma in njenim rezultatom, razmislite, kako bi lahko dodali človeka v proces za preverjanje rezultatov. Prav tako razmislite in implementirajte druge načine za dosego zaupanja in transparentnosti.
+- **Zaupanje in preglednost:** Ne zaupajte AI popolnoma in njegovim rezultatom, razmislite, kako dodati človeka v proces za preverjanje rezultatov. Tudi razmislite in izvedite druge načine za dosego zaupanja in preglednosti.
 
-- **Nadzor:** Dajte uporabniku nadzor nad podatki, ki jih posreduje aplikaciji. Implementirajte način, kako se lahko uporabnik odloči za vključitev ali izključitev zbiranja podatkov v aplikaciji z umetno inteligenco.
+- **Nadzor:** Dajte uporabniku nadzor nad podatki, ki jih daje aplikaciji. Vzpostavite način, da se uporabnik lahko odloči za vklop ali izklop zbiranja podatkov v AI aplikaciji.
+
+<!-- ## [Post-predavanje kviz](../../../12-designing-ux-for-ai-applications/quiz-url) -->
 
 ## Nadaljujte z učenjem!
 
-Po zaključku te lekcije si oglejte našo [učno zbirko o generativni umetni inteligenci](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), da še naprej nadgrajujete svoje znanje o generativni umetni inteligenci!
+Po končani tej lekciji si oglejte našo [Generativno AI zbirko učenja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), da nadaljujete z nadgradnjo svojega znanja o generativni AI!
 
-Nadaljujte z 13. lekcijo, kjer bomo obravnavali [varnost aplikacij z umetno inteligenco](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Pojdite na Lekcijo 13, kjer bomo pogledali, kako [zagotoviti varnost AI aplikacij](../13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve za prevajanje AI [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku naj se šteje za avtoritativni vir. Za ključne informacije je priporočljivo profesionalno človeško prevajanje. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki izhajajo iz uporabe tega prevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Omejitev odgovornosti**:
+Ta dokument je bil preveden z uporabo AI prevajalske storitve [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za kritične informacije je priporočljiv strokovni človeški prevod. Ne odgovarjamo za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
