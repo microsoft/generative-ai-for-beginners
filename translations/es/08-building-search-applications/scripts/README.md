@@ -1,21 +1,21 @@
 # Preparación de datos de transcripción
 
-Los scripts de preparación de datos de transcripción descargan las transcripciones de videos de YouTube y las preparan para su uso con el ejemplo de Búsqueda Semántica con OpenAI Embeddings y Funciones.
+Los scripts de preparación de datos de transcripción descargan transcripciones de videos de YouTube y las preparan para su uso con el ejemplo de Búsqueda Semántica con Embeddings y Funciones de OpenAI.
 
 Los scripts de preparación de datos de transcripción han sido probados en las últimas versiones de Windows 11, macOS Ventura y Ubuntu 22.04 (y superiores).
 
-## Crear los recursos necesarios en Azure OpenAI Service
+## Crear recursos necesarios de Azure OpenAI Service
 
 > [!IMPORTANT]
-> Recomendamos actualizar Azure CLI a la última versión para asegurar la compatibilidad con OpenAI
-> Consulta la [Documentación](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
+> Sugerimos actualizar el Azure CLI a la última versión para asegurar la compatibilidad con OpenAI
+> Ver [Documentación](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Crear un grupo de recursos
 
 > [!NOTE]
 > Para estas instrucciones estamos usando el grupo de recursos llamado "semantic-video-search" en East US.
 > Puedes cambiar el nombre del grupo de recursos, pero al cambiar la ubicación de los recursos,
-> revisa la [tabla de disponibilidad de modelos](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> verifica la [tabla de disponibilidad de modelos](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
@@ -28,7 +28,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Obtener el endpoint y las claves para su uso en esta aplicación
+1. Obtener el endpoint y las claves para usar en esta aplicación
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -38,8 +38,8 @@ az cognitiveservices account keys list --name semantic-video-openai \
 ```
 
 1. Desplegar los siguientes modelos:
-   - `text-embedding-ada-002` versión `2` o superior, nombrado `text-embedding-ada-002`
-   - `gpt-35-turbo` versión `0613` o superior, nombrado `gpt-35-turbo`
+   - `text-embedding-ada-002` versión `2` o superior, llamado `text-embedding-ada-002`
+   - `gpt-5-mini` llamado `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,9 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-35-turbo \
-    --model-name gpt-35-turbo \
-    --model-version "0613"  \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -71,7 +70,7 @@ Las siguientes variables de entorno son necesarias para ejecutar los scripts de 
 
 ### En Windows
 
-Se recomienda agregar las variables a las variables de entorno de tu `usuario`.
+Se recomienda añadir las variables a tus variables de entorno de `usuario`.
 `Inicio de Windows` > `Editar las variables de entorno del sistema` > `Variables de entorno` > `Variables de usuario` para [USER] > `Nuevo`.
 
 ```text
@@ -81,11 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
+<!-- Puedes agregar las variables de entorno a tu perfil de PowerShell.
 
+```powershell
+$env:AZURE_OPENAI_API_KEY = "<tu clave API de Azure OpenAI Service>"
+$env:AZURE_OPENAI_ENDPOINT = "<tu endpoint de Azure OpenAI Service>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<tu nombre de despliegue de modelo de Azure OpenAI Service>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<tu clave API de desarrollador Google>"
+``` -->
 
 ### En Linux y macOS
 
-Se recomienda agregar las siguientes exportaciones a tu archivo `~/.bashrc` o `~/.zshrc`.
+Se recomienda agregar los siguientes exports a tu archivo `~/.bashrc` o `~/.zshrc`.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -97,7 +103,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ## Instalar las librerías de Python requeridas
 
 1. Instala el [cliente git](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) si aún no está instalado.
-1. Desde una ventana de `Terminal`, clona el ejemplo en la carpeta de tu repositorio preferido.
+1. Desde una ventana de `Terminal`, clona el ejemplo a la carpeta de tu repositorio preferido.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -165,5 +171,9 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ./transcripts_prepare.sh
 ```
 
-**Aviso legal**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por la precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o inexactitudes. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda la traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas derivadas del uso de esta traducción.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Descargo de responsabilidad**:
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o inexactitudes. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional humana. No somos responsables de cualquier malentendido o interpretación errónea que surja del uso de esta traducción.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
