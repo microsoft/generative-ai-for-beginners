@@ -1,13 +1,13 @@
-# AGENTS.md
+# README.md
 
 ## Project Overview
 
-This repository contains a comprehensive 21-lesson curriculum teaching Generative AI fundamentals and application development. The course is designed for beginners and covers everything from basic concepts to building production-ready applications.
+This repository contains a comprehensive 21-lesson curriculum that teaches the fundamentals of Generative AI and application development. The course is designed for beginners and covers everything from basic concepts to practical implementation.
 
 **Key Technologies:**
 - Python 3.9+ with libraries: `openai`, `python-dotenv`, `tiktoken`, `azure-ai-inference`, `pandas`, `numpy`, `matplotlib`
 - TypeScript/JavaScript with Node.js and libraries: `openai` (Azure OpenAI via the v1 endpoint + Responses API), `@azure-rest/ai-inference` (Microsoft Foundry Models)
-- Azure OpenAI Service, OpenAI API, and Microsoft Foundry Models (GitHub Models is retiring end of July 2026)
+- Azure OpenAI Service, OpenAI API, and Microsoft Foundry Models (GitHub Models is retiring at the end of July 2026)
 - Jupyter Notebooks for interactive learning
 - Dev Containers for consistent development environment
 
@@ -15,7 +15,7 @@ This repository contains a comprehensive 21-lesson curriculum teaching Generativ
 - 21 numbered lesson directories (00-21) containing READMEs, code examples, and assignments
 - Multiple implementations: Python, TypeScript, and sometimes .NET examples
 - Translations directory with 40+ language versions
-- Centralized configuration via `.env` file (use `.env.copy` as template)
+- Centralized configuration via `.env` file (use `.env.copy` as a template)
 
 ## Setup Commands
 
@@ -62,11 +62,11 @@ npm install
 
 The repository includes a `.devcontainer` configuration for GitHub Codespaces or VS Code Dev Containers:
 
-1. Open repository in GitHub Codespaces or VS Code with Dev Containers extension
-2. Dev Container will automatically:
+1. Open the repository in GitHub Codespaces or VS Code with the Dev Containers extension
+2. The Dev Container will automatically:
    - Install Python dependencies from `requirements.txt`
-   - Run post-create script (`.devcontainer/post-create.sh`)
-   - Set up Jupyter kernel
+   - Run the post-create script (`.devcontainer/post-create.sh`)
+   - Set up the Jupyter kernel
 
 ## Development Workflow
 
@@ -83,15 +83,15 @@ All lessons requiring API access use environment variables defined in `.env`:
 - `HUGGING_FACE_API_KEY` - For Hugging Face models
 - `AZURE_INFERENCE_ENDPOINT` - Microsoft Foundry Models endpoint (multi-provider model catalog)
 - `AZURE_INFERENCE_CREDENTIAL` - Microsoft Foundry Models API key (replaces the retiring `GITHUB_TOKEN`)
-- `AZURE_INFERENCE_CHAT_MODEL` - A non-reasoning model (e.g. `Llama-3.3-70B-Instruct`) used by the `temperature` examples, since reasoning models don't support sampling controls
+- `AZURE_INFERENCE_CHAT_MODEL` - A non-reasoning model (e.g., `Llama-3.3-70B-Instruct`) used by the `temperature` examples, since reasoning models don't support sampling controls
 
-### Model conventions (important)
+### Model Conventions (Important)
 
-- **Default chat model is `gpt-5-mini`** - a current, non-deprecated **reasoning** model. As of 2026 the older temperature-capable "mini" models (`gpt-4o-mini`, `gpt-4.1-mini`) are *deprecating*, so the curriculum standardizes on the GPT-5 family.
-- **Reasoning models reject `temperature` and `top_p`**, and use `max_output_tokens` (Responses API) / `max_completion_tokens` (chat completions) instead of `max_tokens`. Do **not** add `temperature`/`top_p`/`max_tokens` to samples that call `gpt-5-mini`.
-- **To demonstrate `temperature`**, samples use a **Llama** model (`Llama-3.3-70B-Instruct`) via the Microsoft Foundry Models endpoint (`AZURE_INFERENCE_CHAT_MODEL`). Steer reasoning models with prompt engineering + reasoning controls instead of sampling knobs.
-- **Fine-tuning (lesson 18)** keeps `gpt-4.1-mini`: GPT-5 only supports reinforcement fine-tuning (RFT), not the supervised fine-tuning (SFT) shown there.
-- Lessons 20 (Mistral) and 21 (Meta) keep `temperature`/`max_tokens` because they target Mistral/Llama models, which support them.
+- **Default chat model is `gpt-5-mini`** - a current, non-deprecated **reasoning** model. As of 2026, the older temperature-capable "mini" models (`gpt-4o-mini`, `gpt-4.1-mini`) are *deprecating*
+- **Reasoning models reject `temperature` and `top_p`**, and use `max_output_tokens` (Responses API) / `max_completion_tokens` (chat completions) instead of `max_tokens`. Do **not** add `temperature` parameters to reasoning model samples
+- **To demonstrate `temperature`**, samples use a **Llama** model (`Llama-3.3-70B-Instruct`) via the Microsoft Foundry Models endpoint (`AZURE_INFERENCE_CHAT_MODEL`). Steer reasoning models with prompt engineering
+- **Fine-tuning (lesson 18)** keeps `gpt-4.1-mini`: GPT-5 only supports reinforcement fine-tuning (RFT), not the supervised fine-tuning (SFT) shown there
+- Lessons 20 (Mistral) and 21 (Meta) keep `temperature`/`max_tokens` because they target Mistral/Llama models, which support them
 
 ### Running Python Examples
 
@@ -122,7 +122,7 @@ npm start
 # Start Jupyter in the repository root
 jupyter notebook
 
-# Or use VS Code with Jupyter extension
+# Or use VS Code with the Jupyter extension
 ```
 
 ### Working with Different Lesson Types
@@ -136,14 +136,14 @@ jupyter notebook
 ### Python
 
 - Use `python-dotenv` for environment variable management
-- Import `openai` library for API interactions
+- Import the `openai` library for API interactions
 - Use `pylint` for linting (some examples include `# pylint: disable=all` for simplicity)
 - Follow PEP 8 naming conventions
 - Store API credentials in `.env` file, never in code
 
 ### TypeScript
 
-- Use `dotenv` package for environment variables
+- Use the `dotenv` package for environment variables
 - TypeScript configuration in `tsconfig.json` for each app
 - Use the `openai` package for Azure OpenAI (point the client at the `/openai/v1/` endpoint and call `client.responses.create`); use `@azure-rest/ai-inference` for Microsoft Foundry Models
 - Use `nodemon` for development with auto-reload
@@ -252,7 +252,7 @@ This is an educational repository focused on tutorials and examples. There are n
 
 1. Edit README.md in the lesson directory
 2. Follow Markdown guidelines (tracking IDs, relative links)
-3. Update translations are handled by GitHub Actions (don't edit manually)
+3. Translations are handled by GitHub Actions (don't edit manually)
 4. Test all links are valid
 
 ### Working with Dev Containers
@@ -264,7 +264,7 @@ This is an educational repository focused on tutorials and examples. There are n
 
 ## Deployment and Publishing
 
-This is a learning repository - there is no deployment process. The curriculum is consumed by:
+This is a learning repository—there is no deployment process. The curriculum is consumed by:
 
 1. **GitHub Repository**: Direct access to code and documentation
 2. **GitHub Codespaces**: Instant dev environment with pre-configured setup
