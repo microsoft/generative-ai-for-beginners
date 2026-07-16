@@ -2,206 +2,206 @@
 
 [![Erinevate LLM-ide uurimine ja võrdlemine](../../../translated_images/et/02-lesson-banner.ef94c84979f97f60.webp)](https://youtu.be/KIRUeDKscfI?si=8BHX1zvwzQBn-PlK)
 
-> _Klõpsake ülaloleval pildil, et vaadata selle tunni videot_
+> _Klikka ülaloleval pildil, et vaadata selle õppetunni videot_
 
-Eelmise tunniga nägime, kuidas generatiivne tehisintellekt muudab tehnoloogiate maastikku, kuidas suured keelemudelid (LLMid) töötavad ja kuidas ettevõte — näiteks meie idufirma — saab neid oma kasutusjuhtudel rakendada ja kasvada! Selles peatükis vaatleme erinevate suurte keelemudelite (LLM-ide) tüüpe ning võrdleme nende plusse ja miinuseid.
+Eelmises õppetunnis nägime, kuidas Generatiivne tehisintellekt muudab tehnoloogiaalast maastikku, kuidas suured keelemudelid (LLM-id) töötavad ja kuidas ettevõte – näiteks meie idufirma – saab neid oma kasutusjuhtumites rakendada ja kasvada! Selles peatükis vaatame, kuidas erinevat tüüpi suuri keelemudeleid võrrelda ja vastandada, et mõista nende plusse ja miinuseid.
 
-Järgmiseks sammuks meie idufirma teekonnal on uurida olemasolevat LLM-ide maastikku ja mõista, millised sobivad meie kasutusjuhtumile.
+Järgmine samm meie idufirma teekonnal on uurida olemasolevat LLM-ide maastikku ja mõista, millised neist sobivad meie kasutusjuhtumiks.
 
 ## Sissejuhatus
 
-See tund hõlmab:
+See õppetund katab:
 
-- Praegused erinevad LLM-tüübid.
-- Mudelite testimine, iteratiivne täiustamine ja võrdlemine Azure’is teie kasutusjuhtumi jaoks.
+- Erinevad LLM-tüübid praegusel maastikul.
+- Erinevate mudelite testimine, iteratsioon ja võrdlus teie kasutusjuhtumi jaoks Azure’s.
 - Kuidas LLM-i juurutada.
 
 ## Õpieesmärgid
 
-Pärast selle tunni läbimist saate:
+Pärast selle õppetunni läbimist oskate:
 
-- Valida õige mudel oma kasutusjuhtumi jaoks.
-- Mõista, kuidas mudelit testida, täiustada ja jõudlust parandada.
+- Vali oma kasutusjuhtumi jaoks õige mudel.
+- Mõista, kuidas mudelit testida, iteratiivselt parendada ja sooritust suurendada.
 - Teada, kuidas ettevõtted mudeleid juurutavad.
 
 ## Mõista erinevaid LLM-tüüpe
 
-LLM-e saab kategooriateks jaotada nende arhitektuuri, koolitusandmete ja kasutusjuhtumi põhjal. Nende erinevuste mõistmine aitab meie idufirmal valida õige mudeli vastava stsenaariumi jaoks ning mõista, kuidas mudelit testida, täiustada ja jõudlust parandada.
+LLM-ide puhul võib esineda mitmeid kategooriaid, mis põhinevad nende arhitektuuril, treeningandmetel ja kasutusjuhtumil. Nende erinevuste mõistmine aitab meie idufirmal valida konkreetse stsenaariumi jaoks õige mudeli ning mõista, kuidas testida, iteratiivselt täiustada ja sooritust parandada.
 
-LLL-mudelite tüüpe on palju — mudeli valik sõltub sellest, milleks soovite neid kasutada, teie andmetest, valmisolekust maksta ja muudest teguritest.
+Olemas on palju erinevat tüüpi LLM-mudeleid, mudeli valik sõltub sellest, milleks te neid kasutada soovite, teie andmetest, valmisolekust maksta ja muudest teguritest.
 
-Sõltuvalt sellest, kas soovite kasutada mudeleid teksti, heli, video, pildi genereerimiseks jms, võite valida erinevat tüüpi mudeli.
+Sõltuvalt sellest, kas kavatsete kasutada mudeleid teksti, heli, video, pildiloome jaoks või muudeks eesmärkideks, võite valida erinevat tüüpi mudeli.
 
-- **Heli ja kõnetuvastus**. Whisper-laadsed mudelid on endiselt kasulikud üldotstarbelised kõnetuvastusmudelid, kuid tootmiskasutuses on nüüd ka uuemad kõnest tekstiks mudelid nagu `gpt-4o-transcribe`, `gpt-4o-mini-transcribe` ja diariseerimisvariantid. Hinnake oma stsenaariumi jaoks keelteulatus, diariseerimine, reaalajas tugi, latentsus ja maksumus. Lisateavet leiate [OpenAI kõnest tekstiks dokumentatsioonist](https://platform.openai.com/docs/guides/speech-to-text?WT.mc_id=academic-105485-koreyst).
+- **Heli ja kõnetuvastus**. Whisper-tüüpi mudelid on endiselt kasulikud üldotstarbelised kõnetuvastuse mudelid, kuid tootmiskasutuses võivad olla ka uuemad kõne-tekst mudelid nagu `gpt-4o-transcribe`, `gpt-4o-mini-transcribe` ning diariseerimise variandid. Hinnake oma stsenaariumi jaoks keelekatvust, diariseerimist, reaalajas tuge, latency'd ja kulu. Lisateavet leiate [OpenAI kõne-tekst dokumentatsioonist](https://platform.openai.com/docs/guides/speech-to-text?WT.mc_id=academic-105485-koreyst).
 
-- **Pildigeneratsioon**. DALL-E ja Midjourney on hästi tuntud pildigeneratsiooni võimalused, kuid praegused OpenAI pildi-API-d keskenduvad GPT pildimudelitele nagu `gpt-image-2`, samas kui Stable Diffusion, Imagen, Flux ja teised mudelite pered on samuti tavalised valikud. Võrrelge käsu järgimist, redigeerimistoetust, stiilikontrolli, turvanõudeid ja litsentseerimist. Lisateavet leiate [OpenAI pildigeneratsiooni juhendist](https://platform.openai.com/docs/guides/images?WT.mc_id=academic-105485-koreyst) ning selle õppekava 9. peatükist.
+- **Pildiloome**. DALL-E ja Midjourney on hästi tuntud pildigeneratsiooni valikud, kuid praegused OpenAI pildi-API-d keskenduvad GPT pildimudelitele nagu `gpt-image-2`, samas on ka Stable Diffusion, Imagen, Flux ja teised mudelifirmad populaarsed valikud. Võrrelge promptide järgimist, redigeerimistuge, stiilijalitust, turvanõudeid ja litsentseerimist. Lisateavet leiate [OpenAI pildiloome juhendist](https://platform.openai.com/docs/guides/images?WT.mc_id=academic-105485-koreyst) ja selle õppekava 9. peatükist.
 
-- **Tekstigeneratsioon**. Tekstimudelid hõlmavad nüüd tipptasemel mudeleid, loogikamodelle, väiksemaid madala latentsusega mudeleid ja avatud kaaludega mudeleid. Praeguste näidete hulka kuuluvad OpenAI GPT-5.x mudelid, Anthropic Claude 4.x mudelid, Google Gemini 3.x mudelid, Meta Llama 4 mudelid ja Mistral mudelid. Ärge valige ainult väljaandmiskuupäeva või hinna järgi; võrrelge ülesande kvaliteeti, latentsust, kontekstiakent, tööriistakasutust, turvakäitumist, regionaalset saadavust ja kogukulusid. [Microsoft Foundry mudelikataloog](https://ai.azure.com/catalog?WT.mc_id=academic-105485-koreyst) on hea koht, kus võrrelda Azure’is saadaolevaid mudeleid.
+- **Teksti generatsioon**. Tekstimudelid katavad nüüd tipptasemel mudeleid, mõtlemismudeleid, väikse latentsusega mudeleid ning avatud kaaludega mudeleid. Praegused näiteks on OpenAI GPT-5.x mudelid, Anthropic Claude 4.x mudelid, Google Gemini 3.x mudelid, Meta Llama 4 mudelid ja Mistral mudelid. Ära vali ainult vabastamise kuupäeva või hinna järgi; võrdle töö kvaliteeti, latentseegi, kontekstiakna suurust, tööriistade kasutust, turvalisuse käitumist, piirkondlikku saadavust ja kogukulusid. [Microsoft Foundry mudelikollektsioon](https://ai.azure.com/catalog?WT.mc_id=academic-105485-koreyst) on hea koht Azure'is saadaval olevate mudelite võrdlemiseks.
 
-- **Mitme modaliteedi tugi**. Paljud praegused mudelid suudavad töödelda rohkem kui teksti. Mõned aktsepteerivad pildi, heli või video sisendeid; mõned võivad kasutada tööriistu; ning spetsiifilised mudelid suudavad genereerida pilte, heli või videot. Näiteks praegused OpenAI mudelid toetavad teksti ja pildi sisendeid, Gemini mudelid võivad erinevate variatsioonide puhul toetada teksti, koodi, pilti, heli ja videot ning Llama 4 Scout ja Maverick on avatud kaaluga natiivselt multimodaalsed mudelid. Enne töövoo loomist kontrollige alati iga mudelikaardi puhul toetatud sisendi ja väljundi modaliteete.
+- **Mitmemodaalsus**. Paljud praegused mudelid suudavad töödelda rohkem kui ainult teksti. Mõned aktsepteerivad pilte, heli või video sisendeid; mõned võivad kasutada tööriistu; ja spetsialiseeritud mudelid võivad genereerida pilte, heli või videot. Näiteks toetavad praegused OpenAI mudelid teksti ja pildi sisestust, Gemini mudelid suudavad mõne variandi puhul toetada teksti, koodi, pilti, heli ja videot ning Llama 4 Scout ja Maverick on avatud kaaludega loomupäraselt mitmemodaalsed mudelid. Enne oma töövoo ehitamist kontrolli alati konkreetse mudelikaarte toetatud sisend- ja väljundmoodaalsusi.
 
-Mudeli valimine tähendab, et saate mõned põhilised võimed, mis aga ei pruugi alati piisavad olla. Tihti on teil ettevõttele omaseid andmeid, millest peate LLM-ile kuidagi teatama. Selleks on mõned erinevad võimalused, millest räägime järgmistes osades.
+Mudeli valimine tähendab, et saad mõned põhilised võimed, kuid need ei pruugi alati piisavad olla. Tihti on ettevõttel olemas konkreetseid andmeid, millest peate LLM-ile kuidagi rääkima. Selleks on mitu erinevat lähenemist - neist rohkem järgmistes lõikudes.
 
-### Alusmudelid võrreldes LLM-idega
+### Põhimudelite ja LLM-ide võrdlus
 
-Mõistet Alusmudel kasutasid [Stanfordi teadlased](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) ja määratlesid selle kui tehisintellekti mudeli, mis vastab teatud kriteeriumidele, näiteks:
+Mõistet "Foundation Model" algatasid [Stanfordi teadlased](https://arxiv.org/abs/2108.07258?WT.mc_id=academic-105485-koreyst) ning defineerisid AI mudelina, mis vastab mõnedele kriteeriumidele, näiteks:
 
-- **Need on treenitud juhendamata õppe või enesejuhitud õppe meetodil**, mis tähendab, et neid treenitakse märgistamata, mitmemodaalsetel andmetel ning nende treeninguks pole vaja inimlike annotatsioonide või märgistuste kasutamist.
-- **Need on väga suured mudelid**, põhinedes väga sügavatel närvivõrkudel ja treenitud miljardite parameetritega.
-- **Neid kasutatakse tavaliselt kui „alust“ teiste mudelite jaoks**, mis tähendab, et neid saab kasutada lähtepunktina teiste mudelite ehitamiseks, seda saab teha peenhäälestamise teel.
+- **Nende treenimine toimub järelevalveta või enesejärelevalvega**, mis tähendab, et nad treenitakse märgistamata mitmemodaalsetel andmetel ning nende treeninguks ei ole vaja inimeste annotatsioone ega märgistamist.
+- **Nad on väga suured mudelid**, mis põhinevad väga sügavatel närvivõrkudel, mis on treenitud miljardite parameetrite peal.
+- **Neid kasutatakse tavaliselt teiste mudelite ‘põhjana’**, see tähendab, et neid saab kasutada lähtepunktina teiste mudelite loomisel, mida saab peenhäälestada.
 
-![Alusmudelid võrreldes LLM-idega](../../../translated_images/et/FoundationModel.e4859dbb7a825c94.webp)
+![Põhimudelid võrreldes LLM-idega](../../../translated_images/et/FoundationModel.e4859dbb7a825c94.webp)
 
-Pildiallikas: [Oluline juhend alusmudelite ja suurte keelemudelite kohta | autor Babar M Bhatti | Medium
+Pildi allikas: [Essential Guide to Foundation Models and Large Language Models | by Babar M Bhatti | Medium
 ](https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404)
 
-Selle eristuse selgitamiseks võtame ajaloolise näite ChatGPT-st. Varasemad ChatGPT versioonid kasutasid alusmudelina GPT-3.5. OpenAI kasutas seejärel vestluslike stsenaariumide jaoks parema toimivusega peenhäälestatud versiooni loomiseks vestlusele spetsiifilisi andmeid ja joondamistehnikaid, näiteks vestlusrobotitel. Kaasaegsed tehisintellekti teenused kasutavad tihti mitme mudelivariandi vahel, nii et teenuse nimi ja aluseks oleva mudeli nimi ei ole alati identsed.
+Selle eristuse võrdlemiseks võtame ajaloolise näitena ChatGPT. Varem kasutasid ChatGPT varased versioonid GPT-3.5 põhimudelit. OpenAI kasutas seejärel vestlusspetsiifilisi andmeid ja joondustehnikaid, et luua häälestatud versioon, mis toimib paremini vestlussituatsioonides, nagu vestlusrobotid. Kaasaegsed AI teenused marsruutivad tihti mitme mudelivariandi vahel, seega teenuse nimi ja aluseks oleva mudeli nimi ei ole alati sama.
 
-![Alusmudel](../../../translated_images/et/Multimodal.2c389c6439e0fc51.webp)
+![Põhimudel](../../../translated_images/et/Multimodal.2c389c6439e0fc51.webp)
 
-Pildiallikas: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
+Pildi allikas: [2108.07258.pdf (arxiv.org)](https://arxiv.org/pdf/2108.07258.pdf?WT.mc_id=academic-105485-koreyst)
 
-### Avatud kaaluga/avatud lähtekoodiga versus patenteeritud mudelid
+### Avatud-kaalude/avatud lähtekoodiga mudelid versus patenteeritud mudelid
 
-Teine viis LLM-ide klassifitseerimiseks on see, kas need on avatud kaaluga, avatud lähtekoodiga või patenteeritud.
+Veel üks viis LLM-ide kategoriseerimiseks on see, kas need on avatud-kaalude (open-weight), avatud lähtekoodiga või patenteeritud mudelid.
 
-Avatud lähtekoodiga ja avatud kaaluga mudelid võimaldavad mudeli komponente uurida, alla laadida või kohandada, kuid nende litsentsid erinevad. Mõned on täielikult avatud lähtekoodiga, teised on avatud kaaluga mudelid kasutuspiirangutega. Need on kasulikud ettevõtetele, kes vajavad rohkem kontrolli juurutamise, andmete asukoha, maksumuse või kohandamise üle. Kuid meeskonnad peavad enne tootmiskasutusse võtmist üle vaatama litsentsitingimused, teeninduskulud, hoolduse, turvauuendused ja hindamise kvaliteedi. Näideteks on [Meta Llama 4](https://ai.meta.com/blog/llama-4-multimodal-intelligence/?WT.mc_id=academic-105485-koreyst), mõned [Mistral mudelid](https://docs.mistral.ai/models/overview?WT.mc_id=academic-105485-koreyst) ja paljud mudelid, mis on majutatud [Hugging Face’is](https://huggingface.co/models?WT.mc_id=academic-105485-koreyst).
+Avatud lähtekoodiga ja avatud-kaalude mudelid teevad mudeli artefaktid kättesaadavaks ülevaate, allalaadimise või kohandamise jaoks, kuid nende litsentsitingimused erinevad. Mõned on täiesti avatud lähtekoodiga, teised on avatud-kaalude mudelid kasutuspiirangutega. Need võivad olla kasulikud, kui ettevõte vajab suuremat kontrolli juurutuse, andmete lokaalsuse, kulude või kohandamise üle. Kuid meeskonnad peavad siiski enne tootmiskasutusse võtmist üle vaatama litsentsitingimusi, teeninduskulusid, hooldust, turvauuendusi ja hinnangu kvaliteeti. Näitena võib tuua [Meta Llama 4](https://ai.meta.com/blog/llama-4-multimodal-intelligence/?WT.mc_id=academic-105485-koreyst), mõned [Mistral mudelid](https://docs.mistral.ai/models/overview?WT.mc_id=academic-105485-koreyst) ja palju mudeleid, mis on majutatud [Hugging Face’i platvormil](https://huggingface.co/models?WT.mc_id=academic-105485-koreyst).
 
-Patenteeritud mudelid kuuluvad ja neid majutab teenusepakkuja. Need mudelid on tihti optimeeritud hallatuks tootmiskasutuseks ning pakuvad tugevat tuge, turvasüsteeme, tööriistade integratsiooni ja skaleeritavust. Kuid klientidel tavaliselt ei ole võimalik mudeli kaalusid uurida ega muuta ning nad peavad hoolikalt läbivaadata pakkuja tingimused privaatsuse, säilitamise, vastavuse ja sobiliku kasutuse kohta. Näideteks on [OpenAI mudelid](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst), [Google Gemini](https://deepmind.google/models/gemini/pro/?WT.mc_id=academic-105485-koreyst) ja [Anthropic Claude](https://platform.claude.com/docs/en/about-claude/models/overview?WT.mc_id=academic-105485-koreyst).
+Patenteeritud mudelid kuuluvad ja neid majutab teenusepakkuja. Need mudelid on tihti optimeeritud hallatuks tootmiskasutuseks ning pakuvad tugevat tuge, turvasüsteeme, tööriistade integratsiooni ja skaleerimist. Kuid kliendid ei saa tavaliselt mudeli kaalusid uurida ega muuta ning peavad üle vaatama pakkuja tingimused privaatsuse, säilitamise, vastavuse ja sobiliku kasutuse osas. Näideteks on [OpenAI mudelid](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst), [Google Gemini](https://deepmind.google/models/gemini/pro/?WT.mc_id=academic-105485-koreyst) ja [Anthropic Claude](https://platform.claude.com/docs/en/about-claude/models/overview?WT.mc_id=academic-105485-koreyst).
 
-### Embedding versus pildigeneratsioon versus teksti ja koodi genereerimine
+### Manustamine versus pildiloome versus teksti ja koodi generatsioon
 
-LLM-e saab klassifitseerida ka väljundi tüübi järgi.
+LLM-e saab ka kategoriseerida vastavalt väljundile, mida nad genereerivad.
 
-Embeddingud on mudelite komplekt, mis suudavad teksti konverteerida numbriliseks kujuks, mida nimetatakse embedinguiks — see on sisendi teksti numbriline esitus. Embeddingud võimaldavad masinatel paremini mõista sõnade või lausete vahelisi seoseid ja neid saab kasutada sisendina teistele mudelitele, nagu klassifikatsioonimudelid või grupeerimismudelid, millel on parem toimivus numbriliste andmete toetamisel. Embedding-mudeleid kasutatakse tihti ülekandeõppeks (transfer learning), kus mudel ehitatakse varjatud ülesande jaoks, mille jaoks on palju andmeid, ja seejärel kasutatakse mudeli kaalusid (embeddinguid) teiste allülesannete jaoks uuesti. Selle kategooria näide on [OpenAI embeddingud](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
+Manustamised on mudeleid, mis suudavad muuta teksti numbriliseks vormiks, mida nimetatakse manustamiseks (embedding), mis on sisendi teksti numbriline esitlus. Manustamised lihtsustavad masinatele sõnade või lausetevaheliste seoste mõistmist ning neid saab kasutada sisenditena teiste mudelite, näiteks klassifitseerimis- või klasterdamismudelite jaoks, mis töötlevad numbrilisi andmeid paremini. Manustamismudeleid kasutatakse sageli ülekandeõppes, kus mudel on ehitatud asendusülesandele, mille jaoks on palju andmeid, ja siis mudeli kaalud (manustused) taaskasutatakse muude ülesannete jaoks. Selle kategooria näide on [OpenAI manustamised](https://platform.openai.com/docs/models/embeddings?WT.mc_id=academic-105485-koreyst).
 
-![Embedding](../../../translated_images/et/Embedding.c3708fe988ccf760.webp)
+![Manustamine](../../../translated_images/et/Embedding.c3708fe988ccf760.webp)
 
-Pildigeneratsioonimudelid on mudelid, mis loovad pilte. Neid kasutatakse sageli piltide redigeerimiseks, sünteesimiseks ja tõlkimiseks. Pildigeneratsioonimudeleid treenitakse tihti suurte pildiandmetega, näiteks [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), ning neid saab kasutada uute piltide genereerimiseks või olemasolevate piltide redigeerimiseks inpaintingu, kõrgresolutsiooni ja värvimise tehnikate abil. Näideteks on [GPT pildimudelid](https://platform.openai.com/docs/guides/images?WT.mc_id=academic-105485-koreyst), [Stable Diffusion mudelid](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst) ja Imagen mudelid.
+Pildiloome mudelid on mudelid, mis genereerivad pilte. Neid kasutatakse sageli pildi redigeerimiseks, sünteesiks ja tõlkeks. Pildiloome mudeleid treenitakse sageli suurel hulgal pildistandardeid, nagu [LAION-5B](https://laion.ai/blog/laion-5b/?WT.mc_id=academic-105485-koreyst), ja neid saab kasutada uute piltide loomiseks või olemasolevate piltide redigeerimiseks inpainting’i, super-resolutsiooni ja värvimise tehnikate abil. Näideteks on [GPT pildimudelid](https://platform.openai.com/docs/guides/images?WT.mc_id=academic-105485-koreyst), [Stable Diffusion mudelid](https://github.com/Stability-AI/StableDiffusion?WT.mc_id=academic-105485-koreyst) ja Imagen mudelid.
 
-![Pildigeneratsioon](../../../translated_images/et/Image.349c080266a763fd.webp)
+![Pildiloome](../../../translated_images/et/Image.349c080266a763fd.webp)
 
-Teksti ja koodi genereerimise mudelid loovad teksti või koodi. Neid kasutatakse tihti teksti kokkusurumiseks, tõlkimiseks ja küsimustele vastamiseks. Tekstigeneratsioonimudeleid treenitakse tihti suurte tekstandmetega, näiteks [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), ning neid saab kasutada uue teksti genereerimiseks või küsimustele vastamiseks. Koodigeneratsioonimudeleid, nagu [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), treenitakse sageli suurte koodiandmetega, näiteks GitHubi andmetel, ja neid saab kasutada uue koodi genereerimiseks või olemasoleva koodi vigade parandamiseks.
+Teksti ja koodi generatsiooni mudelid on mudelid, mis genereerivad teksti või koodi. Neid kasutatakse sageli teksti kokkuvõtmiseks, tõlkimiseks ja küsimustele vastamiseks. Tekstigeneratsiooni mudeleid treenitakse suurel hulgal tekstandmetel, nagu [BookCorpus](https://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhu_Aligning_Books_and_ICCV_2015_paper.html?WT.mc_id=academic-105485-koreyst), ja neid saab kasutada uue teksti loomiseks või küsimustele vastamiseks. Koodigeneratsioonimudeleid, nagu [CodeParrot](https://huggingface.co/codeparrot?WT.mc_id=academic-105485-koreyst), treenitakse sageli suurel hulgal koodil, näiteks GitHub’is, ja neid saab kasutada uue koodi genereerimiseks või olemasolevate vigade parandamiseks.
 
-![Teksti ja koodi genereerimine](../../../translated_images/et/Text.a8c0cf139e5cc2a0.webp)
+![Teksti ja koodi generatsioon](../../../translated_images/et/Text.a8c0cf139e5cc2a0.webp)
 
-### Kodeerija-dekodeerija versus ainult dekodeerija
+### Kodeerija-Dekodeerija versus Ainult dekodeerija
 
-LLM-ide erinevate arhitektuuritüüpide selgitamiseks kasutame analoogiat.
+LLM-ide erinevate arhitektuuride selgitamiseks kasutame analoogiat.
 
-Kujutage ette, et teie juht andis teile ülesandeks kirjutada viktoriin õpilastele. Teil on kaks kolleegi; üks vastutab sisu loomise eest ja teine ülevaatamise eest.
+Kujutle, et su juht andis sulle ülesandeks koostada viktoriin õpilastele. Sul on kaks kolleegi; üks vastutab sisu loomise eest ja teine ülevaatamise eest.
 
-Sisu looja on kui ainult dekodeerija mudel: ta saab vaadata teemat, näha, mida te juba kirjutasite, ja seejärel jätkata sisu genereerimist selle konteksti põhjal. Ta on väga osav kaasahaarava ja informatiivse sisu kirjutamisel, kuid see pole alati parim valik, kui ülesandeks on vaid info klassifitseerimine, taastamine või kodeerimine. Näideteks on ainult dekodeerija mudelipere nagu GPT ja Llama mudelid.
+Sisulooja on nagu ainult dekodeerija mudel: ta suudab vaadata teemat, näha, mida sa oled juba kirjutanud, ja jätkata sisu genereerimist selle põhjal. Nad on väga head kaasahaarava ja informatiivse sisu kirjutamisel, kuid ei ole alati parim valik, kui ülesandeks on vaid klassifitseerimine, andmete tagasivõtmine või kodeerimine. Ainult dekodeerija mudelite perekonda kuuluvad näiteks GPT ja Llama mudelid.
 
-Ülevaataja on kui ainult kodeerija mudel, kes vaatab kirjutatud teksti ja vastuseid, märkab nendevahelist seost ja mõistab konteksti, kuid ta ei ole hea sisu genereerimisel. Kodeerija mudeli näide oleks BERT.
+Ülevaataja on nagu ainult kodeerija mudel: nad vaatavad kursust ja vastuseid, märkides nendevahelist seost ja mõistes konteksti, kuid nad ei ole head sisu genereerimisel. Ainult kodeerijate näide on BERT.
 
-Kujutage ette, et meil on keegi, kes võiks viktoriini nii luua kui ka üle vaadata — see on kodeerija-dekodeerija mudel. Mõned näited: BART ja T5.
+Kujutle, et meil on keegi, kes suudab nii viktoriini luua kui ka üle vaadata; see on kodeerija-dekodeerija mudel. Näideteks on BART ja T5.
 
-### Teenus versus mudel
+### Teenus versus Mudel
 
-Räägime nüüd teenuse ja mudeli erinevusest. Teenus on pilveteenuse pakkuja pakutav toode, mis on tihti kombinatsioon mudelitest, andmetest ja muudest komponentidest. Mudel on teenuse põhikomponent ja tihti alusmudel, näiteks LLM.
+Räägime nüüd teenuse ja mudeli erinevusest. Teenus on pilveteenuse pakkuja pakutav toode ja see on sageli mudelite, andmete ja muude komponentide kombinatsioon. Mudel on teenuse tuumakomponent ja see on sageli põhimudel, nagu LLM.
 
-Teenused on tihti optimeeritud tootmiskasutuseks ning neid on tavaliselt lihtsam kasutada graafilise kasutajaliidese kaudu kui mudeleid. Teenused ei pruugi alati olla tasuta ning võivad nõuda tellimust või tasu, vahetades teenuse omaniku seadmete ja ressursside kasutusvõimalust, kulude optimeerimist ning skaleerimise lihtsustamist vastu. Näide teenusest on [Azure OpenAI teenus](https://learn.microsoft.com/azure/ai-services/openai/overview?WT.mc_id=academic-105485-koreyst), mis pakub kasutus põhist hinnastamismeetodit, kus kasutajaid arvestatakse proportsionaalselt teenuse kasutusega. Azure OpenAI teenus pakub ka ettevõtte tasemel turvalisust ja vastutustundliku tehisintellekti raamistikku mudelite võimete peal.
+Teenused on sageli optimeeritud tootmiskasutuseks ning neid on tavaliselt lihtsam kasutada, näiteks graafilise kasutajaliidese kaudu. Kuid teenused ei ole alati tasuta ning võivad nõuda tellimust või tasu kasutamise eest, vastutasuks teenuse omaniku seadmetele ja ressurssidele juurdepääsu eest, kulude optimeerimise ja skaleerimise hõlbustamiseks. Näiteks on [Azure OpenAI teenus](https://learn.microsoft.com/azure/ai-foundry/openai/overview?WT.mc_id=academic-105485-koreyst), mis pakub kasutuspõhist hinnakava, mis tähendab, et kasutajalt võetakse tasu proportsionaalselt teenuse kasutusmahuga. Azure OpenAI teenus pakub ka ettevõtte tasemel turvalisust ja vastutustundliku tehisintellekti raamistikku mudelite võimete peale.
 
-Mudelid on närvivõrgu komponendid: parameetrid, kaalud, arhitektuur, tokeniseerija ja toetav konfiguratsioon. Mudeli jooksutamine lokaalselt või privaatses keskkonnas nõuab sobivat riistvara, teenindusinfrastruktuuri, jälgimist ning kas ühilduvat avatud lähtekoodi/kaalukasutuslitsentsi või kommertslitsentsi. Avatud kaaluga mudelid nagu Llama 4 või Mistral mudelid saab ise majutada, kuid neil on endiselt vaja arvutusvõimsust ja operatiivset ekspertiisi.
+Mudelid on närvivõrgu artefaktid: parameetrid, kaalud, arhitektuur, tokeniseerija ja toetuskonfiguratsioonid. Mudeli kohalikuks või privaatseks jooksutamiseks on vaja sobivat riistvara, teenindustaristut, monitooringut ning kas ühilduvat avatud lähtekoodi/ava-kaalude litsentsi või ärilitsentsi. Avatud-kaaludega mudelid, nagu Llama 4 või Mistral mudelid, võivad töötada isemajutatult, kuid nõuavad siiski arvutusvõimsust ja operatiivset kompetentsi.
 
-## Kuidas testida ja iteratiivselt täiustada erinevaid mudeleid, et mõista nende jõudlust Azure’is
+## Kuidas testida ja iteratiivselt parandada erinevaid mudeleid Azure’is, et mõista sooritust
 
 
-Kui meie meeskond on uurinud olemasolevat LLM-ide maastikku ja tuvastanud mõned head kandidaadid nende stsenaariumite jaoks, on järgmine samm testida neid oma andmete ja töökoormuse peal. See on iteratiivne protsess, mida tehakse katsete ja mõõtmiste abil.
-Enamik mudeleid, millest eelnevates lõikudes rääkisime (OpenAI mudelid, avatud kaaludega mudelid nagu Llama 4 ja Mistral ning Hugging Face mudelid) on saadaval [Microsoft Foundry Models](https://learn.microsoft.com/azure/foundry/concepts/foundry-models-overview?WT.mc_id=academic-105485-koreyst).
+Kui meie meeskond on uurinud praegust LLM-ide maastikku ja tuvastanud mõningad sobivad kandidaadid nende stsenaariumite jaoks, on järgmine samm nende testimine nende andmete ja töökoormuse peal. See on iteratiivne protsess, mida tehakse katsete ja mõõtmiste abil.
+Enamik mudeleid, mida mainisime eelnevates lõikudes (OpenAI mudelid, avatud kaaludega mudelid nagu Llama 4 ja Mistral ning Hugging Face mudelid) on saadaval [Microsoft Foundry Models](https://learn.microsoft.com/azure/foundry/concepts/foundry-models-overview?WT.mc_id=academic-105485-koreyst) platvormil.
 
-[Microsoft Foundry](https://learn.microsoft.com/azure/foundry/what-is-foundry?WT.mc_id=academic-105485-koreyst), endine Azure AI Studio/Azure AI Foundry, on ühtne Azure platvorm tehisintellekti rakenduste ja agentide loomiseks. See aitab arendajatel hallata kogu elutsüklit alates katsetamisest ja hindamisest kuni juurutamise, jälgimise ja halduseni. Microsoft Foundry mudelite kataloog võimaldab kasutajal:
+[Microsoft Foundry](https://learn.microsoft.com/azure/foundry/what-is-foundry?WT.mc_id=academic-105485-koreyst), varem tuntud kui Azure AI Studio/Azure AI Foundry, on ühtne Azure platvorm tehisintellekti rakenduste ja agentide loomiseks. See aitab arendajatel hallata kogu elu tsüklit alates eksperimenteerimisest ja hindamisest kuni juurutamise, jälgimise ja halduseni. Microsoft Foundry mudeliloend võimaldab kasutajal:
 
-- Leida kataloogist huvipakkuv alusuuringu mudel, sealhulgas Azure’i müüdavad mudelid ning partnerite ja kogukonna pakutavad mudelid. Kasutajad saavad filtreerida ülesande, pakkuja, litsentsi, juurutamisvaliku või nime järgi.
+- Leida huvipakkuv alustaloenduses olev mudel, sealhulgas Azure'i müüdavad mudelid ja partnerite ning kogukonna pakkujate mudelid. Kasutajad saavad filtreerida ülesande, pakkuja, litsentsi, juurutamise valiku või nime järgi.
 
 ![Model catalog](../../../translated_images/et/AzureAIStudioModelCatalog.3cf8a499aa8ba031.webp)
 
-- Läbivaatada mudelikaarti, mis sisaldab üksikasjalikku kirjelduse kavandatud kasutusest ja treeningandmetest, koodinäiteid ning sisemiste hindamiste teeki kuuluvaid hindamistulemusi.
+- Vaadata mudelikaarti, mis sisaldab põhjalikku kirjeldust kavandatud kasutusest ja koolitusandmetest, koodinäiteid ja hindamistulemusi sisemiste hindamisraamatukogude kohta.
 
 ![Model card](../../../translated_images/et/ModelCard.598051692c6e400d.webp)
 
-- Võrrelda erinevate mudelite ja andmekogumite võrdlusnäitajaid, mis on tööstuses saadaval, et hinnata, milline neist vastab äristsenaariumile, kasutades selleks [Mudeli võrdlusnäitajate](https://learn.microsoft.com/azure/ai-studio/how-to/model-benchmarks?WT.mc_id=academic-105485-koreyst) lõiku.
+- Võrrelda tööstuses saadaolevate mudelite ja andmekogude võrdlusaluseid, et hinnata, milline mudel vastab äristsenaariumile, kasutades [Model Benchmarks](https://learn.microsoft.com/azure/ai-foundry/concepts/model-benchmarks?WT.mc_id=academic-105485-koreyst) paneeli.
 
 ![Model benchmarks](../../../translated_images/et/ModelBenchmarks.254cb20fbd06c03a.webp)
 
-- Parandada toetatud mudeleid kohandatud treeningandmete põhjal, et parandada mudeli jõudlust konkreetses töökoormuses, kasutades Microsoft Foundry katsetamis- ja jälgimisvõimalusi.
+- Peenhäälestada toetatud mudeleid kohandatud koolitusandmetel, et parandada mudeli tulemuslikkust konkreetse töökoormuse puhul, kasutades Microsoft Foundry eksperimenteerimise ja jälgimise võimalusi.
 
 ![Model fine-tuning](../../../translated_images/et/FineTuning.aac48f07142e36fd.webp)
 
-- Juurutada originaalne eelnevalt treenitud mudel või kohandatud versioon kaugel reaalajas tehtava järelduste tegemise lõpp-punkti, kasutades hallatud arvutusressursse või serverivaba juurutamist, et rakendused saaksid seda kasutada.
+- Juurutada originaalne eel-koolitatud mudel või peenhäälestatud versioon kaugemal reaalajas inference lõpp-punktile, kasutades hallatud arvutusvõimsust või serverivabasid juurutamisvalikuid, et võimaldada rakendustel seda tarbida.
 
 ![Model deployment](../../../translated_images/et/ModelDeploy.890da48cbd0bccdb.webp)
 
 > [!NOTE]
-> Kõik kataloogis olevad mudelid ei ole praegu saadaval kohandamiseks ja/või tasu põhise juurutamise jaoks. Kontrollige mudelikaarti, et saada teavet mudeli võimaluste ja piirangute kohta.
+> Kõik loendis olevad mudelid ei ole hetkel saadaval peenhäälestamiseks ja/või tasulise kasutusega juurutamiseks. Vaata mudelikaarti, et saada teavet mudeli võimekuste ja piirangute kohta.
 
-## LLM-i tulemuste parandamine
+## LLM-tulemuste parandamine
 
-Meie idufirma meeskond on uurinud erinevat tüüpi LLM-e ja pilveplatvormi (Microsoft Foundry), mis võimaldab meil võrrelda erinevaid mudeleid, hinnata neid testandmete põhjal, parandada nende jõudlust ja juurutada neid järelduste tegemise lõpp-punktides.
+Oleme oma idufirma meeskonnaga uurinud erinevaid LLM-e ja pilveplatvormi (Microsoft Foundry), mis võimaldab meil võrrelda erinevaid mudeleid, hinnata neid testandmetel, parandada tulemuslikkust ning juurutada neid inference lõpp-punktidesse.
 
-Aga millal tuleks valida mudeli kohandamine asemel eelnevalt treenitud mudeli kasutamine? Kas on teisi lähenemisviise mudeli jõudluse parandamiseks spetsiifilistes töökoormustes?
+Kuid millal tuleks kaaluda mudeli peenhäälestamist, mitte-eel-koolitatud mudeli kasutamist? Kas on veel teisi lähenemisviise, kuidas mudeli tulemuslikkust konkreetsetel töökoormustel parandada?
 
-Ettevõte saab kasutada mitmeid lähenemisviise, et saada LLM-ist vajalikud tulemused. LLM-i tootmises kasutamiseks saab valida erinevaid mudelitüüpe, mille treeningutase, keerukus, hind ja kvaliteet varieeruvad. Siin on mõned erinevad lähenemisviisid:
+Ettevõte saab kasutada mitmeid lähenemisviise, et saada LLM-ilt vajalikke tulemusi. LLM-i juurutamisel tootmises saab valida erinevaid mudelitüüpe erineva koolitusastmega, millel on erinev keerukus, kulud ja kvaliteet. Siin on mõned erinevad lähenemised:
 
-- **Kontekstiga promptide insenerimine**. Mõte on anda promptimise ajal piisavalt konteksti, et tagada vajalikud vastused.
+- **Konteksti põhine prompti loomine**. Idee on anda piisavalt konteksti prompti juures, et kindlustada vajalike vastuste saamine.
 
-- **Andmepõhine genereerimise täiendamine (Retrieval Augmented Generation, RAG)**. Teie andmed võivad olla näiteks andmebaasis või veebilõpp-punktis, et tagada nende või nende alamhulga kaasamine prompti ajal, saate hankida asjakohased andmed ja lisada need kasutaja prompti.
+- **Andmete põhine täiendus, Retrieval Augmented Generation, RAG**. Teie andmed võivad näiteks asuda andmebaasis või veebipunktis, et kindlustada nende andmete või selle alamhulga kaasamine prompti ajal, saate hankida asjakohased andmed ja lisada need kasutaja prompti osaks.
 
-- **Kohandatud mudel**. Siin on mudelit edasi treenitud oma andmete peal, mis teeb mudeli täpsemaks ja vastuvõtlikumaks teie vajadustele, kuid see võib olla kulukas.
+- **Peenhäälestatud mudel**. Siin on mudel edasi koolitatud teie enda andmetel, mis teeb mudeli täpsemaks ja vastuvõtlikumaks teie vajadustele, kuid see võib olla kallis.
 
 ![LLMs deployment](../../../translated_images/et/Deploy.18b2d27412ec8c02.webp)
 
-Pildi allikas: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
+Pildiallikas: [Four Ways that Enterprises Deploy LLMs | Fiddler AI Blog](https://www.fiddler.ai/blog/four-ways-that-enterprises-deploy-llms?WT.mc_id=academic-105485-koreyst)
 
-### Kontekstiga promptide insenerimine
+### Prompti loomine konteksti põhjal
 
-Eelnevalt treenitud LLM-id toimivad väga hästi üldistel loomuliku keele ülesannetel, isegi lühikese prompti, näiteks lause täitmise või küsimuse kujul – nn "zero-shot" õppimise puhul.
+Eel-koolitatud LLM-id töötavad väga hästi üldistatud loomuliku keele ülesannetes, isegi kui neid kutsuda lühikese promptiga, näiteks lause lõpetamiseks või küsimuseks – nn „zero-shot” õppimine.
 
-Kuid mida paremini kasutaja suudab oma päringut raamida, esitada detailse taotluse ja näited – konteksti – seda täpsem ja ootustele lähem on vastus. Siin räägime "one-shot" õppimisest, kui prompt sisaldab ainult ühte näidet, ja "few-shot" õppimisest, kui näiteid on mitu.
-Kontekstiga promptide insenerimine on kõige kulutõhusam lähenemine alustamiseks.
+Kuid mida rohkem kasutaja suudab oma päringut piirata üksikasjaliku taotluse ja näidetega – ehk kontekstiga –, seda täpsem ja ootustele lähem vastus on. Sellel juhul räägime „one-shot” õppimisest, kui prompt sisaldab ainult ühte näidet, ja „few-shot” õppimisest, kui see sisaldab mitut näidet.
+Prompti loomine konteksti põhjal on kõige kulutõhusam lähenemine alustamiseks.
 
-### Andmepõhine genereerimise täiendamine (RAG)
+### Retrieval Augmented Generation (RAG)
 
-LLM-ide piiranguks on see, et nad saavad vastuse genereerimiseks kasutada ainult oma treeningu käigus kasutatud andmeid. See tähendab, et nad ei tea midagi faktidest, mis on toimunud pärast treeningut, ega pääse ligi mittetöötlemata teabele (nagu ettevõtte andmed).
-Seda piirangut saab ületada RAG-i abil, mis täiendab prompti väliste andmetega dokumentide osadena, võttes arvesse prompti pikkuse piire. Seda toetavad vektoriandmebaasi tööriistad (näiteks [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)), mis otsivad kasulikke tükke eri eelnevalt määratletud andmeallikatest ja lisavad selle prompti konteksti.
+LLM-ide piirang on see, et nad saavad kasutusele võtta ainult koolitusel kasutatud andmeid vastuse genereerimiseks. See tähendab, et nad ei tea midagi faktidest, mis toimusid pärast koolitusprotsessi ning neil puudub juurdepääs mitteavalikele andmetele (näiteks ettevõtte andmed).
+Seda saab ületada RAG-iga, tehnika abil, mis täiendab prompti väliste andmetega dokumentide fragmentide vormis, arvestades prompti pikkuse piiranguid. Selle võimaldavad vektorandmebaasi tööriistad (nagu [Azure Vector Search](https://learn.microsoft.com/azure/search/vector-search-overview?WT.mc_id=academic-105485-koreyst)), mis otsivad kasulikke fragmente erinevatest eelmääratletud andmeallikatest ja lisavad need prompti konteksti.
 
-See tehnika on väga kasulik, kui ettevõttel ei ole piisavalt andmeid, aega või ressursse LLM-i kohandamiseks, kuid soovitakse siiski parandada jõudlust konkreetses töökoormuses ning vähendada hallutsineeritud, aegunud või põhjendamata vastuste riske.
+See tehnika on väga kasulik, kui ettevõttel pole piisavalt andmeid, aega või ressursse LLM-i peenhäälestamiseks, kuid soovib siiski parandada tulemuslikkust konkreetse töökoormuse puhul ja vähendada hallutsineeritud, aegunud või toetamatute vastuste riski.
 
-### Kohandatud mudel
+### Peenhäälestatud mudel
 
-Kohandamine on protsess, mis kasutab edasiandõpet mudeli “kohandamiseks” konkreetse ülesande jaoks või kindla probleemi lahendamiseks. Erinevalt "few-shot" õppimisest ja RAG-st, genereeritakse siin uus mudel, millel on uuendatud kaalud ja nihked. Selleks on vaja treeningnäidist, mis koosneb ühest sisendist (prompt) ja vastavast väljundist (täiendamine).
-See oleks eelistatud lähenemine, kui:
+Peenhäälestamine on protsess, mis kasutab siirdeõpet mudeli „kohandamiseks“ allülesandeks või konkreetse probleemi lahendamiseks. Erinevalt väheste näidete õppest ja RAG-ist, moodustab see uue mudeli, millel on värskendatud kaalud ja nihked. Selleks on vaja koolitusnäidete komplekti, mis koosneb ühest sisendist (prompt) ja selle vastavast väljundist (täiendamine).
+See oleks eelistatud lähenemine juhul, kui:
 
-- **Kasutatakse väiksemaid spetsiifilisi mudeleid**. Ettevõte eelistab kohandada väiksemat mudelit konkreetse piiratuma ülesande jaoks, mitte pidevalt kasutada suuremat tipptasemel mudelit, mis on kuluefektiivsem ja kiirem lahendus.
+- **Väiksemate konkreetsete ülesannetega mudelite kasutamine**. Ettevõte sooviks peenhäälestada väiksema mudeli kitsale ülesandele, mitte korduvalt kutsuda suuremat piirimudelit, mis annab kulutõhusama ja kiirem lahenduse.
 
-- **Arvestatakse latentsust**. Latentsus on konkreetse kasutusjuhtumi puhul oluline, mistõttu ei saa kasutada väga pikki prompt’e ega nii palju näiteid, kui mudel nõuab, sest need ei mahu prompti pikkuse piiridesse.
+- **Latentsusajaga arvestamine**. Latentsus on konkreetse kasutusjuhtumi puhul oluline, seega ei saa kasutada väga pikki promte ega ka liiga palju näiteid, mida mudel peaks õppima, kui need ei sobi prompti pikkuse piiranguga.
 
-- **Kohandatakse stabiilset käitumist**. Ettevõttel on palju kvaliteetseid näiteid ning ta soovib, et mudel järjekindlalt järgiks ülesande mustrit, väljundformaati, tooni või valdkonnaspetsiifilist stiili. Kui peamised probleemid on värsked faktid või sageli muutuvad privaatteadmised, tuleks RAG-i kasutada iseseisvalt kohandamise asemel.
+- **Stabiilse käitumise kohandamine**. Ettevõttel on palju kvaliteetseid näiteid ja nad soovivad, et mudel järjekindlalt järgiks ülesande mustrit, väljundiformaati, tooni või domeenipõhist stiili. Kui peamine probleem on värsked faktid või sageli muutuva privaatteadmise olemasolu, siis kasutage RAG-i selle asemel, et tugineda üksnes peenhäälestamisele.
 
-### Treenitud mudel
+### Koolitatud mudel
 
-LLM-i nullist treenimine on kindlasti kõige keerulisem ja nõudlikum lähenemine, mis vajab tohutult palju andmeid, oskustega ressursse ja sobivat arvutusvõimsust. See valik tuleks kaaluda ainult juhul, kui ettevõttel on valdkonnapõhine kasutusjuhtum ja suur hulk selle valdkonna keskseid andmeid.
+LLM-i nullist koolitamine on kindlasti kõige raskem ja keerulisem lähenemine, mis nõuab tohutuid andmemahte, oskustega ressursse ja sobivat arvutusvõimsust. Seda võimalust tuleks arvestada ainult juhul, kui ettevõttel on domeenipõhine kasutusjuhtum ja suur hulk domeenikeskseid andmeid.
 
 ## Teadmiste kontroll
 
-Milline võiks olla hea lähenemine LLM-i täitmiste tulemuste parandamiseks?
+Milline võiks olla hea lähenemine LLM-i täienduste tulemustele?
 
-1. Kontekstiga promptide insenerimine
+1. Prompti loomine konteksti põhjal
 1. RAG
-1. Kohandatud mudel
+1. Peenhäälestatud mudel
 
-V: Kõik kolm aitavad. Alusta promptide insenerimisest ja kontekstist kiirete paranduste saavutamiseks ning kasuta RAG-i, kui mudel vajab värskeid fakte või ettevõtte privaatseid andmeid. Valige kohandamine, kui on piisavalt kvaliteetseid näiteid ja mudelit tuleb järjekindlalt jälgida töö, vormingu, tooni või valdkonna mustri osas.
+V: Kõik kolm aitavad. Alustage prompti loomise ja kontekstiga kiirete täiustuste jaoks ning kasutage RAG-i, kui mudel vajab ajakohaseid fakte või privaatseid ärilisi andmeid. Valige peenhäälestamine, kui teil on piisavalt kvaliteetseid näiteid ja soovite, et mudel järjekindlalt järgiks ülesande, vormingu, tooni või domeeni mustrit.
 
 ## 🚀 Väljakutse
 
-Loe lähemalt, kuidas saad [kasutada RAG-i](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst) oma ettevõttes.
+Loe rohkem sellest, kuidas saad oma äri jaoks [kasutada RAG-i](https://learn.microsoft.com/azure/search/retrieval-augmented-generation-overview?WT.mc_id=academic-105485-koreyst).
 
 ## Suurepärane töö, jätka õppimist
 
-Pärast selle õppetundi lõpetamist vaata meie [Generative AI õppematerjalide kogumikku](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata oma Generative AI teadmiste tõstmist!
+Pärast selle õppetunni lõpetamist vaata meie [Generative AI õppekogu](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata generatiivse tehisintellekti teadmiste arendamist!
 
-Liigu edasi õppetundi 3, kus vaatame, kuidas [ehitada Generative AI-d vastutustundlikult](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
+Liigu 3. õppetundi, kus vaatleme, kuidas [luua generatiivse tehisintellektiga vastutustundlikult](../03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
