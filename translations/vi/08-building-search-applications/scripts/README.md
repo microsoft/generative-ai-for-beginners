@@ -1,20 +1,20 @@
-# Chuẩn bị dữ liệu phiên âm
+# Chuẩn bị dữ liệu chuyển tự
 
-Các script chuẩn bị dữ liệu phiên âm tải transcript video YouTube và chuẩn bị chúng để sử dụng với ví dụ Semantic Search với OpenAI Embeddings và Functions.
+Các script chuẩn bị dữ liệu chuyển tự tải xuống bản ghi video YouTube và chuẩn bị chúng để sử dụng với ví dụ Semantic Search với OpenAI Embeddings và Functions.
 
-Các script chuẩn bị dữ liệu phiên âm đã được thử nghiệm trên các bản phát hành Windows 11, macOS Ventura và Ubuntu 22.04 (trở lên) mới nhất.
+Các script chuẩn bị dữ liệu chuyển tự đã được thử nghiệm trên các phiên bản mới nhất của Windows 11, macOS Ventura và Ubuntu 22.04 (và cao hơn).
 
 ## Tạo các tài nguyên Azure OpenAI Service cần thiết
 
 > [!IMPORTANT]
-> Chúng tôi đề xuất bạn cập nhật Azure CLI lên phiên bản mới nhất để đảm bảo tương thích với OpenAI
+> Chúng tôi khuyên bạn nên cập nhật Azure CLI lên phiên bản mới nhất để đảm bảo tương thích với OpenAI
 > Xem [Tài liệu](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Tạo một nhóm tài nguyên
 
 > [!NOTE]
-> Với các hướng dẫn này chúng tôi đang sử dụng nhóm tài nguyên tên "semantic-video-search" ở East US.
-> Bạn có thể đổi tên nhóm tài nguyên, nhưng khi thay đổi vị trí cho các tài nguyên,
+> Đối với các hướng dẫn này, chúng tôi sử dụng nhóm tài nguyên có tên "semantic-video-search" ở khu vực East US.
+> Bạn có thể thay đổi tên nhóm tài nguyên, nhưng khi thay đổi vị trí các tài nguyên,
 > hãy kiểm tra [bảng khả dụng mô hình](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
@@ -28,7 +28,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Lấy endpoint và khóa để sử dụng trong ứng dụng này
+1. Lấy điểm cuối và khóa để sử dụng trong ứng dụng này
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -39,7 +39,7 @@ az cognitiveservices account keys list --name semantic-video-openai \
 
 1. Triển khai các mô hình sau:
    - `text-embedding-ada-002` phiên bản `2` hoặc cao hơn, đặt tên `text-embedding-ada-002`
-   - `gpt-4o-mini` đặt tên `gpt-4o-mini`
+   - `gpt-5-mini` đặt tên `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,8 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -66,12 +66,12 @@ az cognitiveservices account deployment create \
 
 ## Biến môi trường
 
-Các biến môi trường sau là bắt buộc để chạy các script chuẩn bị dữ liệu phiên âm YouTube.
+Các biến môi trường sau đây là bắt buộc để chạy các script chuẩn bị dữ liệu chuyển tự YouTube.
 
 ### Trên Windows
 
 Khuyên bạn nên thêm các biến vào biến môi trường `user` của bạn.
-`Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` cho [USER] > `New`.
+`Windows Start` > `Chỉnh sửa biến môi trường hệ thống` > `Biến môi trường` > `Biến người dùng` dành cho [USER] > `Mới`.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -80,18 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-<!-- Bạn có thể thêm các biến môi trường vào profile PowerShell của bạn.
+<!-- Bạn có thể thêm các biến môi trường vào hồ sơ PowerShell của bạn.
 
 ```powershell
 $env:AZURE_OPENAI_API_KEY = "<khóa API Azure OpenAI Service của bạn>"
-$env:AZURE_OPENAI_ENDPOINT = "<endpoint Azure OpenAI Service của bạn>"
+$env:AZURE_OPENAI_ENDPOINT = "<điểm cuối Azure OpenAI Service của bạn>"
 $env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<tên triển khai mô hình Azure OpenAI Service của bạn>"
-$env:GOOGLE_DEVELOPER_API_KEY = "<khóa API developer Google của bạn>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<khóa API nhà phát triển Google của bạn>"
 ``` -->
 
 ### Trên Linux và macOS
 
-Khuyên bạn nên thêm các khai báo export sau vào file `~/.bashrc` hoặc `~/.zshrc` của bạn.
+Khuyên bạn nên thêm các câu lệnh xuất (exports) sau vào file `~/.bashrc` hoặc `~/.zshrc` của bạn.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -100,10 +100,10 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## Cài đặt các thư viện Python cần thiết
+## Cài đặt thư viện Python cần thiết
 
 1. Cài đặt [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) nếu chưa được cài.
-1. Từ cửa sổ `Terminal`, clone mẫu về thư mục repo bạn muốn.
+1. Từ cửa sổ `Terminal`, sao chép mẫu vào thư mục repo bạn muốn.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -157,7 +157,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## Chạy các script chuẩn bị dữ liệu phiên âm YouTube
+## Chạy các script chuẩn bị dữ liệu chuyển tự YouTube
 
 ### Trên Windows
 

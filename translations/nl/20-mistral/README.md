@@ -3,40 +3,40 @@
 ## Introductie 
 
 Deze les behandelt: 
-- Het verkennen van de verschillende Mistral-modellen 
-- Het begrijpen van de use-cases en scenario's voor elk model 
-- Het verkennen van codevoorbeelden die de unieke eigenschappen van elk model laten zien. 
+- Verkenning van de verschillende Mistral-modellen 
+- Begrip van de gebruiksscenario's voor elk model 
+- Verkenning van codevoorbeelden die de unieke kenmerken van elk model laten zien. 
 
 ## De Mistral-modellen 
 
-In deze les verkennen we 3 verschillende Mistral-modellen: 
+In deze les zullen we 3 verschillende Mistral-modellen verkennen: 
 **Mistral Large**, **Mistral Small** en **Mistral Nemo**. 
 
-Elk van deze modellen is gratis beschikbaar op [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst). De code in deze notebook gebruikt deze modellen om de code uit te voeren.
+Elk van deze modellen is gratis beschikbaar op [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst). De code in dit notitieboek maakt gebruik van deze modellen om de code uit te voeren.
 
-> **Opmerking:** GitHub Models wordt met eind juli 2026 uitgefaseerd. Hier zijn meer details over het gebruik van [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) om te prototypen met AI-modellen. 
+> **Opmerking:** GitHub Models wordt eind juli 2026 uitgefaseerd. Hier zijn meer details over het gebruik van [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) om te prototypen met AI-modellen. 
 
 
 ## Mistral Large 2 (2407)
 Mistral Large 2 is momenteel het vlaggenschipmodel van Mistral en is ontworpen voor zakelijk gebruik. 
 
-Dit model is een upgrade van het oorspronkelijke Mistral Large door het bieden van 
+Het model is een upgrade van de originele Mistral Large door het aanbieden van 
 -  Groter contextvenster - 128k vs 32k 
--  Betere prestaties bij wiskunde- en codeertaken - 76,9% gemiddelde nauwkeurigheid versus 60,4% 
--  Verbeterde meertalige prestaties - talen omvatten: Engels, Frans, Duits, Spaans, Italiaans, Portugees, Nederlands, Russisch, Chinees, Japans, Koreaans, Arabisch en Hindi.
+-  Betere prestaties op wiskunde- en codeertaken - 76,9% gemiddelde nauwkeurigheid vs 60,4% 
+-  Verbeterde meertalige prestaties - talen omvatten: Engels, Frans, Duits, Spaans, Italiaans, Portugees, Nederlands, Russisch, Chinees, Japans, Koreaan, Arabisch en Hindi.
 
 Met deze functies blinkt Mistral Large uit in 
 - *Retrieval Augmented Generation (RAG)* - dankzij het grotere contextvenster
-- *Function Calling* - dit model ondersteunt native function calling, wat integratie met externe tools en API's mogelijk maakt. Deze aanroepen kunnen zowel parallel als achtereenvolgens worden gedaan. 
-- *Codegeneratie* - dit model excelleert in het genereren van Python, Java, TypeScript en C++. 
+- *Functieoproep* - dit model heeft native functieoproepen waarmee integratie met externe tools en API's mogelijk is. Deze oproepen kunnen zowel parallel als achtereenvolgens in een sequentiële volgorde worden uitgevoerd. 
+- *Codegeneratie* - dit model blinkt uit in Python, Java, TypeScript en C++ generatie. 
 
 ### RAG-voorbeeld met Mistral Large 2 
 
-In dit voorbeeld gebruiken we Mistral Large 2 om een RAG-patroon toe te passen op een tekstdocument. De vraag is geschreven in het Koreaans en gaat over de activiteiten van de auteur voordat hij/zij naar de universiteit ging. 
+In dit voorbeeld gebruiken we Mistral Large 2 om een RAG-patroon toe te passen op een tekstdocument. De vraag is in het Koreaans geschreven en gaat over de activiteiten van de auteur vóór de universiteit. 
 
-Het gebruikt het Cohere Embeddings Model om embeddings van het tekstdocument en ook van de vraag te maken. Voor dit voorbeeld gebruikt het de faiss Python-package als vector store. 
+Het gebruikt het Cohere Embeddings Model om embeddings te maken van het tekstdocument en de vraag. Voor dit voorbeeld wordt de faiss Python-pakket als vectoropslag gebruikt. 
 
-De prompt die naar het Mistral-model wordt gestuurd bevat zowel de vragen als de opgehaalde tekststukken die vergelijkbaar zijn met de vraag. Het model geeft vervolgens een natuurlijke taalreactie. 
+De prompt die naar het Mistral-model wordt gestuurd, bevat zowel de vragen als de opgehaalde stukken die vergelijkbaar zijn met de vraag. Het model levert vervolgens een natuurlijk taalantwoord. 
 
 ```python 
 pip install faiss-cpu
@@ -53,7 +53,7 @@ from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.inference import EmbeddingsClient
 
-# Haal deze op van de "Overzicht" pagina van je Microsoft Foundry-project
+# Verkrijg deze van de "Overzicht" pagina van je Microsoft Foundry-project
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-large"
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
@@ -134,22 +134,22 @@ print(chat_response.choices[0].message.content)
 ```
 
 ## Mistral Small 
-Mistral Small is een ander model uit de Mistral-familie binnen de premier/enterprise categorie. Zoals de naam al doet vermoeden, is dit model een Klein Taalmodel (SLM). De voordelen van het gebruik van Mistral Small zijn: 
-- Kostenbesparing vergeleken met Mistral LLM's zoals Mistral Large en NeMo - 80% prijsverlaging
-- Lage latentie - snellere respons vergeleken met Mistral's LLM's
-- Flexibel - kan worden ingezet in verschillende omgevingen met minder beperkingen op vereiste middelen. 
+Mistral Small is een ander model in de Mistral-familie binnen de premier/ondernemingscategorie. Zoals de naam al zegt, is dit model een Klein Taalmodel (SLM). De voordelen van het gebruik van Mistral Small zijn: 
+- Kostenbesparing in vergelijking met Mistral LLM's zoals Mistral Large en NeMo - 80% prijsdaling
+- Lage latency - snellere reactie in vergelijking met Mistrals LLM's
+- Flexibel - kan in verschillende omgevingen worden ingezet met minder beperkingen op vereiste middelen. 
 
 
-Mistral Small is uitstekend geschikt voor: 
+Mistral Small is uitstekend voor: 
 - Tekstgebaseerde taken zoals samenvatting, sentimentanalyse en vertaling. 
-- Toepassingen waarbij frequent verzoeken worden gedaan vanwege de kosteneffectiviteit. 
-- Code taken met lage latentie zoals code reviews en codevoorstellen. 
+- Toepassingen waar frequent verzoeken worden gedaan vanwege de kosteneffectiviteit 
+- Codeertaken met lage latency zoals beoordeling en codevoorstellen 
 
 ## Vergelijking tussen Mistral Small en Mistral Large 
 
-Om de verschillen in latentie tussen Mistral Small en Large te tonen, voer je de onderstaande cellen uit. 
+Om de verschillen in latency tussen Mistral Small en Large te laten zien, voer je de onderstaande cellen uit. 
 
-Je zou een verschil in responstijden van 3-5 seconden moeten zien. Let ook op de reactielengte en stijl bij dezelfde prompt.  
+Je zou een verschil in responstijden van 3-5 seconden moeten zien. Let ook op de responslengte en stijl bij dezelfde prompt.  
 
 ```python 
 
@@ -211,24 +211,24 @@ print(response.choices[0].message.content)
 
 ## Mistral NeMo
 
-In vergelijking met de andere twee modellen die in deze les worden besproken, is Mistral NeMo het enige gratis model met een Apache2-licentie. 
+Vergeleken met de andere twee modellen besproken in deze les, is Mistral NeMo het enige gratis model met een Apache2-licentie. 
 
-Het wordt gezien als een upgrade van het eerdere open source LLM van Mistral, Mistral 7B. 
+Het wordt gezien als een upgrade van het eerdere open-source LLM van Mistral, Mistral 7B. 
 
 Enkele andere kenmerken van het NeMo-model zijn: 
 
-- *Efficiëntere tokenisatie:* Dit model gebruikt de Tekken-tokenizer in plaats van de meer gebruikelijke tiktoken. Dit zorgt voor betere prestaties voor meer talen en code. 
+- *Efficiëntere tokenisatie:* Dit model gebruikt de Tekken-tokenizer in plaats van de meer gebruikte tiktoken. Dit zorgt voor betere prestaties bij meerdere talen en code. 
 
-- *Fijn afstemmen:* Het basismodel is beschikbaar voor fijn afstemmen. Dit biedt meer flexibiliteit voor use-cases waar fijn afstemmen nodig kan zijn. 
+- *Fijn afstellen:* Het basismodel is beschikbaar voor fijn afstellen. Dit maakt het flexibeler voor gebruikssituaties waar fijn afstellen vereist kan zijn. 
 
-- *Native Function Calling* - Net als Mistral Large is dit model getraind op function calling. Dit maakt het uniek als een van de eerste open source modellen met deze eigenschap. 
+- *Native functieoproepen* - Net als Mistral Large is dit model getraind op functieoproepen. Dit maakt het uniek als een van de eerste open-source modellen die dit kunnen. 
 
 
 ### Vergelijking van tokenizers 
 
-In dit voorbeeld kijken we hoe Mistral NeMo tokenisatie aanpakt vergeleken met Mistral Large. 
+In dit voorbeeld bekijken we hoe Mistral NeMo tokenisatie afhandelt in vergelijking met Mistral Large. 
 
-Beide voorbeelden nemen dezelfde prompt, maar je zou moeten zien dat NeMo minder tokens teruggeeft dan Mistral Large. 
+Beide voorbeelden nemen dezelfde prompt, maar je zult zien dat NeMo minder tokens retourneert dan Mistral Large. 
 
 ```bash
 pip install mistral-common
@@ -246,7 +246,7 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Laad Mistral tokenizer
+# Laad Mistral-tokenizer
 
 model_name = "open-mistral-nemo"
 
@@ -302,7 +302,7 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Laad Mistral tokenizer
+# Laad Mistral-tokenizer
 
 model_name = "mistral-large-latest"
 
@@ -346,9 +346,9 @@ tokens, text = tokenized.tokens, tokenized.text
 print(len(tokens))
 ```
 
-## Leren stopt hier niet, ga verder met de reis
+## Leren stopt hier niet, ga door met de reis
 
-Na het voltooien van deze les, bekijk onze [Generative AI Learning-collectie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) om je kennis van Generative AI verder te vergroten!
+Na het voltooien van deze les, kijk dan eens naar onze [Generative AI Learning collectie](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) om je kennis van Generative AI verder uit te breiden!
 
 ---
 
