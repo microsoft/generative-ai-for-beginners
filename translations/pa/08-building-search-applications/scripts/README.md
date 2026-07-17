@@ -1,34 +1,34 @@
-# ਟ੍ਰਾਂਸਕ੍ਰਿਪਸ਼ਨ ਡੇਟਾ ਤਿਆਰੀ
+# ਟ੍ਰਾਂਸਕ੍ਰਿਪਸ਼ਨ ਡਾਟਾ ਤਿਆਰ ਕਰਨਾ
 
-ਟ੍ਰਾਂਸਕ੍ਰਿਪਸ਼ਨ ਡੇਟਾ ਤਿਆਰੀ ਸਕ੍ਰਿਪਟ YouTube ਵੀਡੀਓ ਟ੍ਰਾਂਸਕ੍ਰਿਪਟ ਡਾਊਨਲੋਡ ਕਰਦੀਆਂ ਹਨ ਅਤੇ ਉਨ੍ਹਾਂ ਨੂੰ OpenAI ਐਮਬੈੱਡਿੰਗ ਅਤੇ ਫੰਕਸ਼ਨਸ ਦੇ ਨਾਲ Semantic Search ਦੇ ਨਮੂਨੇ ਲਈ ਤਿਆਰ ਕਰਦੀਆਂ ਹਨ।
+ਟ੍ਰਾਂਸਕ੍ਰਿਪਸ਼ਨ ਡਾਟਾ ਤਿਆਰ ਕਰਨ ਵਾਲੇ ਸਕ੍ਰਿਪਟ ਯੂਟਿਊਬ ਵੀਡੀਓ ਟ੍ਰਾਂਸਕ੍ਰਿਪਟਸ ਡਾਊਨਲੋਡ ਕਰਦੇ ਹਨ ਅਤੇ ਇਹਨਾਂ ਨੂੰ Semantic Search with OpenAI Embeddings and Functions ਸੈਂਪਲ ਨਾਲ ਵਰਤੋਂ ਲਈ ਤਿਆਰ ਕਰਦੇ ਹਨ।
 
-ਟ੍ਰਾਂਸਕ੍ਰਿਪਸ਼ਨ ਡੇਟਾ ਤਿਆਰੀ ਸਕ੍ਰਿਪਟਾਂ ਨੂੰ ਨਵੀਆਂ ਰਿਲੀਜ਼ਾਂ Windows 11, macOS Ventura ਅਤੇ Ubuntu 22.04 (ਅਤੇ ਉੱਪਰ) 'ਤੇ ਟੈਸਟ ਕੀਤਾ ਗਿਆ ਹੈ।
+ਟ੍ਰਾਂਸਕ੍ਰਿਪਸ਼ਨ ਡਾਟਾ ਤਿਆਰ ਕਰਨ ਵਾਲੇ ਸਕ੍ਰਿਪਟ ਨਵੀਨਤਮ ਰਿਲੀਜ਼ਾਂ Windows 11, macOS Ventura ਅਤੇ Ubuntu 22.04 (ਅਤੇ ਉਪਰ) 'ਤੇ ਟੈਸਟ ਕੀਤੇ ਗਏ ਹਨ।
 
-## ਲੋੜੀਂਦੇ Azure OpenAI ਸਰਵਿਸ ਸਾਧਨ ਬਣਾਓ
+## ਲੋੜੀਂਦੇ Azure OpenAI Service ਸਰੋਤ ਬਣਾਓ
 
 > [!IMPORTANT]
-> ਅਸੀਂ ਸਿਫਾਰਸ਼ ਕਰਦੇ ਹਾਂ ਕਿ ਤੁਸੀਂ OpenAI ਨਾਲ ਸੁਮੇਲਤਾ ਯਕੀਨੀ ਬਣਾਉਣ ਲਈ Azure CLI ਨੂੰ ਨਵੀਂ ਵਰਜਨ 'ਤੇ ਅੱਪਡੇਟ ਕਰੋ
-> ਵੇਖੋ [ਡੌਕਯੂਮੇਂਟੇਸ਼ਨ](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
+> ਅਸੀਂ ਤੁਹਾਨੂੰ ਸਿਫਾਰਸ਼ ਕਰਦੇ ਹਾਂ ਕਿ ਤੁਸੀਂ OpenAI ਨਾਲ ਅਨੁਕੂਲਤਾ ਯਕੀਨੀ ਬਣਾਉਣ ਲਈ Azure CLI ਨੂੰ ਨਵੇਂ ਵਰਜਨ ਵਿੱਚ ਅਪਡੇਟ ਕਰੋ
+> ਦੇਖੋ [ਦਸਤਾਵੇਜ਼](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
-1. ਏਕ ਰਿਸੋਰਸ ਗਰੁੱਪ ਬਣਾਓ
+1. ਇੱਕ ਰਿਸੋਰਸ ਗਰੁੱਪ ਬਣਾਓ
 
 > [!NOTE]
-> ਇਹਨਾਂ ਹਦਾਇਤਾਂ ਲਈ ਅਸੀਂ East US ਵਿੱਚ "semantic-video-search" ਨਾਮਕ ਰਿਸੋਰਸ ਗਰੁੱਪ ਵਰਤ ਰਹੇ ਹਾਂ।
-> ਤੁਸੀਂ ਰਿਸੋਰਸ ਗਰੁੱਪ ਦਾ ਨਾਮ ਬਦਲ ਸਕਦੇ ਹੋ, ਪਰ ਜਦੋਂ ਤੁਸੀਂ ਸਾਧਨਾਂ ਦੀ ਥਾਂ ਬਦਲਦੇ ਹੋ,
-> ਤਾਂ [ਮਾਡਲ ਉਪਲਬਧਤਾ ਟੇਬਲ](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst) ਨੂੰ ਵੇਖੋ।
+> ਇਨ੍ਹਾਂ ਹਿਦਾਇਤਾਂ ਲਈ ਅਸੀਂ "semantic-video-search" ਨਾਂ ਦਾ ਰਿਸੋਰਸ ਗਰੁੱਪ East US ਵਿੱਚ ਵਰਤ ਰਹੇ ਹਾਂ।
+> ਤੁਸੀਂ ਰਿਸੋਰਸ ਗਰੁੱਪ ਦਾ ਨਾਂ ਬਦਲ ਸਕਦੇ ਹੋ, ਪਰ ਜਦੋਂ ਸਰੋਤਾਂ ਦੀ ਜਗ੍ਹਾ ਬਦਲਦੇ ਹੋ,
+> ਤਾਂ [ਮਾਡਲ ਉਪਲਬਧਤਾ ਟੇਬਲ](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst) ਦੀ ਜਾਂਚ ਕਰੋ।
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. ਇੱਕ Azure OpenAI ਸਰਵਿਸ ਸਾਧਨ ਬਣਾਓ।
+1. ਇੱਕ Azure OpenAI Service ਸਰੋਤ ਬਣਾਓ।
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. ਇਸ ਐਪਲੀਕੇਸ਼ਨ ਵਿੱਚ ਵਰਤੋਂ ਲਈ ਐਂਡਪੁਆਇੰਟ ਅਤੇ ਕੁੰਜੀਆਂ ਪ੍ਰਾਪਤ ਕਰੋ
+1. ਇਸ ਐਪਲੀਕੇਸ਼ਨ ਵਿੱਚ ਵਰਤੋਂ ਲਈ ਐਂਡਪੌਇੰਟ ਅਤੇ ਕੁੰਜੀਆਂ ਪ੍ਰਾਪਤ ਕਰੋ
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -37,9 +37,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. ਹੇਠਾਂ ਦਿੱਤੇ ਮਾਡਲ ਤਾਇਨਾਤ ਕਰੋ:
-   - `text-embedding-ada-002` ਵਰਜਨ `2` ਜਾਂ ਵੱਧ, ਜਿਸਨੂੰ `text-embedding-ada-002` ਨਾਮ ਦਿੱਤਾ ਗਿਆ ਹੈ
-   - `gpt-4o-mini` ਜਿਸਨੂੰ `gpt-4o-mini` ਨਾਮ ਦਿੱਤਾ ਗਿਆ ਹੈ
+1. ਹੇਠ ਲਿਖੇ ਮਾਡਲ ਤਾਇਨਾਤ ਕਰੋ:
+   - `text-embedding-ada-002` ਵਰਜਨ `2` ਜਾਂ ਵੱਧ, ਜਿਸਦਾ ਨਾਂ `text-embedding-ada-002` ਹੈ
+   - `gpt-5-mini` ਜਿਸਦਾ ਨਾਂ `gpt-5-mini` ਹੈ
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,25 +53,25 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
 ```
 
-## ਲੋੜੀਂਦਾ ਸਾਫਟਵੇਅਰ
+## ਲੋੜੀਂਦੀ ਸਾਫਟਵੇਅਰ
 
 - [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) ਜਾਂ ਵੱਧ
 
-## ਮਾਹੌਲੀਆ ਵੈਰੀਏਬਲ
+## ਵਾਤਾਵਰਣ ਪਰਿਵਰਤਨਸ਼ੀਲ
 
-YouTube ਟ੍ਰਾਂਸਕ੍ਰਿਪਸ਼ਨ ਡੇਟਾ ਤਿਆਰੀ ਸਕ੍ਰਿਪਟ ਚਲਾਉਣ ਲਈ ਹੇਠਾਂ ਦਿੱਤੇ ਮਾਹੌਲੀਆ ਵੈਰੀਏਬਲ ਲੋੜੀਂਦੇ ਹਨ।
+ਯੂਟਿਊਬ ਟ੍ਰਾਂਸਕ੍ਰਿਪਸ਼ਨ ਡਾਟਾ ਤਿਆਰ ਕਰਨ ਵਾਲੇ ਸਕ੍ਰਿਪਟ ਚਲਾਉਣ ਲਈ ਹੇਠਾਂ ਦਿੱਤੇ ਵਾਤਾਵਰਣ ਪਰਿਵਰਤਨਸ਼ੀਲ ਲੋੜੀਂਦੇ ਹਨ।
 
-### ਵਿੰਡੋਜ਼ 'ਤੇ
+### Windows 'ਤੇ
 
-ਸਿਫਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ ਕਿ ਤੁਸੀਂ ਇਹ ਵੈਰੀਏਬਲ ਆਪਣੇ `user` ਮਾਹੌਲ ਵੈਰੀਏਬਲਾਂ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ।
-`Windows Start` > `Edit the system environment variables` > `Environment Variables` > `[USER]` ਲਈ `User variables` > `New`.
+ਸਿਫਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ ਕਿ ਇਹ ਪਰਿਵਰਤਨਸ਼ੀਲ ਆਪਣੇ `user` ਵਾਤਾਵਰਣ ਪਰਿਵਰਤਨਸ਼ੀਲਾਂ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ।
+`Windows Start` > `Edit the system environment variables` > `Environment Variables` > `[USER]` ਲਈ `User variables` > `New`।
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -80,18 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-<!-- ਤੁਸੀਂ ਇਹ ਮਾਹੌਲ ਵੈਰੀਏਬਲ ਆਪਣੇ PowerShell ਪ੍ਰੋਫਾਈਲ ਵਿੱਚ ਵੀ ਜੋੜ ਸਕਦੇ ਹੋ।
+<!-- ਤੁਸੀਂ ਇਹ ਵਾਤਾਵਰਣ ਪਰਿਵਰਤਨਸ਼ੀਲ ਆਪਣੇ PowerShell ਪ੍ਰੋਫਾਈਲ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰ ਸਕਦੇ ਹੋ।
 
 ```powershell
-$env:AZURE_OPENAI_API_KEY = "<ਤੁਹਾਡੀ Azure OpenAI ਸਰਵਿਸ API ਕੁੰਜੀ>"
-$env:AZURE_OPENAI_ENDPOINT = "<ਤੁਹਾਡਾ Azure OpenAI ਸਰਵਿਸ ਐਂਡਪੁਆਇੰਟ>"
-$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<ਤੁਹਾਡਾ Azure OpenAI ਸਰਵਿਸ ਮਾਡਲ ਤਾਇਨਾਤੀ ਨਾਮ>"
-$env:GOOGLE_DEVELOPER_API_KEY = "<ਤੁਹਾਡੀ ਗੂਗਲ ਡਿਵੈਲਪਰ API ਕੁੰਜੀ>"
+$env:AZURE_OPENAI_API_KEY = "<ਤੁਹਾਡਾ Azure OpenAI Service API ਕੁੰਜੀ>"
+$env:AZURE_OPENAI_ENDPOINT = "<ਤੁਹਾਡਾ Azure OpenAI Service ਐਂਡਪੌਇੰਟ>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<ਤੁਹਾਡਾ Azure OpenAI Service ਮਾਡਲ ਤਾਇਨਾਤੀ ਨਾਂ>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<ਤੁਹਾਡਾ Google ਡਿਵੈਲਪਰ API ਕੁੰਜੀ>"
 ``` -->
 
-### ਲਿਨਕਸ ਅਤੇ macOS 'ਤੇ
+### Linux ਅਤੇ macOS 'ਤੇ
 
-ਸੋਝੀਦਾਰੀ ਹੈ ਕਿ ਤੁਸੀਂ ਹੇਠਾਂ ਦਿੱਤੇ ਨਿਰਯਾਤ ਆਪਣੇ `~/.bashrc` ਜਾਂ `~/.zshrc` ਫਾਈਲ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ।
+ਸਿਫਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ ਕਿ ਹੇਠਾਂ ਦਿੱਤੇ ਐਕਸਪੋਰਟ ਆਪਣੇ `~/.bashrc` ਜਾਂ `~/.zshrc` ਫਾਈਲ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ।
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -100,10 +100,10 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## ਲੋੜੀਂਦੀਆਂ Python ਲਾਇਬ੍ਰੇਰੀਆਂ ਇੰਸਟਾਲ ਕਰੋ
+## ਲੋੜੀਂਦੇ Python ਲਾਇਬ੍ਰੇਰੀਜ਼ ਇੰਸਟਾਲ ਕਰੋ
 
-1. ਜੇ ਨਹੀਂ ਕੀਤਾ ਤੁਸੀਂ [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) ਇੰਸਟਾਲ ਕਰੋ।
-1. ਇੱਕ `Terminal` ਵਿੰਡੋ ਤੋਂ, ਨਮੂਨਾ ਆਪਣੇ ਮਨਪਸੰਦ ਰੇਪੋ ਫੋਲਡਰ ਵਿੱਚ ਕਲੋਨ ਕਰੋ।
+1. [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) ਇੰਸਟਾਲ ਕਰੋ ਜੇਕਰ ਪਹਿਲਾਂ ਇੰਸਟਾਲ ਨਹੀਂ ਹੈ।
+1. ਇੱਕ `Terminal` ਵਿਂਡੋ ਤੋਂ ਸੈਂਪਲ ਨੂੰ ਆਪਣੀ ਪਸੰਦ ਦੇ ਰਿਪੋ ਫੋਲਡਰ ਵਿੱਚ ਕਲੋਨ ਕਰੋ।
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -115,57 +115,57 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. ਇੱਕ Python ਵਰਚੁਅਲ ਵਾਤਾਵਰਣ ਬਣਾਓ।
+1. ਇੱਕ Python ਵਰਚੁਅਲ ਅਵਰਨਾਰਨਮੈਂਟ ਬਣਾਓ।
 
-    ਵਿੰਡੋਜ਼ 'ਤੇ:
+    Windows 'ਤੇ:
 
     ```powershell
     python -m venv .venv
     ```
 
-    macOS ਅਤੇ ਲਿਨਕਸ 'ਤੇ:
+    macOS ਅਤੇ Linux 'ਤੇ:
 
     ```bash
     python3 -m venv .venv
     ```
 
-1. Python ਵਰਚੁਅਲ ਵਾਤਾਵਰਣ ਸਰਗਰਮ ਕਰੋ।
+1. Python ਵਰਚੁਅਲ ਅਵਰਨਾਰਨਮੈਂਟ ਐਕਟੀਵੇਟ ਕਰੋ।
 
-   ਵਿੰਡੋਜ਼ 'ਤੇ:
+   Windows 'ਤੇ:
 
    ```powershell
    .venv\Scripts\activate
    ```
 
-   macOS ਅਤੇ ਲਿਨਕਸ 'ਤੇ:
+   macOS ਅਤੇ Linux 'ਤੇ:
 
    ```bash
    source .venv/bin/activate
    ```
 
-1. ਲੋੜੀਂਦੀਆਂ ਲਾਇਬ੍ਰੇਰੀਆਂ ਇੰਸਟਾਲ ਕਰੋ।
+1. ਲੋੜੀਂਦੀਆਂ ਲਾਇਬ੍ਰੇਰੀਜ਼ ਇੰਸਟਾਲ ਕਰੋ।
 
-   ਵਿੰਡੋਜ਼ 'ਤੇ:
+   Windows 'ਤੇ:
 
    ```powershell
    pip install -r requirements.txt
    ```
 
-   macOS ਅਤੇ ਲਿਨਕਸ 'ਤੇ:
+   macOS ਅਤੇ Linux 'ਤੇ:
 
    ```bash
    pip3 install -r requirements.txt
    ```
 
-## YouTube ਟ੍ਰਾਂਸਕ੍ਰਿਪਸ਼ਨ ਡੇਟਾ ਤਿਆਰੀ ਸਕ੍ਰਿਪਟਾਂ ਚਲਾਓ
+## ਯੂਟਿਊਬ ਟ੍ਰਾਂਸਕ੍ਰਿਪਸ਼ਨ ਡਾਟਾ ਤਿਆਰ ਕਰਨ ਵਾਲੇ ਸਕ੍ਰਿਪਟ ਚਲਾਓ
 
-### ਵਿੰਡੋਜ਼ 'ਤੇ
+### Windows 'ਤੇ
 
 ```powershell
 .\transcripts_prepare.ps1
 ```
 
-### macOS ਅਤੇ ਲਿਨਕਸ 'ਤੇ
+### macOS ਅਤੇ Linux 'ਤੇ
 
 ```bash
 ./transcripts_prepare.sh
