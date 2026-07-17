@@ -1,34 +1,34 @@
 # AGENTS.md
 
-## 專案概述
+## 專案概覽
 
-此儲存庫包含完整的 21 課課程，教授生成式 AI 的基礎與應用開發。該課程專為初學者設計，覆蓋從基本概念到建置可投入生產的應用程式。
+這個儲存庫包含一個全面的 21 課程綱要，教授生成式 AI 的基礎知識及應用開發。課程設計適合初學者，涵蓋從基本概念到建立可投入生產的應用程式。
 
-**主要技術：**
-- Python 3.9+ 並使用函式庫：`openai`、`python-dotenv`、`tiktoken`、`azure-ai-inference`、`pandas`、`numpy`、`matplotlib`
-- TypeScript/JavaScript 使用 Node.js 及函式庫：`openai`（透過 v1 端點 + 回應 API 使用 Azure OpenAI）、`@azure-rest/ai-inference`（Microsoft Foundry 模型）
-- Azure OpenAI 服務、OpenAI API 及 Microsoft Foundry 模型（GitHub Models 將於 2026 年 7 月底退休）
-- 使用 Jupyter Notebooks 進行互動式學習
-- Dev Containers 提供一致的開發環境
+**關鍵技術：**
+- Python 3.9+ 與函式庫：`openai`、`python-dotenv`、`tiktoken`、`azure-ai-inference`、`pandas`、`numpy`、`matplotlib`
+- TypeScript/JavaScript 搭配 Node.js 及函式庫：`openai`（透過 v1 端點及 Responses API 使用 Azure OpenAI）、`@azure-rest/ai-inference`（微軟 Foundry 模型）
+- Azure OpenAI 服務、OpenAI API 與微軟 Foundry 模型（GitHub Models 將於 2026 年 7 月底退休）
+- 用於互動學習的 Jupyter 筆記本
+- 用於一致性開發環境的 Dev Containers
 
 **儲存庫結構：**
-- 21 個編號課程目錄（00-21），內含 README、程式碼範例及作業
-- 多種實作：Python、TypeScript，有時包含 .NET 範例
-- 翻譯目錄涵蓋 40 多種語言版本
-- 統一配置透過 `.env` 檔案（可使用 `.env.copy` 作為範本）
+- 21 個編號課程目錄（00-21），包含 README、代碼範例及作業
+- 多種實作：Python、TypeScript，有時也包含 .NET 範例
+- 翻譯目錄包含 40 多種語言版本
+- 透過 `.env` 檔案集中管理設定（使用 `.env.copy` 作為範本）
 
-## 安裝指令
+## 設定指令
 
-### 儲存庫初次設定
+### 初始儲存庫設定
 
 ```bash
-# 複製儲存庫
+# 複製倉庫
 git clone https://github.com/microsoft/generative-ai-for-beginners.git
 cd generative-ai-for-beginners
 
 # 複製環境範本
 cp .env.copy .env
-# 用你的 API 金鑰和端點編輯 .env
+# 編輯 .env，輸入你的 API 金鑰及端點
 ```
 
 ### Python 環境設定
@@ -47,42 +47,51 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### Node.js/TypeScript 環境設定
+### Node.js/TypeScript 設定
 
 ```bash
-# 安裝根目錄層級的依賴（用於文件工具）
+# 安裝根目錄層級的依賴項（用於文件工具）
 npm install
 
-# 若針對單一課程的 TypeScript 範例，請導航至該特定課程：
+# 對於個別課程的 TypeScript 範例，請導航至特定課程：
 cd 06-text-generation-apps/typescript/recipe-app
 npm install
 ```
 
-### Dev Container 設定（推薦）
+### Dev Container 設定（建議）
 
-儲存庫包含 `.devcontainer` 設定檔，適用於 GitHub Codespaces 或 VS Code Dev Containers：
+本儲存庫包含 `.devcontainer` 設定檔，可用於 GitHub Codespaces 或 VS Code Dev Containers：
 
-1. 於 GitHub Codespaces 或 VS Code（有 Dev Containers 擴充功能）中開啟儲存庫
-2. Dev Container 將自動執行：
-   - 從 `requirements.txt` 安裝 Python 依賴
-   - 執行 post-create 腳本（`.devcontainer/post-create.sh`）
-   - 設定 Jupyter kernel
+1. 在 GitHub Codespaces 或安裝了 Dev Containers 擴充功能的 VS Code 中開啟儲存庫
+2. Dev Container 會自動：
+   - 安裝 `requirements.txt` 中的 Python 相依套件
+   - 執行建立後腳本（`.devcontainer/post-create.sh`）
+   - 設定 Jupyter 核心
 
-## 開發流程
+## 開發工作流程
 
 ### 環境變數
 
-所有需使用 API 的課程皆透過 `.env` 中定義的環境變數：
+所有需存取 API 的課程皆使用 `.env` 中定義的環境變數：
 
 - `OPENAI_API_KEY` - 用於 OpenAI API
-- `AZURE_OPENAI_API_KEY` - 用於 Microsoft Foundry 中的 Azure OpenAI（Azure OpenAI 服務現為 Microsoft Foundry 一部分：https://ai.azure.com）
+- `AZURE_OPENAI_API_KEY` - 用於微軟 Foundry 的 Azure OpenAI（Azure OpenAI 服務現屬於微軟 Foundry：https://ai.azure.com）
 - `AZURE_OPENAI_ENDPOINT` - Azure OpenAI 端點 URL（Foundry 資源端點）
-- `AZURE_OPENAI_DEPLOYMENT` - 聊天完成模型部署名稱
-- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - 向量嵌入模型部署名稱
+- `AZURE_OPENAI_DEPLOYMENT` - 聊天完成模型部署名稱（課程預設：`gpt-5-mini`）
+- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - 嵌入模型部署名稱（課程預設：`text-embedding-3-small`）
 - `AZURE_OPENAI_API_VERSION` - API 版本（預設：`2024-10-21`）
 - `HUGGING_FACE_API_KEY` - 用於 Hugging Face 模型
-- `AZURE_INFERENCE_ENDPOINT` - Microsoft Foundry 模型端點（多供應商模型目錄）
-- `AZURE_INFERENCE_CREDENTIAL` - Microsoft Foundry 模型 API 金鑰（取代即將退役的 `GITHUB_TOKEN`）
+- `AZURE_INFERENCE_ENDPOINT` - 微軟 Foundry 模型端點（多供應商模型目錄）
+- `AZURE_INFERENCE_CREDENTIAL` - 微軟 Foundry 模型 API 金鑰（取代即將退休的 `GITHUB_TOKEN`）
+- `AZURE_INFERENCE_CHAT_MODEL` - 用於 `temperature` 範例的非推理模型（例如 `Llama-3.3-70B-Instruct`），因推理模型不支援抽樣控制
+
+### 模型規範（重要）
+
+- **預設聊天模型為 `gpt-5-mini`<strong> — 一款目前非棄用的 </strong>推理** 模型。2026 年起，較舊且支持 temperature 的 “mini” 模型（`gpt-4o-mini`、`gpt-4.1-mini`）將逐步淘汰，因此課程統一採用 GPT-5 系列。
+- **推理模型不接受 `temperature` 與 `top_p`**，取而代之使用 `max_output_tokens`（Responses API）/ `max_completion_tokens`（聊天完成）替代 `max_tokens`。請 <strong>勿</strong> 對呼叫 `gpt-5-mini` 的範例加入 `temperature`/`top_p`/`max_tokens`。
+- **為展示 `temperature`，範例使用 Llama 模型**（`Llama-3.3-70B-Instruct`），透過微軟 Foundry 模型的端點（`AZURE_INFERENCE_CHAT_MODEL`）呼叫。採用提示工程與推理控管方法引導推理模型，而非抽樣參數。
+- **微調（第 18 課）維持使用 `gpt-4.1-mini`**：GPT-5 目前僅支援強化學習微調（RFT），不支援此處的監督式微調（SFT）。
+- 第 20（Mistral）及第 21（Meta）課仍使用 `temperature`/`max_tokens`，因目標模型為支援該參數的 Mistral/Llama。
 
 ### 執行 Python 範例
 
@@ -90,14 +99,14 @@ npm install
 # 導航到課程目錄
 cd 06-text-generation-apps/python
 
-# 執行 Python 腳本
+# 執行一個 Python 腳本
 python aoai-app.py
 ```
 
 ### 執行 TypeScript 範例
 
 ```bash
-# 導航到 TypeScript 應用程式目錄
+# 導覽至 TypeScript 應用程式目錄
 cd 06-text-generation-apps/typescript/recipe-app
 
 # 編譯 TypeScript 程式碼
@@ -107,162 +116,162 @@ npm run build
 npm start
 ```
 
-### 執行 Jupyter Notebooks
+### 執行 Jupyter 筆記本
 
 ```bash
-# 喺儲存庫根目錄啟動 Jupyter
+# 由儲存庫根目錄啟動 Jupyter
 jupyter notebook
 
-# 或者用帶 Jupyter 擴展嘅 VS Code
+# 或使用帶有 Jupyter 擴充功能的 VS Code
 ```
 
 ### 處理不同類型的課程
 
-- **「學習」課程**：專注於 README.md 文檔及概念
-- **「建構」課程**：包含 Python 及 TypeScript 的運行範例
-- 每個課程都有 README.md，涵蓋理論、代碼導覽與影片連結
+- **「學習」課程**：著重於 README.md 說明文件與概念
+- **「建置」課程**：包含 Python 與 TypeScript 的可運作代碼範例
+- 每個課程均有 README.md，包括理論、代碼導覽及影片連結
 
-## 代碼風格準則
+## 程式碼風格準則
 
 ### Python
 
 - 使用 `python-dotenv` 管理環境變數
-- 引入 `openai` 函式庫以呼叫 API
-- 使用 `pylint` 偵錯（部分範例為簡化，包含 `# pylint: disable=all`）
+- 匯入 `openai` 函式庫進行 API 互動
+- 使用 `pylint` 進行程式碼檢查（部分範例為簡潔性加上 `# pylint: disable=all`）
 - 遵循 PEP 8 命名慣例
-- API 憑證儲存在 `.env` 檔案，絕不放入程式碼中
+- API 憑證存於 `.env` 檔案，切勿硬編碼於程式中
 
 ### TypeScript
 
 - 使用 `dotenv` 套件管理環境變數
-- 各應用的 TypeScript 設定在 `tsconfig.json`
-- 使用 `openai` 套件調用 Azure OpenAI（客戶端指向 `/openai/v1/` 端點，呼叫 `client.responses.create`）；使用 `@azure-rest/ai-inference` 呼叫 Microsoft Foundry 模型
-- 開發時使用 `nodemon` 自動重載
-- 執行前先編譯：`npm run build`，接著 `npm start`
+- 各應用的 TypeScript 設定於 `tsconfig.json`
+- 使用 `openai` 套件以呼叫 Azure OpenAI（指向 `/openai/v1/` 端點並呼叫 `client.responses.create`）；使用 `@azure-rest/ai-inference` 以調用微軟 Foundry 模型
+- 使用 `nodemon` 進行開發，具自動重載功能
+- 執行前先編譯：`npm run build`，接著啟動：`npm start`
 
-### 通用慣例
+### 一般慣例
 
-- 保持範例程式簡潔且具教學性
-- 含註解說明重點概念
-- 每課程的程式碼應自包含且能執行
-- 命名一致：Azure OpenAI 須以 `aoai-` 為前綴，OpenAI API 以 `oai-`，Microsoft Foundry 模型（從 GitHub Models 時代延續）以 `githubmodels-`
+- 保持範例代碼簡單，聚焦教學
+- 加入註解解釋關鍵概念
+- 每個單元的程式碼皆應獨立完整且可執行
+- 命名保持一致：Azure OpenAI 使用 `aoai-` 為前綴，OpenAI API 使用 `oai-`，微軟 Foundry 模型使用 `githubmodels-`（沿用 GitHub Models 時代的舊前綴）
 
-## 文件撰寫指引
+## 文件準則
 
-### Markdown 格式
+### Markdown 風格
 
-- 所有網址必須以 `[text](../../url)` 格式包裹，且中間不留空格
+- 所有網址需以 `[文字](../../網址)` 格式包裹，且不得有多餘空格
 - 相對連結必須以 `./` 或 `../` 開頭
-- 所有指向 Microsoft 領域的連結必須包含追蹤 ID：`?WT.mc_id=academic-105485-koreyst`
-- 網址中不使用國家特定語系路徑（避免 `/en-us/`）
-- 圖片存放於 `./images` 資料夾，名稱需描述性
-- 檔案名稱使用英文字母、數字和短橫線
+- 所有指向 Microsoft 領域的連結必須包括追蹤 ID：`?WT.mc_id=academic-105485-koreyst`
+- 避免網址中出現特定國家語系（避免 `/en-us/`）
+- 圖片儲存在 `./images` 資料夾，檔名需具描述性
+- 檔名使用英文字母、數字與連字號
 
 ### 翻譯支援
 
-- 儲存庫支援透過自動化 GitHub Actions 產生 40 多種語言版本
-- 翻譯檔存放於 `translations/` 目錄
+- 儲存庫透過自動化 GitHub Actions 支援 40 多種語言
+- 翻譯內容存於 `translations/` 目錄
 - 不接受部分翻譯提交
 - 不接受機器翻譯
-- 翻譯後的圖片存放於 `translated_images/` 目錄
+- 翻譯後的圖片存於 `translated_images/` 目錄
 
 ## 測試與驗證
 
 ### 提交前檢查
 
-此儲存庫使用 GitHub Actions 進行驗證。提交 PR 前：
+此儲存庫利用 GitHub Actions 進行驗證。提交 PR 前：
 
 1. **檢查 Markdown 連結**：
    ```bash
    # validate-markdown.yml 工作流程檢查：
-   # - 斷裂的相對路徑
-   # - 路徑上缺少追蹤 ID
-   # - URL 上缺少追蹤 ID
-   # - 包含國家地區代碼的 URL
-   # - 斷裂的外部 URL
+   # - 損壞的相對路徑
+   # - 路徑中缺失的追蹤 ID
+   # - URL 中缺失的追蹤 ID
+   # - 含有國家地區代碼的 URL
+   # - 損壞的外部 URL
    ```
 
 2. <strong>手動測試</strong>：
    - 測試 Python 範例：啟動 venv 並執行腳本
-   - 測試 TypeScript 範例：`npm install`、`npm run build`、`npm start`
-   - 確認環境變數配置正確
-   - 確認 API 金鑰能運作於程式碼範例
+   - 測試 TypeScript 範例：執行 `npm install`、`npm run build`、`npm start`
+   - 確認環境變數設定正確
+   - 測試 API 金鑰能於範例中正常使用
 
 3. <strong>程式碼範例</strong>：
-   - 確保所有程式碼能無錯誤執行
-   - 支援時同時測試 Azure OpenAI 及 OpenAI API
-   - 確認範例支援 Microsoft Foundry 模型時正常運作
+   - 確保所有代碼皆能無錯執行
+   - 具支援時，同時測試 Azure OpenAI 與 OpenAI API
+   - 確認與支持的 Microsoft Foundry 模型範例能正常運作
 
 ### 無自動化測試
 
-此為教學儲存庫，重點在教學與範例，無單元測試或整合測試。驗證主要依賴：
+這是一個教育性質的儲存庫，專注於教程與範例。無單元測試或整合測試執行。驗證主要依靠：
 - 手動測試程式碼範例
-- GitHub Actions 驗證 Markdown 格式
-- 社群審核教學內容
+- GitHub Actions 進行 Markdown 驗證
+- 社區對教育內容的審查
 
-## 取回請求指引
+## Pull Request 指南
 
-### 提交前注意事項
+### 提交前
 
-1. 針對 Python 和 TypeScript 進行程式碼變更測試（如適用）
+1. 於有關 Python 與 TypeScript 的修改均進行測試
 2. 執行 Markdown 驗證（PR 自動觸發）
-3. 確認所有 Microsoft 網址含追蹤 ID
-4. 檢查相對連結有效
+3. 確保所有微軟網址包含追蹤 ID
+4. 檢查相對連結有效性
 5. 確認圖片引用正確
 
 ### PR 標題格式
 
-- 使用具描述性的標題，例如 `[Lesson 06] 修正 Python 範例錯字` 或 `更新第08課 README`
-- 有關議題請標明修正關聯號碼，例如 `Fixes #123`
+- 使用具描述性的標題：`[Lesson 06] 修正 Python 範例錯字` 或 `更新第 08 課 README`
+- 適用時參考議題號碼：`Fixes #123`
 
 ### PR 說明
 
-- 說明更動內容及原因
-- 提供相關議題連結
-- 針對程式碼更動，說明測試範例
-- 針對翻譯 PR，需包含完整翻譯檔案
+- 說明變更內容與原因
+- 連結相關議題
+- 就程式碼變更指定已測試的範例
+- 翻譯 PR 請附上完整檔案以完成翻譯
 
-### 貢獻條件
+### 貢獻需求
 
-- 簽署 Microsoft CLA（首次 PR 自動完成）
-- 複製儲存庫至個人帳號後進行更改
-- 一個 PR 一項邏輯變更（避免合併無關修正）
-- 盡量保持 PR 專注且簡潔
+- 需簽署微軟 CLA（首次 PR 自動完成）
+- 在進行修改前，先將儲存庫分支到個人帳戶
+- 每次 PR 聚焦於一項邏輯變更（避免混合不相關修改）
+- 儘量保持 PR 精簡集中
 
 ## 常見工作流程
 
 ### 新增程式碼範例
 
 1. 前往相應課程目錄
-2. 於 `python/` 或 `typescript/` 子目錄新建範例
-3. 遵守命名規則：`{provider}-{example-name}.{py|ts|js}`
+2. 在 `python/` 或 `typescript/` 子目錄中建立範例
+3. 遵循命名規則：`{provider}-{example-name}.{py|ts|js}`
 4. 使用真實 API 憑證測試
-5. 於課程 README 中記錄任何新增的環境變數
+5. 在課程 README 文件中記錄新增的環境變數
 
 ### 更新文件
 
-1. 編輯課程目錄中的 README.md
-2. 遵循 Markdown 規範（追蹤 ID、相對連結）
-3. 翻譯由 GitHub Actions 自動處理（請勿手動修改）
-4. 確認所有連結有效
+1. 編輯課程目錄內的 README.md
+2. 遵循 Markdown 指南（追蹤 ID、相對連結）
+3. 翻譯由 GitHub Actions 自動處理（勿手動編輯）
+4. 測試所有連結有效
 
 ### 使用 Dev Containers
 
-1. 儲存庫包含 `.devcontainer/devcontainer.json`
-2. post-create 腳本會自動安裝 Python 依賴
-3. 已預配置 Python 與 Jupyter 擴充功能
+1. 儲存庫含 `.devcontainer/devcontainer.json`
+2. 建立後腳本自動安裝 Python 依賴
+3. 預先設定 Python 與 Jupyter 擴充功能
 4. 環境基於 `mcr.microsoft.com/devcontainers/universal:2.11.2`
 
-## 部署與發布
+## 部署與發佈
 
-這是學習用的儲存庫，無部署流程。課程內容透過以下方式使用：
+本儲存庫為學習用，無部署流程。課程使用方式包含：
 
 1. **GitHub 儲存庫**：直接存取程式碼與文件
-2. **GitHub Codespaces**：立即開啟預配置的開發環境
-3. **Microsoft Learn**：課程可能同步至官方學習平台
-4. **docsify**：從 Markdown 建立的文件站點（參見 `docsifytopdf.js` 與 `package.json`）
+2. **GitHub Codespaces**：即時開發環境與預設定置
+3. **Microsoft Learn**：內容可能經由官方學習平台發佈
+4. **docsify**：利用 Markdown 編譯成文件網站（參見 `docsifytopdf.js` 與 `package.json`）
 
-### 建置文件站點
+### 編譯文件網站
 
 ```bash
 # 從文件生成 PDF（如有需要）
@@ -274,43 +283,43 @@ npm run convert
 ### 常見問題
 
 **Python 匯入錯誤**：
-- 確認虛擬環境已啟動
+- 確認已啟用虛擬環境
 - 執行 `pip install -r requirements.txt`
-- 檢查 Python 版本需為 3.9 以上
+- 檢查 Python 版本是否為 3.9 以上
 
 **TypeScript 編譯錯誤**：
-- 在該應用目錄執行 `npm install`
+- 在特定應用目錄執行 `npm install`
 - 確認 Node.js 版本相容
-- 如有需要，清除 `node_modules` 後重新安裝
+- 若需要，刪除 `node_modules` 並重新安裝
 
 **API 認證錯誤**：
-- 確認 `.env` 檔案存在且值正確
+- 確認 `.env` 檔案存在且數值正確
 - 檢查 API 金鑰有效且未過期
-- 確認端點 URL 符合所屬地區
+- 確認端點 URL 符合您所在區域
 
 <strong>缺少環境變數</strong>：
-- 複製 `.env.copy` 為 `.env`
-- 填寫該課需要的所有欄位
+- 將 `.env.copy` 複製為 `.env`
+- 填寫您工作課程需要的所有值
 - 更新 `.env` 後重新啟動應用程式
 
-## 附加資源
+## 額外資源
 
 - [課程設定指南](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
-- [貢獻指引](./CONTRIBUTING.md)
-- [行為守則](./CODE_OF_CONDUCT.md)
+- [貢獻指南](./CONTRIBUTING.md)
+- [行為準則](./CODE_OF_CONDUCT.md)
 - [安全政策](./SECURITY.md)
 - [Azure AI Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
-- [進階程式碼範例集](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
+- [進階代碼範例彙整](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
 
-## 專案專屬說明
+## 專案特定說明
 
-- 這是一個<strong>教育用途儲存庫</strong>，側重學習，非生產程式碼
-- 範例有意簡化，專注於教學概念
-- 代碼品質與教學清晰度兼顧
-- 每課獨立且可獨立完成
-- 支援多個 API 供應商：Azure OpenAI、OpenAI、Microsoft Foundry 模型，以及離線供應商如 Foundry Local、Ollama
-- 內容多語言，並有自動翻譯工作流程
-- Discord 社群活躍，提供問題與支援服務
+- 本儲存庫為<strong>教育性質</strong>，專注學習，不是生產代碼
+- 範例特意保持簡單，聚焦在教學概念
+- 代碼品質與教學清晰度保持平衡
+- 各課程獨立完整，可獨立完成
+- 儲存庫支援多種 API 供應商：Azure OpenAI、OpenAI、微軟 Foundry 模型，以及離線供應商如 Foundry Local 和 Ollama
+- 內容多語言支持，自動化翻譯工作流
+- 活躍社區於 Discord，提供問題與支援
 
 ---
 
