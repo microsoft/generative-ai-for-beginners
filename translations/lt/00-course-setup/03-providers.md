@@ -1,54 +1,54 @@
-# LLM teikėjo pasirinkimas ir konfigūravimas 🔑
+# Pasirenkame ir konfigūruojame LLM teikėją 🔑
 
-Užduotys **taip pat gali būti** nustatytos veikti su vienu ar keliais Didelės kalbos modelio (LLM) diegimais per palaikomą paslaugų teikėją, pavyzdžiui, OpenAI, Azure arba Hugging Face. Šie teikėjai siūlo _talpinamą galinį tašką_ (API), prie kurio galime programiškai prisijungti su tinkamais prisijungimo duomenimis (API raktu arba žetonu). Šiame kurse aptariame šiuos teikėjus:
+Užduotys **gali** būti sukonfigūruotos taip, kad veiktų per vieną ar daugiau didelių kalbos modelių (LLM) diegimų per palaikytą paslaugų teikėją, tokį kaip OpenAI, Azure ar Hugging Face. Jie suteikia _hostintą taško prieigos vietą_ (API), prie kurios galime programiškai prisijungti turėdami tinkamus prieigos duomenis (API raktą ar žetoną). Šiame kurse aptariame šiuos teikėjus:
 
  - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) su įvairiais modeliais, įskaitant pagrindinę GPT seriją.
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) OpenAI modeliams, orientuotiems į verslo parengtį
- - [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) vienam galiniam taškui ir API raktui, leidžiant prisijungti prie šimtų modelių iš OpenAI, Meta, Mistral, Cohere, Microsoft ir kt. (pakeis GitHub Models, kuris nustos veikti 2026 m. liepos pabaigoje)
- - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) atvirojo kodo modeliams ir išvados serveriui
- - [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) arba [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst), jei norite modelius paleisti visiškai vietoje savo įrenginyje be debesijos prenumeratos
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-foundry/openai/?WT.mc_id=academic-105485-koreyst) OpenAI modeliams, akcentuojant paruošimą verslui.
+ - [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) su vienu taško prieigos vietos ir API raktu prieigai prie šimtų modelių iš OpenAI, Meta, Mistral, Cohere, Microsoft ir kt. (pakeičia GitHub Models, kurios bus nutrauktos 2026 m. liepos pabaigoje).
+ - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) atvirojo kodo modeliams ir inferencijos serveriui.
+ - [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) arba [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst), jei norite modelius paleisti visiškai neprisijungę savo įrenginyje, be jokios debesų prenumeratos.
 
-**Šioms užduotims reikės jūsų pačių paskyrų**. Užduotys yra neprivalomos, todėl galite pasirinkti nustatyti vieną, visus ar nė vieno teikėjo paslaugas pagal savo pomėgius. Štai kelios pildymo gairės:
+**Šioms užduotims reikės naudotis savo paskyromis**. Užduotys yra neprivalomos, tad galite pasirinkti sukonfigūruoti vieną, visus arba nė vieno iš teikėjų pagal savo pomėgius. Štai keletas patarimų registracijai:
 
-| Registracija | Kaina | API raktas | Žaidimų aikštelė | Pastabos |
+| Registracija | Kaina | API raktas | Demonstracija | Pastabos |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Kainodara](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Projekto bazėje](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Be kodo, web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Turtingas modelių pasirinkimas |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Kainodara](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK pradžia](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio pradžia](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Reikia iš anksto pateikti paraišką prieigai](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) | [Kainodara](https://azure.microsoft.com/pricing/details/ai-foundry/?WT.mc_id=academic-105485-koreyst) | [Projekto apžvalga](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) | [Foundry žaidimų aikštelė](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) | Nemokamas paketas yra; vienas galinis taškas + raktas daugeliui modelių teikėjų |
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Kainodara](https://huggingface.co/pricing) | [Prieigos žetonai](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat ribotas modelių pasirinkimas](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
-| [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) | Nemokama (veikia jūsų įrenginyje) | Nereikalingas | [Vietinis CLI/SDK](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) | Visiškai offline, OpenAI suderinamas galinis taškas |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Kainodara](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Projektų pagrindu](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Be kodo, internetinė](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Galima naudotis keletu modelių |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Kainodara](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK pradžiamokslis](https://learn.microsoft.com/azure/ai-foundry/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio pradžiamokslis](https://learn.microsoft.com/azure/ai-foundry/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Reikia iš anksto kreiptis dėl prieigos](https://learn.microsoft.com/azure/ai-foundry/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) | [Kainodara](https://azure.microsoft.com/pricing/details/ai-foundry/?WT.mc_id=academic-105485-koreyst) | [Projekto apžvalgos puslapis](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) | [Foundry demonstracija](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) | Galima nemokama versija; vienas taško prieigos vietos URL + raktas daugeliui modelių teikėjų |
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Kainodara](https://huggingface.co/pricing) | [Prieigos žetonai](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat turi ribotą modelių asortimentą](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) | Nemokama (veikia jūsų įrenginyje) | Nereikalinga | [Vietinis CLI/SDK](https://learn.microsoft.com/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) | Visiškai neprisijungusi, OpenAI suderinama taško prieigos vieta |
 | | | | | |
 
-Toliau pateiktos instrukcijos padės _konfigūruoti_ šį repozitoriją darbui su skirtingais teikėjais. Užduotyse, kurioms reikalingas konkretus teikėjas, failo pavadinimuose bus vienas iš šių žymų:
+Toliau pateiktos instrukcijos, kaip _konfigūruoti_ šį repozitorijų darbui su skirtingais teikėjais. Užduotys, reikalaujančios konkretaus teikėjo, turės vieną iš šių žymų savo failo pavadinime:
 
-- `aoai` - reikia Azure OpenAI galinio taško, rakto
-- `oai` - reikia OpenAI galinio taško, rakto
-- `hf` - reikia Hugging Face žetono
-- `githubmodels` - reikia Microsoft Foundry Models galinio taško, rakto (GitHub Models nustos veikti 2026 m. liepos pabaigoje)
+- `aoai` - reikalauja Azure OpenAI taško prieigos vietos ir rakto
+- `oai` - reikalauja OpenAI taško prieigos vietos ir rakto
+- `hf` - reikalauja Hugging Face žetono
+- `githubmodels` - reikalauja Microsoft Foundry Models taško prieigos vietos ir rakto (GitHub Models bus nutrauktos 2026 m. liepos pabaigoje)
 
-Galite konfigūruoti vieną, nė vieno ar visus teikėjus. Susijusios užduotys paprasčiausiai sugrąžins klaidą trūkstant prisijungimo duomenų.
+Galite konfigūruoti vieną, nė vieno ar visus teikėjus. Susijusios užduotys tiesiog grąžins klaidą pritrūkus leidimų.
 
 ## Sukurkite `.env` failą
 
-Manome, kad jau perskaitėte aukščiau pateiktas instrukcijas ir užsiregistravote pas atitinkamą teikėją bei gavote reikalingus autentifikacijos duomenis (API_RAKTAS arba žetoną). Azure OpenAI atveju taip pat turime turėti galiojančią Azure OpenAI paslaugos diegimą (galinį tašką) su bent vienu GPT modeliu pokalbių užbaigimui.
+Darome prielaidą, kad jau perskaitėte aukščiau pateiktas instrukcijas, užsiregistravote pas atitinkamą teikėją ir gavote reikiamus autentifikacijos duomenis (API_RAKTAS arba žetoną). Azure OpenAI atveju taip pat darant prielaidą, kad turite galiojantį Azure OpenAI paslaugos diegimą (taško prieigos vietą) su bent vienu GPT modeliu pokalbių užbaigimui.
 
-Kitas žingsnis – sukonfigūruoti savo **vietinius aplinkos kintamuosius** taip:
+Kitas žingsnis yra sukonfigūruoti jūsų **vietinius aplinkos kintamuosius** taip:
 
-1. Pažiūrėkite į šakninį aplanką, kur turėtų būti `.env.copy` failas su tokio turinio pavyzdžiu:
+1. Pagrindiniame aplanke raskite `.env.copy` failą, kuris turėtų atrodyti taip:
 
    ```bash
-   # OpenAI tiekėjas
+   # OpenAI paslaugų teikėjas
    OPENAI_API_KEY='<add your OpenAI API key here>'
 
-   ## Azure OpenAI Microsoft Foundry
+   ## Azure OpenAI Microsoft Foundry platformoje
    ## (Azure OpenAI paslauga dabar yra Microsoft Foundry dalis: https://ai.azure.com)
-   AZURE_OPENAI_API_VERSION='2024-10-21' # Numatytoji reikšmė nustatyta! (dabartinė stabili GA API versija)
+   AZURE_OPENAI_API_VERSION='2024-10-21' # Numatytoji reikšmė nustatyta! (dabar esama stabilioji GA API versija)
    AZURE_OPENAI_API_KEY='<add your Foundry resource key here>'
    AZURE_OPENAI_ENDPOINT='<add your Foundry resource endpoint here, e.g. https://<resource-name>.openai.azure.com>'
-   AZURE_OPENAI_DEPLOYMENT='<add your chat completion model deployment name here, e.g. gpt-4o-mini>'
+   AZURE_OPENAI_DEPLOYMENT='<add your chat completion model deployment name here, e.g. gpt-5-mini>'
    AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='<add your embeddings model deployment name here, e.g. text-embedding-3-small>'
 
-   ## Microsoft Foundry modeliai (daugia-tiekėjo modelių katalogas, pakeičia GitHub modelius, kurie bus nutraukti 2026 m. liepos pabaigoje)
+   ## Microsoft Foundry modeliai (daugiau paslaugų teikėjų modelių katalogas, pakeičia GitHub modelius, kurie bus nutraukti 2026 metų liepos pabaigoje)
    AZURE_INFERENCE_ENDPOINT='<add your Microsoft Foundry project endpoint here>'
    AZURE_INFERENCE_CREDENTIAL='<add your Microsoft Foundry Models API key here>'
 
@@ -56,96 +56,96 @@ Kitas žingsnis – sukonfigūruoti savo **vietinius aplinkos kintamuosius** tai
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. Nukopijuokite šį failą į `.env` naudodami šią komandą. Šis failas yra _gitignore_, todėl saugo jūsų slaptažodžius.
+2. Nukopijuokite jį į `.env` naudodami žemiau pateiktą komandą. Šis failas yra _gitignore mechanizme_, tad paslaptys išlieka saugios.
 
    ```bash
    cp .env.copy .env
    ```
 
-3. Užpildykite reikšmes (pakeiskite dešinėje pusėje esančius laikinuosius simbolius po =), kaip aprašyta kitame skyriuje.
+3. Užpildykite reikšmes (pakeiskite dešinėje po `=` esančius žymeklius) kaip aprašyta kitame skyriuje.
 
-4. (Pasirinktinai) Jei naudojate GitHub Codespaces, galite įrašyti aplinkos kintamuosius kaip _Codespaces secrets_, susietus su šiuo repozitorijumi. Tokiu atveju nereikės kurti vietinio .env failo. **Tačiau atkreipkite dėmesį, kad ši galimybė veikia tik su GitHub Codespaces.** Jei naudojate Docker Desktop, .env failas vis tiek turi būti sukurtas.
+4. (Pasirinktinai) Jei naudojate GitHub Codespaces, galite išsaugoti aplinkos kintamuosius kaip _Codespaces paslaptis_ susietas su šiuo repozitorium. Tokiu atveju nereikės kurti vietinio .env failo. **Tačiau atkreipkite dėmesį, kad ši galimybė veikia tik naudojant GitHub Codespaces.** Jei naudojate Docker Desktop, .env failą vis tiek reikės sukurti.
 
 ## Užpildykite `.env` failą
 
-Pažvelkime į kintamųjų pavadinimus ir supraskime, ką jie reiškia:
+Pažvelkime greitai į kintamųjų pavadinimus, kad suprastume, ką jie reiškia:
 
 | Kintamasis  | Aprašymas  |
 | :--- | :--- |
-| HUGGING_FACE_API_KEY | Tai yra vartotojo prieigos žetonas, kurį nustatėte savo profilyje |
-| OPENAI_API_KEY | Tai yra autorizacijos raktas naudojant ne Azure OpenAI galinius taškus |
-| AZURE_OPENAI_API_KEY | Tai yra autorizacijos raktas naudojant Azure OpenAI paslaugą |
-| AZURE_OPENAI_ENDPOINT | Tai yra Azure OpenAI išdiegto galinio taško adresas |
-| AZURE_OPENAI_DEPLOYMENT | Tai yra _teksto generavimo_ modelio diegimo galinis taškas |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Tai yra _teksto įterpimo_ modelio diegimo galinis taškas |
-| AZURE_INFERENCE_ENDPOINT | Tai yra Microsoft Foundry projekto galinis taškas, naudojamas Microsoft Foundry Models |
-| AZURE_INFERENCE_CREDENTIAL | Tai yra API raktas jūsų Microsoft Foundry projektui |
+| HUGGING_FACE_API_KEY | Tai vartotojo prieigos žetonas, kurį nustatėte savo profilyje |
+| OPENAI_API_KEY | Tai autorizacijos raktas naudojant ne Azure OpenAI taško prieigos vietas |
+| AZURE_OPENAI_API_KEY | Tai autorizacijos raktas naudojant Azure OpenAI paslaugą |
+| AZURE_OPENAI_ENDPOINT | Tai diegta Azure OpenAI išteklių taško prieigos vieta |
+| AZURE_OPENAI_DEPLOYMENT | Tai _teksto generavimo_ modelio diegimo taško prieigos vieta |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Tai _teksto įterpimų_ (embedding) modelio diegimo taško prieigos vieta |
+| AZURE_INFERENCE_ENDPOINT | Tai jūsų Microsoft Foundry projekto taško prieigos vieta, naudojama Microsoft Foundry modeliams |
+| AZURE_INFERENCE_CREDENTIAL | Tai API raktas jūsų Microsoft Foundry projektui |
 | | |
 
-Pastaba: Paskutiniai du Azure OpenAI kintamieji atspindi numatytąjį modelį pokalbių užbaigimui (teksto generavimui) ir vektorinėms paieškoms (įterpimams) atitinkamai. Nurodymai, kaip juos nustatyti, bus pateikti atitinkamose užduotyse.
+Pastaba: Paskutiniai du Azure OpenAI kintamieji atspindi numatytą modelį pokalbių užbaigimui (teksto generavimui) ir vektorinėms paieškoms (embeddingams). Nurodymai juos nustatyti bus aprašyti atitinkamose užduotyse.
 
-## Azure OpenAI konfigūravimas: per Portalą
+## Konfigūruokite Azure OpenAI: per Portalą
 
-> **Pastaba:** Azure OpenAI paslauga dabar yra [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) dalis. Ištekliai ir diegimai vis dar matomi Azure portale, tačiau kasdienis modelio valdymas (diegimai, žaidimų aikštelė, stebėjimas) vyksta Foundry portale, o ne senojoje atskiroje „Azure OpenAI Studio“ aplinkoje.
+> **Pastaba:** Azure OpenAI paslauga dabar yra [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) dalis. Ištekliai ir diegimai vis dar matomi Azure portale, tačiau kasdienis modelių valdymas (diegimai, demonstracinė aplinka, stebėjimas) vyksta Foundry portale vietoj senojo atskiro "Azure OpenAI Studio".
 
-Azure OpenAI galinio taško ir rakto reikšmes rasite [Azure portale](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), tad pradėkime ten.
+Azure OpenAI taško prieigos vietos ir rakto reikšmes rasite [Azure Portale](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), tad pradėkime nuo ten.
 
-1. Eikite į [Azure portalą](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
-1. Šoniniame meniu (kaip kairėje) spustelėkite pasirinkimą **Keys and Endpoint**.
-1. Spustelėkite **Show Keys** – turėtumėte matyti KEY 1, KEY 2 ir Endpoint.
+1. Eikite į [Azure Portalą](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
+1. Kairiajame meniu spustelėkite **Keys and Endpoint**.
+1. Spauskite **Show Keys** – turėtumėte matyti: KEY 1, KEY 2 ir Endpoint.
 1. Naudokite KEY 1 reikšmę kaip AZURE_OPENAI_API_KEY
 1. Naudokite Endpoint reikšmę kaip AZURE_OPENAI_ENDPOINT
 
-Toliau mums reikės specifinių modelių galinių taškų, kuriuos įdiegėme.
+Toliau reikia rasti specifinių diegimų taško prieigos vietas.
 
-1. Šoniniame meniu (kairėje) Azure OpenAI ištekliui spustelėkite **Model deployments**.
-1. Paskirties puslapyje spustelėkite **Eiti į Microsoft Foundry portalą** (arba **Valdyti diegimus**, priklausomai nuo išteklių tipo).
+1. Kairiajame meniu spauskite **Model deployments** jūsų Azure OpenAI ištekliui.
+1. Nukreiptoje puslapio vietoje pasirinkite **Go to Microsoft Foundry portal** (arba **Manage Deployments**, priklausomai nuo jūsų išteklių tipo)
 
-Jums bus atidarytas Microsoft Foundry portalas, kuriame rasime kitas reikšmes, kaip aprašyta žemiau.
+Tai nuves jus į Microsoft Foundry portalą, kur rasime kitus reikalingus duomenis, kaip aprašyta toliau.
 
-## Azure OpenAI konfigūravimas: per Microsoft Foundry portalą
+## Konfigūruokite Azure OpenAI: per Microsoft Foundry portalą
 
-1. Eikite į [Microsoft Foundry portalą](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) **per savo išteklių** kaip aprašyta prieš tai.
-1. Spustelėkite skirtuką **Deployments** (šoninis meniu kairėje), kad pamatytumėte šiuo metu įdiegtus modelius.
-1. Jei norimas modelis nėra įdiegtas, naudokite **Deploy model**, kad diegtumėte jį iš [modelių katalogo](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
-1. Jums reikės _teksto generavimo_ modelio – rekomenduojame: **gpt-4o-mini**
-1. Jums reikės _teksto įterpimo_ modelio – rekomenduojame **text-embedding-3-small**
+1. Eikite į [Microsoft Foundry portalą](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) **per savo išteklių**, kaip aprašyta aukščiau.
+1. Skiltyje **Deployments** (kairiojoje šoninėje juostoje) peržiūrėkite šiuo metu diegiamus modelius.
+1. Jei norimas modelis nėra diegiamas, naudokite **Deploy model** ir pasirinkite jį iš [modelių katalogo](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
+1. Jums reikės _teksto generavimo_ modelio – rekomenduojame: **gpt-5-mini**
+1. Jums reikės _teksto įterpimų_ modelio – rekomenduojame **text-embedding-3-small**
 
-Dabar atnaujinkite aplinkos kintamuosius, kad atspindėtumėte naudotą _Deployment name_. Tai paprastai bus toks pat kaip modelio pavadinimas, nebent jūs jį aiškiai pakeitėte. Pavyzdžiui, galite turėti:
+Dabar atnaujinkite aplinkos kintamuosius, kad juose būtų nurodytas _Deployment name_, naudojamas diegimui. Tai paprastai yra tas pats, kas modelio pavadinimas, nebent jį eksplicitiškai pakeitėte. Pavyzdžiui, galite turėti:
 
 ```bash
-AZURE_OPENAI_DEPLOYMENT='gpt-4o-mini'
+AZURE_OPENAI_DEPLOYMENT='gpt-5-mini'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-3-small'
 ```
 
-**Nepamirškite išsaugoti .env failo pabaigus**. Dabar galite uždaryti failą ir grįžti prie tolesnių instrukcijų, kaip paleisti užrašų knygelę.
+**Nepamirškite įrašyti .env failo pabaigus.** Dabar galite uždaryti failą ir grįžti prie užduočių vykdymo instrukcijų.
 
-## OpenAI konfigūravimas: per profilį
+## Konfigūruokite OpenAI: Profile
 
-Jūsų OpenAI API raktą rasite savo [OpenAI paskyroje](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Jei jo neturite, galite užsiregistruoti ir sukurti API raktą. Kai turėsite raktą, jį įrašykite į `OPENAI_API_KEY` kintamąjį `.env` faile.
+Jūsų OpenAI API raktą rasite savo [OpenAI paskyroje](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Jei neturite, susikurkite paskyrą ir susikurkite API raktą. Gavę raktą, naudokite jį reikšmei `OPENAI_API_KEY` `.env` faile.
 
-## Hugging Face konfigūravimas: per profilį
+## Konfigūruokite Hugging Face: Profile
 
-Savo Hugging Face žetoną rasite profilyje skiltyje [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Nepublikuokite ar nesidalinkite juo viešai. Vietoje to sukurkite naują žetoną šiam projektui ir nukopijuokite jį į `.env` failą po `HUGGING_FACE_API_KEY` kintamuoju. _Pastaba:_ techniškai tai nėra API raktas, bet naudojamas autentifikacijai, todėl laikomės šios pavadinimo konvencijos dėl nuoseklumo.
+Jūsų Hugging Face žetoną rasite savo profilyje po [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Neskelbkite jo viešai. Vietoje to susikurkite naują žetoną šiam projektui ir nukopijuokite jį į `.env` failą po kintamuoju `HUGGING_FACE_API_KEY`. _Pastaba:_ techniškai tai nėra API raktas, bet naudojama autentifikacijai, todėl laikome tokią pavadinimų konvenciją dėl nuoseklumo.
 
-## Microsoft Foundry Models konfigūravimas: per Portalą
+## Konfigūruokite Microsoft Foundry Models: per Portalą
 
-> **Pastaba:** GitHub Models nustos veikti 2026 m. liepos pabaigoje. Microsoft Foundry Models yra tiesioginis pakeitimas, siūlantis tą patį nemokamą bandomąjį modelių katalogą ir Azure AI Inference SDK / OpenAI SDK patirtį.
+> **Pastaba:** GitHub Models bus nutrauktos 2026 m. liepos pabaigoje. Microsoft Foundry Models yra tiesioginis pakeitimas, suteikiantis tokį pat nemokamo bandymo modelių katalogą bei Azure AI Inferencijos SDK / OpenAI SDK patirtį.
 
 1. Eikite į [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) ir sukurkite (arba atidarykite) Foundry projektą.
-1. Peržiūrėkite [modelių katalogą](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) ir diegkite modelį, pvz., `gpt-4o-mini`.
-1. Projekto **Overview** puslapyje nukopijuokite **galinį tašką** ir **API raktą**.
-1. Naudokite galinio taško reikšmę `AZURE_INFERENCE_ENDPOINT` ir rakto reikšmę `AZURE_INFERENCE_CREDENTIAL` savo `.env` faile.
+1. Peržiūrėkite [modelių katalogą](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) ir įdiekite modelį, pavyzdžiui `gpt-5-mini`.
+1. Projekto **Overview** puslapyje nukopijuokite **taško prieigos vietos URL** ir **API raktą**.
+1. Naudokite taško prieigos vietos URL reikšmei `AZURE_INFERENCE_ENDPOINT` ir raktą reikšmei `AZURE_INFERENCE_CREDENTIAL` savo `.env` faile.
 
-## Offline / Vietiniai teikėjai
+## Neprisijungę / Vietiniai teikėjai
 
-Jei nenorite naudoti debesijos prenumeratos, galite palaikomus atvirus modelius paleisti tiesiogiai savo įrenginyje:
+Jei nenorite visai naudoti debesų prenumeratos, suderinamus atvirus modelius galite paleisti tiesiogiai savo įrenginyje:
 
-- **[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst)** – Microsoft vietinis vykdymo variklis. Automatiškai pasirenka geriausią vykdymo teikėją (NPU, GPU arba CPU) ir pateikia OpenAI suderinamą galinį tašką, todėl daugelį pavyzdinių kodo dalių šiame kurse galėsite naudoti su minimaliais pakeitimais. Žr. [Foundry Local dokumentaciją](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) pradėti arba įdiekite su `winget install Microsoft.FoundryLocal` (Windows) / `brew install microsoft/foundrylocal/foundrylocal` (macOS).
-- **[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst)** – populiari alternatyva vietoje paleisti atvirus modelius, tokius kaip Llama, Phi, Mistral ir Gemma.
+- **[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst)** – Microsoft įrenginio vykdymo aplinka. Ji automatiškai parenka geriausią vykdymo teikėją (NPU, GPU arba CPU) ir pateikia OpenAI suderinamą taško prieigos vietą, tad galite daugumą pavyzdinių šio kurso kodų naudoti beveik be pakeitimų. Pradžiai žiūrėkite [Foundry Local dokumentaciją](https://learn.microsoft.com/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) arba įdiekite naudodami `winget install Microsoft.FoundryLocal` (Windows) / `brew install microsoft/foundrylocal/foundrylocal` (macOS).
+- **[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst)** – populiari alternatyva atvirų modelių, tokių kaip Llama, Phi, Mistral ir Gemma, vietiniam paleidimui.
 
 
-Peržiūrėkite [19 pamoką: Statyba naudojant SLM](../19-slm/README.md?WT.mc_id=academic-105485-koreyst) dėl praktinių pavyzdžių, naudojant abiejus variantus.
+Žr. [19 pamoka: Statyba su SLM](../19-slm/README.md?WT.mc_id=academic-105485-koreyst) praktinius pavyzdžius, kuriuose naudojamos abi galimybės.
 
 ---
 
