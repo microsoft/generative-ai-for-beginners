@@ -1,34 +1,34 @@
-# ಲಿಪ್ಯಂತರಣ ಡೇಟಾ ಸಿದ್ಧತೆ
+# ಲಿಪ್ಯಂತರಣ ಡೇಟಾ ತಯಾರಿ
 
-ಲಿಪ್ಯಂತರಣ ಡೇಟಾ ಸಿದ್ಧತೆ ಸ್ಕ್ರಿಪ್ಟ್‌ಗಳು YouTube ವೀಡಿಯೊ ಲಿಪ್ಯಂತರಣಗಳನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ Semantic Search with OpenAI Embeddings and Functions ಮಾದರಿಗಾಗಿ ಬಳಸಲು ಸಿದ್ಧಪಡಿಸುತ್ತವೆ.
+ಲಿಪ್ಯಂತರಣ ಡೇಟಾ ತಯಾರಿ ಸ್ಕ್ರಿಪ್ಟ್‌ಗಳು YouTube ವಿಡಿಯೋ ಲಿಪ್ಯಂತರಗಳನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡುತ್ತವೆ ಮತ್ತು ಅವನ್ನು OpenAI ಅಂಟಿಕೆಗಳೊಂದಿಗೆ ಸೆಮಾಂಟಿಕ್ ಸರ್ಚ್ ಮತ್ತು ಕ್ರಿಯೆಗಳ ಉದಾಹರಣೆಯಲ್ಲಿ ಬಳಕೆಗೆ ತಯಾರಿಸುತ್ತವೆ.
 
-ಲಿಪ್ಯಂತರಣ ಡೇಟಾ ಸಿದ್ಧತೆ ಸ್ಕ್ರಿಪ್ಟ್‌ಗಳನ್ನು Windows 11, macOS Ventura ಮತ್ತು Ubuntu 22.04 (ಮತ್ತು ಮೇಲ್ಪಟ್ಟಿರುವ) ಇತ್ತೀಚಿನ ಬಿಡುಗಡೆಯ ಮೇಲೆ ಪರೀಕ್ಷಿಸಲಾಗಿದೆ.
+ಲಿಪ್ಯಂತರಣ ಡೇಟಾ ತಯಾರಿ ಸ್ಕ್ರಿಪ್ಟ್‌ಗಳಿಗೆ ಇತ್ತೀಚಿನ ಬಿಡುಗಡೆಯಾದ Windows 11, macOS Ventura ಮತ್ತು Ubuntu 22.04 (ಮತ್ತು ಮೇಲಕರು) ಮೇಲೆ ಪರೀಕ್ಷಿಸಲಾಗಿದೆ.
 
-## ಅಗತ್ಯವಿರುವ Azure OpenAI ಸೇವಾ ಸಂಪನ್ಮೂಲಗಳನ್ನು ಸೃಷ್ಟಿಸಿ
+## ಅಗತ್ಯವಿರುವ Azure OpenAI ಸೇವೆ ಸಂಪನ್ಮೂಲಗಳನ್ನು ರಚಿಸಿ
 
 > [!IMPORTANT]
-> OpenAI ಜೊತೆ ಹೊಂದಾಣಿಕೆಯನ್ನು ಖಚಿತಪಡಿಸಲು ಸ್ವಲ್ಪಮಾಡಿದ Azure CLI ನವೀಕರಿಸುವುದನ್ನು ನಾವು ಶಿಫಾರಸು ಮಾಡುತ್ತೇವೆ
+> OpenAI ಸಹಕಾರಕ್ಕಾಗಿ ಖಚಿತತೆ ಮಾಡಿಕೊಳ್ಳಲು Azure CLI ಅನ್ನು ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಗೆ ನವಿಕರಿಸಲು ನಾವು ಸಲಹೆ ನೀಡುತ್ತೇವೆ
 > [ಡಾಕ್ಯುಮೆಂಟೇಶನ್](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst) ನೋಡಿ
 
-1. ಒಂದು ಸಂಪನ್ಮೂಲ ಗುಂಪು ಸೃಷ್ಟಿಸಿ
+1. ಒಂದು ಸಂಪನ್ಮೂಲ ಗುಂಪನ್ನು ರಚಿಸಿ
 
 > [!NOTE]
-> ಈ ಸೂಚನೆಗಳಲ್ಲಿ, ನಾವು East US ನಲ್ಲಿ "semantic-video-search" ಎನ್ನುವ ಸಂಪನ್ಮೂಲ ಗುಂಪನ್ನು ಬಳಕೆ ಮಾಡುತ್ತಿದ್ದೇವೆ.
-> ನೀವು ಸಂಪನ್ಮೂಲ ಗುಂಪಿನ ಹೆಸರನ್ನು ಬದಲಾಯಿಸಬಹುದು, ಆದರೆ ಸಂಪನ್ಮೂಲಗಳ ಸ್ಥಳವನ್ನು ಬದಲಿಸುವಾಗ
-> [ಮಾದರಿ ಲಭ್ಯತೆಯ ಪಟ್ಟಿಯನ್ನು](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst) ಪರಿಶೀಲಿಸಿ.
+> ಈ ಸೂಚನೆಗಳಿಗೆ ನಾವು "semantic-video-search" ಎನ್ನುವ ಹೆಸರಿನ ಸಂಪನ್ಮೂಲ ಗುಂಪನ್ನು ಈಸ್ಟ್ ಯುಎಸ್ ನಲ್ಲಿ ಬಳಸುತ್ತಿದ್ದೇವೆ.
+> ಸಂಪನ್ಮೂಲಗಳ ಸ್ಥಾನವನ್ನು ಬದಲಾಯಿಸುವಾಗ, ನೀವು ಸಂಪನ್ಮೂಲ ಗುಂಪಿನ ಹೆಸರನ್ನು ಬದಲಾಯಿಸಬಹುದು,
+> [ಮಾದರಿ ಲಭ್ಯತೆ ಫಲಕ](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst) ಅನ್ನು ಪರಿಶೀಲಿಸಿ.
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. ಒಂದು Azure OpenAI ಸೇವಾ ಸಂಪನ್ಮೂಲವನ್ನು ಸೃಷ್ಟಿಸಿ.
+1. ಒಂದು Azure OpenAI ಸೇವೆ ಸಂಪನ್ಮೂಲವನ್ನು ರಚಿಸಿ.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. ಈ ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ ಉಪಯೋಗಿಸಲು ಎಂಡ್ಪಾಯಿಂಟ್ ಮತ್ತು ಕೀಗಳನ್ನು ಪಡೆಯಿರಿ
+1. ಈ ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ ಬಳಕೆಗೆ ಎಂಡ್‌ಪಾಯಿಂಟ್ ಮತ್ತು ಕೀಗಳನ್ನು ಪಡೆಯಿರಿ
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -38,8 +38,8 @@ az cognitiveservices account keys list --name semantic-video-openai \
 ```
 
 1. ಕೆಳಗಿನ ಮಾದರಿಗಳನ್ನು ನಿಯೋಜಿಸಿ:
-   - `text-embedding-ada-002` ಆವೃತ್ತಿ `2` ಅಥವಾ ಮೇಲ್ಪಟ್ಟಿರುವ, `text-embedding-ada-002` ಎಂದು ಹೆಸರು ಮಾಡಲಾಗಿದೆ
-   - `gpt-4o-mini` ಎಂದು ಹೆಸರು ಮಾಡಲಾಗಿದೆ `gpt-4o-mini`
+   - `text-embedding-ada-002` ಸಂಸ್ಕರಣಾ `2` ಅಥವಾ ಹಿರಿಯ, ಹೆಸರು `text-embedding-ada-002`
+   - `gpt-5-mini` ಹೆಸರು `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,8 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -62,16 +62,16 @@ az cognitiveservices account deployment create \
 
 ## ಅಗತ್ಯವಿರುವ ಸಾಫ್ಟ್‌ವೇರ್
 
-- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) ಅಥವಾ ಮೇಲ್ಪಟ್ಟಿರುವ
+- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) ಅಥವಾ ಮೇಲಿನ ಆವೃತ್ತಿ
 
-## ಪರಿಸರ ಚರಗಳು
+## ಪರಿಸರ ವ್ಯತ್ಯاسಗಳು
 
-YouTube ಲಿಪ್ಯಂತರಣ ಡೇಟಾ ಸಿದ್ಧತೆ ಸ್ಕ್ರಿಪ್ಟ್‌ಗಳನ್ನು ಚಾಲನೆ ಮಾಡುವ uchun ಕೆಳಗಿನ ಪರಿಸರ ಚರಗಳು ಅಗತ್ಯ.
+YouTube ಲಿಪ್ಯಂತರಣ ಡೇಟಾ ತಯಾರಿ ಸ್ಕ್ರಿಪ್ಟ್‌ಗಳನ್ನು ಚಾಲನೆ ಮಾಡಲು ಕೆಳಗಿನ ಪರಿಸರ ವ್ಯತ್ಯಾಸಗಳು ಅಗತ್ಯವಿದ್ದು.
 
-### વિન્ડೋಸ್ ಮೇಲೆ
+### ವಿಂಡೋಸ್ ನಲ್ಲಿ
 
-ನಿಮ್ಮ `user` ಪರಿಸರ ಚರಗಳಿಗೆ ವ್ಯತ್ಯಾಸಗಳನ್ನು ಸೇರಿಸಲು ಶಿಫಾರಸು ಮಾಡಲಾಗುತ್ತದೆ.
-`Windows ಪ್ರಾರಂಭ` > `ಸಿಸ್ಟಂ ಪರಿಸರ ಚರಗಳನ್ನು ಸಂಪಾದಿಸಿ` > `ಪರಿಸರ ಚರಗಳು` > `[USER]`ಗಾಗಿ ಬಳಕೆದಾರ ಚರಗಳು > `ಹೊಸದು`.
+ನಿಮ್ಮ `user` ಪರಿಸರ ವ್ಯತ್ಯಾಸಗಳಲ್ಲಿ ವ್ಯತ್ಯಾಸಗಳನ್ನು ಸೇರಿಸುವುದು ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ.
+`Windows Start` > `Edit the system environment variables` > `Environment Variables` > [USER] ಗೆ `User variables` > `New`.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -80,18 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-<!-- ನೀವು ನಿಮ್ಮ PowerShell ಪ್ರೊಫೈಲ್‌ಗೆ ಪರಿಸರ ಚರಗಳನ್ನು ಸೇರಿಸಬಹುದು.
+<!-- ನೀವು ನಿಮ್ಮ PowerShell ಪ್ರೊಫೈಲ್‌ಗೆ ಪರಿಸರ ವ್ಯತ್ಯಾಸಗಳನ್ನು ಸೇರಿಸಬಹುದು.
 
 ```powershell
-$env:AZURE_OPENAI_API_KEY = "<ನಿಮ್ಮ Azure OpenAI ಸೇವೆ API ಕೀ>"
-$env:AZURE_OPENAI_ENDPOINT = "<ನಿಮ್ಮ Azure OpenAI ಸೇವೆ ಎಂಡ್ಪಾಯಿಂಟ್>"
-$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<ನಿಮ್ಮ Azure OpenAI ಸೇವೆ ಮಾದರಿ ನಿಯೋಜನೆ ಹೆಸರು>"
-$env:GOOGLE_DEVELOPER_API_KEY = "<ನಿಮ್ಮ Google ಅಭಿವೃದ್ಧಿ API ಕೀ>"
+$env:AZURE_OPENAI_API_KEY = "<ನಿಮ್ಮ Azure OpenAI ಸರ್ವಿಸ್ API ಕೀ>"
+$env:AZURE_OPENAI_ENDPOINT = "<ನಿಮ್ಮ Azure OpenAI ಸರ್ವಿಸ್ ಎಂಡ್ ಪಾಯಿಂಟ್>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<ನಿಮ್ಮ Azure OpenAI ಸರ್ವಿಸ್ ಮಾದರಿ ನಿಯೋಜನೆ ಹೆಸರು>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<ನಿಮ್ಮ Google ಡೆವಲಪರ್ API ಕೀ>"
 ``` -->
 
 ### ಲಿನಕ್ಸ ಮತ್ತು macOS ನಲ್ಲಿ
 
-ನಿಮ್ಮ `~/.bashrc` ಅಥವಾ `~/.zshrc` ಫೈಲಿನಲ್ಲಿ ಕೆಳಗಿನ ರಫ್ತುಗಳನ್ನು ಸೇರಿಸಲು ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ.
+ಕೆಳಗಿನ ರಫ್ತಿಗಳನ್ನು ನಿಮ್ಮ `~/.bashrc` ಅಥವಾ `~/.zshrc` ಫೈಲ್ ಗೆ ಸೇರಿಸಲು ಶಿಫಾರಸು ಮಾಡುತ್ತದೆ.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -100,16 +100,16 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## ಅಗತ್ಯವಿರುವ Python ಲೈಬ್ರರಿಗಳನ್ನು ಸ್ಥಾಪಿಸಿ
+## ಅಗತ್ಯ Python ಗ್ರಂಥಾಲಯಗಳನ್ನು ಸ್ಥಾಪಿಸಿ
 
-1. [git ಕ್ಲೈಂಟ್](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) ಇಷ್ಟಿಲ್ಲದಿದ್ದರೆ ಅದನ್ನು ಸ್ಥಾಪಿಸಿ.
-1. `ಟರ್ಮಿನಲ್` ಕಿಟಕಿಯಿಂದ, ಮಾದರಿಯನ್ನು ನಿಮ್ಮ ಇಚ್ಚಿತ ರೆಪೋ ಫೋಲ್ಡರ್‌ಗೆ ಕ್ಲೋನ್ ಮಾಡಿ.
+1. ನೀವು ಈಗಾಗಲೇ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡದಿದ್ದರೆ [git ಕ್ಲೈಂಟ್](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) ಅನ್ನು ಸ್ಥಾಪಿಸಿ.
+1. `Terminal` ಕಿಟಕಿಯಿಂದ, ನಿಮ್ಮ ಇಚ್ಛಿತ ರೆಪೋ ಫೋಲ್ಡರ್‌ಗೆ ಉದಾಹರಣೆಯನ್ನು ಕ್ಲೋನ್ ಮಾಡಿ.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
     ```
 
-1. `data_prep` ಫೋಲ್ಡರ್‌ಗೆ ಹೋಗಿ.
+1. `data_prep` ಫೋಲ್ಡರ್‌ಗೆ ನವಿಗೇಟ್ ಮಾಡಿ.
 
    ```bash
    cd semanic-search-openai-embeddings-functions/src/data_prep
@@ -117,13 +117,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Python ವರ್ಚುವಲ್ ಪರಿಸರವನ್ನು ರಚಿಸಿ.
 
-    Windows ನಲ್ಲಿ:
+    ವಿಂಡೋಸ್‌ನಲ್ಲಿ:
 
     ```powershell
     python -m venv .venv
     ```
 
-    macOS ಮತ್ತು ಲಿನಕ್ಸಿನಲ್ಲಿ:
+    macOS ಮತ್ತು ಲಿನಕ್ಸ್ನಲ್ಲಿ:
 
     ```bash
     python3 -m venv .venv
@@ -131,41 +131,41 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Python ವರ್ಚುವಲ್ ಪರಿಸರವನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ.
 
-   Windows ನಲ್ಲಿ:
+   ವಿಂಡೋಸ್‌ನಲ್ಲಿ:
 
    ```powershell
    .venv\Scripts\activate
    ```
 
-   macOS ಮತ್ತು ಲಿನಕ್ಸಿನಲ್ಲಿ:
+   macOS ಮತ್ತು ಲಿನಕ್ಸ್ನಲ್ಲಿ:
 
    ```bash
    source .venv/bin/activate
    ```
 
-1. ಅಗತ್ಯವಿರುವ ಲೈಬ್ರರಿಗಳನ್ನು ಸ್ಥಾಪಿಸಿ.
+1. ಅಗತ್ಯವಿರುವ ಗ್ರಂಥಾಲಯಗಳನ್ನು ಸ್ಥಾಪಿಸಿ.
 
-   Windows ನಲ್ಲಿ:
+   ವಿಂಡೋಸ್‌ನಲ್ಲಿ:
 
    ```powershell
    pip install -r requirements.txt
    ```
 
-   macOS ಮತ್ತು ಲಿನಕ್ಸಿನಲ್ಲಿ:
+   macOS ಮತ್ತು ಲಿನಕ್ಸ್ನಲ್ಲಿ:
 
    ```bash
    pip3 install -r requirements.txt
    ```
 
-## YouTube ಲಿಪ್ಯಂತರಣ ಡೇಟಾ ಸಿದ್ಧತೆ ಸ್ಕ್ರಿಪ್ಟ್‌ಗಳನ್ನು ನೆರವೇರಿಸಿ
+## YouTube ಲಿಪ್ಯಂತರಣ ಡೇಟಾ ತಯಾರಿ ಸ್ಕ್ರಿಪ್ಟ್‌ಗಳನ್ನು ರನ್ ಮಾಡಿ
 
-### Windows ನಲ್ಲಿ
+### ವಿಂಡೋಸ್‌ನಲ್ಲಿ
 
 ```powershell
 .\transcripts_prepare.ps1
 ```
 
-### macOS ಮತ್ತು ಲಿನಕ್ಸಿನಲ್ಲಿ
+### macOS ಮತ್ತು ಲಿನಕ್ಸ್ನಲ್ಲಿ
 
 ```bash
 ./transcripts_prepare.sh

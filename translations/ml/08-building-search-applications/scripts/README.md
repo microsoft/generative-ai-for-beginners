@@ -1,34 +1,34 @@
-# ട്രാൻസ്‌ക്രിപ്ഷൻ ഡാറ്റ തയ്യാറാക്കൽ
+# ട്രാൻസ്ക്രിപ്ഷൻ ഡാറ്റ പ്രിപ്പ്
 
-ട്രാൻസ്‌ക്രിപ്ഷൻ ഡാറ്റ തയ്യാറാക്കൽ സ്ക്രിപ്റ്റുകൾ YouTube വീഡിയോകളുടെ ട്രാൻസ്‌ക്രിപ്റ്റുകൾ ഡൗൺലോഡ് ചെയ്ത് Semantic Search with OpenAI Embeddings and Functions സാംപിളിനായി ഉപയോഗിക്കാൻ തയ്യാറാക്കുന്നു.
+ട്രാൻസ്ക്രിപ്ഷൻ ഡാറ്റ പ്രിപ്പ് സ്ക്രിപ്റ്റുകൾ YouTube വീഡിയോ ട്രാൻസ്ക്രിപ്റ്റുകൾ ഡൗൺലോഡ് ചെയ്യുകയും OpenAI എംബെഡിംഗുകളും ഫംക്ഷനുകളും ഉപയോഗിക്കുന്ന സെമാന്റിക് സെർച്ചിനു വേണ്ടി തയ്യാറാക്കുകയും ചെയ്യുന്നു.
 
-ട്രാൻസ്‌ക്രിപ്ഷൻ ഡാറ്റ തയ്യാറാക്കൽ സ്ക്രിപ്റ്റുകൾ അടുത്തിടെ പുറത്തിറങ്ങിയ Windows 11, macOS Ventura, Ubuntu 22.04 (മറ്റും മുകളിൽ) എന്നിവയിൽ പരീക്ഷിച്ചിട്ടുണ്ട്.
+ട്രാൻസ്ക്രിപ്ഷൻ ഡാറ്റ പ്രിപ്പ് സ്ക്രിപ്റ്റുകൾ ഏറ്റവും പുതിയ റിലീസായ Windows 11, macOS Ventura, Ubuntu 22.04 (മാഫ്‌) എന്നിവയിൽ പരീക്ഷിക്കപ്പെട്ടിരിക്കുന്നു.
 
-## ആവശ്യമായ Azure OpenAI സർവീസ് വിഭവങ്ങൾ സൃഷ്‌ടിക്കുക
+## ആവശ്യമായ Azure OpenAI Service വിഭവങ്ങൾ സൃഷ്ടിക്കൽ
 
 > [!IMPORTANT]
-> OpenAI-യുമായുള്ള അനുയോജ്യത ഉറപ്പാക്കാൻ നിങ്ങൾ Azure CLI ഏറ്റവും പുതിയ പതിപ്പിലേക്ക് അപ്ഡേറ്റ് ചെയ്യണമെന്ന് നാം നിർദ്ദേശിക്കുന്നു
-> [ഡോക്യുമെന്റേഷൻ](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst) കാണുക
+> OpenAI-യുമായി പൊരുത്തപ്പെടുന്നതിനായി Azure CLI ഏറ്റവും പുതിയ പതിപ്പിലേക്ക് അപ്‌ഡേറ്റ് ചെയ്യാൻ നാം നിർദ്ദേശിക്കുന്നു
+> [Documentation](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst) കാണുക
 
-1. ഒരു റിസോഴ്‌സ് ഗ്രൂപ്പ് സൃഷ്‌ടിക്കുക
+1. ഒരു റിസോർസ് ഗ്രൂപ്പ് സൃഷ്ടിക്കുക
 
 > [!NOTE]
-> ഈ നിർദ്ദേശങ്ങൾക്കായി നാം "semantic-video-search" എന്ന പേരിലുള്ള റിസോഴ്‌സ് ഗ്രൂപ്പ് East US-യിൽ ഉപയോഗിക്കുന്നുണ്ട്.
-> റിസോഴ്‌സുകളുടെ സ്ഥാനം മാറ്റുമ്പോഴെന്തെങ്കിലും, റിസോഴ്‌സ് ഗ്രൂപ്പിന്റെ പേര് നിങ്ങൾ മാറ്റാൻ കഴിയും,
+> ഈ നിർദ്ദേശങ്ങൾക്കായി നാം East US-ൽ നാമകരണം ചെയ്ത "semantic-video-search" റിസോഴ്സ് ഗ്രൂപ്പ് ഉപയോഗിക്കുന്നു.
+> റിസോഴ്സുകളുടെ സ്ഥാനമാറ്റം വരുമ്പോൾ റിസോർസ് ഗ്രൂപ്പിന്റെ പേര് മാറ്റാം, പക്ഷേ 
 > [model availability table](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst) പരിശോധിക്കുക.
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. ഒരു Azure OpenAI സർവീസ് റിസോഴ്‌സ് സൃഷ്‌ടിക്കുക.
+1. ഒരു Azure OpenAI Service വിഭവം സൃഷ്ടിക്കുക.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. ഈ ആപ്ലിക്കേഷൻ ഉപയോഗിക്കുന്നതിന് എൻഡ്പോയിന്റും കീകളും നേടുക
+1. ഈ അപ്ലിക്കേഷനിൽ ഉപയോഗത്തിനായി എന്റ്പോയിന്റും കീകളും കൈപ്പറ്റുക
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -37,9 +37,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. താഴെപ്പറയുന്ന മോഡലുകൾ ഡിപ്ലോയ് ചെയ്യുക:
-   - `text-embedding-ada-002` പതിപ്പ് `2` അല്ലെങ്കിൽ അതിൽ കൂടുതൽ, പേര് `text-embedding-ada-002`
-   - `gpt-4o-mini` പേരുള്ളത് `gpt-4o-mini`
+1. താഴെപ്പറയുന്ന മോഡലുകൾ വിന്യസിക്കുക:
+   - `text-embedding-ada-002` പതിപ്പ് `2` അല്ലെങ്കിൽ അതിനുശേഷം, പേര് `text-embedding-ada-002`
+   - `gpt-5-mini` പേര് `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,25 +53,25 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
 ```
 
-## ആവശ്യമായ സോഫ്‌റ്റ്‌വെയർ
+## ആവശ്യമായ സോഫ്റ്റ്‌വെയർ
 
-- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) അല്ലെങ്കിൽ അതിൽ കൂടുതൽ
+- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) അല്ലെങ്കിൽ അതിനുശേഷം
 
-## പരിസ്ഥിതി വ്യത്യാസങ്ങൾ
+## പരിസ്ഥിതി വ്യത്യസ്ഥങ്ങൾ
 
-YouTube ട്രാൻസ്‌ക്രിപ്ഷൻ ഡാറ്റ തയ്യാറാക്കൽ സ്ക്രിപ്റ്റുകൾ പ്രവർത്തിക്കാൻ താഴെ പറയുന്ന പരിസ്ഥിതി വ്യത്യാസങ്ങൾ ആവശ്യമാണ്.
+YouTube ട്രാൻസ്ക്രിപ്ഷൻ ഡാറ്റ പ്രിപ്പ് സ്ക്രിപ്റ്റുകൾ പ്രവർത്തിപ്പിക്കാൻ താഴെപ്പറയുന്ന പരിസ്ഥിതി വ്യത്യസ്ഥങ്ങൾ ആവശ്യമുണ്ട്.
 
 ### Windows-ൽ
 
-ഈ വ്യത്യാസങ്ങൾ നിങ്ങളുടെ `user` പരിസ്ഥിതി വ്യത്യാസങ്ങളിൽ ചേർക്കാൻ ശുപാർശ ചെയ്‌യുന്നു.
-`Windows Start` > `Edit the system environment variables` > `Environment Variables` > [USER]ന്റെ `User variables` > `New`.
+`user` പരിസ്ഥിതി വ്യത്യസ്ഥങ്ങളെ നിങ്ങളുടെ സജസ്റ്റുചെയ്യുന്നു.
+`Windows Start` > `Edit the system environment variables` > `Environment Variables` > [USER] നുള്ള `User variables` > `New`.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -80,18 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-<!-- നിങ്ങൾക്ക് ഈ പരിസ്ഥിതി വ്യത്യാസങ്ങൾ നിങ്ങളുടെ PowerShell പ്രൊഫൈലിൽ ചേർക്കാം.
+<!-- നിങ്ങൾ പരിസ്ഥിതി വ്യത്യസ്ഥങ്ങൾ നിങ്ങളുടെ PowerShell പ്രൊഫയലില്‍ ചേർക്കാം.
 
 ```powershell
-$env:AZURE_OPENAI_API_KEY = "<നിങ്ങളുടെ Azure OpenAI സർവീസ് API കീ>"
-$env:AZURE_OPENAI_ENDPOINT = "<നിങ്ങളുടെ Azure OpenAI സർവീസ് എൻഡ്പോയിന്റ്>"
-$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<നിങ്ങളുടെ Azure OpenAI സർവീസ് മോഡൽ ഡിപ്ലോയ്മെന്റ് പേര്>"
-$env:GOOGLE_DEVELOPER_API_KEY = "<നിങ്ങളുടെ Google ഡെവലപ്പർ API കീ>"
+$env:AZURE_OPENAI_API_KEY = "<your Azure OpenAI Service API key>"
+$env:AZURE_OPENAI_ENDPOINT = "<your Azure OpenAI Service endpoint>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<your Azure OpenAI Service model deployment name>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<your Google developer API key>"
 ``` -->
 
-### Linux, macOS-ൽ
+### Linux-ഉം macOS-ഉം
 
-ഈ‍റെ എക്സ്പോർട്ടുകൾ നിങ്ങളുടെ `~/.bashrc` അല്ലെങ്കിൽ `~/.zshrc` ഫയലിൽ ചേർക്കാൻ ശുപാർശ ചെയ്യുന്നു.
+നിങ്ങൾക്ക് ശുപാർശ ചെയ്യുന്നത് താഴെപ്പറയുന്ന എക്സ്പോർട്ടുകൾ നിങ്ങളുടെ `~/.bashrc` അല്ലെങ്കിൽ `~/.zshrc` ഫയലിൽ ചേർക്കുക എന്നതാണ്.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -100,22 +100,22 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## ആവശ്യമായ Python ലൈബ്രററികൾ ഇൻസ്റ്റാൾ ചെയ്യുക
+## ആവശ്യമായ Python ലൈബ്രറികൾ ഇൻസ്റ്റാൾ ചെയ്യുക
 
-1. [Git ക്ലയന്റ്](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ലെങ്കിൽ അത് ഇൻസ്റ്റാൾ ചെയ്യുക.
-1. ഒരു `Terminal` വിൻഡോയിൽ നിന്ന് സാംപിൾ നിങ്ങളുടെ ഇഷ്ടപ്പെട്ട റിപ്പോ ഫോൾഡറിലേക്ക് ക്ലോൺ ചെയ്യുക.
+1. [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) ഇന്സ്റ്റാൾ ചെയ്തിട്ടില്ലെങ്കിൽ ഇൻസ്റ്റാൾ ചെയ്യുക.
+1. `Terminal` വിംഡോയിൽ നിന്നു് സാമ്പിൾ നിങ്ങളുടെ ഇഷ്ടപ്പെട്ട റെപ്പോ ഫോൾഡറിലേക്ക് ക്ലോൺ ചെയ്യുക.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
     ```
 
-1. `data_prep` ഫോൾഡറിലേക്ക് നാവിഗേറ്റ് ചെയ്യുക.
+1. `data_prep` ഫോൾഡർ കാണുക.
 
    ```bash
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. ഒരു Python വെർച്ച്വൽ എൻവയോൺമെന്റ് സൃഷ്‌ടിക്കുക.
+1. ഒരു Python വെർച്വൽ എൻവയോൺമെന്റ് സൃഷ്ടിക്കുക.
 
     Windows-ൽ:
 
@@ -123,13 +123,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     python -m venv .venv
     ```
 
-    macOS, Linux-ൽ:
+    macOS-ഉം Linux-ഉം:
 
     ```bash
     python3 -m venv .venv
     ```
 
-1. Python വെർച്ച്വൽ എൻവയോൺമെന്റ് ആക്ടിവേറ്റ് ചെയ്യുക.
+1. Python വെർച്വൽ എൻവയോൺമെന്റ് സജീവമാക്കുക.
 
    Windows-ൽ:
 
@@ -137,13 +137,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    .venv\Scripts\activate
    ```
 
-   macOS, Linux-ൽ:
+   macOS-ഉം Linux-ഉം:
 
    ```bash
    source .venv/bin/activate
    ```
 
-1. ആവശ്യമായ ലൈബ്രററികൾ ഇൻസ്റ്റാൾ ചെയ്യുക.
+1. ആവശ്യമായ ലൈബ്രറികൾ ഇൻസ്റ്റാൾ ചെയ്യുക.
 
    Windows-ൽ:
 
@@ -151,13 +151,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip install -r requirements.txt
    ```
 
-   macOS, Linux-ൽ:
+   macOS-ഉം Linux-ഉം:
 
    ```bash
    pip3 install -r requirements.txt
    ```
 
-## YouTube ട്രാൻസ്‌ക്രിപ്ഷൻ ഡാറ്റ തയ്യാറാക്കൽ സ്ക്രിപ്റ്റുകൾ chạy
+## YouTube ട്രാൻസ്ക്രിപ്ഷൻ ഡാറ്റ പ്രിപ്പ് സ്ക്രിപ്റ്റുകൾ പ്രവർത്തിപ്പിക്കുക
 
 ### Windows-ൽ
 
@@ -165,7 +165,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 .\transcripts_prepare.ps1
 ```
 
-### macOS, Linux-ൽ
+### macOS-ഉം Linux-ഉം
 
 ```bash
 ./transcripts_prepare.sh
