@@ -510,14 +510,14 @@
     "language_code": "cs"
   },
   "generated-image.7e17ceec085357b2.webp": {
-    "original_hash": "dc2b8fe051905608f12adca030eab947",
-    "translation_date": "2026-01-17T05:14:26+00:00",
+    "original_hash": "de215401dcea94edf1efe7fae51ba951",
+    "translation_date": "2026-07-18T00:01:51+00:00",
     "source_file": "09-building-image-applications/images/generated-image.png",
     "language_code": "cs"
   },
   "generated-image.95d5d16f109311a0.webp": {
-    "original_hash": "6c071e545c86d274c55cc1f516d2bb8e",
-    "translation_date": "2026-01-17T05:14:23+00:00",
+    "original_hash": "b344f453aa20389ad296822a1cdc52d1",
+    "translation_date": "2026-07-18T00:01:55+00:00",
     "source_file": "09-building-image-applications/python/generated-image.png",
     "language_code": "cs"
   },
@@ -582,8 +582,8 @@
     "language_code": "cs"
   },
   "mask.1b2976ccec9e011e.webp": {
-    "original_hash": "c7289ceb502203fec05c4a1945f2ad34",
-    "translation_date": "2026-01-17T05:14:39+00:00",
+    "original_hash": "7fd96814e477c9ba232e3f2099c58637",
+    "translation_date": "2026-07-18T00:01:48+00:00",
     "source_file": "09-building-image-applications/images/mask.png",
     "language_code": "cs"
   },
@@ -672,8 +672,8 @@
     "language_code": "cs"
   },
   "startup.94d6b79cc4bb3f5a.webp": {
-    "original_hash": "c10f5b592fb049bd498c300c7042d032",
-    "translation_date": "2026-01-17T05:14:36+00:00",
+    "original_hash": "22ec17200e40886ba9bcd9386205bc6e",
+    "translation_date": "2026-07-18T00:01:45+00:00",
     "source_file": "09-building-image-applications/images/startup.png",
     "language_code": "cs"
   },
@@ -690,14 +690,14 @@
     "language_code": "cs"
   },
   "sunlit_lounge.a75a0cb61749db0e.webp": {
-    "original_hash": "020dd55f65bd4ac0a0b81ae1323ca380",
-    "translation_date": "2026-01-17T05:14:43+00:00",
+    "original_hash": "7d715267753e32863ca855c577bea761",
+    "translation_date": "2026-07-18T00:01:40+00:00",
     "source_file": "09-building-image-applications/images/sunlit_lounge.png",
     "language_code": "cs"
   },
   "sunlit_lounge_result.76ae02957c0bbeb8.webp": {
-    "original_hash": "a18b64845dc1cb6752f121b374527822",
-    "translation_date": "2026-01-17T05:14:25+00:00",
+    "original_hash": "e976e81167dffd18d89507b82d41e973",
+    "translation_date": "2026-07-18T00:01:41+00:00",
     "source_file": "09-building-image-applications/images/sunlit_lounge_result.png",
     "language_code": "cs"
   },

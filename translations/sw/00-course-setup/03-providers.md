@@ -1,54 +1,54 @@
-# Kuchagua na Kusanidi Mtoa Huduma wa LLM 🔑
+# Kuchagua & Kusanidi Mtoa Huduma wa LLM 🔑
 
-Majukumu **yanaweza** pia kusanidiwa kufanya kazi dhidi ya moja au zaidi ya usambazaji wa Mfano Mkubwa wa Lugha (LLM) kupitia mtoa huduma aliyeletwa kama msaada kama OpenAI, Azure au Hugging Face. Hawa hutoa _sehemu ya mwenyeji_ (API) ambayo tunaweza kuipata kwa mpango kwa kutumia vibali sahihi (funguo za API au tokeni). Katika kozi hii, tunajadili watoa huduma hawa:
+Majukumu **yanaweza** pia kusanidiwa kufanya kazi dhidi ya uenezaji mmoja au zaidi wa Mfano Mkubwa wa Lugha (LLM) kupitia mtoa huduma anayeelezwa kama OpenAI, Azure au Hugging Face. Hawa hutoa _sehemu ya mwenyeji_ (API) ambayo tunaweza kufikia kwa njia ya programu kwa kutumia hati sahihi (funguo za API au tokeni). Katika kozi hii, tunazungumzia watoa huduma hawa:
 
- - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) na mifano mbalimbali ikiwa ni pamoja na mfululizo kuu wa GPT.
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) kwa mifano ya OpenAI ikiwa na kuzingatia utayari wa kampuni
- - [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) kwa sehemu moja na funguo ya API kupata mamia ya mifano kutoka OpenAI, Meta, Mistral, Cohere, Microsoft na zaidi (inachukua nafasi ya GitHub Models, ambayo itafutwa mwishoni mwa Julai 2026)
- - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) kwa mifano ya chanzo wazi na seva ya uchambuzi
- - [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) au [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) ikiwa ungependa kuendesha mifano kikamilifu bila mtandao kwenye kifaa chako, bila haja ya usajili wa wingu
+ - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) na mifano mbalimbali ikiwemo mfululizo wa msingi wa GPT.
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-foundry/openai/?WT.mc_id=academic-105485-koreyst) kwa mifano ya OpenAI yenye mtazamo wa ustadi wa biashara
+ - [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) kwa sehemu moja ya huduma na ufunguo wa API kupata mamia ya mifano kutoka OpenAI, Meta, Mistral, Cohere, Microsoft na zaidi (inachukua nafasi ya GitHub Models, ambayo itasimama mwishoni mwa Julai 2026)
+ - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) kwa mifano ya chanzo wazi na seva ya inferensi
+ - [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) au [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) ikiwa ungependa kuendesha mifano kikamilifu bila mtandao kwenye kifaa chako mwenyewe, bila haja ya usajili wa wingu
 
-**Utahitaji kutumia akaunti zako binafsi kwa mazoezi haya**. Majukumu ni hiari hivyo unaweza kuchagua kusanidi moja, zote - au hakuna - wa watoa huduma kwa kuzingatia mambo unayovutiwa nayo. Mwongozo wa usajili:
+**Utahitaji kutumia akaunti zako mwenyewe kwa mazoezi haya**. Majukumu ni hiari hivyo unaweza kuchagua kusanidi mmoja, yote - au hakuna - ya watoa huduma kulingana na maslahi yako. Mwongozo wa kujiandikisha:
 
-| Usajili | Gharama | Funguo za API | Uwanja wa Mchezo | Maoni |
+| Jisajili | Gharama | Funguo ya API | Ukumbi wa majaribio | Maoni |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Bei](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Inayotegemea Mradi](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Bila Msimbo, Tovuti](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Mifano Mingi Inapatikana |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Bei](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK Kuanzia haraka](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio Kuanzia haraka](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Inahitajika Kuomba Mapema Kuwahi Kupata] (https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) | [Bei](https://azure.microsoft.com/pricing/details/ai-foundry/?WT.mc_id=academic-105485-koreyst) | [Ukurasa wa Muhtasari wa Mradi](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) | [Uwanja wa Mchezo wa Foundry](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) | Kiwango cha bure kinapatikana; sehemu moja + funguo kwa watoa huduma wengi wa mfano |
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Bei](https://huggingface.co/pricing) | [Tokoni za Ufikiaji](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat ina mifano michache](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
-| [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) | Bure (inaendeshwa kifaa chako) | Hakihitajiki | [CLI/SDK ya Ndani](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) | Sehemu ya mwenyeji kikamilifu bila mtandao, inayoendana na OpenAI |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Bei](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Project-based](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Bila Msimbo, Mtandao](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Mifano Mingi Inapatikana |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Bei](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK Kuanzia Haraka](https://learn.microsoft.com/azure/ai-foundry/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio Kuanzia Haraka](https://learn.microsoft.com/azure/ai-foundry/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Lazima Uombe Kufikia Mbele](https://learn.microsoft.com/azure/ai-foundry/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) | [Bei](https://azure.microsoft.com/pricing/details/ai-foundry/?WT.mc_id=academic-105485-koreyst) | [Ukaguzi wa Mradi](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) | [Ukumbi wa Foundry](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) | Kiwango cha bure kinapatikana; sehemu moja + ufunguo kwa watoa huduma wengi wa mfano |
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Bei](https://huggingface.co/pricing) | [Tokeni za Kufikia](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat ina mifano kidogo](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) | Bure (inaendesha kwenye kifaa chako) | Haitakiwi | [CLI/SDK ya Mitaa](https://learn.microsoft.com/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) | Sehemu kikamilifu isiyo na mtandao, inayolingana na OpenAI |
 | | | | | |
 
-Fuata maelekezo hapa chini ili _kusanidi_ hifadhidata hii kwa kutumia watoa huduma tofauti. Majukumu yanayohitaji mtoa huduma maalum yataonyesha moja ya lebo hizi katika jina la faili:
+Fuata maelekezo chini ili _kusanidi_ hifadhidata hii kwa matumizi na watoa huduma tofauti. Majukumu yanayohitaji mtoa huduma maalum yata kuwa na mojawapo ya lebo hizi kwenye jina la faili yao:
 
-- `aoai` - inahitaji sehemu ya Azure OpenAI, funguo
-- `oai` - inahitaji sehemu ya OpenAI, funguo
+- `aoai` - inahitaji sehemu ya Azure OpenAI, ufunguo
+- `oai` - inahitaji sehemu ya OpenAI, ufunguo
 - `hf` - inahitaji tokeni ya Hugging Face
-- `githubmodels` - inahitaji sehemu ya Microsoft Foundry Models, funguo (GitHub Models itafutwa mwishoni mwa Julai 2026)
+- `githubmodels` - inahitaji sehemu ya Microsoft Foundry Models, ufunguo (GitHub Models itasimama mwishoni mwa Julai 2026)
 
-Unaweza kusanidi moja, hakuna, au wote watoa huduma. Majukumu yanayohusiana yatatokea hitilafu endapo vibali vitakosekana.
+Unaweza kusanidi mmoja, hakuna, au wote watoa huduma. Majukumu yanayohusiana yatafanya tu kosa la kutokuwepo kwa hati zinazohitajika.
 
-## Unda faili la `.env`
+## Unda faili `.env`
 
-Tunachukulia kuwa tayari umesoma mwongozo hapo juu na kusajiliwa na mtoa huduma husika, na kupata vibali vya uthibitishaji vinavyohitajika (API_KEY au tokeni). Katika kesi ya Azure OpenAI, tunachukulia pia kuwa una usambazaji halali wa Huduma ya Azure OpenAI (sehemu) na angalau mfano mmoja wa GPT uliowekwa kwa ajili ya kukamilisha mazungumzo.
+Tunadhani tayari umejisomea mwongozo hapo juu na ujisajili kwa mtoa huduma husika, na upate hati za uthibitishaji zinazohitajika (API_KEY au tokeni). Katika kesi ya Azure OpenAI, tunadhani pia una uenezaji halali wa huduma ya Azure OpenAI (sehemu) iliyotumika na mfano mmoja au zaidi wa GPT kwa kumaliza mazungumzo.
 
 Hatua inayofuata ni kusanidi **mabadiliko ya mazingira ya ndani** kama ifuatavyo:
 
-1. Angalia katika saraka kuu faili `.env.copy` inayopaswa kuwa na maudhui kama haya:
+1. Angalia kwenye folda kuu kwa faili `.env.copy` ambayo inapaswa kuwa na maudhui kama haya:
 
    ```bash
-   # Mtoa huduma wa OpenAI
+   # Mtoa Huduma wa OpenAI
    OPENAI_API_KEY='<add your OpenAI API key here>'
 
    ## Azure OpenAI katika Microsoft Foundry
    ## (Huduma ya Azure OpenAI sasa ni sehemu ya Microsoft Foundry: https://ai.azure.com)
-   AZURE_OPENAI_API_VERSION='2024-10-21' # Chaguo-msingi kimewekwa! (toleo thabiti la sasa la GA API)
+   AZURE_OPENAI_API_VERSION='2024-10-21' # Chaguo-msingi kimewekwa! (toleo thabiti la sasa la API ya GA)
    AZURE_OPENAI_API_KEY='<add your Foundry resource key here>'
    AZURE_OPENAI_ENDPOINT='<add your Foundry resource endpoint here, e.g. https://<resource-name>.openai.azure.com>'
-   AZURE_OPENAI_DEPLOYMENT='<add your chat completion model deployment name here, e.g. gpt-4o-mini>'
+   AZURE_OPENAI_DEPLOYMENT='<add your chat completion model deployment name here, e.g. gpt-5-mini>'
    AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='<add your embeddings model deployment name here, e.g. text-embedding-3-small>'
 
-   ## Mifano ya Microsoft Foundry (katalogi ya mifano ya watoa huduma wengi, inachukua nafasi ya Mifano ya GitHub, ambayo itatolewa mwisho wa Julai 2026)
+   ## Miundo ya Microsoft Foundry (katalogi ya miundo ya wahudumu wengi, inachukua nafasi ya Miundo ya GitHub, ambayo itakoma mwishoni mwa Julai 2026)
    AZURE_INFERENCE_ENDPOINT='<add your Microsoft Foundry project endpoint here>'
    AZURE_INFERENCE_CREDENTIAL='<add your Microsoft Foundry Models API key here>'
 
@@ -56,96 +56,96 @@ Hatua inayofuata ni kusanidi **mabadiliko ya mazingira ya ndani** kama ifuatavyo
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. Nakili faili hiyo kuwa `.env` kwa kutumia amri hapa chini. Faili hii imewekwa katika _gitignore_, ikilinda siri.
+2. Nakili faili hiyo kwa `.env` kwa kutumia amri ifuatayo. Faili hili linatajwa katika _gitignore_, linalinda siri.
 
    ```bash
    cp .env.copy .env
    ```
 
-3. Jaza thamani (badilisha nafasi za kushoto ya `=`) kama inavyoelezwa katika sehemu ifuatayo.
+3. Jaza maadili (badilisha mstari wa kushoto wa `=`) kama inavyoelezwa katika sehemu inayofuata.
 
-4. (Hiari) Ikiwa unatumia GitHub Codespaces, una chaguo la kuhifadhi mabadiliko ya mazingira kama _siri za Codespaces_ zinazohusiana na hifadhidata hii. Katika hali hiyo, hautahitaji kusanidi faili la .env la ndani. **Hata hivyo, kumbuka kuwa chaguo hili linafanya kazi tu ikiwa unatumia GitHub Codespaces.** Bado utahitaji kusanidi faili la .env ikiwa unatumia Docker Desktop badala yake.
+4. (Chaguo) Ikiwa unatumia GitHub Codespaces, una chaguo la kuhifadhi mabadiliko ya mazingira kama _siri za Codespaces_ zinazohusiana na hifadhidata hii. Katika hali hiyo, hutahitaji kusanidi faili la .env la ndani. **Hata hivyo, kumbuka kuwa chaguo hili linafanya kazi tu ukiwa unatumia GitHub Codespaces.** Bado utahitaji kusanidi faili la .env ikiwa unatumia Docker Desktop badala yake.
 
-## Jaza faili la `.env`
+## Jaza faili `.env`
 
-Hebu tuchunguze jina la vigezo ili kuelewa kinachowakilishwa:
+Hebu tuchunguze kwa haraka majina ya mabadiliko kuelewa maana yake:
 
-| Kigezo | Maelezo |
+| Mabadiliko  | Maelezo  |
 | :--- | :--- |
-| HUGGING_FACE_API_KEY | Hii ni tokeni ya ufikiaji ya mtumiaji unayosanidi kwenye wasifu wako |
-| OPENAI_API_KEY | Hii ni funguo ya idhini ya kutumia huduma kwa sehemu zisizo za Azure OpenAI |
-| AZURE_OPENAI_API_KEY | Hii ni funguo ya idhini ya kutumia huduma hiyo |
-| AZURE_OPENAI_ENDPOINT | Hii ni sehemu iliyoanzishwa ya rasilimali ya Azure OpenAI |
-| AZURE_OPENAI_DEPLOYMENT | Hii ni sehemu ya usambazaji wa mfano wa _utengenezaji wa maandishi_ |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Hii ni sehemu ya usambazaji wa mfano wa _uwekaji wa maandishi_ |
-| AZURE_INFERENCE_ENDPOINT | Hii ni sehemu kwa mradi wako wa Microsoft Foundry, hutumika kwa Microsoft Foundry Models |
-| AZURE_INFERENCE_CREDENTIAL | Hii ni funguo ya API ya mradi wako wa Microsoft Foundry |
+| HUGGING_FACE_API_KEY | Hii ni tokeni ya upatikanaji wa mtumiaji uliyoz-sanidi kwenye wasifu wako |
+| OPENAI_API_KEY | Hii ni ufunguo wa idhini wa kutumia huduma kwa sehemu zisizo za Azure OpenAI |
+| AZURE_OPENAI_API_KEY | Hii ni ufunguo wa idhini wa kutumia huduma hiyo |
+| AZURE_OPENAI_ENDPOINT | Hii ni sehemu iliyotumika kwa rasilimali ya Azure OpenAI |
+| AZURE_OPENAI_DEPLOYMENT | Hii ni sehemu ya uenezaji wa mfano wa _uzoaji wa maandishi_ |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Hii ni sehemu ya uenezaji wa mfano wa _mafananisho ya maandishi_ |
+| AZURE_INFERENCE_ENDPOINT | Hii ni sehemu ya mradi wako wa Microsoft Foundry, inayotumika kwa Microsoft Foundry Models |
+| AZURE_INFERENCE_CREDENTIAL | Hii ni ufunguo wa API kwa mradi wako wa Microsoft Foundry |
 | | |
 
-Kumbuka: Vigezo viwili vya mwisho vya Azure OpenAI vinaonyesha mfano wa chaguo la kukamilisha mazungumzo (utengenezaji wa maandishi) na utafutaji wa vector (uwekaji) mtawaliwa. Maelekezo ya kuvitumia yataelezwa katika mazoezi husika.
+Kumbuka: Mabadiliko ya Azure OpenAI mawili ya mwisho yanaonyesha mfano wa msingi wa kumaliza mazungumzo (uzoaji wa maandishi) na utafutaji wa vekta (mafananisho) mtawalia. Maelekezo ya kusanidi zitafafanuliwa katika majukumu husika.
 
 ## Sanidi Azure OpenAI: Kutoka Portal
 
-> **Kumbuka:** Huduma ya Azure OpenAI sasa ni sehemu ya [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst). Rasilimali na usambazaji bado huonekana kwenye Portal ya Azure, lakini usimamizi wa kila siku wa mfano (usambazaji, uwanja wa mchezo, ufuatiliaji) sasa hufanyika kwenye portal ya Foundry badala ya "Azure OpenAI Studio" iliyokuwa huru zamani.
+> **Kumbuka:** Huduma ya Azure OpenAI sasa ni sehemu ya [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst). Rasilimali na uenezaji bado huonekana katika Azure Portal, lakini usimamizi wa kila siku wa mifano (uenezaji, ukumbi wa majaribio, ufuatiliaji) sasa hufanyika kwenye portal ya Foundry badala ya "Azure OpenAI Studio" ya zamani.
 
-Thamani za sehemu na funguo za Azure OpenAI zitapatikana kwenye [Portal ya Azure](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) hivyo tuanze huko.
+Thamani za sehemu na ufunguo wa Azure OpenAI zitapatikana katika [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) kwa hiyo tuanze hapo.
 
-1. Nenda kwenye [Portal ya Azure](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
-1. Bonyeza chaguo la **Funguo na Sehemu** kwenye menyu ya pembeni (menu upande wa kushoto).
-1. Bonyeza **Onyesha Funguo** - unapaswa kuona yafuatayo: KEY 1, KEY 2 pamoja na Sehemu.
-1. Tumia thamani ya KEY 1 kwa AZURE_OPENAI_API_KEY
+1. Nenda kwenye [Azure Portal](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
+1. Bonyeza chaguo la **Funguo na Sehemu** kwenye upau wa upande (menyu upande wa kushoto).
+1. Bonyeza **Onyesha Funguo** - unapaswa kuona yafuatayo: UFUNGUO 1, UFUNGUO 2 na Sehemu.
+1. Tumia thamani ya UFUNGUO 1 kwa AZURE_OPENAI_API_KEY
 1. Tumia thamani ya Sehemu kwa AZURE_OPENAI_ENDPOINT
 
-Ifuatayo, tunahitaji sehemu za mifano maalum tuliyo isambaza.
+Ifuatayo, tunahitaji sehemu za mifano maalum tuliyoizeneza.
 
-1. Bonyeza chaguo la **Usambazaji wa mifano** kwenye menyu ya pembeni (upande wa kushoto) kwa rasilimali ya Azure OpenAI.
-1. Katika ukurasa wa lengo, bonyeza **Nenda kwenye portal ya Microsoft Foundry** (au **Simamia Usambazaji**, kulingana na aina ya rasilimali yako)
+1. Bonyeza chaguo la **Uenezaji wa mfano** kwenye upau wa upande (menyu kushoto) kwa rasilimali ya Azure OpenAI.
+1. Katika ukurasa wa mwisho, bonyeza **Nenda kwenye portal ya Microsoft Foundry** (au **Simamia Uenezaji**, kulingana na aina ya rasilimali yako)
 
-Hii itakupeleka kwenye portal ya Microsoft Foundry, ambapo tutapata thamani nyingine kama inavyoelezwa hapa chini.
+Hii itakupeleka kwenye portal ya Microsoft Foundry, ambapo tutapata thamani zingine kama zilivyoelezwa hapa chini.
 
 ## Sanidi Azure OpenAI: Kutoka portal ya Microsoft Foundry
 
-1. Elekea kwenye [portal ya Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) **kutoka rasilimali yako** kama ilivyoelezwa hapo juu.
-1. Bonyeza kichupo cha **Usambazaji** (menyu ya pembeni, kushoto) kuangalia mifano iliyosambazwa kwa sasa.
-1. Ikiwa mfano unaotaka haujasambazwa, tumia **Sambaza mfano** kuusambaza kutoka [katalogi ya mifano](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
-1. Utahitaji mfano wa _utengenezaji wa maandishi_ - tunapendekeza: **gpt-4o-mini**
-1. Utahitaji mfano wa _uwekaji wa maandishi_ - tunapendekeza **text-embedding-3-small**
+1. Nenda kwenye [portal ya Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) **kutoka rasilimali yako** kama ilivyoelezwa hapo juu.
+1. Bonyeza kichupo cha **Uenezaji** (upau wa upande, kushoto) kuona mifano iliyotumiwa sasa.
+1. Ikiwa mfano unayotaka haujaeneza, tumia **Eneza mfano** kuutumia kutoka kwenye [katalogi ya mifano](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
+1. Utahitaji mfano wa _uzoaji wa maandishi_ - tunashauri: **gpt-5-mini**
+1. Utahitaji mfano wa _ongeza maandishi_ - tunashauri **text-embedding-3-small**
 
-Sasa sasisha mabadiliko ya mazingira kuakisi _Jina la Usambazaji_ ulilotumiwa. Hii kawaida itakuwa sawa na jina la mfano isipokuwa umeibadilisha waziwazi. Kwa mfano, unaweza kuwa na:
+Sasisha sasa mabadiliko ya mazingira ili kuonyesha _Jina la Uenezaji_ lililotumiwa. Hii kawaida itakuwa sawa na jina la mfano isipokuwa ukibadilisha waziwazi. Kwa mfano, unaweza kuwa na:
 
 ```bash
-AZURE_OPENAI_DEPLOYMENT='gpt-4o-mini'
+AZURE_OPENAI_DEPLOYMENT='gpt-5-mini'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-3-small'
 ```
 
-**Usisahau kuhifadhi faili ya .env baada ya kumaliza**. Sasa unaweza kutoka kwenye faili na kurudi kwenye maelekezo ya kuendesha daftari la mazoezi.
+**Usisahau kuhifadhi faili la .env baada ya kumaliza**. Sasa unaweza kutoka kwenye faili na kurudi kwenye maelekezo ya kuendesha daftari.
 
 ## Sanidi OpenAI: Kutoka Wasifu
 
-Funguo yako ya API ya OpenAI inaweza kupatikana kwenye [akaunti yako ya OpenAI](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Ikiwa huna moja, unaweza kusajili akaunti na kuunda funguo ya API. Ukipata funguo, unaweza kuitumia kujaza kigezo cha `OPENAI_API_KEY` kwenye faili la `.env`.
+Ufunguo wako wa API wa OpenAI unaweza kupatikana kwenye [akaunti yako ya OpenAI](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Ikiwa huna moja, unaweza kujisajili na kuunda ufunguo wa API. Ukipata ufunguo, unaweza kuitumia kujaza kigezo cha `OPENAI_API_KEY` kwenye faili `.env`.
 
 ## Sanidi Hugging Face: Kutoka Wasifu
 
-Tokeni yako ya Hugging Face inaweza kupatikana kwenye wasifu wako chini ya [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Usisite au usishirikishe hadharani. Badala yake, tengeneza tokeni mpya kwa matumizi ya mradi huu na uikilishe kwenye faili la `.env` chini ya kigezo cha `HUGGING_FACE_API_KEY`. _Kumbuka:_ Hii si funguo ya API kiufundi lakini hutumika kwa uthibitishaji hivyo tunahifadhi jina hili kwa ajili ya umoja.
+Tokeni yako ya Hugging Face inaweza kupatikana kwenye wasifu wako chini ya [Tokeni za Kufikia](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Usiziweke hadharani au kushiriki. Badala yake, tengeneza tokeni mpya kwa matumizi ya mradi huu na nakili hiyo kwenye faili `.env` chini ya kigezo cha `HUGGING_FACE_API_KEY`. _Kumbuka:_ Hii si funguo halisi ya API lakini hutumika kwa uthibitishaji, hivyo tunahifadhi mtindo huo wa majina kwa mlingano.
 
 ## Sanidi Microsoft Foundry Models: Kutoka Portal
 
-> **Kumbuka:** GitHub Models itafutwa mwishoni mwa Julai 2026. Microsoft Foundry Models ni mbadala wa moja kwa moja, ukitoa katalogi ya mfano wa bure wa kujaribu na uzoefu wa SDK ya Azure AI Inference / OpenAI SDK.
+> **Kumbuka:** GitHub Models itasimama mwishoni mwa Julai 2026. Microsoft Foundry Models ni mbadala wa moja kwa moja, ukitoa katalogi ya modeli ya bure ya kujaribu na uzoefu wa Azure AI Inference SDK / OpenAI SDK.
 
-1. Nenda kwa [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) na unda (au fungua) mradi wa Foundry.
-1. Pitia [katalogi ya mifano](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) na sambaza mfano, kwa mfano `gpt-4o-mini`.
-1. Kwenye ukurasa wa Muhtasari wa mradi, nakili **sehemu** na **funguo za API**.
-1. Tumia thamani ya sehemu kwa `AZURE_INFERENCE_ENDPOINT` na thamani ya funguo kwa `AZURE_INFERENCE_CREDENTIAL` kwenye faili lako la `.env`.
+1. Nenda [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) na unda (au fungua) mradi wa Foundry.
+1. Pitia [katalogi ya mifano](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) na enezaji mfano, kwa mfano `gpt-5-mini`.
+1. Kwenye ukurasa wa **Muhtasari** wa mradi, nakili **sehemu** na **funguo ya API**.
+1. Tumia thamani ya sehemu kwa `AZURE_INFERENCE_ENDPOINT` na thamani ya ufunguo kwa `AZURE_INFERENCE_CREDENTIAL` kwenye faili `.env`.
 
-## Watoa Huduma Wasio Mtandaoni / Wa Ndani
+## Watoa Huduma wa Nje ya Mtandao / Wenyeji
 
-Ikiwa ungependa kuto tumia usajili wa wingu kabisa, unaweza kuendesha mifano inayoendana moja kwa moja kwenye kifaa chako mwenyewe:
+Ikiwa ungependa kuto tumia mkataba wa wingu kabisa, unaweza kuendesha mifano ya wazi inayolingana moja kwa moja kwenye kifaa chako:
 
-- **[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst)** - mazingira ya mwendo wa Microsoft kwenye kifaa. Huchagua kiotomatiki mtoa huduma bora wa utekelezaji (NPU, GPU, au CPU) na hutoa sehemu inayoendana na OpenAI, hivyo unaweza kutumia sehemu kubwa ya mfano wa msimbo katika kozi hii kwa mabadiliko madogo. Angalia [nyaraka za Foundry Local](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) kuanza, au usakinishe kwa `winget install Microsoft.FoundryLocal` (Windows) / `brew install microsoft/foundrylocal/foundrylocal` (macOS).
-- **[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst)** - mbadala maarufu kwa kuendesha mifano wazi kama Llama, Phi, Mistral, na Gemma ndani ya kifaa.
+- **[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst)** - runtime ya kifaa cha Microsoft. Huchagua moja kwa moja mtoa huduma bora wa utekelezaji (NPU, GPU, au CPU) na huonesha sehemu inayolingana na OpenAI, hivyo unaweza kutumia sehemu kubwa ya msimbo wa mfano katika kozi hii kwa mabadiliko kidogo. Angalia [nyaraka za Foundry Local](https://learn.microsoft.com/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) kuanza, au weka kwa `winget install Microsoft.FoundryLocal` (Windows) / `brew install microsoft/foundrylocal/foundrylocal` (macOS).
+- **[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst)** - mbadala maarufu wa kuendesha mifano ya wazi kama Llama, Phi, Mistral, na Gemma kwa ndani.
 
 
-Angalia [Somo la 19: Kuunda na SLMs](../19-slm/README.md?WT.mc_id=academic-105485-koreyst) kwa mifano ya vitendo ikitumia chaguzi zote mbili.
+Angalia [Somo la 19: Kujenga kwa kutumia SLMs](../19-slm/README.md?WT.mc_id=academic-105485-koreyst) kwa mifano ya vitendo kutumia chaguzi zote mbili.
 
 ---
 
