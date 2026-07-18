@@ -1,66 +1,66 @@
-# Generatyvios AI pagrindu veikiančių pokalbių programų kūrimas
+# Generatyviosios AI pagrindu veikiančių pokalbių programėlių kūrimas
 
-[![Generatyvios AI pagrindu veikiančių pokalbių programų kūrimas](../../../translated_images/lt/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Generatyviosios AI pagrindu veikiančių pokalbių programėlių kūrimas](../../../translated_images/lt/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
-> _(Spustelėkite aukščiau esančią nuotrauką, kad peržiūrėtumėte šios pamokos vaizdo įrašą)_
+> _(Paspauskite aukščiau esančią nuotrauką, kad peržiūrėtumėte šios pamokos vaizdo įrašą)_
 
-Dabar, kai matėme, kaip galime kurti teksto generavimo programas, pažvelkime į pokalbių programas.
+Kadangi jau matėme, kaip galime kurti teksto generavimo programas, pažvelkime į pokalbių programėles.
 
-Pokalbių programos tapo integralia mūsų kasdienio gyvenimo dalimi – jos ne tik leidžia laisvai bendrauti. Jos yra svarbi klientų aptarnavimo, techninės pagalbos ir net sudėtingų konsultavimo sistemų dalis. Greičiausiai neseniai jau gavote pagalbą iš pokalbių programos. Integruojant pažangesnes technologijas, tokias kaip generatyvioji AI, į šias platformas, didėja ne tik sudėtingumas, bet ir iššūkiai.
+Pokalbių programėlės tapo neatsiejama mūsų kasdienio gyvenimo dalimi, siūlančios ne tik paprastą laisva besikeičiančią komunikaciją. Jos yra svarbi klientų aptarnavimo, techninės pagalbos ir net sudėtingų konsultacinių sistemų dalis. Tikėtina, kad neseniai gavote pagalbą iš pokalbių programėlės. Integruodami pažangias technologijas, tokias kaip generatyvioji AI, į šias platformas, didėja sudėtingumas ir iššūkiai.
 
-Kai kurie klausimai, kuriuos turime išspręsti, yra:
+Kai kuriuos klausimus turime išspręsti:
 
-- **Programos kūrimas**. Kaip efektyviai sukurti ir sklandžiai integruoti šias AI pagrindu veikiančias programas konkretiems naudojimo atvejams?
-- **Stebėsena**. Įdiegus, kaip galima stebėti ir užtikrinti, kad programos veiktų aukščiausios kokybės lygiu tiek funkcionalumo, tiek laikymosi [atsakingos AI šešių principų](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst) atžvilgiu?
+- **Programėlės kūrimas**. Kaip efektyviai sukurti ir sklandžiai integruoti šias AI pagrindu veikiančias programėles specifiniams naudojimo atvejams?
+- **Stebėsena**. Įdiegus, kaip galime stebėti ir užtikrinti, kad programėlės veikia aukščiausio kokybės lygio, tiek funkcionalumo, tiek laikantis [atsakingos AI šešių principų](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)?
 
-Judant toliau automatizacijos ir sklandaus žmogaus bei mašinos sąveikos amžiuje, būtina suprasti, kaip generatyvioji AI keičia pokalbių programų apimtį, gilumą ir pritaikomumą. Šioje pamokoje nagrinėsime architektūros aspektus, kurie palaiko šias sudėtingas sistemas, metodikas, kaip jas pritaikyti specifinėms sritims, ir įvertinsime metrikas bei svarstymus, susijusius su atsakinga AI diegimu.
+Žengdami į automatizacijos ir sklandžios žmogaus ir mašinos sąveikos amžių, tampa esminė supratimas, kaip generatyvioji AI keičia pokalbių programėlių apimtį, gylį ir prisitaikomumą. Šioje pamokoje išnagrinėsime architektūros aspektus, kurie palaiko šias sudėtingas sistemas, gilinsimės į metodus jas tobulinti specifiniams uždaviniams ir įvertinsime matavimus bei kritinius aspektus, svarbius atsakingam AI taikymui.
 
 ## Įvadas
 
 Ši pamoka apima:
 
-- Technikas, kaip efektyviai kurti ir integruoti pokalbių programas.
-- Kaip taikyti pritaikymą ir smulkų derinimą programoms.
-- Strategijas ir svarstymus, kaip efektyviai stebėti pokalbių programas.
+- Technikas, kaip efektyviai kurti ir integruoti pokalbių programėles.
+- Kaip pritaikyti personalizavimą ir tobulinimą programėlėms.
+- Strategijas ir svarstymus, kaip efektyviai stebėti pokalbių programėles.
 
 ## Mokymosi tikslai
 
-Pabaigę šią pamoką, galėsite:
+Pamokos pabaigoje galėsite:
 
-- Apibūdinti svarstymus statant ir integruojant pokalbių programas į esamas sistemas.
-- Pritaikyti pokalbių programas konkretiems naudojimo atvejams.
-- Nustatyti pagrindines metrikas ir svarstymus efektyviai stebėti ir palaikyti AI pagrindu veikiančių pokalbių programų kokybę.
-- Užtikrinti, kad pokalbių programos atsakingai naudotų AI.
+- Apibūdinti svarstymus, kaip kurti ir integruoti pokalbių programėles į esamas sistemas.
+- Personalizuoti pokalbių programėles konkretiems naudojimo atvejams.
+- Nustatyti pagrindinius rodiklius ir svarstymus efektyviai stebėti ir palaikyti AI pagrindu veikiančių pokalbių programėlių kokybę.
+- Užtikrinti, kad pokalbių programėlės atsakingai naudotų AI.
 
-## Generatyvios AI integravimas į pokalbių programas
+## Generatyviosios AI integravimas į pokalbių programėles
 
-Tobulinant pokalbių programas naudojant generatyviąją AI, svarbu ne tik jas padaryti protingesnes, bet ir optimizuoti jų architektūrą, veikimą bei vartotojo sąsają, kad būtų užtikrinta kokybiška vartotojo patirtis. Tai apima architektūrinių pagrindų, API integracijų ir vartotojo sąsajos svarstymų tyrimą. Ši dalis siekia suteikti jums išsamų vadovą šiose sudėtingose srityse, vienaip ar kitaip jungiant jas prie esamų sistemų arba kuriant kaip atskiras platformas.
+Pokalbių programėlių tobulinimas generatyviosios AI pagalba nėra tik apie jų sumanumo didinimą; tai optimizuojamos jų architektūros, veikimo ir vartotojo sąsajos aspektai, siekiant užtikrinti kokybišką vartotojo patirtį. Tai apima architektūros pagrindus, API integracijas ir vartotojo sąsajos svarstymus. Ši dalis pateiks išsamų žemėlapį, kaip naviguoti sudėtingose srityse, nesvarbu, ar prisijungiate prie esamų sistemų, ar kuriate nepriklausomas platformas.
 
-Pabaigoje turėsite reikiamų žinių efektyviai kurti ir įtraukti pokalbių programas.
+Šios dalies pabaigoje būsite įgudę efektyviai kurti ir integruoti pokalbių programėles.
 
-### Pokalbių robotas ar pokalbių programa?
+### Pokalbių robotas ar pokalbių programėlė?
 
-Prieš pradėdami kurti pokalbių programas, palyginkime „pokalbių robotus“ ir „AI pagrindu veikiančias pokalbių programas“, kurios atlieka skirtingas funkcijas ir vaidmenis. Pokalbių roboto pagrindinis tikslas – automatizuoti specifines pokalbių užduotis, pavyzdžiui, atsakyti į dažnai užduodamus klausimus ar stebėti siuntinį. Dažniausiai juos valdo taisyklėmis pagrįsta logika arba sudėtingi AI algoritmai. Priešingai, AI pagrindu veikianti pokalbių programa yra kur kas platesnė aplinka, skirta įvairiems skaitmeninės komunikacijos formoms – tekstiniams, balso ir vaizdo pokalbiams tarp žmonių. Jos pagrindinė savybė – generatyvios AI modelio integracija, kuri imituoja niuansuotus, žmogui būdingus pokalbius, generuodama atsakymus pagal įvairias įvestis ir kontekstinius signalus. Generatyvioji AI palaikoma pokalbių programa gali dalyvauti atvirų temų diskusijose, prisitaikyti prie besikeičiančių pokalbių kontekstų ir net kurti kūrybišką ar sudėtingą dialogą.
+Prieš pradedant kurti pokalbių programėles, palyginkime „pokalbių robotus“ ir „AI pagrindu veikiančias pokalbių programėles“, kurios atlieka skirtingas funkcijas ir vaidmenis. Pokalbių roboto pagrindinis tikslas – automatizuoti specifines pokalbių užduotis, tokias kaip dažniausiai užduodamų klausimų atsakymai ar siuntos sekimas. Paprastai jis veikia pagal taisykles arba sudėtingus AI algoritmus. Priešingai, AI pagrindu veikianti pokalbių programėlė yra daug platesnė aplinka, skirta įvairių skaitmeninių komunikacijos formų, tokių kaip tekstiniai, balso ir vaizdo pokalbiai tarp žmonių, facilitatavimui. Jos pagrindinis bruožas – generatyviosios AI modelio integracija, kuri sukuria niuansuotas, žmogaus kalbą primenančias diskusijas, generuodama atsakymus pagal įvairiausius įvesties ir kontekstinius signalus. Generatyviosios AI pagrindu veikianti pokalbių programėlė gali vykdyti atvirus diskursus, prisitaikyti prie kintančių pokalbių kontekstų bei kurti kūrybiškus ar sudėtingus dialogus.
 
-Žemiau pateikta lentelė išryškina pagrindinius skirtumus ir panašumus, kad geriau suprastume jų unikalias roles skaitmeninėje komunikacijoje.
+Žemiau pateikta lentelė išdėsto pagrindinius skirtumus ir panašumus, kad geriau suprastume jų unikalius vaidmenis skaitmeninėje komunikacijoje.
 
-| Pokalbių robotas                     | Generatyviai AI pagrįsta pokalbių programa                      |
-| ----------------------------------- | --------------------------------------------------------------- |
-| Užduočių orientuotas ir taisyklėmis valdomas | Kontekstą atpažįstantis                                       |
-| Dažnai integruotas į didesnes sistemas | Gali talpinti vieną ar kelis pokalbių robotus                   |
-| Ribojasi su programuotomis funkcijomis | Įtraukia generatyvius AI modelius                              |
-| Specializuotos ir struktūruotos sąveikos | Geba vesti atvirų temų diskusijas                              |
+| Pokalbių robotas                   | Generatyviosios AI pagrindu veikianti pokalbių programėlė    |
+| --------------------------------- | ----------------------------------------------------------- |
+| Užduotims skirtas ir taisyklių valdomas | Konteksto suvokimas                                         |
+| Dažnai integruotas į didesnes sistemas | Gali talpinti vieną ar kelis pokalbių robotus                |
+| Ribotas į programą įtrauktų funkcijų   | Apima generatyviosios AI modelius                            |
+| Specializuotos ir struktūruotos sąveikos | Geba vykdyti atvirus diskursus                                |
 
-### Iš anksto sukurtų funkcijų panaudojimas su SDK ir API
+### Iš anksto sukurtų funkcijų naudojimas su SDK ir API
 
-Statant pokalbių programą, pirmasis žingsnis yra įvertinti, kas jau egzistuoja. SDK ir API naudojimas pokalbių programoms kurti yra naudinga strategija dėl įvairių priežasčių. Integruodami gerai dokumentuotus SDK ir API, strategiškai pozicionuojate savo programą ilgalaikei sėkmei, spręsdami mastelio keitimo ir priežiūros problemas.
+Kuriant pokalbių programėlę, puikus pirmas žingsnis yra įvertinti, kas jau yra pasiekiama rinkoje. Naudojant SDK ir API, kad sukurtumėte pokalbių programėles, yra naudingas strateginis pasirinkimas dėl įvairių priežasčių. Integruodami gerai dokumentuotas SDK ir API, strategiškai pozicionuojate savo programėlę ilgalaikei sėkmei, spręsdami skalės didėjimo ir priežiūros klausimus.
 
-- **Pagreitina vystymosi procesą ir sumažina apkrovą**: Pasikliaujant iš anksto sukurtomis funkcijomis jūs sutaupote brangaus laiko, kurį reiktų skirti jų kūrimui, todėl galite daugiau dėmesio skirti kitiems programos aspektams, pavyzdžiui, verslo logikai.
-- **Geresnis veikimas**: Kuriant funkcijas nuo nulio, galiausiai kyla klausimai „Kaip tai plėtotis? Ar programa gali susidoroti su staigiu vartotojų padaugėjimu?“ Gerai prižiūrimi SDK ir API dažnai turi įdiegtus sprendimus šioms problemoms.
-- **Lengvesnė priežiūra**: Atnaujinimai ir patobulinimai yra lengviau valdomi, nes daugumai API ir SDK tiesiog reikia atnaujinti biblioteką išleidus naują jos versiją.
-- **Prieiga prie pažangiausių technologijų**: Naudojant modelius, kurie yra smulkiai derinti ir apmokyti remiantis plačiomis duomenų bazėmis, jūsų programa įgyja natūralios kalbos galimybes.
+- **Pagreitina kūrimo procesą ir sumažina apkrovą**: Pasikliovimas jau sukurtomis funkcijomis vietoj brangaus jų kūrimo leidžia sutelkti dėmesį į svarbesnius programėlės aspektus, pavyzdžiui, verslo logiką.
+- **Geresnis našumas**: Kuriant funkcionalumą nuo nulio, anksčiau ar vėliau kyla klausimas: „Kaip tai išsiplės? Ar ši programėlė gali tvarkyti staigų vartotojų antplūdį?“ Gerai prižiūrimi SDK ir API dažnai turi įmontuotus sprendimus šiems klausimams.
+- **Lengvesnė priežiūra**: Atnaujinimai ir patobulinimai paprastai valdomi lengvai, kadangi dauguma API ir SDK tiesiog reikalauja bibliotekos atnaujinimo, kai pasirodo naujesnė versija.
+- **Prieiga prie pažangiausių technologijų**: Naudojant modelius, kurie buvo tiksliai paruošti ir apmokyti plačiuose duomenų rinkiniuose, jūsų programėlė įgyja natūralios kalbos galimybių.
 
-SDK ar API funkcijų naudojimas dažniausiai reikalauja leidimo naudotis suteiktomis paslaugomis, dažnai per unikalų raktą arba autentifikavimo žetoną. Pažvelgsime, kaip tai atrodo naudodami OpenAI Python biblioteką. Šią pamoką taip pat galite išbandyti savarankiškai šioje [OpenAI užduočių knygoje](./python/oai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) arba [Azure OpenAI paslaugų užduočių knygoje](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreys).
+Funkcijų prieigos prie SDK ar API dažniausiai reikalauja leidimo naudotis teikiamomis paslaugomis, dažnai per unikalų raktą arba autentifikavimo žetoną. Naudosime OpenAI Python biblioteką, kad pamatytume, kaip tai atrodo. Taip pat galite išbandyti šią pamoką savarankiškai toliau pateiktuose [OpenAI užduoties užduotyne](./python/oai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) arba [Azure OpenAI užduoties užduotyne](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreys).
 
 ```python
 import os
@@ -72,118 +72,118 @@ client = OpenAI(
     api_key=API_KEY
     )
 
-response = client.responses.create(model="gpt-4o-mini", input="Suggest two titles for an instructional lesson on chat applications for generative AI.", store=False)
+response = client.responses.create(model="gpt-5-mini", input="Suggest two titles for an instructional lesson on chat applications for generative AI.", store=False)
 print(response.output_text)
 ```
 
-Aukščiau pateiktame pavyzdyje naudojamas GPT-4o mini modelis su Atsakymų API užbaigiant užklausą, tačiau atkreipkite dėmesį, kad API raktas nustatytas iš anksto. Jei to nepadarysite, gausite klaidą.
+Aukščiau pateiktame pavyzdyje naudojamas GPT-5 mini modelis su Responses API užbaigia paraginimą, tačiau atkreipkite dėmesį, kad API raktas nustatomas iš anksto. Jei rakto nenustatytumėte, gautumėte klaidą.
 
 ## Vartotojo patirtis (UX)
 
-Bendros UX taisyklės taikomos pokalbių programoms, tačiau čia pateikiamos papildomos svarstymai, kurie tampa ypač svarbūs dėl įtrauktų mašininio mokymosi komponentų.
+Bendro pobūdžio UX principai taikomi pokalbių programėlėms, tačiau čia yra papildomų svarstymų, kurie tampa ypač svarbūs dėl įtrauktų mašininio mokymosi komponentų.
 
-- **Neapibrėžtumo sprendimo mechanizmas**: Generatyvios AI modeliai kartais generuoja dviprasmius atsakymus. Funkcija, leidžianti vartotojams prašyti patikslinimų, gali būti labai naudinga susidūrus su šia problema.
-- **Konteksto išlaikymas**: Pažangūs generatyvios AI modeliai gali prisiminti pokalbio kontekstą, kas yra svarbus vartotojo patirties aspektas. Leidžiant vartotojams valdyti kontekstą pagerina patirtį, bet tai taip pat kelia riziką saugoti jautrią informaciją. Svarstymai, kiek ilgai tokia informacija saugoma, pavyzdžiui, įvedant saugojimo politiką, leidžia subalansuoti konteksto poreikį su privatumu.
-- **Personalizavimas**: Gebėjimas mokytis ir prisitaikyti leidžia AI modeliams suteikti asmeninę patirtį. Pritaikant vartotojo patirtį per funkcijas, tokias kaip vartotojo profiliai, ne tik sukuriama įspūdis, kad vartotojas yra suprastas, bet tai taip pat padeda greičiau ir efektyviau rasti reikiamus atsakymus bei patenkinti poreikius.
+- **Mechanizmas neaiškumams spręsti**: Generatyviosios AI modeliai kartais sukuria dviprasmius atsakymus. Funkcija, leidžianti vartotojams prašyti paaiškinimų, gali būti naudinga susidūrus su šia problema.
+- **Konteksto išlaikymas**: Pažangūs generatyviosios AI modeliai sugeba prisiminti kontekstą pokalbyje, tai gali būti vertingas vartotojo patirties priedas. Leidimas vartotojams valdyti ir kontroliuoti kontekstą gerina patirtį, bet įveda riziką saugoti jautrią informaciją. Svarstymai, kiek ilgai ši informacija saugoma, pavyzdžiui, įvedant saugojimo politiką, gali subalansuoti konteksto poreikį su privatumu.
+- **Personalizavimas**: Gebėjimas mokytis ir prisitaikyti leidžia AI modeliams pasiūlyti individualią vartotojo patirtį. Vartotojo patirties pritaikymas per funkcijas, tokias kaip vartotojo profiliai, ne tik suteikia vartotojui supratimo jausmą, bet ir padeda efektyviau rasti konkrečius atsakymus, taip sukuriant efektyvesnę ir malonesnę sąveiką.
 
-Vienas tokių personalizavimo pavyzdžių yra „Individualūs nurodymai“ OpenAI ChatGPT nustatymuose. Tai leidžia pateikti informaciją apie save, kuri gali būti svarbus kontekstas jūsų užklausoms. Štai pavyzdys, kaip atrodo individualus nurodymas.
+Vienas tokių personalizavimo pavyzdžių yra „Custom instructions“ nustatymai OpenAI ChatGPT. Jie leidžia pateikti informaciją apie save, kuri gali būti svarbus kontekstas jūsų paraginimams. Štai pavyzdys, kaip veikia vartotojo instrukcija.
 
-![Individualių nurodymų nustatymai ChatGPT](../../../translated_images/lt/custom-instructions.b96f59aa69356fcf.webp)
+![Custom Instructions Settings in ChatGPT](../../../translated_images/lt/custom-instructions.b96f59aa69356fcf.webp)
 
-Šis „profilis“ nurodo ChatGPT sukurti pamokos planą apie susietų sąrašų temą. Pastebėkite, kad ChatGPT atsižvelgia į tai, kad vartotoja gali norėti išsamiau išdėstyto plano, remdamasi jos patirtimi.
+Šis „profilis“ skatina ChatGPT paruošti pamokos planą apie susietas eilutes. Pastebėkite, kad ChatGPT atsižvelgia į tai, kad vartotojas gali norėti giliau išsamios pamokos pagal jos patirtį.
 
-![Užklausa ChatGPT dėl pamokos plano apie susietus sąrašus](../../../translated_images/lt/lesson-plan-prompt.cc47c488cf1343df.webp)
+![Komentaras ChatGPT, prašantis pamokos plano apie susietas eilutes](../../../translated_images/lt/lesson-plan-prompt.cc47c488cf1343df.webp)
 
-### Microsoft sistemos pranešimų sistema dideliems kalbos modeliams
+### Microsoft sistemos žinutės karkasas dideliems kalbos modeliams
 
-[Microsoft pateikė rekomendacijas](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) apie veiksmingų sistemos pranešimų rašymą generuojant atsakymus iš didelių kalbos modelių, suskirstytų į 4 sritis:
+[Microsoft pateikė rekomendacijas](https://learn.microsoft.com/azure/ai-foundry/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst), kaip efektyviai rašyti sistemos žinutes generuojant atsakymus iš LLM, suskirstytas į 4 sritis:
 
-1. Apibrėžti, kam skirtas modelis, taip pat jo galimybes ir ribotumus.
+1. Apibrėžti, kam modelis skirtas, taip pat jo galimybes ir ribotumus.
 2. Apibrėžti modelio išvesties formatą.
-3. Pateikti konkrečius pavyzdžius, kurie rodo numatytą modelio elgesį.
-4. Pateikti papildomus elgesio apsaugos mechanizmus.
+3. Pateikti specifinius pavyzdžius, iliustruojančius modelio numatomą elgesį.
+4. Pateikti papildomas elgesio apsaugas.
 
 ### Prieinamumas
 
-Nesvarbu, ar vartotojas turi regos, klausos, motorikos ar pažintinius sutrikimus – gerai sukurta pokalbių programa turėtų būti naudinga visiems. Toliau pateikiamas sąrašas su specifinėmis funkcijomis, skirtomis gerinti prieinamumą įvairiems vartotojų sutrikimams.
+Nesvarbu, ar vartotojas turi regos, klausos, motorikos ar pažinimo sutrikimų, gerai sukurta pokalbių programėlė turėtų būti prieinama visiems. Žemiau pateikiamas sąrašas specifinių funkcijų, skirtų pagerinti prieinamumą įvairiems vartotojų sutrikimams.
 
-- **Funkcijos regos sutrikimams**: Didelio kontrasto temos ir keičiami tekstai, suderinamumas su ekrano skaitytuvais.
+- **Funkcijos regos sutrikimams**: Aukšto kontrasto temos ir keičiamo dydžio tekstas, suderinamumas su ekrano skaitytuvais.
 - **Funkcijos klausos sutrikimams**: Teksto į kalbą ir kalbos į tekstą funkcijos, vizualiniai signalai garso pranešimams.
-- **Funkcijos motorikos sutrikimams**: Klaviatūros navigacijos palaikymas, balso komandos.
-- **Funkcijos pažintiniams sutrikimams**: Supaprastinta kalbų parinktis.
+- **Funkcijos motorikos sutrikimams**: Palaikymas klaviatūros navigacijai, balso komandos.
+- **Funkcijos pažinimo sutrikimams**: Supaprastintos kalbos parinktys.
 
-## Pritaikymas ir smulkus derinimas domeno specifiniams kalbos modeliams
+## Personalizavimas ir tobulinimas domenui specifiniams kalbos modeliams
 
-Įsivaizduokite pokalbių programą, kuri supranta jūsų įmonės terminus ir numato specifines užklausas, kurios dažniausiai kyla jos naudotojams. Yra keletas svarbių metodų:
+Įsivaizduokite pokalbių programėlę, kuri supranta jūsų įmonės žargoną ir numato specifinius klausimus, kuriuos dažnai užduoda vartotojai. Yra keli būdai, verti paminėjimo:
 
-- **Domeno specifinių kalbos (DSL) modelių panaudojimas**. DSL reiškia domenui specifinę kalbą. Galite naudoti vadinamąjį DSL modelį, apmokytą konkrečiam domenui suprasti jo sąvokas ir situacijas.
-- **Taikyti smulkų derinimą**. Smulkus derinimas yra modelio tolesnis mokymas su specifiniais duomenimis.
+- **Naudojimasis DSL modeliais**. DSL reiškia domenui specifinę kalbą. Galite naudoti vadinamąjį DSL modelį, apmokytą konkrečiame domene, kad jis suprastų jo sąvokas ir scenarijus.
+- **Taikyti tobulinimą (fine-tuning)**. Tobulinimas yra procesas, kai modelis toliau mokomas su specifiniais duomenimis.
 
-## Pritaikymas: naudojant DSL
+## Personalizavimas: DSL naudojimas
 
-Naudojant domenui specifinius kalbos modelius (DSL modelius) galima pagerinti vartotojų įsitraukimą, suteikiant specializuotas, kontekstiškai tinkamas sąveikas. Tai modelis, kuris yra apmokytas arba smulkiai derintas suprasti ir generuoti tekstą susijusį su konkrečia sritimi, pramone arba tema. DSL modelio panaudojimo galimybės apima modelio mokymą nuo nulio arba jau egzistuojančių per SDK ir API naudojimą. Kita galimybė – smulkus derinimas, kai paimamas esamas iš anksto apmokytas modelis ir pritaikomas specifiniam domenui.
+Naudojimasis domenui specifiniais kalbos modeliais (DSL modeliais) gali pagerinti vartotojo įsitraukimą, suteikiant specializuotą, kontekstualiai reikšmingą sąveiką. Tai modelis, apmokytas arba tobulintas suprasti ir generuoti tekstus, susijusius su konkrečia sritimi, industrija ar tema. DSL modelio naudojimo galimybės svyruoja nuo pilno mokymo nuo nulio iki jau esamų modelių naudojimo per SDK ir API. Kita galimybė – tobulinimas, kai paimamas jau iš anksto apmokytas modelis ir pritaikomas specifiniam domenui.
 
-## Pritaikymas: taikyti smulkų derinimą
+## Personalizavimas: taikyti tobulinimą
 
-Smulkus derinimas paprastai svarstomas, kai iš anksto apmokytas modelis neatitinka specializuotos srities ar konkrečios užduoties poreikių.
+Tobulinimas dažnai svarstomas, kai iš anksto apmokytas modelis nepakankamai gerai veikia specializuotoje srityje ar konkrečioje užduotyje.
 
-Pavyzdžiui, medicininiai klausimai yra sudėtingi ir reikalauja daug konteksto. Medicinos specialistas diagnozuodamas pacientą atsižvelgia į įvairius veiksnius, tokius kaip gyvenimo būdas ar iš anksto esantys sutrikimai, ir gali net pasikliauti naujausiais medicinos žurnalais patvirtindamas diagnozę. Tokiose niuansuotose situacijose bendros paskirties AI pokalbių programa negali būti patikimu šaltiniu.
+Pavyzdžiui, medicinos užklausos yra sudėtingos ir reikalauja daug konteksto. Kai medikas diagnozuoja pacientą, tai remiasi įvairiais veiksniais, tokiais kaip gyvenimo būdas ar esamos ligos, ir gali net remtis naujausiais medicinos žurnalais savo diagnozei pagrįsti. Tokiuose niuansuotuose scenarijuose bendros paskirties AI pokalbių programėlė negali būti patikimu šaltiniu.
 
-### Scenarijus: medicinos programa
+### Scenarijus: medicinos programėlė
 
-Apsvarstykite pokalbių programą, skirtą padėti medicinos specialistams greitai rasti gydymo gairių, vaistų sąveikų ar naujausių tyrimų rezultatus.
+Įsivaizduokite pokalbių programėlę, skirtą padėti medicinos specialistams greitai rasti gydymo gaires, vaistų sąveiką ar naujausius tyrimų rezultatus.
 
-Bendros paskirties modelis gali būti tinkamas atsakyti į bendruosius medicininius klausimus ar suteikti bendrą patarimą, bet jis gali susidurti su sunkumais šiose srityse:
+Bendros paskirties modelis gali tikti, atsakant į pagrindinius medicinos klausimus ar teikiant bendrą patarimą, tačiau gali susidurti su sunkumais šiais atvejais:
 
-- **Labai specifinės ar sudėtingos situacijos**. Pavyzdžiui, neurologas gali paklausti programos: „Kokios yra dabartinės geriausios praktikos vaistams atsparios epilepsijos valdymui pediatrinėje pacientų grupėje?“
-- **Trūksta naujausių pasiekimų**. Bendros paskirties modelis gali sunkiai pateikti naujausią atsakymą, atspindintį paskutinius neurologijos ir farmakologijos pasiekimus.
+- **Labai specifinės ar sudėtingos situacijos**. Pavyzdžiui, neurologas gali paklausti programėlės: „Kokios yra dabartinės geriausios praktikos gydant vaikus, kuriems pasireiškia vaistams atspari epilepsija?“
+- **Trūksta naujausių pasiekimų**. Bendros paskirties modelis gali nepavykti pateikti naujausiais neurologijos ir farmakologijos pasiekimais pagrįsto atsakymo.
 
-Tokiais atvejais modelio smulkus derinimas su specializuotu medicinos duomenų rinkiniu gali žymiai pagerinti jo gebėjimą tiksliai ir patikimai tvarkyti sudėtingas medicinines užklausas. Tai reikalauja prieigos prie didelio ir susijusio duomenų rinkinio, atspindinčio domenui būdingus iššūkius ir klausimus, kuriuos reikia spręsti.
+Tokiais atvejais modelio papildomas apmokymas specializuotame medicininiame duomenų rinkinyje žymiai pagerina jo gebėjimą tiksliai ir patikimai spręsti sudėtingus medicininius klausimus. Tam reikia turėti prieigą prie didelio ir aktualaus duomenų rinkinio, atspindinčio domenui būdingus iššūkius ir klausimus.
 
-## Aukštos kokybės AI valdomos pokalbių patirties svarstymai
+## Aukštos kokybės AI pagrįstos pokalbių patirties svarstymai
 
-Ši dalis išdėsto „aukštos kokybės“ pokalbių programų kriterijus, įskaitant veiksmingų metrikų fiksavimą ir atsakingo AI technologijos naudojimo principų laikymąsi.
+Šiame skyriuje aprašomi kriterijai „aukštos kokybės“ pokalbių programėlėms, įskaitant veiksmingų rodiklių fiksavimą ir atsakingą AI technologijos taikymo sistemą.
 
-### Pagrindinės metrikos
+### Pagrindiniai rodikliai
 
-Norint palaikyti aukštos kokybės programos veikimą, būtina sekti pagrindines metrikas ir svarstymus. Šie rodikliai ne tik užtikrina programos funkcionalumą, bet ir vertina AI modelio bei vartotojo patirties kokybę. Toliau pateikiamas sąrašas apimantis pagrindines, AI ir vartotojo patirties metrikas.
+Norint palaikyti aukštos kokybės programėlės veikimą, būtina stebėti pagrindinius rodiklius ir svarstymus. Šie matavimai ne tik užtikrina programėlės funkcionalumą, bet ir vertina AI modelio kokybę bei vartotojo patirtį. Žemiau pateiktas sąrašas apima bazinius, AI ir vartotojo patirties rodiklius, į kuriuos reikėtų atkreipti dėmesį.
 
-| Metrika                     | Apibrėžimas                                                                                                           | Svarstymai pokalbių programų kūrėjui                         |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| **Prieinamumo laikas (uptime)** | Matuoja, kiek laiko programa veikia ir yra prieinama vartotojams.                                                   | Kaip sumažinsite prastovas?                                  |
-| **Atsakymo laikas**          | Laikas, per kurį programa atsako į vartotojo užklausą.                                                               | Kaip optimizuosite užklausų apdorojimą, kad pagerintumėte atsakymo laiką? |
-| **Tikslumas (precision)**    | Teisingų teigiamų prognozių santykis su visomis teigiamomis prognozėmis.                                            | Kaip patikrinsite savo modelio tikslumą?                      |
-| **Atmintis (recall, jautrumas)** | Teisingų teigiamų prognozių santykis su realiomis teigiamomis reikšmėmis.                                           | Kaip matuosite ir gerinsite atmintį?                          |
-| **F1 balas**                | Tikslumo ir atminties harmoninis vidurkis, subalansuojantis šių dviejų rodiklių mainus.                              | Koks yra jūsų tikslinis F1 balas? Kaip subalansuosite tikslumą ir atmintį? |
-| **Painumas (perplexity)**     | Matuoja, kaip gerai modelio prognozuojama tikimybių pasiskirstymas atitinka tikrą duomenų pasiskirstymą.               | Kaip sumažinsite painumą?                                    |
-| **Vartotojų pasitenkinimo metrikos** | Matuoja vartotojo požiūrį į programą. Dažnai renkami apklausomis.                                                    | Kaip dažnai rinksitės vartotojų atsiliepimus? Kaip juos naudosite adaptavimui? |
-| **Klaidų dažnis**            | Modelio klaidų kiekis suprantant arba kuriant išvestį.                                                              | Kokias strategijas turite klaidų dažniui mažinti?            |
-| **Perkvalifikavimo ciklai** | Kaip dažnai modelis atnaujinamas, įtraukiant naujus duomenis ir įžvalgas.                                            | Kaip dažnai perkvalifikuosite modelį? Kas sukelia perkvalifikavimo ciklą? |
+| Rodiklis                     | Apibrėžimas                                                                                                           | Svarstymai pokalbių programėlės kūrėjui                         |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| **Veikimo laikas**           | Matuoja laiką, kiek programėlė yra veikianti ir prieinama vartotojams.                                                | Kaip sumažinsite neveikimo laiką?                              |
+| **Atsakymo laikas**           | Laikas nuo vartotojo užklausos iki programėlės atsakymo.                                                              | Kaip optimizuosite užklausų apdorojimą, kad pagerintumėte atsakymų laiką? |
+| **Tikslumas (Precision)**     | Tikrųjų teigiamų prognozių santykis su visomis teigiamomis prognozėmis.                                              | Kaip patikrinsite savo modelio tikslumą?                        |
+| **Atgavimas (Recall)**        | Tikrųjų teigiamų prognozių santykis su realiu teigiamų atvejų skaičiumi.                                            | Kaip matuosite ir gerinsite atkūrimą?                           |
+| **F1 balas**                  | Tikslumo ir atgavimo harmoninis vidurkis, balansuojantis abu aspektus.                                               | Koks jūsų tikslinis F1 balas? Kaip subalansuosite tikslumą ir atkūrimą? |
+| **Sutrikimo lygis (Perplexity)** | Matuoja, kaip gerai modelio prognozuojamas tikimybių pasiskirstymas atitinka faktinį duomenų pasiskirstymą.           | Kaip mažinsite sutrikimo lygį?                                 |
+| **Vartotojo pasitenkinimo rodikliai** | Matuoja vartotojo požiūrį į programėlę. Dažnai renkama apklausų būdu.                                                | Kaip dažnai rinksite vartotojų atsiliepimus? Kaip prisitaikysite pagal juos? |
+| **Klaidų dažnis**             | Modelio klaidų suprantant arba kuriant išvestį dažnis.                                                               | Kokias strategijas turite klaidų dažnio mažinimui?             |
+| **Permokymo ciklai**          | Dažnis, kuriuo modelis atnaujinamas, įtraukiant naujus duomenis ir įžvalgas.                                          | Kaip dažnai perkursite modelį? Kas inicijuoja modelio perkūrimą?  |
 
-| **Anomalių aptikimas**      | Įrankiai ir technikos neįprastoms, nuo tikėtino elgesio neatitinkančioms, modelių identifikavimui.                 | Kaip reaguosite į anomalijas?                                            |
+| **Anomalijų nustatymas**    | Įrankiai ir technikos nustatyti neįprastus modelius, kurie nesilaiko numatytos elgsenos.                                   | Kaip reaguosite į anomalijas?                                            |
 
-### Atsakingos DI praktikos diegimas pokalbių programėlėse
+### Atsakingos dirbtinio intelekto praktikos įgyvendinimas pokalbių programėlėse
 
-„Microsoft“ požiūris į Atsakingą DI identifikavo šešis principus, kurie turėtų vadovauti DI kūrimui ir naudojimui. Žemiau pateikti principai, jų apibrėžimas ir dalykai, kuriuos pokalbių programėlės kūrėjas turėtų apsvarstyti, ir kodėl juos būtina rimtai vertinti.
+„Microsoft“ požiūris į atsakingą DI nustatė šešis principus, kurie turėtų vadovauti DI kūrimui ir naudojimui. Žemiau pateikti principai, jų apibrėžimai ir dalykai, kuriuos pokalbių programėlės kūrėjas turėtų apsvarstyti bei kodėl jie turėtų būti rimtai vertinami.
 
-| Principai             | „Microsoft“ apibrėžimas                                | Apsvarstymai pokalbių programėlės kūrėjui                          | Kodėl tai svarbu                                                               |
-| ---------------------- | ----------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| Teisingumas           | DI sistemos turėtų elgtis teisingai su visais žmonėmis. | Užtikrinkite, kad pokalbių programėlė nediskriminuotų pagal naudotojo duomenis. | Siekiant kurti pasitikėjimą ir įtrauktį tarp naudotojų; išvengti teisinių pasekmių. |
-| Patikimumas ir saugumas | DI sistemos turėtų veikti patikimai ir saugiai.         | Įdiekite testavimą ir atsargumo priemones, kad sumažintumėte klaidas ir rizikas. | Užtikrina naudotojų pasitenkinimą ir apsaugo nuo galimos žalos.              |
-| Privatumas ir saugumas | DI sistemos turėtų būti saugios ir gerbti privatumą.   | Įgyvendinkite stiprią šifravimą ir duomenų apsaugos priemones.        | Siekiant apsaugoti jautrius naudotojų duomenis ir laikytis privatumo įstatymų. |
-| Įtrauktis             | DI sistemos turėtų įgalinti visus ir įtraukti žmones. | Sukurkite vartotojo sąsają/naudotojo patirtį, kuri yra prieinama ir patogi įvairiai auditorijai. | Užtikrina, kad platesnė žmonių grupė gali efektyviai naudotis programėle.    |
-| Skaidrumas            | DI sistemos turėtų būti suprantamos.                    | Pateikite aiškią dokumentaciją ir pagrindimą DI atsakymams.           | Naudotojai labiau pasitiki sistema, jei gali suprasti, kaip priimami sprendimai. |
-| Atsakomybė            | Žmonės turėtų būti atsakingi už DI sistemas.            | Sukurkite aiškų procesą DI sprendimų tikrinimui ir gerinimui.          | Leidžia nuolatinį tobulinimą ir taisomąsias priemones klaidų atveju.          |
+| Principai             | „Microsoft“ apibrėžimas                               | Apsvarstymai pokalbių programėlės kūrėjui                            | Kodėl tai svarbu                                                                       |
+| ---------------------- | ----------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| Teisingumas           | DI sistemos turėtų visus žmones vertinti teisingai. | Užtikrinti, kad pokalbių programėlė nediskriminuotų pagal naudotojo duomenis. | Sukurti pasitikėjimą ir įtrauktį tarp naudotojų; išvengti teisinių pasekmių.           |
+| Patikimumas ir saugumas | DI sistemos turėtų veikti patikimai ir saugiai.       | Vykdyti testavimą ir avarinius sprendimus, kad sumažintumėte klaidų ir rizikų.  | Užtikrinti naudotojų pasitenkinimą ir išvengti galimos žalos.                          |
+| Privatumas ir saugumas | DI sistemos turi būti saugios ir gerbti privatumo taisykles.  | Įdiegti stiprią šifravimą ir duomenų apsaugos priemones.              | Apsaugoti jautrius naudotojų duomenis ir laikytis privatumo įstatymų.                  |
+| Įtrauktis              | DI sistemos turi suteikti galią visiems ir įtraukti žmones. | Kurti sąsajas, patogias ir prieinamas įvairioms auditorijoms.         | Užtikrinti, kad platesnis žmonių ratas galėtų efektyviai naudotis programėle.          |
+| Skaidrumas             | DI sistemos turi būti suprantamos.                    | Teikti aiškią dokumentaciją ir paaiškinimus dėl DI atsakymų.          | Naudotojai labiau pasitiki sistema, jei supranta, kaip priimami sprendimai.            |
+| Atsakomybė             | Žmonės turi būti atsakingi už DI sistemas.            | Nustatyti aiškų procesą DI sprendimų tikrinimui ir tobulinimui.       | Leidžia nuolat gerinti ir koreguoti, jei padaromos klaidos.                            |
 
 ## Užduotis
 
-Peržiūrėkite [užduotį](../../../07-building-chat-applications/python). Ji ves per keletą pratimų nuo pirmųjų pokalbių užklausų paleidimo iki teksto klasifikavimo ir santraukų rengimo bei daugiau. Atkreipkite dėmesį, kad užduotys prieinamos įvairiomis programavimo kalbomis!
+Žr. [assignment](../../../07-building-chat-applications/python). Ji jus ves per seriją pratimų – nuo pirmųjų pokalbių užklausų vykdymo iki teksto klasifikavimo ir santraukų sudarymo bei daugiau. Atkreipkite dėmesį, kad užduotys prieinamos skirtingomis programavimo kalbomis!
 
 ## Puikiai! Tęskite kelionę
 
-Užbaigus šią pamoką, apžiūrėkite mūsų [Generatyvinio DI mokymosi kolekciją](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ir toliau keldami savo žinias apie Generatyvinį DI!
+Baigę šią pamoką, peržiūrėkite mūsų [Generatyvinio DI mokymosi kolekciją](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), kad toliau gilintumėte savo žinias apie generatyvinį DI!
 
-Eikite į 8 pamoką, kad pamatytumėte, kaip pradėti [kurti paieškos programėles](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Eikite į 8-ą pamoką, kur sužinosite, kaip pradėti [kurti paieškos programėles](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 

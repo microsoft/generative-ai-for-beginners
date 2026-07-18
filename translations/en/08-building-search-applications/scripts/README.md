@@ -2,19 +2,19 @@
 
 The transcription data prep scripts download YouTube video transcripts and prepare them for use with the Semantic Search with OpenAI Embeddings and Functions sample.
 
-The transcription data prep scripts have been tested on the latest releases of Windows 11, macOS Ventura, and Ubuntu 22.04 (and above).
+The transcription data prep scripts have been tested on the latest releases Windows 11, macOS Ventura and Ubuntu 22.04 (and above).
 
 ## Create required Azure OpenAI Service resources
 
 > [!IMPORTANT]
-> We recommend updating the Azure CLI to the latest version to ensure compatibility with OpenAI
+> We suggest you update the Azure CLI to the latest version to ensure compatibility with OpenAI
 > See [Documentation](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Create a resource group
 
 > [!NOTE]
-> For these instructions, we're using the resource group named "semantic-video-search" in East US.
-> You can change the resource group name, but if you change the location of the resources, 
+> For these instructions we're using the resource group named "semantic-video-search" in East US.
+> You can change the name of the resource group, but when changing the location for the resources, 
 > check the [model availability table](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
@@ -28,7 +28,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Get the endpoint and keys for use in this application
+1. Get the endpoint and keys for usage in this application
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -38,8 +38,8 @@ az cognitiveservices account keys list --name semantic-video-openai \
 ```
 
 1. Deploy the following models:
-   - `text-embedding-ada-002` version `2` or higher, named `text-embedding-ada-002`
-   - `gpt-35-turbo` version `0613` or higher, named `gpt-35-turbo`
+   - `text-embedding-ada-002` version `2` or greater, named `text-embedding-ada-002`
+   - `gpt-5-mini` named `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,9 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-35-turbo \
-    --model-name gpt-35-turbo \
-    --model-version "0613"  \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -63,7 +62,7 @@ az cognitiveservices account deployment create \
 
 ## Required software
 
-- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) or higher
+- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) or greater
 
 ## Environment variables
 
@@ -71,7 +70,7 @@ The following environment variables are required to run the YouTube transcriptio
 
 ### On Windows
 
-We recommend adding the variables to your `user` environment variables.
+Recommend adding the variables to your `user` environment variables.
 `Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` for [USER] > `New`.
 
 ```text
@@ -81,11 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
+<!-- You can add the environment variables to your PowerShell profile.
 
+```powershell
+$env:AZURE_OPENAI_API_KEY = "<your Azure OpenAI Service API key>"
+$env:AZURE_OPENAI_ENDPOINT = "<your Azure OpenAI Service endpoint>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<your Azure OpenAI Service model deployment name>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<your Google developer API key>"
+``` -->
 
 ### On Linux and macOS
 
-We recommend adding the following exports to your `~/.bashrc` or `~/.zshrc` file.
+Recommend adding the following exports to your `~/.bashrc` or `~/.zshrc` file.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -96,7 +102,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## Install the required Python libraries
 
-1. Install the [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) if it’s not already installed.
+1. Install the [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) if it's not already installed.
 1. From a `Terminal` window, clone the sample to your preferred repo folder.
 
     ```bash
@@ -139,7 +145,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Install the required libraries.
 
-   On Windows:
+   On windows:
 
    ```powershell
    pip install -r requirements.txt
@@ -153,7 +159,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## Run the YouTube transcription data prep scripts
 
-### On Windows
+### On windows
 
 ```powershell
 .\transcripts_prepare.ps1
@@ -165,5 +171,9 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ./transcripts_prepare.sh
 ```
 
-**Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Disclaimer**:
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

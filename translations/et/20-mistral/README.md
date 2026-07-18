@@ -1,42 +1,42 @@
-# Mistral mudelitega ehitamine 
+# Mistrali mudelitega ehitamine 
 
 ## Sissejuhatus 
 
-See õppetund käsitleb: 
-- Erinevate Mistral mudelite uurimist 
-- Iga mudeli kasutusjuhtude ja stsenaariumide mõistmist 
-- Koodinäidete uurimist, mis näitavad iga mudeli ainulaadseid omadusi. 
+Selles õppetükis käsitleme: 
+- Erinevate Mistrali mudelite uurimist 
+- Iga mudeli kasutusjuhtude ja stsenaariumite mõistmist 
+- Koodi näidete uurimist, mis näitavad iga mudeli ainulaadseid omadusi. 
 
-## Mistral mudelid 
+## Mistrali mudelid 
 
-Selles õppetunnis uurime kolme erinevat Mistral mudelit: 
+Selles õppetükis uurime kolme erinevat Mistrali mudelit: 
 **Mistral Large**, **Mistral Small** ja **Mistral Nemo**. 
 
-Iga neist mudelitest on tasuta saadaval aadressil [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst). Selle märkmiku kood kasutab neid mudeleid koodi käivitamiseks.
+Kõik need mudelid on tasuta kättesaadavad saidil [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst). Selle märkmeraamatu kood kasutab neid mudeleid koodi käivitamiseks.
 
-> **Märkus:** GitHub Models pensionile jääb 2026. aasta juuli lõpus. Rohkem teavet AI mudelite prototüüpimiseks kasutamise kohta leiate [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) juurest. 
+> **Märkus:** GitHub Models suletakse 2026. aasta juuli lõpus. Siit leiate lisateavet [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) kasutamise kohta AI mudelite prototüüpimiseks. 
 
 
 ## Mistral Large 2 (2407)
-Mistral Large 2 on praegu Mistrali lipulaevmudel ja on mõeldud ettevõtte kasutuseks. 
+Mistral Large 2 on praegu Mistrali lipulaev mudel ja on mõeldud ettevõtete kasutamiseks. 
 
-Mudel on täiendus originaalsele Mistral Large mudelile, pakkudes 
-- Suuremat konteksti akent - 128k vs 32k 
-- Paremat tulemuslikkust matemaatika ja koodi ülesannetes - 76,9% keskmist täpsust vs 60,4% 
-- Suurenenud mitmekeelseid võimekusi - keeled hõlmavad: inglise, prantsuse, saksa, hispaania, itaalia, portugali, hollandi, vene, hiina, jaapani, korea, araabia ja hindi keelt.
+Mudel on uuendus võrreldes algse Mistral Large mudeliga, pakkudes 
+-  Suuremat konteksti akent - 128k vs 32k 
+-  Paremad tulemused matemaatika ja programmeerimise ülesannetes - 76,9% keskmine täpsus vs 60,4% 
+-  Suurenenud mitmekeelseid tulemusi - toetatud keeled: inglise, prantsuse, saksa, hispaania, itaalia, portugali, hollandi, vene, hiina, jaapani, korea, araabia ja hindi.
 
-Nende omadustega paistab Mistral Large silma: 
-- *Taasesitusega täiendatud genereerimine (RAG)* - suurema konteksti akna tõttu
-- *Funktsioonikõned* - see mudel toetab natiivset funktsioonikõnede kasutamist, mis võimaldab integreerumist väliste tööriistade ja API-dega. Need kõned võivad toimuda nii paralleelselt kui ka järjestikku.
-- *Koodigeneerimine* - see mudel on väga hea Pythoni, Java, TypeScripti ja C++ genereerimisel. 
+Nende omadustega paistab Mistral Large silma järgnevates valdkondades: 
+- *Taastekstimisel põhinev loomine (RAG)* - tänu suuremale konteksti aknale
+- *Funktsioonikõne* - see mudel toetab natiivset funktsioonikõnet, mis võimaldab integreeritud kasutada väliseid tööriistu ja API-sid. Neid kõnesid saab teha paralleelselt või ükshaaval järjestikku. 
+- *Koodi genereerimine* - see mudel on eriti tugev Python, Java, TypeScripti ja C++ genereerimisel. 
 
-### RAG näide, kasutades Mistral Large 2 
+### RAG näide kasutades Mistral Large 2 mudelit
 
-Selles näites kasutame Mistral Large 2 RAG mustriga tekstidokumendi töötlemiseks. Küsimus on kirjutatud korea keeles ja küsib autori tegevusi enne ülikooli. 
+Selles näites kasutame Mistral Large 2 mudelit, et rakendada RAG-mustrit tekstidokumendi peal. Küsimus on kirjutatud koreakeelsena ja küsib autori tegevuste kohta enne kolledžit. 
 
-See kasutab Cohere embedimist mudelit, et luua embedimised tekstidokumendi ja küsimuse jaoks. Selle näite puhul kasutatakse faiss Python paketti vektoripoena. 
+Kasutatakse Cohere Embeddings mudelit, et luua teksti- ja küsimuse manuseid. Selle näite puhul kasutatakse vektoripoes faiss Python paketti. 
 
-Mudelile saadetav prompt sisaldab nii küsimust kui ka leitud lõike, mis on küsimusega sarnased. Mudel seejärel vastab loomulikus keeles. 
+Mistral mudelile saadetav prompt sisaldab nii küsimusi kui ka küsimusele sarnaseid tagastatud lõike. Mudel annab seejärel loomulikus keeles vastuse. 
 
 ```python 
 pip install faiss-cpu
@@ -134,22 +134,22 @@ print(chat_response.choices[0].message.content)
 ```
 
 ## Mistral Small 
-Mistral Small on teine mudel Mistrali mudelite peres, kuuludes premier/ettevõtte kategooriasse. Nagu nimigi vihjab, on see mudel väike keelemudel (Small Language Model, SLM). Mistral Small kasutamise eelised on: 
-- Kuluefektiivsus võrreldes Mistral LLM-dega nagu Mistral Large ja NeMo - 80% hinnalangus
-- Madal latentsus - vastused kiiremad võrreldes Mistral LLM-dega
-- Paindlikkus - saab kasutada erinevates keskkondades, kus ressursinõuded on kergemad. 
+Mistral Small on teine mudel Mistrali pere mudelite hulgas peamise/ettevõtte kategooria all. Nime järgi on see väike keelemudel (SLM). Mistral Small kasutamise eelised on järgmised: 
+- Säästab kulusid võrreldes Mistrali suurte LLM-idega nagu Mistral Large ja NeMo - 80% hinnalangus
+- Madal latentsus - kiirem reageerimine võrreldes Mistrali LLM-idega
+- Paindlik - saab paigaldada erinevatesse keskkondadesse, nõudes vähem ressursse.
 
 
-Mistral Small sobib suurepäraselt: 
-- Tekstipõhisteks ülesanneteks nagu kokkuvõtete tegemine, meeleoluanalüüs ja tõlkimine. 
-- Rakendustesse, kus päringuid tehakse sageli, tänu selle soodsale hinnale 
-- Madala latentsusega koodiülesannete jaoks nagu ülevaatus ja koodisoovitused 
+Mistral Small sobib hästi: 
+- Tekstipõhisteks ülesanneteks nagu kokkuvõtete tegemine, meeleolu analüüs ja tõlkimine. 
+- Rakendused, kus tehakse sageli päringuid tänu selle kuluefektiivsusele 
+- Madala latentsusega kodeerimise ülesanded, nagu koodi ülevaatus ja koodisoovitused 
 
 ## Mistral Small ja Mistral Large võrdlus 
 
-Latentsuse erinevuste demonstreerimiseks Mistral Small ja Large vahel käivita allolevad lahtrid. 
+Näitamaks latentsus erinevusi Mistral Small ja Large vahel, käivitage allolevad rakud. 
 
-Peaksid nägema vastuseaja erinevust umbes 3–5 sekundit. Pane tähele ka vastuse pikkust ja stiili sama prompti puhul.  
+Näete vastuse aegade erinevust umbes 3-5 sekundit. Pöörake tähelepanu ka vastuste pikkusele ja stiilile sama prompti puhul.  
 
 ```python 
 
@@ -211,24 +211,24 @@ print(response.choices[0].message.content)
 
 ## Mistral NeMo
 
-Võrreldes kahe eelnevalt käsitletud mudeliga on Mistral NeMo ainus tasuta mudel, millel on Apache2 litsents. 
+Võrreldes teiste selles õppetükis käsitletud mudelitega on Mistral NeMo ainus tasuta mudel, mille litsents on Apache2. 
 
-Seda peetakse täienduseks varasemale avatud lähtekoodiga Mistrali suurele keelemudelile Mistral 7B-le. 
+Seda peetakse uuenduseks varasemale Mistrali avatud lähtekoodiga LLM-ile, Mistral 7B-le. 
 
-Mõned NeMo mudeli muud omadused on: 
+Mõned muud NeMo mudeli omadused on: 
 
-- *Tõhusam tokeniseerimine:* See mudel kasutab Tekken tokenisaatorit, mis on paindlikum kui tavapärasem tiktoken. See tagab parema jõudluse paljudes keeltes ja koodis. 
+- *Tõhusam tokeniseerimine:* See mudel kasutab Tekkeni tokeniseerijat, mis on parem valik kui sagedamini kasutatav tiktoken. See tagab paremad tulemused mitmes keeles ja koodis. 
 
-- *Peenhäälestus:* Põhimudel on saadaval peenhäälestamiseks. See võimaldab rohkem paindlikkust kasutusjuhtudel, kus peenhäälestus võib vajalik olla. 
+- *Häälestamise võimalus:* Põhimudel on saadaval peenhäälestamiseks. See annab suurema paindlikkuse kasutusjuhtudel, kus võib olla vaja peenhäälestust. 
 
-- *Natiivne funktsioonikõnede tugi* - Nagu Mistral Large, on see mudel koolitatud funktsioonikõnedele. See teeb temast unikaalse, kuna tegemist on ühe esimese avatud lähtekoodiga mudeliga, mis seda toetab. 
+- *Natiivne funktsioonikõne* - Nagu Mistral Large, on ka see mudel treenitud funktsioonikõneks. See muudab selle ainulaadseks ning on üks esimesi avatud lähtekoodiga mudeleid, mis seda toetab. 
 
 
-### Tokenisaatorite võrdlus 
+### Tokeniseerijate võrdlus 
 
-Selles näites vaatleme, kuidas Mistral NeMo tokeniseerib võrreldes Mistral Large mudeliga. 
+Selles näites vaatleme, kuidas Mistral NeMo käsitleb tokeniseerimist võrreldes Mistral Large'iga. 
 
-Mõlemad näited kasutavad sama prompti, kuid näed, et NeMo tagastab vähem tähemärke kui Mistral Large. 
+Mõlemad näited võtavad sama prompti, kuid näete, et NeMo tagastab vähem tokeneid kui Mistral Large. 
 
 ```bash
 pip install mistral-common
@@ -246,7 +246,7 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Laadi Mistral tokeniseerija
+# Laadi Mistrali tokeniseerijat
 
 model_name = "open-mistral-nemo"
 
@@ -286,7 +286,7 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# Loenda tokenite arv
+# Loe tokenite arv
 print(len(tokens))
 ```
 
@@ -302,13 +302,13 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Laadi Mistral tokeniseerija
+# Laadi Mistrali tokenisaator
 
 model_name = "mistral-large-latest"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Tokeniseeri sõnumite nimekiri
+# Tokeniseeri sõnumite loend
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -342,13 +342,13 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# Loe tokenite arvu
+# Loenda tokenite arv
 print(len(tokens))
 ```
 
-## Õppimine ei peatu siin, jätka teekonda
+## Õppimine ei lõpe siin, jätka teekonda
 
-Pärast selle õppetunni lõpetamist vaata meie [Generative AI õppe kollektsiooni](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata oma generatiivse tehisintellekti teadmiste tõstmist!
+Pärast selle õppetüki lõpetamist vaadake meie [Generatiivse tehisintellekti õppematerjalide kogu](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata oma generatiivse AI teadmiste süvendamist!
 
 ---
 

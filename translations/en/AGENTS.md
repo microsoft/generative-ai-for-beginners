@@ -2,20 +2,20 @@
 
 ## Project Overview
 
-This repository offers a comprehensive 21-lesson curriculum on Generative AI fundamentals and application development. The course is tailored for beginners, covering everything from foundational concepts to creating production-ready applications.
+This repository contains a comprehensive 21-lesson curriculum teaching Generative AI fundamentals and application development. The course is designed for beginners and covers everything from basic concepts to building production-ready applications.
 
 **Key Technologies:**
 - Python 3.9+ with libraries: `openai`, `python-dotenv`, `tiktoken`, `azure-ai-inference`, `pandas`, `numpy`, `matplotlib`
-- TypeScript/JavaScript with Node.js and libraries: `@azure/openai`, `@azure-rest/ai-inference`, `openai`
-- Azure OpenAI Service, OpenAI API, and GitHub Models
+- TypeScript/JavaScript with Node.js and libraries: `openai` (Azure OpenAI via the v1 endpoint + Responses API), `@azure-rest/ai-inference` (Microsoft Foundry Models)
+- Azure OpenAI Service, OpenAI API, and Microsoft Foundry Models (GitHub Models is retiring end of July 2026)
 - Jupyter Notebooks for interactive learning
-- Dev Containers for a consistent development environment
+- Dev Containers for consistent development environment
 
 **Repository Structure:**
 - 21 numbered lesson directories (00-21) containing READMEs, code examples, and assignments
-- Multiple implementations: Python, TypeScript, and occasionally .NET examples
-- Translations directory with over 40 language versions
-- Centralized configuration via `.env` file (use `.env.copy` as a template)
+- Multiple implementations: Python, TypeScript, and sometimes .NET examples
+- Translations directory with 40+ language versions
+- Centralized configuration via `.env` file (use `.env.copy` as template)
 
 ## Setup Commands
 
@@ -62,26 +62,36 @@ npm install
 
 The repository includes a `.devcontainer` configuration for GitHub Codespaces or VS Code Dev Containers:
 
-1. Open the repository in GitHub Codespaces or VS Code with the Dev Containers extension.
-2. The Dev Container will automatically:
+1. Open repository in GitHub Codespaces or VS Code with Dev Containers extension
+2. Dev Container will automatically:
    - Install Python dependencies from `requirements.txt`
-   - Run the post-create script (`.devcontainer/post-create.sh`)
-   - Set up the Jupyter kernel
+   - Run post-create script (`.devcontainer/post-create.sh`)
+   - Set up Jupyter kernel
 
 ## Development Workflow
 
 ### Environment Variables
 
-Lessons requiring API access use environment variables defined in `.env`:
+All lessons requiring API access use environment variables defined in `.env`:
 
 - `OPENAI_API_KEY` - For OpenAI API
-- `AZURE_OPENAI_API_KEY` - For Azure OpenAI Service
-- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI endpoint URL
-- `AZURE_OPENAI_DEPLOYMENT` - Chat completion model deployment name
-- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Embeddings model deployment name
-- `AZURE_OPENAI_API_VERSION` - API version (default: `2024-02-01`)
+- `AZURE_OPENAI_API_KEY` - For Azure OpenAI in Microsoft Foundry (Azure OpenAI Service is now part of Microsoft Foundry: https://ai.azure.com)
+- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI endpoint URL (Foundry resource endpoint)
+- `AZURE_OPENAI_DEPLOYMENT` - Chat completion model deployment name (course default: `gpt-5-mini`)
+- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Embeddings model deployment name (course default: `text-embedding-3-small`)
+- `AZURE_OPENAI_API_VERSION` - API version (default: `2024-10-21`)
 - `HUGGING_FACE_API_KEY` - For Hugging Face models
-- `GITHUB_TOKEN` - For GitHub Models
+- `AZURE_INFERENCE_ENDPOINT` - Microsoft Foundry Models endpoint (multi-provider model catalog)
+- `AZURE_INFERENCE_CREDENTIAL` - Microsoft Foundry Models API key (replaces the retiring `GITHUB_TOKEN`)
+- `AZURE_INFERENCE_CHAT_MODEL` - A non-reasoning model (e.g. `Llama-3.3-70B-Instruct`) used by the `temperature` examples, since reasoning models don't support sampling controls
+
+### Model conventions (important)
+
+- **Default chat model is `gpt-5-mini`** - a current, non-deprecated **reasoning** model. As of 2026 the older temperature-capable "mini" models (`gpt-4o-mini`, `gpt-4.1-mini`) are *deprecating*, so the curriculum standardizes on the GPT-5 family.
+- **Reasoning models reject `temperature` and `top_p`**, and use `max_output_tokens` (Responses API) / `max_completion_tokens` (chat completions) instead of `max_tokens`. Do **not** add `temperature`/`top_p`/`max_tokens` to samples that call `gpt-5-mini`.
+- **To demonstrate `temperature`**, samples use a **Llama** model (`Llama-3.3-70B-Instruct`) via the Microsoft Foundry Models endpoint (`AZURE_INFERENCE_CHAT_MODEL`). Steer reasoning models with prompt engineering + reasoning controls instead of sampling knobs.
+- **Fine-tuning (lesson 18)** keeps `gpt-4.1-mini`: GPT-5 only supports reinforcement fine-tuning (RFT), not the supervised fine-tuning (SFT) shown there.
+- Lessons 20 (Mistral) and 21 (Meta) keep `temperature`/`max_tokens` because they target Mistral/Llama models, which support them.
 
 ### Running Python Examples
 
@@ -125,17 +135,17 @@ jupyter notebook
 
 ### Python
 
-- Use `python-dotenv` for managing environment variables
-- Import the `openai` library for API interactions
+- Use `python-dotenv` for environment variable management
+- Import `openai` library for API interactions
 - Use `pylint` for linting (some examples include `# pylint: disable=all` for simplicity)
 - Follow PEP 8 naming conventions
 - Store API credentials in `.env` file, never in code
 
 ### TypeScript
 
-- Use the `dotenv` package for environment variables
-- TypeScript configuration is defined in `tsconfig.json` for each app
-- Use `@azure/openai` or `@azure-rest/ai-inference` for Azure services
+- Use `dotenv` package for environment variables
+- TypeScript configuration in `tsconfig.json` for each app
+- Use the `openai` package for Azure OpenAI (point the client at the `/openai/v1/` endpoint and call `client.responses.create`); use `@azure-rest/ai-inference` for Microsoft Foundry Models
 - Use `nodemon` for development with auto-reload
 - Build before running: `npm run build` then `npm start`
 
@@ -144,7 +154,7 @@ jupyter notebook
 - Keep code examples simple and educational
 - Include comments explaining key concepts
 - Each lesson's code should be self-contained and runnable
-- Use consistent naming: `aoai-` prefix for Azure OpenAI, `oai-` for OpenAI API, `githubmodels-` for GitHub Models
+- Use consistent naming: `aoai-` prefix for Azure OpenAI, `oai-` for OpenAI API, `githubmodels-` for Microsoft Foundry Models (legacy prefix retained from the GitHub Models era)
 
 ## Documentation Guidelines
 
@@ -153,17 +163,17 @@ jupyter notebook
 - All URLs must be wrapped in `[text](../../url)` format with no extra spaces
 - Relative links must start with `./` or `../`
 - All links to Microsoft domains must include tracking ID: `?WT.mc_id=academic-105485-koreyst`
-- Avoid country-specific locales in URLs (e.g., `/en-us/`)
-- Images should be stored in the `./images` folder with descriptive names
+- No country-specific locales in URLs (avoid `/en-us/`)
+- Images stored in `./images` folder with descriptive names
 - Use English characters, numbers, and dashes in file names
 
 ### Translation Support
 
-- The repository supports over 40 languages via automated GitHub Actions
-- Translations are stored in the `translations/` directory
+- Repository supports 40+ languages via automated GitHub Actions
+- Translations stored in `translations/` directory
 - Do not submit partial translations
 - Machine translations are not accepted
-- Translated images are stored in the `translated_images/` directory
+- Translated images stored in `translated_images/` directory
 
 ## Testing and Validation
 
@@ -182,7 +192,7 @@ This repository uses GitHub Actions for validation. Before submitting PRs:
    ```
 
 2. **Manual Testing**:
-   - Test Python examples: Activate the virtual environment and run scripts
+   - Test Python examples: Activate venv and run scripts
    - Test TypeScript examples: `npm install`, `npm run build`, `npm start`
    - Verify environment variables are configured correctly
    - Check that API keys work with the code examples
@@ -190,7 +200,7 @@ This repository uses GitHub Actions for validation. Before submitting PRs:
 3. **Code Examples**:
    - Ensure all code runs without errors
    - Test with both Azure OpenAI and OpenAI API when applicable
-   - Verify examples work with GitHub Models where supported
+   - Verify examples work with Microsoft Foundry Models where supported
 
 ### No Automated Tests
 
@@ -223,9 +233,9 @@ This is an educational repository focused on tutorials and examples. There are n
 
 ### Contribution Requirements
 
-- Sign the Microsoft CLA (automatic on first PR)
-- Fork the repository to your account before making changes
-- Submit one PR per logical change (don't combine unrelated fixes)
+- Sign Microsoft CLA (automatic on first PR)
+- Fork repository to your account before making changes
+- One PR per logical change (don't combine unrelated fixes)
 - Keep PRs focused and small when possible
 
 ## Common Workflows
@@ -233,32 +243,32 @@ This is an educational repository focused on tutorials and examples. There are n
 ### Adding a New Code Example
 
 1. Navigate to the appropriate lesson directory
-2. Create the example in the `python/` or `typescript/` subdirectory
-3. Follow naming conventions: `{provider}-{example-name}.{py|ts|js}`
+2. Create example in `python/` or `typescript/` subdirectory
+3. Follow naming convention: `{provider}-{example-name}.{py|ts|js}`
 4. Test with actual API credentials
-5. Document any new environment variables in the lesson README
+5. Document any new environment variables in lesson README
 
 ### Updating Documentation
 
-1. Edit the README.md in the lesson directory
+1. Edit README.md in the lesson directory
 2. Follow Markdown guidelines (tracking IDs, relative links)
-3. Translation updates are handled by GitHub Actions (don't edit manually)
-4. Test all links to ensure they are valid
+3. Update translations are handled by GitHub Actions (don't edit manually)
+4. Test all links are valid
 
 ### Working with Dev Containers
 
-1. The repository includes `.devcontainer/devcontainer.json`
-2. The post-create script installs Python dependencies automatically
+1. Repository includes `.devcontainer/devcontainer.json`
+2. Post-create script installs Python dependencies automatically
 3. Extensions for Python and Jupyter are pre-configured
-4. The environment is based on `mcr.microsoft.com/devcontainers/universal:2.11.2`
+4. Environment is based on `mcr.microsoft.com/devcontainers/universal:2.11.2`
 
 ## Deployment and Publishing
 
-This is a learning repository - there is no deployment process. The curriculum is consumed through:
+This is a learning repository - there is no deployment process. The curriculum is consumed by:
 
 1. **GitHub Repository**: Direct access to code and documentation
-2. **GitHub Codespaces**: Instant development environment with pre-configured setup
-3. **Microsoft Learn**: Content may be syndicated to the official learning platform
+2. **GitHub Codespaces**: Instant dev environment with pre-configured setup
+3. **Microsoft Learn**: Content may be syndicated to official learning platform
 4. **docsify**: Documentation site built from Markdown (see `docsifytopdf.js` and `package.json`)
 
 ### Building Documentation Site
@@ -273,18 +283,18 @@ npm run convert
 ### Common Issues
 
 **Python Import Errors**:
-- Ensure the virtual environment is activated
+- Ensure virtual environment is activated
 - Run `pip install -r requirements.txt`
-- Check that the Python version is 3.9+
+- Check Python version is 3.9+
 
 **TypeScript Build Errors**:
 - Run `npm install` in the specific app directory
-- Check that the Node.js version is compatible
+- Check Node.js version is compatible
 - Clear `node_modules` and reinstall if needed
 
 **API Authentication Errors**:
-- Verify the `.env` file exists and has correct values
-- Check that API keys are valid and not expired
+- Verify `.env` file exists and has correct values
+- Check API keys are valid and not expired
 - Ensure endpoint URLs are correct for your region
 
 **Missing Environment Variables**:
@@ -307,11 +317,13 @@ npm run convert
 - Examples are intentionally simple and focused on teaching concepts
 - Code quality is balanced with educational clarity
 - Each lesson is self-contained and can be completed independently
-- The repository supports multiple API providers: Azure OpenAI, OpenAI, and GitHub Models
+- The repository supports multiple API providers: Azure OpenAI, OpenAI, Microsoft Foundry Models, and offline providers such as Foundry Local and Ollama
 - Content is multilingual with automated translation workflows
 - Active community on Discord for questions and support
 
 ---
 
-**Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Disclaimer**:
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,54 +1,54 @@
-# 選擇和配置 LLM 供應商 🔑
+# 選擇及配置大型語言模型提供商 🔑
 
-作業<strong>可以</strong>設置為透過支援的服務供應商，如 OpenAI、Azure 或 Hugging Face，對一個或多個大型語言模型（LLM）部署進行操作。這些供應商提供一個 _託管端點_（API），我們可以使用正確的憑證（API 密鑰或令牌）以程式方式訪問。在本課程中，我們討論以下這些供應商：
+作業<strong>可能</strong>設定為通過支援的服務提供商（如 OpenAI、Azure 或 Hugging Face）對一個或多個大型語言模型 (LLM) 部署進行操作。這些提供了一個 _託管端點_（API），只要有合適的憑證（API 金鑰或令牌）就可以程式化存取。本課程中，我們會討論以下提供商：
 
- - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) ，提供多元模型，包括核心的 GPT 系列。
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)，專注於企業級準備的 OpenAI 模型
- - [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst)，透過單一端點和 API 密鑰訪問來自 OpenAI、Meta、Mistral、Cohere、Microsoft 等數百個模型（取代 GitHub Models，該服務將於 2026 年 7 月底停用）
- - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst)，用於開源模型和推理伺服器
- - [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) 或 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst)，如果你想要在自己的設備上完全離線運行模型，無需雲訂閱
+ - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) 提供多樣模型，包括核心 GPT 系列。
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-foundry/openai/?WT.mc_id=academic-105485-koreyst) 專注企業級的 OpenAI 模型。
+ - [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) 用單一端點和 API 金鑰存取數百個來自 OpenAI、Meta、Mistral、Cohere、Microsoft 等模型（取代將於 2026 年 7 月底退休的 GitHub Models）
+ - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) 提供開源模型及推論伺服器
+ - [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) 或 [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) 如果你想在自己的裝置上完全離線運行模型，無需雲端訂閱
 
-<strong>你需要使用自己的帳戶來完成這些練習</strong>。作業是選修的，所以你可以根據興趣選擇設置一個、全部或者都不設定。以下是一些註冊指引：
+<strong>你將需要使用自己的帳戶進行這些練習</strong>。作業是選擇性的，你可以根據興趣選擇設定一個、全部，或不設定任何提供商。以下是註冊的部分指南：
 
-| 註冊 | 費用 | API 密鑰 | 練習台 | 備註 |
+| 註冊 | 費用 | API 金鑰 | 操作環境 | 備註 |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [價格](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [基於專案](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [無需程式碼，網頁版](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | 多種模型可用 |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [價格](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK 快速入門](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio 快速入門](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [必須事先申請訪問](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) | [價格](https://azure.microsoft.com/pricing/details/ai-foundry/?WT.mc_id=academic-105485-koreyst) | [專案概覽頁面](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) | [Foundry 練習台](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) | 免費等級可用；一個端點+密鑰對應多個模型供應商 |
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [價格](https://huggingface.co/pricing) | [訪問令牌](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat 模型有限](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
-| [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) | 免費（在你的設備運行） | 不需要 | [本地 CLI/SDK](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) | 完全離線，支援 OpenAI 相容端點 |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [價格](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [專案金鑰](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [無碼、網頁版](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | 多種模型可用 |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [價格](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK 快速入門](https://learn.microsoft.com/azure/ai-foundry/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio 快速入門](https://learn.microsoft.com/azure/ai-foundry/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [必須事先申請存取權](https://learn.microsoft.com/azure/ai-foundry/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) | [價格](https://azure.microsoft.com/pricing/details/ai-foundry/?WT.mc_id=academic-105485-koreyst) | [專案概覽頁](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) | [Foundry 操作環境](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) | 提供免費階層；一組端點與金鑰可存取多個模型提供商 |
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [價格](https://huggingface.co/pricing) | [存取令牌](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chat 模型有限](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) | 免費（運行於你的裝置） | 不需要 | [本地 CLI/SDK](https://learn.microsoft.com/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) | 完全離線，兼容 OpenAI 端點 |
 | | | | | |
 
-請依照以下指示來 _配置_ 此程式碼庫以使用不同的供應商。需要特定供應商的作業會在其檔名中包含下列標籤之一：
+按照以下指示為不同提供商_配置_此代碼庫。需要特定提供商的作業，文件名通常會帶有以下標籤：
 
-- `aoai` - 需 Azure OpenAI 端點和密鑰
-- `oai` - 需 OpenAI 端點和密鑰
-- `hf` - 需 Hugging Face 令牌
-- `githubmodels` - 需 Microsoft Foundry Models 端點和密鑰（GitHub Models 將於 2026 年 7 月底停用）
+- `aoai` - 需要 Azure OpenAI 端點、金鑰
+- `oai` - 需要 OpenAI 端點、金鑰
+- `hf` - 需要 Hugging Face 令牌
+- `githubmodels` - 需要 Microsoft Foundry Models 端點、金鑰（GitHub Models 將於 2026 年 7 月底退休）
 
-你可以選擇配置其中一個、全部或都不配置。缺少憑證時，相關作業將產生錯誤。
+你可以配置其中一個、全部或不配置。相關作業在憑證缺失時會報錯。
 
 ## 建立 `.env` 檔案
 
-我們假設你已經閱讀上方指導並註冊了相關供應商，且已取得所需的認證憑證（API_KEY 或令牌）。以 Azure OpenAI 為例，我們假設你也已經有一個有效部署的 Azure OpenAI 服務（端點），並部署了至少一個 GPT 聊天完成模型。
+我們假設你已閱讀上述指導並在相關提供商完成註冊，並取得所需的身份驗證憑證（API_KEY 或令牌）。以 Azure OpenAI 為例，你也應該有一個有效部署的 Azure OpenAI 服務（端點），且至少部署一個 GPT 模型用於聊天補全。
 
-接下來請依下列步驟配置你的 <strong>本地環境變數</strong>：
+接下來的步驟是設定你的<strong>本地環境變數</strong>如下：
 
-1. 在根目錄尋找 `.env.copy` 檔案，裡面應該包含如下所示內容：
+1. 查看根目錄下的 `.env.copy` 檔，內容應類似：
 
    ```bash
    # OpenAI 供應商
    OPENAI_API_KEY='<add your OpenAI API key here>'
 
-   ## Microsoft Foundry 的 Azure OpenAI
-   ##（Azure OpenAI 服務現已成為 Microsoft Foundry 的一部分：https://ai.azure.com）
-   AZURE_OPENAI_API_VERSION='2024-10-21' # 預設已設定！（目前穩定 GA API 版本）
+   ## Microsoft Foundry 內的 Azure OpenAI
+   ## （Azure OpenAI 服務現已成為 Microsoft Foundry 一部分：https://ai.azure.com）
+   AZURE_OPENAI_API_VERSION='2024-10-21' # 預設已設定！ （當前穩定 GA API 版本）
    AZURE_OPENAI_API_KEY='<add your Foundry resource key here>'
    AZURE_OPENAI_ENDPOINT='<add your Foundry resource endpoint here, e.g. https://<resource-name>.openai.azure.com>'
-   AZURE_OPENAI_DEPLOYMENT='<add your chat completion model deployment name here, e.g. gpt-4o-mini>'
+   AZURE_OPENAI_DEPLOYMENT='<add your chat completion model deployment name here, e.g. gpt-5-mini>'
    AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='<add your embeddings model deployment name here, e.g. text-embedding-3-small>'
 
-   ## Microsoft Foundry 模型（多供應商模型目錄，取代 2026 年 7 月底退役的 GitHub 模型）
+   ## Microsoft Foundry 模型（多供應商模型目錄，取代將於2026年7月底退休的 GitHub 模型）
    AZURE_INFERENCE_ENDPOINT='<add your Microsoft Foundry project endpoint here>'
    AZURE_INFERENCE_CREDENTIAL='<add your Microsoft Foundry Models API key here>'
 
@@ -56,96 +56,96 @@
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. 使用下面的指令將該檔案複製為 `.env`。該檔案已設定為 _gitignore_，以保障機密安全。
+2. 使用以下命令將該檔複製到 `.env`。此檔案已在 _gitignore_ 中，以保護秘密。
 
    ```bash
    cp .env.copy .env
    ```
 
-3. 依下一節的說明填入變數值（替換 `=` 右側的佔位符）。
+3. 按下一節所述填寫變數值（將 `=` 右側的佔位符替換）。
 
-4. （選項）如果你使用 GitHub Codespaces，可以選擇將環境變數儲存為與該程式碼庫關聯的 _Codespaces 秘密_，這樣就不必在本地建立 .env 檔案。但請注意，**此選項只適用於使用 GitHub Codespaces 時**。若改用 Docker Desktop，仍需設置 .env 檔案。
+4. (選擇) 如果你使用 GitHub Codespaces，可選擇將環境變數保存為與本代碼庫相關聯的 _Codespaces secrets_。如此一來，你就不用建立本地 `.env` 檔。但請注意，**此方案僅適用於使用 GitHub Codespaces 情況**。若改用 Docker Desktop，仍須設定 `.env` 檔。
 
 ## 填寫 `.env` 檔案
 
-讓我們快速了解變數名稱所代表的意義：
+快速查看變數名稱及其代表的意義：
 
-| 變數名稱 | 說明 |
+| 變數  | 說明  |
 | :--- | :--- |
-| HUGGING_FACE_API_KEY | 你在個人資料中設置的使用者存取令牌 |
-| OPENAI_API_KEY | 用於非 Azure OpenAI 端點服務的授權密鑰 |
-| AZURE_OPENAI_API_KEY | 用於 Azure OpenAI 服務的授權密鑰 |
+| HUGGING_FACE_API_KEY | 你在個人檔案中設定的使用者存取令牌 |
+| OPENAI_API_KEY | 非 Azure OpenAI 端點使用的授權金鑰 |
+| AZURE_OPENAI_API_KEY | Azure OpenAI 服務的授權金鑰 |
 | AZURE_OPENAI_ENDPOINT | Azure OpenAI 資源的部署端點 |
 | AZURE_OPENAI_DEPLOYMENT | _文字生成_ 模型部署端點 |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | _文字向量嵌入_ 模型部署端點 |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | _文字嵌入_ 模型部署端點 |
 | AZURE_INFERENCE_ENDPOINT | 你的 Microsoft Foundry 專案端點，用於 Microsoft Foundry Models |
-| AZURE_INFERENCE_CREDENTIAL | 你的 Microsoft Foundry 專案用 API 密鑰 |
+| AZURE_INFERENCE_CREDENTIAL | 你的 Microsoft Foundry 專案 API 金鑰 |
 | | |
 
-注意：最後兩個 Azure OpenAI 變數分別為聊天完成（文字生成）和向量搜尋（嵌入向量）的預設模型。設置說明將在相關作業中詳述。
+注意：最後兩個 Azure OpenAI 變數分別對應默認模型的聊天補全（文字生成）及向量搜尋（嵌入）。設定指示將在相關作業中定義。
 
 ## 配置 Azure OpenAI：從入口網站
 
-> **注意：** Azure OpenAI 服務現已納入 [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst)。資源和部署仍可在 Azure 入口網站中查看，但日常的模型管理（部署、練習台、監控）現在改在 Foundry 入口網站操作，取代舊有獨立的「Azure OpenAI Studio」。
+> **注意：** Azure OpenAI 服務現已納入 [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst)。資源和部署仍會顯示於 Azure 入口網站，但日常模型管理（部署、操作環境、監控）現於 Foundry 入口網站進行，而非舊的獨立 "Azure OpenAI Studio"。
 
-Azure OpenAI 的端點和密鑰可在 [Azure 入口網站](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)找到，我們從這裡開始。
+Azure OpenAI 端點與金鑰可在 [Azure 入口網站](https://portal.azure.com?WT.mc_id=academic-105485-koreyst) 找到，從此開始。
 
-1. 前往 [Azure 入口網站](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
-1. 在側邊欄（左側選單）點選 **Keys and Endpoint** 選項。
-1. 點擊 **Show Keys** —— 你應該會看到：KEY 1、KEY 2 及 Endpoint。
-1. 將 KEY 1 的值用於 AZURE_OPENAI_API_KEY
-1. 將 Endpoint 的值用於 AZURE_OPENAI_ENDPOINT
+1. 進入 [Azure 入口網站](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
+1. 點選側邊欄的 <strong>金鑰和端點</strong> 選項（左側選單）。
+1. 點擊 <strong>顯示金鑰</strong> - 你會看到以下資訊：KEY 1、KEY 2 和端點。
+1. 將 KEY 1 值用作 AZURE_OPENAI_API_KEY
+1. 將端點值用作 AZURE_OPENAI_ENDPOINT
 
-接著，我們需要所部署模型的端點。
+接著，我們需要取得已部署模型的端點。
 
-1. 在 Azure OpenAI 資源的側邊欄（左側選單）點選 **Model deployments**。
-1. 在目標頁面中，點選 **Go to Microsoft Foundry portal**（或根據資源類型點選 **Manage Deployments**）
+1. 在 Azure OpenAI 資源頁面，點擊側邊欄的 <strong>模型部署</strong> 選項（左側選單）。
+1. 在目標頁面中，點擊 **前往 Microsoft Foundry 入口網站**（或 <strong>管理部署</strong>，視資源類型而定）
 
-這會帶你至 Microsoft Foundry 入口網站，我們將在此找到其他必須的設定值，如下所述。
+這會導向 Microsoft Foundry 入口網站，我們將在此找到以下說明所述的其他值。
 
 ## 配置 Azure OpenAI：從 Microsoft Foundry 入口網站
 
-1. 按上面說明，透過你的資源進入 [Microsoft Foundry 入口網站](https://ai.azure.com?WT.mc_id=academic-105485-koreyst)。
-1. 點擊 **Deployments** 標籤（側邊欄，左側）檢視已部署模型。
-1. 如果你想要的模型尚未部署，使用 **Deploy model** 從 [模型目錄](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst)部署它。
-1. 你會需要一個 _文字生成_ 模型 —— 我們推薦：**gpt-4o-mini**
-1. 你會需要一個 _文字嵌入_ 模型 —— 我們推薦：**text-embedding-3-small**
+1. 按上述方法從你的資源進入 [Microsoft Foundry 入口網站](https://ai.azure.com?WT.mc_id=academic-105485-koreyst)。
+1. 點擊側邊欄（左側）中的 <strong>部署</strong> 分頁，查看目前已部署的模型。
+1. 若目標模型尚未部署，使用 <strong>部署模型</strong> 從 [模型目錄](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) 部署。
+1. 你將需要一個 _文字生成_ 模型—我們推薦：**gpt-5-mini**
+1. 你將需要一個 _文字嵌入_ 模型—我們推薦 **text-embedding-3-small**
 
-現在更新環境變數以反映所用的 _部署名稱_。通常這會和模型名稱相同，除非你特別更改。舉例來說，你可能會這樣寫：
+現在更新環境變數，以反映使用的 _部署名稱_。通常這與模型名稱相同，除非你有明確更改。例如，你可能有：
 
 ```bash
-AZURE_OPENAI_DEPLOYMENT='gpt-4o-mini'
+AZURE_OPENAI_DEPLOYMENT='gpt-5-mini'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-3-small'
 ```
 
-**更新完成後別忘了儲存 .env 檔案**。接著你可以關閉檔案並返回操作筆記本的指示。
+**完成後別忘了存檔 .env 檔**。現在可以關閉檔案，並回到操作筆記本的指示。
 
-## 配置 OpenAI：來自個人頁面
+## 配置 OpenAI：從個人檔案
 
-你的 OpenAI API 密鑰可在你的 [OpenAI 帳戶](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst)中找到。如果沒有，可以註冊帳號並建立 API 密鑰。取得密鑰後，可用它填寫 `.env` 檔案中的 `OPENAI_API_KEY` 變數。
+你的 OpenAI API 金鑰可以在你的 [OpenAI 帳戶](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) 找到。若尚無帳戶，可以註冊並建立 API 金鑰。獲得金鑰後，用其填寫 `.env` 檔案中的 `OPENAI_API_KEY` 變數。
 
-## 配置 Hugging Face：來自個人頁面
+## 配置 Hugging Face：從個人檔案
 
-你的 Hugging Face 令牌可以在個人資料的 [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst) 中找到。請勿公開或分享令牌，建議為本專案創建新的令牌，並複製貼到 `.env` 檔案的 `HUGGING_FACE_API_KEY` 變數下。_注意：_ 技術上這不是 API 密鑰，但用於認證，因此我們沿用此命名慣例以保持一致性。
+你的 Hugging Face 令牌可在個人資料的 [存取令牌](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst) 頁面找到。請勿公開或分享；請為本專案產生新的令牌，並複製到 `.env` 檔案的 `HUGGING_FACE_API_KEY` 變數中。_注意:_ 技術上這不是 API 金鑰，但用於身份驗證，因此保持此命名風格以維持一致性。
 
 ## 配置 Microsoft Foundry Models：從入口網站
 
-> **注意：** GitHub Models 將於 2026 年 7 月底退役。Microsoft Foundry Models 是直接替代方案，提供相同的免費試用模型目錄以及 Azure AI 推論 SDK / OpenAI SDK 體驗。
+> **注意：** GitHub Models 將於 2026 年 7 月底退休。Microsoft Foundry Models 為其直接替代方案，提供相同的免費試用模型目錄及 Azure AI Inference SDK / OpenAI SDK 體驗。
 
-1. 前往 [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) 並建立（或開啟）Foundry 專案。
-1. 瀏覽 [模型目錄](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst)，並部署一個模型，例如 `gpt-4o-mini`。
-1. 在專案的 **Overview** 頁面，複製 <strong>端點</strong> 和 **API 密鑰**。
-1. 將端點值用於 `.env` 檔案中的 `AZURE_INFERENCE_ENDPOINT`，將密鑰值用於 `AZURE_INFERENCE_CREDENTIAL`。
+1. 造訪 [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) 並建立（或開啟）Foundry 專案。
+1. 瀏覽 [模型目錄](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) 並部署模型，例如 `gpt-5-mini`。
+1. 在專案的 <strong>概覽</strong> 頁面，複製 <strong>端點</strong> 和 **API 金鑰**。
+1. 使用端點值填寫 `.env` 的 `AZURE_INFERENCE_ENDPOINT`，使用金鑰值填寫 `AZURE_INFERENCE_CREDENTIAL`。
 
-## 離線／本地供應商
+## 離線 / 本地提供商
 
-如果你不想使用雲端訂閱，可以直接在自己的設備上運行相容的開源模型：
+如果你完全不想使用雲端訂閱，可以直接在自己的裝置上運行相容的開放模型：
 
-- **[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst)** - 微軟的設備端執行環境。自動選擇最佳執行裝置（NPU、GPU 或 CPU），並提供 OpenAI 相容端點，讓你可以最小化修改地重用本課程的大部分示範程式碼。請參閱 [Foundry Local 文件](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) 以開始，或者使用 `winget install Microsoft.FoundryLocal`（Windows）／`brew install microsoft/foundrylocal/foundrylocal`（macOS）安裝。
-- **[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst)** - 在本地運行如 Llama、Phi、Mistral 和 Gemma 等開放模型的流行替代方案。
+- **[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst)** - 微軟的本地運行時。它會自動選擇最佳執行提供商（NPU、GPU 或 CPU），並暴露兼容 OpenAI 的端點，讓你可幾乎不改動地重用本課程大部分範例程式碼。詳見 [Foundry Local 文件](https://learn.microsoft.com/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst)，或使用 `winget install Microsoft.FoundryLocal`（Windows）／`brew install microsoft/foundrylocal/foundrylocal`（macOS）安裝。
+- **[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst)** - 在本地執行開放模型如 Llama、Phi、Mistral、Gemma 的熱門替代方案。
 
 
-請參閱 [Lesson 19: 使用 SLMs 建構](../19-slm/README.md?WT.mc_id=academic-105485-koreyst) 以獲得兩種選項的實作範例。
+請參閱 [第19課：使用SLM建構](../19-slm/README.md?WT.mc_id=academic-105485-koreyst) 了解使用兩種選項的實作範例。
 
 ---
 

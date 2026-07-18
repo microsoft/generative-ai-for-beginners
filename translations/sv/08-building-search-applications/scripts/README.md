@@ -1,8 +1,8 @@
-# Förberedelse av transkriptionsdata
+# Transkriptionsdataförberedelse
 
-Skripten för förberedelse av transkriptionsdata laddar ner transkript från YouTube-videor och förbereder dem för användning med provexemplet Semantic Search med OpenAI-embeddings och funktioner.
+Skripten för transkriptionsdataförberedelse laddar ner YouTube-videotranskriptioner och förbereder dem för användning med exemplet Semantic Search med OpenAI Embeddings och Functions.
 
-Skripten för förberedelse av transkriptionsdata har testats på de senaste versionerna av Windows 11, macOS Ventura och Ubuntu 22.04 (och senare).
+Skripten för transkriptionsdataförberedelse har testats på de senaste versionerna av Windows 11, macOS Ventura och Ubuntu 22.04 (och senare).
 
 ## Skapa nödvändiga Azure OpenAI Service-resurser
 
@@ -14,8 +14,8 @@ Skripten för förberedelse av transkriptionsdata har testats på de senaste ver
 
 > [!NOTE]
 > För dessa instruktioner använder vi resursgruppen med namnet "semantic-video-search" i East US.
-> Du kan ändra namnet på resursgruppen, men när du ändrar plats för resurserna,
-> kontrollera [tabellen för tillgänglighet av modeller](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> Du kan byta namn på resursgruppen, men när du ändrar platsen för resurserna, 
+> kontrollera tabellen för [modelltillgänglighet](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
@@ -28,7 +28,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Hämta endpoint och nycklar för användning i denna applikation
+1. Hämta slutpunkt och nycklar för användning i denna applikation
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -38,8 +38,8 @@ az cognitiveservices account keys list --name semantic-video-openai \
 ```
 
 1. Distribuera följande modeller:
-   - `text-embedding-ada-002` version `2` eller senare, namngiven `text-embedding-ada-002`
-   - `gpt-4o-mini` namngiven `gpt-4o-mini`
+   - `text-embedding-ada-002` version `2` eller högre, med namn `text-embedding-ada-002`
+   - `gpt-5-mini` med namn `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,8 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -66,11 +66,11 @@ az cognitiveservices account deployment create \
 
 ## Miljövariabler
 
-Följande miljövariabler krävs för att köra skripten för förberedelse av transkriptionsdata från YouTube.
+Följande miljövariabler krävs för att köra skripten för YouTube-transkriptionsdataförberedelse.
 
 ### På Windows
 
-Rekommenderas att lägga till variablerna till dina `user`-miljövariabler.
+Vi rekommenderar att du lägger till variablerna i dina `user` miljövariabler.
 `Windows Start` > `Redigera systemmiljövariabler` > `Miljövariabler` > `Användarvariabler` för [USER] > `Ny`.
 
 ```text
@@ -83,15 +83,15 @@ GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 <!-- Du kan lägga till miljövariablerna i din PowerShell-profil.
 
 ```powershell
-$env:AZURE_OPENAI_API_KEY = "<din Azure OpenAI Service API-nyckel>"
-$env:AZURE_OPENAI_ENDPOINT = "<din Azure OpenAI Service endpoint>"
-$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<namnet på din Azure OpenAI Service modellutplacering>"
-$env:GOOGLE_DEVELOPER_API_KEY = "<din Google developer API-nyckel>"
+$env:AZURE_OPENAI_API_KEY = "<ditt Azure OpenAI Service API-nyckel>"
+$env:AZURE_OPENAI_ENDPOINT = "<din Azure OpenAI Service-slutpunkt>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<ditt Azure OpenAI Service modell-distributionsnamn>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<din Google utvecklar-API-nyckel>"
 ``` -->
 
 ### På Linux och macOS
 
-Rekommenderar att lägga till följande export-kommandon i din `~/.bashrc` eller `~/.zshrc`-fil.
+Vi rekommenderar att du lägger till följande exports i din `~/.bashrc` eller `~/.zshrc` fil.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -103,7 +103,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ## Installera de nödvändiga Python-biblioteken
 
 1. Installera [git-klienten](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) om den inte redan är installerad.
-1. Från ett `Terminal`-fönster, klona exemplet till din föredragna mapp för versionhantering.
+1. Från ett `Terminal`-fönster, klona exemplet till din föredragna repo-mapp.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -115,7 +115,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. Skapa en Python virtuell miljö.
+1. Skapa en Python-virtuell miljö.
 
     På Windows:
 
@@ -129,7 +129,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     python3 -m venv .venv
     ```
 
-1. Aktivera den Python virtuella miljön.
+1. Aktivera den virtuella Python-miljön.
 
    På Windows:
 
@@ -157,7 +157,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## Kör skripten för förberedelse av YouTube transkriptionsdata
+## Kör skripten för YouTube-transkriptionsdataförberedelse
 
 ### På Windows
 

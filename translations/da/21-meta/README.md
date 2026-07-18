@@ -1,21 +1,21 @@
-# Bygning Med Meta Familie Modellerne 
+# Bygning med Meta-familie modellerne 
 
 ## Introduktion 
 
 Denne lektion vil dække: 
 
-- Udforskning af de to hoved Meta familie modeller - Llama 3.1 og Llama 3.2 
-- Forståelse af anvendelsestilfælde og scenarier for hver model 
-- Kodestykke der viser de unikke funktioner i hver model 
+- Udforskning af de to hoved Meta-familie modeller - Llama 3.1 og Llama 3.2 
+- Forståelse af brugsscenarier og anvendelser for hver model 
+- Kodeeksempel for at vise de unikke funktioner ved hver model 
 
 
-## Meta Familien af Modeller 
+## Meta-familien af modeller 
 
-I denne lektion vil vi udforske 2 modeller fra Meta familien eller "Llama-flokken" - Llama 3.1 og Llama 3.2.
+I denne lektion vil vi udforske 2 modeller fra Meta-familien eller "Llama-flokken" - Llama 3.1 og Llama 3.2.
 
-Disse modeller findes i forskellige varianter og er tilgængelige i [Microsoft Foundry Models kataloget](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
+Disse modeller kommer i forskellige varianter og er tilgængelige i [Microsoft Foundry Models kataloget](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
 
-> **Bemærk:** GitHub Models pensioneres ved slutningen af juli 2026. Her er flere detaljer om brugen af [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) til at prototypere med AI-modeller.
+> **Note:** GitHub Models udfases ved slutningen af juli 2026. Her er flere detaljer om brugen af [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) til prototyping med AI-modeller.
 
 Modelvarianter: 
 - Llama 3.1 - 70B Instruct 
@@ -23,39 +23,39 @@ Modelvarianter:
 - Llama 3.2 - 11B Vision Instruct 
 - Llama 3.2 - 90B Vision Instruct 
 
-*Bemærk: Llama 3 er også tilgængelig i Microsoft Foundry Models, men vil ikke blive dækket i denne lektion*
+*Note: Llama 3 er også tilgængelig i Microsoft Foundry Models, men vil ikke blive dækket i denne lektion*
 
 ## Llama 3.1 
 
-Ved 405 milliarder parametre passer Llama 3.1 ind i kategorien åbne kildesprogmodeller (LLM). 
+Med 405 milliarder parametre hører Llama 3.1 til kategorien af open source LLM'er. 
 
-Modellen er en opgradering af den tidligere version Llama 3 ved at tilbyde: 
+Modellen er en opgradering fra den tidligere udgivelse Llama 3 ved at tilbyde: 
 
-- Større kontekstvindue - 128k tokens mod 8k tokens 
-- Større Maksimum Output Tokens - 4096 mod 2048 
-- Bedre flersproget understøttelse - på grund af øget antal træningstokens 
+- Større kontekstvindue - 128k tokens vs 8k tokens 
+- Større maks output tokens - 4096 vs 2048 
+- Bedre flersproget support - på grund af flere træningstokens 
 
-Disse giver Llama 3.1 mulighed for at håndtere mere komplekse anvendelsestilfælde ved opbygning af GenAI applikationer, herunder: 
-- Indbygget Funktionskald - evnen til at kalde eksterne værktøjer og funktioner uden for LLM-arbejdsgangen
-- Bedre RAG-ydelse - på grund af det større kontekstvindue 
-- Syntetisk Datagenerering - evnen til at skabe effektiv data til opgaver som finjustering 
+Disse gør det muligt for Llama 3.1 at håndtere mere komplekse anvendelsesscenarier ved opbygning af GenAI-applikationer inklusive: 
+- Indbygget funktion opkald - evnen til at kalde eksterne værktøjer og funktioner uden for LLM-arbejdsgangen
+- Bedre RAG-ydeevne - på grund af det større kontekstvindue 
+- Syntetisk datagenerering - evnen til at skabe effektiv data til opgaver som finjustering 
 
-### Indbygget Funktionskald 
+### Indbygget funktion opkald 
 
-Llama 3.1 er finjusteret til at være mere effektiv til at lave funktions- eller værktøjskald. Den har også to indbyggede værktøjer, som modellen kan identificere som nødvendige at bruge baseret på brugerens prompt. Disse værktøjer er: 
+Llama 3.1 er finjusteret til at være mere effektiv til funktion- eller værktøjsopkald. Den har også to indbyggede værktøjer, som modellen kan identificere som nødvendige at bruge baseret på brugerens prompt. Disse værktøjer er: 
 
-- **Brave Search** - Kan bruges til at få opdaterede informationer som vejret ved at udføre et web-søgning 
+- **Brave Search** - Kan bruges til at få opdaterede oplysninger som vejret via et web-søgning 
 - **Wolfram Alpha** - Kan bruges til mere komplekse matematiske beregninger, så det ikke er nødvendigt at skrive egne funktioner. 
 
-Du kan også oprette dine egne brugerdefinerede værktøjer, som LLM kan kalde. 
+Du kan også skabe dine egne brugerdefinerede værktøjer, som LLM kan kalde. 
 
 I kodeeksemplet nedenfor: 
 
 - Definerer vi de tilgængelige værktøjer (brave_search, wolfram_alpha) i systemprompten. 
-- Sender en brugerprompt, der spørger om vejret i en bestemt by. 
-- LLM vil svare med et værktøjskald til Brave Search-værktøjet, som vil se sådan ud `<|python_tag|>brave_search.call(query="Stockholm weather")` 
+- Sender et brugerprompt, som spørger om vejret i en bestemt by. 
+- LLM vil svare med et værktøjsopkald til Brave Search-værktøjet, som vil se sådan ud `<|python_tag|>brave_search.call(query="Stockholm weather")` 
 
-*Bemærk: Dette eksempel foretager kun værktøjskaldet; hvis du vil have resultaterne, skal du oprette en gratis konto på Brave API-siden og definere funktionen selv.*
+*Note: Dette eksempel foretager kun værktøjsopkaldet, hvis du ønsker at få resultaterne, skal du oprette en gratis konto på Brave API-siden og definere funktionen selv.
 
 ```python 
 import os
@@ -98,16 +98,16 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2 
 
-Selvom det er en LLM, er en begrænsning ved Llama 3.1 dens mangel på multimodalitet. Det vil sige, manglende evne til at bruge forskellige typer input såsom billeder som prompts og give svar. Denne evne er en af hovedfunktionerne i Llama 3.2. Disse funktioner omfatter også: 
+Selvom den er en LLM, er en begrænsning ved Llama 3.1 dens manglende multimodalitet. Det vil sige evnen til at bruge forskellige typer input som billeder som prompt og give svar. Denne evne er en af hovedfunktionerne i Llama 3.2. Andre funktioner inkluderer: 
 
-- Multimodalitet - har evnen til at evaluere både tekst- og billedprompter 
-- Små til mellemstore størrelsesvariationer (11B og 90B) - hvilket giver fleksible muligheder for udrulning, 
-- Tekst-only variationer (1B og 3B) - dette tillader modellen at blive udrullet på edge/mobilenheder og giver lav latenstid 
+- Multimodalitet - har evnen til at evaluere både tekst- og billed frembringelser 
+- Små til mellemstore varianter (11B og 90B) - hvilket giver fleksible udrulningsmuligheder 
+- Tekst-only varianter (1B og 3B) - giver mulighed for udrulning på edge / mobile enheder og giver lav latenstid 
 
-Den multimodale understøttelse repræsenterer et stort skridt i open source-modellernes verden. Kodeeksemplet nedenfor tager både et billede og en tekstprompt for at få en analyse af billedet fra Llama 3.2 90B. 
+Den multimodale support repræsenterer et stort skridt inden for open source modeller. Kodeeksemplet nedenfor tager både et billede og tekstprompt for at få en analyse af billedet fra Llama 3.2 90B. 
 
 
-### Multimodal Support med Llama 3.2
+### Multimodal support med Llama 3.2
 
 ```python 
 import os
@@ -122,7 +122,7 @@ from azure.ai.inference.models import (
 )
 from azure.core.credentials import AzureKeyCredential
 
-# Hent disse fra din Microsoft Foundry projekts "Oversigt" side
+# Hent disse fra din Microsoft Foundry-projekts "Oversigt" side
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Llama-3.2-90B-Vision-Instruct"
@@ -157,7 +157,7 @@ print(response.choices[0].message.content)
 
 ## Læringen stopper ikke her, fortsæt rejsen
 
-Når du har fuldført denne lektion, så tjek vores [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) for at fortsætte med at øge din viden om Generativ AI!
+Efter at have gennemført denne lektion, så tjek vores [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) for at fortsætte med at øge din viden om Generative AI!
 
 ---
 

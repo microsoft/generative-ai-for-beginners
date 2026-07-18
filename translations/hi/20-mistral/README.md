@@ -1,42 +1,42 @@
-# Mistral मॉडल के साथ निर्माण 
+# Mistral मॉडल के साथ निर्माण  
 
-## परिचय 
+## परिचय  
 
-इस पाठ में शामिल होगा: 
-- विभिन्न Mistral मॉडलों का अन्वेषण 
-- प्रत्येक मॉडल के उपयोग-मामले और परिदृश्यों को समझना 
-- प्रत्येक मॉडल की अनूठी विशेषताओं को दिखाने वाले कोड नमूनों का अन्वेषण। 
+इस पाठ में हम कवर करेंगे:  
+- विभिन्न Mistral मॉडलों का अन्वेषण  
+- प्रत्येक मॉडल के उपयोग-मामलों और परिदृश्यों की समझ  
+- प्रत्येक मॉडल की अनोखी विशेषताओं को दर्शाने वाले कोड उदाहरणों का अन्वेषण।  
 
-## Mistral मॉडल 
+## Mistral मॉडल  
 
-इस पाठ में, हम 3 विभिन्न Mistral मॉडलों का अन्वेषण करेंगे: 
-**Mistral Large**, **Mistral Small** और **Mistral Nemo**। 
+इस पाठ में, हम 3 अलग-अलग Mistral मॉडलों का अन्वेषण करेंगे:  
+**Mistral Large**, **Mistral Small** और **Mistral Nemo**।  
 
-ये सभी मॉडल [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) पर निशुल्क उपलब्ध हैं। इस नोटबुक में कोड चलाने के लिए ये मॉडल उपयोग किए जाएंगे।
+ये प्रत्येक मॉडल [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) पर मुफ्त उपलब्ध हैं। इस नोटबुक में कोड चलाने के लिए ये मॉडल उपयोग किए जा रहे हैं।  
 
-> **नोट:** GitHub Models जुलाई 2026 के अंत तक बंद हो रहे हैं। AI मॉडलों के साथ प्रोटोटाइपिंग के लिए [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) का उपयोग करने के बारे में अधिक विवरण यहां हैं। 
+> **नोट:** GitHub Models जुलाई 2026 के अंत में बंद हो रहा है। AI मॉडल्स के साथ प्रोटोटाइप बनाने के लिए [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) के उपयोग पर अधिक जानकारी यहाँ देखें।  
 
 
-## Mistral Large 2 (2407)
-Mistral Large 2 वर्तमान में Mistral का प्रमुख मॉडल है और इसे उद्यम उपयोग के लिए डिज़ाइन किया गया है। 
+## Mistral Large 2 (2407)  
+Mistral Large 2 वर्तमान में Mistral का प्रमुख मॉडल है और इसे एंटरप्राइज उपयोग के लिए डिज़ाइन किया गया है।  
 
-यह मॉडल मूल Mistral Large का उन्नयन है, जो प्रदान करता है: 
--  बड़ा कंटेक्स्ट विंडो - 128k बनाम 32k 
--  गणित और कोडिंग कार्यों में बेहतर प्रदर्शन - 76.9% औसत सटीकता बनाम 60.4% 
--  बढ़ी हुई बहुभाषी प्रदर्शन - भाषाओं में शामिल हैं: अंग्रेज़ी, फ़्रेंच, जर्मन, स्पेनिश, इतालवी, पुर्तगाली, डच, रूसी, चीनी, जापानी, कोरियन, अरब, और हिंदी।
+यह मॉडल मूल Mistral Large का उन्नयन है जो निम्नलिखित विशेषताएं प्रदान करता है:  
+-  बड़ा कॉन्टेक्स्ट विंडो - 128k बनाम 32k  
+-  गणित और कोडिंग कार्यों में बेहतर प्रदर्शन - 76.9% औसत सटीकता बनाम 60.4%  
+-  बहुभाषी प्रदर्शन में वृद्धि - भाषाओं में शामिल हैं: अंग्रेज़ी, फ्रेंच, जर्मन, स्पेनिश, इतालवी, पुर्तगाली, डच, रूसी, चीनी, जापानी, कोरियाई, अरबी, और हिंदी।  
 
-इन विशेषताओं के साथ, Mistral Large उत्कृष्ट है:
-- *प्राप्ति उन्नत जेनेरेशन (RAG)* - बड़े कंटेक्स्ट विंडो के कारण
-- *फंक्शन कॉलिंग* - इस मॉडल में मूल फंक्शन कॉलिंग है जो बाहरी टूल्स और APIs के साथ एकीकरण की अनुमति देता है। ये कॉल्स समानांतर में या एक क्रमिक क्रम में की जा सकती हैं। 
-- *कोड जनरेशन* - यह मॉडल Python, Java, TypeScript और C++ जनरेशन में उत्कृष्ट है। 
+इन विशेषताओं के साथ, Mistral Large निम्नलिखित में उत्कृष्ट है:  
+- *रीट्रीवल ऑगमेंटेड जनरेशन (RAG)* - बड़े संदर्भ विंडो के कारण  
+- *फंक्शन कॉलिंग* - इस मॉडल में मूल फंक्शन कॉलिंग है जो बाहरी टूल्स और API के साथ इंटीग्रेशन की अनुमति देता है। ये कॉल समानांतर या अनुक्रमिक क्रम में की जा सकती हैं।  
+- *कोड जनरेशन* - यह मॉडल पायथन, जावा, टाइपस्क्रिप्ट और C++ जनरेशन में उत्कृष्ट है।  
 
-### Mistral Large 2 का उपयोग कर RAG उदाहरण 
+### Mistral Large 2 का उपयोग करके RAG उदाहरण  
 
-इस उदाहरण में, हम Mistral Large 2 का उपयोग एक टेक्स्ट दस्तावेज़ पर RAG पैटर्न चलाने के लिए कर रहे हैं। प्रश्न कोरियाई में लिखा गया है और लेखक की कॉलेज से पहले की गतिविधियों के बारे में पूछता है। 
+इस उदाहरण में, हम Mistral Large 2 का उपयोग एक टेक्स्ट दस्तावेज़ पर RAG पैटर्न चलाने के लिए कर रहे हैं। प्रश्न कोरियाई में लिखा गया है और लेखक की कॉलेज से पहले की गतिविधियों के बारे में पूछता है।  
 
-यह Cohere Embeddings मॉडल का उपयोग करता है टेक्स्ट दस्तावेज़ और प्रश्न के एम्बेडिंग बनाने के लिए। इस नमूने के लिए, यह faiss Python पैकेज को वेक्टर स्टोर के रूप में उपयोग करता है। 
+यह टेक्स्ट दस्तावेज़ और प्रश्न दोनों के एम्बेडिंग बनाने के लिए Cohere Embeddings मॉडल का उपयोग करता है। इस नमूने के लिए यह faiss पायथन पैकेज को वेक्टर स्टोर के रूप में उपयोग करता है।  
 
-Mistral मॉडल को भेजा गया प्रॉम्प्ट दोनों प्रश्न और समान प्रश्न से संबंधित पुनः प्राप्त किए गए चंक्स को शामिल करता है। मॉडल फिर एक प्राकृतिक भाषा प्रतिक्रिया प्रदान करता है। 
+Mistral मॉडल को भेजे गए प्रॉम्प्ट में प्रश्न और उन्हीं प्रश्न के समान पुनः प्राप्त किए गए खंड दोनों शामिल होते हैं। मॉडल फिर प्राकृतिक भाषा में प्रतिक्रिया प्रदान करता है।  
 
 ```python 
 pip install faiss-cpu
@@ -53,7 +53,7 @@ from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.inference import EmbeddingsClient
 
-# इन्हें अपने Microsoft Foundry परियोजना के "ओवरव्यू" पेज से प्राप्त करें
+# इन्हें अपने Microsoft Foundry प्रोजेक्ट के "अवलोकन" पृष्ठ से प्राप्त करें
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-large"
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
@@ -133,23 +133,23 @@ chat_response = client.complete(
 print(chat_response.choices[0].message.content)
 ```
 
-## Mistral Small 
-Mistral Small Mistral परिवार में एक अन्य मॉडल है जो प्रीमियर/एंटरप्राइज श्रेणी के अंतर्गत आता है। जैसा कि नाम से पता चलता है, यह एक छोटा भाषा मॉडल (SLM) है। Mistral Small के उपयोग के लाभ हैं: 
-- Mistral LLMs जैसे Mistral Large और NeMo की तुलना में लागत में बचत - 80% की कीमत में गिरावट
-- कम विलंबता - Mistral के LLMs की तुलना में तेज़ प्रतिक्रिया
-- लचीला - इसे कम संसाधन आवश्यकताओं के साथ विभिन्न वातावरणों में तैनात किया जा सकता है। 
+## Mistral Small  
+Mistral Small Mistral परिवार का एक और मॉडल है जो प्रीमियर/एंटरप्राइज श्रेणी में आता है। जैसा कि नाम से पता चलता है, यह एक छोटा भाषा मॉडल (SLM) है। Mistral Small के उपयोग के लाभ हैं:  
+- Mistral के LLMs जैसे Mistral Large और NeMo की तुलना में लागत बचत - 80% कीमत में कमी  
+- कम लेटेंसी - Mistral के LLMs की तुलना में तेज़ प्रतिक्रिया  
+- लचीला - आवश्यक संसाधनों पर कम प्रतिबंधों के साथ विभिन्न पर्यावरणों में तैनात किया जा सकता है।  
 
 
-Mistral Small अच्छा है: 
-- टेक्स्ट आधारित कार्य जैसे सारांशण, भावना विश्लेषण और अनुवाद। 
-- उन अनुप्रयोगों के लिए जहाँ लागत प्रभावशीलता के कारण बार-बार अनुरोध किए जाते हैं 
-- समीक्षा और कोड सुझाव जैसी कम विलंबता वाले कोड कार्यों के लिए 
+Mistral Small के लिए उपयुक्त हैं:  
+- पाठ आधारित कार्य जैसे सारांश, भावना विश्लेषण और अनुवाद।  
+- ऐसे अनुप्रयोग जहां लागत प्रभावशीलता के कारण अक्सर अनुरोध किए जाते हैं  
+- समीक्षा और कोड सुझाव जैसे कम लेटेंसी वाले कोड कार्य  
 
-## Mistral Small और Mistral Large की तुलना 
+## Mistral Small और Mistral Large की तुलना  
 
-Mistral Small और Large के बीच विलंबता में अंतर दिखाने के लिए, नीचे के सेल चलाएं। 
+Mistral Small और Large के बीच लेटेंसी के अंतर को दिखाने के लिए, नीचे दिए गए सेल चलाएं।  
 
-आपको 3-5 सेकंड के बीच प्रतिक्रिया समय में अंतर दिखाई देगा। साथ ही समान प्रॉम्प्ट पर प्रतिक्रिया की लंबाई और शैली पर ध्यान दें।  
+आपको 3-5 सेकंड के बीच प्रतिक्रिया समय में अंतर दिखाई देना चाहिए। समान प्रॉम्प्ट पर प्रतिक्रिया की लंबाई और शैली पर भी ध्यान दें।  
 
 ```python 
 
@@ -209,26 +209,26 @@ print(response.choices[0].message.content)
 
 ```
 
-## Mistral NeMo
+## Mistral NeMo  
 
-इस पाठ में चर्चा किए गए अन्य दो मॉडलों की तुलना में, Mistral NeMo एकमात्र मुफ्त मॉडल है जिसमें Apache2 लाइसेंस है। 
+इस पाठ में चर्चा किए गए अन्य दो मॉडलों की तुलना में, Mistral NeMo एकमात्र मुफ्त मॉडल है जिसके पास Apache2 लाइसेंस है।  
 
-इसे Mistral के पहले के ओपन-सोर्स LLM, Mistral 7B के उन्नयन के रूप में देखा जाता है। 
+इसे Mistral के पहले मुक्त स्रोत LLM, Mistral 7B, का उन्नयन माना जाता है।  
 
-NeMo मॉडल की कुछ अन्य विशेषताएं हैं: 
+NeMo मॉडल की कुछ अन्य विशेषताएं हैं:  
 
-- *अधिक कुशल टोकनाईज़ेशन:* यह मॉडल tiktoken की बजाय Tekken टोकनाइज़र का उपयोग करता है। इससे अधिक भाषाओं और कोड पर बेहतर प्रदर्शन होता है। 
+- *अधिक कुशल टोकनाइजेशन:* यह मॉडल अधिक सामान्य Tiktoken के बजाय Tekken टोकनाइज़र का उपयोग करता है। यह अधिक भाषाओं और कोड पर बेहतर प्रदर्शन की अनुमति देता है।  
 
-- *फाइनट्यूनिंग:* बेस मॉडल फाइनट्यूनिंग के लिए उपलब्ध है। इससे उन उपयोग-मामलों के लिए अधिक लचीलेपन की अनुमति मिलती है जहाँ फाइनट्यूनिंग की आवश्यकता हो सकती है। 
+- *फाइनट्यूनिंग:* आधार मॉडल फाइनट्यूनिंग के लिए उपलब्ध है। यह उन उपयोग-मामलों के लिए अधिक लचीलापन प्रदान करता है जहां फाइनट्यूनिंग की आवश्यकता हो सकती है।  
 
-- *मूल फंक्शन कॉलिंग* - Mistral Large की तरह, इस मॉडल को भी फंक्शन कॉलिंग पर प्रशिक्षित किया गया है। इसे पहले ओपन-सोर्स मॉडलों में से एक के रूप में अनूठा बनाता है। 
+- *मूल फंक्शन कॉलिंग* - Mistral Large की तरह, इस मॉडल को भी फंक्शन कॉलिंग पर प्रशिक्षित किया गया है। यह इसे पहले मुक्त स्रोत मॉडलों में से एक बनाता है जो ऐसा करता है।  
 
 
-### टोकनाइज़र की तुलना 
+### टोकनाइज़र की तुलना  
 
-इस नमूने में, हम देखेंगें कि Mistral NeMo टोकनाईज़ेशन को Mistral Large की तुलना में कैसे हैंडल करता है। 
+इस उदाहरण में, हम देखेंगे कि Mistral NeMo टोकनाइजेशन को Mistral Large की तुलना में कैसे संभालता है।  
 
-दोनों नमूने एक ही प्रॉम्प्ट लेते हैं लेकिन आप देखेंगे कि NeMo Mistral Large की तुलना में कम टोकन लौटाता है। 
+दोनों नमूने एक समान प्रॉम्प्ट लेते हैं, लेकिन आप देखेंगे कि NeMo Mistral Large की तुलना में कम टोकन लौटाता है।  
 
 ```bash
 pip install mistral-common
@@ -246,65 +246,9 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Mistral टोकनाइज़र लोड करें
+# मिस्त्रल टोकनाइज़र लोड करें
 
 model_name = "open-mistral-nemo"
-
-tokenizer = MistralTokenizer.from_model(model_name)
-
-# संदेशों की सूची को टोकनाइज़ करें
-tokenized = tokenizer.encode_chat_completion(
-    ChatCompletionRequest(
-        tools=[
-            Tool(
-                function=Function(
-                    name="get_current_weather",
-                    description="Get the current weather",
-                    parameters={
-                        "type": "object",
-                        "properties": {
-                            "location": {
-                                "type": "string",
-                                "description": "The city and state, e.g. San Francisco, CA",
-                            },
-                            "format": {
-                                "type": "string",
-                                "enum": ["celsius", "fahrenheit"],
-                                "description": "The temperature unit to use. Infer this from the user's location.",
-                            },
-                        },
-                        "required": ["location", "format"],
-                    },
-                )
-            )
-        ],
-        messages=[
-            UserMessage(content="What's the weather like today in Paris"),
-        ],
-        model=model_name,
-    )
-)
-tokens, text = tokenized.tokens, tokenized.text
-
-# टोकनों की संख्या गिनें
-print(len(tokens))
-```
-
-```python
-# आवश्यक पैकेज आयात करें:
-from mistral_common.protocol.instruct.messages import (
-    UserMessage,
-)
-from mistral_common.protocol.instruct.request import ChatCompletionRequest
-from mistral_common.protocol.instruct.tool_calls import (
-    Function,
-    Tool,
-)
-from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
-
-# Mistral टोकनाइज़र लोड करें
-
-model_name = "mistral-large-latest"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
@@ -346,9 +290,65 @@ tokens, text = tokenized.tokens, tokenized.text
 print(len(tokens))
 ```
 
-## सीखना यहीं खत्म नहीं होता, यात्रा जारी रखें
+```python
+# आवश्यक पैकेज आयात करें:
+from mistral_common.protocol.instruct.messages import (
+    UserMessage,
+)
+from mistral_common.protocol.instruct.request import ChatCompletionRequest
+from mistral_common.protocol.instruct.tool_calls import (
+    Function,
+    Tool,
+)
+from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-इस पाठ को पूरा करने के बाद, हमारे [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) को देखें ताकि आप अपना जनरेटिव AI ज्ञान बढ़ाते रहें!
+# मिस्ट्रल टोकनाइज़र लोड करें
+
+model_name = "mistral-large-latest"
+
+tokenizer = MistralTokenizer.from_model(model_name)
+
+# संदेशों की सूची को टोकनाइज़ करें
+tokenized = tokenizer.encode_chat_completion(
+    ChatCompletionRequest(
+        tools=[
+            Tool(
+                function=Function(
+                    name="get_current_weather",
+                    description="Get the current weather",
+                    parameters={
+                        "type": "object",
+                        "properties": {
+                            "location": {
+                                "type": "string",
+                                "description": "The city and state, e.g. San Francisco, CA",
+                            },
+                            "format": {
+                                "type": "string",
+                                "enum": ["celsius", "fahrenheit"],
+                                "description": "The temperature unit to use. Infer this from the user's location.",
+                            },
+                        },
+                        "required": ["location", "format"],
+                    },
+                )
+            )
+        ],
+        messages=[
+            UserMessage(content="What's the weather like today in Paris"),
+        ],
+        model=model_name,
+    )
+)
+tokens, text = tokenized.tokens, tokenized.text
+
+# टोकन की संख्या गिनें
+print(len(tokens))
+```
+
+## सीखना यहीं खत्म नहीं होता, यात्रा जारी रखें  
+
+इस पाठ को पूरा करने के बाद, हमारे [जनरेटिव AI सीखने के संग्रह](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) को देखें ताकि आप अपनी जनरेटिव AI ज्ञान को और आगे बढ़ा सकें!  
 
 ---
 

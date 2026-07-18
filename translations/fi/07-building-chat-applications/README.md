@@ -1,66 +1,66 @@
-# Generatiivisella tekoälyllä toimivien chat-sovellusten rakentaminen
+# Generatiivista tekoälyä hyödyntävien chat-sovellusten rakentaminen
 
-[![Generatiivisella tekoälyllä toimivien chat-sovellusten rakentaminen](../../../translated_images/fi/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
+[![Generatiivista tekoälyä hyödyntävien chat-sovellusten rakentaminen](../../../translated_images/fi/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
-> _(Napsauta yllä olevaa kuvaa nähdäksesi tämän oppitunnin videon)_
+> _(Klikkaa yllä olevaa kuvaa katsoaksesi tämän oppitunnin videon)_
 
 Nyt kun olemme nähneet, miten voimme rakentaa tekstinluontisovelluksia, tarkastellaan chat-sovelluksia.
 
-Chat-sovellukset ovat tulleet osaksi jokapäiväistä elämäämme tarjoten muutakin kuin vain tapa keskustella rennosti. Ne ovat keskeisiä asiakaspalvelussa, teknisessä tuessa ja jopa kehittyneissä neuvontajärjestelmissä. On todennäköistä, että olet saanut apua chat-sovelluksesta äskettäin. Kun yhdistämme näihin alustoihin kehittyneempiä teknologioita, kuten generatiivista tekoälyä, monimutkaisuus kasvaa ja samalla myös haasteet.
+Chat-sovelluksista on tullut osa jokapäiväistä elämäämme, ja ne tarjoavat enemmän kuin vain mahdollisuuden rentoon keskusteluun. Ne ovat olennainen osa asiakaspalvelua, teknistä tukea ja jopa kehittyneitä neuvontajärjestelmiä. On todennäköistä, että olet saanut apua chat-sovellukselta äskettäin. Kun integroimme näihin alustoihin edistyneempiä teknologioita kuten generatiivista tekoälyä, monimutkaisuus kasvaa ja samoin haasteet.
 
-Joitakin kysymyksiä, joihin meidän tulee vastata, ovat:
+Joitakin kysymyksiä, joihin meidän on vastattava, ovat:
 
-- **Sovelluksen rakentaminen**. Miten rakennamme tehokkaasti ja sulavasti integroimme nämä tekoälyllä toimivat sovellukset tiettyjä käyttötarkoituksia varten?
-- **Valvonta**. Kun sovellukset on otettu käyttöön, miten voimme valvoa ja varmistaa, että ne toimivat parhaalla mahdollisella tavalla sekä toiminnallisuuden että [vastuullisen tekoälyn kuuden periaatteen](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst) noudattamisen suhteen?
+- **Sovelluksen rakentaminen**. Miten rakennamme tehokkaasti ja saumattomasti integroimme nämä tekoälyllä varustetut sovellukset tiettyihin käyttötarkoituksiin?
+- **Valvonta**. Kun sovellukset on otettu käyttöön, miten voimme seurata ja varmistaa, että ne toimivat parhaalla mahdollisella laadulla niin toiminnallisuuden kuin [vastuullisen tekoälyn kuuden periaatteen](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst) noudattamisen osalta?
 
-Kun siirrymme yhä enemmän automaation ja saumattomien ihmisen ja koneen vuorovaikutusten aikakauteen, on olennaista ymmärtää, miten generatiivinen tekoäly muuttaa chat-sovellusten laajuutta, syvyyttä ja mukautuvuutta. Tämä oppitunti tutkii arkkitehtuurin osa-alueita, jotka tukevat näitä monimutkaisia järjestelmiä, syventyy menetelmiin, joilla niitä hienosäädetään tiettyjä tehtäviä varten, sekä arvioi mittareita ja näkökulmia, jotka liittyvät vastuullisen tekoälyn käyttöönottoon.
+Kun siirrymme yhä enemmän automaation ja saumattoman ihmisen ja koneen vuorovaikutuksen aikakauteen, on olennaista ymmärtää, miten generatiivinen tekoäly muuttaa chat-sovellusten laajuutta, syvyyttä ja sopeutumiskykyä. Tässä oppitunnissa tutkitaan arkkitehtuurisia näkökulmia, jotka tukevat näitä monimutkaisia järjestelmiä, käsitellään menetelmiä niiden hienosäätöön toimialakohtaisia tehtäviä varten ja arvioidaan mittareita ja näkökulmia, jotka ovat olennaisia vastuullisen tekoälyn käyttöönotossa.
 
 ## Johdanto
 
-Tämä oppitunti käsittelee:
+Tämä oppitunti kattaa:
 
-- Menetelmiä tehokkaaseen chat-sovellusten rakentamiseen ja integrointiin.
-- Kuinka sovelluksia voidaan räätälöidä ja hienosäätää.
-- Strategioita ja näkökulmia chat-sovellusten tehokkaaseen valvontaan.
+- Tekniikat chat-sovellusten tehokkaaseen rakentamiseen ja integrointiin.
+- Sovellusten räätälöinnin ja hienosäädön käytännöt.
+- Strategiat ja näkökohdat chat-sovellusten tehokkaaseen valvontaan.
 
 ## Oppimistavoitteet
 
-Oppitunnin lopuksi osaat:
+Oppitunnin lopuksi pystyt:
 
-- Kuvailla tekijöitä chat-sovellusten rakentamisessa ja integroinnissa olemassa oleviin järjestelmiin.
-- Räätälöidä chat-sovelluksia tiettyjä käyttötapauksia varten.
-- Tunnistaa keskeiset mittarit ja näkökulmat, joilla valvotaan ja ylläpidetään tekoälyllä toimivien chat-sovellusten laatua.
-- Varmistaa, että chat-sovellukset hyödyntävät tekoälyä vastuullisesti.
+- Kuvaamaan näkökulmia chat-sovellusten rakentamiseen ja integrointiin olemassa oleviin järjestelmiin.
+- Räätälöimään chat-sovelluksia tiettyihin käyttötarkoituksiin.
+- Tunnistamaan keskeiset mittarit ja näkökulmat tekoälyllä varustettujen chat-sovellusten laadun tehokkaaseen seuranaan ja ylläpitoon.
+- Varmistamaan, että chat-sovellukset hyödyntävät tekoälyä vastuullisesti.
 
 ## Generatiivisen tekoälyn integrointi chat-sovelluksiin
 
-Chat-sovellusten kohottaminen generatiivisella tekoälyllä ei tarkoita pelkästään älykkäämmäksi tekemistä, vaan myös niiden arkkitehtuurin, suorituskyvyn ja käyttöliittymän optimoimista tarjotakseen laadukkaan käyttökokemuksen. Tämä edellyttää arkkitehtuurin perusteiden, API-integraatioiden ja käyttöliittymään liittyvien näkökulmien tutkimista. Tämä osio tarjoaa sinulle kokonaisvaltaisen tiekartan monimutkaisten järjestelmien hallintaan, olitpa sitten liittämässä niitä olemassa oleviin järjestelmiin tai rakentamassa niitä itsenäisiksi alustoiksi.
+Chat-sovellusten parantaminen generatiivisella tekoälyllä ei koske pelkästään niiden älykkäämmäksi tekemistä, vaan myös arkkitehtuurin, suorituskyvyn ja käyttöliittymän optimointia laadukkaan käyttökokemuksen tarjoamiseksi. Tämä tarkoittaa arkkitehtuuriperusteiden, API-integraatioiden ja käyttöliittymän näkökulmien tutkimista. Tämä osio pyrkii tarjoamaan sinulle kokonaisvaltaisen tiekartan monimutkaisten ympäristöjen hallintaan, olitpa sitten liittämässä ne olemassa oleviin järjestelmiin tai rakentamassa itsenäisiä alustoja.
 
-Osion lopussa sinulla on asiantuntemus rakentaa ja ottaa chat-sovellukset tehokkaasti käyttöön.
+Tämän osion lopuksi olet varustautunut taidoilla, joita tarvitset rakentaaksesi ja integroidaksesi chat-sovelluksia tehokkaasti.
 
 ### Chatbot vai chat-sovellus?
 
-Ennen kuin sukellamme chat-sovellusten rakentamiseen, vertaillaan 'chatbotteja' ja 'tekoälyllä toimivia chat-sovelluksia', joilla on erilaiset roolit ja toiminnot. Chatbotin päätehtävä on automatisoida tiettyjä keskustelutehtäviä, kuten usein kysyttyihin kysymyksiin vastaamista tai paketin seurantaa. Se pohjautuu tyypillisesti sääntöpohjaiseen logiikkaan tai monimutkaisiin tekoälyalgoritmeihin. Sen sijaan tekoälyllä toimiva chat-sovellus on laajempi ympäristö, joka mahdollistaa erilaiset digitaaliset viestintämuodot, kuten tekstin, äänen ja videon välityksellä tapahtuvan keskustelun ihmisten välillä. Sen määrittävä ominaisuus on generatiivisen tekoälymallin integrointi, joka simuloi vivahteikkaita, ihmismäisiä keskusteluja luomalla vastauksia monipuolisen syötteen ja kontekstuaalisten vihjeiden perusteella. Generatiivisella tekoälyllä toimiva chat-sovellus voi käydä avoimia keskusteluja, sopeutua muuttuviin keskustelukonteksteihin ja jopa tuottaa luovia tai monimutkaisia dialogeja.
+Ennen kuin sukellamme chat-sovellusten rakentamiseen, vertaillaan 'chatbotteja' ja 'tekoälyllä varustettuja chat-sovelluksia', sillä niillä on erilaiset roolit ja toiminnallisuudet. Chatbotin päätarkoitus on automatisoida tiettyjä keskustelutehtäviä, kuten vastata usein kysyttyihin kysymyksiin tai seurata paketin kulkua. Se toimii yleensä sääntöpohjaisesti tai monimutkaisten tekoälyalgoritmien avulla. Sen sijaan tekoälyllä varustettu chat-sovellus on paljon laajempi ympäristö, joka mahdollistaa monenlaiset digitaaliset viestintämuodot, kuten teksti-, ääni- ja videokeskustelut ihmiskäyttäjien välillä. Sen määrittelevä piirre on generatiivisen tekoälymallin integrointi, joka simuloi vivahteikkaita, ihmismäisiä keskusteluja ja luo vastauksia laajan syötteen ja kontekstuaalisten vihjeiden perusteella. Generatiivisella tekoälyllä toimiva chat-sovellus voi käydä avoimen alan keskusteluja, sopeutua muuttuvaan keskustelukontekstiin ja jopa tuottaa luovaa tai monimutkaista vuoropuhelua.
 
-Alla oleva taulukko hahmottaa keskeiset erot ja samankaltaisuudet auttaakseen meitä ymmärtämään niiden ainutlaatuisia rooleja digitaalisessa viestinnässä.
+Alla oleva taulukko hahmottaa keskeiset erot ja yhtäläisyydet, jotka auttavat ymmärtämään niiden ainutlaatuisia rooleja digitaalisessa viestinnässä.
 
-| Chatbot                               | Generatiivisella tekoälyllä toimiva chat-sovellus      |
-| ------------------------------------- | --------------------------------------                  |
-| Tehtäväkeskeinen ja sääntöpohjainen  | Kontekstitietoinen                                      |
-| Usein osana suurempia järjestelmiä    | Voi sisältää yhden tai useampia chatboteja              |
-| Rajoittunut ohjelmoituihin toimintoihin | Sisältää generatiivisia tekoälymalleja                  |
-| Erikoistuneet ja rakenteelliset vuorovaikutukset | Pystyy avoimen alueen keskusteluihin                      |
+| Chatbot                               | Generatiivista tekoälyä hyödyntävä chat-sovellus              |
+| ------------------------------------- | -------------------------------------- |
+| Tehtäväkeskeinen ja sääntöpohjainen  | Kontekstin huomioiva                           |
+| Usein integroitu suurempiin järjestelmiin  | Voi isännöidä yhtä tai useampaa chatbotia      |
+| Rajattu ohjelmoituihin toimintoihin   | Sisältää generatiivisia tekoälymalleja           |
+| Erikoistuneet ja rakenteelliset vuorovaikutukset | Pystyy käymään avoimen alan keskusteluja      |
 
-### Esivalmistettujen toimintojen hyödyntäminen SDK:illa ja API:lla
+### Valmiiden toimintojen hyödyntäminen SDK:ien ja API:en avulla
 
-Chat-sovellusta rakentaessa hyvä ensimmäinen askel on arvioida, mitä valmiita ratkaisuja on jo olemassa. SDK:iden ja API:en käyttö chat-sovellusten rakentamisessa on hyödyllinen strategia monista syistä. Integroimalla hyvin dokumentoituja SDK:ita ja API:a asemoit sovelluksesi strategisesti kohti pitkäaikaista menestystä ottaen huomioon skaalautuvuuden ja ylläpidon näkökulmat.
+Chat-sovellusta rakentaessa hyvä ensimmäinen askel on arvioida, mitä jo on tarjolla. SDK:iden ja API:en käyttäminen chat-sovellusten rakentamiseen on hyödyllinen strategia monista syistä. Integroimalla hyvin dokumentoidut SDK:t ja API:t sijoitat sovelluksesi strategisesti pitkän aikavälin menestykseen huolehtien skaalautuvuudesta ja ylläpidon vaatimuksista.
 
-- **Nopeuttaa kehitysprosessia ja vähentää ylimääräistä työtä**: Luottaessa valmiisiin toimintoihin sen sijaan, että rakentaisit ne itse kalliisti, voit keskittyä muihin sovelluksesi osa-alueisiin, jotka saattavat olla tärkeämpiä, kuten liiketoimintalogiikkaan.
-- **Parempi suorituskyky**: Rakentaessasi toiminnallisuutta alusta alkaen kysyt lopulta itseltäsi "Miten tämä skaalautuu? Pystyykö tämä sovellus käsittelemään äkillisen käyttäjämäärän kasvun?" Hyvin ylläpidetyissä SDK:ssa ja API:ssa on usein sisäänrakennettuja ratkaisuja näihin haasteisiin.
-- **Helpompi ylläpito**: Päivitysten ja parannusten hallinta on helpompaa, sillä useimmat API:t ja SDK:t vaativat vain kirjaston päivityksen, kun uudempi versio julkaistaan.
-- **Pääsy huipputeknologiaan**: Mallien, joita on hienosäädetty ja koulutettu laajoilla datasetillä, hyödyntäminen tarjoaa sovelluksellesi luonnollisen kielen kyvykkyyksiä.
+- **Kehitysprosessin nopeuttaminen ja kuormituksen vähentäminen**: Luottamalla valmiisiin toimintoihin sen sijaan, että rakentaisit kaiken itse, voit keskittyä muihin sovelluksesi osa-alueisiin, kuten liiketoimintalogiikkaan.
+- **Parempi suorituskyky**: Rakentaessasi toiminnallisuutta alusta alkaen kysyt lopulta itseltäsi ”Miten tämä skaalautuu? Pystyykö sovellus käsittelemään äkillisen käyttäjämäärän kasvun?” Hyvin ylläpidetyillä SDK:illa ja API:eilla on usein nämä asiat huomioituina.
+- **Helpompi ylläpito**: Päivitykset ja parannukset on helpompaa hallita, koska useimmat API:t ja SDK:t vaativat vain kirjaston päivityksen uudemman version ilmestyessä.
+- **Pääsy huipputeknologiaan**: Mallien hyödyntäminen, joita on hienosäädetty ja koulutettu laajoilla tietoaineistoilla, tarjoaa sovelluksellesi luonnollisen kielen kyvykkyyksiä.
 
-SDK:n tai API:n toiminnallisuuksiin pääsy edellyttää yleensä luvan saamista palvelun käyttöön, yleensä uniikin avaimen tai todennustunnuksen avulla. Tutustumme tähän käyttämällä OpenAI Python Libraryä ja katsomme, miltä tämä näyttää. Voit myös kokeilla sitä itse seuraavassa [OpenAI:n muistikirjassa](./python/oai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) tai [Azure OpenAI -palveluiden muistikirjassa](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreys) tälle oppitunnille.
+SDK:n tai API:n toiminnallisuuteen pääseminen sisältää yleensä luvan hankkimisen palvelun käyttämiseen, joka tapahtuu tyypillisesti ainutlaatuisen avaimen tai tunnistautumistunnuksen avulla. Tutustumme OpenAI Python -kirjaston avulla, miltä tämä käytännössä näyttää. Voit myös kokeilla itse seuraavissa [OpenAI:n notebookissa](./python/oai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) tai [Azure OpenAI -palveluiden notebookissa](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreys) tälle oppitunnille.
 
 ```python
 import os
@@ -72,118 +72,118 @@ client = OpenAI(
     api_key=API_KEY
     )
 
-response = client.responses.create(model="gpt-4o-mini", input="Suggest two titles for an instructional lesson on chat applications for generative AI.", store=False)
+response = client.responses.create(model="gpt-5-mini", input="Suggest two titles for an instructional lesson on chat applications for generative AI.", store=False)
 print(response.output_text)
 ```
 
-Yllä oleva esimerkki käyttää GPT-4o mini -mallia Responses API:n kanssa kehotteen täydentämiseen, mutta huomaa, että API-avain asetetaan sitä ennen. Saisit virheen, jos et asettaisi avainta.
+Yllä olevassa esimerkissä käytetään GPT-5 mini -mallia Responses API:n kanssa kehotteen täydentämiseen, mutta huomaa, että API-avain on asetettu ennen tätä. Ilman avainta saisit virheen.
 
 ## Käyttäjäkokemus (UX)
 
-Yleiset UX-periaatteet pätevät chat-sovelluksiin, mutta tässä on joitakin lisähuomioita, jotka ovat erityisen tärkeitä koneoppimiskomponenttien vuoksi.
+Yleiset UX-periaatteet pätevät chat-sovelluksiin, mutta tässä on joitakin lisänäkökulmia, jotka korostuvat koneoppimisen komponenttien mukanaollessa.
 
-- **Epätarkkuuden käsittelyn mekanismi**: Generatiiviset tekoälymallit tuottavat toisinaan epäselviä vastauksia. Toiminto, joka antaa käyttäjille mahdollisuuden pyytää tarkennusta, voi olla hyödyllinen tällaisissa tilanteissa.
-- **Kontekstin säilyttäminen**: Kehittyneemmillä generatiivisilla malleilla on kyky muistaa keskustelun konteksti, mikä voi olla olennainen hyödyke käyttäjäkokemukseen. Käyttäjien mahdollisuus hallita ja säädellä kontekstia parantaa käyttökokemusta mutta tuo mukanaan riskin arkaluontoisten tietojen säilyttämisestä. Mieti, kuinka kauan tietoa säilytetään, esimerkiksi asettamalla säilytyskäytäntö, joka tasapainottaa kontekstin tarpeen ja yksityisyyden välillä.
-- **Personointi**: Tekoälymallit tarjoavat yksilöllisen kokemuksen oppimalla ja sopeutumalla. Käyttäjäkokemuksen räätälöinti esimerkiksi käyttäjäprofiilien kautta saa käyttäjän tuntemaan itsensä ymmärretyksi ja auttaa löytämään tiettyjä vastauksia tehokkaammin, luoden sujuvamman ja tyydyttävämmän vuorovaikutuksen.
+- **Epätarkkuuksien käsittelymekanismi**: Generatiiviset tekoälymallit tuottavat toisinaan epäselviä vastauksia. Ominaisuus, joka antaa käyttäjille mahdollisuuden pyytää tarkennusta, voi olla hyödyllinen tällaisissa tilanteissa.
+- **Kontekstin säilyttäminen**: Kehittyneillä generatiivisilla tekoälymalleilla on kyky muistaa keskustelun konteksti, mikä voi olla välttämätön osa käyttökokemusta. Käyttäjille annettu mahdollisuus hallita ja säädellä kontekstia parantaa käyttökokemusta, mutta tuo mukanaan riskin arkaluontoisten tietojen säilyttämisestä. Tietojen säilyttämisen pituutta koskevat näkökohdat, kuten säilytyskäytännön käyttöönotto, voivat tasapainottaa kontekstitarvetta ja yksityisyyttä.
+- **Personalisointi**: Mallien kyky oppia ja sopeutua tarjoaa yksilöllisen kokemuksen käyttäjälle. Käyttäjäprofiilien kaltaisten ominaisuuksien avulla räätälöity käyttökokemus saa käyttäjän tuntemaan itsensä ymmärretyksi ja auttaa häntä löytämään tarkat vastaukset tehokkaammin ja miellyttävämmin.
 
-Yksi personoinnin esimerkki on OpenAI:n ChatGPT:n "Mukautettu ohjeistus" -asetukset. Ne antavat sinun antaa tietoja itsestäsi, jotka voivat olla tärkeitä kehotteiden kannalta. Tässä on esimerkki mukautetusta ohjeesta.
+Yksi esimerkki personalisoinnista on OpenAI:n ChatGPT:n “Custom instructions” -asetukset. Niillä voit antaa tietoja itsestäsi, jotka voivat olla olennaista kontekstia kehotteillesi. Tässä esimerkki mukautetusta ohjeesta.
 
-![Mukautetut ohjeistukset ChatGPT:ssä](../../../translated_images/fi/custom-instructions.b96f59aa69356fcf.webp)
+![Custom Instructions Settings in ChatGPT](../../../translated_images/fi/custom-instructions.b96f59aa69356fcf.webp)
 
-Tämä "profiili" ohjaa ChatGPT:tä laatimaan oppituntisuunnitelman linkitetyistä listoista. Huomaa, että ChatGPT ottaa huomioon käyttäjän kokemuksen ja tarjoaa syvällisemmän oppituntisuunnitelman.
+Tämä "profiili" ohjaa ChatGPT:tä laatimaan oppitunnin linkitetyistä listoista. Huomaa, että ChatGPT ottaa huomioon käyttäjän aikaisemman kokemuksen ja halun saada syvällisempi oppitunti.
 
-![ChatGPT-kehotteesta oppituntisuunnitelmaa linkitetyistä listoista](../../../translated_images/fi/lesson-plan-prompt.cc47c488cf1343df.webp)
+![Kehote ChatGPT:ssä oppitunnista linkitetyistä listoista](../../../translated_images/fi/lesson-plan-prompt.cc47c488cf1343df.webp)
 
 ### Microsoftin järjestelmäviestikehys suurille kielimalleille
 
-[Microsoft on julkaissut ohjeistusta](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) tehokkaiden järjestelmäviestien kirjoittamiseksi LLM:ien vastausten tuottamiseen neljällä alueella:
+[Microsoft on antanut ohjeistuksen](https://learn.microsoft.com/azure/ai-foundry/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) tehokkaiden järjestelmäviestien kirjoittamisesta LLM-mallien vastausten tuottamiseen neljällä osa-alueella:
 
-1. Mallin kohderyhmän, kyvykkyyksien ja rajoitusten määrittely.
-2. Mallin tulosteen formaatin määrittely.
-3. Erityisten esimerkkien tarjoaminen, jotka osoittavat mallin tarkoitetun toiminnan.
-4. Lisäkäyttäytymisen suojakeinojen tarjoaminen.
+1. Mallin käyttötarkoituksen ja sen kykyjen sekä rajoitusten määrittely.
+2. Mallin tuottaman vastausformaatin määrittely.
+3. Tarkkojen esimerkkien tarjoaminen, jotka demonstroivat mallin toivottua käyttäytymistä.
+4. Lisäkäyttäytymisen suojautumiskeinojen tarjoaminen.
 
 ### Esteettömyys
 
-Olipa käyttäjällä näkö-, kuulo-, motorisia tai kognitiivisia rajoitteita, hyvin suunnitellun chat-sovelluksen tulee olla kaikkien käytettävissä. Seuraava lista kattaa erityisiä ominaisuuksia, jotka parantavat esteettömyyttä eri käyttäjärajoitteissa.
+Olipa käyttäjällä visuaalisia, kuulo-, motorisia tai kognitiivisia rajoitteita, hyvin suunnitellun chat-sovelluksen tulee olla kaikkien käyttäjien saavutettavissa. Seuraava lista hahmottaa erityisiä ominaisuuksia, jotka on suunniteltu lisäämään saavutettavuutta erilaisille käyttäjävammaryhmille.
 
-- **Näkövammaiset**: Suurikontrastiset teemat ja muokattavat tekstit, ruudunlukuohjelmien yhteensopivuus.
-- **Kuulovammaiset**: Teksti puheeksi- ja puhe tekstiksi -toiminnot, visuaaliset merkit äänitiedotteille.
-- **Motorisesti rajoittuneet**: Näppäimistöohjaus, äänikomennot.
-- **Kognitiivisesti rajoittuneet**: Yksinkertaistetut kielivaihtoehdot.
+- **Visuaalisen vamman ominaisuudet**: Korkean kontrastin teemat ja skaalautuva teksti, ruudunlukijan yhteensopivuus.
+- **Kuulovamman ominaisuudet**: Tekstin puheeksi ja puheen tekstiksi muuntotoiminnot, visuaaliset merkit äänisignaaleille.
+- **Motorisen vamman ominaisuudet**: Näppäimistönavigoinnin tuki, äänikomennot.
+- **Kognitiivisen vamman ominaisuudet**: Yksinkertaistetun kielen vaihtoehdot.
 
 ## Räätälöinti ja hienosäätö toimialakohtaisille kielimalleille
 
-Kuvittele chat-sovellus, joka ymmärtää yrityksesi sanaston ja ennakoi sen käyttäjäkunnan yleisimmät kysymykset. On muutamia lähestymistapoja, jotka ovat mainitsemisen arvoisia:
+Kuvittele chat-sovellus, joka ymmärtää yrityksesi ammattisanaston ja ennakoi käyttäjän yleiset kysymykset. Mainittavia lähestymistapoja on pari:
 
-- **DSL-mallien hyödyntäminen**. DSL tarkoittaa toimialakohtaista kieltä (domain specific language). Voit hyödyntää ns. DSL-mallia, joka on koulutettu tietylle toimialalle ymmärtämään sen käsitteitä ja tilanteita.
-- **Hienosäätö**. Hienosäätö on prosessi, jossa mallia koulutetaan edelleen erityisellä aineistolla.
+- **DSL-mallien hyödyntäminen**. DSL tarkoittaa toimialakohtaista kieltä. Voit hyödyntää niin kutsuttua DSL-mallia, joka on koulutettu tietyn toimialan käsitteiden ja tilanteiden ymmärtämiseen.
+- **Hienosäännä mallia**. Hienosäätö tarkoittaa mallin jatkokouluttamista spesifisellä aineistolla.
 
-## Räätälöinti: DSL:n käyttö
+## Räätälöinti: DSL:n käyttäminen
 
-Toimialakohtaisten kielimallien (DSL-mallit) hyödyntäminen voi parantaa käyttäjien sitoutumista tarjoamalla erikoistuneita ja tilanteeseen sopivia vuorovaikutuksia. Malli on koulutettu tai hienosäädetty ymmärtämään ja tuottamaan tekstiä tietystä alasta, teollisuudesta tai aiheesta. DSL-mallien käyttömahdollisuudet vaihtelevat kokonaan uuden mallin kouluttamisesta valmiiden mallien käyttöön SDK:iden ja API:en kautta. Toinen vaihtoehto on hienosäätö, jossa olemassa oleva esikoulutettu malli mukautetaan tietylle alalle.
+Toimialakohtaisten kielimallien (DSL-mallien) hyödyntäminen voi lisätä käyttäjävuorovaikutusta tarjoamalla erikoistuneita, kontekstuaalisesti merkityksellisiä vuorovaikutuksia. Se on malli, joka on koulutettu tai hienosäädetty ymmärtämään ja tuottamaan tekstiä tiettyyn alaan, teollisuuteen tai aiheeseen liittyen. DSL-mallin käyttäminen voi vaihdella mallin kouluttamisesta alusta alkaen valmiiden SDK:en ja API:en kautta tapahtuvaan hyödyntämiseen. Toinen vaihtoehto on hienosäätö, jossa olemassaolevaa ennalta koulutettua mallia mukautetaan tietylle toimialalle.
 
-## Räätälöinti: Hienosäätö
+## Räätälöinti: Hienosäädön soveltaminen
 
-Hienosäätö on usein harkittava, kun esikoulutettu malli ei riitä erikoistuneella alalla tai tietyssä tehtävässä.
+Hienosäätö on usein harkittava, kun ennalta koulutettu malli ei riitä erikoistuneessa toimialassa tai tiettyyn tehtävään.
 
-Esimerkiksi lääketieteelliset kyselyt ovat monimutkaisia ja vaativat paljon kontekstia. Kun lääkäri tekee diagnoosin, se perustuu moniin tekijöihin, kuten elämäntapaan tai olemassa oleviin sairauksiin, ja saattaa turvautua myös viimeisimpiin lääketieteellisiin julkaisuihin diagnoosin vahvistamiseksi. Tällaisissa nyansoiduissa tapauksissa yleiskäyttöinen tekoälyllä toimiva chat-sovellus ei voi olla luotettava lähde.
+Esimerkiksi lääketieteelliset kyselyt ovat monimutkaisia ja vaativat paljon kontekstia. Kun lääkäri tekee diagnoosin, se perustuu moniin tekijöihin, kuten elämäntapaan tai aiemmin esiintyneisiin sairauksiin, ja saattaa lisäksi nojautua viimeaikaisiin lääketieteellisiin tutkimusjulkaisuihin diagnosin vahvistamiseksi. Näissä hienovaraisissa tilanteissa yleiskäyttöinen tekoälysovellus ei voi olla luotettava lähde.
 
 ### Tilanne: lääketieteellinen sovellus
 
-Kuvittele chat-sovellus, joka auttaa lääketieteen ammattilaisia tarjoamalla nopeasti hoito-ohjeita, lääkeaineiden yhteisvaikutuksia tai tuoreimpia tutkimustuloksia.
+Kuvittele chat-sovellus, joka on suunniteltu auttamaan lääketieteen ammattilaisia tarjoamalla nopeita viitteitä hoito-ohjeisiin, lääkkeiden yhteisvaikutuksiin tai viimeisimpiin tutkimustuloksiin.
 
-Yleiskäyttöinen malli voi olla riittävä peruskysymyksiin vastaamisessa tai yleisterveysohjeiden antamisessa, mutta se saattaa kohdata vaikeuksia seuraavissa:
+Yleiskäyttöinen malli saattaa riittää peruslääketieteellisten kysymysten vastaamiseen tai yleisten neuvojen antamiseen, mutta siinä voi olla vaikeuksia seuraavissa tilanteissa:
 
-- **Erittäin spesifit tai monimutkaiset tapaukset**. Esimerkiksi neurologi saattaa kysyä sovellukselta: "Mitkä ovat nykyiset parhaat käytännöt lääkeresistentin epilepsian hoitamiseksi lapsipotilailla?"
-- **Viimeisimpien edistysaskeleiden puute**. Yleiskäyttöinen malli voi kokea vaikeuksia tarjota ajantasaista vastausta, joka sisältää uusimmat neurologian ja farmakologian edistysaskeleet.
+- **Erittäin spesifit tai monimutkaiset tapaukset**. Esimerkiksi neurologi saattaa kysyä sovellukselta: ”Mitkä ovat nykyiset parhaat käytännöt lääkkeille vastustuskykyisen epilepsian hoitamiseksi lapsipotilailla?”
+- **Puuttuvat viimeisimmät edistysaskeleet**. Yleiskäyttöinen malli voi vaikeuksissa tarjota ajankohtaisen vastauksen, joka sisältää neurotieteen ja farmakologian viimeisimmät saavutukset.
 
-Tällaisissa tapauksissa mallin hienosäätö erikoistuneella lääketieteellisellä aineistolla voi merkittävästi parantaa sen kykyä käsitellä näitä monimutkaisia lääketieteellisiä kysymyksiä tarkemmin ja luotettavammin. Tämä edellyttää pääsyä suureen ja asiaankuuluvaan aineistoon, joka edustaa toimialakohtaisia haasteita ja kysymyksiä.
+Tällaisissa tapauksissa mallin hienosäätö erikoistuneella lääketieteellisellä aineistolla voi merkittävästi parantaa sen kykyä käsitellä monimutkaisia lääketieteellisiä kyselyjä tarkemmin ja luotettavammin. Tämä edellyttää pääsyä suureen ja aiheeseen liittyvään tietoaineistoon, joka kattaa toimialakohtaiset haasteet ja kysymykset, jotka on käsiteltävä.
 
-## Korkealaatuisen tekoälypohjaisen chat-kokemuksen näkökulmat
+## Laadukkaan tekoälypohjaisen chat-kokemuksen näkökohdat
 
-Tässä osiossa kuvataan "korkealaatuisten" chat-sovellusten kriteerejä, jotka sisältävät käyttökelpoisten mittareiden keruun ja vastuullista tekoälyteknologian hyödyntämistä koskevan viitekehyksen noudattamisen.
+Tässä osiossa esitellään "laadukkaiden" chat-sovellusten kriteerit, joihin kuuluu käyttökelpoisten mittareiden kerääminen ja vastuullisesti tekoälyteknologiaa hyödyntävän kehysmallin noudattaminen.
 
 ### Keskeiset mittarit
 
-Sovelluksen korkean suorituskyvyn ylläpitämiseksi on olennaista seurata keskeisiä mittareita ja näkökulmia. Nämä mittaukset eivät vain takaa sovelluksen toiminnallisuutta, vaan arvioivat myös tekoälymallin ja käyttäjäkokemuksen laatua. Alla on luettelo, joka kattaa perustason, tekoäly- ja käyttäjäkokemusmittarit huomioitavaksi.
+Laadukkaan sovelluksen suorituskyvyn ylläpitämiseksi on tärkeää seurata keskeisiä mittareita ja näkökulmia. Nämä mittaukset varmistavat sovelluksen toimivuuden lisäksi myös tekoälymallin ja käyttökokemuksen laadun. Alla on luettelo perus-, tekoäly- ja käyttökokemukseen liittyvistä mittareista, jotka kannattaa ottaa huomioon.
 
-| Mittari                       | Määritelmä                                                                                                            | Chat-kehittäjän näkökulma                                              |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| **Käyttöaika**                 | Mittaa ajan, jonka sovellus on toiminnassa ja käyttäjien saatavilla.                                                   | Kuinka minimoit käyttökatkokset?                                       |
-| **Vastausaika**               | Aika, jonka sovellus käyttää vastatakseen käyttäjän kyselyyn.                                                         | Kuinka optimoit kyselyjen käsittelyn lyhentääksesi vastausaikaa?       |
-| **Täsmällisyys**              | Todellisten positiivisten ennusteiden suhde kaikkiin positiivisiin ennusteisiin.                                      | Kuinka validoit mallisi täsmällisyyden?                                |
-| **Herkkyys (Recall)**         | Todellisten positiivisten ennusteiden suhde todelliseen positiivisten määrään.                                        | Kuinka mittaat ja parannat herkkyyttä?                                |
-| **F1-pisteet**                | Täsmällisyyden ja herkkyyden harmoninen keskiarvo, joka tasapainottaa näiden välisen vaihtokaupan.                     | Mikä on tavoittelemasi F1-piste? Kuinka tasapainotat täsmällisyyden ja herkkyyden?  |
-| **Hämmennys**                | Mittaa, miten hyvin mallin ennustama todennäköisyysjakauma vastaa datan todellista jakaumaa.                            | Kuinka minimoit hämmennyksen?                                         |
-| **Käyttäjätyytyväisyysmittarit** | Mittaavat käyttäjän kokemaa sovelluksesta. Usein kerätään kyselyiden avulla.                                            | Kuinka usein keräät käyttäjäpalautetta? Kuinka sopeudut sen perusteella? |
-| **Virheiden määrä**           | Mallin virheiden ymmärryksessä tai tuotoksessa määrä.                                                                 | Mitä strategioita sinulla on virheiden vähentämiseksi?                  |
-| **Uudelleenkoulutusjaksot**  | Kuinka usein mallia päivitetään ottamaan huomioon uutta dataa ja havaintoja.                                          | Kuinka usein uudelleenkoulutat mallin? Mikä käynnistää uudelleenkoulutusjakson?  |
+| Mittari                       | Määritelmä                                                                                                          | Kehittäjän huomioitavat seikat                                |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
+| **Käyttöaika**                | Mittaa ajan, jolloin sovellus on toiminnassa ja käyttäjien saavutettavissa.                                        | Miten minimoit käyttökatkokset?                              |
+| **Vastausaika**               | Aika, jonka sovellus käyttää vastatakseen käyttäjän kyselyyn.                                                     | Miten optimoit kyselyn käsittelyn parantaaksesi vastausaikaa? |
+| **Tarkkuus**                  | Tosien positiivisten ennusteiden suhde kaikkien positiivisten ennusteiden määrään.                                 | Miten validoit mallisi tarkkuuden?                             |
+| **Havaitsevuus (sensitiivisyys)** | Tosien positiivisten ennusteiden suhde todelliseen positiivisten määrään.                                        | Miten mittaat ja parannat havaitsevuutta?                     |
+| **F1-pisteet**                | Tarkkuuden ja havaitsevyyden harmoninen keskiarvo, joka tasapainottaa molemmat.                                   | Mikä on tavoittelemasi F1-pistemäärä? Miten tasapainotat tarkkuutta ja havaitsevyyttä? |
+| **Hämmentyneisyys (perplexity)** | Mittaa, kuinka hyvin mallin ennustama todennäköisyysjakauma vastaa datan todellista jakaumaa.                     | Miten minimoit hämmentyneisyyden?                              |
+| **Käyttäjätyytyväisyysmittarit** | Mittaa käyttäjän käsitystä sovelluksesta. Usein kerätään kyselyillä.                                              | Kuinka usein keräät käyttäjäpalautetta? Miten mukautat sen perusteella? |
+| **Virheiden määrä**            | Mallin tekemien virheiden määrä ymmärtämisessä tai vastauksissa.                                                 | Mitä strategioita sinulla on virheiden vähentämiseksi?       |
+| **Uudelleenkoulutussyklit**   | Kuinka usein mallia päivitetään uusilla tiedoilla ja näkemyksillä.                                               | Kuinka usein uudelleenkoulutat mallin? Mikä käynnistää uudelleenkoulutussyklin? |
 
-| **Poikkeavuuksien tunnistaminen** | Työkalut ja tekniikat poikkeuksellisten kuvioiden tunnistamiseen, jotka eivät vastaa odotettua käyttäytymistä. | Miten reagoit poikkeavuuksiin?                                          |
+| **Poikkeavuuksien tunnistus** | Työkaluja ja tekniikoita epätavallisten mallien tunnistamiseen, jotka eivät vastaa odotettua käyttäytymistä.                  | Kuinka vastaat poikkeavuuksiin?                                          |
 
-### Vastuunalaisen tekoälyn käytäntöjen toteuttaminen chat-sovelluksissa
+### Vastuullisten tekoälykäytäntöjen toteuttaminen chat-sovelluksissa
 
-Microsoftin lähestymistapa vastuulliseen tekoälyyn on tunnistanut kuusi periaatetta, jotka tulisi ohjata tekoälyn kehitystä ja käyttöä. Alla ovat periaatteet, niiden määritelmät ja asioita, joita chat-kehittäjän tulisi harkita ja miksi niihin tulisi suhtautua vakavasti.
+Microsoftin lähestymistapa vastuulliseen tekoälyyn on tunnistanut kuusi periaatetta, joiden tulisi ohjata tekoälyn kehitystä ja käyttöä. Alla ovat periaatteet, niiden määritelmät sekä huomioita chat-kehittäjälle ja miksi niitä tulisi ottaa vakavasti.
 
-| Periaatteet           | Microsoftin määritelmä                               | Huomiot chat-kehittäjälle                                          | Miksi se on tärkeää                                                                   |
+| Periaatteet           | Microsoftin määritelmä                                | Huomioitavaa chat-kehittäjälle                                       | Miksi se on tärkeää                                                                    |
 | ---------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| Oikeudenmukaisuus       | Tekoälyjärjestelmien tulisi kohdella kaikkia reilusti. | Varmista, ettei chat-sovellus syrji käyttäjätietojen perusteella.   | Rakentaa luottamusta ja osallisuutta käyttäjien keskuudessa; välttää oikeudellisia seuraamuksia. |
-| Luotettavuus ja turvallisuus | Tekoälyjärjestelmien tulisi toimia luotettavasti ja turvallisesti. | Toteuta testaus ja turvatoimet virheiden ja riskien minimoimiseksi.  | Varmistaa käyttäjien tyytyväisyyden ja estää mahdolliset vahingot.                     |
-| Yksityisyys ja tietoturva | Tekoälyjärjestelmien tulisi olla turvallisia ja kunnioittaa yksityisyyttä. | Toteuta vahva salaaminen ja tietosuojatoimet.                        | Suojaa arkaluonteiset käyttäjätiedot ja täyttää tietosuojalainsäädännön vaatimukset.   |
-| Osallisuus             | Tekoälyjärjestelmien tulisi antaa voimaa kaikille ja sitouttaa ihmisiä. | Suunnittele käyttöliittymä/UX, joka on saavutettava ja helppokäyttöinen erilaisille käyttäjille. | Varmistaa, että laajempi joukko ihmisiä voi käyttää sovellusta tehokkaasti.            |
-| Läpinäkyvyys           | Tekoälyjärjestelmien tulisi olla ymmärrettäviä.       | Tarjoa selkeää dokumentaatiota ja perusteluja tekoälyn vastauksille. | Käyttäjät luottavat järjestelmään paremmin, jos he voivat ymmärtää, miten päätökset tehdään. |
-| Vastuuvelvollisuus     | Ihmisten tulisi olla vastuussa tekoälyjärjestelmistä. | Perusta selkeä prosessi tekoälypäätösten tarkastamiseen ja parantamiseen. | Mahdollistaa jatkuvan parantamisen ja korjaavat toimenpiteet virheiden sattuessa.       |
+| Oikeudenmukaisuus      | Tekoälyjärjestelmien tulisi kohdella kaikkia ihmisiä oikeudenmukaisesti. | Varmista, ettei chat-sovellus diskriminoi käyttäjätietojen perusteella. | Luottamuksen ja inklusiivisuuden rakentamiseksi käyttäjien keskuudessa; välttää oikeudellisia seuraamuksia. |
+| Luotettavuus ja turvallisuus | Tekoälyjärjestelmien tulisi toimia luotettavasti ja turvallisesti. | Toteuta testauksia ja varajärjestelmiä virheiden ja riskien minimoimiseksi. | Varmistaa käyttäjien tyytyväisyyden ja ehkäisee mahdollisia vahinkoja.                  |
+| Yksityisyys ja turvallisuus | Tekoälyjärjestelmien tulisi olla turvallisia ja kunnioittaa yksityisyyttä. | Toteuta vahvaa salakirjoitusta ja tietosuojatoimia.                  | Herkkien käyttäjätietojen suojelemiseksi ja tietosuojalakien noudattamiseksi.          |
+| Osallisuus           | Tekoälyjärjestelmien tulisi valtuuttaa kaikkia ja sitouttaa ihmisiä.   | Suunnittele käyttöliittymä/UX, joka on saavutettava ja helppokäyttöinen moninaisille yleisöille. | Varmistaa, että laajempi joukko ihmisiä voi käyttää sovellusta tehokkaasti.              |
+| Läpinäkyvyys         | Tekoälyjärjestelmien tulisi olla ymmärrettäviä.        | Tarjoa selkeää dokumentaatiota ja perusteluja tekoälyn vastauksille.  | Käyttäjät luottavat järjestelmään todennäköisemmin, jos he voivat ymmärtää päätöksenteon perusteet. |
+| Vastuuvelvollisuus   | Ihmisten tulisi olla vastuussa tekoälyjärjestelmistä.  | Perusta selkeä prosessi tekoälypäätösten tarkastamiseen ja parantamiseen. | Mahdollistaa jatkuvan parantamisen ja oikaisutoimet virhetilanteissa.                  |
 
 ## Tehtävä
 
-Katso [assignment](../../../07-building-chat-applications/python). Se vie sinut läpi sarjan harjoituksia ensimmäisten chat-kehotusten suorittamisesta tekstin luokitteluun ja tiivistämiseen sekä muuhun. Huomaa, että tehtävät ovat saatavilla eri ohjelmointikielillä!
+Katso [tehtävä](../../../07-building-chat-applications/python). Se ohjaa sinut sarjan harjoitusten läpi ensimmäisistä chat-kehotteistasi tekstin luokitteluun ja tiivistämiseen sekä muuta. Huomaa, että tehtävät ovat saatavilla eri ohjelmointikielillä!
 
 ## Hienoa työtä! Jatka matkaa
 
-Tämän oppitunnin suorittamisen jälkeen tutustu [Generatiivisen tekoälyn oppimiskokoelmaamme](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), jotta voit jatkaa generatiivisen tekoälyn osaamisesi kehittämistä!
+Tämän oppitunnin suorittamisen jälkeen tutustu [Generatiivisen tekoälyn oppimiskokoelmaamme](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), ja jatka generatiivisen tekoälyn taitojesi kehittämistä!
 
-Siirry oppitunnille 8 nähdäksesi, miten voit aloittaa [hakusovellusten rakentamisen](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Siirry Oppitunnille 8 nähdäksesi, kuinka voit aloittaa [hakusovellusten rakentamisen](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 

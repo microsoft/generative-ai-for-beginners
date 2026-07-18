@@ -1,61 +1,61 @@
-# Építés a Meta Család Modelleivel 
+# Építés a Meta család modelleivel 
 
 ## Bevezetés 
 
 Ez a lecke a következőket fogja lefedni: 
 
-- A Meta család két fő modelljének felfedezése - Llama 3.1 és Llama 3.2 
-- Minden modell felhasználási eseteinek és forgatókönyveinek megértése 
-- Kódrészlet, amely bemutatja az egyedi jellemzőket minden modell esetében 
+- A két fő Meta család modell felfedezése - Llama 3.1 és Llama 3.2 
+- Mindkét modell felhasználási eseteinek és szcenárióinak megértése 
+- Kódpélda, amely bemutatja mindkét modell egyedi jellemzőit 
 
 
-## A Meta Család Modelljei 
+## A Meta család modelljei 
 
-Ebben a leckében két modellt fedezünk fel a Meta családból vagy "Llama Herd"-ből - Llama 3.1 és Llama 3.2.
+Ebben a leckében két modellt fogunk felfedezni a Meta családból, azaz a "Llama Herd"-ból – Llama 3.1 és Llama 3.2.
 
-Ezek a modellek különféle változatokban érhetők el, és megtalálhatók a [Microsoft Foundry Models katalógusában](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
+Ezek a modellek különböző variánsokban érhetők el, és megtalálhatók a [Microsoft Foundry Models katalógusában](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
 
-> **Megjegyzés:** A GitHub Modellek 2026 júliusának végén megszűnik. További részletek a [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) használatáról az AI modellekkel való prototípus-készítéshez.
+> **Megjegyzés:** A GitHub Models 2026 júliusának végén megszűnik. Itt további részleteket talál a [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) használatáról az AI modellekkel való prototípuskészítéshez.
 
-Modell Változatok: 
-- Llama 3.1 - 70B Instruct 
-- Llama 3.1 - 405B Instruct 
-- Llama 3.2 - 11B Vision Instruct 
-- Llama 3.2 - 90B Vision Instruct 
+Modellváltozatok: 
+- Llama 3.1 - 70B Instruktív 
+- Llama 3.1 - 405B Instruktív 
+- Llama 3.2 - 11B Vision Instruktív 
+- Llama 3.2 - 90B Vision Instruktív 
 
-*Megjegyzés: A Llama 3 elérhető a Microsoft Foundry Models szolgáltatásban is, de ez a lecke nem foglalkozik vele*
+*Megjegyzés: A Llama 3 szintén elérhető a Microsoft Foundry Modelseiben, de ez a lecke nem foglalkozik vele*
 
 ## Llama 3.1 
 
-A 405 milliárd paraméterrel rendelkező Llama 3.1 az open source nagyméretű nyelvi modellek kategóriájába tartozik. 
+A 405 milliárd paraméterével a Llama 3.1 az open source nagyméretű nyelvi modellek (LLM) kategóriájába tartozik. 
 
-A modell az előző kiadás, a Llama 3 továbbfejlesztése, amely a következőket kínálja: 
+A modell fejlesztés a korábbi Llama 3 kiadáshoz képest, az alábbiakat kínálja: 
 
-- Nagyobb kontextusablak - 128k token a 8k token helyett 
-- Nagyobb Maximális Kimeneti Tokenek száma - 4096 a 2048 helyett 
-- Jobb többnyelvű támogatás - a megnövekedett tanító tokenek miatt 
+- Nagyobb kontextusablak - 128k token vs 8k token 
+- Nagyobb maximális kimeneti tokenek száma - 4096 vs 2048 
+- Jobb többnyelvű támogatás - a megnövelt tanító token mennyiség miatt 
 
-Ezek lehetővé teszik, hogy a Llama 3.1 összetettebb feladatokat is kezeljen GenAI alkalmazások építése során, beleértve: 
-- Natív funkcióhívás - a képesség arra, hogy külső eszközöket és funkciókat hívjon meg az LLM munkafolyamatán kívül
+Ezek lehetővé teszik, hogy a Llama 3.1 összetettebb feladatokat kezeljen GenAI alkalmazások fejlesztésekor, beleértve: 
+- Natív függvényhívás - a képesség külső eszközök és függvények meghívására az LLM munkafolyamatán kívül
 - Jobb RAG teljesítmény - a nagyobb kontextusablak miatt 
-- Szintetikus adat generálása - a képesség hatékony adatokat előállítani finomhangolási feladatokhoz 
+- Szintetikus adat generálás - hatékony adatok létrehozásának képessége olyan feladatokhoz, mint a finomhangolás 
 
-### Natív Funkcióhívás 
+### Natív függvényhívás 
 
-A Llama 3.1-et úgy hangolták finomra, hogy hatékonyabb legyen a funkció- vagy eszközhívásoknál. Két beépített eszközzel is rendelkezik, amelyeket a modell azonosítani tud, ha a felhasználó utasítása alapján azok használata szükséges. Ezek az eszközök: 
+A Llama 3.1 finomhangoltabb, hogy hatékonyabban hívhasson meg függvényeket vagy eszközöket. Két beépített eszközt is tartalmaz, amelyeket a modell azonosítani tud, hogy a felhasználói prompt alapján használnia kell. Ezek az eszközök: 
 
-- **Brave Search** - Használható friss információk, például az időjárás lekérdezésére webes keresés végrehajtásával 
-- **Wolfram Alpha** - Használható bonyolultabb matematikai számításokra, így nem szükséges saját függvényeket írni. 
+- **Brave Search** - használható az aktuális információkhoz, például az időjárás lekérdezéséhez, webes keresést végezve 
+- **Wolfram Alpha** - összetettebb matematikai számításokra használható, így nem szükséges saját függvények írása. 
 
-Saját egyedi eszközöket is létrehozhatsz, amelyeket az LLM képes meghívni. 
+Saját egyéni eszközöket is létrehozhatsz, amelyeket az LLM hívhat. 
 
-A következő kódrészletben: 
+Az alábbi kódpéldában: 
 
-- Meghatározzuk az elérhető eszközöket (brave_search, wolfram_alpha) a rendszerutasításban. 
-- Küldünk egy felhasználói utasítást, amely megkérdezi egy adott város időjárását. 
-- Az LLM válaszként egy eszközhívást fog generálni a Brave Search eszközhöz, ami így fog kinézni: `<|python_tag|>brave_search.call(query="Stockholm weather")` 
+- Meghatározzuk a rendelkezésre álló eszközöket (brave_search, wolfram_alpha) a rendszerpromptban. 
+- Küldünk egy felhasználói promptot, amely az időjárásról kérdez egy adott városban. 
+- Az LLM válasza egy eszközhívás lesz a Brave Search eszközre, amely így néz ki: `<|python_tag|>brave_search.call(query="Stockholm weather")` 
 
-*Megjegyzés: Ez a példa csak az eszközhívást mutatja be, ha az eredményeket is meg szeretnéd kapni, ingyenes fiókot kell létrehoznod a Brave API oldalán, és definiálnod kell magát a függvényt.
+*Megjegyzés: Ez a példa csak az eszközhívást hajtja végre, ha az eredményeket is szeretnéd megkapni, ingyenes fiókot kell létrehoznod a Brave API oldalon, és magát a függvényt is definiálnod kell.
 
 ```python 
 import os
@@ -63,7 +63,7 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import AssistantMessage, SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-# Szerezd be ezeket a Microsoft Foundry projekted „Áttekintés” oldaláról
+# Ezeket a Microsoft Foundry projekted „Áttekintés” oldaláról szerezd be
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Meta-Llama-3.1-405B-Instruct"
@@ -98,13 +98,13 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2 
 
-Noha az Llama 3.1 egy LLM, egy korlátja az, hogy nem támogatja a multimodalitást. Vagyis nem képes különböző típusú bemeneteket, például képeket használni utasításként, és válaszokat adni rájuk. Ez a képesség a Llama 3.2 egyik fő jellemzője. Ezek a jellemzők a következők: 
+Habár LLM, a Llama 3.1 egy korlátja, hogy nincs multimodális képessége. Ez azt jelenti, hogy nem képes különböző típusú bemeneteket használni, például képeket promptként, és választ adni rájuk. Ez a képesség a Llama 3.2 egyik fő jellemzője. Ezek a jellemzők a következők is: 
 
-- Multimodalitás - képes értékelni mind szöveges, mind képi utasításokat 
-- Kis és közepes méretű változatok (11B és 90B) - rugalmas telepítési lehetőségeket biztosítanak, 
-- Csak szöveges változatok (1B és 3B) - lehetővé teszi a modell telepítését edge / mobil eszközökön, alacsony késleltetéssel 
+- Multimodalitás - képes mind szöveg, mind kép promptokat értékelni 
+- Kicsi és közepes méretű változatok (11B és 90B) - rugalmas telepítési lehetőségeket biztosítanak, 
+- Csak szöveges változatok (1B és 3B) - lehetővé teszi a modell telepítését élvonalbeli / mobil eszközökön és alacsony késleltetést biztosít 
 
-A multimodális támogatás nagy előrelépést jelent az open source modellek világában. Az alábbi kódrészlet mind kép-, mind szöveges utasítást használva elemzést kér a Llama 3.2 90B modelltől. 
+A multimodális támogatás nagy előrelépést jelent a nyílt forráskódú modellek világában. Az alábbi kódpélda egy képet és szöveges promptot is használ, hogy elemzést kapjunk a Llama 3.2 90B-től a képről. 
 
 
 ### Multimodális támogatás a Llama 3.2-vel
@@ -122,7 +122,7 @@ from azure.ai.inference.models import (
 )
 from azure.core.credentials import AzureKeyCredential
 
-# Szerezze be ezeket a Microsoft Foundry projekt "Áttekintés" oldaláról
+# Szerezd be ezeket a Microsoft Foundry projekted „Áttekintés” oldaláról
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Llama-3.2-90B-Vision-Instruct"
@@ -157,7 +157,7 @@ print(response.choices[0].message.content)
 
 ## A tanulás itt nem áll meg, folytasd az utat
 
-A lecke elvégzése után nézd meg a [Generatív AI tanulási gyűjteményünket](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy tovább fejleszd a generatív AI ismereteidet!
+A lecke befejeztével tekintsd meg [Generatív AI tanulási gyűjteményünket](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy folytasd a Generatív AI ismereteid fejlesztését!
 
 ---
 

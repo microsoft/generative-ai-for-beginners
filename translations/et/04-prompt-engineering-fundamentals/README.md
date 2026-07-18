@@ -1,143 +1,143 @@
-# Käsuplaneerimise põhialused
+# Päringu Insenertehnika Alused
 
-[![Käsuplaneerimise põhialused](../../../translated_images/et/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
+[![Päringu Insenertehnika Alused](../../../translated_images/et/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Sissejuhatus
-See moodul käsitleb olulisi mõisteid ja tehnikaid tõhusate käskude loomiseks generatiivsetes tehisintellekti mudelites. Viis, kuidas kirjutate käsu LLM-ile, on samuti oluline. Hoolikalt koostatud käsk võib saavutada parema vastuse kvaliteedi. Kuid mida täpselt tähendavad sellised mõisted nagu _käsk_ ja _käsuplaneerimine_? Ja kuidas ma saan parendada käsu _sisendit_, mida ma LLM-ile saadan? Neile küsimustele püüame vastuseid leida käesolevas ja järgmisel peatükil.
+See moodul käsitleb olulisi mõisteid ja tehnikaid tõhusate päringute loomisel generatiivsete tehisintellekti mudelite jaoks. Kuidas sa kirjutad oma päringu LLM-ile on samuti oluline. Hoolikalt koostatud päring võib saavutada parema vastuste kvaliteedi. Kuid mida täpselt tähendavad mõisted nagu _päring_ ja _päringu insenertehnika_? Ja kuidas ma saan parandada päringu _sisendit_, mida ma LLM-ile saadan? Need on küsimused, millele püüame vastata käesolevas ja järgnevates peatükkides.
 
-_Generatiivne tehisintellekt_ suudab luua uut sisu (nt teksti, pilte, heli, koodi jne) vastuseks kasutaja päringutele. Selle saavutamiseks kasutatakse _suurekeelseid mudeleid_ nagu OpenAI GPT ("Generative Pre-trained Transformer") seeria, mis on koolitatud loomuliku keele ja koodi kasutamiseks.
+_Generatiivne tehisintellekt_ suudab luua uut sisu (nt tekst, pildid, heli, kood jms) kasutajate päringutele vastuses. Seda saavutatakse kasutades _suurte keelemudelite_ nagu OpenAI GPT ("Generative Pre-trained Transformer") seeria, mida on treenitud kasutama loomulikku keelt ja koodi.
 
-Kasutajad saavad nüüd nendega suhelda tuttavate paradigmade kaudu, näiteks vestluse kaudu, ilma tehniliste teadmisteta või koolituseta. Mudelid on _käskudel põhinevad_ – kasutajad saadavad tekstisisendi (käsu) ja saavad vastu tehisintellekti vastuse (täienduse). Nad saavad seejärel "vestelda tehisintellektiga" iteratiivselt, mitmevoorulistes vestlustes, täiustades oma käsku, kuni vastus vastab nende ootustele.
+Kasutajad saavad nüüd nendega suhelda tuttavate paradigmade kaudu nagu vestlus, ilma et oleks vaja tehnilisi teadmisi või koolitust. Mudelid töötavad _päringupõhiselt_ – kasutajad saadavad tekstisisendi (päringu) ja saavad tagasi tehisintellekti vastuse (täienduse). Nad saavad seejärel AI-ga "vestelda" järjepidevalt, mitme vooruga, täiendades oma päringut, kuni vastus vastab nende ootustele.
 
-"Käsud" muutuvad nüüd generatiivsete tehisintellekti rakenduste peamiseks _programmeermisliideseks_, mis annab mudelitele juhised ja mõjutab tagastatavate vastuste kvaliteeti. "Käsuplaneerimine" on kiiresti kasvav uurimisvaldkond, mis keskendub _käskude kavandamisele ja optimeerimisele_, et pakkuda järjepidevaid ja kvaliteetseid vastuseid suurel hulgal.
+"Päringud" muutuvad nüüd generatiivsete AI rakenduste peamiseks _programmeermisliideseks_, mis ütlevad mudelitele, mida teha ja mõjutavad tagastatud vastuste kvaliteeti. "Päringu insenertehnika" on kiiresti kasvav uurimisvaldkond, mis keskendub päringute _disainile ja optimeerimisele_, eesmärgiga tagada järjepidevad ja kvaliteetsed vastused suures mahus.
 
 ## Õpieesmärgid
 
-Selles õppetükis saame teada, mis on käsuplaneerimine, miks see on oluline ja kuidas saame luua tõhusamaid käske konkreetse mudeli ja rakenduse eesmärgi jaoks. Mõistame põhimõisteid ja parimaid tavasid käsuplaneerimiseks ning tutvume interaktiivse Jupyteri märkmikute "liivakasti" keskkonnaga, kus saame neid mõisteid rakendada reaalses näidetes.
+Selles õppetükis õpime, mis on päringu insenertehnika, miks see on tähtis ja kuidas saame koostada tõhusamaid päringuid antud mudeli ja rakenduse eesmärgi jaoks. Mõistame põhikontseptsioone ja parimaid tavasid päringute insenertehnikas – ning tutvume interaktiivse Jupyteri märkmiku "liivakastiga", kus saame neid kontseptsioone reaalses näites rakendada.
 
-Selle õppetüki lõpuks suudame:
+Selle õppetüki lõpuks oskame:
 
-1. Selgitada, mis on käsuplaneerimine ja miks see oluline on.
-2. Kirjeldada käsu komponente ja nende kasutust.
-3. Õppida käsuplaneerimise parimaid tavasid ja tehnikaid.
-4. Rakendada õpitud tehnikaid reaalsele näitele, kasutades OpenAI lõpp-punkti.
+1. Selgitada, mis on päringu insenertehnika ja miks see oluline on.
+2. Kirjeldada päringu komponente ja nende kasutust.
+3. Õppida päringu insenertehnika parimaid tavasid ja tehnikaid.
+4. Rakendada õpitud tehnikaid reaalsetes näidetes, kasutades OpenAI lõpp-punkti.
 
-## Olulised terminid
+## Peamised mõisted
 
-Käsuplaneerimine: Tehisintellekti mudelite suunamisel soovitud tulemuste saavutamiseks sisendite kavandamise ja täpsustamise praktika.
-Tokeniseerimine: Teksti teisendamine väiksemateks üksusteks ehk tokeniteks, mida mudel suudab mõista ja töödelda.
-Juhenditega kohandatud LLM-id: Suurekeelsed mudelid, mis on edasiõpetatud konkreetsete juhendite abil, et parandada vastuste täpsust ja asjakohasust.
+Päringu insenertehnika: Tehisintellekti mudelite juhendamiseks soovitud väljundite tootmiseks sisendite kujundamise ja täiustamise praktika.
+Tokeniseerimine: Teksti teisendamise protsess väiksemateks üksusteks, mida nimetatakse tokeniteks, mida mudel suudab mõista ja töödelda.
+Juhendusega treenitud LLM-id: Suured keelemudelid, mida on peenhäälestatud konkreetsete juhistega, et parandada nende vastuste täpsust ja asjakohasust.
 
 ## Õppimise liivakast
 
-Käsuplaneerimine on praegu pigem kunst kui teadus. Intuitsiooni parandamiseks on parim harjutada ja kasutada katse-eksituse lähenemist, mis ühendab rakendusvaldkonna teadmised soovitatud tehnikate ja mudelispetsiifiliste optimeerimistega.
+Päringu insenertehnika on praegu rohkem kunst kui teadus. Parim viis oma intuitsiooni parandamiseks on _rohkem harjutada_ ja rakendada katse-eksituse meetodit, mis ühendab rakendusvaldkonna ekspertiisi soovitatud tehnikate ja mudelispetsiifiliste optimeerimistega.
 
-Selle õppetükiga kaasnev Jupyteri märkmik pakub _liivakasti_ keskkonda, kus saad proovida õpitut - kas õppetüki jooksul või koodi väljakutse raames lõpus. Harjutuste täitmiseks vajad:
+Selle õppetüki Jupyteri märkmik pakub _liivakasti_ keskkonna, kus saad testiida õpitut – kas jooksvalt või koodiülesande osana õppetüki lõpus. Harjutuste täitmiseks vajad:
 
-1. **Azure OpenAI API võtit** – teenuse lõpp-punkti juurdepääsuks kasutusel olevale LLM-ile.
-2. **Python käitusaega** – märkmiku täitmiseks.
-3. **Kohalikke keskkonnamuutujaid** – _täida nüüd [SEADISTAMISE](./../00-course-setup/02-setup-local.md?WT.mc_id=academic-105485-koreyst) sammud, et valmis saada_.
+1. **Azure OpenAI API võtit** – teenuse lõpp-punkti väljaantud LLM-ile.
+2. **Python'i jooksutamiskeskkonda** – kus märkmikku saab täita.
+3. **Kohalikke keskkonnamuutujaid** – _täida nüüd [SEADISTUS](./../00-course-setup/02-setup-local.md?WT.mc_id=academic-105485-koreyst) sammud, et valmis saada_.
 
-Märkmikus on kaasas _algus_ harjutused – kuid sind julgustatakse lisama omaenda _Markdown_ (kirjeldus) ja _Code_ (käsupäringud) sektsioone, et proovida rohkem näiteid või ideid ning ehitada üles oma intuitsioon käsu kujundamisel.
+Märkmik sisaldab _algus_ harjutusi – kuid sind julgustatakse lisama ka oma _Markdown_ (kirjeldus) ja _Koodi_ (päringu taotluste) sektsioone, et proovida rohkem näiteid või ideid – ning arendada oma intuitsiooni päringu disainis.
 
-## Illustratiivne juhend
+## Illustreeritud juhend
 
-Kas soovid enne süvenemist saada ülevaadet sellest, mida see õppetükk hõlmab? Vaata seda illustratiivset juhendit, mis annab sulle ülevaate peamistest käsitletavatest teemadest ja võtmeideedest, millele mõelda. Õppetüki teejuht viib sind läbi põhimõistete ja väljakutsete mõistmise kuni asjakohaste käsuplaneerimise tehnikate ja parimate tavade rakendamiseni. Pane tähele, et "Täpsemad tehnikad" osa selles juhendis viitab järgmisel peatükil käsitletavatele teemadele.
+Kas soovid saada suuremat ülevaadet sellest, mida see õppetükk katab, enne sukeldumist? Vaata seda illustreeritud juhendit, mis annab sulle aimu peamistest käsitletavatest teemadest ja võtmevõttest, mille üle mõelda igas neist. Õppetüki teejuht viib sind põhikontseptsioonide ja väljakutsete mõistmisest nende lahendamise juurde asjakohaste päringu insenertehnika tehnikate ja parimate tavadega. Pane tähele, et selle juhendi jaotis "Täpsemad tehnikad" viitab järgmises õppekava peatükis käsitletavale sisule.
 
-![Illustratiivne juhend käsuplaneerimisele](../../../translated_images/et/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
+![Illustreeritud juhend päringu insenertehnikasse](../../../translated_images/et/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## Meie idufirma
 
-Räägime nüüd, kuidas _see teema_ on seotud meie idufirma missiooniga [tuua haridusse tehisintellekti uuenduslikkus](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst). Soovime luua tehisintellektil põhinevaid rakendusi _isiklikuks õppimiseks_ – seega mõtleme, kuidas meie rakenduse erinevad kasutajad võiksid "kujundada" käske:
+Nüüd räägime, kuidas _see teema_ seostub meie idufirma missiooniga [tuua AI innovatsiooni haridusse](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst). Me tahame luua AI-jõulisi rakendusi _isikliku õppe_ toetamiseks – mõtleme siis, kuidas erinevad kasutajad meie rakendust kasutades päringuid "kujundavad":
 
-- **Administraatorid** võivad paluda tehisintellektil _analüüsida õppekava andmeid, et tuvastada lünki_. Tehisintellekt saab tulemusi kokku võtta või visualiseerida koodi abil.
-- **Õpetajad** võivad paluda tehisintellektil _luua õppetund sihtrühmale ja teemal_. Tehisintellekt saab koostada isikupärastatud plaani kindlas formaadis.
-- **Õpilased** võivad paluda tehisintellektil _õpetada neid keerulises aines_. Tehisintellekt juhendab õpilasi nüüd õppetundide, vihjete ja näidete abil, mis on kohandatud nende tasemele.
+- **Administraatorid** võivad paluda AI-l _analüüsida õppekava andmeid, et tuvastada kaetud teemade lüngad_. AI saab tulemusi kokku võtta või neid koodiga visualiseerida.
+- **Õpetajad** võivad paluda AI-l _luua õppetunni plaan sihtrühma ja teema jaoks_. AI saab koostada personaalse plaani määratud vormingus.
+- **Õpilased** võivad paluda AI-l _õpetada neid keerulises aines_. AI saab juhendada õpilasi nende tasemele kohandatud tundide, vihjete ja näidetega.
 
-See on alles jäämäe tipp. Uuri [Prompts For Education](https://github.com/microsoft/prompts-for-edu/tree/main?WT.mc_id=academic-105485-koreyst) – haridusekspertide kureeritud avatud lähtekoodiga käsude kogu – et saada laiem arusaam võimalustest! _Proovi neid käske liivakastis või OpenAI mänguväljakul, et näha, mis juhtub!_
+See on alles jäämäe tipp. Vaata [Prompts For Education](https://github.com/microsoft/prompts-for-edu/tree/main?WT.mc_id=academic-105485-koreyst) – avatud lähtekoodiga päringute kogu, mida kureerivad hariduseksperdid – et saada laiem arusaam võimalustest! _Proovi mõnda neist päringutest liivakastis või OpenAI mänguväljal, et näha, mis juhtub!_
 
 <!--
-ÕPPETEKSTI MALL:
-See üksus peaks hõlmama põhimõistet nr 1.
-Tuua mõistele lisatugevus näidete ja viidetega.
+ÕPPETÜKI MALL:
+See üksus peaks käsitlema põhikontseptsiooni #1.
+Kinnista kontseptsiooni näidete ja viidetega.
 
-PÕHIMÕISTE #1:
-Käsuplaneerimine.
-Defineerida ning selgitada, miks seda vaja on.
+KONTSPTSIOON #1:
+Päringu insenertehnika.
+Määra see ja selgita, miks see vajalik on.
 -->
 
-## Mis on käsuplaneerimine?
+## Mis on päringu insenertehnika?
 
-Alustasime seda õppetundi selle defineerimisega kui **käsuplaneerimist**, mis on tekstisisendite (käskude) _kujundamise ja optimeerimise_ protsess, et tagada järjepidevad ja kvaliteetsed vastused (täiendused) konkreetse rakenduse eesmärgi ja mudeli jaoks. Seda võib vaadelda kui kahesammulist protsessi:
+Alustasime seda õppetükki, määratledes **päringu insenertehnikat** kui protsessi päringutekstide (päringute) kujundamiseks ja optimeerimiseks, et pakkuda järjepidevaid ja kvaliteetseid vastuseid (täiendusi) antud rakenduse eesmärgi ja mudeli jaoks. Seda võib vaadelda ka kaheastmelise protsessina:
 
-- algse käsu _kujundamine_ konkreetse mudeli ja eesmärgi jaoks
-- käsu _täpsustamine_ iteratiivselt vastuse kvaliteedi parandamiseks
+- _kujundamine_ algse päringu jaoks antud mudelis ja eesmärgil
+- _täiustamine_ päringu iteratiivseks parandamiseks vastuse kvaliteedis
 
-See on tingimata katse-eksituse protsess, mis nõuab kasutaja intuitsiooni ja pingutust optimaalse tulemuse saavutamiseks. Miks see siis oluline on? Sellele vastamiseks peame esmalt mõistma kolme mõistet:
+See on tingimata katse-eksituse protsess, mis nõuab kasutaja intuitsiooni ja pingutust optimaalse tulemuse saavutamiseks. Miks see siis oluline on? Selle küsimuse vastamiseks peame esmalt mõistma kolme mõistet:
 
-- _Tokeniseerimine_ = kuidas mudel käsu "näeb"
-- _Alus LLM-id_ = kuidas baas-mudel käsu "töötab"
-- _Juhenditega kohandatud LLM-id_ = kuidas mudel nüüd näeb "ülesandeid"
+- _Tokeniseerimine_ = kuidas mudel "näeb" päringut
+- _Põhimudelitena LLM-id_ = kuidas põhimudel "töötab" päringuga
+- _Juhendusega treenitud LLM-id_ = kuidas mudel näeb nüüd "ülesandeid"
 
 ### Tokeniseerimine
 
-LLM näeb käske kui _tokenite jada_, kus erinevad mudelid (või mudeli versioonid) võivad sama käsku tokeniseerida eri viisidel. Kuna LLM-id on koolitatud tokenite peale (mitte tooteksti peale), mõjutab käsu tokeniseerimine otseselt loodava vastuse kvaliteeti.
+LLM näeb päringuid kui _tokenite jada_, kus erinevad mudelid (või sama mudeli versioonid) võivad sama päringu tokeniseerida erinevalt. Kuna LLM-e on treenitud tokenitel (mitte toortekstil), mõjutab päringute tokeniseerimine otseselt genereeritud vastuse kvaliteeti.
 
-Tokeniseerimise paremaks mõistmiseks proovi tööriistu nagu [OpenAI tokeniseerija](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst), mis on näidatud allpool. Kleepi oma käsk sisse ja vaata, kuidas see tokeniteks teisendatakse, pöörates tähelepanu tühikute ja kirjavahemärkide töötlemisele. Pane tähele, et näide kasutab vanemat LLM-i (GPT-3) – uuemate mudelitega katsetamisel võivad tulemused erineda.
+Intuitsiooni saamiseks tokeniseerimisest proovi näiteks tööriista [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) allpool toodud näidet. Kopeeri oma päring ja vaata, kuidas seda tokeniteks teisendatakse, pöörates tähelepanu tühikute ja punktuatsiooni käsitsemisele. Pane tähele, et see näide kasutab vanemat LLM-i (GPT-3) – nii et uuema mudeliga katsetamisel võib tulemus olla erinev.
 
 ![Tokeniseerimine](../../../translated_images/et/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
-### Mõiste: Baasmudelid
+### Kontseptsioon: Põhimudelid
 
-Kui käsk on tokeniseeritud, on "Alus LLM"-i (või baas-mudeli) peamine ülesanne ennustada selle jada järgmist tokenit. Kuna LLM-id on koolitatud tohutute tekstikogumitega, on neil hea statistiline tunnetus tokenite vaheliste suhete kohta ning nad saavad selle ennustuse usaldusväärselt teha. Pane tähele, et nad ei mõista käskudes või tokenites olevate sõnade _tähendust_; nad näevad mustrit, mida nad võivad oma järgmise ennustusega "täita". Ennustamine jätkub, kuni kasutaja sekkub või täidetakse eelnevalt määratletud tingimus.
+Kui päring on tokeniseeritud, siis ["Põhimudeli" (Base LLM)](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) põhifunktsiooniks on selle tokenite jadat prognoosida. Kuna LLM-e on treenitud ulatuslike tekstikogumitega, tunnevad nad hästi tokenite statistilisi seoseid ning saavad seda prognoosi õige kindlusega teha. Tuleb märkida, et nad ei mõista päringus kasutatud sõnade _tähendust_; nad näevad mustrit, mida saavad järgmise prognoosiga "täita". Nad saavad prognoosida jadat edasi, kuni kasutaja sekkumine või mõni eelnevalt määratletud tingimus selle lõpetab.
 
-Kas soovid näha, kuidas käsupõhine täiendamine töötab? Sisesta ülaltoodud käsk [Microsoft Foundry mänguväljakule](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) vaikeväärtustega. Süsteem käsitleb käske teabe päringutena, seega peaksid saama vastuse, mis sobib konteksti.
+Kas soovid näha, kuidas päringul põhinev täiendamine töötab? Sisesta ülaltoodud päring [Microsoft Foundry mänguväljakule](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) vaikeseadetega. Süsteem on konfigureeritud võtma päringuid informatsiooni päringutena – nii et peaksid nägema vastust, mis vastab sellele kontekstile.
 
-Aga mis siis, kui kasutaja soovib midagi konkreetset, mis vastaks mõnele kriteeriumile või ülesande eesmärgile? Siin tulevad mängu _juhenditega kohandatud_ LLM-id.
+Ent mis siis, kui kasutaja tahaks näha midagi konkreetset, mis vastab mõnele kriteeriumile või ülesande eesmärgile? Siin tulevad mängu _juhendusega treenitud_ LLM-id.
 
-![Alus LLM vestluse täiendamine](../../../translated_images/et/04-playground-chat-base.65b76fcfde0caa67.webp)
+![Põhimudeli LLM vestluse täiendamine](../../../translated_images/et/04-playground-chat-base.65b76fcfde0caa67.webp)
 
-### Mõiste: Juhenditega kohandatud LLM-id
+### Kontseptsioon: Juhendusega treenitud LLM-id
 
-[Juhenditega kohandatud LLM](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) algab baas-mudelilt, millele tehakse täiendõpe näidete või sisend/väljund paaridega (nt mitme vooru "sõnumid"), mis sisaldavad selgeid juhiseid – ning tehisintellekti vastus püüab neid juhiseid järgida.
+[Juhendusega treenitud LLM](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) algab põhimudelist ja täiustab seda näidete või sisend/väljund paaride (näiteks mitme vooruga "sõnumite") abil, mis võivad sisaldada selgeid juhiseid – ning tehisintellekti vastus püüab neid juhiseid järgida.
 
-Selleks kasutatakse meetodeid nagu inimtagasisidel põhinev tugevdamisõpe (RLHF), mis koolitab mudelit _juhiseid järgima_ ja _tagasisidest õppima_, et produktsioon vastaks paremini praktilistele rakendustele ja kasutaja eesmärkidele.
+See kasutab tehnikaid nagu inimtagasisidega tugevdamisõpe (RLHF), mis suudab mudelit õpetada _juhiseid järgima_ ja _tagasisidest õppima_, nii et see toodab vastuseid, mis sobivad paremini praktiliste rakenduste jaoks ja on kasutaja eesmärkide suhtes asjakohasemad.
 
-Proovime seda – muuda ülaltoodud käsus _süsteemisõnum_ järgmiste juhistega kontekstiks:
+Proovime järele – külasta eelmise päringu kontekstit vastav _süsteemi sõnum_ ja muuda see järgmise juhisega:
 
-> _Kokkuvõtke antud sisu teise klassi õpilase jaoks. Hoidke tulemus ühe lõiguna koos 3–5 täppidega._
+> _Kokkuvõtle sulle antud sisu teise klassi õpilase jaoks. Hoia tulemus ühe lõigu pikkune, 3–5 punktiga._
 
-Näed, kuidas tulemus nüüd on häälestatud vastama soovitud eesmärgile ja vormingule? Õpetaja saab seda vastust otse kasutada oma esitlustes selle klassi jaoks.
+Näed, kuidas tulemus on nüüd häälestatud peegeldama soovitud eesmärki ja vormingut? Õpetaja saab selle vastuse nüüd otse oma tunnis slaididel kasutada.
 
-![Juhenditega kohandatud LLM vestluse täiendamine](../../../translated_images/et/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
+![Juhendusega treenitud LLM vestluse täiendamine](../../../translated_images/et/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
-## Miks me vajame käsuplaneerimist?
+## Miks meil on vaja päringu insenertehnikat?
 
-Nüüd, kui teame, kuidas LLM-id käske töötlevad, räägime, _miks_ me vajame käsuplaneerimist. Vastus peitub selles, et praegused LLM-id tekitavad mitmeid väljakutseid, mis muudavad _usaldusväärsete ja järjepidevate vastuste_ saavutamise keerulisemaks ilma pingutusteta käsu koostamisel ja optimeerimisel. Näiteks:
+Nüüd, kui teame, kuidas LLM-id päringuid töötlevad, räägime, _miks_ meil on päringu insenertehnika vaja. Vastus peitub selles, et praegustel LLM-idel on omajagu väljakutseid, mis muudavad _usaldusväärsete ja järjepidevate täienduste_ saamise keeruliseks ilma pingutusteta päringu koostamisel ja optimeerimisel. Näiteks:
 
-1. **Mudelivastused on stokhastilised.** _Sama käsk_ võib erinevate mudelite või mudeliversioonide puhul anda erinevaid vastuseid. Ja isegi _samaga mudeliga_ võivad erinevatel kordadel tulemused erineda. _Käsuplaneerimise tehnikad aitavad neid varieeruvusi vähendada, pakkudes paremaid piiranguid_.
+1. **Mudeli vastused on stokastilised.** _Sama päring_ tõenäoliselt toodab erinevate mudelite või mudeli versioonidega erinevaid vastuseid. Ja see võib anda erinevaid tulemusi ka _sama mudeli_ kasutamisel erinevatel kordadel. _Päringu insenertehnika tehnikad aitavad meil neid varieerumisi minimaliseerida, pakkudes paremaid kontrollmehhanisme_.
 
-1. **Mudelid võivad vastuseid väljamõelda.** Mudelid on koolitatud _ülisuurele, kuid piiratud_ andmestikule, mistõttu neil puudub teadmine väljaspool koolitusandmestikku olevaid kontseptsioone. Selle tulemusena võivad nad toodada täiendusi, mis on ebatäpsed, väljamõeldud või mõneti vastuolus teadaolevate faktidega. _Käsuplaneerimise tehnikad aitavad kasutajatel selliseid väljamõeldisi tuvastada ja neile vastu astuda, nt paludes tsiteeringuid või põhjendusi_.
+1. **Mudelid võivad genereerida väljamõeldud vastuseid.** Mudelid on eelnevalt treenitud _suurtel, kuid piiratud_ andmestikel, mis tähendab, et neil puudub teadmine mõistetest väljaspool seda treeningut. Seetõttu võivad nad esitada täiendusi, mis on ebatäpsed, fantaasiarikkad või otseselt vastuolus tuntud faktidega. _Päringu insenertehnika tehnikad aitavad kasutajatel selliseid väljamõeldisi tuvastada ja leevendada, nt nõudes AI-lt allikaviiteid või põhjendusi_.
 
-1. **Mudelite võimekus varieerub.** Uuemad mudelid või mudelite põlvkonnad pakuvad rohkem võimalusi, kuid toovad kaasa ka unikaalseid eripärasid ning kulude ja keerukuse kompromisse. _Käsuplaneerimine aitab meil arendada parimaid tavasid ja töövooge, mis abstraktiseerivad erinevusi ning kohanduvad mudelispetsiifiliste nõuetega skaleeritaval ja sujuval viisil_.
+1. **Mudelite võimekus varieerub.** Uuemad mudelid või mudelipõlvkonnad omavad rikkalikumaid võimeid, kuid toovad kaasa unikaalseid eripärasid ning kulude ja keerukuse kompromisse. _Päringu insenertehnika aitab välja töötada parimaid tavasid ja töövooge, mis varjavad erinevusi ning kohanevad mudelispetsiifiliste nõuetega skaleeritavalt ja sujuvalt_.
 
-Vaatame seda praktikas OpenAI või Azure OpenAI mänguväljakul:
+Näeme seda praktikas OpenAI või Azure OpenAI mänguväljakul:
 
-- Kasuta sama käsu erinevate LLM-i juurutustega (nt OpenAI, Azure OpenAI, Hugging Face) – kas märkad erinevusi?
-- Kasuta sama käsku korduvalt ühe _jaama_ LLM puhul (nt Azure OpenAI mänguväljak) – kuidas need varieeruvused erinesid?
+- Kasuta sama päringut erinevate LLM-de juurutuste puhul (nt OpenAI, Azure OpenAI, Hugging Face) – kas märkasid erinevusi?
+- Kasuta sama päringut korduvalt sama LLM juurutuse juures (nt Azure OpenAI mänguväljak) – kuidas need varieerumised erinesid?
 
 ### Väljamõeldiste näide
 
-Selles kursuses kasutame mõistet **"väljamõeldis"**, mis viitab nähtusele, kus LLM-id mõnikord genereerivad faktipõhiselt ebatäpset teavet nende koolituse või muude piirangute tõttu. Seda on populaarteaduses või uurimustes nimetatud ka _"hallutsinatsioonideks"_. Kuid soovitame kasutada _"väljamõeldis"_ terminina, et vältida käitumise antropomorfiseerimist, seostades masina väljundit inimlike omadustega. See toetab ka [Vastutustundliku tehisintellekti juhiseid](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst) terminoloogia seisukohast, eemaldades sõnu, mida mõnedes kontekstides võib pidada solvavaks või mitte-sisse võtvaks.
+Selles kursuses kasutame mõistet **"väljamõeldis"** viitamaks nähtusele, kus LLM-id mõnikord genereerivad faktuaalselt ebatäpset informatsiooni oma piirangute või muude tingimuste tõttu. Võid olla kuulnud ka mõistet _"hallutsinatsioonid"_ populaarsetes artiklites või teadustöös. Soovitame siiski kasutada _"väljamõeldis"_ terminit, et vältida käitumise antropomorfiseerimist, omistades masinajuhitud tulemusele inimlikke omadusi. See toetab ka [Vastutustundliku AI juhiseid](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst) terminoloogia vaatenurgast, eemaldades termineid, mis mõnes kontekstis võivad olla solvavad või mittekaasavad.
 
-Kas soovid aru saada, kuidas väljamõeldised toimivad? Mõtle käsule, mis palub tehisintellektil luua sisu mitteolemasoleva teema kohta (et tagada, et seda pole koolitusandmestikus). Näiteks kasutasin seda käsku:
+Soovid tunnet saada, kuidas väljamõeldised toimivad? Mõtle päringule, mis palub AI-l genereerida sisu olemasolemata teema kohta (et veenduda, et seda ei leidu treeningandmestikus). Näiteks – proovisin järgmist päringut:
 
-> **Käsk:** loo õppetund Marsi sõjast 2076. aastal.
+> **Päring:** genereeri õppetunni plaan Marsi sõja kohta aastast 2076.
 
-Veebipäring näitas, et on olemas väljamõeldud kirjeldused (nt telesarjad või raamatud) Marsi sõdadest – kuid mitte 2076. aastal. Tervemõistus ütleb ka, et 2076. aasta on _tulevikus_, seega ei saa see olla seotud reaalse sündmusega.
+Veebipäring näitas mulle, et leidub ilukirjanduslikke kirjeldusi (nt telesarjad või raamatud) Marsi sõdadest, kuid mitte aastast 2076. Tervislik mõistus ütleb, et aasta 2076 on _tulevikus_, seega ei saa see olla seotud päris sündmusega.
 
 
-Mis siis juhtub, kui me käivitame selle päringu erinevate LLM-teenusepakkujatega?
+Mida siis juhtub, kui me kasutame seda prompti erinevate LLM-i teenusepakkujatega?
 
 > **Vastus 1**: OpenAI Playground (GPT-35)
 
@@ -151,63 +151,63 @@ Mis siis juhtub, kui me käivitame selle päringu erinevate LLM-teenusepakkujate
 
 ![Response 3](../../../translated_images/et/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
-Nagu oodatud, toodab iga mudel (või mudeli versioon) veidi erinevaid vastuseid tänu stokastilisele käitumisele ja mudeli võimekuse erinevustele. Näiteks suunab üks mudel 8. klassi tasemele, samas kui teine eeldab keskkooliõpilast. Kuid kõik kolm mudelit genereerisid vastuseid, mis võiksid veenda teadmata kasutajat, et sündmus oli tõeline.
+Nagu oodata oli, toodab iga mudel (või mudeli versioon) veidi erinevaid vastuseid tänu juhuslikule käitumisele ja mudeli võimekuse erinevustele. Näiteks üks mudel sihib 8. klassi taset, samas kui teine arvestab keskkooliõpilasega. Kuid kõik kolm mudelit lõid vastuseid, mis võivad veenda teadmatus kasutajat, et sündmus oli tõeline.
 
-Päringu inseneritehnika meetodid nagu _metaprompting_ ja _temperatuuri seadistamine_ võivad mõnevõrra vähendada mudeli väljamõeldisi. Uued päringu inseneri _arhitektuurid_ integreerivad sujuvalt uued tööriistad ja meetodid päringu voogu, et leevendada või vähendada mõningaid neist mõjudest.
+Promptide insenertehnika meetodid nagu _metaprompting_ ja _temperatuuri seadistamine_ võivad mõningal määral vähendada mudeli väljamõeldisi. Uued promptide insenertehnika _arhitektuurid_ integreerivad sujuvalt uusi tööriistu ja tehnikaid prompti voogu, et neid mõjusid vähendada või leevendada.
 
 ## Juhtumiuuring: GitHub Copilot
 
-Lõpetame selle osa sellega, et saame aru, kuidas päringu inseneritehnikat kasutatakse reaalses maailmas, vaadates ühte juhtumiuuringut: [GitHub Copilot](https://github.com/features/copilot?WT.mc_id=academic-105485-koreyst).
+Lõpetame selle osa, saades aimu, kuidas promptide insenertehnikat kasutatakse reaalses maailmas ühe juhtumiuuringu näitel: [GitHub Copilot](https://github.com/features/copilot?WT.mc_id=academic-105485-koreyst).
 
-GitHub Copilot on sinu "AI paariprogrammeerija" – see teisendab teksipäringud koodilõikudeks ja on integreeritud sinu arenduskeskkonda (näiteks Visual Studio Code), pakkudes sujuvat kasutajakogemust. Nagu alljärgnevate blogiseeriate põhjal on dokumenteeritud, põhines esialgne versioon OpenAI Codex mudelil – insenerid mõistsid kiiresti vajadust mudelit peenhäälestada ja arendada paremaid päringu inseneri tehnikaid, et parandada koodi kvaliteeti. Juulis [esitlesid nad täiustatud AI mudelit, mis läheb Codexist kaugemale](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst) veelgi kiiremaks soovituste tegemiseks.
+GitHub Copilot on sinu "tehisintellekti paarisprogrammeeri­ja" - see teisendab tekstikäsud kooditäidisteks ja on integreeritud sinu arenduskeskkonda (nt Visual Studio Code) sujuva kasutajakogemuse jaoks. Allolevates blogide seerias on dokumenteeritud, et varasem versioon põhines OpenAI Codex mudelil - insenerid mõistsid kiiresti vajadust mudelit täpsemalt häälestada ja arendada paremaid promptide insenertehnikaid koodikvaliteedi parandamiseks. Juulis nad [esitlesid täiustatud tehisintellek­ti mudelit, mis läheb Codex-ist kaugemale](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst) veelgi kiiremaks soovitamiseks.
 
-Loe postitusi järjest, et jälgida nende õppimisprotsessi.
+Loe postitusi järjekorras, et jälgida nende õppeteekonda.
 
-- **Mai 2023** | [GitHub Copilot mõistab su koodi paremini](https://github.blog/2023-05-17-how-github-copilot-is-getting-better-at-understanding-your-code/?WT.mc_id=academic-105485-koreyst)
-- **Mai 2023** | [GitHub sees: tööd GitHub Copiloti taga olevate LLM-idega](https://github.blog/2023-05-17-inside-github-working-with-the-llms-behind-github-copilot/?WT.mc_id=academic-105485-koreyst).
-- **Juuni 2023** | [Kuidas kirjutada paremaid päringuid GitHub Copilot jaoks](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/?WT.mc_id=academic-105485-koreyst).
-- **Juuli 2023** | [GitHub Copilot läheb Codexist kaugemale täiustatud AI mudeliga](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst)
-- **Juuli 2023** | [Arendaja juhend päringu insenerile ja LLM-idele](https://github.blog/2023-07-17-prompt-engineering-guide-generative-ai-llms/?WT.mc_id=academic-105485-koreyst)
-- **Sept 2023** | [Kuidas ehitada ettevõtte LLM-rakendus: õppetunnid GitHub Copilotist](https://github.blog/2023-09-06-how-to-build-an-enterprise-llm-application-lessons-from-github-copilot/?WT.mc_id=academic-105485-koreyst)
+- **Mai 2023** | [GitHub Copilot paraneb sinu koodi mõistmisel](https://github.blog/2023-05-17-how-github-copilot-is-getting-better-at-understanding-your-code/?WT.mc_id=academic-105485-koreyst)
+- **Mai 2023** | [GitHub sees: Töötades LLM-idega GitHub Copiloti taga](https://github.blog/2023-05-17-inside-github-working-with-the-llms-behind-github-copilot/?WT.mc_id=academic-105485-koreyst).
+- **Juuni 2023** | [Kuidas kirjutada paremaid handiseid GitHub Copilotile](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/?WT.mc_id=academic-105485-koreyst).
+- **Juuli 2023** | [.. GitHub Copilot läheb Codex-ist kaugemale täiustatud tehisintellekti mudeliga](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst)
+- **Juuli 2023** | [Arendaja juhend promptide insenertehnikaks ja LLM-ideks](https://github.blog/2023-07-17-prompt-engineering-guide-generative-ai-llms/?WT.mc_id=academic-105485-koreyst)
+- **September 2023** | [Kuidas ehitada ettevõtte LLM rakendust: õppetunnid GitHub Copilotilt](https://github.blog/2023-09-06-how-to-build-an-enterprise-llm-application-lessons-from-github-copilot/?WT.mc_id=academic-105485-koreyst)
 
-Sa võid ka sirvida nende [inseneriblogi](https://github.blog/category/engineering/?WT.mc_id=academic-105485-koreyst), kus on rohkem postitusi nagu [see](https://github.blog/2023-09-27-how-i-used-github-copilot-chat-to-build-a-reactjs-gallery-prototype/?WT.mc_id=academic-105485-koreyst), mis näitab, kuidas neid mudeleid ja tehnikaid _rakendatakse_ reaalse maailma rakenduste arendamisel.
+Võid sirvida ka nende [Inseneriblogi](https://github.blog/category/engineering/?WT.mc_id=academic-105485-koreyst), kus on postitusi nagu [see siin](https://github.blog/2023-09-27-how-i-used-github-copilot-chat-to-build-a-reactjs-gallery-prototype/?WT.mc_id=academic-105485-koreyst), mis näitab, kuidas neid mudeleid ja tehnikaid rakendatakse reaalse maailma lahenduste loomiseks.
 
 ---
 
 <!--
-ÕPPEMATERJALI MALL:
-See üksus peaks katma põhikontseptsiooni #2.
+ÕPPEPLAANIMALL:
+See osa peaks käsitlema põhikontsepti #2.
 Kinnita kontseptsiooni näidete ja viidetega.
 
-KONTSEPTSIOON #2:
-Päringu kujundamine.
+KONTSEPT #2:
+Prompti kujundamine.
 Illustreeritud näidetega.
 -->
 
-## Päringu koostamine
+## Promptide ülesehitus
 
-Oleme näinud, miks päringu inseneritehnika on oluline – nüüd mõistame, kuidas päringud on _koostatud_, et saaksime hinnata erinevaid tehnikaid tõhusama päringu kujundamiseks.
+Oleme näinud, miks promptide insenertehnika on oluline – nüüd mõistame, kuidas promptid on _ehitatud_, et saaksime hinnata erinevaid tehnikaid tõhusamaks promptide kujundamiseks.
 
-### Lihtne päring
+### Põhiprompt
 
-Alustame lihtsast päringust: tekstisisend, mis saadetakse mudelile ilma muude kontekstideta. Näide - kui saata US riigihümni esimesed sõnad OpenAI [Completion API-le](https://platform.openai.com/docs/api-reference/completions?WT.mc_id=academic-105485-koreyst), siis see kohe _täidab_ vastuse järgmiste ridadega, illustreerides põhilist ennustuskäitumist.
+Alustame põhipromptist: tekstisisend, mis saadetakse mudelile ilma muu kontekstita. Näiteks, kui saadame USA hümni esimesed sõnad OpenAI [Completion API-le](https://platform.openai.com/docs/api-reference/completions?WT.mc_id=academic-105485-koreyst), siis see koheselt _täidab_ vastuse järgmiste ridadega, illustreerides põhilist ennustuskäitumist.
 
-| Päring (sisend)     | Täitmine (väljund)                                                                                                                        |
+| Prompt (sisend)   | Täidise (väljundi)                                                                                                                          |
 | :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| Oh say can you see | Tundub, nagu alustaksid sa USA riigihümni "The Star-Spangled Banner" sõnu. Täielik tekst on ...                                            |
+| Oh say can you see | Tundub, et alustad lauluga "The Star-Spangled Banner", USA riigihümn. Täis­laulusõnad on ...                                                |
 
-### Kompleksne päring
+### Kompleksne prompt
 
-Lisame nüüd konteksti ja juhised sellele lihtsale päringule. [Chat Completion API](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt?WT.mc_id=academic-105485-koreyst) võimaldab ehitada komplekspäringut _sõnumite_ kogumikuna, kus:
+Lisame nüüd konteksti ja juhised sellele põhipromptile. [Chat Completion API](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/chatgpt?WT.mc_id=academic-105485-koreyst) võimaldab meil konstrueerida keeruka prompti _sõnumite_ kogumina, milles on:
 
-- Sisendi/väljundi paarid, mis peegeldavad _kasutaja_ sisendit ja _abistaja_ vastust.
-- Süsteemisõnum, mis seab konteksti abilise käitumiseks või isikupäraks.
+- Sissetulevad/väljaminevad paarid, mis peegeldavad _kasutaja_ sisestust ja _abilise_ vastust.
+- Süsteemisõnum, mis seab abilise käitumise või isiksuse konteksti.
 
-Taotlus on nüüd alljärgnevas vormis, kus _tokeniseerimine_ haarab tõhusalt kontekstist ja vestlusest asjakohast teavet. Süsteemi konteksti muutmine võib seega mõjutada täitmiste kvaliteeti sama palju kui kasutaja poolt esitatud sisendid.
+Nüüd on taotlus alljärgnevas vormis, kus _tokeniseerimine_ haarab efektiivselt relevantset teavet kontekstist ja vestlusest. Süsteemse konteksti muutmine võib värskete vastuste kvaliteeti mõjutada sama oluliselt kui kasutaja sisendid.
 
 ```python
 response = client.responses.create(
-    model="gpt-4o-mini",
+    model="gpt-5-mini",
     input=[
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": "Who won the world series in 2020?"},
@@ -217,192 +217,192 @@ response = client.responses.create(
 )
 ```
 
-### Juhise päring
+### Juhenduspõhine prompt
 
-Ülaltoodud näidetes oli kasutaja päring lihtne tekstipäring, mida saab tõlgendada kui info taotlust. _Juhiste_ päringute korral saame seda teksti kasutada, et täpsemalt määratleda ülesannet, pakkudes AI-le paremat juhendamist. Näide:
+Ülaltoodud näidetes oli kasutaja prompt lihtne tekstipäring, mida võidi tõlgendada infotaotluseks. _Juhenduspõhiste_ promptide puhul saame seda teksti kasutada ülesande täpsemaks määratlemiseks, andes tehisintellektile paremaid juhiseid. Näide:
 
-| Päring (sisend)                                                                                                                                                                                                                         | Täitmine (väljund)                                                                                                        | Juhise tüüp        |
+| Prompt (sisend)                                                                                                                                                                                                                         | Täidis (väljund)                                                                                                        | Juhendustüüp       |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------- | :------------------ |
-| Kirjuta Ameerika kodusõja kirjeldus                                                                                                                                                                                                    | _tagastati lihtne lõik_                                                                                                    | Lihtne              |
-| Kirjuta Ameerika kodusõja kirjeldus. Too välja olulised kuupäevad ja sündmused ning kirjelda nende tähendust                                                                                                                               | _tagastati lõik ja nimekiri olulistest sündmuste kuupäevadest koos kirjeldustega_                                           | Kompleksne          |
-| Kirjuta Ameerika kodusõja kirjeldus ühes lõigus. Too välja 3 märksõna oluliste kuupäevade ja nende tähendusega. Too 3 lisamärksõna ajalooliste tegelaste ja nende panustega. Tagasta väljund JSON-failina | _tagastab tekstikastis põhjalikuma detailsema teabe, vormindatuna JSON-vormingus, mida saab kopeerida ja vajadusel valideerida_ | Kompleksne. Vormindatud. |
+| Kirjuta Ameerika kodusõja kirjeldus                                                                                                                                                                                                   | _tagastas lihtsa lõigu_                                                                                                  | Lihtne              |
+| Kirjuta Ameerika kodusõja kirjeldus. Too välja tähtsamad kuupäevad ja sündmused ning kirjuta nende tähtsusest                                                                                                                        | _tagastas lõigu koos nimekirjaga tähtsatest kuupäevadest ja kirjeldustest_                                               | Komplekssed          |
+| Kirjuta Ameerika kodusõja kirjeldus 1 lõigus. Too 3 peamist võtmekuupäeva koos tähtsusega. Too veel 3 peamist ajaloolist tegelast ja nende panust. Tagasta väljund JSON-failina            | _tagastab ulatuslikumaid andmeid tekstiboksis, vormindatuna JSON-ina, mida saad kopeerida ja vajadusel valideerida_         | Komplekssed. Vormindatud. |
 
 ## Põhisisu
 
-Ülaltoodud näidetes oli päring siiski üsna avatud, lubades LLM-il otsustada, milline osa selle eelnevalt treenitud andmestikust on asjakohane. _Põhisisu_ kujundusmustri korral jaguneb sisendtekst kaheks osaks:
+Ülaltoodud näidetes oli prompt endiselt suhteliselt avatud, võimaldades LLM-il otsustada, milline osa selle eelõppemehhanismist on relevantne. _Põhisisu_ disainimall jagab sisendteksti kaheks osaks:
 
-- juhis (tegevus)
+- juhend (tegevus)
 - asjakohane sisu (mis mõjutab tegevust)
 
 Näide, kus juhis on "kokkuvõtke see 2 lauses".
 
-| Päring (sisend)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Täitmine (väljund)                                                                                                                                                                                                                                                                             |
+| Prompt (sisend)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Täidis (väljund)                                                                                                                                                                                                                                                                             |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Jupiter on päikesest viies planeet ja suurim Päikesesüsteemis. See on gaasihiid, mille mass on üks tuhandik Päikese massist, kuid kahe ja poole korra suurem kui kõigi teiste Päikesesüsteemi planeetide masside summa. Jupiter on üks eredamaid palja silmaga nähtavaid objektid öötaevas ja on olnud tuntud iidsetest tsivilisatsioonidest enne kirjaliku ajaloo algust. Selle nimi tuleneb Rooma jumal Jupiterist.[19] Maa pealt vaadates võib Jupiter olla piisavalt hele, et selle peegeldav valgus heidaks nähtavaid varje,[20] ja on keskmiselt kolmandaks kõige eredam looduslik objekt öötaevas pärast Kuut ja Veenust. <br/> **Kokkuvõtke see 2 lühikeses lauses** | Jupiter, päikesest viies planeet, on suurim Päikesesüsteemis ja tuntud kui üks eredamaid objekte öötaevas. Nime saanud Rooma jumala Jupiteri järgi, on see gaasihiid, mille mass on kahe ja poole korra suurem kui kõigi teiste planeetide ühismass. |
+| Jupiter on päikesest viies planeet ja suurim Päikesesüsteemis. See on gaasihiiglane, mille mass on tuhandik Päikese massist, kuid kaks ja pool korda suurem kui kõik teised planeedid kokku. Jupiter on üks eredamaid objekti, mida palja silmaga öötaevas näha saab, ja see on tuntud iidsetest tsivilisatsioonidest juba enne ajaloo algust. Selle nimi tuleb Rooma jumala Jupiteri järgi.[19] Maalt vaadates võib Jupiter olla piisavalt ere, et peegeldunud valgus tekitab nähtavaid varje,[20] ja keskmiselt on see öötaeva kolmas eredaim looduslik objekt pärast Kuud ja Veenust. <br/> **Kokkuvõtke see 2 lühikeses lauses** | Jupiter, päikesest viies planeet, on Päikesesüsteemi suurim ja tuntud kui üks eredamaid taevalaotusel nähtavaid objekte. Nime sai see Rooma jumala Jupiteri järgi ja on gaasihiiglane, mille mass on kaks ja pool korda suurem kui kõigi teiste planeetideühikute kogum. |
 
-Põhisisu segmenti saab kasutada erinevalt, et anda tõhusamaid juhiseid:
+Põhisisu segmenti saab kasutada mitmel viisil, et anda tõhusamaid juhiseid:
 
-- **Näited** - selle asemel, et anda mudelile otsene juhis, anna talle näiteid, mida teha, ja lase tal mustrit tuletada.
-- **Vihjed** - järelda juhisele "vihje", mis suunab täitmisi, juhatades mudelit asjakohasemate vastusteni.
-- **Mallid** - need on korduvad 'retseptid' päringutele koos kohatäitjatega (muutujad), mida saab konkreetsete andmetega kohandada konkreetsete kasutusjuhtude jaoks.
+- **Näited** - mudelile ei öelda otseselt, mida teha, vaid antakse näited, mida teha ja lastakse mudelil mustrit tuletada.
+- **Vihjed** - juhisele järgneb "vihje", mis suunab mudelit relevantsemate vastusteni.
+- **Mustrid** - korduvkasutatavad 'retseptid' promptide jaoks koos kohatäiteks muutuja-dega, mida saab kohandada konkreetseteks juhtudeks.
 
-Uurime neid lähemalt tegutsemas.
+Vaatame neid teemasid praktikas.
 
 ### Näidete kasutamine
 
-See on lähenemine, kus kasutatakse põhisisu, et "toita mudelile" näiteid soovitud väljundist antud juhise jaoks, lubades tal mustri tuletada. Näidete arvu põhjal võib teha null-löögiga päringu, ühe löögi päringu, mõne löögi päringu jne.
+See lähenemine kasutab põhisisu, et "toita mudelit" soovitud väljundi näidetega antud juhise põhjal ning võimaldab mudelil tuletada mustrikäitumise. Näidete arvu põhjal võib olla null-korral promptimine, ühe-korral promptimine, mõne-korral promptimine jne.
 
-Päring koosneb nüüd kolmest komponendist:
+Prompt koosneb nüüd kolmest komponendist:
 
 - Ülesande kirjeldus
-- Mõned näited soovitud väljundist
+- Mõned näited soovitud väljundi kohta
 - Uue näite algus (mis muutub kaudseks ülesande kirjelduseks)
 
-| Õpipõhimõte | Päring (sisend)                                                                                                                                         | Täitmine (väljund)      |
-| :------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------- |
-| Null-löök    | "Päike paistab". Tõlgi hispaania keelde.                                                                                                              | "El Sol está brillando". |
-| Ühe löögiga | "Päike paistab" => ""El Sol está brillando". <br> "On külm ja tuuline päev" =>                                                                             | "Es un día frío y ventoso". |
-| Mõne löögiga | Mängija jooksis alustest => Pesapall <br/> Mängija lõi ässa => Tennis <br/> Mängija lõi kuueste => Kriket <br/> Mängija tegi panuse => Korvpall           | Korvpall                 |
-|               |                                                                                                                                                       |                          |
+| Õppimise tüüp | Prompt (sisend)                                                                                                                                        | Täidis (väljund)          |
+| :------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------- |
+| Null-korral   | "The Sun is Shining". Tõlgi hispaania keelde                                                                                                         | "El Sol está brillando".   |
+| Ühe-korral    | "The Sun is Shining" => ""El Sol está brillando". <br> "It's a Cold and Windy Day" =>                                                                 | "Es un día frío y ventoso".|
+| Mõne-korral   | Mängija jooksis baasidel => Pesapall <br/> Mängija lõi ässa => Tennis <br/> Mängija lõi kuue => Kriket <br/> Mängija tegi slam-dunki =>                 | Korvpall                  |
+|               |                                                                                                                                                       |                           |
 
-Pane tähele, et null-löögiga päringus pidime andma otsese juhise ("Tõlgi hispaania keelde"), kuid ühe löögi näites see tuletatakse ära. Mõne löögi näide näitab, kuidas rohkemate näidete lisamine võimaldab mudelitel teha täpsemaid järeldusi ilma lisajuhisteta.
+Märka, kuidas me pidime null-korral promptimisel andma otsese juhise ("Tõlgi hispaania keelde"), kuid ühe-korral promptimisel tuletatakse see juba ise. Mõne-korrase näide näitab, kuidas rohkemate näidete lisamine võimaldab mudelil teha täpsemaid järeldusi ilma täiendavate juhisteta.
 
-### Päringu vihjed
+### Prompti vihjed
 
-Teine tehnika põhisisu kasutamiseks on anda _vihjeid_ näidete asemel. Sel juhul anname mudelile tõuke õiges suunas, alustades lõiguga, mis peegeldab soovitud vastuse formaati. Mudel "mõistab vihjet" ja jätkab samas stiilis.
+Teine tehnika põhisisu kasutamisel on vihjete andmine näidete asemel. Sel juhul anname mudelile suunise, alustades vastava vormingu näitega. Mudel siis "võtab vihje vastu" ja jätkab antud stiilis.
 
-| Vihjete arv | Päring (sisend)                                                                                                                                                                                                                                                                                                                                                                                                                                              | Täitmine (väljund)                                                                                                                                                                                                                                                                                       |
-| :---------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0           | Jupiter on päikesest viies planeet ja suurim Päikesesüsteemis. See on gaasihiid, mille mass on üks tuhandik Päikese massist, kuid kahe ja poole korra suurem kui kõigi teiste Päikesesüsteemi planeetide masside summa. Jupiter on üks eredamaid palja silmaga nähtavaid objektid öötaevas ja on olnud tuntud iidsetest tsivilisatsioonidest enne kirjaliku ajaloo algust. <br/>**Kokkuvõtke see**                                | Jupiter on suurim planeet Päikesesüsteemis ja päikesest viies planeet. See on gaasihiid, mille mass on 1/1000 Päikese massist, kuid raskem kui kõik teised planeedid kokku. Iidsetel tsivilisatsioonidel on Jupiter pikka aega tuntud ja see on öötaevas hõlpsasti nähtav.                             |
-| 1           | Jupiter on päikesest viies planeet ja suurim Päikesesüsteemis. See on gaasihiid, mille mass on üks tuhandik Päikese massist, kuid kahe ja poole korra suurem kui kõigi teiste Päikesesüsteemi planeetide masside summa. Jupiter on üks eredamaid palja silmaga nähtavaid objektid öötaevas ja on olnud tuntud iidsetest tsivilisatsioonidest enne kirjaliku ajaloo algust. <br/>**Kokkuvõtke see** <br/> Mida me õppisime, on see, et Jupiter | on päikesest viies planeet ja suurim Päikesesüsteemis. See on gaasihiid, mille mass on üks tuhandik Päikese massist, kuid kahe ja poole korra suurem kui kõigi teiste planeetide koosmass. See on palja silmaga hõlpsasti nähtav ja tuntud iidsetest aegadest.                                            |
+| Vihjete arv   | Prompt (sisend)                                                                                                                                                                                                                                                                                                                                                                                                                                               | Täidis (väljund)                                                                                                                                                                                                                                                                                       |
+| :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0              | Jupiter on päikesest viies planeet ja suurim Päikesesüsteemis. See on gaasihiiglane, mille mass on tuhandik Päikese massist, kuid kaks ja pool korda suurem kui kõik teised planeedid kokku. Jupiter on üks eredamaid objekti, mida palja silmaga öötaevas näha saab, ja see on tuntud iidsetest tsivilisatsioonidest juba enne ajaloo algust. <br/>**Kokkuvõtke see**                                       | Jupiter on suurim planeet meie Päikesesüsteemis ja päikesest viies planeet. See on gaasihiiglane, mille mass on 1/1000 Päikese massist, kuid raskem kui kõik teised planeedid kokku. Iidsetest tsivilisatsioonidest on Jupiter teada olnud kaua ja see on öötaevas kergesti nähtav.. |
+| 1              | Jupiter on päikesest viies planeet ja suurim Päikesesüsteemis. See on gaasihiiglane, mille mass on tuhandik Päikese massist, kuid kaks ja pool korda suurem kui kõik teised planeedid kokku. Jupiter on üks eredamaid objekti, mida palja silmaga öötaevas näha saab, ja see on tuntud iidsetest tsivilisatsioonidest juba enne ajaloo algust. <br/>**Kokkuvõtke see** <br/> Mida me õppisime, on see, et Jupiter | on päikesest viies planeet ja suurim Päikesesüsteemis. See on gaasihiiglane, mille mass on tuhandik Päikese massist, kuid kaks ja pool korda suurem kui kõik teised planeedid kokku. See on palja silmaga hõlpsasti nähtav ja on tuntud iidsetest aegadest.                       |
 
-| 2              | Jupiter on päikesesüsteemi viies planeet Päikesest ning suurim planeet Päikesesüsteemis. See on gaasihiiglane, mille mass on üks tuhandik Päikese massist, kuid kaks ja pool korda suurem kui kõigi teiste päikesesüsteemi planeetide mass kokku. Jupiter on üks eredamaid palja silmaga öötaevas nähtavaid objekte ning see on olnud tuntud muistsete tsivilisatsioonide seas juba enne ajaloolise kirja algust. <br/>**Kokkuvõte** <br/> 3 peamist fakti, mida õppisime:         | 1. Jupiter on päikesesüsteemi viies planeet Päikesest ning suurim Päikesesüsteemis. <br/> 2. See on gaasihiiglane, mille mass on üks tuhandik Päikese massist...<br/> 3. Jupiter on olnud palja silmaga nähtav juba muistsetest aegadest...                                                                       |
+| 2              | Jupiter on Päikesest viies planeet ja Päikesesüsteemi suurim. See on gaasihiid, mille mass on üks tuhandik Päikese massist, kuid kaks ja pool korda suurem kui kõigi teiste Päikesesüsteemi planeetide masside summa. Jupiter on üks eredamaid palja silmaga öötaevas nähtavaid objekte ning on olnud tuntud iidsetele tsivilisatsioonidele juba enne ajaloo kirjalikku algust. <br/>**Kokkuvõte** <br/> Kolm peamist fakti, mida õppisime:         | 1. Jupiter on Päikesest viies planeet ja Päikesesüsteemi suurim. <br/> 2. See on gaasihiid, mille mass on üks tuhandik Päikese massist...<br/> 3. Jupiter on olnud palja silmaga nähtav juba antiikajast alates ...                                                                       |
 |                |                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                                                                                                                                                                                                                                                           |
 
-### Päringumallid
+### Päringu mallid
 
-Päringumall on _eelmääratletud päringu retsept_, mida saab vajadusel salvestada ja uuesti kasutada, et pakkuda suurel hulgal järjepidevamaid kasutajakogemusi. Lihtsaimal kujul on see lihtsalt kogumik päringu näidetest, nagu [see OpenAI näide](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst), mis pakub nii interaktiivseid päringu komponente (kasutaja ja süsteemi sõnumeid) kui ka API-põhist päringu vormingut – taaskasutuse toetamiseks.
+Päringu mall on _eelnevalt määratletud päringu retsept_, mida saab salvestada ja vajadusel uuesti kasutada, et juhendada sujuvamaid kasutajakogemusi ulatuslikult. Lihtsamas vormis on see lihtsalt päringunäidete kogum nagu [see OpenAI näide](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst), mis pakub nii interaktiivseid päringu komponente (kasutaja ja süsteemi sõnumid) kui ka API-põhise päringu formaati - taaskasutuse toetamiseks.
 
-Keerukamas vormis, nagu [see LangChain näide](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst), sisaldab see _kohatäiteid_, mida saab asendada andmetega erinevatest allikatest (kasutaja sisend, süsteemi kontekst, välised andmeallikad jne), et genereerida päring dünaamiliselt. See võimaldab meil luua taaskasutatavate päringute raamatukogu, mida saab kasutada järjepidevate kasutajakogemuste loomisel **programmiliselt** suurel hulgal.
+Keerulisemas vormis nagu [see näide LangChainist](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst) sisaldab see _kohatäiteid_, mida saab asendada andmetega mitmest allikast (kasutaja sisend, süsteemi kontekst, välised andmeallikad jne) dünaamilise päringu loomiseks. See võimaldab meil koostada taaskasutatavate päringute kogu, mida saab programmi abil kasutada järjepidevate kasutajakogemuste loomiseks ulatuslikult.
 
-Lõpuks seisneb mallide tõeline väärtus võimes luua ja avaldada _päringu raamatukogusid_ vertikaalsete rakendusvaldkondade jaoks – kus päringumall on nüüd _optimeeritud_, et kajastada rakendusele spetsiifilist konteksti või näiteid, mis muudavad vastused sihtrühma jaoks asjakohasemaks ja täpsemaks. [Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst) hoidla on suurepärane näide sellest lähenemisest, koondades haridusvaldkonna jaoks päringuraamatukogu, keskendudes olulistele eesmärkidele nagu õppetöö planeerimine, õppekava koostamine, õpilaste juhendamine jne.
+Lõpuks seisneb mallide tegelik väärtus võimes luua ja avaldada _päringukogusid_ vertikaalsete rakendusvaldkondade jaoks - kus päringu mall on nüüd _optimeeritud_, et peegeldada rakenduspõhist konteksti või näiteid, mis muudavad vastused sihtrühmale asjakohasemaks ja täpsemaks. [Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst) hoidla on suurepärane näide sellest lähenemisest, koondades haridusvaldkonna päringute kogu, mille rõhk on olulistel eesmärkidel nagu tunniplaani koostamine, õppekava disain, õpilaste juhendamine jms.
 
 ## Toetav sisu
 
-Kui mõtleme päringu koostamisele kui juhise (ülesande) ja sihtmärgi (esmane sisu) olemasolule, siis _teisene sisu_ on nagu täiendav kontekst, mida pakume, et **mingil moel mõjutada väljundit**. See võib olla seadistamisparameetrid, vormindusjuhised, teemade taksonoomiad jne, mis aitavad mudelil oma vastust kohandada vastavalt soovitud kasutajate eesmärkidele või ootustele.
+Kui me mõtleme päringu koostamist kui juhist (ülesande) ja sihtmärki (põhisisu), siis _teisene sisu_ on nagu lisakontekst, mida me anname, et **mõnel viisil väljundit mõjutada**. See võib olla häälestusparameetrid, vormindusjuhised, teema taksonoomiad jne, mis aitavad mudelil kohandada vastust soovitud kasutajaeesmärkide või ootustega.
 
-Näiteks: Kui on olemas kursuse kataloog koos ulatusliku metaandmete (nimi, kirjeldus, tase, metaandmete märgendid, juhendaja jne) komplektiga kõigi õppekava kursuste kohta:
+Näiteks: kui meil on kursusekataloog, mis sisaldab põhjalikku metainfot (nimi, kirjeldus, tase, metatähed, õppejõud jne) kõigi õppekava välistingimustes olevate kursuste kohta:
 
-- saame määratleda juhise "kokkuvõtte kursuse kataloog sügiseks 2023"
-- saame esmast sisu kasutada paaril näitel soovitud väljundi esitamiseks
-- saame teisest sisu kasutada, et tuvastada 5 kõige olulisemat "märgendit"
+- me saame määratleda juhise "kokkuvõtke sügissemestri 2023 kursuste kataloog"
+- me saame kasutada peamist sisu, et anda mõned soovitud väljundi näited
+- me saame kasutada teisest sisust, et määratleda 5 enim huvi pakkuvat "märksõna"
 
-Nüüd saab mudel pakkuda kokkuvõtet näidete vormingus – kuid kui tulemuses on mitu märgendit, saab prioritiseerida teisese sisu kaudu tuvastatud 5 märgendit.
+Nüüd saab mudel pakkuda kokkuvõtet vormingus, mida näitavad paar eeskuju - kuid kui tulemuses on mitu märksõna, saab ta anda prioriteedi teisest sisust määratud viiele märksõnale.
 
 ---
 
 <!--
-ÕPPEKAVATEMPLAAT:
-See jaotis peaks katma põhikontseptsiooni nr 1.
+ÕPPEPLANEERIMISE MALL:
+See üksus peaks hõlmama põhikontseptsiooni #1.
 Tugevdage kontseptsiooni näidete ja viidetega.
 
-KONTSEPTSIOON NR 3:
-Päringu insenertehnika tehnikad.
-Millised on mõned põhilised päringu insenertehnika tehnikad?
-Illustreerige seda mõningate harjutustega.
+KONTSEPTSIOON #3:
+Päringute inseneritehnika tehnikad.
+Millised on mõned põhilised tehnikad päringute inseneritehnikas?
+Illustreerige seda mõnede harjutustega.
 -->
 
-## Päringu parimad praktikad
+## Parimad tavad päringu koostamisel
 
-Nüüd, kui teame, kuidas päringuid saab _koostada_, võime hakata mõtlema, kuidas neid _disainida_, et peegeldada parimaid praktikaid. Võime mõelda sellele kahes osas – õigele _mõtteviisile_ ja õigele _tehnikale_.
+Nüüd, kui me teame, kuidas päringuid saab _koostada_, võime hakata mõtlema, kuidas neid _kujundada_, võttes arvesse parimaid tavasid. Võime seda käsitleda kahes osas - õige _mõtteviisi_ omamine ja sobivate _tehnikate_ rakendamine.
 
-### Päringu insenertehnika mõtteviis
+### Päringu inseneritehnika mõtteviis
 
-Päringu insenertehnika on katse-eksituse protsess, nii et pea meeles kolme põhilist juhist:
+Päringu inseneritehnika on katsumus- ja eksitusprotsess, seega pidage meeles kolme laiemat juhist:
 
-1. **Valdkonna mõistmine on oluline.** Vastuse täpsus ja asjakohasus sõltub _valdkonnast_, milles rakendus või kasutaja tegutseb. Kasuta oma intuitsiooni ja valdkonna ekspertiisi, et **kohandada tehnikaid** täpsemalt. Näiteks määra süsteemi päringutes valdkonnaspetsiifilisi isikupärasid või kasuta kasutajate päringutes valdkonnaspetsiifilisi malle. Paku teisest sisust valdkonnaspetsiifilist konteksti või kasuta _valdkonnaspetsiifilisi vihjeid ja näiteid_, et juhendada mudelit tuttavate kasutusmustrite suunas.
+1. **Valdkonna mõistmine on oluline.** Vastuse täpsus ja asjakohasus sõltub _valdkonnast_, milles rakendus või kasutaja tegutseb. Kasutage oma intuitsiooni ja valdkonnapädevust, et _kohandada tehnikaid_ veelgi. Näiteks määrake süsteemi päringutes _valdkonnapõhised isiksused_ või kasutage kasutaja päringutes _valdkonnapõhiseid malle_. Lisage teisene sisu, mis peegeldab valdkonnapõhist konteksti, või kasutage _valdkonnapõhiseid viiteid ja näiteid_, et juhendada mudelit tuttavate kasutusmusterite suunas.
 
-2. **Mudeli mõistmine on oluline.** Teame, et mudelid on oma olemuselt stokhastilised. Kuid mudelid võivad erineda kasutatud treeningandmestiku (eelõppteadmised), pakutavate võimaluste (nt API või SDK kaudu) ja optimeerimise sisu tüübi (nt kood vs pildid vs tekst) poolest. Mõista mudeli tugevusi ja piiranguid ning kasuta seda teadmist, et _prioriseerida ülesandeid_ või luua _kohandatud malle_, mis on optimeeritud mudeli võimsusele.
+2. **Mudelipõhine mõistmine on oluline.** Teame, et mudelid on oma olemuselt stokastilised. Kuid mudelite rakendused võivad erineda seoses kasutatava treeningandmestikuga (eelõppe teadmised), nende pakutavate võimalustega (nt API või SDK kaudu) ja optimeeritud sisutüübiga (nt kood, pildid või tekst). Mõistke enda kasutatava mudeli tugevusi ja nõrkusi ning kasutage seda teadmist, et _prioriseerida ülesandeid_ või ehitada _kohandatud malle_, mis on optimeeritud mudeli võimalustele.
 
-3. **Iteratsioon ja valideerimine on olulised.** Mudelid arenevad kiiresti ja samamoodi arenevad ka päringu insenertehnika tehnikad. Valdkonna eksperdina võid sul olla ka oma rakenduse spetsiifiline kontekst või kriteeriumid, mis ei pruugi laiemale kogukonnale kehtida. Kasuta päringu insenertehnika tööriistu ja tehnikaid, et "alustada kiirendatud päringu koostamist", seejärel korda ja vali tulemused oma intuitsiooni ja valdkonna asjatundlikkuse põhjal. Salvestage oma teadmised ja loo **teadmusbaas** (nt päringuraamatukogud), mida teised saavad kasutada uut baasjoontena kiiremate iteratsioonide jaoks tulevikus.
+3. **Iteratsioon ja valideerimine on olulised.** Mudelid arenevad kiiresti ja nii ka päringuinseneritehnika tehnikad. Valdkonnaeksperdina võite omada lisakonteksti või kriteeriume _oma_ spetsiifilise rakenduse jaoks, mis ei pruugi kehtida laiemale kogukonnale. Kasutage päringu inseneritehnika tööriistu ja tehnikaid, et "kiirendada" päringu koostamist, seejärel korduge ja valideerige tulemusi oma intuitsiooni ja valdkonnapädevuse abil. Salvestage oma tähelepanekud ja looge **teadmistebaas** (nt päringukogud), mida teised saavad kasutada uue lähtepunktina kiiremateks iteratsioonideks tulevikus.
 
-## Parimad praktikad
+## Parimad protseduurid
 
-Vaatame nüüd tavalisi parimaid praktikaid, mida soovitavad [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api?WT.mc_id=academic-105485-koreyst) ja [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices?WT.mc_id=academic-105485-koreyst) spetsialistid.
+Vaatame nüüd levinud parimaid tavasid, mida soovitavad [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api?WT.mc_id=academic-105485-koreyst) ja [Azure OpenAI](https://learn.microsoft.com/azure/ai-foundry/openai/concepts/prompt-engineering#best-practices?WT.mc_id=academic-105485-koreyst) praktikandid.
 
 | Mida                             | Miks                                                                                                                                                                                                                                              |
-| :------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Hinda uusimaid mudeleid.        | Uued mudeligeneratsioonid võivad sisaldada täiustatud funktsioone ja kvaliteeti – kuid võivad põhjustada ka kõrgemaid kulusid. Hinda nende mõju ja tee migratsiooniga seotud otsused.                                                               |
-| Eristage juhised ja kontekst    | Uuri, kas sinu mudel/teenusepakkuja määratleb _piirajad_, et eristada juhiseid, esmaseid ja teiseseid sisu selgemalt. See aitab mudelitel määrata tähemärkidele täpsemalt kaalu.                                                                   |
-| Ole konkreetne ja selge          | Anna rohkem üksikasju soovitud konteksti, tulemuse, pikkuse, vormingu, stiili jm kohta. See parandab nii vastuste kvaliteeti kui järjepidevust. Salvestage retseptid taaskasutatavatesse mallidesse.                                                  |
-| Ole kirjeldav, kasuta näiteid    | Mudelid võivad paremini reageerida "näita ja räägi" lähenemisele. Alusta `null-pildiga` (zero-shot), kus annad juhise (aga ei anna näiteid) ning seejärel proovi `mõne-sõltuvat` (few-shot) täiustust, andes mõned soovitud väljundi näited. Kasuta analoogiaid. |
-| Kasuta vihjeid täitude käivitamiseks | Juhenda mudelit soovitud tulemuse suunas, andes sellele mõne juhtiva sõna või fraasi, mida see saab vastuse alustamiseks kasutada.                                                                                                                  |
-| Korda ja kinnita               | Mõnikord peate mudelile endale mitmeid kordi kordama. Anna juhised enne ja pärast esmast sisu, kasuta juhist ja vihjet vms. Korda ja vali, milline lähenemine töötab.                                                                                |
-| Järjestus on tähtis             | Teave mudelile esitamise järjekord võib avaldada mõju väljundile, ka õpikenäidetes recency ehk hiljuti sisestatud mõju tõttu. Proovi erinevaid variante, et näha, mis töötab kõige paremini.                                                           |
-| Anna mudelile "väljapääs"        | Anna mudelile _tagasipöördumisvastus_, mida ta saab anda, kui ta mingil põhjusel ei suuda ülesannet lõpetada. See võib vähendada valet või väljamõeldud vastuste tekkimise tõenäosust.                                                              |
-|                                 |                                                                                                                                                                                                                                                   |
+| :-------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Hinnake uusimaid mudeleid.      | Uued mudelisukupõlved tõenäoliselt pakuvad paremaid omadusi ja kvaliteeti - kuid võivad tuua kaasa ka kõrgemaid kulusid. Hinnake nende mõju ja seejärel tehke üleminekuga seotud otsused.                                                            |
+| Eraldage juhised ja kontekst     | Kontrollige, kas teie mudel/teenusepakkuja määratleb _piirajad_, mis eristavad juhiseid, põhisisu ja teisest sisu selgemalt. See aitab mudelitel tähemärkidele anda täpsemaid kaalu.                                                             |
+| Olge spetsiifiline ja selge      | Andke rohkem detaile soovitud konteksti, tulemuse, pikkuse, formaadi, stiili jms kohta. See parandab nii vastuste kvaliteeti kui järjepidevust. Salvestage retseptid taaskasutatavates mallides.                                                     |
+| Olge kirjeldav, kasutage näiteid | Mudelid võivad reageerida paremini "näita ja räägi" lähenemise korral. Alustage `zero-shot` meetodiga, kus annate juhise (kuid mitte näiteid), seejärel proovige `few-shot` meetodit täpsustamiseks, pakkudes paar näidet soovitud väljundist. Kasutage võrdlusi. |
+| Kasutage vihjeid vastuste alustamiseks | Suunake mudelit soovitud tulemuse poole, andes hüüdsõnade või fraaside algused, mida ta saab vastuse alustamiseks kasutada.                                                                                                                       |
+| Korrake vajalikul juhul         | Mõnikord peate mudelile korduvalt juhiseid andma. Lisage juhised nii enne kui pärast põhisisu, kasutage juhist ja vihjet jms. Korduge ja valideerige, et näha, mis toimib.                                                                          |
+| Järjestus loeb                  | Informatsiooni esitamise järjekord mudelile võib mõjutada väljundit, isegi õppekordustes tänu värske mälu eelistusele. Proovige erinevaid variante, et näha, mis töötab kõige paremini.                                                            |
+| Andke mudelile "väljatulek"    | Paku mudelile _varuvastus_, mida ta saab anda, kui ei suuda mingil põhjusel ülesannet täita. See võib vähendada vale- või väljamõeldud vastuste tekkimise tõenäosust.                                                                              |
+|                                  |                                                                                                                                                                                                                                                   |
 
-Nagu igas parimas praktikas, pea meeles, et _tulemused võivad mudelist, ülesandest ja valdkonnast sõltuvalt erineda_. Kasuta neid kui lähtepunkti ja korda, et leida parim lahendus endale. Hinda pidevalt uuesti oma päringu insenertehnika protsessi, kuna uus mudelid ning tööriistad muutuvad kättesaadavaks, keskendudes protsessi skaleeritavusele ja vastuste kvaliteedile.
+Nagu iga parima tava puhul, pidage meeles, et _teie kogemus võib varieeruda_ mudeli, ülesande ja valdkonna järgi. Kasutage neid lähtepunktina ja iteratsioonideks, et leida enda jaoks parim. Hinnake pidevalt oma päringu inseneritehnika protsessi, kui uued mudelid ja tööriistad muutuvad kättesaadavaks, keskendudes protsessi skaleeritavusele ja vastuste kvaliteedile.
 
 <!--
-ÕPPEKAVATEMPLAAT:
-See jaotis peaks pakkuma koodiväljakutset, kui see on asjakohane
+ÕPPEPLANEERIMISE MALL:
+See üksus peaks pakkuma koodiülesannet, kui see on asjakohane
 
-VÄLJAKUTSE:
-Link Jupyteri märkmikule, kus juhistes on ainult koodikommentaarid (koodi osad on tühjad).
+ÜLESANNE:
+Link Jupyter notebook'ile, mis sisaldab ainult koodi kommentaare juhistes (koodilõigud on tühjad).
 
 LAHENDUS:
-Link selle märkmiku koopiale, kus päringud on täidetud ja käivitatud, näidates üht näidet.
+Link koopia sellele notebookile, kus päringud on täidetud ja käivitatud, näidates ühe näite lahendust.
 -->
 
 ## Ülesanne
 
-Palju õnne! Sa jõudsid õppetüki lõpuni! On aeg panna mõned neist kontseptsioonidest ja tehnikaist proovile tõeliste näidetega!
+Palju õnne! Sa jõudsid tunni lõpuni! On aeg mõnda neist kontseptsioonidest ja tehnikatest proovile panna tõeliste näidetega!
 
-Meie ülesandes kasutame Jupyteri märkmikku, mille harjutusi saad interaktiivselt täita. Sa võid lisaks märkmele laiendada ka oma Markdown ja koodirakkudega, et iseseisvalt uurida ideid ja tehnikaid.
+Meie ülesande jaoks kasutame Jupyter notebook'i koos harjutustega, mida saate interaktiivselt täita. Samuti saate notebooki laiendada oma Markdown ja koodirakkudega, et iseseisvalt ideid ja tehnikaid uurida.
 
-### Alustamiseks klooni hoidla, seejärel
+### Alustamiseks tehke fork hoidlast, seejärel
 
-- (Soovitatav) Käivita GitHub Codespaces
-- (Valikuline) Klooni hoidla oma lokaalsele seadmele ja kasuta seda Docker Desktopiga
-- (Valikuline) Ava märkmik oma eelistatud märkmikukeskkonnas.
+- (Soovituslik) Käivitage GitHub Codespaces
+- (Või) Kloonige hoidla oma kohalikku seadmesse ning kasutage seda Docker Desktopiga
+- (Või) Avage notebook oma eelistatud notebook-tarkvara keskkonnas.
 
-### Seejärel seadista oma keskkonnamuutujad
+### Seejärel seadistage oma keskkonnamuutujad
 
-- Kopeeri hoidla juurest fail `.env.copy` nimega `.env` ja täida `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT` ja `AZURE_OPENAI_DEPLOYMENT` väärtused. Tule tagasi [õppimise sandboxi sektsiooni](#õppimise-liivakast), et teada saada, kuidas.
+- Kopeerige hoidla juurkaustas olev `.env.copy` fail `.env` nimega ja täitke `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT` ja `AZURE_OPENAI_DEPLOYMENT` väärtused. Tulge tagasi [Learning Sandbox jaotisesse](#õppimise-liivakast), et õppida, kuidas seda teha.
 
-### Seejärel ava Jupyteri märkmik
+### Seejärel avage Jupyter notebook
 
-- Vali täitmiskeskkonna kernel. Kui kasutad valikuid 1 või 2, valige lihtsalt vaikimisi Python 3.10.x kernel, mille pakub dev konteiner.
+- Valige töötlusmootori kernel. Kui kasutate võimalusi 1 või 2, valige lihtsalt dev konteineri vaikimisi pakutav Python 3.10.x kernel.
 
-Oled valmis harjutusi jooksma. Pane tähele, et siin pole _õigeid ega valesid_ vastuseid – lihtsalt õpid läbi katse-eksituse ning arendad intuitsiooni, mis töötab antud mudeli ja rakendusvaldkonna puhul.
+Olete valmis harjutusi läbi viima. Pange tähele, et siin pole _õigeid ega valesid_ vastuseid - see on katsetamine ja intuitsiooni arendamine selle kohta, mis konkreetsele mudelile ja rakendusvaldkonnale sobib.
 
-_Seetõttu pole sellel õppetükil koodi lahendusosa. Selle asemel on märkmikus Markdown-rakud pealkirjaga "Minu lahendus:", mis näitavad ühe näidistulemuse viidet._
+_Seetõttu pole selles tunnis koodilahenduse lõike. Selle asemel on notebookis markdown-rakud pealkirjaga "Minu lahendus:", mis näevad ühe näidisväljundi viitena._
 
  <!--
-ÕPPEKAVATEMPLAAT:
-Seo jaotis kokku kokkuvõtte ja iseõppematerjalidega.
+ÕPPEPLANEERIMISE MALL:
+Lõpetage jaotis kokkuvõtte ning iseseisva õppimise ressurssidega.
 -->
 
 ## Teadmiste kontroll
 
-Milline järgnevatest on hea päring, järgides mõistlikke parimaid praktikaid?
+Milline järgmistest on hea päring, mis järgib mõistlikke parimaid tavasid?
 
-1. Näita mulle punase auto pilti
-2. Näita mulle punase auto pilti mark Volvo ja mudel XC90, mis on parkimas kalju ääres päikeseloojangul
-3. Näita mulle punase auto pilti mark Volvo ja mudel XC90
+1. Näita mulle pilti punasest autost
+2. Näita mulle pilti punasest Volvost XC90 mudelist, mis on parkis kalju ääres päikeseloojangul
+3. Näita mulle pilti punasest Volvo XC90 mudelist
 
-V: 2 on parim päring, kuna see annab üksikasju "mida" ja läheb detailidesse (mitte lihtsalt auto, vaid konkreetne mark ja mudel) ning kirjeldab ka üldist olukorda. 3 on järgmiseks parim, kuna sisaldab samuti palju kirjelduselemente.
+Vastus: 2 on parim, kuna see annab üksikasju "mida" ja läheb spetsiifikasse (mitte lihtsalt üks auto, vaid konkreetne margi ja mudeli järgi) ning kirjeldab ka kogu stseeni. 3 on järgmine parim, kuna sisaldab samuti palju kirjeldust.
 
 ## 🚀 Väljakutse
 
-Proovi kasutada "vihje" tehnikat päringuga: Täienda lauset "Näita mulle punase auto pilti mark Volvo ja ". Mida see vastab ja kuidas saaksid seda parendada?
+Proovi kasutada "vihje" tehnikat päringuga: Täienda lauset "Näita mulle pilti punasest autost margiga Volvo ja ". Mida see vastab, ja kuidas saaksid seda parandada?
 
-## Suurepärane töö! Jätka õppimist
+## Väga hea! Jätka õppimist
 
-Kas soovid rohkem teada saada erinevatest päringu insenertehnika kontseptsioonidest? Mine [edasijõudnute õppimise lehele](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), kus on selle teema kohta muud suurepärased ressursid.
+Kas soovid õppida rohkem erinevate päringu inseneritehnika kontseptsioonide kohta? Mine [edaspidise õppimise lehele](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et leida selle teema kohta teisi suurepäraseid ressursse.
 
-Liigu peatüki 5 juurde, kus vaatleme [edasijõudnud päringu tehnikat](../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)!
+Mine 5. õppetundi, kus vaatleme [edasijõudnud päringu tehnikat](../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 

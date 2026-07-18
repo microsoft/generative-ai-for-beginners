@@ -1,34 +1,34 @@
-# எழுத்துப்பரிமாற்ற தரவு தயாரிப்பு
+# உரைமாற்று தரவு தயார்
 
-எழுத்துப்பரிமாற்ற தரவு தயாரிப்பு ஸ்கிரிப்ட்கள் யுடியூப் வீடியோ உரை மாற்றங்களை பதிவிறக்கம் செய்து, அவற்றை Semantic Search with OpenAI Embeddings and Functions மாதிரிக்குரிய பயன்பாட்டிற்கு தயார் செய்கின்றன.
+உரைமாற்று தரவு தயார் ஸ்கிரிப்ட்கள் YouTube வீடியோ உரைகளை 다운로드 செய்து, Semantic Search with OpenAI Embeddings and Functions மாதிரிக்கான பயன்பாட்டிற்கு தயாரிக்கின்றன.
 
-எழுத்துப்பரிமாற்ற தரவு தயாரிப்பு ஸ்கிரிப்ட்கள் Windows 11, macOS Ventura மற்றும் Ubuntu 22.04 (மேலும் மேல்) சமீபத்திய வெளியீடுகளில் சோதிக்கப்பட்டுள்ளன.
+உரைமாற்று தரவு தயார் ஸ்கிரிப்ட்கள் Windows 11, macOS Ventura மற்றும் Ubuntu 22.04 (மற்றும் மேலதிக பதிப்புகள்) சமீபத்திய வெளியீடுகளில் பரிசோதிக்கப்பட்டுள்ளன.
 
-## தேவைப்படும் Azure OpenAI சேவை வளங்களை உருவாக்குக
+## தேவையான Azure OpenAI சேவை வளங்களை உருவாக்கவும்
 
 > [!IMPORTANT]
-> OpenAI உடன் பொருந்துதலுக்கு Azure CLI-ஐ சமீபத்திய பதிப்பிற்கு மேம்படுத்த பரிந்துரைக்கிறோம்
-> பார்க்கவும் [Documentation](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
+> OpenAI உடன் இணக்கமாக இருப்பதற்காக Azure CLI ஐ சமீபத்திய பதிப்பிற்கு புதுப்பிப்பதை நாம் பரிந்துரைக்கிறோம்
+> [டாக்குமென்டேஷன்](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst) ஐ பார்க்கவும்
 
-1. ஒரு வளக் குழுவை உருவாக்குக
+1. ஒரு Resource group ஐ உருவாக்கவும்
 
 > [!NOTE]
-> இந்த வழிமுறைகளுக்கு, East US இல் "semantic-video-search" என்ற வளக் குழு பயன்படுத்தப்படுகிறது.
-> நீங்கள் வளக் குழுவின் பெயரை மாற்றலாம், ஆனால் வளங்களின் இடத்தை மாற்றும்போது,
-> [model availability table](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst) ஐ சரிபார்க்கவும்.
+> இந்த வழிமுறைகளில் East US இல் உள்ள "semantic-video-search" என்ற resource group பயன்படுத்தப்படுகிறது.
+> resource group பெயரை மாற்றிக்கொள் முடியும், ஆனால் வளங்களுக்கான இடத்தை மாற்றும்போது, 
+> [மாதிரி கிடைக்கும் அட்டவணை](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst) を சரிபார்க்கவும்.
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. ஒரு Azure OpenAI சேவை வளத்தை உருவாக்குக.
+1. ஒரு Azure OpenAI சேவை வளத்தை உருவாக்கு.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. இந்த பயன்பாட்டில் பயன்படுத்துகிறீர்கள் என்ற முனையில் அதி முகவரி மற்றும் விசைகளை பெறுக
+1. இந்த பயன்பாட்டில் பயன்படுத்துவதற்கான எண்ட்பாயிண்ட் மற்றும் விசைகள் பெறவும்
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -37,9 +37,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. பின்வரும் மாடல்களை அமைக்கவும்:
-   - `text-embedding-ada-002` பதிப்பு `2` அல்லது அதற்கு மேலாக, `text-embedding-ada-002` என்ற பெயரில்
-   - `gpt-4o-mini` என்ற பெயரில் `gpt-4o-mini`
+1. கீழ்கண்ட மாதிரிகளை இயக்கவும்:
+   - `text-embedding-ada-002` பதிப்பு `2` அல்லது அதற்கு மேற்பட்டது, `text-embedding-ada-002` என பெயரிடப்பட்டது
+   - `gpt-5-mini` `gpt-5-mini` என பெயரிடப்பட்டது
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,8 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -62,16 +62,16 @@ az cognitiveservices account deployment create \
 
 ## தேவையான மென்பொருள்
 
-- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) அல்லது அதற்கு மேலாக
+- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) அல்லது அதற்கு மேற்பட்ட பதிப்பு
 
-## சூழல் மாறிகள்
+## சுற்றுச்சூழல் மாறிகள்
 
-YouTube எழுத்துப்பரிமாற்ற தரவு தயாரிப்பு ஸ்கிரிப்ட்களை இயக்கு பின்வரும் சூழல் மாறிகள் தேவை.
+YouTube உரைமாற்று தரவு தயாரிக்கும் ஸ்கிரிப்ட்களை இயக்க தேவையான சுற்றுச்சூழல் மாறிகள் பின்வருமாறு உள்ளன.
 
-### விண்டோஸில்
+### விண்டோஸ் இயங்குதளத்தில்
 
-பரிந்துரைக்கப்படுகிறது இந்த மாறிகளை உங்கள் `user` சூழல் மாறிகளாகச் சேர்க்க.
-`Windows Start` > `Edit the system environment variables` > `Environment Variables` > [USER]க்கு `User variables` > `New`.
+உங்கள் `user` சுற்றுச்சூழல் மாறிகளில் இவ்வாறாக சேர்க்க பரிந்துரைக்கப்படுகிறது.
+`Windows Start` > `Edit the system environment variables` > `Environment Variables` > [USER] க்கான `User variables` > `New`.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -80,7 +80,7 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-<!-- நீங்கள் இந்த சூழல் மாறிகளை உங்கள் PowerShell சுயவிவரத்தில் சேர்க்கலாம்.
+<!-- நீங்கள் உங்கள் PowerShell ப்ரொஃபைலிலும் சுற்றுச்சூழல் மாறிகளைச் சேர்க்கலாம்.
 
 ```powershell
 $env:AZURE_OPENAI_API_KEY = "<your Azure OpenAI Service API key>"
@@ -91,7 +91,7 @@ $env:GOOGLE_DEVELOPER_API_KEY = "<your Google developer API key>"
 
 ### லினக்ஸ் மற்றும் macOS இல்
 
-பின்வரும் ஏற்றுதல்களை உங்கள் `~/.bashrc` அல்லது `~/.zshrc` கோப்பில் சேர்க்க பரிந்துரைக்கப்படுகிறது.
+பின்வரும் எக்ஸ்போர்ட்களை உங்கள் `~/.bashrc` அல்லது `~/.zshrc` கோப்பில் சேர்க்க பரிந்துரைக்கப்படுகிறது.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -102,20 +102,20 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## தேவையான Python நூலகங்களை நிறுவுக
 
-1. [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) இன்னும் நிறுவப்படவில்லை என்றால் இன்ஸ்டால் செய்யவும்.
-1. `Terminal` சாளரத்திலிருந்து உங்கள் விருப்பமான சேமிப்பிடம் கோப்பகத்தில் மாதிரியைக் கிளோன் செய்யவும்.
+1. [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) கணிணியில் இல்லை என்றால் நிறுவுக.
+1. `Terminal` சாளரை திறந்து மாதிரியை உங்கள் விருப்பமான நிரலுணமை கோப்புறையில் கிளோன் செய்வதற்காக.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
     ```
 
-1. `data_prep` கோப்பகத்துக்கு செல்லவும்.
+1. `data_prep` கோப்புறைக்கு செல்லவும்.
 
    ```bash
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. Python க்கான மெய்நிகர் சூழலை உருவாக்கவும்.
+1. Python மெய்நிகர் சுற்றுச்சூழலை உருவாக்கவும்.
 
     விண்டோஸில்:
 
@@ -123,13 +123,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     python -m venv .venv
     ```
 
-    macOS மற்றும் லினக்சில்:
+    macOS மற்றும் லினக்ஸில்:
 
     ```bash
     python3 -m venv .venv
     ```
 
-1. Python மெய்நிகர் சூழலை செயல்படுத்தவும்.
+1. Python மெய்நிகர் சுற்றுச்சூழலை செயல்படுத்தவும்.
 
    விண்டோஸில்:
 
@@ -137,7 +137,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    .venv\Scripts\activate
    ```
 
-   macOS மற்றும் லினக்சில்:
+   macOS மற்றும் லினக்ஸில்:
 
    ```bash
    source .venv/bin/activate
@@ -151,13 +151,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip install -r requirements.txt
    ```
 
-   macOS மற்றும் லினக்சில்:
+   macOS மற்றும் லினக்ஸில்:
 
    ```bash
    pip3 install -r requirements.txt
    ```
 
-## YouTube எழுத்துப்பரிமாற்ற தரவு தயாரிப்பு ஸ்கிரிப்ட்களை இயக்குக
+## YouTube உரைமாற்று தரவு தயார் ஸ்கிரிப்ட்களை இயக்கவும்
 
 ### விண்டோஸில்
 
@@ -165,7 +165,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 .\transcripts_prepare.ps1
 ```
 
-### macOS மற்றும் லினக்சில்
+### macOS மற்றும் லினக்ஸில்
 
 ```bash
 ./transcripts_prepare.sh

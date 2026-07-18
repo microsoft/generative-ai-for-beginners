@@ -12,14 +12,14 @@
     "language_code": "sl"
   },
   "00-course-setup/03-providers.md": {
-    "original_hash": "e42496ada9916b7e279164eb37caf48a",
-    "translation_date": "2026-07-14T11:58:11+00:00",
+    "original_hash": "fab863173e487cb258f7c6597986b7f8",
+    "translation_date": "2026-07-17T15:46:47+00:00",
     "source_file": "00-course-setup/03-providers.md",
     "language_code": "sl"
   },
   "00-course-setup/README.md": {
-    "original_hash": "b7715104414b93dfd629ef1a0a510475",
-    "translation_date": "2026-07-14T11:56:15+00:00",
+    "original_hash": "05b52bd2a88c87dd834973ed87db21d7",
+    "translation_date": "2026-07-17T15:45:46+00:00",
     "source_file": "00-course-setup/README.md",
     "language_code": "sl"
   },
@@ -30,8 +30,8 @@
     "language_code": "sl"
   },
   "02-exploring-and-comparing-different-llms/README.md": {
-    "original_hash": "7c0b6c7afd8179179037ff13444135de",
-    "translation_date": "2026-07-14T11:40:33+00:00",
+    "original_hash": "9c0c27569753ea3d503d5f26f8f21cb8",
+    "translation_date": "2026-07-17T15:33:58+00:00",
     "source_file": "02-exploring-and-comparing-different-llms/README.md",
     "language_code": "sl"
   },
@@ -42,26 +42,26 @@
     "language_code": "sl"
   },
   "04-prompt-engineering-fundamentals/README.md": {
-    "original_hash": "9bd086d3d86ff1f2d0965116dbe063ce",
-    "translation_date": "2026-07-14T11:52:13+00:00",
+    "original_hash": "d858903bcad65dac632e1669475254cb",
+    "translation_date": "2026-07-17T15:44:04+00:00",
     "source_file": "04-prompt-engineering-fundamentals/README.md",
     "language_code": "sl"
   },
   "04-prompt-engineering-fundamentals/python/aoai-assignment.ipynb": {
-    "original_hash": "d4c396c210b037f62cb3249af65c9cf3",
-    "translation_date": "2026-07-14T10:27:00+00:00",
+    "original_hash": "94e9a5bc4b4d966a9c4b89fcd4585bcf",
+    "translation_date": "2026-07-17T14:26:20+00:00",
     "source_file": "04-prompt-engineering-fundamentals/python/aoai-assignment.ipynb",
     "language_code": "sl"
   },
   "04-prompt-engineering-fundamentals/python/githubmodels-assignment.ipynb": {
-    "original_hash": "5c74025e85c4e35f2d8b12e883df8a72",
-    "translation_date": "2026-07-14T10:26:07+00:00",
+    "original_hash": "39f8e87f11abf8e57d65e5a1258866c7",
+    "translation_date": "2026-07-17T14:25:28+00:00",
     "source_file": "04-prompt-engineering-fundamentals/python/githubmodels-assignment.ipynb",
     "language_code": "sl"
   },
   "04-prompt-engineering-fundamentals/python/oai-assignment.ipynb": {
-    "original_hash": "718b31e4b328e49859d616e4b7ace377",
-    "translation_date": "2026-07-14T10:26:35+00:00",
+    "original_hash": "2a5a5cfc3883f7927c170deb1eae9aa8",
+    "translation_date": "2026-07-17T14:25:54+00:00",
     "source_file": "04-prompt-engineering-fundamentals/python/oai-assignment.ipynb",
     "language_code": "sl"
   },
@@ -72,32 +72,32 @@
     "language_code": "sl"
   },
   "06-text-generation-apps/README.md": {
-    "original_hash": "95ebb1ee01a6af11951eac5039a2fa3a",
-    "translation_date": "2026-07-14T11:38:59+00:00",
+    "original_hash": "bc1399ef83bb3226723a6f2bc7e30cc4",
+    "translation_date": "2026-07-17T15:32:20+00:00",
     "source_file": "06-text-generation-apps/README.md",
     "language_code": "sl"
   },
   "06-text-generation-apps/python/aoai-assignment.ipynb": {
-    "original_hash": "416f0649496b3aecc4d2a2a914ae5db9",
-    "translation_date": "2026-07-14T10:17:16+00:00",
+    "original_hash": "6ff0d65c9995c923d24e0accacb848af",
+    "translation_date": "2026-07-17T14:16:44+00:00",
     "source_file": "06-text-generation-apps/python/aoai-assignment.ipynb",
     "language_code": "sl"
   },
   "06-text-generation-apps/python/githubmodels-assignment.ipynb": {
-    "original_hash": "18432ab30a1f72aabe7fd25afc5310d6",
-    "translation_date": "2026-07-14T10:15:57+00:00",
+    "original_hash": "a23279e56fd19d1a5946bab150f39612",
+    "translation_date": "2026-07-17T14:15:26+00:00",
     "source_file": "06-text-generation-apps/python/githubmodels-assignment.ipynb",
     "language_code": "sl"
   },
   "06-text-generation-apps/python/oai-assigment.ipynb": {
-    "original_hash": "a78ab05a0c2c7bac4f5e574afcd9b605",
-    "translation_date": "2026-07-14T10:14:09+00:00",
+    "original_hash": "db18aa6993cf005a6baaa4ebd315e79a",
+    "translation_date": "2026-07-17T14:13:31+00:00",
     "source_file": "06-text-generation-apps/python/oai-assigment.ipynb",
     "language_code": "sl"
   },
   "07-building-chat-applications/README.md": {
-    "original_hash": "7eb38a2633b077ffed3a10de5b060c3c",
-    "translation_date": "2026-07-14T11:46:48+00:00",
+    "original_hash": "0517cf9ab4f1283fdffe3adcd675ec33",
+    "translation_date": "2026-07-17T15:39:44+00:00",
     "source_file": "07-building-chat-applications/README.md",
     "language_code": "sl"
   },
@@ -108,38 +108,38 @@
     "language_code": "sl"
   },
   "07-building-chat-applications/python/aoai-assignment.ipynb": {
-    "original_hash": "dc5aef9a098690364db76556aed30aff",
-    "translation_date": "2026-07-14T10:22:37+00:00",
+    "original_hash": "4ddbb03200b7be60facbfd63bb90064f",
+    "translation_date": "2026-07-17T14:21:49+00:00",
     "source_file": "07-building-chat-applications/python/aoai-assignment.ipynb",
     "language_code": "sl"
   },
   "07-building-chat-applications/python/githubmodels-assignment-simple.ipynb": {
-    "original_hash": "b12e15e1f86113bc52a6a1e229e747a6",
-    "translation_date": "2026-07-14T10:21:08+00:00",
+    "original_hash": "06771407654ec2ee8cbd61f962905da0",
+    "translation_date": "2026-07-17T14:20:21+00:00",
     "source_file": "07-building-chat-applications/python/githubmodels-assignment-simple.ipynb",
     "language_code": "sl"
   },
   "07-building-chat-applications/python/githubmodels-assignment.ipynb": {
-    "original_hash": "4d7f3de8b812c5b54568684e7d9bf5d4",
-    "translation_date": "2026-07-14T10:19:54+00:00",
+    "original_hash": "9024a7326edc20acf240b7205ce7c9cd",
+    "translation_date": "2026-07-17T14:19:13+00:00",
     "source_file": "07-building-chat-applications/python/githubmodels-assignment.ipynb",
     "language_code": "sl"
   },
   "07-building-chat-applications/python/oai-assigment-simple.ipynb": {
-    "original_hash": "c796ad2380f3539e8c2810c16f8c2e47",
-    "translation_date": "2026-07-14T10:21:08+00:00",
+    "original_hash": "f6a9e26edd65a66e043d165c2a0069be",
+    "translation_date": "2026-07-17T14:20:21+00:00",
     "source_file": "07-building-chat-applications/python/oai-assigment-simple.ipynb",
     "language_code": "sl"
   },
   "07-building-chat-applications/python/oai-assignment.ipynb": {
-    "original_hash": "51b42ca9b66cad6e9700c697efdf325a",
-    "translation_date": "2026-07-14T10:21:08+00:00",
+    "original_hash": "0d9003e153c0b2cc15257c84c7efe388",
+    "translation_date": "2026-07-17T14:20:20+00:00",
     "source_file": "07-building-chat-applications/python/oai-assignment.ipynb",
     "language_code": "sl"
   },
   "08-building-search-applications/README.md": {
-    "original_hash": "58953c08b8ba7073b836d4270ea0fe86",
-    "translation_date": "2025-10-18T01:39:16+00:00",
+    "original_hash": "e959debdd9bef3c0dd16818c0f23ea57",
+    "translation_date": "2026-07-17T15:36:23+00:00",
     "source_file": "08-building-search-applications/README.md",
     "language_code": "sl"
   },
@@ -156,32 +156,32 @@
     "language_code": "sl"
   },
   "08-building-search-applications/scripts/README.md": {
-    "original_hash": "31a230186a79713aa423f4dd6b20e139",
-    "translation_date": "2026-07-14T11:59:52+00:00",
+    "original_hash": "d4946101ee3024782ed4fd24f7ad89fb",
+    "translation_date": "2026-07-17T15:48:23+00:00",
     "source_file": "08-building-search-applications/scripts/README.md",
     "language_code": "sl"
   },
   "09-building-image-applications/README.md": {
-    "original_hash": "c01962c88cac462846567a8467688fb6",
-    "translation_date": "2026-07-14T11:36:25+00:00",
+    "original_hash": "11c896e841f7f1ab9ec199aeea7e9d2e",
+    "translation_date": "2026-07-17T15:29:37+00:00",
     "source_file": "09-building-image-applications/README.md",
     "language_code": "sl"
   },
   "09-building-image-applications/python/aoai-assignment.ipynb": {
-    "original_hash": "b2cc4644b92e1f449e8bcf6e7de1df74",
-    "translation_date": "2026-07-14T10:12:24+00:00",
+    "original_hash": "0a09c8b6beeaa55f41fd0054ad234f55",
+    "translation_date": "2026-07-17T14:11:46+00:00",
     "source_file": "09-building-image-applications/python/aoai-assignment.ipynb",
     "language_code": "sl"
   },
   "09-building-image-applications/python/oai-assignment.ipynb": {
-    "original_hash": "8700f5be7c21970a7e3034e607152e2d",
-    "translation_date": "2026-07-14T10:11:20+00:00",
+    "original_hash": "8acc2be376ef79520b92cb1af440979e",
+    "translation_date": "2026-07-17T14:10:56+00:00",
     "source_file": "09-building-image-applications/python/oai-assignment.ipynb",
     "language_code": "sl"
   },
   "10-building-low-code-ai-applications/README.md": {
-    "original_hash": "3ecf799329c10b7d88978e383cf87e70",
-    "translation_date": "2026-07-14T11:34:58+00:00",
+    "original_hash": "28117d37fc68b9485f8e71f6a2161a67",
+    "translation_date": "2026-07-17T15:28:51+00:00",
     "source_file": "10-building-low-code-ai-applications/README.md",
     "language_code": "sl"
   },
@@ -198,14 +198,14 @@
     "language_code": "sl"
   },
   "11-integrating-with-function-calling/python/aoai-assignment.ipynb": {
-    "original_hash": "ec3908e0132ba1bbb27b3e675e0404b2",
-    "translation_date": "2026-07-14T10:25:42+00:00",
+    "original_hash": "2f24cc3af4b1aeaaca1b34855dc4d4e8",
+    "translation_date": "2026-07-17T14:25:02+00:00",
     "source_file": "11-integrating-with-function-calling/python/aoai-assignment.ipynb",
     "language_code": "sl"
   },
   "11-integrating-with-function-calling/python/oai-assignment.ipynb": {
-    "original_hash": "3741ebcb191ce2706da4cdd92472a075",
-    "translation_date": "2026-07-14T10:24:09+00:00",
+    "original_hash": "1fbc7b6f195a63cc56b36a096204ca70",
+    "translation_date": "2026-07-17T14:23:23+00:00",
     "source_file": "11-integrating-with-function-calling/python/oai-assignment.ipynb",
     "language_code": "sl"
   },
@@ -216,8 +216,8 @@
     "language_code": "sl"
   },
   "13-securing-ai-applications/README.md": {
-    "original_hash": "a2faf8ee7a0b851efa647a19788f1e5b",
-    "translation_date": "2025-10-18T01:40:12+00:00",
+    "original_hash": "7fbfa76a091446723bf839d67673d54f",
+    "translation_date": "2026-07-17T15:35:28+00:00",
     "source_file": "13-securing-ai-applications/README.md",
     "language_code": "sl"
   },
@@ -228,8 +228,8 @@
     "language_code": "sl"
   },
   "15-rag-and-vector-databases/README.md": {
-    "original_hash": "19150359fc3fc9c718c941200f10fe13",
-    "translation_date": "2026-07-14T11:59:14+00:00",
+    "original_hash": "e38e13008942c909c18b0ac213ab1ff0",
+    "translation_date": "2026-07-17T15:48:01+00:00",
     "source_file": "15-rag-and-vector-databases/README.md",
     "language_code": "sl"
   },
@@ -252,8 +252,8 @@
     "language_code": "sl"
   },
   "15-rag-and-vector-databases/notebook-rag-vector-databases.ipynb": {
-    "original_hash": "0d0788d24da4bca10972ed2e0e045103",
-    "translation_date": "2026-07-14T10:09:22+00:00",
+    "original_hash": "ac7310c441ed123bc29fcd17e65351bd",
+    "translation_date": "2026-07-17T14:09:04+00:00",
     "source_file": "15-rag-and-vector-databases/notebook-rag-vector-databases.ipynb",
     "language_code": "sl"
   },
@@ -264,62 +264,62 @@
     "language_code": "sl"
   },
   "17-ai-agents/README.md": {
-    "original_hash": "edee948cb94444f2544d4fdf2f9130af",
-    "translation_date": "2026-07-14T11:37:23+00:00",
+    "original_hash": "ff394097f6ea0f6b234ed129254b5548",
+    "translation_date": "2026-07-17T15:30:37+00:00",
     "source_file": "17-ai-agents/README.md",
     "language_code": "sl"
   },
   "18-fine-tuning/README.md": {
-    "original_hash": "6a0fb87288327c90e063d6ec621ceae2",
-    "translation_date": "2026-07-14T11:45:03+00:00",
+    "original_hash": "9b13dc4c27b0a2ccc689bc7a9ede237d",
+    "translation_date": "2026-07-17T15:37:45+00:00",
     "source_file": "18-fine-tuning/README.md",
     "language_code": "sl"
   },
   "18-fine-tuning/RESOURCES.md": {
-    "original_hash": "0ec98c609895291a231dabaa3d9b8cd3",
-    "translation_date": "2026-07-14T11:45:40+00:00",
+    "original_hash": "7d5dea621b61ac1442882a5b86acda12",
+    "translation_date": "2026-07-17T15:38:16+00:00",
     "source_file": "18-fine-tuning/RESOURCES.md",
     "language_code": "sl"
   },
   "18-fine-tuning/python/openai/oai-assignment.ipynb": {
-    "original_hash": "d09a0d51eea4869d1a6b8877c0c09f00",
-    "translation_date": "2026-07-14T10:18:45+00:00",
+    "original_hash": "edc904ea9ce1b98334c32491389fb347",
+    "translation_date": "2026-07-17T14:18:03+00:00",
     "source_file": "18-fine-tuning/python/openai/oai-assignment.ipynb",
     "language_code": "sl"
   },
   "19-slm/README.md": {
-    "original_hash": "faba2f6307b675d85263a419d5075488",
-    "translation_date": "2026-07-14T11:48:21+00:00",
+    "original_hash": "26ec4b144d4756359f666a15e2e8c3b7",
+    "translation_date": "2026-07-17T15:41:23+00:00",
     "source_file": "19-slm/README.md",
     "language_code": "sl"
   },
   "20-mistral/README.md": {
-    "original_hash": "f8d33c4e7d80e2d87c0f860345b397c0",
-    "translation_date": "2026-07-14T11:32:55+00:00",
+    "original_hash": "b57886440bb27329c75e5199a38e984e",
+    "translation_date": "2026-07-17T15:26:31+00:00",
     "source_file": "20-mistral/README.md",
     "language_code": "sl"
   },
   "20-mistral/python/githubmodels-assignment.ipynb": {
-    "original_hash": "9ad0b64b1cf27a4aaf9994b5152f03f1",
-    "translation_date": "2026-07-14T10:10:17+00:00",
+    "original_hash": "2841e9859e636f52dff6188a9a427cb8",
+    "translation_date": "2026-07-17T14:10:01+00:00",
     "source_file": "20-mistral/python/githubmodels-assignment.ipynb",
     "language_code": "sl"
   },
   "21-meta/README.md": {
-    "original_hash": "75045a00b0c39be2ac2014bcb5dcb3f6",
-    "translation_date": "2026-07-14T11:52:40+00:00",
+    "original_hash": "3d4a0c57c88ed4b64360ca0d26b24d85",
+    "translation_date": "2026-07-17T15:44:33+00:00",
     "source_file": "21-meta/README.md",
     "language_code": "sl"
   },
   "21-meta/python/githubmodels-assignment.ipynb": {
-    "original_hash": "dfe84ed45feb9edb9c1d6cee7482ccbe",
-    "translation_date": "2026-07-14T10:27:30+00:00",
+    "original_hash": "4431cd3304d97a25e47ace7cf60455c7",
+    "translation_date": "2026-07-17T14:26:51+00:00",
     "source_file": "21-meta/python/githubmodels-assignment.ipynb",
     "language_code": "sl"
   },
   "AGENTS.md": {
-    "original_hash": "0a988312ed684eb5d813206ac23e2c64",
-    "translation_date": "2026-07-14T11:30:34+00:00",
+    "original_hash": "9a83074ad906bc1ddbaeb98ab148c611",
+    "translation_date": "2026-07-17T15:23:52+00:00",
     "source_file": "AGENTS.md",
     "language_code": "sl"
   },
@@ -336,8 +336,8 @@
     "language_code": "sl"
   },
   "README.md": {
-    "original_hash": "f9e009e10b1175c5e9ccbfc2eb4a160b",
-    "translation_date": "2026-07-14T11:32:20+00:00",
+    "original_hash": "bc44817dcd8facb678cee32946cfd5fa",
+    "translation_date": "2026-07-17T15:25:54+00:00",
     "source_file": "README.md",
     "language_code": "sl"
   },
@@ -349,13 +349,13 @@
   },
   "__translation_failures__": {
     "CHANGELOG.md": {
-      "original_hash": "1bfb1a7b89d85d2620424c5198aaf23c",
+      "original_hash": "a48fc288183d6c459408f4cb608a53b1",
       "source_file": "CHANGELOG.md",
       "language_code": "sl",
-      "failure_date": "2026-07-14T12:02:04+00:00",
+      "failure_date": "2026-07-17T15:54:36+00:00",
       "status": "failed",
       "error_type": "TranslationIncompleteError",
-      "error_message": "Markdown translation remained incomplete for chunk 1 of 'CHANGELOG.md', and the chunk could not be split further.",
+      "error_message": "Markdown translation remained incomplete for chunk 1.1.1 of 'CHANGELOG.md', and the chunk could not be split further.",
       "translator_version": "0.20.0",
       "failure_policy_version": 1
     }

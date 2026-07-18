@@ -2,27 +2,27 @@
 
 ## Muhtasari wa Mradi
 
-Hifadhidata hii ina mtaala kamili wa masomo 21 unaofundisha misingi ya AI Inayotengeneza na maendeleo ya matumizi. Kozi hii imeundwa kwa wanaoanza na inashughulikia kila kitu kutoka dhana za msingi hadi kujenga programu za tayari kutumika.
+Hifadhi hii ina mitaala kamili ya masomo 21 inayofundisha misingi ya AI za Uzalishaji na uendelezaji wa matumizi. Kozi hii imetengenezwa kwa wanaoanza na inashughulikia kila kitu kuanzia dhana za msingi hadi kujenga matumizi yanayoweza kutumika.
 
 **Teknolojia Muhimu:**
 - Python 3.9+ na maktaba: `openai`, `python-dotenv`, `tiktoken`, `azure-ai-inference`, `pandas`, `numpy`, `matplotlib`
-- TypeScript/JavaScript na Node.js na maktaba: `openai` (Azure OpenAI kupitia kituo cha v1 + API ya Majibu), `@azure-rest/ai-inference` (Microsoft Foundry Models)
-- Huduma ya Azure OpenAI, OpenAI API, na Microsoft Foundry Models (GitHub Models inaondoka mwisho wa Julai 2026)
+- TypeScript/JavaScript na Node.js na maktaba: `openai` (Azure OpenAI kupitia sehemu ya v1 + API ya Majibu), `@azure-rest/ai-inference` (Microsoft Foundry Models)
+- Huduma ya Azure OpenAI, API ya OpenAI, na Microsoft Foundry Models (GitHub Models itakoma mwishoni mwa Julai 2026)
 - Daftari la Jupyter kwa kujifunza kwa mwingiliano
-- Kontena za Maendeleo kwa mazingira thabiti ya maendeleo
+- Dev Containers kwa mazingira ya maendeleo thabiti
 
-**Muundo wa Hifadhidata:**
-- Saraka za masomo 21 zenye namba (00-21) zenye README, mifano ya nambari, na kazi za nyumbani
-- Utekelezaji mbalimbali: Python, TypeScript, na baadhi ya mifano ya .NET
-- Saraka ya Tafsiri zenye matoleo ya lugha 40+
-- Usanidi wa kati kupitia faili la `.env` (tumia `.env.copy` kama kiolezo)
+**Muundo wa Hifadhi:**
+- Taka la masomo yaliyo na nambari 21 (00-21) lina README, mifano ya msimbo, na kazi za nyumbani
+- Utekelezaji mwingi: mifano ya Python, TypeScript, na wakati mwingine .NET
+- Saraka ya Tafsiri na toleo la lugha zaidi ya 40
+- Mipangilio midogo kupitia faili `.env` (tumieni `.env.copy` kama kiolezo)
 
-## Amri za Kufunga
+## Amri za Kusanidi
 
-### Kusanidi Hifadhidata ya Kwanza
+### Kusanidi Hifadhi ya Awali
 
 ```bash
-# Nakili hifadhidata
+# Nakili hifadhi
 git clone https://github.com/microsoft/generative-ai-for-beginners.git
 cd generative-ai-for-beginners
 
@@ -50,7 +50,7 @@ pip install -r requirements.txt
 ### Kusanidi Node.js/TypeScript
 
 ```bash
-# Sakinisha utegemezi wa kiwango cha mzizi (kwa zana za nyaraka)
+# Sakinisha utegemezi wa ngazi ya mzizi (kwa zana za nyaraka)
 npm install
 
 # Kwa mifano ya TypeScript ya somo binafsi, nenda kwenye somo maalum:
@@ -58,36 +58,45 @@ cd 06-text-generation-apps/typescript/recipe-app
 npm install
 ```
 
-### Kusanidi Kontena la Maendeleo (Inayopendekezwa)
+### Kusanidi Dev Container (Inapendekezwa)
 
-Hifadhidata hii ina usanidi wa `.devcontainer` kwa GitHub Codespaces au VS Code Dev Containers:
+Hifadhi ina usanidi wa `.devcontainer` kwa GitHub Codespaces au VS Code Dev Containers:
 
-1. Fungua hifadhidata kwenye GitHub Codespaces au VS Code na ugani wa Dev Containers
-2. Kontena la Maendeleo litafanya moja kwa moja:
-   - Sakinisha mahitaji ya Python kutoka `requirements.txt`
-   - Endesha skripti ya baada ya kuunda (`.devcontainer/post-create.sh`)
+1. Fungua hifadhi katika GitHub Codespaces au VS Code na kiendelezi cha Dev Containers
+2. Dev Container ita:
+   - Sajili tegemezi za Python kutoka `requirements.txt`
+   - Endesha script ya baadaye-uundaji (`.devcontainer/post-create.sh`)
    - Sanidi kernel ya Jupyter
 
 ## Mtiririko wa Maendeleo
 
 ### Mabadiliko ya Mazingira
 
-Masomo yote yanayohitaji ufikiaji wa API yanatumia mabadiliko ya mazingira yaliyoainishwa kwenye `.env`:
+Masomo yote yanayohitaji upatikanaji wa API hutumia mabadiliko ya mazingira yaliyobainishwa katika `.env`:
 
-- `OPENAI_API_KEY` - Kwa OpenAI API
-- `AZURE_OPENAI_API_KEY` - Kwa Azure OpenAI ndani ya Microsoft Foundry (Huduma ya Azure OpenAI sasa ni sehemu ya Microsoft Foundry: https://ai.azure.com)
-- `AZURE_OPENAI_ENDPOINT` - URL ya kituo cha Azure OpenAI (kituo cha rasilimali ya Foundry)
-- `AZURE_OPENAI_DEPLOYMENT` - Jina la utekelezaji wa mfano wa mazungumzo
-- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Jina la utekelezaji wa mfano wa embeddings
+- `OPENAI_API_KEY` - Kwa API ya OpenAI
+- `AZURE_OPENAI_API_KEY` - Kwa Azure OpenAI katika Microsoft Foundry (Huduma ya Azure OpenAI sasa ni sehemu ya Microsoft Foundry: https://ai.azure.com)
+- `AZURE_OPENAI_ENDPOINT` - URL ya sehemu ya mwisho ya Azure OpenAI (sehemu ya rasilimali Foundry)
+- `AZURE_OPENAI_DEPLOYMENT` - Jina la usambazaji wa mfano wa mazungumzo (chaguo-msingi cha kozi: `gpt-5-mini`)
+- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Jina la usambazaji wa mfano wa embeddings (chaguo-msingi cha kozi: `text-embedding-3-small`)
 - `AZURE_OPENAI_API_VERSION` - Toleo la API (chaguo-msingi: `2024-10-21`)
 - `HUGGING_FACE_API_KEY` - Kwa mifano ya Hugging Face
-- `AZURE_INFERENCE_ENDPOINT` - Kituo cha Microsoft Foundry Models (katalogi ya mifano wa watoa huduma wengi)
-- `AZURE_INFERENCE_CREDENTIAL` - API key ya Microsoft Foundry Models (inachukua nafasi ya `GITHUB_TOKEN` inayohamia)
+- `AZURE_INFERENCE_ENDPOINT` - Sehemu ya Microsoft Foundry Models (katalogi ya mfano wa wanatoa wengi)
+- `AZURE_INFERENCE_CREDENTIAL` - Kitufe cha API cha Microsoft Foundry Models (kinachochukua nafasi ya `GITHUB_TOKEN` inayostaafu)
+- `AZURE_INFERENCE_CHAT_MODEL` - Mfano usiotumia uamuzi (km. `Llama-3.3-70B-Instruct`) unaotumika katika mifano ya `temperature`, kwani mifano ya uamuzi haiji na udhibiti wa sampuli
+
+### Kanuni za Mfano (muhimu)
+
+- **Mfano wa mazungumzo wa chaguo-msingi ni `gpt-5-mini`** - mfano wa sasa, usioachwa kwa ajili ya **uamuzi**. Kuanzia 2026 mifano ya awali ya "mini" yenye uwezo wa joto (`gpt-4o-mini`, `gpt-4.1-mini`) zinaondolewa, hivyo mitaala huweka viwango vya familia ya GPT-5.
+- **Mifano ya uamuzi hailali `temperature` na `top_p`**, na hutumia `max_output_tokens` (API ya Majibu) / `max_completion_tokens` (ukamilishaji wa mazungumzo) badala ya `max_tokens`. Usiongeze `temperature`/`top_p`/`max_tokens` kwa mifano inayopita kwenye `gpt-5-mini`.
+- **Ili kuonyesha `temperature`**, mifano hutumia mfano wa **Llama** (`Llama-3.3-70B-Instruct`) kupitia sehemu ya Microsoft Foundry Models (`AZURE_INFERENCE_CHAT_MODEL`). Elekeza mifano ya uamuzi kwa uhandisi wa maelekezo + udhibiti wa uamuzi badala ya viashiria vya sampuli.
+- **Urekebishaji (somo la 18)** unaongeza `gpt-4.1-mini`: GPT-5 inaunga mkono tu urekebishaji wa kuimarisha (RFT), si urekebishaji wa chini ya usimamizi (SFT) unaooneshwa hapo.
+- Masomo 20 (Mistral) na 21 (Meta) bado yanatumia `temperature`/`max_tokens` kwa sababu yanawalenga mifano ya Mistral/Llama, ambayo inaunga mkono hayo.
 
 ### Kuendesha Mifano ya Python
 
 ```bash
-# Elekea kwenye saraka ya somo
+# Naviga kwenye saraka ya somo
 cd 06-text-generation-apps/python
 
 # Endesha script ya Python
@@ -100,7 +109,7 @@ python aoai-app.py
 # Elekea kwenye saraka ya programu ya TypeScript
 cd 06-text-generation-apps/typescript/recipe-app
 
-# Jenge msimbo wa TypeScript
+# Jenga msimbo wa TypeScript
 npm run build
 
 # Endesha programu
@@ -110,157 +119,157 @@ npm start
 ### Kuendesha Daftari la Jupyter
 
 ```bash
-# Anzisha Jupyter kwenye mzizi wa hifadhidata
+# Anza Jupyter katika mzizi wa hifadhidata
 jupyter notebook
 
-# Au tumia VS Code na kiendelezi cha Jupyter
+# Au tumia VS Code na programu-jalizi ya Jupyter
 ```
 
-### Kufanya Kazi na Aina Tofauti za Masomo
+### Kufanya kazi na Aina Tofauti za Masomo
 
-- **Masomo ya "Jifunze"**: Angazia nyaraka za README.md na dhana
-- **Masomo ya "Jenga"**: Yanajumuisha mifano ya nambari inayofanya kazi kwa Python na TypeScript
-- Kila somo lina README.md yenye nadharia, maelezo ya nambari, na viungo vya maudhui ya video
+- **Masomo ya "Jifunze"**: Lenga kwenye nyaraka za README.md na dhana
+- **Masomo ya "Jenga"**: Yanajumuisha mifano ya kazi kwa Python na TypeScript
+- Kila somo lina README.md yenye nadharia, maelezo ya msimbo, na viungo vya maudhui ya video
 
-## Mwongozo wa Mtindo wa Nambari
+## Miongozo ya Mtindo wa Msimbo
 
 ### Python
 
 - Tumia `python-dotenv` kwa usimamizi wa mabadiliko ya mazingira
-- Ingiza maktaba ya `openai` kwa mwingiliano na API
-- Tumia `pylint` kwa ukaguzi wa nambari (mifano mingine ina `# pylint: disable=all` kwa urahisi)
-- Fuata kanuni za jina za PEP 8
-- Hifadhi nyaraka za API kwenye faili `.env`, kamwe siyo katika nambari
+- Ingiza maktaba `openai` kwa mwingiliano wa API
+- Tumia `pylint` kwa ukaguzi wa msimbo (mifano mingine ina `# pylint: disable=all` kwa urahisi)
+- Fuata kanuni za uandishi wa PEP 8
+- Hifadhi taarifa za API katika faili `.env`, kamwe si msimbos
 
 ### TypeScript
 
-- Tumia kifurushi cha `dotenv` kwa mabadiliko ya mazingira
-- Usaidizi wa TypeScript kwenye `tsconfig.json` kwa kila programu
-- Tumia kifurushi cha `openai` kwa Azure OpenAI (elekeza mteja kwa kituo cha `/openai/v1/` na piga `client.responses.create`); tumia `@azure-rest/ai-inference` kwa Microsoft Foundry Models
-- Tumia `nodemon` kwa maendeleo na upakiaji otomatiki
-- Jenga kabla ya kuendesha: `npm run build` kisha `npm start`
+- Tumia kifurushi `dotenv` kwa mabadiliko ya mazingira
+- Usanidi wa TypeScript katika `tsconfig.json` kwa kila app
+- Tumia kifurushi `openai` kwa Azure OpenAI (elekeza mteja kwa sehemu ya mwisho `/openai/v1/` na piga `client.responses.create`); tumia `@azure-rest/ai-inference` kwa Microsoft Foundry Models
+- Tumia `nodemon` kwa maendeleo na upakiaji wa mara kwa mara
+- Tafuta kabla ya kuendesha: `npm run build` kisha `npm start`
 
 ### Kanuni za Jumla
 
-- Hifadhi mifano ya nambari kuwa rahisi na ya elimu
-- Jumuisha maoni yanayofafanua dhana kuu
-- Kila nambari ya somo iwe yenye uhuru na inaweza kuendeshwa
-- Tumia majina thabiti: kiambatanishi `aoai-` kwa Azure OpenAI, `oai-` kwa OpenAI API, `githubmodels-` kwa Microsoft Foundry Models (kiambatanishi cha zamani kilichoachwa kutoka enzi ya GitHub Models)
+- Fanya mifano ya msimbo iwe rahisi na elimu
+- Jumuisha maelezo ya maoni yanayofafanua dhana kuu
+- Msimbo wa kila somo unapaswa kujitegemea na kuweza kuendesha
+- Tumia majina thabiti: kiambatanisho `aoai-` kwa Azure OpenAI, `oai-` kwa API ya OpenAI, `githubmodels-` kwa Microsoft Foundry Models (kiambatanisho cha zamani kinachohifadhiwa kutoka enzi za GitHub Models)
 
-## Mwongozo wa Nyaraka
+## Miongozo ya Nyaraka
 
 ### Mtindo wa Markdown
 
-- URL zote lazima zifunikwe katika muundo wa `[text](../../url)` bila nafasi za ziada
-- Viungo vya uhusiano lazima vitaanze na `./` au `../`
-- Viungo vyote vya maeneo ya Microsoft lazima viwe na kitambulisho cha ufuatiliaji: `?WT.mc_id=academic-105485-koreyst`
-- Epuka matumizi ya maeneo maalum ya nchi katika URL (epuka `/en-us/`)
-- Picha zinahifadhiwa katika saraka ya `./images` zikibeba majina yenye maelezo
-- Tumia herufi za Kiingereza, nambari, na alama za dash katika majina ya faili
+- URL zote lazima ziwe zimefungwa ndani ya muundo wa `[text](../../url)` bila nafasi za ziada
+- Viungo vya ndani lazima vianze na `./` au `../`
+- Viungo vyote kwa maeneo ya Microsoft lazima viwe na kitambulisho cha ufuatiliaji: `?WT.mc_id=academic-105485-koreyst`
+- Epuka maeneo ya lugha maalum ya nchi katika URL (epuka `/en-us/`)
+- Picha zimehifadhiwa katika saraka `./images` zikiwa na majina ya kuelezea
+- Tumia herufi za Kiingereza, nambari, na dashini katika majina ya faili
 
 ### Msaada wa Tafsiri
 
-- Hifadhidata inasaidia lugha 40+ kupitia GitHub Actions otomatiki
-- Tafsiri zinahifadhiwa katika saraka ya `translations/`
-- Usitumie tafsiri za sehemu
-- Tafsiri za mashine hazikubaliki
-- Picha zilizotafsiriwa zinahifadhiwa katika saraka ya `translated_images/`
+- Hifadhi inaunga mkono lugha zaidi ya 40 kupitia GitHub Actions moja kwa moja
+- Tafsiri zimehifadhiwa katika saraka `translations/`
+- Usitume tafsiri zisizokamilika
+- Tafsiri za mashine hazikubaliwa
+- Picha zilizotafsiriwa zinahifadhiwa katika saraka `translated_images/`
 
 ## Upimaji na Uthibitishaji
 
-### Ukaguzi Kabla ya Kuwasilisha
+### Ukaguzi wa Kabla ya Kuwasilisha
 
-Hifadhidata hii inatumia GitHub Actions kwa uthibitishaji. Kabla ya kuwasilisha PRs:
+Hifadhi hii inatumia GitHub Actions kwa uthibitishaji. Kabla ya kuwasilisha PR:
 
 1. **Kagua Viungo vya Markdown**:
    ```bash
    # Kazi ya validate-markdown.yml inakagua:
-   # - Njia za kiraka zilizo kuvunjika
-   # - IDs za ufuatiliaji zinazokosekana kwenye njia
-   # - IDs za ufuatiliaji zinazokosekana kwenye URLs
-   # - URLs zilizo na eneo la nchi
-   # - URLs za nje zilizo kuvunjika
+   # - Njia za uhusiano zilizovunjika
+   # - Vitambulisho vya ufuatiliaji vinavyokosekana kwenye njia
+   # - Vitambulisho vya ufuatiliaji vinavyokosekana kwenye URL
+   # - URL zilizo na eneo la nchi
+   # - URL za nje zilizovunjika
    ```
 
 2. **Upimaji wa Mikono**:
-   - Jaribu mifano ya Python: Washa venv na endesha skripti
+   - Jaribu mifano ya Python: Weka venv na endesha skripti
    - Jaribu mifano ya TypeScript: `npm install`, `npm run build`, `npm start`
-   - Thibitisha mabadiliko ya mazingira yamewekwa sawa
-   - Kagua funguo za API zinafanya kazi na mifano ya nambari
+   - Hakikisha mabadiliko ya mazingira yamepangwa ipasavyo
+   - Angalia kama funguo za API zinafanya kazi na mifano ya msimbo
 
-3. **Mifano ya Nambari**:
-   - Hakikisha nambari zote zinafanya kazi bila makosa
-   - Jaribu na Azure OpenAI na OpenAI API inapowezekana
-   - Thibitisha mifano inafanya kazi na Microsoft Foundry Models pale panapoungwa mkono
+3. **Mifano ya Msimbo**:
+   - Hakikisha msimbo wote unaendesha bila makosa
+   - Jaribu na Azure OpenAI na API ya OpenAI inapobidi
+   - Hakikisha mifano inafanya kazi na Microsoft Foundry Models pale inapoungwa mkono
 
-### Hakuna Majaribio ya Otomatiki
+### Hakuna Majaribio ya Moja kwa Moja
 
-Hii ni hifadhidata ya kielimu inayolenga mafunzo na mifano. Hakuna majaribio ya kitengo au ya muunganisho ya kuendesha. Uthibitishaji ni hasa:
-- Upimaji wa mikono wa mifano ya nambari
+Hii ni hifadhi ya elimu inayojikita kwenye mafunzo na mifano. Hakuna majaribio ya kitengo au utekelezaji wa pamoja wa kuendesha. Uthibitishaji ni hasa:
+- Upimaji wa mikono wa mifano ya msimbo
 - GitHub Actions kwa uthibitishaji wa Markdown
-- Ukaguzi wa jamii ya maudhui ya elimu
+- Mapitio ya jamii ya maudhui ya elimu
 
-## Mwongozo wa OMBI LA VIONGOZI
+## Miongozo ya Omba Mchango
 
 ### Kabla ya Kuwasilisha
 
-1. Jaribu mabadiliko ya nambari kwa Python na TypeScript inapowezekana
-2. Endesha uthibitishaji wa Markdown (unaanzishwa moja kwa moja kwenye PR)
-3. Hakikisha kitambulisho cha ufuatiliaji kiko kwenye URL zote za Microsoft
-4. Kagua viungo vya uhusiano viko halali
-5. Thibitisha picha zimetajwa ipasavyo
+1. Jaribu mabadiliko ya msimbo kwa Python na TypeScript inapowezekana
+2. Endesha uthibitishaji wa Markdown (hufanyika moja kwa moja wakati wa PR)
+3. Hakikisha vitambulisho vya ufuatiliaji vipo kwa URL zote za Microsoft
+4. Kagua viungo vya ndani ni halali
+5. Hakikisha picha zimetajwa ipasavyo
 
 ### Muundo wa Kichwa cha PR
 
-- Tumia vichwa vinavyoelezea: `[Somo 06] Rekebisha kosa la mfano wa Python` au `Sasisha README kwa somo 08`
-- Rejelea nambari za maswala inapowezekana: `Inarekebisha #123`
+- Tumia vichwa vinavyoelezea: `[Lesson 06] Rekebisha kosa la somo la Python` au `Sasisha README kwa somo la 08`
+- Taja nambari za masuala inapobidi: `Fixes #123`
 
 ### Maelezo ya PR
 
 - Eleza kilichobadilishwa na kwa nini
-- Weka viungo kwa maswala yanayohusiana
-- Kwa mabadiliko ya nambari, taja mifano iliyojaribiwa
+- Taja masuala yanayohusiana
+- Kwa mabadiliko ya msimbo, taja mifano iliyojaribiwa
 - Kwa PR za tafsiri, jumuisha faili zote kwa tafsiri kamili
 
-### Vigezo vya Michango
+### Mahitaji ya Michango
 
-- Saini Microsoft CLA (moja kwa moja kwenye PR ya kwanza)
-- Fanya forksi ya hifadhidata kwa akaunti yako kabla ya kufanya mabadiliko
-- PR moja kwa mabadiliko ya maana (usichanganye marekebisho yasiyohusiana)
-- Weka PR kuwa na muktadha na ndogo inapowezekana
+- Saini Microsoft CLA (hufanyika moja kwa moja kwenye PR ya kwanza)
+- Fanya fork ya hifadhi kwa akaunti yako kabla ya kufanya mabadiliko
+- PR moja kwa mabadiliko mantiki (usichanganye marekebisho yasiyohusiana)
+- Fanya PR zihakikishwe na ndogo inapowezekana
 
-## Mitiririko ya Kazi ya Kawaida
+## Mtiririko wa Kazi wa Kawaida
 
-### Kuongeza Mfano Mpya wa Nambari
+### Kuongeza Mfano Mpya wa Msimbo
 
-1. Nenda kwenye saraka ya somo husika
-2. Unda mfano katika saraka ndogo ya `python/` au `typescript/`
+1. Nenda kwenye saraka inayohusika ya somo
+2. Unda mfano ndani ya saraka ndogo ya `python/` au `typescript/`
 3. Fuata kanuni ya majina: `{provider}-{example-name}.{py|ts|js}`
-4. Jaribu kwa kutumia nyaraka halali za API
-5. Andika mabadiliko yoyote ya mabadiliko ya mazingira katika README ya somo
+4. Jaribu kwa kutumia funguo halisi za API
+5. Andika mabadiliko yoyote ya mazingira kwenye README ya somo
 
 ### Kusasisha Nyaraka
 
 1. Hariri README.md katika saraka ya somo
-2. Fuata mwongozo wa Markdown (kitambulisho cha ufuatiliaji, viungo vya uhusiano)
-3. Sasisho la tafsiri linaendeshwa na GitHub Actions (usihariri kwa mikono)
-4. Jaribu viungo vyote kuhakikisha vinafanana
+2. Fuata miongozo ya Markdown (vitambulisho vya kufuatilia, viungo vya ndani)
+3. Sasisho la tafsiri hufanywa na GitHub Actions (usihariri kwa mikono)
+4. Jaribu viungo vyote ni halali
 
-### Kufanya Kazi na Kontena za Maendeleo
+### Kufanya kazi na Dev Containers
 
-1. Hifadhidata ina `.devcontainer/devcontainer.json`
-2. Skripti ya baada ya kuunda inasakinisha otomatiki mahitaji ya Python
-3. Viendelezi vya Python na Jupyter vimesanidiwa kabla
-4. Mazingira yanategemea `mcr.microsoft.com/devcontainers/universal:2.11.2`
+1. Hifadhi ina `.devcontainer/devcontainer.json`
+2. Script ya baada ya uundaji inasakinisha tegemezi za Python kiotomatiki
+3. Viendelezi vya Python na Jupyter vimesanidiwa awali
+4. Mazingira yanatokana na `mcr.microsoft.com/devcontainers/universal:2.11.2`
 
-## Uenezaji na Kuchapisha
+## Ueneaji na Kuchapisha
 
-Hii ni hifadhidata ya kujifunza - hakuna mchakato wa uenezaji. Mtaala unatumika na:
+Hii ni hifadhi ya kujifunza - hakuna mchakato wa ueneaji. Mitaala hutumiwa na:
 
-1. **Hifadhidata ya GitHub**: Ufikiaji wa moja kwa moja wa nambari na nyaraka
-2. **GitHub Codespaces**: Mazingira ya maendeleo ya haraka yenye usanidi tayari
+1. **Hifadhi ya GitHub**: Upatikanaji wa moja kwa moja kwa msimbo na nyaraka
+2. **GitHub Codespaces**: Mazingira ya maendeleo ya papo hapo yenye usanidi wa awali
 3. **Microsoft Learn**: Maudhui yanaweza kusambazwa kwenye jukwaa rasmi la kujifunza
-4. **docsify**: Tovuti ya nyaraka inajengwa kutoka Markdown (ona `docsifytopdf.js` na `package.json`)
+4. **docsify**: Tovuti ya nyaraka inayojengwa kutoka Markdown (angalia `docsifytopdf.js` na `package.json`)
 
 ### Kujenga Tovuti ya Nyaraka
 
@@ -269,48 +278,48 @@ Hii ni hifadhidata ya kujifunza - hakuna mchakato wa uenezaji. Mtaala unatumika 
 npm run convert
 ```
 
-## Matatizo na Ufumbuzi
+## Utaftaji wa Matatizo
 
-### Changamoto Zilizojitokeza Mara kwa Mara
+### Masuala ya Kawaida
 
-**Makosa ya Kuwasilisha Python**:
-- Hakikisha mazingira ya mtandao yamewashwa
+**Makosa ya Kuingiza Python**:
+- Hakikisha mazingira ya kibinafsi yamewashwa
 - Endesha `pip install -r requirements.txt`
-- Angalia toleo la Python likiwa 3.9+
+- Kagua toleo la Python lisiwe chini ya 3.9
 
-**Makosa ya Ujenzi wa TypeScript**:
-- Endesha `npm install` katika saraka ya programu husika
-- Hakikisha toleo la Node.js linaendana
-- Futa `node_modules` na zindua tena ikiwa inahitajika
+**Makosa ya Kujengea TypeScript**:
+- Endesha `npm install` katika saraka maalum ya app
+- Hakikisha toleo la Node.js linafaa
+- Safisha `node_modules` na usakinishe tena inapobidi
 
 **Makosa ya Uthibitishaji wa API**:
-- Thibitisha faili la `.env` lipo na lina maadili sahihi
-- Angalia funguo za API ni halali na hazijakwisha muda wake
-- Hakikisha URL za vituo ni sahihi kwa mkoa wako
+- Hakikisha faili `.env` ipo na ina thamani sahihi
+- Kagua funguo za API zikiwa halali na hazijapungua muda wake
+- Hakikisha URL za sehemu za mwisho ni sahihi kwa eneo lako
 
-**Mabadiliko ya Mazingira Yanayokosekana**:
-- Nakili `.env.copy` kwa `.env`
-- Jaza maadili yote yanayohitajika kwa somo unalofanyia kazi
+**Mabadiliko ya Mazingira Yaliyokosekana**:
+- Nakili `.env.copy` hadi `.env`
+- Jaza thamani zote zinazohitajika kwa somo unalofanyia kazi
 - Anzisha tena programu baada ya kusasisha `.env`
 
 ## Rasilimali Zaidi
 
 - [Mwongozo wa Kusanidi Kozi](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
-- [Mwongozo wa Michango](./CONTRIBUTING.md)
-- [Kanuni za Maadili](./CODE_OF_CONDUCT.md)
+- [Miongozo ya Kuchangia](./CONTRIBUTING.md)
+- [Kanuni za Tabia](./CODE_OF_CONDUCT.md)
 - [Sera ya Usalama](./SECURITY.md)
-- [Azure AI Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
-- [Mkusanyiko wa Mifano ya Nambari ya Juu](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
+- [Discord ya Azure AI](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
+- [Mkusanyiko wa Mifano ya Msimbo wa Juu](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
 
-## Maelezo Mahususi ya Mradi
+## Vidokezo Maalum vya Mradi
 
-- Hii ni **hifadhidata ya kielimu** inayolenga kujifunza, si nambari ya uzalishaji
+- Hii ni **hifadhi ya elimu** inayolenga kujifunza, si msimbo wa uzalishaji
 - Mifano ni rahisi kwa makusudi na inalenga kufundisha dhana
-- Ubora wa nambari umezingatia uwazi wa elimu
-- Kila somo lina uhuru na linaweza kukamilishwa kwa kujitegemea
-- Hifadhidata inaunga mkono watoa huduma wa API wengi: Azure OpenAI, OpenAI, Microsoft Foundry Models, na watoa huduma wa nje kama Foundry Local na Ollama
-- Maudhui ni mengi ya lugha na yana mchakato wa tafsiri otomatiki
-- Kuna jamii hai kwenye Discord kwa maswali na msaada
+- Ubora wa msimbo umeunganishwa na uwazi wa elimu
+- Kila somo ni huru na linaweza kukamilishwa kwa kujitegemea
+- Hifadhi inaunga mkono watoa huduma wa API wengi: Azure OpenAI, OpenAI, Microsoft Foundry Models, na watoa huduma wa nje kama Foundry Local na Ollama
+- Maudhui ni mengi kwa lugha na yana mizunguko ya tafsiri ya moja kwa moja
+- Jumuiya hai kwenye Discord kwa maswali na msaada
 
 ---
 

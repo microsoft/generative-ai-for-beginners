@@ -209,15 +209,15 @@ def chatbot(user_input):
         {"role": "user", "content": "\n\n".join(history) }
     ]
 
-    # Use chat completion to generate a response
-    response = openai.chat.completions.create(
-        model="gpt-4",
-        temperature=0.7,
-        max_tokens=800,
-        messages=messages
+    # Use the Responses API to generate a response
+    response = client.responses.create(
+        model="gpt-5-mini",
+        max_output_tokens=800,
+        input=messages,
+        store=False,
     )
 
-    return response.choices[0].message
+    return response.output_text
 
 chatbot(user_input)
 ```
@@ -268,5 +268,5 @@ After completing this lesson, check out our [Generative AI Learning collection](
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

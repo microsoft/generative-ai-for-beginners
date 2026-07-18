@@ -1,62 +1,62 @@
 [![Open Source Models](../../../translated_images/my/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
-## မိတ်ဆက်ခြင်း
+## နိဒါန်း
 
-AI Agents တွေဟာ Generative AI ကဏ္ဍမှာ ရွှေ့ပြောင်းတိုးတက်မှုစိတ်လှုပ်ရှားဖွယ်ရာအမျိုးအစားဖြစ်ပြီး၊ Large Language Models (LLMs) ကို အကူအညီပေးသူများမှ အသက်သွင်းနိုင်သော agent များအဖြစ် ဖွံ့ဖြိုးတိုးတက်စေပါသည်။ AI Agent ဖွဲ့စည်းမှုက developers များကို LLM များအတွက် tools နှင့် state စီမံခန့်ခွဲမှုများကို အသုံးပြုနိုင်စေရန် အက်ပလီကေးရှင်းများ ဖန်တီးနိုင်စေပါသည်။ ထို့အပြင် user များနှင့် developer များအား LLM များမှ စီစဉ်ထားသော လုပ်ဆောင်ချက်များကို လေ့လာကြည့်ရှုနိုင်ဖို့ မြင်သာမှုတိုးမြှင့်ပေးခြင်းမွ ်ဖြစ်သည်၊ ဒါဟာ အတွေ့အကြုံ စီမံခန့်ခွဲမှုကို တိုးကောင်းစေပါသည်။
+AI Agents သည် Generative AI အတွက် စိတ်လှုပ်ရှားဖွယ်ဖြစ်ပြီး၊ Large Language Models (LLMs) ကို အကူအညီပေးသူမှ တက်ကြွလှုပ်ရှားခွင့်ရှိသည့် သက်ဆိုင်သူအဖြစ် ဖွံ့ဖြိုးတိုးတက်စေပါသည်။ AI Agent Framework များသည် developer များအနေဖြင့် LLMs များကို tool များနှင့် state စီမံခန့်ခွဲမှု အလွယ်တကူ အသုံးပြုနိုင်စေရန် အက်ပ်လီကေးရှင်းများ ဖန်တီးနိုင်စေသည်။ ထို့အပြင် user နှင့် developer များအား LLMs မှ ကြိုတင်အစီအစဉ်ရေးဆွဲထားသော လှုပ်ရှားမှုများကို ကြည့်ရှု စစ်ဆေးနိုင်သော ဝါရင့်နေရာလုံခြုံမှုကို တိုးတက်စေပြီး အသုံးပြုမှုကို မျှတစွာ စီမံခန့်ခွဲနိုင်စေပါသည်။
 
-ဒီသင်ခန်းစာမှာ အောက်ပါအကြောင်းအရာများကို ပညာပို့မှာဖြစ်ပါတယ်။
+ဒီသင်ခန်းစာတွင် အောက်ပါအချက်များကို ဖတ်ရှု လေ့လာသွားမှာ ဖြစ်ပါတယ်။
 
-- AI Agent ဆိုတာ ဘာလဲ၊ AI Agent အကြောင်း နားလည်ခြင်း။
-- AI Agent Frameworks ငါးမျိုးကို စူးစမ်းလေ့လာခြင်း၊ ထူးခြားချက်များ။
-- AI Agent များကို အသုံးပြုသင့်သည့် နေရာများ၊ မည်သည့်အခါ အသုံးပြုသင့်သည်။
+- AI Agent ဆိုတာ ဘာလဲဆိုတာ နားလည်ခြင်း - AI Agent ဆိုတာ မည်သည်နည်း?
+- AI Agent Framework ပေါင်း ၅ မျိုးကို ရှင်းလင်းခြင်း - ၎င်းတို့သည် ဘာကြောင့်ထူးခြားသနည်း?
+- AI Agents များကို အသုံးပြုနိုင်သော ကိစ္စများတွင် လျှောက်ထားခြင်း - ဘယ်အချိန်တွင် AI Agents များကို အသုံးပြုသင့်သနည်း?
 
-## သင်ယူရမည့် ရည်မှန်းချက်များ
+## သင်ယူစရာ ရည်ရွယ်ချက်များ
 
 ဒီသင်ခန်းစာပြီးဆုံးပြီးနောက် သင်သည်:
 
-- AI Agent များကို ရှင်းပြနိုင်ပြီး သူတို့အသုံးပြုမှုကို နားလည်နိုင်ပါလိမ့်မည်။
-- လူကြိုက်များသော AI Agent Frameworks များရဲ့ ကွာခြားချက်များနှင့် မတူကွဲပြားမှုများကို နားလည်နိုင်ပါလိမ့်မည်။
-- AI Agent များက မည်သို့လုပ်ဆောင်ကြောင်းနားလည်ပြီး အက်ပလီကေးရှင်းများ ဆောက်ရန် အသုံးပြုနိုင်ပါလိမ့်မည်။
+- AI Agents ဆိုတာ ဘာလဲ၊ ဘယ်လိုအသုံးပြုနိုင်လဲ ဆိုတာကိုရှင်းပြနိုင်ပါမည်။
+- လူကြိုက်များသော AI Agent Framework များအနက် တချို့၏ကွာခြားချက်များနားလည်နိုင်မည်။
+- AI Agents များသည် ဘယ်လိုလုပ်ဆောင်ကြသည်ကို နားလည်သဘောပေါက်၍ လျှောက်လွှာများ ဖန်တီးနိုင်မည်။
 
-## AI Agent များ ဆိုတာဘာလဲ?
+## AI Agents ဆိုတာ မည်သည်နည်း?
 
-AI Agent များဟာ Generative AI ကမ္ဘာကြီးအတွင်း စိတ်လှုပ်ရှားဖွယ် ကဏ္ဍတစ်ခုဖြစ်ပါတယ်။ ဒီစိတ်လှုပ်ရှားမှုကြောင့် အချိန်တစ်ချို့ စကားလုံးများနှင့် သုတေသနများမှာ ရှုပ်ထွေးမှုရှိနိုင်ပါတယ်။ AI Agent ကို ပြောဆိုရာမှာ ထည့်သွင်းစဉ်းစားသူအများစုအတွက် ရိုးရှင်းပြီး အပြင်အဆင်များကို ထည့်သွင်းစဉ်းစားရန် ဒီအဓိပ္ပါယ်ကို သုံးမှာဖြစ်ပါတယ်။
+AI Agents သည် Generative AI အတွင်း အလွန်စိတ်လှုပ်ရှားဖွယ် အရာဖြစ်သည်။ သိုသော် စကားလုံးအသုံးအနှုန်းနှင့် ဤ တီထွင်မှုများ၏ အသုံးချမှုအပေါ် အချိန်အခါအားဖြင့် မပေါက်ကြားမှုတွေရှိတတ်သည်။ AI Agents ဟုအမည်ပေးသော အသုံးအနှုန်းများကို ရိုးရှင်းပြီး အများအားလုံးပါဝင်သော စကားသတ်မှတ်ချက်တစ်ခုကို အသုံးပြုသွားမည်ဖြစ်သည်။
 
-AI Agent များက Large Language Models (LLMs) ကို **state** နှင့် **tools** သုံးစွဲခွင့်ပေးခြင်းဖြင့် တစ်စိတ်တစ်ပိုင်းအလုပ်များ ပြုလုပ်နိုင်စေပါသည်။
+AI Agents သည် Large Language Models (LLMs) များကို **state** နှင့် **tools** များ အသုံးပြု၍ လုပ်ဆောင်နိုင်စေပါသည်။
 
 ![Agent Model](../../../translated_images/my/what-agent.21f2893bdfd01e6a.webp)
 
-ဒီစကားလုံးများကို အဓိပ္ပါယ်ပေးလိုက်မယ်။
+အောက်ပါ စကားလုံးများကို သတ်မှတ်ကြရအောင်။
 
-**Large Language Models** - ဒီဟာတွေက ဒီသင်ခန်းစာမှာ ဖော်ပြထားတဲ့ GPT-3.5, GPT-4, Llama-2 စတာတွေပါ။
+**Large Language Models** - ဒီသင်ခန်းစာတွင် အကြောင်းပြုသော မော်ဒယ်များမှာ GPT-5, GPT-4o နှင့် Llama 3.3 စသဖြင့် ဖြစ်ပါသည်။
 
-**State** - ဒါဟာ LLM များ လုပ်ဆောင်နေသည့် အခြေအနေဖြစ်ပါတယ်။ LLM က မကြာသေးမီလုပ်ဆောင်ချက်များနဲ့ လက်ရှိလုပ်ဆောင်နေသော အခြေအနေကို အသုံးပြုပြီး နောက်လှည့်လုပ်ဆောင်ချက်များ ဆုံးဖြတ်တတ်ပါသည်။ AI Agent Frameworks တွေက ဒီအခြေအနေကို ထိန်းသိမ်းရာမှာ developer များကို အဆင်ပြေလွယ်ကူစေပါသည်။
+**State** -  မည်သည့် context သို့ LLM သည် လုပ်ဆောင်နေသည်ကို ရည်ညွှန်းသည်။ LLM သည် ၎င်း၏ ယခင် လှုပ်ရှားမှုများနှင့် လက်ရှိ context ကို အသုံးပြု၍ နောက်ထပ် လုပ်ဆောင်ချက်များအတွက် ဆုံးဖြတ်မှု လမ်းပြသည်။ AI Agent Framework များသည် developer များအတွက် ထို context ကို ပိုမိုလွယ်ကူစွာ စီမံခန့်ခွဲနိုင်ရန် အထောက်အကူပြုပါသည်။
 
-**Tools** - အသုံးပြုသူတောင်းဆိုထားပြီး LLM က စီစဉ်ထားတဲ့ လုပ်ငန်းကို ပြီးမြောက်စေရန် Tools တွေလိုအပ်ပါတယ်။ Tools များအနေနဲ့ database တစ်ခု၊ API တစ်ခု၊ ပြင်ပအက်ပလီကေးရှင်းတစ်ခု သို့မဟုတ် တခြား LLM တစ်ခုဖြစ်နိုင်ပါတယ်။
+**Tools** - user ၏ တောင်းဆိုမှုနှင့် LLM ၏ စီစဉ်ထားသော အလုပ်အကိုင်များကို ပြည့်မှီအောင် ဖော်ဆောင်ရန် လိုအပ်သော tools များကို ရယူရမည်။ ဥပမာ တချို့မှာ ဒေတာဘေ့စ်၊ API၊ ပြင်ပအက်ပ်လီကေးရှင်း သို့မဟုတ် အခြား LLM တစ်ခုဖြစ်နိုင်သည်။
 
-ဒီအဓိပ္ပါယ်တွေက မကြာခဏ ဆက်လက်ကြည့်ရှုတွေ့ကြုံနေမယ့် AI Agent များ တည်ဆောက်ပုံနဲ့တဲ့အခါ ကောင်းမွန်အခြေခံတည်ဆောက်မှု ပေးစေနိုင်ပါလိမ့်မယ်။ အခု အနည်းငယ်ကွဲပြားတဲ့ AI Agent framework များကို စူးစမ်းကြည့်ကြမယ်။
+အဆိုပါစကားသတ်မှတ်ချက်များသည် နောက်တည့်နေ့တွင် ၎င်းတို့ ဘယ်လို အကောင်အထည်ဖော်ကြောင်း စူးစမ်းရှာဖွရာတွင် များစွာ အခြေခံအချက်များ ပေးနိုင်မည်ဟု မျှော်လင့်ပါတယ်။ AI Agent Framework များအနည်းငယ်ကို စူးစမ်းကြည့်ရအောင် -
 
 ## LangChain Agents
 
-[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) က ကျွန်တော်တို့ ယခင်အဓိပ္ပါယ်ပေးထားတဲ့ အကြောင်းအရာတွေအပေါ် တည်ဆောက်ထားတာပါ။
+[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) သည် အထက်ဖော်ပြပါသတ်မှတ်ချက်များကို တက်ရောက်ပုံဖော်ပြချက်တစ်ခုဖြစ်သည်။
 
-**state** ကို စီမံရန် `AgentExecutor` လို့ခေါ်တဲ့ built-in function တစ်ခုကို အသုံးပြုပါတယ်။ ဒါက သတ်မှတ်ထားတဲ့ `agent` နဲ့ ရနိုင်တဲ့ `tools` တွေကို လက်ခံပါတယ်။
+**state** ကို စီမံရန်အတွက် `AgentExecutor` ဟုခေါ်သော built-in function ကို အသုံးပြုသည်။ ၎င်းသည် သတ်မှတ်ထားသော `agent` နှင့် ရနိုင်သော `tools` များကို လက်ခံသည်။
 
-`Agent Executor` က chat သမိုင်းဇယားကိုလည်း သိမ်းဆည်းထားပြီး chat context ကို ပံ့ပိုးပေးပါတယ်။
+`Agent Executor` သည် chat မှတ်တမ်းအကြောင်းအရာကိုလည်းသိမ်းဆည်းထားပြီး၊ chat context ကို ပံ့ပိုးပေးသည်။
 
 ![Langchain Agents](../../../translated_images/my/langchain-agents.edcc55b5d5c43716.webp)
 
-LangChain မှာ [တင့်တယ်တဲ့ tools စုစည်းမှု](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) ရှိပြီး ကိုယ့်အက်ပလီကေးရှင်းထဲသို့ import လုပ်နိုင်ပြီး LLM က access ရစေပါတယ်။ ဒီ tools တွေကို ပြုလုပ်သူများနဲ့ LangChain အဖွဲ့က ဖန်တီးထားသော tools များဖြစ်ပါသည်။
+LangChain သည် LLM အား access ရစေရန် သင့်အက်ပ်လီကေးရှင်းထဲသို့ ထည့်သွင်းနိုင်သော [tool များ का ကတ်တလော့](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) ကို ပေးသည်။ ၎င်းထုတ်လုပ်မှုများကို အဖွဲ့အစည်းနှင့် LangChain အဖွဲ့တို ့မှ ဖန်တီးထားသည်။
 
-ထို့နောက် ဒီ tools တွေကို သတ်မှတ်ပြီး `Agent Executor` ကို ပေးပို့နိုင်ပါသည်။
+ထို tools များကို သတ်မှတ်ပြီး `Agent Executor` ထံ ပို့ပါ။
 
-AI Agents တွေကို ဆိုတဲ့အခါ မြင်သာမှုက အရေးကြီးတဲ့ အရာတစ်ခုဖြစ်ပါတယ်။ Application developer များအနေနဲ့ LLM ဘယ် tool ကို ဘာကြောင့် အသုံးပြုနေသည်ကို နားလည်ရပါမယ်။ အဲဒီအတွက် LangChain အဖွဲ့က LangSmith ကို ဖန်တီးထားပါတယ်။
+AI Agents အကြောင်း စကားပြောရာတွင် Visibility သည် အရေးပါတဲ့အချက်တစ်ခုဖြစ်ပြီး၊ application developer များအနေဖြင့် LLM ဘယ် tool ကို အသုံးပြုနေသည်ကို နားလည်ရန် အရေးကြီးပါသည်။ ထို့ကြောင့် LangChain အဖွဲ့သည် LangSmith ကို ဖန်တီးထားသည်။
 
 ## AutoGen
 
-နောက်တစ်ခု ဆွေးနွေးမည့် AI Agent framework ကတော့ [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst) ပါ။ AutoGen ရဲ့ အဓိက ဦးတည်ချက်က စကားပြောခြင်းဖြစ်ပါတယ်။ Agents များဟာ **စကားပြောနိုင်ပြီး** ပုံစံပြင်နိုင်ပါတယ်။
+နောက်တစ်ခု မိတ်ဆက်မည့် AI Agent framework သည် [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst) ဖြစ်သည်။ AutoGen ၏ အဓိကအာရုံစိုက်ချက်မှာ စကားပြောခြင်းဖြစ်သည်။ Agents များသည် **စကားပြောနိုင်**ပြီး **စိတ်ကြိုက်ပြင်ဆင်နိုင်**ပါသည်။
 
-**စကားပြောနိုင်ခြင်း** - LLM များက တစ်ခြား LLM နဲ့ စကားပြောစတင်နိုင်ပြီး တစ်ဆက်တည်း ဆက်လက်ပြောဆိုနိုင်ပါတယ်၊ လုပ်ငန်းကို ပြီးမြောက်စေရန်ဖြစ်သည်။ ဒါကို `AssistantAgents` ကို ဖန်တီးထားပြီး စနစ်စာသား (system message) သတ်မှတ်ပေးခြင်းဖြင့် ပြုလုပ်ပါတယ်။
+**စကားပြောနိုင်ခြင်း -** LLM များသည် တစ်ခုချင်း LLM နှင့် စကားပြော၍ လုပ်ရမည့် အလုပ်ကို ပြီးဆုံးစေနိုင်သည်။ ၎င်းသည် `AssistantAgents` များ ဖန်တီးပြီး အထူးပြု system message ကို ပေးခြင်းဖြင့် ဖြစ်သည်။
 
 ```python
 
@@ -64,7 +64,7 @@ autogen.AssistantAgent( name="Coder", llm_config=llm_config, ) pm = autogen.Assi
 
 ```
 
-**စိတ်ကြိုက်ပြင်နိုင်ခြင်း** - Agent များကို LLM အဖြစ်တင်မက User သို့မဟုတ် Tool အဖြစ်လည်း သတ်မှတ်နိုင်ပါတယ်။ Developer အနေနဲ့ `UserProxyAgent` ကို သတ်မှတ်နိုင်ပြီး၊ ဒီ Agent က user နဲ့ feedback ဖြင့် ဆက်ဆံရေးထားပြီး လုပ်ငန်းစတင်ဆောင်ရွက်မှုကို ဆက်လက်လုပ်ဆောင်သည်ဟုတ်၊ ရပ်ဆိုင်းသည်ဟုတ် ဆုံးဖြတ်ပေးနိုင်ပါတယ်။
+**စိတ်ကြိုက်ပြင်ဆင်နိုင်ခြင်း** - Agents များကို LLM များအဖြစ်သာမက user သို့မဟုတ် tool အဖြစ် မည်သည့် developer မှ မဆို ရေးဆွဲနိုင်သည်။ developer များအနေနှင့် တာဝန်ယူသော `UserProxyAgent` ကို သတ်မှတ်နိုင်ပြီး၊ ၎င်းသည် user မှ တုံ့ပြန်ချက်ရယူ၍ task ပြီးစီးမှုအတွက် အကြံပြုရန် အတွက် ဖြစ်သည်။ ဒီ feedback သည် task လုပ်ငန်း ဆက်လက်ဆောင်ရွက်ခြင်း သို့မဟုတ် ရပ်နားခြင်း တို့ဖြစ်နိုင်သည်။
 
 ```python
 user_proxy = UserProxyAgent(name="user_proxy")
@@ -72,30 +72,30 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 ### State နှင့် Tools
 
-စတိတ်ပြောင်းလဲမှုနဲ့ စီမံခန့်ခွဲမှုအတွက် assistant Agent က Python code ကို ထုတ်လုပ်ပြီး လုပ်ငန်းကို ပြီးမြောက်စေပါသည်။
+state ကို ပြောင်းလဲ စီမံရန်အတွက် assistant Agent သည် Python code တစ်ခု ဖန်တီးပြီး အလုပ် ပြီးဆုံးပါသည်။
 
-ဒီကိစ္စကို ဥပမာအားဖြင့် ပြပါမယ်။
+ဒီလုပ်ငန်းစဉ်၏ ဥပမာဖြစ်သည် -
 
 ![AutoGen](../../../translated_images/my/autogen.dee9a25a45fde584.webp)
 
-#### စနစ်စာသားဖြင့် သတ်မှတ်ထားသော LLM
+#### LLM ကို System Message ဖြင့် သတ်မှတ်ခြင်း
 
 ```python
 system_message="For weather related tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done."
 ```
 
-ဒီစနစ်စာသားက LLM အထူးသတ်မှတ် လုပ်ငန်းဆောင်တာတွေအတွက် စနစ်ကို ဦးတည်ညွှန်ပြသည်။ AutoGen ကိုသုံး၍ အသားတင်ထားသော AssistantAgents များစွာဖြင့် စနစ်စာသားတွေကွဲပြားစွာ အသုံးပြုနိုင်သည်။
+ဒီ system message သည် ထို LLM သတ်မှတ်ထားသော လုပ်ငန်းများအတွက် ဘာ function များ သင့်လျော်ကြောင်းညွှန်ပြသည်။ AutoGen ဖြင့် သင်သည် แตกต่างသော မတူညီသော system messages များရသော AssistantAgents များ များစွာ သတ်မှတ်နိုင်သည်။
 
-#### User ကနေ စတင်သော စကားပြောခြင်း
+#### အသုံးပြုသူမှ စကားပြောခြင်း စတင်ခြင်း
 
 ```python
 user_proxy.initiate_chat( chatbot, message="I am planning a trip to NYC next week, can you help me pick out what to wear? ", )
 
 ```
 
-User_proxy (လူ) ထံမှ စကားလုံး အဲဒါကြောင့် Agent က လုပ်ဆောင်ရမယ့် function တွေကို ရှာဖွေလေ့လာဖို့ စတင်သည်။
+user_proxy (လူ့မက်ဆေ့ခ်ျ) မှ ဒီမက်ဆေ့ခ်ျသည် Agent စတင် လုပ်ဆောင်ရန် လုပ်ငန်းစဉ်ကို စတင်ခြင်းဖြစ်သည်။
 
-#### Function တစ်ခုကို လုပ်ဆောင်ခြင်း
+#### Function ကို အကောင်အထည်ဖော်ခြင်း
 
 ```bash
 chatbot (to user_proxy):
@@ -106,23 +106,23 @@ chatbot (to user_proxy):
 
 ```
 
-ပထမဆုံး စကားပြောချက် ပြီးမြောက်ပြီးနောက် Agent က သတ်မှတ်ထားသော tool ကို အကြံပြုကြောင်း ပို့ပါမည်၊ ဒီေနရာမှာ `get_weather` ဆိုတဲ့ function ဖြစ်ပါတယ်။ သင့်စနစ်ပုံစံအရ ဒီ function ကို အလိုအလျောက် လုပ်ဆောင်နိုင်ကာ Agent ကဖတ်ရှုမှုရရှိတတ်သည်၊ မဟုတ်လျှင် user input မူတည်ပြီး လုပ်ဆောင်ပေးရပါမည်။
+စတင်သော chat ကို ပြုလုပ်ပြီးနောက် Agent သည် ခေါ်ဆိုရန်အတွက် အကြံပြု tool ကို ရိုက်ချက်ပေးပါသည်။ ဤအမှုအတွက် သည်သည် `get_weather` ဟုခေါ်သော function တစ်ခုဖြစ်သည်။ သင်၏ configuration အပေါ်မူတည်၍ ၎င်း function ကို Agent မှ မလိုလားဘဲ အလိုအလျောက် တင်နိုင်သလို၊ user input ဖြင့် ရုပ်သိမ်းပါလိမ့်မည်။
 
-ပိုမိုလေ့လာရန်အတွက် [AutoGen code နမူနာများ](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) ကို ကြည့်ရှုနိုင်ပါသည်။
+[AutoGen code နမူနာများ](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) ကို ဘယ်လိုတည်ဆောက်မလဲဆိုတာ အကောင်းဆုံးလေ့လာနိုင်ပါသည်။
 
 ## Microsoft Agent Framework
 
-[Microsoft Agent Framework](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst) သည် Microsoft ၏ အခမဲ့ SDK ဖြစ်ပြီး AI Agents နှင့် multi-agent စနစ်များကို **Python** နှင့် **.NET** နှစ်မျိုးစလုံးဖြင့် တည်ဆောက်နိုင်မည့် framework ဖြစ်သည်။ ဒီ framework သည် Microsoft ၏ နောက်ဆုံးပေါ် project နှစ်ခုဖြစ်သည့် **Semantic Kernel** ၏ စီးပွားရေးဆိုင်ရာ အင်္ဂါရပ်များနှင့် **AutoGen** ၏ multi-agent စနစ်ကို ပေါင်းစပ်ထားပြီး single framework တစ်ခုအဖြစ် ကျင်းပထားသည်။ AutoGen ၏ အဆက်သတင်းအဖြစ် အခုမှ စတင်တဲ့ Agent project များအတွက် ဒီ framework ကို အကြံပြုပါသည်။
+[Microsoft Agent Framework](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst) သည် Microsoft ၏ AI Agent များနှင့် multi-agent systems များကို **Python** နှင့် **.NET** တို့ဖြင့် တည်ဆောက်နိုင်သော open-source SDK ဖြစ်သည်။ ၎င်းသည် Microsoft ၏ ယခင် project များဖြစ်သော **Semantic Kernel** ၏ စီးပွားရေးလုပ်ငန်း features များနှင့် **AutoGen** ၏ multi-agent ထိန်းချုပ်မှုတို့ကို ပေါင်းစည်းထားသည်။ ယနေ့တွင် agent project အသစ် စတင်ရန် AutoGen ၏ နောက်လမ်းကြောင်းအဖြစ် အကြံပြုသည်။
 
-ဒီ framework က single **chat agent** မှစ၍ ရှုပ်ထွေးသော **multi-agent workflow** အထိ ဖြန့်ချိသည်။ Microsoft Foundry, Azure OpenAI နှင့် OpenAI တို့နှင့် တိုက်ရိုက်ပေါင်းစည်းထားသည်။ OpenTelemetry မှတဆင့် Built-in observability ကို ပေးပြီး agents များ၏ လုပ်ဆောင်ချက်များကို အတိအကျနားလည်နိုင်စေသည်။
+၎င်း framework သည် တစ်ခုတည်းသော **chat agent** မှ စ၍ ခက်ခဲတော်တဲ့ **multi-agent workflow** များအထိ အလွယ်တကူ တိုးတက်နိုင်ပြီး Microsoft Foundry, Azure OpenAI, နှင့် OpenAI တို့နှင့် တိုက်ရိုက် ပေါင်းစပ်ထားသည်။ OpenTelemetry ဖြင့် ဆောင်ရွက်မှု အတိအကျ ပြန်ကြည့်သိရှိနိုင်မှုကိုလည်း ပံ့ပိုးသည်။
 
 ### State နှင့် Tools
 
-**State** - Framework က အသုံးပြုသူနှင့် စကားဝိုင်း context ကို **threads** မှတဆင့် စီမံသည်။ Agent က စကားပြောသမိုင်း (အသုံးပြုသူတောင်းဆိုမှုများ၊ tool ခေါ်ဆိုမှုများ၊ ဆာလီလ်) အား ထိန်းသိမ်းထားပြီး turns တစ်ခုချင်းစီမှာ ယခင် turns များကို အခြေခံသည်။ Threads များကို တိုက်ရိုက် သိုလှောင်ထားပြီး စကားဝိုင်း ပြန်စဖွင့်ရန် ခွင့်ပြုသည်။
+**State** - framework သည် **threads** အားဖြင့် စကားပြော context ကို စီမံသည်။ agent များသည် မက်ဆေ့ခ်ျမှတ်တမ်း (user တောင်းဆိုချက်များ၊ tool ခေါ်ဆိုချက်၊ နှင့် ၎င်းတို့ရလဒ်များ) ကို ထိန်းသိမ်းထားပြီး turn တစ်ခုပြီး turn နောက်က ဆက်ခံသည်။ Threads များကို ထိန်းသိမ်းပြီး စကားပြောမှုကို ပိတ်ထား၍ ပြန်စတင်နိုင်သည်။
 
-**Tools** - Agent သို့ Tools များကို အခြေခံ Python function များဖြင့် ပေးနိုင်ပါသည်။ Type-annotated parameters များကို schema အဖြစ် အလိုအလျော့ ပြောင်းလဲပြီး model သည် ဘယ်လိုနဲ့ ဘယ်အချိန်ခေါ်ဆိုမလဲ သိရှိစေသည်။ Framework က Model Context Protocol (MCP) servers နှင့် hosted tools များ (code interpreter အသေးစိတ်) ကိုလည်း ထောက်ပံ့သည်။
+**Tools** - Python function များကို တိုက်ရိုက် agent များသို့ ပေးပို့သည်။ Type-annotated parameter များကို schema ဖန်တီး စက်တင်ဖြစ်သဖြင့် မော်ဒယ်သည် ဘယ်အချိန်နှင့် ဘယ်လိုခေါ်လို့ရမည်ကို သိပါသည် (function calling)။ framework သည် Model Context Protocol (MCP) server များနှင့် hosted tool များ (အနုပညာကုဒ် interpreter ကိုပါ) အား ပံ့ပိုးပေးသည်။
 
-ဒီမှာ custom tool ပါတဲ့ single agent ရဲ့ ဥပမာတစ်ခုရှိသည်။
+ဒီမှာ လုပ်ငန်း တစ်ခုနှင့် custom tool တစ်ခု ပါဝင်သော agent ဥပမာရှိသည်။
 
 ```python
 import asyncio
@@ -154,14 +154,14 @@ async def main():
 asyncio.run(main())
 ```
 
-Microsoft Foundry မှ Azure OpenAI ကို ချိတ်ဆက်ရန် အစား၊ endpoint နှင့် credentials များကို client သို့ ပေးပို့ပါ။
+Microsoft Foundry ၏ Azure OpenAI နှင့် ဆက်သွယ်ရန် client သို့ endpoint နှင့် credentials ပေးပို့ပါ။
 
 ```python
 from azure.identity.aio import AzureCliCredential
 from agent_framework.openai import OpenAIChatClient
 
 client = OpenAIChatClient(
-    model="my-gpt-4o-deployment",
+    model="my-gpt-5-mini-deployment",
     azure_endpoint="https://my-resource.openai.azure.com",
     credential=AzureCliCredential(),
 )
@@ -169,78 +169,78 @@ client = OpenAIChatClient(
 
 ### Multi-agent workflows
 
-Framework ဟာ အတဲ့အရာမှာအခြား agent တွေကို တစ်ခုချင်းစီ နောက်တစ်ခုဆက်ပြီး လုပ်ကိုင်ခိုင်းတာ (context များ လွှဲပြောင်းခြင်း) သို့မဟုတ် agent များစွာကို တပြိုင်နက် မျှဝေပေးပြီး သူတို့ရဲ့ ရလဒ်များကို စုစည်းပြည့်စုံစေခြင်း အတွက် အထူးကောင်းမွန်သည်။
+ဒီ framework ၏ ထူးခြားမှုမှာ 여러 agent များကို တစ်ပြိုင်နက် တွဲညှိခြင်းဖြစ်သည်။ ဥပမာ agent များကို တစ်ချိန်တည်းတွင် တစ်ခုချင်းလှည့်လုပ်ခြင်း( တစ်ခု၏ context ကို နောက်တစ်ခုသို့ ပို့ခြင်း) သို့မဟုတ် agent များစွာ parallel တင်လုပ်ပြီး ၎င်းတို့ရလဒ်များ ကို စုစည်းခြင်းဖြစ်သည်။
 
 ```python
 from agent_framework.orchestrations import SequentialBuilder, ConcurrentBuilder
 
-# နောက်ဆက်လက်အသွားအလာအဖြစ် ကိုယ်စားလှယ်များကို လည်ပတ်ပါ၊ စကားပြောဆိုမှု အကြောင်းအရာကို ချိတ်ဆက်ပါ။
+# ကိုယ်စားလှယ်များကို တန်းလိုက် အပ်နှံပြီး၊ စကားပြော ဆက်စပ်မှုကို ဆက်လက် ပေးပို့သည်
 sequential = SequentialBuilder(participants=[researcher, writer, editor]).build()
 
-# ကိုယ်စားလှယ်များကို တပြိုင်နက်စီ ဖြန့်ချိပြီး၊ ၎င်းတို့၏ တုံ့ပြန်ချက်များကို စုစည်းပါ။
+# ကိုယ်စားလှယ်များကို တပြိုင်နက် အဖြန်ထုတ်ပြီး၊ ၎င်းတို့၏ တုံ့ပြန်ချက်များကို စုပေါင်းသည်
 concurrent = ConcurrentBuilder(participants=[analyst_a, analyst_b, analyst_c]).build()
 ```
 
-Framework ကိုထည့်သွင်းပြီး စတင်အသုံးပြုရန်--
+Framework ကို install ပြီး စတင်လိုက်ပါ -
 
 ```bash
 pip install agent-framework-core
-# ရွေးချယ်စရာ ပေါင်းစည်းမှုများ
+# ရွေးချယ်စရာပေါင်းစည်းမှုများ
 pip install agent-framework-openai       # OpenAI နှင့် Azure OpenAI
 pip install agent-framework-foundry      # Microsoft Foundry
 ```
 
-[Microsoft Agent Framework repository](https://github.com/microsoft/agent-framework?WT.mc_id=academic-105485-koreyst) နှင့် [တရားဝင်စာတမ်းများ](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst) များကို ပိုမိုလေ့လာနိုင်သည်။
+[Microsoft Agent Framework repository](https://github.com/microsoft/agent-framework?WT.mc_id=academic-105485-koreyst) နှင့် [တရားဝင်စာရွက်စာတမ်း](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst) တွင် ပိုမိုလေ့လာနိုင်သည်။
 
 ## Taskweaver
 
-နောက်တစ်ခု စူးစမ်းမည့် agent framework ကတော့ [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst) ဖြစ်ပြီး “code-first” agent လို့ လူသိများသည်။ `strings` အသုံးပြုမှု အစား Python DataFrames တွေနဲ့အလုပ်လုပ်နိုင်ပါတယ်။ ဒါက data analysis နဲ့ generation လုပ်ငန်းအတွက် အထူးအသုံးဝင်ပြီး ဂရပ်နဲ့ဇယားဖန်တီးခြင်း သို့မဟုတ် စံတော်ချိန်နံပါတ်တွေထုတ်ယူခြင်း စတာတွေလုပ်ဖို့ အသုံးဝင်ပါတယ်။
+နောက်တစ်ခု အကြောင်းဖေါ်ပြမည့် agent framework သည် [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst) ဖြစ်သည်။ ၎င်းကို "code-first" agent ဟု ခေါ်ကြပြီး `strings` ဖြင့်သာ မဟုတ် DataFrames များဖြင့် Python အတွင်း လုပ်ဆောင်နိုင်သည်။ ဒါက data analysis နှင့် ကြိုတင်ထုတ်လုပ်မှုလုပ်ငန်းများတွင် အလွန်အသုံးဝင်သည်။ ဥပမာ လက်တွေ့ သို့မဟုတ် ဖန်တီးတာသည် graphs နှင့် charts တည်ဆောက်ခြင်း သို့မဟုတ် ကျပ်တည်းဟုတွင် random number များ ဖန်တီးခြင်းဖြစ်နိုင်သည်။
 
 ### State နှင့် Tools
 
-စကားပြောအခြေအနေကို စီမံရန် TaskWeaver က `Planner` ဆိုတဲ့အယူအဆကိုသုံးတယ်။ `Planner` ဆိုတာဟာ အသုံးပြုသူတောင်းဆိုချက်တွေကို လက်ခံပြီး လုပ်ငန်းလိုအပ်ချက်တွေကို အစီအစဉ်ပြုစုတဲ့ LLM ပါ။
+စကားပြောမှု State ကို စီမံရန် TaskWeaver သည် `Planner` အယူအဆကို သုံးသည်။ `Planner` သည် LLM တစ်ခုဖြစ်ပြီး user မှ တောင်းဆိုမှုကို ဖမ်းယူထားပြီး ပြီးစီးရမည့် task များကို ရှာဖွေ စီမံသည်။
 
-လုပ်ငန်းများကို ပြီးမြောက်စေရန် `Planner` ကို `Plugins` ဆိုတဲ့ tool စုဆောင်းမှုပေးတယ်။ ဒါတွေဟာ Python class များ သို့မဟုတ် စက် code ရှင်းလင်းစနစ်တွေ ဖြစ်နိုင်သည်။ ဒီ plugins တွေကို embedding အဖြစ် သိမ်းဆည်းထားတာကြောင့် LLM က درست plugin ရှာဖွေရာမှာ တိုးတက်ကောင်းမွန်ပြီး ရှာဖွေတတ်စေသည်။
+task များကို ပြီးဆုံးရန် `Planner` သည် `Plugins` ဟုခေါ်သော tool များစုစည်းမှုအတွက်ဖွင့်ပေးသည်။ ၎င်းသည် Python classes သို့မဟုတ် ဝေါဟာရ interpreter များဖြစ်နိုင်သည်။ Plugins များကို embeddings အဖြစ်သိမ်းဆည်းထားပြီး LLM သည် မှန်ကန်သော plugin ကို အလွယ်တကူ ရှာဖွေနိုင်ပါသည်။
 
 ![Taskweaver](../../../translated_images/my/taskweaver.da8559999267715a.webp)
 
-Anomaly detection ကို ကိုင်တွယ်ရန် plugin ဥပမာတစ်ခုရှိသည်။
+အောက်ပါမှာ anomaly detection ကို ကိုင်တွယ်သည့် plugin ၏ ဥပမာဖြစ်သည် -
 
 ```python
 class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_col_name: str, value_col_name: str):
 ```
 
-ကုဒ်ကို 실행하기မပြုလုပ်ခင် စစ်ဆေးပါသည်။ Taskweaver မှာ context ကို စီမံရန် `experience` ဆိုတဲ့ feature တစ်ခုရှိသည်။ Experience က YAML ဖိုင်ထဲမှာ စကားပြော context ကို ကြာရှည်သိမ်းဆည်းနိုင်ပြီး LLM က ဒီအရည်အချင်းကို အချိန်ကြာလာတာနဲ့ တိုးတက်လာစေသည်။
+ကုဒ်သည် တည်ဆောက်ခြင်းမတိုင်မှီ စစ်ဆေးသည်။ Taskweaver ထဲတွင် context စီမံရန်နောက်ထပ် function တစ်ခုမှာ `experience` ဖြစ်သည်။ Experience သည် စကားပြော context ကို YAML ဖိုင်တစ်ခုတွင် ကြာရှည်သိမ်းထားခြင်းဖြစ်သည်။ ၎င်းကို configure ပြုလုပ်၍ LLM သည် ယှဉ်တွဲစကားပြောမှုများကို ပုသိပ်လေ့လာ၍ အချိန်အတောအတွင်း တိုးတက်မြှင့်တင်နိုင်သည်။
 
 ## JARVIS
 
-နောက်ဆုံး agent framework ကတော့ [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file&WT.mc_id=academic-105485-koreyst) ဖြစ်ပြီး JARVIS ၏ ထူးခြားချက်က စကားပြောအခြေအနေ (`state`) ကို စီမံရန် LLM ကို အသုံးပြုခြင်းနှင့် `tools` အဖြစ် အခြား AI မော်ဒယ်များကို အသုံးပြုခြင်း ဖြစ်သည်။ AI မော်ဒယ်တိုင်းသည် အထူးပြုလုပ်ချက်များ လုပ်ဆောင်သော အထူးပြု မော်ဒယ်များဖြစ်ပြီး အရာဝတ္ထု မှတ်တမ်းတင်ခြင်း၊ အသံစာတမ်းပြုခြင်း သို့မဟုတ် ပုံလေး ဆွဲခြင်း စသည်တို့ဖြစ်သည်။
+နောက်ဆုံး agent framework သည် [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file&WT.mc_id=academic-105485-koreyst) ဖြစ်သည်။ JARVIS ၏ထူးခြားချက်မှာ LLM သည် စကားပြော **state** ကို စီမံခြင်း ဖြစ်ပြီး `tools` များမှာ အခြား AI မော်ဒယ်များ ဖြစ်သည်။ AI မော်ဒယ်တိုင်းမှာ သတ်မှတ်ထားသော အလုပ်များကို လုပ်ဆောင်သော အထူးပြု မော်ဒယ်များဖြစ်သည်၊ ဥပမာ object detection, transcription သို့မဟုတ် image captioning ပါ။
 
 ![JARVIS](../../../translated_images/my/jarvis.762ddbadbd1a3a33.webp)
 
-အထူးပန်းတိုင် မော်ဒယ်များကို အသုံးပြုရန် LLM ဟာ အသုံးပြုသူ၏ တောင်းဆိုမှုကို လက်ခံပြီး အထူးပြု လုပ်ငန်းနဲ့ လိုအပ်သောဒေတာ/အချက်အလက်များကို ထုတ်ဖော်သိမြင်သည်။
+LLM သည် ပုံမှန်ဒီဇိုင်းမော်ဒယ်ဆိုပြီး user မှ တောင်းဆိုမှုကို လက်ခံကာ သတ်မှတ်ထားသော task နှင့် အကျိုးဝါး/ဒေတာများကို ခွဲခြားထားသည်။
 
 ```python
 [{"task": "object-detection", "id": 0, "dep": [-1], "args": {"image": "e1.jpg" }}]
 ```
 
-LLM က ထိုတောင်းဆိုမှုကို အထူးပန်းတိုင်မော်ဒယ် က နားလည်နိုင်ဖို့ JSON သို့နှင့် ပြောင်းထားသည်။ AI မော်ဒယ်က လုပ်ငန်းအောက်တွင်ခံယူချက် ပြန်ပေးလာပါက LLM က အဲဒီဖြေကြားချက်ကို လက်ခံပါသည်။
+LLM သည် request ကို specialized AI မော်ဒယ် အား သိမ်းထားသော ပုံစံဖြစ် JSON အနေဖြင့် ပြောင်းလဲလုပ်ဆောင်ပါသည်။ AI မော်ဒယ်အနေဖြင့် အလုပ်ဆောင်ပြီး ရလဒ် များကလည်း LLM သို့ ပြန်သွားသည်။
 
-လုပ်ငန်း ပြီးမြောက်ဖို့ မော်ဒယ်များစွာလိုအပ်ပါက ဒီ model တွေရဲ့ ဖြေကြားချက်များအား စုစည်းပြီး အသုံးပြုသူလာတဲ့ ဖြေကြားချက် ထုတ်ဖော်ရန် ပြင်ဆင်သည်။
+အလုပ်ပြီးစီးရန် မော်ဒယ်များစွာ ခေါ်ရန်လိုလျှင် ဤ model များမှရရှိသော ဖြေကြောင်းများကို စုစည်းညှိနှိုင်းကာ user တွင် တုံ့ပြန်ချက် ထုတ်ပေးသည်။
 
-ဥပမာအောက်မှာ အသုံးပြုသူက ပုံထဲမှာ အရာဝတ္ထုများ၏ ဖော်ပြချက်နှင့် အရေအတွက်ကို တောင်းဆိုတဲ့ အခါ ဒီလိုပုံစံဖြင့် ဆောင်ရွက်မည်ကို မြင်ရပါမည်။
+အောက်ပါ ဥပမာတွင် user တစ်ဦးမှ ဓာတ်ပုံရှိ objects များ၏ ဖော်ပြချက်နှင့် အရေအတွက် တောင်းဆိုသည့် နည်းလမ်းကို ဖော်ပြသည်။
 
-## လုပ်ငန်းစီမံကိန်း
+## လုပ်ငန်းတာဝန်
 
-AI Agents သင်ယူမှုကို ဆက်လက်တိုးတက်ရန် Microsoft Agent Framework ဖြင့် အောက်ပါအတိုင်း application တစ်ခု တည်ဆောက်ပါ။
+AI Agents ကို ဆက်လက်လေ့လာရန် Microsoft Agent Framework ဖြင့် အောက်ပါအတိုင်း အက်ပ် တစ်ခု တည်ဆောက်ပါ -
 
-- ပညာရေး စတားတပ်တစ်ခု၏ ကဏ္ဍများအကြား စီးပွားရေး ဆွေးနွေးပွဲကို အတုလုပ်ထားသော အက်ပလီကေးရှင်း။
-- LLM များကို မတူသောပုဂ္ဂိုလ်များနှင့် ဦးစားပေးချက်များ နားလည်စေရန် စနစ်စာသားများ ဖန်တီးပြီး အသုံးပြုသူကို ထုတ်ကုန်အသစ် ဝင်ငွေ ဆွေးနွေးခွင့် ပေးပါ။
-- LLM က အဆိုပြုထားသော ထုတ်ကုန်အကြံပြုမှုကို တိုင်းတာ ရှေးရွေးကောက်ချက်များဖန်တီးရန် ဝန်ကြီးဌာန တစ်ခုစီထံမှ တုံ့ပြန်မေးခွန်းများ ထုတ်လုပ်ပါ။
+- ပညာရေး စတိတ်တစ်ခု၏ ကွဲပြားသော ဌာနများနှင့် စီးပွားရေး အစည်းအဝေးကို နမူနာပြုကြည့်ရန်။
+- LLM များကို မတူညီသော persona များနှင့် ဦးစားပေးချက်များ ဆိုင်ရာ ဒီဇိုင်း system message များ ဖန်တီးပြီး အသုံးပြုသူအား ထုတ်ကုန်အကြံပြု မှတ်ချက် တင်နိုင်စေပါ။
+- ထို့နောက် 各ဌာနမှ follow-up မေးခွန်းများကို ရှာဖွေရန် ဖန်တီးသင့်ပါသည်၊ ဒါမှ pitch နှင့် ထုတ်ကုန်အကြံစာတို့ တိုးတက်မြှင့်တင်နိုင်မည်။
 
-## သင်ယူခြင်း ဒီမှာ မရပ်ပါနဲ့၊ ခရီးစဉ်ကို ဆက်လက်ပါ
+## သင်ယူမှု သက်တမ်း မရပ်နား၊ ခရီးလမ်းဆက်လက် နှင့်အတူဖြတ်သန်းပါ
 
-ဒီသင်ခန်းစာပြီးလျှင် ကျွန်ုပ်တို့ရဲ့ [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ကို ကြည့်ပြီး Generative AI ဗဟုသုတကို ဆက်လက်မြှင့်တင်နိုင်ပါသည်။
+ဒီသင်ခန်းစာပြီးသည်နှင့် [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) တွင် သင့် Generative AI ကျွမ်းကျင်မှုများ အဆင့်မြင့်စေနိုင်ပါသည်။
 
 ---
 

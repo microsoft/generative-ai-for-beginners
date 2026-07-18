@@ -57,10 +57,13 @@ In your fork: **Code -> Codespaces -> New on main**
    echo . > .env
    ```
 
-3. **Edit the `.env` File**: Open the `.env` file in a text editor (e.g., VS Code, Notepad++, or any other editor). Add the following line to the file, replacing `your_github_token_here` with your actual GitHub token:
+3. **Edit the `.env` File**: Open the `.env` file in a text editor (e.g., VS Code, Notepad++, or any other editor). Add the following lines to the file, replacing the placeholders with your actual Microsoft Foundry Models endpoint and key (see [`providers.md`](03-providers.md) for how to get these):
+
+   > **Note:** GitHub Models (and its `GITHUB_TOKEN` variable) is retiring at the end of July 2026. Use [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) instead.
 
    ```env
-   GITHUB_TOKEN=your_github_token_here
+   AZURE_INFERENCE_ENDPOINT=your_foundry_endpoint_here
+   AZURE_INFERENCE_CREDENTIAL=your_foundry_api_key_here
    ```
 
 4. **Save the File**: Save the changes and close the text editor.
@@ -80,13 +83,14 @@ In your fork: **Code -> Codespaces -> New on main**
    # Load environment variables from .env file
    load_dotenv()
 
-   # Access the GITHUB_TOKEN variable
-   github_token = os.getenv("GITHUB_TOKEN")
+   # Access the Microsoft Foundry Models variables
+   endpoint = os.getenv("AZURE_INFERENCE_ENDPOINT")
+   token = os.getenv("AZURE_INFERENCE_CREDENTIAL")
 
-   print(github_token)
+   print(endpoint)
    ```
 
-That's it! You've successfully created a `.env` file, added your GitHub token, and loaded it into your Python application.
+That's it! You've successfully created a `.env` file, added your Microsoft Foundry Models credentials, and loaded them into your Python application.
 
 ## How to Run locally on your computer
 
@@ -141,7 +145,7 @@ The environment file specifies the dependencies we need. `<environment-name>` re
 With that done, you can go ahead and create your Conda environment by running the commands below in your command line/terminal
 
 ```bash
-conda env create --name ai4beg --file .devcontainer/environment.yml # The .devcontainer sub path applies only to Codespace setups
+conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer sub path applies to only Codespace setups
 conda activate ai4beg
 ```
 
@@ -179,22 +183,22 @@ Once you access the URL, you should see the course outline and be able to naviga
 
 ### Running in a container
 
-An alternative to setting everything up on your computer or Codespace is to use a [container](https://en.wikipedia.org/wiki/Containerization_%28computing%29?WT.mc_id=academic-105485-koreyst). The special `.devcontainer` folder within the course repository makes it possible for VS Code to set up the project within a container. Outside of Codespaces, this will require the installation of Docker, and quite frankly, it involves a bit of work, so we recommend this only to those with experience working with containers.
+An alternative to setting everything up on your computer or Codespace is to use a [container](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>). The special `.devcontainer` folder within the course repository makes it possible for VS Code to set up the project within a container. Outside of Codespaces, this will require the installation of Docker, and quite frankly, it involves a bit of work, so we recommend this only to those with experience working with containers.
 
 One of the best ways to keep your API keys secure when using GitHub Codespaces is by using Codespace Secrets. Please follow the [Codespaces secrets management](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) guide to learn more about this.
 
 
 ## Lessons and Technical Requirements
 
-The course has 6 concept lessons and 6 coding lessons.
+The course has "Learn" lessons that explain Generative AI concepts and "Build" lessons with hands-on code examples in both **Python** and **TypeScript** where possible.
 
-For the coding lessons, we are using the Azure OpenAI Service. You will need access to the Azure OpenAI service and an API key to run this code. You can apply to get access by [completing this application](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst).
+For the coding lessons, we use Azure OpenAI in Microsoft Foundry. You'll need an Azure subscription and an API key. Access is open - no application required - so you can [create a Microsoft Foundry resource and deploy a model](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst) to get your endpoint and key.
 
-While you wait for your application to be processed, each coding lesson also includes a `README.md` file where you can view the code and outputs.
+Each coding lesson also includes a `README.md` file where you can view the code and outputs without running anything.
 
 ## Using the Azure OpenAI Service for the first time
 
-If this is your first time working with the Azure OpenAI service, please follow this guide on how to [create and deploy an Azure OpenAI Service resource.](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
+If this is your first time working with the Azure OpenAI service, please follow this guide on how to [create and deploy an Azure OpenAI Service resource.](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
 
 ## Using the OpenAI API for the first time
 
@@ -218,16 +222,18 @@ Most contributions require you to agree to a Contributor License Agreement (CLA)
 
 Important: when translating text in this repo, please ensure that you do not use machine translation. We will verify translations via the community, so please only volunteer for translations in languages where you are proficient.
 
+
 When you submit a pull request, a CLA-bot will automatically determine whether you need to provide a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions provided by the bot. You will only need to do this once across all repositories using our CLA.
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst). For more information read the Code of Conduct FAQ or contact [Email opencode](opencode@microsoft.com) with any additional questions or comments.
 
 ## Let's Get Started
+
 Now that you have completed the needed steps to complete this course, let's get started by getting an [introduction to Generative AI and LLMs](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst).
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

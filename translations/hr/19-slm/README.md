@@ -1,144 +1,144 @@
-# Uvod u Male Jezične Modele za Generativnu AI za Početnike
-Generativna AI je fascinantno polje umjetne inteligencije koje se fokusira na stvaranje sustava sposobnih za generiranje novog sadržaja. Taj sadržaj može biti od teksta i slika do glazbe pa čak i čitavih virtualnih okruženja. Jedna od najuzbudljivijih primjena generativne AI nalazi se u području jezičnih modela.
+# Uvod u male jezične modele za generativnu umjetnu inteligenciju za početnike
+Generativna umjetna inteligencija je fascinantno područje umjetne inteligencije koje se fokusira na stvaranje sustava sposobnih za generiranje novog sadržaja. Taj sadržaj može varirati od teksta i slika do glazbe, pa čak i čitavih virtualnih okruženja. Jedna od najuzbudljivijih primjena generativne umjetne inteligencije nalazi se u području jezičnih modela.
 
-## Što su Mali Jezični Modeli?
+## Što su mali jezični modeli?
 
-Mali jezični model (SLM) predstavlja smanjenu varijantu velikog jezičnog modela (LLM), koristeći mnoge arhitektonske principe i tehnike LLM-ova, dok pokazuje značajno smanjen računarski otisak.
+Mali jezični model (SLM) predstavlja smanjenu varijantu velikog jezičnog modela (LLM), koristeći mnoge arhitektonske principe i tehnike LLM-ova, uz značajno smanjen računalni otisak.
 
-SLM-ovi su podskup jezičnih modela dizajniranih za generiranje teksta sličnog ljudskom. Za razliku od svojih većih kolega poput GPT-4, SLM-ovi su kompaktniji i učinkovitiji, što ih čini idealnima za primjene gdje su računalni resursi ograničeni. Unatoč manjoj veličini, mogu obavljati razne zadatke. Obično se SLM-ovi konstruiraju komprimirajući ili destilirajući LLM-ove, nastojeći zadržati značajan dio originalne funkcionalnosti i jezičnih sposobnosti modela. Ovo smanjenje veličine modela smanjuje ukupnu složenost, čineći SLM-ove učinkovitijima u pogledu korištenja memorije i računalnih zahtjeva. Unatoč ovim optimizacijama, SLM-ovi mogu obavljati širok spektar zadataka obrade prirodnog jezika (NLP):
+SLM-ovi su podskup jezičnih modela dizajniranih za generiranje teksta nalik ljudskom. Za razliku od njihovih većih kolega, poput GPT-4, SLM-ovi su kompaktniji i učinkovitiji, što ih čini idealnima za aplikacije gdje su računalni resursi ograničeni. Unatoč njihovoj manjoj veličini, oni i dalje mogu obavljati razne zadatke. Tipično se SLM-ovi konstruiraju kompresijom ili destilacijom LLM-ova, s ciljem zadržavanja značajnog dijela funkcionalnosti i jezičnih sposobnosti izvornog modela. Ovo smanjenje veličine modela smanjuje ukupnu složenost, čineći SLM-ove učinkovitijima u pogledu korištenja memorije i računalnih zahtjeva. Unatoč ovim optimizacijama, SLM-ovi i dalje mogu obavljati širok spektar zadataka obrade prirodnog jezika (NLP):
 
-- Generiranje teksta: Stvaranje koherentnih i kontekstualno relevantnih rečenica ili odlomaka.
+- Generiranje teksta: Stvaranje koherentnih i kontekstualno prikladnih rečenica ili odlomaka.
 - Dovršavanje teksta: Predviđanje i dovršavanje rečenica na temelju danog upita.
-- Prevođenje: Pretvaranje teksta s jednog jezika na drugi.
-- Sažimanje: Sažimanje dugih tekstova u kraće, preglednije sažetke.
+- Prevođenje: Prevođenje teksta s jednog jezika na drugi.
+- Sažimanje: Sažimanje dugih tekstova u kraće, lakše probavljive sažetke.
 
-Iako uz određene kompromise u izvedbi ili dubini razumijevanja u usporedbi s njihovim većim kolegama.
+Iako s određenim kompromisima u izvedbi ili dubini razumijevanja u usporedbi s njihovim većim kolegama.
 
-## Kako Male Jezične Modele Funkcioniraju?
-SLM-ovi se treniraju na ogromnim količinama tekstualnih podataka. Tijekom treniranja, uče obrasce i strukture jezika, omogućujući im generiranje teksta koji je gramatički ispravan i kontekstualno prikladan. Proces treniranja uključuje:
+## Kako mali jezični modeli rade?
+SLM-ovi se treniraju na ogromnim količinama tekstualnih podataka. Tijekom treninga uče obrasce i strukture jezika, što im omogućuje generiranje teksta koji je gramatički ispravan i kontekstualno prikladan. Proces treninga uključuje:
 
-- Prikupljanje podataka: Sakupljanje velikih skupova tekstualnih podataka iz različitih izvora.
-- Predobrada: Čišćenje i organiziranje podataka kako bi bili prikladni za treniranje.
-- Treniranje: Korištenje algoritama strojnog učenja za učenje modela razumijevanja i generiranja teksta.
-- Fino podešavanje: Prilagođavanje modela radi poboljšanja njegovih performansi na specifičnim zadacima.
+- Prikupljanje podataka: Prikupljanje velikih skupova tekstualnih podataka iz različitih izvora.
+- Predobrada: Čišćenje i organizaciju podataka kako bi bili prikladni za trening.
+- Trening: Korištenje algoritama strojnog učenja za učenje modela kako razumjeti i generirati tekst.
+- Fine-tuning: Prilagodbu modela radi poboljšanja izvedbe na specifičnim zadacima.
 
-Razvoj SLM-ova usklađen je s rastućom potrebom za modelima koji se mogu implementirati u okruženjima s ograničenim resursima, poput mobilnih uređaja ili rubnih računalnih platformi, gdje široki LLM-ovi mogu biti nepraktični zbog svojih velikih zahtjeva za resursima. Fokusujući se na učinkovitost, SLM-ovi uravnotežuju performanse i pristupačnost, omogućujući širu primjenu u različitim područjima.
+Razvoj SLM-ova usklađen je s rastućom potrebom za modelima koji se mogu implementirati u okruženjima s ograničenim resursima, poput mobilnih uređaja ili edge računalnih platformi, gdje potpuni LLM-ovi mogu biti nepraktični zbog svojih velikih zahtjeva za resursima. Fokusirajući se na učinkovitost, SLM-ovi balansiraju između izvedbe i pristupačnosti, omogućujući širu primjenu u raznim područjima.
 
 ![slm](../../../translated_images/hr/slm.4058842744d0444a.webp)
 
-## Ciljevi Učenja
+## Ciljevi učenja
 
-U ovom ćemo lekciji predstaviti znanje o SLM-ovima i kombinirati ga s Microsoft Phi-3 kako bismo naučili različite scenarije u tekstualnom sadržaju, viziji i MoE.
+U ovoj lekciji nastojimo predstaviti znanje o SLM-ovima i povezati ga s Microsoft Phi-3 kako bismo naučili različite scenarije u tekstualnom sadržaju, viziji i MoE.
 
-Do kraja ove lekcije trebali biste moći odgovoriti na sljedeća pitanja:
+Na kraju ove lekcije trebali biste moći odgovoriti na sljedeća pitanja:
 
 - Što je SLM?
-- Koja je razlika između SLM i LLM?
+- Koja je razlika između SLM-a i LLM-a?
 - Što je Microsoft Phi-3/3.5 obitelj?
-- Kako pokrenuti inferencu s Microsoft Phi-3/3.5 obitelji?
+- Kako izvršiti inferenciju s Microsoft Phi-3/3.5 obitelji?
 
 Spremni? Krenimo.
 
-## Razlike između Velikih jezičnih Modela (LLM) i Malih Jezičnih Modela (SLM)
+## Razlike između velikih jezičnih modela (LLM) i malih jezičnih modela (SLM)
 
-I LLM-ovi i SLM-ovi izgrađeni su na temeljnim principima probabilističkog strojnog učenja, slijedeći slične pristupe u arhitektonskom dizajnu, metodologijama treninga, procesima generiranja podataka i tehnikama evaluacije modela. Međutim, nekoliko ključnih čimbenika razlikuje ove dvije vrste modela.
+I LLM-ovi i SLM-ovi temelje se na osnovnim principima probabilističkog strojnog učenja, prateći slične pristupe u arhitektonskom dizajnu, metodologiji treninga, procesima generiranja podataka i tehnikama evaluacije modela. Međutim, nekoliko ključnih čimbenika razlikuju ove dvije vrste modela.
 
-## Primjene Malih Jezičnih Modela
+## Primjene malih jezičnih modela
 
 SLM-ovi imaju širok spektar primjena, uključujući:
 
-- Chatbotovi: Pružanje korisničke podrške i angažiranje korisnika u konverzacijskom obliku.
-- Kreiranje sadržaja: Pomoć piscima generiranjem ideja ili čak izradom cijelih članaka.
-- Obrazovanje: Pomoć studentima pri pisanju zadataka ili učenju novih jezika.
-- Pristupačnost: Izrada alata za osobe s invaliditetom, poput sustava pretvorbe teksta u govor.
+- Chatbotovi: Pružanje korisničke podrške i interakcija s korisnicima na konverzacijski način.
+- Kreiranje sadržaja: Pomoć piscima u generiranju ideja ili čak u izradi čitavih članaka.
+- Obrazovanje: Pomoć studentima u pisanju zadataka ili učenju novih jezika.
+- Pristupačnost: Kreiranje alata za osobe s invaliditetom, poput sustava za pretvaranje teksta u govor.
 
 **Veličina**
   
-Primarna je razlika između LLM-ova i SLM-ova u veličini modela. LLM-ovi, poput ChatGPT-a (GPT-4), mogu sadržavati procijenjenih 1,76 bilijuna parametara, dok open-source SLM-ovi poput Mistral 7B imaju znatno manji broj parametara — oko 7 milijardi. Ova razlika uglavnom proizlazi iz razlika u arhitekturi modela i procesima treniranja. Na primjer, ChatGPT koristi mehanizam samopozornosti unutar okvira enkoder-dekoder, dok Mistral 7B koristi pozornost s pokretnim prozorom, što omogućuje učinkovitije treniranje unutar samo-dekoder modela. Ova arhitektonska varijacija ima duboke implikacije na složenost i performanse ovih modela.
+Primarna razlika između LLM-ova i SLM-ova leži u veličini modela. LLM-ovi, poput ChatGPT-a (GPT-4), mogu sadržavati procijenjenih 1,76 bilijuna parametara, dok su open-source SLM-ovi poput Mistral 7B dizajnirani sa značajno manjim brojem parametara — otprilike 7 milijardi. Ova razlika prvenstveno proizlazi iz razlika u arhitekturi modela i procesima treninga. Na primjer, ChatGPT koristi mehanizam samo-pažnje unutar encoder-decoder okvira, dok Mistral 7B koristi sliding window pažnju koja omogućava učinkovitiji trening unutar modela samo s decoderom. Ova arhitektonska razlika ima duboke implikacije na složenost i izvedbu ovih modela.
 
 **Razumijevanje**
 
-SLM-ovi su obično optimizirani za izvedbu unutar određenih domena, čineći ih vrlo specijaliziranim, ali potencijalno ograničenim u mogućnosti pružanja širokog kontekstualnog razumijevanja u više područja znanja. Nasuprot tome, LLM-ovi nastoje simulirati ljudsku inteligenciju na sveobuhvatnijoj razini. Osposobljeni na ogromnim, raznolikim skupovima podataka, LLM-ovi su dizajnirani da dobro funkcioniraju u različitim domenama, nudeći veću svestranost i prilagodljivost. Posljedično, LLM-ovi su prikladniji za širi raspon zadataka, poput obrade prirodnog jezika i programiranja.
+SLM-ovi su tipično optimizirani za izvedbu unutar specifičnih domena, čineći ih vrlo specijaliziranima, ali potencijalno ograničenima u njihovoj sposobnosti pružanja širokog kontekstualnog razumijevanja preko više područja znanja. Nasuprot tome, LLM-ovi nastoje simulirati inteligenciju nalik ljudskoj na sveobuhvatnijoj razini. Trenirani na ogromnim i raznolikim skupovima podataka, LLM-ovi su dizajnirani za dobru izvedbu u raznim domenama, nudeći veću svestranost i prilagodljivost. Posljedično, LLM-ovi su prikladniji za širi spektar zadataka, poput obrade prirodnog jezika i programiranja.
 
-**Računarstvo**
+**Računalna snaga**
 
-Treniranje i implementacija LLM-ova zahtijevaju velike resurse, često zahtijevajući značajnu računalnu infrastrukturu, uključujući velike GPU klastere. Na primjer, treniranje modela poput ChatGPT-a od početka može zahtijevati tisuće GPU-a tijekom dugih razdoblja. Nasuprot tome, SLM-ovi, sa svojim manjim brojem parametara, dostupniji su u smislu računalnih resursa. Modeli poput Mistral 7B mogu se trenirati i pokretati na lokalnim računalima opremljenim umjerenim GPU kapacitetima, iako treniranje još uvijek traži nekoliko sati na više GPU-a.
+Trening i implementacija LLM-ova su procesi koji zahtijevaju velike resurse, često uključujući značajnu računalnu infrastrukturu, uključujući velike GPU klastere. Na primjer, treniranje modela poput ChatGPT-a od nule može zahtijevati tisuće GPU-a tijekom dugog vremenskog razdoblja. Nasuprot tome, SLM-ovi s manjim brojem parametara su pristupačniji u smislu računalnih resursa. Modeli poput Mistral 7B mogu se trenirati i koristiti na lokalnim računalima opremljenim umjerenim GPU sposobnostima, iako trening i dalje zahtijeva nekoliko sati preko više GPU-a.
 
 **Pristranost**
 
-Pristranost je poznat problem u LLM-ovima, uglavnom zbog prirode trening podataka. Ovi modeli često se oslanjaju na sirove, otvoreno dostupne podatke s interneta, koji mogu podzastupljivati ili pogrešno predstavljati određene skupine, uvesti pogrešne oznake ili odražavati jezične pristranosti pod utjecajem dijalekata, geografske varijacije i gramatičkih pravila. Nadalje, složenost LLM arhitektura može nenamjerno pojačati pristranost, koja može proći nezapaženo bez pažljivog fino podešavanja. S druge strane, SLM-ovi, budući da su trenirani na ograničenijim, domen-specifičnim skupovima podataka, inherentno su manje podložni takvim pristranostima, iako nisu imuni na njih.
+Pristranost je poznat problem kod LLM-ova, prvenstveno zbog prirode trening podataka. Ti modeli često se oslanjaju na sirove, javno dostupne podatke s interneta, koji mogu nedovoljno ili pogrešno zastupati određene skupine, uvoditi netočne oznake ili odražavati jezične pristranosti uzrokovane dijalektom, geografskim varijacijama i gramatičkim pravilima. Dodatno, složenost arhitektura LLM-ova može nenamjerno pogoršati pristranost, koja može ostati neprimijećena bez pažljivog podešavanja. S druge strane, SLM-ovi, trenirani na ograničenijim, domenski specifičnim skupovima podataka, inherentno su manje podložni takvim pristranostima, iako nisu potpuno imuni.
 
 **Inferencija**
 
-Manja veličina SLM-ova pruža im značajnu prednost u brzini inferencije, omogućujući efikasno generiranje izlaza na lokalnom hardveru bez potrebe za opsežnim paralelnim procesiranjem. Nasuprot tome, LLM-ovi zbog svoje veličine i složenosti često zahtijevaju znatne paralelne računalne resurse da bi postigli prihvatljivo vrijeme inferencije. Prisustvo više istodobnih korisnika dodatno usporava vrijeme odziva LLM-ova, osobito kada se implementiraju na velikoj skali.
+Smanjena veličina SLM-ova pruža im značajnu prednost u brzini inferencije, omogućujući efikasno generiranje izlaza na lokalnom hardveru bez potrebe za opsežnim paralelnim procesiranjem. Nasuprot tome, LLM-ovi zbog svoje veličine i složenosti često zahtijevaju značajne paralelne računalne resurse za postizanje prihvatljivog vremena inferencije. Prisustvo više istodobnih korisnika dodatno usporava vrijeme odgovora LLM-ova, posebno kada su implementirani u velikom opsegu.
 
-Ukratko, iako LLM-ovi i SLM-ovi dijele temeljnu osnovu u strojnome učenju, oni se značajno razlikuju po veličini modela, zahtjevima za resursima, razumijevanju konteksta, osjetljivosti na pristranost i brzini inferencije. Te razlike odražavaju njihovu prikladnost za različite slučajeve uporabe, gdje su LLM-ovi svestraniji, ali zahtjevniji za resurse, a SLM-ovi nude veću učinkovitost za specifične domene s manjim računalnim zahtjevima.
+Ukratko, iako LLM-ovi i SLM-ovi dijele temeljnu osnovu u strojnome učenju, značajno se razlikuju u veličini modela, zahtjevima za resursima, razumijevanju konteksta, osjetljivosti na pristranost i brzini inferencije. Te razlike odražavaju njihovu prikladnost za različite upotrebe, pri čemu su LLM-ovi svestraniji ali zahtjevniji za resurse, dok SLM-ovi nude veću učinkovitost usmjerenu na domene uz smanjene računalne zahtjeve.
 
-***Napomena: U ovoj lekciji ćemo predstaviti SLM koristeći Microsoft Phi-3 / 3.5 kao primjer.***
+***Napomena: U ovoj lekciji predstavit ćemo SLM koristeći Microsoft Phi-3 / 3.5 kao primjer.***
 
-## Predstavljanje Phi-3 / Phi-3.5 Obitelji
+## Predstavljanje obitelji Phi-3 / Phi-3.5
 
-Phi-3 / 3.5 obitelj prvenstveno cilja tekstualne, vizualne i Agent (MoE) aplikacijske scenarije:
+Obitelj Phi-3 / 3.5 usmjerena je uglavnom na scenarije primjene u tekstu, viziji i agentima (MoE):
 
 ### Phi-3 / 3.5 Instruct
 
-Prvenstveno za generiranje teksta, dovršavanje razgovora i izdvajanje informacija iz sadržaja itd.
+Glavnom za generiranje teksta, dovršavanje razgovora i ekstrakciju informacija iz sadržaja, itd.
 
 **Phi-3-mini**
 
-Jezični model od 3,8 milijardi dostupan je na Microsoft Foundry, Hugging Face i Ollama. Phi-3 modeli značajno nadmašuju jezične modele iste ili veće veličine na ključnim mjerilima (vidi brojeve mjerila ispod, veći brojevi su bolji). Phi-3-mini nadmašuje modele dvostruke veličine, dok Phi-3-small i Phi-3-medium nadmašuju veće modele, uključujući GPT-3.5.
+Jezični model od 3.8 milijardi parametara dostupan je na Microsoft Foundry, Hugging Face i Ollama. Phi-3 modeli značajno nadmašuju jezične modele iste i veće veličine na ključnim testovima (pogledajte brojeve na benchmarku dolje, veći brojevi znače bolju izvedbu). Phi-3-mini nadmašuje modele dvostruke veličine, dok Phi-3-small i Phi-3-medium nadmašuju veće modele, uključujući GPT-3.5.
 
 **Phi-3-small & medium**
 
-Sa samo 7 milijardi parametara, Phi-3-small pobjeđuje GPT-3.5T na raznim mjerilima za jezik, rezoniranje, kodiranje i matematiku.
+Sa samo 7 milijardi parametara, Phi-3-small nadmašuje GPT-3.5T na raznim testovima jezika, rezoniranja, kodiranja i matematike.
 
 Phi-3-medium s 14 milijardi parametara nastavlja ovaj trend i nadmašuje Gemini 1.0 Pro.
 
 **Phi-3.5-mini**
 
-Možemo ga smatrati nadogradnjom Phi-3-mini. Iako parametri ostaju nepromijenjeni, poboljšava sposobnost podrške više jezika (podržava 20+ jezika: arapski, kineski, češki, danski, nizozemski, engleski, finski, francuski, njemački, hebrejski, mađarski, talijanski, japanski, korejski, norveški, poljski, portugalski, ruski, španjolski, švedski, tajlandski, turski, ukrajinski) ​​i dodaje snažniju podršku za dugu kontekstualnost.
+Možemo ga smatrati nadogradnjom Phi-3-mini. Iako broj parametara ostaje nepromijenjen, poboljšava sposobnost podrške za više jezika (podržava više od 20 jezika: arapski, kineski, češki, danski, nizozemski, engleski, finski, francuski, njemački, hebrejski, mađarski, talijanski, japanski, korejski, norveški, poljski, portugalski, ruski, španjolski, švedski, tajlandski, turski, ukrajinski) i dodaje snažniju podršku za dug kontekst.
 
-Phi-3.5-mini s 3,8 milijardi parametara nadmašuje jezične modele iste veličine i izjednačen je s modelima dvostruke veličine.
+Phi-3.5-mini s 3.8 milijardi parametara nadmašuje jezične modele iste veličine i usporediv je s modelima dvostruke veličine.
 
 ### Phi-3 / 3.5 Vision
 
-Možemo promatrati Instruct model Phi-3/3.5 kao sposobnost Phi-ja za razumijevanje, dok je Vision ono što Phi-ju daje oči da razumije svijet.
+Možemo model Instruct Phi-3/3.5 smatrati Phi-ovom sposobnošću razumijevanja, a Vision je ono što daje Phi-ju oči da razumije svijet.
 
 
 **Phi-3-Vision**
 
-Phi-3-vision, sa samo 4,2 milijarde parametara, nastavlja ovaj trend i nadmašuje veće modele kao što su Claude-3 Haiku i Gemini 1.0 Pro V na općim zadacima vizualnog rezoniranja, OCR-u te razumijevanju tablica i dijagrama.
+Phi-3-vision, sa samo 4.2 milijarde parametara, nastavlja ovaj trend i nadmašuje veće modele kao što su Claude-3 Haiku i Gemini 1.0 Pro V na zadacima općeg vizualnog rezoniranja, OCR-u te razumijevanju tablica i dijagrama.
 
 
 **Phi-3.5-Vision**
 
-Phi-3.5-Vision također je nadogradnja Phi-3-Vision, dodajući podršku za više slika. To možemo smatrati poboljšanjem u vidu, sada ne samo da možete vidjeti slike, nego i videozapise.
+Phi-3.5-Vision je također nadogradnja Phi-3-Vision, dodajući podršku za višestruke slike. Možete ga smatrati poboljšanjem vida, ne samo da vidi slike, već i videozapise.
 
-Phi-3.5-vision nadmašuje veće modele poput Claude-3.5 Sonnet i Gemini 1.5 Flash u zadacima OCR-a, razumijevanju tablica i grafikona, te je na razini u općim zadacima vizualnog znanja i rezoniranja. Podržava ulaz s više okvira, tj. izvršavanje rezoniranja na više ulaznih slika.
+Phi-3.5-vision nadmašuje veće modele poput Claude-3.5 Sonnet i Gemini 1.5 Flash u OCR-u, razumijevanju tablica i grafikona te je usporediv na zadacima općeg vizualnog rezoniranja. Podržava višekadarni unos, tj. izvršava rezoniranje na više ulaznih slika.
 
 
 ### Phi-3.5-MoE
 
-***Mišavina Eksperata (MoE)*** omogućava modelima da se unaprijede s mnogo manje računanja, što znači da možete dramatično povećati veličinu modela ili skupa podataka s istim proračunom za računanje kao i gusti model. Konkretno, MoE model bi trebao postići istu kvalitetu kao njegov gusto povezani pandan mnogo brže tijekom prettreniranja.
+***Mišavina stručnjaka (MoE)*** omogućava modelima da budu prethodno trenirani s puno manjim računalnim zahtjevima, što znači da možete dramatično povećati veličinu modela ili skupa podataka s istim računalnim budžetom kao i gusto povezani model. Konkretno, MoE model trebao bi brže tijekom pretreninga postići istu kvalitetu kao i njegov gusto povezani pandan.
 
-Phi-3.5-MoE sastoji se od 16x3.8B ekspertskih modula. Phi-3.5-MoE s samo 6,6 milijardi aktivnih parametara postiže sličan nivo rezoniranja, razumijevanja jezika i matematike kao mnogo veći modeli.
+Phi-3.5-MoE se sastoji od 16x3.8B stručnjaka modula. Phi-3.5-MoE s samo 6.6 milijardi aktivnih parametara postiže sličnu razinu rezoniranja, razumijevanja jezika i matematike kao značajno veći modeli.
 
-Možemo koristiti Phi-3/3.5 obiteljski model u različitim scenarijima. Za razliku od LLM-a, Phi-3/3.5-mini ili Phi-3/3.5-Vision možete implementirati na rubnim uređajima.
+Možemo koristiti model Phi-3/3.5 obitelji temeljen na različitim scenarijima. Za razliku od LLM-a, Phi-3/3.5-mini ili Phi-3/3.5-Vision možete implementirati na edge uređajima.
 
 
-## Kako koristiti modele obitelji Phi-3/3.5
+## Kako koristiti modele Phi-3/3.5 obitelji
 
-Nadamo se koristiti Phi-3/3.5 u različitim scenarijima. Sljedeće ćemo koristiti Phi-3/3.5 u različitim scenarijima.
+Nadamo se da ćemo koristiti Phi-3/3.5 u različitim scenarijima. Sljedeće ćemo koristiti Phi-3/3.5 na temelju različitih scenarija.
 
 ![phi3](../../../translated_images/hr/phi3.655208c3186ae381.webp)
 
-### Inference putem Cloud API-ja
+### Izvršavanje inferencije putem Cloud API-ja
 
-**Microsoft Foundry Modeli**
+**Microsoft Foundry modeli**
 
-> **Napomena:** GitHub modeli prestaju s radom krajem srpnja 2026. [Microsoft Foundry modeli](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) su njihova izravna zamjena.
+> **Napomena:** GitHub modeli se ukidaju krajem srpnja 2026. [Microsoft Foundry modeli](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) su izravna zamjena.
 
-Microsoft Foundry modeli su najizravniji način. Možete brzo pristupiti Phi-3/3.5-Instruct modelu putem kataloga Foundry modela. U kombinaciji s Azure AI Inference SDK / OpenAI SDK, možete pristupiti API-ju putem koda za dovršavanje Phi-3/3.5-Instruct poziva. Također možete testirati različite učinke putem Playgrounda.
+Microsoft Foundry modeli su najizravniji način. Brzo možete pristupiti Phi-3/3.5-Instruct modelu putem kataloga Foundry modela. U kombinaciji s Azure AI Inference SDK / OpenAI SDK, možete pristupiti API-ju kroz kod za dovršetak poziva Phi-3/3.5-Instruct. Također možete isprobati različite učinke putem Playground-a.
 
 - Demo: Usporedba učinaka Phi-3-mini i Phi-3.5-mini u kineskim scenarijima
 
@@ -149,55 +149,55 @@ Microsoft Foundry modeli su najizravniji način. Možete brzo pristupiti Phi-3/3
 
 **Microsoft Foundry**
 
-Ili ako želimo koristiti modele za vid i MoE, možemo koristiti Microsoft Foundry za dovršetak poziva. Ako ste zainteresirani, možete pročitati Phi-3 Cookbook kako biste naučili kako pozivati Phi-3/3.5 Instruct, Vision, MoE kroz Microsoft Foundry [Kliknite ovaj link](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst)
+Ili, ako želimo koristiti modele za vid i MoE, možemo koristiti Microsoft Foundry za dovršetak poziva. Ako ste zainteresirani, možete pročitati Phi-3 Cookbook kako biste naučili kako pozvati Phi-3/3.5 Instruct, Vision, MoE putem Microsoft Foundry [Kliknite ovaj link](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst)
 
 
 **NVIDIA NIM**
 
-Osim kataloga Microsoft Foundry modela u oblaku, također možete koristiti [NVIDIA NIM](https://developer.nvidia.com/nim?WT.mc_id=academic-105485-koreyst) za dovršetak povezanih poziva. Možete posjetiti NVIDIA NIM za dovršetak API poziva Phi-3/3.5 obitelji. NVIDIA NIM (NVIDIA Inference Microservices) je skup pospješenih mikrousluga za inferenciju dizajniranih da pomognu programerima efikasno implementirati AI modele u različitim okruženjima, uključujući oblake, podatkovne centre i radne stanice.
+Osim kataloga Microsoft Foundry modela baziranih na oblaku, također možete koristiti [NVIDIA NIM](https://developer.nvidia.com/nim?WT.mc_id=academic-105485-koreyst) za dovršetak povezanih poziva. Možete posjetiti NVIDIA NIM za izvršavanje API poziva obitelji Phi-3/3.5. NVIDIA NIM (NVIDIA Inference Microservices) je skup ubrzanih mikrousluga za inferenciju dizajniranih da pomognu programerima učinkovitije implementirati AI modele u različitim okruženjima, uključujući oblak, podatkovne centre i radne stanice.
 
-Evo nekoliko ključnih značajki NVIDIA NIM-a:
+Evo nekih ključnih značajki NVIDIA NIM-a:
 
-- **Jednostavnost implementacije:** NIM omogućava implementaciju AI modela s jednom naredbom, što ga čini jednostavnim za integraciju u postojeće radne tokove.
+- **Jednostavnost implementacije:** NIM omogućuje implementaciju AI modela jednom naredbom, što ga čini jednostavnim za integraciju u postojeće radne tokove.
 
-- **Optimizirana izvedba:** Iskorištava NVIDIA-in unaprijed optimizirani inference engine, kao što su TensorRT i TensorRT-LLM, kako bi osigurao nisku latenciju i visok protok.
-- **Skalabilnost:** NIM podržava automatsko skaliranje na Kubernetesu, omogućujući učinkovito upravljanje različitim radnim opterećenjima.
-- **Sigurnost i kontrola:** Organizacije mogu zadržati kontrolu nad svojim podacima i aplikacijama samostalnim hostanjem NIM mikroservisa na vlastitoj upravljanoj infrastrukturi.
-- **Standardni API-jevi:** NIM pruža industrijske standarde API-ja, što olakšava izgradnju i integraciju AI aplikacija poput chatbotova, AI asistenata i drugih.
+- **Optimizirana izvedba:** Iskorištava unaprijed optimizirane NVIDIA inferencijske motore, poput TensorRT i TensorRT-LLM, kako bi osigurala nisko kašnjenje i visok protok.
+- **Skalabilnost:** NIM podržava automatsko skaliranje na Kubernetesu, omogućujući učinkovito upravljanje promjenjivim opterećenjima.
+- **Sigurnost i kontrola:** Organizacije mogu održavati kontrolu nad svojim podacima i aplikacijama samostalnim hostanjem NIM mikroservisa na svojoj upravljanoj infrastrukturi.
+- **Standardni API-jevi:** NIM pruža industrijske standardne API-jeve, što olakšava izgradnju i integraciju AI aplikacija poput chatbota, AI asistenata i drugih.
 
-NIM je dio NVIDIA AI Enterprise-a, koji ima za cilj pojednostaviti implementaciju i operacionalizaciju AI modela, osiguravajući njihovo učinkovito izvođenje na NVIDIA GPU-ima.
+NIM je dio NVIDIA AI Enterprise, što ima za cilj pojednostaviti implementaciju i operacionalizaciju AI modela, osiguravajući njihovo učinkovito izvođenje na NVIDIA GPU-ima.
 
-- Demo: Korištenje NVIDIA NIM za pozivanje Phi-3.5-Vision-API  [[Kliknite ovaj link](./python/Phi-3-Vision-Nividia-NIM.ipynb?WT.mc_id=academic-105485-koreyst)]
+- Demo: Korištenje NVIDIA NIM za pozivanje Phi-3.5-Vision-API [[Klikni na ovaj link](./python/Phi-3-Vision-Nividia-NIM.ipynb?WT.mc_id=academic-105485-koreyst)]
 
 
 ### Pokretanje Phi-3/3.5 lokalno
-Inference u odnosu na Phi-3, ili bilo koji jezični model poput GPT-3, odnosi se na proces generiranja odgovora ili predviđanja na temelju unosa koji prima. Kada Phi-3-u date prompt ili pitanje, koristi svoj istrenirani neuronski mrežni model za izvođenje najvjerojatnijeg i relevantnog odgovora analizirajući obrasce i odnose u podacima na kojima je treniran.
+Inferencija u vezi s Phi-3, ili bilo kojim jezičnim modelom poput GPT-3, odnosi se na proces generiranja odgovora ili predviđanja na temelju unosa koji prima. Kada Phi-3 date upit ili pitanje, koristi svoj trenirani neuronski mrežni model za zaključivanje najvjerojatnijeg i relevantnog odgovora analizirajući obrasce i odnose u podacima na kojima je treniran.
 
 **Hugging Face Transformer**
-Hugging Face Transformers je moćna biblioteka dizajnirana za obradu prirodnog jezika (NLP) i druge zadatke strojnog učenja. Evo nekoliko ključnih točaka o njoj:
+Hugging Face Transformers je moćna biblioteka dizajnirana za obradu prirodnog jezika (NLP) i druge zadatke strojnog učenja. Evo nekoliko ključnih točaka:
 
-1. **Predtrenirani modeli**: Pruža tisuće predtreneniranih modela za različite zadatke poput klasifikacije teksta, prepoznavanja imenskih entiteta, odgovaranja na pitanja, sažimanja, prevođenja i generiranja teksta.
+1. **Prethodno trenirani modeli:** Pruža tisuće prethodno treniranih modela koji se mogu koristiti za različite zadatke poput klasifikacije teksta, prepoznavanja imenovanih entiteta, odgovaranja na pitanja, sažimanja, prevođenja i generiranja teksta.
 
-2. **Interoperabilnost okvira:** Biblioteka podržava više dubokih okvira za učenje, uključujući PyTorch, TensorFlow i JAX. To vam omogućuje treniranje modela u jednom okviru i njegovo korištenje u drugom.
+2. **Interoperabilnost okvira:** Biblioteka podržava više dubokih okvira za učenje, uključujući PyTorch, TensorFlow i JAX. Ovo vam omogućuje treniranje modela u jednom okviru i korištenje u drugom.
 
-3. **Multimodalne sposobnosti:** Osim NLP-a, Hugging Face Transformers podržava i zadatke iz računalnog vida (npr. klasifikacija slika, detekcija objekata) i obrade zvuka (npr. prepoznavanje govora, klasifikacija zvuka).
+3. **Multimodalne sposobnosti:** Osim NLP-a, Hugging Face Transformers također podržava zadatke u računalnom vidu (npr. klasifikacija slika, detekcija objekata) i obradi zvuka (npr. prepoznavanje govora, klasifikacija zvuka).
 
-4. **Jednostavnost korištenja:** Biblioteka nudi API-je i alate za jednostavno preuzimanje i fino podešavanje modela, čineći je pristupačnom i početnicima i stručnjacima.
+4. **Jednostavnost upotrebe:** Biblioteka nudi API-je i alate za jednostavno preuzimanje i fino podešavanje modela, čineći ju dostupnom i za početnike i za stručnjake.
 
-5. **Zajednica i resursi:** Hugging Face ima živu zajednicu i opsežnu dokumentaciju, tutorijale i vodiče za pomoć korisnicima u početku i maksimalnom iskorištavanju biblioteke.
+5. **Zajednica i resursi:** Hugging Face ima aktivnu zajednicu i opsežnu dokumentaciju, tutorijale i vodiče koji pomažu korisnicima da započnu i maksimalno iskoriste biblioteku.
 [službena dokumentacija](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) ili njihov [GitHub repozitorij](https://github.com/huggingface/transformers?WT.mc_id=academic-105485-koreyst).
 
-Ovo je najčešće korištena metoda, ali zahtijeva GPU ubrzanje. Na kraju krajeva, scenariji poput Vision i MoE zahtijevaju mnogo izračuna, što će biti vrlo sporo na CPU-u ako nisu kvantizirani.
+Ovo je najčešće korištena metoda, no također zahtijeva GPU ubrzanje. Uostalom, scenariji poput Vision i MoE zahtijevaju mnogo proračuna, što će biti vrlo sporo na CPU-u ako nisu kvantizirani.
 
 
-- Demo: Korištenje Transformera za pozivanje Phi-3.5-Instruct [Kliknite ovaj link](./python/phi35-instruct-demo.ipynb?WT.mc_id=academic-105485-koreyst)
+- Demo: Korištenje Transformera za pozivanje Phi-3.5-Instruct [Klikni na ovaj link](./python/phi35-instruct-demo.ipynb?WT.mc_id=academic-105485-koreyst)
 
-- Demo: Korištenje Transformera za pozivanje Phi-3.5-Vision [Kliknite ovaj link](./python/phi35-vision-demo.ipynb?WT.mc_id=academic-105485-koreyst)
+- Demo: Korištenje Transformera za pozivanje Phi-3.5-Vision [Klikni na ovaj link](./python/phi35-vision-demo.ipynb?WT.mc_id=academic-105485-koreyst)
 
-- Demo: Korištenje Transformera za pozivanje Phi-3.5-MoE [Kliknite ovaj link](./python/phi35_moe_demo.ipynb?WT.mc_id=academic-105485-koreyst)
+- Demo: Korištenje Transformera za pozivanje Phi-3.5-MoE [Klikni na ovaj link](./python/phi35_moe_demo.ipynb?WT.mc_id=academic-105485-koreyst)
 
 **Ollama**
-[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) je platforma dizajnirana kako bi olakšala pokretanje velikih jezičnih modela (LLM) lokalno na vašem računalu. Podržava razne modele poput Llama 3.1, Phi 3, Mistral i Gemma 2, između ostalih. Platforma pojednostavljuje proces kombiniranjem težina modela, konfiguracije i podataka u jedan paket, što korisnicima omogućuje prilagođavanje i stvaranje vlastitih modela. Ollama je dostupna za macOS, Linux i Windows. Izvrsno je sredstvo ako želite eksperimentirati ili implementirati LLM bez oslanjanja na cloud usluge. Ollama je najizravniji način, trebate samo izvršiti sljedeću naredbu.
+[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) je platforma dizajnirana da olakša pokretanje velikih jezičnih modela (LLM) lokalno na vašem računalu. Podržava razne modele poput Llama 3.1, Phi 3, Mistral i Gemma 2, među ostalima. Platforma pojednostavljuje proces tako što spaja težine modela, konfiguraciju i podatke u jedan paket, čineći ju dostupnijom korisnicima za prilagodbu i izradu vlastitih modela. Ollama je dostupna za macOS, Linux i Windows. Sjajan je alat ako želite eksperimentirati ili implementirati LLM-ove bez oslanjanja na oblak. Ollama je najizravniji put, samo trebate izvršiti sljedeću naredbu.
 
 
 ```bash
@@ -208,7 +208,7 @@ ollama run phi3.5
 
 **Foundry Local**
 
-[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) je Microsoftov offline runtime na uređaju za pokretanje modela poput Phi potpuno na vlastitom hardveru - nije potrebna pretplata na Azure, API ključ ili mrežna veza. Automatski odabire najboljeg dostupnog pružatelja izvođenja (NPU, GPU ili CPU) i izlaže endpoint kompatibilan s OpenAI-jem, tako da postojeći kod za `openai`/Azure AI Inference SDK može na njega pokazivati s minimalnim izmjenama. Pogledajte [Foundry Local dokumentaciju](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) za početak.
+[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) je Microsoftova off-line izvedba na uređaju za pokretanje modela poput Phi u potpunosti na vašem hardveru - nije potrebna pretplata na Azure, API ključ ili mrežna veza. Automatski bira najbolji dostupni izvršni pružatelj (NPU, GPU ili CPU) i izlaže OpenAI-kompatibilnu točku pristupa, tako da postojeći `openai`/Azure AI Inference SDK kod može ciljati na nju uz minimalne promjene. Pogledajte [Foundry Local dokumentaciju](https://learn.microsoft.com/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) za početak.
 
 ```bash
 
@@ -236,32 +236,32 @@ print(manager.endpoint, manager.api_key)
 
 **ONNX Runtime za GenAI**
 
-[ONNX Runtime](https://github.com/microsoft/onnxruntime-genai?WT.mc_id=academic-105485-koreyst) je cross-platformski akcelerator za inference i treniranje strojnog učenja. ONNX Runtime za Generativnu AI (GENAI) je moćan alat koji vam pomaže učinkovito pokretati generativne AI modele na različitim platformama. 
+[ONNX Runtime](https://github.com/microsoft/onnxruntime-genai?WT.mc_id=academic-105485-koreyst) je međuplatformski akcelerator za inferenciju i treniranje strojnog učenja. ONNX Runtime za Generative AI (GENAI) je moćan alat koji vam pomaže efikasno pokretati generativne AI modele na raznim platformama.
 
 ## Što je ONNX Runtime?
-ONNX Runtime je open-source projekt koji omogućuje visokoučinkovit inference strojnog učenja. Podržava modele u Open Neural Network Exchange (ONNX) formatu, koji je standard za predstavljanje ML modela. ONNX Runtime inference može omogućiti brža korisnička iskustva i niže troškove, podržavajući modele iz dubokih okvira kao što su PyTorch i TensorFlow/Keras kao i klasične biblioteke strojnog učenja poput scikit-learn, LightGBM, XGBoost itd. ONNX Runtime je kompatibilan s različitim hardverom, upravljačkim programima i operativnim sustavima, i pruža optimalnu izvedbu iskorištavanjem hardverskih akceleratora gdje je primjenjivo, zajedno s optimizacijama i transformacijama grafova.
+ONNX Runtime je projekt otvorenog koda koji omogućuje visoko-performantnu inferenciju modela strojnog učenja. Podržava modele u Open Neural Network Exchange (ONNX) formatu, koji je standard za predstavljanje modela strojnog učenja. ONNX Runtime inferencija može omogućiti brža korisnička iskustva i niže troškove, podržavajući modele dubokog učenja iz okvira poput PyTorch i TensorFlow/Keras kao i klasične biblioteke strojnog učenja poput scikit-learn, LightGBM, XGBoost, itd. ONNX Runtime je kompatibilan s različitim hardverom, drajverima i operativnim sustavima, te pruža optimalnu izvedbu iskorištavanjem hardverskih akceleratora kad je to moguće, zajedno s optimizacijama i transformacijama grafova.
 
 ## Što je Generativna AI?
-Generativna AI odnosi se na AI sustave koji mogu generirati novi sadržaj, poput teksta, slika ili glazbe, na temelju podataka na kojima su trenirani. Primjeri uključuju jezične modele poput GPT-3 i modele za generiranje slika poput Stable Diffusion. ONNX Runtime za GenAI biblioteka pruža generativni AI ciklus za ONNX modele, uključujući inference s ONNX Runtime, obradu logitskih vrijednosti, pretragu i uzorkovanje te upravljanje KV kešom.
+Generativna AI odnosi se na AI sustave koji mogu generirati novi sadržaj, poput teksta, slika ili glazbe, na temelju podataka na kojima su trenirani. Primjeri uključuju jezične modele poput GPT-3 i modele za generiranje slika poput Stable Diffusion. ONNX Runtime za GenAI biblioteka pruža generativni AI ciklus za ONNX modele, uključujući inferenciju s ONNX Runtime, obradu logita, pretraživanje i uzorkovanje te upravljanje KV kešom.
 
 ## ONNX Runtime za GENAI
-ONNX Runtime za GENAI proširuje mogućnosti ONNX Runtime-a za podršku generativnim AI modelima. Evo nekoliko ključnih značajki:
+ONNX Runtime za GENAI proširuje mogućnosti ONNX Runtime-a kako bi podržao generativne AI modele. Evo nekoliko ključnih značajki:
 
-- **Široka podrška platformi:** Radi na različitim platformama, uključujući Windows, Linux, macOS, Android i iOS.
+- **Široka podrška platformi:** Radi na raznim platformama, uključujući Windows, Linux, macOS, Android i iOS.
 - **Podrška modelima:** Podržava mnoge popularne generativne AI modele, poput LLaMA, GPT-Neo, BLOOM i drugih.
-- **Optimizacija izvedbe:** Uključuje optimizacije za različite hardverske akceleratore poput NVIDIA GPU-a, AMD GPU-a i ostalih2.
-- **Jednostavnost korištenja:** Pruža API-je za jednostavnu integraciju u aplikacije, omogućujući generiranje teksta, slika i drugog sadržaja s minimalnim kodom.
-- Korisnici mogu pozvati metodu generiranja na visokoj razini generate(), ili izvršavati svaku iteraciju modela u petlji, generirajući po jedan token, te po želji mijenjati parametre generiranja unutar petlje.
-- ONNX runtime također podržava pohlepnu/beam pretragu i TopP, TopK uzorkovanje za generiranje sekvenci tokena i ugrađenu obradu logitskih vrijednosti poput penalizacije ponavljanja. Također je lako dodati prilagođeno ocjenjivanje.
+- **Optimizacija izvedbe:** Uključuje optimizacije za različite hardverske akceleratore poput NVIDIA GPU-a, AMD GPU-a i drugih.
+- **Jednostavnost upotrebe:** Pruža API-je za jednostavnu integraciju u aplikacije, omogućujući generiranje teksta, slika i drugog sadržaja uz minimalan kod.
+- Korisnici mogu pozvati visokonivometod generate(), ili pokretati svaku iteraciju modela u petlji, generirajući jedan token odjednom i po želji ažurirajući parametre generiranja unutar petlje.
+- ONNX runtime također podržava greedy/beam search i TopP, TopK uzorkovanje za generiranje niza tokena i ugrađenu obradu logita poput penalizacija ponavljanja. Također se lako može dodati prilagođeno ocjenjivanje.
 
-## Početak rada
-Za početak rada s ONNX Runtime za GENAI, možete slijediti ove korake:
+## Početak
+Za početak rada s ONNX Runtime za GENAI slijedite ove korake:
 
 ### Instalirajte ONNX Runtime:
 ```Python
 pip install onnxruntime
 ```
-### Instalirajte Generativne AI ekstenzije:
+### Instalirajte ekstenzije za Generative AI:
 ```Python
 pip install onnxruntime-genai
 ```
@@ -340,12 +340,12 @@ while not generator.is_done():
 
 **Ostalo**
 
-Osim metoda referenci ONNX Runtime, Ollama i Foundry Local, možemo također dovršiti referencu kvantitativnih modela na temelju modela referenci koje pružaju različiti proizvođači. Kao što su Apple MLX okvir s Apple Metal-om, Qualcomm QNN s NPU-om, Intel OpenVINO s CPU/GPU-om i drugi. Više sadržaja možete pronaći i u [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst)
+Osim referentnih metoda ONNX Runtime, Ollama i Foundry Local, možemo i dopuniti referencu kvantitativnih modela bazirano na referentnim metodama modela koje pružaju različiti proizvođači. Kao što su Apple MLX framework s Apple Metal, Qualcomm QNN s NPU, Intel OpenVINO s CPU/GPU i sl. Više sadržaja možete pronaći u [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst)
 
 
 ## Više
 
-Naučili smo osnove obitelji Phi-3/3.5, ali za detaljnije učenje o SLM trebamo više znanja. Odgovore možete pronaći u Phi-3 Cookbooku. Ako želite saznati više, posjetite [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst).
+Naučili smo osnove Phi-3/3.5 obitelji, ali za dublje razumijevanje SLM-a potrebne su dodatne spoznaje. Odgovore možete pronaći u Phi-3 Cookbook-u. Ako želite saznati više, posjetite [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst).
 
 ---
 

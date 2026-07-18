@@ -1,34 +1,34 @@
-# آماده‌سازی داده‌های رونوشت
+# آماده‌سازی داده‌های رونویسی
 
-اسکریپت‌های آماده‌سازی داده‌های رونوشت ویدیوهای YouTube را دانلود کرده و برای استفاده با نمونه جستجوی معنایی با OpenAI Embeddings و توابع آماده می‌کنند.
+اسکریپت‌های آماده‌سازی داده‌های رونویسی، رونوشت‌های ویدیوهای یوتیوب را دانلود کرده و آنها را برای استفاده در نمونه جستجوی معنایی با OpenAI Embeddings و توابع آماده می‌کنند.
 
-اسکریپت‌های آماده‌سازی داده‌های رونوشت بر روی نسخه‌های جدید Windows 11، macOS Ventura و Ubuntu 22.04 (و بالاتر) آزمایش شده‌اند.
+اسکریپت‌های آماده‌سازی داده‌های رونویسی بر روی آخرین نسخه‌های Windows 11، macOS Ventura و Ubuntu 22.04 (و بالاتر) آزمایش شده‌اند.
 
-## ساخت منابع لازم برای سرویس Azure OpenAI
+## ایجاد منابع مورد نیاز سرویس Azure OpenAI
 
 > [!IMPORTANT]
-> پیشنهاد می‌کنیم Azure CLI را به آخرین نسخه به‌روزرسانی کنید تا با OpenAI سازگاری داشته باشد.
+> توصیه می‌کنیم Azure CLI را به آخرین نسخه به‌روزرسانی کنید تا از سازگاری با OpenAI اطمینان حاصل شود.
 > مراجعه کنید به [مستندات](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
-1. ساخت یک گروه منبع
+1. یک گروه منابع ایجاد کنید.
 
 > [!NOTE]
-> در این دستورالعمل‌ها از گروه منبعی به نام "semantic-video-search" در East US استفاده می‌کنیم.
-> شما می‌توانید نام گروه منبع را تغییر دهید، اما هنگام تغییر مکان منابع، 
+> برای این دستورالعمل، ما از گروه منابع به نام "semantic-video-search" در منطقه East US استفاده می‌کنیم.
+> شما می‌توانید نام گروه منابع را تغییر دهید، اما هنگام تغییر مکان منابع، 
 > جدول [در دسترس بودن مدل](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst) را بررسی کنید.
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. ساخت یک منبع سرویس Azure OpenAI.
+1. یک منبع سرویس Azure OpenAI ایجاد کنید.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. دریافت نقطه پایان و کلیدها برای استفاده در این برنامه
+1. برای استفاده در این برنامه، نقطه پایانی و کلیدها را دریافت کنید.
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -37,9 +37,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. پیاده‌سازی مدل‌های زیر:
+1. مدل‌های زیر را مستقر کنید:
    - نسخه `2` یا بالاتر از `text-embedding-ada-002` با نام `text-embedding-ada-002`
-   - مدل `gpt-4o-mini` با نام `gpt-4o-mini`
+   - مدل `gpt-5-mini` با نام `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,8 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -62,16 +62,16 @@ az cognitiveservices account deployment create \
 
 ## نرم‌افزارهای مورد نیاز
 
-- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) یا بالاتر
+- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) یا جدیدتر
 
 ## متغیرهای محیطی
 
-متغیرهای محیطی زیر برای اجرای اسکریپت‌های آماده‌سازی داده‌های رونوشت YouTube مورد نیاز است.
+متغیرهای محیطی زیر برای اجرای اسکریپت‌های آماده‌سازی داده‌های رونویسی یوتیوب لازم است.
 
 ### در ویندوز
 
-پیشنهاد می‌شود متغیرها را به متغیرهای محیطی `user` خود اضافه کنید.
-`Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` برای [USER] > `New`.
+توصیه می‌شود متغیرها را به متغیرهای محیطی کاربر `user` اضافه کنید.
+`Windows Start` > `ویرایش متغیرهای محیطی سیستم` > `متغیرهای محیطی` > `متغیرهای کاربری` برای [USER] > `جدید`.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -83,15 +83,15 @@ GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 <!-- می‌توانید متغیرهای محیطی را به پروفایل PowerShell خود اضافه کنید.
 
 ```powershell
-$env:AZURE_OPENAI_API_KEY = "<your Azure OpenAI Service API key>"
-$env:AZURE_OPENAI_ENDPOINT = "<your Azure OpenAI Service endpoint>"
-$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<your Azure OpenAI Service model deployment name>"
-$env:GOOGLE_DEVELOPER_API_KEY = "<your Google developer API key>"
+$env:AZURE_OPENAI_API_KEY = "<کلید API سرویس Azure OpenAI شما>"
+$env:AZURE_OPENAI_ENDPOINT = "<نقطه پایانی سرویس Azure OpenAI شما>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<نام استقرار مدل سرویس Azure OpenAI شما>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<کلید API توسعه‌دهنده گوگل شما>"
 ``` -->
 
-### در لینوکس و macOS
+### در لینوکس و مک او اس
 
-پیشنهاد می‌شود اکسپورت‌های زیر را به فایل `~/.bashrc` یا `~/.zshrc` خود اضافه کنید.
+توصیه می‌شود اکسپورت‌های زیر را به فایل `~/.bashrc` یا `~/.zshrc` خود اضافه کنید.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -102,8 +102,8 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## نصب کتابخانه‌های پایتون مورد نیاز
 
-1. اگر نصب نیست، [کلاینت git](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) را نصب کنید.
-1. از پنجره `Terminal` نمونه را به پوشه ریپوی دلخواه خود کلون کنید.
+1. در صورتی که کلاینت [git](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) نصب نشده، آن را نصب کنید.
+1. از پنجره `Terminal`، نمونه را به پوشه مخزن مورد نظر خود کلون کنید.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -115,7 +115,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. یک محیط مجازی پایتون بسازید.
+1. یک محیط مجازی پایتون ایجاد کنید.
 
     در ویندوز:
 
@@ -123,7 +123,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     python -m venv .venv
     ```
 
-    در macOS و لینوکس:
+    در مک او اس و لینوکس:
 
     ```bash
     python3 -m venv .venv
@@ -137,7 +137,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    .venv\Scripts\activate
    ```
 
-   در macOS و لینوکس:
+   در مک او اس و لینوکس:
 
    ```bash
    source .venv/bin/activate
@@ -151,13 +151,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip install -r requirements.txt
    ```
 
-   در macOS و لینوکس:
+   در مک او اس و لینوکس:
 
    ```bash
    pip3 install -r requirements.txt
    ```
 
-## اجرای اسکریپت‌های آماده‌سازی داده‌های رونوشت یوتیوب
+## اجرای اسکریپت‌های آماده‌سازی داده‌های رونویسی یوتیوب
 
 ### در ویندوز
 
@@ -165,7 +165,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 .\transcripts_prepare.ps1
 ```
 
-### در macOS و لینوکس
+### در مک او اس و لینوکس
 
 ```bash
 ./transcripts_prepare.sh

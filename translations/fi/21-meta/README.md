@@ -1,61 +1,61 @@
-# Rakentaminen Meta-perhemalleilla 
+# Rakentaminen Meta Family -malleilla
 
-## Johdanto 
+## Johdanto
 
-Tässä oppitunnissa käsitellään: 
+Tässä oppitunnissa käsitellään:
 
-- Kaksi pääasiallista Meta-perhemallia - Llama 3.1 ja Llama 3.2 
-- Mallien käyttötarkoitukset ja skenaariot 
-- Koodiesimerkki, joka näyttää kunkin mallin ainutlaatuiset ominaisuudet 
+- Kaksi pääasiallista Meta Family -mallia - Llama 3.1 ja Llama 3.2
+- Ymmärtäminen kunkin mallin käyttötapauksista ja tilanteista
+- Koodiesimerkki, joka näyttää kunkin mallin ainutlaatuiset ominaisuudet
 
 
-## Meta-perhemallit 
+## Meta Family -mallit
 
-Tässä oppitunnissa tutustumme kahteen Meta-perheen tai "Llama Herd" -malliin - Llama 3.1 ja Llama 3.2.
+Tässä oppitunnissa tutustumme kahteen Meta Family- tai "Llama Herd" -malliin - Llama 3.1 ja Llama 3.2.
 
-Näitä malleja on erilaisina versioina saatavilla [Microsoft Foundry Models -katalogista](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
+Nämä mallit ovat saatavilla eri versioina [Microsoft Foundry Models -katalogissa](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
 
-> **Huom:** GitHub Models lopetetaan heinäkuun 2026 lopussa. Tässä on lisätietoja [Microsoft Foundry Modelsin](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) käytöstä tekoälymallien prototyyppien tekemiseen.
+> **Huom:** GitHub Models poistuu käytöstä heinäkuun 2026 lopussa. Lisätietoja pienoismallien tekemisestä voit lukea käyttämällä [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst).
 
-Mallin versiot: 
-- Llama 3.1 - 70B Instruct 
-- Llama 3.1 - 405B Instruct 
-- Llama 3.2 - 11B Vision Instruct 
-- Llama 3.2 - 90B Vision Instruct 
+Malliversiot:
+- Llama 3.1 - 70B Instruct
+- Llama 3.1 - 405B Instruct
+- Llama 3.2 - 11B Vision Instruct
+- Llama 3.2 - 90B Vision Instruct
 
 *Huom: Llama 3 on myös saatavilla Microsoft Foundry Models -katalogissa, mutta sitä ei käsitellä tässä oppitunnissa*
 
-## Llama 3.1 
+## Llama 3.1
 
-Llama 3.1 kuuluu 405 miljardin parametrin avoimen lähdekoodin LLM-mallien luokkaan. 
+405 miljardilla parametrillaan Llama 3.1 kuuluu avoimen lähdekoodin LLM-kategoriaan.
 
-Malli on päivitys aikaisempaan Llama 3 -versioon tarjoamalla: 
+Malli on päivitys aiempaan Llama 3 -versioon ja tarjoaa:
 
-- Suuremman kontekstikkunan - 128k tokenia vs 8k tokenia 
-- Suuremman maksimivasteen tokenimäärän - 4096 vs 2048 
-- Parempi monikielituki - johtuen koulutustokenien lisääntymisestä 
+- Suuremman konteksti-ikkunan - 128k tokenia vs 8k tokenia
+- Suuremman maksimiulostettujen tokenien määrän - 4096 vs 2048
+- Parempi monikielinen tuki - johtuen koulutustokeneiden lisääntymisestä
 
-Nämä mahdollistavat Llama 3.1:n käsitellä monimutkaisempia käyttötapauksia GenAI-sovelluksia rakennettaessa, mukaan lukien: 
-- Natiivitoimintojen kutsuminen - kyky kutsua ulkoisia työkaluja ja toimintoja LLM-työnkulun ulkopuolella
-- Parempi RAG-suorituskyky - johtuen suuremmasta kontekstikkunasta 
-- Synteettinen datan generointi - kyky luoda tehokasta dataa kuten hienosäätöä varten 
+Nämä ominaisuudet antavat Llama 3.1:lle kyvyn käsitellä monimutkaisempia käyttötapauksia GenAI-sovelluksissa, mukaan lukien:
+- Natiivitoimintojen kutsuminen - mahdollisuus kutsua ulkoisia työkaluja ja toimintoja LLM-työnkulun ulkopuolella
+- Parempi RAG-suorituskyky - johtuen suuremmasta konteksti-ikkunasta
+- Syntetisen datan generointi - kyky luoda tehokasta dataa tehtäviin, kuten hienosäätöön
 
-### Natiivitoimintojen kutsuminen 
+### Natiivitoimintojen kutsuminen
 
-Llama 3.1 on hienosäädetty tehokkaammaksi toiminto- tai työkalukutsujen tekemisessä. Mallissa on myös kaksi sisäänrakennettua työkalua, jotka se voi tunnistaa käyttötilanteen perusteella käyttäjän kehotteesta. Nämä työkalut ovat: 
+Llama 3.1 on hienosäädetty toimimaan tehokkaammin toimintojen tai työkalujen kutsumisessa. Sillä on myös kaksi sisäänrakennettua työkalua, jotka malli voi tunnistaa käyttäjän kehotteen perusteella tarvittaviksi. Nämä työkalut ovat:
 
-- **Brave Search** - Voidaan käyttää ajantasaisen tiedon, kuten sään, hakemiseen web-haun avulla 
-- **Wolfram Alpha** - Voidaan käyttää monimutkaisempiin matemaattisiin laskutoimituksiin, joten omien funktioiden kirjoittaminen ei ole tarpeen. 
+- **Brave Search** - Voidaan käyttää saadakseen ajantasaisia tietoja, kuten sää, tekemällä verkkohaku
+- **Wolfram Alpha** - Voidaan käyttää monimutkaisempiin matemaattisiin laskuihin, joten omien funktioiden kirjoittaminen ei ole tarpeen
 
-Voit myös luoda omia räätälöityjä työkaluja, joita LLM voi kutsua. 
+Voit myös luoda omia räätälöityjä työkaluja, joita LLM voi kutsua.
 
-Seuraavassa esimerkkikoodissa: 
+Seuraavassa koodiesimerkissä:
 
-- Määrittelemme järjestelmäkehotteessa käytettävissä olevat työkalut (brave_search, wolfram_alpha). 
-- Lähetämme käyttäjäkehotteen, jossa kysytään säätä tietyssä kaupungissa. 
-- LLM vastaa työkalukutsulla Brave Search -työkaluun, joka näyttää tältä `<|python_tag|>brave_search.call(query="Stockholm weather")` 
+- Määritämme käytettävissä olevat työkalut (brave_search, wolfram_alpha) järjestelmän kehotteessa.
+- Lähetetään käyttäjän kehotus, joka kysyy säätä tietyssä kaupungissa.
+- LLM vastaa kutsumalla Brave Search -työkalua, joka näyttää tältä `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*Huom: Tämä esimerkki tekee vain työkalukutsun. Jos haluat saada tulokset, sinun täytyy luoda ilmainen tili Brave API -sivulle ja määritellä funktio itse.
+*Huom: Tämä esimerkki tekee vain työkalukutsun; jos haluat saada tulokset, sinun täytyy luoda ilmainen tili Brave API -sivulla ja määritellä itse funktio.
 
 ```python 
 import os
@@ -96,18 +96,18 @@ response = client.complete(messages=messages, model=model_name)
 print(response.choices[0].message.content)
 ```
 
-## Llama 3.2 
+## Llama 3.2
 
-Vaikka Llama 3.1 onkin LLM, yksi sen rajoituksista on monimuotoisuuden puute. Toisin sanoen kyvyttömyys käyttää erilaisia syötteitä, kuten kuvia kehotteina ja antaa niihin vastauksia. Tämä kyky on yksi Llama 3.2:n pääominaisuuksista. Muita ominaisuuksia ovat:
+Vaikka Llama 3.1 on LLM, sen rajallisuus on multimodaalisuuden puute. Eli kyvyttömyys käyttää erilaisia syötetyyppejä, kuten kuvia kehotteina ja antaa vastauksia. Tämä kyky on yksi Llama 3.2:n pääominaisuuksista. Näihin ominaisuuksiin kuuluu myös:
 
-- Monimuotoisuus - kyky käsitellä sekä teksti- että kuvakehotteita 
-- Pienet ja keskisuuret variaatiot (11B ja 90B) - tarjoavat joustavia käyttöönottoasetuksia,
-- Vain tekstipohjaiset versiot (1B ja 3B) - mahdollistavat mallin käytön reunalaitteissa / mobiililaitteissa ja tarjoavat alhaisen viiveen 
+- Multimodaalisuus - kykenee arvioimaan sekä teksti- että kuvatulosteita
+- Pienet ja keskisuuret kokovaihtoehdot (11B ja 90B) - tarjoaa joustavia käyttöönotto vaihtoehtoja,
+- Vain tekstiversiot (1B ja 3B) - mahdollistaa mallin käyttöönoton reunalaitteissa/mobiililaitteissa ja tarjoaa pienen viiveen
 
-Monimuotoistuki on merkittävä askel avoimen lähdekoodin mallien maailmassa. Alla oleva koodiesimerkki ottaa sekä kuvan että tekstikehotteen analysoiden kuvaa Llama 3.2 90B:llä. 
+Multimodaalinen tuki on iso askel avoimen lähdekoodin mallien maailmassa. Alla oleva koodiesimerkki hyödyntää sekä kuva- että tekstikehotteita saadakseen kuvan analyysin Llama 3.2 90B:ltä.
 
 
-### Monimuotoistuki Llama 3.2:lla
+### Multimodaalinen tuki Llama 3.2:lla
 
 ```python 
 import os
@@ -122,7 +122,7 @@ from azure.ai.inference.models import (
 )
 from azure.core.credentials import AzureKeyCredential
 
-# Hanki nämä Microsoft Foundry -projektisi "Yleiskatsaus" sivulta
+# Hanki nämä Microsoft Foundry -projektisi "Yleiskatsaus"-sivulta
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Llama-3.2-90B-Vision-Instruct"
@@ -157,7 +157,7 @@ print(response.choices[0].message.content)
 
 ## Oppiminen ei lopu tähän, jatka matkaa
 
-Oppitunnin jälkeen tutustu Generative AI Learning -kokoelmaamme osoitteessa [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi generatiivisen tekoälyn osaamisen kehittämistä!
+Oppitunnin suorittamisen jälkeen tutustu [Generative AI Learning -kokoelmaamme](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi generatiivisen tekoälyn osaamisesi kehittämistä!
 
 ---
 

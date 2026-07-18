@@ -1,13 +1,13 @@
-# Припрема података транскрипције
+# Припрема трансрипционих података
 
-Скрипте за припрему података транскрипције преузимају транскрипте видео снимака са YouTube-а и припремају их за коришћење са примером Семантичке претраге са OpenAI уграђивањима и функцијама.
+Скрипте за припрему трансрипционих података преузимају транскрипте YouTube видео снимака и припремају их за коришћење са примером Семантичке претраге са OpenAI уграђивањима и функцијама.
 
-Скрипте за припрему података транскрипције су тестиране на најновијим издањима Windows 11, macOS Ventura и Ubuntu 22.04 (и новије).
+Скрипте за припрему трансрипционих података тестиране су на најновијим издањима Windows 11, macOS Ventura и Ubuntu 22.04 (и новијим).
 
-## Креирање потребних ресурса Azure OpenAI услуге
+## Креирање потребних ресурса Azure OpenAI сервиса
 
 > [!IMPORTANT]
-> Предлажемо да ажурирате Azure CLI на најновију верзију ради обезбеђења компатибилности са OpenAI
+> Препоручујемо да ажурирате Azure CLI на најновију верзију ради обезбеђивања компатибилности са OpenAI
 > Погледајте [Документацију](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Креирајте ресурсну групу
@@ -21,14 +21,14 @@
 az group create --name semantic-video-search --location eastus
 ```
 
-1. Креирајте Azure OpenAI сервис ресурс.
+1. Креирајте Azure OpenAI Service ресурс.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Набавите крајњу тачку и кључеве за коришћење у овој апликацији
+1. Добијте крајњу тачку и кључеве за коришћење у овој апликацији
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -37,9 +37,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. Деплотирајте следеће моделе:
-   - `text-embedding-ada-002` верзија `2` или новија, под именом `text-embedding-ada-002`
-   - `gpt-4o-mini` под именом `gpt-4o-mini`
+1. Деплојујте следеће моделе:
+   - `text-embedding-ada-002` верзија `2` или новија, под називом `text-embedding-ada-002`
+   - `gpt-5-mini` под називом `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,8 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -66,11 +66,11 @@ az cognitiveservices account deployment create \
 
 ## Променљиве окружења
 
-Следеће променљиве окружења су потребне за извршавање скрипти за припрему података транскрипције са YouTube-а.
+Следеће променљиве окружења су потребне да би се покренуле скрипте за припрему трансрипционих података са YouTube.
 
 ### На Windows-у
 
-Препоручује се додавање променљивих у `user` променљиве окружења.
+Препоручујемо додавање променљивих у корисничке променљиве окружења (`user` environment variables).
 `Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` за [USER] > `New`.
 
 ```text
@@ -91,7 +91,7 @@ $env:GOOGLE_DEVELOPER_API_KEY = "<your Google developer API key>"
 
 ### На Linux и macOS
 
-Препоручује се да следеће export наредбе додате у свој `~/.bashrc` или `~/.zshrc` фајл.
+Препоручујемо додавање следећих export команди у ваш `~/.bashrc` или `~/.zshrc` фајл.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -100,16 +100,16 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## Инсталирање потребних Python библиотека
+## Инсталирајте потребне Python библиотеке
 
 1. Инсталирајте [git клијент](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) ако већ није инсталиран.
-1. Из `Terminal` прозора клонирајте пример у жељени фолдер свог репозиторијума.
+1. Из терминал прозора клонирајте пример у жељену фасциклу вашег репозиторијума.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
     ```
 
-1. Идите у фолдер `data_prep`.
+1. Идите у фасциклу `data_prep`.
 
    ```bash
    cd semanic-search-openai-embeddings-functions/src/data_prep
@@ -157,7 +157,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## Покрените скрипте за припрему података транскрипције са YouTube-а
+## Покрените скрипте за припрему YouTube трансрипционих података
 
 ### На Windows-у
 

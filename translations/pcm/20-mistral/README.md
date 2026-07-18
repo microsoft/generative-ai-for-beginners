@@ -2,41 +2,41 @@
 
 ## Introduction 
 
-Dis lesson go cover: 
-- Exploring di different Mistral Models 
+Dis leksson go cover: 
+- Exploring di diferent Mistral Models 
 - Understanding di use-cases and scenarios for each model 
-- Exploring code samples wey show di unique features of each model. 
+- Exploring code samples wey dey show di unique features of each model. 
 
 ## Di Mistral Models 
 
-For dis lesson, we go explore 3 different Mistral models: 
+For dis leksson, we go explore 3 diferent Mistral models: 
 **Mistral Large**, **Mistral Small** and **Mistral Nemo**. 
 
-Each of these models dey free for [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst). Di code for dis notebook go use these models to run di code.
+Each of dem models dey free for [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst). Di code for dis notebook go use dis models to run di code.
 
-> **Note:** GitHub Models dey retire by di end of July 2026. Here be more details on how to use [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) to prototype wit AI models. 
+> **Note:** GitHub Models go stop for end of July 2026. Here na more details about how to use [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) to prototype wit AI models. 
 
 
 ## Mistral Large 2 (2407)
-Mistral Large 2 na di main model from Mistral now and e dey designed for enterprise use. 
+Mistral Large 2 na di main model from Mistral and e dey designed for enterprise use. 
 
-Di model na upgrade from di og original Mistral Large by giving 
+Di model na upgrade to di original Mistral Large by offering 
 -  Bigger Context Window - 128k vs 32k 
--  Better performance on Math and Coding Tasks - 76.9% average accuracy vs 60.4% 
--  Increase multilingual performance - languages include: English, French, German, Spanish, Italian, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Arabic, and Hindi.
+-  Better performance for Math and Coding Tasks - 76.9% average accuracy vs 60.4% 
+-  Better multilingual performance - languages include: English, French, German, Spanish, Italian, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Arabic, and Hindi.
 
-Wit these features, Mistral Large dey sharp for 
+With dis features, Mistral Large dey perform well for 
 - *Retrieval Augmented Generation (RAG)* - because e get bigger context window
-- *Function Calling* - dis model get native function calling wey allow am integrate wit outside tools and APIs. Dem fit make these calls either all at once or one after di oda like sequence. 
-- *Code Generation* - dis model dey shine for Python, Java, TypeScript and C++ generation. 
+- *Function Calling* - dis model get native function calling wey allow e to connect wit external tools and APIs. Dem calls fit happen both for parallel or one after di oda for sequential order. 
+- *Code Generation* - dis model dey strong for Python, Java, TypeScript and C++ generation. 
 
-### RAG Example wey use Mistral Large 2 
+### RAG Example wit Mistral Large 2 
 
-For dis example, we dey use Mistral Large 2 run one RAG pattern for one text document. Di question dey written for Korean and e dey ask about wetin di author dey do before college. 
+For dis example, we dey use Mistral Large 2 to run RAG pattern on top text document. Di question dey written for Korean and e dey ask about wetin di author dey do before college. 
 
-E dey use Cohere Embeddings Model make embeddings of di text document plus di question. For dis sample, e use di faiss Python package as di vector store. 
+E use Cohere Embeddings Model to create embeddings of di text document and di question. For dis sample, e use di faiss Python package as vector store. 
 
-Di prompt wey dem send to di Mistral model get both di questions and di chunks wey dem retrieve wey similar to di question. Di Model then go give natural language response. 
+Di prompt wey dem send go Mistral model get both di questions and di retrieved chunks wey dey similar to di question. Di Model then go give natural language response. 
 
 ```python 
 pip install faiss-cpu
@@ -53,7 +53,7 @@ from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.inference import EmbeddingsClient
 
-# Comot dis one for your Microsoft Foundry project "Overview" page
+# Collect dem from your Microsoft Foundry project "Overview" page
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-large"
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
@@ -134,22 +134,22 @@ print(chat_response.choices[0].message.content)
 ```
 
 ## Mistral Small 
-Mistral Small na another model for di Mistral family under di premier/enterprise category. Like di name talk, dis model na Small Language Model (SLM). Di advantages of using Mistral Small na: 
-- E go save cost compared to Mistral LLMs like Mistral Large and NeMo - 80% price drop
-- E get low latency - e respond faster compared to Mistral's LLMs
-- E flexible - fit deploy for different environments wit less restriction on wetin e need. 
+Mistral Small na another model for Mistral family of models under di premier/enterprise category. As di name talk, dis model na Small Language Model (SLM). Di advantages of using Mistral Small na: 
+- Cost Saving compared to Mistral LLMs like Mistral Large and NeMo - 80% price drop
+- Low latency - faster response compared to Mistral's LLMs
+- Flexible - fit deploy for different environments wit less restrictions on needed resources. 
 
 
-Mistral Small make sense for: 
+Mistral Small good for: 
 - Text based tasks like summarization, sentiment analysis and translation. 
-- Applications wey dem dey do frequent requests because e cheap 
-- Low latency code tasks like code review and suggestions 
+- Applications wey dem dey make frequent requests because e cheap 
+- Low latency code tasks like review and code suggestions 
 
 ## Comparing Mistral Small and Mistral Large 
 
-To see di difference for latency between Mistral Small and Large, run di cells wey dey below. 
+To show difference in latency between Mistral Small and Large, run di cells wey dey below. 
 
-You go see difference in response times around 3-5 seconds. Also note di response length and style for di same prompt.  
+You go see difference for response times between 3-5 seconds. Make you also note di response lengths and style for di same prompt.  
 
 ```python 
 
@@ -211,31 +211,31 @@ print(response.choices[0].message.content)
 
 ## Mistral NeMo
 
-Compared to di oda two models wey we talk for dis lesson, Mistral NeMo na di only free model wey get Apache2 License. 
+Compared to di oda two models wey we discuss for dis leksson, Mistral NeMo na di only free model wey get Apache2 License. 
 
-E dey viewed as upgrade to di earlier open source LLM from Mistral, Mistral 7B. 
+E dey seen as upgrade to di earlier open source LLM from Mistral, Mistral 7B. 
 
-Some oda features of di NeMo model be: 
+Some other features of di NeMo model na: 
 
-- *More efficient tokenization:* Dis model dey use Tekken tokenizer instead of di more common tiktoken. Dis one make am perform well for more languages and code. 
+- *More efficient tokenization:* Dis model dey use di Tekken tokenizer instead of di more common tiktoken. Dis one allow better performance for more languages and code. 
 
-- *Finetuning:* Di base model dey available for finetuning. Dis one make am flexible for use-cases wey need finetuning. 
+- *Finetuning:* Di base model dey available for finetuning. Dis one give more flexibility for use-cases wey need finetuning. 
 
-- *Native Function Calling* - Like Mistral Large, dis model train on function calling. Dis one make am unique as e be one of di first open source models wey gatch train for dat. 
+- *Native Function Calling* - Like Mistral Large, dis model don train on function calling. Dis one make am unique as one of di first open source models wey do am. 
 
 
 ### Comparing Tokenizers 
 
-For dis sample, we go see how Mistral NeMo handle tokenization compared to Mistral Large. 
+For dis sample, we go look how Mistral NeMo handle tokenization compared to Mistral Large. 
 
-Both samples take di same prompt but you go notice say NeMo return fewer tokens pass Mistral Large. 
+Both samples use the same prompt but you go see say NeMo go return fewer tokens than Mistral Large. 
 
 ```bash
 pip install mistral-common
 ```
 
 ```python 
-# Import di packages wey you need:
+# Import di package wey you need:
 from mistral_common.protocol.instruct.messages import (
     UserMessage,
 )
@@ -252,7 +252,7 @@ model_name = "open-mistral-nemo"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Tokenize one list of messages
+# Tokenize di list of messages
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -308,7 +308,7 @@ model_name = "mistral-large-latest"
 
 tokenizer = MistralTokenizer.from_model(model_name)
 
-# Tokenize one list of messages
+# Tokenize wan list of messages
 tokenized = tokenizer.encode_chat_completion(
     ChatCompletionRequest(
         tools=[
@@ -346,9 +346,9 @@ tokens, text = tokenized.tokens, tokenized.text
 print(len(tokens))
 ```
 
-## Learning no stop here, continue di journey
+## Learning no stop here, make you continue di journey
 
-After you finish dis lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) make you continue to level up your Generative AI knowledge!
+After you finish dis leksson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue to dey level up your Generative AI knowledge!
 
 ---
 

@@ -1,34 +1,34 @@
-# Transkriptsiooniandmete ettevalmistus
+# Transkriptsioonandmete ettevalmistus
 
-Transkriptsiooniandmete ettevalmistamise skriptid laadivad alla YouTube'i video transkriptsioonid ja valmistavad need ette kasutamiseks näites Semantic Search with OpenAI Embeddings and Functions.
+Transkriptsioonandmete ettevalmistamise skriptid laadivad alla YouTube'i video transkriptsioonid ja valmistavad need ette kasutamiseks näidise Semantic Search with OpenAI Embeddings and Functions jaoks.
 
-Transkriptsiooniandmete ettevalmistamise skripte on testitud uusimate versioonidega Windows 11, macOS Ventura ja Ubuntu 22.04 (ja uuemad).
+Transkriptsioonandmete ettevalmistamise skriptid on testitud Windows 11, macOS Ventura ja Ubuntu 22.04 (ja uuem) viimastel versioonidel.
 
-## Vajalikud Azure OpenAI Service ressursid
+## Nõutavate Azure OpenAI Service ressursside loomine
 
 > [!IMPORTANT]
-> Soovitame värskendada Azure CLI uusimale versioonile, et tagada ühilduvus OpenAI-ga
-> Vaata [Dokumentatsiooni](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
+> Soovitame teil uuendada Azure CLI uusimale versioonile, et tagada ühilduvus OpenAI-ga
+> Vaadake [Dokumentatsiooni](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
-1. Loo ressursigrupp
+1. Looge ressursside grupp
 
 > [!NOTE]
-> Nendes juhistes kasutame ressursigruppi nimega "semantic-video-search" East US piirkonnas.
-> Saad muuta ressursigrupi nime, kuid kui ressursi asukohta muudad,
-> kontrolli [mudeli saadavuse tabelit](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> Nende juhiste puhul kasutame ressursside gruppi nimega "semantic-video-search" asukohaga East US.
+> Saate muuta ressursside grupi nime, kuid kui muudate ressursside asukohta,
+> kontrollige [mudeli saadavustabelit](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. Loo Azure OpenAI Service ressurss.
+1. Looge Azure OpenAI Service ressurss.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Hangi selle rakenduse kasutamiseks lõpp-punkt ja võtmed
+1. Leidke selle rakenduse kasutamiseks vajalikud endpoint ja võtmed
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -37,9 +37,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. Paigalda järgmised mudelid:
+1. Paigaldage järgmised mudelid:
    - `text-embedding-ada-002` versioon `2` või uuem, nimega `text-embedding-ada-002`
-   - `gpt-4o-mini` nimega `gpt-4o-mini`
+   - `gpt-5-mini` nimega `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,24 +53,24 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
 ```
 
-## Vajalik tarkvara
+## Nõutav tarkvara
 
 - [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) või uuem
 
 ## Keskkonnamuutujad
 
-Järgmised keskkonnamuutujad on vajalikud YouTube'i transkriptsiooniandmete ettevalmistamise skriptide käivitamiseks.
+Järgmistesse keskkonnamuutujatesse tuleb panna YouTube'i transkriptsioonandmete ettevalmistamise skriptide käivitamiseks.
 
 ### Windowsis
 
-Soovitame lisada muutujad oma `user` keskkonnamuutujate hulka.
+Soovitame lisada muutujad enda `user` keskkonnamuutujate hulka.
 `Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` for [USER] > `New`.
 
 ```text
@@ -80,18 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-<!-- Saad lisada keskkonnamuutujad oma PowerShell profiili.
+<!-- Võite lisada keskkonnamuutujad ka oma PowerShelli profiili.
 
 ```powershell
-$env:AZURE_OPENAI_API_KEY = "<your Azure OpenAI Service API key>"
-$env:AZURE_OPENAI_ENDPOINT = "<your Azure OpenAI Service endpoint>"
-$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<your Azure OpenAI Service model deployment name>"
-$env:GOOGLE_DEVELOPER_API_KEY = "<your Google developer API key>"
+$env:AZURE_OPENAI_API_KEY = "<teie Azure OpenAI Service API võti>"
+$env:AZURE_OPENAI_ENDPOINT = "<teie Azure OpenAI Service endpoint>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<teie Azure OpenAI Service mudeli paigaldamise nimi>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<teie Google arendaja API võti>"
 ``` -->
 
 ### Linuxis ja macOS-is
 
-Soovitame lisada järgmised ekspordikäsklused oma `~/.bashrc` või `~/.zshrc` faili.
+Soovitame lisada järgmised ekspordid oma `~/.bashrc` või `~/.zshrc` faili.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -100,22 +100,22 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## Vajalikud Python'i teegid
+## Nõutavate Python'i teekide paigaldamine
 
-1. Paigalda [git klient](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), kui see pole veel installitud.
-1. Terminalis klooni näidis eelistatud repokataloogi.
+1. Paigaldage [git klient](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), kui see pole veel paigaldatud.
+1. Avage `Terminali` aken ja kloonige näidis eelistatud kausta.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
     ```
 
-1. Liigu kataloogi `data_prep`.
+1. Minge kausta `data_prep`.
 
    ```bash
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. Loo Python virtuaalne keskkond.
+1. Looge Python'i virtuaalne keskkond.
 
     Windowsis:
 
@@ -129,7 +129,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     python3 -m venv .venv
     ```
 
-1. Aktiveeri Python virtuaalne keskkond.
+1. Aktiveerige Python'i virtuaalne keskkond.
 
    Windowsis:
 
@@ -143,7 +143,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    source .venv/bin/activate
    ```
 
-1. Paigalda vajalikud teegid.
+1. Paigaldage nõutavad teegid.
 
    Windowsis:
 
@@ -157,7 +157,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## Käivita YouTube'i transkriptsiooniandmete ettevalmistamise skriptid
+## Käivitage YouTube'i transkriptsioonandmete ettevalmistamise skriptid
 
 ### Windowsis
 

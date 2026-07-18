@@ -1,20 +1,20 @@
-# Priprava podatkov za prepisovanje
+# Priprava podatkov za transkripcijo
 
-Skripte za pripravo podatkov za prepisovanje prenesejo prepise videoposnetkov s YouTuba in jih pripravijo za uporabo s primerom semantičnega iskanja z OpenAI vdelavami in funkcijami.
+Skripte za pripravo podatkov za transkripcijo prenašajo prepise videoposnetkov YouTube in jih pripravljajo za uporabo s primerom Semantično iskanje z OpenAI vdelavami in funkcijami.
 
-Skripte za pripravo podatkov za prepisovanje so bile preizkušene na najnovejših različicah Windows 11, macOS Ventura in Ubuntu 22.04 (in novejših).
+Skripte za pripravo podatkov za transkripcijo so bile preizkušene na najnovejših izdajah Windows 11, macOS Ventura in Ubuntu 22.04 (ter novejših).
 
 ## Ustvarite zahtevane vire storitve Azure OpenAI
 
 > [!IMPORTANT]
 > Priporočamo, da posodobite Azure CLI na najnovejšo različico, da zagotovite združljivost z OpenAI
-> Oglejte si [Dokumentacijo](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
+> Glejte [Dokumentacija](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Ustvarite skupino virov
 
 > [!NOTE]
 > Za ta navodila uporabljamo skupino virov z imenom "semantic-video-search" v regiji East US.
-> Ime skupine virov lahko spremenite, vendar pri spremembi lokacije virov,
+> Ime skupine virov lahko spremenite, vendar ob spremembi lokacije virov,
 > preverite [tabelo razpoložljivosti modelov](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
@@ -38,8 +38,8 @@ az cognitiveservices account keys list --name semantic-video-openai \
 ```
 
 1. Namestite naslednje modele:
-   - `text-embedding-ada-002` različica `2` ali novejša, z imenom `text-embedding-ada-002`
-   - `gpt-4o-mini` z imenom `gpt-4o-mini`
+   - `text-embedding-ada-002` različica `2` ali več, z imenom `text-embedding-ada-002`
+   - `gpt-5-mini` z imenom `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,8 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -62,15 +62,15 @@ az cognitiveservices account deployment create \
 
 ## Potrebna programska oprema
 
-- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) ali novejša
+- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) ali novejši
 
 ## Spremenljivke okolja
 
-Za zagon skriptov za pripravo podatkov za prepisovanje YouTube so potrebne naslednje spremenljivke okolja.
+Za zagon skript za pripravo podatkov za transkripcijo YouTube potrebujete naslednje spremenljivke okolja.
 
 ### Na Windows
 
-Priporočamo, da spremenljivke dodate v uporabniške spremenljivke okolja.
+Priporočamo, da spremenljivke dodate med spremenljivke okolja za `user`.
 `Windows Start` > `Uredi sistemske spremenljivke okolja` > `Spremenljivke okolja` > `Uporabniške spremenljivke` za [USER] > `Novo`.
 
 ```text
@@ -80,18 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-<!-- Spremenljivke okolja lahko dodate v svoj PowerShell profil.
+<!-- Spremenljivke okolja lahko dodate tudi v svoj PowerShell profil.
 
 ```powershell
-$env:AZURE_OPENAI_API_KEY = "<vaš Azure OpenAI Service API ključ>"
-$env:AZURE_OPENAI_ENDPOINT = "<vaša Azure OpenAI Service končna točka>"
-$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<ime nameščanja modela Azure OpenAI Service>"
-$env:GOOGLE_DEVELOPER_API_KEY = "<vaš Google razvijalski API ključ>"
+$env:AZURE_OPENAI_API_KEY = "<your Azure OpenAI Service API key>"
+$env:AZURE_OPENAI_ENDPOINT = "<your Azure OpenAI Service endpoint>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<your Azure OpenAI Service model deployment name>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<your Google developer API key>"
 ``` -->
 
 ### Na Linux in macOS
 
-Priporočamo, da dodate naslednje izvoze v datoteko `~/.bashrc` ali `~/.zshrc`.
+Priporočamo, da naslednje izvoze dodate v datoteko `~/.bashrc` ali `~/.zshrc`.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -103,7 +103,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ## Namestite zahtevane Python knjižnice
 
 1. Namestite [git odjemalca](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), če še ni nameščen.
-1. V oknu `Terminal` klonirajte primer v svojo želeno mapo repozitorija.
+1. V oknu `Terminal` klonirajte vzorec v želeno mapo repozitorija.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -115,7 +115,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. Ustvarite virtualno Python okolje.
+1. Ustvarite Python virtualno okolje.
 
     Na Windows:
 
@@ -129,7 +129,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     python3 -m venv .venv
     ```
 
-1. Aktivirajte virtualno Python okolje.
+1. Aktivirajte Python virtualno okolje.
 
    Na Windows:
 
@@ -145,7 +145,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Namestite zahtevane knjižnice.
 
-   Na Windows:
+   Na windows:
 
    ```powershell
    pip install -r requirements.txt
@@ -157,7 +157,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## Zaženite skripte za pripravo podatkov za prepisovanje YouTube
+## Zaženite skripte za pripravo podatkov za transkripcijo YouTube
 
 ### Na Windows
 

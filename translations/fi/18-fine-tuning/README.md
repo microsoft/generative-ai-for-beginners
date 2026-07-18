@@ -1,103 +1,143 @@
 [![Avoimen lähdekoodin mallit](../../../translated_images/fi/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
-# Räätälöi LLM-malliasi
+# LLM-mallin hienosäätö
 
-Suurten kielimallien käyttäminen generatiivisten tekoälysovellusten rakentamiseen tuo mukanaan uusia haasteita. Keskeinen kysymys on varmistaa vastauksen laatu (tarkkuus ja merkityksellisyys) mallin tuottamassa sisällössä käyttäjän pyynnön perusteella. Aiemmissa oppitunneissa käsittelimme tekniikoita, kuten kehotteen suunnittelua ja tiedonhakuun perustuvaa generointia, jotka pyrkivät ratkaisemaan ongelmaa _muokkaamalla mallin syötettä_.
+Suurten kielimallien käyttäminen generatiivisten tekoälysovellusten rakentamiseen tuo mukanaan uusia haasteita. Keskeinen kysymys on varmistaa vastausten laatu (tarkkuus ja merkityksellisyys) mallin tuottamassa sisällössä käyttäjän pyynnön perusteella. Aiemmissa oppitunneissa käsittelimme tekniikoita, kuten kehotteen suunnittelu ja hakuun perustuva generointi, jotka yrittävät ratkaista ongelman _muokkaamalla mallin syötteenä olevaa kehotetta_.
 
-Tänään tarkastelemme kolmatta tekniikkaa, **täsmäoppimista**, joka pyrkii ratkaisemaan haasteen _kouluttamalla mallia uudelleen_ lisädatan avulla. Sukelletaan yksityiskohtiin.
+Nykyisessä oppitunnissa käsittelemme kolmatta tekniikkaa, **hienosäätöä**, joka pyrkii ratkaisemaan haasteen _kouluttamalla mallia uudelleen_ lisäaineistolla. Sukelletaan yksityiskohtiin.
 
 ## Oppimistavoitteet
 
-Tässä oppitunnissa perehdytään täsmäoppimisen käsitteeseen esikoulutetuilla kielimalleilla, tutustutaan tämän lähestymistavan hyötyihin ja haasteisiin sekä annetaan ohjeita, milloin ja miten täsmäoppimista voidaan käyttää generatiivisten tekoälymallien suorituskyvyn parantamiseen.
+Tässä oppitunnissa esittelemme käsitteen hienosäädölle valmiiksi koulutetuissa kielimalleissa, tarkastelemme tämän lähestymistavan etuja ja haasteita sekä annamme ohjeita, milloin ja miten hienosäätöä kannattaa käyttää parantamaan generatiivisten tekoälymalliesi suorituskykyä.
 
-Oppitunnin lopussa sinun tulisi pystyä vastaamaan seuraaviin kysymyksiin:
+Oppitunnin lopussa pystyt vastaamaan seuraaviin kysymyksiin:
 
-- Mitä täsmäoppiminen kielimalleille tarkoittaa?
-- Milloin ja miksi täsmäoppiminen on hyödyllistä?
-- Kuinka voin täsmäopettaa esikoulutetun mallin?
-- Mitkä ovat täsmäoppimisen rajoitukset?
+- Mitä hienosäätö tarkoittaa kielimalleissa?
+- Milloin ja miksi hienosäätö on hyödyllistä?
+- Kuinka voin hienosäätää valmiiksi koulutettua mallia?
+- Mitkä ovat hienosäädön rajoitukset?
 
-Valmis? Aloitetaan.
+Valmiina? Aloitetaan.
 
 ## Kuvitettu opas
 
-Haluatko saada kokonaiskuvan siitä, mitä aiomme käsitellä ennen syvempää tutustumista? Katso tämä kuvitettu opas, joka kuvaa oppimismatkaa tälle oppitunnille - alkaen täsmäoppimisen keskeisten käsitteiden ja motivaation oppimisesta aina prosessin ja parhaiden käytäntöjen ymmärtämiseen täsmäoppimistehtävän suorittamiseksi. Tämä on kiehtova aihe tutkittavaksi, joten muista myös katsoa [Resurssit](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) -sivu lisälinkkejä itseohjattuun oppimiseen!
+Haluatko saada kokonaiskuvan siitä, mitä aiomme käsitellä ennen syventymistä? Tutustu tähän kuvitettuun oppaaseen, joka kuvaa oppimispolkua tässä oppitunnissa – ydinkäsitteiden ja hienosäädön motiivien oppimisesta aina prosessin ja parhaiden käytäntöjen ymmärtämiseen hienosäätötehtävän toteuttamisessa. Tämä on kiehtova aihe tutkimiseen, joten älä unohda tarkistaa [Resurssit](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) -sivua lisälinkkejä varten, jotka tukevat itseopiskelupolkua!
 
-![Kuvitettu opas kielimallien täsmäoppimiseen](../../../translated_images/fi/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Kuvitettu opas kielimallien hienosäätöön](../../../translated_images/fi/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
-## Mitä täsmäoppiminen kielimalleille tarkoittaa?
+## Mitä hienosäätö tarkoittaa kielimalleissa?
 
-Määritelmän mukaan suuret kielimallit on _esikoulutettu_ suuriin tekstimääriin, joita on kerätty monipuolisista lähteistä, mukaan lukien internet. Kuten olemme oppineet aiemmissa oppitunneissa, tarvitsemme tekniikoita kuten _kehotteen suunnittelua_ ja _tiedonhakuun perustuvaa generointia_ parantaaksemme mallin vastauksien laatua käyttäjän kysymyksiin ("kehotteisiin").
+Määritelmän mukaan suuret kielimallit on _valmiiksi koulutettu_ suuriin tekstimääriin, joita on kerätty monista lähteistä, mukaan lukien internet. Kuten olemme oppineet aiemmissa oppitunneissa, tarvitsemme tekniikoita kuten _kehotteen suunnittelu_ ja _haulla rikastettu generointi_ parantamaan mallin vastausten laatua käyttäjän kysymyksiin ("kehotteet").
 
-Yleinen kehotteen suunnittelun tekniikka on antaa mallille enemmän ohjeita siitä, mitä vastauksessa odotetaan joko antamalla _ohjeita_ (eksplisiittinen ohjaus) tai _antamalla muutama esimerkki_ (implisiittinen ohjaus). Tätä kutsutaan _muutama-esimerkkinen oppimiseksi_, mutta siinä on kaksi rajoitusta:
+Suosittu kehotteen suunnittelutekniikka on antaa mallille enemmän ohjeistusta siitä, mitä vastauksessa odotetaan, joko tarjoamalla _ohjeita_ (selkeä ohjaus) tai _antamalla muutama esimerkki_ (epäsuora ohjaus). Tätä kutsutaan _pienellä oppimisella_, mutta sillä on kaksi rajoitusta:
 
-- Mallin token-rajoitukset voivat estää antamiesi esimerkkien määrää ja rajoittaa tehokkuutta.
+- Mallin token-rajoitukset voivat rajoittaa annettavien esimerkkien määrää ja tehokkuutta.
 - Mallin token-kustannukset voivat tehdä esimerkkien lisäämisestä jokaiseen kehotteeseen kallista ja rajoittaa joustavuutta.
 
-Täsmäoppiminen on yleinen käytäntö koneoppimisjärjestelmissä, jossa otetaan esikoulutettu malli ja koulutetaan sitä uudelleen uudella datalla parantaakseen sen suorituskykyä tietyssä tehtävässä. Kielimallien yhteydessä voimme täsmäopettaa esikoulutettua mallia _valikoidulla joukolla esimerkkejä tiettyä tehtävää tai sovellusaluetta varten_ luodaksemme **räätälöidyn mallin**, joka voi olla tarkempi ja merkityksellisempi juuri kyseiseen tehtävään tai alueeseen. Täsmäoppimisen sivu-etuna on myös se, että se voi vähentää muutama-esimerkkisen oppimisen tarvitsemien esimerkkien määrää - vähentäen token-kulutusta ja siihen liittyviä kustannuksia.
+Hienosäätö on yleinen käytäntö koneoppimisjärjestelmissä, joissa otetaan valmiiksi koulutettu malli ja koulutetaan sitä uudelleen uusilla tiedoilla, jotta sen suorituskyky tiettyyn tehtävään paranee. Kielimallien yhteydessä voimme hienosäätää valmiiksi koulutettua mallia _huolellisesti valitulla esimerkkiajolla tietystä tehtävästä tai sovellusalueesta_ luodaksemme **räätälöidyn mallin**, joka voi olla tarkempi ja merkityksellisempi kyseiselle tehtävälle tai alueelle. Hienosäädön sivuvaikutuksena on myös, että se voi vähentää tarvittavien esimerkkien määrää pienellä oppimisella – vähentäen tokenien käyttöä ja siihen liittyviä kustannuksia.
 
-## Milloin ja miksi täsmäopettaa malleja?
+## Milloin ja miksi meidän pitäisi hienosäätää malleja?
 
-Tässä yhteydessä, kun puhumme täsmäoppimisesta, tarkoitamme **valvottua** täsmäoppimista, jossa uudelleenkoulutus tehdään **lisäämällä uutta dataa**, jota ei ollut alkuperäisessä koulutusdatassa. Tämä eroaa valvomattomasta täsmäkoulutuksesta, jossa mallia uudelleenkoulutetaan alkuperäiseen dataan perustuen, mutta eri hyperparametreilla.
+Tässä yhteydessä, kun puhumme hienosäädöstä, tarkoitamme **valvottua** hienosäätöä, jossa uudelleenkoulutus tehdään **lisäämällä uutta dataa**, jota ei ollut alkuperäisessä koulutusjoukossa. Tämä eroaa valvomattomasta hienosäädöstä, jossa mallia koulutetaan uudelleen alkuperäisellä datalla, mutta eri hyperparametreilla.
 
-Tärkeintä on muistaa, että täsmäoppiminen on edistynyt tekniikka, joka vaatii tietyn tason asiantuntemusta toivottujen tulosten saavuttamiseksi. Jos sitä tehdään väärin, se ei välttämättä tuota odotettuja parannuksia, ja saattaa jopa heikentää mallin suorituskykyä kohdealueellasi.
+Tärkeintä on muistaa, että hienosäätö on edistynyt tekniikka, joka vaatii tietyn tason asiantuntemusta haluttujen tulosten saavuttamiseksi. Jos sitä ei tehdä oikein, se ei välttämättä tuo odotettuja parannuksia ja saattaa jopa heikentää mallin suorituskykyä kohdistetulla alueella.
 
-Joten ennen kuin opit "miten" täsmäopettaa kielimalleja, sinun tulee tietää "miksi" tämä tie kannattaa valita ja "milloin" aloittaa täsmäoppimisprosessi. Aloita kysymällä itseltäsi nämä kysymykset:
+Joten ennen kuin opit "kuinka" hienosäätää kielimalleja, sinun täytyy tietää "miksi" valitset tämän tien ja "milloin" aloittaa hienosäätöprosessi. Aloita kysymällä itseltäsi nämä kysymykset:
 
-- **Käyttötapaus**: Mikä on _käyttötapauksesi_ täsmäoppimiselle? Mitä mallin osa-aluetta haluat parantaa?
-- **Vaihtoehdot**: Oletko kokeillut _muita tekniikoita_ haluttujen tulosten saavuttamiseksi? Käytä niitä perustana vertailulle.
-  - Kehotteen suunnittelu: Kokeile esimerkiksi muutama-esimerkkistä promptausta asiaankuuluvilla esimerkeillä. Arvioi vastausten laatu.
-  - Tiedonhakuun perustuva generointi: Yritä täydentää kehotteita hakutuloksilla, jotka löydät datastasi. Arvioi vastausten laatu.
-- **Kustannukset**: Oletko tunnistanut täsmäoppimisen kustannukset?
-  - Täsmäytettävyys - onko esikoulutettu malli saatavilla täsmäoppimiseen?
-  - Työmäärä - koulutusdatan valmistelu, mallin arviointi ja hienosäätö.
-  - Laskenta - täsmäoppimisen suorittaminen ja täsmäytetyn mallin käyttöönotto
-  - Data - riittävän laadukkaiden esimerkkien saatavuus täsmäoppimisen vaikutukseen
-- **Hyödyt**: Oletko varmistanut täsmäoppimisen hyödyt?
-  - Laatu - ylittikö täsmäytetty malli perusmallin suorituskyvyn?
-  - Kustannukset - vähentääkö se tokenin kulutusta yksinkertaistamalla kehotteita?
-  - Joustavuus - voitko hyödyntää perusmallia uusilla alueilla?
+- **Käyttötapaus**: Mikä on sinun _käyttötapauksesi_ hienosäädölle? Mitä haluat parantaa nykyisessä valmiiksi koulutetussa mallissa?
+- **Vaihtoehdot**: Oletko kokeillut _muita menetelmiä_ saavuttaaksesi toivotut tulokset? Käytä niitä vertailupohjana.
+  - Kehotteen suunnittelu: Kokeile tekniikoita, kuten pienellä oppimisella esimerkkien avulla merkityksellisistä kehotteista. Arvioi vastausten laatua.
+  - Hakuun rikastettu generointi: Kokeile rikastaa kehotteita hakutuloksilla, jotka saat tietojesi haulla. Arvioi vastausten laatua.
+- **Kustannukset**: Oletko tunnistanut hienosäädön kustannukset?
+  - Säädettävyys – onko valmiiksi koulutettu malli käytettävissä hienosäätöön?
+  - Työmäärä – koulutusdatan valmistelu, mallin arviointi ja hienosäätö
+  - Suorituskyky – hienosäätötyöskentelyn ajaminen ja hienosäädön mallin käyttöönotto
+  - Data – pääsy riittävän laadukkaisiin esimerkkeihin hienosäädön vaikutuksen aikaansaamiseksi
+- **Hyödyt**: Oletko varmistunut hienosäädön eduista?
+  - Laatu – paransiko hienosäädetty malli vertailukohtaa?
+  - Kustannukset – vähentääkö se token-käyttöä yksinkertaistamalla kehotteita?
+  - Laajennettavuus – voitko käyttää perusmallia uudelleen uusilla alueilla?
 
-Vastaamalla näihin kysymyksiin sinun pitäisi pystyä päättämään, onko täsmäoppiminen oikea lähestymistapa käyttötapauksellesi. Ihanteellisesti tapa on perusteltu vain, jos hyödyt ovat suuremmat kuin kustannukset. Kun päätät jatkaa, on aika miettiä _miten_ voit täsmäopettaa esikoulutettua mallia.
+Vastaamalla näihin kysymyksiin sinun pitäisi pystyä päättämään, onko hienosäätö oikea lähestymistapa sinun käyttötapaukseesi. Ihannetapauksessa se on perusteltua vain, jos hyödyt ylittävät kustannukset. Kun päätät jatkaa, on aika miettiä _miten_ hienosäätää valmiiksi koulutettu malli.
 
-Haluatko lisää näkemyksiä päätöksentekoprosessiin? Katso [Täsmäopeta vai älä täsmäopeta](https://www.youtube.com/watch?v=0Jo-z-MFxJs)
+Haluatko saada lisää näkemyksiä päätöksentekoprosessiin? Katso [Hienosäätö vai ei hienosäätöä](https://www.youtube.com/watch?v=0Jo-z-MFxJs)
 
-## Kuinka voimme täsmäopettaa esikoulutetun mallin?
+## Kuinka voimme hienosäätää valmiiksi koulutetun mallin?
 
-Täsmäoppimiseen tarvitset:
+Hienosäätöön tarvitset:
 
-- täsmäytettävän esikoulutetun mallin
-- datasetin täsmäoppimista varten
-- koulutusympäristön täsmäoppimistehtävän suorittamiseksi
-- hosting-ympäristön täsmäytetyn mallin käyttöönottamiseksi
+- valmiiksi koulutetun mallin hienosäädettäväksi
+- aineiston hienosäätöä varten
+- koulutusympäristön hienosäätötyön suorittamiseen
+- käyttöönottoympäristön hienosäädetyn mallin käyttöönottoa varten
 
-## Täsmäoppiminen käytännössä
+## Hienosäätö Microsoft Foundryllä
 
-> **Huom:** Joissakin alla olevissa opetusohjelmissa mainittu `gpt-35-turbo` / `gpt-3.5-turbo` on poistettu käytöstä sekä inferenssissä että täsmäoppimisessa. Jos aloitat uuden täsmäoppimistehtävän tänään, valitse sen sijaan tällä hetkellä tuettu malli, kuten `gpt-4o-mini` tai `gpt-4.1-mini`. Katso [Täsmäytettävien mallien lista](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure?WT.mc_id=academic-105485-koreyst#fine-tuning-models) ajantasaisista malleista. Näiden opetusohjelmien käsitteet ja vaiheet pätevät yhä.
+[Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) on paikka, jossa hienosäätö, käyttöönotto ja räätälöityjen mallien hallinta tapahtuu Azurella nykyään (se yhdistää aiemmin Azure OpenAI Studion ja Azure AI Studion toiminnot). Ennen työn aloittamista on hyvä ymmärtää, mitä Foundry tarjoaa - ja mitkä ovat suositellut parhaat käytännöt. Moottorin alla Foundry käyttää **LoRAa (low-rank adaptation)** mallien tehokkaaseen hienosäätöön, mikä pitää koulutuksen nopeampana ja edullisempana kuin painojen täydellinen uudelleenkoulutus.
 
-Seuraavat resurssit tarjoavat askel askeleelta ohjeita opastamaan sinua todellisen esimerkin läpi käyttämällä valittua mallia valikoidulla datasetilla. Näitä opetusohjelmia varten tarvitset tilin kyseisellä palveluntarjoajalla, sekä pääsyn asiaankuuluviin malleihin ja datoihin.
+### Vaihe 1: Valitse koulutustekniikka
 
-| Tarjoaja     | Opetusohjelma                                                                                                                                                                  | Kuvaus                                                                                                                                                                                                                                                                                                                                                                                                                            |
+Foundry tukee kolmea hienosäätötekniikkaa. **Aloita SFT:stä** – se kattaa laajimman valikoiman tilanteita.
+
+| Tekniikka | Mitä se tekee | Milloin sitä käytetään |
+| --- | --- | --- |
+| **Ohjattu hienosäätö (SFT)** | Kouluttaa syöte-/vastesamplepareilla, jotta malli oppii tuottamaan haluamiasi vastauksia. | Tavallinen metodi useimpiin tehtäviin: erikoistuminen alaan, tehtävän suorituskyky, tyyli ja sävy, ohjeiden noudattaminen ja kielten mukauttaminen. |
+| **Suora preferenssin optimointi (DPO)** | Oppii _suosituilta vs. ei-suosituilta_ vastauspareilta kohdentamaan tuotoksia ihmisten mieltymysten mukaisiksi. | Vastausten laadun, turvallisuuden ja kohdentamisen parantaminen, kun käytettävissä vertailevaa palautetta. |
+| **Vahvistettu hienosäätö (RFT)** | Käyttää _arvioijilta_ saatavia palkkiosignaaleja monimutkaisten käyttäytymisten optimointiin vahvistusoppimisen avulla. | Objektiiviset, päättelyä vaativat alat (matematiikka, kemia, fysiikka) selkeillä oikeilla/väärillä vastauksilla. Vaatii enemmän koneoppimisosaamista. |
+
+### Vaihe 2: Valitse koulutustaso
+
+Foundry antaa valita, miten ja missä koulutus suoritetaan:
+
+- **Standardi** – kouluttaa resurssisi alueella ja takaa datan säilymisen siellä. Käytä, kun datan pitää pysyä tietyssä alueessa.
+- **Globaali** – edullisempi ja nopeampi jonottaa käyttämällä kapasiteettia oman alueesi ulkopuolella (data ja painot kopioidaan koulutusalueelle). Hyvä oletus, kun datan säilytyspaikkavaatimus ei päde.
+- **Kehittäjä** – alhaisin hinta, käyttää käyttämätöntä kapasiteettia ilman latenssi- tai SLA-takuita (työt voidaan keskeyttää ja jatkaa). Ihanteellinen kokeiluun.
+
+### Vaihe 3: Valitse perusmalli
+
+Hienosäädettävät mallit sisältävät OpenAI `gpt-4o-mini`, `gpt-4o`, `gpt-4.1`, `gpt-4.1-mini` ja `gpt-4.1-nano` (SFT; 4o/4.1-perhe tukee myös DPO:ta), päättelymallit `o4-mini` ja `gpt-5` (RFT), sekä avoimen lähdekoodin mallit kuten `Ministral-3B`, `Qwen-32B`, `Llama-3.3-70B-Instruct` ja `gpt-oss-20b` (SFT Foundryn resursseilla). Tarkista aina ajantasainen [Hienosäätömallien lista](https://learn.microsoft.com/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure?WT.mc_id=academic-105485-koreyst) tuetuista menetelmistä, alueista ja saatavuudesta.
+
+> Foundry tarjoaa kaksi toimintamallia: **palvelimeton** (kuluun perustuva hinnoittelu, ei GPU-rajoitusten hallintaa, OpenAI ja valitut mallit) ja **hallinnoitu suorituskyky** (vie omat VM:t Azure Machine Learningin kautta laajimman mallivalikoiman käyttämiseksi). Useimpien kannattaa aloittaa palvelimettomasta.
+
+### Foundryn parhaat käytännöt
+
+- **Vertaa ensin lähtötasoon.** Mittaa perusmallin suorituskyky kehotteen suunnittelulla ja RAG:lla _ennen_ hienosäätöä, jotta voit osoittaa parannuksen.
+- **Aloita pienestä ja laajenna.** Aloita 50–100 korkealaatuisella esimerkillä lähestymistavan vahvistamiseksi, kasva sitten 500+ tuotantokäyttöön. Laatu on määrää tärkeämpää – karsi huonolaatuiset esimerkit.
+- **Muotoile data oikein.** Koulutus- ja validointitiedostojen täytyy olla JSONL-muodossa, UTF-8 **BOMilla**, alle 512 Mt, käyttäen chat-completions -viestimuotoa. Sisällytä aina validointitiedosto, jotta voit seurata ylikoulutusta.
+- **Pidä koulutusjärjestelmän kehotetta käytössä päättelyssä.** Käytä samaa järjestelmäviestiä mallin kutsussa kuin mitä käytit koulutuksessa.
+- **Arvioi tarkistuspisteitä – älä ota viimeistä suoraan käyttöön.** Foundry säilyttää viimeiset kolme epookkia käyttöön otettavina tarkistuspisteinä; valitse parhaiten yleistyvä seuraamalla `train_loss` / `valid_loss` ja token-tarkkuutta.
+- **Mittaa token-kustannukset laadun rinnalla** verrattaessa hienosäädettyä mallia lähtötasoon.
+- **Jatkuva hienosäätö.** Voit hienosäätää jo hienosäädettyä mallia uudella datalla (tuettu OpenAI-malleilla).
+- **Huomaa isännöintikustannukset.** Käytössä oleva räätälöity malli laskuttaa tuntiperusteisesti, ja käyttämätön käyttöönotto poistetaan 15 päivän jälkeen – siivoa tarpeettomat.
+
+Käy läpi koko kädestä pitäen opastus [Mukauta mallia hienosäädöllä](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/fine-tuning?WT.mc_id=academic-105485-koreyst) ja tutustu opaisiin [DPO:sta](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/fine-tuning-direct-preference-optimization?WT.mc_id=academic-105485-koreyst) ja [RFT:stä](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/reinforcement-fine-tuning?WT.mc_id=academic-105485-koreyst), kun olet valmis muihin tekniikoihin.
+
+## Hienosäätö käytännössä
+
+Seuraavat resurssit tarjoavat askel askeleelta opastuksia, jotka johdattavat sinut todennäköisen toteutusesimerkin pariin tällä hetkellä tuetulla mallilla ja huolellisesti valikoidulla aineistolla. Näiden kanssa työskentelemiseen tarvitset tilin kyseisellä palveluntarjoajalla sekä pääsyn asiaankuuluviin malleihin ja aineistoihin.
+
+| Palveluntarjoaja     | Opas                                                                                                                                                                       | Kuvaus                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| OpenAI       | [Kuinka täsmäopettaa chat-malleja](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst)                | Opettele täsmäopettamaan `gpt-35-turbo` tiettyyn toimialaan ("reseptiassistenti") valmistamalla koulutusdataa, suorittamalla täsmäoppimistehtävä ja käyttämällä täsmäytettyä mallia inferenssiin.                                                                                                                                                                                                                                   |
-| Azure OpenAI | [GPT 3.5 Turbo täsmäoppimisen opas](https://learn.microsoft.com/azure/ai-services/openai/tutorials/fine-tune?tabs=python-new%2Ccommand-line&WT.mc_id=academic-105485-koreyst)           | Opettele täsmäopettamaan `gpt-35-turbo-0613` mallia **Azurella** askel askeleelta luoden ja lataen koulutusdataa, suorittamalla täsmäoppimistehtävän sekä käyttöönottoa ja uuden mallin käyttöä.                                                                                                                                                                                                                                    |
-| Hugging Face | [Kielimallien täsmäoppiminen Hugging Facella](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                          | Tämä blogikirjoitus opastaa täsmäoppimisessa _avoimelle LLM-mallille_ (esim. `CodeLlama 7B`) käyttäen [transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) kirjasto & [Transformer Reinforcement Learning (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst) avoimilla [dataseteillä](https://huggingface.co/docs/datasets/index?WT.mc_id=academic-105485-koreyst) Hugging Facessa.      |
+| OpenAI       | [Kuinka hienosäätää chat-malleja](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst)                | Opettele hienosäätämään viimeisin OpenAI-chat-malli tiettyyn käyttötarkoitukseen ("reseptiavustaja") valmistamalla koulutusdata, suorittamalla hienosäätötyö ja käyttämällä hienosäädettyä mallia päättelyssä.                                                                                                                                                                                                                                              |
+| Microsoft Foundry | [Mukauta mallia hienosäädöllä](https://learn.microsoft.com/azure/ai-foundry/openai/tutorials/fine-tune?WT.mc_id=academic-105485-koreyst) | Opettele hienosäätämään tällä hetkellä tuettua mallia, kuten `gpt-4.1-mini` **Azuressa** Microsoft Foundryn avulla: valmistele ja lataa koulutus- ja validointidata, suorita hienosäätötyö, ota malli käyttöön ja käytä sitä.                                                                                                                                                                                                                                                                 |
+
+| Hugging Face | [LLM-mallien hienosäätö Hugging Face -alustalla](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                               | Tämä blogikirjoitus opastaa sinut hienosäätämään _avointa LLM:ää_ (esim. `CodeLlama 7B`) käyttäen [transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) -kirjastoa ja [Transformer Reinforcement Learning (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst) -työkalua avoimilla [aineistoilla](https://huggingface.co/docs/datasets/index?WT.mc_id=academic-105485-koreyst) Hugging Face -alustalla. |
 |              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| 🤗 AutoTrain | [Kielimallien täsmäoppiminen AutoTrainilla](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                               | AutoTrain (tai AutoTrain Advanced) on Hugging Facen python-kirjasto, joka mahdollistaa täsmäoppimisen moniin eri tehtäviin, mukaan lukien LLM-täsmäoppiminen. AutoTrain on kooditon ratkaisu ja täsmäoppimista voi tehdä omassa pilvessä, Hugging Face Spacessa tai paikallisesti. Tukee web-pohjaista GUI:ta, komentoriviä sekä koulutusta yaml-konfiguraatiotiedostojen avulla.                                                                              |
+| 🤗 AutoTrain | [LLM-mallien hienosäätö AutoTrainilla](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                                         | AutoTrain (tai AutoTrain Advanced) on Hugging Facen kehittämä python-kirjasto, joka mahdollistaa hienosäädön moniin eri tehtäviin, mukaan lukien LLM-hienosäätö. AutoTrain on kooditon ratkaisu, ja hienosäätö voidaan suorittaa omassa pilvessäsi, Hugging Face Spaces -palvelussa tai paikallisesti. Se tukee sekä web-pohjaista käyttöliittymää, komentorivikäyttöä että koulutusta yaml-määritystiedostojen kautta.                                                                               |
 |              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| 🦥 Unsloth | [Kielimallien täsmäoppiminen Unslothilla](https://github.com/unslothai/unsloth?WT.mc_id=academic-105485-koreyst)                                                               | Unsloth on avoimen lähdekoodin kehys, joka tukee LLM-täsmäoppimista ja vahvistusoppimista (RL). Unsloth virtaviivaistaa paikallisen koulutuksen, arvioinnin ja käyttöönoton valmiiksi rakennetuilla [notebookeilla](https://github.com/unslothai/notebooks?WT.mc_id=academic-105485-koreyst). Tukee myös tekstistä puheeksi (TTS), BERT- ja multimodaalisia malleja. Aloittaaksesi lue heidän vaiheittainen [Täsmäoppimisen opas LLM:lle](https://docs.unsloth.ai/get-started/fine-tuning-llms-guide).                 |
+| 🦥 Unsloth | [LLM-mallien hienosäätö Unslothilla](https://github.com/unslothai/unsloth?WT.mc_id=academic-105485-koreyst)                                                         | Unsloth on avoimen lähdekoodin kehys, joka tukee LLM-hienosäätöä ja vahvistusoppimista (RL). Unsloth virtaviivaistaa paikallisen koulutuksen, arvioinnin ja käyttöönoton valmiiden [notebookien](https://github.com/unslothai/notebooks?WT.mc_id=academic-105485-koreyst) avulla. Se tukee myös puheeksi muuntamista (TTS), BERT-malleja ja multimodaalisia malleja. Aloittaaksesi lue heidän vaiheittainen [LLM-mallien hienosäätö-opas](https://docs.unsloth.ai/get-started/fine-tuning-llms-guide).                                                                          |
 |              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 ## Tehtävä
 
-Valitse yllä olevista opetusohjelmista yksi ja käy se läpi. _Saatamme kopioida osan näistä opetusohjelmista Jupyter Notebookeihin tässä repossa vain viitteeksi. Käytä kuitenkin alkuperäisiä lähteitä saadaksesi uusimmat versiot_.
+Valitse jokin yllä olevista tutoriaaleista ja käy se läpi. _Saatamme toistaa joitain näistä tutoriaaleista Jupyter Notebookseissa tässä repoissa viitteeksi. Käytä kuitenkin suoraan alkuperäislähteitä saadaksesi uusimmat versiot_.
 
 ## Hienoa työtä! Jatka oppimista.
 
-Kun olet suorittanut tämän oppitunnin, tutustu [Generative AI Learning kokoelmaamme](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi generatiivisen tekoälyn tietojesi kehittämistä!
+Tämän oppitunnin suorittamisen jälkeen tutustu [Generatiivisen tekoälyn oppimiskokoelmaamme](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi generatiivisen tekoälyn osaamisesi kehittämistä!
 
-Onneksi olkoon!! Olet suorittanut tämän kurssin v2-sarjan viimeisen oppitunnin! Älä lopeta oppimista ja rakentamista. \*\*Tutustu [RESURSSIT](RESOURCES.md?WT.mc_id=academic-105485-koreyst) -sivuun saadaksesi lisää ehdotuksia juuri tähän aiheeseen.
+Onnittelut!! Olet suorittanut tämän kurssin v2-sarjan viimeisen oppitunnin! Älä lopeta oppimista ja rakentamista. \*\*Tutustu [RESURSSIT](RESOURCES.md?WT.mc_id=academic-105485-koreyst) -sivuun saadaksesi listan lisäehdotuksista juuri tähän aiheeseen liittyen.
 
-Myös v1-sarjamme oppitunnit on päivitetty lisäämällä tehtäviä ja konsepteja. Joten ota hetki ja virkistä tietosi - ja ole hyvä ja [jaa kysymyksesi ja palautteesi](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) auttaaksesi meitä parantamaan näitä oppitunteja yhteisölle.
+Myös v1-sarjaamme on päivitetty lisää tehtäviä ja käsitteitä. Joten ota hetki kerrataksesi tietosi — ja ole hyvä, [jaa kysymyksesi ja palautteesi](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) auttaaksesi meitä parantamaan näitä oppitunteja yhteisölle.
 
 ---
 

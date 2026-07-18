@@ -2,61 +2,61 @@
 
 ## Johdanto
 
-AI-agentit edustavat jännittävää kehityssuuntaa generatiivisessa tekoälyssä, mahdollistaen suurten kielimallien (LLM) kehittymisen assistenteista toimijoiksi, jotka kykenevät suorittamaan toimintoja. AI-agenttikehykset antavat kehittäjille mahdollisuuden luoda sovelluksia, jotka antavat LLM:ille pääsyn työkaluihin ja tilan hallintaan. Nämä kehykset parantavat myös näkyvyyttä, jolloin käyttäjät ja kehittäjät voivat seurata LLM:ien suunnittelemia toimintoja, parantaen siten käyttökokemuksen hallintaa.
+AI-agentit edustavat jännittävää kehitystä Generatiivisessa tekoälyssä, mahdollistaen suurten kielimallien (LLM) kehittymisen assistenteista agentteiksi, jotka pystyvät suorittamaan toimia. AI-agenttikehykset antavat kehittäjille mahdollisuuden luoda sovelluksia, jotka antavat LLM:ille pääsyn työkaluihin ja tilanhallintaan. Nämä kehykset parantavat myös näkyvyyttä, jolloin käyttäjät ja kehittäjät voivat seurata LLM:ien suunnittelemia toimia ja näin parantaa käyttökokemuksen hallintaa.
 
 Oppitunti kattaa seuraavat alueet:
 
-- Mitä AI-agentti tarkalleen ottaen on?
+- Ymmärtäminen, mitä AI-agentti on - Mikä tarkalleen on AI-agentti?
 - Viiden eri AI-agenttikehyksen tutkiminen - Mikä tekee niistä ainutlaatuisia?
 - Näiden AI-agenttien soveltaminen erilaisiin käyttötapauksiin - Milloin meidän tulisi käyttää AI-agentteja?
 
 ## Oppimistavoitteet
 
-Tämän oppitunnin jälkeen osaat:
+Oppitunnin jälkeen pystyt:
 
-- Selittää, mitä AI-agentit ovat ja miten niitä voidaan käyttää.
-- Ymmärtää eroja suosittujen AI-agenttikehysten välillä.
-- Ymmärtää, miten AI-agentit toimivat sovellusten rakentamiseksi niiden avulla.
+- Selittämään, mitä AI-agentit ovat ja miten niitä voidaan käyttää.
+- Ymmärtämään eroja suosittujen AI-agenttikehysten välillä ja miten ne eroavat toisistaan.
+- Ymmärtämään, miten AI-agentit toimivat, jotta voit rakentaa sovelluksia niiden avulla.
 
 ## Mitä ovat AI-agentit?
 
-AI-agentit ovat hyvin jännittävä ala generatiivisen tekoälyn maailmassa. Tämän jännityksen mukana tulee toisinaan käsitteiden ja sovellusten sekavuutta. Yksinkertaisuuden ja suurimman osan AI-agentteihin viittaavien työkalujen kattamiseksi käytämme seuraavaa määritelmää:
+AI-agentit ovat erittäin jännittävä ala generatiivisen tekoälyn maailmassa. Tämän innostuksen mukana tulee joskus terminologian ja sen sovelluksen sekaannus. Pidämme asiat yksinkertaisina ja kattavina useimmille AI-agentteihin viittaaville työkaluille käyttämällä tätä määritelmää:
 
-AI-agentit mahdollistavat suurten kielimallien (LLM) suorittaa tehtäviä antamalla niille pääsyn **tilaan** ja **työkaluihin**.
+AI-agentit antavat suurille kielimalleille (LLM) mahdollisuuden suorittaa tehtäviä antamalla niille pääsyn **tilaan** ja **työkaluihin**.
 
 ![Agenttimalli](../../../translated_images/fi/what-agent.21f2893bdfd01e6a.webp)
 
 Määritellään nämä termit:
 
-**Suuret kielimallit** - Näitä ovat kurssin aikana käsitellyt mallit, kuten GPT-3.5, GPT-4, Llama-2 jne.
+**Suuret kielimallit** - Nämä ovat kursilla käytettyjä malleja, kuten GPT-5, GPT-4o ja Llama 3.3 jne.
 
-**Tila** - Viittaa kontekstiin, jossa LLM toimii. LLM käyttää aiempien toimintojensa ja nykyisen kontekstin tietoja ohjatakseen päätöksentekoaan seuraavien toimintojen osalta. AI-agenttikehykset helpottavat kehittäjiä ylläpitämään tätä kontekstia.
+**Tila** - Viittaa kontekstiin, jossa LLM toimii. LLM käyttää aiempien toimien ja nykyisen kontekstin tietoja ohjatakseen päätöksentekoaan seuraavien toimien osalta. AI-agenttikehykset auttavat kehittäjiä ylläpitämään tätä kontekstia helpommin.
 
-**Työkalut** - Suorittaakseen käyttäjän pyytämän ja LLM:n suunnitteleman tehtävän LLM tarvitsee pääsyn työkaluihin. Esimerkkejä työkaluista voivat olla tietokanta, API, ulkoinen sovellus tai jopa toinen LLM!
+**Työkalut** - Suorittaakseen käyttäjän pyytämän ja LLM:n suunnitteleman tehtävän, LLM tarvitsee pääsyn työkaluihin. Esimerkkejä työkaluista voivat olla tietokanta, API, ulkoinen sovellus tai jopa toinen LLM!
 
-Nämä määritelmät toivottavasti antavat hyvän pohjan jatkaa, kun tarkastelemme niiden toteutusta. Tutkitaan muutamia eri AI-agenttikehyksiä:
+Nämä määritelmät antavat toivottavasti hyvän perustan, kun tarkastelemme kuinka niitä toteutetaan. Tutkitaan muutamia eri AI-agenttikehyksiä:
 
 ## LangChain-agentit
 
-[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) toteuttaa yllä antamamme määritelmät.
+[LangChain-agentit](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) ovat yllä esittämämme määritelmien toteutus.
 
-Tilan hallintaan se käyttää sisäänrakennettua funktiota nimeltä `AgentExecutor`. Tämä ottaa vastaan määritellyn `agent`in ja käytettävissä olevat `tools`.
+Hallitakseen **tilaa** käytetään sisäänrakennettua funktiota nimeltä `AgentExecutor`. Tämä hyväksyy määritellyn `agentin` ja käytettävissä olevat `työkalut`.
 
-`Agent Executor` tallentaa myös chat-historian tarjotakseen keskustelun kontekstin.
+`AgentExecutor` tallentaa myös keskusteluhistorian tarjotakseen keskustelun kontekstin.
 
-![LangChain-agentit](../../../translated_images/fi/langchain-agents.edcc55b5d5c43716.webp)
+![Langchain-agentit](../../../translated_images/fi/langchain-agents.edcc55b5d5c43716.webp)
 
-LangChain tarjoaa [työkaluluettelon](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), jonka voit tuoda sovellukseesi ja johon LLM pääsee käsiksi. Näitä tekevät yhteisö ja LangChain-tiimi.
+LangChain tarjoaa [työkaluluettelon](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), jotka voidaan tuoda sovellukseesi, joihin LLM voi saada pääsyn. Nämä ovat tehty yhteisön ja LangChain-tiimin toimesta.
 
-Voit määritellä nämä työkalut ja välittää ne `Agent Executor`ille.
+Voit sitten määritellä nämä työkalut ja antaa ne `AgentExecutorille`.
 
-Näkyvyys on toinen tärkeä aspekti AI-agentteja puhuttaessa. On tärkeää, että sovelluskehittäjät ymmärtävät, mitä työkalua LLM käyttää ja miksi. Tätä varten LangChain-tiimi on kehittänyt LangSmithin.
+Näkyvyys on toinen tärkeä näkökulma AI-agentteja puhuttaessa. On tärkeää, että sovelluskehittäjät ymmärtävät, mitä työkalua LLM käyttää ja miksi. LangChain-tiimi on kehittänyt tätä varten LangSmithin.
 
 ## AutoGen
 
-Seuraava AI-agenttikehys, jota käsittelemme, on [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). AutoGenin päätavoitteena ovat keskustelut. Agentit ovat sekä **keskusteltavissa** että **muokattavissa**.
+Seuraava AI-agenttikehys, jota käsittelemme, on [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). AutoGenin pääpaino on keskusteluissa. Agentit ovat sekä **keskustelukykyisiä** että **mukautettavia**.
 
-**Keskusteltavissa** - LLM:t voivat aloittaa ja jatkaa keskustelua toisen LLM:n kanssa suorittaakseen tehtävän. Tämä tehdään luomalla `AssistantAgents` ja antamalla niille tietty järjestelmäviesti.
+**Keskustelukykyisiä** - LLM:t voivat aloittaa ja jatkaa keskustelua toisen LLM:n kanssa suorittaakseen tehtävän. Tämä tehdään luomalla `AssistantAgents` ja antamalla niille tietty järjestelmäviesti.
 
 ```python
 
@@ -64,7 +64,7 @@ autogen.AssistantAgent( name="Coder", llm_config=llm_config, ) pm = autogen.Assi
 
 ```
 
-**Muokattavissa** - Agentit voivat olla määriteltyjä ei vain LLM:inä, vaan myös käyttäjinä tai työkaluina. Kehittäjänä voit määritellä `UserProxyAgent`in, joka vastaa vuorovaikutuksesta käyttäjän kanssa palautteen saamiseksi tehtävän suorittamisesta. Tämä palaute voi joko jatkaa tehtävän suorittamista tai lopettaa sen.
+**Mukautettavia** - Agentteja voidaan määritellä paitsi LLM:iksi, myös käyttäjiksi tai työkaluiksi. Kehittäjänä voit määritellä `UserProxyAgentin`, joka vastaa vuorovaikutuksesta käyttäjän kanssa palautteen saamiseksi tehtävän suorittamisesta. Tämä palaute voi jatkaa tehtävän suorittamista tai pysäyttää sen.
 
 ```python
 user_proxy = UserProxyAgent(name="user_proxy")
@@ -72,28 +72,28 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 ### Tila ja työkalut
 
-Avustava agentti generoituu Python-koodia hallitakseen ja muuttaakseen tilaa suorittaessaan tehtävää.
+Tilaa muuttaakseen ja hallitakseen avustava agentti luo Python-koodia tehtävän suorittamiseksi.
 
 Tässä esimerkki prosessista:
 
 ![AutoGen](../../../translated_images/fi/autogen.dee9a25a45fde584.webp)
 
-#### LLM määritelty järjestelmäviestillä
+#### Järjestelmäviestillä määritelty LLM
 
 ```python
 system_message="For weather related tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done."
 ```
 
-Tämä järjestelmäviesti ohjaa tätä tiettyä LLM:ää siihen, mitkä toiminnot ovat olennaisia sen tehtävälle. Muista, että AutoGenissa voit määritellä useita AssistantAgentteja erilaisilla järjestelmäviesteillä.
+Tämä järjestelmäviesti ohjaa tämän tietyn LLM:n, mitkä toiminnot ovat tehtävän kannalta relevantteja. Muista, että AutoGenilla voit määritellä useita AssistantAgentteja eri järjestelmäviesteillä.
 
-#### Keskustelu käynnistyy käyttäjän toimesta
+#### Käyttäjä aloittaa keskustelun
 
 ```python
 user_proxy.initiate_chat( chatbot, message="I am planning a trip to NYC next week, can you help me pick out what to wear? ", )
 
 ```
 
-Tämä käyttäjä_proxy:n (ihmisen) viesti käynnistää agentin prosessin tutkia mahdollisia suoritettavia toimintoja.
+Tämä viesti käyttäjäproxyltä (ihmiseltä) käynnistää agentin prosessin tutkia, mitä toimintoja sen tulisi suorittaa.
 
 #### Funktio suoritetaan
 
@@ -106,23 +106,23 @@ chatbot (to user_proxy):
 
 ```
 
-Kun alkuperäinen keskustelu on käsitelty, agentti ehdottaa käytettävää työkalua. Tässä tapauksessa se on `get_weather`-funktio. Kokoonpanostasi riippuen tätä toimintoa voi suorittaa agentti automaattisesti tai se voidaan suorittaa käyttäjän syötteen perusteella.
+Kun alkuperäinen keskustelu on käsitelty, agentti lähettää ehdotetun työkalun kutsuttavaksi. Tässä tapauksessa se on funktio nimeltä `get_weather`. Konfiguraatiostasi riippuen tämä funktio voidaan suorittaa automaattisesti ja lukea agentin toimesta tai suorittaa käyttäjän syötteen perusteella.
 
-Löydät lisätietoja ja [AutoGen-koodiesimerkkejä](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) tutustuaksesi siihen, miten pääset alkuun rakentamisessa.
+Löydät listan [AutoGenin koodiesimerkeistä](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) tutustuaksesi tarkemmin, miten pääset alkuun rakentamisessa.
 
 ## Microsoft Agent Framework
 
-[Microsoft Agent Framework](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst) on Microsoftin avoimen lähdekoodin SDK AI-agenttien ja monitoimijajärjestelmien rakentamiseen sekä **Python**- että **.NET**-ympäristöissä. Se yhdistää kahden aiemman Microsoftin projektin vahvuudet — yritysominaisuudet **Semantic Kernelissä** ja monitoimijaorchesteroinnin **AutoGenissä** — yhdeksi tuetuksi kehyksi. Jos aloitat tänään uuden agenttiprojektin, tämä on suositeltu AutoGenin seuraaja.
+[Microsoft Agent Framework](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst) on Microsoftin avoimen lähdekoodin SDK AI-agenttien ja moniaagenttijärjestelmien rakentamiseen sekä **Pythonilla** että **.NETillä**. Se yhdistää kahden aiemman Microsoft-projektin vahvuudet — yritysominaisuudet **Semantic Kernelissä** ja moniaagenttien orkestroinnin **AutoGenissä** — yhdeksi tuetuksi kehykseksi. Jos aloitat uuden agenttiprojektin tänään, tämä on suositeltu AutoGenin seuraaja.
 
-Kehys skaalautuu yhdestä **chat-agentista** monimutkaisiin **monitoimijatyönkulkuihin** ja integroituu suoraan Microsoft Foundryyn, Azure OpenAI:hin ja OpenAI:hin. Se tarjoaa myös sisäänrakennetun havaittavuuden OpenTelemetryn kautta, jotta voit tarkasti jäljittää agenttien toimia.
+Kehys skaalautuu yhdestä **keskusteluagentista** aina monimutkaisiin **moniaagenttiprosesseihin** asti, ja se integroituu suoraan Microsoft Foundryn, Azure OpenAI:n ja OpenAI:n kanssa. Lisäksi se tarjoaa sisäänrakennetun havainnoitavuuden OpenTelemetryn kautta, jotta voit seurata tarkasti, mitä agenttisi tekevät.
 
 ### Tila ja työkalut
 
-**Tila** - Kehys hallitsee keskustelukontekstia puolestasi **keskusteluketjujen** avulla. Agentti seuraa viestihistoriaa (käyttäjän pyynnöt, työkalukutsut ja niiden tulokset), joten jokainen vuoro rakentuu edellisen varaan. Keskusteluketjuja voidaan myös tallentaa, mikä mahdollistaa keskustelun tauottamisen ja jatkamisen myöhemmin.
+**Tila** - Kehys hallitsee keskustelukontekstia puolestasi **säikeiden** kautta. Agentti seuraa viestihistoriaa (käyttäjän pyyntöjä, työkalukutsuja ja niiden tuloksia), joten jokainen vaihe rakentuu edellisten päälle. Säikeet voidaan myös tallentaa, jolloin keskustelu voidaan keskeyttää ja jatkaa myöhemmin.
 
-**Työkalut** - Annet agentille työkaluja välittämällä sille tavallisia Python-funktioita. Typetettyjä parametrejä muunnetaan automaattisesti skeemaksi, joten malli tietää, miten ja milloin kutsua niitä (funktion kutsu). Kehys tukee myös Model Context Protocol (MCP) -palvelimia ja isännöityjä työkaluja, kuten kooditulkkia.
+**Työkalut** - Annet agentille työkaluja välittämällä tavallisia Python-funktioita. Tyyppimerkittyjä parametreja muutetaan automaattisesti skeemaksi, jotta malli tietää, miten ja milloin kutsua niitä (funktion kutsu). Kehys tukee myös Model Context Protocol (MCP) -palvelimia ja isännöityjä työkaluja, kuten koodin tulkkia.
 
-Tässä esimerkki yksittäisestä agentista, jolla on mukautettu työkalu:
+Tässä esimerkki yhdestä agentista, jolla on mukautettu työkalu:
 
 ```python
 import asyncio
@@ -154,34 +154,34 @@ async def main():
 asyncio.run(main())
 ```
 
-Jos haluat yhdistää Microsoft Foundryssä Azure OpenAI:hin, välitä päätepiste ja tunnistetiedot asiakkaalle:
+Yhdistääksesi Microsoft Foundrystä Azure OpenAI:hin, anna päätepisteesi ja tunnistetietosi asiakkaalle:
 
 ```python
 from azure.identity.aio import AzureCliCredential
 from agent_framework.openai import OpenAIChatClient
 
 client = OpenAIChatClient(
-    model="my-gpt-4o-deployment",
+    model="my-gpt-5-mini-deployment",
     azure_endpoint="https://my-resource.openai.azure.com",
     credential=AzureCliCredential(),
 )
 ```
 
-### Monitoimijatyönkulut
+### Moniaagenttiprosessit
 
-Kehyksen erityinen vahvuus on monien agenttien orkestraatiossa. Esimerkiksi voit ajaa agentteja peräkkäin (jokainen välittää kontekstinsa seuraavalle) tai hajauttaa useille agentteille rinnakkain ja yhdistää niiden tulokset:
+Kehyksen suuri vahvuus on useiden agenttien orkestroinnissa. Voit esimerkiksi suorittaa agentteja yksi toisensa jälkeen (jokainen välittää oman kontekstinsa seuraavalle) tai hajauttaa useille agenteille rinnakkain ja koota niiden tulokset yhteen:
 
 ```python
 from agent_framework.orchestrations import SequentialBuilder, ConcurrentBuilder
 
-# Suorita agentit peräkkäin, siirtäen keskustelun kontekstin ketjussa eteenpäin
+# Suorita agentit peräkkäin, kuljettamalla keskustelukonteksti ketjua pitkin
 sequential = SequentialBuilder(participants=[researcher, writer, editor]).build()
 
-# Hajauta agentteihin rinnakkain, ja tee sitten vastausten yhdistäminen
+# Jaa agentteihin rinnakkain, ja kerää sitten niiden vastaukset yhteen
 concurrent = ConcurrentBuilder(participants=[analyst_a, analyst_b, analyst_c]).build()
 ```
 
-Kehyksen asentamiseksi ja käytön aloittamiseksi:
+Asentaaksesi kehyksen ja aloittaaksesi:
 
 ```bash
 pip install agent-framework-core
@@ -190,57 +190,57 @@ pip install agent-framework-openai       # OpenAI ja Azure OpenAI
 pip install agent-framework-foundry      # Microsoft Foundry
 ```
 
-Voit tutustua lisää [Microsoft Agent Framework -arkistoon](https://github.com/microsoft/agent-framework?WT.mc_id=academic-105485-koreyst) ja [viralliseen dokumentaatioon](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst).
+Voit tutkia lisää [Microsoft Agent Frameworkin repositoriosta](https://github.com/microsoft/agent-framework?WT.mc_id=academic-105485-koreyst) ja [virallisesta dokumentaatiosta](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst).
 
 ## Taskweaver
 
-Seuraava agenttikehys, jota tutkitaan, on [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). sitä kutsutaan "koodi ensin" -agentiksi, koska se ei työskentele pelkästään `merkkijonojen` kanssa, vaan voi käsitellä Pythonin DataFrameja. Tämä on erittäin hyödyllistä data-analyysi- ja luontitehtävissä, kuten kaavioiden ja graafien luomisessa tai satunnaislukujen generoinnissa.
+Seuraava agenttikehys, jota tutustumme, on [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). Se tunnetaan "koodi ensin" -agenttina, koska se työskentelee pelkkien `merkkijonojen` sijaan DataFramejen kanssa Pythonissa. Tämä on erittäin hyödyllistä data-analyysi- ja generointitehtävissä. Esimerkkejä voivat olla graafien ja kaavioiden luominen tai satunnaislukujen generointi.
 
 ### Tila ja työkalut
 
-Keskustelun tilan hallintaan TaskWeaver käyttää `Planner`-käsitettä. `Planner` on LLM, joka ottaa käyttäjän pyynnön ja suunnittelee tarvittavat tehtävät tämän pyynnön toteuttamiseksi.
+Keskustelun tilan hallintaan TaskWeaver käyttää `Planner`-käsitettä. `Planner` on LLM, joka ottaa käyttäjän pyynnön ja laatii tehtävät, jotka on suoritettava tämän pyynnön täyttämiseksi.
 
-Tehtävien suorittamiseksi `Planner` pääsee käsiksi työkalukokoelmaan nimeltä `Plugins`. Nämä voivat olla Python-luokkia tai yleinen koodin tulkki. Nämä pluginien tiedot tallennetaan upotuksina, jotta LLM voi paremmin hakea oikeaa pluginiä.
+Tehtävien suorittamiseksi `Planner`ille on tarjolla kokoelma työkaluja nimeltä `Plugins`. Nämä voivat olla Python-luokkia tai yleinen koodintulkki. Nämä plugin-moduulit tallennetaan upotuksina, jotta LLM voi paremmin etsiä oikean pluginin.
 
 ![Taskweaver](../../../translated_images/fi/taskweaver.da8559999267715a.webp)
 
-Tässä esimerkki pluginitoteutuksesta poikkeamien tunnistamiseen:
+Tässä esimerkki pluginista, joka käsittelee poikkeavuuksien tunnistusta:
 
 ```python
 class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_col_name: str, value_col_name: str):
 ```
 
-Koodi tarkastetaan ennen suoritusta. Toinen Taskweaverin kontekstinhallintafunktio on `experience`. Experience mahdollistaa keskustelukontekstin tallentamisen pitkällä aikavälillä YAML-tiedostoon. Tämä voidaan konfiguroida niin, että LLM paranee ajan myötä tiettyjen tehtävien suorittamisessa, kun se pääsee käsiksi aiempiin keskusteluihin.
+Koodi tarkistetaan ennen suoritusta. Toinen Taskweaverin kontekstinhallintaa helpottava ominaisuus on `experience`. Kokemus mahdollistaa keskustelukontekstin pitkäaikaissäilytyksen YAML-tiedostossa. Tämä voidaan määrittää siten, että LLM paranee ajan myötä tietyissä tehtävissä, kun sille altistetaan aiempia keskusteluja.
 
 ## JARVIS
 
-Viimeinen agenttikehys, jota tutkimme, on [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file&WT.mc_id=academic-105485-koreyst). JARVISin ainutlaatuisuus on siinä, että se käyttää LLM:ää keskustelun `tilan` hallintaan ja `työkalut` ovat muita tekoälymalleja. Jokainen tekoälymalli on erikoistunut suorittamaan tiettyjä tehtäviä, kuten esineiden tunnistusta, puheen tekstiksi muuntamista tai kuvan kuvatekstitystä.
+Viimeinen agenttikehys, jota tutkimme, on [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file&WT.mc_id=academic-105485-koreyst). JARVISin ainutlaatuisuus on siinä, että se käyttää LLM:ää keskustelun `tilan` hallintaan ja `työkalut` ovat muita tekoälymalleja. Jokainen tekoälymalli on erikoistunut tiettyihin tehtäviin, kuten kohteiden tunnistukseen, puheen tekstitykseen tai kuvan kuvatekstin luomiseen.
 
 ![JARVIS](../../../translated_images/fi/jarvis.762ddbadbd1a3a33.webp)
 
-LLM, ollen yleiskäyttöinen malli, saa käyttäjän pyynnön, tunnistaa tehtävän ja tarvittavat argumentit/tiedot tehtävän suorittamiseen.
+Yleistarkoituksena mallina LLM vastaanottaa käyttäjän pyynnön ja tunnistaa tietyn tehtävän ja mahdolliset argumentit/tiedot, jotka tarvitaan tehtävän suorittamiseen.
 
 ```python
 [{"task": "object-detection", "id": 0, "dep": [-1], "args": {"image": "e1.jpg" }}]
 ```
 
-LLM muotoilee pyynnön mallille luettavaksi muodossa, kuten JSON. Kun tekoälymalli on palauttanut ennusteen tehtävän perusteella, LLM saa vastauksen.
+LLM muotoilee pyynnön sellaiseksi, että erikoistunut tekoälymalli voi sen tulkita, esimerkiksi JSON-muodossa. Kun tekoälymalli on palauttanut ennusteensa tehtävän perusteella, LLM vastaanottaa vastauksen.
 
-Jos tehtävän suorittamiseen tarvitaan useita malleja, LLM tulkitsee myös näiden mallien vastaukset ennen vastausten yhdistämistä käyttäjälle.
+Jos tehtävän suorittamiseen tarvitaan useampi malli, LLM tulkitsee myös niiden vastaukset ennen kuin se kokoaa ne tuottaakseen vastauksen käyttäjälle.
 
-Alla oleva esimerkki näyttää, miten tämä toimisi, kun käyttäjä pyytää kuvan esineiden kuvausta ja määritystä:
+Alla oleva esimerkki näyttää, miten tämä toimii, kun käyttäjä pyytää kuvan kohteiden kuvausta ja lukumäärää:
 
 ## Tehtävä
 
-Jatkaaksesi AI-agenttien oppimista voit rakentaa Microsoft Agent Frameworkilla:
+Jatka oppimista AI-agenttien parissa rakentamalla sovellus Microsoft Agent Frameworkilla:
 
-- Sovelluksen, joka simuloi liiketapaamista eri koulutusalan startupin osastojen välillä.
-- Luo järjestelmäviestejä, jotka ohjaavat LLM:ää ymmärtämään erilaisia persoonia ja prioriteetteja, ja mahdollistavat käyttäjän ehdottaa uutta tuoteideaa.
-- LLM:n tulisi sitten generoida jokaisen osaston jatkokysymyksiä myynnin ja tuoteidean kehittämiseksi ja parantamiseksi.
+- Sovellus, joka simuloi liiketoimintakokousta eri osastojen kanssa koulutusalan startupissa.
+- Luo järjestelmäviestit, jotka ohjaavat LLM:ia ymmärtämään erilaisia persoonia ja prioriteetteja, ja anna käyttäjän esitellä uusi tuoteidea.
+- LLM:n tulisi sitten luoda jatkokysymyksiä kustakin osastosta pitchin ja tuoteidean tarkentamiseksi ja parantamiseksi.
 
 ## Oppiminen ei lopu tähän, jatka matkaa
 
-Oppitunnin jälkeen tutustu Generative AI -oppimiskokoelmaamme [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi generatiivisen tekoälyn osaamisesi kehittämistä!
+Tämän oppitunnin suorittamisen jälkeen tutustu [Generatiivisen tekoälyn oppimiskokoelmaamme](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi Generatiivisen tekoälyn taitojen kehittämistä!
 
 ---
 

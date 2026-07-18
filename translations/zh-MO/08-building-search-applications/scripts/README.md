@@ -1,21 +1,21 @@
-# 文字轉錄資料準備
+# 轉錄數據準備
 
-文字轉錄資料準備腳本會下載 YouTube 視頻文字稿並進行整理，以便用於帶有 OpenAI 嵌入式和功能的語義搜索示例。
+轉錄數據準備腳本會下載 YouTube 影片的字幕並將其準備好，以供語義搜尋結合 OpenAI 嵌入和函數的範例使用。
 
-文字轉錄資料準備腳本已在最新版本 Windows 11、macOS Ventura 和 Ubuntu 22.04（及以上版本）上進行測試。
+這些轉錄數據準備腳本已在最新版本的 Windows 11、macOS Ventura 和 Ubuntu 22.04（以及以上版本）上測試過。
 
-## 建立所需的 Azure OpenAI 服務資源
+## 建立必要的 Azure OpenAI 服務資源
 
 > [!IMPORTANT]
-> 我們建議您更新 Azure CLI 至最新版本，以確保與 OpenAI 的相容性
+> 我們建議您將 Azure CLI 更新至最新版本，以確保與 OpenAI 的兼容性
 > 請參閱 [文件](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. 建立資源群組
 
 > [!NOTE]
-> 本指南使用位於東美區的名為 "semantic-video-search" 的資源群組。
-> 您可以更改資源群組名稱，但在更改資源位置時，
-> 請查閱 [模型可用性表](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst)。
+> 指示中使用的資源群組名為 "semantic-video-search"，位置在 East US（東部美國）。
+> 您可以更改資源群組名稱，但如要更改資源位置，
+> 請查看 [模型可用性表](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst)。
 
 ```console
 az group create --name semantic-video-search --location eastus
@@ -28,7 +28,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. 取得用於此應用程式的端點和金鑰
+1. 取得此應用程式使用的端點與金鑰
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -38,8 +38,8 @@ az cognitiveservices account keys list --name semantic-video-openai \
 ```
 
 1. 部署以下模型：
-   - 版本為 `2` 或以上的 `text-embedding-ada-002`，名為 `text-embedding-ada-002`
-   - 名為 `gpt-4o-mini` 的 `gpt-4o-mini`
+   - 版本為 `2` 或更新版本的 `text-embedding-ada-002`，命名為 `text-embedding-ada-002`
+   - 命名為 `gpt-5-mini` 的 `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,25 +53,25 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
 ```
 
-## 必要軟件
+## 必要軟體
 
-- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) 或以上版本
+- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) 或更高版本
 
 ## 環境變數
 
-執行 YouTube 文字轉錄資料準備腳本需要以下環境變數。
+為了執行 YouTube 轉錄數據準備腳本，下列環境變數是必要的。
 
 ### 在 Windows 上
 
-建議將變數添加到您的 `user` 環境變數中。
-`Windows Start` > `編輯系統環境變數` > `環境變數` > `[USER] 的使用者變數` > `新增`。
+建議將這些變數加入您的 `使用者` 環境變數。
+`Windows 開始` > `編輯系統環境變數` > `環境變數` > 選擇 [USER] 的 `使用者變數` > `新增`。
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -80,18 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-<!-- 你也可以將環境變數加入你的 PowerShell 配置檔案。
+<!-- 您也可以將環境變數加入您的 PowerShell 配置檔。
 
 ```powershell
-$env:AZURE_OPENAI_API_KEY = "<你的 Azure OpenAI 服務 API 金鑰>"
-$env:AZURE_OPENAI_ENDPOINT = "<你的 Azure OpenAI 服務端點>"
-$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<你的 Azure OpenAI 服務模型部署名稱>"
-$env:GOOGLE_DEVELOPER_API_KEY = "<你的 Google 開發者 API 金鑰>"
+$env:AZURE_OPENAI_API_KEY = "<您的 Azure OpenAI 服務 API 金鑰>"
+$env:AZURE_OPENAI_ENDPOINT = "<您的 Azure OpenAI 服務端點>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<您的 Azure OpenAI 服務模型部署名稱>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<您的 Google 開發者 API 金鑰>"
 ``` -->
 
-### 在 Linux 和 macOS 上
+### 在 Linux 與 macOS 上
 
-建議將以下匯出命令加入你的 `~/.bashrc` 或 `~/.zshrc` 文件中。
+建議將以下 export 指令加入您的 `~/.bashrc` 或 `~/.zshrc` 檔案。
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -102,14 +102,14 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## 安裝必要的 Python 函式庫
 
-1. 若尚未安裝，請安裝 [git 用戶端](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst)。
-1. 從 `終端機` 視窗將範例複製至你偏好的資料夾。
+1. 若尚未安裝，請先安裝 [git 用戶端](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst)。
+1. 在 `終端機` 視窗中，將範例複製到您偏好的倉庫資料夾。
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
     ```
 
-1. 進入 `data_prep` 資料夾。
+1. 前往 `data_prep` 資料夾。
 
    ```bash
    cd semanic-search-openai-embeddings-functions/src/data_prep
@@ -123,13 +123,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     python -m venv .venv
     ```
 
-    在 macOS 和 Linux 上：
+    在 macOS 與 Linux 上：
 
     ```bash
     python3 -m venv .venv
     ```
 
-1. 啟用 Python 虛擬環境。
+1. 啟動 Python 虛擬環境。
 
    在 Windows 上：
 
@@ -137,7 +137,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    .venv\Scripts\activate
    ```
 
-   在 macOS 和 Linux 上：
+   在 macOS 與 Linux 上：
 
    ```bash
    source .venv/bin/activate
@@ -151,13 +151,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip install -r requirements.txt
    ```
 
-   在 macOS 和 Linux 上：
+   在 macOS 與 Linux 上：
 
    ```bash
    pip3 install -r requirements.txt
    ```
 
-## 執行 YouTube 文字轉錄資料準備腳本
+## 執行 YouTube 轉錄數據準備腳本
 
 ### 在 Windows 上
 
@@ -165,7 +165,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 .\transcripts_prepare.ps1
 ```
 
-### 在 macOS 和 Linux 上
+### 在 macOS 與 Linux 上
 
 ```bash
 ./transcripts_prepare.sh

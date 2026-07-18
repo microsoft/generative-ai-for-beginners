@@ -4,135 +4,141 @@
 
 _(Click the image above to view the video of this lesson)_
 
-Generative AI refers to artificial intelligence capable of creating text, images, and other types of content. What makes it an incredible technology is its ability to democratize AI—anyone can use it with just a text prompt, a sentence written in natural language. You don’t need to learn programming languages like Java or SQL to achieve meaningful results; you simply use your own language, state what you want, and the AI model provides suggestions. The applications and impact of this are immense, enabling tasks like writing or understanding reports, creating applications, and much more—all in seconds.
+Generative AI is artificial intelligence capable of generating text, images, and other types of content. What makes it a fantastic technology is that it democratizes AI; anyone can use it with as little as a text prompt, a sentence written in a natural language. There's no need for you to learn a language like Java or SQL to accomplish something worthwhile; all you need is to use your language, state what you want, and out comes a suggestion from an AI model. The applications and impact of this are huge: you write or understand reports, write applications, and much more, all in seconds.
 
-In this curriculum, we’ll explore how our startup utilizes generative AI to unlock new possibilities in the education sector and how we address the inevitable challenges related to its social implications and technological limitations.
+In this curriculum, we’ll explore how our startup leverages generative AI to unlock new scenarios in the education world and how we address the inevitable challenges associated with the social implications of its application and the technology limitations.
 
 ## Introduction
 
 This lesson will cover:
 
 - Introduction to the business scenario: our startup idea and mission.
-- Generative AI and the evolution of the current technology landscape.
-- The inner workings of a large language model.
-- Key capabilities and practical use cases of Large Language Models.
+- Generative AI and how we landed on the current technology landscape.
+- Inner workings of a large language model.
+- Main capabilities and practical use cases of Large Language Models.
 
 ## Learning Goals
 
 After completing this lesson, you will understand:
 
-- What generative AI is and how Large Language Models function.
-- How to leverage large language models for various use cases, with a focus on educational scenarios.
+- What generative AI is and how Large Language Models work.
+- How you can leverage large language models for different use cases, with a focus on education scenarios.
 
 ## Scenario: our educational startup
 
-Generative Artificial Intelligence (AI) represents the pinnacle of AI technology, pushing the boundaries of what was once considered impossible. Generative AI models have numerous capabilities and applications, but for this curriculum, we'll focus on how they are transforming education through a fictional startup. We'll refer to this startup as _our startup_. Our startup operates in the education domain with the ambitious mission statement:
+Generative Artificial Intelligence (AI) represents the pinnacle of AI technology, pushing the boundaries of what was once thought impossible. Generative AI models have several capabilities and applications, but for this curriculum we'll explore how it's revolutionizing education through a fictional startup. We'll refer to this startup as _our startup_. Our startup works in the education domain with the ambitious mission statement of
 
-> _Improving accessibility in learning on a global scale, ensuring equitable access to education, and providing personalized learning experiences tailored to each learner’s needs._
+> _improving accessibility in learning, on a global scale, ensuring equitable access to education and providing personalized learning experiences to every learner, according to their needs_.
 
-Our startup team recognizes that achieving this goal is impossible without leveraging one of the most powerful tools of modern times—Large Language Models (LLMs).
+Our startup team is aware we’ll not be able to achieve this goal without leveraging one of the most powerful tools of modern times – Large Language Models (LLMs).
 
-Generative AI is expected to revolutionize the way we learn and teach today, offering students virtual teachers available 24/7 to provide vast amounts of information and examples, while enabling teachers to use innovative tools to assess students and provide feedback.
+Generative AI is expected to revolutionize the way we learn and teach today, with students having at their disposal virtual teachers 24 hours a day who provide vast amounts of information and examples, and teachers able to leverage innovative tools to assess their students and give feedback.
 
 ![Five young students looking at a monitor - image by DALLE2](../../../translated_images/en/students-by-DALLE2.b70fddaced1042ee.webp)
 
-To begin, let’s define some basic concepts and terminology that will be used throughout the curriculum.
+To start, let’s define some basic concepts and terminology we’ll be using throughout the curriculum.
 
 ## How did we get Generative AI?
 
-Despite the extraordinary _hype_ surrounding the recent announcement of generative AI models, this technology has been decades in the making, with initial research efforts dating back to the 1960s. Today, AI has reached a point where it exhibits human-like cognitive capabilities, such as conversation, as demonstrated by tools like [OpenAI ChatGPT](https://openai.com/chatgpt) or [Bing Chat](https://www.microsoft.com/edge/features/bing-chat?WT.mc_id=academic-105485-koreyst), which also uses a GPT model for web search-based conversations.
+Despite the extraordinary _hype_ created lately by the announcement of generative AI models, this technology is decades in the making, with the first research efforts dating back to the 60s. We're now at a point with AI having human cognitive capabilities, like conversation as shown by, for example, [OpenAI ChatGPT](https://openai.com/chatgpt) or [Microsoft Copilot](https://copilot.microsoft.com/?WT.mc_id=academic-105485-koreyst), which also uses a GPT model for its conversational web search experience.
 
-Looking back, the earliest prototypes of AI consisted of typewritten chatbots that relied on a knowledge base extracted from expert input and represented within a computer. Responses in the knowledge base were triggered by keywords found in the input text. However, it soon became evident that this approach, using typewritten chatbots, did not scale well.
+Backing up a bit, the very first prototypes of AI consisted of typewritten chatbots, relying on a knowledge base extracted from a group of experts and represented in a computer. The answers in the knowledge base were triggered by keywords appearing in the input text.
+However, it soon became clear that such an approach, using typewritten chatbots, did not scale well.
 
 ### A statistical approach to AI: Machine Learning
 
-A major turning point came in the 1990s with the application of statistical methods to text analysis. This led to the development of new algorithms—known as machine learning—that could learn patterns from data without explicit programming. This approach enabled machines to simulate human language understanding: a statistical model trained on text-label pairings could classify unknown input text with a predefined label representing the message’s intent.
+A turning point arrived during the 90s, with the application of a statistical approach to text analysis. This led to the development of new algorithms – known as machine learning – capable of learning patterns from data without being explicitly programmed. This approach allows machines to simulate human language understanding: a statistical model is trained on text-label pairings, enabling the model to classify unknown input text with a pre-defined label representing the intention of the message.
 
 ### Neural networks and modern virtual assistants
 
-In recent years, advancements in hardware capable of processing larger datasets and performing complex computations have spurred AI research, leading to the development of advanced machine learning algorithms known as neural networks or deep learning algorithms.
+In recent years, the technological evolution of hardware, capable of handling larger amounts of data and more complex computations, encouraged research in AI, leading to the development of advanced machine learning algorithms known as neural networks or deep learning algorithms.
 
-Neural networks (particularly Recurrent Neural Networks—RNNs) significantly improved natural language processing, allowing for a more meaningful representation of text by considering the context of words within sentences.
+Neural networks (and in particular Recurrent Neural Networks – RNNs) significantly enhanced natural language processing, enabling the representation of the meaning of text in a more meaningful way, valuing the context of a word in a sentence.
 
-This technology powered the virtual assistants that emerged in the first decade of the 21st century, which excelled at interpreting human language, identifying needs, and performing actions to fulfill them—such as responding with predefined scripts or utilizing third-party services.
+This is the technology that powered the virtual assistants born in the first decade of the new century, very proficient in interpreting human language, identifying a need, and performing an action to satisfy it – like answering with a pre-defined script or consuming a 3rd party service.
 
 ### Present day, Generative AI
 
-This brings us to today’s Generative AI, which can be considered a subset of deep learning.
+So that’s how we came to Generative AI today, which can be seen as a subset of deep learning.
 
 ![AI, ML, DL and Generative AI](../../../translated_images/en/AI-diagram.c391fa518451a40d.webp)
 
-After decades of AI research, a new model architecture—called _Transformer_—overcame the limitations of RNNs by processing much longer text sequences as input. Transformers use an attention mechanism that allows the model to assign different weights to the inputs it receives, focusing more on the most relevant information regardless of its position in the text sequence.
+After decades of research in the AI field, a new model architecture – called _Transformer_ – overcame the limits of RNNs, being able to get much longer sequences of text as input. Transformers are based on the attention mechanism, enabling the model to give different weights to the inputs it receives, ‘paying more attention’ where the most relevant information is concentrated, regardless of their order in the text sequence.
 
-Most recent generative AI models—also known as Large Language Models (LLMs), as they work with textual inputs and outputs—are based on this architecture. These models, trained on vast amounts of unlabeled data from diverse sources like books, articles, and websites, can be adapted to a wide range of tasks and generate grammatically correct text with a touch of creativity. Not only have they greatly enhanced machines’ ability to ‘understand’ input text, but they have also enabled the generation of original responses in human language.
+Most of the recent generative AI models – also known as Large Language Models (LLMs), since they work with textual inputs and outputs – are indeed based on this architecture. What’s interesting about these models – trained on a huge amount of unlabeled data from diverse sources like books, articles and websites – is that they can be adapted to a wide variety of tasks and generate grammatically correct text with a semblance of creativity. So, not only did they incredibly enhance the capacity of a machine to ‘understand’ an input text, but they enabled their capacity to generate an original response in human language.
 
 ## How do large language models work?
 
-In the next chapter, we’ll explore different types of Generative AI models, but for now, let’s examine how large language models work, focusing on OpenAI GPT (Generative Pre-trained Transformer) models.
+In the next chapter we are going to explore different types of Generative AI models, but for now let’s have a look at how large language models work, with a focus on OpenAI GPT (Generative Pre-trained Transformer) models.
 
-- **Tokenizer, text to numbers**: Large Language Models take text as input and produce text as output. However, as statistical models, they work better with numbers than text sequences. Therefore, every input to the model is processed by a tokenizer before being used by the core model. A token is a chunk of text consisting of a variable number of characters, and the tokenizer’s main task is to split the input into an array of tokens. Each token is then mapped to a token index, which is the integer encoding of the original text chunk.
+- **Tokenizer, text to numbers**: Large Language Models receive a text as input and generate a text as output. However, being statistical models, they work much better with numbers than text sequences. That’s why every input to the model is processed by a tokenizer before being used by the core model. A token is a chunk of text – consisting of a variable number of characters, so the tokenizer's main task is splitting the input into an array of tokens. Then, each token is mapped with a token index, which is the integer encoding of the original text chunk.
 
 ![Example of tokenization](../../../translated_images/en/tokenizer-example.80a5c151ee7d1bd4.webp)
 
-- **Predicting output tokens**: Given n tokens as input (with max n varying by model), the model predicts one token as output. This token is then added to the input for the next iteration, creating an expanding window pattern that enhances the user experience by generating one (or multiple) sentences as a response. This explains why, if you’ve used ChatGPT, you might notice it sometimes stops mid-sentence.
+- **Predicting output tokens**: Given n tokens as input (with max n varying from one model to another), the model is able to predict one token as output. This token is then incorporated into the input of the next iteration, in an expanding window pattern, enabling a better user experience of getting one (or multiple) sentences as an answer. This explains why, if you ever played with ChatGPT, you might have noticed that sometimes it looks like it stops in the middle of a sentence.
 
-- **Selection process, probability distribution**: The model selects the output token based on its probability of occurring after the current text sequence. This probability distribution is calculated based on the model’s training. However, the token with the highest probability isn’t always chosen. A degree of randomness is introduced to simulate creative thinking, making the model non-deterministic—producing varied outputs for the same input. This randomness can be adjusted using a parameter called temperature.
+- **Selection process, probability distribution**: The output token is chosen by the model according to its probability of occurring after the current text sequence. This is because the model predicts a probability distribution over all possible ‘next tokens’, calculated based on its training. However, not always is the token with the highest probability chosen from the resulting distribution. A degree of randomness is added to this choice, in a way that the model acts in a non-deterministic fashion - we do not get the exact same output for the same input. This degree of randomness is added to simulate the process of creative thinking and it can be tuned using a model parameter called temperature.
 
 ## How can our startup leverage Large Language Models?
 
-Now that we understand how large language models work, let’s explore practical examples of their most common tasks, focusing on our business scenario. The primary capability of a Large Language Model is _generating text from scratch based on a natural language input_.
+Now that we have a better understanding of the inner working of a large language model, let’s see some practical examples of the most common tasks they can perform pretty well, with an eye to our business scenario.
+We said that the main capability of a Large Language Model is _generating a text from scratch, starting from a textual input, written in natural language_.
 
 But what kind of textual input and output?
-The input to a large language model is called a prompt, while the output is referred to as a completion, which describes the model’s process of generating the next token to complete the current input. We’ll delve deeper into prompts and how to design them effectively later. For now, let’s note that a prompt may include:
+The input of a large language model is known as a prompt, while the output is known as a completion—a term that refers to the model mechanism of generating the next token to complete the current input. We are going to dive deep into what a prompt is and how to design it in a way to get the most out of our model. But for now, let’s just say that a prompt may include:
 
-- An **instruction** specifying the type of output expected from the model. This instruction may include examples or additional data.
+- An **instruction** specifying the type of output we expect from the model. This instruction sometimes might embed some examples or some additional data.
 
-  1. Summarization of articles, books, product reviews, etc., along with extracting insights from unstructured data.
+  1. Summarization of an article, book, product reviews and more, along with extraction of insights from unstructured data.
     
     ![Example of summarization](../../../translated_images/en/summarization-example.7b7ff97147b3d790.webp)
   
-  2. Creative ideation and design of articles, essays, assignments, and more.
+  2. Creative ideation and design of an article, an essay, an assignment or more.
       
      ![Example of creative writing](../../../translated_images/en/creative-writing-example.e24a685b5a543ad1.webp)
 
-- A **question**, posed as part of a conversation with an agent.
+- A **question**, asked in the form of a conversation with an agent.
   
   ![Example of conversation](../../../translated_images/en/conversation-example.60c2afc0f595fa59.webp)
 
-- A chunk of **text to complete**, implicitly requesting writing assistance.
+- A chunk of **text to complete**, which implicitly is an ask for writing assistance.
   
   ![Example of text completion](../../../translated_images/en/text-completion-example.cbb0f28403d42752.webp)
 
-- A chunk of **code**, accompanied by a request for explanation and documentation, or a comment asking for code to perform a specific task.
+- A chunk of **code** together with the ask of explaining and documenting it, or a comment asking to generate a piece of code performing a specific task.
   
   ![Coding example](../../../translated_images/en/coding-example.50ebabe8a6afff20.webp)
 
-The examples above are simple and not intended to fully demonstrate the capabilities of Large Language Models. They aim to showcase the potential of generative AI, particularly in educational contexts.
+The examples above are quite simple and are not intended to be an exhaustive demonstration of Large Language Models' capabilities. They are meant to show the potential of using generative AI, in particular but not limited to educational contexts.
 
-It’s important to note that the output of generative AI models is not perfect. Sometimes, the model’s creativity can lead to outputs that combine correct information with fabrications, resulting in misleading or offensive content. Generative AI is not intelligent in the broader sense—it lacks critical and creative reasoning, emotional intelligence, and determinism. It is not inherently trustworthy, as it may confidently present erroneous references, content, or statements. In the following lessons, we’ll address these limitations and explore ways to mitigate them.
+Also, the output of a generative AI model is not perfect and sometimes the creativity of the model can work against it, resulting in an output which is a combination of words that the human user can interpret as a mystification of reality, or it can be offensive. Generative AI is not intelligent - at least in the more comprehensive definition of intelligence, including critical and creative reasoning or emotional intelligence; it is not deterministic, and it is not trustworthy, since fabrications, such as erroneous references, content, and statements, may be combined with correct information, and presented in a persuasive and confident manner. In the following lessons, we’ll be dealing with all these limitations and we’ll see what we can do to mitigate them.
 
 ## Assignment
 
-Your assignment is to research more about [generative AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) and identify an area where generative AI could be applied today but isn’t yet. How would the impact differ from traditional methods? Could it enable something previously impossible, or make processes faster? Write a 300-word summary of your dream AI startup, including headers like "Problem," "How I would use AI," "Impact," and optionally a business plan.
+Your assignment is to read up more on [generative AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence?WT.mc_id=academic-105485-koreyst) and try to identify an area where you would add generative AI today that doesn't have it. How would the impact be different from doing it the "old way," can you do something you couldn't before, or are you faster? Write a 300-word summary on what your dream AI startup would look like and include headers like "Problem," "How I would use AI," "Impact," and optionally a business plan.
 
-If you complete this task, you might even be ready to apply to Microsoft's incubator, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst), which offers credits for Azure, OpenAI, mentoring, and more. Check it out!
+If you did this task, you might even be ready to apply to Microsoft's incubator, [Microsoft for Startups Founders Hub](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst) we offer credits for both Azure, OpenAI, mentoring and much more, check it out!
 
 ## Knowledge check
 
 What's true about large language models?
 
 1. You get the exact same response every time.
-1. It does things perfectly, such as adding numbers or producing flawless code.
-1. The response may vary despite using the same prompt. It’s great for providing a first draft of text or code, but you’ll need to refine the results.
+1. It does things perfectly, great at adding numbers, produce working code etc.
+1. The response may vary despite using the same prompt. It's also great at giving you a first draft of something, be it text or code. But you need to improve on the results.
 
-A: 3, an LLM is non-deterministic, meaning the response varies. However, you can control its variance using a temperature setting. You shouldn’t expect it to perform tasks perfectly—it’s designed to handle the heavy lifting, often providing a solid starting point that requires further improvement.
+A: 3, an LLM is non-deterministic, the response varies, however, you can control its variance via a temperature setting. You also shouldn't expect it to do things perfectly, it's here to do the heavy lifting for you which often means you get a good first attempt at something that you need to gradually improve.
 
 ## Great Work! Continue the Journey
 
-After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue enhancing your Generative AI knowledge!
+After completing this lesson, check out our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue leveling up your Generative AI knowledge!
+
+
 Head over to Lesson 2 where we will look at how to [explore and compare different LLM types](../02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we aim for accuracy, please note that automated translations may include errors or inaccuracies. The original document in its native language should be regarded as the authoritative source. For critical information, professional human translation is advised. We are not responsible for any misunderstandings or misinterpretations resulting from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Disclaimer**:
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

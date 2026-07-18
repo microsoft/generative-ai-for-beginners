@@ -2,7 +2,7 @@
 
 ## Introdução 
 
-Esta lição cobrirá: 
+Esta lição irá cobrir: 
 
 - Explorar os dois principais modelos da família Meta - Llama 3.1 e Llama 3.2 
 - Compreender os casos de uso e cenários para cada modelo 
@@ -15,47 +15,47 @@ Nesta lição, vamos explorar 2 modelos da família Meta ou "Llama Herd" - Llama
 
 Estes modelos vêm em diferentes variantes e estão disponíveis no [catálogo Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
 
-> **Nota:** O GitHub Models será descontinuado no final de julho de 2026. Aqui estão mais detalhes sobre como usar os [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) para prototipar com modelos de IA.
+> **Nota:** O GitHub Models será descontinuado no final de julho de 2026. Aqui estão mais detalhes sobre como usar [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) para prototipar com modelos de IA.
 
-Variantes dos Modelos: 
+Variantes de Modelo: 
 - Llama 3.1 - 70B Instruct 
 - Llama 3.1 - 405B Instruct 
 - Llama 3.2 - 11B Vision Instruct 
 - Llama 3.2 - 90B Vision Instruct 
 
-*Nota: Llama 3 também está disponível nos Microsoft Foundry Models mas não será abordado nesta lição*
+*Nota: Llama 3 também está disponível no Microsoft Foundry Models mas não será abordado nesta lição*
 
 ## Llama 3.1 
 
-Com 405 mil milhões de parâmetros, o Llama 3.1 enquadra-se na categoria de LLM open source. 
+Com 405 Mil Milhões de Parâmetros, Llama 3.1 enquadra-se na categoria de LLM de código aberto. 
 
-O modelo é uma atualização do lançamento anterior Llama 3 ao oferecer: 
+O modelo é uma atualização da versão anterior Llama 3, oferecendo: 
 
-- Janela de contexto maior - 128k tokens contra 8k tokens 
-- Máximo de tokens de saída maior - 4096 contra 2048 
-- Melhor suporte multilingue - devido ao aumento dos tokens de treino 
+- Janela de contexto maior - 128k tokens vs 8k tokens 
+- Máximo de tokens de saída maior - 4096 vs 2048 
+- Melhor suporte multilíngue - devido ao aumento dos tokens de treino 
 
-Isto permite que o Llama 3.1 lide com casos de uso mais complexos ao construir aplicações GenAI incluindo: 
-- Chamada Nativa de Funções - a capacidade de chamar ferramentas e funções externas fora do fluxo de trabalho do LLM
-- Melhor desempenho RAG - devido à janela de contexto maior 
-- Geração de Dados Sintéticos - a capacidade de criar dados eficazes para tarefas como fine-tuning 
+Estes permitem que o Llama 3.1 lide com casos de uso mais complexos ao construir aplicações GenAI incluindo: 
+- Chamada nativa de funções - a capacidade de chamar ferramentas externas e funções fora do fluxo de trabalho do LLM
+- Melhor desempenho RAG - devido à maior janela de contexto 
+- Geração de dados sintéticos - a capacidade de criar dados eficazes para tarefas como fine-tuning 
 
 ### Chamada Nativa de Funções 
 
-O Llama 3.1 foi ajustado para ser mais eficaz ao fazer chamadas de funções ou ferramentas. Ele também tem duas ferramentas incorporadas que o modelo pode identificar como necessárias com base no prompt do utilizador. Essas ferramentas são: 
+O Llama 3.1 foi ajustado para ser mais eficaz em fazer chamadas de funções ou ferramentas. Também tem duas ferramentas integradas que o modelo pode identificar como necessárias para usar com base no prompt do utilizador. Essas ferramentas são: 
 
-- **Brave Search** - Pode ser usado para obter informações atualizadas como o tempo através de uma pesquisa na web 
-- **Wolfram Alpha** - Pode ser usado para cálculos matemáticos mais complexos, pelo que não é necessário escrever as suas próprias funções. 
+- **Brave Search** - Pode ser usado para obter informações atualizadas como o tempo ao realizar uma pesquisa na web 
+- **Wolfram Alpha** - Pode ser usado para cálculos matemáticos mais complexos, pelo que não é necessário escrever as tuas próprias funções. 
 
-Também pode criar as suas próprias ferramentas personalizadas que o LLM pode chamar. 
+Também podes criar as tuas próprias ferramentas personalizadas que o LLM pode chamar. 
 
 No exemplo de código abaixo: 
 
 - Definimos as ferramentas disponíveis (brave_search, wolfram_alpha) no prompt do sistema. 
-- Enviamos um prompt do utilizador que pergunta sobre o tempo numa certa cidade. 
-- O LLM responderá com uma chamada de ferramenta para a Brave Search que será assim `<|python_tag|>brave_search.call(query="Stockholm weather")` 
+- Enviamos um prompt de utilizador que pergunta sobre o tempo numa determinada cidade. 
+- O LLM responderá com uma chamada de ferramenta para a ferramenta Brave Search que terá esta aparência `<|python_tag|>brave_search.call(query="Stockholm weather")` 
 
-*Nota: Este exemplo apenas faz a chamada de ferramenta, se quiser obter os resultados, terá de criar uma conta gratuita na página da API Brave e definir a função em si.
+*Nota: Este exemplo apenas faz a chamada à ferramenta, se quiseres obter os resultados, precisarás de criar uma conta gratuita na página da API Brave e definir a função ela mesma.
 
 ```python 
 import os
@@ -63,7 +63,7 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import AssistantMessage, SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-# Obtenha estes na página "Visão Geral" do seu projeto Microsoft Foundry
+# Obtenha-os a partir da página "Visão Geral" do seu projeto Microsoft Foundry
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Meta-Llama-3.1-405B-Instruct"
@@ -100,11 +100,11 @@ print(response.choices[0].message.content)
 
 Apesar de ser um LLM, uma limitação do Llama 3.1 é a sua falta de multimodalidade. Ou seja, a incapacidade de usar diferentes tipos de entrada como imagens como prompts e fornecer respostas. Esta capacidade é uma das principais características do Llama 3.2. Estas características incluem também: 
 
-- Multimodalidade - tem a capacidade de avaliar prompts de texto e imagem 
+- Multimodalidade - capacidade de avaliar prompts tanto de texto como de imagem 
 - Variações de tamanho pequeno a médio (11B e 90B) - isto proporciona opções flexíveis de implantação, 
-- Variações só de texto (1B e 3B) - isso permite que o modelo seja implantado em dispositivos edge / móveis e fornece baixa latência 
+- Variações apenas de texto (1B e 3B) - permite que o modelo seja implantado em dispositivos móveis / edge e oferece baixa latência 
 
-O suporte multimodal representa um grande avanço no mundo dos modelos open source. O exemplo de código abaixo usa tanto uma imagem como um prompt de texto para obter uma análise da imagem pelo Llama 3.2 90B. 
+O suporte multimodal representa um grande passo no mundo dos modelos open source. O exemplo de código abaixo utiliza tanto uma imagem como um prompt de texto para obter uma análise da imagem do Llama 3.2 90B. 
 
 
 ### Suporte Multimodal com Llama 3.2
@@ -122,7 +122,7 @@ from azure.ai.inference.models import (
 )
 from azure.core.credentials import AzureKeyCredential
 
-# Obtenha estes na página "Visão geral" do seu projeto Microsoft Foundry
+# Obtenha estes da página "Visão geral" do seu projeto Microsoft Foundry
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Llama-3.2-90B-Vision-Instruct"
@@ -155,9 +155,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## A aprendizagem não para aqui, continua o percurso
+## A aprendizagem não termina aqui, continua a jornada
 
-Depois de completar esta lição, veja a nossa [coleção de Aprendizagem de IA Generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para continuar a elevar o seu conhecimento em IA Generativa!
+Após completar esta lição, explora a nossa [coleção de Aprendizagem em IA Generativa](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) para continuares a evoluir no teu conhecimento em IA Generativa!
 
 ---
 

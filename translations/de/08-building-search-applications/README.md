@@ -1,59 +1,59 @@
-# Aufbau von Suchanwendungen
+# Erstellen einer Suchanwendung
 
 [![Einführung in Generative KI und große Sprachmodelle](../../../translated_images/de/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
-> > _Klicken Sie auf das Bild oben, um das Video zu dieser Lektion anzusehen_
+> > _Klicken Sie auf das obige Bild, um das Video zu dieser Lektion anzusehen_
 
-LLMs können mehr als nur Chatbots und Textgenerierung. Es ist auch möglich, Suchanwendungen mithilfe von Embeddings zu erstellen. Embeddings sind numerische Darstellungen von Daten, auch bekannt als Vektoren, und können für die semantische Suche nach Daten verwendet werden.
+Große Sprachmodelle bieten mehr als nur Chatbots und Texterzeugung. Es ist auch möglich, Suchanwendungen unter Verwendung von Embeddings zu erstellen. Embeddings sind numerische Darstellungen von Daten, auch als Vektoren bekannt, und können für die semantische Suche in Daten verwendet werden.
 
-In dieser Lektion werden Sie eine Suchanwendung für unser Bildungs-Startup erstellen. Unser Startup ist eine gemeinnützige Organisation, die Schülern in Entwicklungsländern kostenlose Bildung bietet. Unser Startup verfügt über eine große Anzahl von YouTube-Videos, die Schüler nutzen können, um mehr über KI zu lernen. Unser Startup möchte eine Suchanwendung entwickeln, die es Schülern ermöglicht, nach einem YouTube-Video zu suchen, indem sie eine Frage eingeben.
+In dieser Lektion werden Sie eine Suchanwendung für unser Bildungs-Startup erstellen. Unser Startup ist eine gemeinnützige Organisation, die Studenten in Entwicklungsländern kostenlose Bildung anbietet. Unser Startup verfügt über eine große Anzahl von YouTube-Videos, die Studenten zum Lernen über KI nutzen können. Unser Startup möchte eine Suchanwendung erstellen, die es den Studenten ermöglicht, durch Eingabe einer Frage nach einem YouTube-Video zu suchen.
 
-Zum Beispiel könnte ein Schüler eingeben: „Was sind Jupyter Notebooks?“ oder „Was ist Azure ML?“ und die Suchanwendung wird eine Liste von YouTube-Videos zurückgeben, die für die Frage relevant sind. Noch besser: Die Suchanwendung wird einen Link zu der Stelle im Video zurückgeben, an der die Antwort auf die Frage zu finden ist.
+Zum Beispiel könnte ein Student „Was sind Jupyter Notebooks?“ oder „Was ist Azure ML?“ eingeben, und die Suchanwendung gibt eine Liste von YouTube-Videos zurück, die für die Frage relevant sind. Noch besser ist, dass die Suchanwendung einen Link an die Stelle im Video zurückgibt, an der die Antwort auf die Frage zu finden ist.
 
 ## Einführung
 
 In dieser Lektion behandeln wir:
 
-- Semantische vs. Schlüsselwortsuche.
-- Was sind Text-Embeddings.
-- Erstellen eines Text-Embedding-Index.
-- Durchsuchen eines Text-Embedding-Index.
+- Semantische Suche vs. Stichwortsuche.
+- Was Text-Embeddings sind.
+- Erstellen eines Text-Embeddings-Index.
+- Durchsuchen eines Text-Embeddings-Index.
 
 ## Lernziele
 
 Nach Abschluss dieser Lektion können Sie:
 
-- Den Unterschied zwischen semantischer und Schlüsselwortsuche erklären.
+- Den Unterschied zwischen semantischer Suche und Stichwortsuche erläutern.
 - Erklären, was Text-Embeddings sind.
 - Eine Anwendung erstellen, die Embeddings verwendet, um nach Daten zu suchen.
 
 ## Warum eine Suchanwendung erstellen?
 
-Das Erstellen einer Suchanwendung hilft Ihnen zu verstehen, wie Sie Embeddings verwenden können, um nach Daten zu suchen. Sie lernen auch, wie Sie eine Suchanwendung erstellen, die von Schülern genutzt werden kann, um Informationen schnell zu finden.
+Die Erstellung einer Suchanwendung hilft Ihnen zu verstehen, wie man Embeddings verwendet, um nach Daten zu suchen. Außerdem lernen Sie, wie man eine Suchanwendung baut, die Studenten hilft, Informationen schnell zu finden.
 
-Die Lektion enthält einen Embedding-Index der YouTube-Transkripte des Microsoft [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) YouTube-Kanals. Der AI Show ist ein YouTube-Kanal, der Ihnen KI und maschinelles Lernen näherbringt. Der Embedding-Index enthält die Embeddings für jedes der YouTube-Transkripte bis Oktober 2023. Sie werden den Embedding-Index verwenden, um eine Suchanwendung für unser Startup zu erstellen. Die Suchanwendung gibt einen Link zu der Stelle im Video zurück, an der die Antwort auf die Frage zu finden ist. Dies ist eine großartige Möglichkeit für Schüler, die benötigten Informationen schnell zu finden.
+Die Lektion beinhaltet einen Embedding-Index der YouTube-Transkripte des Microsoft [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) YouTube-Kanals. Die AI Show ist ein YouTube-Kanal, der Ihnen KI und maschinelles Lernen näherbringt. Der Embedding-Index enthält die Embeddings für jeden der YouTube-Transkripte bis Oktober 2023. Sie werden den Embedding-Index verwenden, um eine Suchanwendung für unser Startup zu erstellen. Die Suchanwendung gibt einen Link zur Stelle im Video zurück, an der die Antwort auf die Frage zu finden ist. Dies ist eine hervorragende Möglichkeit für Studenten, die benötigten Informationen schnell zu finden.
 
-Das folgende ist ein Beispiel für eine semantische Abfrage zur Frage „Kann man RStudio mit Azure ML verwenden?“. Schauen Sie sich die YouTube-URL an, Sie werden sehen, dass die URL einen Zeitstempel enthält, der Sie zu der Stelle im Video führt, an der die Antwort auf die Frage zu finden ist.
+Im Folgenden sehen Sie ein Beispiel für eine semantische Abfrage mit der Frage „kann man rstudio mit azure ml verwenden?“. Werfen Sie einen Blick auf die YouTube-URL: Darin ist ein Zeitstempel enthalten, der Sie zu der Stelle im Video führt, an der die Antwort auf die Frage gegeben wird.
 
-![Semantische Abfrage zur Frage "Kann man RStudio mit Azure ML verwenden?"](../../../translated_images/de/query-results.bb0480ebf025fac6.webp)
+![Semantische Abfrage für die Frage "kann man rstudio mit Azure ML verwenden"](../../../translated_images/de/query-results.bb0480ebf025fac6.webp)
 
 ## Was ist semantische Suche?
 
-Nun fragen Sie sich vielleicht, was semantische Suche ist. Semantische Suche ist eine Suchtechnik, die die Semantik oder Bedeutung der Wörter in einer Abfrage verwendet, um relevante Ergebnisse zurückzugeben.
+Vielleicht fragen Sie sich, was semantische Suche ist? Semantische Suche ist eine Suchtechnik, die die Semantik oder Bedeutung der Wörter einer Abfrage verwendet, um relevante Ergebnisse zurückzugeben.
 
-Hier ist ein Beispiel für eine semantische Suche. Angenommen, Sie möchten ein Auto kaufen, dann könnten Sie nach „mein Traumauto“ suchen. Die semantische Suche versteht, dass Sie nicht von einem Auto träumen, sondern vielmehr Ihr „ideales“ Auto kaufen möchten. Die semantische Suche versteht Ihre Absicht und liefert relevante Ergebnisse. Die Alternative ist die „Schlüsselwortsuche“, die buchstäblich nach Träumen über Autos suchen würde und oft irrelevante Ergebnisse liefert.
+Hier ist ein Beispiel für semantische Suche. Angenommen, Sie möchten ein Auto kaufen und suchen nach „mein Traumauto“. Die semantische Suche versteht, dass Sie nicht von einem Auto `träumen`, sondern Ihr `ideales` Auto kaufen möchten. Die semantische Suche erkennt Ihre Absicht und liefert relevante Ergebnisse. Die Alternative ist die `Stichwortsuche`, die tatsächlich nach Träumen über Autos sucht und oft irrelevante Ergebnisse liefert.
 
 ## Was sind Text-Embeddings?
 
-[Text-Embeddings](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst) sind eine Technik zur Textdarstellung, die in der [natürlichen Sprachverarbeitung](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst) verwendet wird. Text-Embeddings sind semantische numerische Darstellungen von Text. Embeddings werden verwendet, um Daten so darzustellen, dass sie für eine Maschine leicht verständlich sind. Es gibt viele Modelle zur Erstellung von Text-Embeddings. In dieser Lektion konzentrieren wir uns darauf, Embeddings mit dem OpenAI Embedding Model zu generieren.
+[Text-Embeddings](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst) sind eine Technik der Textrepräsentation, die in der [Verarbeitung natürlicher Sprache](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst) eingesetzt wird. Text-Embeddings sind semantische numerische Darstellungen von Text. Embeddings werden genutzt, um Daten so darzustellen, dass Maschinen diese leichter verstehen können. Es gibt viele Modelle zur Erstellung von Text-Embeddings; in dieser Lektion konzentrieren wir uns auf das Erzeugen von Embeddings mithilfe des OpenAI Embedding-Modells.
 
-Hier ist ein Beispiel: Stellen Sie sich vor, der folgende Text stammt aus einem Transkript einer Episode des AI Show YouTube-Kanals:
+Hier ein Beispiel: Stellen Sie sich vor, der folgende Text stammt aus einem Transkript einer Folge des AI Show YouTube-Kanals:
 
 ```text
 Today we are going to learn about Azure Machine Learning.
 ```
 
-Wir würden den Text an die OpenAI Embedding API übergeben, und sie würde das folgende Embedding zurückgeben, bestehend aus 1536 Zahlen, auch bekannt als Vektor. Jede Zahl im Vektor repräsentiert einen anderen Aspekt des Textes. Der Kürze halber sind hier die ersten 10 Zahlen des Vektors.
+Wir geben den Text an die OpenAI Embedding API weiter, die eine Embedding zurückgibt, die aus 1536 Zahlen besteht, auch Vektor genannt. Jede Zahl im Vektor repräsentiert einen anderen Aspekt des Textes. Der Übersichtlichkeit halber sind hier die ersten 10 Zahlen des Vektors aufgeführt.
 
 ```python
 [-0.006655829958617687, 0.0026128944009542465, 0.008792596869170666, -0.02446001023054123, -0.008540431968867779, 0.022071078419685364, -0.010703742504119873, 0.003311325330287218, -0.011632772162556648, -0.02187200076878071, ...]
@@ -61,61 +61,61 @@ Wir würden den Text an die OpenAI Embedding API übergeben, und sie würde das 
 
 ## Wie wird der Embedding-Index erstellt?
 
-Der Embedding-Index für diese Lektion wurde mit einer Reihe von Python-Skripten erstellt. Sie finden die Skripte zusammen mit Anweisungen im [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) im Ordner 'scripts' für diese Lektion. Sie müssen diese Skripte nicht ausführen, um diese Lektion abzuschließen, da der Embedding-Index für Sie bereitgestellt wird.
+Der Embedding-Index für diese Lektion wurde mit einer Reihe von Python-Skripten erstellt. Sie finden die Skripte zusammen mit Anweisungen in der [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) im Ordner 'scripts' dieser Lektion. Sie müssen diese Skripte nicht ausführen, um die Lektion abzuschließen, da der Embedding-Index für Sie bereitgestellt wird.
 
-Die Skripte führen die folgenden Operationen aus:
+Die Skripte führen folgende Schritte aus:
 
-1. Das Transkript für jedes YouTube-Video in der [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1)-Playlist wird heruntergeladen.
-2. Mithilfe von [OpenAI-Funktionen](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst) wird versucht, den Namen des Sprechers aus den ersten 3 Minuten des YouTube-Transkripts zu extrahieren. Der Sprechername für jedes Video wird im Embedding-Index namens `embedding_index_3m.json` gespeichert.
-3. Der Transkripttext wird dann in **3-Minuten-Textsegmente** unterteilt. Das Segment enthält etwa 20 Wörter, die sich mit dem nächsten Segment überschneiden, um sicherzustellen, dass das Embedding für das Segment nicht abgeschnitten wird und um einen besseren Suchkontext zu bieten.
-4. Jedes Textsegment wird dann an die OpenAI Chat API übergeben, um den Text in 60 Wörter zusammenzufassen. Die Zusammenfassung wird ebenfalls im Embedding-Index `embedding_index_3m.json` gespeichert.
-5. Schließlich wird der Segmenttext an die OpenAI Embedding API übergeben. Die Embedding API gibt einen Vektor mit 1536 Zahlen zurück, die die semantische Bedeutung des Segments repräsentieren. Das Segment zusammen mit dem OpenAI Embedding-Vektor wird in einem Embedding-Index `embedding_index_3m.json` gespeichert.
+1. Das Transkript jedes YouTube-Videos in der [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) Wiedergabeliste wird heruntergeladen.
+2. Mithilfe von [OpenAI Functions](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst) wird versucht, den Namen des Sprechers aus den ersten 3 Minuten des YouTube-Transkripts zu extrahieren. Der Sprechername für jedes Video wird im Embedding-Index namens `embedding_index_3m.json` gespeichert.
+3. Der Transkripttext wird dann in **3-minütige Textabschnitte** unterteilt. Der Abschnitt enthält etwa 20 Wörter, die mit dem nächsten Abschnitt überlappen, um sicherzustellen, dass das Embedding für den Abschnitt nicht abgeschnitten wird und um einen besseren Suchkontext zu bieten.
+4. Jeder Textabschnitt wird dann an die OpenAI Chat API übergeben, um den Text in 60 Wörter zusammenzufassen. Die Zusammenfassung wird ebenfalls im Embedding-Index `embedding_index_3m.json` gespeichert.
+5. Schließlich wird der Abschnittstext an die OpenAI Embedding API übergeben. Die Embedding-API gibt einen Vektor aus 1536 Zahlen zurück, die die semantische Bedeutung des Abschnitts repräsentieren. Der Abschnitt und der OpenAI Embedding-Vektor werden im Embedding-Index `embedding_index_3m.json` gespeichert.
 
 ### Vektordatenbanken
 
-Der Embedding-Index wird der Einfachheit halber in einer JSON-Datei namens `embedding_index_3m.json` gespeichert und in ein Pandas DataFrame geladen. In der Produktion würde der Embedding-Index jedoch in einer Vektordatenbank wie [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst), [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst), [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme?WT.mc_id=academic-105485-koreyst), [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst) gespeichert werden, um nur einige zu nennen.
+Zur Vereinfachung der Lektion wird der Embedding-Index in einer JSON-Datei mit dem Namen `embedding_index_3m.json` gespeichert und in ein Pandas DataFrame geladen. In der Produktion würde der Embedding-Index jedoch in einer Vektordatenbank wie [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst), [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst), [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme?WT.mc_id=academic-105485-koreyst), [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst) und anderen gespeichert.
 
-## Verständnis von Kosinus-Ähnlichkeit
+## Verstehen der Kosinusähnlichkeit
 
-Wir haben über Text-Embeddings gelernt. Der nächste Schritt ist zu lernen, wie man Text-Embeddings verwendet, um nach Daten zu suchen und insbesondere die ähnlichsten Embeddings zu einer gegebenen Abfrage mithilfe der Kosinus-Ähnlichkeit zu finden.
+Wir haben etwas über Text-Embeddings gelernt, der nächste Schritt ist zu lernen, wie man Text-Embeddings verwendet, um nach Daten zu suchen und insbesondere die ähnlichsten Embeddings zu einer gegebenen Abfrage mithilfe der Kosinusähnlichkeit zu finden.
 
-### Was ist Kosinus-Ähnlichkeit?
+### Was ist Kosinusähnlichkeit?
 
-Kosinus-Ähnlichkeit ist ein Maß für die Ähnlichkeit zwischen zwei Vektoren. Sie wird auch als `nächster Nachbar-Suche` bezeichnet. Um eine Kosinus-Ähnlichkeitssuche durchzuführen, müssen Sie den _Abfrage_-Text mithilfe der OpenAI Embedding API _vektorisieren_. Berechnen Sie dann die _Kosinus-Ähnlichkeit_ zwischen dem Abfragevektor und jedem Vektor im Embedding-Index. Denken Sie daran, dass der Embedding-Index einen Vektor für jedes YouTube-Transkript-Textsegment enthält. Sortieren Sie schließlich die Ergebnisse nach Kosinus-Ähnlichkeit, und die Textsegmente mit der höchsten Kosinus-Ähnlichkeit sind die ähnlichsten zur Abfrage.
+Kosinusähnlichkeit ist ein Maß für die Ähnlichkeit zwischen zwei Vektoren, dies wird auch als `Nearest-Neighbor-Suche` bezeichnet. Um eine Kosinusähnlichkeitssuche durchzuführen, müssen Sie den _Abfrage_-Text unter Verwendung der OpenAI Embedding API _vektorisieren_. Anschließend berechnen Sie die _Kosinusähnlichkeit_ zwischen dem Abfragevektor und jedem Vektor im Embedding-Index. Denken Sie daran, dass der Embedding-Index einen Vektor für jeden Textabschnitt des YouTube-Transkripts enthält. Am Ende sortieren Sie die Ergebnisse nach Kosinusähnlichkeit, und die Textabschnitte mit der höchsten Kosinusähnlichkeit sind am ähnlichsten zur Abfrage.
 
-Aus mathematischer Sicht misst die Kosinus-Ähnlichkeit den Kosinus des Winkels zwischen zwei Vektoren, die in einem mehrdimensionalen Raum projiziert werden. Diese Messung ist vorteilhaft, da zwei Dokumente, die aufgrund ihrer Größe weit voneinander entfernt sind, dennoch einen kleineren Winkel zwischen sich haben und daher eine höhere Kosinus-Ähnlichkeit aufweisen können. Weitere Informationen zu Kosinus-Ähnlichkeitsgleichungen finden Sie unter [Cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-koreyst).
+Aus mathematischer Sicht misst die Kosinusähnlichkeit den Kosinus des Winkels zwischen zwei Vektoren, die in einem mehrdimensionalen Raum projiziert sind. Dieses Maß ist nützlich, denn wenn zwei Dokumente aufgrund ihrer Größe im euklidischen Raum weit auseinanderliegen, können sie dennoch einen kleineren Winkel (und damit eine höhere Kosinusähnlichkeit) haben. Weitere Informationen zu den Gleichungen der Kosinusähnlichkeit finden Sie unter [Kosinusähnlichkeit](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-koreyst).
 
-## Ihre erste Suchanwendung erstellen
+## Erstellen Ihrer ersten Suchanwendung
 
-Als Nächstes lernen wir, wie man eine Suchanwendung mit Embeddings erstellt. Die Suchanwendung ermöglicht es Schülern, ein Video zu suchen, indem sie eine Frage eingeben. Die Suchanwendung gibt eine Liste von Videos zurück, die für die Frage relevant sind. Die Suchanwendung gibt auch einen Link zu der Stelle im Video zurück, an der die Antwort auf die Frage zu finden ist.
+Als Nächstes lernen wir, wie man eine Suchanwendung mit Embeddings erstellt. Die Suchanwendung ermöglicht es Studenten, ein Video durch Eingabe einer Frage zu suchen. Die Suchanwendung gibt eine Liste von Videos zurück, die für die Frage relevant sind. Außerdem liefert die Suchanwendung einen Link zur Stelle im Video, an der die Antwort auf die Frage zu finden ist.
 
-Diese Lösung wurde auf Windows 11, macOS und Ubuntu 22.04 mit Python 3.10 oder höher entwickelt und getestet. Sie können Python von [python.org](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) herunterladen.
+Diese Lösung wurde unter Windows 11, macOS und Ubuntu 22.04 mit Python 3.10 oder höher entwickelt und getestet. Python können Sie von [python.org](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) herunterladen.
 
-## Aufgabe - Eine Suchanwendung erstellen, um Schüler zu unterstützen
+## Aufgabe – Erstellen einer Suchanwendung für Studenten
 
-Wir haben unser Startup zu Beginn dieser Lektion vorgestellt. Jetzt ist es an der Zeit, den Schülern zu ermöglichen, eine Suchanwendung für ihre Aufgaben zu erstellen.
+Wir haben unser Startup zu Beginn dieser Lektion vorgestellt. Nun ist es an der Zeit, den Studenten die Möglichkeit zu geben, eine Suchanwendung für ihre Bewertungen zu erstellen.
 
-In dieser Aufgabe erstellen Sie die Azure OpenAI-Dienste, die zum Aufbau der Suchanwendung verwendet werden. Sie werden die folgenden Azure OpenAI-Dienste erstellen. Sie benötigen ein Azure-Abonnement, um diese Aufgabe abzuschließen.
+In dieser Aufgabe erstellen Sie die Azure OpenAI-Dienste, die für den Aufbau der Suchanwendung verwendet werden. Sie werden die folgenden Azure OpenAI-Dienste erstellen. Zur Durchführung dieser Aufgabe benötigen Sie ein Azure-Abonnement.
 
-### Starten Sie die Azure Cloud Shell
+### Starten der Azure Cloud Shell
 
-1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) an.
+1. Melden Sie sich im [Azure-Portal](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) an.
 2. Wählen Sie das Cloud Shell-Symbol in der oberen rechten Ecke des Azure-Portals aus.
 3. Wählen Sie **Bash** als Umgebungstyp.
 
-#### Erstellen Sie eine Ressourcengruppe
+#### Erstellen einer Ressourcengruppe
 
-> Für diese Anweisungen verwenden wir die Ressourcengruppe mit dem Namen "semantic-video-search" in East US.
-> Sie können den Namen der Ressourcengruppe ändern, aber wenn Sie den Standort für die Ressourcen ändern,
-> überprüfen Sie die [Modellverfügbarkeitstabelle](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> Für diese Anweisungen verwenden wir die Ressourcengruppe namens „semantic-video-search“ im Bereich East US.
+> Sie können den Namen der Ressourcengruppe ändern, aber wenn Sie den Speicherort der Ressourcen ändern,
+> prüfen Sie die [Tabelle zur Modellverfügbarkeit](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```shell
 az group create --name semantic-video-search --location eastus
 ```
 
-#### Erstellen Sie eine Azure OpenAI Service-Ressource
+#### Erstellen einer Azure OpenAI-Dienstressource
 
-Führen Sie den folgenden Befehl aus der Azure Cloud Shell aus, um eine Azure OpenAI Service-Ressource zu erstellen.
+Führen Sie in der Azure Cloud Shell den folgenden Befehl aus, um eine Azure OpenAI-Dienstressource zu erstellen.
 
 ```shell
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
@@ -124,7 +124,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
 
 #### Abrufen des Endpunkts und der Schlüssel für die Verwendung in dieser Anwendung
 
-Führen Sie die folgenden Befehle aus der Azure Cloud Shell aus, um den Endpunkt und die Schlüssel für die Azure OpenAI Service-Ressource abzurufen.
+Führen Sie in der Azure Cloud Shell die folgenden Befehle aus, um den Endpunkt und die Schlüssel für die Azure OpenAI-Dienstressource zu erhalten.
 
 ```shell
 az cognitiveservices account show --name semantic-video-openai \
@@ -135,7 +135,7 @@ az cognitiveservices account keys list --name semantic-video-openai \
 
 #### Bereitstellen des OpenAI Embedding-Modells
 
-Führen Sie den folgenden Befehl aus der Azure Cloud Shell aus, um das OpenAI Embedding-Modell bereitzustellen.
+Führen Sie in der Azure Cloud Shell den folgenden Befehl aus, um das OpenAI Embedding-Modell bereitzustellen.
 
 ```shell
 az cognitiveservices account deployment create \
@@ -150,19 +150,21 @@ az cognitiveservices account deployment create \
 
 ## Lösung
 
-Öffnen Sie das [Lösungs-Notebook](./python/aoai-solution.ipynb?WT.mc_id=academic-105485-koreyst) in GitHub Codespaces und folgen Sie den Anweisungen im Jupyter Notebook.
+Öffnen Sie das [Lösungsnotebook](./python/aoai-solution.ipynb?WT.mc_id=academic-105485-koreyst) in GitHub Codespaces und folgen Sie den Anweisungen im Jupyter Notebook.
 
-Wenn Sie das Notebook ausführen, werden Sie aufgefordert, eine Abfrage einzugeben. Das Eingabefeld sieht wie folgt aus:
+Wenn Sie das Notebook ausführen, werden Sie aufgefordert, eine Abfrage einzugeben. Das Eingabefeld sieht dann folgendermaßen aus:
 
-![Eingabefeld für den Benutzer zur Eingabe einer Abfrage](../../../translated_images/de/notebook-search.1e320b9c7fcbb0bc.webp)
+![Eingabefeld für die Benutzereingabe einer Abfrage](../../../translated_images/de/notebook-search.1e320b9c7fcbb0bc.webp)
 
 ## Großartige Arbeit! Setzen Sie Ihr Lernen fort
 
-Nachdem Sie diese Lektion abgeschlossen haben, schauen Sie sich unsere [Generative AI Learning Collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) an, um Ihr Wissen über Generative KI weiter zu vertiefen!
+Nach Abschluss dieser Lektion schauen Sie sich unsere [Generative AI Lernsammlung](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) an, um Ihr Wissen über Generative KI weiter zu vertiefen!
 
-Gehen Sie zu Lektion 9, in der wir uns ansehen, wie man [Anwendungen zur Bildgenerierung erstellt](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Gehen Sie zu Lektion 9, wo wir ansehen werden, wie man [Anwendungen zur Bilderzeugung erstellt](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner ursprünglichen Sprache sollte als maßgebliche Quelle betrachtet werden. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Nutzung dieser Übersetzung ergeben.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Haftungsausschluss**:
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner Ursprungssprache gilt als maßgebliche Quelle. Bei kritischen Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die aus der Verwendung dieser Übersetzung entstehen.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
