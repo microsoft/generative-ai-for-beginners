@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "openai": "^4.77.0",
-    "axios": "^1.16.0",
+    "axios": "^1.18.0",
     "dotenv": "^16.3.1",
     "rimraf": "^5.0.5"
   },
