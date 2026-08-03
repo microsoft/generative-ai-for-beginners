@@ -205,6 +205,8 @@ Now that we learned how to set up and configure openai, it's time to build your 
    > [!NOTE]
    > If you're using plain OpenAI (not Azure), use `client = OpenAI(api_key="<replace this value with your OpenAI key>")` (no `base_url`) and pass a model name like `gpt-5-mini` instead of a deployment name.
 
+> The same OpenAI client `base_url` pattern works with OpenAI-compatible multi-model gateways — for example [DaoXE](https://daoxe.com?utm_source=github&utm_medium=organic&utm_campaign=generative-ai-for-beginners&utm_content=text-generation-apps) at `https://api.daoxe.com/v1` (`OpenAI(api_key=..., base_url="https://api.daoxe.com/v1")`).
+
    You should see an output like the following:
 
    ```output
