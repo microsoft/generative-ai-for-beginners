@@ -28,6 +28,7 @@ jobs:
               body: `👋 Thanks for contributing @${ issueAuthor }! We will review the issue and get back to you soon.`
             })
       - name: Auto-assign issue
+        continue-on-error: true
         uses: pozil/auto-assign-issue@v4
         with:
           repo-token:  ${{ secrets.GITHUB_TOKEN }}
