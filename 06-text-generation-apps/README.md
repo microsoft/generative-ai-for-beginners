@@ -185,19 +185,19 @@ Now that we learned how to set up and configure openai, it's time to build your 
    ```python
    import os
    from openai import OpenAI
-
+   
    client = OpenAI(
        api_key="<replace this value with your Azure OpenAI key>",
        base_url="<endpoint found in Azure Portal>/openai/v1/",
    )
    deployment_name = "<deployment name>"
-
+   
    # add your completion code
    prompt = "Complete the following: Once upon a time there was a"
-
+   
    # make a request using the Responses API
    response = client.responses.create(model=deployment_name, input=prompt, store=False)
-
+   
    # print response
    print(response.output_text)
    ```
@@ -209,7 +209,7 @@ Now that we learned how to set up and configure openai, it's time to build your 
 
    ```output
     very unhappy _____.
-
+   
    Once upon a time there was a very unhappy mermaid.
    ```
 
@@ -404,9 +404,9 @@ Now that we have played out a scenario, let's write code to match the demonstrat
 
    ```python
    no_recipes = input("No of recipes (for example, 5): ")
-
+   
    ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
-
+   
    # interpolate the number of recipes into the prompt an ingredients
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
@@ -416,7 +416,7 @@ Now that we have played out a scenario, let's write code to match the demonstrat
    ```output
    No of recipes (for example, 5): 3
    List of ingredients (for example, chicken, potatoes, and carrots): milk,strawberries
-
+   
    -Strawberry milk shake: milk, strawberries, sugar, vanilla extract, ice cubes
    -Strawberry shortcake: milk, flour, baking powder, sugar, salt, unsalted butter, strawberries, whipped cream
    -Strawberry milk: milk, strawberries, sugar, vanilla extract
@@ -443,7 +443,7 @@ To further improve it, we want to add the following:
   ```output
   No of recipes (for example, 5): 3
   List of ingredients (for example, chicken, potatoes, and carrots): onion,milk
-  Filter (for example, vegetarian, vegan, or gluten-free): no milk
+  Filter (for example, vegetarian, vegan, or gluten-free): milk
 
   1. French Onion Soup
 
@@ -516,10 +516,10 @@ To further improve it, we want to add the following:
   ```python
   old_prompt_result = response.output_text
   prompt = "Produce a shopping list for the generated recipes and please don't include ingredients that I already have."
-
+  
   new_prompt = f"{old_prompt_result} {prompt}"
   response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
-
+  
   # print response
   print("Shopping list:")
   print(response.output_text)
@@ -579,9 +579,9 @@ What we have so far is code that works, but there are some tweaks we should be d
      import os
      from dotenv import load_dotenv
      from openai import OpenAI
-
+   
      load_dotenv()
-
+   
      client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
      ```
 
