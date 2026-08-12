@@ -21,10 +21,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Check broken Paths
         id: check-broken-paths
-        uses: john0isaac/action-check-markdown@v1.3.1
+        uses: john0isaac/action-check-markdown@c255625e4ae89924a5f39a440a22e51fcc9f5893 # v1.3.1
         with:
           command: check_broken_paths
           directory: ./
@@ -37,10 +37,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Run Check paths tracking
         id: check-paths-tracking
-        uses: john0isaac/action-check-markdown@v1.3.1
+        uses: john0isaac/action-check-markdown@c255625e4ae89924a5f39a440a22e51fcc9f5893 # v1.3.1
         with:
           command: check_paths_tracking
           directory: ./
@@ -53,7 +53,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
       - name: Collect changed markdown files
@@ -80,10 +80,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Run Check URLs Country Locale
         id: check-urls-locale
-        uses: john0isaac/action-check-markdown@v1.3.1
+        uses: john0isaac/action-check-markdown@c255625e4ae89924a5f39a440a22e51fcc9f5893 # v1.3.1
         with:
           command: check_urls_locale
           directory: ./
@@ -95,10 +95,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Run Check Broken URLs
         id: check-broken-urls
-        uses: john0isaac/action-check-markdown@v1.3.1
+        uses: john0isaac/action-check-markdown@c255625e4ae89924a5f39a440a22e51fcc9f5893 # v1.3.1
         with:
           command: check_broken_urls
           directory: ./
