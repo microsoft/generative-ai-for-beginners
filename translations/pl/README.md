@@ -68,7 +68,7 @@ Każda lekcja zawiera także sekcję "Kontynuuj naukę" z dodatkowymi narzędzia
 
 Stworzyliśmy lekcję **[Konfiguracja kursu](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)**, która pomoże Ci w konfiguracji środowiska programistycznego.
 
-Nie zapomnij [oznaczyć to repozytorium gwiazdką (🌟)](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst), aby łatwiej było je znaleźć później.
+Nie zapomnij [oznaczyć (🌟) to repozytorium gwiazdką](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst), aby łatwiej było je znaleźć później.
 
 ## 🧠 Gotowy do wdrożenia?
 
