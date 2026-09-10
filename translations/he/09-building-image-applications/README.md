@@ -1,267 +1,146 @@
-# בניית יישומי יצירת תמונות
+# בניית אפליקציות ליצירת תמונות
 
-[![בניית יישומי יצירת תמונות](../../../translated_images/he/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![בניית אפליקציות ליצירת תמונות](../../../translated_images/he/09-lesson-banner.906e408c741f4411.webp)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
 
-יש ל-LLMs יותר מיצירת טקסט. ניתן גם ליצור תמונות מתיאורי טקסט. קיום תמונות כממדי יכול להיות שימושי מאוד במספר תחומים כמו מד-טק, ארכיטקטורה, תיירות, פיתוח משחקים ועוד. בפרק זה נסקור את שני הדגמים הפופולריים ביותר ליצירת תמונות, DALL-E ו-Midjourney.
+יש ל-LLM יותר מאשר יצירת טקסט. אפשר גם לייצר תמונות מתיאורי טקסט. תמונות כמדיום שימושיות בתחומים כמו MedTech, אדריכלות, תיירות, פיתוח משחקים, שיווק ועוד. בשיעור זה נבחן את דגמי **GPT Image** העדכניים ונבנה אפליקציית יצירת תמונות.
 
 ## מבוא
 
-בשיעור זה נכסה:
+יצירת תמונות מאפשרת להפוך פקודת שפה טבעית לתמונה. בשיעור זה נעבוד עם משפחת המודלים **`gpt-image`** של OpenAI - הדור הנוכחי של דגמי תמונות הזמינים ב-[Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) ופלטפורמת OpenAI. דגמים אלו מחליפים את דגמי DALL·E הישנים (DALL·E 2/3 הם מורשת).
 
-- יצירת תמונות ולמה זה מועיל.
-- DALL-E ו-Midjourney, מה הם ואיך הם פועלים.
-- איך לבנות אפליקציה ליצירת תמונות.
+לאורך השיעור נשתמש בסטארטאפ בדוי, **Edu4All**, שמפתח כלי למידה. הצוות רוצה לייצר איורים למשימות ולחומרי לימוד.
 
-## יעדי למידה
+## מטרות הלמידה
 
-עם סיום השיעור תוכל:
+בסוף שיעור זה תוכל:
 
-- לבנות אפליקציית יצירת תמונות.
-- להגדיר גבולות לאפליקציה שלך עם מטה-פרומפטים.
-- לעבוד עם DALL-E ו-Midjourney.
+- להסביר מהי יצירת תמונות והיכן היא שימושית.
+- להבין את משפחת מודלי `gpt-image` ואיך הם שונים מדגמי DALL·E הוותיקים.
+- לבנות אפליקציית יצירת תמונות בפייתון (וב-TypeScript / .NET).
+- לערוך תמונות וליישם כללי הגנה באמצעות מטא-פרומפטים.
 
-## למה לבנות אפליקציית יצירת תמונות?
+## מהי יצירת תמונות?
 
-אפליקציות ליצירת תמונות הן דרך נהדרת לחקור את יכולות הבינה המלאכותית הגנרטיבית. ניתן להשתמש בהן, למשל:
+דגמי יצירת תמונות יוצרים תמונות מתוך פקודת טקסט. דגמים מודרניים כמו `gpt-image` מבוססים על טכניקות Transformer + Diffusion: המודל לומד את הקשר בין טקסט לתמונות במהלך האימון, ואז, בהינתן פקודה, מסיר בהדרגה רעש אקראי לתמונה שתואמת את התיאור.
 
-- **עריכת תמונות וסינתזה**. ניתן ליצור תמונות למגוון שימושים, כגון עריכת תמונות וסינתזה.
+שתי משפחות ידועות של דגמי תמונה הן:
 
-- **מיושמות בתעשיות שונות**. ניתן להשתמש בהן ליצירת תמונות למגוון תעשיות כמו מד-טק, תיירות, פיתוח משחקים ועוד.
+- **`gpt-image` (OpenAI)** - הדור הנוכחי, בשימוש בשיעור זה. תומך ביצירת תמונה מטקסט ועריכת תמונות (inpainting עם מסכה).
+- **Midjourney** - מודל צד שלישי פופולרי עם שירות עצמאי וזרימת עבודה מבוססת Discord.
 
-## תרחיש: Edu4All
+> דגמי OpenAI הוותיקים - **DALL·E 2** ו-**DALL·E 3** - הם מורשת. DALL·E 3 אינו זמין לפריסות חדשות, ופיצ'רים כמו `create_variation` היו קיימים רק ב-DALL·E 2. השתמש בדגמי `gpt-image` לאפליקציות חדשות.
 
-כחלק מהשיעור נמשיך לעבוד עם הסטארטאפ Edu4All. התלמידים ייצרו תמונות למבדקי ההערכה שלהם, אילו תמונות בדיוק - זו החלטה שלהם; הן יכולות להיות איורים לאגדה שכתבו, יצירת דמות חדשה לסיפור, או כדי לעזור להם להמחיש רעיונות ומושגים.
+### איזה דגם `gpt-image` כדאי להשתמש?
 
-הנה מה שתלמידי Edu4All יכלו ליצור למשל כשעובדים בכיתה על אנדרטאות:
+ב-Microsoft Foundry זמינים באופן **כללי**:
 
-![סטארטאפ Edu4All, שיעור על אנדרטאות, מגדל אייפל](../../../translated_images/he/startup.94d6b79cc4bb3f5a.webp)
+| מודל | הערות |
+| --- | --- |
+| **`gpt-image-2`** | המודל העדכני והמתקדם ביותר - ברירת מחדל מומלצת. |
+| `gpt-image-1.5` | זמין באופן כללי; איכות טובה במחיר נמוך יותר. |
+| `gpt-image-1-mini` | זמין באופן כללי; הכי מהיר והכי זול. |
+| `gpt-image-1` | לצפייה בלבד. |
 
-תוך שימוש בפרומפט כמו
+תמיד בדוק את [רשימת דגמי התמונות ב-Foundry](https://learn.microsoft.com/azure/ai-foundry/openai/concepts/models?WT.mc_id=academic-105485-koreyst) למידע על זמינות ואזורי פעילות.
 
-> "כלב ליד מגדל אייפל באור השמש של הבוקר המוקדם"
+> **חשוב:** דגמי `gpt-image` מחזירים את התמונה שנוצרה ב**base64** (`b64_json`), לא כ-URL. הקוד שלך מפענח את מחרוזת ה-base64 לבייטים ושומר אותה - אין URL לתמונה להורדה.
 
-## מה זה DALL-E ו-Midjourney?
+## הגדרות
 
-[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) ו-[Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) הם שניים מהדגמים הפופולריים ביותר ליצירת תמונות, הם מאפשרים שימוש בפרומפטים ליצירת תמונות.
+אפשר להריץ את הדוגמאות מול **Azure OpenAI ב-Microsoft Foundry** (הדוגמאות `aoai-*`) או מול **פלטפורמת OpenAI** (הדוגמאות `oai-*`).
 
-### DALL-E
+### 1. צור ופרוס מודל
 
-נתחיל עם DALL-E, שהוא דגם בינה מלאכותית גנרטיבית שיוצר תמונות מתיאורי טקסט.
+עקוב אחרי מדריך [יצירת משאב](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst) כדי ליצור משאב ב-Microsoft Foundry, ואז פרוס מודל תמונה - מומלץ **`gpt-image-2`**.
 
-> [DALL-E הוא צירוף של שני דגמים, CLIP ותשומת לב מפושטת](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst).
+### 2. הגדר את הקובץ `.env` שלך
 
-- **CLIP**, הוא דגם שיוצר ייצוגים נומריים (אמבדינגים) של נתונים, מתמונות וטקסט.
+```text
+AZURE_OPENAI_ENDPOINT=<your endpoint>
+AZURE_OPENAI_API_KEY=<your key>
+AZURE_OPENAI_DEPLOYMENT="gpt-image-2"
+```
 
-- **תשומת לב מפושטת**, הוא דגם שיוצר תמונות מאמבדינגים. DALL-E מאומן על מאגר נתונים של תמונות וטקסט ויכול לשמש לייצור תמונות מתיאורי טקסט. למשל, DALL-E יכול לייצר תמונות של חתול עם כובע או כלב עם מוקאהוק.
+מצא ערכים אלו בדף **פריסות** של המשאב שלך ב-[פורטל Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst).
 
-### Midjourney
+### 3. התקן את הספריות
 
-Midjourney פועל בדומה ל-DALL-E, הוא יוצר תמונות מפרומפטים טקסטואליים. ניתן להשתמש בו גם ליצירת תמונות בשימוש בפרומפטים כמו "חתול עם כובע" או "כלב עם מוקאהוק".
+צור קובץ `requirements.txt`:
 
-![תמונה שנוצרה על ידי Midjourney, יונת מכאנית](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
-_זכויות תמונה ויקיפדיה, תמונה שנוצרה על ידי Midjourney_
+```text
+python-dotenv
+openai
+pillow
+```
 
-## איך DALL-E ו-Midjourney פועלים
+לאחר מכן צור והפעל סביבה וירטואלית והתקן:
 
-ראשית, [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E הוא דגם בינה מלאכותית גנרטיבית מבוסס ארכיטקטורת טרנספורמר עם _טרנספורמר אוטורגסיבי_.
+```bash
+python3 -m venv venv
+source venv/bin/activate        # חלונות: venv\Scripts\activate
+pip install -r requirements.txt
+```
 
-טרנספורמר אוטורגסיבי מגדיר איך דגם מייצר תמונות מתיאורי טקסט, הוא מייצר פיקסל אחד בכל פעם, ומשתמש בפיקסלים שנוצרו כדי ליצור את הבא. עובר דרך שכבות ברשת נוירונים עד שהתמונה השלמה נוצרת.
+## בניית האפליקציה
 
-בתהליך זה, DALL-E שולט על התכונות, האובייקטים, המאפיינים ועוד בתמונה שהוא יוצר. עם זאת, ב-DALL-E 2 ו-3 יש שליטה טובה יותר על התמונה שנוצרת.
+צור את הקובץ `app.py` עם הקוד הבא. הוא יוצר תמונה ושומר אותה כקובץ PNG.
 
-## בניית אפליקציית יצירת תמונות ראשונה שלך
+```python
+import os
+import base64
+from openai import AzureOpenAI
+from PIL import Image
+import dotenv
 
-אז מה דרוש לבניית אפליקציית יצירת תמונות? יש צורך בספריות הבאות:
+dotenv.load_dotenv()
 
-- **python-dotenv**, מומלץ מאוד להשתמש בספריה זו כדי לשמור סודות בקובץ _.env_ מחוץ לקוד.
-- **openai**, ספריה זו תאפשר לך לתקשר עם ממשק ה-API של OpenAI.
-- **pillow**, לעבודה עם תמונות בפייתון.
-- **requests**, לעזרה בביצוע בקשות HTTP.
+# הפנה את הלקוח למשאב Azure OpenAI (Microsoft Foundry) שלך.
+# דגמי תמונה מצריכים גרסת API עדכנית - בדוק את תיעוד Foundry עבור הגרסה שהמודל שלך צריך.
+client = AzureOpenAI(
+    api_key=os.environ["AZURE_OPENAI_API_KEY"],
+    api_version="2025-04-01-preview",
+    azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"],
+)
 
-## יצירת ופריסת מודל Azure OpenAI
+deployment = os.environ["AZURE_OPENAI_DEPLOYMENT"]  # לדוגמה, "gpt-image-2"
 
-אם לא עשית זאת כבר, עקוב אחר ההוראות בעמוד [Microsoft Learn](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
-כדי ליצור משאב ומודל Azure OpenAI. בחר ב-**gpt-image-1** כמודל (מודל יצירת תמונות Azure OpenAI הנוכחי; DALL-E 3 הוא וותיק וכבר אינו זמין לפריסות חדשות).
-
-## צור את האפליקציה
-
-1. צור קובץ _.env_ עם התוכן הבא:
-
-   ```text
-   AZURE_OPENAI_ENDPOINT=<your endpoint>
-   AZURE_OPENAI_API_KEY=<your key>
-   AZURE_OPENAI_DEPLOYMENT="gpt-image-1"
-   ```
-
-   אתר מידע זה בפורטל Azure OpenAI Foundry עבור המשאב שלך בחלק "Deployments".
-
-1. אסוף את הספריות שלמעלה בקובץ בשם _requirements.txt_ כך:
-
-   ```text
-   python-dotenv
-   openai
-   pillow
-   requests
-   ```
-
-1. לאחר מכן, צור סביבת עבודה ווירטואלית והתקן את הספריות:
-
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
-   pip install -r requirements.txt
-   ```
-
-   עבור ווינדוס, השתמש בפקודות הבאות ליצירה והפעלת סביבת העבודה הווירטואלית:
-
-   ```bash
-   python3 -m venv venv
-   venv\Scripts\activate.bat
-   ```
-
-1. הוסף את הקוד הבא בקובץ בשם _app.py_:
-
-    ```python
-    import openai
-    import os
-    import requests
-    from PIL import Image
-    import dotenv
-    from openai import OpenAI, AzureOpenAI
-    
-    # ייבא dotenv
-    dotenv.load_dotenv()
-    
-    # קבע תצורה של לקוח שירות Azure OpenAI
-    client = AzureOpenAI(
-      azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"],
-      api_key=os.environ['AZURE_OPENAI_API_KEY'],
-      api_version = "2024-10-21"
-      )
-    try:
-        # צור תמונה באמצעות ממשק ה-API ליצירת תמונות
-        generation_response = client.images.generate(
-                                prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',
-                                size='1024x1024', n=1,
-                                model=os.environ['AZURE_OPENAI_DEPLOYMENT']
-                              )
-
-        # הגדר את התיקייה לשמירת התמונה
-        image_dir = os.path.join(os.curdir, 'images')
-
-        # אם התיקייה לא קיימת, צור אותה
-        if not os.path.isdir(image_dir):
-            os.mkdir(image_dir)
-
-        # אתחל את נתיב התמונה (שים לב שסוג הקובץ צריך להיות png)
-        image_path = os.path.join(image_dir, 'generated-image.png')
-
-        # שלוף את התמונה שנוצרה
-        image_url = generation_response.data[0].url  # הפק כתובת URL של התמונה מהתגובה
-        generated_image = requests.get(image_url).content  # הורד את התמונה
-        with open(image_path, "wb") as image_file:
-            image_file.write(generated_image)
-
-        # הצג את התמונה במציג התמונות המוגדר כברירת מחדל
-        image = Image.open(image_path)
-        image.show()
-
-    # תפוס חריגות
-    except openai.BadRequestError as err:
-        print(err)
-   ```
-
-בואו נסביר את הקוד הזה:
-
-- ראשית, אנו מייבאים את הספריות הדרושות, כולל ספריית OpenAI, dotenv, requests ו-Pillow.
-
-  ```python
-  import openai
-  import os
-  import requests
-  from PIL import Image
-  import dotenv
-  ```
-
-- לאחר מכן, אנו טוענים את משתני הסביבה מקובץ _.env_.
-
-  ```python
-  # ייבוא dotenv
-  dotenv.load_dotenv()
-  ```
-
-- לאחר מכן, אנחנו מגדירים את לקוח שירות Azure OpenAI 
-
-  ```python
-  # לקבל נקודת קצה ומפתח משתנות סביבה
-  client = AzureOpenAI(
-      azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"],
-      api_key=os.environ['AZURE_OPENAI_API_KEY'],
-      api_version = "2024-10-21"
-      )
-  ```
-
-- לאחר מכן, אנו מייצרים את התמונה:
-
-  ```python
-  # צור תמונה באמצעות ממשק תכנות היישומים (API) לייצור תמונות
-  generation_response = client.images.generate(
-                        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',
-                        size='1024x1024', n=1,
-                        model=os.environ['AZURE_OPENAI_DEPLOYMENT']
-                      )
-  ```
-
-  הקוד למעלה מממשק תגובה שמכיל את כתובת ה-URL של התמונה שנוצרה. ניתן להשתמש ב-URL כדי להוריד את התמונה ולשמור אותה לקובץ.
-
-- לבסוף, אנחנו פותחים את התמונה ומשתמשים בצופה סטנדרטי להצגת התמונה:
-
-  ```python
-  image = Image.open(image_path)
-  image.show()
-  ```
-
-### פרטים נוספים על יצירת התמונה
-
-נבחן את הקוד שיוצר את התמונה ביתר פירוט:
-
-   ```python
-     generation_response = client.images.generate(
-                               prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',
-                               size='1024x1024', n=1,
-                               model=os.environ['AZURE_OPENAI_DEPLOYMENT']
-                           )
-   ```
-
-- **prompt**, הוא טקסט הפרומפט שמשמש ליצירת התמונה. במקרה זה, אנו משתמשים בפרומפט "ארנב על סוס, מחזיק סוכרייה, בערבה ערפלית עם נרקיסים".
-- **size**, הוא גודל התמונה שנוצרה. במקרה זה, אנו יוצרים תמונה בגודל 1024x1024 פיקסלים.
-- **n**, הוא מספר התמונות שנוצרות. במקרה זה, אנו יוצרים שתי תמונות.
-- **temperature**, הוא פרמטר ששולט באקראיות הפלט של דגם בינה מלאכותית גנרטיבית. הטמפרטורה היא ערך בין 0 ל-1 כש-0 אומר פלט דטרמיניסטי ו-1 אומר פלט אקראי. ברירת המחדל היא 0.7.
-
-יש עוד דברים שניתן לעשות עם תמונות שנכסה בסעיף הבא.
-
-## יכולות נוספות ביצירת תמונות
-
-עד כה ראית איך יכולנו ליצור תמונה בכמה שורות פייתון. עם זאת, יש עוד דברים שניתן לעשות עם תמונות.
-
-ניתן גם לעשות את הדברים הבאים:
-
-- **לבצע עריכות**. על ידי מתן תמונה קיימת, מסכה ופרומפט, ניתן לשנות תמונה. למשל, ניתן להוסיף משהו לחלק מהתמונה. דמיין את תמונת הארנב שלנו, אפשר להוסיף לו כובע. איך עושים זאת? מספקים את התמונה, מסכה (שמציינת את האזור לשינוי) ופרומפט טקסט שיגיד מה לעשות.
-> שים לב: זה לא נתמך ב-DALL-E 3.
- 
-הנה דוגמה עם GPT Image:
-
-   ```python
-   response = client.images.edit(
-       model="gpt-image-1",
-       image=open("sunlit_lounge.png", "rb"),
-       mask=open("mask.png", "rb"),
-       prompt="A sunlit indoor lounge area with a pool containing a flamingo"
-   )
-   image_url = response.data[0].url
-   ```
-
-  התמונה הבסיסית תכיל רק את הלונג' עם הבריכה, אבל התמונה הסופית תכיל פלמינגו:
+result = client.images.generate(
+    model=deployment,
+    prompt='Bunny on a horse, holding a lollipop, on a foggy meadow where it grows daffodils',
+    size="1024x1024",   # גם 1536x1024 (נוף), 1024x1536 (תמונה עומדת), או "אוטומטי"
+    n=1,
+)
+
+# דגמי gpt-image מחזירים base64 (b64_json), לא כתובת URL - פענח זאת לבייטים.
+image_bytes = base64.b64decode(result.data[0].b64_json)
+
+os.makedirs("images", exist_ok=True)
+image_path = os.path.join("images", "generated-image.png")
+with open(image_path, "wb") as f:
+    f.write(image_bytes)
+
+Image.open(image_path).show()
+```
+
+הרץ אותו עם `python app.py`. תקבל קובץ PNG שמור בתיקייה `images/`.
+
+> כל קריאה ל-`images.generate` יוצרת תמונה שונה עבור אותו פרומפט - לדגמי תמונה אין פרמטר `temperature` (הוא שייך לשליטה ביצירת טקסט). לקבלת גיוון, פשוט קרא שוב ל-API; להפחתת גיוון - הפוך את הפרומפט שלך למדויק יותר.
+
+## עריכת תמונות
+
+דגמי `gpt-image` יכולים **לערוך** תמונה קיימת: ספק את התמונה, מסכה **אופציונלית** (שמציינת את האזור לשינוי), ופרומפט שמתאר את השינוי. כמו ביצירה, העריכות מוחזרות ב-base64.
+
+```python
+result = client.images.edit(
+    model=deployment,
+    image=open("sunlit_lounge.png", "rb"),
+    mask=open("mask.png", "rb"),
+    prompt="A sunlit indoor lounge area with a pool containing a flamingo",
+)
+image_bytes = base64.b64decode(result.data[0].b64_json)
+with open("images/edited-image.png", "wb") as f:
+    f.write(image_bytes)
+```
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
   <img src="../../../translated_images/he/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
@@ -269,212 +148,47 @@ _זכויות תמונה ויקיפדיה, תמונה שנוצרה על ידי M
   <img src="../../../translated_images/he/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
+## הגדרת גבולות עם מטא-פרומפטים
 
-- **ליצור וריאציות**. הרעיון הוא שלוקחים תמונה קיימת ומבקשים ליצור וריאציות שלה. ליצירת וריאציה, מספקים תמונה ופרומפט עם הקוד הבא:
-
-  ```python
-  response = client.images.create_variation(
-    image=open("bunny-lollipop.png", "rb"),
-    n=1,
-    size="1024x1024"
-  )
-  image_url = response.data[0].url
-  ```
-
-  > שים לב, זה נתמך רק בדגם DALL-E 2 של OpenAI, לא ב-gpt-image-1
-
-## טמפרטורה
-
-טמפרטורה היא פרמטר ששולט באקראיות הפלט בדגם בינה מלאכותית גנרטיבית. הטמפרטורה היא ערך בין 0 ל-1, שבה 0 אומר פלט דטרמיניסטי ו-1 אומר פלט אקראי. ברירת המחדל היא 0.7.
-
-נראה דוגמה כיצד הטמפרטורה פועלת על ידי הרצת הפרומפט פעמיים:
-
-> פרומפט: "ארנב על סוס, מחזיק סוכרייה, בערבה ערפלית עם נרקיסים"
-
-![ארנב על סוס מחזיק סוכרייה, גרסה 1](../../../translated_images/he/v1-generated-image.a295cfcffa3c13c2.webp)
-
-כעת נריץ את אותו הפרומפט שוב רק כדי לראות שלא נקבל את אותה תמונה פעמיים:
-
-![תמונה שנוצרה של ארנב על סוס](../../../translated_images/he/v2-generated-image.33f55a3714efe61d.webp)
-
-כפי שאתה רואה, התמונות דומות אך אינן זהות. ננסה לשנות את ערך הטמפרטורה ל-0.1 ונראה מה קורה:
+לאחר שתוכל ליצור תמונות, אתה צריך כללי הגנה כדי שהאפליקציה שלך לא תפיק תוכן לא בטוח או לא מותאם למותג. **מטא-פרומפט** הוא טקסט שאתה מוסיף לפני הפרומפט של המשתמש כדי להגביל את הפלט של המודל.
 
 ```python
- generation_response = client.images.generate(
-        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # הזן כאן את טקסט ההנחיה שלך
-        size='1024x1024',
-        n=2
-    )
-```
-
-### שינוי הטמפרטורה
-
-ננסה להפוך את התגובה ליותר דטרמיניסטית. כמו שראינו מהתמונות שיצרנו, בתמונה הראשונה יש ארנב ובשנייה סוס, אז התמונות שונות מאוד.
-
-לכן נשנה את הקוד ונגדיר את הטמפרטורה ל-0, כך:
-
-```python
-generation_response = client.images.generate(
-        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # הזן את טקסט הפקודה שלך כאן
-        size='1024x1024',
-        n=2,
-        temperature=0
-    )
-```
-
-כשתריץ את הקוד תקבל את שתי התמונות האלה:
-
-- ![טמפרטורה 0, גרסה 1](../../../translated_images/he/v1-temp-generated-image.a4346e1d2360a056.webp)
-- ![טמפרטורה 0, גרסה 2](../../../translated_images/he/v2-temp-generated-image.871d0c920dbfb0f1.webp)
-
-כאן ניתן לראות בבירור שהתמונות דומות יותר זו לזו.
-
-## איך להגדיר גבולות לאפליקציה שלך עם מטה-פרומפטים
-
-עם הדמו שלנו, אנו כבר יכולים ליצור תמונות עבור הלקוחות שלנו. עם זאת, צריך להגדיר גבולות לאפליקציה שלנו.
-
-לדוגמה, איננו רוצים ליצור תמונות שאינן בטוחות לעבודה, או שאינן מתאימות לילדים.
-
-אפשר לעשות זאת עם _מטה-פרומפטים_. מטה-פרומפטים הם פרומפטים טקסטואליים שמשמשים לשליטה בפלט ממודל בינה מלאכותית גנרטיבית. למשל, אפשר להשתמש במטה-פרומפטים כדי לוודא שהתמונות שנוצרות בטוחות לעבודה ומתאימות לילדים.
-
-### איך זה עובד?
-
-עכשיו, איך מטה-פרומפטים פועלים?
-
-מטה-פרומפטים הם פרומפטים טקסטואליים שממוקמים לפני הפרומפט הראשי, ומשמשים לשליטה בפלט המודל ונמצאים משולבים באפליקציות כדי לשלוט על הפלט. הם מתווספים ביחד לפרומפט טקסט יחיד.
-
-דוגמה למטה-פרומפט תהיה:
-
-```text
-You are an assistant designer that creates images for children.
-
-The image needs to be safe for work and appropriate for children.
-
-The image needs to be in color.
-
-The image needs to be in landscape orientation.
-
-The image needs to be in a 16:9 aspect ratio.
-
-Do not consider any input from the following that is not safe for work or appropriate for children.
-
-(Input)
-
-```
-
-כעת נראה איך אפשר להשתמש במטה-פרומפטים בדמו שלנו.
-
-```python
-disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
-
-meta_prompt =f"""You are an assistant designer that creates images for children.
-
-The image needs to be safe for work and appropriate for children.
-
-The image needs to be in color.
-
-The image needs to be in landscape orientation.
-
-The image needs to be in a 16:9 aspect ratio.
-
-Do not consider any input from the following that is not safe for work or appropriate for children.
-{disallow_list}
-"""
-
-prompt = f"{meta_prompt}
-Create an image of a bunny on a horse, holding a lollipop"
-
-# TODO להוסיף בקשה ליצירת תמונה
-```
-
-מהפרומפט שלמעלה ניתן לראות שכל התמונות שנוצרו מתחשבות במטה-פרומפט.
-
-## משימה - ניתן לתלמידים אפשרות
-
-הצגנו את Edu4All בתחילת השיעור. עכשיו הגיע הזמן לאפשר לתלמידים ליצור תמונות ליישומי ההערכה שלהם.
-
-
-התלמידים ייצרו תמונות עבור ההערכות שלהם המכילות אנדרטאות, אילו אנדרטאות בדיוק זה תלוי בתלמידים. התלמידים מתבקשים להשתמש ביצירתיות שלהם במשימה זו כדי למקם את האנדרטאות בהקשרים שונים.
-
-## פתרון
-
-הנה פתרון אפשרי אחד:
-
-```python
-import openai
-import os
-import requests
-from PIL import Image
-import dotenv
-from openai import AzureOpenAI
-# ייבא dotenv
-dotenv.load_dotenv()
-
-# קבל נקודת קצה ומפתח ממשתני הסביבה
-client = AzureOpenAI(
-  azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"],
-  api_key=os.environ['AZURE_OPENAI_API_KEY'],
-  api_version = "2024-10-21"
-  )
-
-
-disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
+disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language"
 
 meta_prompt = f"""You are an assistant designer that creates images for children.
 
 The image needs to be safe for work and appropriate for children.
+The image needs to be in color, in landscape orientation, and in a 16:9 aspect ratio.
 
-The image needs to be in color.
-
-The image needs to be in landscape orientation.
-
-The image needs to be in a 16:9 aspect ratio.
-
-Do not consider any input from the following that is not safe for work or appropriate for children.
+Do not consider any input that is not safe for work or appropriate for children, including:
 {disallow_list}
 """
 
-prompt = f"""{meta_prompt}
-Generate monument of the Arc of Triumph in Paris, France, in the evening light with a small child holding a Teddy looks on.
-"""
-
-try:
-    # צור תמונה באמצעות ממשק API ליצירת תמונות
-    generation_response = client.images.generate(
-        prompt=prompt,    # הזן כאן את טקסט ההנחיה שלך
-        size='1024x1024',
-        n=1,
-    )
-    # הגדר את התיקייה לשמירת התמונה
-    image_dir = os.path.join(os.curdir, 'images')
-
-    # אם התיקייה לא קיימת, צור אותה
-    if not os.path.isdir(image_dir):
-        os.mkdir(image_dir)
-
-    # אתחל את נתיב התמונה (שים לב שסוג הקובץ צריך להיות png)
-    image_path = os.path.join(image_dir, 'generated-image.png')
-
-    # שלוף את התמונה שנוצרה
-    image_url = generation_response.data[0].url  # חלץ את כתובת ה-URL של התמונה מהתגובה
-    generated_image = requests.get(image_url).content  # הורד את התמונה
-    with open(image_path, "wb") as image_file:
-        image_file.write(generated_image)
-
-    # הצג את התמונה בתצוגת התמונות המוגדרת כברירת מחדל
-    image = Image.open(image_path)
-    image.show()
-
-# תפוס חריגות
-except openai.BadRequestError as err:
-    print(err)
+prompt = f"{meta_prompt}\nCreate an image of a bunny on a horse, holding a lollipop"
+# העבר את `prompt` ל-client.images.generate(...)
 ```
+
+כל תמונה נוצרת עכשיו בתוך הגבולות שהציב המטא-פרומפט. שלב זאת עם מסנני התוכן הבנויים ב-Microsoft Foundry להגנה ברמת עומק.
+
+## משימה - ננגיש לסטודנטים
+
+לסטודנטים של Edu4All דרושות תמונות למבחנים שלהם. בנה אפליקציה שיוצרת תמונות של **אנדרטאות** (איזה אנדרטאות זה תלוי בך) במצבים שונים ויצירתיים - למשל, נקודת ציון מפורסמת בשקיעה עם ילד צופה.
+
+נסה זאת בעצמך, ואז השווה לפתרונות המ-reference:
+
+- Python (Azure): [aoai-solution.py](../../../09-building-image-applications/python/aoai-solution.py)
+- Python (Azure) אפליקציה מלאה ליצירה: [aoai-app.py](../../../09-building-image-applications/python/aoai-app.py)
+- Python (OpenAI): [oai-app.py](../../../09-building-image-applications/python/oai-app.py)
+- TypeScript (Azure): [typescript/image-generation-app](../../../09-building-image-applications/typescript/image-generation-app)
+- .NET (Azure): [dotnet/notebook-azure-openai.dib](../../../09-building-image-applications/dotnet/notebook-azure-openai.dib)
+
+עבד גם עם המחברות בתיקייה [python/](../../../09-building-image-applications/python) (`aoai-assignment.ipynb` ל-Azure, `oai-assignment.ipynb` ל-OpenAI).
 
 ## עבודה מצוינת! המשך ללמוד
 
-לאחר סיום השיעור, עיין ב[אוסף הלמידה של AI גנרטיבי](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) שלנו כדי להמשיך לשדרג את הידע שלך ב-AI גנרטיבי!
+לאחר שסיימת את השיעור, עיין ב-[אוספת הלימוד לבינה מלאכותית יוצרת שלנו](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) כדי להמשיך לשפר את הידע שלך ב-Generative AI!
 
-עבור לשיעור 10 שבו נבחן כיצד [לבנות יישומי AI עם קוד נמוך](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+עבור לשיעור 10 להמשך הלמידה.
 
 ---
 

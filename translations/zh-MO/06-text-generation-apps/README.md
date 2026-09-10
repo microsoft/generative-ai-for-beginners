@@ -1,82 +1,82 @@
-# 建立文本生成應用程式
+# 建立文字生成應用程式
 
-[![建立文本生成應用程式](../../../translated_images/zh-MO/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![建立文字生成應用程式](../../../translated_images/zh-MO/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
-> _(點擊上方圖片觀看本課程影片)_
+> _(按上方圖片觀看本課程的影片)_
 
-到目前為止，你已在此課程中看到關於提示詞等核心概念，甚至還有一門完整的學科稱為「提示工程」。許多你可以互動的工具，如 ChatGPT、Office 365、Microsoft Power Platform 等，都支援你透過提示詞來完成某些任務。
+到目前為止，你已經在這個課程中看到一些核心概念，比如提示詞，甚至有一個完整的領域叫做「提示工程」。許多你可以互動的工具，如 ChatGPT、Office 365、Microsoft Power Platform 等，都支持你使用提示詞來完成某些工作。
 
-若你想要把這種體驗加入到應用程式中，就需要了解像是提示詞、補全等概念，並選擇適合的函式庫合作。這正是你會在本章學習的內容。
+若你想要在應用程式中加入這類體驗，就需要理解提示詞、補全等概念並選擇合適的函式庫來使用。這正是你在本章節將學到的內容。
 
 ## 介紹
 
-在本章，你將會：
+在本章中，你將會：
 
-- 瞭解 openai 函式庫及其核心概念。
-- 使用 openai 建立文本生成應用程式。
-- 瞭解如何使用提示詞、溫度和代幣等概念來建立文本生成應用程式。
+- 了解 openai 函式庫及其核心概念。
+- 使用 openai 建立一個文字生成應用程式。
+- 理解如何使用提示詞、溫度、代幣等概念來建立文字生成應用程式。
 
 ## 學習目標
 
-在本課結束時，你將能夠：
+在本課程結束時，你將能夠：
 
-- 解釋什麼是文本生成應用程式。
-- 使用 openai 建立文本生成應用程式。
-- 設定你的應用程式使用較多或較少的代幣，也能調整溫度，以產生多樣化的輸出。
+- 解釋什麼是文字生成應用程式。
+- 使用 openai 建立文字生成應用程式。
+- 配置你的應用程式使用更多或更少的代幣，並且調整溫度以產生不同的輸出。
 
-## 什麼是文本生成應用程式？
+## 什麼是文字生成應用程式？
 
-通常當你建立應用程式時，會有某種介面，像以下範例：
+通常當你建立一個應用程式時，它會有某種介面，例如下列：
 
-- 指令式。控制台應用程式是典型的指令式應用程式，你輸入指令，程式執行任務。例如，`git` 就是指令式應用程式。
-- 使用者介面 (UI)。有些應用程式具備圖形使用者介面 (GUI)，你可以點按按鈕、輸入文字、選擇選項等等。
+- 基於指令。命令列應用程式是典型的應用程式，你輸入一個指令，應用程式便會執行任務。比方說，`git` 就是基於指令的應用程式。
+- 使用使用者介面（UI）。有些應用程式有圖形使用者介面（GUI），你可以點擊按鈕、輸入文字、選擇選項等。
 
-### 控制台和 UI 應用程式的限制
+### 命令列和 GUI 應用程式的限制
 
-與你在指令式應用程式中輸入指令相比：
+與你直接輸入指令的應用程式比較：
 
-- <strong>有其限制</strong>。你不能隨心所欲地輸入任何指令，只能是應用程式所支援的指令。
-- <strong>語言特定</strong>。有些應用支援多種語言，但預設仍是以特定語言開發，雖然你可以擴充語言支援。
+- <strong>受限</strong>。你不能隨便打任何指令，只能用應用程式支持的指令。
+- <strong>特定語言</strong>。有些應用程式支持多種語言，但預設情況下是為某一種語言設計，即使你可以加裝更多語言支持。
 
-### 文本生成應用程式的優點
+### 文字生成應用程式的好處
 
-那麼文本生成應用程式有何不同呢？
+那麼文字生成應用程式有什麼不同呢？
 
-在文本生成應用程式裡，你有更多彈性，不再限於固定指令集合或特定輸入語言。你可以使用自然語言與應用程式互動。另一優點是你其實已經在與一個經過大量語料訓練的資料來源互動，而傳統應用可能只限於資料庫內的資訊。
+在文字生成應用程式中，你擁有更多彈性，不受限於一組固定的指令或特定輸入語言。你可以用自然語言來與應用程式互動。另一個好處是，你已經在與一個經過大量資訊語料訓練過的資料來源互動，而傳統應用程式可能只受限於資料庫裡的內容。
 
-### 我可以用文本生成應用程式做什麼？
+### 用文字生成應用程式可以做什麼？
 
-你可以做很多事。例如：
+你可以建立很多類型的東西，例如：
 
-- <strong>聊天機器人</strong>。一個回答主題問題的聊天機器人，例如關於你公司及其產品的問題，就很適合。
-- <strong>助手</strong>。大型語言模型擅長摘要文本、從文本中獲得洞察、產出履歷等多種文本。
-- <strong>程式碼助理</strong>。視所用模型而定，你可以建立程式碼助理幫你撰寫程式碼。例如，可以使用 GitHub Copilot 或 ChatGPT 協助寫程式。
+- <strong>聊天機器人</strong>。一個能回答問題的聊天機器人，像是關於你的公司和產品的問題，是很好的應用。
+- <strong>助手</strong>。大型語言模型（LLM）很擅長摘要文字、從文字中獲得洞見、生成文字如履歷等。
+- <strong>程式碼助手</strong>。視所使用的語言模型而定，你可以建造一個幫助寫程式碼的程式碼助手。例如，你可以使用 GitHub Copilot 或 ChatGPT 來幫助你編寫程式碼。
 
-## 如何開始？
+## 怎麼開始？
 
-你需要找到一個方法與大型語言模型集成，通常包含以下兩種方式：
+好的，你需要找到一種方式與大型語言模型整合，通常有以下兩種方法：
 
-- 使用 API。這裡你建立帶有提示詞的網路請求，取得生成的文本。
-- 使用函式庫。函式庫封裝 API 呼叫，讓使用更簡便。
+- 使用 API。你構造帶有提示詞的網路請求，然後獲得生成的文字回應。
+- 使用函式庫。函式庫幫助封裝 API 調用，使使用更加簡便。
 
 ## 函式庫/SDK
 
-有幾個知名的函式庫用於與大型語言模型合作，例如：
+有幾個知名的函式庫用於與大型語言模型互動，例如：
 
-- **openai**，此函式庫讓你輕鬆連接你的模型並傳送提示詞。
+- **openai**，這個函式庫讓你輕鬆連接到模型並發送提示詞。
 
-還有一些運作在更高層級的函式庫，例如：
+還有一些運作在更高層次的函式庫，如：
 
-- **Langchain**。Langchain 知名且支援 Python。
-- **Semantic Kernel**。Semantic Kernel 是微軟的函式庫，支援 C#、Python 和 Java。
+- **Langchain**。Langchain 是知名的函式庫，並且支持 Python。
+- **Semantic Kernel**。Semantic Kernel 是微軟推出的函式庫，支持 C#、Python 和 Java。
 
 ## 使用 openai 建立第一個應用程式
 
-讓我們看看如何建立第一個應用程式，需要哪些函式庫，以及所需資源量等。
+讓我們看看怎麼建立第一個應用程式，需要哪些函式庫，需求有多大等等。
 
 ### 安裝 openai
 
-市面上有許多與 OpenAI 或 Azure OpenAI 互動的函式庫。你也可以使用多種程式語言，如 C#、Python、JavaScript、Java 等。我們選擇使用 `openai` Python 函式庫，因此會用 `pip` 安裝它。
+有很多函式庫可以用來與 OpenAI 或 Azure OpenAI 互動。你也可以使用多種程式語言，如 C#、Python、JavaScript、Java 等。我們選擇使用 `openai` Python 函式庫，因此將用 `pip` 來安裝它。
 
 ```bash
 pip install openai
@@ -86,32 +86,32 @@ pip install openai
 
 你需要完成以下步驟：
 
-- 在 Azure 建立帳戶 [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst)。
-- 取得 Azure OpenAI 權限。前往 [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) 並申請權限。
+- 在 Azure 上建立帳戶 [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst)。
+- 取得 Azure OpenAI 的權限。前往 [https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) 申請權限。
 
   > [!NOTE]
-  > 撰寫本文時，需申請 Azure OpenAI 的使用權限。
+  > 撰寫本文時，你需要申請 Azure OpenAI 的使用權限。
 
 - 安裝 Python <https://www.python.org/>
-- 已建立 Azure OpenAI 服務資源。請參考此指引了解如何[建立資源](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst)。
+- 已建立 Azure OpenAI 服務資源。請參考此指南以了解如何[建立資源](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst)。
 
-### 找到 API 金鑰與端點
+### 找出 API 金鑰和端點
 
-現在你需要告訴 `openai` 函式庫要使用哪個 API 金鑰。請前往 Azure OpenAI 資源的「金鑰與端點」區段，複製「金鑰 1」的值。
+此時，你需要告訴 `openai` 函式庫使用哪個 API 金鑰。前往你的 Azure OpenAI 資源中的「Keys and Endpoint」部分，複製「Key 1」的值。
 
-![Azure 入口網站中的金鑰與端點資源版面](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+![Azure 入口網站中的 Keys and Endpoint 資源頁面](https://learn.microsoft.com/azure/ai-foundry/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-現在你有了這個資訊，讓我們指示函式庫使用它。
+現在你已複製了這些資訊，讓我們來指示函式庫使用它們。
 
 > [!NOTE]
-> 建議將你的 API 金鑰與程式碼分離。你可以透過環境變數做到這點。
+> 將 API 金鑰與程式碼分開存放是值得的。你可以使用環境變數來達成這點。
 >
-> - 將環境變數 `OPENAI_API_KEY` 設為你的 API 金鑰。
+> - 設定環境變數 `OPENAI_API_KEY` 給你的 API 金鑰。
 >   `export OPENAI_API_KEY='sk-...'`
 
 ### 設定 Azure 配置
 
-如果你使用 Azure OpenAI（現為 Microsoft Foundry 一部分），設定方法如下。我們使用標準 `OpenAI` 用戶端指向 Azure OpenAI `/openai/v1/` 端點，這適用於 Responses API，且無需 `api_version`：
+若你使用 Azure OpenAI（現為 Microsoft Foundry 的一部分），設定方式如下。我們使用標準的 `OpenAI` 用戶端，指向 Azure OpenAI 的 `/openai/v1/` 端點，該端點適用於 Responses API 且不需要 `api_version`：
 
 ```python
 import os
@@ -123,48 +123,48 @@ client = OpenAI(
 )
 ```
 
-上述設定包含：
+上述設定了以下項目：
 
-- `api_key`，你的 Azure Portal 或 Microsoft Foundry 入口網站找到的 API 金鑰。
-- `base_url`，你的 Foundry 資源端點，末尾附加 `/openai/v1/`。這一穩定的 v1 端點同時支援 OpenAI 與 Azure OpenAI，無需管理 `api_version`。
+- `api_key`，這是你在 Azure 入口網站或 Microsoft Foundry 入口網站找到的 API 金鑰。
+- `base_url`，這是你的 Foundry 資源端點，後面加上 `/openai/v1/`。穩定的 v1 端點適用於 OpenAI 和 Azure OpenAI，不用管理 `api_version`。
 
-> [!NOTE] > `os.environ` 用來讀取環境變數。你可用它讀取像 `AZURE_OPENAI_API_KEY` 與 `AZURE_OPENAI_ENDPOINT` 這類環境變數。可在終端機設定或使用函式庫如 `dotenv`。
+> [!NOTE] > `os.environ` 讀取環境變數。你可以用它讀取像是 `AZURE_OPENAI_API_KEY` 和 `AZURE_OPENAI_ENDPOINT` 的環境變數。請在終端機設定這些環境變數，或使用像 `dotenv` 的函式庫。
 
-## 生成文字
+## 產生文字
 
-生成文字的方式是使用 Responses API 的 `responses.create` 方法。以下是範例：
+產生文字的方法是使用 Responses API 的 `responses.create` 方法。例如：
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
 
 response = client.responses.create(
-    model="gpt-4o-mini",  # 這是您的模型部署名稱
+    model="gpt-5-mini",  # 這是您的模型部署名稱
     input=prompt,
     store=False,
 )
 print(response.output_text)
 ```
 
-在上述程式中，我們建立一個回應，傳入想使用的模型與提示詞，然後透過 `response.output_text` 列印生成的文字。
+以上程式碼示範我們建立一個回應並傳入想用的模型和提示詞。接著我們用 `response.output_text` 列印生成的文字。
 
-### 支援多輪對話
+### 多輪對話
 
-Responses API 適合單輪文本生成和多輪聊天機器人 — 你可以在 `input` 中傳入多條訊息來構建對話：
+Responses API 非常適合單輪文字生成和多輪聊天機器人——你可在 `input` 中提供一串訊息，建立對話：
 
 ```python
 from openai import OpenAI
 
 client = OpenAI(api_key="sk-...")
 
-response = client.responses.create(model="gpt-4o-mini", input="Hello world", store=False)
+response = client.responses.create(model="gpt-5-mini", input="Hello world", store=False)
 print(response.output_text)
 ```
 
-更多此功能內容將在接下來的章節介紹。
+這項功能會在後面章節詳細介紹。
 
-## 練習 - 你的第一個文本生成應用程式
+## 練習 - 你的第一個文字生成應用程式
 
-現在你已學會如何設定與配置 openai，該是建立你第一個文本生成應用程式的時候。建立應用程式，請依照以下步驟：
+現在我們學會如何設定並配置 openai，是時候建立你的第一個文字生成應用程式。按下列步驟操作：
 
 1. 建立虛擬環境並安裝 openai：
 
@@ -175,12 +175,12 @@ print(response.output_text)
    ```
 
    > [!NOTE]
-   > 若使用 Windows，請輸入 `venv\Scripts\activate`，而非 `source venv/bin/activate`。
+   > 如果你是使用 Windows，請輸入 `venv\Scripts\activate`，而非 `source venv/bin/activate`。
 
    > [!NOTE]
-   > 前往 [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) 搜尋 `Open AI`，選擇 `Open AI 資源`，再進入「金鑰與端點」並複製 `金鑰 1` 的值。
+   > 到 [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) 搜尋 `Open AI`，點選 `Open AI resource`，再點選 `Keys and Endpoint`，複製 `Key 1` 的值。
 
-1. 建立一個 _app.py_ 檔案並填入以下程式碼：
+1. 建立一個 _app.py_ 檔案，並加入以下程式碼：
 
    ```python
    import os
@@ -192,20 +192,20 @@ print(response.output_text)
    )
    deployment_name = "<deployment name>"
 
-   # 添加您的完成程式碼
+   # 加入您的完成程式碼
    prompt = "Complete the following: Once upon a time there was a"
 
-   # 使用 Responses API 進行請求
+   # 使用 Responses API 發出請求
    response = client.responses.create(model=deployment_name, input=prompt, store=False)
 
-   # 列印回應
+   # 印出回應
    print(response.output_text)
    ```
 
    > [!NOTE]
-   > 如果你使用純 OpenAI (非 Azure)，請改用 `client = OpenAI(api_key="<用你的OpenAI金鑰取代此值>")`（無需 `base_url`），並傳入模型名稱如 `gpt-4o-mini`，而非部署名稱。
+   > 如果你使用純 OpenAI（非 Azure），請使用 `client = OpenAI(api_key="<replace this value with your OpenAI key>")`（不帶 `base_url`），並且傳入模型名稱如 `gpt-5-mini` 而非部署名稱。
 
-   你應該會看到類似以下輸出：
+   你應該會看到如下輸出：
 
    ```output
     very unhappy _____.
@@ -213,25 +213,25 @@ print(response.output_text)
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## 不同類型的提示詞，對不同任務
+## 不同類型的提示詞，針對不同用途
 
-現在你已看到如何用提示詞生成文字。你甚至有一個已執行的程式，可以修改它來生成不同類型的文字。
+現在你已經看到如何使用提示詞生成文字。你的程式已經可以運行，你也可以修改它產生不同類型的文字。
 
-提示詞可支援各種任務。例如：
+提示詞可以用於各種任務。例如：
 
-- <strong>生成特定類型的文本</strong>。例如，詩歌、測驗問題等。
-- <strong>查詢資訊</strong>。可用提示詞查詢資訊，例如「在網頁開發中 CORS 是什麼意思？」等。
-- <strong>生成程式碼</strong>。可用提示詞產生程式碼，例如開發正則表達式用來驗證電子郵件，甚至直接生成整個程式，如 Web 應用程式。
+- <strong>生成某種類型的文字</strong>。比如你可以生成詩歌、測驗題目等。
+- <strong>查找資訊</strong>。你可以用提示詞來查找資訊，例如以下問題「CORS 在網頁開發中是什麼意思？」。
+- <strong>產生程式碼</strong>。你可以用提示詞生成程式碼，例如開發用於驗證電子郵件的正則表達式，或甚至產生一個完整的程式，如網頁應用程式？
 
-## 更實用的案例：食譜生成器
+## 更實用的例子：食譜生成器
 
-想像你家裡有食材，想煮點什麼。這時候你需要食譜。尋找食譜的方法，可以用搜尋引擎，或者直接用大型語言模型。
+想像你家裡有一些材料，想煮點什麼。你需要食譜。找食譜的方式可以是用搜尋引擎，或者使用大型語言模型來幫忙。
 
-你可以寫出如下的提示詞：
+你可以這樣撰寫提示詞：
 
-> 「列出 5 道包含以下材料的菜肴食譜：雞肉、馬鈴薯、紅蘿蔔。每道食譜列出所有食材。」
+> "展示五個含有以下材料的菜譜：雞肉、馬鈴薯和紅蘿蔔。並列出每道菜的所有用料。"
 
-依上述提示詞，你可能會得到這樣的回應：
+對於上述提示詞，你可能會得到類似的回應：
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -295,16 +295,16 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-這樣的結果很好，我知道該煮什麼了。接下來有用的改進可能是：
+這結果很棒，我知道該煮什麼了。此時可以做的改進包含：
 
-- 過濾掉我不喜歡或過敏的食材。
-- 產生購物清單，以防我家中食材不齊全。
+- 篩選出我不喜歡或過敏的材料。
+- 產生購物清單，以防我家沒有所有必需材料。
 
-對以上情況，我們來增加一個額外提示詞：
+針對上述情況，我們加一個額外提示詞：
 
-> 「請移除含大蒜的食譜，因為我過敏，並替換成其他材料。同時請考慮我家已有雞肉、馬鈴薯和紅蘿蔔，產生購物清單。」
+> "請去除含有大蒜的食譜，因為我過敏，並用其他材料替代。另外，請根據食譜製作購物清單，考慮我家已有雞肉、馬鈴薯和紅蘿蔔。"
 
-現在你會得到新的結果，如下：
+現在你會有如下新結果：
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -371,20 +371,20 @@ Shopping List:
 - Pepper
 ```
 
-這是你的五道食譜，都不含大蒜，且你也有一張考慮現有食材的購物清單。
+這就是你的五道菜譜，沒有提到大蒜，且有考慮你家已有材料的購物清單。
 
 ## 練習 - 建立食譜生成器
 
-我們已經演示了這種情境，接著寫程式碼來實現。請依以下步驟：
+現在我們複習過一個場景，我們來寫程式碼對應此場景。操作步驟如下：
 
-1. 以現有的 _app.py_ 檔案作為起點
-1. 找到 `prompt` 變數，將其程式碼改為如下：
+1. 使用現有的 _app.py_ 檔案為起點
+1. 找到 `prompt` 變數，並將其程式碼改為以下內容：
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   現在執行程式，你會看到類似輸出：
+   如果現在執行程式，你應該會看到類似的輸出：
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -396,22 +396,22 @@ Shopping List:
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > 注意，你的 LLM 是非確定性的，每次執行程式結果可能不同。
+   > 注意，你的 LLM 是非決定性的，每次執行程式可能得到不同結果。
 
-   很好，讓我們看看如何改進。為了讓程式更靈活，讓食材與食譜數量都能改變與調整。
+   很好，我們來看看如何改進。為了更靈活，我們希望能讓代碼能改變配料與菜譜數量。
 
-1. 我們依以下方式修改程式碼：
+1. 按下列方式修改程式碼：
 
    ```python
    no_recipes = input("No of recipes (for example, 5): ")
 
    ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
 
-   # 將食譜的數量和材料插入提示中
+   # 把食譜數目插入提示同原材料中
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   測試執行程式的程式碼，可以像這樣：
+   測試運行程式可能會長這樣：
 
    ```output
    No of recipes (for example, 5): 3
@@ -422,13 +422,13 @@ Shopping List:
    -Strawberry milk: milk, strawberries, sugar, vanilla extract
    ```
 
-### 改進：加入過濾條件與購物清單
+### 透過加入過濾器和購物清單來改進
 
-我們現在有一個可用應用，可產生食譜，且因為依賴使用者輸入，無論是食譜數量還是食材都相當靈活。
+我們現在有一個能產生食譜的運作中應用程式，而且它的彈性大，因為它依賴使用者輸入，既控制食譜數量，也控制使用的材料。
 
-進一步改進，我們想加入：
+進一步改進，我們希望加上以下功能：
 
-- <strong>過濾食材</strong>。想能過濾掉不喜歡或過敏的食材。為了達成，我們可在現有提示詞後加上過濾條件，如下：
+- <strong>過濾材料</strong>。我們想過濾掉不喜歡或會過敏的材料。實現此改動，我們可以編輯現有提示詞，並在尾端加上過濾條件，像這樣：
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -436,9 +436,9 @@ Shopping List:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  上面我們在提示詞末尾加入 `{filter}`，並從使用者取得過濾條件值。
+  在上面，我們在提示詞尾端加上 `{filter}`，同時我們也捕捉使用者輸入的過濾條件值。
 
-  執行程式的範例輸入可能如下：
+  執行程式時的一個範例輸入可能如下所示：
 
   ```output
   No of recipes (for example, 5): 3
@@ -505,14 +505,14 @@ Shopping List:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  如你所見，任何含牛奶的食譜都被過濾掉了。但如果你乳糖不耐症，也可能想過濾掉有起司的食譜，因此需明確描述。
+  如你所見，任何含牛奶的食譜已被過濾。但如果你乳糖不耐症，可能也要過濾掉含起司的食譜，因此也祈求明確的過濾條件。
 
 
-- <strong>製作購物清單</strong>。我哋想製作一個購物清單，考慮我哋已經喺屋企擁有嘅嘢。
+- <strong>產生購物清單</strong>。我們想要產生一個購物清單，考慮我們家裡已經有的東西。
 
-  對於呢個功能，我哋可以嘗試喺一個提示入面解決所有嘢，或者將佢分拆成兩個提示。試吓後者嘅方法。呢度我哋建議加入一個額外嘅提示，但要令到呢個工作，需要將前一個提示嘅結果加到後一個提示嘅上下文入面。
+  對於這個功能，我們可以嘗試用一個提示來解決所有問題，或者把它分成兩個提示。讓我們試試後者的方法。這裡我們建議添加一個額外的提示，但要實現這個功能，我們需要把前一個提示的結果作為後一個提示的上下文。
 
-  搵出代碼中打印第一個提示結果嘅部份，然後喺下面加入以下代碼：
+  找到程式碼中顯示第一個提示結果的部分，並在下面添加以下程式碼：
 
   ```python
   old_prompt_result = response.output_text
@@ -526,21 +526,21 @@ Shopping List:
   print(response.output_text)
   ```
 
-  留意以下事項：
+  注意以下幾點：
 
-  1. 我哋係通過將第一個提示嘅結果加入新提示，嚟構建一個新提示：
+  1. 我們正在構造一個新的提示，將第一個提示的結果加入到新提示中：
 
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  1. 我哋做一個新嘅請求，同時考慮第一個提示 asked 嘅 token 數量，所以今次我哋講 `max_output_tokens` 係 1200。
+  1. 我們發出一個新請求，但也考慮到第一次提示所要求的 token 數，因此這次設置 `max_output_tokens` 為 1200。
 
      ```python
      response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
      ```
 
-     透過執行呢段代碼，我哋而家得到嘅輸出係：
+     試跑這段程式碼後，我們得到如下輸出：
 
      ```output
      No of recipes (for example, 5): 2
@@ -554,19 +554,19 @@ Shopping List:
      -Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice
      ```
 
-## 改進你嘅設置
+## 改善您的設置
 
-到目前為止，我哋寫嘅代碼係可行嘅，但有啲調整我哋應該做嚟進一步改進。可以考慮嘅嘢有：
+到目前為止，我們的程式碼是可運作的，但我們還可以進行一些調整來進一步提升。有幾件事我們應該做：
 
-- <strong>將機密同代碼分離</strong>，例如 API 密鑰。機密唔應該放喺代碼入面，應該儲存在安全嘅地方。為咗將機密同代碼分離，我哋可以用環境變數同埋例如 `python-dotenv` 呢啲庫去從文件加载佢哋。以下係代碼示例：
+- <strong>將密鑰與程式碼分離</strong>，例如 API 金鑰。密鑰不應該出現在程式碼中，應該存放在安全的位置。為了將密鑰從程式碼中分離出來，我們可以使用環境變量和像 `python-dotenv` 這樣的庫從檔案中載入。程式碼範例如下：
 
-  1. 建立一個 `.env` 文件，內容如下：
+  1. 建立一個 `.env` 檔案，內容如下：
 
      ```bash
      OPENAI_API_KEY=sk-...
      ```
 
-     > 注意，喺 Microsoft Foundry 嘅 Azure OpenAI，要設定以下環境變數：
+     > 注意，若使用 Microsoft Foundry 的 Azure OpenAI，需設置以下環境變量：
 
      ```bash
      AZURE_OPENAI_API_KEY=<replace>
@@ -574,7 +574,7 @@ Shopping List:
      AZURE_OPENAI_API_VERSION=2024-10-21
      ```
 
-     喺代碼中，你會咁樣加载環境變數：
+     在程式碼中，載入環境變量的方式如下：
 
      ```python
      import os
@@ -586,39 +586,45 @@ Shopping List:
      client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
      ```
 
-- **關於 token 長度嘅說明**。我哋應該考慮生成文字所需嘅 token 數。Token 係要費錢嘅，所以盡量喺可能嘅情況下節省 token 使用量。例如，唔可以調整提示，使得用更少嘅 token 表達？
+- **關於 token 長度的一句話**。我們需要考慮產生所需文字用的 token 數量。token 是要花費資源的，所以能節省使用 token 的地方就盡量節省。例如，我們能不能學會如何修改提示以使用較少 token？
 
-  要改變使用嘅 token 數，可以用 `max_output_tokens` 參數。例如你想用 100 個 token，可以咁做：
+  要改變使用的 token 數，可以使用 `max_output_tokens` 參數。例如，若要使用 100 個 tokens，可以這樣設置：
 
   ```python
   response = client.responses.create(model=deployment, input=prompt, max_output_tokens=100, store=False)
   ```
 
-- **嘗試調整 temperature**。到而家為止我哋未提及 temperature，但佢係對程序表現好重要嘅一個上下文參數。temperature 值越高，輸出結果就越隨機。相反，temperature 值越低，輸出就越可預測。考慮你想唔想令輸出有變化。
+- **嘗試調整 temperature**。temperature 是我們目前還沒提過，但對程式表現很重要的參數。temperature 數值越高，輸出越隨機；越低，輸出越可預測。思考一下你是否需要你的輸出多樣化。
 
-  要調整 temperature，可以用 `temperature` 參數。例如你想用 0.5 嘅 temperature，可以咁做：
+  要改變溫度，可使用 `temperature` 參數。例如，若想設定為 0.5，可以這樣做：
 
   ```python
   response = client.responses.create(model=deployment, input=prompt, temperature=0.5, store=False)
   ```
 
-  > 注意，越接近 1.0，輸出越多變化。
+  > 注意，越接近 1.0，輸出越多變。
 
-## 任務
+- **推理模型不使用 `temperature`<strong>。這是 2026 年一個重要的轉變。目前在 Microsoft Foundry 上的非棄用模型中，是</strong>推理模型<strong>（GPT-5 系列，o-series），而且它們</strong>不支持 `temperature` 或 `top_p`**（也不支持 `max_tokens`，請使用 `max_output_tokens`）。如果你對 `gpt-5-mini` 發送 `temperature`，會得到「不支持此參數」的錯誤。所以想嘗試上面的 temperature 範例，請用還支持抽樣控制的模型——例如來自 [Microsoft Foundry 模型目錄](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) 的開放式 **Llama** 模型 `Llama-3.3-70B-Instruct`，透過 Foundry Models / Azure AI 推論端點呼叫（用法與 `githubmodels-*` 範例相同）。對於像 GPT-5 這類的推理模型，控制輸出方式有所不同：
+  - <strong>提示工程</strong>——清晰的指令、範例和結構化輸出（參見課程 [04 - 提示工程基礎](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)）完成了原本抽樣控制的工作。
+  - <strong>推理控制</strong>——使用像推理努力/冗長度之類的參數來權衡推理深度、延遲和成本。
 
-呢個任務，你可以自由選擇想製作乜嘢。
+  簡言之：`temperature`/`top_p` 依然在很多模型（Llama、Mistral、Phi 和 GPT-4.x 系列——雖然 GPT-4.x 正在逐步淘汰）上有效，但趨勢是推理模型如 GPT-5 會以提示工程和推理控制為主。
 
-以下係啲建議：
+## 作業
 
-- 微調食譜生成器應用，令佢變得更好。試吓調整 temperature 嘅值，亦試吓改變提示詞，睇吓可以搞出咩花樣。
-- 製作一個「學習夥伴」。呢個應用要能回答關於某個主題嘅問題，例如 Python，可以用類似「Python 中乜嘢係某個話題？」嘅提示，或者有啲提示叫佢顯示某個主題嘅代碼等等。
-- 歷史 Bot，令歷史活起嚟，指示 Bot 扮演某個歷史人物，問佢關於佢嘅人生同時代嘅問題。
+這次作業，你可以自由選擇要開發什麼。
+
+以下是一些建議：
+
+- 調整食譜生成器應用，進一步改進它。嘗試不同的 temperature 值和提示，看看能產出什麼結果。
+- 建立一個「學習夥伴」。此應用應能回答有關某個主題的問題，例如 Python，你可以有提示像是「Python 中某個主題是什麼？」或請它顯示某個主題的程式碼等。
+- 歷史機器人，讓歷史活起來，指示機器人扮演某個歷史人物，並問它有關該人物生平與時代的問題。
 
 ## 解決方案
 
 ### 學習夥伴
 
-以下係一個起步提示，睇吓你點用佢同埋按你喜好調整。
+以下是起步提示，看看你如何使用它並調整成你喜歡的樣子。
 
 ```text
 - "You're an expert on the Python language
@@ -631,9 +637,9 @@ Shopping List:
     - exercise in code with solutions"
 ```
 
-### 歷史 Bot
+### 歷史機器人
 
-呢度係可以使用嘅啲提示：
+這是一些你可以用的提示：
 
 ```text
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
@@ -642,23 +648,23 @@ Shopping List:
    Tell me about your greatest accomplishments, in 300 words"
 ```
 
-## 知識檢查
+## 知識檢測
 
-temperature 呢個概念係做咩用？
+temperature 這個概念有什麼功能？
 
-1. 控制輸出嘅隨機程度。
-1. 控制回應嘅長度。
-1. 控制使用嘅 token 數量。
+1. 它控制輸出的隨機程度。
+1. 它控制回應的篇幅大小。
+1. 它控制使用多少 tokens。
 
 ## 🚀 挑戰
 
-喺做任務嘅時候，試吓改變 temperature，試下設 0、0.5 同 1。記住 0 係最少變化，1 係最高變化。邊個值喺你嘅應用裡面效果最好？
+在做作業時，試著變化 temperature，設為 0、0.5 和 1。記住 0 是最不變化，1 是變化最多。哪個數值對你的應用最好？
 
 ## 做得好！繼續學習
 
-完成呢課後，可以睇睇我哋嘅 [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，繼續提升你嘅生成式 AI 知識！
+完成本課後，請參考我們的 [生成式 AI 學習系列](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，持續提升你的生成式 AI 知識！
 
-去下一課 Lesson 7，研究點樣 [製造聊天應用](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)！
+前往第七課，了解如何[建構聊天應用程式](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)！
 
 ---
 

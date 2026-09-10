@@ -1,66 +1,66 @@
-# Gradnja klepetalnih aplikacij, podprtih z generativno umetno inteligenco  
+# Gradnja pogovornih aplikacij na osnovi generativne umetne inteligence
 
-[![Gradnja klepetalnih aplikacij, podprtih z generativno umetno inteligenco](../../../translated_images/sl/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)  
+[![Gradnja pogovornih aplikacij na osnovi generativne umetne inteligence](../../../translated_images/sl/07-lesson-banner.a279b937f2843833.webp)](https://youtu.be/R9V0ZY1BEQo?si=IHuU-fS9YWT8s4sA)
 
-> _(Kliknite sliko zgoraj za ogled videa te lekcije)_  
+> _(Kliknite zgornjo sliko za ogled videoposnetka te lekcije)_
 
-Zdaj, ko smo videli, kako lahko gradimo aplikacije za generiranje besedila, si poglejmo klepetalne aplikacije.  
+Zdaj, ko smo videli, kako lahko gradimo aplikacije za generiranje besedila, poglejmo pogovorne aplikacije.
 
-Klepetalne aplikacije so postale sestavni del našega vsakdana in nudijo več kot le način za priložnostno pogovarjanje. So ključni del storitev za stranke, tehnične podpore in celo sofisticiranih svetovalnih sistemov. Verjetno ste v zadnjem času prejeli pomoč prek klepetalne aplikacije. Ko v te platforme vključujemo naprednejše tehnologije, kot je generativna umetna inteligenca, se kompleksnost povečuje, prav tako pa tudi izzivi.  
+Pogovorne aplikacije so postale del našega vsakdana in ponujajo več kot le način za sproščen pogovor. So ključni deli storitev za stranke, tehnične podpore in celo sofisticiranih svetovalnih sistemov. Verjetno ste pred kratkim prejeli pomoč preko pogovorne aplikacije. Z vključevanjem naprednih tehnologij, kot je generativna umetna inteligenca, v te platforme, se kompleksnost povečuje, prav tako pa tudi izzivi.
 
-Nekaj vprašanj, na katera moramo odgovoriti, je:  
+Nekatera vprašanja, na katera moramo odgovoriti, so:
 
-- **Gradnja aplikacije**. Kako učinkovito graditi in brezhibno integrirati te aplikacije, podprte z umetno inteligenco, za specifične primere uporabe?  
-- **Nadzor**. Ko je aplikacija nameščena, kako lahko nadzorujemo in zagotovimo, da aplikacije delujejo na najvišji kvaliteti, tako z vidika funkcionalnosti kot spoštovanja [šestih načel odgovornih AI](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)?  
+- **Gradnja aplikacije**. Kako učinkovito zgraditi in brezhibno integrirati te aplikacije, podprte z AI, za specifične primere uporabe?
+- **Nadzor**. Ko so aplikacije uvete, kako jih lahko spremljamo in zagotavljamo, da delujejo na najvišji kakovostni ravni, tako glede funkcionalnosti kot spoštovanja [šestih načel odgovorne umetne inteligence](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst)?
 
-Ko vstopamo v dobo, ki jo opredeljujeta avtomatizacija in brezhibna interakcija med človekom in strojem, postaja razumevanje, kako generativna AI spreminja obseg, globino in prilagodljivost klepetalnih aplikacij, nujno. Ta lekcija bo raziskala vidike arhitekture, ki podpirajo te zapletene sisteme, metode za njihovo natančno prilagoditev za domensko specifične naloge ter merila in dejavnike, pomembne za zagotovitev odgovorne uporabe AI.  
+Ker se premikamo v dobo, ki jo opredeljuje avtomatizacija in brezhibna interakcija med človekom in strojem, je razumevanje, kako generativna umetna inteligenca spreminja obseg, globino in prilagodljivost pogovornih aplikacij, ključnega pomena. Ta lekcija bo raziskala vidike arhitekture, ki podpirajo te zapletene sisteme, metode za njihovo fino prilagajanje za naloge na specifičnih področjih ter ovrednotila metrike in premisleke za zagotavljanje odgovorne uporabe umetne inteligence.
 
-## Uvod  
+## Uvod
 
-Ta lekcija zajema:  
+Ta lekcija zajema:
 
-- Tehnike za učinkovito gradnjo in integracijo klepetalnih aplikacij.  
-- Kako uporabiti prilagoditve in fino nastavitev aplikacij.  
-- Strategije in dejavniki za učinkovito spremljanje klepetalnih aplikacij.  
+- Tehnike za učinkovito gradnjo in integracijo pogovornih aplikacij.
+- Kako uporabiti prilagoditev in fino nastavitev aplikacij.
+- Strategije in premisleke za učinkovito spremljanje pogovornih aplikacij.
 
-## Cilji učenja  
+## Cilji učenja
 
-Do konca te lekcije boste lahko:  
+Do konca te lekcije boste sposobni:
 
-- Opisali upoštevane dejavnike za gradnjo in integracijo klepetalnih aplikacij v obstoječe sisteme.  
-- Prilagodili klepetalne aplikacije za specifične primere uporabe.  
-- Prepoznali ključne metrike in dejavnike za učinkovito spremljanje ter vzdrževanje kakovosti klepetalnih aplikacij, podprtih z AI.  
-- Zagotovili, da klepetalne aplikacije uporabljajo AI odgovorno.  
+- Opisati premisleke za gradnjo in integracijo pogovornih aplikacij v obstoječe sisteme.
+- Prilagoditi pogovorne aplikacije za specifične primere uporabe.
+- Prepoznati ključne metrike in premisleke za učinkovito spremljanje in vzdrževanje kakovosti pogovornih aplikacij na osnovi umetne inteligence.
+- Zagotoviti, da pogovorne aplikacije uporabljajo umetno inteligenco odgovorno.
 
-## Integracija generativne AI v klepetalne aplikacije  
+## Integracija generativne umetne inteligence v pogovorne aplikacije
 
-Nadgradnja klepetalnih aplikacij z generativno AI ni le ustvarjanje pametnejših sistemov; gre za optimizacijo arhitekture, zmogljivosti in uporabniškega vmesnika za zagotavljanje kakovostne uporabniške izkušnje. To vključuje raziskovanje arhitekturnih osnov, integracij API-jev in vidikov uporabniškega vmesnika. Ta oddelek vam bo ponudil celovito vodilo za navigacijo po teh kompleksnih področjih, ne glede na to, ali jih priklapljate na obstoječe sisteme ali gradite kot samostojne platforme.  
+Nadgradnja pogovornih aplikacij s generativno umetno inteligenco ni samo v tem, da jih naredimo pametnejše; gre za optimizacijo njihove arhitekture, zmogljivosti in uporabniškega vmesnika za zagotavljanje kakovostne uporabniške izkušnje. To vključuje raziskovanje arhitekturnih temeljev, integracije API-jev in premislekov o uporabniškem vmesniku. Ta razdelek vam želi ponuditi celovito pot za navigacijo po teh zapletenih področjih, ne glede na to, ali jih vključujete v obstoječe sisteme ali gradite kot samostojne platforme.
 
-Do konca tega oddelka boste imeli znanje, potrebno za učinkovito ustvarjanje in vključevanje klepetalnih aplikacij.  
+Do konca tega razdelka boste opremljeni z znanjem, potrebnim za učinkovito gradnjo in vključevanje pogovornih aplikacij.
 
-### Klepetalni robot ali klepetalna aplikacija?  
+### Pogovorni robot ali pogovorna aplikacija?
 
-Preden se poglobimo v gradnjo klepetalnih aplikacij, primerjajmo "klepetalnike" in "klepetalne aplikacije, podprte z AI", ki opravljajo različne vloge in funkcionalnosti. Glavni namen klepetalnika je avtomatizacija določenih pogovornih nalog, kot je odgovarjanje na pogosta vprašanja ali sledenje pošiljke. Običajno ga upravlja pravilo osnovana logika ali kompleksni AI algoritmi. Nasprotno pa je klepetalna aplikacija, podprta z AI, veliko širše okolje, zasnovano za olajšanje različnih oblik digitalne komunikacije, kot so besedilni, glasovni in video klepeti med ljudmi. Njena značilnost je integracija generativnega AI modela, ki simulira nianse človeškega pogovora in ustvarja odzive na podlagi širokega nabora vhodnih in kontekstualnih podatkov. Takšna aplikacija lahko vodi odprte diskusije, se prilagaja spreminjajočim kontekstom pogovora in celo ustvarja kreativna ali kompleksna besedila.  
+Preden se poglobimo v gradnjo pogovornih aplikacij, primerjajmo 'pogovorne bote' in 'pogovorne aplikacije na osnovi umetne inteligence', ki služijo različnim vlogam in funkcionalnostim. Glavni namen pogovornega bota je avtomatizacija specifičnih pogovornih nalog, na primer odgovarjanje na pogosta vprašanja ali sledenje paketu. Običajno ga upravlja pravilo-based logika ali kompleksni AI algoritmi. Za razliko od tega je pogovorna aplikacija na osnovi umetne inteligence bistveno širše okolje, zasnovano za omogočanje različnih oblik digitalne komunikacije, kot so besedilni, glasovni in video pogovori med ljudmi. Njegova ključna značilnost je integracija generativnega AI modela, ki simulira nijansirane, človeške pogovore in ustvarja odgovore na podlagi širokega nabora vhodnih in kontekstualnih podatkov. Pogovorna aplikacija na osnovi generativne umetne inteligence lahko vodi odprto domeno pogovorov, se prilagaja razvijajočim se kontekstom pogovora in celo ustvarja kreativne ali kompleksne dialoge.
 
-Tabela spodaj prikazuje ključne razlike in podobnosti, ki nam pomagajo razumeti njihove edinstvene vloge v digitalni komunikaciji.  
+Spodnja tabela povzema ključne razlike in podobnosti, ki nam pomagajo razumeti njihove edinstvene vloge v digitalni komunikaciji.
 
-| Klepetalnik                         | Klepetalna aplikacija, podprta z generativno AI                   |  
-| --------------------------------- | --------------------------------------------------------------- |  
-| Osredotočen na naloge in pravila   | Zaveda se konteksta                                                |  
-| Pogosto integriran v večje sisteme | Lahko gosti enega ali več klepetalnikov                           |  
-| Omejen na programirane funkcije    | Vključuje modele generativne AI                                   |  
-| Specializirane in strukturirane interakcije | Zmožen odprtih razprav na različne teme                         |  
+| Pogovorni bot                       | Pogovorna aplikacija na osnovi generativne umetne inteligence |
+| ---------------------------------- | --------------------------------------------------------------- |
+| Osredotočen na naloge in pravila    | Zaznava kontekst                                                |
+| Pogosto integriran v večje sisteme | Lahko gosti enega ali več pogovornih botov                      |
+| Omejen na programirane funkcije     | Vključuje generativne AI modele                                 |
+| Specializirane in strukturirane interakcije | Zmožen odprtodomenih razprav                                 |
 
-### Uporaba predpripravljenih funkcionalnosti z SDK-ji in API-ji  
+### Izraba vnaprej pripravljene funkcionalnosti z SDK-ji in API-ji
 
-Pri gradnji klepetalne aplikacije je odličen prvi korak ocena že obstoječega. Uporaba SDK-jev in API-jev pri gradnji klepetalnih aplikacij je strateška prednost zaradi več razlogov. Z vključitvijo dobro dokumentiranih SDK-jev in API-jev si aplikacijo strateško postavite za dolgoročni uspeh, pri čemer rešujete izzive razširljivosti in vzdrževanja.  
+Pri gradnji pogovorne aplikacije je odličen prvi korak ocena obstoječih rešitev. Uporaba SDK-jev in API-jev za gradnjo pogovornih aplikacij je koristna strategija iz različnih razlogov. Z integracijo dobro dokumentiranih SDK-jev in API-jev strateško pozicionirate vašo aplikacijo za dolgoročni uspeh, obravnavate vprašanja razširljivosti in vzdrževanja.
 
-- **Pospeši proces razvoja in zmanjša obremenitev**: Zanašanje na že zgrajene funkcionalnosti namesto na drag proces njihove izdelave omogoča, da se osredotočite na druge vidike aplikacije, ki so vam morda pomembnejši, kot je poslovna logika.  
-- **Boljša zmogljivost**: Ko gradite funkcionalnost iz nič, se slej ko prej vprašate: "Kako se to razširja? Ali aplikacija zmore obvladati nenaden porast uporabnikov?" Dobro vzdrževani SDK-ji in API-ji pogosto vključujejo rešitve za te izzive.  
-- **Enostavnejše vzdrževanje**: Posodobitve in izboljšave so lažje upravljati, saj večina API-jev in SDK-jev zahteva le posodobitev knjižnice ob izdaji nove različice.  
-- **Dostop do najnovejše tehnologije**: Uporaba modelov, ki so fino nastavljeni in usposobljeni na obsežnih podatkovnih zbirkah, zagotavlja vaši aplikaciji zmogljivosti naravnega jezika.  
+- **Pospeši razvojni proces in zmanjša stroške**: Zanašanje na vnaprej pripravljene funkcije namesto dragih postopkov samostojne izdelave vam omogoča, da se osredotočite na druge vidike vaše aplikacije, ki so vam morda bolj pomembni, kot je poslovna logika.
+- **Boljša zmogljivost**: Pri gradnji funkcionalnosti od začetka se boste sčasoma vprašali "Kako se to širi? Ali je ta aplikacija sposobna obvladovati nenaden porast uporabnikov?" Dobro vzdrževani SDK-ji in API-ji pogosto vključujejo že vgrajene rešitve za te izzive.
+- **Lažje vzdrževanje**: Posodobitve in izboljšave je lažje upravljati, saj večina API-jev in SDK-jev zahteva samo posodobitev knjižnice ob izdaji novejše različice.
+- **Dostop do najsodobnejše tehnologije**: Uporaba modelov, ki so bili fino nastavljeni in trenirani na obsežnih podatkovnih zbirkah, zagotavlja vaši aplikaciji zmožnosti naravnega jezika.
 
-Dostop do funkcionalnosti SDK-ja ali API-ja običajno pomeni pridobitev dovoljenja za uporabo storitev, kar je pogosto prek edinstvenega ključa ali žetona za preverjanje pristnosti. Za prikaz, kako to izgleda, bomo uporabili knjižnico OpenAI za Python. Poskusite lahko tudi sami v naslednjem [zvezku za OpenAI](./python/oai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) ali [zvezku za Azure OpenAI Services](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreys) za to lekcijo.  
+Dostop do funkcionalnosti SDK-ja ali API-ja običajno zahteva dovoljenje za uporabo ponujenih storitev, ki je pogosto omogočeno z edinstvenim ključem ali avtentikacijskim žetonom. Za raziskovanje tega bomo uporabili OpenAI Python knjižnico. Lahko jo poskusite tudi sami v naslednjem [zvezku za OpenAI](./python/oai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) ali [zvezku za Azure OpenAI storitve](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreys) za to lekcijo.
 
 ```python
 import os
@@ -72,118 +72,118 @@ client = OpenAI(
     api_key=API_KEY
     )
 
-response = client.responses.create(model="gpt-4o-mini", input="Suggest two titles for an instructional lesson on chat applications for generative AI.", store=False)
+response = client.responses.create(model="gpt-5-mini", input="Suggest two titles for an instructional lesson on chat applications for generative AI.", store=False)
 print(response.output_text)
 ```
-  
-Primer zgoraj uporablja GPT-4o mini model z API-jem za odgovore, da dopolni poziv, a opazite, da je ključ API nastavljen pred tem. Če ključa ne nastavite, boste prejeli napako.  
 
-## Uporabniška izkušnja (UX)  
+Zgornji primer uporablja model GPT-5 mini z API-jem za odgovore, da dopolni poziv, vendar opazite, da je API ključ nastavljen prej. Če ključ ne bi bil nastavljen, bi prejeli napako.
 
-Splošna načela UX veljajo za klepetalne aplikacije, tukaj pa je nekaj dodatnih dejavnikov, ki postanejo še posebej pomembni zaradi komponent strojnega učenja.  
+## Uporabniška izkušnja (UX)
 
-- **Mehanizem za rešitev nejasnosti**: Generativni AI modeli včasih ustvarijo dvoumne odgovore. Funkcija, ki uporabnikom omogoča zahtevo za pojasnilo, je lahko koristna, če naletijo na ta problem.  
-- **Ohranjanje konteksta**: Napredni generativni AI modeli imajo sposobnost ohranjanja konteksta znotraj pogovora, kar je lahko pomembna prednost za uporabniško izkušnjo. Uporabnikom omogočiti nadzor in upravljanje konteksta izboljša izkušnjo, vendar prinaša tveganje za hranjenje občutljivih informacij. Premisleki o tem, kako dolgo se te informacije shranjujejo, na primer uvedba politike zadrževanja, lahko uravnotežijo potrebo po kontekstu in zasebnosti.  
-- **Personalizacija**: Zmožnost učenja in prilagajanja AI modelov ponuja individualizirano uporabniško izkušnjo. Prilagajanje izkušnje z lastnostmi, kot so uporabniški profili, ne le da uporabnik dobi občutek razumevanja, temveč mu tudi pomaga pri iskanju specifičnih odgovorov, s čimer se ustvari učinkovitejša in zadovoljivejša interakcija.  
+Splošna načela UX veljajo za pogovorne aplikacije, vendar so tukaj še nekateri dodatni premisleki, ki postanejo posebej pomembni zaradi vključenih komponent strojnega učenja.
 
-Primer take personalizacije so nastavitve "Custom Instructions" v OpenAI-jevem ChatGPT-ju. Omogočajo vam, da podate informacije o sebi, ki so lahko pomemben kontekst za vaše pozive. Tukaj je primer prilagojene navodila.  
+- **Mehanizem za reševanje nejasnosti**: Generativni AI modeli včasih ustvarijo nejasne odgovore. Funkcija, ki omogoča uporabnikom, da zaprosijo za pojasnilo, je lahko koristna, če naletijo na ta problem.
+- **Ohranjanje konteksta**: Napredni generativni AI modeli imajo sposobnost zapomniti si kontekst znotraj pogovora, kar je lahko pomemben doprinos k uporabniški izkušnji. Omogočanje uporabnikom, da nadzorujejo in upravljajo kontekst, izboljšuje uporabniško izkušnjo, vendar prinaša tveganje shranjevanja občutljivih uporabniških podatkov. Premisleki o tem, kako dolgo se ti podatki hranijo, kot je uvedba obdobja hranjenja, lahko uravnotežijo potrebo po kontekstu glede na zasebnost.
+- **Personalizacija**: Z zmožnostjo učenja in prilagajanja AI modeli nudijo individualizirano izkušnjo za uporabnika. Prilagajanje uporabniške izkušnje preko funkcij, kot so uporabniški profili, ne le da naredi uporabnika občutnega in razumljenega, ampak vam tudi pomaga najti specifične odgovore, s čimer ustvarja učinkovitejšo in zadovoljujočo interakcijo.
 
-![Nastavitve prilagojenih navodil v ChatGPT](../../../translated_images/sl/custom-instructions.b96f59aa69356fcf.webp)  
+Eden takšnih primerov personalizacije so "Nastavitve po meri" v OpenAI ChatGPT. Omogočajo vam, da podate informacije o sebi, ki so lahko pomemben kontekst za vaše pozive. Tukaj je primer prilagojenih navodil.
 
-Ta "profil" usmerja ChatGPT, da pripravi učni načrt o povezanih seznamih. Opazite, da ChatGPT upošteva, da uporabnik želi bolj poglobljen učni načrt glede na njene izkušnje.  
+![Nastavitve po meri v ChatGPT](../../../translated_images/sl/custom-instructions.b96f59aa69356fcf.webp)
 
-![Poziv v ChatGPT za učni načrt o povezanih seznamih](../../../translated_images/sl/lesson-plan-prompt.cc47c488cf1343df.webp)  
+Ta "profil" spodbuja ChatGPT, da ustvari učni načrt o povezanih seznamih. Opazimo, da ChatGPT upošteva, da uporabnica morda želi bolj poglobljen učni načrt glede na svojo izkušnjo.
 
-### Microsoftov sistemski okvir sporočil za velike jezikovne modele  
+![Poziv v ChatGPT za učni načrt o povezanih seznamih](../../../translated_images/sl/lesson-plan-prompt.cc47c488cf1343df.webp)
 
-[Microsoft je zagotovil smernice](https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) za učinkovito pisanje sistemskih sporočil pri generiranju odgovorov iz LLM-jev, razdeljenih na 4 področja:  
+### Microsoftov sistemski okvir za velika jezikovna modela
 
-1. Določitev, za koga je model namenjen, ter njegovih zmožnosti in omejitev.  
-2. Določitev formata izhoda modela.  
-3. Predložitev specifičnih primerov, ki prikazujejo želeno vedenje modela.  
-4. Zagotavljanje dodatnih vedenjskih varovalk.  
+[Microsoft je zagotovil smernice](https://learn.microsoft.com/azure/ai-foundry/openai/concepts/system-message#define-the-models-output-format?WT.mc_id=academic-105485-koreyst) za pisanje učinkovitih sistemskih sporočil pri generiranju odgovorov iz LLM-jev, razdeljen na 4 področja:
 
-### Dostopnost  
+1. Določanje, za koga je model namenjen, ter njegovih zmožnosti in omejitev.
+2. Določanje izhodnega formata modela.
+3. Zagotavljanje specifičnih primerov, ki prikazujejo predvideno vedenje modela.
+4. Zagotavljanje dodatnih vedenjskih varovalk.
 
-Ne glede na to, ali ima uporabnik vidne, slušne, motorične ali kognitivne okvare, mora biti dobro zasnovana klepetalna aplikacija uporabna za vse. Spodnji seznam predstavi posebne funkcije, namenjene izboljšanju dostopnosti za različne vrste uporabniških omejitev.  
+### Dostopnost
 
-- **Funkcije za vidno invalidnost**: teme z visokim kontrastom in besedilo z nastavljivo velikostjo, združljivost z bralniki zaslona.  
-- **Funkcije za slušno invalidnost**: funkcije besedilo-učno-naprej in govor-besedilo, vizualni znaki za zvočna obvestila.  
-- **Funkcije za motorične omejitve**: podpora tipkovni navigaciji, glasovni ukazi.  
-- **Funkcije za kognitivne omejitve**: poenostavljene jezikovne možnosti.  
+Ne glede na to, ali ima uporabnik vidne, slušne, motorične ali kognitivne ovire, mora biti dobro zasnovana pogovorna aplikacija uporabna za vse. Spodnji seznam povzema specifične funkcije, namenjene izboljšanju dostopnosti za različne uporabniške omejitve.
 
-## Prilagoditev in fino nastavljanje za domensko specifične jezikovne modele  
+- **Funkcije za vidno okvaro**: Tematski visoki kontrasti in nastavljiva velikost pisave, združljivost s čitalci zaslona.
+- **Funkcije za slušno okvaro**: Funkcije besedila v govor in govora v besedilo, vizualni signali za zvočna obvestila.
+- **Funkcije za motorično okvaro**: Podpora za navigacijo s tipkovnico, glasovni ukazi.
+- **Funkcije za kognitivno okvaro**: Poenostavljene jezikovne možnosti.
 
-Predstavljajte si klepetalno aplikacijo, ki razume žargon vašega podjetja in predvidi specifična vprašanja, ki jih pogosto postavlja njena uporabniška baza. Obstajata dva pristopa, ki ju je vredno omeniti:  
+## Prilagoditev in fino nastavljanje jezikovnih modelov za specifična področja
 
-- **Uporaba DSL modelov**. DSL pomeni domensko specifični jezik. Uporabite lahko tako imenovani DSL model, usposobljen na določeno področje, da razume njegove koncepte in scenarije.  
-- **Uporaba fine-tuninga**. Fino nastavljanje je proces dodatnega treniranja vašega modela z določenimi podatki.  
+Predstavljajte si pogovorno aplikacijo, ki razume žargon vašega podjetja in predvideva specifična vprašanja, ki jih pogosto postavljajo njeni uporabniki. Obstaja nekaj pristopov, ki jih je vredno omeniti:
 
-## Prilagoditev: uporaba DSL  
+- **Uporaba modelov specifičnega jezika (DSL)**. DSL pomeni domeno specifični jezik. Lahko uporabite t.i. DSL model, treniran na določeni domeni, da razume njene koncepte in scenarije.
+- **Uporaba fine-nastavitve**. Fine-nastavitev je proces dodatnega treniranja vašega modela s specifičnimi podatki.
 
-Uporaba domensko specifičnih jezikovnih modelov (DSL modeli) lahko poveča uporabniško angažiranost z zagotavljanjem specializiranih, kontekstualno relevantnih interakcij. To je model, ki je usposobljen ali fino nastavljen za razumevanje in generiranje besedil, povezanih z določenim področjem, industrijo ali temo. Možnosti uporabe DSL modela se gibljejo od usposabljanja modela iz nič do uporabe že obstoječih prek SDK-jev in API-jev. Druga možnost je fino nastavljanje, kjer vzamete obstoječi predhodno usposobljeni model in ga prilagodite za specifično področje.  
+## Prilagoditev: uporaba DSL
 
-## Prilagoditev: uporaba fino nastavljanja  
+Uporaba modelov specifičnega jezika (DSL modeli) lahko poveča angažiranost uporabnikov in zagotovi specializirane, kontekstualno relevantne interakcije. Gre za model, ki je treniran ali fino nastavljen za razumevanje in ustvarjanje besedila, povezanega z določeno področjem, industrijo ali temo. Možnosti uporabe DSL modela se razlikujejo od treniranja enega od začetka do uporabe obstoječih preko SDK-jev in API-jev. Druga možnost je fino nastavljanje, ki vključuje prilagoditev obstoječega vnaprej usposobljenega modela za specifično domeno.
 
-Fino nastavljanje se pogosto uporablja, kadar predhodno usposobljen model ni dovolj dober na specializiranem področju ali za specifično nalogo.  
+## Prilagoditev: uporaba fine-nastavitve
 
-Na primer, medicinska vprašanja so zapletena in zahtevajo veliko konteksta. Ko zdravnik postavi diagnozo, temelji na različnih dejavnikih, kot so življenjski slog ali predhodna stanja, ter pogosto uporablja tudi najnovejše medicinske članke za potrditev diagnoze. V tako zahtevnih primerih splošna AI klepetalna aplikacija ne more biti zanesljiv vir.  
+Fine-nastavitev se pogosto uporabi, kadar vnaprej usposobljen model zaostaja na specializiranem področju ali specifični nalogi.
 
-### Primer: medicinska aplikacija  
+Na primer, medicinska vprašanja so kompleksna in zahtevajo veliko konteksta. Ko medicinski strokovnjak diagnosticira pacienta, to temelji na različnih dejavnikih, kot so življenjski slog ali predhodna stanja, lahko se opira tudi na najnovejše medicinske revije za potrditev diagnoze. V takih izpopolnjenih scenarijih splošna AI pogovorna aplikacija ne more biti zanesljiv vir.
 
-Predstavljajte si klepetalno aplikacijo, zasnovano za pomoč zdravstvenim delavcem z nudenjem hitrih referenc o smernicah zdravljenja, interakcijah zdravil ali najnovejših raziskavah.  
+### Scenarij: medicinska aplikacija
 
-Splošni model je lahko primeren za odgovore na osnovna medicinska vprašanja ali za splošne nasvete, vendar se lahko spopade z naslednjim:  
+Predstavljajte si pogovorno aplikacijo, zasnovano za pomoč medicinskim delavcem z zagotavljanjem hitrih referenc za smernice zdravljenja, interakcije zdravil ali najnovejših raziskovalnih ugotovitev.
 
-- **Zelo specifični ali kompleksni primeri**. Na primer, nevrolog bi lahko vprašal aplikacijo: "Kakšni so trenutni najboljši pristopi za obvladovanje zdravljenju odporne epilepsije pri pediatričnih bolnikih?"  
-- **Pomanjkanje najnovejših znanstvenih dosežkov**. Splošni model bi lahko imel težave z zagotavljanjem aktualnih odgovorov, ki vključujejo najnovejše dosežke v nevrologiji in farmakologiji.  
+Splošni model je morda zadosten za odgovore na osnovna medicinska vprašanja ali splošne nasvete, a se lahko spopada z naslednjim:
 
-V takih primerih lahko fino nastavljanje modela z ustrezno medicinsko bazo podatkov znatno izboljša njegovo sposobnost natančnega in zanesljivega obravnavanja teh zahtevnih medicinskih vprašanj. To zahteva dostop do velike in relevantne baze podatkov, ki predstavlja domensko specifične izzive in vprašanja, ki jih je treba nasloviti.  
+- **Zelo specifični ali kompleksni primeri**. Na primer, nevrolog bi lahko vprašal aplikacijo: "Kateri so trenutno najboljši postopki za upravljanje zdravilno odporne epilepsije pri pediatričnih pacientih?"
+- **Pomanjkanje najnovejših dognanj**. Splošni model lahko težko zagotovi aktualen odgovor, ki vključuje najnovejša dognanja na področju nevrologije in farmakologije.
 
-## Dejavniki za visoko kakovostno klepetalno izkušnjo, pogonjeno z AI  
+V primerih, kot so ti, lahko fino nastavljanje modela s specializiranim medicinskim naborom podatkov bistveno izboljša njegovo sposobnost natančnega in zanesljivega obravnavanja teh zahtevnih medicinskih vprašanj. To zahteva dostop do velike in relevantne zbirke podatkov, ki predstavlja težave in vprašanja specifična za domeno.
 
-Ta oddelek navaja merila za "visokokakovostne" klepetalne aplikacije, ki zajemajo merjenje ključnih metrik in upoštevanje okvira, ki odgovorno uporablja tehnologijo AI.  
+## Premisleki za visokokakovostno uporabniško izkušnjo pogovorov z AI
 
-### Ključne metrike  
+Ta razdelek opisuje kriterije za "visokokakovostne" pogovorne aplikacije, ki vključujejo zajem ključnih metrik in spoštovanje okvira, ki odgovorno uporablja tehnologijo umetne inteligence.
 
-Za ohranjanje visokih zmogljivosti aplikacije je bistveno spremljati ključne metrike in dejavnike. Ta merila ne zagotavljajo le funkcionalnosti aplikacije, temveč tudi ocenjujejo kakovost AI modela in uporabniške izkušnje. Spodaj je seznam osnovnih metrik, AI in meril uporabniške izkušnje za razmislek.  
+### Ključne metrike
 
-| Metrična vrednost           | Opis                                                                                                                   | Razmisleki za razvijalca klepeta                                  |  
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |  
-| **Čas delovanja (Uptime)**  | Meri čas, ko je aplikacija delujoča in dostopna uporabnikom.                                                           | Kako boste zmanjšali čas nedosegljivosti?                        |  
-| **Čas odziva**              | Čas, ki ga aplikacija potrebuje za odgovor na uporabnikov zahtevek.                                                    | Kako lahko optimizirate obdelavo poizvedb za hitrejše odzive?    |  
-| **Natančnost (Precision)**  | Razmerje prave pozitivne napovedi glede na skupno število pozitivnih napovedi.                                         | Kako boste preverili natančnost vašega modela?                   |  
-| **Pokritost (Recall)**      | Razmerje prave pozitivne napovedi glede na dejansko število pozitivnih primerov.                                      | Kako boste merili in izboljšali pokritost?                       |  
-| **F1 rezultat**             | Harmonično povprečje natančnosti in pokritosti, ki uravnoteži kompromis med obema.                                    | Kakšen je vaš cilj za F1 rezultat? Kako boste uravnotežili natančnost in pokritost? |  
-| **Perpleksnost**            | Meri, kako dobro se porazdelitev verjetnosti, ki jo napove model, ujema z dejansko porazdelitvijo podatkov.            | Kako boste zmanjšali perpleksnost?                               |  
-| **Metrike zadovoljstva uporabnikov** | Meri uporabnikovo percepcijo aplikacije. Pogosto se zajema preko anket.                                        | Kako pogosto boste zbirali povratne informacije? Kako se boste nanje odzvali? |  
-| **Stopnja napak**           | Stopnja, pri kateri model dela napake pri razumevanju ali izhodu.                                                      | Kake strategije imate za zmanjšanje stopnje napak?              |  
-| **Cikli ponovnega usposabljanja** | Pogostost, s katero se model posodablja za vključitev novih podatkov in spoznanj.                               | Kako pogosto boste model ponovno usposabljali? Kaj sproži cikel ponovnega usposabljanja? |  
+Za vzdrževanje visokokakovostne zmogljivosti aplikacije je bistveno spremljati ključne metrike in premisleke. Te meritve ne zagotavljajo le delovanja aplikacije, ampak tudi ocenjujejo kakovost AI modela in uporabniške izkušnje. Spodaj je seznam, ki zajema osnovne, AI in metrike uporabniške izkušnje, ki jih je treba upoštevati.
 
-| **Odkrivanje anomalij**    | Orodja in tehnike za prepoznavanje nenavadnih vzorcev, ki niso skladni s pričakovanim vedenjem.                          | Kako boste odgovorili na anomalije?                                        |
+| Metrične           | Definicija                                                                                                           | Premisleki za razvijalca pogovora                               |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| **Dostopnost (Uptime)** | Meri čas, ko je aplikacija operativna in dostopna uporabnikom.                                                     | Kako boste zmanjšali izpad delovanja?                           |
+| **Čas odziva**      | Čas, ki ga aplikacija potrebuje za odgovor na uporabniško vprašanje.                                                | Kako lahko optimizirate obdelavo poizvedbe za izboljšanje časa odziva? |
+| **Natančnost**      | Razmerje pravih pozitivnih napovedi glede na skupno število pozitivnih napovedi.                                     | Kako boste preverili natančnost svojega modela?                 |
+| **Pokritost (Sensitivity)** | Razmerje pravih pozitivnih napovedi glede na dejansko število pozitivnih.                                          | Kako boste merili in izboljšali pokritost?                      |
+| **F1 rezultat**     | Harmonično povprečje natančnosti in pokritosti, ki uravnava kompromis med obema.                                    | Kakšen je vaš cilj za F1 rezultat? Kako boste uravnotežili natančnost in pokritost? |
+| **Perpleksnost**    | Meri, kako dobro verjetnostna porazdelitev, ki jo napoveduje model, sovpada z dejansko porazdelitvijo podatkov.      | Kako boste zmanjšali perpleksnost?                              |
+| **Metrike zadovoljstva uporabnika** | Meri zaznavo uporabnika o aplikaciji. Pogosto zajeta preko anket.                                                   | Kako pogosto boste zbirali povratne informacije uporabnikov? Kako se boste prilagajali na podlagi tega? |
+| **Stopnja napak**   | Stopnja, pri kateri model dela napake pri razumevanju ali izhodu.                                                    | Katere strategije imate za znižanje stopnje napak?             |
+| **Cikli ponovnega treniranja** | Pogostost, s katero se model posodablja z vključevanjem novih podatkov in vpogledov.                             | Kako pogosto boste ponovno trenirali model? Kaj sproži cikel ponovnega treniranja? |
 
-### Uvajanje odgovornih praks AI v klepetalnih aplikacijah
+| **Odkrivanje anomalij**         | Orodja in tehnike za prepoznavanje nenavadnih vzorcev, ki ne ustrezajo pričakovanemu vedenju.                        | Kako boste odgovorili na anomalije?                                        |
 
-Microsoftov pristop k odgovorni uporabi AI je identificiral šest načel, ki naj bi usmerjala razvoj in uporabo AI. Spodaj so navedena načela, njihova definicija ter stvari, ki jih naj razvijalec klepeta upošteva in zakaj jih mora jemati resno.
+### Izvajanje praks odgovorne umetne inteligence v klepetalnih aplikacijah
 
-| Načela                 | Microsoftova definicija                                | Premisleki za razvijalca klepeta                                   | Zakaj je pomembno                                                                     |
-| ---------------------- | ----------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| Poštenost              | AI sistemi naj bi vse ljudi obravnavali pravično.     | Zagotovite, da klepetalna aplikacija ne diskriminira na podlagi uporabniških podatkov. | Za izgradnjo zaupanja in vključenosti med uporabniki; preprečuje pravne posledice.  |
-| Zanesljivost in varnost | AI sistemi naj delujejo zanesljivo in varno.          | Izvedite testiranja in varnostne ukrepe za zmanjšanje napak in tveganj.         | Zagotavlja zadovoljstvo uporabnikov in preprečuje morebitno škodo.                   |
-| Zasebnost in varnost   | AI sistemi naj bodo varni in spoštujejo zasebnost.    | Uvedite močno šifriranje in ukrepe za zaščito podatkov.                        | Za varovanje občutljivih uporabniških podatkov in upoštevanje zakonov o zasebnosti.  |
-| Vključenost            | AI sistemi naj opolnomočijo vse in vključujejo ljudi. | Oblikujte UI/UX, ki je dostopna in enostavna za uporabo različnim občinstvom. | Zagotavlja, da lahko širši krog ljudi učinkovito uporablja aplikacijo.               |
-| Transparentnost        | AI sistemi naj bodo razumljivi.                        | Zagotovite jasno dokumentacijo in pojasnila za AI odzive.                       | Uporabniki bolj zaupajo sistemu, če razumejo, kako so sprejete odločitve.           |
-| Odgovornost            | Ljudje naj so odgovorni za AI sisteme.                | Vzpostavite jasen proces za revizijo in izboljševanje AI odločitev.             | Omogoča stalno izboljševanje in korektivne ukrepe v primeru napak.                   |
+Microsoftov pristop k odgovorni umetni inteligenci je opredelil šest načel, ki bi morali usmerjati razvoj in uporabo umetne inteligence. Spodaj so načela, njihove definicije in stvari, ki jih mora razvijalec klepeta upoštevati ter zakaj jih mora jemati resno.
+
+| Načela                | Microsoftova definicija                                | Premisleki za razvijalca klepeta                                | Zakaj je pomembno                                                                   |
+| ---------------------- | ----------------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Poštenost             | Sistemi umetne inteligence morajo vse ljudi obravnavati pošteno. | Poskrbite, da klepetalna aplikacija ne diskriminira na podlagi uporabniških podatkov. | Za gradnjo zaupanja in vključujočnosti med uporabniki; preprečuje pravne posledice. |
+| Zanesljivost in varnost | Sistemi umetne inteligence morajo delovati zanesljivo in varno. | Izvedite testiranja in varnostne mehanizme, da zmanjšate napake in tveganja. | Zagotavlja zadovoljstvo uporabnikov in preprečuje morebitno škodo.                   |
+| Zasebnost in varnost  | Sistemi umetne inteligence morajo biti varni in spoštovati zasebnost. | Uvedite močno šifriranje in ukrepe za zaščito podatkov.             | Za zaščito občutljivih uporabniških podatkov in skladnost z zakonodajo o zasebnosti. |
+| Vključenost           | Sistemi umetne inteligence morajo opolnomočiti vsakogar in vključevati ljudi. | Oblikujte UI/UX, ki je dostopna in enostavna za uporabo raznoliki publiki. | Zagotavlja, da lahko širši krog ljudi učinkovito uporablja aplikacijo.                |
+| Transparentnost       | Sistemi umetne inteligence morajo biti razumljivi.    | Zagotovite jasno dokumentacijo in utemeljitev odgovorov umetne inteligence. | Uporabniki bodo bolj zaupali sistemu, če bodo razumeli, kako so sprejete odločitve.  |
+| Odgovornost           | Ljudje morajo biti odgovorni za sisteme umetne inteligence. | Vzpostavite jasen postopek za revizijo in izboljšave odločitev umetne inteligence. | Omogoča stalno izboljševanje in korektivne ukrepe v primeru napak.                    |
 
 ## Naloga
 
-Glej [nalogo](../../../07-building-chat-applications/python). Ta vas bo vodila skozi vrsto vaj od izvajanja prvih klepetalnih ukazov do razvrščanja in povzemanja besedila in še več. Opazite, da so naloge na voljo v različnih programskih jezikih!
+Oglejte si [nalogo](../../../07-building-chat-applications/python). Vodila vas bo skozi vrsto vaj od zagona prvih klepetalnih pozivov, do klasifikacije in povzemanja besedil in več. Opazili boste, da so naloge na voljo v različnih programskih jezikih!
 
 ## Odlično delo! Nadaljujte pot
 
-Po končani tej lekciji si oglejte našo [Zbirko za učenje Generativne AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), da nadaljujete z nadgrajevanjem svojega znanja o Generativni AI!
+Po zaključku te lekcije si oglejte našo [zbirko za učenje generativne umetne inteligence](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), da nadaljujete z dvigovanjem svojega znanja o generativni umetni inteligenci!
 
-Pojdite na Lekcijo 8, da vidite, kako lahko začnete [graditi iskalne aplikacije](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Pojdite na Lekcijo 8, kjer boste videli, kako lahko začnete [graditi iskalne aplikacije](../08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 

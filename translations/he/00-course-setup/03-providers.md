@@ -1,54 +1,54 @@
-# בחירת ספק LLM והגדרתו 🔑
+# בחירה והגדרת ספק LLM 🔑
 
-משימות **יכולות** גם להיות מוגדרות לעבוד מול פריסות של מודל שפה גדול (LLM) דרך ספק שירות נתמך כמו OpenAI, Azure או Hugging Face. אלו מספקים _נקודת קצה מתארחת_ (API) שניתן לגשת אליה תכנותית עם האישורים הנכונים (מפתח API או טוקן). בקורס זה, נדון בספקים הבאים:
+ניתן גם להגדיר תרגילים שיפעלו מול פריסות מודל שפה גדול (LLM) דרך ספק שירות נתמך כדוגמת OpenAI, Azure או Hugging Face. אלו מספקים _נקודת גישה מנוהלת_ (API) אליה נוכל לגשת באופן תכנותי עם אישורים מתאימים (מפתח API או טוקן). בקורס זה, נדון בספקים הבאים:
 
- - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) עם מודלים מגוונים כולל סדרת GPT המרכזית.
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) עבור מודלים של OpenAI עם מיקוד למוכנות ארגונית
- - [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) עבור נקודת קצה אחת ומפתח API לגישה למאות מודלים מ-OpenAI, Meta, Mistral, Cohere, Microsoft ועוד (מחליף את GitHub Models, שייפסק בסוף יולי 2026)
- - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) עבור מודלים בקוד פתוח ושרת אינפרנסים
- - [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) או [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) אם אתם מעדיפים להריץ מודלים במלואם ללא חיבור לאינטרנט במכשיר שלכם, ללא צורך במנוי ענן
+ - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) עם דגמים מגוונים כולל סדרת GPT המרכזית.
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-foundry/openai/?WT.mc_id=academic-105485-koreyst) עבור דגמי OpenAI, תוך דגש על מוכנות עסקית
+ - [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) עבור נקודת גישה אחת ומפתח API לגישה למאות דגמים מ-OpenAI, Meta, Mistral, Cohere, מייקרוסופט ועוד (מחליף את GitHub Models, שיפסיק לפעול בסוף יולי 2026)
+ - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) עבור דגמים מקור פתוח ושרת הסקה
+ - [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) או [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) אם אתם מעדיפים להריץ דגמים באופן מלא במכשירכם, ללא צורך במנוי ענן
 
-**תזדקקו לחשבונות שלכם עבור התרגילים האלה**. המשימות הן אופציונליות כך שתוכלו לבחור להגדיר אחד, את כולם - או אף אחד - מהספקים על פי תחומי העניין שלכם. כמה הנחיות להרשמה:
+**תצטרכו להשתמש בחשבונות האישיים שלכם עבור התרגילים האלה**. התרגילים הם אופציונליים ואתם יכולים לבחור להגדיר אחד, כולם - או אף אחד - מהספקים בהתאם לתחומי העניין שלכם. כמה הנחיות להרשמה:
 
-| הרשמה | עלות | מפתח API | פלטפורמת משחק | הערות |
+| הרשמה | מחיר | מפתח API | מגרש משחקים | הערות |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [תמחור](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [מבוסס פרויקטים](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [ללא קוד, רשת](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | מודלים מרובים זמינים |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [תמחור](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [התחלה מהירה ב-SDK](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [התחלה מהירה בסטודיו](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [חובה להגיש בקשה מראש לקבלת גישה](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) | [תמחור](https://azure.microsoft.com/pricing/details/ai-foundry/?WT.mc_id=academic-105485-koreyst) | [דף סקירת פרויקט](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) | [פלטפורמת Foundry](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) | יש שכבת חינם; נקודת קצה אחת + מפתח בשביל ספקי מודלים רבים |
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [תמחור](https://huggingface.co/pricing) | [טוקני גישה](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [ל-Hugging Chat יש מודלים מוגבלים](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
-| [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) | חינם (רץ על המכשיר שלך) | לא נדרש | [CLI/SDK מקומי](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) | נקודת קצה תואמת OpenAI במצב לא מקוון מלא |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [תמחור](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [מבוסס פרויקט](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [ללא קוד, אינטרנט](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | דגמים רבים זמינים |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [תמחור](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [התחלת עבודה עם SDK](https://learn.microsoft.com/azure/ai-foundry/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [התחלת עבודה בסטודיו](https://learn.microsoft.com/azure/ai-foundry/openai/quickstart?WT.mc_id=academic-105485-koreyst) | [יש להגיש בקשה מראש לקבלת גישה](https://learn.microsoft.com/azure/ai-foundry/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) | [תמחור](https://azure.microsoft.com/pricing/details/ai-foundry/?WT.mc_id=academic-105485-koreyst) | [דף סקירת הפרויקט](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) | [Foundry Playground](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) | שכבת חינם זמינה; נקודת גישה אחת + מפתח למספר ספקי דגמים |
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [תמחור](https://huggingface.co/pricing) | [טוקני גישה](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [ל-Hugging Chat יש דגמים מוגבלים](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) | חינם (רצים במכשירך) | לא נדרש | [Local CLI/SDK](https://learn.microsoft.com/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) | נקודת גישה תואמת OpenAI במצב אופליין מלא |
 | | | | | |
 
-עקבו אחר ההוראות למטה כדי _לקנפג_ את המאגר הזה לשימוש עם ספקים שונים. משימות שדורשות ספק ספציפי יכללו אחת התגים האלה בשם הקובץ שלהן:
+עקבו אחר ההוראות מטה כדי _להגדיר_ מאגר זה לשימוש עם ספקים שונים. תרגילים שדורשים ספק מסוים יכילו אחת התגיות האלה בשם הקובץ שלהם:
 
-- `aoai` - דורש נקודת קצה ומפתח Azure OpenAI
-- `oai` - דורש נקודת קצה ומפתח OpenAI
+- `aoai` - דורש נקודת גישה ומפתח Azure OpenAI
+- `oai` - דורש נקודת גישה ומפתח OpenAI
 - `hf` - דורש טוקן Hugging Face
-- `githubmodels` - דורש נקודת קצה ומפתח Microsoft Foundry Models (GitHub Models ייסגר בסוף יולי 2026)
+- `githubmodels` - דורש נקודת גישה ומפתח Microsoft Foundry Models (GitHub Models יופסק בסוף יולי 2026)
 
-ניתן להגדיר אחד, אף אחד או את כל הספקים. משימות קשורות פשוט יציגו שגיאה אם האישורים חסרים.
+אתם יכולים להגדיר אחד, אף אחד או את כל הספקים. תרגילים הקשורים לזה ייכשלו אם אישורי הגישה חסרים.
 
-## צור קובץ `.env`
+## יצירת קובץ `.env`
 
-מניחים שכבר קראת את ההנחיות לעיל, נרשמת לספק הרלוונטי, וקיבלת את האישורים הדרושים לאימות (API_KEY או טוקן). במקרה של Azure OpenAI, מניחים שגם יש לך פריסת שירות Azure OpenAI תקפה (נקודת קצה) עם לפחות מודל GPT אחד פרוס לסיום שיחה.
+הנחה שנקראת כבר ההנחיה לעיל ונרשמתם עם הספק הרלוונטי, וקיבלתם את אישורי האימות הנדרשים (API_KEY או טוקן). במקרה של Azure OpenAI, הנחה שיש לכם גם פריסה תקפה של שירות Azure OpenAI (נקודת גישה) עם לפחות דגם GPT פרוס לשיחה.
 
-השלב הבא הוא להגדיר את **משתני הסביבה המקומיים** שלך כך:
+השלב הבא הוא להגדיר את **משתני הסביבה המקומיים** כך:
 
-1. חפש בתיקיית השורש קובץ `.env.copy` שלרוב יכיל תוכן כזה:
+1. חפשו בתיקיית השורש קובץ `.env.copy` שצריך להכיל תוכן כמו זה:
 
    ```bash
    # ספק OpenAI
    OPENAI_API_KEY='<add your OpenAI API key here>'
 
-   ## Azure OpenAI ב־Microsoft Foundry
-   ## (שירות Azure OpenAI הוא עכשיו חלק מ־Microsoft Foundry: https://ai.azure.com)
-   AZURE_OPENAI_API_VERSION='2024-10-21' # ברירת המחדל נקבעה! (גרסת ה-API היציבה הנוכחית)
+   ## Azure OpenAI ב- Microsoft Foundry
+   ## (שירות Azure OpenAI הוא כעת חלק מ- Microsoft Foundry: https://ai.azure.com)
+   AZURE_OPENAI_API_VERSION='2024-10-21' # ברירת המחדל הוגדרה! (גרסת API יציבה נוכחית)
    AZURE_OPENAI_API_KEY='<add your Foundry resource key here>'
    AZURE_OPENAI_ENDPOINT='<add your Foundry resource endpoint here, e.g. https://<resource-name>.openai.azure.com>'
-   AZURE_OPENAI_DEPLOYMENT='<add your chat completion model deployment name here, e.g. gpt-4o-mini>'
+   AZURE_OPENAI_DEPLOYMENT='<add your chat completion model deployment name here, e.g. gpt-5-mini>'
    AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='<add your embeddings model deployment name here, e.g. text-embedding-3-small>'
 
-   ## דגמי Microsoft Foundry (קטלוג דגמים רב-ספקי, מחליף את דגמי GitHub, שיפסיקו בסוף יולי 2026)
+   ## דגמי Microsoft Foundry (קטלוג דגמים מרובי ספקים, מחליף את דגמי GitHub, שייפסק בסוף יולי 2026)
    AZURE_INFERENCE_ENDPOINT='<add your Microsoft Foundry project endpoint here>'
    AZURE_INFERENCE_CREDENTIAL='<add your Microsoft Foundry Models API key here>'
 
@@ -56,93 +56,93 @@
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. העתק את הקובץ הזה ל-`.env` באמצעות הפקודה למטה. קובץ זה מופעל ב-.gitignore ושומר על סודות בטוחים.
+2. העתיקו את הקובץ ל-`.env` באמצעות הפקודה למטה. קובץ זה כלול ב-_gitignore_, לשמירת סודיות.
 
    ```bash
    cp .env.copy .env
    ```
 
-3. מלא את הערכים (החלף את המקומות המוחזקים מצד ימין של `=`) כפי שמתואר בסעיף הבא.
+3. מלאו את הערכים (החליפו את הממוינים בצד ימין של `=`) כפי שמתואר בסעיף הבא.
 
-4. (אופציה) אם אתם משתמשים ב-GitHub Codespaces, יש לכם אפשרות לשמור משתני סביבה כ_סודות Codespaces_ המשויכים למאגר זה. במקרה כזה, לא תצטרכו להגדיר קובץ .env מקומי. **עם זאת, שימו לב שאפשרות זו פועלת רק אם אתם משתמשים ב-GitHub Codespaces.** תצטרכו עדיין להגדיר את קובץ ה-.env אם אתם משתמשים ב-Docker Desktop.
+4. (אופציונלי) אם אתם משתמשים ב-GitHub Codespaces, יש לכם אפשרות לשמור משתני סביבה כסודות _Codespaces_ המקושרים למאגר זה. במקרה כזה, אינכם צריכים להגדיר קובץ .env מקומי. **עם זאת, אפשרות זו פועלת רק אם אתם משתמשים ב-GitHub Codespaces.** עדיין תצטרכו להגדיר את קובץ .env אם אתם משתמשים ב-Docker Desktop במקום.
 
-## מלא את קובץ `.env`
+## מילוי קובץ `.env`
 
-בואו נבחן במהירות את שמות המשתנים כדי להבין למה הם מתייחסים:
+בואו נסקור בקצרה את שמות המשתנים להבנת משמעותם:
 
-| משתנה  | תיאור  |
+| משתנה | תיאור |
 | :--- | :--- |
-| HUGGING_FACE_API_KEY | זהו טוקן גישת המשתמש שהגבת בפרופיל שלך |
-| OPENAI_API_KEY | זהו מפתח האישור לשימוש בשירות עבור נקודות קצה שאינן Azure OpenAI |
-| AZURE_OPENAI_API_KEY | זהו מפתח האישור לשירות זה |
-| AZURE_OPENAI_ENDPOINT | זו נקודת הקצה שהופעלה עבור משאב Azure OpenAI |
-| AZURE_OPENAI_DEPLOYMENT | זו נקודת הקצה של מודל _יצירת טקסט_ שפורס |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | זו נקודת הקצה של מודל _הטמעת טקסט_ שפורס |
-| AZURE_INFERENCE_ENDPOINT | זו נקודת הקצה עבור פרויקט Microsoft Foundry שלך, משמשת עבור Microsoft Foundry Models |
-| AZURE_INFERENCE_CREDENTIAL | זהו מפתח ה-API עבור פרויקט Microsoft Foundry שלך |
+| HUGGING_FACE_API_KEY | זהו טוקן גישת המשתמש שהגדרת בפרופיל שלך |
+| OPENAI_API_KEY | זהו מפתח האישור לשימוש בשירות עבור נקודות גישה שאינן Azure OpenAI |
+| AZURE_OPENAI_API_KEY | זהו מפתח האישור לשימוש בשירות הזה |
+| AZURE_OPENAI_ENDPOINT | זוהי נקודת הגישה שהופעלה למשאב Azure OpenAI |
+| AZURE_OPENAI_DEPLOYMENT | זוהי נקודת גישה לפריסת מודל _יצירת טקסט_ |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | זוהי נקודת גישה לפריסת מודל _אימבדינגטקסט_ |
+| AZURE_INFERENCE_ENDPOINT | זוהי נקודת הגישה לפרויקט Microsoft Foundry שלך, המשמשת עבור Microsoft Foundry Models |
+| AZURE_INFERENCE_CREDENTIAL | זהו מפתח ה-API לפרויקט Microsoft Foundry שלך |
 | | |
 
-הערה: שני המשתנים האחרונים של Azure OpenAI מייצגים מודל ברירת מחדל לסיום שיחה (יצירת טקסט) וחיפוש וקטורי (הטמעות) בהתאמה. הוראות להגדיר אותם יינתנו במשימות רלוונטיות.
+הערה: שני המשתנים האחרונים של Azure OpenAI משקפים מודל ברירת מחדל להשלמת שיחה (יצירת טקסט) ולחיפוש וקטורי (אימבדינגס) בהתאמה. ההוראות להגדרתם יופיעו בתרגילים הרלוונטיים.
 
-## הגדר Azure OpenAI: מהפורטל
+## הגדרת Azure OpenAI: מפורטל
 
-> **הערה:** שירות Azure OpenAI הוא כעת חלק מ-[Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst). משאבים ופריסות עדיין מוצגים בפורטל Azure, אבל ניהול המודלים היומיומי (פריסות, פלטפורמה, ניטור) נעשה כעת בפורטל Foundry במקום סטודיו עצמאי ישן של "Azure OpenAI".
+> **הערה:** שירות Azure OpenAI הוא עכשיו חלק מ-[Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst). המשאבים והפריסות עדיין מוצגים בפורטל Azure, אך ניהול מודלים יומיומי (פריסות, מגרש משחקים, ניטור) מתבצע כעת בפורטל Foundry במקום "Azure OpenAI Studio" הישן העצמאי.
 
-ערכי נקודת הקצה ומפתח Azure OpenAI יימצאו ב-[פורטל Azure](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), אז בואו נתחיל שם.
+ערכי נקודת הגישה והמפתח של Azure OpenAI יימצאו ב-[פורטל Azure](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), אז נתחיל שם.
 
-1. עבור ל-[פורטל Azure](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
-1. לחץ על האופציה **Keys and Endpoint** בתפריט הצדדי (תפריט משמאל).
-1. לחץ על **Show Keys** - תראה את הפריטים הבאים: KEY 1, KEY 2 ו-Endpoint.
-1. השתמש בערך KEY 1 עבור AZURE_OPENAI_API_KEY
-1. השתמש בערך Endpoint עבור AZURE_OPENAI_ENDPOINT
+1. כנסו ל-[פורטל Azure](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
+1. לחצו על אפשרות **Keys and Endpoint** בסרגל הצד (תפריט שמאלי).
+1. לחצו על **Show Keys** - אמור להופיע הבא: KEY 1, KEY 2 ו-Endpoint.
+1. השתמשו בערך KEY 1 עבור AZURE_OPENAI_API_KEY
+1. השתמשו בערך Endpoint עבור AZURE_OPENAI_ENDPOINT
 
-לאחר מכן, נדרש לקבל את נקודות הקצה עבור המודלים הספציפיים שפרסת.
+עכשיו, אנו זקוקים לנקודות הגעה עבור הדגמים הספציפיים שהפעלנו.
 
-1. לחץ על האופציה **Model deployments** בתפריט הצדדי (תפריט משמאל) עבור משאב Azure OpenAI.
-1. בעמוד הייעודי, לחץ על **Go to Microsoft Foundry portal** (או **Manage Deployments**, תלוי בסוג המשאב שלך)
+1. לחצו על אפשרות **Model deployments** בסרגל הצד (תפריט שמאלי) עבור משאב Azure OpenAI.
+1. בדף היעד, לחצו על **Go to Microsoft Foundry portal** (או **Manage Deployments**, תלוי בסוג המשאב שלכם)
 
-זה יוביל אותך לפורטל Microsoft Foundry, שם נמצא את הערכים האחרים כמפורט מטה.
+זה יקח אתכם לפורטל Microsoft Foundry, שם נמצא את הערכים הנוספים כפי שמתואר מטה.
 
-## הגדר Azure OpenAI: מתוך פורטל Microsoft Foundry
+## הגדרת Azure OpenAI: מפורטל Microsoft Foundry
 
-1. ניווט ל-[פורטל Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) **מהמשאב שלך** כפי שתואר למעלה.
-1. לחץ על לשונית **Deployments** (תפריט צד, שמאל) כדי לצפות במודלים שפורסו כרגע.
-1. אם המודל הרצוי אינו פרוס, השתמש ב-**Deploy model** לפרוס אותו מ-[קטלוג המודלים](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
-1. תזדקק למודל _יצירת טקסט_ - אנו ממליצים על: **gpt-4o-mini**
-1. תזדקק למודל _הטמעת טקסט_ - אנו ממליצים על **text-embedding-3-small**
+1. נווטו ל[פורטל Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) **מהמשאב שלכם** כמו שתואר למעלה.
+1. לחצו על לשונית **Deployments** (סרגל צד, שמאל) לצפייה בדגמים המופעלים כרגע.
+1. אם המודל הרצוי לכם לא פרוס, השתמשו ב**Deploy model** כדי לפרוס אותו מתוך [קטלוג הדגמים](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
+1. תזדקקו למודל _יצירת טקסט_ - מומלץ: **gpt-5-mini**
+1. תזדקקו למודל _אימבדינג טקסט_ - מומלץ **text-embedding-3-small**
 
-עכשיו עדכן את משתני הסביבה לשקף את שם ה_פריסה_ ששימש. בדרך כלל זה יהיה אותו שם כמו שם המודל אלא אם שינית אותו במפורש. לדוגמה, ייתכן שתרצה:
+עכשיו עדכנו את משתני הסביבה לשקף את שם הפריסה (_Deployment name_) שהשתמשתם בו. בדרך כלל זה יהיה זהה לשם המודל אלא אם שיניתם מפורשות. לדוגמה, ייתכן שיהיה לכם:
 
 ```bash
-AZURE_OPENAI_DEPLOYMENT='gpt-4o-mini'
+AZURE_OPENAI_DEPLOYMENT='gpt-5-mini'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-3-small'
 ```
 
-**אל תשכח לשמור את קובץ ה-.env לאחר הסיום**. כעת תוכל לצאת מהקובץ ולחזור להוראות להרצת המחברת.
+**אל תשכחו לשמור את קובץ ה-.env בתום השינויים**. כעת תוכלו לצאת מהקובץ ולחזור להוראות להרצת פנקס התיעוד.
 
-## הגדר OpenAI: מתוך הפרופיל
+## הגדרת OpenAI: מפרופיל
 
-מפתח ה-API של OpenAI שלך נמצא ב-[חשבון OpenAI שלך](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). אם אין לך אחד, תוכל להירשם וליצור מפתח API. לאחר שיש לך את המפתח, תוכל למלא את המשתנה `OPENAI_API_KEY` בקובץ `.env`.
+מפתח ה-API של OpenAI נמצא ב[חשבון OpenAI שלך](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). אם אין לך מפתח, תוכל להירשם וליצור מפתח API חדש. לאחר שתקבל את המפתח, יש להשתמש בו כדי למלא את המשתנה `OPENAI_API_KEY` בקובץ `.env`.
 
-## הגדר Hugging Face: מתוך הפרופיל
+## הגדרת Hugging Face: מפרופיל
 
-הטוקן של Hugging Face נמצא בפרופיל שלך תחת [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). אל תפרסם או שתף אותם בפומבי. במקום זאת, צור טוקן חדש לשימוש בפרויקט זה והעתק אותו לקובץ `.env` תחת המשתנה `HUGGING_FACE_API_KEY`. _הערה:_ טכנית זה לא מפתח API אלא משמש לאימות ולכן אנחנו שומרים על השם הזה למען עקביות.
+טוקן Hugging Face שלך נמצא בפרופיל תחת [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). אל תפרסם או תשתף את הטוקנים האלה בפומבי. במקום זאת, צור טוקן חדש לשימוש בפרויקט זה והעתק אותו לתוך קובץ `.env` תחת המשתנה `HUGGING_FACE_API_KEY`. _הערה:_ זה טכנית לא מפתח API אך משמש לאימות, ולכן שומרים על שם זה למטרת עקביות.
 
-## הגדר Microsoft Foundry Models: מתוך פורטל
+## הגדרת Microsoft Foundry Models: מהפורטל
 
-> **הערה:** GitHub Models ייסגר בסוף יולי 2026. Microsoft Foundry Models הוא התחליף הישיר, ומציע אותו קטלוג מודלים חינמי לנסות וניסיון SDK של Azure AI Inference / OpenAI.
+> **הערה:** GitHub Models ייסגר בסוף יולי 2026. Microsoft Foundry Models הוא התחליף הישיר, ומציע את אותו קטלוג הדגמים להיסיון חופשי וחווית SDK להסקה של Azure AI / OpenAI.
 
-1. עבור ל-[Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) ויצר (או פתח) פרויקט Foundry.
-1. דפדף ב-[קטלוג המודלים](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) ופרוס מודל, לדוגמה `gpt-4o-mini`.
-1. בעמוד ה**סקירה** של הפרויקט, העתק את **נקודת הקצה** ו**מפתח ה-API**.
-1. השתמש בערך נקודת הקצה ל-`AZURE_INFERENCE_ENDPOINT` ובערך המפתח ל-`AZURE_INFERENCE_CREDENTIAL` בקובץ `.env` שלך.
+1. כנסו ל-[Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) וצור (או פתח) פרויקט Foundry.
+1. דפדפו ב[קטלוג הדגמים](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) ופרוס מודל, למשל `gpt-5-mini`.
+1. בעמוד **סקירת הפרויקט**, העתיקו את **נקודת הגישה** ואת **מפתח ה-API**.
+1. השתמשו בערך נקודת הגישה עבור `AZURE_INFERENCE_ENDPOINT` ובערך המפתח עבור `AZURE_INFERENCE_CREDENTIAL` בקובץ `.env`.
 
-## ספקים לא מקוונים / מקומיים
+## ספקים אופליין / מקומיים
 
-אם אתה מעדיף לא להשתמש במנוי ענן בכלל, ניתן להריץ מודלים פתוחים תואמים ישירות במכשיר שלך:
+אם אתם מעדיפים לא להשתמש במנוי ענן כלל, ניתן להריץ דגמים פתוחים תואמים ישירות במכשירכם:
 
-- **[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst)** - סביבת הריצה של מיקרוסופט במכשיר. היא בוחרת אוטומטית את ספק הביצוע הטוב ביותר (NPU, GPU או CPU) וחשופה נקודת קצה תואמת OpenAI, כך שתוכל להשתמש ברוב קוד הדוגמה בקורס זה עם מינימום שינויים. צפה ב-[תיעוד Foundry Local](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) כדי להתחיל, או התקן עם `winget install Microsoft.FoundryLocal` (ווינדוס) / `brew install microsoft/foundrylocal/foundrylocal` (macOS).
-- **[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst)** - אלטרנטיבה פופולרית להרצת מודלים פתוחים כמו Llama, Phi, Mistral ו-Gemma באופן מקומי.
+- **[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst)** - ריצת זמן של מייקרוסופט במכשיר. בוחרת אוטומטית את ספק הביצוע הטוב ביותר (NPU, GPU, או CPU) וחשופה נקודת גישה תואמת OpenAI, כך שתוכלו להפעיל את רוב קוד הדוגמא בקורס זה עם מינימום שינויים. ראו את [התיעוד של Foundry Local](https://learn.microsoft.com/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) להתחלה, או התקינו עם `winget install Microsoft.FoundryLocal` (Windows) / `brew install microsoft/foundrylocal/foundrylocal` (macOS).
+- **[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst)** - חלופה פופולרית להרצת דגמים פתוחים כמו Llama, Phi, Mistral ו-Gemma מקומית.
 
 
 ראה [שיעור 19: בנייה עם SLMs](../19-slm/README.md?WT.mc_id=academic-105485-koreyst) לדוגמאות מעשיות המשתמשות בשתי האפשרויות.

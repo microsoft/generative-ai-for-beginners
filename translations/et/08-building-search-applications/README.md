@@ -1,129 +1,130 @@
 # Otsingurakenduste loomine
 
-[![Sissejuhatus generatiivse tehisintellekti ja suurte keelemudelite juurde](../../../translated_images/et/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Sissejuhatus generatiivsesse tehisintellekti ja suurtesse keelemudelitesse](../../../translated_images/et/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
-> > _Klõpsa ülaloleval pildil, et vaadata selle õppetunni videot_
+> > _Klõpsake ülaloleval pildil, et vaadata selle õppetunni videot_
 
-LLM-id (suured keelemudelid) ei piirdu ainult vestlusrobotite ja tekstigeneratsiooniga. Nende abil on võimalik luua ka otsingurakendusi, kasutades sisendvektoreid (Embeddings). Sisendvektorid on andmete numbrilised esitlused, mida tuntakse ka vektorite nime all, ja neid saab kasutada semantilise otsingu jaoks.
+Suuremates keelemudelites on rohkem kui lihtsalt vestlusrobotid ja teksti genereerimine. Samuti on võimalik luua otsingurakendusi, kasutades manustusi. Manustused on andmete numbrilised esitlused ehk vektorid, mida saab kasutada semantiliseks otsinguks andmetes.
 
-Selles õppetunnis loome otsingurakenduse meie haridusalgatuse jaoks. Meie algatus on mittetulundusühing, mis pakub tasuta haridust arengumaade õpilastele. Algatusel on suur hulk YouTube'i videoid, mida õpilased saavad kasutada tehisintellekti õppimiseks. Algatus soovib luua otsingurakenduse, mis võimaldab õpilastel otsida YouTube'i videoid, sisestades küsimuse.
+Selles õppetükis ehitate otsingurakenduse meie haridusettevõttele. Meie ettevõte on mittetulundusühing, mis pakub tasuta haridust arengumaade õpilastele. Meie ettevõttel on suur hulk YouTube'i videoid, mida õpilased saavad kasutada AI õppimiseks. Meie ettevõte soovib luua otsingurakenduse, mis võimaldab õpilastel otsida YouTube'i videot, tippides küsimuse.
 
-Näiteks võib õpilane sisestada küsimuse "Mis on Jupyter Notebooks?" või "Mis on Azure ML?" ja otsingurakendus tagastab nimekirja YouTube'i videotest, mis on küsimusega seotud. Veelgi enam, otsingurakendus tagastab lingi video sellele kohale, kus küsimusele vastus asub.
+Näiteks võib õpilane sisestada „Mis on Jupyter Notebookid?“ või „Mis on Azure ML?“ ning otsingurakendus tagastab nimekirja YouTube'i videotest, mis küsimusega seotud on, ja mis veel parem – otsingurakendus annab lingi kohta videos, kus küsimusele vastus asub.
 
 ## Sissejuhatus
 
-Selles õppetunnis käsitleme:
+Selles õppetükis käsitleme:
 
-- Semantiline vs märksõnaotsing.
-- Mis on tekstisisendvektorid (Text Embeddings).
-- Tekstisisendvektorite indeksi loomine.
-- Tekstisisendvektorite indeksi otsing.
+- Semantilist vs märksõnapõhist otsingut.
+- Mis on teksti manustused.
+- Teksti manustuste indeksi loomist.
+- Teksti manustuste indeksi otsimist.
 
-## Õppeeesmärgid
+## Õpieesmärgid
 
-Pärast selle õppetunni läbimist oskad:
+Pärast selle õppetüki lõpetamist oskad:
 
-- Eristada semantilist ja märksõnaotsingut.
-- Selgitada, mis on tekstisisendvektorid.
-- Luua rakenduse, mis kasutab sisendvektoreid andmete otsimiseks.
+- Erinevust semantilise ja märksõnapõhise otsingu vahel selgitada.
+- Selgitada, mis on teksti manustused.
+- Luua rakenduse, mis kasutab manustusi andmete otsimiseks.
 
-## Miks luua otsingurakendust?
+## Miks ehitada otsingurakendus?
 
-Otsingurakenduse loomine aitab sul mõista, kuidas kasutada sisendvektoreid andmete otsimiseks. Samuti õpid, kuidas luua otsingurakendust, mida õpilased saavad kasutada teabe kiireks leidmiseks.
+Otsingurakenduse loomine aitab sul mõista, kuidas kasutada manustusi andmete otsimiseks. Samuti õpid, kuidas ehitada otsingurakendust, mida õpilased saavad kasutada info kiireks leidmiseks.
 
-Õppetund sisaldab sisendvektorite indeksit Microsofti [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) YouTube'i kanali transkriptsioonide jaoks. AI Show on YouTube'i kanal, mis õpetab tehisintellekti ja masinõppe kohta. Sisendvektorite indeks sisaldab kõigi YouTube'i transkriptsioonide sisendvektoreid kuni oktoobrini 2023. Kasutad sisendvektorite indeksit, et luua meie algatuse jaoks otsingurakendus. Otsingurakendus tagastab lingi video sellele kohale, kus küsimusele vastus asub. See on suurepärane viis, kuidas õpilased saavad kiiresti vajaliku teabe leida.
+Õppetükk sisaldab manustuste indeksit YouTube'i tekstide kohta Microsofti [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) kanali jaoks. AI Show on YouTube'i kanal, mis õpetab AI-d ja masinõpetust. Manustuste indeksi koosseisus on manustused kõikide kuni oktoober 2023 kestvuste YouTube'i transkriptsioonide jaoks. Kasutad seda indeksit, et luua otsingurakendus meie ettevõttele. Otsingurakendus annab lingi kohta videos, kus küsimusele vastus asub. See on suurepärane viis, kuidas õpilased saavad kiiresti vajaliku info kätte.
 
-Allpool on näide semantilisest päringust küsimuse "Kas Azure ML-i saab kasutada koos RStudio-ga?" kohta. Vaata YouTube'i URL-i, näed, et URL sisaldab ajatemplit, mis viib sind video sellele kohale, kus küsimusele vastus asub.
+Järgnev näide on semantilisest päringust küsimusele „kas saate kasutada rstudiot Azure ML-iga?“. Vaata YouTube'i URL-i, näed seal ajatemplit, mis viib kohale videos, kus vastus asub.
 
-![Semantiline päring küsimuse "Kas Azure ML-i saab kasutada koos RStudio-ga?" kohta](../../../translated_images/et/query-results.bb0480ebf025fac6.webp)
+![Semantiline päring küsimusele "kas saate kasutada rstudiot Azure ML-ga"](../../../translated_images/et/query-results.bb0480ebf025fac6.webp)
 
 ## Mis on semantiline otsing?
 
-Võid küsida, mis on semantiline otsing? Semantiline otsing on otsingutehnika, mis kasutab päringus olevate sõnade tähendust, et tagastada asjakohaseid tulemusi.
+Võid ju mõelda, mis see semantiline otsing siis on? Semantiline otsing on otsingutehnika, mis kasutab päringus sõnade tähendust ehk semantikat, et tagastada asjakohased tulemused.
 
-Siin on näide semantilisest otsingust. Oletame, et otsid autot ja sisestad otsingusse "minu unistuste auto". Semantiline otsing mõistab, et sa ei "unista" autost, vaid otsid oma "ideaalset" autot. Semantiline otsing mõistab sinu kavatsust ja tagastab asjakohased tulemused. Alternatiiviks on "märksõnaotsing", mis otsiks sõna otseses mõttes unenägusid autode kohta ja tagastaks sageli ebaolulisi tulemusi.
+Näiteks semantilises otsingus, kui otsid autot ja sisestad „minu unistuste auto“, mõistab semantiline otsing, et sa ei `unenägi` autot, vaid otsid oma `ideaalselt` autot. Semantiline otsing mõistab su kavatsust ja tagastab asjakohased tulemused. Alternatiiviks on „märksõnaotsing“, mis otsib sõnasõnaliselt unistusi autodest ja sageli tagastab ebaolulisi tulemusi.
 
-## Mis on tekstisisendvektorid?
+## Mis on teksti manustused?
 
-[Tekstisisendvektorid](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst) on tekstiesituse tehnika, mida kasutatakse [loomuliku keele töötlemises](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst). Tekstisisendvektorid on teksti semantilised numbrilised esitlused. Sisendvektoreid kasutatakse andmete esitamiseks viisil, mis on masinale kergesti mõistetav. Tekstisisendvektorite loomiseks on palju mudeleid, kuid selles õppetunnis keskendume sisendvektorite genereerimisele OpenAI sisendvektori mudeli abil.
+[Teksti manustused](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst) on tekstide esindamise meetod, mida kasutatakse [loomuliku keele töötlemises](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst). Tekstimanustused on teksti semantilised numbrilised esitlused. Manustusi kasutatakse andmete esitamiseks masinale arusaadaval moel. Tekstimanustuste loomisel on palju mudeleid, selles õppetükis keskendume manustuste genereerimisele OpenAI manustumudeli abil.
 
-Siin on näide: kujutame ette, et järgmine tekst on ühe AI Show YouTube'i kanali episoodi transkriptsioonist:
+Näiteks kujuta ette, et järgmine tekst on ühes episoodis AI Show YouTube'i kanali transkriptsioonis:
 
 ```text
 Today we are going to learn about Azure Machine Learning.
 ```
 
-Edastame teksti OpenAI sisendvektori API-le ja see tagastab järgmise sisendvektori, mis koosneb 1536 numbrist ehk vektorist. Iga number vektoris esindab teksti erinevat aspekti. Lühiduse huvides on siin vektori esimesed 10 numbrit.
+Anname selle teksti OpenAI manustuste API-le ja see tagastab 1536 numbrist koosneva manustuse ehk vektori. Iga vektoriosa esindab teistsugust aspekti tekstist. Lühiduse mõttes on siin toodud vektori esimesed 10 numbrit.
 
 ```python
 [-0.006655829958617687, 0.0026128944009542465, 0.008792596869170666, -0.02446001023054123, -0.008540431968867779, 0.022071078419685364, -0.010703742504119873, 0.003311325330287218, -0.011632772162556648, -0.02187200076878071, ...]
 ```
 
-## Kuidas luuakse sisendvektorite indeks?
+## Kuidas manustuste indeks luuakse?
 
-Selle õppetunni sisendvektorite indeks loodi mitme Python skripti abil. Leiad skriptid koos juhistega [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) failist õppetunni 'scripts' kaustas. Sa ei pea neid skripte käivitama, et õppetundi lõpetada, kuna sisendvektorite indeks on sulle juba ette antud.
+Selle õppetüki manustuste indeks loodi Python-skriptide abil. Leia skriptid koos juhistega [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) dokumendist selles õppetüki kaustas. Sul ei ole vaja neid skripte käivitada, sest manustuste indeks on sulle ette valmistatud.
 
-Skriptid teevad järgmised toimingud:
+Skriptid teostavad järgmisi toiminguid:
 
-1. Laetakse alla iga YouTube'i video transkriptsioon [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) esitusloendist.
-2. Kasutades [OpenAI funktsioone](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst), tehakse katse tuvastada kõneleja nimi YouTube'i transkriptsiooni esimese 3 minuti jooksul. Iga video kõneleja nimi salvestatakse sisendvektorite indeksisse nimega `embedding_index_3m.json`.
-3. Transkriptsiooni tekst jagatakse **3-minutilisteks tekstisegmentideks**. Segment sisaldab umbes 20 sõna kattumist järgmise segmendiga, et tagada, et segmendi sisendvektor ei katkeks ja et otsingukontekst oleks parem.
-4. Iga tekstisegment edastatakse OpenAI Chat API-le, et kokku võtta tekst 60 sõnaga. Kokkuvõte salvestatakse samuti sisendvektorite indeksisse `embedding_index_3m.json`.
-5. Lõpuks edastatakse segmendi tekst OpenAI sisendvektori API-le. Sisendvektori API tagastab vektori, mis koosneb 1536 numbrist ja esindab segmendi semantilist tähendust. Segment koos OpenAI sisendvektori vektoriga salvestatakse sisendvektorite indeksisse `embedding_index_3m.json`.
+1. Tõmbab alla iga YouTube'i video transkriptsiooni [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) esitusloendist.
+2. Kasutades [OpenAI funktsioone](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst), püütakse YouTube'i videote transkriptsiooni esimesest 3 minutist välja lugeda esineja nimi. Iga video esineja nimi salvestatakse manustuste indeksisse nimega `embedding_index_3m.json`.
+3. Seejärel jagatakse transkriptsiooni tekst **3-minutilisteks tekstilõikudeks**. Lõik sisaldab umbes 20 sõna kattuvust järgmise lõiguga, et manustus ei lõigataks pooleli ja et paremini otsingu konteksti pakkuda.
+4. Iga lõik antakse OpenAI Chat API-le, mis kokkuvõtlikult teisendab teksti ~60 sõnaks. Kokkuvõte salvestatakse ka manustuste indeksisse `embedding_index_3m.json`.
+5. Lõpuks antakse lõigu tekst OpenAI manustuste API-le. Manustuste API tagastab vektori 1536 numbriga, mis esindavad lõigu semantilist tähendust. Lõik koos OpenAI manustusvektoriga salvestatakse manustuste indeksisse `embedding_index_3m.json`.
 
 ### Vektorandmebaasid
 
-Õppetunni lihtsuse huvides salvestatakse sisendvektorite indeks JSON-faili nimega `embedding_index_3m.json` ja laaditakse Pandas DataFrame'i. Kuid tootmises salvestatakse sisendvektorite indeks vektorandmebaasi, nagu näiteks [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst), [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst), [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme?WT.mc_id=academic-105485-koreyst), [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst), ja teised.
+Lihtsuse mõttes hoitakse selles õppetükis manustuste indeksit JSON-failis nimega `embedding_index_3m.json` ning laaditakse Pandas DataFrame'i. Kuid tootmiskeskkonnas hoitakse indeksit vektorandmebaasis, näiteks [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst), [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst), [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme?WT.mc_id=academic-105485-koreyst), [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst) ja teised.
 
-## Kosinuse sarnasuse mõistmine
+## Kosinussarnasusest mõistmine
 
-Oleme õppinud tekstisisendvektorite kohta, järgmine samm on õppida, kuidas kasutada tekstisisendvektoreid andmete otsimiseks ja eriti leida kõige sarnasemad sisendvektorid antud päringule, kasutades kosinuse sarnasust.
+Oleme õppinud teksti manustusi, järgmine samm on õppida, kuidas neid manustusi kasutada andmete otsimiseks ja konkreetsemalt leida päringule kõige sarnasemad manustused kosinussarnasuse abil.
 
-### Mis on kosinuse sarnasus?
+### Mis on kosinussarnasus?
 
-Kosinuse sarnasus on sarnasuse mõõt kahe vektori vahel, mida nimetatakse ka `lähima naabri otsinguks`. Kosinuse sarnasuse otsingu tegemiseks tuleb _vektoriseerida_ päringu tekst OpenAI sisendvektori API abil. Seejärel arvutatakse _kosinuse sarnasus_ päringu vektori ja iga sisendvektorite indeksis oleva vektori vahel. Pea meeles, et sisendvektorite indeksis on vektor iga YouTube'i transkriptsiooni tekstisegmendi jaoks. Lõpuks sorteeritakse tulemused kosinuse sarnasuse järgi ja tekstisegmendid, millel on kõige suurem kosinuse sarnasus, on päringule kõige sarnasemad.
+Kosinussarnasus on kahe vektori vahelise sarnasuse mõõt, seda nimetatakse ka `lähedase naabri otsinguks`. Kosinussarnasuse otsingu tegemiseks pead päringu teksti vektoriseerima OpenAI manustuste API abil. Seejärel arvutad kosinussarnasuse päringu vektori ja iga vektori vahel manustuste indeksis. Pea meeles, et indeks sisaldab vektoreid iga YouTube'i teksti lõigu kohta. Lõpuks sorteerid tulemused kosinussarnasuse järgi ning tekstilõigud, mille kosinussarnasus on kõrgeim, on päringule kõige sarnasemad.
 
-Matemaatilisest vaatenurgast mõõdab kosinuse sarnasus kahe vektori vahelist nurka mitmemõõtmelises ruumis. See mõõtmine on kasulik, sest kui kaks dokumenti on Eukleidese kauguse järgi kaugel, kuna nende suurus erineb, võivad nad siiski olla väiksema nurga all ja seega suurema kosinuse sarnasusega. Lisateavet kosinuse sarnasuse valemite kohta leiad [Kosinuse sarnasus](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-koreyst).
+Matemaatiliselt mõõdab kosinussarnasus kahe vektori vahelist nurka mitmemõõtmelises ruumis. See mõõde on kasulik, sest kui kaks dokumenti on euclidese kauguse poolest kaugel, näiteks erineva suuruse tõttu, võivad neil siiski olla väiksem nurk ja seetõttu suurem kosinussarnasus. Lisateavet kosinussarnasuse valemite kohta leiad [siit](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-koreyst).
 
-## Esimese otsingurakenduse loomine
+## Oma esimese otsingurakenduse loomine
 
-Järgmisena õpime, kuidas luua otsingurakendust, kasutades sisendvektoreid. Otsingurakendus võimaldab õpilastel otsida videot, sisestades küsimuse. Otsingurakendus tagastab nimekirja videotest, mis on küsimusega seotud. Otsingurakendus tagastab ka lingi video sellele kohale, kus küsimusele vastus asub.
+Järgnevalt õpime, kuidas luua otsingurakendus kasutades manustusi. Otsingurakendus võimaldab õpilastel otsida videot, tippides küsimuse. Rakendus tagastab nimekirja videotest, mis küsimusega seotud on. Rakendus annab ka lingi kohtale videos, kus vastus asub.
 
-See lahendus loodi ja testiti Windows 11, macOS-i ja Ubuntu 22.04 operatsioonisüsteemides, kasutades Python 3.10 või uuemat versiooni. Sa saad Python'i alla laadida [python.org](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) veebilehelt.
+See lahendus ehitati ja testiti Windows 11, macOS ja Ubuntu 22.04 platvormidel kasutades Python 3.10 või uuemat versiooni. Python’i saad alla laadida aadressilt [python.org](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
 
-## Ülesanne - otsingurakenduse loomine, et aidata õpilasi
+## Ülesanne - otsingurakenduse ehitamine õpilastele
 
-Tutvustasime oma algatust selle õppetunni alguses. Nüüd on aeg võimaldada õpilastel luua otsingurakendus oma ülesannete jaoks.
+Tutvustasime oma ettevõtet selle õppetunni alguses. Nüüd on aeg lubada õpilastel ehitada otsingurakendus oma ülesannete jaoks.
 
-Selles ülesandes lood Azure OpenAI teenused, mida kasutatakse otsingurakenduse loomiseks. Lood järgmised Azure OpenAI teenused. Selle ülesande täitmiseks on sul vaja Azure'i tellimust.
+Selles ülesandes loote Azure OpenAI teenused, mida kasutatakse otsingurakenduse ehitamisel. Lood need Azure OpenAI teenused. Ülesande täitmiseks on vaja Azure tellimust.
 
-### Azure Cloud Shelli käivitamine
+### Käivita Azure Cloud Shell
 
-1. Logi sisse [Azure'i portaali](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst).
-2. Vali Azure'i portaali paremas ülanurgas Cloud Shelli ikoon.
-3. Vali **Bash** keskkonna tüübiks.
+1. Logi sisse [Azure portaali](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst).
+2. Vali nurgas ülemises paremas nurgas Cloud Shell ikoon.
+3. Vali keskkonna tüübiks **Bash**.
 
-#### Ressursigrupi loomine
+#### Loo ressursirühm
 
-> Nendes juhistes kasutame ressursigruppi nimega "semantic-video-search" East US piirkonnas.
-> Ressursigrupi nime muutmisel kontrolli [mudelite saadavuse tabelit](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> Nendes juhistes kasutame ressursirühma nimega „semantic-video-search“ East USA piirkonnas.
+> Võid ressursirühma nime muuta, kuid kui muudad ressursside asukohta,
+> kontrolli [mudeli saadavuse tabelit](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```shell
 az group create --name semantic-video-search --location eastus
 ```
 
-#### Azure OpenAI teenuse ressursi loomine
+#### Loo Azure OpenAI teenuse ressurss
 
-Käivita Azure Cloud Shellis järgmine käsk, et luua Azure OpenAI teenuse ressurss.
+Azure Cloud Shellis käivita järgmine käsk, et luua Azure OpenAI teenuse ressurss.
 
 ```shell
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-#### Endpoint'i ja võtmete hankimine rakenduse jaoks
+#### Saa teenuse aadress ja võtmed rakenduse kasutamiseks
 
-Käivita Azure Cloud Shellis järgmised käsud, et hankida endpoint ja võtmed Azure OpenAI teenuse ressursi jaoks.
+Azure Cloud Shellis käivita järgmised käsud, et saada Azure OpenAI teenuse ressursi aadress ja võtmed.
 
 ```shell
 az cognitiveservices account show --name semantic-video-openai \
@@ -132,9 +133,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-#### OpenAI sisendvektori mudeli juurutamine
+#### Hoiusta OpenAI manustusmudelit
 
-Käivita Azure Cloud Shellis järgmine käsk, et juurutada OpenAI sisendvektori mudel.
+Azure Cloud Shellis käivita järgmine käsk, et juurutada OpenAI manustusmudel.
 
 ```shell
 az cognitiveservices account deployment create \
@@ -149,19 +150,21 @@ az cognitiveservices account deployment create \
 
 ## Lahendus
 
-Ava [lahenduse märkmik](./python/aoai-solution.ipynb?WT.mc_id=academic-105485-koreyst) GitHub Codespaces'is ja järgi Jupyter Notebookis antud juhiseid.
+Ava [lahendusnotebook](./python/aoai-solution.ipynb?WT.mc_id=academic-105485-koreyst) GitHub Codespaces’is ja järgi juhiseid Jupyter Notebookis.
 
-Kui käivitad märkmiku, palutakse sul sisestada päring. Sisendkast näeb välja selline:
+Kui käivitad notebooki, küsitakse päringut. Sisendkast näeb välja nii:
 
-![Sisendkast, kuhu kasutaja saab päringu sisestada](../../../translated_images/et/notebook-search.1e320b9c7fcbb0bc.webp)
+![Sisendkast, kuhu kasutaja võib päringu sisestada](../../../translated_images/et/notebook-search.1e320b9c7fcbb0bc.webp)
 
-## Tubli töö! Jätka õppimist
+## Suurepärane töö! Jätka õppimist
 
-Pärast selle õppetunni lõpetamist tutvu meie [Generatiivse tehisintellekti õppekollektsiooniga](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata oma teadmiste täiendamist generatiivse tehisintellekti valdkonnas!
+Pärast selle õppetüki lõpetamist vaata meie [Generative AI õppimiskogu](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata generatiivse AI teadmiste täiustamist!
 
-Liigu edasi 9. õppetundi, kus uurime, kuidas [luua pildigeneratsiooni rakendusi](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Suleb Lesson 9, kus vaatame, kuidas [ehitada pildigeneratsiooni rakendusi](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Lahtiütlus**:  
-See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta arusaamatuste või valesti tõlgenduste eest, mis võivad tuleneda selle tõlke kasutamisest.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Lahtiütlus**:
+See dokument on tõlgitud kasutades AI tõlketeenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi me püüdleme täpsuse poole, palun pange tähele, et automatiseeritud tõlgetes võib esineda vigu või ebatäpsusi. Originaaldokument selle emakeeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta selle tõlkega seotud eksimustest või valesti mõistmistest.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

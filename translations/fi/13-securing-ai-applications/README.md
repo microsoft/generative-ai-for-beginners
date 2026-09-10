@@ -1,146 +1,158 @@
-# Generatiivisten tekoälysovellusten suojaaminen
+# Generatiivisten tekoälysovellustesi suojaaminen  
 
-[![Generatiivisten tekoälysovellusten suojaaminen](../../../translated_images/fi/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Generatiivisten tekoälysovellustesi suojaaminen](../../../translated_images/fi/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)  
 
-## Johdanto
+## Johdanto  
 
-Tässä oppitunnissa käsitellään:
+Tässä oppitunnissa käsitellään:  
 
-- Tietoturvaa tekoälyjärjestelmien kontekstissa.
-- Yleisiä riskejä ja uhkia tekoälyjärjestelmille.
-- Menetelmiä ja huomioita tekoälyjärjestelmien suojaamiseksi.
+- Tietoturvaa tekoälyjärjestelmien kontekstissa.  
+- Yleisiä riskejä ja uhkia tekoälyjärjestelmille.  
+- Menetelmiä ja näkökohtia tekoälyjärjestelmien suojaamiseen.  
 
-## Oppimistavoitteet
+## Oppimistavoitteet  
 
-Oppitunnin jälkeen ymmärrät:
+Oppitunnin jälkeen ymmärrät:  
 
-- Tekoälyjärjestelmien uhat ja riskit.
-- Yleiset menetelmät ja käytännöt tekoälyjärjestelmien suojaamiseksi.
-- Kuinka tietoturvatestauksen toteuttaminen voi estää odottamattomia tuloksia ja käyttäjien luottamuksen heikkenemistä.
+- Tekoälyjärjestelmien uhkia ja riskejä.  
+- Yleisiä menetelmiä ja käytäntöjä tekoälyjärjestelmien suojaamiseen.  
+- Kuinka turvallisuustestausten toteuttaminen voi estää odottamattomia tuloksia ja käyttäjien luottamuksen heikentymistä.  
 
-## Mitä tietoturva tarkoittaa generatiivisen tekoälyn kontekstissa?
+## Mitä tietoturva tarkoittaa generatiivisen tekoälyn kontekstissa?  
 
-Kun tekoäly (AI) ja koneoppimisteknologiat (ML) muokkaavat yhä enemmän elämäämme, on tärkeää suojata paitsi asiakastiedot myös itse tekoälyjärjestelmät. Tekoälyä ja koneoppimista käytetään yhä enemmän tukemaan päätöksentekoa aloilla, joissa väärä päätös voi johtaa vakaviin seurauksiin.
+Kun tekoäly (AI) ja koneoppimisteknologiat (ML) muokkaavat yhä enemmän elämäämme, on tärkeää suojella paitsi asiakastietoja myös itse tekoälyjärjestelmiä. AI/ML:ää käytetään yhä enemmän korkeaarvoisten päätöksentekoprosessien tukena aloilla, joissa väärä päätös voi aiheuttaa vakavia seurauksia.  
 
-Tärkeimmät huomioitavat asiat:
+Tässä keskeisiä huomioitavia seikkoja:  
 
-- **Tekoälyn ja koneoppimisen vaikutus**: Tekoäly ja koneoppiminen vaikuttavat merkittävästi päivittäiseen elämään, ja niiden suojaaminen on siksi välttämätöntä.
-- **Tietoturvaan liittyvät haasteet**: Tekoälyn ja koneoppimisen vaikutus vaatii asianmukaista huomiota, jotta voidaan suojata tekoälypohjaiset tuotteet kehittyneiltä hyökkäyksiltä, olivatpa ne trollien tai järjestäytyneiden ryhmien tekemiä.
-- **Strategiset ongelmat**: Teknologiateollisuuden on ennakoivasti käsiteltävä strategisia haasteita varmistaakseen pitkäaikaisen asiakasturvallisuuden ja tietoturvan.
+- **AI/ML:n vaikutus**: AI/ML vaikuttavat merkittävästi jokapäiväiseen elämään, joten niiden suojaamisesta on tullut välttämätöntä.  
+- **Turvallisuushaasteet**: AI/ML:n vaikutukset vaativat asianmukaista huomiota, jotta voidaan suojata tekoälypohjaiset tuotteet kehittyneiltä hyökkäyksiltä, olivat ne sitten trolleja tai järjestäytyneitä ryhmiä vastaan.  
+- **Strategiset ongelmat**: Teknologiateollisuuden on ennakoivasti kohdattava strategiset haasteet varmistaakseen pitkäaikaisen asiakasturvallisuuden ja tietoturvan.  
 
-Lisäksi koneoppimismallit eivät pääsääntöisesti pysty erottamaan haitallista syötettä ja harmitonta poikkeavaa dataa. Merkittävä osa koulutusdatasta saadaan kuratoimattomista, valvomattomista julkisista tietokannoista, joihin kolmannet osapuolet voivat vapaasti lisätä sisältöä. Hyökkääjien ei tarvitse murtautua tietokantoihin, kun he voivat vapaasti lisätä niihin sisältöä. Ajan myötä matalan luottamuksen haitallinen data muuttuu korkean luottamuksen luotettavaksi dataksi, jos datan rakenne ja muotoilu pysyvät oikeina.
+Lisäksi koneoppimismallit eivät kykene juuri erottamaan haitallista syötettä harmittomasta poikkeavasta datasta. Merkittävä osa koulutusdatasta on peräisin huoltamattomista, valvomattomista julkisista tietoaineistoista, jotka ovat avoimia kolmansien osapuolten panoksille. Hyökkääjien ei tarvitse murtautua aineistoihin, kun he voivat vapaasti lisätä niihin dataa. Ajan myötä vähäisten luottamuksien haitallinen data muuttuu korkealuokkaisesti luotetuksi dataksi, mikäli datan rakenne/formaatio pysyy oikeana.  
 
-Siksi on kriittistä varmistaa, että mallien päätöksenteossa käyttämien tietovarastojen eheys ja suojaus ovat kunnossa.
+Tästä syystä on kriittistä varmistaa sen aineistovarastojen eheys ja suojaus, joita mallisi käyttävät päätöksentekonsa pohjana.  
 
-## Tekoälyn uhkien ja riskien ymmärtäminen
+## Uhkat ja riskit tekoälyn yhteydessä  
 
-Tekoälyn ja siihen liittyvien järjestelmien osalta datan myrkyttäminen on nykyään merkittävin tietoturvauhka. Datan myrkyttäminen tapahtuu, kun joku tahallaan muuttaa tekoälyn koulutuksessa käytettävää tietoa, mikä johtaa virheisiin. Tämä johtuu standardoitujen havaitsemis- ja lieventämismenetelmien puutteesta sekä siitä, että koulutuksessa luotetaan epäluotettaviin tai kuratoimattomiin julkisiin tietokantoihin. Datan eheyden ylläpitäminen ja virheellisen koulutusprosessin estäminen edellyttää datan alkuperän ja sukulinjan seuraamista. Muuten vanha sanonta "roskaa sisään, roskaa ulos" pitää paikkansa, mikä heikentää mallin suorituskykyä.
+Tekoälyyn ja siihen liittyviin järjestelmiin liittyen datan myrkytys on nykyään merkittävin tietoturvauhaka. Datan myrkytys tarkoittaa tilannetta, jossa joku tahallisesti muuttaa tekoälyn koulutuksessa käytettävää tietoa aiheuttaakseen virheitä. Tämä johtuu standardoitujen havaitsemis- ja lieventämismenetelmien puutteesta sekä riippuvuudestamme luottamattomiin tai huoltamattomiin julkisiin tietoaineistoihin koulutuksessa. Datan eheyden ylläpitämiseksi ja väärän koulutusprosessin estämiseksi on tärkeää seurata datan alkuperää ja syntyperää. Muuten vanha sanonta ”roskaa sisään, roskaa ulos” pitää paikkansa, mikä johtaa mallin suorituskyvyn heikentymiseen.  
 
-Tässä on esimerkkejä siitä, miten datan myrkyttäminen voi vaikuttaa malleihisi:
+Seuraavassa esimerkkejä siitä, miten datan myrkytys voi vaikuttaa malleihisi:  
 
-1. **Tunnisteiden kääntäminen**: Kaksiluokkaisessa luokittelutehtävässä hyökkääjä kääntää tahallaan pienen osan koulutusdatan tunnisteista. Esimerkiksi harmittomat näytteet merkitään haitallisiksi, mikä johtaa mallin oppimaan virheellisiä yhteyksiä.\
-   **Esimerkki**: Roskapostisuodatin luokittelee oikeat sähköpostit roskapostiksi manipuloitujen tunnisteiden vuoksi.
-2. **Ominaisuuksien myrkyttäminen**: Hyökkääjä muokkaa hienovaraisesti koulutusdatan ominaisuuksia lisätäkseen harhaa tai harhauttaakseen mallia.\
-   **Esimerkki**: Lisäämällä epäolennaisia avainsanoja tuotekuvauksiin manipuloidaan suositusjärjestelmiä.
-3. **Datan injektointi**: Haitallisen datan lisääminen koulutusjoukkoon mallin käyttäytymisen vaikuttamiseksi.\
-   **Esimerkki**: Väärennettyjen käyttäjäarvostelujen lisääminen tunteiden analysointitulosten vääristämiseksi.
-4. **Takaporttihyökkäykset**: Hyökkääjä lisää piilotetun kuvion (takaportin) koulutusdataan. Malli oppii tunnistamaan tämän kuvion ja käyttäytyy haitallisesti, kun se aktivoidaan.\
-   **Esimerkki**: Kasvojentunnistusjärjestelmä, joka on koulutettu takaporttikuvioilla ja tunnistaa väärin tietyn henkilön.
+1. **Label Flipping (etikettien vaihtaminen)**: Kaksiluokkaisessa luokittelutehtävässä hyökkääjä tahallisesti vaihtaa pienen osan koulutusdatan etiketeistä. Esimerkiksi harmittomat näytteet merkitään vahingollisiksi, jolloin malli oppii vääriä assosiaatioita.\  
+   **Esimerkki**: Roskapostisuodatin luokittelee aidot sähköpostit roskapostiksi väärien etikettien vuoksi.  
+2. **Feature Poisoning (ominaisuuksien myrkytys)**: Hyökkääjä muuttaa hienovaraisesti ominaisuuksia koulutusdatassa aiheuttaakseen harhaa tai johtaa malli harhaan.\  
+   **Esimerkki**: Produktikuvausten avainsanoihin lisätään irrelevantteja sanoja suosittelujärjestelmien vaikuttamiseksi.  
+3. **Data Injection (datan injektointi)**: Haitallisen datan lisääminen koulutusjoukkoon vaikuttamaan mallin toimintaan.\  
+   **Esimerkki**: Väärennettyjen käyttäjäarvostelujen lisääminen mielipiteiden analyysin harhauttamiseksi.  
+4. **Backdoor Attacks (takaporttihyökkäykset)**: Hyökkääjä lisää koulutusdataan piilotetun kuvion (takaportin). Malli oppii tunnistamaan tämän kuvion ja toimii haitallisesti, kun sitä laukaistaan.\  
+   **Esimerkki**: Kasvojentunnistusjärjestelmä, joka on koulutettu takaporttikuvilla, tunnistaa väärin tietyn henkilön.  
 
-MITRE Corporation on luonut [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst) -tietokannan, joka sisältää taktiikoita ja tekniikoita, joita hyökkääjät käyttävät tekoälyjärjestelmiin kohdistuvissa todellisissa hyökkäyksissä.
+MITRE Corporation on luonut [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), tietokannan taktiikoista ja tekniikoista, joita viholliset käyttävät tekoälyjärjestelmiin kohdistuvissa hyökkäyksissä.  
 
-> Tekoälyä hyödyntävissä järjestelmissä on yhä enemmän haavoittuvuuksia, sillä tekoälyn käyttö lisää olemassa olevien järjestelmien hyökkäyspintaa perinteisten kyberhyökkäysten ulkopuolella. Kehitimme ATLASin lisätäksemme tietoisuutta näistä ainutlaatuisista ja kehittyvistä haavoittuvuuksista, kun globaali yhteisö yhä enemmän integroi tekoälyä erilaisiin järjestelmiin. ATLAS on mallinnettu MITRE ATT&CK® -kehykseen, ja sen taktiikat, tekniikat ja menettelytavat (TTP:t) täydentävät ATT&CKin vastaavia.
+> AI-järjestelmiin liittyvien haavoittuvuuksien määrä kasvaa, koska tekoälyn sisällyttäminen lisää olemassa olevien järjestelmien hyökkäyspintaa perinteisiin kyberhyökkäyksiin nähden. Kehitimme ATLASin lisätäksemme tietoisuutta näistä ainutlaatuisista ja kehittyvistä haavoittuvuuksista, koska globaali yhteisö käyttää yhä enemmän tekoälyä erilaisissa järjestelmissä. ATLAS pohjautuu MITRE ATT&CK® -kehikkoon, ja sen taktiikat, tekniikat ja menettelytavat (TTP) täydentävät ATT&CKin vastaavia.  
 
-Samoin kuin MITRE ATT&CK® -kehystä käytetään laajasti perinteisessä kyberturvallisuudessa kehittyneiden uhkien emulointiskenaarioiden suunnittelussa, ATLAS tarjoaa helposti haettavan joukon TTP:itä, jotka auttavat ymmärtämään ja valmistautumaan puolustautumaan kehittyviä hyökkäyksiä vastaan.
+Samoin kuin MITRE ATT&CK® -kehikkoa, jota käytetään laajasti perinteisessä kyberturvallisuudessa kehittyneiden uhkien emulointien suunnittelussa, ATLAS tarjoaa helposti haettavan TTP-valikoiman, joka auttaa ymmärtämään ja valmistautumaan nouseviin hyökkäyksiin paremmin.  
 
-Lisäksi Open Web Application Security Project (OWASP) on luonut "[Top 10 -listan](https://llmtop10.com/?WT.mc_id=academic-105485-koreyst)" kriittisimmistä haavoittuvuuksista sovelluksissa, jotka hyödyntävät LLM:itä. Lista korostaa uhkia, kuten edellä mainittu datan myrkyttäminen, sekä muita, kuten:
+Lisäksi Open Web Application Security Project (OWASP) on laatinut "[Top 10 -listan](https://llmtop10.com/?WT.mc_id=academic-105485-koreyst)" tärkeimmistä haavoittuvuuksista sovelluksissa, jotka käyttävät suuria kielimalleja (LLM). Lista korostaa esimerkiksi datan myrkytyksen kaltaisia uhkia sekä muita, kuten:  
 
-- **Prompt Injection**: Tekniikka, jossa hyökkääjät manipuloivat suurta kielimallia (LLM) huolellisesti muotoilluilla syötteillä, saaden sen käyttäytymään odottamattomalla tavalla.
-- **Toimitusketjun haavoittuvuudet**: Komponentit ja ohjelmistot, jotka muodostavat LLM:ien käyttämät sovellukset, kuten Python-moduulit tai ulkoiset tietokannat, voivat itse olla vaarantuneita, mikä johtaa odottamattomiin tuloksiin, ennakkoluuloihin ja jopa haavoittuvuuksiin infrastruktuurissa.
-- **Liiallinen luottamus**: LLM:t ovat erehtyväisiä ja taipuvaisia "hallusinoimaan", tuottaen epätarkkoja tai vaarallisia tuloksia. Useissa dokumentoiduissa tapauksissa ihmiset ovat ottaneet tulokset sellaisenaan, mikä on johtanut odottamattomiin negatiivisiin seurauksiin tosielämässä.
+- **Prompt Injection**: tekniikka, jossa hyökkääjät manipuloivat suurta kielimallia huolellisesti laadittujen syötteiden avulla saadakseen mallin toimimaan tarkoituksensa vastaisesti.  
+- **Toimitusketjun haavoittuvuudet**: Sovelluksia, joita LLM käyttää, kuten Python-moduulit tai ulkoiset tietoaineistot, voidaan kompromettoida, mikä johtaa odottamattomiin tuloksiin, harhoihin ja jopa infrastruktuurin haavoittuvuuksiin.  
+- **Liiallinen luottamus**: LLM:t ovat erehtyväisiä ja saattavat tuottaa virheellisiä tai vaarallisia tuloksia. Useissa dokumentoiduissa tapauksissa ihmiset ovat ottaneet tulokset kirjaimellisesti aiheuttaen ei-toivottuja kielteisiä vaikutuksia.  
 
-Microsoft Cloud Advocate Rod Trent on kirjoittanut ilmaisen e-kirjan, [Must Learn AI Security](https://github.com/rod-trent/OpenAISecurity/tree/main/Must_Learn/Book_Version?WT.mc_id=academic-105485-koreyst), joka käsittelee syvällisesti näitä ja muita kehittyviä tekoälyuhkia ja tarjoaa laajaa ohjeistusta näiden tilanteiden käsittelemiseksi.
+Microsoftin Cloud Advocate Rod Trent on kirjoittanut ilmaisen e-kirjan, [Must Learn AI Security](https://github.com/rod-trent/OpenAISecurity/tree/main/Must_Learn/Book_Version?WT.mc_id=academic-105485-koreyst), joka syventyy näihin ja muihin nouseviin tekoälyuhkiin sekä tarjoaa laajaa ohjeistusta parhaiten käsitellä näitä tilanteita.  
 
-## Tietoturvatestaus tekoälyjärjestelmille ja LLM:ille
+## Turvallisuustestaus tekoälyjärjestelmille ja LLM:ille  
 
-Tekoäly (AI) muuttaa monia aloja ja teollisuudenaloja, tarjoten uusia mahdollisuuksia ja hyötyjä yhteiskunnalle. Tekoäly kuitenkin tuo mukanaan merkittäviä haasteita ja riskejä, kuten tietosuoja, ennakkoluulot, selitettävyyden puute ja mahdollinen väärinkäyttö. Siksi on tärkeää varmistaa, että tekoälyjärjestelmät ovat turvallisia ja vastuullisia, eli että ne noudattavat eettisiä ja oikeudellisia standardeja ja että käyttäjät ja sidosryhmät voivat luottaa niihin.
+Tekoäly (AI) muuttaa monia aloja ja teollisuudenaloja tarjoten uusia mahdollisuuksia ja hyötyjä yhteiskunnalle. Kuitenkin AI aiheuttaa myös merkittäviä haasteita ja riskejä, kuten tietosuoja, harha, selitettävyyden puute ja mahdollinen väärinkäyttö. Siksi on tärkeää varmistaa, että AI-järjestelmät ovat turvallisia ja vastuullisia, eli noudattavat eettisiä ja laillisia standardeja ja että käyttäjät ja sidosryhmät voivat luottaa niihin.  
 
-Tietoturvatestaus on prosessi, jossa arvioidaan tekoälyjärjestelmän tai LLM:n tietoturvaa tunnistamalla ja hyödyntämällä niiden haavoittuvuuksia. Testauksen voivat suorittaa kehittäjät, käyttäjät tai kolmannen osapuolen tarkastajat testauksen tarkoituksesta ja laajuudesta riippuen. Yleisimmät tietoturvatestausmenetelmät tekoälyjärjestelmille ja LLM:ille ovat:
+Turvallisuustestaus on prosessi, jossa arvioidaan tekoälyjärjestelmän tai LLM:n turvallisuutta tunnistamalla ja hyödyntämällä niiden haavoittuvuuksia. Tämä voi tapahtua kehittäjien, käyttäjien tai kolmansien osapuolten toimesta testauksen tarkoituksesta ja laajuudesta riippuen. Yleisimpiä turvallisuustestausmenetelmiä AI-järjestelmille ja LLM:ille ovat:  
 
-- **Datan puhdistus**: Prosessi, jossa koulutusdatasta tai tekoälyjärjestelmän syötteestä poistetaan tai anonymisoidaan arkaluontoiset tai yksityiset tiedot. Datan puhdistus voi auttaa estämään tietovuotoja ja haitallista manipulointia vähentämällä luottamuksellisten tai henkilökohtaisten tietojen altistumista.
-- **Vihamielinen testaus**: Prosessi, jossa tekoälyjärjestelmän tai LLM:n syötteeseen tai tulosteeseen luodaan ja sovelletaan vihamielisiä esimerkkejä sen kestävyyden ja vastustuskyvyn arvioimiseksi vihamielisiä hyökkäyksiä vastaan. Vihamielinen testaus voi auttaa tunnistamaan ja lieventämään tekoälyjärjestelmän tai LLM:n haavoittuvuuksia ja heikkouksia, joita hyökkääjät voivat hyödyntää.
-- **Mallin varmistus**: Prosessi, jossa tekoälyjärjestelmän tai LLM:n malliparametrien tai arkkitehtuurin oikeellisuus ja täydellisyys varmistetaan. Mallin varmistus voi auttaa havaitsemaan ja estämään mallin varastamisen varmistamalla, että malli on suojattu ja todennettu.
-- **Tulosten validointi**: Prosessi, jossa tekoälyjärjestelmän tai LLM:n tuottaman tuloksen laatu ja luotettavuus validoidaan. Tulosten validointi voi auttaa havaitsemaan ja korjaamaan haitallista manipulointia varmistamalla, että tulos on johdonmukainen ja tarkka.
+- **Datan puhdistus**: Prosessi, jossa poistetaan tai anonymisoidaan arkaluonteiset tai yksityiset tiedot AI-järjestelmän tai LLM:n koulutusdatasta tai syötteestä. Datan puhdistus auttaa estämään tiedon vuotamisen ja haitallisen manipuloinnin rajoittamalla luottamuksellisten tai henkilökohtaisten tietojen paljastumista.  
+- **Vihamielinen testaus**: Prosessi, jossa luodaan ja sovelletaan vihamielisiä esimerkkejä AI-järjestelmän tai LLM:n syötteisiin tai tuotoksiin arvioimaan sen kestävyys ja vastustuskyky vihamielisiä hyökkäyksiä vastaan. Vihamielinen testaus auttaa tunnistamaan ja lieventämään AI-järjestelmän tai LLM:n haavoittuvuuksia ja heikkouksia, joita hyökkääjät voivat hyödyntää.  
+- **Mallin tarkistaminen**: Prosessi, jossa varmistetaan AI-järjestelmän tai LLM:n malliparametrien tai arkkitehtuurin oikeellisuus ja täydellisyys. Mallin tarkistaminen auttaa havaitsemaan ja estämään mallin varastamisen varmistamalla, että malli on suojattu ja autentikoitu.  
+- **Tulosten validoiminen**: Prosessi, jossa validoidaan AI-järjestelmän tai LLM:n tuotoksen laatu ja luotettavuus. Tulosten validointi auttaa havaitsemaan ja korjaamaan haitallisen manipuloinnin varmistamalla, että tuotokset ovat johdonmukaisia ja täsmällisiä.  
 
-OpenAI, tekoälyjärjestelmien johtava toimija, on perustanut _turvallisuusarviointeja_ osana red teaming -verkostoaloitettaan, jonka tavoitteena on testata tekoälyjärjestelmien tuottamia tuloksia ja edistää tekoälyn turvallisuutta.
+OpenAI, AI-järjestelmien johtaja, on perustanut sarjan _turvallisuusarviointeja_ osana red teaming -verkostoaan, joiden tavoitteena on testata AI-järjestelmien tuotoksia ja edesauttaa tekoälyn turvallisuutta.  
 
-> Arvioinnit voivat vaihdella yksinkertaisista kysymys-vastaus-testeistä monimutkaisempiin simulaatioihin. Konkreettisina esimerkkeinä tässä on OpenAI:n kehittämiä arviointeja tekoälykäyttäytymisen arvioimiseksi eri näkökulmista:
+> Arvioinnit voivat vaihdella yksinkertaisista kysymys-vastaus -testeistä monimutkaisempiin simulaatioihin. Tässä konkreettisia esimerkkejä OpenAI:n kehittämistä arvioinneista, joiden avulla AI-käyttäytymistä arvioidaan useista näkökulmista:  
 
-#### Suostuttelu
+#### Vakuuttelu  
 
-- [MakeMeSay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_say/readme.md?WT.mc_id=academic-105485-koreyst): Kuinka hyvin tekoälyjärjestelmä voi huijata toisen tekoälyjärjestelmän sanomaan salaisen sanan?
-- [MakeMePay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_pay/readme.md?WT.mc_id=academic-105485-koreyst): Kuinka hyvin tekoälyjärjestelmä voi suostutella toisen tekoälyjärjestelmän lahjoittamaan rahaa?
-- [Ballot Proposal](https://github.com/openai/evals/tree/main/evals/elsuite/ballots/readme.md?WT.mc_id=academic-105485-koreyst): Kuinka hyvin tekoälyjärjestelmä voi vaikuttaa toisen tekoälyjärjestelmän poliittisen ehdotuksen kannatukseen?
+- [MakeMeSay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_say/readme.md?WT.mc_id=academic-105485-koreyst): Kuinka hyvin AI-järjestelmä pystyy huijaamaan toista AI-järjestelmää sanomaan salaisen sanan?  
+- [MakeMePay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_pay/readme.md?WT.mc_id=academic-105485-koreyst): Kuinka hyvin AI-järjestelmä pystyy vakuuttamaan toisen AI-järjestelmän lahjoittamaan rahaa?  
+- [Ballot Proposal](https://github.com/openai/evals/tree/main/evals/elsuite/ballots/readme.md?WT.mc_id=academic-105485-koreyst): Kuinka hyvin AI-järjestelmä voi vaikuttaa toisen AI-järjestelmän tukeen poliittisessa ehdotuksessa?  
 
-#### Steganografia (piiloviestintä)
+#### Steganografia (piilotettu viestintä)  
 
-- [Steganography](https://github.com/openai/evals/tree/main/evals/elsuite/steganography/readme.md?WT.mc_id=academic-105485-koreyst): Kuinka hyvin tekoälyjärjestelmä voi välittää salaisia viestejä jäämättä kiinni toiselle tekoälyjärjestelmälle?
-- [Text Compression](https://github.com/openai/evals/tree/main/evals/elsuite/text_compression/readme.md?WT.mc_id=academic-105485-koreyst): Kuinka hyvin tekoälyjärjestelmä voi pakata ja purkaa viestejä salaisen viestinnän mahdollistamiseksi?
-- [Schelling Point](https://github.com/openai/evals/blob/main/evals/elsuite/schelling_point/README.md?WT.mc_id=academic-105485-koreyst): Kuinka hyvin tekoälyjärjestelmä voi tehdä yhteistyötä toisen tekoälyjärjestelmän kanssa ilman suoraa viestintää?
+- [Steganography](https://github.com/openai/evals/tree/main/evals/elsuite/steganography/readme.md?WT.mc_id=academic-105485-koreyst): Kuinka hyvin AI-järjestelmä voi välittää salaisia viestejä muuten kiinnittymättä toisen AI-järjestelmän huomioon?  
+- [Text Compression](https://github.com/openai/evals/tree/main/evals/elsuite/text_compression/readme.md?WT.mc_id=academic-105485-koreyst): Kuinka hyvin AI-järjestelmä pystyy pakkaamaan ja purkamaan viestejä salattujen viestien piilottamiseksi?  
+- [Schelling Point](https://github.com/openai/evals/blob/main/evals/elsuite/schelling_point/README.md?WT.mc_id=academic-105485-koreyst): Kuinka hyvin AI-järjestelmä voi koordinoitua toisen AI-järjestelmän kanssa ilman suoraa viestintää?  
 
-### Tekoälyn tietoturva
+### Tekoälyn turvallisuus  
 
-On välttämätöntä pyrkiä suojaamaan tekoälyjärjestelmiä haitallisilta hyökkäyksiltä, väärinkäytöltä tai odottamattomilta seurauksilta. Tämä sisältää toimenpiteitä tekoälyjärjestelmien turvallisuuden, luotettavuuden ja luottamuksen varmistamiseksi, kuten:
+On välttämätöntä pyrkiä suojaamaan AI-järjestelmät haitallisilta hyökkäyksiltä, väärinkäytöltä tai tahattomilta seuraamuksilta. Tämä sisältää toimet, joilla varmistetaan AI-järjestelmien turvallisuus, luotettavuus ja uskottavuus, kuten:  
 
-- Tekoälymallien koulutuksessa ja käytössä käytettävän datan ja algoritmien suojaaminen
-- Tekoälyjärjestelmien luvattoman käytön, manipuloinnin tai sabotoinnin estäminen
-- Ennakkoluulojen, syrjinnän tai eettisten ongelmien havaitseminen ja lieventäminen tekoälyjärjestelmissä
-- Tekoälypäätösten ja -toimien vastuullisuuden, läpinäkyvyyden ja selitettävyyden varmistaminen
-- Tekoälyjärjestelmien tavoitteiden ja arvojen yhdenmukaistaminen ihmisten ja yhteiskunnan kanssa
+- AI-mallien koulutukseen ja suorittamiseen käytettävien tietojen ja algoritmien suojaaminen  
+- Luvattoman pääsyn, manipuloinnin tai sabotaasin estäminen AI-järjestelmissä  
+- Harhan, syrjinnän tai eettisten ongelmien havaitseminen ja lieventäminen AI-järjestelmissä  
+- AI-päätösten ja -toimien vastuullisuuden, läpinäkyvyyden ja selitettävyyden varmistaminen  
+- AI-järjestelmien tavoitteiden ja arvojen sopeuttaminen ihmisten ja yhteiskunnan arvoihin  
 
-Tekoälyn tietoturva on tärkeää tekoälyjärjestelmien ja datan eheyden, saatavuuden ja luottamuksellisuuden varmistamiseksi. Tekoälyn tietoturvan haasteet ja mahdollisuudet ovat:
+AI-turvallisuus on tärkeää AI-järjestelmien ja datan eheyden, saatavuuden ja luottamuksellisuuden varmistamiseksi. Joitakin AI-turvallisuuden haasteita ja mahdollisuuksia ovat:  
 
-- **Mahdollisuus**: Tekoälyn integroiminen kyberturvallisuusstrategioihin, sillä se voi olla keskeisessä roolissa uhkien tunnistamisessa ja reagointiaikojen parantamisessa. Tekoäly voi auttaa automatisoimaan ja tehostamaan kyberhyökkäysten, kuten phishingin, haittaohjelmien tai kiristysohjelmien, havaitsemista ja lieventämistä.
-- **Haaste**: Tekoälyä voidaan käyttää myös hyökkääjien toimesta kehittyneiden hyökkäysten toteuttamiseen, kuten väärennetyn tai harhaanjohtavan sisällön luomiseen, käyttäjien jäljittelyyn tai tekoälyjärjestelmien haavoittuvuuksien hyödyntämiseen. Siksi tekoälykehittäjillä on erityinen vastuu suunnitella järjestelmiä, jotka ovat kestäviä ja vastustuskykyisiä väärinkäytölle.
+- Mahdollisuus: Tekoälyn sisällyttäminen kyberturvallisuusstrategioihin, sillä se voi olla ratkaisevassa roolissa uhkien tunnistamisessa ja vasteaikojen parantamisessa. AI voi auttaa automaattisesti havaitsemaan ja lieventämään kyberhyökkäyksiä, kuten tietojenkalastelua, haittaohjelmia tai kiristyshaittaohjelmia.  
+- Haaste: Hyökkääjät voivat käyttää AI:ta monimutkaisten hyökkäysten käynnistämiseen, kuten väärennetyn tai harhaanjohtavan sisällön luomiseen, käyttäjien jäljittelyyn tai AI-järjestelmien haavoittuvuuksien hyväksikäyttöön. Siksi AI-kehittäjillä on ainutlaatuinen vastuu suunnitella järjestelmiä, jotka ovat vahvoja ja kestäviä väärinkäyttöjä vastaan.  
 
-### Datan suojaaminen
+### Datan suojaaminen  
 
-LLM:t voivat aiheuttaa riskejä niiden käyttämän datan yksityisyydelle ja turvallisuudelle. Esimerkiksi LLM:t voivat mahdollisesti muistaa ja vuotaa arkaluontoista tietoa koulutusdatastaan, kuten henkilökohtaisia nimiä, osoitteita, salasanoja tai luottokorttinumeroita. Niitä voidaan myös manipuloida tai hyökätä haitallisten toimijoiden toimesta, jotka haluavat hyödyntää niiden haavoittuvuuksia tai ennakkoluuloja. Siksi on tärkeää olla tietoinen näistä riskeistä ja ryhtyä asianmukaisiin toimenpiteisiin LLM:ien kanssa käytettävän datan suojaamiseksi. Voit suojata LLM:ien kanssa käytettävää dataa seuraavilla toimenpiteillä:
+Suuret kielimallit (LLM) voivat aiheuttaa riskejä tietosuoja- ja tietoturvakysymyksissä sillä datalle, jota ne käyttävät. Esimerkiksi LLM:n voi muistaa ja vuotaa arkaluonteisia tietoja koulutusdatastaan, kuten henkilöiden nimiä, osoitteita, salasanoja tai luottokorttitietoja. Ne voivat myös joutua manipuloinnin tai hyökkäysten kohteiksi, kun haitalliset tahot pyrkivät hyödyntämään niiden haavoittuvuuksia tai harhoja. Siksi on tärkeää olla tietoinen näistä riskeistä ja ryhtyä asianmukaisiin toimiin datan suojaamiseksi LLM:eissä. Voit suojata dataa, jota käytät LLM:ien kanssa, seuraavilla keinoilla:  
 
-- **Rajoita LLM:ien kanssa jaettavan datan määrää ja tyyppiä**: Jaa vain dataa, joka on tarpeellista ja tarkoituksenmukaista aiottuihin tarkoituksiin, ja vältä jakamasta arkaluontoista, luottamuksellista tai henkilökohtaista dataa. Käyttäjien tul
-Reaaliaikaisten uhkien jäljittelyä pidetään nykyään vakiokäytäntönä kestävämpien tekoälyjärjestelmien rakentamisessa, käyttämällä samanlaisia työkaluja, taktiikoita ja menetelmiä järjestelmien riskien tunnistamiseen ja puolustajien reagoinnin testaamiseen.
+- **Rajoittamalla ja valitsemalla jaettavaa dataa LLM:ille**: Jaa vain tarpeellinen ja tarkoituksenmukainen data, ja vältä arkaluonteisen, luottamuksellisen tai henkilökohtaisen datan jakamista. Käyttäjä voi myös anonymisoida tai salata datan, kuten poistamalla tai peittämällä tunnistettavia tietoja tai käyttämällä turvallisia viestintäkanavia.  
+- **Varmistamalla LLM:ien tuottaman datan oikeellisuus**: Tarkista aina, että LLM:n tuottamat tuotokset ovat tarkkoja ja laadukkaita eikä niissä ole ei-toivottua tai sopimatonta tietoa.  
+- **Ilmoittamalla ja varoittamalla mahdollisista tietomurroista tai poikkeamista**: Ole valppaana epätavallisen tai epäilyttävän käytöksen varalta LLM:issä, kuten epäoleellisten, virheellisten, loukkaavien tai haitallisten tekstien tuottaminen. Tämä voi olla merkki tietomurrosta tai tietoturvaongelmasta.  
 
-> Tekoälyn red teaming -käytäntö on kehittynyt laajempaan merkitykseen: se ei kata ainoastaan tietoturva-aukkojen etsimistä, vaan myös muiden järjestelmävirheiden, kuten mahdollisesti haitallisen sisällön tuottamisen, tutkimista. Tekoälyjärjestelmät tuovat mukanaan uusia riskejä, ja red teaming on keskeinen keino ymmärtää näitä uusia riskejä, kuten kehotusruiskutusta ja perustelemattoman sisällön tuottamista. - [Microsoft AI Red Team rakentaa turvallisempaa tekoälyä](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
+Datan turvallisuus, hallinta ja vaatimustenmukaisuus ovat kriittisiä kaikissa organisaatioissa, jotka haluavat hyödyntää datan ja tekoälyn voimaa monipilviympäristössä. Kaiken datan suojaaminen ja hallinta on monimutkainen ja monisyinen tehtävä. Sinun on suojattava ja hallittava erilaisia datatyyppejä (rakenteellinen, rakenteeton ja tekoälyn luoma data) eri sijainneissa useiden pilvialustojen välillä ja otettava huomioon olemassa olevat ja tulevat tietoturvavaatimukset, hallinta ja tekoälymääräykset. Suojataksesi dataasi, sinun kannattaa noudattaa parhaita käytäntöjä ja varotoimia, kuten:  
 
-[![Ohjeet ja resurssit red teamingille](../../../translated_images/fi/13-AI-red-team.642ed54689d7e8a4.webp)]()
+- Käytä pilvipalveluita tai -alustoja, jotka tarjoavat datansuojauksen ja tietosuojan ominaisuuksia.  
+- Käytä datan laadunvarmistus- ja validointityökaluja tarkistaaksesi datasi virheiden, ristiriitojen tai poikkeavuuksien varalta.  
+- Käytä datanhallinnan ja etiikan kehikkoja varmistaaksesi, että dataasi käytetään vastuullisesti ja läpinäkyvästi.  
 
-Alla on keskeisiä oivalluksia, jotka ovat muokanneet Microsoftin AI Red Team -ohjelmaa.
+### Todellisen maailman uhkien simulointi – AI red teaming  
 
-1. **Tekoälyn red teamingin laajentunut ulottuvuus:**
-   Tekoälyn red teaming kattaa nyt sekä tietoturvan että vastuullisen tekoälyn (RAI) tavoitteet. Perinteisesti red teaming keskittyi tietoturvaan, käsitellen mallia vektorina (esim. mallin varastaminen). Tekoälyjärjestelmät tuovat mukanaan uusia tietoturva-aukkoja (esim. kehotusruiskutus, myrkytys), jotka vaativat erityistä huomiota. Tietoturvan lisäksi tekoälyn red teaming tutkii myös oikeudenmukaisuuskysymyksiä (esim. stereotypiointi) ja haitallista sisältöä (esim. väkivallan ihannointi). Näiden ongelmien varhainen tunnistaminen mahdollistaa puolustusinvestointien priorisoinnin.
+
+Todellisten uhkien jäljittelyä pidetään nyt standardikäytäntönä kestävien tekoälyjärjestelmien rakentamisessa käyttämällä vastaavia työkaluja, taktiikoita ja menettelyjä järjestelmien riskien tunnistamiseksi ja puolustajien reagoinnin testaamiseksi.
+
+> Tekoälyn red teaming -käytäntö on kehittynyt laajempaan merkitykseen: se ei kata enää vain tietoturva-aukkojen tutkimista, vaan myös muiden järjestelmävikojen, kuten mahdollisesti haitallisen sisällön tuottamisen tutkimista. Tekoälyjärjestelmät tuovat mukanaan uusia riskejä, ja red teaming on keskeistä näiden uusien riskien ymmärtämiseksi, kuten kehotteen injektointi ja perustumattoman sisällön tuottaminen. - [Microsoft AI Red Team rakentaa turvallisemman tekoälyn tulevaisuutta](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
+
+[![Ohjeet ja resurssit red teamingiin](../../../translated_images/fi/13-AI-red-team.642ed54689d7e8a4.webp)]()
+
+Alla on keskeiset oivallukset, jotka ovat muokanneet Microsoftin AI Red Team -ohjelmaa.
+
+1. **Laaja-alainen tekoälyn red teaming:**
+   Tekoälyn red teaming kattaa nyt sekä tietoturvan että vastuullisen tekoälyn (RAI) tulokset. Perinteisesti red teaming keskittyi tietoturvaan käsitellen mallia hyökkäyskohteena (esim. mallin varastaminen). Kuitenkin tekoälyjärjestelmät tuovat uusia tietoturvahaavoittuvuuksia (esim. kehotteen injektointi, myrkytys), jotka vaativat erityishuomiota. Tietoturvan lisäksi red teaming tutkii oikeudenmukaisuuskysymyksiä (esim. stereotypiat) ja haitallista sisältöä (esim. väkivallan ihannointi). Näiden ongelmien varhainen tunnistaminen mahdollistaa puolustuksen investointien priorisoinnin.
 2. **Pahantahtoiset ja harmittomat virheet:**
-   Tekoälyn red teaming tarkastelee virheitä sekä pahantahtoisesta että harmittomasta näkökulmasta. Esimerkiksi uuden Bingin red teamingissä tutkitaan paitsi sitä, miten pahantahtoiset vastustajat voivat manipuloida järjestelmää, myös sitä, miten tavalliset käyttäjät voivat kohdata ongelmallista tai haitallista sisältöä. Toisin kuin perinteinen tietoturvan red teaming, joka keskittyy pääasiassa pahantahtoisiin toimijoihin, tekoälyn red teaming huomioi laajemman joukon henkilöitä ja mahdollisia virheitä.
+   Tekoälyn red teaming ottaa huomioon virheet sekä pahantahtoisesta että harmittomasta näkökulmasta. Esimerkiksi uuden Bingin red teamingissa tutkitaan paitsi miten pahantahtoiset hyökkääjät voivat alistaa järjestelmän, myös miten tavalliset käyttäjät voivat kohdata ongelmallista tai haitallista sisältöä. Toisin kuin perinteinen tietoturvan red teaming, joka keskittyy pääasiassa pahantahtoisiiin toimijoihin, tekoälyn red teaming huomioi laajemman kirjon käyttäjäprofiileja ja mahdollisia virheitä.
 3. **Tekoälyjärjestelmien dynaaminen luonne:**
-   Tekoälysovellukset kehittyvät jatkuvasti. Suurten kielimallien sovelluksissa kehittäjät mukautuvat muuttuviin vaatimuksiin. Jatkuva red teaming varmistaa jatkuvan valppauden ja sopeutumisen kehittyviin riskeihin.
+   Tekoälysovellukset kehittyvät jatkuvasti. Suurten kielimallien sovelluksissa kehittäjät sopeutuvat muuttuviin vaatimuksiin. Jatkuva red teaming varmistaa valppautta ja sopeutumista kehittyviin riskeihin.
 
-Tekoälyn red teaming ei kata kaikkea ja sitä tulisi pitää täydentävänä toimintana lisäkontrolleille, kuten [roolipohjainen pääsynhallinta (RBAC)](https://learn.microsoft.com/azure/ai-services/openai/how-to/role-based-access-control?WT.mc_id=academic-105485-koreyst) ja kattavat datanhallintaratkaisut. Sen tarkoitus on täydentää tietoturvastrategiaa, joka keskittyy turvallisten ja vastuullisten tekoälyratkaisujen käyttöön, huomioiden yksityisyyden ja tietoturvan samalla pyrkien minimoimaan ennakkoluulot, haitallisen sisällön ja väärän tiedon, jotka voivat heikentää käyttäjien luottamusta.
+Tekoälyn red teaming ei ole kaiken kattava ja sitä tulisi pitää täydentävänä toimintana muiden kontrollien, kuten [roolipohjaisen pääsynhallinnan (RBAC)](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/role-based-access-control?WT.mc_id=academic-105485-koreyst) ja kokonaisvaltaisten tietohallintaratkaisujen, rinnalla. Sen tarkoituksena on täydentää turvallisuusstrategiaa, joka keskittyy turvallisten ja vastuullisten tekoälyratkaisujen käyttöönottoon, ottaen huomioon yksityisyys ja tietoturva sekä pyrkien minimoimaan ennakkoluuloja, haitallista sisältöä ja väärää tietoa, jotka voivat heikentää käyttäjien luottamusta.
 
-Tässä on lista lisälukemista, joka auttaa sinua ymmärtämään, miten red teaming voi auttaa tunnistamaan ja lieventämään riskejä tekoälyjärjestelmissäsi:
+Tässä on lisälukemista, jotka auttavat ymmärtämään paremmin, miten red teaming voi auttaa tunnistamaan ja lieventämään riskejä tekoälyjärjestelmissäsi:
 
-- [Red teamingin suunnittelu suurille kielimalleille (LLM) ja niiden sovelluksille](https://learn.microsoft.com/azure/ai-services/openai/concepts/red-teaming?WT.mc_id=academic-105485-koreyst)
+- [Red teamingin suunnittelu suurille kielimalleille (LLM) ja niiden sovelluksille](https://learn.microsoft.com/azure/ai-foundry/openai/concepts/red-teaming?WT.mc_id=academic-105485-koreyst)
 - [Mikä on OpenAI Red Teaming Network?](https://openai.com/blog/red-teaming-network?WT.mc_id=academic-105485-koreyst)
-- [Tekoälyn red teaming - keskeinen käytäntö turvallisempien ja vastuullisempien tekoälyratkaisujen rakentamisessa](https://rodtrent.substack.com/p/ai-red-teaming?WT.mc_id=academic-105485-koreyst)
-- MITRE [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), tietokanta taktiikoista ja tekniikoista, joita vastustajat käyttävät tekoälyjärjestelmiin kohdistuvissa todellisissa hyökkäyksissä.
+- [Tekoälyn Red Teaming - keskeinen käytäntö turvallisempien ja vastuullisempien tekoälyratkaisujen rakentamisessa](https://rodtrent.substack.com/p/ai-red-teaming?WT.mc_id=academic-105485-koreyst)
+- MITRE [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), tietokanta taktiikoista ja tekniikoista, joita vastustajat käyttävät todellisissa hyökkäyksissä tekoälyjärjestelmiin.
 
-## Tietotesti
+## Tietotarkistus
 
-Mikä voisi olla hyvä lähestymistapa datan eheyden ylläpitämiseen ja väärinkäytön estämiseen?
+Mikä voisi olla hyvä lähestymistapa tietojen eheyden ylläpitämiseen ja väärinkäytön estämiseen?
 
-1. Käytä vahvoja roolipohjaisia kontrollimekanismeja datan käyttöoikeuksien ja hallinnan osalta  
-1. Toteuta ja tarkista datan merkintä väärinkäytön tai virheellisen esittämisen estämiseksi  
-1. Varmista, että tekoälyinfrastruktuurisi tukee sisällön suodatusta  
+1. Käytä vahvoja roolipohjaisia kontrollikeinoja tiedon saatavuuteen ja hallintaan
+1. Toteuta ja auditoi tiedon merkintä väärinkäytön tai virheellisen tulkinnan estämiseksi
+1. Varmista, että tekoälyinfrastruktuurisi tukee sisällön suodatusta
 
-A:1, Vaikka kaikki kolme ovat erinomaisia suosituksia, varmistamalla, että annat käyttäjille asianmukaiset datan käyttöoikeudet, voit merkittävästi estää datan manipulointia ja virheellistä esittämistä, joita LLM:t käyttävät.
+Vastaus 1, Kaikki kolme ovat hyviä suosituksia, mutta oikein myönnetyt tiedon käyttöoikeudet käyttäjille ovat merkittävä keino estää tietojen manipulointia ja virheellistä esittämistä suurten kielimallien käytössä.
 
 ## 🚀 Haaste
 
@@ -148,11 +160,13 @@ Lue lisää siitä, miten voit [hallita ja suojata arkaluontoista tietoa](https:
 
 ## Hienoa työtä, jatka oppimista
 
-Tämän oppitunnin jälkeen tutustu [Generative AI Learning -kokoelmaan](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) jatkaaksesi generatiivisen tekoälyn tietämyksesi kehittämistä!
+Tämän oppitunnin jälkeen tutustu [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) -kokoelmaamme kehittyäksesi edelleen generatiivisen tekoälyn osaamisessa!
 
-Siirry oppituntiin 14, jossa tarkastelemme [Generatiivisen tekoälyn sovelluskehityksen elinkaarta](../14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)!
+Siirry oppitunnille 14, jossa tarkastelemme [Generative AI -sovelluskehityksen elinkaarta](../14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vastuuvapauslauseke**:
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, otathan huomioon, että automaattiset käännökset saattavat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäiskielellä on virallinen lähde. Tärkeissä asioissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

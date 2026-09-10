@@ -1,34 +1,34 @@
 # Príprava dát pre prepis
 
-Skripty na prípravu dát pre prepis sťahujú tabuľky titulkov videí z YouTube a pripravujú ich na použitie so vzorovým príkladom Semantického vyhľadávania s OpenAI Embeddings a Funkciami.
+Skripty na prípravu dát pre prepis sťahujú prepisy videí z YouTube a pripravujú ich na použitie so vzorcom Semantic Search with OpenAI Embeddings and Functions.
 
-Skripty na prípravu dát pre prepis boli testované na najnovších verziách Windows 11, macOS Ventura a Ubuntu 22.04 (a novších).
+Skripty na prípravu dát pre prepis boli testované na najnovších verziách Windows 11, macOS Ventura a Ubuntu 22.04 (a vyššie).
 
-## Vytvorenie požadovaných zdrojov služby Azure OpenAI
+## Vytvorenie požadovaných zdrojov služby Azure OpenAI Service
 
 > [!IMPORTANT]
 > Odporúčame aktualizovať Azure CLI na najnovšiu verziu, aby bola zabezpečená kompatibilita s OpenAI
-> Viac informácií nájdete v [dokumentácii](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
+> Pozrite si [Dokumentáciu](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Vytvorte skupinu zdrojov
 
 > [!NOTE]
-> V týchto inštrukciách používame skupinu zdrojov s názvom "semantic-video-search" v regióne East US.
-> Môžete zmeniť názov skupiny zdrojov, ale pri zmene umiestnenia zdrojov
-> si skontrolujte [tabuľku dostupnosti modelov](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> Pre tieto pokyny používame skupinu zdrojov s názvom "semantic-video-search" v regióne East US.
+> Môžete zmeniť názov skupiny zdrojov, ale pri zmene lokácie zdrojov,
+> skontrolujte [tabuľku dostupnosti modelov](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. Vytvorte zdroj služby Azure OpenAI.
+1. Vytvorte zdroj služby Azure OpenAI Service.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Získajte koncový bod a kľúče na použitie v tejto aplikácii
+1. Získajte endpoint a kľúče na použitie v tejto aplikácii
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -37,9 +37,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. Nasadte nasledujúce modely:
-   - `text-embedding-ada-002` verzia `2` alebo vyššia, s názvom `text-embedding-ada-002`
-   - `gpt-4o-mini` s názvom `gpt-4o-mini`
+1. Nasadzujte nasledujúce modely:
+   - `text-embedding-ada-002` verzia `2` alebo vyššia, pomenovaný `text-embedding-ada-002`
+   - `gpt-5-mini` pomenovaný `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,25 +53,25 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
 ```
 
-## Požadovaný softvér
+## Potrebný softvér
 
-- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) alebo novší
+- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) alebo vyšší
 
 ## Premenné prostredia
 
-Na spustenie skriptov na prípravu dát prepisu YouTube sú potrebné nasledujúce premenné prostredia.
+Na spustenie skriptov na prípravu dát pre prepis YouTube sú potrebné nasledujúce premenné prostredia.
 
 ### Vo Windows
 
-Odporúčame pridať premenné do používateľských premenných prostredia.
-`Windows Štart` > `Upraviť systémové premenné prostredia` > `Premenné prostredia` > `Používateľské premenné` pre [USER] > `Nové`.
+Odporúča sa pridať premenné do vašich používateľských premenných prostredia.
+`Windows Štart` > `Upraviť premenné systému` > `Premenné prostredia` > `Používateľské premenné` pre [USER] > `Nové`.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -80,18 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-<!-- Premenné prostredia môžete pridať do svojho profilu PowerShell.
+<!-- Môžete pridať premenné prostredia do vášho PowerShell profilu.
 
 ```powershell
-$env:AZURE_OPENAI_API_KEY = "<váš API kľúč služby Azure OpenAI>"
-$env:AZURE_OPENAI_ENDPOINT = "<váš koncový bod služby Azure OpenAI>"
-$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<názov nasadenia modelu služby Azure OpenAI>"
-$env:GOOGLE_DEVELOPER_API_KEY = "<váš Google API kľúč pre vývojárov>"
+$env:AZURE_OPENAI_API_KEY = "<váš Azure OpenAI Service API kľúč>"
+$env:AZURE_OPENAI_ENDPOINT = "<váš Azure OpenAI Service endpoint>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<váš názov nasadenia modelu Azure OpenAI Service>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<váš Google developer API kľúč>"
 ``` -->
 
-### Na Linuxe a macOS
+### V Linuxe a macOS
 
-Odporúčame pridať nasledujúce exporty do súboru `~/.bashrc` alebo `~/.zshrc`.
+Odporúča sa pridať nasledujúce exporty do súboru `~/.bashrc` alebo `~/.zshrc`.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -103,7 +103,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ## Inštalácia požadovaných Python knižníc
 
 1. Nainštalujte [git klienta](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), ak ešte nie je nainštalovaný.
-1. V okne `Terminálu` sklonujte vzorový príklad do preferovaného priečinka.
+1. Z terminálu sklonujte vzorový projekt do vášho preferovaného priečinka.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -157,7 +157,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## Spustenie skriptov na prípravu dát prepisu YouTube
+## Spustenie skriptov na prípravu dát pre prepis YouTube
 
 ### Vo Windows
 

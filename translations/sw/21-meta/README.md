@@ -1,61 +1,61 @@
-# Kujenga Kwa Mfumo wa Familia ya Meta 
+# Kujenga Kwa Matoleo ya Familia ya Meta 
 
 ## Utangulizi 
 
-Somo hili litajumuisha: 
+Somo hili litahusu: 
 
-- Kuchunguza mifano miwili kuu ya familia ya Meta - Llama 3.1 na Llama 3.2 
+- Kuchunguza matoleo mawili makuu ya familia ya Meta - Llama 3.1 na Llama 3.2 
 - Kuelewa matumizi na matukio ya kila mfano 
-- Sampuli ya msimbo kuonyesha sifa za kipekee za kila mfano 
+- Mfano wa msimbo kuonyesha sifa za kipekee za kila mfano 
 
 
-## Familia ya Mifano ya Meta 
+## Familia ya Meta ya Modeli 
 
-Katika somo hili, tutachunguza mifano 2 kutoka kwa familia ya Meta au "Kundi la Llama" - Llama 3.1 na Llama 3.2.
+Katika somo hili, tutachunguza modeli 2 kutoka familia ya Meta au "Kundi la Llama" - Llama 3.1 na Llama 3.2.
 
-Mifano hii inakuja kwa aina tofauti na inapatikana katika [Katalogi ya Mifano ya Microsoft Foundry](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
+Modeli hizi zinapatikana katika matoleo tofauti na zinapatikana katika [Katalogi ya Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
 
-> **Kumbuka:** GitHub Models inakoma kufanikisha mwishoni mwa Julai 2026. Hapa kuna maelezo zaidi ya kutumia [Mifano ya Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) kuunda mfano na mifano ya AI.
+> **Kumbuka:** GitHub Models itatupwa mwisho wa Julai 2026. Hapa kuna maelezo zaidi juu ya kutumia [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) kujaribu modeli za AI.
 
-Aina za Mfano: 
+Matoleo ya Modeli: 
 - Llama 3.1 - 70B Instruct 
 - Llama 3.1 - 405B Instruct 
 - Llama 3.2 - 11B Vision Instruct 
 - Llama 3.2 - 90B Vision Instruct 
 
-*Kumbuka: Llama 3 pia inapatikana katika Mifano ya Microsoft Foundry lakini haitajadiliwa katika somo hili*
+*Kumbuka: Llama 3 pia inapatikana katika Microsoft Foundry Models lakini haitashughulikiwa katika somo hili*
 
 ## Llama 3.1 
 
-Kwa Paramita Bilioni 405, Llama 3.1 inaingia katika kundi la LLM za chanzo huria. 
+Kwa Parameters Bilioni 405, Llama 3.1 inaingia katika kundi la LLM la chanzo wazi. 
 
 Mfano huu ni sasisho la toleo la awali la Llama 3 kwa kutoa: 
 
 - Dirisha kubwa la muktadha - tokeni 128k dhidi ya tokeni 8k 
-- Idadi kubwa ya Max Output Tokens - 4096 dhidi ya 2048 
-- Msaada bora wa lugha mbalimbali - kwa sababu ya kuongezeka kwa tokeni za mafunzo 
+- Idadi kubwa zaidi ya Tokeni za Matokeo - 4096 dhidi ya 2048 
+- Usaidizi bora wa Lugha Nyingi - kutokana na kuongezeka kwa tokeni za mafunzo 
 
-Hii inaruhusu Llama 3.1 kushughulikia matumizi magumu zaidi wakati wa kujenga programu za GenAI ikiwa ni pamoja na: 
-- Kupiga simu za Kifunction asilia - uwezo wa kuitisha zana za nje na kazi nje ya mtiririko wa LLM
-- Utendaji Bora wa RAG - kutokana na dirisha kubwa zaidi la muktadha 
-- Uundaji wa Data ya Syntetiki - uwezo wa kuunda data bora kwa kazi kama vile kufinywa 
+Hii inamwezesha Llama 3.1 kushughulikia matumizi tata zaidi wakati wa kujenga programu za GenAI ikiwa ni pamoja na: 
+- Kufanya Simu za Vitendo vya Asili - uwezo wa kuita zana na vitendo nje ya mtiririko wa LLM
+- Utendaji Bora wa RAG - kutokana na dirisha kubwa la muktadha 
+- Uundaji wa Data za Synthetiki - uwezo wa kuunda data madhubuti kwa kazi kama vile kurekebisha mafunzo 
 
-### Kupiga Simu Kifunction Asilia 
+### Kufanya Simu za Vitendo vya Asili 
 
-Llama 3.1 imesanifiwa tena ili kuwa na ufanisi zaidi katika kupiga simu za kifunction au zana. Pia ina zana mbili zilizojengwa ndani ambazo mfano unaweza kubaini zinahitaji kutumiwa kulingana na ombi la mtumiaji. Zana hizi ni: 
+Llama 3.1 imeboreshwa kuwa na ufanisi zaidi katika kuita vitendo au zana. Pia ina zana mbili zilizojengewa ndani ambazo mfano unaweza kubaini zinahitajika kutumiwa kulingana na ombi kutoka kwa mtumiaji. Zana hizi ni: 
 
-- **Brave Search** - Inaweza kutumika kupata habari za hivi karibuni kama hali ya hewa kwa kufanya utafutaji wa wavuti 
-- **Wolfram Alpha** - Inaweza kutumika kwa mahesabu magumu zaidi ya kihisabati hivyo kuandika kazi zako mwenyewe si lazima. 
+- **Brave Search** - Inaweza kutumika kupata taarifa za hivi punde kama hali ya hewa kwa kufanya utafutaji mtandaoni 
+- **Wolfram Alpha** - Inaweza kutumika kwa hesabu tata za kihisabati kwa hivyo sio lazima uandike vitendo vyako mwenyewe. 
 
-Pia unaweza kuunda zana zako za kawaida ambazo LLM inaweza kuitisha. 
+Unaweza pia kuunda zana zako binafsi ambazo LLM inaweza kuita. 
 
-Katika mfano wa msimbo chini: 
+Katika mfano wa msimbo ufuatao: 
 
-- Tunateua zana zinazopatikana (brave_search, wolfram_alpha) katika onyo la mfumo. 
+- Tunataja zana zinazopatikana (brave_search, wolfram_alpha) katika ombi la mfumo. 
 - Tuma ombi la mtumiaji linalouliza kuhusu hali ya hewa katika mji fulani. 
 - LLM itajibu kwa simu ya zana kwa zana ya Brave Search ambayo itaonekana kama hii `<|python_tag|>brave_search.call(query="Stockholm weather")` 
 
-*Kumbuka: Mfano huu unafanya simu tu ya zana, kama unataka kupata matokeo, utahitaji kujisajili bure kwenye ukurasa wa Brave API na kufafanua kifunction yenyewe.
+*Kumbuka: Mfano huu hufanya simu ya zana tu, ikiwa ungependa kupata matokeo, utahitaji kuunda akaunti bure kwenye ukurasa wa API wa Brave na ueleze vitendo yenyewe.
 
 ```python 
 import os
@@ -63,7 +63,7 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import AssistantMessage, SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-# Pata hizi kutoka ukurasa wa "Muhtasari" wa mradi wako wa Microsoft Foundry
+# Pata haya kutoka kwenye ukurasa wa "Muhtasari" wa mradi wako wa Microsoft Foundry
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Meta-Llama-3.1-405B-Instruct"
@@ -98,16 +98,16 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2 
 
-Licha ya kuwa LLM, kizuizi kimoja cha Llama 3.1 ni ukosefu wa multimodality. Yaani, kutoweza kutumia aina tofauti za ingizo kama picha kama mateke na kutoa majibu. Uwezo huu ni mojawapo ya sifa kuu za Llama 3.2. Sifa hizi pia zinajumuisha: 
+Licha ya kuwa LLM, ukosefu mmoja wa Llama 3.1 ni kutokuwa na multimodality. Yaani, kushindwa kutumia aina mbalimbali za pembejeo kama picha kama mabango na kutoa majibu. Uwezo huu ni moja ya sifa kuu za Llama 3.2. Sifa hizi pia ni pamoja na: 
 
-- Multimodality - ina uwezo wa kutathmini mateke ya maandishi na picha 
-- Aina ndogo hadi za kati (11B na 90B) - hii inatoa chaguzi flexible za ueneaji, 
-- Aina za maandishi tu (1B na 3B) - hii inaruhusu mfano kuenezwa kwenye vifaa vya edge / simu na kutoa ucheleweshaji mdogo 
+- Multimodality - ina uwezo wa kutathmini mabango ya maandishi na picha 
+- Tofauti za ukubwa mdogo hadi wa wastani (11B na 90B) - hii inatoa chaguo zinazobadilika za usambazaji, 
+- Tofauti za maandishi pekee (1B na 3B) - hii inaruhusu mfano kuwekwa katika vifaa vya edge / simu na huleta ucheleweshaji mdogo 
 
-Msaada wa multimodal ni hatua kubwa katika dunia ya mifano ya chanzo huria. Mfano wa msimbo chini unatumia picha na kufanya tahmini ya picha kutoka Llama 3.2 90B. 
+Usaidizi wa multimodal ni hatua kubwa katika dunia ya modeli za chanzo wazi. Mfano wa msimbo ufuatao unachukua picha na ombi la maandishi ili kupata uchambuzi wa picha kutoka Llama 3.2 90B. 
 
 
-### Msaada wa Multimodal na Llama 3.2
+### Usaidizi wa Multimodal na Llama 3.2
 
 ```python 
 import os
@@ -155,9 +155,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Kujifunza hakukomi hapa, endelea safari
+## Kujifunza haikuishii hapa, endelea safari
 
-Baada ya kumaliza somo hili, angalia [Mkusanyiko wetu wa Kujifunza AI ya Kizazi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kuongeza ujuzi wako wa AI ya Kizazi!
+Baada ya kumaliza somo hili, angalia [Mkusanyiko wa Kujifunza AI ya Kizazi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendelea kuongeza maarifa yako ya AI ya Kizazi!
 
 ---
 

@@ -1,10 +1,10 @@
 # Preparação de dados de transcrição
 
-Os scripts de preparação de dados de transcrição baixam transcrições de vídeos do YouTube e os preparam para uso com o exemplo de Pesquisa Semântica com Embeddings OpenAI e Funções.
+Os scripts de preparação de dados de transcrição fazem o download das transcrições de vídeos do YouTube e as preparam para uso com o exemplo Pesquisa Semântica com Embeddings e Funções OpenAI.
 
-Os scripts de preparação de dados de transcrição foram testados nas versões mais recentes do Windows 11, macOS Ventura e Ubuntu 22.04 (e superior).
+Os scripts de preparação de dados de transcrição foram testados nas versões mais recentes do Windows 11, macOS Ventura e Ubuntu 22.04 (e superiores).
 
-## Crie os recursos necessários do Azure OpenAI Service
+## Criar recursos necessários do Azure OpenAI Service
 
 > [!IMPORTANT]
 > Sugerimos que você atualize o Azure CLI para a versão mais recente para garantir compatibilidade com o OpenAI
@@ -13,9 +13,9 @@ Os scripts de preparação de dados de transcrição foram testados nas versões
 1. Crie um grupo de recursos
 
 > [!NOTE]
-> Para estas instruções estamos usando o grupo de recursos chamado "semantic-video-search" na região East US.
+> Para essas instruções, estamos usando o grupo de recursos chamado "semantic-video-search" na região East US.
 > Você pode alterar o nome do grupo de recursos, mas ao mudar a localização dos recursos,
-> verifique a [tabela de disponibilidade de modelos](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> verifique a [tabela de disponibilidade dos modelos](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
@@ -37,9 +37,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. Implemente os seguintes modelos:
+1. Implante os seguintes modelos:
    - `text-embedding-ada-002` versão `2` ou superior, nomeado `text-embedding-ada-002`
-   - `gpt-4o-mini` nomeado `gpt-4o-mini`
+   - `gpt-5-mini` nomeado `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,8 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -66,12 +66,12 @@ az cognitiveservices account deployment create \
 
 ## Variáveis de ambiente
 
-As seguintes variáveis de ambiente são obrigatórias para executar os scripts de preparação de transcrição do YouTube.
+As seguintes variáveis de ambiente são necessárias para executar os scripts de preparação de dados de transcrição do YouTube.
 
 ### No Windows
 
 Recomendamos adicionar as variáveis às variáveis de ambiente do seu `usuário`.
-`Início do Windows` > `Editar variáveis de ambiente do sistema` > `Variáveis de Ambiente` > `Variáveis do usuário` para [USER] > `Novo`.
+`Iniciar do Windows` > `Editar as variáveis de ambiente do sistema` > `Variáveis de Ambiente` > `Variáveis do usuário` para [USUÁRIO] > `Novo`.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -83,10 +83,10 @@ GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 <!-- Você pode adicionar as variáveis de ambiente ao seu perfil do PowerShell.
 
 ```powershell
-$env:AZURE_OPENAI_API_KEY = "<sua chave da API do Azure OpenAI Service>"
+$env:AZURE_OPENAI_API_KEY = "<sua chave API do Azure OpenAI Service>"
 $env:AZURE_OPENAI_ENDPOINT = "<seu endpoint do Azure OpenAI Service>"
-$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<seu nome de implantação do modelo do Azure OpenAI Service>"
-$env:GOOGLE_DEVELOPER_API_KEY = "<sua chave da API de desenvolvedor do Google>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<nome da implantação do modelo do Azure OpenAI Service>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<sua chave API do desenvolvedor do Google>"
 ``` -->
 
 ### No Linux e macOS
@@ -100,10 +100,10 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## Instale as bibliotecas Python necessárias
+## Instalar as bibliotecas Python necessárias
 
 1. Instale o [cliente git](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) se ainda não estiver instalado.
-1. Em uma janela de `Terminal`, clone o exemplo para a pasta de seu repositório preferido.
+1. Em uma janela de `Terminal`, clone o exemplo para a pasta do seu repositório preferido.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git

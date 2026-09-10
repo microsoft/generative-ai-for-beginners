@@ -281,30 +281,6 @@
     "source_file": "11-integrating-with-function-calling/images/LLM-Flow.png",
     "language_code": "bn"
   },
-  "Llama1.da7b29534fe3cbc7.webp": {
-    "original_hash": "483e6c9fab2bbc1e6dc95f7b3c0f2b14",
-    "translation_date": "2026-01-16T12:16:17+00:00",
-    "source_file": "02-exploring-and-comparing-different-llms/images/Llama1.png",
-    "language_code": "bn"
-  },
-  "Llama2.5c15b0755a9cd824.webp": {
-    "original_hash": "69f29cd8d93c10d4f0760aad20e6c279",
-    "translation_date": "2026-01-16T12:16:46+00:00",
-    "source_file": "02-exploring-and-comparing-different-llms/images/Llama2.png",
-    "language_code": "bn"
-  },
-  "Llama3.b985a3d84bf298c3.webp": {
-    "original_hash": "b283a2c5a5fc03afbc4b5885a1bd073b",
-    "translation_date": "2026-01-16T12:21:37+00:00",
-    "source_file": "02-exploring-and-comparing-different-llms/images/Llama3.png",
-    "language_code": "bn"
-  },
-  "Llama4.42bb7d9ca73554bf.webp": {
-    "original_hash": "9145d9786f37c1fdbb858ca6b39fc75a",
-    "translation_date": "2026-01-16T12:15:56+00:00",
-    "source_file": "02-exploring-and-comparing-different-llms/images/Llama4.png",
-    "language_code": "bn"
-  },
   "ModelBenchmarks.254cb20fbd06c03a.webp": {
     "original_hash": "4c3b5f2b945a8a2892b3c4f92722b15b",
     "translation_date": "2026-01-16T12:20:39+00:00",
@@ -387,12 +363,6 @@
     "original_hash": "e2b006f74417290be79fc6bd3c37d063",
     "translation_date": "2026-01-16T12:04:13+00:00",
     "source_file": "16-open-source-models/images/choose-model.png",
-    "language_code": "bn"
-  },
-  "codespaces-basicpy.3f0d052758c11ce9.webp": {
-    "original_hash": "9ec8afe4d31c769119abf8b38a8d9c64",
-    "translation_date": "2026-01-16T12:28:43+00:00",
-    "source_file": "06-text-generation-apps/images/codespaces-basicpy.png",
     "language_code": "bn"
   },
   "codespaces-secrets.acfe1f8ab4d8cd1b.webp": {
@@ -539,21 +509,15 @@
     "source_file": "18-fine-tuning/python/openai/img/fine-tuned-playground-launch.png",
     "language_code": "bn"
   },
-  "genai_course_12[88].76a0a38703cefa94.webp": {
-    "original_hash": "bce584bbc930d58ed317a7cd8290a439",
-    "translation_date": "2026-01-16T12:13:44+00:00",
-    "source_file": "12-designing-ux-for-ai-applications/images/genai_course_12[88].png",
-    "language_code": "bn"
-  },
   "generated-image.7e17ceec085357b2.webp": {
-    "original_hash": "dc2b8fe051905608f12adca030eab947",
-    "translation_date": "2026-01-16T12:43:58+00:00",
+    "original_hash": "de215401dcea94edf1efe7fae51ba951",
+    "translation_date": "2026-07-17T02:01:18+00:00",
     "source_file": "09-building-image-applications/images/generated-image.png",
     "language_code": "bn"
   },
   "generated-image.95d5d16f109311a0.webp": {
-    "original_hash": "6c071e545c86d274c55cc1f516d2bb8e",
-    "translation_date": "2026-01-16T12:43:54+00:00",
+    "original_hash": "b344f453aa20389ad296822a1cdc52d1",
+    "translation_date": "2026-07-17T02:01:22+00:00",
     "source_file": "09-building-image-applications/python/generated-image.png",
     "language_code": "bn"
   },
@@ -618,8 +582,8 @@
     "language_code": "bn"
   },
   "mask.1b2976ccec9e011e.webp": {
-    "original_hash": "c7289ceb502203fec05c4a1945f2ad34",
-    "translation_date": "2026-01-16T12:45:54+00:00",
+    "original_hash": "7fd96814e477c9ba232e3f2099c58637",
+    "translation_date": "2026-07-17T02:01:15+00:00",
     "source_file": "09-building-image-applications/images/mask.png",
     "language_code": "bn"
   },
@@ -677,46 +641,10 @@
     "source_file": "08-building-search-applications/images/query-results.png",
     "language_code": "bn"
   },
-  "repo-thubmnail2.0f2b17cf562b4a8c.webp": {
-    "original_hash": "48d5875c746eea4336d928f29a8a8918",
-    "translation_date": "2026-01-16T11:58:57+00:00",
-    "source_file": "images/repo-thubmnail2.png",
-    "language_code": "bn"
-  },
-  "repo-thubmnailv2.115823d179386974.webp": {
-    "original_hash": "d5b69dfc925c8375e4bf44953616c6fe",
-    "translation_date": "2026-01-16T12:00:13+00:00",
-    "source_file": "images/repo-thubmnailv2.png",
-    "language_code": "bn"
-  },
-  "repo-thumbnailv2.06f4a48036fde647.webp": {
-    "original_hash": "d5b69dfc925c8375e4bf44953616c6fe",
-    "translation_date": "2026-01-16T11:58:41+00:00",
-    "source_file": "images/repo-thumbnailv2.png",
-    "language_code": "bn"
-  },
-  "repo-thumbnailv3.917487e234b90100.webp": {
-    "original_hash": "1573acc06f264d139365fd3fca221806",
-    "translation_date": "2026-01-16T12:00:42+00:00",
-    "source_file": "images/repo-thumbnailv3.png",
-    "language_code": "bn"
-  },
   "repo-thumbnailv4-fixed.11f1ce6a85d01461.webp": {
     "original_hash": "a1c0bdadfc81125f9662146924c9b9af",
     "translation_date": "2026-01-16T12:00:27+00:00",
     "source_file": "images/repo-thumbnailv4-fixed.png",
-    "language_code": "bn"
-  },
-  "repo-thumbnailv4.2a8556df61fae2a1.webp": {
-    "original_hash": "4ea0e4c04d0429fcf5fcf974e9b29526",
-    "translation_date": "2026-01-16T11:59:55+00:00",
-    "source_file": "images/repo-thumbnailv4.png",
-    "language_code": "bn"
-  },
-  "repository-thumbnail.d450333985e6cb81.webp": {
-    "original_hash": "7cf33b807aaf9de3771b56c627077971",
-    "translation_date": "2026-01-16T11:59:43+00:00",
-    "source_file": "images/repository-thumbnail.png",
     "language_code": "bn"
   },
   "sample.8e6ed0440e2c33bf.webp": {
@@ -744,8 +672,8 @@
     "language_code": "bn"
   },
   "startup.94d6b79cc4bb3f5a.webp": {
-    "original_hash": "c10f5b592fb049bd498c300c7042d032",
-    "translation_date": "2026-01-16T12:45:51+00:00",
+    "original_hash": "22ec17200e40886ba9bcd9386205bc6e",
+    "translation_date": "2026-07-17T02:01:11+00:00",
     "source_file": "09-building-image-applications/images/startup.png",
     "language_code": "bn"
   },
@@ -762,14 +690,14 @@
     "language_code": "bn"
   },
   "sunlit_lounge.a75a0cb61749db0e.webp": {
-    "original_hash": "020dd55f65bd4ac0a0b81ae1323ca380",
-    "translation_date": "2026-01-16T12:45:59+00:00",
+    "original_hash": "7d715267753e32863ca855c577bea761",
+    "translation_date": "2026-07-17T02:01:06+00:00",
     "source_file": "09-building-image-applications/images/sunlit_lounge.png",
     "language_code": "bn"
   },
   "sunlit_lounge_result.76ae02957c0bbeb8.webp": {
-    "original_hash": "a18b64845dc1cb6752f121b374527822",
-    "translation_date": "2026-01-16T12:43:56+00:00",
+    "original_hash": "e976e81167dffd18d89507b82d41e973",
+    "translation_date": "2026-07-17T02:01:08+00:00",
     "source_file": "09-building-image-applications/images/sunlit_lounge_result.png",
     "language_code": "bn"
   },
@@ -785,12 +713,6 @@
     "source_file": "01-introduction-to-genai/images/text-completion-example.png",
     "language_code": "bn"
   },
-  "text-generation-works.6a9bf609154fce28.webp": {
-    "original_hash": "3927234d9f22d3141130a3fd08939aec",
-    "translation_date": "2026-01-16T12:35:55+00:00",
-    "source_file": "10-building-low-code-ai-applications/images/text-generation-works.png",
-    "language_code": "bn"
-  },
   "tokenizer-example.80a5c151ee7d1bd4.webp": {
     "original_hash": "70bd973fc6e2b9ea5c0fb994eeb66773",
     "translation_date": "2026-01-16T12:03:14+00:00",
@@ -801,48 +723,6 @@
     "original_hash": "36d1aa62d316d2cc8be4773f8b01c149",
     "translation_date": "2026-01-16T12:12:02+00:00",
     "source_file": "12-designing-ux-for-ai-applications/images/uxinai.png",
-    "language_code": "bn"
-  },
-  "v1-generated-image.a295cfcffa3c13c2.webp": {
-    "original_hash": "9b740bd7ff1b40e32b25a6bc9e046350",
-    "translation_date": "2026-01-16T12:45:57+00:00",
-    "source_file": "09-building-image-applications/images/v1-generated-image.png",
-    "language_code": "bn"
-  },
-  "v1-low-temp-generated-image.c96d135514f96423.webp": {
-    "original_hash": "a40098f4dcb94794c74cd8ca31719f89",
-    "translation_date": "2026-01-16T12:44:00+00:00",
-    "source_file": "09-building-image-applications/images/v1-low-temp-generated-image.png",
-    "language_code": "bn"
-  },
-  "v1-temp-generated-image.a4346e1d2360a056.webp": {
-    "original_hash": "3365bb705b2104f7d1d35847bd21ef0b",
-    "translation_date": "2026-01-16T12:45:45+00:00",
-    "source_file": "09-building-image-applications/images/v1-temp-generated-image.png",
-    "language_code": "bn"
-  },
-  "v2-generated-image.33f55a3714efe61d.webp": {
-    "original_hash": "4788edcde9ec51473dad3536e628daeb",
-    "translation_date": "2026-01-16T12:46:07+00:00",
-    "source_file": "09-building-image-applications/images/v2-generated-image.png",
-    "language_code": "bn"
-  },
-  "v2-low-temp-generated-image.f1b2c78ff318d685.webp": {
-    "original_hash": "4415805bf374b0dd74ed3532b676f14e",
-    "translation_date": "2026-01-16T12:45:49+00:00",
-    "source_file": "09-building-image-applications/images/v2-low-temp-generated-image.png",
-    "language_code": "bn"
-  },
-  "v2-temp-generated-image.871d0c920dbfb0f1.webp": {
-    "original_hash": "b315c8216f3e4c4378f8bd811f6641f6",
-    "translation_date": "2026-01-16T12:45:47+00:00",
-    "source_file": "09-building-image-applications/images/v2-temp-generated-image.png",
-    "language_code": "bn"
-  },
-  "vscode-envvariable.33d8dc1aa25ec2a7.webp": {
-    "original_hash": "00252b60d50c5dfac05767e63ab042dc",
-    "translation_date": "2026-01-16T12:29:19+00:00",
-    "source_file": "06-text-generation-apps/images/vscode-envvariable.png",
     "language_code": "bn"
   },
   "vscode-follow-link.85520ab6a1237adc.webp": {

@@ -1,82 +1,82 @@
-# Szöveggeneráló alkalmazások építése
+# Szöveg generáló alkalmazások fejlesztése
 
-[![Szöveggeneráló alkalmazások építése](../../../translated_images/hu/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Szöveg generáló alkalmazások fejlesztése](../../../translated_images/hu/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
-> _(Kattints a fenti képre a lecke videójának megtekintéséhez)_
+> _(Kattintson a fenti képre, hogy megtekinthesse az óra videóját)_
 
-Eddig a tananyag során láthattad, hogy léteznek olyan alapfogalmak, mint a promptok, és még egy teljes tudományterület is létezik "prompt mérnökség" néven. Számos eszköz, amivel interakcióba léphetsz, például a ChatGPT, az Office 365, a Microsoft Power Platform és mások, támogatják a promptok használatát valamilyen cél elérésére.
+Eddig a tananyag során láttad, hogy vannak alapvető fogalmak, mint például a promptok, és létezik egy egész diszciplína, amit "prompt tervezésnek" hívnak. Számos eszköz, amivel interakcióba léphetsz, mint a ChatGPT, Office 365, Microsoft Power Platform és mások, promptok használatát támogatják, hogy valamilyen célt elérj.
 
-Ahhoz, hogy az ilyen élményt egy alkalmazáshoz adj, meg kell értened olyan fogalmakat, mint a promptok, befejezések és ki kell választanod egy könyvtárat a használathoz. Pontosan ezt fogod megtanulni ebben a fejezetben.
+Ahhoz, hogy ilyen élményt adj egy alkalmazáshoz, értened kell olyan fogalmakat, mint a promptok, befejezések, és ki kell választanod egy könyvtárat, amivel dolgozol. Pontosan ezt fogod megtanulni ebben a fejezetben.
 
 ## Bevezetés
 
-Ebben a fejezetben a következőket fogod megtenni:
+Ebben a fejezetben a következőket fogod megtanulni:
 
-- Megismerkedsz az openai könyvtárral és annak alapfogalmaival.
-- Építesz egy szöveggeneráló alkalmazást az openai segítségével.
-- Megérted, hogyan használhatók olyan fogalmak, mint a prompt, hőmérséklet és tokenek egy szöveggeneráló alkalmazás építéséhez.
+- Megismerkedsz az openai könyvtárral és annak alapvető fogalmaival.
+- Egy szöveg generáló alkalmazást építesz openai segítségével.
+- Megérted, hogyan használhatók olyan fogalmak, mint a prompt, temperature és tokenek egy szöveg generáló alkalmazás építéséhez.
 
 ## Tanulási célok
 
 A lecke végére képes leszel:
 
-- Megmagyarázni, mi az a szöveggeneráló alkalmazás.
-- Szöveggeneráló alkalmazást építeni az openai segítségével.
-- Beállítani az alkalmazásodat úgy, hogy több vagy kevesebb token használjon, és változtathasd a hőmérsékletet a változatos kimenet érdekében.
+- Elmagyarázni, mi az a szöveg generáló alkalmazás.
+- Szöveg generáló alkalmazást építeni az openai segítségével.
+- Konfigurálni az alkalmazásodat, hogy több vagy kevesebb tokennel működjön és változtasd meg a temperature értékét a változatosabb kimenet érdekében.
 
-## Mi az a szöveggeneráló alkalmazás?
+## Mi az a szöveg generáló alkalmazás?
 
-Általában, amikor egy alkalmazást építesz, az valamilyen felülettel rendelkezik, például az alábbiak szerint:
+Általában, amikor egy alkalmazást építesz, annak valamilyen felülete van, például ilyen:
 
-- Parancs alapú. A konzolos alkalmazások tipikus példák, ahol beírsz egy parancsot, és az végrehajt egy feladatot. Például a `git` egy parancs alapú alkalmazás.
-- Felhasználói felület (UI). Néhány alkalmazás grafikus felhasználói felülettel (GUI) rendelkezik, ahol gombokat kattintasz, szöveget viszel be, opciókat választasz és így tovább.
+- Parancs-alapú. A konzol alkalmazások azok az alkalmazások, ahol beírsz egy parancsot, és az elvégzi a feladatot. Például a `git` egy parancs-alapú alkalmazás.
+- Felhasználói felület (UI). Néhány alkalmazás grafikusan felhasználói felülettel rendelkezik, ahol gombokat kattintasz, szöveget írsz be, választhatsz opciókat és így tovább.
 
-### A konzolos és UI alkalmazások korlátoltak
+### A konzol és UI alkalmazások korlátozottak
 
-Hasonlítsd össze egy parancs alapú alkalmazással, ahol beírsz egy parancsot:
+Hasonlítsuk ezt össze egy parancs-alapú alkalmazással, ahol beírsz egy parancsot:
 
-- **Korlátolt**. Nem írhatsz be akármit, csak azokat a parancsokat, amelyeket az alkalmazás támogat.
-- **Nyelvspecifikus**. Néhány alkalmazás sok nyelvet támogat, de alapértelmezésben az alkalmazást egy adott nyelvre építik, még ha több nyelvi támogatást is hozzáadhatsz.
+- **Korlátozott**. Nem írhatsz be akármilyen parancsot, csak azokat, amiket az alkalmazás támogat.
+- **Nyelvspecifikus**. Néhány alkalmazás több nyelvet is támogat, de alapértelmezésben egy adott nyelvre épül, még ha hozzá is adható több nyelvi támogatás.
 
-### A szöveggeneráló alkalmazások előnyei
+### A szöveg generáló alkalmazások előnyei
 
-Miben különbözik tehát egy szöveggeneráló alkalmazás?
+Miben más egy szöveg generáló alkalmazás?
 
-Egy szöveggeneráló alkalmazásban nagyobb a rugalmasság, nem vagy korlátozva egy parancskészletre vagy egy adott bemeneti nyelvre. Ehelyett természetes nyelvet használhatsz az alkalmazással való interakcióra. Egy másik előny, hogy egy olyan adatforrással lépsz interakcióba, amelyet egy hatalmas információkorpuszra tanítottak, míg egy hagyományos alkalmazás korlátozott lehet az adatbázisban lévő tartalmakra.
+Egy szöveg generáló alkalmazásban több a szabadságod, nem vagy korlátozva egy parancskészletre vagy egy adott bemeneti nyelvre. Helyette természetes nyelvet használhatsz az alkalmazással való interakcióra. Egy másik előny, hogy már egy olyan adatforrással dolgozol, amit egy hatalmas információs korpuszra képeztek ki, míg egy hagyományos alkalmazás adatai egy adatbázis tartalmára korlátozódhatnak.
 
-### Mit építhetek egy szöveggeneráló alkalmazással?
+### Mit építhetek egy szöveg generáló alkalmazással?
 
-Sokféle dolgot építhetsz. Például:
+Sok mindent építhetsz, például:
 
-- **Csevegőbot**. Egy olyan csevegőbot, amely kérdésekre válaszol témákban, például a cégedről és termékeiről, jó választás lehet.
-- **Segéd**. A nagyméretű nyelvi modellek (LLM-ek) nagyszerűek például szöveg összegzésére, szövegből való betekintések nyerésére, önéletrajzok, és más szövegek létrehozására.
-- **Kódsegéd**. A használt nyelvi modelltől függően építhetsz kódsegédet, amely segít kódot írni. Például használhatod a GitHub Copilot terméket vagy a ChatGPT-t is kódírás támogatására.
+- **Egy csevegőrobotot (chatbotot)**. Egy chatbot, ami kérdésekre válaszol témakörökről, például a cégedről és termékeiről, jó példa lehet.
+- **Segítőt**. A nyelvi modellek kiválóak szöveg összefoglalására, betekintések kinyerésére, szöveg előállítására, például önéletrajzok létrehozására és más feladatokra.
+- **Kódtámogatót**. Attól függően, melyik nyelvi modellt használod, készíthetsz kódtámogató eszközt, ami segít kód írni. Például használhatod a GitHub Copilotot vagy a ChatGPT-t kódírás támogatására.
 
-## Hogyan kezdjek hozzá?
+## Hogyan kezdhetek neki?
 
-Nos, meg kell találnod a módját, hogy hogyan integrálódj egy LLM-mel, ami általában a következő két megközelítést jelenti:
+Nos, találni kell egy módot az LLM-mel (nagy nyelvi modellel) való integrációra, ami általában a következő két megközelítést jelenti:
 
-- Használj API-t. Itt webes kéréseket építesz a promptoddal, és visszakapod a generált szöveget.
-- Használj könyvtárat. A könyvtárak segítenek becsomagolni az API hívásokat, és egyszerűbbé teszik a használatot.
+- Használj API-t. Itt webkéréseket állítasz össze a promptoddal, és visszakapod a generált szöveget.
+- Használj egy könyvtárat. A könyvtárak segítenek kapszulázni az API hívásokat és megkönnyítik a használatot.
 
 ## Könyvtárak/SDK-k
 
-Néhány jól ismert könyvtár LLM-ekkel való munka esetén:
+Néhány jól ismert könyvtár a nagy nyelvi modellekkel való munkához:
 
-- **openai**, ez a könyvtár megkönnyíti a modellhez való csatlakozást és a promptok elküldését.
+- **openai**, ez a könyvtár megkönnyíti a modellhez való kapcsolódást és promptok küldését.
 
-Ezek mellett vannak magasabb szintű könyvtárak is, mint például:
+Vannak emellett magasabb szintű könyvtárak is, mint például:
 
-- **Langchain**. A Langchain ismert és támogatja a Pythont.
-- **Semantic Kernel**. A Semantic Kernel egy Microsoft által fejlesztett könyvtár, amely támogatja a C#, Python és Java nyelveket.
+- **Langchain**. A Langchain jól ismert és támogatja a Pythont.
+- **Semantic Kernel**. A Semantic Kernel egy Microsoft könyvtár, amely támogatja a C#, Python és Java nyelveket.
 
-## Első alkalmazás az openai könyvtárral
+## Első alkalmazás openai-val
 
-Nézzük meg, hogyan építhetjük meg első alkalmazásunkat, milyen könyvtárakra van szükségünk, menyi minden szükséges és így tovább.
+Nézzük meg, hogyan építhetjük fel az első alkalmazásunkat, milyen könyvtárak kellenek, mennyi beállítás szükséges és így tovább.
 
 ### openai telepítése
 
-Számos könyvtár elérhető az OpenAI vagy az Azure OpenAI használatához. Több programozási nyelvet is használhatsz, például C#, Python, JavaScript, Java és még sok mást. Mi az `openai` Python könyvtárat választottuk, ezért a `pip` csomagkezelővel fogjuk telepíteni.
+Számos könyvtár létezik az OpenAI vagy az Azure OpenAI-val való interakcióhoz. Több programozási nyelv is használható, mint C#, Python, JavaScript, Java és mások. Mi a `openai` Python könyvtárat választottuk, ezért a `pip` segítségével telepítjük.
 
 ```bash
 pip install openai
@@ -84,34 +84,34 @@ pip install openai
 
 ### Erőforrás létrehozása
 
-A következő lépéseket kell elvégezned:
+A következő lépéseket kell megtenned:
 
-- Regisztrálj egy fiókot az Azure-on a következő címen: [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- Szerezz hozzáférést az Azure OpenAI-hoz. Menj a [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) oldalra és kérelmezd a hozzáférést.
+- Hozz létre egy fiókot az Azure-on [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
+- Szerezd meg az Azure OpenAI hozzáférést. Látogass el a [https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) oldalra és igényeld a hozzáférést.
 
   > [!NOTE]
-  > A cikk írásának időpontjában kérelmezni kell az Azure OpenAI használati hozzáférést.
+  > A cikk írásakor hozzáférést kell kérned az Azure OpenAI-hoz.
 
-- Telepítsd a Python-t <https://www.python.org/>
-- Hozz létre egy Azure OpenAI szolgáltatás erőforrást. Lásd az útmutatót arról, hogyan kell [erőforrást létrehozni](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- Telepítsd a Pythont <https://www.python.org/>
+- Hozd létre az Azure OpenAI Szolgáltatás erőforrást. A következő útmutatóban olvashatsz arról, hogyan [hozz létre egy erőforrást](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
-### API kulcs és végpont keresése
+### Találd meg az API kulcsot és az endpoint címet
 
-Ekkor meg kell adnod az `openai` könyvtáradnak, hogy melyik API kulcsot használja. Az API kulcsod megtalálásához menj az Azure OpenAI erőforrásod "Kulcsok és végpont" szekciójára, és másold ki az "1. kulcs" értékét.
+Itt meg kell mondanod az `openai` könyvtárnak, melyik API kulcsot használja. Az API kulcsot az Azure OpenAI erőforrás "Kulcsok és végpont" szekciójában találod, másold ki a "Kulcs 1" értéket.
 
-![Kulcsok és végpont erőforrás panel az Azure Portálban](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+![Kulcsok és végpont az Azure portál erőforrás lapján](https://learn.microsoft.com/azure/ai-foundry/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-Miután ezt az információt kimásoltad, adjuk utasítást a könyvtáraknak, hogy használják azt.
+Ha megvan ez az információ, adjuk meg a könyvtáraknak a használathoz.
 
 > [!NOTE]
-> Érdemes az API kulcsot különválasztani a kódtól. Ezt megteheted környezeti változók használatával.
+> Érdemes az API kulcsot külön tartani a kódtól. Ezt megteheted környezeti változók használatával.
 >
 > - Állítsd be az `OPENAI_API_KEY` környezeti változót az API kulcsodra.
 >   `export OPENAI_API_KEY='sk-...'`
 
 ### Azure konfiguráció beállítása
 
-Ha Azure OpenAI-t használsz (most a Microsoft Foundry része), így állítod be a konfigurációt. Az alapértelmezett `OpenAI` kliens az Azure OpenAI `/openai/v1/` végpontjára mutat, ami a Responses API-val működik és nem igényel `api_version` megadását:
+Ha Azure OpenAI-t használsz (most a Microsoft Foundry része), így kell beállítanod a konfigurációt. A szokásos `OpenAI` klienssel dolgozunk, ami az Azure OpenAI `/openai/v1/` végpontjára mutat, ami kompatibilis a Responses API-val és nem igényel `api_version` megadását:
 
 ```python
 import os
@@ -125,48 +125,48 @@ client = OpenAI(
 
 Fent a következőket állítjuk be:
 
-- `api_key`, ez az API kulcs, amit az Azure Portálból vagy a Microsoft Foundry portálról találsz.
-- `base_url`, ez a Foundry erőforrásod végpontja, aminek a végén a `/openai/v1/` szerepel. Az stabil v1 végpont az OpenAI és az Azure OpenAI esetén is működik `api_version` kezelés nélkül.
+- `api_key`, ez az API kulcsod, amit az Azure Portalban vagy a Microsoft Foundry portálon találsz meg.
+- `base_url`, ez az Foundry erőforrásod végpontja, `/openai/v1/`-el kiegészítve. A stabil v1 végpont működik az OpenAI és az Azure OpenAI esetén is, `api_version` kezelés nélkül.
 
-> [!NOTE] > Az `os.environ` környezeti változókat olvas be. Használhatod az `AZURE_OPENAI_API_KEY` és `AZURE_OPENAI_ENDPOINT` környezeti változók beolvasására. Állítsd be ezeket a környezeti változókat a terminálodban vagy használj hozzá például `dotenv` könyvtárat.
+> [!NOTE] > Az `os.environ` olvassa a környezeti változókat. Használhatod, hogy beolvasd például az `AZURE_OPENAI_API_KEY` és `AZURE_OPENAI_ENDPOINT` változókat. Ezeket a terminálodban állítsd be vagy egy olyan könyvtárral, mint a `dotenv`.
 
 ## Szöveg generálása
 
-A szöveggenerálás módja a Responses API használata a `responses.create` metódussal. Íme egy példa:
+Szöveget a Responses API `responses.create` metódusán keresztül lehet generálni. Például:
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
 
 response = client.responses.create(
-    model="gpt-4o-mini",  # ez a modell telepítési neve
+    model="gpt-5-mini",  # ez a modell telepítésének neve
     input=prompt,
     store=False,
 )
 print(response.output_text)
 ```
 
-A fenti kódban létrehozunk egy választ, és megadjuk a használni kívánt modellt és a promptot. Ezután a generált szöveget kiírjuk a `response.output_text` segítségével.
+A fenti kódban elkészítünk egy választ, megadva a használni kívánt modellt és a promptot. Ezután kiírjuk a generált szöveget az `response.output_text` segítségével.
 
 ### Többfordulós beszélgetések
 
-A Responses API jól használható egyfordulós szöveggeneráláshoz és többfordulós chatbotokhoz is - a `input` paraméterben üzenetlistát adsz meg a beszélgetés felépítéséhez:
+A Responses API jól használható egyfordulós szöveg generálásra és többfordulós chatbotokhoz is - egy üzenetlistát adsz meg az `input` mezőben, hogy építsd a beszélgetést:
 
 ```python
 from openai import OpenAI
 
 client = OpenAI(api_key="sk-...")
 
-response = client.responses.create(model="gpt-4o-mini", input="Hello world", store=False)
+response = client.responses.create(model="gpt-5-mini", input="Hello world", store=False)
 print(response.output_text)
 ```
 
-Erről a funkcionalitásról egy későbbi fejezetben lesz szó.
+Erről a funkcióról többet olvashatsz a következő fejezetben.
 
-## Gyakorlat - az első szöveggeneráló alkalmazásod
+## Gyakorlat - az első szöveg generáló alkalmazásod
 
-Most, hogy megtanultuk, hogyan állítsuk be és konfiguráljuk az openai-t, itt az ideje, hogy megépítsd az első szöveggeneráló alkalmazásodat. Az alkalmazás elkészítéséhez kövesd az alábbi lépéseket:
+Miután megtanultuk, hogyan állítsuk be és konfiguráljuk az openai-t, itt az ideje megépíteni az első szöveg generáló alkalmazásodat. Kövesd a következő lépéseket:
 
-1. Hozz létre egy virtuális környezetet és telepítsd az openai könyvtárat:
+1. Hozz létre egy virtuális környezetet és telepítsd az openai-t:
 
    ```bash
    python -m venv venv
@@ -175,12 +175,12 @@ Most, hogy megtanultuk, hogyan állítsuk be és konfiguráljuk az openai-t, itt
    ```
 
    > [!NOTE]
-   > Ha Windows-t használsz, írd be a `venv\Scripts\activate` parancsot a `source venv/bin/activate` helyett.
+   > Windows esetén a `venv\Scripts\activate` parancsot írd be a `source venv/bin/activate` helyett.
 
    > [!NOTE]
-   > Az Azure OpenAI kulcsodat az alábbi címen találhatod meg: [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst). Keresd meg az `Open AI` szót, válaszd az `Open AI erőforrás`-t, majd a `Kulcsok és végpont` részt, és másold ki az `1. kulcs` értékét.
+   > Az Azure OpenAI kulcsod megtalálásához menj a [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) oldalra, keress rá az `Open AI`-ra, válaszd ki az `Open AI erőforrást`, majd a `Kulcsok és végpont` részt és másold ki a `Kulcs 1` értéket.
 
-1. Hozz létre egy _app.py_ fájlt, és add meg neki a következő kódot:
+1. Hozz létre egy _app.py_ fájlt, és írd bele a következő kódot:
 
    ```python
    import os
@@ -192,10 +192,10 @@ Most, hogy megtanultuk, hogyan állítsuk be és konfiguráljuk az openai-t, itt
    )
    deployment_name = "<deployment name>"
 
-   # add hozzá a teljesítési kódodat
+   # írd be a befejező kódodat
    prompt = "Complete the following: Once upon a time there was a"
 
-   # küldj egy kérést a Responses API segítségével
+   # készíts egy kérést a Responses API használatával
    response = client.responses.create(model=deployment_name, input=prompt, store=False)
 
    # írd ki a választ
@@ -203,9 +203,9 @@ Most, hogy megtanultuk, hogyan állítsuk be és konfiguráljuk az openai-t, itt
    ```
 
    > [!NOTE]
-   > Ha sima OpenAI-t használsz (nem Azure-t), akkor használd ezt: `client = OpenAI(api_key="<helyettesítsd az OpenAI kulcsoddal>")` (`base_url` nélkül) és model helyett adj meg egy modellt, például `gpt-4o-mini` a deployment név helyett.
+   > Ha sima OpenAI-t használsz (nem Azure-t), akkor a `client = OpenAI(api_key="<cseréld le ezt az OpenAI kulcsodra>")` parancsot használd `base_url` nélkül, és a telepítési név helyett add meg a modellt, például `gpt-5-mini`.
 
-   Kimenetként valami hasonlót fogsz látni:
+   Erre egy ilyen outputot kellene kapnod:
 
    ```output
     very unhappy _____.
@@ -213,25 +213,25 @@ Most, hogy megtanultuk, hogyan állítsuk be és konfiguráljuk az openai-t, itt
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## Különböző típusú promptok különböző feladatokra
+## Különböző típusú promptok, különböző feladatokra
 
-Most már láttad, hogyan generálhatsz szöveget egy prompt segítségével. Van már egy programod, amely fut, és amelyet módosíthatsz, változtathatsz különböző típusú szövegek előállításához.
+Most már láttad, hogyan generálhatók szövegek prompt használatával. Van egy futó programod, amit módosíthatsz és változatos szöveg típusokat generálhatsz.
 
 A promptokat sokféle feladatra használhatod. Például:
 
-- **Szövegtípus generálása**. Például generálhatsz verset, kvízkérdéseket stb.
-- **Információ keresése**. Promptokkal kereshetsz információkat, pl. "Mit jelent a CORS a webfejlesztésben?".
-- **Kód generálása**. Promptokkal kódot is generálhatsz, például szabályos kifejezéseket e-mail címek ellenőrzésére, vagy akár egész programokat, például webalkalmazásokat.
+- **Szöveg egy adott típusa generálása**. Például egy vers generálása, kvízkérdések megalkotása stb.
+- **Információk keresése**. Promtok segítségével kereshetsz információkat, mint például a következő példa: 'Mit jelent a CORS a webfejlesztésben?'.
+- **Kód generálása**. Promptokkal kódot generálhatsz, például egy reguláris kifejezést e-mailek ellenőrzésére, vagy akár egy teljes programot, például webalkalmazást.
 
-## Egy gyakorlatiasabb eset: receptgenerátor
+## Egy praktikus példa: receptgenerátor
 
-Képzeld el, hogy vannak alapanyagaid otthon, és főzni szeretnél valamit. Ehhez recept kell. Recept keresésére használhatsz keresőmotort, vagy használhatod az LLM-et is.
+Képzeld el, hogy otthon vannak alapanyagaid, és főzni szeretnél. Ehhez recept kell. Receptet kereshetsz keresőmotorral, vagy használhatsz LLM-et.
 
-Írhatsz egy promptot így:
+Írhatsz egy ilyen promptot:
 
-> "Mutass 5 receptet egy olyan ételhez, amelynek a következő alapanyagai vannak: csirke, burgonya, és sárgarépa. Receptenként sorold fel az összes használt alapanyagot."
+> "Mutass 5 receptet, amelyben a következő alapanyagok vannak: csirke, burgonya és sárgarépa. Minden recept esetében sorold fel az összes felhasznált alapanyagot."
 
-A fenti prompt alapján a válasz hasonló lehet:
+A fenti prompt alapján egy ilyen választ kaphatsz:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -295,16 +295,16 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-Ez a kimenet szuper, tudom, mit főzzek. Itt hasznos fejlesztések lehetnek:
+Ez remek eredmény, tudom, mit főzzek. Ezen a ponton hasznos lehet a következő fejlesztés:
 
-- Szűrni azokat az alapanyagokat, amelyeket nem szeretek vagy amelyekre allergiás vagyok.
-- Bevásárlólistát készíteni, arra az esetre, ha nem lenne meg mind az összetevő otthon.
+- Kiszűrni azokat az alapanyagokat, amiket nem szeretek vagy amire allergiás vagyok.
+- Bevásárlólistát készíteni, ha netán nincs meg otthon valamennyi alapanyag.
 
-Ehhez az alábbi plusz promptot adjuk hozzá:
+Ehhez a következő kiegészítő promptot adjuk hozzá:
 
-> "Kérlek, távolítsd el a receptek közül a fokhagymásakat, mert allergiás vagyok rá, és helyettesítsd valami mással. Kérlek, készíts bevásárlólistát a receptekhez, figyelembe véve, hogy otthon már van csirkém, burgonyám és sárgarépám."
+> "Kérlek, távolítsd el a receptek közül a fokhagymát, mert arra allergiás vagyok, és cseréld valami másra. Készíts kérlek egy bevásárlólistát is a receptekhez, tekintettel arra, hogy otthon már van csirkém, burgonyám és sárgarépám."
 
-Most új eredményt kapsz, mégpedig:
+Most ez az új válaszod lesz:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -371,20 +371,20 @@ Shopping List:
 - Pepper
 ```
 
-Ez az öt recept, aminél nem szerepel a fokhagyma, és emellett van egy bevásárlólista is, figyelembe véve az otthon rendelkezésre álló alapanyagokat.
+Ez az öt recept fokhagyma nélkül, és egy bevásárlólistád is van, ami figyelembe veszi az otthoni alapanyagokat.
 
-## Gyakorlat - építs receptgenerátort
+## Gyakorlat - építs recept generátort
 
-Most, hogy végigvettünk egy forgatókönyvet, írjunk kódot a bemutatott forgatókönyvhez. Ehhez kövesd az alábbi lépéseket:
+Miután eljátszottuk a szituációt, írjunk kódot a bemutatott forgatókönyv megvalósítására. Kövesd az alábbi lépéseket:
 
-1. Használd az eddigi _app.py_ fájlt kiindulási pontként
-1. Keresd meg a `prompt` változót és változtasd meg a kódját a következőre:
+1. Használd kiindulópontként a meglévő _app.py_ fájlt.
+1. Keresd meg a `prompt` változót, és módosítsd a kódját az alábbiakra:
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   Ha most lefuttatod a kódot, hasonló kimenetet fogsz látni:
+   Ha most lefuttatod a kódot, az output hasonló lesz a következőhöz:
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -396,22 +396,22 @@ Most, hogy végigvettünk egy forgatókönyvet, írjunk kódot a bemutatott forg
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > MEGJEGYZÉS, az LLM nem determinisztikus, így minden futtatásnál más-más eredményt kaphatsz.
+   > MEGJEGYZÉS: az LLM-ed nem determinisztikus, ezért minden futtatásnál eltérő eredmény születhet.
 
-   Nagyszerű, nézzük, hogyan fejleszthetjük tovább. A kódot rugalmasabbá akarjuk tenni, hogy az alapanyagok és a receptek száma egyszerűen változtatható legyen.
+   Remek, nézzük, hogyan lehetne tovább fejleszteni. Arra törekszünk, hogy a kód rugalmas legyen, tehát a recept alapanyagok és a receptek száma is módosítható legyen.
 
-1. A kódot módosítsuk az alábbiak szerint:
+1. Módosítsuk a kódot az alábbiak szerint:
 
    ```python
    no_recipes = input("No of recipes (for example, 5): ")
 
    ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
 
-   # a receptek számát interpolálja a bemenetbe és az összetevőkbe
+   # szúrja be a receptek számát a bemeneti szövegbe és az összetevőkbe
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   Egy tesztfutásban így nézhet ki a kód:
+   Egy teszt lefutása így nézhet ki:
 
    ```output
    No of recipes (for example, 5): 3
@@ -424,11 +424,11 @@ Most, hogy végigvettünk egy forgatókönyvet, írjunk kódot a bemutatott forg
 
 ### Fejlesztés szűrő és bevásárlólista hozzáadásával
 
-Most már van egy működő alkalmazásunk, ami képes recepteket előállítani, és rugalmas, mert a felhasználó bemenetein alapul, mind a receptek számát, mind az alapanyagokat illetően.
+Most már van egy működő alkalmazásunk, ami képes receptek előállítására, és rugalmas is, mivel a felhasználótól kap bemeneteket, így a receptek száma és az alapanyagok is változtathatók.
 
-További fejlesztésként a következőket akarjuk hozzáadni:
+További fejlesztéshez szeretnénk az alábbiakat hozzáadni:
 
-- **Alapanyagok szűrése**. Szeretnénk tudni szűrni azokat az alapanyagokat, amelyeket nem szeretünk vagy amelyekre allergiásak vagyunk. Ehhez a változtatáshoz szerkesszük az eddigi promptunkat és adjunk hozzá egy szűrési feltételt a prompt végéhez így:
+- **Alapanyagok szűrése**. Szeretnénk kiszűrni azokat az összetevőket, amiket nem szeretünk vagy allergiásak vagyunk rájuk. Ehhez szerkeszthetjük meglévő promptunkat és a végére egy szűrőfeltételt tehetünk, így:
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -436,9 +436,9 @@ További fejlesztésként a következőket akarjuk hozzáadni:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  Fent a prompt végéhez adjuk a `{filter}` változót, és a szűrési feltételt is begyűjtjük a felhasználótól.
+  Fent hozzáadtuk a `{filter}`-t a prompt végére, és meg is fogjuk kapni a felhasználótól a szűrő értéket.
 
-  Egy példa a program futására most így nézhet ki:
+  Egy példa a program futtatására most így nézhet ki:
 
   ```output
   No of recipes (for example, 5): 3
@@ -505,14 +505,14 @@ További fejlesztésként a következőket akarjuk hozzáadni:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  Mint látod, azok a receptek, amelyek tejterméket tartalmaznak, most ki lettek szűrve. De ha laktózérzékeny vagy, akkor lehet, hogy a sajtot tartalmazó recepteket is ki szeretnéd szűrni, ezért fontos hogy világos legyen a feltétel.
+  Ahogy látod, azokat a recepteket kiszűrtük, amiben tej szerepel. De ha laktózérzékeny vagy, akkor akár a sajtot is kiszűrheted, tehát egyértelműen kell kommunikálnod.
 
 
-- **Készíts bevásárlólistát**. Szeretnénk készíteni egy bevásárlólistát, figyelembe véve, mi van már otthon.
+- **Állíts össze egy bevásárlólistát**. Szeretnénk összeállítani egy bevásárlólistát, figyelembe véve, hogy mi van már itthon.
 
-  Ehhez a funkcióhoz megpróbálhatjuk egyszerre megoldani az egészet egy prompttal, vagy két részre bonthatjuk, és a második promptba hozzáadjuk az első prompt eredményét kontextusként. Próbáljuk meg az utóbbi megközelítést.
+  Ehhez a funkcióhoz vagy megpróbálhatunk mindent egyetlen promptban megoldani, vagy két promptra bonthatjuk. Próbáljuk ki az utóbbi megközelítést. Itt egy további prompt hozzáadását javasoljuk, de ahhoz, hogy ez működjön, az első prompt eredményét hozzá kell adnunk a második prompt kontextusához.
 
-  Keressük meg a kódban azt a részt, ahol az első prompt eredményét kiírja, és alatta adjuk hozzá a következő kódot:
+  Találd meg a kódban azt a részt, ahol az első prompt eredményét írja ki, és add hozzá alá a következő kódot:
 
   ```python
   old_prompt_result = response.output_text
@@ -521,26 +521,26 @@ További fejlesztésként a következőket akarjuk hozzáadni:
   new_prompt = f"{old_prompt_result} {prompt}"
   response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
 
-  # válasz nyomtatása
+  # válasz kiíratása
   print("Shopping list:")
   print(response.output_text)
   ```
 
-  Vegyük figyelembe a következőket:
+  Figyeld meg a következőket:
 
-  1. Új promptot állítunk össze az első prompt eredményének hozzáadásával:
+  1. Egy új promptot építünk, az első prompt eredményét hozzáadva az új prompthoz:
 
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  1. Új kérést teszünk, figyelembe véve az első promptnál megadott tokenmennyiséget, ezért most `max_output_tokens` értéke 1200 lesz.
+  1. Új kérést indítunk, figyelembe véve az első promptnál kért tokenek számát, ezért most `max_output_tokens` értéke 1200 lesz.
 
      ```python
      response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
      ```
 
-     Ezt a kódot lefuttatva, a következő kimenetet kapjuk:
+     Ezen a kódon futtatva most az alábbi kimenetet kapjuk:
 
      ```output
      No of recipes (for example, 5): 2
@@ -554,11 +554,11 @@ További fejlesztésként a következőket akarjuk hozzáadni:
      -Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice
      ```
 
-## Fejleszd tovább a beállításod
+## Fejleszd tovább a beállításaidat
 
-Ami eddig van, az működő kód, de van néhány finomhangolás, amit meg kell tennünk a további javítás érdekében. Néhány teendő:
+Amit eddig csináltunk, az egy működő kód, de van néhány módosítás, amit érdemes elvégezni a további javítás érdekében. Néhány teendő:
 
-- **Válaszd szét a titkokat és a kódot**, mint például az API kulcsot. A titkok nem tartoznak a kódba, és biztonságos helyen kell tárolni őket. A titkok szétválasztásához használhatunk környezeti változókat és olyan könyvtárakat, mint a `python-dotenv`, hogy fájlból töltsük be őket. Így nézne ki a kód:
+- **Titkok elkülönítése a kódtól**, például az API kulcs. A titkok nem tartoznak a kódba, és biztonságos helyen kell tárolni őket. A titkok elkülönítésére környezeti változókat használhatunk, illetve olyan könyvtárakat mint a `python-dotenv`, hogy fájlból töltsük be őket. Így nézhet ki ez kódban:
 
   1. Hozz létre egy `.env` fájlt a következő tartalommal:
 
@@ -566,7 +566,7 @@ Ami eddig van, az működő kód, de van néhány finomhangolás, amit meg kell 
      OPENAI_API_KEY=sk-...
      ```
 
-     > Megjegyzés: Azure OpenAI használatakor Microsoft Foundry-ban a következő környezeti változókat kell beállítani helyette:
+     > Megjegyzés: Azure OpenAI használata esetén, Microsoft Foundry-ban, helyette az alábbi környezeti változókat kell beállítani:
 
      ```bash
      AZURE_OPENAI_API_KEY=<replace>
@@ -574,7 +574,7 @@ Ami eddig van, az működő kód, de van néhány finomhangolás, amit meg kell 
      AZURE_OPENAI_API_VERSION=2024-10-21
      ```
 
-     Kódban a környezeti változókat így töltenéd be:
+     Kódban így töltjük be a környezeti változókat:
 
      ```python
      import os
@@ -586,39 +586,45 @@ Ami eddig van, az működő kód, de van néhány finomhangolás, amit meg kell 
      client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
      ```
 
-- **Szó a token hosszáról**. Fontoljuk meg, hány tokenre van szükségünk a kívánt szöveg generálásához. A tokenek költséggel járnak, ezért ahol lehet, spóroljunk a tokenek számával. Például, megfogalmazhatjuk úgy a promptot, hogy kevesebb token szükséges?
+- **Szó a token hosszúságról**. Fontoljuk meg, mennyi tokenre van szükségünk a kívánt szöveg generálásához. A tokenek pénzbe kerülnek, ezért lehetőség szerint takarékonynak kell lennünk a felhasznált tokenek számával. Például: le lehet-e rövidíteni a promptot, hogy kevesebb tokenből megússzuk?
 
-  A használt tokenek számát a `max_output_tokens` paraméterrel változtathatjuk. Például, ha 100 tokent akarunk használni, így kell tennünk:
+  A felhasznált tokenek számát a `max_output_tokens` paraméterrel állíthatod. Ha például 100 tokenre van szükséged, ezt használhatod:
 
   ```python
   response = client.responses.create(model=deployment, input=prompt, max_output_tokens=100, store=False)
   ```
 
-- **Kísérletezés a hőmérséklettel**. A hőmérséklet olyan paraméter, amit eddig nem említettünk, de fontos szerepe van a program viselkedésében. Minél magasabb a hőmérséklet értéke, annál véletlenszerűbb lesz a kimenet. Ezzel szemben minél alacsonyabb az érték, annál kiszámíthatóbb a kimenet. Döntsd el, hogy változatosságot akarsz-e az eredményben, vagy sem.
+- **Kísérletezés a hőmérséklettel**. A hőmérséklet (temperature) egy fontos paraméter, amit eddig nem említettünk, de fontos a program teljesítményének alakításában. Minél magasabb a hőmérséklet értéke, annál véletlenszerűbb lesz a kimenet. Fordítva, minél alacsonyabb a hőmérséklet, annál kiszámíthatóbb a kimenet. Gondold át, hogy szeretnél-e változatosságot a válaszodban.
 
-  A hőmérséklet módosításához használd a `temperature` paramétert. Például, ha 0.5-ös hőmérsékletet akarsz, így állítsd be:
+  A hőmérséklet beállítására a `temperature` paramétert használhatod. Például, ha 0.5 értéket szeretnél adni:
 
   ```python
   response = client.responses.create(model=deployment, input=prompt, temperature=0.5, store=False)
   ```
 
-  > Megjegyzés: minél közelebb van az érték 1.0-hoz, annál változatosabb lesz a kimenet.
+  > Megjegyzés: minél közelebb van 1.0-hez, annál változatosabb a kimenet.
+
+- **Az érvényes következtető modellek nem használják a `temperature` paramétert**. Ez egy fontos 2026-os változás. A Microsoft Foundry jelenleg nem elavult, jelenlegi modellei **következtető modellek** (GPT-5 család, o-sorozat) - és ezek **nem támogatják a `temperature` vagy `top_p` paramétereket** (sem a `max_tokens`-t; helyette a `max_output_tokens` használatos). Ha a `temperature`-t küldöd a `gpt-5-mini`-nek, "nem támogatott paraméter" hiba lesz az eredmény. Ezért a fent említett hőmérséklet példát olyan modellnél próbáld ki, amely még támogatja a mintavételezési vezérlőket - például egy nyílt **Llama** modell, mint a `Llama-3.3-70B-Instruct` a [Microsoft Foundry modellkatalógusából](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst), használva a Foundry Models / Azure AI Inference végpontot (ugyanúgy, mint a `githubmodels-*` minták esetében). A GPT-5-höz hasonló következtető modelleknél másképpen irányítod a kimenetet:
+  - **Prompt tervezés** - világos utasítások, példák és strukturált kimenet (lásd a [04 - Prompt Engineering](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst) leckét) végzik el azt, amit a mintavételezési beállítások korábban.
+  - **Következtető vezérlők** - olyan paraméterek, mint a következtetési erőfeszítés/terjedelem, amelyek mérlegelik a következtetés mélységét a késleltetés és költség ellenében.
+
+  Röviden: a `temperature`/`top_p` még mindig érvényes sok modellen (Llama, Mistral, Phi és a GPT-4.x család - bár utóbbi deprekálódó), de az irány a prompt tervezés + következtetési vezérlők használata a GPT-5-höz hasonló következtető modelleknél.
 
 ## Feladat
 
-Ehhez a feladathoz te döntheted el, mit szeretnél megvalósítani.
+Ez a feladat szabadon választható, hogy mit építesz.
 
 Íme néhány javaslat:
 
-- Finomíts tovább a receptgeneráló alkalmazást. Próbálj ki különböző hőmérsékleti értékeket és promptokat, hogy meglásd, milyen eredményt érhetsz el.
-- Készíts egy "tanulótársat". Ez az app képes legyen kérdésekre válaszolni egy témáról, például Pythont illetően; lehetnek promptok, mint "Mi a(z) X a Pythonban?", vagy kérheted, hogy mutasson példakódot egy adott témához.
-- Történelmi bot, keltsd életre a történelmet, utasítsd a botot, hogy játsszon egy adott történelmi személyt, és kérdezd őt az életéről és koráról.
+- Finomítsd tovább a recept generátor alkalmazást. Játssz a hőmérséklet értékekkel és a promptokkal, hogy lássad, mit tudsz kihozni belőle.
+- Építs egy "tanulótársat". Ez az app tudjon kérdésekre válaszolni egy témában, például Python, ilyen prompt lehet "Mi az adott téma Pythonban?", vagy kérhetsz kódot egy adott témához stb.
+- Történelmi bot, elevenítsd meg a történelmet, utasítsd a botot, hogy játsszon el egy adott történelmi szereplőt, és kérdezd meg az életéről és koráról.
 
 ## Megoldás
 
 ### Tanulótárs
 
-Az alábbi prompt egy induló pont, nézd meg, hogyan használhatod és alakíthatod a saját ízlésed szerint.
+Lent egy kezdő prompt látható, nézd meg, hogyan tudod használni és a kedved szerint módosítani.
 
 ```text
 - "You're an expert on the Python language
@@ -633,7 +639,7 @@ Az alábbi prompt egy induló pont, nézd meg, hogyan használhatod és alakíth
 
 ### Történelmi bot
 
-Íme néhány prompt, amiket használhatsz:
+Íme néhány prompt, amit használhatsz:
 
 ```text
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
@@ -644,21 +650,21 @@ Az alábbi prompt egy induló pont, nézd meg, hogyan használhatod és alakíth
 
 ## Tudásellenőrzés
 
-Mit csinál a hőmérséklet fogalma?
+Mit csinál a hőmérséklet koncepció?
 
-1. Az irányítja, mennyire véletlenszerű a kimenet.
-1. Az irányítja, mekkora a válasz mérete.
-1. Az irányítja, mennyi token kerül felhasználásra.
+1. Szabályozza, hogy mennyire véletlenszerű a kimenet.
+1. Szabályozza, hogy mekkora legyen a válasz.
+1. Szabályozza, hogy hány token legyen felhasználva.
 
 ## 🚀 Kihívás
 
-A feladaton dolgozva próbáld ki a hőmérséklet változtatását: állítsd 0-ra, 0.5-re és 1-re. Ne feledd, 0 a legkevésbé változatos, 1 a leginkább. Melyik érték a legjobb a te alkalmazásodhoz?
+A feladaton dolgozva próbáld változtatni a hőmérsékletet: állítsd 0-ra, 0.5-re és 1-re. Ne feledd, 0 a legkevésbé változatos, 1 a leginkább változatos. Melyik érték működik legjobban az alkalmazásodban?
 
 ## Nagyszerű munka! Folytasd a tanulást
 
-A lecke befejezése után nézd meg a [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) gyűjteményünket, hogy tovább fejleszd generatív MI tudásodat!
+A lecke elvégzése után nézd meg [a Generatív AI tanulási gyűjteményünket](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy tovább fejleszd a generatív MI tudásodat!
 
-Indulj neki a 7. leckének, ahol a [chat alkalmazások építésének](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst) módját nézzük majd meg!
+Lépj tovább a 7. leckére, ahol megnézzük, hogyan lehet [chat alkalmazásokat építeni](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 

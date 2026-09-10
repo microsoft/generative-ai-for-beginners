@@ -1,6 +1,6 @@
 # Local Setup 🖥️
 
-**Use this guide if you prefer to run everything on your own laptop.**  
+**Use this guide if you prefer to run everything on your own laptop.**   
 You have two paths: **(A) native Python + virtual-env** or **(B) VS Code Dev Container with Docker**.  
 Choose whichever feels easier—both lead to the same lessons.
 
@@ -41,7 +41,7 @@ source .venv/bin/activate     # macOS / Linux
 pip install -r requirements.txt
 ```
 
-Skip to Section 3 on [API keys](../../../00-course-setup)
+Skip to Section 3 on [API keys](#3-add-your-api-keys)
 
 ## 2. Option B – VS Code Dev Container (Docker)
 
@@ -139,7 +139,9 @@ Once you access the URL, you should see the course outline and be able to naviga
 ## 3. Add Your API Keys
 
 Keeping your API keys safe and secure is important when building any type of application. We recommend not to store any API keys directly in your code. Committing those details to a public repository could result in security issues and even unwanted costs if used by a bad actor.
-Here's a step-by-step guide on how to create a `.env` file for Python and add the `GITHUB_TOKEN`:
+Here's a step-by-step guide on how to create a `.env` file for Python and add your Microsoft Foundry Models credentials:
+
+> **Note:** GitHub Models (and its `GITHUB_TOKEN` variable) is retiring at the end of July 2026. This guide uses [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) instead. Prefer to work fully offline? See [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst).
 
 1. **Navigate to Your Project Directory**: Open your terminal or command prompt and navigate to your project's root directory where you want to create the `.env` file.
 
@@ -161,10 +163,11 @@ Here's a step-by-step guide on how to create a `.env` file for Python and add th
    echo . > .env
    ```
 
-3. **Edit the `.env` File**: Open the `.env` file in a text editor (e.g., VS Code, Notepad++, or any other editor). Add the following line to the file, replacing `your_github_token_here` with your actual GitHub token:
+3. **Edit the `.env` File**: Open the `.env` file in a text editor (e.g., VS Code, Notepad++, or any other editor). Add the following lines to the file, replacing the placeholders with your actual Microsoft Foundry project endpoint and API key:
 
    ```env
-   GITHUB_TOKEN=your_github_token_here
+   AZURE_INFERENCE_ENDPOINT=your_foundry_endpoint_here
+   AZURE_INFERENCE_CREDENTIAL=your_foundry_api_key_here
    ```
 
 4. **Save the File**: Save the changes and close the text editor.
@@ -184,13 +187,14 @@ Here's a step-by-step guide on how to create a `.env` file for Python and add th
    # Load environment variables from .env file
    load_dotenv()
 
-   # Access the GITHUB_TOKEN variable
-   github_token = os.getenv("GITHUB_TOKEN")
+   # Access the Microsoft Foundry Models variables
+   endpoint = os.getenv("AZURE_INFERENCE_ENDPOINT")
+   token = os.getenv("AZURE_INFERENCE_CREDENTIAL")
 
-   print(github_token)
+   print(endpoint)
    ```
 
-That's it! You've successfully created a `.env` file, added your GitHub token, and loaded it into your Python application.
+That's it! You've successfully created a `.env` file, added your Microsoft Foundry Models credentials, and loaded them into your Python application.
 
 🔐 Never commit .env—it’s already in .gitignore.
 Full provider instructions live in [`providers.md`](03-providers.md).
@@ -219,5 +223,5 @@ Full provider instructions live in [`providers.md`](03-providers.md).
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

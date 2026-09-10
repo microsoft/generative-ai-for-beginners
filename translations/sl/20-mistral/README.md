@@ -4,39 +4,39 @@
 
 Ta lekcija bo zajemala: 
 - Raziskovanje različnih modelov Mistral 
-- Razumevanje uporabnih primerov in scenarijev za vsak model 
-- Raziskovanje primerov kode, ki prikazujejo edinstvene značilnosti posameznega modela. 
+- Razumevanje primerov uporabe in scenarijev za vsak model 
+- Raziskovanje vzorcev kode, ki prikazujejo edinstvene značilnosti vsakega modela. 
 
 ## Modeli Mistral 
 
 V tej lekciji bomo raziskali 3 različne modele Mistral: 
 **Mistral Large**, **Mistral Small** in **Mistral Nemo**. 
 
-Vsak od teh modelov je brezplačno dostopen na [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst). Koda v tem zvezku bo uporabila te modele za izvajanje kode.
+Vsak od teh modelov je brezplačno na voljo na [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst). Koda v tej zvezki bo uporabila te modele za izvajanje kode.
 
-> **Opomba:** GitHub Models se bo upokojil konec julija 2026. Tukaj so podrobnosti o uporabi [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) za prototipiranje z AI modeli. 
+> **Opomba:** GitHub Models se bo upokojil konec julija 2026. Tukaj so dodatne podrobnosti o uporabi [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) za prototipiranje z AI modeli. 
 
 
 ## Mistral Large 2 (2407)
-Mistral Large 2 je trenutno glavni model Mistral in je zasnovan za podjetniško uporabo. 
+Mistral Large 2 je trenutno vodilni model podjetja Mistral in je zasnovan za podjetniško uporabo. 
 
-Model je nadgradnja prvotnega Mistral Large z naslednjimi prednostmi: 
--  Večje kontekstno okno - 128k proti 32k 
--  Boljša zmogljivost pri matematičnih in programerskih nalogah - povprečna natančnost 76,9% proti 60,4% 
--  Povečana večjezična zmogljivost - jeziki vključujejo: angleščino, francoščino, nemščino, španščino, italijanščino, portugalščino, nizozemščino, ruščino, kitajščino, japonščino, korejščino, arabščino in hindijščino.
+Model je nadgradnja prvotnega Mistral Large z zagotavljanjem 
+-  Večjega kontekstnega okna - 128k v primerjavi z 32k 
+-  Boljše zmogljivosti pri matematičnih in programerskih nalogah - 76,9 % povprečne natančnosti proti 60,4 % 
+-  Povečane večjezične zmogljivosti - jeziki vključujejo: angleščino, francoščino, nemščino, španščino, italijanščino, portugalščino, nizozemščino, ruščino, kitajščino, japonščino, korejščino, arabščino in hindijščino.
 
-Z temi funkcijami Mistral Large izstopa pri 
-- *Generiranju z uporabo poizvedb oz. RAG (Retrieval Augmented Generation)* - zaradi večjega kontekstnega okna
-- *Klicu funkcij* - ta model ima native klic funkcij, kar omogoča integracijo z zunanjimi orodji in API-ji. Ti klici se lahko izvajajo vzporedno ali zaporedno enega za drugim. 
-- *Generiranju kode* - ta model izstopa pri generiranju kode v Pythonu, Javi, TypeScriptu in C++. 
+S temi lastnostmi Mistral Large izstopa pri 
+- *Pridobitveno podprti generaciji (RAG)* - zaradi večjega kontekstnega okna
+- *Klicu funkcij* - ta model ima vgrajen klic funkcij, ki omogoča integracijo z zunanjimi orodji in API-ji. Ti klici se lahko izvajajo vzporedno ali zaporedoma v nizu. 
+- *Generaciji kode* - ta model izstopa pri generiranju v Pythonu, Javi, TypeScriptu in C++. 
 
 ### Primer RAG z uporabo Mistral Large 2 
 
-V tem primeru uporabljamo Mistral Large 2 za izvajanje RAG vzorca nad besedilnim dokumentom. Vprašanje je zapisano v korejščini in sprašuje o avtorjevih dejavnostih pred fakulteto. 
+V tem primeru uporabljamo Mistral Large 2 za izvajanje vzorca RAG na besedilnem dokumentu. Vprašanje je napisano v korejščini in sprašuje o dejavnostih avtorja pred fakulteto. 
 
-Uporablja Cohere Embeddings Model za ustvarjanje vdelavk besedilnega dokumenta in vprašanja. Za ta primer uporablja Python paket faiss kot shramben vektorjev. 
+Uporablja model vdelav Cohere za ustvarjanje vdelav besedilnega dokumenta in vprašanja. Za ta vzorec uporablja Python paket faiss kot shrambo vektorjev. 
 
-Poziv, poslan modelu Mistral, vključuje tako vprašanja kot pridobljene dele besedila, ki so podobni vprašanju. Model nato poda odgovor v naravnem jeziku. 
+Poziv, poslan modelu Mistral, vključuje tako vprašanja kot pridobljene dele, ki so podobni vprašanju. Model nato poda odgovor v naravnem jeziku. 
 
 ```python 
 pip install faiss-cpu
@@ -53,7 +53,7 @@ from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.inference import EmbeddingsClient
 
-# Pridobite jih s strani »Pregled« vašega Microsoft Foundry projekta
+# Pridobite te s strani "Pregled" vašega Microsoft Foundry projekta
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-large"
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
@@ -134,22 +134,22 @@ print(chat_response.choices[0].message.content)
 ```
 
 ## Mistral Small 
-Mistral Small je še en model iz družine modelov Mistral v kategoriji premier/podjetje. Kot ime pove, je ta model majhen jezikovni model (SLM). Prednosti uporabe Mistral Small so: 
-- Varčevanje stroškov v primerjavi z Mistral LLM kot so Mistral Large in NeMo - 80% znižanje cene
-- Nizka zakasnitev - hitrejši odziv v primerjavi z Mistral LLM-ji
-- Prilagodljivost - lahko se namesti v različnih okoljih z manj omejitvami glede zahtevanih virov. 
+Mistral Small je še en model v družini modelov Mistral v kategoriji premier/podjetniški. Kot ime pove, je ta model majhen jezikovni model (SLM). Prednosti uporabe Mistral Small so: 
+- Varčevanje stroškov v primerjavi z LLM modeli Mistral, kot so Mistral Large in NeMo - 80 % znižanje cene
+- Majhna latenca - hitrejši odziv v primerjavi z LLM modeli Mistral
+- Prilagodljiv - lahko je nameščen v različnih okoljih z manj omejitvami glede potrebnih virov. 
 
 
 Mistral Small je odličen za: 
-- Naloge, osnovane na besedilu, kot so povzema, analiza sentimenta in prevajanje. 
+- Naloge, ki temeljijo na besedilu, kot so povzemanje, analiza sentimenta in prevajanje. 
 - Aplikacije, kjer so pogoste zahteve zaradi stroškovne učinkovitosti 
-- Nizkoločasne naloge s kodo, kot so pregled in predlogi kode 
+- Naloge kode z nizko latenco, kot so pregled in predlogi kode 
 
 ## Primerjava Mistral Small in Mistral Large 
 
-Za prikaz razlik v zakasnitvi med Mistral Small in Large zaženite spodnje celice. 
+Za prikaz razlik v latenci med Mistral Small in Large, zaženite spodnje celice. 
 
-Videli boste razliko v odzivnem času med 3-5 sekundami. Prav tako opazite dolžino in slog odgovora na isti poziv.  
+Opazili boste razliko v časih odziva med 3-5 sekundami. Prav tako opazite dolžine in slog odgovorov na enak poziv.  
 
 ```python 
 
@@ -213,22 +213,22 @@ print(response.choices[0].message.content)
 
 V primerjavi z drugima dvema modeloma, predstavljenima v tej lekciji, je Mistral NeMo edini brezplačni model z licenco Apache2. 
 
-Vidijo ga kot nadgradnjo prejšnjega odprtokodnega LLM Mistral, Mistral 7B. 
+Šteje se za nadgradnjo prejšnjega odprtokodnega LLM-ja podjetja Mistral, Mistral 7B. 
 
 Nekatere druge značilnosti modela NeMo so: 
 
-- *Učinkovitejša tokenizacija:* Ta model uporablja tokenizator Tekken namesto bolj običajno uporabljenega tiktoken. To omogoča boljšo zmogljivost za več jezikov in kode. 
+- *Učinkovitejše tokeniziranje:* Ta model uporablja tokenizator Tekken namesto bolj pogosto uporabljenega tiktoken. To omogoča boljšo zmogljivost v več jezikih in kodi. 
 
-- *Fino nastavljanje (Finetuning):* Osnovni model je na voljo za fino nastavljanje. To omogoča večjo prilagodljivost za primere uporabe, kjer je fino nastavljanje potrebno. 
+- *Finetuning:* Osnovni model je na voljo za nadaljnje prilagajanje. To omogoča večjo prilagodljivost za primere uporabe, kjer je prilagajanje potrebno. 
 
-- *Native klic funkcij* - Tako kot Mistral Large je bil ta model usposobljen za klic funkcij. To ga naredi edinstvenega, saj je eden izmed prvih odprtokodnih modelov s to možnostjo. 
+- *Vgrajen klic funkcij* - tako kot Mistral Large, je bil ta model usposobljen za klic funkcij. To ga naredi edinstvenega kot enega prvih odprtokodnih modelov s to funkcionalnostjo. 
 
 
 ### Primerjava tokenizatorjev 
 
-V tem primeru bomo pogledali, kako Mistral NeMo obvladuje tokenizacijo v primerjavi z Mistral Large. 
+V tem vzorcu bomo pogledali, kako Mistral NeMo obravnava tokenizacijo v primerjavi z Mistral Large. 
 
-Oba primera uporabljata isti poziv, a videli boste, da NeMo vrne manj tokenov kot Mistral Large. 
+Oba vzorca vzameta isti poziv, vendar boste opazili, da NeMo vrne manj tokenov kot Mistral Large. 
 
 ```bash
 pip install mistral-common
@@ -346,9 +346,9 @@ tokens, text = tokenized.tokens, tokenized.text
 print(len(tokens))
 ```
 
-## Učenje se tukaj ne ustavi, nadaljujte pot
+## Učenje tukaj ne konča, nadaljujte pot
 
-Po zaključku te lekcije si oglejte našo [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) za nadaljnje poglabljanje znanja o Generativni AI!
+Po končani tej lekciji si oglejte našo [Zbirko učenja o generativni AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), da nadaljujete z nadgrajevanjem svojega znanja o generativni umetni inteligenci!
 
 ---
 

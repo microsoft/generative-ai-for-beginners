@@ -1,42 +1,42 @@
-# 使用 Mistral 模型构建
+# 使用 Mistral 模型构建  
 
-## 介绍
+## 介绍  
 
-本课将涵盖：
-- 探索不同的 Mistral 模型
-- 理解每个模型的用例和场景
-- 探索展示每个模型独特功能的代码示例。
+本课将涵盖：  
+- 探索不同的 Mistral 模型  
+- 了解每个模型的用例和场景  
+- 探索展示每个模型独特特性的代码示例。  
 
-## Mistral 模型
+## Mistral 模型  
 
-在本课中，我们将探索 3 种不同的 Mistral 模型：
-**Mistral Large**、**Mistral Small** 和 **Mistral Nemo**。
+本课我们将探索 3 种不同的 Mistral 模型：  
+**Mistral Large**、**Mistral Small** 和 **Mistral Nemo**。  
 
-这些模型均可在 [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) 免费使用。本笔记本中的代码将使用这些模型运行。
+这些模型均免费提供于 [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst)。本笔记本中的代码将使用这些模型来运行。  
 
-> **注意：** GitHub 模型将在 2026 年 7 月底退休。有关使用 [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) 进行 AI 模型原型开发的更多详细信息，请参见此处。
+> **注意：** GitHub 模型服务将于 2026 年 7 月底退役。有关使用 [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) 进行 AI 模型原型设计的更多详情，请参见此链接。  
 
 
-## Mistral Large 2 (2407)
-Mistral Large 2 目前是 Mistral 的旗舰模型，专为企业使用设计。
+## Mistral Large 2 (2407)  
+Mistral Large 2 目前是 Mistral 的旗舰模型，面向企业使用设计。  
 
-该模型是原版 Mistral Large 的升级，提供：
-- 更大的上下文窗口 - 128k 对比 32k
-- 在数学和编程任务上的更好表现 - 平均准确率76.9% 对比 60.4%
-- 增强的多语言性能 - 支持语言包括：英语、法语、德语、西班牙语、意大利语、葡萄牙语、荷兰语、俄语、中文、日语、韩语、阿拉伯语和印地语。
+该模型是对原始 Mistral Large 的升级，具备  
+- 更大的上下文窗口 - 128k 对比 32k  
+- 在数学和编码任务上表现更佳 - 平均准确率 76.9% 对比 60.4%  
+- 提升的多语言能力 - 支持语言包括：英语、法语、德语、西班牙语、意大利语、葡萄牙语、荷兰语、俄语、中文、日语、韩语、阿拉伯语和印地语。  
 
-凭借这些功能，Mistral Large 在以下方面表现出色：
-- *检索增强生成 (RAG)* - 由于更大的上下文窗口
-- <em>函数调用</em> - 此模型支持原生函数调用，允许与外部工具和 API 集成。这些调用可以并行或顺序执行。
-- <em>代码生成</em> - 此模型在 Python、Java、TypeScript 和 C++ 代码生成方面表现出色。
+凭借这些特性，Mistral Large 在以下方面表现优异：  
+- *检索增强生成（RAG）* - 由于更大的上下文窗口  
+- <em>函数调用</em> - 该模型支持原生函数调用，允许与外部工具和 API 集成。调用方式可以并行或顺序执行。  
+- <em>代码生成</em> - 该模型在 Python、Java、TypeScript 和 C++ 代码生成方面表现出色。  
 
-### 使用 Mistral Large 2 的 RAG 示例
+### 使用 Mistral Large 2 的 RAG 示例  
 
-在此示例中，我们使用 Mistral Large 2 对文本文件执行 RAG 模式。问题用韩语书写，询问作者在大学前的活动。
+在此示例中，我们使用 Mistral Large 2 对文本文件执行 RAG 模式。问题使用韩语书写，询问作者大学前的活动。  
 
-它使用 Cohere Embeddings 模型创建文本文件和问题的嵌入表示。本示例中使用 faiss Python 包作为向量存储。
+它使用 Cohere Embeddings 模型为文本和问题创建向量表示。此示例使用 faiss Python 包作为向量存储。  
 
-发送给 Mistral 模型的提示包含问题和与问题相似的检索片段。模型随后提供自然语言响应。
+发给 Mistral 模型的提示包括问题和与问题相似的检索块。模型随后提供自然语言回复。  
 
 ```python 
 pip install faiss-cpu
@@ -53,7 +53,7 @@ from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.inference import EmbeddingsClient
 
-# 从您的 Microsoft Foundry 项目的“概览”页面获取这些
+# 从您的Microsoft Foundry项目的“概览”页面获取这些
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Mistral-large"
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
@@ -133,23 +133,23 @@ chat_response = client.complete(
 print(chat_response.choices[0].message.content)
 ```
 
-## Mistral Small
-Mistral Small 是 Mistral 家族中另一款顶级/企业级模型。顾名思义，该模型是小型语言模型（SLM）。使用 Mistral Small 的优势包括：
-- 与 Mistral 大型模型（如 Mistral Large 和 NeMo）相比，成本节约约 80%
-- 低延迟 - 响应速度比 Mistral 的大型语言模型更快
-- 灵活性强 - 可在不同环境中部署，对所需资源限制较少。
+## Mistral Small  
+Mistral Small 是 Mistral 系列中另一款属于高级/企业分类的模型。顾名思义，该模型属于小型语言模型（SLM）。使用 Mistral Small 的优势包括：  
+- 与 Mistral 大型语言模型如 Mistral Large 和 NeMo 相比节省成本 - 价格下降 80%  
+- 低延迟 - 响应速度较 Mistral 的大型语言模型更快  
+- 灵活 - 可部署于不同环境，对资源需求限制较少。  
 
 
-Mistral Small 适合：
-- 基于文本的任务，如摘要、情感分析和翻译。
-- 由于成本效益高，适合频繁请求的应用
-- 低延迟的代码任务，如代码审查和建议
+Mistral Small 适合：  
+- 基于文本的任务，如摘要、情感分析和翻译。  
+- 因其成本效益适合频繁请求的应用  
+- 低延迟的代码任务，如代码审查和建议  
 
-## Mistral Small 与 Mistral Large 的比较
+## Mistral Small 与 Mistral Large 的比较  
 
-要显示 Mistral Small 和 Large 之间的延迟差异，请运行下方单元。
+为展示 Mistral Small 与 Large 在延迟上的差异，请运行下方单元格。  
 
-您应能看到响应时间差异约为 3 到 5 秒。同时注意相同提示下响应长度和风格的不同。
+你应会看到响应时间差异在 3-5 秒之间。也请注意同一提示词下两者的回复长度和风格。  
 
 ```python 
 
@@ -209,26 +209,26 @@ print(response.choices[0].message.content)
 
 ```
 
-## Mistral NeMo
+## Mistral NeMo  
 
-与本课讨论的其他两个模型相比，Mistral NeMo 是唯一具有 Apache2 许可的免费模型。
+相较本课讨论的另外两款模型，Mistral NeMo 是唯一持有 Apache2 许可证的免费模型。  
 
-它被视为早期 Mistral 开源大模型 Mistral 7B 的升级版。
+它被视作 Mistral 早期开源大型语言模型 Mistral 7B 的升级版本。  
 
-NeMo 模型的其他特点包括：
+NeMo 模型的其他特点有：  
 
-- *更高效的分词器：* 此模型使用 Tekken 分词器，优于更常用的 tiktoken。这样在更多语言和代码上性能更佳。
+- *更高效的分词：* 该模型采用 Tekken 分词器，而非更常用的 tiktoken。这使得其在多语言和代码方面性能更优。  
 
-- *微调：* 基础模型可用于微调。这为需要微调的用例提供了更大灵活性。
+- *微调能力：* 基础模型支持微调，允许在需要微调的场景中更具灵活性。  
 
-- <em>原生函数调用</em> - 类似 Mistral Large，该模型经过函数调用训练。它是最早支持此功能的开源模型之一。
+- <em>原生函数调用</em> - 与 Mistral Large 类似，该模型经过函数调用训练，是首批开源支持此功能的模型之一。  
 
 
-### 分词器比较
+### 分词器比较  
 
-在此示例中，我们将比较 Mistral NeMo 与 Mistral Large 在分词上的处理方式。
+在此示例中，我们将比较 Mistral NeMo 与 Mistral Large 在分词处理上的差异。  
 
-两个示例均使用相同提示，但您应能看到 NeMo 返回的标记数少于 Mistral Large。
+两个示例都使用相同的提示词，但你会看到 NeMo 返回的令牌数少于 Mistral Large。  
 
 ```bash
 pip install mistral-common
@@ -246,7 +246,7 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# 加载 Mistral 分词器
+# 加载Mistral分词器
 
 model_name = "open-mistral-nemo"
 
@@ -286,7 +286,7 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# 计算标记数量
+# 统计标记数量
 print(len(tokens))
 ```
 
@@ -342,13 +342,13 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# 计算标记数量
+# 计算令牌数量
 print(len(tokens))
 ```
 
-## 学习不会止步于此，继续前行
+## 学习不会止步于此，继续前行  
 
-完成本课后，请查看我们的 [生成式 AI 学习合集](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ，继续提升您的生成式 AI 知识！
+完成本课后，请访问我们的 [生成式 AI 学习合集](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) 继续提升你的生成式 AI 知识！  
 
 ---
 

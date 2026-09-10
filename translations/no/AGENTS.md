@@ -2,36 +2,36 @@
 
 ## Prosjektoversikt
 
-Dette depotet inneholder en omfattende pensum med 21 leksjoner som lærer grunnleggende Generativ AI og applikasjonsutvikling. Kurset er designet for nybegynnere og dekker alt fra grunnleggende konsepter til bygging av produksjonsklare applikasjoner.
+Dette depotet inneholder en omfattende læreplan med 21 leksjoner som lærer grunnleggende om Generativ AI og applikasjonsutvikling. Kurset er designet for nybegynnere og dekker alt fra grunnleggende konsepter til bygging av produksjonsklare applikasjoner.
 
-**Nøkkel Teknologier:**
+**Nøkkelteknologier:**
 - Python 3.9+ med biblioteker: `openai`, `python-dotenv`, `tiktoken`, `azure-ai-inference`, `pandas`, `numpy`, `matplotlib`
-- TypeScript/JavaScript med Node.js og biblioteker: `openai` (Azure OpenAI via v1-endepunkt + Responses API), `@azure-rest/ai-inference` (Microsoft Foundry Models)
-- Azure OpenAI Service, OpenAI API og Microsoft Foundry Models (GitHub Models faset ut slutten av juli 2026)
+- TypeScript/JavaScript med Node.js og biblioteker: `openai` (Azure OpenAI via v1-endepunktet + Responses API), `@azure-rest/ai-inference` (Microsoft Foundry-modeller)
+- Azure OpenAI Service, OpenAI API og Microsoft Foundry-modeller (GitHub Models trekkes tilbake i slutten av juli 2026)
 - Jupyter Notebooks for interaktiv læring
 - Dev Containers for konsistent utviklingsmiljø
 
 **Depotstruktur:**
 - 21 nummererte leksjonsmapper (00-21) som inneholder README-filer, kodeeksempler og oppgaver
-- Flere implementasjoner: Python, TypeScript, og noen ganger .NET eksempler
-- Oversettelsesmappen med 40+ språkversjoner
-- Sentralisert konfigurasjon via `.env` fil (bruk `.env.copy` som mal)
+- Flere implementasjoner: Python, TypeScript og av og til .NET-eksempler
+- Oversettelsesmappe med 40+ språkoppsett
+- Sentralisert konfigurasjon via `.env`-fil (bruk `.env.copy` som mal)
 
-## Oppsettskommandoer
+## Oppsettkommandoer
 
-### Første Oppsett av Depot
+### Første oppsett av depot
 
 ```bash
 # Klon depotet
 git clone https://github.com/microsoft/generative-ai-for-beginners.git
 cd generative-ai-for-beginners
 
-# Kopier miljømalen
+# Kopier miljømal
 cp .env.copy .env
 # Rediger .env med dine API-nøkler og endepunkter
 ```
 
-### Python Miljøoppsett
+### Python-miljøoppsett
 
 ```bash
 # Opprett virtuelt miljø
@@ -47,44 +47,53 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### Node.js/TypeScript Oppsett
+### Node.js/TypeScript-oppsett
 
 ```bash
 # Installer avhengigheter på rot-nivå (for dokumentasjonsverktøy)
 npm install
 
-# For individuelle leksjons-Typescript-eksempler, naviger til den spesifikke leksjonen:
+# For individuelle leksjonseksempler i TypeScript, naviger til den spesifikke leksjonen:
 cd 06-text-generation-apps/typescript/recipe-app
 npm install
 ```
 
-### Dev Container Oppsett (Anbefalt)
+### Dev Container-oppsett (anbefalt)
 
-Depotet inkluderer en `.devcontainer` konfigurasjon for GitHub Codespaces eller VS Code Dev Containers:
+Depotet inkluderer en `.devcontainer`-konfigurasjon for GitHub Codespaces eller VS Code Dev Containers:
 
 1. Åpne depotet i GitHub Codespaces eller VS Code med Dev Containers-utvidelsen
 2. Dev Container vil automatisk:
    - Installere Python-avhengigheter fra `requirements.txt`
-   - Kjøre post-create skript (`.devcontainer/post-create.sh`)
-   - Sette opp Jupyter-kjernen
+   - Kjøre post-create script (`.devcontainer/post-create.sh`)
+   - Sette opp Jupyter-kjerne
 
-## Utviklingsarbeidsflyt
+## Utviklingsflyt
 
 ### Miljøvariabler
 
 Alle leksjoner som krever API-tilgang bruker miljøvariabler definert i `.env`:
 
 - `OPENAI_API_KEY` - For OpenAI API
-- `AZURE_OPENAI_API_KEY` - For Azure OpenAI i Microsoft Foundry (Azure OpenAI Service er nå en del av Microsoft Foundry: https://ai.azure.com)
-- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI endepunkt-URL (Foundry ressursendepunkt)
-- `AZURE_OPENAI_DEPLOYMENT` - Chat completion modellutplassering navn
-- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Embeddings modellutplassering navn
+- `AZURE_OPENAI_API_KEY` - For Azure OpenAI i Microsoft Foundry (Azure OpenAI Service er nå del av Microsoft Foundry: https://ai.azure.com)
+- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI-endepunkt-URL (Foundry-ressursendepunkt)
+- `AZURE_OPENAI_DEPLOYMENT` - Navn på distribusjon av chat-kompletteringsmodell (kursstandard: `gpt-5-mini`)
+- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - Navn på distribusjon av embeddings-modell (kursstandard: `text-embedding-3-small`)
 - `AZURE_OPENAI_API_VERSION` - API-versjon (standard: `2024-10-21`)
-- `HUGGING_FACE_API_KEY` - For Hugging Face modeller
-- `AZURE_INFERENCE_ENDPOINT` - Microsoft Foundry Models endepunkt (flere leverandører modellkatalog)
-- `AZURE_INFERENCE_CREDENTIAL` - Microsoft Foundry Models API-nøkkel (erstatter den nedtrappede `GITHUB_TOKEN`)
+- `HUGGING_FACE_API_KEY` - For Hugging Face-modeller
+- `AZURE_INFERENCE_ENDPOINT` - Microsoft Foundry Models-endepunkt (flere leverandører modellkatalog)
+- `AZURE_INFERENCE_CREDENTIAL` - Microsoft Foundry Models API-nøkkel (erstatter den nedtrukkede `GITHUB_TOKEN`)
+- `AZURE_INFERENCE_CHAT_MODEL` - En modell uten resonnering (f.eks. `Llama-3.3-70B-Instruct`) brukt av `temperature`-eksemplene, siden resonneringsmodeller ikke støtter sampling-kontroller
 
-### Kjøre Python Eksempler
+### Modellkonvensjoner (viktig)
+
+- **Standard chat-modell er `gpt-5-mini`** - en nåværende, ikke-utdatert **resonnerings**modell. Fra 2026 blir de eldre temperatur-aktiverte "mini"-modellene (`gpt-4o-mini`, `gpt-4.1-mini`) *utrangert*, så læreplanen standardiserer på GPT-5-familien.
+- **Resonneringsmodeller avviser `temperature` og `top_p`**, og bruker `max_output_tokens` (Responses API) / `max_completion_tokens` (chat-kompletteringer) i stedet for `max_tokens`. Ikke legg til `temperature`/`top_p`/`max_tokens` i eksempler som kaller `gpt-5-mini`.
+- **For å demonstrere `temperature`**, bruker eksemplene en **Llama**-modell (`Llama-3.3-70B-Instruct`) via Microsoft Foundry Models-endepunktet (`AZURE_INFERENCE_CHAT_MODEL`). Styr resonneringsmodeller med prompt-engineering + resonneringskontroller i stedet for utvalgsinnstillinger.
+- **Finjustering (leksjon 18)** beholder `gpt-4.1-mini`: GPT-5 støtter kun forsterkningsbasert finjustering (RFT), ikke den overstyrte finjusteringen (SFT) vist der.
+- Leksjon 20 (Mistral) og 21 (Meta) beholder `temperature`/`max_tokens` fordi de retter seg mot Mistral/Llama-modeller som støtter disse.
+
+### Kjøre Python-eksempler
 
 ```bash
 # Naviger til leksjonskatalogen
@@ -94,10 +103,10 @@ cd 06-text-generation-apps/python
 python aoai-app.py
 ```
 
-### Kjøre TypeScript Eksempler
+### Kjøre TypeScript-eksempler
 
 ```bash
-# Naviger til TypeScript app-katalogen
+# Naviger til TypeScript-appkatalogen
 cd 06-text-generation-apps/typescript/recipe-app
 
 # Bygg TypeScript-koden
@@ -110,206 +119,206 @@ npm start
 ### Kjøre Jupyter Notebooks
 
 ```bash
-# Start Jupyter i rotmappen til repositoriet
+# Start Jupyter i rotmappen til prosjektet
 jupyter notebook
 
 # Eller bruk VS Code med Jupyter-utvidelsen
 ```
 
-### Arbeide med Ulike Leksjonstyper
+### Arbeide med ulike leksjonstyper
 
-- **"Lær" leksjoner**: Fokuser på README.md dokumentasjon og konsepter
+- **"Lær" leksjoner**: Fokus på README.md dokumentasjon og konsepter
 - **"Bygg" leksjoner**: Inkluderer fungerende kodeeksempler i Python og TypeScript
-- Hver leksjon har en README.md med teori, kodegjennomganger, og lenker til videoinnhold
+- Hver leksjon har en README.md med teori, kodegjennomganger og lenker til videoinnhold
 
-## Kode stilig retningslinjer
+## Retningslinjer for kodestil
 
 ### Python
 
 - Bruk `python-dotenv` for håndtering av miljøvariabler
-- Importer `openai` biblioteket for API-interaksjoner
-- Bruk `pylint` for linting (noen eksempler inkluderer `# pylint: disable=all` for enkelhet)
+- Importer `openai`-biblioteket for API-interaksjoner
+- Bruk `pylint` for linting (noen eksempler inneholder `# pylint: disable=all` for enkelhet)
 - Følg PEP 8 navnekonvensjoner
-- Lagre API-legitimasjon i `.env` fil, aldri i kode
+- Lagre API-legitimasjon i `.env`-fil, aldri i koden
 
 ### TypeScript
 
-- Bruk `dotenv` pakken for miljøvariabler
+- Bruk `dotenv`-pakken for miljøvariabler
 - TypeScript-konfigurasjon i `tsconfig.json` for hver app
-- Bruk `openai` pakken for Azure OpenAI (pek klienten til `/openai/v1/` endepunkt og kall `client.responses.create`); bruk `@azure-rest/ai-inference` for Microsoft Foundry Models
+- Bruk `openai`-pakken for Azure OpenAI (pek klienten til `/openai/v1/` endepunkt og kall `client.responses.create`); bruk `@azure-rest/ai-inference` for Microsoft Foundry Models
 - Bruk `nodemon` for utvikling med auto-reload
 - Bygg før kjøring: `npm run build` deretter `npm start`
 
-### Generelle Konvensjoner
+### Generelle konvensjoner
 
 - Hold kodeeksempler enkle og pedagogiske
 - Inkluder kommentarer som forklarer nøkkelkonsepter
-- Hver leksjons kode skal være selvstendig og kjørbar
-- Bruk konsistent navngivning: `aoai-` prefiks for Azure OpenAI, `oai-` for OpenAI API, `githubmodels-` for Microsoft Foundry Models (arvet prefiks fra GitHub Models epoken)
+- Koden til hver leksjon bør være selvstendig og kjøreklar
+- Bruk konsekvente navnekonvensjoner: `aoai-` prefiks for Azure OpenAI, `oai-` for OpenAI API, `githubmodels-` for Microsoft Foundry Models (arvet prefiks fra GitHub Models-epoken)
 
 ## Dokumentasjonsretningslinjer
 
-### Markdown Stil
+### Markdown-stil
 
-- Alle URLer må være pakket inn i `[text](../../url)` format uten ekstra mellomrom
+- Alle URL-er må være omsluttet i `[tekst](../../url)` format uten ekstra mellomrom
 - Relative lenker må starte med `./` eller `../`
 - Alle lenker til Microsoft-domener må inkludere sporings-ID: `?WT.mc_id=academic-105485-koreyst`
-- Ingen lands-spesifikke lokaliteter i URLer (unngå `/en-us/`)
-- Bilder lagres i `./images` mappe med beskrivende navn
-- Bruk engelske bokstaver, tall og bindestreker i filnavn
+- Ingen lands-spesifikke lokaliteter i URL-er (unngå `/en-us/`)
+- Bilder lagres i `./images`-mappen med beskrivende navn
+- Bruk engelske tegn, tall og bindestreker i filnavn
 
-### Støtte for Oversettelse
+### Støtte for oversettelse
 
 - Depotet støtter 40+ språk via automatiserte GitHub Actions
-- Oversettelser lagres i `translations/` mappen
+- Oversettelser lagres i `translations/`-katalogen
 - Ikke send inn delvise oversettelser
-- Maskinoversettelser godtas ikke
-- Oversatte bilder lagres i `translated_images/` mappen
+- Maskinoversettelser aksepteres ikke
+- Oversatte bilder lagres i `translated_images/`-katalogen
 
-## Testing og Validering
+## Testing og validering
 
 ### Sjekker før innsending
 
-Dette depotet bruker GitHub Actions for validering. Før innsending av PRs:
+Dette depotet bruker GitHub Actions for validering. Før innsending av PR-er:
 
-1. **Sjekk Markdown-lenker**:
+1. **Sjekk markdown-lenker**:
    ```bash
    # validate-markdown.yml-arbeidsflyten sjekker:
-   # - Ødelagte relative stier
-   # - Manglende sporings-IDer på stier
+   # - Ødelagte relative baner
+   # - Manglende sporings-IDer på baner
    # - Manglende sporings-IDer på URL-er
-   # - URL-er med landslocale
+   # - URL-er med landsspesifikk lokalisering
    # - Ødelagte eksterne URL-er
    ```
 
-2. **Manuell Testing**:
-   - Test Python-eksempler: Aktiver venv og kjør skriptene
+2. **Manuell testing**:
+   - Test Python-eksempler: Aktiver venv og kjør skripter
    - Test TypeScript-eksempler: `npm install`, `npm run build`, `npm start`
-   - Verifiser miljøvariabler er riktig konfigurert
-   - Kontroller at API-nøkler fungerer med kodeeksemplene
+   - Bekreft at miljøvariabler er korrekt konfigurert
+   - Sjekk at API-nøkler fungerer med kodeeksemplene
 
 3. **Kodeeksempler**:
-   - Sikre at all kode kjører uten feil
-   - Test med både Azure OpenAI og OpenAI API når det er relevant
-   - Verifiser at eksempler fungerer med Microsoft Foundry Models der støttet
+   - Sørg for at all kode kjører uten feil
+   - Test med både Azure OpenAI og OpenAI API når aktuelt
+   - Bekreft at eksempler fungerer med Microsoft Foundry Models der det støttes
 
-### Ingen Automatiserte Tester
+### Ingen automatiserte tester
 
-Dette er et pedagogisk depot fokusert på opplæring og eksempler. Det finnes ingen enhetstester eller integrasjonstester å kjøre. Validering er hovedsakelig:
+Dette er et utdanningsdepot fokusert på opplæring og eksempler. Det finnes ingen enhetstester eller integrasjonstester. Validering er primært:
 - Manuell testing av kodeeksempler
 - GitHub Actions for Markdown-validering
-- Fellesskapsgjennomgang av opplæringsinnhold
+- Fellesskapsgjennomgang av pedagogisk innhold
 
-## Retningslinjer for Pull Requests
+## Retningslinjer for pull requests
 
 ### Før innsending
 
-1. Test kodeendringer i både Python og TypeScript når relevant
-2. Kjør Markdown-validering (utløses automatisk på PR)
-3. Sørg for at sporings-IDer er til stede på alle Microsoft-URLer
+1. Test kodeendringer i både Python og TypeScript der aktuelt
+2. Kjør Markdown-validering (utløst automatisk på PR)
+3. Sørg for at sporings-ID-er er tilstede på alle Microsoft-URL-er
 4. Sjekk at relative lenker er gyldige
-5. Verifiser at bilder er riktig referert
+5. Bekreft at bilder er riktig referert
 
-### PR Tittel Format
+### PR-tittelformat
 
-- Bruk beskrivende titler: `[Lesson 06] Fix Python example typo` eller `Oppdater README for leksjon 08`
-- Referer til saknummer når mulig: `Fixes #123`
+- Bruk beskrivende titler: `[Lesson 06] Fix Python example typo` eller `Update README for lesson 08`
+- Referer til issues når aktuelt: `Fixes #123`
 
-### PR Beskrivelse
+### PR-beskrivelse
 
 - Forklar hva som ble endret og hvorfor
-- Lenke til relaterte saker
+- Lenke til relaterte issues
 - For kodeendringer, spesifiser hvilke eksempler som ble testet
-- For oversettelses-PRer, inkluder alle filer for en fullstendig oversettelse
+- For oversettelses-PR-er, inkluder alle filer for fullstendig oversettelse
 
-### Bidragskrav
+### Krav til bidrag
 
 - Signer Microsoft CLA (automatisk ved første PR)
 - Fork depotet til din konto før du gjør endringer
-- En PR per logisk endring (ikke kombiner urelaterte fikser)
-- Hold PRer fokuserte og små når mulig
+- Én PR per logisk endring (ikke kombiner urelaterte fikser)
+- Hold PR-er fokuserte og små når mulig
 
-## Vanlige Arbeidsflyter
+## Vanlige arbeidsflyter
 
-### Legge til et Nytt Kodeeksempel
+### Legge til et nytt kodeeksempel
 
-1. Naviger til riktig leksjonsmappe
+1. Gå til riktig leksjonskatalog
 2. Opprett eksempel i `python/` eller `typescript/` undermappe
-3. Følg navngivningskonvensjon: `{provider}-{example-name}.{py|ts|js}`
+3. Følg navnekonvensjon: `{provider}-{example-name}.{py|ts|js}`
 4. Test med faktiske API-legitimasjoner
 5. Dokumenter eventuelle nye miljøvariabler i leksjonens README
 
-### Oppdatere Dokumentasjon
+### Oppdatere dokumentasjon
 
-1. Rediger README.md i leksjonsmappen
-2. Følg Markdown-retningslinjer (sporings-IDer, relative lenker)
-3. Oppdateringer av oversettelser håndteres av GitHub Actions (ikke rediger manuelt)
+1. Rediger README.md i leksjonskatalogen
+2. Følg Markdown-retningslinjer (sporings-ID-er, relative lenker)
+3. Oppdateringer til oversettelser håndteres av GitHub Actions (ikke rediger manuelt)
 4. Test at alle lenker er gyldige
 
 ### Arbeide med Dev Containers
 
 1. Depotet inkluderer `.devcontainer/devcontainer.json`
-2. Post-create skript installerer Python-avhengigheter automatisk
+2. Post-create script installerer Python-avhengigheter automatisk
 3. Utvidelser for Python og Jupyter er forhåndskonfigurert
-4. Miljøet baseres på `mcr.microsoft.com/devcontainers/universal:2.11.2`
+4. Miljøet er basert på `mcr.microsoft.com/devcontainers/universal:2.11.2`
 
-## Distribusjon og Publisering
+## Distribusjon og publisering
 
-Dette er et læringsdepot – det finnes ingen distribusjonsprosess. Pensumet konsumeres gjennom:
+Dette er et læringsdepot - det finnes ingen distribusjonsprosess. Læreplanen konsumeres gjennom:
 
 1. **GitHub Repository**: Direkte tilgang til kode og dokumentasjon
-2. **GitHub Codespaces**: Umiddelbart utviklingsmiljø med forhåndskonfigurert oppsett
-3. **Microsoft Learn**: Innhold kan distribueres til offisiell læringsplattform
+2. **GitHub Codespaces**: Øyeblikkelig utviklingsmiljø med ferdigoppsett
+3. **Microsoft Learn**: Innhold kan distribueres til den offisielle læringsplattformen
 4. **docsify**: Dokumentasjonsnettsted bygget fra Markdown (se `docsifytopdf.js` og `package.json`)
 
-### Bygge Dokumentasjonsnettsted
+### Bygge dokumentasjonsnettsted
 
 ```bash
-# Generer PDF fra dokumentasjon (om nødvendig)
+# Generer PDF fra dokumentasjon (hvis nødvendig)
 npm run convert
 ```
 
 ## Feilsøking
 
-### Vanlige Problemer
+### Vanlige problemer
 
-**Python Import Feil**:
-- Sørg for at virtuell miljø er aktivert
+**Python Import-feil**:
+- Sørg for at virtuelt miljø er aktivert
 - Kjør `pip install -r requirements.txt`
 - Sjekk at Python-versjonen er 3.9+
 
-**TypeScript Byggefeil**:
-- Kjør `npm install` i den spesifikke app-mappen
+**TypeScript-buildfeil**:
+- Kjør `npm install` i den spesifikke app-katalogen
 - Sjekk at Node.js-versjonen er kompatibel
-- Rydd `node_modules` og installer på nytt hvis nødvendig
+- Rydd `node_modules` og installer på nytt om nødvendig
 
-**API Autentiseringsfeil**:
-- Verifiser at `.env`-filen finnes og har riktige verdier
+**API-autentiseringsfeil**:
+- Verifiser at `.env`-filen eksisterer og har riktige verdier
 - Sjekk at API-nøkler er gyldige og ikke utløpt
-- Sørg for at endepunkts-URLer er riktige for din region
+- Sørg for at endepunkt-URL-er er riktige for din region
 
-**Manglende Miljøvariabler**:
+**Manglende miljøvariabler**:
 - Kopier `.env.copy` til `.env`
 - Fyll inn alle nødvendige verdier for leksjonen du jobber med
 - Start applikasjonen på nytt etter oppdatering av `.env`
 
-## Ekstra Ressurser
+## Tilleggsressurser
 
-- [Kursoppsett Veiledning](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
-- [Retningslinjer for Bidrag](./CONTRIBUTING.md)
+- [Kursoppsettveiledning](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)
+- [Retningslinjer for bidrag](./CONTRIBUTING.md)
 - [Adferdskodeks](./CODE_OF_CONDUCT.md)
 - [Sikkerhetspolicy](./SECURITY.md)
 - [Azure AI Discord](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
-- [Samling av Avanserte Kodeeksempler](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
+- [Samling av avanserte kodeeksempler](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst)
 
-## Prosjektspesifikke Notater
+## Prosjektspesifikke merknader
 
-- Dette er et **pedagogisk depot** fokusert på læring, ikke produksjonskode
-- Eksemplene er bevisst enkle og fokuserte på å lære konsepter
-- Kodekvalitet balanseres med pedagogisk klarhet
+- Dette er et **utdanningsdepot** fokusert på læring, ikke produksjonskode
+- Eksemplene er med vilje enkle og fokusert på å lære konsepter
+- Kvaliteten på koden balanseres med pedagogisk klarhet
 - Hver leksjon er selvstendig og kan fullføres uavhengig
-- Depotet støtter flere API-leverandører: Azure OpenAI, OpenAI, Microsoft Foundry Models, og offline leverandører som Foundry Local og Ollama
-- Innhold er flerspråklig med automatiserte oversettelsesarbeidsflyter
+- Depotet støtter flere API-leverandører: Azure OpenAI, OpenAI, Microsoft Foundry Models, og offline-leverandører som Foundry Local og Ollama
+- Innholdet er flerspråklig med automatiserte oversettelsesarbeidsflyter
 - Aktivt fellesskap på Discord for spørsmål og støtte
 
 ---

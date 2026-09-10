@@ -4,18 +4,18 @@
 
 Pelajaran ini akan membahas: 
 
-- Menjelajahi dua model keluarga Meta utama - Llama 3.1 dan Llama 3.2 
-- Memahami kasus penggunaan dan skenario untuk masing-masing model 
-- Contoh kode untuk menunjukkan fitur unik dari masing-masing model 
+- Menjelajahi dua model utama keluarga Meta - Llama 3.1 dan Llama 3.2 
+- Memahami kasus penggunaan dan skenario untuk setiap model 
+- Contoh kode untuk menunjukkan fitur unik dari setiap model 
 
 
 ## Keluarga Model Meta 
 
-Dalam pelajaran ini, kita akan menjelajahi 2 model dari keluarga Meta atau "Llama Herd" - Llama 3.1 dan Llama 3.2.
+Dalam pelajaran ini, kita akan mengeksplorasi 2 model dari keluarga Meta atau "Llama Herd" - Llama 3.1 dan Llama 3.2.
 
-Model-model ini hadir dalam berbagai varian dan tersedia di [Microsoft Foundry Models catalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
+Model-model ini datang dalam berbagai varian dan tersedia di [Microsoft Foundry Models catalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
 
-> **Catatan:** GitHub Models akan dihentikan pada akhir Juli 2026. Berikut adalah detail lebih lanjut tentang menggunakan [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) untuk membuat prototipe dengan model AI.
+> **Catatan:** GitHub Models akan dihentikan pada akhir Juli 2026. Berikut adalah detail lebih lanjut tentang menggunakan [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) untuk membuat prototipe dengan model AI.
 
 Varian Model: 
 - Llama 3.1 - 70B Instruct 
@@ -27,35 +27,35 @@ Varian Model:
 
 ## Llama 3.1 
 
-Dengan 405 Miliar Parameter, Llama 3.1 masuk dalam kategori LLM sumber terbuka. 
+Dengan 405 Miliar Parameter, Llama 3.1 termasuk ke dalam kategori LLM sumber terbuka. 
 
-Model ini merupakan peningkatan dari rilis awal Llama 3 dengan menawarkan: 
+Model ini merupakan peningkatan dari rilis sebelumnya Llama 3 dengan menawarkan: 
 
 - Jendela konteks yang lebih besar - 128k token dibandingkan 8k token 
-- Maksimum Token Output lebih besar - 4096 dibandingkan 2048 
-- Dukungan Multibahasa lebih baik - karena peningkatan token pelatihan 
+- Maksimum Token Output yang lebih besar - 4096 dibandingkan 2048 
+- Dukungan Multibahasa yang lebih baik - karena peningkatan token pelatihan 
 
-Ini memungkinkan Llama 3.1 untuk menangani kasus penggunaan yang lebih kompleks saat membangun aplikasi GenAI termasuk: 
-- Pemanggilan Fungsi Native - kemampuan memanggil alat dan fungsi eksternal di luar alur kerja LLM
-- Kinerja RAG lebih baik - karena jendela konteks yang lebih besar 
-- Pembuatan Data Sintetis - kemampuan membuat data efektif untuk tugas seperti fine-tuning 
+Ini memungkinkan Llama 3.1 menangani kasus penggunaan yang lebih kompleks saat membangun aplikasi GenAI termasuk: 
+- Pemanggilan Fungsi Native - kemampuan untuk memanggil alat dan fungsi eksternal di luar alur kerja LLM
+- Kinerja RAG yang lebih baik - karena jendela konteks yang lebih besar 
+- Pembuatan Data Sintetis - kemampuan untuk membuat data efektif untuk tugas seperti fine-tuning 
 
 ### Pemanggilan Fungsi Native 
 
-Llama 3.1 telah di-fine-tune agar lebih efektif dalam membuat panggilan fungsi atau alat. Model ini juga memiliki dua alat bawaan yang dapat dikenali oleh model untuk digunakan berdasarkan prompt dari pengguna. Alat-alat ini adalah: 
+Llama 3.1 telah disetel agar lebih efektif dalam melakukan pemanggilan fungsi atau alat. Model ini juga memiliki dua alat bawaan yang dapat diidentifikasi oleh model untuk digunakan berdasarkan prompt dari pengguna. Alat-alat ini adalah: 
 
 - **Brave Search** - Dapat digunakan untuk mendapatkan informasi terkini seperti cuaca dengan melakukan pencarian web 
-- **Wolfram Alpha** - Dapat digunakan untuk perhitungan matematika yang lebih kompleks sehingga tidak perlu menulis fungsi sendiri. 
+- **Wolfram Alpha** - Dapat digunakan untuk perhitungan matematika yang lebih kompleks sehingga menulis fungsi sendiri tidak diperlukan. 
 
-Anda juga dapat membuat alat khusus Anda sendiri yang dapat dipanggil oleh LLM. 
+Anda juga dapat membuat alat kustom sendiri yang dapat dipanggil oleh LLM. 
 
 Dalam contoh kode di bawah ini: 
 
 - Kita mendefinisikan alat yang tersedia (brave_search, wolfram_alpha) dalam prompt sistem. 
-- Mengirim prompt pengguna yang menanyakan tentang cuaca di sebuah kota tertentu. 
-- LLM akan merespon dengan panggilan alat ke Brave Search yang akan terlihat seperti `<|python_tag|>brave_search.call(query="Stockholm weather")` 
+- Mengirim prompt pengguna yang menanyakan tentang cuaca di kota tertentu. 
+- LLM akan merespons dengan pemanggilan alat ke alat Brave Search yang akan terlihat seperti ini `<|python_tag|>brave_search.call(query="Stockholm weather")` 
 
-*Catatan: Contoh ini hanya membuat panggilan alat, jika Anda ingin mendapatkan hasilnya, Anda perlu membuat akun gratis di halaman Brave API dan mendefinisikan fungsi itu sendiri.
+*Catatan: Contoh ini hanya membuat pemanggilan alat, jika ingin mendapatkan hasilnya, Anda perlu membuat akun gratis di halaman API Brave dan mendefinisikan fungsi itu sendiri.*
 
 ```python 
 import os
@@ -63,7 +63,7 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import AssistantMessage, SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-# Dapatkan ini dari halaman "Ikhtisar" proyek Microsoft Foundry Anda
+# Dapatkan ini dari halaman "Overview" proyek Microsoft Foundry Anda
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Meta-Llama-3.1-405B-Instruct"
@@ -98,13 +98,13 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2 
 
-Meskipun merupakan LLM, salah satu keterbatasan Llama 3.1 adalah kurangnya multimodalitas. Artinya, ketidakmampuan menggunakan berbagai jenis input seperti gambar sebagai prompt dan memberikan respon. Kemampuan ini merupakan salah satu fitur utama Llama 3.2. Fitur-fitur ini juga meliputi: 
+Meskipun merupakan LLM, salah satu keterbatasan Llama 3.1 adalah kurangnya multimodalitas. Artinya, ketidakmampuan menggunakan berbagai jenis input seperti gambar sebagai prompt dan memberikan respons. Kemampuan ini adalah salah satu fitur utama Llama 3.2. Fitur-fitur ini juga meliputi: 
 
-- Multimodalitas - memiliki kemampuan mengevaluasi prompt teks dan gambar 
-- Varian ukuran kecil sampai sedang (11B dan 90B) - menyediakan opsi deployment yang fleksibel, 
-- Varian hanya teks (1B dan 3B) - memungkinkan model dideploy pada perangkat edge / mobile dan memberikan latensi rendah 
+- Multimodalitas - memiliki kemampuan untuk mengevaluasi prompt teks dan gambar 
+- Variasi ukuran kecil hingga sedang (11B dan 90B) - memberikan opsi penyebaran yang fleksibel, 
+- Variasi hanya teks (1B dan 3B) - memungkinkan model digunakan pada perangkat edge / mobile dan menyediakan latensi rendah 
 
-Dukungan multimodal merupakan langkah besar di dunia model open source. Contoh kode di bawah ini mengambil prompt gambar dan teks untuk mendapat analisis gambar dari Llama 3.2 90B. 
+Dukungan multimodal mewakili langkah besar di dunia model sumber terbuka. Contoh kode di bawah ini menggunakan prompt gambar dan teks untuk mendapatkan analisis gambar dari Llama 3.2 90B. 
 
 
 ### Dukungan Multimodal dengan Llama 3.2
@@ -155,9 +155,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Pembelajaran tidak berhenti di sini, lanjutkan perjalanan
+## Pembelajaran tidak berhenti di sini, lanjutkan perjalanan Anda
 
-Setelah menyelesaikan pelajaran ini, lihat koleksi pembelajaran [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) untuk terus meningkatkan pengetahuan Generative AI Anda!
+Setelah menyelesaikan pelajaran ini, lihat koleksi [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk terus meningkatkan pengetahuan Generative AI Anda!
 
 ---
 

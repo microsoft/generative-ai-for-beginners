@@ -1,62 +1,62 @@
-[![Model Sumber Terbuka](../../../translated_images/ms/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Open Source Models](../../../translated_images/ms/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Pengenalan
 
-Ejen AI mewakili perkembangan menarik dalam AI Generatif, membolehkan Model Bahasa Besar (LLM) berkembang daripada pembantu kepada ejen yang mampu mengambil tindakan. Rangka kerja Ejen AI membolehkan pembangun mencipta aplikasi yang memberi LLM akses kepada alat dan pengurusan keadaan. Rangka kerja ini juga meningkatkan keterlihatan, membolehkan pengguna dan pembangun memantau tindakan yang dirancang oleh LLM, sekali gus memperbaiki pengurusan pengalaman.
+Ejen AI mewakili perkembangan yang menarik dalam AI Generatif, membolehkan Model Bahasa Besar (LLM) berkembang dari pembantu menjadi ejen yang mampu mengambil tindakan. Rangka kerja Ejen AI membolehkan pembangun mencipta aplikasi yang memberi LLM akses kepada alat dan pengurusan keadaan. Rangka kerja ini juga meningkatkan keterlihatan, membolehkan pengguna dan pembangun memantau tindakan yang dirancang oleh LLM, dengan itu meningkatkan pengurusan pengalaman.
 
 Pelajaran ini akan meliputi bidang berikut:
 
-- Memahami apa itu Ejen AI - Apakah sebenarnya Ejen AI?
+- Memahami apa itu Ejen AI - Apa sebenarnya Ejen AI?
 - Meneroka lima Rangka Kerja Ejen AI yang berbeza - Apa yang menjadikannya unik?
-- Menerapkan Ejen AI ini ke pelbagai kes penggunaan - Bilakah kita perlu menggunakan Ejen AI?
+- Mengaplikasikan Ejen AI ini kepada pelbagai kes penggunaan - Bila kita harus menggunakan Ejen AI?
 
 ## Matlamat pembelajaran
 
-Selepas mengikuti pelajaran ini, anda akan dapat:
+Selepas mengambil pelajaran ini, anda akan dapat:
 
-- Jelaskan apa itu Ejen AI dan bagaimana ia boleh digunakan.
+- Menjelaskan apa itu Ejen AI dan bagaimana ia boleh digunakan.
 - Memahami perbezaan antara beberapa Rangka Kerja Ejen AI yang popular, dan bagaimana ia berbeza.
 - Memahami bagaimana Ejen AI berfungsi untuk membina aplikasi dengannya.
 
 ## Apakah Ejen AI?
 
-Ejen AI adalah bidang yang sangat menarik dalam dunia AI Generatif. Dengan keterujaan ini kadang-kadang terdapat kekeliruan tentang istilah dan aplikasinya. Untuk memudahkan dan merangkumi kebanyakan alat yang merujuk kepada Ejen AI, kami akan menggunakan definisi ini:
+Ejen AI adalah bidang yang sangat menarik dalam dunia AI Generatif. Dengan keseronokan ini kadangkala datang kekeliruan istilah dan aplikasinya. Untuk memudahkan dan merangkumi kebanyakan alat yang merujuk kepada Ejen AI, kami akan menggunakan definisi ini:
 
-Ejen AI membolehkan Model Bahasa Besar (LLM) melaksanakan tugas dengan memberi mereka akses kepada **keadaan** dan **alat**.
+Ejen AI membolehkan Model Bahasa Besar (LLM) melaksanakan tugas dengan memberikan mereka akses kepada **keadaan** dan **alat**.
 
-![Model Ejen](../../../translated_images/ms/what-agent.21f2893bdfd01e6a.webp)
+![Agent Model](../../../translated_images/ms/what-agent.21f2893bdfd01e6a.webp)
 
-Mari kita takrifkan istilah-istilah ini:
+Mari kita definisikan istilah ini:
 
-**Model Bahasa Besar** - Ini adalah model yang dirujuk sepanjang kursus ini seperti GPT-3.5, GPT-4, Llama-2, dan lain-lain.
+**Model Bahasa Besar** - Ini adalah model yang dirujuk sepanjang kursus ini seperti GPT-5, GPT-4o, dan Llama 3.3, dan lain-lain.
 
-**Keadaan** - Ini merujuk kepada konteks di mana LLM sedang bekerja. LLM menggunakan konteks tindakan lalu dan konteks semasa, membimbing pembuatan keputusannya untuk tindakan seterusnya. Rangka kerja Ejen AI membolehkan pembangun mengekalkan konteks ini dengan lebih mudah.
+**Keadaan** - Ini merujuk pada konteks di mana LLM bekerja. LLM menggunakan konteks tindakan masa lalu dan konteks semasa, membimbing pembuatan keputusannya untuk tindakan selanjutnya. Rangka Kerja Ejen AI membolehkan pembangun mengekalkan konteks ini dengan lebih mudah.
 
-**Alat** - Untuk melengkapkan tugas yang diminta pengguna dan yang dirancang oleh LLM, LLM memerlukan akses kepada alat. Contoh alat termasuk pangkalan data, API, aplikasi luar atau bahkan LLM lain!
+**Alat** - Untuk menyelesaikan tugas yang diminta pengguna dan dirancang oleh LLM, LLM memerlukan akses kepada alat. Contoh alat boleh jadi pangkalan data, API, aplikasi luaran atau bahkan LLM lain!
 
-Definisi ini diharap akan memberikan asas yang baik semasa kita melihat bagaimana ia dilaksanakan. Mari kita teroka beberapa rangka kerja Ejen AI yang berbeza:
+Definisi ini diharap dapat memberi anda asas yang baik semasa kita melihat bagaimana ia dilaksanakan. Mari kita terokai beberapa rangka kerja Ejen AI yang berbeza:
 
 ## Ejen LangChain
 
-[Ejen LangChain](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) adalah pelaksanaan definisi yang kami berikan di atas.
+[Ejen LangChain](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) adalah pelaksanaan definisi yang telah kami berikan di atas.
 
-Untuk mengurus **keadaan**, ia menggunakan fungsi terbina dalam yang dipanggil `AgentExecutor`. Fungsi ini menerima `agent` yang ditakrifkan dan `tools` yang tersedia kepadanya.
+Untuk mengurus **keadaan**, ia menggunakan fungsi terbina dalam yang dipanggil `AgentExecutor`. Ini menerima `agent` yang ditakrifkan dan `tools` yang tersedia kepadanya.
 
-`AgentExecutor` juga menyimpan sejarah sembang untuk menyediakan konteks perbualan.
+`Agent Executor` juga menyimpan sejarah sembang untuk menyediakan konteks perbualan.
 
-![Ejen Langchain](../../../translated_images/ms/langchain-agents.edcc55b5d5c43716.webp)
+![Langchain Agents](../../../translated_images/ms/langchain-agents.edcc55b5d5c43716.webp)
 
-LangChain menawarkan [katalog alat](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) yang boleh diimport ke dalam aplikasi anda untuk diakses oleh LLM. Ini dibuat oleh komuniti dan pasukan LangChain.
+LangChain menawarkan [katalog alat](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) yang boleh diimport ke dalam aplikasi anda di mana LLM boleh mendapatkan akses kepadanya. Ini dibuat oleh komuniti dan oleh pasukan LangChain.
 
-Anda kemudian boleh mentakrifkan alat ini dan menghantarnya ke `AgentExecutor`.
+Anda kemudiannya boleh mendefinisikan alat ini dan memberikannya kepada `Agent Executor`.
 
-Keterlihatan adalah aspek penting lain apabila bercakap tentang Ejen AI. Adalah penting bagi pembangun aplikasi untuk memahami alat mana yang digunakan oleh LLM dan mengapa. Untuk itu, pasukan LangChain telah membangunkan LangSmith.
+Keterlihatan adalah aspek penting lain apabila bercakap tentang Ejen AI. Penting bagi pembangun aplikasi untuk memahami alat mana yang digunakan oleh LLM dan mengapa. Untuk itu, pasukan di LangChain telah membangunkan LangSmith.
 
 ## AutoGen
 
-Rangka kerja Ejen AI seterusnya yang akan kita bincangkan adalah [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). Fokus utama AutoGen adalah perbualan. Ejen adalah kedua-duanya **boleh diajak berbual** dan **boleh disesuaikan**.
+Rangka kerja Ejen AI seterusnya yang akan kita bincangkan ialah [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). Fokus utama AutoGen adalah perbualan. Ejen adalah kedua-duanya **boleh berbual** dan **boleh disesuaikan**.
 
-**Boleh diajak berbual -** LLM boleh memulakan dan meneruskan perbualan dengan LLM lain untuk menyelesaikan tugas. Ini dilakukan dengan mencipta `AssistantAgents` dan memberi mereka mesej sistem khusus.
+**Boleh berbual -** LLM boleh memulakan dan meneruskan perbualan dengan LLM lain untuk menyelesaikan tugas. Ini dilakukan dengan membuat `AssistantAgents` dan memberikan mesej sistem yang spesifik kepada mereka.
 
 ```python
 
@@ -64,7 +64,7 @@ autogen.AssistantAgent( name="Coder", llm_config=llm_config, ) pm = autogen.Assi
 
 ```
 
-**Boleh disesuaikan** - Ejen boleh ditakrifkan bukan sahaja sebagai LLM tetapi juga sebagai pengguna atau alat. Sebagai pembangun, anda boleh mentakrifkan `UserProxyAgent` yang bertanggungjawab berinteraksi dengan pengguna untuk maklum balas dalam melaksanakan tugas. Maklum balas ini boleh meneruskan pelaksanaan tugas atau menghentikannya.
+**Boleh disesuaikan** - Ejen boleh ditakrifkan bukan hanya sebagai LLM tetapi juga sebagai pengguna atau alat. Sebagai pembangun, anda boleh mendefinisikan `UserProxyAgent` yang bertanggungjawab berinteraksi dengan pengguna untuk maklum balas dalam menyelesaikan tugas. Maklum balas ini boleh meneruskan pelaksanaan tugas atau menghentikannya.
 
 ```python
 user_proxy = UserProxyAgent(name="user_proxy")
@@ -72,9 +72,9 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 ### Keadaan dan Alat
 
-Untuk menukar dan menguruskan keadaan, Ejen pembantu menjana kod Python untuk menyelesaikan tugas.
+Untuk mengubah dan mengurus keadaan, seorang ejen pembantu menghasilkan kod Python untuk menyelesaikan tugas.
 
-Berikut adalah contoh proses:
+Berikut adalah contoh prosesnya:
 
 ![AutoGen](../../../translated_images/ms/autogen.dee9a25a45fde584.webp)
 
@@ -84,16 +84,16 @@ Berikut adalah contoh proses:
 system_message="For weather related tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done."
 ```
 
-Mesej sistem ini mengarahkan LLM tertentu ini kepada fungsi yang relevan untuk tugasnya. Ingat, dengan AutoGen anda boleh mempunyai pelbagai AssistantAgents yang ditakrifkan dengan mesej sistem yang berbeza.
+Mesej sistem ini mengarahkan LLM khusus ini fungsi mana yang relevan untuk tugasan yang dihadapi. Ingat, dengan AutoGen anda boleh mempunyai beberapa AssistantAgents yang ditakrifkan dengan mesej sistem yang berbeza.
 
-#### Perbualan Dimulakan oleh Pengguna
+#### Sembang Dimulakan oleh Pengguna
 
 ```python
 user_proxy.initiate_chat( chatbot, message="I am planning a trip to NYC next week, can you help me pick out what to wear? ", )
 
 ```
 
-Mesej daripada user_proxy (Manusia) inilah yang akan memulakan proses Ejen meneroka fungsi yang mungkin perlu dijalankan.
+Mesej dari user_proxy (Manusia) ini adalah yang akan memulakan proses ejen untuk meneroka fungsi yang mungkin perlu dilaksanakan.
 
 #### Fungsi Dilaksanakan
 
@@ -106,21 +106,21 @@ chatbot (to user_proxy):
 
 ```
 
-Setelah sembang awal diproses, Ejen akan menghantar alat yang dicadangkan untuk dipanggil. Dalam kes ini, ia adalah fungsi yang dipanggil `get_weather`. Bergantung pada konfigurasi anda, fungsi ini boleh dijalankan secara automatik dan dibaca oleh Ejen atau boleh dilaksanakan berdasarkan input pengguna.
+Setelah sembang awal diproses, ejen akan menghantar alat yang dicadangkan untuk dipanggil. Dalam kes ini, ia adalah fungsi yang dipanggil `get_weather`. Bergantung pada konfigurasi anda, fungsi ini boleh dilaksanakan secara automatik dan dibaca oleh ejen atau boleh dilaksanakan berdasarkan input pengguna.
 
-Anda boleh menemui senarai [contoh kod AutoGen](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) untuk meneroka lebih lanjut cara memulakan pembinaan.
+Anda boleh mendapatkan senarai [contoh kod AutoGen](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) untuk menerokai bagaimana memulakan pembinaan.
 
-## Rangka Kerja Ejen Microsoft
+## Microsoft Agent Framework
 
-[Rangka Kerja Ejen Microsoft](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst) adalah SDK sumber terbuka Microsoft untuk membina Ejen AI dan sistem multi-ejen dalam **Python** dan **.NET**. Ia menggabungkan kekuatan dua projek Microsoft terdahulu — ciri perusahaan **Semantic Kernel** dan orkestrasi multi-ejen **AutoGen** — ke dalam satu rangka kerja yang disokong. Jika anda memulakan projek ejen baru hari ini, ini adalah pengganti yang disyorkan kepada AutoGen.
+[Microsoft Agent Framework](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst) adalah SDK sumber terbuka Microsoft untuk membina Ejen AI dan sistem multi-ejen dalam kedua-dua **Python** dan **.NET**. Ia menggabungkan kekuatan dua projek Microsoft terdahulu — ciri enterprise **Semantic Kernel** dan orkestrasi multi-ejen **AutoGen** — ke dalam satu rangka kerja yang disokong. Jika anda memulakan projek ejen baru hari ini, ini adalah penerus yang disyorkan untuk AutoGen.
 
-Rangka kerja ini berskala dari **ejen sembang** tunggal hingga ke **aliran kerja multi-ejen** yang kompleks, dan ia berintegrasi terus dengan Microsoft Foundry, Azure OpenAI, dan OpenAI. Ia juga menyediakan pengawasan terbina dalam melalui OpenTelemetry supaya anda boleh mengesan dengan tepat apa yang ejen anda lakukan.
+Rangka kerja ini berkembang dari satu **ejen sembang** sehingga **aliran kerja multi-ejen** yang kompleks, dan ia berintegrasi secara langsung dengan Microsoft Foundry, Azure OpenAI, dan OpenAI. Ia juga menyediakan kebolehlihatan terbina dalam melalui OpenTelemetry supaya anda boleh menjejaki dengan tepat apa yang dilakukan oleh ejen anda.
 
 ### Keadaan dan Alat
 
-**Keadaan** - Rangka kerja mengurus konteks perbualan untuk anda melalui **benang**. Ejen menyimpan sejarah mesej (permintaan pengguna, panggilan alat, dan hasilnya), jadi setiap giliran membina berdasarkan giliran sebelumnya. Benang juga boleh disimpan, membolehkan perbualan dijeda dan disambung semula kemudian.
+**Keadaan** - Rangka kerja mengurus konteks perbualan untuk anda melalui **benang**. Ejen menyimpan sejarah mesej (permintaan pengguna, panggilan alat, dan hasilnya), jadi setiap giliran dibina berdasarkan yang sebelumnya. Benang juga boleh disimpan, membolehkan perbualan dihentikan dan disambung semula kemudian.
 
-**Alat** - Anda memberikan alat kepada ejen dengan menghantar fungsi Python biasa. Parameter yang diberi anotasi jenis secara automatik diubah menjadi skema, supaya model tahu bagaimana dan bila memanggilnya (panggilan fungsi). Rangka kerja juga menyokong pelayan Model Context Protocol (MCP) dan alat hos seperti penafsir kod.
+**Alat** - Anda memberikan alat kepada ejen dengan menyerahkan fungsi Python biasa. Parameter yang dianotasi secara jenis secara automatik ditukar menjadi skema, jadi model tahu cara dan bila untuk memanggilnya (pemanggilan fungsi). Rangka kerja juga menyokong pelayan Model Context Protocol (MCP) dan alat yang dihoskan seperti penafsir kod.
 
 Berikut adalah contoh ejen tunggal dengan alat khusus:
 
@@ -154,14 +154,14 @@ async def main():
 asyncio.run(main())
 ```
 
-Untuk sambung ke Azure OpenAI dalam Microsoft Foundry sebaliknya, hantar titik akhir dan kelayakan anda ke klien:
+Untuk menyambung ke Azure OpenAI dalam Microsoft Foundry, berikan titik akhir dan kelayakan anda kepada klien:
 
 ```python
 from azure.identity.aio import AzureCliCredential
 from agent_framework.openai import OpenAIChatClient
 
 client = OpenAIChatClient(
-    model="my-gpt-4o-deployment",
+    model="my-gpt-5-mini-deployment",
     azure_endpoint="https://my-resource.openai.azure.com",
     credential=AzureCliCredential(),
 )
@@ -169,19 +169,19 @@ client = OpenAIChatClient(
 
 ### Aliran kerja multi-ejen
 
-Di mana rangka kerja benar-benar menonjol adalah dalam mengorkestrakan beberapa ejen bersama-sama. Sebagai contoh, anda boleh menjalankan ejen satu demi satu (setiap satu menghantar konteksnya ke ejen berikutnya) atau mengarahkan ke beberapa ejen secara selari dan menggabungkan hasil mereka:
+Di mana rangka kerja ini benar-benar menonjol adalah mengorkestrakan beberapa ejen bersama-sama. Sebagai contoh, anda boleh menjalankan ejen satu demi satu (setiap satu menyerahkan konteksnya kepada yang berikut) atau mengagihkan ke beberapa ejen secara selari dan mengagregatkan hasil mereka:
 
 ```python
 from agent_framework.orchestrations import SequentialBuilder, ConcurrentBuilder
 
-# Jalankan ejen secara berurutan, menghantar konteks perbualan sepanjang rantaian
+# Jalankan ejen secara berurutan, sambil meneruskan konteks perbualan sepanjang rantai
 sequential = SequentialBuilder(participants=[researcher, writer, editor]).build()
 
 # Sebarkan kepada ejen secara selari, kemudian gabungkan respons mereka
 concurrent = ConcurrentBuilder(participants=[analyst_a, analyst_b, analyst_c]).build()
 ```
 
-Untuk memasang rangka kerja dan memulakan:
+Untuk memasang rangka kerja dan bermula:
 
 ```bash
 pip install agent-framework-core
@@ -190,17 +190,17 @@ pip install agent-framework-openai       # OpenAI dan Azure OpenAI
 pip install agent-framework-foundry      # Microsoft Foundry
 ```
 
-Anda boleh meneroka lebih lanjut di [repositori Rangka Kerja Ejen Microsoft](https://github.com/microsoft/agent-framework?WT.mc_id=academic-105485-koreyst) dan [dokumentasi rasmi](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst).
+Anda boleh meneroka lebih lanjut di [repositori Microsoft Agent Framework](https://github.com/microsoft/agent-framework?WT.mc_id=academic-105485-koreyst) dan [dokumentasi rasmi](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst).
 
 ## Taskweaver
 
-Rangka kerja ejen seterusnya yang akan kita teroka adalah [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). Ia dikenali sebagai ejen "kod-pertama" kerana ia boleh menggunakan DataFrame dalam Python dan bukan hanya bekerja dengan `strings`. Ini menjadi sangat berguna untuk tugas analisis dan penjanaan data. Contohnya seperti mencipta graf dan carta atau menjana nombor rawak.
+Rangka kerja ejen seterusnya yang akan kita terokai ialah [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). Ia dikenali sebagai ejen "berkod dahulu" kerana bukannya hanya bekerja dengan `strings`, ia boleh bekerja dengan DataFrames dalam Python. Ini sangat berguna untuk tugas analisis data dan penjanaan. Ini boleh menjadi seperti membuat graf dan carta atau menjana nombor rawak.
 
 ### Keadaan dan Alat
 
-Untuk menguruskan keadaan perbualan, TaskWeaver menggunakan konsep `Planner`. `Planner` adalah LLM yang menerima permintaan dari pengguna dan memetakan tugas yang perlu diselesaikan untuk memenuhi permintaan ini.
+Untuk mengurus keadaan perbualan, TaskWeaver menggunakan konsep `Planner`. `Planner` adalah LLM yang mengambil permintaan dari pengguna dan merancang tugasan yang perlu diselesaikan untuk memenuhi permintaan ini.
 
-Untuk melengkapkan tugas, `Planner` diberi akses kepada koleksi alat yang dipanggil `Plugins`. Ini boleh berupa kelas Python atau penafsir kod umum. Plugin ini disimpan sebagai embeddings supaya LLM dapat mencari plugin yang betul dengan lebih baik.
+Untuk melaksanakan tugasan itu, `Planner` diberi akses kepada koleksi alat yang dipanggil `Plugins`. Ini boleh menjadi kelas Python atau penafsir kod umum. Plugin ini disimpan sebagai embedding supaya LLM dapat mencari plugin yang betul dengan lebih baik.
 
 ![Taskweaver](../../../translated_images/ms/taskweaver.da8559999267715a.webp)
 
@@ -210,37 +210,37 @@ Berikut adalah contoh plugin untuk mengendalikan pengesanan anomali:
 class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_col_name: str, value_col_name: str):
 ```
 
-Kod disahkan sebelum dilaksanakan. Satu lagi ciri untuk mengurus konteks dalam Taskweaver ialah `experience`. Experience membolehkan konteks perbualan disimpan dalam jangka masa panjang dalam fail YAML. Ini boleh dikonfigurasikan supaya LLM bertambah baik dari masa ke masa pada tugas tertentu dengan pendedahan kepada perbualan sebelum ini.
+Kod ini disahkan sebelum dilaksanakan. Satu lagi ciri untuk mengurus konteks dalam Taskweaver adalah `experience`. Experience membolehkan konteks perbualan disimpan dalam jangka masa panjang dalam fail YAML. Ini boleh dikonfigurasikan supaya LLM bertambah baik dari masa ke masa pada tugas tertentu dengan pendedahan kepada perbualan lalu.
 
 ## JARVIS
 
-Rangka kerja ejen terakhir yang akan kita teroka adalah [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file&WT.mc_id=academic-105485-koreyst). Apa yang membuatkan JARVIS unik ialah ia menggunakan LLM untuk mengurus `keadaan` perbualan dan `alat` adalah model AI lain. Setiap model AI adalah model khusus yang melakukan tugas tertentu seperti pengesanan objek, transkripsi atau keterangan imej.
+Rangka kerja ejen terakhir yang akan kita terokai adalah [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file&WT.mc_id=academic-105485-koreyst). Apa yang menjadikan JARVIS unik ialah ia menggunakan LLM untuk mengurus `keadaan` perbualan dan `alat`nya adalah model AI lain. Setiap model AI adalah model khusus yang menjalankan tugasan tertentu seperti pengesanan objek, transkripsi atau keterangan imej.
 
 ![JARVIS](../../../translated_images/ms/jarvis.762ddbadbd1a3a33.webp)
 
-LLM, sebagai model tujuan umum, menerima permintaan dari pengguna dan mengenal pasti tugas khusus dan apa-apa argumen/data yang diperlukan untuk melengkapkan tugas.
+LLM, sebagai model tujuan umum, menerima permintaan dari pengguna dan mengenal pasti tugasan khusus dan sebarang argumen/data yang diperlukan untuk menyelesaikan tugasan tersebut.
 
 ```python
 [{"task": "object-detection", "id": 0, "dep": [-1], "args": {"image": "e1.jpg" }}]
 ```
 
-LLM kemudian memformat permintaan dalam cara yang boleh ditafsir oleh model AI khusus, seperti JSON. Setelah model AI mengembalikan ramalannya berdasarkan tugas, LLM menerima respons.
+LLM kemudian memformat permintaan dalam cara yang boleh ditafsir oleh model AI khusus, seperti JSON. Setelah model AI mengembalikan ramalannya berdasarkan tugasan, LLM menerima tindak balas tersebut.
 
-Jika beberapa model diperlukan untuk melengkapkan tugas, ia juga akan mentafsir respons dari model-model tersebut sebelum menggabungkannya untuk menjana respons kepada pengguna.
+Jika beberapa model diperlukan untuk melaksanakan tugasan itu, ia juga akan mentafsirkan tindak balas daripada model-model tersebut sebelum menyatukannya untuk menghasilkan tindak balas kepada pengguna.
 
 Contoh di bawah menunjukkan bagaimana ini berfungsi apabila pengguna meminta penerangan dan kiraan objek dalam gambar:
 
 ## Tugasan
 
-Untuk meneruskan pembelajaran mengenai Ejen AI, anda boleh membina dengan Rangka Kerja Ejen Microsoft:
+Untuk meneruskan pembelajaran anda tentang Ejen AI anda boleh membina dengan Microsoft Agent Framework:
 
-- Satu aplikasi yang mensimulasikan mesyuarat perniagaan dengan pelbagai jabatan sebuah startup pendidikan.
-- Cipta mesej sistem yang membimbing LLM memahami persona dan keutamaan yang berbeza, dan membolehkan pengguna membentangkan idea produk baru.
-- LLM kemudian harus menjana soalan susulan dari setiap jabatan untuk memperhalusi dan memperbaiki pembentangan dan idea produk.
+- Sebuah aplikasi yang mensimulasikan mesyuarat perniagaan dengan jabatan-jabatan berbeza dalam sebuah startup pendidikan.
+- Buat mesej sistem yang membimbing LLM untuk memahami persona dan keutamaan berbeza, dan membolehkan pengguna memberi cadangan idea produk baru.
+- LLM kemudian harus menjana soalan susulan dari setiap jabatan untuk memperbaiki dan menambah baik cadangan dan idea produk
 
-## Pembelajaran tidak berhenti di sini, teruskan Perjalanan
+## Pembelajaran tidak terhenti di sini, teruskan Perjalanan
 
-Selepas melengkapkan pelajaran ini, lihat koleksi [Pembelajaran AI Generatif kami](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) untuk terus meningkatkan pengetahuan AI Generatif anda!
+Selepas menyelesaikan pelajaran ini, lihat [koleksi Pembelajaran AI Generatif kami](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) untuk terus meningkatkan pengetahuan AI Generatif anda!
 
 ---
 
