@@ -1,20 +1,20 @@
-# இந்த பாடத்திட்டத்தைத் தொடங்குதல்
+# இந்த பாடத்திட்டத்தை தொடங்குதல்
 
-ஜெனரேட்டிவ் ஏஐயுடன் நீங்கள் உருவாக்கத் தூண்டப்படுவது என்ன என்று இப்பாடத்திட்டத்தைத் தொடங்குவதற்கு நாங்கள் மிகவும் உற்சாகமாக இருக்கிறோம்!
+இந்தப் பாடத்திட்டத்தை நீங்கள் தொடங்கி, ஜெனரேட்டிவ் AI உடன் நீங்கள் உருவாக்கும் அதிர்ஷ்டத்தை பார்க்க நாங்கள் மிகவும் உற்சாகமாக உள்ளோம்!
 
-உங்கள் வெற்றியை உறுதிப்படுத்த, இந்த பக்கம் அமைப்பு படிகளை, தொழில்நுட்ப தேவைகளை, மற்றும் உதவி பெறும் இடங்களை விளக்குகிறது.
+உங்கள் வெற்றியை உறுதிசெய்ய, இந்த பக்கம் அமைப்பு படிகள், தொழில்நுட்ப தேவைகள் மற்றும் உதவி எங்கே பெறுவது என்பதை விளக்குகிறது.
 
 ## அமைப்பு படிகள்
 
-இந்த பாடத்திட்டத்தைத் தொடங்க நீங்கள் பின்வரும் படிகளை முடிக்க வேண்டும்.
+இந்தப் பாடத்தை தொடங்க, கீழ்க்காணும் படிகளை நீங்கள் முடிக்க வேண்டும்.
 
 ### 1. இந்த ரெப்போவை ஃபோர்க் செய்யவும்
 
-[இந்த முழுக் ரெப்போவை ஃபோர்க் செய்யவும்](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) உங்கள் சொந்த GitHub கணக்கிற்கு, எந்த குறியீடும் மாற்றி சவால்களை நிறைவேற்ற முடியும். மேலும், [இந்த ரெப்போவை ஸ்டார் செய்யவும் (🌟)](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) அதையும் சம்பந்தப்பட்ட ரெப்போக்களையும் எளிதில் கண்டுபிடிக்க.
+[இந்த முழு ரெப்போவை ஃபோர்க் செய்யவும்](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) உங்கள் சொந்த GitHub கணக்கிற்கு, இதன்மூலம் நீங்கள் ஏதேனும் குறியீடுகளை மாற்றி சவால்களை முடிக்க முடியும். மேலும் இதையும் மற்றும் தொடர்புடைய ரெப்போக்களை எளிதில் காண [⭐ (ஸ்டார்) செய்யவும்](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst).
 
-### 2. ஒரு கோட்ஸ்பேசை உருவாக்கவும்
+### 2. கோட்ஸ்பேஸ் உருவாக்கவும்
 
-குறியீட்டைப் இயக்கும்போது எந்த சார்பு பிரச்சினைகளும் தவிர்க்க, இந்த பாடத்திட்டத்தை [GitHub Codespaces](https://github.com/features/codespaces?WT.mc_id=academic-105485-koreyst) இல் இயக்க பரிந்துரைக்கிறோம்.
+குறியீட்டை இயக்கும் போது பிற சார்புகள் பிரச்சனைகளில் எடையை தவிர்க்க, இந்த பாடத்தை [GitHub Codespaces](https://github.com/features/codespaces?WT.mc_id=academic-105485-koreyst) இல் இயக்க பரிந்துரைக்கப்படுகிறது.
 
 உங்கள் ஃபோர்கில்: **Code -> Codespaces -> New on main**
 
@@ -22,30 +22,30 @@
 
 #### 2.1 ஒரு ரகசியத்தைச் சேர்க்கவும்
 
-1. ⚙️ கருவி ஐகான் -> கமாண்ட் பிலேட் -> Codespaces : Manage user secret -> Add a new secret.
-2. OPENAI_API_KEY என பெயரிடுக, உங்கள் விசையை ஒட்டு, சேமிக்கவும்.
+1. ⚙️ கருவி ஐகன் -> Command Palette -> Codespaces : Manage user secret -> Add a new secret.
+2. OPENAI_API_KEY என்று பெயர் இடுங்கள், உங்கள் விசையை ஒட்டவும், சேமிக்கவும்.
 
 ### 3. அடுத்து என்ன?
 
-| நான் என்ன செய்ய விரும்புகிறேன்… | செல்ல வேண்டியது…                                                           |
-|-----------------------------|-------------------------------------------------------------------------|
-| பாடம் 1 தொடங்கவும்           | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
-| ஆஃப்லைன் வேலை செய்தல்       | [`setup-local.md`](02-setup-local.md)                                   |
-| LLM வழங்குநரை அமைத்தல்    | [`providers.md`](03-providers.md)                                        |
-| மற்ற பயனர்களுடன் சந்திக்க  | [எங்கள் Discord இல் சேரவும்](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
+| நான் விரும்புவது…       | செல்ல வேண்டியது…                                                       |
+|---------------------|-------------------------------------------------------------------------|
+| பாடம் 1 தொடங்கு     | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
+| ஆஃப்லைனில் பணியாற்று | [`setup-local.md`](02-setup-local.md)                                   |
+| ஒரு LLM வழங்குநரை அமைக்கவும் | [`providers.md`](03-providers.md)                                        |
+| மற்ற மாணவர்களை சந்திக்கவும் | [எங்கள் Discord-இல் சேரவும்](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
 
-## குறைபாடுகள் தீர்க்கல்
+## பிரச்சனைத் தீர்க்கும் வழிகள்
 
 
-| அறிகுறி                                 | சரி செய்வது                                                      |
-|----------------------------------------|-----------------------------------------------------------------|
-| கன்டெய்னர் கட்டமைப்பு 10 நிமிடங்களுக்கு மேல் தங்கல் | **Codespaces ➜ “Rebuild Container”**                            |
-| `python: command not found`            | டெர்மினல் இணைக்கப்படவில்லை; **+** ➜ *bash* கிளிக் செய்யவும்        |
-| OpenAI இல் இருந்து `401 Unauthorized`  | தவறான/காலாவதியான `OPENAI_API_KEY`                                |
-| VS Code “Dev container mounting…” காட்சி | உலாவி தாளை புதுப்பிக்கவும்—Codespaces சில நேரங்களில் இணைப்பை இழக்கிறது  |
-| நோட்டுபுக் கர்னல் காணவில்லை          | நோட்டுபுக் மெனு ➜ **Kernel ▸ Select Kernel ▸ Python 3**           |
+| அறிகுறி                                  | தீர்வு                                                            |
+|-------------------------------------------|-----------------------------------------------------------------|
+| கொண்டெயினர் கட்டுமானம் 10 நிமிடத்திற்கு மேலாக நின்று இருக்கிறது | **Codespaces ➜ “Rebuild Container”**                            |
+| `python: command not found`               | டெர்மினல் இணைக்கப்படவில்லை; **+** கிளிக் செய்து *bash* தேர்வு செய்யவும்    |
+| OpenAI-இல் இருந்து `401 Unauthorized`    | தவறான அல்லது காலாவதியான `OPENAI_API_KEY`                       |
+| VS Code “Dev container mounting…” காட்டுகிறது | உலாவி தாவலை புதுப்பிக்கவும்—Codespaces சில நேரங்களில் இணைப்பை இழக்கிறது |
+| நோட்புக்கின் கர்னல் காணவில்லை               | நோட்புக் மெனு ➜ **Kernel ▸ Select Kernel ▸ Python 3**             |
 
-   யுனிக்ஸ் அடிப்படையிலான அமைப்புகள்:
+   யூனிக்ஸ் அடிப்படையிலான கணினிகள்:
 
    ```bash
    touch .env
@@ -57,68 +57,68 @@
    echo . > .env
    ```
 
-3. **`.env` கோப்பை தொகுக்கவும்**: `.env` கோப்பை ஒரு உரை தொகுப்பியில் (उदा., VS Code, Notepad++, அல்லது வேறு வேறு தொகுப்பு) திறந்து, உங்கள் Microsoft Foundry Models முகவரி மற்றும் விசையை உள்ளிடுங்கள் (பெறுவதற்கான வழிமுறைகள் [`providers.md`](03-providers.md) நிரலில் உள்ளன):
+3. **`.env` கோப்பை திருத்தவும்**: `.env` கோப்பை உரை திருத்தியில் (எ.ก., VS Code, Notepad++, அல்லது வேறு எந்த திருத்தியிலும்) திறக்கவும். கீழ்காணும் வரிகளை சேர்த்து, உங்கள் Microsoft Foundry Models முனையத்தையும் விசையையும் (விளக்கத்திற்கு [`providers.md`](03-providers.md) பார்க்கவும்) பதிலாக பயன்படுத்தவும்:
 
-   > **குறிப்பு:** GitHub Models (மற்றும் அதன் `GITHUB_TOKEN` மாறிலி)  ஜூலை 2026இல் பணிபுரிந்து முடிகிறது. பதிலாக [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) பயன்படுத்தவும்.
+   > **குறிப்பு:** GitHub Models (மற்றும் அதனுடைய `GITHUB_TOKEN` மாறி) ஜூலை 2026 முடிவில் சேவை நிறுத்துகிறது. அதன் பதிலாக [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) பயன்படுத்தவும்.
 
    ```env
    AZURE_INFERENCE_ENDPOINT=your_foundry_endpoint_here
    AZURE_INFERENCE_CREDENTIAL=your_foundry_api_key_here
    ```
 
-4. **கோப்பை சேமிக்கவும்**: மாற்றங்களை சேமித்து உரை தொகுப்பியை மூடவும்.
+4. **கோப்பை சேமிக்கவும்**: மாற்றங்களை சேமித்து உரை திருத்தியை மூடவும்.
 
-5. **`python-dotenv` நிறுவுக**: நீங்கள் இதுவரை நிறுவவில்லை என்றால், .env கோப்பிலிருந்து சூழல் மாறிலிகளை உங்கள் Python பயன்பாட்டிற்கு ஏற்ற `python-dotenv` தொகுப்பை நிறுவ வேண்டும். இதை `pip` மூலம் நிறுவலாம்:
+5. **`python-dotenv` நிறுவவும்**: நீங்கள் இதுவரை நிறுவாதிருந்தால், `.env` கோப்பிலிருந்து வகை நிலை மாறிகள் போன்றவற்றை உங்கள் Python செயலியில் ஏற்க `python-dotenv` தொகுப்பை நிறுவவேண்டும். `pip` மூலம் நிறுவலாம்:
 
    ```bash
    pip install python-dotenv
    ```
 
-6. **Python ஸ்கிரிப்டில் சூழல் மாறிலிகளை ஏற்றுக**: உங்கள் Python ஸ்கிரிப்டில், `.env` கோப்பிலிருந்து சூழல் மாறிலிகளை `python-dotenv` மூலம் ஏற்றுக:
+6. **Python ஸ்க்ரிப்டில் வகை நிலை மாறிகளை ஏற்றி கொள்ளவும்**: உங்கள் Python ஸ்கிரிப்டில், `python-dotenv` தொகுப்பை பயன்படுத்தி `.env` கோப்பிலிருந்து வகை நிலை மாறிகளை ஏற்றவும்:
 
    ```python
    from dotenv import load_dotenv
    import os
 
-   # .env கோப்பிலிருந்து சூழல் மாறிலிகளை ஏற்றுக
+   # .env கோப்பிலிருந்து சுற்றுச்சூழல் மாறிகள் ஏற்று
    load_dotenv()
 
-   # Microsoft Foundry Models மாறிலிகளை அணுகுக
+   # Microsoft Foundry Models மாறிகள் அணுகு
    endpoint = os.getenv("AZURE_INFERENCE_ENDPOINT")
    token = os.getenv("AZURE_INFERENCE_CREDENTIAL")
 
    print(endpoint)
    ```
 
-அதுவே! நீங்கள் வெற்றிகரமாக `.env` கோப்பை உருவாக்கி, Microsoft Foundry Models அங்கீகாரங்களை சேர், அவற்றை உங்கள் Python பயன்பாட்டில் ஏற்றியுள்ளீர்கள்.
+அதுவே! நீங்கள் வெற்றிகரமாக `.env` கோப்பை உருவாக்கி, உங்கள் Microsoft Foundry Models அங்கீகாரங்களைச் சேர்த்து, உங்கள் Python செயலியில் ஏற்றிவிட்டீர்கள்.
 
-## உங்கள் கணினியில் உள்ளடக்கமாக இயக்குவது எப்படி
+## உங்கள் கணினியில் உள்ளூர் இயக்குவது எப்படி
 
-குறியீட்டை உங்கள் கணினியில் இயக்க, உங்கள் கணினியில் [Python இன் ஒரு பதிப்பு நிறுவப்பட்டிருக்க வேண்டும்](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
+குறியீட்டை உங்கள் கணினியில் உள்ளூர் இயக்க, நீங்கள் எந்தவொரு [Python பதிப்பையும் நிறுவியிருக்க வேண்டும்](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst).
 
-பின்னர், இந்த ரெப்போவை கிளோன் செய்ய வேண்டும்:
+பின்னர் ரெப்போவை பயன்படுத்த, அதை கிளோன் செய்ய வேண்டும்:
 
 ```shell
 git clone https://github.com/microsoft/generative-ai-for-beginners
 cd generative-ai-for-beginners
 ```
 
-அனைத்து பொருட்களையும் சரிபார்த்த பிறகு, நீங்கள் இப்போது தொடங்கலாம்!
+எல்லாவற்றையும் சரிபார்த்து பெற்ற பிறகே, நீங்கள் துவங்கலாம்!
 
 ## விருப்ப படிகள்
 
-### Miniconda நிறுவுதல்
+### மினிகொண்டா நிறுவல்
 
-[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) என்பது [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python மற்றும் சில தொகுப்புகளை நிறுவுவதற்கு எளிமையான நிறுவி ஆகும்.
-Conda தானாகவே ஒரு தொகுப்பு மேலாளராகும், இது பல Python [**விர்ச்சுவல் சூழல்களில்**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) மற்றும் தொகுப்புகளின் இடையிலான மாற்றத்தை எளிதாக்குகிறது. இது `pip` மூலம் கிடைக்காத தொகுப்புகளை நிறுவுவதிலும் உதவுகிறது.
+[மினிகொண்டா](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) என்பது [கொண்டா](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python மற்றும் சில தொகுப்புகளை நிறுவ ஒரு மென்மையான நிறுவி ஆகும்.
+கொண்டா என்பது ஒரு தொகுப்பு மேலாளர்; இது Python [**மெய்நிகர் சூழல்களை**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) மற்றும் தொகுப்புகளை அமைக்கவும் மாறிடவும் சுலபமாக்குகிறது. `pip` மூலம் கிடைக்காத தொகுப்புகளை நிறுவ உதவும்.
 
-அதை அமைப்பதற்கான [MiniConda நிறுவல் வழிகாட்டியை](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) பின்பற்றலாம்.
+[மினிகொண்டா நிறுவல் வழிகாட்டியை](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) பின்பற்ற வியூகிக்கவும்.
 
-Miniconda நிறுவப்பட்ட பிறகு, நீங்கள் இப்போதும் கிளோன் செய்ய வேண்டும் [ரெப்போவை](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) (முந்தையதாக செய்யவில்லை என்றால்)
+மினிகொண்டா நிறுவிய பிறகு, [ரெப்போவை](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) (இன்னும் கிளோன் செய்யவில்லை என்றால்) கிளோன் செய்யவும்.
 
-அடுத்ததாக, ஒரு விர்ச்சுவல் சூழலை உருவாக்கவேண்டும். இதற்கு Conda துணை கொண்டு, புதிய சூழல் கோப்பை (_environment.yml_) உருவாக்குங்கள். நீங்கள் Codespaces ஐ பயன்படுத்தினால், `.devcontainer` கோப்புறையில் இது இருக்க வேண்டும், அதாவது `.devcontainer/environment.yml`.
+அடுத்து, ஒரு மெய்நிகர் சூழலை உருவாக்க வேண்டும். கொண்டாவுடன், _environment.yml_ என்ற சூழல் கோப்பை உருவாக்கி, Codespaces பயன்படுத்தினால் அந்த கோப்பை `.devcontainer` கோப்பகத்தில் வைத்து `.devcontainer/environment.yml` ஆக உருவாக்கவும்.
 
-கீழ்க்காணும் சிற்றொட்டையை உங்கள் சூழல் கோப்பில் சேர்க்கவும்:
+கீழ்காணும் சான்று குறியீட்டை உங்கள் சூழல் கோப்பில் நிரப்பவும்:
 
 ```yml
 name: <environment-name>
@@ -134,38 +134,38 @@ dependencies:
       - azure-ai-ml
 ```
 
-எசர்கலைப்போகும் போது, குறைபாடுகள் வந்தால் கீழ்க்காணும் கட்டளையை டெர்மினலில் இயக்கி Microsoft AI நூலகங்களை கையேடு முறையில் நிறுவலாம்.
+கொண்டா பயன்படுத்தும்போது பிழைகள் வந்தால், டெர்மினலில் கீழ்க்காணும் கட்டளையைக் கொண்டு Microsoft AI நூலகங்களை கைமுறையால் நிறுவலாம்.
 
 ```
 conda install -c microsoft azure-ai-ml
 ```
 
-சூழல் கோப்பு நாம் தேவையான சார்புகளை குறிப்பிடுகிறது. `<environment-name>` என்பது உங்கள் Conda சூழலுக்கு விரும்பும் பெயர், `<python-version>` என்பது நீங்கள் இயக்க விரும்பும் Python பதிப்பு (எ.கா., `3` என்பது Python இன் சமீபத்திய முக்கிய பதிப்பு).
+சூழல் கோப்பு நமக்கு தேவைப்படும் சார்புகளை குறிப்பிடுகிறது. `<environment-name>` என்பது நீங்கள் கொண்டா சூழலுக்கு கொடுக்க விரும்பும் பெயர், `<python-version>` என்பது நீங்கள் பயன்படுத்த விரும்பும் Python பதிப்பு, உதாரணமாக `3` என்பது Python இன் புதிய பிரதான பதிப்பாகும்.
 
-இதை முடித்த பிறகு, கீழ்க்காணும் கட்டளைகளை உங்கள் கட்டளைப் பத்தியில்/டெர்மினலில் இயக்கி உங்கள் Conda சூழலை உருவாக்கலாம்
+இவற்றை முடித்த பின், கீழ்காணும் கட்டளைகளை உங்கள் கட்டளைக் கோப்பில்/டெர்மினலில் இயக்கி கொண்டா சூழலை உருவாக்கவும்
 
 ```bash
-conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer துணை பாதை Codespace அமைப்புகளுக்கு மட்டும் பொருந்தும்
+conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer உபபாதை Codespace அமைப்புகளுக்கு மட்டுமே பொருந்தும்
 conda activate ai4beg
 ```
 
-எந்த பிரச்சனையோ ஏற்பட்டால் [Conda சூழல்கள் வழிகாட்டி](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) பார்க்கவும்.
+ஏதேனும் பிரச்சனை வந்தால் [கொண்டா சூழல் வழிகாட்டி](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) ஐ பார்க்கவும்.
 
-### Python மேலாண்மையுடன் Visual Studio Code பயன்படுத்துதல்
+### Python ஆதரவுடன் Visual Studio Code பயன்படுத்துதல்
 
-இந்த பாடத்திட்டத்துக்கு நாம் பரிந்துரைக்கிறோம் [Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) தொகுப்பாளியை [Python மேலாண்மை நீட்சியுடன்](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) பயன்படுத்த. இது பரிந்துரை மட்டுமே, கட்டாயம் அல்ல.
+இந்த பாடத்திற்கு, [Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) மற்றும் அதில் உள்ள [Python ஆதரவு நீட்சியை](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) பயன்படுத்த பரிந்துரைக்கிறோம். இது ஒரு பரிந்துரையே; கட்டாயம் இல்லை.
 
-> **குறிப்பு**: பாடத்திட்ட ரெப்போவை VS Code இல் திறந்தால், திட்டத்தை ஒரு கன்டெய்னரில் அமைப்பதற்கான விருப்பம் உங்களுக்கு கிடைக்கும். இது பாடத்திட்டத்தில் உள்ள [சிறப்பு `.devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) கோப்புறையின் காரணமாகவே. இதை பின்னர் மேலும் பார்க்கலாம்.
+> **குறிப்பு**: VS Code இல் பாடம் ரெப்போவைத் திறந்தவுடன், உங்கள் திட்டத்தை ஒரு கொண்டெயினர் வழியாக அமைக்க επιλογம் உள்ளது. இதற்கு காரணம் பாடம் ரெப்போவில் உள்ள [சிறப்பு `.devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) கோப்பகம் ஆகும். பின்னர் இதில் விளக்கம்.
 
-> **குறிப்பு**: நீங்கள் ரெப்போவை கிளோன் செய்து VS Code இல் திறந்தவுடன், Python மேலாண்மை நீட்சியை நிறுவ பரிந்துரை வரும்.
+> **குறிப்பு**: நீங்கள் ரெப்போவை கிளோன் செய்து VS Code இல் திறக்கும்போது, Python ஆதரவு நீடியை நிறுவ பரிந்துரை செய்யப்படும்.
 
-> **குறிப்பு**: VS Code ரெப்போவை கன்டெய்னரில் மீண்டும் திறக்க பரிந்துரைத்தால், அதை மறுக்கவும், ஏனெனில் நீங்கள் உள்ளூர் கணினியில் நிறுவிய Python ஐ பயன்படுத்த விரும்பலாம்.
+> **குறிப்பு**: VS Code ரெப்போவை கொண்டெயினரில் மீண்டும் திறக்க பரிந்துரைத்தால், அதற்கான வேண்டுகோளை மறுத்து உள்ளூர் Python பதிப்பை பயன்படுத்தவும்.
 
-### உலாவியில் Jupyter பயன்படுத்தல்
+### உலாவியில் Jupyter பயன்படுத்துதல்
 
-இந்த திட்டத்தில் வேலை செய்வதற்கு நீங்கள் உங்கள் உலாவியில் உள்ள [Jupyter சூழலை](https://jupyter.org?WT.mc_id=academic-105485-koreyst) பயன்படுத்தலாம். பாரம்பரிய Jupyter மற்றும் [Jupyter Hub](https://jupyter.org/hub?WT.mc_id=academic-105485-koreyst) இரண்டும் தானாகக் குமிழ்நீக்கம், குறியீட்டு வெளிச்சம் போன்ற வசதிகளுடன் ஒரு இனிமையான அபிவிருத்தி சூழலை வழங்குகின்றன.
+உலாவியில் உள்ளே [Jupyter சூழலை](https://jupyter.org?WT.mc_id=academic-105485-koreyst) பயன்படுத்தி பணியாற்றலாம். இரண்டிலும், பழமையான Jupyter மற்றும் [Jupyter Hub](https://jupyter.org/hub?WT.mc_id=academic-105485-koreyst) தானாக நிறைவு, குறியீடு வண்ணமயமாக்கல் போன்ற வாய்ப்புகளை கொண்ட இனிமையான வளர்ச்சிச் சூழல்களை வழங்குகின்றன.
 
-Jupyter ஐ உள்ளூர் இயக்க, டெர்மினல்/கமாண்ட் பத்தியை திறந்து, பாடத்திட்ட கோப்புறைக்கு சென்று, கீழ்க்காணும் கட்டளை இயக்கவும்:
+Jupyter ஐ உள்ளூரில் தொடங்க, டெர்மினல்/கட்டளைக் கோப்பிற்கு சென்று பாடம் கோப்புறைக்கு நகர்ந்து இயக்கவும்:
 
 ```bash
 jupyter notebook
@@ -177,59 +177,59 @@ jupyter notebook
 jupyterhub
 ```
 
-இது ஒரு Jupyter இடத்தைத் துவக்கி, அணுகும் URL-ஐ கட்டளை பத்தி சாளரத்தில் காட்டும்.
+இதனால் Jupyter வேலை நிழல் துவங்கி, அணுகுவதற்கான URL கட்டளைக் கோப்பு ஜன்னலில் காட்டப்படும்.
 
-நீங்கள் அந்த URL-ஐ அணுகியவுடன், பாடத்திட்ட விளக்கத்தைப் பார், எந்த `*.ipynb` கோப்பிடத்திற்கும் செல்ல முடியும். உதாரணமாக, `08-building-search-applications/python/oai-solution.ipynb`.
+அந்த URL ஐ அணுகியவுடன், பாட திட்ட அகத்தை காண்பீர்கள் மற்றும் எந்த `*.ipynb` கோப்புக்கும் செல்ல முடியும். உதாரணமாக, `08-building-search-applications/python/oai-solution.ipynb`.
 
-### கன்டெய்னரில் இயக்குதல்
+### கொண்டெயினரில் இயக்குதல்
 
-உங்கள் கணினியிலும் Codespace-லுமல்லாமல் ஒரு [கன்டெய்னர்](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>) பயன்படுத்துவதும் வழி உள்ளது. பாடத்திட்ட ரெப்போவின் `.devcontainer` கோப்புறை இதை VS Codeலாக அமைக்க உதவுகிறது. Codespaces தவிர, இது Docker நிறுவல் தேவைப்படும், மற்றும் ஒரு கட்டாய வேலை, எனவே தயவுசெய்து கன்டெய்னர் அனுபவம் உள்ளவர்கள் மட்டுமே இதை முயற்சிக்க வேண்டும்.
+உங்கள் கணினியில் அல்லது Codespace இல் அனைத்தையும் அமைக்கும் மாற்றாக [ஒரு கொண்டெயினர்](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>) பயன்படுத்தலாம். பாடம் ரெப்போவில் உள்ள சிறப்பு `.devcontainer` கோப்பகம் VS Code இல் கொண்டெயினரில் இதை அமைக்க உதவும். Codespaces தவிர்ப்பில், Docker நிறுவ வேண்டும்; இது குறுகிய நேரம் மற்றும் அனுபவம் தேவைபடும், ஆகையால் கொண்டெயினர்களில் அனுபவமுள்ளவர்களுக்கு பரிந்துரைக்கப்படுகின்றது.
 
-GitHub Codespaces பயன்படுத்தும்போது உங்கள் API விசைகளை பாதுகாப்பாக வைப்பதற்கான சிறந்த வழிகளில் ஒன்று Codespace ரகசியங்களை பயன்படுத்துதல். இதற்கான மேலாண்மை முறையை அறிய [Codespaces ரகசிய மேலாண்மை](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) வழிகாட்டியை பின்பற்றவும்.
+GitHub Codespaces பயன்படுத்தும் போது உங்கள் API விசைகளை பாதுகாப்பதற்கான சிறந்த வழிகளில் ஒன்று Codespace ரகசியங்களைப் பயன்படுத்தல் ஆகும். இதைப் பற்றி இங்கே பார்க்கவும்: [Codespaces secrets management](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst)
 
 
 ## பாடங்கள் மற்றும் தொழில்நுட்ப தேவைகள்
 
-இந்த பாடத்திட்டத்தில் 6 கருத்துப் பாடங்களும் 6 குறியீட்டு பாடங்களும் உள்ளன.
+பாடத்தில் "கற்றல்" பாடங்கள் ஜெனரேட்டிவ் AI கருத்துக்களை விளக்கும்; "உருவாக்குதல்" பாடங்கள் Python மற்றும் TypeScript இல் கையால் எழுதும் குறியீடு உதாரணங்களைக் கொண்டவை.
 
-குறியீட்டு பாடங்களுக்கான, நாம் Azure OpenAI சேவையைப் பயன்படுத்துகிறோம். இந்த குறியீட்டை இயக்க Azure OpenAI சேவையிலும் API விசையுமே வேண்டும். அணுகலை பெற [இந்த விண்ணப்பத்தை](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst) பூர்த்தி செய்து கோரி பெறலாம்.
+குறியீட்டுப் பாடங்களுக்கு, Microsoft Foundry இல் Azure OpenAI பயன்படுத்தப்படுகிறது. இதற்காக Azure சந்தா மற்றும் API விசை வேண்டும். விண்ணப்பம் இல்லாமல் திறந்த அணுகல் உள்ளது - அதனால் [Microsoft Foundry வளத்தை உருவாக்கி மற்றும் ஒரு மாதிரியை தளத்தில் அனுப்ப](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst) உங்கள் முனையத்தையும் விசையையும் பெறலாம்.
 
-உங்கள் விண்ணப்பம் செயலாக்கப்படும் வரை, ஒவ்வொரு குறியீட்டு பாடத்திலும் உள்ள `README.md` கோப்பில் குறியீடு மற்றும் வெளியீடுகளை பார்க்கலாம்.
+ஒவ்வொரு குறியீட்டு பாடத்திலும் குறியீடு மற்றும் வெளியீடுகளை இயக்காமல் பார்ப்பதற்கான `README.md` கோப்பு உண்டு.
 
-## Azure OpenAI சேவையை முதல்முறை பயன்பாடு
+## Azure OpenAI சேவையை முதன்முறையாக பயன்படுத்துதல்
 
-இது உங்கள் முதல் முறையாக Azure OpenAI சேவையைப் பயன்படுத்துவதாக இருந்தால், [Azure OpenAI சேவை வளங்களை உருவாக்கி இயக்கும் வழிகாட்டியை](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst) பின்பற்றவும்.
+இது Azure OpenAI சேவையை முதன்முறையாக பயன்படுத்தினால், தயவுசெய்து இந்த வழிகாட்டியை பின்பற்ற [Azure OpenAI சேவை வளத்தை உருவாக்கி அனுப்புவது எப்படி](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
 
-## OpenAI API-ஐ முதல் முறையாக பயன்படுத்துதல்
+## OpenAI API-ஐ முதன்முறையாக பயன்படுத்துதல்
 
-இது உங்கள் முதல் முறையாக OpenAI API-ஐப் பயன்படுத்துகிறீர்களானால், [இணையமைப்பை உருவாக்கி பயன்படுத்தும் வழிகாட்டியை](https://platform.openai.com/docs/quickstart?context=pythont&WT.mc_id=academic-105485-koreyst) பின்பற்றவும்.
+OpenAI API-ஐ முதன்முறையாக பயன்படுத்தினால், இந்த வழிகாட்டியை பின்பற்றவும்: [இணைமுகத்தை உருவாக்கி பயன்படுத்துவது எப்படி](https://platform.openai.com/docs/quickstart?context=pythont&WT.mc_id=academic-105485-koreyst)
 
-## மற்ற பயனர்களுடன் சந்திப்பு
+## மற்ற மாணவர்களை சந்திக்க
 
-நாங்கள் அதிகாரப்பூர்வ [AI சமூha Discord சேவையில்](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) மற்ற பயனர்களுக்கு சந்திப்புக்கான சேனல்கள் உருவாக்கியுள்ளோம். இது இதேபோன்ற ஆசைப்படுவோரோடு, கலைஞர்களோடு, மாணவர்களோடு இணைந்து வலைபின்னல் அமைப்பதற்கான சிறந்த வழி.
+எங்கள் அதிகாரப்பூர்வ [AI Community Discord சேவையகத்தில்](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) மற்ற மாணவர்களை சந்திக்க சேனல் அமைத்துள்ளோம். இது மற்றபடியும் சேர்க்கையோடு முனைந்த தொழில்களோடு, கட்டுமானத்தோடு, மாணவர்களோடு மற்றும் ஜெனரேட்டிவ் AI-யில் முன்னேறும் விருப்பமுள்ளவர்களோடு தொடர்பை பராமரிக்க சிறந்த வழி.
 
-[![Discord சேனலில் சேரவும்](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
+[![Join discord channel](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
-திட்ட குழு இந்த Discord சேவையிலிருப்பார்கள் மற்றும் பயனர்களுக்கு உதவுவார்கள்.
+இந்த Discord சேவையகத்தில் திட்ட குழு மாணவர்களுக்கு உதவும்.
 
 ## பங்களிக்கவும்
 
-இந்த பாடத்திட்டம் ஒரு திறந்த மூல முயற்சி ஆகும். மேம்பாடுகள் அல்லது பிழைகள் இருந்தால், [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) உருவாக்கவும் அல்லது [GitHub issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) பதிவு செய்யவும்.
+இந்த பாடத்திட்டம் திறந்த மூல முயற்சி ஆகும். மேம்பாட்டு பகுதிகள் அல்லது பிரச்சனைகள் இருந்தால், தயவுசெய்து [Pull Request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) உருவாக்கவும் அல்லது [GitHub issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) பதிவேற்றவும்.
 
-திட்ட குழு அனைத்து பங்களிப்புகளையும் கண்காணிப்பார்கள். திறந்த மூலத்தில் பங்களிப்பது ஜெனரேட்டிவ் ஏஐ-இல் உங்கள் வாழ்க்கைமாறு அமைப்பதற்கான ஒரு அற்புதமான வழி.
+திட்டம் அனைத்து பங்களிப்புகளையும் கண்காணிக்கும். திறந்த மூலத்திற்கு பங்களிப்பு செய்வது ஜெனரேட்டிவ் AI-யில் உங்கள் தொழிலை உருவாக்க சிறந்த வழி.
 
-பெரும்பாலான பங்களிப்புகள், நீங்கள் அந்த பங்களிப்பை பயன்படுத்துவதற்கு உரிமை உங்களுக்கு இருப்பதாகவும், உண்மையிலேயும் அப்படி செய்கிறீர்களா என்று உறுதிப்படுத்தும் பங்களிப்பாளர் உரிமம் ஒப்பந்தம் (CLA) ஒப்புதல் தேவைப்படும். விரிவாக, [CLA, Contributor License Agreement இணையதளத்தை](https://cla.microsoft.com?WT.mc_id=academic-105485-koreyst) பார்க்கவும்.
+பெரும்பாலான பங்களிப்புகளுக்கு, நீங்கள் ஒரு பங்களிப்பாளர் உரிமம் ஒப்பந்தத்துக்கு (CLA) ஒப்புக்கொண்டிருப்பது அவசியம். இதில் நீங்கள் பங்களிப்பை வழங்கும் உரிமையை கொண்டுள்ளீர்கள் என்றும், நமக்கு பயன் படுத்த அனுமதி தருவீர்கள் என்றும் கூறப்படுகிறது. விரிவுகளுக்கு [CLA, Contributor License Agreement இணையத்தளம்](https://cla.microsoft.com?WT.mc_id=academic-105485-koreyst) பார்க்கவும்.
 
-முக்கியம்: இந்த ரெப்போவில் உரையை மொழிபெயர்க்கும்போது, இயந்திர மொழிபெயர்ப்பைப் பயன்படுத்த வேண்டாம். சமூகத்தினரால் மொழிபெயர்ப்புகள் சரிபார்க்கப்படும், எனவே நீங்கள் தேர்ச்சி பெற்ற மொழிகளில் மட்டும் மொழிபெயர்ப்புக்கான தன்னார்வப் பார்வையாளராக இருங்கள்.
-
-நீங்கள் ஒரு pull request சமர்ப்பிக்கும் போது, CLA-பாட் தானாகவே நீங்கள் CLA வழங்க வேண்டுமா என்பதையும், PR-ஐ சரியானவாறு அடையாளம் காணும் (எ.கா., லேபல், கருத்து). பின் படிகள் அவனின் வழிகாட்டுதல்களைப் பின்பற்றுங்கள். இது ஒரு முறையே அனைத்து ரெப்போக்களுக்கும் செய்வது போதுமானது.
+முக்கியம்: இந்த ரெப்போவில் உள்ள உரைகளை மொழிமாற்றம் செய்யும்போது, தயவு செய்து மெஷின் தமிழ் மொழிமாற்றத்தைப் பயன்படுத்த வேண்டாம். மொழிபெயர்ப்புகளை சமுதாயத்தின் மூலம் சரிபார்ப்போம். எனவே, நீங்கள் நன்றாக அறிந்த மொழிகளுக்குப் பணி செய்யவும்.
 
 
-இந்த திட்டம் [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst)-ஐ ஏற்றுக்கொண்டுள்ளது. கூடுதல் தகவலுக்கு Code of Conduct FAQஐ படிக்கவும் அல்லது [Email opencode](opencode@microsoft.com)க்கு மேலதிக கேள்விகள் அல்லது கருத்துக்கள் இருந்தால் தொடர்புகொள்ளவும்.
+நீங்கள் ஒரு pull request சமர்ப்பிக்கும் போது, CLA-bot தானாகவே நீங்கள் CLA வழங்க வேண்டுமா என்று தீர்மானித்து PR ஐ பொருத்தமான முறையில் அலங்கரிக்கும் (உதாரணமாக, லேபல், கருத்து). இந்தக் கட்டளைபடி bot வழங்கும் வழிமுறைகளை பின்பற்றுங்கள். நீங்கள் எங்கள் CLA ஐ பயன்படுத்தும் அனைத்து சேமிப்பகங்களிலும் இதை ஒருமுறை ғана செய்ய வேண்டும்.
 
-## ஆவனையுடன் தொடங்குவோம்
+இந்த திட்டம் [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst) ஐ ஏற்றுக்கொண்டுள்ளது. கூடுதல் தகவலுக்கு நடத்தை விதிமுறைகள் FAQ ஐ படியுங்கள் அல்லது [Email opencode](opencode@microsoft.com) என்ற முகவரிக்கு கூடுதல் கேள்விகள் அல்லது கருத்துக்களை அனுப்புங்கள்.
 
-இப்போது நீங்கள் இந்த பாடங்களை முடித்துள்ளீர்கள், தொடங்கும்போது [Generative AI மற்றும் LLMகளுக்கான அறிமுகம்](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst) பெறுவோம்.
+## தொடங்குவோம்
+
+இப்போது நீங்கள் இந்த பாடத்திட்டத்தை முடித்துள்ளீர்கள், [இங்கு இருந்து ஜெனரட்டிவ் AI மற்றும் LLM களை அறிமுகம்](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst) படியுங்கள்.
 
 ---
 

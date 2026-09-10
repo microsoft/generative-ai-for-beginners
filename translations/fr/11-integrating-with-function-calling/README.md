@@ -1,10 +1,10 @@
 # Intégration avec l'appel de fonction
 
-[![Intégration avec l'appel de fonction](../../../translated_images/fr/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
+[![Intégrer avec l'appel de fonction](../../../translated_images/fr/11-lesson-banner.d78860d3e1f041e2.webp)](https://youtu.be/DgUdCLX8qYQ?si=f1ouQU5HQx6F8Gl2)
 
-Vous avez déjà appris pas mal de choses dans les leçons précédentes. Cependant, nous pouvons encore nous améliorer. Parmi les points à aborder, il y a la manière d'obtenir un format de réponse plus cohérent pour faciliter le traitement des réponses en aval. De plus, nous pourrions vouloir ajouter des données provenant d'autres sources pour enrichir davantage notre application.
+Vous avez déjà appris pas mal de choses dans les leçons précédentes. Cependant, nous pouvons encore améliorer. Certains points que nous pouvons aborder sont la manière d'obtenir un format de réponse plus cohérent pour faciliter le traitement de la réponse en aval. De plus, nous pourrions vouloir ajouter des données provenant d'autres sources pour enrichir davantage notre application.
 
-Ce chapitre vise à résoudre les problèmes mentionnés ci-dessus.
+Les problèmes mentionnés ci-dessus sont ceux que ce chapitre cherche à résoudre.
 
 ## Introduction
 
@@ -19,56 +19,59 @@ Cette leçon couvrira :
 À la fin de cette leçon, vous serez capable de :
 
 - Expliquer l'objectif de l'utilisation de l'appel de fonction.
-- Configurer un appel de fonction en utilisant le service Azure OpenAI.
-- Concevoir des appels de fonction efficaces pour les cas d'utilisation de votre application.
+- Configurer l'appel de fonction en utilisant le service Azure OpenAI.
+- Concevoir des appels de fonction efficaces pour le cas d'utilisation de votre application.
 
 ## Scénario : Améliorer notre chatbot avec des fonctions
 
-Pour cette leçon, nous souhaitons développer une fonctionnalité pour notre startup éducative permettant aux utilisateurs d'utiliser un chatbot pour trouver des cours techniques. Nous recommanderons des cours adaptés à leur niveau de compétence, leur rôle actuel et leur technologie d'intérêt.
+Pour cette leçon, nous souhaitons construire une fonctionnalité pour notre startup éducative qui permet aux utilisateurs d'utiliser un chatbot pour trouver des cours techniques. Nous recommanderons des cours adaptés à leur niveau de compétence, rôle actuel et technologie d'intérêt.
 
-Pour réaliser ce scénario, nous utiliserons une combinaison de :
+Pour compléter ce scénario, nous utiliserons une combinaison de :
 
 - `Azure OpenAI` pour créer une expérience de chat pour l'utilisateur.
-- `Microsoft Learn Catalog API` pour aider les utilisateurs à trouver des cours en fonction de leur demande.
-- `Appel de fonction` pour prendre la requête de l'utilisateur et l'envoyer à une fonction afin de faire la requête API.
+- `Microsoft Learn Catalog API` pour aider les utilisateurs à trouver des cours selon leur demande.
+- `Function Calling` pour prendre la requête de l'utilisateur et l'envoyer à une fonction qui fera la requête API.
 
-Pour commencer, examinons pourquoi nous voudrions utiliser l'appel de fonction en premier lieu :
+Pour commencer, voyons pourquoi nous voudrions utiliser l'appel de fonction en premier lieu :
 
 ## Pourquoi l'appel de fonction
 
-Avant l'appel de fonction, les réponses d'un LLM étaient non structurées et incohérentes. Les développeurs devaient écrire un code de validation complexe pour s'assurer qu'ils pouvaient gérer chaque variation de réponse. Les utilisateurs ne pouvaient pas obtenir des réponses comme "Quel est le temps actuel à Stockholm ?". Cela est dû au fait que les modèles étaient limités aux données disponibles au moment de leur entraînement.
+Avant l'appel de fonction, les réponses d'un LLM étaient non structurées et inconsistantes. Les développeurs devaient écrire du code de validation complexe pour s'assurer de pouvoir gérer chaque variation de réponse. Les utilisateurs ne pouvaient pas obtenir des réponses comme "Quel temps fait-il actuellement à Stockholm ?". Cela est dû au fait que les modèles étaient limités à la période des données utilisées pour l'entraînement.
 
-L'appel de fonction est une fonctionnalité du service Azure OpenAI qui permet de surmonter les limitations suivantes :
+L'appel de fonction est une fonctionnalité du service Azure OpenAI pour dépasser les limitations suivantes :
 
-- **Format de réponse cohérent**. Si nous pouvons mieux contrôler le format de réponse, nous pouvons plus facilement intégrer la réponse en aval dans d'autres systèmes.
-- **Données externes**. Capacité à utiliser des données provenant d'autres sources d'une application dans un contexte de chat.
+- **Format de réponse cohérent**. Si nous pouvons mieux contrôler le format de réponse, nous pouvons plus facilement intégrer la réponse en aval à d'autres systèmes.
+- **Données externes**. Possibilité d'utiliser des données provenant d'autres sources d'une application dans un contexte de chat.
 
-## Illustrer le problème à travers un scénario
+## Illustrer le problème avec un scénario
 
-> Nous vous recommandons d'utiliser le [notebook inclus](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) si vous souhaitez exécuter le scénario ci-dessous. Vous pouvez également simplement lire, car nous essayons d'illustrer un problème où les fonctions peuvent aider à le résoudre.
+> Nous vous recommandons d'utiliser le [notebook inclus](./python/aoai-assignment.ipynb?WT.mc_id=academic-105485-koreyst) si vous souhaitez exécuter le scénario ci-dessous. Vous pouvez aussi simplement lire en nous suivant alors que nous essayons d'illustrer un problème où les fonctions peuvent aider à le résoudre.
 
-Examinons un exemple qui illustre le problème de format de réponse :
+Voyons l'exemple qui illustre le problème du format de réponse :
 
-Disons que nous voulons créer une base de données d'informations sur les étudiants afin de leur suggérer le bon cours. Ci-dessous, nous avons deux descriptions d'étudiants qui sont très similaires dans les données qu'elles contiennent.
+Disons que nous voulons créer une base de données d'informations sur des étudiants afin de leur suggérer le bon cours. Ci-dessous, nous avons deux descriptions d'étudiants très similaires dans les données qu'elles contiennent.
 
 1. Créer une connexion à notre ressource Azure OpenAI :
 
    ```python
    import os
    import json
-   from openai import AzureOpenAI
+   from openai import OpenAI
    from dotenv import load_dotenv
    load_dotenv()
 
-   client = AzureOpenAI(
-   api_key=os.environ['AZURE_OPENAI_API_KEY'],  # this is also the default, it can be omitted
-   api_version = "2023-07-01-preview"
+   # L'API Responses est fournie depuis le point de terminaison Azure OpenAI (Microsoft Foundry) v1
+   # , donc nous configurons le client OpenAI sur <votre-point-de-terminaison>/openai/v1/.
+   endpoint = os.environ['AZURE_OPENAI_ENDPOINT']
+   client = OpenAI(
+   api_key=os.environ['AZURE_OPENAI_API_KEY'],
+   base_url=f"{endpoint.rstrip('/')}/openai/v1/",
    )
 
    deployment=os.environ['AZURE_OPENAI_DEPLOYMENT']
    ```
 
-   Ci-dessous, du code Python pour configurer notre connexion à Azure OpenAI où nous définissons `api_type`, `api_base`, `api_version` et `api_key`.
+   Voici un exemple de code Python pour configurer notre connexion à Azure OpenAI. Comme nous utilisons le point de terminaison v1, nous devons seulement définir `api_key` et `base_url` (aucune `api_version` n'est requise).
 
 1. Créer deux descriptions d'étudiants en utilisant les variables `student_1_description` et `student_2_description`.
 
@@ -78,9 +81,9 @@ Disons que nous voulons créer une base de données d'informations sur les étud
    student_2_description = "Michael Lee is a sophomore majoring in computer science at Stanford University. He has a 3.8 GPA. Michael is known for his programming skills and is an active member of the university's Robotics Club. He hopes to pursue a career in artificial intelligence after finishing his studies."
    ```
 
-   Nous voulons envoyer les descriptions d'étudiants ci-dessus à un LLM pour analyser les données. Ces données peuvent ensuite être utilisées dans notre application et être envoyées à une API ou stockées dans une base de données.
+   Nous voulons envoyer les descriptions étudiants ci-dessus à un LLM pour analyser les données. Ces données peuvent ensuite être utilisées dans notre application et envoyées à une API ou stockées dans une base de données.
 
-1. Créons deux invites identiques dans lesquelles nous instruisons le LLM sur les informations que nous recherchons :
+1. Créons deux prompts identiques où nous demandons au LLM quelles informations nous souhaitons extraire :
 
    ```python
    prompt1 = f'''
@@ -110,33 +113,35 @@ Disons que nous voulons créer une base de données d'informations sur les étud
    '''
    ```
 
-   Les invites ci-dessus instruisent le LLM à extraire des informations et à retourner la réponse au format JSON.
+   Les prompts ci-dessus indiquent au LLM d'extraire les informations et de retourner la réponse au format JSON.
 
-1. Après avoir configuré les invites et la connexion à Azure OpenAI, nous allons maintenant envoyer les invites au LLM en utilisant `openai.ChatCompletion`. Nous stockons l'invite dans la variable `messages` et attribuons le rôle à `user`. Cela permet de simuler un message écrit par un utilisateur à un chatbot.
+1. Après avoir configuré les prompts et la connexion Azure OpenAI, nous allons maintenant envoyer les prompts au LLM en utilisant `client.responses.create`. Nous stockons le prompt dans la variable `input` et définissons le rôle à `user`. Ceci simule un message écrit par un utilisateur à un chatbot.
 
    ```python
-   # response from prompt one
-   openai_response1 = client.chat.completions.create(
+   # réponse de l'invite un
+   openai_response1 = client.responses.create(
    model=deployment,
-   messages = [{'role': 'user', 'content': prompt1}]
+   input = [{'role': 'user', 'content': prompt1}],
+   store=False,
    )
-   openai_response1.choices[0].message.content
+   openai_response1.output_text
 
-   # response from prompt two
-   openai_response2 = client.chat.completions.create(
+   # réponse de l'invite deux
+   openai_response2 = client.responses.create(
    model=deployment,
-   messages = [{'role': 'user', 'content': prompt2}]
+   input = [{'role': 'user', 'content': prompt2}],
+   store=False,
    )
-   openai_response2.choices[0].message.content
+   openai_response2.output_text
    ```
 
-Nous pouvons maintenant envoyer les deux requêtes au LLM et examiner la réponse que nous recevons en la trouvant comme suit : `openai_response1['choices'][0]['message']['content']`.
+Nous pouvons maintenant envoyer les deux requêtes au LLM et examiner la réponse reçue en la trouvant ainsi `openai_response1.output_text`.
 
 1. Enfin, nous pouvons convertir la réponse au format JSON en appelant `json.loads` :
 
    ```python
-   # Loading the response as a JSON object
-   json_response1 = json.loads(openai_response1.choices[0].message.content)
+   # Chargement de la réponse en tant qu'objet JSON
+   json_response1 = json.loads(openai_response1.output_text)
    json_response1
    ```
 
@@ -164,59 +169,60 @@ Nous pouvons maintenant envoyer les deux requêtes au LLM et examiner la répons
    }
    ```
 
-   Bien que les invites soient les mêmes et que les descriptions soient similaires, nous voyons que les valeurs de la propriété `Grades` sont formatées différemment, car nous pouvons parfois obtenir le format `3.7` ou `3.7 GPA`, par exemple.
+   Même si les prompts sont identiques et que les descriptions sont similaires, nous voyons des valeurs de la propriété `Grades` formatées différemment, car parfois nous obtenons le format `3.7` ou `3.7 GPA` par exemple.
 
-   Ce résultat est dû au fait que le LLM prend des données non structurées sous forme d'invite écrite et retourne également des données non structurées. Nous devons avoir un format structuré afin de savoir à quoi nous attendre lors du stockage ou de l'utilisation de ces données.
+   Ce résultat est dû au fait que le LLM prend des données non structurées sous forme de prompt écrit et retourne également des données non structurées. Nous avons besoin d'un format structuré afin de savoir à quoi nous attendre lors du stockage ou de l'utilisation de ces données.
 
-Alors, comment résoudre le problème de formatage ? En utilisant l'appel de fonction, nous pouvons nous assurer de recevoir des données structurées. Lors de l'utilisation de l'appel de fonction, le LLM n'appelle ni n'exécute réellement de fonctions. Au lieu de cela, nous créons une structure que le LLM doit suivre pour ses réponses. Nous utilisons ensuite ces réponses structurées pour savoir quelle fonction exécuter dans nos applications.
+Alors comment résoudre le problème de formatage ? En utilisant l'appel fonctionnel, nous pouvons nous assurer de recevoir des données structurées en retour. Lors de l'appel de fonction, le LLM n'appelle ni n'exécute réellement de fonctions. À la place, nous créons une structure que le LLM doit suivre pour ses réponses. Nous utilisons ensuite ces réponses structurées pour savoir quelle fonction lancer dans nos applications.
 
-![flux de fonction](../../../translated_images/fr/Function-Flow.083875364af4f4bb.webp)
+![flux fonctionnel](../../../translated_images/fr/Function-Flow.083875364af4f4bb.webp)
 
-Nous pouvons ensuite prendre ce qui est retourné par la fonction et renvoyer cela au LLM. Le LLM répondra alors en utilisant un langage naturel pour répondre à la requête de l'utilisateur.
+Nous pouvons ensuite prendre ce qui est retourné de la fonction et le renvoyer au LLM. Le LLM répondra ensuite en langage naturel pour répondre à la requête de l'utilisateur.
 
-## Cas d'utilisation de l'appel de fonction
+## Cas d'utilisation des appels de fonction
 
-Il existe de nombreux cas d'utilisation où l'appel de fonction peut améliorer votre application, tels que :
+Il existe de nombreux cas d'utilisation où les appels de fonction peuvent améliorer votre application, tels que :
 
-- **Appeler des outils externes**. Les chatbots sont excellents pour fournir des réponses aux questions des utilisateurs. En utilisant l'appel de fonction, les chatbots peuvent utiliser les messages des utilisateurs pour accomplir certaines tâches. Par exemple, un étudiant peut demander au chatbot "Envoyez un email à mon professeur pour lui dire que j'ai besoin de plus d'aide sur ce sujet". Cela peut déclencher un appel de fonction à `send_email(to: string, body: string)`.
+- **Appeler des outils externes**. Les chatbots sont excellents pour fournir des réponses aux questions des utilisateurs. En utilisant l'appel de fonction, les chatbots peuvent utiliser les messages des utilisateurs pour accomplir certaines tâches. Par exemple, un étudiant peut demander au chatbot de "Envoyer un email à mon instructeur disant que j'ai besoin de plus d'aide sur ce sujet". Cela peut faire appel à une fonction `send_email(to: string, body: string)`
 
-- **Créer des requêtes API ou des requêtes de base de données**. Les utilisateurs peuvent trouver des informations en utilisant un langage naturel qui est converti en une requête ou une demande API formatée. Un exemple pourrait être un enseignant qui demande "Quels sont les étudiants qui ont terminé le dernier devoir", ce qui pourrait appeler une fonction nommée `get_completed(student_name: string, assignment: int, current_status: string)`.
+- **Créer des requêtes API ou de base de données**. Les utilisateurs peuvent trouver des informations en utilisant un langage naturel qui est converti en requête formatée ou requête API. Un exemple pourrait être un enseignant qui demande "Qui sont les étudiants qui ont terminé la dernière mission" ce qui pourrait appeler une fonction nommée `get_completed(student_name: string, assignment: int, current_status: string)`
 
-- **Créer des données structurées**. Les utilisateurs peuvent prendre un bloc de texte ou un fichier CSV et utiliser le LLM pour en extraire des informations importantes. Par exemple, un étudiant peut convertir un article de Wikipédia sur les accords de paix pour créer des fiches de révision. Cela peut être fait en utilisant une fonction appelée `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`.
+- **Créer des données structurées**. Les utilisateurs peuvent prendre un bloc de texte ou CSV et utiliser le LLM pour en extraire les informations importantes. Par exemple, un étudiant peut convertir un article Wikipedia sur les accords de paix pour créer des fiches d'apprentissage IA. Cela peut être fait en utilisant une fonction appelée `get_important_facts(agreement_name: string, date_signed: string, parties_involved: list)`
 
 ## Créer votre premier appel de fonction
 
 Le processus de création d'un appel de fonction comprend 3 étapes principales :
 
-1. **Appeler** l'API Chat Completions avec une liste de vos fonctions et un message utilisateur.
-2. **Lire** la réponse du modèle pour effectuer une action, c'est-à-dire exécuter une fonction ou une requête API.
-3. **Effectuer** un autre appel à l'API Chat Completions avec la réponse de votre fonction pour utiliser ces informations pour créer une réponse à l'utilisateur.
+1. **Appeler** l'API Responses avec une liste de vos fonctions (outils) et un message utilisateur.
+2. **Lire** la réponse du modèle pour effectuer une action, c'est-à-dire exécuter une fonction ou un appel API.
+3. **Faire** un autre appel à l'API Responses avec la réponse de votre fonction pour utiliser cette information afin de créer une réponse à l'utilisateur.
 
 ![Flux LLM](../../../translated_images/fr/LLM-Flow.3285ed8caf4796d7.webp)
 
-### Étape 1 - créer des messages
+### Étape 1 - créer les messages
 
-La première étape consiste à créer un message utilisateur. Cela peut être attribué dynamiquement en prenant la valeur d'une entrée texte ou vous pouvez attribuer une valeur ici. Si c'est votre première fois avec l'API Chat Completions, nous devons définir le `role` et le `content` du message.
+La première étape est de créer un message utilisateur. Il peut être assigné dynamiquement en prenant la valeur d'un champ de texte ou vous pouvez assigner une valeur ici. Si c'est votre première fois avec l'API Responses, nous devons définir le `role` et le `content` du message.
 
-Le `role` peut être soit `system` (création de règles), `assistant` (le modèle) ou `user` (l'utilisateur final). Pour l'appel de fonction, nous l'attribuerons comme `user` et une question d'exemple.
+Le `role` peut être soit `system` (création de règles), `assistant` (le modèle) ou `user` (l'utilisateur final). Pour l'appel de fonction, nous assignons cela en tant que `user` avec une question d'exemple.
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-En attribuant différents rôles, il est clair pour le LLM si c'est le système qui parle ou l'utilisateur, ce qui aide à construire un historique de conversation sur lequel le LLM peut s'appuyer.
+En assignant des rôles différents, il est clair pour le LLM si c'est le système ou l'utilisateur qui parle, ce qui aide à construire un historique de conversation sur lequel le LLM peut s'appuyer.
 
-### Étape 2 - créer des fonctions
+### Étape 2 - créer les fonctions
 
-Ensuite, nous allons définir une fonction et les paramètres de cette fonction. Nous utiliserons une seule fonction ici appelée `search_courses`, mais vous pouvez en créer plusieurs.
+Ensuite, nous définirons une fonction et ses paramètres. Nous utiliserons une seule fonction ici nommée `search_courses` mais vous pouvez en créer plusieurs.
 
-> **Important** : Les fonctions sont incluses dans le message système au LLM et seront incluses dans le nombre de tokens disponibles.
+> **Important** : Les fonctions sont incluses dans le message système envoyé au LLM et comptent dans le nombre total de tokens disponibles.
 
-Ci-dessous, nous créons les fonctions sous forme de tableau d'éléments. Chaque élément est une fonction et possède les propriétés `name`, `description` et `parameters` :
+Ci-dessous, nous créons les fonctions sous forme d'un tableau d'éléments. Chaque élément est un outil au format plat de l'API Responses, avec les propriétés `type`, `name`, `description` et `parameters` :
 
 ```python
 functions = [
    {
+      "type":"function",
       "name":"search_courses",
       "description":"Retrieves courses from the search index based on the parameters provided",
       "parameters":{
@@ -245,73 +251,74 @@ functions = [
 
 Décrivons chaque instance de fonction plus en détail ci-dessous :
 
-- `name` - Le nom de la fonction que nous voulons appeler.
-- `description` - C'est la description de la manière dont la fonction fonctionne. Ici, il est important d'être spécifique et clair.
-- `parameters` - Une liste de valeurs et de formats que vous souhaitez que le modèle produise dans sa réponse. Le tableau des paramètres se compose d'éléments où les éléments ont les propriétés suivantes :
+- `name` - Le nom de la fonction que nous souhaitons faire appeler.
+- `description` - La description de comment la fonction fonctionne. Il est important ici d'être précis et clair.
+- `parameters` - Une liste de valeurs et du format que vous souhaitez que le modèle produise dans sa réponse. Le tableau parameters consiste en des éléments où chaque élément a les propriétés suivantes :
   1.  `type` - Le type de données dans lequel les propriétés seront stockées.
-  1.  `properties` - Liste des valeurs spécifiques que le modèle utilisera pour sa réponse.
-      1. `name` - La clé est le nom de la propriété que le modèle utilisera dans sa réponse formatée, par exemple, `product`.
-      1. `type` - Le type de données de cette propriété, par exemple, `string`.
-      1. `description` - Description de la propriété spécifique.
+  1.  `properties` - Liste des valeurs spécifiques que le modèle utilisera pour sa réponse
+      1. `name` - La clé est le nom de la propriété que le modèle utilisera dans sa réponse formatée, par exemple `product`.
+      1. `type` - Le type de données de cette propriété, par exemple `string`.
+      1. `description` - Description spécifique de la propriété.
 
-Il existe également une propriété optionnelle `required` - propriété requise pour que l'appel de fonction soit complété.
+Il y a aussi une propriété optionnelle `required` - propriété obligatoire pour que l'appel de fonction soit complété.
 
-### Étape 3 - Effectuer l'appel de fonction
+### Étape 3 - Faire l'appel de fonction
 
-Après avoir défini une fonction, nous devons maintenant l'inclure dans l'appel à l'API Chat Completion. Nous le faisons en ajoutant `functions` à la requête. Dans ce cas, `functions=functions`.
+Après avoir défini une fonction, nous devons maintenant l'inclure dans l'appel à l'API Responses. Nous faisons cela en ajoutant `tools` à la requête. Ici, `tools=functions`.
 
-Il est également possible de définir `function_call` sur `auto`. Cela signifie que nous laisserons le LLM décider quelle fonction doit être appelée en fonction du message utilisateur plutôt que de l'attribuer nous-mêmes.
+Il y a aussi une option pour définir `tool_choice` sur `auto`. Cela signifie que nous laissons le LLM décider quelle fonction doit être appelée selon le message utilisateur, au lieu de l'assigner nous-mêmes.
 
-Voici un code ci-dessous où nous appelons `ChatCompletion.create`, notez comment nous définissons `functions=functions` et `function_call="auto"`, permettant ainsi au LLM de choisir quand appeler les fonctions que nous lui fournissons :
+Voici un exemple de code ci-dessous où nous appelons `client.responses.create`, notez comment nous définissons `tools=functions` et `tool_choice="auto"` donnant ainsi le choix au LLM de quand appeler les fonctions que nous lui fournissons :
 
 ```python
-response = client.chat.completions.create(model=deployment,
-                                        messages=messages,
-                                        functions=functions,
-                                        function_call="auto")
+response = client.responses.create(model=deployment,
+                                        input=messages,
+                                        tools=functions,
+                                        tool_choice="auto",
+                                        store=False)
 
-print(response.choices[0].message)
+print(response.output)
 ```
 
-La réponse qui revient ressemble à ceci :
+La réponse retournée inclut maintenant un élément `function_call` dans `response.output` qui ressemble à ceci :
 
 ```json
 {
-  "role": "assistant",
-  "function_call": {
-    "name": "search_courses",
-    "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
-  }
+  "type": "function_call",
+  "name": "search_courses",
+  "call_id": "call_abc123",
+  "arguments": "{\n  \"role\": \"student\",\n  \"product\": \"Azure\",\n  \"level\": \"beginner\"\n}"
 }
 ```
 
-Ici, nous pouvons voir comment la fonction `search_courses` a été appelée et avec quels arguments, comme indiqué dans la propriété `arguments` de la réponse JSON.
+Ici, nous pouvons voir comment la fonction `search_courses` a été appelée et avec quels arguments, comme listé dans la propriété `arguments` dans la réponse JSON.
 
-En conclusion, le LLM a pu trouver les données pour répondre aux arguments de la fonction en les extrayant de la valeur fournie au paramètre `messages` dans l'appel de complétion de chat. Ci-dessous, un rappel de la valeur `messages` :
+La conclusion est que le LLM a pu trouver les données pour correspondre aux arguments de la fonction car il les extrayait de la valeur donnée au paramètre `input` dans l'appel API Responses. Ci-dessous, un rappel de la valeur de `messages` :
 
 ```python
 messages= [ {"role": "user", "content": "Find me a good course for a beginner student to learn Azure."} ]
 ```
 
-Comme vous pouvez le voir, `student`, `Azure` et `beginner` ont été extraits de `messages` et définis comme entrée pour la fonction. Utiliser les fonctions de cette manière est un excellent moyen d'extraire des informations d'une invite, mais aussi de fournir une structure au LLM et d'avoir des fonctionnalités réutilisables.
+Comme vous le voyez, `student`, `Azure` et `beginner` ont été extraits des `messages` et utilisés en entrée pour la fonction. Utiliser les fonctions de cette manière est un excellent moyen d'extraire des informations d'un prompt mais aussi de fournir une structure au LLM et d'avoir une fonctionnalité réutilisable.
 
-Ensuite, nous devons voir comment nous pouvons utiliser cela dans notre application.
+Ensuite, voyons comment utiliser cela dans notre application.
 
 ## Intégrer les appels de fonction dans une application
 
-Après avoir testé la réponse formatée du LLM, nous pouvons maintenant intégrer cela dans une application.
+Après avoir testé la réponse formatée du LLM, nous pouvons maintenant l'intégrer dans une application.
 
 ### Gérer le flux
 
-Pour intégrer cela dans notre application, suivons les étapes suivantes :
+Pour intégrer cela dans notre application, procédons ainsi :
 
-1. Tout d'abord, faisons l'appel aux services OpenAI et stockons le message dans une variable appelée `response_message`.
+1. D'abord, faisons l'appel aux services OpenAI et extrayons les éléments d'appel de fonction de la réponse `output`.
 
    ```python
-   response_message = response.choices[0].message
+   response_items = response.output
+   tool_calls = [item for item in response_items if item.type == "function_call"]
    ```
 
-1. Maintenant, nous allons définir la fonction qui appellera l'API Microsoft Learn pour obtenir une liste de cours :
+1. Maintenant, nous définirons la fonction qui appellera l'API Microsoft Learn pour obtenir une liste de cours :
 
    ```python
    import requests
@@ -333,65 +340,57 @@ Pour intégrer cela dans notre application, suivons les étapes suivantes :
      return str(results)
    ```
 
-   Notez comment nous créons maintenant une véritable fonction Python qui correspond aux noms de fonctions introduits dans la variable `functions`. Nous effectuons également de véritables appels API externes pour récupérer les données dont nous avons besoin. Dans ce cas, nous utilisons l'API Microsoft Learn pour rechercher des modules de formation.
+   Notez comment nous créons maintenant une véritable fonction Python qui correspond aux noms de fonctions définis dans la variable `functions`. Nous effectuons également de vraies requêtes API externes pour récupérer les données dont nous avons besoin. Ici, nous interrogeons l'API Microsoft Learn pour rechercher des modules de formation.
 
-Ok, donc nous avons créé des variables `functions` et une fonction Python correspondante, comment dire au LLM comment les associer pour que notre fonction Python soit appelée ?
+D'accord, nous avons créé la variable `functions` et une fonction Python correspondante, comment le LLM sait-il faire le lien pour appeler notre fonction Python ?
 
-1. Pour voir si nous devons appeler une fonction Python, nous devons examiner la réponse du LLM et voir si `function_call` en fait partie, puis appeler la fonction indiquée. Voici comment vous pouvez effectuer la vérification mentionnée ci-dessous :
+1. Pour vérifier si nous devons appeler une fonction Python, nous devons examiner la réponse du LLM et voir si un élément `function_call` en fait partie et appeler la fonction désignée. Voici comment effectuer cette vérification ci-dessous :
 
    ```python
-   # Check if the model wants to call a function
-   if response_message.function_call.name:
-    print("Recommended Function call:")
-    print(response_message.function_call.name)
-    print()
+   # Vérifiez si le modèle souhaite appeler une fonction
+   if tool_calls:
+    for tool_call in tool_calls:
+     print("Recommended Function call:")
+     print(tool_call.name)
+     print()
 
-    # Call the function.
-    function_name = response_message.function_call.name
+     # Appelez la fonction.
+     function_name = tool_call.name
 
-    available_functions = {
-            "search_courses": search_courses,
-    }
-    function_to_call = available_functions[function_name]
+     available_functions = {
+             "search_courses": search_courses,
+     }
+     function_to_call = available_functions[function_name]
 
-    function_args = json.loads(response_message.function_call.arguments)
-    function_response = function_to_call(**function_args)
+     function_args = json.loads(tool_call.arguments)
+     function_response = function_to_call(**function_args)
 
-    print("Output of function call:")
-    print(function_response)
-    print(type(function_response))
+     print("Output of function call:")
+     print(function_response)
+     print(type(function_response))
 
-
-    # Add the assistant response and function response to the messages
-    messages.append( # adding assistant response to messages
-        {
-            "role": response_message.role,
-            "function_call": {
-                "name": function_name,
-                "arguments": response_message.function_call.arguments,
-            },
-            "content": None
-        }
-    )
-    messages.append( # adding function response to messages
-        {
-            "role": "function",
-            "name": function_name,
-            "content":function_response,
-        }
-    )
+     # Ajoutez l'appel de fonction et son résultat à la conversation.
+     # L'élément function_call du modèle doit être ajouté avant sa sortie.
+     messages.append(tool_call)  # l'élément function_call de l'assistant
+     messages.append( # le résultat de la fonction
+         {
+             "type": "function_call_output",
+             "call_id": tool_call.call_id,
+             "output": function_response,
+         }
+     )
    ```
 
-   Ces trois lignes garantissent que nous extrayons le nom de la fonction, les arguments et effectuons l'appel :
+   Ces trois lignes assurent que nous extrayons le nom de la fonction, les arguments et effectuons l'appel :
 
    ```python
    function_to_call = available_functions[function_name]
 
-   function_args = json.loads(response_message.function_call.arguments)
+   function_args = json.loads(tool_call.arguments)
    function_response = function_to_call(**function_args)
    ```
 
-   Ci-dessous, la sortie de l'exécution de notre code :
+   Ci-dessous la sortie de notre code :
 
    **Sortie**
 
@@ -412,52 +411,60 @@ Ok, donc nous avons créé des variables `functions` et une fonction Python corr
    <class 'str'>
    ```
 
-1. Maintenant, nous allons envoyer le message mis à jour, `messages`, au LLM afin de recevoir une réponse en langage naturel au lieu d'une réponse formatée en JSON API.
+1. Maintenant, nous enverrons le message mis à jour, `messages` au LLM pour recevoir une réponse en langage naturel au lieu d’une réponse JSON formatée de l'API.
 
    ```python
    print("Messages in next request:")
    print(messages)
    print()
 
-   second_response = client.chat.completions.create(
-      messages=messages,
+   second_response = client.responses.create(
+      input=messages,
       model=deployment,
-      function_call="auto",
-      functions=functions,
-      temperature=0
-         )  # get a new response from GPT where it can see the function response
+      tool_choice="auto",
+      tools=functions,
+      temperature=0,
+      store=False,
+         )  # obtenir une nouvelle réponse du modèle où il peut voir la réponse de la fonction
 
 
-   print(second_response.choices[0].message)
+   print(second_response.output_text)
    ```
 
    **Sortie**
 
-   ```python
-   {
-     "role": "assistant",
-     "content": "I found some good courses for beginner students to learn Azure:\n\n1. [Describe concepts of cryptography] (https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)\n2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)\n3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)\n4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)\n5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)\n\nYou can click on the links to access the courses."
-   }
+   ```text
+   I found some good courses for beginner students to learn Azure:
 
+   1. [Describe concepts of cryptography](https://learn.microsoft.com/training/modules/describe-concepts-of-cryptography/?WT.mc_id=api_CatalogApi)
+   2. [Introduction to audio classification with TensorFlow](https://learn.microsoft.com/training/modules/intro-audio-classification-tensorflow/?WT.mc_id=api_CatalogApi)
+   3. [Design a Performant Data Model in Azure SQL Database with Azure Data Studio](https://learn.microsoft.com/training/modules/design-a-data-model-with-ads/?WT.mc_id=api_CatalogApi)
+   4. [Getting started with the Microsoft Cloud Adoption Framework for Azure](https://learn.microsoft.com/training/modules/cloud-adoption-framework-getting-started/?WT.mc_id=api_CatalogApi)
+   5. [Set up the Rust development environment](https://learn.microsoft.com/training/modules/rust-set-up-environment/?WT.mc_id=api_CatalogApi)
+
+   You can click on the links to access the courses.
    ```
 
 ## Exercice
 
-Pour continuer votre apprentissage de l'appel de fonction Azure OpenAI, vous pouvez créer :
+Pour continuer votre apprentissage de l'appel de fonction Azure OpenAI, vous pouvez construire :
 
-- Plus de paramètres pour la fonction qui pourraient aider les apprenants à trouver davantage de cours.
-- Créer un autre appel de fonction qui prend plus d'informations de l'apprenant, comme sa langue maternelle.
-- Créez une gestion des erreurs lorsque l'appel de fonction et/ou l'appel API ne renvoie aucun cours approprié.
+- Plus de paramètres de fonction qui pourraient aider les apprenants à trouver davantage de cours.
 
-Astuce : Consultez la page [documentation de référence de l'API Learn](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) pour voir comment et où ces données sont disponibles.
+- Créez un autre appel de fonction qui prend plus d'informations de l'apprenant, comme sa langue maternelle
+- Créez une gestion des erreurs lorsque l'appel de fonction et/ou l'appel API ne renvoie aucun cours adapté
 
-## Excellent travail ! Continuez votre parcours
+Astuce : Suivez la page [Documentation de référence de l’API Learn](https://learn.microsoft.com/training/support/catalog-api-developer-reference?WT.mc_id=academic-105485-koreyst) pour voir comment et où ces données sont disponibles.
 
-Après avoir terminé cette leçon, découvrez notre [collection d'apprentissage sur l'IA générative](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) pour continuer à approfondir vos connaissances sur l'IA générative !
+## Excellent travail ! Continuez le parcours
 
-Rendez-vous à la leçon 12, où nous examinerons comment [concevoir l'UX pour les applications d'IA](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst) !
+Après avoir terminé cette leçon, consultez notre [collection d’apprentissage sur l’IA générative](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) pour continuer à améliorer vos connaissances en IA générative !
+
+Rendez-vous à la leçon 12, où nous verrons comment [concevoir l’UX pour les applications d’IA](../12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst) !
 
 ---
 
-**Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction professionnelle humaine. Nous ne sommes pas responsables des malentendus ou des interprétations erronées résultant de l'utilisation de cette traduction.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Avertissement** :
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforçions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue native doit être considéré comme la source faisant autorité. Pour les informations critiques, il est recommandé de recourir à une traduction professionnelle réalisée par un humain. Nous ne saurions être tenus responsables des malentendus ou erreurs d'interprétation découlant de l'utilisation de cette traduction.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

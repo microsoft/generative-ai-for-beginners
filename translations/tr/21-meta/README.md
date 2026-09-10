@@ -1,61 +1,61 @@
-# Meta Ailesi Modelleri ile İnşa Etmek
+# Meta Ailesi Modelleri ile İnşa Etmek 
 
-## Giriş
+## Giriş 
 
-Bu ders şunları kapsayacak:
+Bu ders şunları kapsayacak: 
 
-- İki ana Meta aile modeli - Llama 3.1 ve Llama 3.2'yi keşfetmek
-- Her modelin kullanım senaryolarını anlamak
-- Her modelin benzersiz özelliklerini göstermek için kod örneği
+- İki ana Meta aile modeli - Llama 3.1 ve Llama 3.2'nin keşfi 
+- Her modelin kullanım durumları ve senaryolarının anlaşılması 
+- Her modelin benzersiz özelliklerini gösteren kod örneği 
 
 
-## Meta Aile Modelleri
+## Meta Ailesi Modelleri 
 
-Bu derste, Meta ailesinden veya "Llama Sürüsü"nden 2 modeli keşfedeceğiz - Llama 3.1 ve Llama 3.2.
+Bu derste, Meta ailesinden veya "Llama Sürüsü"nden 2 modeli inceleyeceğiz - Llama 3.1 ve Llama 3.2.
 
-Bu modeller farklı varyantlarda gelir ve [Microsoft Foundry Modelleri kataloğunda](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) mevcuttur.
+Bu modeller farklı varyantlarda gelir ve [Microsoft Foundry Models katalogunda](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) mevcuttur.
 
-> **Not:** GitHub Modelleri Temmuz 2026 sonunda kullanımdan kaldırılacaktır. AI modelleriyle prototip oluşturmak için [Microsoft Foundry Modelleri](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) hakkında daha fazla bilgi burada bulunmaktadır.
+> **Not:** GitHub Modelleri Temmuz 2026 sonunda emekliye ayrılıyor. AI modelleri ile prototip oluşturmak için [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) kullanımı hakkında daha fazla detay burada.
 
-Model Varyantları:
-- Llama 3.1 - 70B Instruct
-- Llama 3.1 - 405B Instruct
-- Llama 3.2 - 11B Vision Instruct
-- Llama 3.2 - 90B Vision Instruct
+Model Varyantları: 
+- Llama 3.1 - 70B Öğretim 
+- Llama 3.1 - 405B Öğretim 
+- Llama 3.2 - 11B Görsel Öğretim 
+- Llama 3.2 - 90B Görsel Öğretim 
 
-*Not: Llama 3, Microsoft Foundry Modellerinde de mevcuttur ancak bu derste ele alınmayacaktır*
+*Not: Llama 3 ayrıca Microsoft Foundry Models'de mevcuttur ancak bu ders kapsamında ele alınmayacaktır*
 
-## Llama 3.1
+## Llama 3.1 
 
-405 Milyar Parametre ile Llama 3.1 açık kaynak LLM kategorisine girer.
+405 Milyar Parametre ile Llama 3.1 açık kaynak LLM kategorisine girer. 
 
-Model, önceki sürüm Llama 3'e şu yönden geliştirmeler sunar:
+Model, önceki sürüm Llama 3’e kıyasla şu iyileştirmeleri sunar: 
 
-- Daha büyük bağlam penceresi - 128k token vs 8k token
-- Daha büyük Maksimum Çıktı Tokenı - 4096 vs 2048
-- Daha iyi Çok-dilli Destek - eğitim token sayısındaki artış sayesinde
+- Daha büyük bağlam penceresi - 8k token yerine 128k token 
+- Daha büyük Maksimum Çıktı Token'ları - 2048 yerine 4096 
+- Daha iyi Çokdillilik Desteği - eğitim tokenlarında artış sayesinde 
 
-Bunlar Llama 3.1'in GenAI uygulamaları geliştirirken daha karmaşık kullanım senaryolarını ele almasını sağlar:
-- Yerel Fonksiyon Çağırma - LLM iş akışının dışındaki harici araçları ve fonksiyonları çağırabilme yeteneği
-- Daha İyi RAG Performansı - daha yüksek bağlam penceresi sayesinde
-- Sentetik Veri Üretimi - ince ayar gibi görevler için etkili veri oluşturabilme yeteneği
+Bunlar, Llama 3.1’in GenAI uygulamaları oluştururken daha karmaşık kullanım durumlarıyla başa çıkabilmesini sağlar, örneğin: 
+- Yerel Fonksiyon Çağrısı - LLM iş akışının dışındaki dış araçları ve fonksiyonları çağırabilme yeteneği
+- Daha İyi RAG Performansı - daha yüksek bağlam penceresi sayesinde 
+- Sentetik Veri Üretimi - ince ayar gibi görevler için etkili veri oluşturabilme yeteneği 
 
-### Yerel Fonksiyon Çağırma
+### Yerel Fonksiyon Çağrısı 
 
-Llama 3.1, fonksiyon veya araç çağrılarında daha etkili olmak üzere ince ayar yapılmıştır. Ayrıca model, kullanıcıdan gelen isteme bağlı olarak kullanılması gereken iki yerleşik araca sahiptir. Bu araçlar:
+Llama 3.1, fonksiyon veya araç çağrılarında daha etkili olması için ince ayar yapılmıştır. Ayrıca, modelin kullanıcıdan gelen isteme bağlı olarak kullanılması gerektiğini belirleyebileceği iki yerleşik aracı vardır. Bu araçlar: 
 
-- **Brave Search** - Web araması yaparak hava durumu gibi güncel bilgileri almak için kullanılabilir
-- **Wolfram Alpha** - Kendi fonksiyonlarınızı yazmanıza gerek kalmadan daha karmaşık matematiksel hesaplamalar için kullanılabilir.
+- **Brave Search** - Web araması yaparak güncel bilgiler (örneğin hava durumu) alabilir 
+- **Wolfram Alpha** - Daha karmaşık matematiksel hesaplamalar için kullanılabilir, kendi fonksiyonlarınızı yazmanız gerekmez. 
 
-Kendi özel araçlarınızı da oluşturup LLM'in çağırmasını sağlayabilirsiniz.
+Ayrıca LLM’nin çağırabileceği kendi özel araçlarınızı da oluşturabilirsiniz. 
 
-Aşağıdaki kod örneğinde:
+Aşağıdaki kod örneğinde: 
 
-- Sistem isteminde mevcut araçlar (brave_search, wolfram_alpha) tanımlanır.
-- Belirli bir şehirdeki hava durumunu soran kullanıcı istemi gönderilir.
-- LLM, Brave Search aracını çağıran şu şekilde yanıt verir: `<|python_tag|>brave_search.call(query="Stockholm weather")`
+- Sistem isteminde mevcut araçlar (brave_search, wolfram_alpha) tanımlanır. 
+- Belirli bir şehirdeki hava durumu hakkında soran bir kullanıcı istemi gönderilir. 
+- LLM, Brave Search aracını çağıran şu şekilde bir cevap verecektir: `<|python_tag|>brave_search.call(query="Stockholm weather")` 
 
-*Not: Bu örnek sadece araç çağrısı yapar, sonuçları almak isterseniz Brave API sayfasında ücretsiz hesap oluşturmalı ve fonksiyonun kendisini tanımlamalısınız.*
+*Not: Bu örnek yalnızca araç çağrısı yapar; sonuçları almak isterseniz Brave API sayfasında ücretsiz bir hesap oluşturmalı ve fonksiyonun kendisini tanımlamalısınız.
 
 ```python 
 import os
@@ -96,18 +96,18 @@ response = client.complete(messages=messages, model=model_name)
 print(response.choices[0].message.content)
 ```
 
-## Llama 3.2
+## Llama 3.2 
 
-Llama 3.1 bir LLM olmasına rağmen, bir sınırlama olarak multimodalite desteği yoktur. Yani, görüntü gibi farklı giriş türlerini istem olarak kullanıp yanıt verme yeteneği yoktur. Bu yetenek Llama 3.2'nin ana özelliklerinden biridir. Bu özellikler ayrıca şunları içerir:
+Llama 3.1 bir LLM olmasına rağmen, bir sınırlaması çok modluluğunun olmamasıdır. Yani, görsel gibi farklı türde girişleri istem olarak kullanamaması ve yanıt vermemesi. Bu yetenek Llama 3.2’nin ana özelliklerinden biridir. Bu özellikler ayrıca şunları içerir: 
 
-- Multimodalite - hem metin hem de görüntü istemlerini değerlendirebilme kabiliyeti
-- Küçük ve Orta boy varyantlar (11B ve 90B) - esnek dağıtım seçenekleri sağlar
-- Sadece metin varyantları (1B ve 3B) - modelin uç / mobil cihazlarda dağıtılmasına olanak verir ve düşük gecikme sunar
+- Çok modluluk - hem metin hem görsel istemleri değerlendirebilme yeteneği 
+- Küçük ila Orta boy varyantlar (11B ve 90B) - esnek dağıtım seçenekleri sunar, 
+- Sadece metin varyantları (1B ve 3B) - bu modelin uç / mobil cihazlarda dağıtılmasını sağlar ve düşük gecikme sunar 
 
-Multimodal destek, açık kaynak modeller dünyasında büyük bir adımdır. Aşağıdaki kod örneği hem görüntü hem de metin istemi alarak Llama 3.2 90B tarafından görüntü analizi yapmaktadır.
+Çok modlu destek, açık kaynak modeller dünyasında büyük bir adımdır. Aşağıdaki kod örneği hem bir görsel hem de metin istemi alarak Llama 3.2 90B’den görsel analizi alır. 
 
 
-### Llama 3.2 ile Multimodal Destek
+### Llama 3.2 ile Çok Modlu Destek
 
 ```python 
 import os
@@ -157,7 +157,7 @@ print(response.choices[0].message.content)
 
 ## Öğrenme burada bitmiyor, yolculuğa devam edin
 
-Bu dersi tamamladıktan sonra, [Üretken AI Öğrenme koleksiyonumuzu](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) inceleyerek Üretken AI bilginizi geliştirmeye devam edin!
+Bu dersi tamamladıktan sonra, [Üretici AI Öğrenme koleksiyonumuza](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) göz atarak Üretici AI bilginizi artırmaya devam edin!
 
 ---
 

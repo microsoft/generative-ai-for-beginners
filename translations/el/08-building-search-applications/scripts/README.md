@@ -1,20 +1,20 @@
 # Προετοιμασία δεδομένων μεταγραφής
 
-Τα σενάρια προετοιμασίας δεδομένων μεταγραφής κατεβάζουν μεταγραφές βίντεο από το YouTube και τις προετοιμάζουν για χρήση με το δείγμα Semantic Search with OpenAI Embeddings and Functions.
+Τα σενάρια προετοιμασίας δεδομένων μεταγραφής κατεβάζουν τα απομαγνητοφωνημένα κείμενα βίντεο από το YouTube και τα προετοιμάζουν για χρήση με το δείγμα Αναζήτησης Σημασιολογίας με OpenAI Embeddings και Λειτουργίες.
 
 Τα σενάρια προετοιμασίας δεδομένων μεταγραφής έχουν δοκιμαστεί στις τελευταίες εκδόσεις των Windows 11, macOS Ventura και Ubuntu 22.04 (και νεότερα).
 
 ## Δημιουργία απαιτούμενων πόρων Azure OpenAI Service
 
 > [!IMPORTANT]
-> Προτείνουμε να ενημερώσετε το Azure CLI στην πιο πρόσφατη έκδοση για να διασφαλίσετε τη συμβατότητα με το OpenAI
-> Δείτε την [Τεκμηρίωση](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
+> Σας προτείνουμε να ενημερώσετε το Azure CLI στην τελευταία έκδοση για να εξασφαλίσετε συμβατότητα με το OpenAI
+> Δείτε [Documentation](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Δημιουργήστε μια ομάδα πόρων
 
 > [!NOTE]
-> Για αυτές τις οδηγίες χρησιμοποιούμε την ομάδα πόρων με όνομα "semantic-video-search" στην περιοχή East US.
-> Μπορείτε να αλλάξετε το όνομα της ομάδας πόρων, αλλά όταν αλλάζετε την τοποθεσία για τους πόρους,
+> Για αυτές τις οδηγίες χρησιμοποιούμε την ομάδα πόρων με όνομα "semantic-video-search" στην Ανατολική Αμερική.
+> Μπορείτε να αλλάξετε το όνομα της ομάδας πόρων, αλλά όταν αλλάζετε την τοποθεσία των πόρων, 
 > ελέγξτε τον [πίνακα διαθεσιμότητας μοντέλων](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
@@ -28,7 +28,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Πάρτε το endpoint και τα κλειδιά για χρήση σε αυτή την εφαρμογή
+1. Πάρτε το endpoint και τα κλειδιά για χρήση σε αυτήν την εφαρμογή
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -39,7 +39,7 @@ az cognitiveservices account keys list --name semantic-video-openai \
 
 1. Αναπτύξτε τα παρακάτω μοντέλα:
    - `text-embedding-ada-002` έκδοση `2` ή μεγαλύτερη, με όνομα `text-embedding-ada-002`
-   - `gpt-4o-mini` με όνομα `gpt-4o-mini`
+   - `gpt-5-mini` με όνομα `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,25 +53,25 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
 ```
 
-## Απαιτούμενο λογισμικό
+## Απαραίτητο λογισμικό
 
 - [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) ή νεότερο
 
 ## Μεταβλητές περιβάλλοντος
 
-Οι ακόλουθες μεταβλητές περιβάλλοντος είναι απαραίτητες για την εκτέλεση των σεναρίων προετοιμασίας δεδομένων μεταγραφής YouTube.
+Οι παρακάτω μεταβλητές περιβάλλοντος είναι απαραίτητες για την εκτέλεση των σεναρίων προετοιμασίας δεδομένων μεταγραφής YouTube.
 
 ### Σε Windows
 
-Συνιστάται να προσθέσετε τις μεταβλητές στα περιβάλλοντα μεταβλητά `user`.
-`Έναρξη Windows` > `Επεξεργασία μεταβλητών συστήματος` > `Μεταβλητές Περιβάλλοντος` > `Μεταβλητές χρήστη` για [USER] > `Νέο`.
+Συνιστάται να προσθέσετε τις μεταβλητές στις μεταβλητές περιβάλλοντος του `user`.
+`Έναρξη Windows` > `Επεξεργασία μεταβλητών συστήματος` > `Μεταβλητές περιβάλλοντος` > `Μεταβλητές χρήστη` για [USER] > `Νέο`.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -80,18 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-<!-- Μπορείτε να προσθέσετε τις μεταβλητές περιβάλλοντος στο προφίλ PowerShell σας.
+<!-- Μπορείτε να προσθέσετε τις μεταβλητές περιβάλλοντος στο προφίλ του PowerShell σας.
 
 ```powershell
-$env:AZURE_OPENAI_API_KEY = "<το κλειδί API της υπηρεσίας Azure OpenAI>"
-$env:AZURE_OPENAI_ENDPOINT = "<το endpoint της υπηρεσίας Azure OpenAI>"
-$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<το όνομα ανάπτυξης μοντέλου της υπηρεσίας Azure OpenAI>"
-$env:GOOGLE_DEVELOPER_API_KEY = "<το κλειδί API προγραμματιστή Google>"
+$env:AZURE_OPENAI_API_KEY = "<το κλειδί API της υπηρεσίας Azure OpenAI σας>"
+$env:AZURE_OPENAI_ENDPOINT = "<το endpoint της υπηρεσίας Azure OpenAI σας>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<το όνομα ανάπτυξης μοντέλου Azure OpenAI σας>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<το κλειδί API προγραμματιστή Google σας>"
 ``` -->
 
 ### Σε Linux και macOS
 
-Συνιστάται να προσθέσετε τα παρακάτω exports στο αρχείο `~/.bashrc` ή `~/.zshrc`.
+Συνιστάται να προσθέσετε τις παρακάτω εξαγωγές στο αρχείο `~/.bashrc` ή `~/.zshrc`.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -100,16 +100,16 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## Εγκατάσταση των απαιτούμενων βιβλιοθηκών Python
+## Εγκατάσταση των απαραίτητων βιβλιοθηκών Python
 
-1. Εγκαταστήστε τον [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) εάν δεν είναι ήδη εγκατεστημένος.
-1. Από ένα παράθυρο `Τερματικού`, κλωνοποιήστε το δείγμα στο προτιμώμενο φάκελο αποθετηρίου σας.
+1. Εγκαταστήστε τον [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) αν δεν είναι ήδη εγκατεστημένος.
+1. Από ένα παράθυρο `Τερματικού`, αντιγράψτε το δείγμα στον προτιμώμενο φάκελο αποθετηρίου σας.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
     ```
 
-1. Μεταβείτε στο φάκελο `data_prep`.
+1. Μεταβείτε στον φάκελο `data_prep`.
 
    ```bash
    cd semanic-search-openai-embeddings-functions/src/data_prep
@@ -157,7 +157,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## Εκτέλεση των σεναρίων προετοιμασίας δεδομένων μεταγραφής YouTube
+## Εκτελέστε τα σενάρια προετοιμασίας δεδομένων μεταγραφής YouTube
 
 ### Σε Windows
 

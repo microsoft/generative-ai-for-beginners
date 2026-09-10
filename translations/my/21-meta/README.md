@@ -1,61 +1,61 @@
-# Meta မိသားစု မော်ဒယ်များဖြင့် ဆောက်လုပ်ခြင်း 
+# Meta မိသားစု မော်ဒယ်များဖြင့် ဆောက်လုပ်ခြင်း
 
-## အကျဉ်းချုပ် 
+## အကြောင်းအရာဝင်
 
-ဤသင်ခန်းစာတွင် ပြောကြားသွားမည့်အကြောင်းအရာများမှာ- 
+ဒီသင်ခန်းစာမှာ လေ့လာမယ့်အကြောင်းအရာတွေက:
 
-- Meta မိသားစု၏ အဓိကမော်ဒယ်နှစ်မျိုးဖြစ်သည့် Llama 3.1 နှင့် Llama 3.2 ပုံစံများကို ရှာဖွေတွေ့ရှိခြင်း 
-- မော်ဒယ်တိုင်း အသုံးပြုမှုနှင့် သက်ဆိုင်ရာ အခြေအနေများကို နားလည်ခြင်း 
-- မော်ဒယ်တစ်ခုချင်းစီ၏ ထူးခြားချက်များကို ပြသသည့် ကုဒ် နမူနာ 
+- Meta မိသားစု၏ အဓိက မော်ဒယ်နှစ်မျိုးဖြစ်တဲ့ Llama 3.1 နဲ့ Llama 3.2 ကို ရှာဖွေခြင်း
+- မော်ဒယ်တိုင်းအတွက် အသုံးပြုမှုနှင့် နောက်ခံအခြေအနေများကို နားလည်ခြင်း
+- မော်ဒယ်တစ်ခုချင်းစီ၏ ထူးခြားတဲ့ လက္ခဏာများကိုပြသရန် ကုဒ်နမူနာ
 
 
-## Meta မိသားစု၏ မော်ဒယ်များ 
+## Meta မိသားစု မော်ဒယ်များ
 
-ဤသင်ခန်းစာတွင် Meta မိသားစု သို့မဟုတ် "Llama Herd" မှ မော်ဒယ် ၂ မျိုးဖြစ်သည့် Llama 3.1 နှင့် Llama 3.2 ကို ရှာဖွေသွားမည်ဖြစ်သည်။
+ဒီသင်ခန်းစာမှာတော့ Meta မိသားစု သို့မဟုတ် "Llama Herd" က မော်ဒယ် ၂ မျိုးဖြစ်တဲ့ Llama 3.1 နဲ့ Llama 3.2 ကို အကျယ်ကြီး လေ့လာပါမယ်။
 
-မော်ဒယ်များမှာ မတူညီသောဗားရှင်းများဖြင့် ရရှိနိုင်ပြီး [Microsoft Foundry Models catalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) တွင်လည်း ရနိုင်ပါသည်။
+မော်ဒယ်တွေဟာ မတူညီတဲ့ ဗားရှင်းတွေထဲက ရရှိနိုင်ပြီး [Microsoft Foundry Models catalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) မှာ ရရှိနိုင်ပါတယ်။
 
-> **မှတ်ချက်** - GitHub Models သည် ၂၀၂၆ ခုနှစ် ဇူလိုင်လ အကုန်တွင် ရပ်နားသည်။ [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) ကို AI မော်ဒယ်များဖြင့် ပုံစံတင်ခြင်းအတွက် အသုံးပြုနိုင်သည့် အသေးစိတ်ကို အောက်ပိုင်းတွင် ကြည့်ရှုနိုင်ပါသည်။
+> **မှတ်ချက်။** GitHub Models ကို 2026 ခုနှစ် ဇူလိုင်လ အဆုံးတွင် သုံးရပ်သွားပါပြီ။ AI မော်ဒယ်များနဲ့ စမ်းသပ်ဖို့ [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) ကို အသုံးပြုခြင်းအကြောင်း အသေးစိတ်ကို ဒီမှာ ကြည့်နိုင်ပါတယ်။
 
-မော်ဒယ်ဗားရှင်းများ- 
-- Llama 3.1 - 70B အညွှန်း 
-- Llama 3.1 - 405B အညွှန်း 
-- Llama 3.2 - 11B Vision အညွှန်း 
-- Llama 3.2 - 90B Vision အညွှန်း 
+မော်ဒယ် ဗားရှင်းများ:
+- Llama 3.1 - 70B Instruct 
+- Llama 3.1 - 405B Instruct 
+- Llama 3.2 - 11B Vision Instruct 
+- Llama 3.2 - 90B Vision Instruct 
 
-*မှတ်ချက်- Llama 3 ကို Microsoft Foundry Models တွင်လည်း ရနိုင်သော်လည်း ယခုသင်ခန်းစာတွင် မဖော်ပြပါ* 
+*မှတ်ချက်။ Llama 3 ကို Microsoft Foundry Models မှာလည်း ရနိုင်သော်လည်း ဒီသင်ခန်းစာမှာ မဖော်ပြပါဘူး*
 
-## Llama 3.1 
+## Llama 3.1
 
-၄၀၅ ဘီလျံ ပါရာမီတာနှင့်အတူ Llama 3.1 သည် open source LLM အမျိုးအစားတွင်ပါဝင်သည်။
+Parameters ၄၀၅ ဘီလီယံပါဝင်သော Llama 3.1 သည် အခမဲ့ LLM များအုပ်စုတွင်ပါဝင်သည်။
 
-ဤမော်ဒယ်သည် ယခင်ထွက်ရှိခဲ့သည့် Llama 3 ကို အထက်ပါအင်္ဂါရပ်များဖြင့် တိုးတက်စေသည် - 
+ဒီမော်ဒယ်ဟာ Llama 3 ရဲ့ ဒေသန္တရ version ကို အောက်ပါအတိုင်း အဆင့်မြှင့်ထားတာဖြစ်ပါတယ်။
 
-- ကြီးမားသော context window - 128k token များ (8k token ပြိုင်) 
-- ကြီးမားသော Max Output Tokens - 4096 (2048 ပြိုင်) 
-- Multilingual Support ကောင်းမွန်ခြင်း - သင်ကြားမှု token များ တိုးပွားခြင်းကြောင့် 
+- ကြီးမားသည့် context window - ၁၂၈ကေတင် vs ၈ကေတင်
+- ကြီးမားသည့် Max Output Tokens - ၄၀၉၆ vs ၂၀၄၈
+- Multilingual ပိုမိုကောင်းမွန်စွာ ထောက်ပံ့မှု - သင်ကြားမှု token များ ပိုမိုရှိခြင်းကြောင့်
 
-၎င်းတို့ကြောင့် Llama 3.1 သည် GenAI အပလီကေးရှင်းများ ဆောက်လုပ်ရာတွင် ပိုမိုရှုပ်ထွေးသော အသုံးပြုမှုများကို ကျော်ဖြတ်နိုင်ပါသည်- 
-- Native Function Calling - LLM workflow အပြင်ရှိ အပြင်ကိရိယာများနှင့် ဖွင့်လှစ်ပြီး သတ်မှတ်နိုင်ခြင်း 
-- RAG လုပ်ဆောင်ချက်အကောင်းဆုံး - context window ကြီးမြတ်ခြင်းကြောင့် 
-- သဘာဝဒေတာထုတ်လုပ်ခြင်း - ဥပမာ fine-tuning အတွက် ထိထိရောက်ရောက် ဒေတာများ ဖန်တီးနိုင်ခြင်း 
+ဒီအရာတွေကြောင့် Llama 3.1 ဟာ GenAI အက်ပ်လီကေးရှင်းတွေကို ဆောက်လုပ်ချိန်မှာ ပိုမိုရှုပ်ထွေးတဲ့ အသုံးချမှုနယ်ပယ်များကို ကိုင်တွယ်နိုင်ပါတယ်။
+- Native Function Calling - LLM workflow ပြင်ပက ကိရိယာများနှင့် လုပ်ဆောင်ချက်များကို ခေါ်ယူနိုင်စွမ်း
+- ပိုမိုကောင်းမွန်သည့် RAG ဖော်ဆောင်ချက် - context window ကြီးပါသောကြောင့်
+- Synthetic Data Generation - fine-tuning စသည့် လုပ်ငန်းများအတွက် ထိရောက်သော ဒေတာဖန်တီးနိုင်ခြင်း
 
-### Native Function Calling 
+### Native Function Calling
 
-Llama 3.1 ကို function သို့မဟုတ် tool call များ အကျိုးရှိရှိ ပြုလုပ်နိုင်စေရန် fine-tune ပြုလုပ်ထားပြီး အသုံးပြုသူ၏ prompt အရ အသုံးပြုရန်လိုအပ်ချက်ကို မှတ်လင့်နိုင်သည့် tool နှစ်ခု ပါရှိသည်။ ထို tool များမှာ-
+Llama 3.1 ကို function သို့မဟုတ် tool call များကို ပိုကောင်းစွာ ပြုလုပ်နိုင်ရန် အကောင်းဆုံး ပြုလုပ်ရေး ထားပြီး ရှိပါတယ်။ မော်ဒယ်မှာ အသုံးပြုသူ၏ prompt အရ ထောက်ခံရန် လိုအပ်သော ပြင်ပ tools နှစ်ခု built-in ပါဝင်သည်။ အဲ့ဒီ tool များမှာ:
 
-- **Brave Search** - web search ဖြင့် ရာသီဥတုအချက်အလက် စသည်များကို ရယူနိုင်သည် 
-- **Wolfram Alpha** - ရိုက်ထားသည့် function မဟုတ်ပဲ ဆန်းစစ်ချက်ခက်ခဲသော သင်္ချာစိတ်ချက်များအတွက် အသုံးပြုနိုင်သည်။
+- **Brave Search** - ဘာသာရပ် အသစ်များကို ရှာဖွေရန် အင်တာနက်ရှာဖွေရေးအတွက် အသုံးပြုနိုင်သည်၊ ဥပမာ - ရာသီဥတု
+- **Wolfram Alpha** - ပိုမိုရှုပ်ထွေးသော သင်္ချာကဏ္ဍများတွက်ချက်ရန်အသုံးပြုနိုင်ပြီး ကိုယ်ပိုင် function ရေးရန် မလိုအပ်ပါ။
 
-LLM သည်သင့်ရဲ့ custom tools များကိုလည်း ခေါ်ယူနိုင်ပါသည်။
+လဲ၊ LLM က ခေါ်ယူနိုင်တဲ့ ကိုယ်ပိုင် tools များကိုလည်း ဖန်တီးနိုင်ပါတယ်။
 
-အောက်ပါကုဒ်နမူနာတွင်-
+အောက်တွင် ကုဒ်ဥပမာမှာ:
 
-- System prompt ထဲတွင် available tools (brave_search, wolfram_alpha) များကို သတ်မှတ်ထားသည်။ 
-- အသုံးပြုသူမှ ရပ်တည်ရာမြို့ရာသာရာ ရာသီဥတုမေးမြန်း prompt ပေးသည်။ 
-- LLM သည် Brave Search tool ကို ခေါ်သုံးမည့် tool call တက်ပြမည်ဖြစ်ပြီး အတူတူလုပ်ဆောင်မည် `<|python_tag|>brave_search.call(query="Stockholm weather")` 
+- စနစ် prompt ထဲမှာ အသုံးပြုနိုင် tool များ (brave_search, wolfram_alpha) ကို သတ်မှတ်ထားပါတယ်။
+- အသုံးပြုသူက ထူးခြားတဲ့ မြို့တစ်မြို့ရဲ့ ရာသီဥတုကို မေးမြန်းတဲ့ prompt ပို့သည်။
+- LLM က Brave Search tool ကို tool call အဖြစ် တုံ့ပြန်ပါလိမ့်မယ်။ ဥပမာ `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*မှတ်ချက်- ဤနမူနာတွင် tool call သာလုပ်မည်ဖြစ်ပြီး ရလဒ်ရရှိရန်အတွက် Brave API စာမျက်နှာတွင် အခမဲ့အကောင့်ဖွင့်၍ function ကို သတ်မှတ်ရန် လိုအပ်ပါသည်* 
+*မှတ်ချက်။ ဒီဥပမာမှာ tool call ကိုသာ ပြုလုပ်ထားပြီး၊ ရလဒ်ရရှိရန်အတွက် Brave API စာမျက်နှာမှာ အခမဲ့ အကောင့်ဖွင့်ပြီး function ကို သင့်ဘာသာ သတ်မှတ်ရပါမယ်။
 
 ```python 
 import os
@@ -63,7 +63,7 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import AssistantMessage, SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-# ဤအချက်အလက်များကို သင်၏ Microsoft Foundry ပရောဂျက်၏ "အနှစ်ချုပ်" စာမျက်နှာမှယူပါ။
+# သင်၏ Microsoft Foundry ပရောဂျက်၏ "အကျဉ်းချုပ်" စာမျက်နှာမှ ဒီအချက်တွေကိုရယူပါ
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Meta-Llama-3.1-405B-Instruct"
@@ -96,18 +96,18 @@ response = client.complete(messages=messages, model=model_name)
 print(response.choices[0].message.content)
 ```
 
-## Llama 3.2 
+## Llama 3.2
 
-Llama 3.1 သည် LLM ဖြစ်သော်လည်း multimodality မရှိခြင်းမှာ ကန့်အသတ်တစ်ခုဖြစ်သည်။ ဤသည်မှာ ပုံများကို prompt အဖြစ် သုံးနိုင်ခြင်းနှင့် တုံ့ပြန်မှုများ ပေးနိုင်ခြင်းမရှိခြင်းဖြစ်သည်။ Llama 3.2 မှာဤစွမ်းရည်ရှိပြီး ထိုဧရိယာများမှာ-
+Llama 3.1 သည် LLM ဖြစ်ပေမယ့် မျိုးစုံ input များကို အသုံးပြု၍ တုံ့ပြန်နိုင်ခြင်းမရှိခြင်းမှာ အားနည်းချက်တစ်ခုဖြစ်သည်။ ဤစွမ်းရည်သည် Llama 3.2 ၏ အခြေခံ လက္ခဏာတစ်ခုဖြစ်သည်။ ထို့အပြင် အခြား feature များမှာ:
 
-- Multimodality - စာသားနှင့် ပုံ prompt များနှစ်မျိုးလုံးကို ခွဲခြားသုံးသပ်နိုင်ခြင်း 
-- အရွယ်အစား သေးငယ်မှ အလယ်အလတ်(11B နှင့် 90B) - တပ်ဆင်မှုရွေးချယ်မှု များ အလွယ်တကူ 
-- စာသား သာ မျိုးစုံ (1B နှင့် 3B) - edge / mobile device များတွင် ပြေးနိုင်ပြီး latency နည်းခြင်း 
+- Multimodality - စာသားနှင့် ဓာတ်ပုံ prompt နှစ်မျိုးကိုလည်း သုံးပြီး ဖော်ထုတ်နိုင်စွမ်း
+- အရွယ်အစား အသေးစားမှ အလယ်အလတ် (11B နှင့် 90B) - ကြိုက်တဲ့ deployment options ပေးသည်
+- စာသားပဲ ပါဝင်သော အမျိုးအစားများ (1B နှင့် 3B) - edge / mobile devices တွင် တပ်ဆင်ရန် လွယ်ကူပြီး latency နည်းစေသည်
 
-ဒီ multimodal support သည် open source မော်ဒယ်များ လောကအတွက် တိုးတက်မှု ကြီးတစ်ခု ဖြစ်သည်။ အောက်ပါ ကုဒ်နမူနာတွင် Llama 3.2 90B မှ ပုံနှင့် စာသား prompt နှစ်မျိုးလုံး ကိုယူ၍ ပုံကို ခွဲခြားသုံးသပ်ပေးမည်ဖြစ်သည်။
+Multimodal support သည် အခမဲ့ models လောကတွင် အဆင့်ကြီးတစ်ခု ဖြစ်သည်။ အောက်ပါကုဒ်ဥပမာသည် Llama 3.2 90B မှ အဖြေကို ရယူရန် ဓာတ်ပုံနှင့် စာသား prompt နှစ်ခုကို လက်ခံသည်။
 
 
-### Llama 3.2 တွင် Multimodal Support
+### Llama 3.2 ဖြင့် Multimodal Support
 
 ```python 
 import os
@@ -122,7 +122,7 @@ from azure.ai.inference.models import (
 )
 from azure.core.credentials import AzureKeyCredential
 
-# မိမိ၏ Microsoft Foundry စီမံကိန်း၏ "အနှောင့်အယှက်" စာမျက်နှာမှ ဤအချက်များကိုရယူပါ
+# သင့် Microsoft Foundry ပရောဂျက်၏ "အကျဉ်းချုပ်" စာမျက်နှာမှ ဤအချက်များကို ရယူပါ
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Llama-3.2-90B-Vision-Instruct"
@@ -155,9 +155,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## သင်ယူမှု ယခုမှာ မရပ်ပါနဲ့၊ ခရီးကို ဆက်လက်လိုက်ပါ
+## သင်ယူမှုကို ဒီမှာ မရပ်ပါနဲ့၊ ခြေလှမ်းဆက်လက်လျောက်ပါ
 
-ဤသင်ခန်းစာပြီးပါက [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ကို စစ်ဆေးပြီး သင်၏ Generative AI သိမြင်မှုကို နောက်တန်းမြှင့်တင်ပါ။
+ဒီသင်ခန်းစာပြီးစီးပြီးနောက်၊ ကျွန်ုပ်တို့၏ [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ကို ကြည့်ရှု၍ Generative AI အသိပညာကို ဆက်လက်မြှင့်တင်ပါ!
 
 ---
 

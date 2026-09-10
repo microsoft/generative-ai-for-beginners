@@ -1,61 +1,61 @@
-# 使用 Meta 家族模型構建
+# 使用 Meta 系列模型進行建構
 
 ## 介紹
 
 本課程將涵蓋：
 
-- 探討兩個主要的 Meta 家族模型 - Llama 3.1 和 Llama 3.2
-- 理解每個模型的使用案例和應用場景
-- 代碼範例展示每個模型的獨特功能
+- 探索兩款主要的 Meta 系列模型 - Llama 3.1 與 Llama 3.2
+- 了解每個模型的使用案例及場景
+- 使用程式碼範例展示各模型的獨特功能
 
 
-## Meta 家族模型
+## Meta 系列模型
 
-在本課程中，我們將探討來自 Meta 家族或「Llama 群」的兩個模型 - Llama 3.1 和 Llama 3.2。
+本課程將探討兩款來自 Meta 系列或稱「Llama 群」的模型 - Llama 3.1 和 Llama 3.2。
 
-這些模型有不同變體，並可在 [Microsoft Foundry Models catalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) 中獲得。
+這些模型有不同的版本，可在 [Microsoft Foundry Models catalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) 中取得。
 
-> **注意：**GitHub Models 將於 2026 年 7 月底退休。這裡有更多關於使用 [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) 進行 AI 模型原型開發的詳細資訊。
+> **注意：** GitHub Models 將於 2026 年 7 月底停用。關於使用 [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) 進行 AI 模型原型開發的詳細訊息，請參閱說明。
 
-模型變體：
-- Llama 3.1 - 70B 指令模式
-- Llama 3.1 - 405B 指令模式
-- Llama 3.2 - 11B 視覺指令模式
-- Llama 3.2 - 90B 視覺指令模式
+模型版本：
+- Llama 3.1 - 70B Instruct
+- Llama 3.1 - 405B Instruct
+- Llama 3.2 - 11B Vision Instruct
+- Llama 3.2 - 90B Vision Instruct
 
-*注意：Llama 3 也在 Microsoft Foundry Models 中提供，但本課程不涵蓋該模型*
+*備註：Llama 3 也可於 Microsoft Foundry Models 取得，但本課程不包括此版本內容*
 
 ## Llama 3.1
 
-Llama 3.1 擁有 4050 億參數，屬於開源大語言模型（LLM）類別。
+Llama 3.1 擁有 4050 億參數，屬於開源大型語言模型類別。
 
-該模型是先前發佈的 Llama 3 的升級版，提供了：
+該模型是先前版本 Llama 3 的升級版，提供以下改進：
 
-- 更大的上下文視窗 - 128k 令牌對比 8k 令牌
-- 更大的最大輸出令牌數 - 4096 對比 2048
-- 更好的多語言支援 - 由於訓練令牌數增加
+- 更大的上下文視窗 - 128k 代幣，較之前的 8k 代幣大幅提升
+- 更大的最大輸出代幣數 - 4096，相較之前的 2048 增加一倍
+- 更佳的多語言支援 - 由於訓練代幣數增加
 
-這些功能使 Llama 3.1 能夠處理更複雜的生成式 AI 應用案例，包括：
-- 原生函數調用 - 能夠呼叫 LLM 工作流程之外的外部工具和函數
-- 更好的檢索式生成（RAG）性能 - 因為上下文視窗更大
-- 合成數據生成 - 能夠為微調等任務創建有效數據
+這些改進使 Llama 3.1 能夠處理更複雜的生成式 AI 應用案例，包括：
+- 本地函數呼叫 - 能夠在大型語言模型流程之外調用外部工具與函數
+- 更優的 RAG 表現 - 受益於更大的上下文視窗
+- 合成數據生成 - 能產生有效數據以用於微調等任務
 
-### 原生函數調用
+### 本地函數呼叫
 
-Llama 3.1 經過微調，使其在函數或工具調用方面更為有效。它內建兩個工具，模型可以根據使用者的提示識別需要使用的工具。這些工具是：
+Llama 3.1 經過微調，於函數或工具呼叫方面更為高效。它內建兩個工具，模型能根據使用者提示判斷是否應使用這些工具。這些工具包括：
 
-- **Brave Search** - 可用於透過網頁搜尋獲取最新資訊，例如天氣
-- **Wolfram Alpha** - 可用於進行更複雜的數學計算，因此不需要自己撰寫函數
+- **Brave Search** - 可用於通過網絡搜索獲取如天氣等即時資訊
+- **Wolfram Alpha** - 可用於較複雜的數學計算，無須編寫自訂函數
 
-您也可以建立自己的自訂工具，讓 LLM 可以呼叫。
+你也可以建立自定義工具讓大型語言模型調用。
 
-在以下代碼範例中：
+在以下的程式碼示例中：
 
-- 我們在系統提示中定義可用工具（brave_search、wolfram_alpha）。
-- 傳送一個詢問某城市天氣的使用者提示。
-- LLM 將以呼叫 Brave Search 工具的方式回應，格式類似 `<|python_tag|>brave_search.call(query="Stockholm weather")`
+- 在系統提示中定義可用的工具（brave_search, wolfram_alpha）。
+- 傳送詢問某城市天氣的用戶提示。
+- 大型語言模型將回應一個工具呼叫給 Brave Search，格式類似 `<|python_tag|>brave_search.call(query="Stockholm weather")`
 
-*注意：這個範例只展示了工具調用，若您想取得結果，需要在 Brave API 頁面建立免費帳號並定義該函數本身。*
+*注意：此範例僅示範工具呼叫，若想取得結果，需於 Brave API 頁面創建免費帳號並定義函數本體。*
 
 ```python 
 import os
@@ -63,7 +63,7 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import AssistantMessage, SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-# 從你的 Microsoft Foundry 項目「概覽」頁面獲取這些資訊
+# 從你的Microsoft Foundry項目之「概覽」頁面獲取這些資料
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Meta-Llama-3.1-405B-Instruct"
@@ -98,13 +98,13 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2
 
-雖然是 LLM，Llama 3.1 的一個限制是缺乏多模態能力。換言之，它無法使用影像等不同類型輸入作為提示並提供回應。這正是 Llama 3.2 的主要功能之一。這些功能還包括：
+Llama 3.1 作為大型語言模型的缺點之一是缺乏多模態支援，即無法使用圖片等不同類型輸入作為提示並提供回應。而 Llama 3.2 的主要功能之一就是具備這項能力。其他特點還包括：
 
-- 多模態 - 能夠處理文字和影像提示
-- 小到中型規模變體（11B 和 90B） - 提供靈活的部署選項
-- 僅文字變體（1B 和 3B） - 允許模型部署於邊緣/行動裝置並提供低延遲
+- 多模態能力 - 同時能處理文本與影像提示
+- 小型至中型版本（11B 與 90B）- 提供彈性的部署選項
+- 僅文字版本（1B 與 3B）- 允許模型部署於邊緣或行動裝置，且延遲低
 
-多模態支援是開源模型領域的一大進步。下面的代碼範例同時接受影像和文字提示，以取得 Llama 3.2 90B 對影像的分析。
+多模態支援在開源模型領域是一大飛躍。下面的程式碼範例會同時使用影像與文字作為提示，以讓 Llama 3.2 90B 對該圖像進行分析。
 
 
 ### Llama 3.2 的多模態支援
@@ -122,7 +122,7 @@ from azure.ai.inference.models import (
 )
 from azure.core.credentials import AzureKeyCredential
 
-# 從你的 Microsoft Foundry 專案的「概覽」頁面取得這些資訊
+# 從你的 Microsoft Foundry 項目「概覽」頁面獲取這些資訊
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Llama-3.2-90B-Vision-Instruct"
@@ -155,9 +155,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## 持續學習，旅程不止於此
+## 學習不止於此，繼續旅程
 
-完成本課程後，請查看我們的 [生成式 AI 學習合集](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，繼續提升你的生成式 AI 知識！
+完成本課程後，歡迎瀏覽我們的 [生成式 AI 學習收藏](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)，持續提升你的生成式 AI 知識！
 
 ---
 

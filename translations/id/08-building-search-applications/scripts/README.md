@@ -1,10 +1,10 @@
 # Persiapan data transkripsi
 
-Skrip persiapan data transkripsi mengunduh transkrip video YouTube dan menyiapkannya untuk digunakan dengan contoh Pencarian Semantik dengan OpenAI Embeddings dan Functions.
+Skrip persiapan data transkripsi mengunduh transkrip video YouTube dan menyiapkannya untuk digunakan dengan contoh Semantic Search menggunakan OpenAI Embeddings dan Fungsi.
 
-Skrip persiapan data transkripsi telah diuji pada rilis terbaru Windows 11, macOS Ventura dan Ubuntu 22.04 (dan yang lebih baru).
+Skrip persiapan data transkripsi telah diuji pada rilis terbaru Windows 11, macOS Ventura, dan Ubuntu 22.04 (dan yang lebih baru).
 
-## Buat sumber daya Azure OpenAI Service yang diperlukan
+## Membuat sumber daya Azure OpenAI Service yang diperlukan
 
 > [!IMPORTANT]
 > Kami menyarankan Anda memperbarui Azure CLI ke versi terbaru untuk memastikan kompatibilitas dengan OpenAI
@@ -13,7 +13,7 @@ Skrip persiapan data transkripsi telah diuji pada rilis terbaru Windows 11, macO
 1. Buat grup sumber daya
 
 > [!NOTE]
-> Untuk petunjuk ini kami menggunakan grup sumber daya bernama "semantic-video-search" di East US.
+> Untuk petunjuk ini, kami menggunakan grup sumber daya bernama "semantic-video-search" di East US.
 > Anda dapat mengubah nama grup sumber daya, tetapi saat mengubah lokasi sumber daya,
 > periksa [tabel ketersediaan model](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
@@ -37,9 +37,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. Pasang model berikut:
+1. Terapkan model berikut:
    - `text-embedding-ada-002` versi `2` atau lebih tinggi, bernama `text-embedding-ada-002`
-   - `gpt-4o-mini` bernama `gpt-4o-mini`
+   - `gpt-5-mini` bernama `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,8 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -62,7 +62,7 @@ az cognitiveservices account deployment create \
 
 ## Perangkat lunak yang diperlukan
 
-- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) atau lebih tinggi
+- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) atau lebih baru
 
 ## Variabel lingkungan
 
@@ -70,7 +70,7 @@ Variabel lingkungan berikut diperlukan untuk menjalankan skrip persiapan data tr
 
 ### Di Windows
 
-Disarankan menambahkan variabel ini ke variabel lingkungan `user` Anda.
+Disarankan menambahkan variabel ke variabel lingkungan `user` Anda.
 `Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` untuk [USER] > `New`.
 
 ```text
@@ -80,18 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-<!-- Anda dapat menambahkan variabel lingkungan ini ke profil PowerShell Anda.
+<!-- Anda dapat menambahkan variabel lingkungan ke profil PowerShell Anda.
 
 ```powershell
-$env:AZURE_OPENAI_API_KEY = "<your Azure OpenAI Service API key>"
-$env:AZURE_OPENAI_ENDPOINT = "<your Azure OpenAI Service endpoint>"
-$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<your Azure OpenAI Service model deployment name>"
-$env:GOOGLE_DEVELOPER_API_KEY = "<your Google developer API key>"
+$env:AZURE_OPENAI_API_KEY = "<kunci API Azure OpenAI Service anda>"
+$env:AZURE_OPENAI_ENDPOINT = "<endpoint Azure OpenAI Service anda>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<nama penyebaran model Azure OpenAI Service anda>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<kunci API pengembang Google anda>"
 ``` -->
 
 ### Di Linux dan macOS
 
-Disarankan menambahkan ekspor berikut ke dalam file `~/.bashrc` atau `~/.zshrc` Anda.
+Disarankan menambahkan ekspor berikut ke file `~/.bashrc` atau `~/.zshrc` Anda.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -100,16 +100,16 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## Instal pustaka Python yang diperlukan
+## Instal perpustakaan Python yang diperlukan
 
 1. Instal [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) jika belum terinstal.
-1. Dari jendela `Terminal`, kloning contoh ini ke folder repo yang Anda pilih.
+1. Dari jendela `Terminal`, kloning contoh ke folder repo pilihan Anda.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
     ```
 
-1. Masuk ke folder `data_prep`.
+1. Navigasi ke folder `data_prep`.
 
    ```bash
    cd semanic-search-openai-embeddings-functions/src/data_prep
@@ -143,7 +143,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    source .venv/bin/activate
    ```
 
-1. Pasang pustaka yang diperlukan.
+1. Instal perpustakaan yang diperlukan.
 
    Di Windows:
 

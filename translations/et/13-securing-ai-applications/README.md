@@ -1,160 +1,172 @@
-# Tehisintellekti rakenduste turvalisuse tagamine
+# Teie generatiivsete tehisintellekti rakenduste turvalisus
 
-[![Tehisintellekti rakenduste turvalisuse tagamine](../../../translated_images/et/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Teie generatiivsete tehisintellekti rakenduste turvalisus](../../../translated_images/et/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Sissejuhatus
 
 Selles õppetükis käsitletakse:
 
 - Turvalisust tehisintellekti süsteemide kontekstis.
-- Tehisintellekti süsteemide levinud riske ja ohte.
-- Meetodeid ja kaalutlusi tehisintellekti süsteemide turvalisuse tagamiseks.
+- Tehisintellekti süsteemide levinumaid riske ja ohte.
+- Meetodeid ja kaalutlusi tehisintellekti süsteemide turvamiseks.
 
-## Õppeeesmärgid
+## Õpieesmärgid
 
 Pärast selle õppetüki läbimist mõistate:
 
-- Tehisintellekti süsteemide ohte ja riske.
-- Levinud meetodeid ja praktikaid tehisintellekti süsteemide turvalisuse tagamiseks.
-- Kuidas turvatestimine aitab vältida ootamatuid tulemusi ja kasutajate usalduse vähenemist.
+- Ohte ja riske, mis on seotud tehisintellekti süsteemidega.
+- Levinumaid meetodeid ja praktikaid tehisintellekti süsteemide turvamiseks.
+- Kuidas turvatestide rakendamine võib aidata vältida ootamatuid tulemusi ja kasutajate usalduse ahenemist.
 
 ## Mida tähendab turvalisus generatiivse tehisintellekti kontekstis?
 
-Kuna tehisintellekti (AI) ja masinõppe (ML) tehnoloogiad kujundavad üha enam meie elu, on oluline kaitsta mitte ainult klientide andmeid, vaid ka tehisintellekti süsteeme endid. AI/ML kasutatakse üha enam kõrge väärtusega otsustusprotsesside toetamiseks tööstusharudes, kus vale otsus võib põhjustada tõsiseid tagajärgi.
+Kuna tehisintellekti (AI) ja masinõppe (ML) tehnoloogiad kujundavad üha enam meie elu, on ülioluline kaitsta mitte ainult kliendiandmeid, vaid ka ennast AI süsteeme. AI/ML kasutatakse üha enam kõrgväärtuslike otsustusprotsesside toetamiseks tööstusharudes, kus vale otsus võib põhjustada tõsiseid tagajärgi.
 
-Siin on olulised punktid, mida arvestada:
+Siin on võtmekohad, mida arvesse võtta:
 
-- **AI/ML mõju**: AI/ML avaldavad märkimisväärset mõju igapäevaelule ja seetõttu on nende kaitsmine muutunud hädavajalikuks.
-- **Turvalisuse väljakutsed**: AI/ML mõju vajab piisavat tähelepanu, et kaitsta AI-põhiseid tooteid keerukate rünnakute eest, olgu need trollide või organiseeritud gruppide poolt.
-- **Strateegilised probleemid**: Tehnoloogiatööstus peab proaktiivselt tegelema strateegiliste väljakutsetega, et tagada pikaajaline klientide turvalisus ja andmete kaitse.
+- **AI/ML mõju**: AI/ML mõjutab oluliselt igapäevaelu ja seetõttu on nende kaitsmine muutunud hädavajalikuks.
+- **Turvalisuse väljakutsed**: AI/ML mõju nõuab tõsist tähelepanu, et kaitsta AI-põhiseid tooteid keerukate rünnakute eest, olgu selleks trollid või organiseeritud grupid.
+- **Strateegilised probleemid**: Tehnoloogiasektor peab ennetavalt lahendama strateegilisi väljakutseid, et tagada pikaajaline kliendiohutus ja andmete turvalisus.
 
-Lisaks ei suuda masinõppe mudelid suuresti eristada pahatahtlikku sisendit ja kahjutut anomaalset andmestikku. Märkimisväärne osa treeningandmetest pärineb kureerimata, modereerimata avalikest andmestikest, mis on avatud kolmandate osapoolte panustele. Ründajad ei pea andmestikke kompromiteerima, kui neil on vabadus neisse panustada. Aja jooksul muutuvad madala usaldusväärsusega pahatahtlikud andmed kõrge usaldusväärsusega usaldusväärseteks andmeteks, kui andmestruktuur/vorming jääb korrektseks.
+Lisaks ei suuda masinõppemudelid tavaliselt eristada pahatahtlikku sisendit kahjutust ebatavalise andmevoo hulgast. Suur osa õppeandmetest pärineb kureerimata, modereerimata ja avalikest andmekogudest, mis on avatud kolmandate osapoolte panustele. Ründajad ei pea andmekogusid kompromiteerima, kui nad saavad nendesse ise panustada. Aja jooksul muutub vähese usaldusväärsusega pahatahtlik andmestik suure usaldusväärsusega usaldusväärseks, kui andmete struktuur ja vormistus jääb korrektsena.
 
-Seetõttu on kriitiline tagada andmehoidlate terviklikkus ja kaitse, mida teie mudelid otsuste tegemiseks kasutavad.
+Seetõttu on kriitiline tagada andmete terviklikkus ja kaitse andmehoidlate osas, mida teie mudelid kasutavad otsuste tegemiseks.
 
 ## Tehisintellekti ohtude ja riskide mõistmine
 
-Tehisintellekti ja sellega seotud süsteemide kontekstis on andmemürgitus tänapäeval kõige olulisem turvaoht. Andmemürgitus toimub siis, kui keegi tahtlikult muudab teavet, mida kasutatakse tehisintellekti treenimiseks, põhjustades selle eksimusi. See tuleneb standardiseeritud tuvastamis- ja leevendamismeetodite puudumisest ning meie sõltuvusest usaldusväärsetest või kureerimata avalikest andmestikest treenimiseks. Andmete terviklikkuse säilitamiseks ja vigase treenimisprotsessi vältimiseks on oluline jälgida oma andmete päritolu ja päritolu. Vastasel juhul kehtib vana ütlus "prügi sisse, prügi välja", mis viib mudeli jõudluse halvenemiseni.
+Tehisintellekti ja seotud süsteemide puhul on andmemürgitus tänapäeval kõige olulisem turvarisk. Andmemürgitus tähendab, et keegi muudab tahtlikult AI treenimiseks kasutatavaid andmeid, põhjustades mudelil vigade tegemist. Seda soodustab standardiseeritud tuvastus- ja leevendusmeetodite puudumine ning meie sõltuvus usaldamatutest või kureerimata avalikest andmestikest. Andmete terviklikkuse säilitamiseks ja vigase õppeprotsessi vältimiseks on oluline jälgida andmete päritolu ja realeid. Vastasel korral kehtib vana ütlus „prügi sisse, prügi välja“ ja mudeli jõudlus halveneb.
 
 Siin on näited, kuidas andmemürgitus võib teie mudeleid mõjutada:
 
-1. **Siltide ümberpööramine**: Kaksikklassifikatsiooni ülesandes pöörab pahatahtlik isik tahtlikult väikese osa treeningandmete silte. Näiteks märgistatakse kahjutud proovid pahatahtlikeks, mis viib mudeli valede seoste õppimiseni.\
-   **Näide**: Rämpsposti filter klassifitseerib õiguspärased e-kirjad rämpspostiks manipuleeritud siltide tõttu.
-2. **Omaduste mürgitamine**: Ründaja muudab treeningandmete omadusi peenelt, et tekitada kallutatust või eksitada mudelit.\
-   **Näide**: Lisatakse ebaolulisi märksõnu tootekirjeldustesse, et manipuleerida soovitussüsteemidega.
-3. **Andmete süstimine**: Pahatahtlike andmete süstimine treeningkomplekti, et mõjutada mudeli käitumist.\
-   **Näide**: Võltsitud kasutajate arvustuste lisamine, et kallutada sentimentanalüüsi tulemusi.
-4. **Tagaukse rünnakud**: Ründaja lisab treeningandmetesse varjatud mustri (tagaukse). Mudel õpib seda mustrit ära tundma ja käitub pahatahtlikult, kui see käivitatakse.\
-   **Näide**: Näotuvastussüsteem, mis on treenitud tagauksega piltidega ja tuvastab konkreetse isiku valesti.
+1. **Siltide ümberpööramine**: Kaheklassilise klassifitseerimise ülesandes pöörab ründaja tahtlikult väikese osa õppeandmete sildid ümber. Näiteks nimetatakse kahjutud näited pahatahtlikeks, põhjustades mudeli vale seoste õppimise.\
+   **Näide**: Rämpsposti filter klassifitseerib manipuleeritud siltide tõttu legitiimsed e-kirjad rämpspostiks.
+2. **Omaduste mürgitamine**: Ründaja muudab õppeandmete omadusi peenelt, et tekitada kallutatus või eksitada mudelit.\
+   **Näide**: Lubamatute märksõnade lisamine toodete kirjeldustesse, et manipuleerida soovitussüsteeme.
+3. **Andmete süstimine**: Pahatahtliku andmestiku lisamine õppekomplekti mudeli käitumise mõjutamiseks.\
+   **Näide**: Võltskasutajate arvustuste lisamine emotsioonide analüüsi tulemuste kallutamiseks.
+4. **Tagaukse rünnakud**: Ründaja lisab õppeandmetesse peidetud mustri (tagauks). Mudel õpib seda mustrit tundma ja käitub rünnakut vallandades pahatahtlikult.\
+   **Näide**: Näotuvastussüsteem, mida on koolitatud tagaukse piltidega, eksitab konkreetset isikut.
 
-MITRE Corporation on loonud [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), teadmistebaasi taktikatest ja tehnikatest, mida vastased kasutavad tehisintellekti süsteemide rünnakutes.
+MITRE Corporation on loonud [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst) – teadmistebaasi taktikate ja tehnikate kohta, mida ründajad kasutavad reaalsete AI süsteemide rünnakute puhul.
 
-> Tehisintellekti kasutamine suurendab süsteemide rünnatavust, mis ulatub kaugemale traditsioonilistest küberrünnakutest. Lõime ATLAS-i, et tõsta teadlikkust nendest ainulaadsetest ja arenevatest haavatavustest, kuna globaalne kogukond integreerib tehisintellekti üha enam erinevatesse süsteemidesse. ATLAS on modelleeritud MITRE ATT&CK® raamistikule ja selle taktikad, tehnikad ja protseduurid (TTP-d) täiendavad ATT&CK-i.
+> AI-toega süsteemides on kasvav arv haavatavusi, sest AI kasutuselevõtt suurendab ründepinda võrreldes traditsiooniliste küberrünnakutega. Me lõime ATLASi, et suurendada teadlikkust neist ainulaadsetest ja arenevatest nõrkustest, sest ülemaailmne kogukond kasutab järjest rohkem AI erinevates süsteemides. ATLAS on mudeldatud MITRE ATT&CK® raamistikku järgides ning selle taktikad, tehnikad ja protseduurid (TTPd) on ATT&CKiga täiendavad.
 
-Sarnaselt MITRE ATT&CK® raamistikule, mida kasutatakse laialdaselt traditsioonilises küberjulgeolekus keerukate ohuemulatsioonistsenaariumide kavandamiseks, pakub ATLAS hõlpsasti otsitavat TTP-de komplekti, mis aitab paremini mõista ja valmistuda uute rünnakute vastu kaitsmiseks.
+Nagu MITRE ATT&CK® raamistik, mida kasutatakse laialdaselt traditsioonilises küberkaitses keerukate ohutendentside stsenaariumide planeerimiseks, pakub ATLAS otsitavat TTPde komplekti, mis aitab paremini mõista ja ette valmistuda tekkivate rünnakute vastu kaitsmiseks.
 
-Lisaks on Open Web Application Security Project (OWASP) loonud "[Top 10 nimekirja](https://llmtop10.com/?WT.mc_id=academic-105485-koreyst)" kõige kriitilisematest haavatavustest rakendustes, mis kasutavad LLM-e. Nimekiri toob esile selliste ohtude riske nagu eespool mainitud andmemürgitus, samuti:
+Lisaks on Open Web Application Security Project (OWASP) koostanud [„Top 10 nimekirja“](https://llmtop10.com/?WT.mc_id=academic-105485-koreyst) kriitilisematest haavatavustest rakendustes, mis kasutavad suurlinguaalseid mudeleid (LLM). Nimekiri rõhutab riske, nagu eespool mainitud andmemürgitus ja teised, nagu:
 
-- **Prompt Injection**: tehnika, kus ründajad manipuleerivad suure keelemudeliga (LLM) hoolikalt koostatud sisendite kaudu, põhjustades selle käitumist väljaspool kavandatud käitumist.
-- **Tarneahela haavatavused**: komponendid ja tarkvara, mis moodustavad LLM-i kasutatavad rakendused, nagu Python moodulid või välised andmestikud, võivad ise olla kompromiteeritud, põhjustades ootamatuid tulemusi, kallutatust ja isegi haavatavusi alusinfrastruktuuris.
-- **Liigne sõltuvus**: LLM-id on ekslikud ja kalduvad "hallutsineerima", pakkudes ebatäpseid või ohtlikke tulemusi. Mitmel dokumenteeritud juhul on inimesed võtnud tulemusi tõe pähe, mis on viinud soovimatute negatiivsete tagajärgedeni reaalses maailmas.
+- **Prompti süstimine**: tehnika, kus ründajad manipuleerivad suurlinguaalset mudelit hoolikalt konstrueeritud sisenditega, põhjustades mudeli käitumist väljaspool selle ettenähtud tegevust.
+- **Tarnijate ahela haavatavused**: komponendid ja tarkvara, mis moodustavad LLM-i kasutatavad rakendused, nagu Python moodulid või välised andmekogud, võivad olla rünnatavad, mis viib ootamatute tulemusteni, eelarvamusteni ja isegi süsteemi infrastruktuuri haavatavusteni.
+- **Liigne usaldus**: LLM-id on ekslikud ja kalduvad hallutsineerima, pakkudes ebatäpseid või ohtlikke tulemusi. Mitmel dokumenteeritud juhul on inimesed võtnud tulemused sõna-sõnalt, mis on viinud tahtmatute negatiivsete tagajärgedeni reaalses maailmas.
 
-Microsofti pilveekspert Rod Trent on kirjutanud tasuta e-raamatu [Must Learn AI Security](https://github.com/rod-trent/OpenAISecurity/tree/main/Must_Learn/Book_Version?WT.mc_id=academic-105485-koreyst), mis süveneb nendesse ja teistesse arenevatesse tehisintellekti ohtudesse ning pakub ulatuslikke juhiseid nende olukordade parimaks lahendamiseks.
+Microsofti pilveadvokaat Rod Trent on kirjutanud tasuta e-raamatu, [Must Learn AI Security](https://github.com/rod-trent/OpenAISecurity/tree/main/Must_Learn/Book_Version?WT.mc_id=academic-105485-koreyst), mis käsitleb süvitsi neid ja muid tekkivaid AI ohte ning annab põhjalikke juhiseid, kuidas neid olukordi kõige paremini lahendada.
 
-## Tehisintellekti süsteemide ja LLM-ide turvatestimine
+## Turvatestimine AI süsteemide ja LLM-ide jaoks
 
-Tehisintellekt (AI) muudab erinevaid valdkondi ja tööstusharusid, pakkudes uusi võimalusi ja kasu ühiskonnale. Kuid tehisintellekt toob kaasa ka olulisi väljakutseid ja riske, nagu andmete privaatsus, kallutatus, selguse puudumine ja võimalik väärkasutus. Seetõttu on ülioluline tagada, et tehisintellekti süsteemid oleksid turvalised ja vastutustundlikud, järgiksid eetilisi ja õiguslikke standardeid ning oleksid usaldusväärsed kasutajate ja sidusrühmade jaoks.
+Tehisintellekt (AI) muudab erinevaid valdkondi ja tööstusharusid, pakkudes uusi võimalusi ja ühiskondlikke hüvesid. Kuid AI tekitab ka olulisi väljakutseid ja riske, nagu andmekaitse, kallutatus, seletamatus ja võimaliku väärkasutuse oht. Seetõttu on oluline tagada, et AI süsteemid on turvalised ja vastutustundlikud, järgides eetilisi ja juriidilisi standardeid ning olles usaldusväärsed kasutajate ja sidusrühmade jaoks.
 
-Turvatestimine on protsess, mille käigus hinnatakse tehisintellekti süsteemi või LLM-i turvalisust, tuvastades ja kasutades ära nende haavatavusi. Seda võivad läbi viia arendajad, kasutajad või kolmandate osapoolte audiitorid, sõltuvalt testimise eesmärgist ja ulatusest. Mõned levinumad turvatestimise meetodid tehisintellekti süsteemide ja LLM-ide jaoks on:
+Turvatestimine on protsess, mille käigus hinnatakse AI süsteemi või LLM-i turvalisust, tuvastades ja ekspluateerides nende haavatavusi. Seda võivad teha arendajad, kasutajad või kolmanda osapoole audiitorid, sõltuvalt testimise eesmärgist ja ulatusest. Levinumad turvatestimise meetodid AI süsteemide ja LLM-ide jaoks on:
 
-- **Andmete puhastamine**: protsess, mille käigus eemaldatakse või anonüümseks muudetakse tundlik või privaatne teave treeningandmetest või tehisintellekti süsteemi või LLM-i sisendist. Andmete puhastamine aitab vältida andmete lekkimist ja pahatahtlikku manipuleerimist, vähendades konfidentsiaalse või isikliku teabe avalikustamist.
-- **Adversariaalne testimine**: protsess, mille käigus luuakse ja rakendatakse vastase näiteid tehisintellekti süsteemi või LLM-i sisendile või väljundile, et hinnata selle vastupidavust ja vastupanuvõimet vastase rünnakutele. Adversariaalne testimine aitab tuvastada ja leevendada tehisintellekti süsteemi või LLM-i haavatavusi ja nõrkusi, mida ründajad võivad ära kasutada.
-- **Mudelite verifitseerimine**: protsess, mille käigus kontrollitakse tehisintellekti süsteemi või LLM-i mudeli parameetrite või arhitektuuri õigsust ja täielikkust. Mudelite verifitseerimine aitab tuvastada ja ennetada mudeli vargust, tagades, et mudel on kaitstud ja autentne.
-- **Väljundi valideerimine**: protsess, mille käigus valideeritakse tehisintellekti süsteemi või LLM-i väljundi kvaliteeti ja usaldusväärsust. Väljundi valideerimine aitab tuvastada ja parandada pahatahtlikku manipuleerimist, tagades, et väljund on järjepidev ja täpne.
+- **Andmete puhastamine**: tundliku või privaatse teabe eemaldamine või anonüümseks muutmine AI süsteemi või LLM-i õppeandmetest või sisendist. Andmete puhastamine aitab vältida andmete lekkimist ja pahatahtlikku manipuleerimist, vähendades konfidentsiaalse või isikliku info avaldamist.
+- **Vasturünnakute testimine**: vasturünnakusarnaste näidete genereerimine ja rakendamine AI süsteemi või LLM-i sisendile või väljundile, et hinnata mudeli tugevust ja vastupidavust vasturünnakutele. See aitab tuvastada ja leevendada AI süsteemi või LLM-i haavatavusi ja nõrkusi, mida ründajad võivad ära kasutada.
+- **Mudeli kontrollimine**: mudeli parameetrite või arhitektuuri õigsuse ja täielikkuse kontrollimine AI süsteemis või LLM-is. Mudeli kontrollimine aitab tuvastada ja vältida mudeli vargust, tagades mudeli kaitse ja autentimise.
+- **Väljundi valideerimine**: AI süsteemi või LLM-i väljundi kvaliteedi ja usaldusväärsuse valideerimine. Väljundi valideerimine aitab tuvastada ja parandada pahatahtlikku manipuleerimist, tagades väljundi järjepidevuse ja täpsuse.
 
-OpenAI, tehisintellekti süsteemide juhtiv arendaja, on loonud _ohutuse hindamise_ programmi osana oma punase meeskonna algatusest, mille eesmärk on testida tehisintellekti süsteemide väljundit, et aidata kaasa tehisintellekti ohutusele.
+OpenAI, AI süsteemide juhtiv ettevõte, on loonud sarja _turvalisuse hindamisi_ osana oma punatiimide võrgustiku algatusest, mille eesmärk on testida AI süsteemide väljundit panustamiseks AI ohutusse.
 
-> Hindamised võivad ulatuda lihtsatest küsimuste ja vastuste testidest keerukamate simulatsioonideni. Konkreetsete näidetena on siin OpenAI poolt välja töötatud hindamised, mis analüüsivad tehisintellekti käitumist mitmest vaatenurgast:
+> Hindamised võivad varieeruda lihtsatest Q&A testidest kuni keerukamate simulatsioonideni. Konkreetsed näited OpenAI väljatöötatud hindamistest, et hinnata AI käitumist mitmest vaatenurgast:
 
-#### Veenvus
+#### Veenmine
 
-- [MakeMeSay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_say/readme.md?WT.mc_id=academic-105485-koreyst): Kui hästi suudab tehisintellekti süsteem veenda teist tehisintellekti süsteemi ütlema salajast sõna?
-- [MakeMePay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_pay/readme.md?WT.mc_id=academic-105485-koreyst): Kui hästi suudab tehisintellekti süsteem veenda teist tehisintellekti süsteemi annetama raha?
-- [Ballot Proposal](https://github.com/openai/evals/tree/main/evals/elsuite/ballots/readme.md?WT.mc_id=academic-105485-koreyst): Kui hästi suudab tehisintellekti süsteem mõjutada teist tehisintellekti süsteemi toetama poliitilist ettepanekut?
+- [MakeMeSay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_say/readme.md?WT.mc_id=academic-105485-koreyst): Kui hästi suudab AI süsteem trickida teist AI süsteemi ütlema salajast sõna?
+- [MakeMePay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_pay/readme.md?WT.mc_id=academic-105485-koreyst): Kui hästi suudab AI süsteem veenda teist AI süsteemi annetama raha?
+- [Ballot Proposal](https://github.com/openai/evals/tree/main/evals/elsuite/ballots/readme.md?WT.mc_id=academic-105485-koreyst): Kui hästi suudab AI süsteem mõjutada teist AI süsteemi poliitilise ettepaneku toetamisel?
 
-#### Steganograafia (varjatud sõnumid)
+#### Steganograafia (peidetud sõnumid)
 
-- [Steganography](https://github.com/openai/evals/tree/main/evals/elsuite/steganography/readme.md?WT.mc_id=academic-105485-koreyst): Kui hästi suudab tehisintellekti süsteem edastada salajasi sõnumeid, ilma et teine tehisintellekti süsteem neid avastaks?
-- [Text Compression](https://github.com/openai/evals/tree/main/evals/elsuite/text_compression/readme.md?WT.mc_id=academic-105485-koreyst): Kui hästi suudab tehisintellekti süsteem tihendada ja dekompresseerida sõnumeid, et võimaldada salajaste sõnumite peitmist?
-- [Schelling Point](https://github.com/openai/evals/blob/main/evals/elsuite/schelling_point/README.md?WT.mc_id=academic-105485-koreyst): Kui hästi suudab tehisintellekti süsteem koordineerida teise tehisintellekti süsteemiga ilma otsese suhtluseta?
+- [Steganography](https://github.com/openai/evals/tree/main/evals/elsuite/steganography/readme.md?WT.mc_id=academic-105485-koreyst): Kui hästi suudab AI süsteem edastada salajasi sõnumeid jäädes teise AI süsteemi eest märkamata?
+- [Text Compression](https://github.com/openai/evals/tree/main/evals/elsuite/text_compression/readme.md?WT.mc_id=academic-105485-koreyst): Kui hästi suudab AI süsteem sõnumeid pakkida ja lahti pakkida, et varjata salajasi sõnumeid?
+- [Schelling Point](https://github.com/openai/evals/blob/main/evals/elsuite/schelling_point/README.md?WT.mc_id=academic-105485-koreyst): Kui hästi suudab AI süsteem koordineerida teise AI süsteemiga ilma otsese suhtluseta?
 
-### Tehisintellekti turvalisus
+### AI turvalisus
 
-On ülioluline kaitsta tehisintellekti süsteeme pahatahtlike rünnakute, väärkasutuse või soovimatute tagajärgede eest. See hõlmab samme, mis tagavad tehisintellekti süsteemide ohutuse, usaldusväärsuse ja usaldusväärsuse, näiteks:
+On hädavajalik püüda kaitsta AI süsteeme pahatahtlike rünnakute, väärkasutuse või tahtmatute tagajärgede eest. See hõlmab samme, et tagada AI süsteemide ohutus, usaldusväärsus ja usaldusväärsus, näiteks:
 
-- Andmete ja algoritmide turvalisuse tagamine, mida kasutatakse tehisintellekti mudelite treenimiseks ja käitamiseks.
-- Tehisintellekti süsteemide volitamata juurdepääsu, manipuleerimise või sabotaaži ennetamine.
-- Kallutatuse, diskrimineerimise või eetiliste probleemide tuvastamine ja leevendamine tehisintellekti süsteemides.
-- Tehisintellekti otsuste ja tegevuste vastutuse, läbipaistvuse ja selguse tagamine.
-- Tehisintellekti süsteemide eesmärkide ja väärtuste kooskõlastamine inimeste ja ühiskonna omadega.
+- Andmete ja algoritmide turvamine, mida kasutatakse AI mudelite treenimiseks ja käitamiseks
+- Volitamata juurdepääsu, manipuleerimise või sabotaaži ennetamine AI süsteemides
+- Kallutatuse, diskrimineerimise või eetiliste probleemide tuvastamine ja leevendamine AI süsteemides
+- AI otsuste ja tegevuste vastutuse, läbipaistvuse ja seletatavuse tagamine
+- AI süsteemide eesmärkide ja väärtuste kooskõlastamine inimeste ja ühiskonna väärtustega
 
-Tehisintellekti turvalisus on oluline tehisintellekti süsteemide ja andmete terviklikkuse, kättesaadavuse ja konfidentsiaalsuse tagamiseks. Mõned tehisintellekti turvalisuse väljakutsed ja võimalused on:
+AI turvalisus on oluline AI süsteemide ja andmete terviklikkuse, kättesaadavuse ja konfidentsiaalsuse tagamiseks. Mõned AI turvalisuse väljakutsed ja võimalused on:
 
-- **Võimalus**: Tehisintellekti integreerimine küberjulgeoleku strateegiatesse, kuna see võib mängida olulist rolli ohtude tuvastamisel ja reageerimisaja parandamisel. Tehisintellekt võib aidata automatiseerida ja täiustada küberrünnakute, nagu andmepüük, pahavara või lunavara, tuvastamist ja leevendamist.
-- **Väljakutse**: Tehisintellekti saab kasutada ka vastaste poolt keerukate rünnakute käivitamiseks, näiteks vale või eksitava sisu genereerimiseks, kasutajate jäljendamiseks või tehisintellekti süsteemide haavatavuste ärakasutamiseks. Seetõttu lasub tehisintellekti arendajatel ainulaadne vastutus kujundada süsteeme, mis on robustsed ja vastupidavad väärkasutuse suhtes.
+- Võimalus: AI kaasamine küberjulgeoleku strateegiatesse, kuna see võib mängida olulist rolli ohtude tuvastamisel ja reageerimisaja parandamisel. AI aitab automatiseerida ja täiendada küberrünnakute, nagu andmepüük, pahavara või lunavara tuvastamist ja leevendamist.
+- Väljakutse: AI-d võivad kasutada ka vaenulikud osapooled keerukate rünnakute käivitamiseks, nagu võlts- või eksitava sisu genereerimine, kasutajate imiteerimine või AI süsteemide haavatavuste ärakasutamine. Seetõttu lasub AI arendajatel ainulaadne vastutus disainida süsteeme, mis on robustsed ja vastupidavad väärkasutusele.
 
 ### Andmekaitse
 
-LLM-id võivad ohustada nende kasutatavate andmete privaatsust ja turvalisust. Näiteks võivad LLM-id potentsiaalselt meelde jätta ja lekkida tundlikku teavet oma treeningandmetest, nagu isikunimed, aadressid, paroolid või krediitkaardi numbrid. Neid võivad manipuleerida või rünnata pahatahtlikud isikud, kes soovivad ära kasutada nende haavatavusi või kallutatust. Seetõttu on oluline olla teadlik nendest riskidest ja võtta asjakohaseid meetmeid LLM-idega kasutatavate andmete kaitsmiseks. Andmete kaitsmiseks LLM-idega on mitmeid samme, mida saate võtta. Need sammud hõlmavad:
+Suured keeltemudelid (LLM-id) võivad ohustada nende kasutatavate andmete privaatsust ja turvalisust. Näiteks võivad LLM-id potentsiaalselt meenutada ja lekitada õppeandmetest pärit tundlikku teavet, nagu isikunimed, aadressid, paroolid või krediitkaardi numbrid. Samuti võivad nad sattuda pahatahtlike osapoolte manipuleerimise või rünnakute sihtmärgiks, kes soovivad ära kasutada nende haavatavusi või kallutatusi. Seetõttu on oluline olla teadlik neist riskidest ja võtta sobivaid meetmeid LLM-idega kasutatavate andmete kaitseks. Andmete kaitseks saab rakendada mitmeid samme, mis hõlmavad:
 
-- **Andmete jagamise piiramine**: Jagage LLM-idega ainult neid andmeid, mis on vajalikud ja asjakohased kavandatud eesmärkide saavutamiseks, ning vältige tundlike, konfidentsiaalsete või isiklike andmete jagamist. Kasutajad peaksid ka anonüümseks muutma või krüpteerima andmed, mida nad LLM-idega jagavad, näiteks eemaldades või maskeerides mis tahes tuvastatavat teavet või kasutades turvalisi suhtluskanaleid.
-- **LLM-ide genereeritud andmete kontrollimine**: Kontrollige alati LLM-ide genereeritud väljundi täpsust ja kvaliteeti, et veenduda, et need ei sisalda soovimatut või sobimatut teavet.
-- **Andmelekkete või intsidentide raporteerimine ja jälgimine**: Olge valvas LLM-ide kahtlaste või ebanormaalsete tegevuste
-Reaalse maailma ohtude jäljendamine on nüüdseks muutunud standardseks praktikaks vastupidavate tehisintellektisüsteemide loomisel, kasutades sarnaseid tööriistu, taktikaid ja protseduure, et tuvastada süsteemide riske ja testida kaitsjate reageerimist.
+- **Piirata andmete hulka ja tüüpi, mida jagatakse LLM-idega**: Jaga ainult neid andmeid, mis on vajalikud ja asjakohased ette nähtud eesmärkide jaoks ning väldi tundlike, konfidentsiaalsete või isiklike andmete jagamist. Kasutajad peaksid samuti andmeid anonüümseks muutma või krüpteerima, näiteks eemaldades või varjates igasugust tuvastavat infot või kasutades turvalisi suhtluskanaleid.
+- **Kontrollida LLM-ide genereeritud andmeid**: Alati kontrollida LLM-idelt saadud väljundi täpsust ja kvaliteeti, et veenduda, et see ei sisalda soovimatut või sobimatut informatsiooni.
+- **Teatada ja hoiatada kõikide andmelekete või intsidentide korral**: Ole valvas kahtlaste või ebatavaliste LLM-ide käitumiste suhtes, näiteks tekstide genereerimisel, mis on asjasse mittepuutuvad, ebatäpsed, solvavad või kahjulikud. See võib viidata andmelekkele või turvaintsidendile.
 
-> Tehisintellekti punase meeskonna (red teaming) praktika on arenenud laiemaks tähenduseks: see ei hõlma ainult turvavigade otsimist, vaid ka teiste süsteemirikkumiste tuvastamist, näiteks potentsiaalselt kahjuliku sisu genereerimist. Tehisintellektisüsteemid toovad kaasa uusi riske ning punane meeskond on keskne nende uute riskide mõistmisel, nagu näiteks prompt injection ja põhjendamata sisu loomine. - [Microsoft AI Red Team ehitab turvalisema tehisintellekti tulevikku](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
+Andmete turvalisus, haldus ja vastavus on kriitilised kõigile organisatsioonidele, kes soovivad kasutada andmete ja AI jõudu mitmepilvelises keskkonnas. Kõigi andmete turvamine ja haldamine on keeruline ja mitmetahuline ülesanne. Teil tuleb turvata ja hallata erinevat tüüpi andmeid (struktureeritud, struktureerimata ja AI genereeritud andmeid) erinevates kohtades mitmes pilves ning arvestada olemasolevate ja tulevaste andmeturbe, halduse ja AI regulatsioonidega. Oma andmete kaitsmiseks tuleb rakendada parimaid tavasid ja ettevaatusabinõusid, nagu:
 
-[![Juhised ja ressursid punase meeskonna jaoks](../../../translated_images/et/13-AI-red-team.642ed54689d7e8a4.webp)]()
+- Kasutada pilveteenuseid või platvorme, mis pakuvad andmekaitse ja privaatsuse funktsioone.
+- Kasutada andmekvaliteedi ja valideerimise tööriistu, et kontrollida oma andmeid vigade, ebakõlade või anomaaliate suhtes.
+- Kasutada andmehalduse ja eetika raamistikke, et tagada andmete vastutustundlik ja läbipaistev kasutamine.
 
-Allpool on toodud peamised teadmised, mis on kujundanud Microsofti tehisintellekti punase meeskonna programmi.
+### Reaalsete ohtude imiteerimine - AI punatiimide tegevus
 
-1. **Tehisintellekti punase meeskonna laiendatud ulatus:**
-   Tehisintellekti punane meeskond hõlmab nüüd nii turvalisuse kui ka vastutustundliku tehisintellekti (RAI) tulemusi. Traditsiooniliselt keskendus punane meeskond turvalisuse aspektidele, käsitledes mudelit kui vektorit (nt mudeli varastamine). Kuid tehisintellektisüsteemid toovad kaasa uusi turvavigu (nt prompt injection, mürgitamine), mis vajavad erilist tähelepanu. Lisaks turvalisusele uurib tehisintellekti punane meeskond ka õiglusprobleeme (nt stereotüübid) ja kahjulikku sisu (nt vägivalla ülistamine). Nende probleemide varajane tuvastamine võimaldab kaitseinvesteeringute prioriteetide seadmist.
+
+Reaalsete ohtude matkamine on nüüdseks peetud tavapäraseks praktikaks vastupidavate tehisintellekti süsteemide loomisel, kasutades sarnaseid tööriistu, taktikaid ja protseduure süsteemide riskide tuvastamiseks ning kaitsja vastuse testimiseks.
+
+> AI punatiimi praktika on arenenud ning omandanud laiemat tähendust: see ei hõlma mitte ainult turvaaukude otsimist, vaid ka teiste süsteemirikkete uurimist, näiteks potentsiaalselt kahjuliku sisu genereerimist. AI süsteemidega kaasnevad uued riskid ning punatiimi tegevus on oluline nende uute riskide mõistmisel, nagu prompt-süstimine ja põhjendamatute sisu tootmine. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
+
+[![Juhised ja ressursid punatiimi tegevuseks](../../../translated_images/et/13-AI-red-team.642ed54689d7e8a4.webp)]()
+
+Alljärgnevalt on olulised teadmised, mis on kujundanud Microsofti AI punatiimi programmi.
+
+1. **AI punatiimi laihaare:**
+   AI punatiim hõlmab nüüd nii turvalisust kui ka vastutustundliku tehisintellekti (RAI) tulemusi. Traditsiooniliselt keskendus punatiim peamiselt turvaohtudele, käsitledes mudelit kui vektorit (nt mudeli varastamine). Kuid AI süsteemid toovad kaasa uusi turvariske (nt prompt-süstimine, mürgitamine), mis nõuavad erilist tähelepanu. Turvaaspektide kõrval uurib AI punatiim ka õiglust (nt stereotüübid) ja kahjulikku sisu (nt vägivalla õigustamine). Nende probleemide varajane avastamine võimaldab kaitseinvesteeringutele prioriteete seada.
 2. **Pahatahtlikud ja heatahtlikud rikked:**
-   Tehisintellekti punane meeskond arvestab rikete võimalusi nii pahatahtlikust kui ka heatahtlikust vaatenurgast. Näiteks uue Bingi punase meeskonna testimisel uurime mitte ainult seda, kuidas pahatahtlikud vastased võivad süsteemi kahjustada, vaid ka seda, kuidas tavalised kasutajad võivad kokku puutuda probleemse või kahjuliku sisuga. Erinevalt traditsioonilisest turvalisuse punasest meeskonnast, mis keskendub peamiselt pahatahtlikele osapooltele, arvestab tehisintellekti punane meeskond laiemat valikut isikuid ja võimalikke rikete stsenaariume.
-3. **Tehisintellektisüsteemide dünaamiline olemus:**
-   Tehisintellekti rakendused arenevad pidevalt. Suurte keelemudelite rakendustes kohandavad arendajad süsteeme vastavalt muutuvatele nõuetele. Jätkuv punase meeskonna töö tagab pideva valvsuse ja kohanemise muutuvate riskidega.
+   AI punatiim arvestab rikkeid nii pahatahtlikust kui ka heatahtlikust vaatenurgast. Näiteks uue Bingi punatiimi uurides vaatame mitte ainult seda, kuidas pahatahtlikud ründajad süsteemi ära kasutavad, vaid ka seda, kuidas tavalised kasutajad võivad kokku puutuda probleemse või kahjuliku sisuga. Traditsioonilise turvapõhise punatiimi erinevalt, mis keskendub peamiselt pahatahtlikele näitlejatele, võtab AI punatiim arvesse laiemat isikute ja võimalike rikete spektrit.
+3. **AI süsteemide dünaamiline olemus:**
+   AI rakendused arenevad pidevalt. Suurkeelemudelite rakenduste puhul kohanduvad arendajad muutuva nõudluse järgi. Jätkuv punatiimi tegevus tagab pideva valvsuse ja kohanemise muutuvate riskidega.
 
-Tehisintellekti punane meeskond ei ole kõikehõlmav ja seda tuleks käsitleda täiendava meetmena lisaks teistele kontrollimeetoditele, nagu [rollipõhine juurdepääsukontroll (RBAC)](https://learn.microsoft.com/azure/ai-services/openai/how-to/role-based-access-control?WT.mc_id=academic-105485-koreyst) ja terviklikud andmehalduslahendused. See on mõeldud täiendama turvastrateegiat, mis keskendub turvaliste ja vastutustundlike tehisintellektilahenduste kasutamisele, arvestades privaatsust ja turvalisust ning püüdes samal ajal minimeerida kallutatust, kahjulikku sisu ja väärinformatsiooni, mis võivad kasutajate usaldust õõnestada.
+AI punatiim ei hõlma kõike ja tuleks pidada täiendavaks tegevuseks teiste kontrollide, näiteks [rollipõhise juurdepääsukontrolli (RBAC)](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/role-based-access-control?WT.mc_id=academic-105485-koreyst) ning ulatuslike andmehalduse lahenduste kõrval. Selle eesmärk on täiendada turvastrateegiat, mis keskendub ohutute ja vastutustundlike AI lahenduste kasutusele, mis tagavad privaatsust ja turvalisust ning püüdlevad kallutatuse, kahjuliku sisu ja väärinfo minimeerimise poole, mis võivad kasutajate usaldust kahjustada.
 
-Siin on nimekiri lisalugemisest, mis aitab paremini mõista, kuidas punane meeskond saab aidata tuvastada ja leevendada riske teie tehisintellektisüsteemides:
+Järgnevalt on lisalugemismaterjalid, mis aitavad paremini mõista, kuidas punatiim võib aidata AI süsteemide riskide tuvastamisel ja leevendamisel:
 
-- [Punase meeskonna planeerimine suurte keelemudelite (LLM) ja nende rakenduste jaoks](https://learn.microsoft.com/azure/ai-services/openai/concepts/red-teaming?WT.mc_id=academic-105485-koreyst)
-- [Mis on OpenAI Red Teaming Network?](https://openai.com/blog/red-teaming-network?WT.mc_id=academic-105485-koreyst)
-- [Tehisintellekti punane meeskond - võtmepraktika turvalisemate ja vastutustundlikumate tehisintellektilahenduste loomiseks](https://rodtrent.substack.com/p/ai-red-teaming?WT.mc_id=academic-105485-koreyst)
-- MITRE [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), teadmistebaas taktikatest ja tehnikatest, mida vastased kasutavad tehisintellektisüsteemide reaalsetes rünnakutes.
+- [Punatiimi planeerimine suurte keelemudelite (LLM) ja nende rakenduste jaoks](https://learn.microsoft.com/azure/ai-foundry/openai/concepts/red-teaming?WT.mc_id=academic-105485-koreyst)
+- [Mis on OpenAI punatiimi võrgustik?](https://openai.com/blog/red-teaming-network?WT.mc_id=academic-105485-koreyst)
+- [AI punatiim - võtmetähtsusega praktika ohutumate ja vastutustundlikumate AI lahenduste loomiseks](https://rodtrent.substack.com/p/ai-red-teaming?WT.mc_id=academic-105485-koreyst)
+- MITRE [ATLAS (Vastasseisupõhine ohtude maastik tehisintellekti süsteemidele)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), taktikate ja tehnikate teadmiste baas, mida ründajad kasutavad AI süsteemide reaalses maailmas toimuvates rünnakutes.
 
 ## Teadmiste kontroll
 
 Milline võiks olla hea lähenemine andmete terviklikkuse säilitamiseks ja väärkasutuse vältimiseks?
 
-1. Kasutage tugevaid rollipõhiseid kontrollimeetmeid andmetele juurdepääsuks ja andmehalduseks  
-1. Rakendage ja auditeerige andmete märgistamist, et vältida andmete vale esitamist või väärkasutust  
-1. Veenduge, et teie tehisintellekti infrastruktuur toetab sisufiltreerimist  
+1. Kasutada tugevaid rollipõhiseid kontrollid andmete juurdepääsu ja halduse jaoks
+1. Rakendada ja auditeerida andmete märgistamist, et vältida andmete valest esitusest või väärkasutusest tulenevaid probleeme
+1. Tagada, et teie AI infrastruktuur toetab sisufiltreerimist
 
-A:1, Kuigi kõik kolm on suurepärased soovitused, aitab õige andmejuurdepääsuõiguste määramine kasutajatele oluliselt vältida LLM-ide kasutatavate andmete manipuleerimist ja vale esitamist.
+V:1, Kuigi kõik kolm on suurepärased soovitused, aitab õige andmete juurdepääsuõiguste määramine kasutajatele oluliselt vältida LLM-de kasutatavate andmete manipuleerimist ja valesti esitamist.
 
 ## 🚀 Väljakutse
 
-Lugege rohkem selle kohta, kuidas [hallata ja kaitsta tundlikku teavet](https://learn.microsoft.com/training/paths/purview-protect-govern-ai/?WT.mc_id=academic-105485-koreyst) tehisintellekti ajastul.
+Loe rohkem selle kohta, kuidas saad [hallata ja kaitsta tundlikku teavet](https://learn.microsoft.com/training/paths/purview-protect-govern-ai/?WT.mc_id=academic-105485-koreyst) AI ajastul.
 
-## Suurepärane töö, jätkake õppimist
+## Tubli töö, jätka õppimist
 
-Pärast selle õppetunni läbimist tutvuge meie [Generatiivse tehisintellekti õppekollektsiooniga](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata oma generatiivse tehisintellekti teadmiste arendamist!
+Pärast selle õppetüki lõpetamist vaata meie [Generative AI õppe kogumikku](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), et jätkata oma Generative AI teadmiste taseme tõstmist!
 
-Liikuge edasi 14. õppetundi, kus vaatame [generatiivse tehisintellekti rakenduste elutsüklit](../14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)!
+Suundu õppetüki 14 juurde, kus vaatleme [Generatiivse AI rakenduse elutsüklit](../14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Lahtiütlus**:  
-See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta arusaamatuste või valesti tõlgenduste eest, mis võivad tekkida selle tõlke kasutamise tõttu.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Lahtiütlus**:
+See dokument on tõlgitud kasutades AI tõlketeenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi me püüdleme täpsuse poole, palun pange tähele, et automatiseeritud tõlgetes võib esineda vigu või ebatäpsusi. Originaaldokument selle emakeeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta selle tõlkega seotud eksimustest või valesti mõistmistest.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

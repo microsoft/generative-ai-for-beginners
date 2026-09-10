@@ -2,9 +2,9 @@
 
 ## Introduktion 
 
-Den här lektionen kommer att täcka: 
+Den här lektionen täcker: 
 - Utforska de olika Mistral-modellerna 
-- Förstå användningsområden och scenarier för varje modell 
+- Förstå användningsfall och scenarier för varje modell 
 - Utforska kodexempel som visar varje modells unika funktioner. 
 
 ## Mistral-modellerna 
@@ -12,31 +12,31 @@ Den här lektionen kommer att täcka:
 I denna lektion kommer vi att utforska 3 olika Mistral-modeller: 
 **Mistral Large**, **Mistral Small** och **Mistral Nemo**. 
 
-Var och en av dessa modeller finns tillgängliga gratis på [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst). Koden i denna anteckningsbok kommer att använda dessa modeller för att köra koden.
+Var och en av dessa modeller är tillgängliga gratis på [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst). Koden i denna anteckningsbok kommer att använda dessa modeller för att köra koden.
 
-> **Notera:** GitHub Models upphör i slutet av juli 2026. Här finns mer information om hur man använder [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) för att prototypa med AI-modeller. 
+> **Notera:** GitHub Models fasas ut i slutet av juli 2026. Här finns mer information om att använda [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) för att prototypa med AI-modeller.
 
 
 ## Mistral Large 2 (2407)
-Mistral Large 2 är för närvarande flaggskeppsmodellen från Mistral och är designad för företagsanvändning. 
+Mistral Large 2 är för närvarande flaggskeppsmodellen från Mistral och är utformad för företagsanvändning. 
 
-Modellen är en uppgradering av den ursprungliga Mistral Large genom att erbjuda 
-- Större kontextfönster - 128k mot 32k 
-- Bättre prestanda på matte- och kodningsuppgifter - 76,9% genomsnittlig noggrannhet mot 60,4% 
-- Ökad flerspråkig prestanda - språk inkluderar: engelska, franska, tyska, spanska, italienska, portugisiska, nederländska, ryska, kinesiska, japanska, koreanska, arabiska och hindi.
+Modellen är en uppgradering av den ursprungliga Mistral Large och erbjuder 
+-  Större kontextfönster - 128k mot 32k 
+-  Bättre prestanda på matematik- och kodningsuppgifter - 76,9% genomsnittlig noggrannhet mot 60,4% 
+-  Ökad flerspråkig prestanda - språk inkluderar: engelska, franska, tyska, spanska, italienska, portugisiska, nederländska, ryska, kinesiska, japanska, koreanska, arabiska och hindi.
 
 Med dessa funktioner utmärker sig Mistral Large vid 
 - *Retrieval Augmented Generation (RAG)* - tack vare det större kontextfönstret
-- *Funktionsanrop* - denna modell har inbyggda funktionsanrop som möjliggör integration med externa verktyg och API:er. Dessa anrop kan göras parallellt eller i sekventiell ordning. 
-- *Kodgenerering* - denna modell utmärker sig på Python, Java, TypeScript och C++ generering. 
+- *Funktionanrop* - denna modell har inbyggda funktionanrop som möjliggör integration med externa verktyg och API:er. Dessa anrop kan göras parallellt eller i följd.
+- *Kodgenerering* - denna modell är skicklig på Python, Java, TypeScript och C++ generering. 
 
 ### RAG-exempel med Mistral Large 2 
 
-I detta exempel använder vi Mistral Large 2 för att köra ett RAG-mönster över ett textdokument. Frågan är skriven på koreanska och handlar om författarens aktiviteter innan college. 
+I detta exempel använder vi Mistral Large 2 för att köra ett RAG-mönster över ett textdokument. Frågan är skriven på koreanska och handlar om författarens aktiviteter före universitetet. 
 
-Den använder Cohere Embeddings Model för att skapa embeddings av textdokumentet samt frågan. För detta exempel används Python-paketet faiss som en vektorlagring. 
+Det använder Cohere Embeddings Model för att skapa inbäddningar av textdokumentet samt frågan. För detta exempel används faiss Python-paketet som vektorlager. 
 
-Prompten som skickas till Mistral-modellen innehåller både frågorna och de hämtade delar som liknar frågan. Modellen ger sedan ett svar på naturligt språk. 
+Prompen som skickas till Mistral-modellen inkluderar både frågorna och de hämtade textavsnitten som är liknande frågan. Modellen ger sedan ett svar på naturligt språk. 
 
 ```python 
 pip install faiss-cpu
@@ -134,22 +134,22 @@ print(chat_response.choices[0].message.content)
 ```
 
 ## Mistral Small 
-Mistral Small är en annan modell i Mistral-familjen inom premier/enterprise-kategorin. Som namnet antyder är denna modell en Small Language Model (SLM). Fördelarna med att använda Mistral Small är att den är: 
-- Kostnadseffektiv jämfört med Mistrals LLM-modeller som Mistral Large och NeMo - 80 % prisreduktion
-- Låg latens - snabbare svar jämfört med Mistrals LLM:er
-- Flexibel - kan distribueras i olika miljöer med färre begränsningar på nödvändiga resurser. 
+Mistral Small är en annan modell i Mistral-familjen inom premiär-/företagskategorin. Som namnet antyder är detta en Small Language Model (SLM). Fördelarna med att använda Mistral Small är att den är: 
+- Kostnadseffektiv jämfört med Mistral LLMs som Mistral Large och NeMo - 80% prisminskning
+- Låg latens - snabbare respons jämfört med Mistrals LLMs
+- Flexibel - kan distribueras över olika miljöer med färre begränsningar på resurser. 
 
 
 Mistral Small är utmärkt för: 
-- Textbaserade uppgifter som sammanfattning, sentimentanalys och översättning. 
+- Textbaserade uppgifter såsom sammanfattning, sentimentanalys och översättning. 
 - Applikationer där frekventa förfrågningar görs tack vare dess kostnadseffektivitet 
 - Låg latens koduppgifter som granskning och kodförslag 
 
 ## Jämförelse mellan Mistral Small och Mistral Large 
 
-För att visa latensskillnader mellan Mistral Small och Large, kör nedanstående celler. 
+För att visa skillnader i latens mellan Mistral Small och Large, kör cellerna nedan. 
 
-Du bör se en skillnad i responstider på mellan 3-5 sekunder. Notera även svarens längd och stil över samma prompt.  
+Du bör se en skillnad i svarstider på 3-5 sekunder. Notera också skillnaden i svarens längd och stil på samma prompt.  
 
 ```python 
 
@@ -211,17 +211,17 @@ print(response.choices[0].message.content)
 
 ## Mistral NeMo
 
-Jämfört med de andra två modellerna som diskuteras i denna lektion är Mistral NeMo den enda gratismodellen med Apache2-licens. 
+Jämfört med de andra två modellerna som diskuteras i denna lektion är Mistral NeMo den enda fria modellen med en Apache2-licens. 
 
-Den ses som en uppgradering av den tidigare open source LLM från Mistral, Mistral 7B. 
+Den ses som en uppgradering av den tidigare öppen källkodens LLM från Mistral, Mistral 7B. 
 
-Några andra funktioner i NeMo-modellen är: 
+Några andra funktioner hos NeMo-modellen är: 
 
-- *Mer effektiv tokenisering:* Denna modell använder Tekken-tokenizer istället för den mer vanligt använda tiktoken. Detta ger bättre prestanda över fler språk och kod. 
+- *Mer effektiv tokenisering:* Denna modell använder Tekken-tokenizer istället för den mer vanliga tiktoken. Detta ger bättre prestanda för fler språk och kod. 
 
-- *Fintuning:* Basmodellen är tillgänglig för fintuning. Detta ger större flexibilitet för användningsfall där fintuning kan behövas. 
+- *Fintuning:* Basmodellen är tillgänglig för fintuning. Detta möjliggör större flexibilitet för användningsfall där fintuning kan behövas. 
 
-- *Inbyggda funktionsanrop* - Likt Mistral Large har denna modell tränats för funktionsanrop. Detta gör den unik som en av de första open source-modellerna att göra det. 
+- *Inbyggda funktionanrop* - Liksom Mistral Large har denna modell tränats på funktionanrop. Detta gör den unik som en av de första öppna källkodsmodellerna att göra det. 
 
 
 ### Jämförelse av tokenizers 
@@ -302,7 +302,7 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Ladda Mistral-tokenizer
+# Ladda Mistral-tokenisatorn
 
 model_name = "mistral-large-latest"
 
@@ -342,13 +342,13 @@ tokenized = tokenizer.encode_chat_completion(
 )
 tokens, text = tokenized.tokens, tokenized.text
 
-# Räkna antalet tokens
+# Räkna antalet token
 print(len(tokens))
 ```
 
-## Lärandet stannar inte här, fortsätt resan
+## Lärandet slutar inte här, fortsätt resan
 
-Efter att du har slutfört denna lektion, kolla in vår [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) för att fortsätta fördjupa dina kunskaper inom generativ AI!
+Efter att ha avslutat denna lektion, kolla in vår [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) för att fortsätta utveckla dina kunskaper inom Generativ AI!
 
 ---
 

@@ -1,103 +1,143 @@
-[![Modeli za Chanzo Huria](../../../translated_images/sw/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Mfano Wazi wa Chanzo](../../../translated_images/sw/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
-# Kurekebisha LLM Yako Kwa Umakini
+# Kuimarisha LLM Yako
 
-Kutumia mifano mikubwa ya lugha kujenga programu za AI zinazotengeneza maudhui kunakuja na changamoto mpya. Tatizo kuu ni kuhakikisha ubora wa majibu (usalama na uhusiano) katika maudhui yanayotengenezwa na mfano kwa ombi la mtumiaji. Katika masomo ya awali, tulijadili mbinu kama uhandisi wa maelekezo na uzalishaji unaosaidiwa na urejeshaji ambao hujaribu kutatua tatizo kwa _kubadilisha maelekezo ya kuingia_ kwa mfano uliopo.
+Kutumia mifano mikubwa ya lugha kujenga programu za AI zinazozalisha huleta changamoto mpya. Tatizo kuu ni kuhakikisha ubora wa majibu (usahihi na umuhimu) katika maudhui yanayozalishwa na mfano kwa ombi la mtumiaji fulani. Katika masomo yaliyopita, tulijadili mbinu kama uhandisi wa maelekezo na kizazi kilichoimarishwa kwa uvutaji ambacho kinajaribu kutatua tatizo kwa _kubadilisha maelekezo yaliyowekwa_ kwa mfano uliopo.
 
-Katika somo la leo, tunajadili mbinu ya tatu, **kurekebisha kwa umakini**, ambayo hujaribu kushughulikia changamoto kwa _kufunza tena mfano yenyewe_ kwa data za ziada. Hebu tuzingatie maelezo ya kina.
+Katika somo la leo, tunajadili mbinu ya tatu, **kuimarisha zaidi**, ambayo inajaribu kushughulikia changamoto hiyo kwa _kurejesha mafunzo ya mfano wenyewe_ na data mpya. Hebu tuchunguze maelezo zaidi.
 
 ## Malengo ya Kujifunza
 
-Somo hili linaanzisha dhana ya kurekebisha kwa umakini kwa mifano ya lugha iliyoandaliwa awali, linachunguza faida na changamoto za mbinu hii, na linatoa mwongozo wa lini na jinsi ya kutumia kurekebisha kwa umakini kuboresha utendaji wa mifano yako ya AI inayozalisha maudhui.
+Somo hili linaleta wazo la kuimarisha zaidi mifano ya lugha iliyofunzwa awali, linaangalia faida na changamoto za mbinu hii, na hutoa mwongozo juu ya wakati na jinsi ya kutumia kuimarisha ili kuboresha utendaji wa mifano yako ya AI inayozalisha.
 
-Mwisho wa somo hili, unapaswa uwezo wa kujibu maswali yafuatayo:
+Mwisho wa somo hili, unapaswa kuwa na uwezo wa kujibu maswali yafuatayo:
 
-- Kurekebisha kwa umakini ni nini kwa mifano ya lugha?
-- Lini, na kwa nini, kurekebisha kwa umakini ni muhimu?
-- Ninawezaje kurekebisha mfano uliotanguliwa na kufunzwa?
-- Ni vikwazo gani vya kurekebisha kwa umakini?
+- Kuimarisha zaidi ni nini katika mifano ya lugha?
+- Lini, na kwa nini, kuimarisha zaidi ni muhimu?
+- Ninawezaje kuimarisha mfano uliowekwa awali?
+- Ni vikwazo gani vya kuimarisha zaidi?
 
 Tayari? Hebu tuanze.
 
-## Mwongozo Uliopigwa Picha
+## Mwongozo Uliochora
 
-Unataka kuona picha kubwa ya yale tutakayojifunza kabla ya kuanza? Angalia mwongozo huu uliopigwa picha unaoelezea safari ya kujifunza kwa somo hili - kutoka kujifunza dhana kuu na motisha ya kurekebisha kwa umakini, hadi kuelewa mchakato na mbinu bora za kutekeleza kazi ya kurekebisha kwa umakini. Hili ni somo lenye mvuto wa kipekee kwa uchunguzi, usisahau kutembelea ukurasa wa [Rasilimali](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) kwa viungo zaidi vya kuunga mkono safari yako ya kujifunza kwa kujiongoza mwenyewe!
+Unataka kuelewa picha kubwa ya tutakachojifunza kabla ya kuingia undani? Angalia mwongozo huu uliyochorwa unaoelezea safari ya kujifunza kwa somo hili - kutoka kwa kujifunza dhana kuu na motisha ya kuimarisha zaidi, hadi kuelewa mchakato na mbinu bora za kutekeleza kazi ya kuimarisha. Hili ni somo la kuvutia kwa uchunguzi, hivyo usisahau kuangalia ukurasa wa [Rasilimali](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) kwa viungo vya ziada kusaidia safari yako ya kujifunza yenye mwongozo binafsi!
 
-![Mwongozo Uliopigwa Picha wa Kurekebisha Mifano ya Lugha](../../../translated_images/sw/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Mwongozo uliyochora wa Kuimarisha Mifano ya Lugha](../../../translated_images/sw/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
-## Kurekebisha kwa umakini ni nini kwa mifano ya lugha?
+## Kuimarisha zaidi ni nini katika mifano ya lugha?
 
-Kwa ufafanuzi, mifano mikubwa ya lugha ni _iliyonafunzwa awali_ kwenye kiasi kikubwa cha maandishi yanayotokana na vyanzo mbalimbali ikijumuisha mtandao wa intaneti. Kama tulivyojifunza katika masomo ya awali, tunahitaji mbinu kama _uhandisi wa maelekezo_ na _uzalishaji unaosaidiwa na urejeshaji_ kuboresha ubora wa majibu ya mfano kwa maswali ya mtumiaji ("maelekezo").
+Kwa ufafanuzi, mifano mikubwa ya lugha ni _iliyofunzwa awali_ na kiasi kikubwa cha maandishi kutoka vyanzo mbalimbali ikiwemo intaneti. Kama tulivyojifunza katika masomo yaliyopita, tunahitaji mbinu kama _uhandisi wa maelekezo_ na _kizazi kilichoimarishwa kwa uvutaji_ ili kuboresha ubora wa majibu ya mfano kwa maswali ya mtumiaji ("maelekezo").
 
-Mbinu maarufu ya uhandisi wa maelekezo ni kumpa mfano mwongozo zaidi juu ya kile kinachotarajiwa katika jibu kwa kutoa _maelekezo_ (mwongozo wa wazi) au _kumpa mifano michache_ (mwongozo wa siri). Hii huitwa _ujifunzaji wa mifano michache_ lakini ina vikwazo viwili:
+Mbinu maarufu ya uhandisi wa maelekezo ni kumpa mfano mwongozo zaidi juu ya kinachotakiwa katika jibu kwa kutoa _maelekezo_ (mwongozo wazi) au _kumtoa baadhi ya mifano_ (mwongozo usio wazi). Hii huitwa _kujifunza kwa mifano michache_ lakini ina vikwazo viwili:
 
-- Vizingiti vya tokeni vya mfano vinaweza kupunguza idadi ya mifano unayoweza kutoa, na kupunguza ufanisi.
-- Gharama za tokeni za mfano zinaweza kufanya kuwa ghali kuongeza mifano kwa kila maelekezo, na kupunguza utegemezi.
+- Mipaka ya tokeni ya mfano inaweza kupunguza idadi ya mifano unayoweza kutoa, na kupunguza ufanisi.
+- Gharama za tokeni za mfano zinaweza kufanya gharama kuwa kubwa kuongeza mifano kwa kila maelekezo, na kupunguza unyumbufu.
 
-Kurekebisha kwa umakini ni mazoezi ya kawaida katika mifumo ya kujifunza mashine ambapo tunachukua mfano uliotanguliwa na kurekebisha tena kwa data mpya ili kuboresha utendaji wake kwenye kazi fulani. Katika muktadha wa mifano ya lugha, tunaweza kurekebisha mfano uliotanguliwa _kwa seti iliyochaguliwa ya mifano kwa kazi fulani au eneo la matumizi_ ili kuunda **mfano maalum** ambao unaweza kuwa sahihi na unaohusiana zaidi kwa kazi au eneo hilo. Faida ya pembeni ya kurekebisha kwa umakini ni kwamba pia inaweza kupunguza idadi ya mifano inayohitajika kwa ujifunzaji wa mifano michache - kupunguza matumizi ya tokeni na gharama zinazohusiana.
+Kuimarisha zaidi ni mazoea ya kawaida katika mifumo ya mashine inayojifunza ambapo tunachukua mfano uliowekwa awali na kuurejesha mafunzo na data mpya ili kuboresha utendaji wake kwa kazi fulani. Katika muktadha wa mifano ya lugha, tunaweza kuimarisha mfano uliowekwa awali _na seti iliyochaguliwa ya mifano kwa kazi au eneo la matumizi fulani_ kuunda **mfano maalum** ambao unaweza kuwa sahihi zaidi na unaohusiana zaidi kwa kazi au eneo hilo. Faida ya pembeni ya kuimarisha zaidi ni kwamba pia inaweza kupunguza idadi ya mifano inayohitajika kwa kujifunza kwa mifano michache - kupunguza matumizi ya tokeni na gharama zinazohusiana.
 
-## Lini na kwa nini tunapaswa kurekebisha mifano kwa umakini?
+## Lini na kwa nini tunapaswa kuimarisha zaidi mifano?
 
-Katika _muktadha huu_, tunapozungumzia kurekebisha kwa umakini, tunarejelea **kurekebisha kwa umakini wa usimamizi** ambapo funzo jipya huendeshwa kwa **kuongeza data mpya** ambayo haikuwa sehemu ya seti ya mafunzo ya awali. Hii ni tofauti na mbinu ya kurekebisha kwa umakini isiyo na usimamizi ambapo mfano hufunzwa tena kwa data ya awali, lakini na vigezo tofauti.
+Katika _muktadha huu_, tunapotaja kuimarisha zaidi, tunarejelea **kuimarisha kwa usimamizi** ambapo urejeshaji wa mafunzo hufanywa kwa **kuongeza data mpya** ambayo haikuwa sehemu ya seti ya data ya mafunzo ya awali. Hii ni tofauti na mbinu isiyo na usimamizi ambapo mfano huwekwa mafunzo tena na data asilia, lakini kwa hyperparameter tofauti.
 
-Jambo kuu la kukumbuka ni kwamba kurekebisha kwa umakini ni mbinu ya hali ya juu ambayo inahitaji kiwango fulani cha utaalamu kupata matokeo yanayotarajiwa. Ikiwa itafanywa vibaya, inaweza isitoa maboresho yanayotarajiwa, na hata kupunguza utendaji wa mfano kwa eneo lako linalolengwa.
+Kitu kikuu cha kukumbuka ni kwamba kuimarisha zaidi ni mbinu ya hali ya juu inayohitaji kiwango fulani cha utaalamu kupata matokeo yanayotarajiwa. Ikiwa itafanywa vibaya, inaweza isilete maboresho yanayotarajiwa, na hata kupunguza utendaji wa mfano kwa eneo lako linalolengwa.
 
-Hivyo, kabla hujajifunza "jinsi" ya kurekebisha mifano ya lugha kwa umakini, unahitaji kujua "kwanini" unapaswa kuchukua njia hii, na "lini" kuanza mchakato wa kurekebisha kwa umakini. Anza kwa kujiuliza maswali haya:
+Hivyo, kabla hujajifunza "jinsi" ya kuimarisha zaidi mifano ya lugha, unahitaji kujua "kwa nini" unapaswa kuchukua njia hii, na "lini" kuanza mchakato wa kuimarisha. Anza kwa kujiuliza maswali haya:
 
-- **Matumizi**: Ni matumizi gani ya _kurekebisha kwa umakini_ unayotaka kufanya? Ni kipengele gani cha mfano uliotanguliwa unaotaka kuboresha?
-- **Mbadala**: Je, umeshajaribu _mbinu nyingine_ kupata matokeo yanayotarajiwa? Zitumi ili kuweka msingi wa kulinganisha.
-  - Uhandisi wa maelekezo: Jaribu mbinu kama maelekezo ya mifano michache yenye mifano ya majibu yanayohusiana. Tathmini ubora wa majibu.
-  - Uzalishaji Unaosaidiwa na Urejeshaji: Jaribu kuongeza maelekezo na matokeo ya utafutaji yanayopatikana kwa kusaka data zako. Tathmini ubora wa majibu.
-- **Gharama**: Je, umebaini gharama za kurekebisha kwa umakini?
-  - Inaweza kurekebishwa - Je, mfano uliotanguliwa upo tayari kwa kurekebishwa?
-  - Jitihada - kwa kuandaa data ya mafunzo, kutathmini & kuboresha mfano.
-  - Kompyuta - kwa kuendesha kazi za kurekebisha kwa umakini, na kupeleka mfano uliorekebishwa
-  - Data - upatikanaji wa mifano ya ubora wa kutosha kwa athari za kurekebisha kwa umakini
-- **Faida**: Je, umehakikisha faida za kurekebisha kwa umakini?
-  - Ubora - Je, mfano uliorekebishwa ulikuwa bora kuliko msingi?
-  - Gharama - Je, hupunguzia matumizi ya tokeni kwa kurahisisha maelekezo?
-  - Uwezo wa kubadilisha - Je, unaweza kutumia tena mfano wa msingi kwa maeneo mapya?
+- **Matumizi**: Ni _matumizi gani_ ya kuimarisha unayo? Ni kipengele gani cha mfano ulioko unayotaka kuboresha?
+- **Mbinu mbadala**: Je, umekuwa ukijaribu _mbinu nyingine_ kupata matokeo unayotaka? Zitumie kuanzisha msingi wa kulinganisha.
+  - Uhandisi wa maelekezo: Jaribu mbinu kama maelekezo ya mifano michache yenye majibu husika. Tathmini ubora wa majibu.
+  - Kizazi kilichoimarishwa kwa uvutaji: Jaribu kuongeza maelekezo na matokeo ya utafutaji kupitia data yako. Tathmini ubora wa majibu.
+- **Gharama**: Je, umebaini gharama za kuimarisha zaidi?
+  - Uwezekano wa kurekebisha - je mfano uliowekwa awali unapatikana kwa kuimarisha zaidi?
+  - Juhudi - kwa kuandaa data ya mafunzo, kutathmini na kuboresha mfano.
+  - Uwezeshaji wa kompyuta - kwa kuendesha kazi za kuimarisha, na kupeleka mfano ulioboreshwa
+  - Data - upatikanaji wa mifano ya ubora wa kutosha kwa athari ya kuimarisha
+- **Faida**: Je, umethibitisha faida za kuimarisha zaidi?
+  - Ubora - je mfano ulioboreshwa ulizidi msingi?
+  - Gharama - je inapunguza matumizi ya tokeni kwa kurahisisha maelekezo?
+  - Uwezo wa kupanua - je unaweza kutumia mfano wa msingi kwa maeneo mapya?
 
-Kwa kujibu maswali haya, unapaswa kuwa na uwezo wa kuamua kama kurekebisha kwa umakini ni mbinu sahihi kwa matumizi yako. Kwa kweli, mbinu ni halali tu ikiwa faida ni zaidi ya gharama. Mara tu unapokuwa tayari kuendelea, ni wakati wa kufikiria _jinsi_ unavyoweza kurekebisha mfano uliotanguliwa.
+Kwa kujibu maswali haya, unapaswa kuwa na uwezo wa kuamua kama kuimarisha zaidi ni mbinu sahihi kwa matumizi yako. Kiufupi, mbinu ni halali tu ikiwa faida zinazidi gharama. Mara tu unapobainisha kuendelea, ni wakati wa kufikiria _jinsi_ unavyoweza kuimarisha mfano uliowekwa awali.
 
-Unataka kupata maarifa zaidi juu ya mchakato wa kufanya maamuzi? Tazama [Kurekebisha au kutorekecha?](https://www.youtube.com/watch?v=0Jo-z-MFxJs)
+Unataka kupata maarifa zaidi juu ya mchakato wa uamuzi? Tazama [Kuimarisha au kutoimarisha](https://www.youtube.com/watch?v=0Jo-z-MFxJs)
 
-## Tunawezaje kurekebisha mfano uliotanguliwa?
+## Tunawezaje kuimarisha mfano uliowekwa awali?
 
-Ili kurekebisha mfano uliotanguliwa, unahitaji kuwa na:
+Ili kuimarisha mfano uliowekwa awali, unahitaji kuwa na:
 
-- mfano uliotanguliwa wa kurekebisha
-- seti ya data ya kutumia kwa kurekebisha
-- mazingira ya mafunzo kuendesha kazi ya kurekebisha
-- mazingira ya mwenyeji kupeleka mfano uliorekebishwa
+- mfano uliowekwa awali wa kuimarisha
+- seti ya data ya matumizi ya kuimarisha
+- mazingira ya mafunzo kuendesha kazi ya kuimarisha
+- mazingira ya kuhifadhi kupeleka mfano ulioboreshwa
 
-## Kurekebisha Katika Matendo
+## Kuimarisha Katika Microsoft Foundry
 
-> **Kumbuka:** `gpt-35-turbo` / `gpt-3.5-turbo`, zinazotajwa katika baadhi ya mafunzo hapa chini, zimesitishwa kwa uamuzi na kurekebisha. Ikiwa unaanza kazi mpya ya kurekebisha leo, lenga mfano unaounga mkono sasa - kwa mfano `gpt-4o-mini` au `gpt-4.1-mini`. Angalia [Orodha ya mifano ya kurekebishwa](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure?WT.mc_id=academic-105485-koreyst#fine-tuning-models) kwa seti ya sasa ya mifano inayoweza kurekebishwa. Dhana na hatua katika mafunzo haya bado zinatumika.
+[Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) ni mahali unapoimarisha, kupeleka, na kusimamia mifano maalum kwenye Azure leo (inachanganya yale yaliyokuwa Azure OpenAI Studio na Azure AI Studio). Kabla ya kuanzisha kazi, ni vyema kuelewa chaguzi Foundry linakupa - na mbinu bora ambazo jukwaa linapendekeza. Ndani ya mfumo, Foundry hutumia **LoRA (mfanano wa kiwango cha chini)** kuimarisha mifano kwa ufanisi, ambayo huifanya mafunzo kuwa ya haraka na nafuu zaidi kuliko kurekebisha kila uzito.
 
-Rasilimali zifuatazo zinatoa mafunzo hatua kwa hatua kukuelekeza kupitia mfano halisi ukitumia mfano uliochaguliwa na seti ya data iliyochaguliwa. Ili kufanya mafunzo haya, unahitaji akaunti kwa mtoa huduma maalum, pamoja na upatikanaji wa mfano na seti za data husika.
+### Hatua 1: Chagua mbinu ya mafunzo
 
-| Mtoa Huduma | Mafunzo                                                                                                                                                                      | Maelezo                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| OpenAI       | [Jinsi ya kurekebisha mifano ya mazungumzo](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst) | Jifunze kurekebisha `gpt-35-turbo` kwa eneo maalum ("msaidizi wa mapishi") kwa kuandaa data ya mafunzo, kuendesha kazi ya kurekebisha, na kutumia mfano uliorekebishwa kwa uamuzi.                                                                                                                                                                                                                                                 |
-| Azure OpenAI | [Mafunzo ya kurekebisha GPT 3.5 Turbo](https://learn.microsoft.com/azure/ai-services/openai/tutorials/fine-tune?tabs=python-new%2Ccommand-line&WT.mc_id=academic-105485-koreyst) | Jifunze kurekebisha mfano `gpt-35-turbo-0613` **kwa Azure** kwa kuchukua hatua za kuunda na kupakia data za mafunzo, kuendesha kazi ya kurekebisha. Peleka na tumia mfano mpya.                                                                                                                                                                                                                                                    |
-| Hugging Face | [Kurekebisha LLMs na Hugging Face](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                              | Chapisho hili la blogu linakuongoza jinsi ya kurekebisha _LLM huru_ (mfano: `CodeLlama 7B`) ukitumia maktaba ya [transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) & [Transformer Reinforcement Learning (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst) kwa seti za data huru kwenye Hugging Face.                                                                        |
-|              |                                                                                                                                                                            |                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| 🤗 AutoTrain | [Kurekebisha LLMs na AutoTrain](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                                        | AutoTrain (au AutoTrain Advanced) ni maktaba ya python iliyotengenezwa na Hugging Face inayoruhusu kurekebisha kwa mafanikio kwa kazi tofauti nyingi ikiwa ni pamoja na kurekebisha LLM. AutoTrain ni suluhisho la bila msimbo na kurekebisha kunaweza kufanywa katika wingu lako mwenyewe, kwenye Hugging Face Spaces au eneo lako. Inaunga mkono GUI ya wavuti, CLI na mafunzo kupitia faili za usanidi za yaml.                                                                            |
-|              |                                                                                                                                                                            |                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| 🦥 Unsloth | [Kurekebisha LLMs na Unsloth](https://github.com/unslothai/unsloth?WT.mc_id=academic-105485-koreyst)                                                           | Unsloth ni mfumo wa chanzo wazi unaounga mkono kurekebisha LLM na kujifunza kwa kuimarisha (RL). Unsloth hurahisisha mafunzo ya ndani, tathmini, na utoaji kwa kutumia [daftari](https://github.com/unslothai/notebooks?WT.mc_id=academic-105485-koreyst) tayari kwa matumizi. Pia inaunga mkono maandishi-kuyabadilisha-sauti (TTS), BERT na mifano ya multimodal. Ili kuanza, soma [Mwongozo wa Kurekebisha LLMs](https://docs.unsloth.ai/get-started/fine-tuning-llms-guide) hatua kwa hatua.                                          |
-|              |                                                                                                                                                                            |                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+Foundry ina msaada wa mbinu tatu za kuimarisha. **Anza na SFT** - inashughulikia aina nyingi zaidi za matukio.
+
+| Mbinu | Inayofanya | Wakati wa kuitumia |
+| --- | --- | --- |
+| **Kuimarisha Kwa Usimamizi (SFT)** | Huongeza mafunzo kwa jozi za mfano/mwisho ili mfano ujifunze kutoa majibu unayotaka. | Chaguo chaguo kwa kazi nyingi: utaalam wa eneo, utendaji wa kazi, mtindo na sauti, kufuata maelekezo, na mabadiliko ya lugha. |
+| **Uboreshaji wa Mapendeleo ya Moja kwa Moja (DPO)** | Hujifunza kutoka kwa jozi za majibu _yanayopendelewa dhidi ya yasiyopendelewa_ kulingana na mapendeleo ya binadamu. | Kuboresha ubora wa jibu, usalama, na ulinganifu wakati una mrejesho wa kulinganisha. |
+| **Kuimarisha Kwa Reinforcement (RFT)** | Inatumia ishara za zawadi kutoka kwa _wasimamizi_ kuboresha tabia ngumu kwa kujifunza kwa reinforcement. | Maeneo ya malengo, yenye uzito wa hoja (hisabati, kemia, fizikia) na majibu sahihi/siyosahihi wazi. Inahitaji utaalamu zaidi wa ML. |
+
+### Hatua 2: Chagua daraja la mafunzo
+
+Foundry inakuwezesha kuchagua jinsi na wapi mafunzo yataendeshwa:
+
+- **Kawaida** - hufunza katika eneo la rasilimali yako na huhakikisha makazi ya data. Tumia wakati data lazima ibaki katika eneo fulani.
+- **Ulimwenguni** - nafuu na haraka kwa kunyonya uwezo zaidi ya eneo lako (data na uzito hukopiwa hadi eneo la mafunzo). Chaguo nzuri wakati makazi ya data si sharti.
+- **Mwanazuoni** - gharama ndogo zaidi, ikitumia uwezo usiotumika bila dhamana za ucheleweshaji/SLA (kazi zinaweza kusitishwa na kuanzishwa tena). Inafaa kwa majaribio.
+
+### Hatua 3: Chagua mfano wa msingi
+
+Mifano inayoweza kuimarishwa ni pamoja na OpenAI `gpt-4o-mini`, `gpt-4o`, `gpt-4.1`, `gpt-4.1-mini`, na `gpt-4.1-nano` (SFT; familia ya 4o/4.1 pia inasaidia DPO), mifano ya hoja `o4-mini` na `gpt-5` (RFT), pamoja na mifano ya chanzo wazi kama `Ministral-3B`, `Qwen-32B`, `Llama-3.3-70B-Instruct`, na `gpt-oss-20b` (SFT kwenye rasilimali za Foundry). Kila wakati hakikisha kuangalia [Orodha ya mifano ya Kuimarisha](https://learn.microsoft.com/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure?WT.mc_id=academic-105485-koreyst#fine-tuning-models) kwa mbinu zinazotolewa, maeneo, na upatikanaji.
+
+> Foundry hutoa njia mbili: **bila seva** (bei ya matumizi, hakuna kibali cha GPU cha kusimamia, OpenAI na mifano iliyochaguliwa) na **kompyuta inayoendeshwa** (leta VM zako mwenyewe kupitia Azure Machine Learning kwa anuwai kubwa zaidi ya mifano). Watu wengi wanapaswa kuanza na isiyo na seva.
+
+### Mbinu Bora za Foundry
+
+- **Kipimo cha msingi kwanza.** Pima mfano wa msingi na uhandisi wa maelekezo na RAG _kabla_ ya kuimarisha, ili uweze kuonyesha faida.
+- **Anza kidogo, kisha pandisha.** Anza na mifano 50-100 ya ubora wa juu kuthibitisha mbinu, kisha ongeza hadi 500+ kwa uzalishaji. Ubora hupita wingi - tofautisha mifano duni.
+- **Panga data ipasavyo.** Faili za mafunzo na tathmini lazima ziwe JSONL, UTF-8 **na BOM**, chini ya 512 MB, zikitumia muundo wa ujumbe wa mazungumzo. Daima jumuisha faili ya tathmini ili uangalie mafunzo kupita kiasi.
+- **Dumisha maelekezo ya mfumo wakati wa utabiri.** Tumia ujumbe huo wa mfumo ulio tumia wakati wa mafunzo unapoita mfano.
+- **Tathmini vidokezo vya hali - usipeleke bila kufikiria.** Foundry huhifadhi epoksi tatu za mwisho kama vidokezo vya kuweza kupeleka; chagua kinachojumlisha vyema kwa kuangalia `train_loss` / `valid_loss` na usahihi wa tokeni.
+- **Pima gharama ya tokeni sambamba na ubora** unapotathmini mfano ulioboreshwa dhidi ya msingi.
+- **Rudia na kuimarisha mfululizo.** Unaweza kuimarisha mfano ulioboreshwa tayari na data mpya (inakubaliwa kwa mifano ya OpenAI).
+- **Tazama gharama za kuhifadhi.** Mfano maalum ulipelekwa hulipishwa kwa saa, na upelekeaji usiotumika hufutwa baada ya siku 15 - safisha kile usichohitaji.
+
+Fanya kupitia mafunzo ya hatua kwa hatua katika [Boresha mfano kwa kuimarisha zaidi](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/fine-tuning?WT.mc_id=academic-105485-koreyst), na ona mwongozo wa [DPO](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/fine-tuning-direct-preference-optimization?WT.mc_id=academic-105485-koreyst) na [RFT](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/reinforcement-fine-tuning?WT.mc_id=academic-105485-koreyst) unapokuwa tayari kwa mbinu nyingine.
+
+## Kuimarisha Katika Vitendo
+
+Rasilimali zifuatazo zinatoa mafunzo hatua kwa hatua yanayokuongoza kupitia mfano halisi kwa mfano unaoendeshwa kwa sasa na dataset iliyochaguliwa. Ili kufanya kazi nazo, unahitaji akaunti kwa muuzaji husika pamoja na upatikanaji wa mfano husika na dataset.
+
+| Muuzaji     | Mafunzo                                                                                                                                                                       | Maelezo                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| OpenAI       | [Jinsi ya kuimarisha mifano ya mazungumzo](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst)     | Jifunze kuimarisha mfano wa mazungumzo wa OpenAI wa hivi karibuni kwa eneo fulani ("msaidizi wa mapishi") kwa kuandaa data ya mafunzo, kuendesha kazi ya kuimarisha, na kutumia mfano ulioboreshwa kwa utabiri.                                                                                                                                                                                                                                                               |
+| Microsoft Foundry | [Boresha mfano kwa kuimarisha zaidi](https://learn.microsoft.com/azure/ai-foundry/openai/tutorials/fine-tune?WT.mc_id=academic-105485-koreyst) | Jifunze kuimarisha mfano unaoendeshwa kwa sasa kama `gpt-4.1-mini` **kutumia Azure** na Microsoft Foundry: andaa na pakia data za mafunzo na tathmini, endesha kazi ya kuimarisha, kisha peleka na tumia mfano mpya.                                                                                                                                                                                                                                                               |
+
+| Hugging Face | [Kufinyaza LLMs kwa Hugging Face](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                               | Kifungu hiki cha blogu kinakuelekeza jinsi ya kufinyaza _open LLM_ (mfano: `CodeLlama 7B`) kwa kutumia maktaba ya [transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) & [Transformer Reinforcement Learning (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst) kwa kutumia [datasets](https://huggingface.co/docs/datasets/index?WT.mc_id=academic-105485-koreyst) za wazi kwenye Hugging Face. |
+|              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| 🤗 AutoTrain | [Kufinyaza LLMs kwa AutoTrain](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                                         | AutoTrain (au AutoTrain Advanced) ni maktaba ya python iliyotengenezwa na Hugging Face inayoruhusu kufinyaza kazi nyingi tofauti ikijumuisha kufinyaza LLM. AutoTrain ni suluhisho lisilo na msimbo na ufinyzaji unaweza kufanyika katika wingu lako mwenyewe, kwenye Hugging Face Spaces au kwa ndani (locally). Inasaidia GUI ya mtandao, CLI na mafunzo kupitia faili za usanidi za yaml.                                                                               |
+|              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| 🦥 Unsloth | [Kufinyaza LLMs kwa Unsloth](https://github.com/unslothai/unsloth?WT.mc_id=academic-105485-koreyst)                                                         | Unsloth ni mfumo wazi wa chanzo unaounga mkono kufinyazwa LLM na kujifunza kwa kuzidisha (RL). Unsloth hufanya mafunzo ya ndani, tathmini, na utekelezaji kuwa rahisi kwa kutumia [notebooks](https://github.com/unslothai/notebooks?WT.mc_id=academic-105485-koreyst) tayari kwa matumizi. Pia inasaidia maandishi kwa sauti (TTS), BERT na mifano ya multimodal. Ili kuanza, soma mwongozo wao wa hatua kwa hatua wa [Kufinyaza LLMs](https://docs.unsloth.ai/get-started/fine-tuning-llms-guide).                                                                          |
+|              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 ## Kazi ya Nyumbani
 
-Chagua moja ya mafunzo yaliyopo hapo juu na uyatumie. _Huenda tukafanikisha toleo la mafunzo haya kwenye Jupyter Notebooks katika hifadhi hii kwa ajili ya rejeleo tu. Tafadhali tumia vyanzo asilia moja kwa moja kupata matoleo ya hivi karibuni_.
+Chagua moja ya mafunzo yaliyotajwa hapo juu na yapitie. _Tunaweza kuiga toleo la mafunzo haya katika Jupyter Notebooks katika repoo hii kwa ajili ya rejea tu. Tafadhali tumia vyanzo asili moja kwa moja kupata matoleo ya hivi karibuni_.
 
-## Kazi Nzuri! Endelea Kujifunza.
+## Kazi Njema! Endelea Kujifunza.
 
-Baada ya kumaliza somo hili, tembelea mkusanyiko wetu wa [Kujifunza AI Inayozalisha](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kuendelea kuinua maarifa yako ya AI Inayozalisha!
+Baada ya kumaliza somo hili, angalia [Mkusanyiko wa Kujifunza AI ya Kutengeneza](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kuendelea kuongeza maarifa yako kuhusu AI ya Kutengeneza!
 
-Hongera!! Umeimaliza somo la mwisho kutoka mfululizo wa v2 kwa kozi hii! Usisite kujifunza na kujenga. \*\*Angalia ukurasa wa [RASILIMALI](RESOURCES.md?WT.mc_id=academic-105485-koreyst) kwa orodha ya mapendekezo ya ziada kwa mada hii pekee.
+Hongera!! Umefanikiwa kumaliza somo la mwisho kutoka kwa mfululizo wa v2 kwa kozi hii! Usisahau kuendelea kujifunza na kujenga. \*\*Tafadhali angalia ukurasa wa [RASILIMALI](RESOURCES.md?WT.mc_id=academic-105485-koreyst) kwa orodha ya mapendekezo zaidi kuhusu mada hii tu.
 
-Mfululizo wetu wa v1 wa masomo pia umeboreshwa kwa kazi zaidi na dhana zaidi. Hivyo chukua dakika moja kuhuisha maarifa yako - na tafadhali [shirikisha maswali na maoni yako](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) kutusaidia kuboresha masomo haya kwa jamii.
+Mfululizo wetu wa v1 wa masomo pia umeboreshwa na kazi za nyumbani na dhana zaidi. Kwa hiyo chukua dakika moja kufufua maarifa yako - na tafadhali [shirikisha maswali na maoni yako](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) kusaidia kuboresha masomo haya kwa jamii.
 
 ---
 

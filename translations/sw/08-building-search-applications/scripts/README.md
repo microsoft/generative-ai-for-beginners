@@ -1,34 +1,34 @@
-# Kuandaa data za uandikishaji
+# Maandalizi ya data ya uandishi wa maandishi
 
-Scripts za kuandaa data za uandikishaji hukamata manukuu ya video za YouTube na kuziandaa kwa matumizi na mfano wa Semantic Search with OpenAI Embeddings and Functions.
+Skripti za maandalizi ya data ya uandishi wa maandishi hupakua maandishi ya video za YouTube na kuziandaa kwa matumizi na mfano wa Semantic Search with OpenAI Embeddings and Functions.
 
-Scripts za kuandaa data za uandikishaji zimeshatumwa kwenye matoleo ya karibuni ya Windows 11, macOS Ventura na Ubuntu 22.04 (na juu yake).
+Skripti za maandalizi ya data ya uandishi wa maandishi zimejaribiwa kwenye matoleo ya hivi karibuni ya Windows 11, macOS Ventura na Ubuntu 22.04 (na juu zaidi).
 
-## Tengeneza rasilimali zinazohitajika za Azure OpenAI Service
+## Tengeneza rasilimali za huduma ya Azure OpenAI zinazohitajika
 
 > [!IMPORTANT]
-> Tunapendekeza upitie Azure CLI hadi toleo la karibuni ili kuhakikisha ulinganifu na OpenAI
-> Angalia [Documentation](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
+> Tunapendekeza uusasishe Azure CLI hadi toleo la hivi karibuni ili kuhakikisha ulinganifu na OpenAI
+> Tazama [Documentation](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Tengeneza kundi la rasilimali
 
 > [!NOTE]
-> Kwa maagizo haya tunatumia kundi la rasilimali linaloitwa "semantic-video-search" katika East US.
-> Unaweza kubadilisha jina la kundi la rasilimali, lakini unapobadilisha eneo la rasilimali, 
+> Kwa maelekezo haya tunatumia kundi la rasilimali linaloitwa "semantic-video-search" kusini mwa Mashariki ya Marekani.
+> Unaweza kubadilisha jina la kundi la rasilimali, lakini unapotoboa eneo la rasilimali, 
 > angalia [jedwali la upatikanaji wa modeli](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. Tengeneza rasilimali ya Azure OpenAI Service.
+1. Tengeneza rasimali ya huduma ya Azure OpenAI.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Pata sehemu ya mwisho na funguo za matumizi katika programu hii
+1. Pata kiunganishi na funguo kwa matumizi katika programu hii
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -37,9 +37,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. Weka modeli zifuatazo:
-   - toleo la `text-embedding-ada-002` lenye `2` au zaidi, liitwe `text-embedding-ada-002`
-   - `gpt-4o-mini` liitwe `gpt-4o-mini`
+1. Sambaza modeli zifuatazo:
+   - toleo la `text-embedding-ada-002` `2` au zaidi, jina `text-embedding-ada-002`
+   - `gpt-5-mini` jina `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,8 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -66,11 +66,11 @@ az cognitiveservices account deployment create \
 
 ## Mabadiliko ya mazingira
 
-Mabadiliko ya mazingira yafuatayo yanahitajika kuendesha scripts za kuandaa data za uandikishaji za YouTube.
+Mabadiliko ya mazingira yafuatayo yanahitajika kuendesha skripti za maandalizi ya data ya uandishi wa maandishi wa YouTube.
 
 ### Kwenye Windows
 
-Tunapendekeza kuongeza mabadiliko haya kwenye mabadiliko ya mazingira ya `user`.
+Tunapendekeza kuongeza mabadiliko kwenye mabadiliko ya mazingira ya `user`.
 `Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` kwa [USER] > `New`.
 
 ```text
@@ -83,15 +83,15 @@ GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 <!-- Unaweza kuongeza mabadiliko ya mazingira kwenye wasifu wako wa PowerShell.
 
 ```powershell
-$env:AZURE_OPENAI_API_KEY = "<your Azure OpenAI Service API key>"
-$env:AZURE_OPENAI_ENDPOINT = "<your Azure OpenAI Service endpoint>"
-$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<your Azure OpenAI Service model deployment name>"
-$env:GOOGLE_DEVELOPER_API_KEY = "<your Google developer API key>"
+$env:AZURE_OPENAI_API_KEY = "<funguo yako ya API ya Huduma ya Azure OpenAI>"
+$env:AZURE_OPENAI_ENDPOINT = "<kiunganishi chako cha Huduma ya Azure OpenAI>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<jina la usambazaji wa modeli ya Huduma ya Azure OpenAI>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<funguo yako ya API ya mtengenezaji wa Google>"
 ``` -->
 
 ### Kwenye Linux na macOS
 
-Tunapendekeza kuongeza exports zifuatazo kwenye faili lako `~/.bashrc` au `~/.zshrc`.
+Tunapendekeza kuongeza amri zifuatazo kwenye faili yako ya `~/.bashrc` au `~/.zshrc`.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -102,8 +102,8 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## Sakinisha maktaba za Python zinazohitajika
 
-1. Sakinisha [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) ikiwa bado haisakinishwi.
-1. Kutoka dirisha la `Terminal`, nakili mfano hadi folda yako ya depo unayoipenda.
+1. Sakinisha [klenti ya git](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst ikiwa bado haijasakinishwa.
+1. Kutoka kwenye dirisha la `Terminal`, nakili mfano katika folda ya repo unayopendelea.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -115,7 +115,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. Tengeneza mazingira ya virtual ya Python.
+1. Tengeneza mazingira ya dhihirisho ya Python.
 
     Kwenye Windows:
 
@@ -129,7 +129,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     python3 -m venv .venv
     ```
 
-1. Washa mazingira ya virtual ya Python.
+1. Washa mazingira ya dhihirisho ya Python.
 
    Kwenye Windows:
 
@@ -157,7 +157,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## Endesha scripts za kuandaa data za uandikishaji za YouTube
+## Endesha skripti za maandalizi ya data ya uandishi wa maandishi wa YouTube
 
 ### Kwenye windows
 

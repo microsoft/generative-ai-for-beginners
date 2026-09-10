@@ -1,16 +1,16 @@
 ![Generatívna AI pre začiatočníkov](../../translated_images/sk/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
-### 21 lekcií, ktoré učia všetko, čo potrebujete vedieť na začatie tvorby aplikácií Generatívnej AI
+### 21 lekcií, ktoré vás naučia všetko, čo potrebujete vedieť na začatie tvorby aplikácií s generatívnou AI
 
-[![GitHub licencia](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)
-[![Prispievatelia na GitHub](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
-[![Problémy na GitHub](https://img.shields.io/github/issues/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/issues/?WT.mc_id=academic-105485-koreyst)
-[![Pull requesty na GitHub](https://img.shields.io/github/issues-pr/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/pulls/?WT.mc_id=academic-105485-koreyst)
-[![PRs vítané](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com?WT.mc_id=academic-105485-koreyst)
+[![GitHub license](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)
+[![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
+[![GitHub issues](https://img.shields.io/github/issues/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/issues/?WT.mc_id=academic-105485-koreyst)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/pulls/?WT.mc_id=academic-105485-koreyst)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com?WT.mc_id=academic-105485-koreyst)
 
-[![Sledujúci na GitHub](https://img.shields.io/github/watchers/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Watch)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/watchers/?WT.mc_id=academic-105485-koreyst)
-[![Forky na GitHub](https://img.shields.io/github/forks/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/network/?WT.mc_id=academic-105485-koreyst)
-[![Hviezdy na GitHub](https://img.shields.io/github/stars/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/stargazers/?WT.mc_id=academic-105485-koreyst)
+[![GitHub watchers](https://img.shields.io/github/watchers/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Watch)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/watchers/?WT.mc_id=academic-105485-koreyst)
+[![GitHub forks](https://img.shields.io/github/forks/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/network/?WT.mc_id=academic-105485-koreyst)
+[![GitHub stars](https://img.shields.io/github/stars/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/stargazers/?WT.mc_id=academic-105485-koreyst)
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
@@ -19,9 +19,9 @@
 #### Podporované cez GitHub Action (automatizované a vždy aktuálne)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabčina](../ar/README.md) | [Bengálčina](../bn/README.md) | [Bulharčina](../bg/README.md) | [Burmčina (Myanmar)](../my/README.md) | [Čínština (zjednodušená)](../zh-CN/README.md) | [Čínština (tradičná, Hongkong)](../zh-HK/README.md) | [Čínština (tradičná, Macao)](../zh-MO/README.md) | [Čínština (tradičná, Taiwan)](../zh-TW/README.md) | [Chorvátčina](../hr/README.md) | [Čeština](../cs/README.md) | [Dánčina](../da/README.md) | [Holandčina](../nl/README.md) | [Estónčina](../et/README.md) | [Fínčina](../fi/README.md) | [Francúzština](../fr/README.md) | [Nemčina](../de/README.md) | [Gréčtina](../el/README.md) | [Hebrejčina](../he/README.md) | [Hindčina](../hi/README.md) | [Maďarčina](../hu/README.md) | [Indonézština](../id/README.md) | [Taliančina](../it/README.md) | [Japončina](../ja/README.md) | [Kannadčina](../kn/README.md) | [Khmerčina](../km/README.md) | [Kórejčina](../ko/README.md) | [Litovčina](../lt/README.md) | [Malajčina](../ms/README.md) | [Malayalam](../ml/README.md) | [Maráthčina](../mr/README.md) | [Nepálčina](../ne/README.md) | [Nigerijská pidžinčina](../pcm/README.md) | [Norvédčina](../no/README.md) | [Perzština (Farsi)](../fa/README.md) | [Poľština](../pl/README.md) | [Portugalčina (Brazília)](../pt-BR/README.md) | [Portugalčina (Portugalsko)](../pt-PT/README.md) | [Pandžábčina (Gurmukhi)](../pa/README.md) | [Rumunčina](../ro/README.md) | [Ruština](../ru/README.md) | [Srbčina (cyrilika)](../sr/README.md) | [Slovenčina](./README.md) | [Slovinčina](../sl/README.md) | [Španielčina](../es/README.md) | [Svahilčina](../sw/README.md) | [Švédčina](../sv/README.md) | [Tagalog (Filipínčina)](../tl/README.md) | [Tamilčina](../ta/README.md) | [Telugčina](../te/README.md) | [Thajčina](../th/README.md) | [Turečtina](../tr/README.md) | [Ukrajinčina](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamčina](../vi/README.md)
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Khmer](../km/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](./README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
-> **Preferujete klonovanie lokálne?**
+> **Radšej klonovať lokálne?**
 >
 > Tento repozitár obsahuje viac ako 50 jazykových prekladov, čo výrazne zvyšuje veľkosť sťahovania. Ak chcete klonovať bez prekladov, použite sparse checkout:
 >
@@ -39,99 +39,99 @@
 > git sparse-checkout set --no-cone "/*" "!translations" "!translated_images"
 > ```
 >
-> Toto vám poskytne všetko potrebné na dokončenie kurzu s oveľa rýchlejším sťahovaním.
+> Toto vám poskytne všetko potrebné pre úspešné dokončenie kurzu so značne rýchlejším sťahovaním.
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-# Generatívna AI pre začiatočníkov (verzia 3) - Kurz
+# Generatívna AI pre začiatočníkov (Verzia 3) - Kurz
 
-Naučte sa základy tvorby aplikácií Generatívnej AI v našom komplexnom kurze so 21 lekciami od Microsoft Cloud Advocates.
+Naučte sa základy tvorby aplikácií s generatívnou AI v našom komplexnom kurze s 21 lekciami od Microsoft Cloud Advocates.
 
 ## 🌱 Začíname
 
-Tento kurz má 21 lekcií. Každá lekcia pokrýva svoju vlastnú tému, takže začnite kdekoľvek chcete!
+Tento kurz obsahuje 21 lekcií. Každá lekcia pokrýva vlastnú tému, takže začnite kdekoľvek chcete!
 
-Lekcie sú označené ako „Learn“ (naučte sa) vysvetľujúce koncept Generatívnej AI alebo „Build“ (stavba), ktoré vysvetľujú koncept aj príklady kódu v **Pythone** a **TypeScripte**, kde je to možné.
+Lekcie sú označené buď ako "Learn" (Naučte sa) vysvetľujúce koncept generatívnej AI, alebo "Build" (Stavajte) ktoré vysvetľujú koncept a obsahujú príklady kódu v **Pythone** a **TypeScripte** vždy, keď je to možné.
 
-Pre .NET vývojárov pozrite si [Generatívnu AI pre začiatočníkov (.NET edícia)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
+Pre .NET vývojárov si pozrite [Generatívna AI pre začiatočníkov (.NET Edícia)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
 
-Každá lekcia tiež obsahuje sekciu „Keep Learning“ (pokračujte v učení) s ďalšími nástrojmi na učenie.
+Každá lekcia obsahuje aj sekciu "Pokračovať v učení" s ďalšími nástrojmi na vzdelávanie.
 
 ## Čo potrebujete
 ### Na spustenie kódu z tohto kurzu môžete použiť:
- - [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **Lekcie:** „aoai-assignment“
- - [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) - **Lekcie:** „githubmodels“ (GitHub Models sa ukončí koncom júla 2026 - namiesto toho používajte Microsoft Foundry Models)
- - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **Lekcie:** „oai-assignment“
- - [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) - Spúšťajte modely úplne offline na vlastnom zariadení, nie je potrebné žiadne cloudové predplatné
+ - [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **Lekcie:** "aoai-assignment"
+ - [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) - **Lekcie:** "githubmodels" (GitHub Models bude ukončený koncom júla 2026 – použite miesto neho Microsoft Foundry Models)
+ - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **Lekcie:** "oai-assignment"
+ - [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) - Spustite modely plne offline na vlastnom zariadení, nie je potrebné žiadne cloudové predplatné
    
-- Základné znalosti Pythonu alebo TypeScriptu sú užitočné - \*Pre úplných začiatočníkov si prezrite tieto kurzy [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) a [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst)
-- GitHub účet na [forknutie tohto celého repozitára](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) na vlastný GitHub účet
+- Základné znalosti Pythonu alebo TypeScriptu sú vítané – \*Pre absolútnych začiatočníkov pozrite si tieto [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) a [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst) kurzy
+- GitHub účet na [forknutie celého tohto repozitára](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) do vlastného GitHub účtu
 
-Vytvorili sme lekciu **[Course Setup](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)**, ktorá vám pomôže s nastavením vývojového prostredia.
+Vytvorili sme lekciu **[Nastavenie kurzu](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)**, ktorá vám pomôže s nastavením vývojového prostredia.
 
-Nezabudnite [pridať hviezdičku (🌟) tomuto repozitáru](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst), aby ste ho neskôr ľahšie našli.
+Nezabudnite [ohviezdičkovať (🌟) tento repozitár](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst), aby ste ho neskôr ľahšie našli.
 
-## 🧠 Pripravení na nasadenie?
+## 🧠 Ste pripravení nasadiť?
 
-Ak hľadáte pokročilejšie príklady kódu, pozrite si našu [kolekciu príkladov kódu Generatívnej AI](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) v **Pythone** a **TypeScripte**.
+Ak hľadáte pokročilejšie ukážky kódu, pozrite si našu [kolekciu ukážok kódu generatívnej AI](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) v **Pythone** aj **TypeScripte**.
 
-## 🗣️ Spoznajte iných študentov, získajte podporu
+## 🗣️ Spoznajte ďalších študentov, získajte podporu
 
-Pridajte sa k nášmu [oficiálnemu Microsoft Foundry Discord serveru](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) a nadviažte kontakty s ostatnými študentmi tohto kurzu a získajte podporu.
+Pridajte sa na náš [oficiálny Microsoft Foundry Discord server](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst), kde môžete spoznať a nadviazať kontakty s ostatnými študentmi tohto kurzu a získať podporu.
 
-Pýtajte sa otázky alebo zdieľajte spätnú väzbu v našom [Microsoft Foundry Developer Forume](https://aka.ms/azureaifoundry/forum) na GitHub.
+Kládte otázky alebo zdieľajte spätnú väzbu k produktu v našom [Microsoft Foundry Developer Fo róme](https://aka.ms/azureaifoundry/forum) na GitHube.
 
-## 🚀 Stavajete startup?
+## 🚀 Budujete startup?
 
-Navštívte [Microsoft for Startups](https://www.microsoft.com/startups) a zistite, ako začať s Azure kreditmi ešte dnes.
+Navštívte [Microsoft pre startupy](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst) a zistite, ako začať budovať pomocou Azure kreditov už dnes.
 
 ## 🙏 Chcete pomôcť?
 
-Máte návrhy alebo ste našli chyby v pravopise či kóde? [Nahláste problém](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) alebo [vytvorte pull request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
+Máte návrhy alebo ste našli chyby v pravopise či kóde? [Vytvorte issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) alebo [Vytvorte pull request](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
 
 ## 📂 Každá lekcia obsahuje:
 
-- Krátke video s úvodom do témy
-- Písanú lekciu umiestnenú v README
-- Príklady kódu v Pythone a TypeScripte podporujúce Azure OpenAI a OpenAI API
-- Odkazy na ďalšie zdroje na pokračovanie vo vzdelávaní
+- Krátke video predstavenie témy
+- Písomnú lekciu umiestnenú v README
+- Ukážky kódu v Pythone a TypeScripte podporujúce Azure OpenAI a OpenAI API
+- Odkazy na doplnkové zdroje na pokračovanie vo vzdelávaní
 
 ## 🗃️ Lekcie
 
-| #   | **Odkaz na lekciu**                                                                                                                              | **Popis**                                                                                  | **Video**                                                                   | **Dodatočné učenie**                                                          |
-| --- | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 00  | [Nastavenie kurzu](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                | **Naučte sa:** Ako nastaviť vaše vývojové prostredie                                      | Video čoskoro                                                                 | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 01  | [Úvod do Generatívnej AI a LLM](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                                            | **Naučte sa:** Pochopenie čo je Generatívna AI a ako fungujú veľké jazykové modely (LLM).  | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 02  | [Preskúmavanie a porovnávanie rôznych LLM](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)                | **Naučte sa:** Ako vybrať správny model pre váš prípad použitia                          | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 03  | [Zodpovedné používanie Generatívnej AI](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                          | **Naučte sa:** Ako zodpovedne stavať aplikácie Generatívnej AI                          | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| #   | **Odkaz na lekciu**                                                                                                                              | **Popis**                                                                                 | **Video**                                                                   | **Doplnkové učenie**                                                             |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| 00  | [Nastavenie kurzu](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                 | **Learn:** Ako nastaviť svoje vývojové prostredie                                            | Video čoskoro                                                                | [Viac sa dozviete](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 01  | [Úvod do generatívnej AI a LLM](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **Learn:** Pochopenie, čo je generatívna AI a ako fungujú veľké jazykové modely (LLM)       | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Viac sa dozviete](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 02  | [Preskúmanie a porovnanie rôznych LLM](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)             | **Learn:** Ako vybrať správny model pre vaše použitie                                      | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Viac sa dozviete](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 
-| 04  | [Pochopenie základov promptového inžinierstva](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **Naučte sa:** Praktické osvedčené postupy promptového inžinierstva                              | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 05  | [Vytváranie pokročilých promptov](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **Naučte sa:** Ako používať techniky promptového inžinierstva, ktoré zlepšia výsledok vašich promptov. | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 06  | [Vytváranie aplikácií na generovanie textu](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Vytvorte:** Aplikáciu na generovanie textu pomocou Azure OpenAI / OpenAI API                  | [Video](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 07  | [Vytváranie chatovacích aplikácií](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Vytvorte:** Techniky na efektívne vytváranie a integráciu chatovacích aplikácií.              | [Video](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 08  | [Vytváranie vyhľadávacích aplikácií s vektorovými databázami](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)         | **Vytvorte:** Vyhľadávaciu aplikáciu, ktorá používa Embeddings na vyhľadávanie dát.            | [Video](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 09  | [Vytváranie aplikácií na generovanie obrázkov](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Vytvorte:** Aplikáciu na generovanie obrázkov                                                | [Video](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 10  | [Vytváranie AI aplikácií s nízkym kódom](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **Vytvorte:** Generatívnu AI aplikáciu pomocou nástrojov s nízkym kódom                        | [Video](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 11  | [Integrácia externých aplikácií s funkciou volania](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst)              | **Vytvorte:** Čo je volanie funkcie a jej použitie v aplikáciách                              | [Video](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 12  | [Navrhovanie UX pre AI aplikácie](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                                | **Naučte sa:** Ako aplikovať zásady UX dizajnu pri vývoji generatívnych AI aplikácií           | [Video](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 13  | [Zabezpečenie vašich generatívnych AI aplikácií](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Naučte sa:** Hrozby a riziká pre AI systémy a metódy ich zabezpečenia                       | [Video](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 14  | [Životný cyklus generatívnych AI aplikácií](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)               | **Naučte sa:** Nástroje a metriky na riadenie životného cyklu LLM a LLMOps                    | [Video](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 15  | [Retrieval Augmented Generation (RAG) a vektorové databázy](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)             | **Vytvorte:** Aplikáciu používajúcu RAG rámec na získavanie embeddings z vektorových databáz  | [Video](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 16  | [Open Source modely a Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                            | **Vytvorte:** Aplikáciu používajúcu open source modely dostupné na Hugging Face               | [Video](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 17  | [AI Agenti](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                           | **Vytvorte:** Aplikáciu používajúcu AI Agent Framework                                       | [Video](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 18  | [Ladenie LLM](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **Naučte sa:** Čo, prečo a ako sa ladia LLM                                                | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 19  | [Vytváranie so SLM](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                                        | **Naučte sa:** Výhody budovania s Malými jazykovými modelmi                                 | Video čoskoro   | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 20  | [Vytváranie s Mistral modelmi](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                        | **Naučte sa:** Vlastnosti a rozdiely modelov rodiny Mistral                                | Video čoskoro   | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 21  | [Vytváranie s Meta modelmi](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                                | **Naučte sa:** Vlastnosti a rozdiely modelov rodiny Meta                                  | Video čoskoro   | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 03  | [Zodpovedné používanie generatívnej AI](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                           | **Naučte sa:** Ako zodpovedne vytvárať aplikácie využívajúce generatívnu AI                                  | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 04  | [Základy navrhovania promptov](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **Naučte sa:** Najlepšie praktiky pri navrhovaní promptov                                                | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 05  | [Vytváranie pokročilých promptov](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **Naučte sa:** Ako aplikovať techniky navrhovania promptov, ktoré zlepšia výsledky vašich promptov       | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 06  | [Vytváranie aplikácií na generovanie textu](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Vytvorte:** Aplikáciu na generovanie textu pomocou Azure OpenAI / OpenAI API                          | [Video](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 07  | [Vytváranie chatovacích aplikácií](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Vytvorte:** Techniky na efektívne vytváranie a integráciu chatovacích aplikácií                       | [Video](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 08  | [Vytváranie vyhľadávacích aplikácií s vektorovými databázami](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Vytvorte:** Aplikáciu na vyhľadávanie využívajúcu Embeddings na vyhľadávanie dát.                      | [Video](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 09  | [Vytváranie aplikácií na generovanie obrázkov](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Vytvorte:** Aplikáciu na generovanie obrázkov                                                        | [Video](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 10  | [Vytváranie low-code AI aplikácií](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **Vytvorte:** Generatívnu AI aplikáciu pomocou nástrojov Low Code                                      | [Video](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 11  | [Integrácia externých aplikácií cez volanie funkcií](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **Vytvorte:** Čo je volanie funkcií a ako sa využíva v aplikáciách                                    | [Video](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 12  | [Navrhovanie UX pre AI aplikácie](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Naučte sa:** Ako aplikovať princípy UX dizajnu pri vývoji generatívnych AI aplikácií                 | [Video](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 13  | [Zabezpečenie vašich generatívnych AI aplikácií](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Naučte sa:** Hrozby a riziká AI systémov a spôsoby ich zabezpečenia                                 | [Video](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 14  | [Životný cyklus generatívnej AI aplikácie](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)           | **Naučte sa:** Nástroje a metriky na riadenie životného cyklu LLM a LLMOps                            | [Video](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 15  | [Retrieval Augmented Generation (RAG) a vektorové databázy](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **Vytvorte:** Aplikáciu využívajúcu RAG framework na získavanie embeddingov z vektorových databáz     | [Video](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 16  | [Open source modely a Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **Vytvorte:** Aplikáciu využívajúcu open source modely dostupné na Hugging Face                      | [Video](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 17  | [AI agenti](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **Vytvorte:** Aplikáciu využívajúcu AI Agent Framework                                             | [Video](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 18  | [Ladanie LLM](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Naučte sa:** Čo, prečo a ako nastavovať LLM                                                     | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 19  | [Vytváranie so SLM](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Naučte sa:** Výhody vytvárania s malými jazykovými modelmi                                       | Video čoskoro      | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 20  | [Vytváranie s modelmi Mistral](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Naučte sa:** Vlastnosti a rozdiely modelov rodiny Mistral                                       | Video čoskoro      | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 21  | [Vytváranie s modelmi Meta](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Naučte sa:** Vlastnosti a rozdiely modelov rodiny Meta                                         | Video čoskoro      | [Viac informácií](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 
 ### 🌟 Špeciálne poďakovanie
 
-Špeciálne poďakovanie patrí [**Johnovi Azizovi**](https://www.linkedin.com/in/john0isaac/) za vytvorenie všetkých GitHub Actions a pracovných tokov
+Špeciálne poďakovanie [**Johnovi Azizovi**](https://www.linkedin.com/in/john0isaac/) za vytvorenie všetkých GitHub Actions a workflow.
 
-[**Bernhardovi Merkle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) za kľúčové príspevky do každej lekcie na zlepšenie skúsenosti študenta aj kódu. 
+[**Bernhardovi Merkleovi**](https://www.linkedin.com/in/bernhard-merkle-738b73/) za kľúčové príspevky ku každej lekcii na zlepšenie zážitku z učenia a kódu.
 
-## 🎒 Iné kurzy
+## 🎒 Ďalšie kurzy
 
-Náš tím produkuje aj iné kurzy! Pozrite sa na:
+Náš tím pripravuje aj iné kurzy! Pozrite si:
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -140,47 +140,47 @@ Náš tím produkuje aj iné kurzy! Pozrite sa na:
 [![LangChain pre začiatočníkov](https://img.shields.io/badge/LangChain%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://github.com/microsoft/langchain-for-beginners?WT.mc_id=m365-94501-dwahlin)
 ---
 
-### Azure / Edge / MCP / Agenti
+### Azure / Edge / MCP / Agentí
 [![AZD pre začiatočníkov](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI pre začiatočníkov](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP pre začiatočníkov](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![AI Agenti pre začiatočníkov](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI agenti pre začiatočníkov](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### Generatívna AI séria
+### Séria Generatívna AI
 [![Generatívna AI pre začiatočníkov](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generatívna AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
-[![Generatívna AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
 
-[![Generatívna AI (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
+[![Generative AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
+[![Generative AI (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### Základné učenie
-[![ML pre začiatočníkov](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
-[![Dátová veda pre začiatočníkov](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
-[![AI pre začiatočníkov](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
-[![Kybernetická bezpečnosť pre začiatočníkov](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
-[![Webový vývoj pre začiatočníkov](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
-[![IoT pre začiatočníkov](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![Vývoj XR pre začiatočníkov](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+### Základné vzdelávanie
+[![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
+[![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+[![Cybersecurity for Beginners](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
+[![Web Dev for Beginners](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+[![IoT for Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### Séria Copilot
-[![Copilot pre AI párované programovanie](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot pre C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Copilot Dobrodružstvo](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Získanie pomoci
 
-Ak sa zaseknete alebo máte otázky ohľadom tvorby AI aplikácií, pridajte sa k ostatným študentom a skúseným vývojárom v diskusiách o MCP. Je to podporná komunita, kde sú otázky vítané a vedomosti sa zdieľajú slobodne.
+Ak sa zaseknete alebo máte otázky ohľadom tvorby AI aplikácií. Pridajte sa k ostatným študentom a skúseným vývojárom v diskusiách o MCP. Je to podporná komunita, kde sú otázky vítané a poznatky sú slobodne zdieľané.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Ak máte spätnú väzbu k produktu alebo narazíte na chyby počas tvorby, navštívte:
+Ak máte spätnú väzbu k produktu alebo chyby počas tvorby, navštívte:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 

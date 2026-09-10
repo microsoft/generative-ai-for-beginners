@@ -1,21 +1,21 @@
 # Transkripsiyon veri hazırlığı
 
-Transkripsiyon veri hazırlık betikleri, YouTube video transkriptlerini indirir ve bunları OpenAI Embeddings ve Functions ile Semantik Arama örneğinde kullanılmak üzere hazırlar.
+Transkripsiyon veri hazırlığı betikleri, YouTube video transkriptlerini indirir ve Semantic Search with OpenAI Embeddings and Functions örneği ile kullanıma hazırlar.
 
-Transkripsiyon veri hazırlık betikleri, en son sürümler olan Windows 11, macOS Ventura ve Ubuntu 22.04 (ve üzeri) üzerinde test edilmiştir.
+Transkripsiyon veri hazırlığı betikleri, Windows 11, macOS Ventura ve Ubuntu 22.04 (ve üstü) en son sürümlerinde test edilmiştir.
 
 ## Gerekli Azure OpenAI Hizmeti kaynaklarını oluşturma
 
 > [!IMPORTANT]
-> Azure CLI'yi, OpenAI ile uyumluluğu sağlamak için en son sürüme güncellemenizi öneririz
-> Bakınız [Dokümantasyon](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
+> Uyumluluğu sağlamak için Azure CLI'yi en son sürüme güncellemenizi öneririz
+> Bkz. [Dokümantasyon](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Bir kaynak grubu oluşturun
 
 > [!NOTE]
-> Bu talimatlarda "semantic-video-search" adlı kaynak grubunu East US bölgesinde kullanıyoruz.
+> Bu talimatlarda, East US'de "semantic-video-search" adlı kaynak grubu kullanılmıştır.
 > Kaynak grubunun adını değiştirebilirsiniz, ancak kaynakların konumunu değiştirirken,
-> [model kullanılabilirlik tablosunu](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst) kontrol edin.
+> [model uygunluk tablosunu](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst) kontrol edin.
 
 ```console
 az group create --name semantic-video-search --location eastus
@@ -28,7 +28,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Bu uygulamada kullanım için uç noktayı ve anahtarları alın
+1. Bu uygulamada kullanım için uç nokta ve anahtarları alın
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -37,9 +37,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. Aşağıdaki modelleri konuşlandırın:
-   - `text-embedding-ada-002` versiyon `2` veya üstü, adı `text-embedding-ada-002`
-   - `gpt-4o-mini` adı `gpt-4o-mini`
+1. Aşağıdaki modelleri dağıtın:
+   - `text-embedding-ada-002` sürüm `2` veya üzeri, adı `text-embedding-ada-002`
+   - `gpt-5-mini` adı `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,24 +53,24 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
 ```
 
-## Gerekli yazılımlar
+## Gerekli yazılım
 
 - [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) veya üzeri
 
 ## Ortam değişkenleri
 
-YouTube transkripsiyon veri hazırlık betiklerini çalıştırmak için aşağıdaki ortam değişkenleri gereklidir.
+Aşağıdaki ortam değişkenleri, YouTube transkripsiyon veri hazırlığı betiklerini çalıştırmak için gereklidir.
 
-### Windows'da
+### Windows'ta
 
-Değişkenleri `kullanıcı` ortam değişkenlerine eklemenizi öneririz.
+Değişkenleri `kullanıcı` ortam değişkenlerinize eklemenizi öneririz.
 `Windows Başlat` > `Sistem ortam değişkenlerini düzenle` > `Ortam Değişkenleri` > [KULLANICI] için `Kullanıcı değişkenleri` > `Yeni`.
 
 ```text
@@ -80,18 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-<!-- Ortam değişkenlerini PowerShell profilinize ekleyebilirsiniz.
+<!-- Ortam değişkenlerini PowerShell profilinize de ekleyebilirsiniz.
 
 ```powershell
-$env:AZURE_OPENAI_API_KEY = "<Azure OpenAI Hizmet API anahtarınız>"
-$env:AZURE_OPENAI_ENDPOINT = "<Azure OpenAI Hizmet uç noktanız>"
-$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<Azure OpenAI Hizmet model dağıtım adınız>"
+$env:AZURE_OPENAI_API_KEY = "<Azure OpenAI Hizmeti API anahtarınız>"
+$env:AZURE_OPENAI_ENDPOINT = "<Azure OpenAI Hizmeti uç noktanız>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<Azure OpenAI Hizmeti model dağıtım adınız>"
 $env:GOOGLE_DEVELOPER_API_KEY = "<Google geliştirici API anahtarınız>"
 ``` -->
 
 ### Linux ve macOS'ta
 
-Aşağıdaki dışa aktarmaları `~/.bashrc` veya `~/.zshrc` dosyanıza eklemeniz önerilir.
+Aşağıdaki export komutlarını `~/.bashrc` veya `~/.zshrc` dosyanıza eklemenizi öneririz.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -102,8 +102,8 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## Gerekli Python kütüphanelerini yükleyin
 
-1. [Git istemcisini](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) henüz yüklemediyseniz yükleyin.
-1. Bir `Terminal` penceresinden örneği tercih ettiğiniz depo klasörüne klonlayın.
+1. [git istemcisini](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) yüklü değilse yükleyin.
+1. Bir `Terminal` penceresinden, örneği tercih ettiğiniz depo klasörüne klonlayın.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -117,7 +117,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Bir Python sanal ortamı oluşturun.
 
-    Windows'da:
+    Windows'ta:
 
     ```powershell
     python -m venv .venv
@@ -131,7 +131,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Python sanal ortamını etkinleştirin.
 
-   Windows'da:
+   Windows'ta:
 
    ```powershell
    .venv\Scripts\activate
@@ -145,7 +145,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Gerekli kütüphaneleri yükleyin.
 
-   Windows'da:
+   Windows'ta:
 
    ```powershell
    pip install -r requirements.txt
@@ -157,9 +157,9 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## YouTube transkripsiyon veri hazırlık betiklerini çalıştırın
+## YouTube transkripsiyon veri hazırlığı betiklerini çalıştırın
 
-### Windows'da
+### Windows'ta
 
 ```powershell
 .\transcripts_prepare.ps1

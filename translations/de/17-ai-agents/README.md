@@ -1,62 +1,62 @@
-[![Open Source Modelle](../../../translated_images/de/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
+[![Open Source Models](../../../translated_images/de/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
 ## Einführung
 
-KI-Agenten stellen eine spannende Entwicklung im Bereich der Generativen KI dar, die es großen Sprachmodellen (LLMs) ermöglicht, sich von Assistenten zu Agenten zu entwickeln, die in der Lage sind, Aktionen durchzuführen. KI-Agenten-Frameworks ermöglichen Entwicklern, Anwendungen zu erstellen, die LLMs Zugriff auf Werkzeuge und Zustandsverwaltung geben. Diese Frameworks verbessern auch die Sichtbarkeit, sodass Benutzer und Entwickler die von LLMs geplanten Aktionen überwachen können, wodurch das Erfahrungshandling verbessert wird.
+KI-Agenten stellen eine aufregende Entwicklung im Bereich der Generativen KI dar, die es großen Sprachmodellen (LLMs) ermöglicht, sich von Assistenten zu Agenten zu entwickeln, die in der Lage sind, Aktionen auszuführen. KI-Agenten-Frameworks ermöglichen Entwicklern die Erstellung von Anwendungen, die LLMs Zugang zu Werkzeugen und Zustandsverwaltung geben. Diese Frameworks verbessern auch die Sichtbarkeit, sodass Benutzer und Entwickler die von LLMs geplanten Aktionen überwachen können, was das Erlebnismanagement verbessert.
 
 Die Lektion behandelt folgende Bereiche:
 
-- Verstehen, was ein KI-Agent ist – Was genau ist ein KI-Agent?
-- Untersuchung von fünf verschiedenen KI-Agenten-Frameworks – Was macht sie einzigartig?
-- Anwendung dieser KI-Agenten auf verschiedene Anwendungsfälle – Wann sollten wir KI-Agenten einsetzen?
+- Verständnis, was ein KI-Agent ist – Was genau ist ein KI-Agent?
+- Erforschung von fünf verschiedenen KI-Agenten-Frameworks – Was macht sie einzigartig?
+- Anwendung dieser KI-Agenten auf verschiedene Anwendungsfälle – Wann sollten wir KI-Agenten verwenden?
 
 ## Lernziele
 
-Nach dieser Lektion wirst du in der Lage sein:
+Nach Abschluss dieser Lektion wirst du in der Lage sein:
 
 - Erklären, was KI-Agenten sind und wie sie verwendet werden können.
-- Ein Verständnis der Unterschiede zwischen einigen der beliebten KI-Agenten-Frameworks zu haben und wie sie sich unterscheiden.
-- Verstehen, wie KI-Agenten funktionieren, um Anwendungen mit ihnen zu bauen.
+- Ein Verständnis der Unterschiede zwischen einigen der populären KI-Agenten-Frameworks zu haben und wie sie sich unterscheiden.
+- Zu verstehen, wie KI-Agenten funktionieren, um Anwendungen mit ihnen zu bauen.
 
 ## Was sind KI-Agenten?
 
-KI-Agenten sind ein sehr spannendes Feld in der Welt der Generativen KI. Mit dieser Aufregung kommt manchmal auch eine Verwirrung über Begriffe und deren Anwendung. Um die Dinge einfach und inklusive der meisten Tools zu halten, die sich auf KI-Agenten beziehen, verwenden wir folgende Definition:
+KI-Agenten sind ein sehr spannendes Feld in der Welt der Generativen KI. Diese Aufregung geht manchmal mit einer Verwirrung über Begriffe und deren Anwendung einher. Um es einfach zu halten und die meisten Werkzeuge einzubeziehen, die sich auf KI-Agenten beziehen, verwenden wir die folgende Definition:
 
-KI-Agenten ermöglichen es großen Sprachmodellen (LLMs), Aufgaben zu erfüllen, indem sie ihnen Zugriff auf einen **Zustand** und **Werkzeuge** geben.
+KI-Agenten ermöglichen es großen Sprachmodellen (LLMs), Aufgaben auszuführen, indem sie ihnen Zugang zu einem **Zustand** und **Werkzeugen** geben.
 
-![Agentenmodell](../../../translated_images/de/what-agent.21f2893bdfd01e6a.webp)
+![Agenten-Modell](../../../translated_images/de/what-agent.21f2893bdfd01e6a.webp)
 
 Lassen Sie uns diese Begriffe definieren:
 
-**Große Sprachmodelle** – Das sind die Modelle, die im gesamten Kurs verwendet werden, wie GPT-3.5, GPT-4, Llama-2 usw.
+**Große Sprachmodelle** – Dies sind die Modelle, die im gesamten Kurs erwähnt werden, wie GPT-5, GPT-4o und Llama 3.3 usw.
 
-**Zustand** – Dies bezieht sich auf den Kontext, in dem das LLM arbeitet. Das LLM nutzt den Kontext seiner vergangenen Aktionen und den aktuellen Kontext, um seine Entscheidungsfindung für nachfolgende Aktionen zu steuern. KI-Agenten-Frameworks ermöglichen Entwicklern, diesen Kontext einfacher zu verwalten.
+**Zustand** – Dies bezieht sich auf den Kontext, in dem das LLM arbeitet. Das LLM nutzt den Kontext seiner vergangenen Aktionen und den aktuellen Kontext, um seine Entscheidungsfindung für nachfolgende Aktionen zu leiten. KI-Agenten-Frameworks erleichtern Entwicklern die Verwaltung dieses Kontexts.
 
-**Werkzeuge** – Um die Aufgabe zu erfüllen, die der Nutzer angefordert hat und die das LLM geplant hat, benötigt das LLM Zugriff auf Werkzeuge. Beispiele für Werkzeuge können eine Datenbank, eine API, eine externe Anwendung oder sogar ein weiteres LLM sein!
+**Werkzeuge** – Um die Aufgabe zu erfüllen, die der Benutzer angefordert hat und die das LLM geplant hat, benötigt das LLM Zugriff auf Werkzeuge. Einige Beispiele für Werkzeuge können eine Datenbank, eine API, eine externe Anwendung oder sogar ein anderes LLM sein!
 
-Diese Definitionen sollen dir eine gute Grundlage geben, wenn wir uns ansehen, wie sie implementiert werden. Schauen wir uns einige verschiedene KI-Agenten-Frameworks an:
+Diese Definitionen sollen dir hoffentlich eine gute Grundlage geben, während wir uns ansehen, wie sie implementiert werden. Lass uns einige verschiedene KI-Agenten-Frameworks erkunden:
 
 ## LangChain Agents
 
 [LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) ist eine Umsetzung der oben gegebenen Definitionen.
 
-Um den **Zustand** zu verwalten, verwendet es eine eingebaute Funktion namens `AgentExecutor`. Diese nimmt den definierten `Agent` und die verfügbaren `Werkzeuge` an.
+Zur Verwaltung des **Zustands** verwendet es eine eingebaute Funktion namens `AgentExecutor`. Diese akzeptiert den definierten `agent` und die `tools`, die ihm zur Verfügung stehen.
 
-Der `Agent Executor` speichert auch den Chatverlauf, um den Kontext des Chats bereitzustellen.
+Der `AgentExecutor` speichert auch die Chat-Historie, um den Kontext des Chats bereitzustellen.
 
-![Langchain Agents](../../../translated_images/de/langchain-agents.edcc55b5d5c43716.webp)
+![LangChain Agents](../../../translated_images/de/langchain-agents.edcc55b5d5c43716.webp)
 
-LangChain bietet einen [Werkzeugkatalog](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), der in deine Anwendung importiert werden kann, zu dem das LLM Zugriff hat. Diese werden von der Community und dem LangChain-Team erstellt.
+LangChain bietet einen [Werkzeugkatalog](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst), der in deine Anwendung importiert werden kann und auf den das LLM zugreifen kann. Diese werden von der Community und dem LangChain-Team erstellt.
 
-Du kannst diese Werkzeuge definieren und an den `Agent Executor` übergeben.
+Du kannst diese Werkzeuge dann definieren und an den `AgentExecutor` übergeben.
 
-Sichtbarkeit ist ein weiterer wichtiger Aspekt, wenn man über KI-Agenten spricht. Es ist wichtig für Anwendungsentwickler zu verstehen, welches Werkzeug das LLM verwendet und warum. Dafür hat das Team von LangChain LangSmith entwickelt.
+Sichtbarkeit ist ein weiterer wichtiger Aspekt, wenn es um KI-Agenten geht. Es ist wichtig für Anwendungsentwickler zu verstehen, welches Werkzeug das LLM verwendet und warum. Dafür hat das Team von LangChain LangSmith entwickelt.
 
 ## AutoGen
 
-Das nächste KI-Agenten-Framework, das wir besprechen werden, ist [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). Der Hauptfokus von AutoGen liegt auf Gesprächen. Agenten sind sowohl **gesprächsfähig** als auch **anpassbar**.
+Das nächste KI-Agenten-Framework, das wir besprechen, ist [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). Der Hauptfokus von AutoGen liegt auf Konversationen. Agenten sind sowohl **sprechbar** als auch **anpassbar**.
 
-**Gesprächsfähig –** LLMs können eine Unterhaltung mit einem anderen LLM beginnen und fortführen, um eine Aufgabe zu erfüllen. Dies geschieht durch das Erstellen von `AssistantAgents` und die Vergabe einer spezifischen Systemnachricht.
+**Sprechbar –** LLMs können eine Konversation mit einem anderen LLM beginnen und fortsetzen, um eine Aufgabe zu erledigen. Dies geschieht durch die Erstellung von `AssistantAgents` und die Vergabe einer bestimmten Systemnachricht.
 
 ```python
 
@@ -64,7 +64,7 @@ autogen.AssistantAgent( name="Coder", llm_config=llm_config, ) pm = autogen.Assi
 
 ```
 
-**Anpassbar** – Agenten können nicht nur als LLMs definiert werden, sondern auch als Benutzer oder Werkzeug. Als Entwickler kannst du einen `UserProxyAgent` definieren, der für die Interaktion mit dem Benutzer zur Rückmeldung bei der Erfüllung einer Aufgabe verantwortlich ist. Dieses Feedback kann die Ausführung der Aufgabe fortsetzen oder stoppen.
+**Anpassbar** – Agenten können nicht nur als LLM definiert werden, sondern auch als Benutzer oder Werkzeug. Als Entwickler kannst du einen `UserProxyAgent` definieren, der dafür verantwortlich ist, mit dem Benutzer wegen Feedback zur Erfüllung einer Aufgabe zu interagieren. Dieses Feedback kann entweder die Ausführung der Aufgabe fortsetzen oder stoppen.
 
 ```python
 user_proxy = UserProxyAgent(name="user_proxy")
@@ -72,21 +72,21 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 ### Zustand und Werkzeuge
 
-Um den Zustand zu ändern und zu verwalten, generiert ein Assistent-Agent Python-Code, um die Aufgabe zu erledigen.
+Um den Zustand zu ändern und zu verwalten, generiert ein Assistenzagent Python-Code, um die Aufgabe zu erfüllen.
 
-Hier ein Beispiel des Ablaufs:
+Hier ist ein Beispiel für den Ablauf:
 
 ![AutoGen](../../../translated_images/de/autogen.dee9a25a45fde584.webp)
 
-#### LLM mit Systemnachricht definiert
+#### LLM definiert mit einer Systemnachricht
 
 ```python
 system_message="For weather related tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done."
 ```
 
-Diese Systemnachricht weist das spezifische LLM an, welche Funktionen für seine Aufgabe relevant sind. Denke daran, mit AutoGen kannst du mehrere definierte AssistantAgents mit unterschiedlichen Systemnachrichten haben.
+Diese Systemnachricht weist dieses spezifische LLM an, welche Funktionen für seine Aufgabe relevant sind. Denk daran, mit AutoGen kannst du mehrere definierte AssistantAgents mit unterschiedlichen Systemnachrichten haben.
 
-#### Chat wird vom Nutzer initiiert
+#### Chat wird vom Benutzer gestartet
 
 ```python
 user_proxy.initiate_chat( chatbot, message="I am planning a trip to NYC next week, can you help me pick out what to wear? ", )
@@ -106,23 +106,23 @@ chatbot (to user_proxy):
 
 ```
 
-Sobald der erste Chat verarbeitet ist, sendet der Agent das vorgeschlagene Werkzeug zum Aufruf. In diesem Fall ist es eine Funktion namens `get_weather`. Je nach Konfiguration kann diese Funktion automatisch vom Agenten ausgeführt und gelesen werden oder basierend auf Nutzereingaben.
+Sobald der anfängliche Chat verarbeitet ist, wird der Agent das vorgeschlagene Werkzeug aufrufen. In diesem Fall ist das eine Funktion namens `get_weather`. Je nach Konfiguration kann diese Funktion automatisch vom Agenten ausgeführt und gelesen werden oder basierend auf Benutzereingabe ausgeführt werden.
 
-Du findest eine Liste von [AutoGen Code-Beispielen](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst), um weiter zu erforschen, wie man mit dem Aufbau startet.
+Du findest eine Liste von [AutoGen Code-Beispielen](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst), um weiter zu erkunden, wie man baut.
 
 ## Microsoft Agent Framework
 
-[Microsoft Agent Framework](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst) ist Microsofts Open-Source-SDK für den Bau von KI-Agenten und Multi-Agenten-Systemen in **Python** und **.NET**. Es vereint die Stärken von zwei früheren Microsoft-Projekten – die Unternehmensfunktionen des **Semantic Kernel** und die Multi-Agenten-Orchestrierung von **AutoGen** – in einem einzigen, unterstützten Framework. Wenn du heute ein neues Agentenprojekt startest, ist dies der empfohlene Nachfolger von AutoGen.
+Das [Microsoft Agent Framework](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst) ist das Open-Source-SDK von Microsoft zum Erstellen von KI-Agenten und Multi-Agenten-Systemen sowohl in **Python** als auch in **.NET**. Es vereint die Stärken zweier früherer Microsoft-Projekte – die Unternehmensfunktionen von **Semantic Kernel** und die Multi-Agent-Orchestrierung von **AutoGen** – in einem einzigen, unterstützten Framework. Wenn du heute ein neues Agentenprojekt startest, ist dies der empfohlene Nachfolger von AutoGen.
 
-Das Framework skaliert von einem einzelnen **Chat-Agenten** bis hin zu komplexen **Multi-Agenten-Workflows** und integriert sich direkt mit Microsoft Foundry, Azure OpenAI und OpenAI. Es bietet auch eingebaute Beobachtbarkeit durch OpenTelemetry, sodass du genau verfolgen kannst, was deine Agenten tun.
+Das Framework skaliert von einem einzelnen **Chat-Agenten** bis hin zu komplexen **Multi-Agenten-Workflows** und integriert sich direkt mit Microsoft Foundry, Azure OpenAI und OpenAI. Es bietet auch eingebaute Beobachtbarkeit durch OpenTelemetry, sodass du genau nachverfolgen kannst, was deine Agenten tun.
 
 ### Zustand und Werkzeuge
 
-**Zustand** – Das Framework verwaltet den Gesprächskontext für dich durch **Threads**. Ein Agent verfolgt die Nachrichtenhistorie (Benutzernachrichten, Werkzeugaufrufe und deren Ergebnisse), sodass jeder Schritt auf den vorherigen aufbaut. Threads können auch gespeichert werden, sodass ein Gespräch pausiert und später fortgesetzt werden kann.
+**Zustand** – Das Framework verwaltet den Gesprächskontext für dich durch **Threads**. Ein Agent verfolgt die Nachrichtenhistorie (Benutzeranfragen, Werkzeugaufrufe und deren Ergebnisse), sodass jeder Schritt auf den vorherigen aufbaut. Threads können auch persistiert werden, was erlaubt, ein Gespräch zu pausieren und später fortzusetzen.
 
-**Werkzeuge** – Du gibst einem Agenten Werkzeuge, indem du einfache Python-Funktionen übergibst. Typannotierte Parameter werden automatisch in ein Schema umgewandelt, damit das Modell weiß, wie und wann es sie aufrufen soll (Funktionsaufruf). Das Framework unterstützt außerdem Model Context Protocol (MCP)-Server und gehostete Werkzeuge wie einen Code-Interpreter.
+**Werkzeuge** – Du gibst einem Agenten Werkzeuge, indem du einfache Python-Funktionen übergibst. Typannotierte Parameter werden automatisch in ein Schema umgewandelt, sodass das Modell weiß, wie und wann es diese aufrufen soll (Function Calling). Das Framework unterstützt auch Model Context Protocol (MCP) Server und gehostete Werkzeuge wie einen Code-Interpreter.
 
-Hier ein Beispiel für einen einzelnen Agenten mit einem benutzerdefinierten Werkzeug:
+Hier ein Beispiel für einen einzelnen Agenten mit einem kundenspezifischen Werkzeug:
 
 ```python
 import asyncio
@@ -154,14 +154,14 @@ async def main():
 asyncio.run(main())
 ```
 
-Um stattdessen eine Verbindung zu Azure OpenAI in Microsoft Foundry herzustellen, übergibt man dem Client den Endpunkt und die Anmeldeinformationen:
+Um stattdessen eine Verbindung zu Azure OpenAI in Microsoft Foundry herzustellen, übergib einfach deinen Endpunkt und die Anmeldedaten an den Client:
 
 ```python
 from azure.identity.aio import AzureCliCredential
 from agent_framework.openai import OpenAIChatClient
 
 client = OpenAIChatClient(
-    model="my-gpt-4o-deployment",
+    model="my-gpt-5-mini-deployment",
     azure_endpoint="https://my-resource.openai.azure.com",
     credential=AzureCliCredential(),
 )
@@ -169,7 +169,7 @@ client = OpenAIChatClient(
 
 ### Multi-Agenten-Workflows
 
-Wo das Framework wirklich herausragt, ist die Orchestrierung mehrerer Agenten zusammen. Zum Beispiel kannst du Agenten nacheinander ausführen lassen (jeder gibt seinen Kontext an den nächsten weiter) oder in mehrere Agenten parallel aufteilen und deren Ergebnisse zusammenführen:
+Wo das Framework wirklich heraussticht, ist die Orchestrierung mehrerer Agenten zusammen. Zum Beispiel kannst du Agenten nacheinander ausführen (jeder übergibt seinen Kontext an den nächsten) oder parallel mehrere Agenten starten und deren Ergebnisse zusammenführen:
 
 ```python
 from agent_framework.orchestrations import SequentialBuilder, ConcurrentBuilder
@@ -177,7 +177,7 @@ from agent_framework.orchestrations import SequentialBuilder, ConcurrentBuilder
 # Führen Sie Agenten nacheinander aus und übergeben Sie den Gesprächskontext entlang der Kette
 sequential = SequentialBuilder(participants=[researcher, writer, editor]).build()
 
-# Verzweigen Sie parallel zu Agenten und fassen Sie dann deren Antworten zusammen
+# Fächern Sie zu Agenten parallel auf und aggregieren Sie dann ihre Antworten
 concurrent = ConcurrentBuilder(participants=[analyst_a, analyst_b, analyst_c]).build()
 ```
 
@@ -194,53 +194,53 @@ Du kannst mehr im [Microsoft Agent Framework Repository](https://github.com/micr
 
 ## Taskweaver
 
-Das nächste Agenten-Framework, das wir erkunden werden, ist [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). Es ist bekannt als ein "Code-first"-Agent, weil er statt strikt mit `strings` mit DataFrames in Python arbeiten kann. Das wird besonders nützlich für Datenanalyse- und Generierungsaufgaben. Das können Dinge sein wie das Erstellen von Grafiken und Diagrammen oder das Generieren von Zufallszahlen.
+Das nächste Agenten-Framework, das wir erkunden, ist [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). Es wird als "code-first"-Agent bezeichnet, weil es statt strikt mit `Strings` zu arbeiten, mit DataFrames in Python arbeiten kann. Das ist äußerst nützlich für Datenanalyse- und Generierungsaufgaben. Dies können Dinge wie das Erstellen von Grafiken und Diagrammen oder das Erzeugen von Zufallszahlen sein.
 
 ### Zustand und Werkzeuge
 
-Um den Zustand des Gesprächs zu verwalten, verwendet TaskWeaver das Konzept eines `Planners`. Der `Planner` ist ein LLM, das die Anfragen der Nutzer entgegennimmt und die Aufgaben plant, die erledigt werden müssen, um diese Anfrage zu erfüllen.
+Um den Zustand des Gesprächs zu verwalten, verwendet TaskWeaver das Konzept eines `Planner`. Der `Planner` ist ein LLM, das die Anfrage der Benutzer entgegennimmt und die Aufgaben abbildet, die zur Erfüllung der Anfrage erledigt werden müssen.
 
-Zur Erledigung der Aufgaben hat der `Planner` Zugriff auf eine Sammlung von Werkzeugen, genannt `Plugins`. Das können Python-Klassen oder ein allgemeiner Code-Interpreter sein. Diese Plugins werden als Embeddings gespeichert, damit das LLM besser nach dem richtigen Plugin suchen kann.
+Zur Erledigung der Aufgaben wird der `Planner` der Sammlung von Werkzeugen namens `Plugins` ausgesetzt. Dies können Python-Klassen oder ein allgemeiner Code-Interpreter sein. Diese Plugins werden als Einbettungen gespeichert, damit das LLM besser das richtige Plugin suchen kann.
 
 ![Taskweaver](../../../translated_images/de/taskweaver.da8559999267715a.webp)
 
-Hier ein Beispiel für ein Plugin zur Anomalieerkennung:
+Hier ein Beispiel für ein Plugin zur Behandlung der Anomalieerkennung:
 
 ```python
 class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_col_name: str, value_col_name: str):
 ```
 
-Der Code wird vor der Ausführung überprüft. Ein weiteres Feature zur Verwaltung des Kontexts in Taskweaver ist `experience`. Experience erlaubt es, den Kontext eines Gesprächs langfristig in einer YAML-Datei zu speichern. Das kann so konfiguriert werden, dass das LLM über die Zeit bei bestimmten Aufgaben besser wird, wenn es vorangegangene Gespräche zu sehen bekommt.
+Der Code wird vor der Ausführung überprüft. Eine weitere Funktion zur Kontextverwaltung in TaskWeaver ist `Experience`. Experience ermöglicht es, den Kontext eines Gesprächs langfristig in einer YAML-Datei zu speichern. Dies kann so konfiguriert werden, dass das LLM im Laufe der Zeit bei bestimmten Aufgaben besser wird, da es vorherige Gespräche berücksichtigt.
 
 ## JARVIS
 
-Das letzte Agenten-Framework, das wir erkunden, ist [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file&WT.mc_id=academic-105485-koreyst). Was JARVIS einzigartig macht, ist die Nutzung eines LLM zur Verwaltung des `Zustands` des Gesprächs und die `Werkzeuge` sind andere KI-Modelle. Jedes dieser KI-Modelle sind spezialisierte Modelle, die bestimmte Aufgaben ausführen, wie Objekterkennung, Transkription oder Bildbeschriftung.
+Das letzte Agenten-Framework, das wir erkunden, ist [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file&WT.mc_id=academic-105485-koreyst). Was JARVIS einzigartig macht, ist, dass es ein LLM verwendet, um den `Zustand` des Gesprächs zu verwalten, und die `Werkzeuge` sind andere KI-Modelle. Jedes der KI-Modelle ist ein spezialisiertes Modell, das bestimmte Aufgaben wie Objekterkennung, Transkription oder Bildunterschriften übernimmt.
 
 ![JARVIS](../../../translated_images/de/jarvis.762ddbadbd1a3a33.webp)
 
-Das LLM, als universelles Modell, erhält die Anfrage des Nutzers und identifiziert die spezifische Aufgabe sowie alle Argumente/Daten, die zur Erfüllung der Aufgabe benötigt werden.
+Das LLM, als allgemein einsetzbares Modell, erhält die Anfrage des Benutzers und identifiziert die spezifische Aufgabe und alle Argumente/Daten, die zur Erfüllung der Aufgabe benötigt werden.
 
 ```python
 [{"task": "object-detection", "id": 0, "dep": [-1], "args": {"image": "e1.jpg" }}]
 ```
 
-Das LLM formatiert dann die Anfrage so, dass ein spezialisiertes KI-Modell sie interpretieren kann, wie zum Beispiel in JSON. Sobald das KI-Modell seine Vorhersage basierend auf der Aufgabe zurückgibt, erhält das LLM die Antwort.
+Das LLM formatiert dann die Anfrage so, dass das spezialisierte KI-Modell sie interpretieren kann, z.B. als JSON. Sobald das KI-Modell seine Vorhersage basierend auf der Aufgabe zurückgegeben hat, erhält das LLM die Antwort.
 
-Falls mehrere Modelle benötigt werden, um die Aufgabe zu erfüllen, wird das LLM auch die Antworten dieser Modelle interpretieren, bevor es sie zusammenführt und die Antwort an den Nutzer generiert.
+Wenn mehrere Modelle zur Erfüllung der Aufgabe benötigt werden, interpretiert es auch die Antworten dieser Modelle, bevor es sie zusammenführt, um die Antwort an den Benutzer zu generieren.
 
-Das folgende Beispiel zeigt, wie dies funktioniert, wenn ein Nutzer eine Beschreibung und Zählung der Objekte in einem Bild anfragt:
+Das folgende Beispiel zeigt, wie dies funktioniert, wenn ein Benutzer eine Beschreibung und Zählung der Objekte auf einem Bild anfordert:
 
 ## Aufgabe
 
-Um dein Lernen zu KI-Agenten fortzusetzen, kannst du mit dem Microsoft Agent Framework folgendes bauen:
+Um dein Lernen über KI-Agenten fortzusetzen, kannst du mit dem Microsoft Agent Framework Folgendes erstellen:
 
 - Eine Anwendung, die ein Geschäftstreffen mit verschiedenen Abteilungen eines Bildungs-Startups simuliert.
-- Erstelle Systemnachrichten, die LLMs dabei helfen, unterschiedliche Personas und Prioritäten zu verstehen, und ermögliche dem Nutzer, eine neue Produktidee zu präsentieren.
-- Das LLM soll dann Folgefragen von jeder Abteilung generieren, um die Präsentation und Produktidee zu verfeinern und zu verbessern.
+- Erstelle Systemnachrichten, die LLMs dabei helfen, unterschiedliche Personas und Prioritäten zu verstehen, und ermögliche dem Benutzer, eine neue Produktidee zu präsentieren.
+- Das LLM soll dann Folgefragen aus jeder Abteilung generieren, um die Präsentation und Produktidee zu verfeinern und zu verbessern.
 
 ## Lernen hört hier nicht auf, setze die Reise fort
 
-Nach Abschluss dieser Lektion solltest du unsere [Lernsammlung Generative KI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) besuchen, um dein Wissen in Generativer KI weiter auszubauen!
+Nach Abschluss dieser Lektion schau dir unsere [Generative AI Learning Sammlung](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) an, um dein Wissen in Generativer KI weiter auszubauen!
 
 ---
 

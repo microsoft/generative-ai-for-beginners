@@ -1,34 +1,34 @@
 # 전사 데이터 준비
 
-전사 데이터 준비 스크립트는 YouTube 비디오 전사본을 다운로드하고 Semantic Search with OpenAI Embeddings and Functions 샘플에서 사용하기 위해 준비합니다.
+전사 데이터 준비 스크립트는 YouTube 비디오 전사본을 다운로드하고 이를 OpenAI 임베딩 및 함수가 포함된 시맨틱 검색 샘플과 함께 사용할 수 있도록 준비합니다.
 
 전사 데이터 준비 스크립트는 최신 릴리스인 Windows 11, macOS Ventura, Ubuntu 22.04(이상)에서 테스트되었습니다.
 
-## 필요한 Azure OpenAI 서비스 리소스 만들기
+## 필요한 Azure OpenAI 서비스 리소스 생성
 
 > [!IMPORTANT]
-> OpenAI와의 호환성을 보장하기 위해 Azure CLI를 최신 버전으로 업데이트할 것을 권장합니다.
+> 호환성을 보장하기 위해 Azure CLI를 최신 버전으로 업데이트할 것을 권장합니다.
 > 자세한 내용은 [문서](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)를 참조하세요.
 
-1. 리소스 그룹 만들기
+1. 리소스 그룹 생성
 
 > [!NOTE]
-> 이 지침에서는 East US에 "semantic-video-search"라는 이름의 리소스 그룹을 사용하고 있습니다.
-> 리소스 그룹 이름은 변경할 수 있지만, 리소스 위치를 변경할 경우
+> 이 지침에서는 "semantic-video-search"라는 이름의 East US 지역 리소스 그룹을 사용합니다.
+> 리소스 그룹 이름을 변경할 수 있지만, 리소스 위치를 변경할 경우 
 > [모델 가용성 표](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst)를 확인하세요.
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. Azure OpenAI 서비스 리소스 만들기
+1. Azure OpenAI 서비스 리소스를 생성하세요.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. 이 애플리케이션에서 사용할 엔드포인트 및 키 가져오기
+1. 이 애플리케이션에서 사용할 엔드포인트 및 키를 가져오세요.
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -37,9 +37,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. 다음 모델 배포:
+1. 다음 모델을 배포하세요:
    - `text-embedding-ada-002` 버전 `2` 이상, 이름 `text-embedding-ada-002`
-   - `gpt-4o-mini` 이름 `gpt-4o-mini`
+   - `gpt-5-mini` 이름 `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,8 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -66,11 +66,11 @@ az cognitiveservices account deployment create \
 
 ## 환경 변수
 
-다음 환경 변수들이 YouTube 전사 데이터 준비 스크립트 실행에 필요합니다.
+다음 환경 변수들은 YouTube 전사 데이터 준비 스크립트를 실행하는 데 필요합니다.
 
-### Windows 환경에서
+### Windows에서
 
-변수들을 `user` 환경 변수에 추가하는 것을 권장합니다.
+변수들을 `사용자` 환경 변수에 추가하는 것을 권장합니다.
 `Windows 시작` > `시스템 환경 변수 편집` > `환경 변수` > [USER]의 `사용자 변수` > `새로 만들기`.
 
 ```text
@@ -80,18 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-<!-- PowerShell 프로필에 환경 변수를 추가할 수 있습니다.
+<!-- PowerShell 프로필에 환경 변수를 추가할 수도 있습니다.
 
 ```powershell
-$env:AZURE_OPENAI_API_KEY = "<your Azure OpenAI Service API key>"
-$env:AZURE_OPENAI_ENDPOINT = "<your Azure OpenAI Service endpoint>"
-$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<your Azure OpenAI Service model deployment name>"
-$env:GOOGLE_DEVELOPER_API_KEY = "<your Google developer API key>"
+$env:AZURE_OPENAI_API_KEY = "<당신의 Azure OpenAI 서비스 API 키>"
+$env:AZURE_OPENAI_ENDPOINT = "<당신의 Azure OpenAI 서비스 엔드포인트>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<당신의 Azure OpenAI 서비스 모델 배포 이름>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<당신의 Google 개발자 API 키>"
 ``` -->
 
-### Linux 및 macOS 환경에서
+### Linux 및 macOS에서
 
-다음 내보내기(export) 명령어를 `~/.bashrc` 또는 `~/.zshrc` 파일에 추가하는 것을 권장합니다.
+다음 export 문들을 `~/.bashrc` 또는 `~/.zshrc` 파일에 추가하는 것을 권장합니다.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -102,8 +102,8 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## 필요한 Python 라이브러리 설치
 
-1. [git 클라이언트](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst)가 설치되어 있지 않으면 설치하세요.
-1. `터미널` 창에서 샘플을 원하는 리포지토리 폴더에 클론하세요.
+1. 설치되어 있지 않다면 [git 클라이언트](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst)를 설치하세요.
+1. `터미널` 창에서, 샘플을 원하는 저장소 폴더에 클론하세요.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git

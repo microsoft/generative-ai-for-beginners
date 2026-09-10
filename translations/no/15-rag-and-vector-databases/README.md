@@ -1,18 +1,18 @@
 # Retrieval Augmented Generation (RAG) og vektordatabaser
 
-[![Retrieval Augmented Generation (RAG) and Vector Databases](../../../translated_images/no/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) og vektordatabaser](../../../translated_images/no/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
-I leksjonen om søkeapplikasjoner lærte vi kort hvordan du integrerer egne data i store språkmodeller (LLMs). I denne leksjonen vil vi gå nærmere inn på konseptene rundt å forankre data i din LLM-applikasjon, mekanismene i prosessen og metodene for lagring av data, inkludert både innebygde representasjoner og tekst.
+I leksjonen om søkeapplikasjoner lærte vi kort hvordan du integrerer dine egne data i Store Språkmodeller (LLMs). I denne leksjonen skal vi dykke dypere inn i konseptene rundt å forankre dine data i LLM-applikasjonen din, mekanismene i prosessen og metodene for lagring av data, inkludert både embeddings og tekst.
 
 > **Video kommer snart**
 
 ## Introduksjon
 
-I denne leksjonen vil vi dekke følgende:
+I denne leksjonen skal vi dekke følgende:
 
 - En introduksjon til RAG, hva det er og hvorfor det brukes i KI (kunstig intelligens).
 
-- Forstå hva vektordatabaser er og opprette en for vår applikasjon.
+- Forstå hva vektordatabaser er og hvordan man oppretter en for vår applikasjon.
 
 - Et praktisk eksempel på hvordan integrere RAG i en applikasjon.
 
@@ -20,69 +20,69 @@ I denne leksjonen vil vi dekke følgende:
 
 Etter å ha fullført denne leksjonen vil du kunne:
 
-- Forklare betydningen av RAG innen datahenting og prosessering.
+- Forklare betydningen av RAG i datahenting og -behandling.
 
-- Sette opp en RAG-applikasjon og forankre dine data til en LLM
+- Sette opp RAG-applikasjon og forankre dine data til en LLM
 
 - Effektiv integrering av RAG og vektordatabaser i LLM-applikasjoner.
 
-## Vårt scenario: forbedring av våre LLM-er med egne data
+## Vårt scenario: forbedre våre LLM-er med våre egne data
 
-For denne leksjonen ønsker vi å legge til egne notater i utdanningsoppstarten, noe som gjør at chatboten kan få mer informasjon om ulike fag. Ved å bruke notatene vi har, vil elever kunne studere bedre og forstå de forskjellige temaene, noe som gjør det enklere å repetere til eksamen. For å lage vårt scenario vil vi bruke:
+For denne leksjonen ønsker vi å legge til våre egne notater i utdanningsstartupen, som lar chatbotten få mer informasjon om de forskjellige fagene. Ved å bruke notatene vi har, vil elever kunne studere bedre og forstå de ulike temaene, noe som gjør det lettere å repetere til eksamen. For å lage vårt scenario vil vi bruke:
 
-- `Azure OpenAI:` LLM-en vi vil bruke for å lage chatboten vår
+- `Azure OpenAI:` LLM-en vi skal bruke til å lage chatbotten vår
 
-- `AI for beginners' lesson on Neural Networks`: dette vil være dataene vi forankrer vår LLM på
+- `AI for beginners'-leksjonen om Nevrale Nettverk`: dette vil være dataene vi forankrer vår LLM på
 
-- `Azure AI Search` og `Azure Cosmos DB:` vektordatabasen for å lagre våre data og opprette en søkeindeks
+- `Azure AI Search` og `Azure Cosmos DB:` vektordatabase for å lagre våre data og opprette en søkeindeks
 
-Brukere vil kunne opprette øvings-quizzer fra sine notater, repetisjonskort og oppsummere til konsise oversikter. For å komme i gang, la oss se på hva RAG er og hvordan det fungerer:
+Brukere vil kunne lage øvelsesquizzer fra notatene sine, revisjonsflashcards og oppsummere det til konsise oversikter. For å komme i gang, la oss se på hva RAG er og hvordan det fungerer:
 
 ## Retrieval Augmented Generation (RAG)
 
-En LLM-drevet chatbot prosesserer brukerforespørsler for å generere svar. Den er designet for å være interaktiv og engasjerer brukere på en rekke emner. Imidlertid er svarene begrenset til konteksten som tilbys og dens grunnleggende treningsdata. For eksempel er GPT-4s kunnskapsavskjæring september 2021, noe som betyr at den mangler kunnskap om hendelser som har skjedd etter denne perioden. I tillegg ekskluderer treningsdataene for LLM-er konfidensiell informasjon som personlige notater eller en bedrifts produktmanual.
+En LLM-drevet chatbot prosesserer brukerforespørsler for å generere svar. Den er designet for å være interaktiv og engasjerer brukere på et bredt spekter av emner. Likevel er svarene begrenset til den konteksten som blir gitt og dens grunnleggende treningsdata. For eksempel har GPT-4 kunnskapsavskjæring i september 2021, noe som betyr at den mangler kunnskap om hendelser som har skjedd etter dette tidspunktet. I tillegg ekskluderer dataene som brukes til å trene LLM-er konfidensiell informasjon som personlige notater eller en bedrifts produktmanual.
 
-### Hvordan RAGs (Retrieval Augmented Generation) fungerer
+### Hvordan RAG (Retrieval Augmented Generation) fungerer
 
-![tegning som viser hvordan RAGs fungerer](../../../translated_images/no/how-rag-works.f5d0ff63942bd3a6.webp)
+![tegning som viser hvordan RAG fungerer](../../../translated_images/no/how-rag-works.f5d0ff63942bd3a6.webp)
 
-Anta at du ønsker å distribuere en chatbot som lager quizzer fra dine notater, da trenger du en tilkobling til kunnskapsbasen. Det er her RAG kommer til unnsetning. RAGs opererer slik:
+Anta at du vil lansere en chatbot som lager quizzer fra notatene dine, da trenger du en forbindelse til kunnskapsbasen. Her kommer RAG til unnsetning. RAG fungerer slik:
 
-- **Kunnskapsbase:** Før henting må dokumentene inntas og forklares, vanligvis ved å dele opp store dokumenter i mindre biter, konvertere dem til tekst-embedding og lagre dem i en database.
+- **Kunnskapsbase:** Før innhenting må dokumentene bli lastet inn og forhåndsbehandlet, vanligvis brytes store dokumenter ned i mindre deler, transformert til tekst-embedding og lagret i en database.
 
 - **Brukerspørsmål:** brukeren stiller et spørsmål
 
-- **Henting:** Når en bruker stiller et spørsmål, henter innebyggingsmodellen relevant informasjon fra vår kunnskapsbase for å gi mer kontekst som legges inn i prompten.
+- **Innhenting:** Når en bruker stiller et spørsmål, henter embed-modellen relevant informasjon fra vår kunnskapsbase for å gi mer kontekst som skal innarbeides i forespørselen.
 
-- **Forsterket generering:** LLM-en forbedrer svaret basert på hentede data. Det tillater at svaret ikke bare baserer seg på forhåndstrent data, men også relevant informasjon fra tilleggs-konteksten. De hentede dataene brukes til å forsterke LLM-ens svar. Deretter returnerer LLM et svar på brukerens spørsmål.
+- **Utvidet generering:** LLM-en forbedrer sitt svar basert på dataene som er hentet. Dette gjør at svaret som genereres ikke bare baseres på forhåndstrente data, men også på relevant informasjon fra den tilførte konteksten. De innhentede dataene brukes til å utvide LLM-ens svar. LLM-en returnerer så et svar på brukerens spørsmål.
 
-![tegning som viser hvordan RAGs arkitektur fungerer](../../../translated_images/no/encoder-decode.f2658c25d0eadee2.webp)
+![tegning som viser hvordan RAG-arkitektur fungerer](../../../translated_images/no/encoder-decode.f2658c25d0eadee2.webp)
 
-Arkitekturen for RAGs implementeres ved hjelp av transformere bestående av to deler: en kodekoder og en dekoder. For eksempel, når en bruker stiller et spørsmål, kodes inntekst til vektorer som fanger betydningen av ord, og vektorene dekodes i vårt dokumentindeks og genererer ny tekst basert på brukerens spørsmål. LLM bruker både en koder-dekoder modell for å generere utdata.
+Arkitekturen for RAG implementeres ved hjelp av transformere bestående av to deler: en encoder og en decoder. For eksempel, når en bruker stiller et spørsmål, blir inndata-teksten 'kodet' til vektorer som fanger meningen i ordene, og vektorene blir 'dekodet' inn i dokumentindeksen vår og genererer ny tekst basert på brukerforespørselen. LLM bruker både en encoder-decoder-modell for å generere utdata.
 
-To tilnærminger når man implementerer RAG i henhold til den foreslåtte artikkelen: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) er:
+To tilnærminger ved implementering av RAG i henhold til det foreslåtte papiret: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) er:
 
-- **_RAG-Sequence_** bruker hentede dokumenter for å forutsi det beste mulige svaret på et brukerspørsmål
+- **_RAG-Sequence_** ved å bruke hentede dokumenter for å forutsi det beste mulige svaret på en brukerforespørsel
 
-- **RAG-Token** bruker dokumenter til å generere neste token, og henter dem deretter for å svare på brukerens spørsmål
+- **RAG-Token** ved å bruke dokumenter for å generere neste token, deretter hente dem for å svare på brukerens spørsmål
 
-### Hvorfor bruke RAGs? 
+### Hvorfor bruke RAG?
 
-- **Informasjonsrikdom:** sikrer at tekstsvar er oppdaterte og aktuelle. Det forbedrer derfor ytelsen på domene-spesifikke oppgaver ved å få tilgang til intern kunnskapsbase.
+- **Informasjonsrikdom:** sikrer at tekstsvar er oppdaterte og aktuelle. Det forbedrer dermed ytelsen på domene-spesifikke oppgaver ved å få tilgang til den interne kunnskapsbasen.
 
-- Reduserer fabrikasjon ved å benytte **verifiserbar data** i kunnskapsbasen for å gi kontekst til brukerspørsmål.
+- Reduserer fabrikasjon ved å bruke **verifiserbare data** i kunnskapsbasen for å gi kontekst til brukerspørsmål.
 
-- Det er **kostnadseffektivt** da det er mer økonomisk sammenlignet med finjustering av en LLM
+- Det er **kostnadseffektivt** da de er mer økonomiske sammenlignet med finjustering av en LLM
 
-## Opprette en kunnskapsbase
+## Lage en kunnskapsbase
 
-Applikasjonen vår er basert på våre personlige data, dvs. Neural Network-leksjonen i AI For Beginners pensum.
+Vår applikasjon er basert på våre personlige data, altså leksjonen om nevrale nettverk i AI For Beginners-kurset.
 
 ### Vektordatabaser
 
-En vektordatabasen er, i motsetning til tradisjonelle databaser, en spesialisert database designet for å lagre, håndtere og søke i innebygde vektorer. Den lagrer numeriske representasjoner av dokumenter. Å bryte ned data til numeriske embeddings gjør det enklere for AI-systemet vårt å forstå og bearbeide dataene.
+En vektordatabase, i motsetning til tradisjonelle databaser, er en spesialisert database designet for å lagre, håndtere og søke i innebygde vektorer. Den lagrer numeriske representasjoner av dokumenter. Å bryte ned data til numeriske embeddings gjør det enklere for vårt AI-system å forstå og behandle dataene.
 
-Vi lagrer våre embeddings i vektordatabaser fordi LLM-er har en grense for hvor mange tokens de aksepterer som input. Siden du ikke kan sende hele embeddingene til en LLM, må vi dele dem opp i biter, og når en bruker stiller et spørsmål, vil de embeddingene som mest ligner spørsmålet bli returnert sammen med prompten. Oppdeling reduserer også kostnader knyttet til antall tokens sendt gjennom en LLM.
+Vi lagrer våre embeddings i vektordatabaser fordi LLM-er har en grense for hvor mange tokens de aksepterer som inndata. Siden du ikke kan sende hele embeddingene til en LLM, må vi dele dem opp i biter, og når en bruker stiller et spørsmål, blir embeddingene som best matcher spørsmålet returnert sammen med prompten. Oppdeling reduserer også kostnader på antall tokens som sendes gjennom en LLM.
 
 Noen populære vektordatabaser inkluderer Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant og DeepLake. Du kan opprette en Azure Cosmos DB-modell ved å bruke Azure CLI med følgende kommando:
 
@@ -95,7 +95,7 @@ az cosmosdb list-keys -n <cosmos-db-name> -g <resource-group-name>
 
 ### Fra tekst til embeddings
 
-Før vi lagrer dataene våre, må vi konvertere dem til vektor-embeddings før de lagres i databasen. Dersom du arbeider med store dokumenter eller lange tekster, kan du dele dem opp basert på forespørsler du forventer. Oppdeling kan gjøres på setningsnivå eller avsnittsnivå. Siden oppdeling utleder mening fra ordene rundt dem, kan du legge til annen kontekst i et avsnitt, for eksempel ved å legge til dokumenttittel eller inkludere tekst før eller etter avsnittet. Du kan dele opp dataene som følger:
+Før vi lagrer dataene våre, må vi konvertere dem til vektor-embedding før de lagres i databasen. Hvis du jobber med store dokumenter eller lange tekster, kan du dele dem opp basert på forventede spørringer. Oppdeling kan gjøres på setningsnivå eller avsnittsnivå. Ettersom oppdeling henter mening fra ordene rundt, kan du legge til noe kontekst til en bit, for eksempel ved å legge til dokumenttittel eller inkludere noe tekst før eller etter biten. Du kan dele opp dataene som følger:
 
 ```python
 def split_text(text, max_length, min_length):
@@ -109,45 +109,45 @@ def split_text(text, max_length, min_length):
             chunks.append(' '.join(current_chunk))
             current_chunk = []
 
-    # Hvis den siste delen ikke nådde minimum lengde, legg den til likevel
+    # Hvis den siste biten ikke nådde minimumslengden, legg den til uansett
     if current_chunk:
         chunks.append(' '.join(current_chunk))
 
     return chunks
 ```
 
-Når dataene er delt opp, kan vi så embedde teksten med forskjellige embedding-modeller. Noen modeller du kan bruke inkluderer: word2vec, ada-002 av OpenAI, Azure Computer Vision og mange flere. Valg av modell avhenger av språkene du bruker, typen innhold som kodes (tekst/bilder/lyd), størrelsen på inndata den kan kode og lengden på embedded output.
+Når bitene er delt opp, kan vi deretter embede teksten vår ved å bruke forskjellige embedding-modeller. Noen modeller du kan bruke inkluderer: word2vec, ada-002 fra OpenAI, Azure Computer Vision og mange flere. Valg av modell avhenger av hvilke språk du bruker, hvilken type innhold som kodes (tekst/bilder/lyd), størrelsen på input den kan kode og lengden på embedding-utdataene.
 
-Et eksempel på embedded tekst ved bruk av OpenAIs `text-embedding-ada-002` modell er:
-![embedding av ordet katt](../../../translated_images/no/cat.74cbd7946bc9ca38.webp)
+Et eksempel på embedded tekst ved bruk av OpenAI sin `text-embedding-ada-002`-modell er:
+![en embedding av ordet katt](../../../translated_images/no/cat.74cbd7946bc9ca38.webp)
 
-## Henting og vektorsøk
+## Innhenting og vektorsøk
 
-Når en bruker stiller et spørsmål, omformer henteren det til en vektor ved bruk av spørringskoderen. Den søker deretter gjennom vårt dokumentsøkeindeks etter relevante vektorer i dokumentet som er relatert til inndataen. Når det er gjort, konverteres både inndatavektor og dokumentvektorer til tekst og sendes gjennom LLM.
+Når en bruker stiller et spørsmål, transformerer innhenteren det til en vektor ved bruk av spørringskoder, den søker deretter gjennom dokumentets søkeindeks etter relevante vektorer i dokumentet som er relatert til inndataen. Når dette er gjort, konverteres både input-vektor og dokumentvektorer til tekst og sendes til LLM.
 
-### Henting
+### Innhenting
 
-Henting skjer når systemet prøver å raskt finne dokumentene i indeksen som oppfyller søkekriteriene. Målet til henteren er å hente dokumenter som kan brukes til å gi kontekst og forankre LLM i dine data.
+Innhenting skjer når systemet prøver å raskt finne dokumenter fra indeksen som tilfredsstiller søkekriteriene. Målet til innhenteren er å få dokumenter som kan brukes til å gi kontekst og forankre LLM på dine data.
 
-Det finnes flere måter å utføre søk i databasen vår på, som:
+Det finnes flere måter å utføre søk i databasen vår på, slik som:
 
-- **Nøkkelordsøk** - brukt for tekstsøk
+- **Nøkkelordssøk** - brukt for tekstsøk
 
-- **Vektorsøk** - konverterer dokumenter fra tekst til vektorreprensentasjoner ved bruk av embedding-modeller, noe som tillater et **semantisk søk** ved bruk av ords mening. Henting utføres ved å spørre de dokumentene hvis vektorreprensentasjoner er nærmest brukerens spørsmål.
+- **Vektorsøk** - konverterer dokumenter fra tekst til vektorrepresentasjoner ved bruk av embedding-modeller, slik at man kan gjøre et **semantisk søk** basert på ords mening. Innhenting gjøres ved å spørre dokumentene hvis vektorrepresentasjoner er nærmest brukerens spørsmål.
 
-- **Hybrid** - en kombinasjon av både nøkkelord- og vektorsøk.
+- **Hybrid** - en kombinasjon av både nøkkelordssøk og vektorsøk.
 
-En utfordring med henting oppstår når det ikke finnes noe lignende svar på forespørselen i databasen; systemet vil da returnere den beste informasjonen det kan finne. Du kan imidlertid bruke taktikker som å sette maksimal avstand for relevans eller bruke hybridsøk, som kombinerer både nøkkelord- og vektorsøk. I denne leksjonen vil vi bruke hybridsøk, en kombinasjon av både vektor- og nøkkelordssøk. Vi lagrer dataene våre i en dataframe med kolonner som inneholder biter samt embeddings.
+En utfordring med innhenting oppstår når det ikke finnes lignende svar på spørsmålet i databasen. Systemet returnerer da den beste informasjonen det kan finne, men du kan bruke taktikker som å sette maksimal avstand for relevans eller bruke hybridsøk som kombinerer både nøkkelord- og vektorsøk. I denne leksjonen vil vi bruke hybridsøk, en kombinasjon av både vektor- og nøkkelordssøk. Vi lagrer dataene våre i en dataframe med kolonner som inneholder både biter samt embeddings.
 
-### Vektorsimilartet
+### Vektorlignendehet
 
-Henteren søker gjennom kunnskapsdatabasen etter embeddings som er nær hverandre, den nærmeste nabo, siden de er tekster som er like. I scenariet stiller en bruker et spørsmål, som først embeddes og deretter matches med lignende embeddings. Den vanlige målingen som brukes for å finne hvor like forskjellige vektorer er, er cosinuslikhet basert på vinkelen mellom to vektorer.
+Innhenteren søker gjennom kunnskapsdatabasen etter embeddings som ligger nær hverandre, nærmeste nabo, siden de er tekster som er like. I scenariet hvor en bruker stiller et spørsmål, embedes det først og matches deretter med lignende embeddings. Den vanlige målingen som brukes for å finne hvor like ulike vektorer er, er cosinuslikhet basert på vinkelen mellom to vektorer.
 
-Vi kan måle likhet ved bruk av andre alternativer som du kan bruke er Euklidisk avstand, som er den rette linjen mellom vektorendepunktene, og prikkprodukt som måler summen av produktene av tilsvarende elementer i to vektorer.
+Alternativer vi kan bruke for å måle likhet er Euklidisk avstand, som er den rette linjen mellom vektorenes endepunkter, og prikkprodukt som måler summen av produktene av tilsvarende elementer i to vektorer.
 
 ### Søkeindeks
 
-Når vi gjør henting, må vi bygge en søkeindeks for kunnskapsbasen vår før vi utfører søk. En indeks lagrer embeddingene våre og kan raskt hente de mest lignende bitene selv i en stor database. Vi kan opprette indeksen vår lokalt ved bruk av:
+Når vi gjør innhenting, må vi bygge en søkeindeks for vår kunnskapsbase før vi utfører søk. En indeks lagrer embeddingene våre og kan raskt hente ut de mest like bitene selv i en stor database. Vi kan opprette vår indeks lokalt ved å bruke:
 
 ```python
 from sklearn.neighbors import NearestNeighbors
@@ -163,7 +163,7 @@ distances, indices = nbrs.kneighbors(embeddings)
 
 ### Omrangering
 
-Når du har spurt databasen, kan det være behov for å sortere resultatene fra de mest relevante. En omrangering LLM benytter maskinlæring for å forbedre relevansen av søkeresultater ved å ordne dem fra mest relevant. Ved bruk av Azure AI Search skjer omrangering automatisk med en semantisk omrangering. Et eksempel på hvordan omrangering fungerer ved bruk av nærmeste naboer:
+Når du har spurt databasen, kan det være nødvendig å sortere resultatene fra de mest relevante. En omrangerings-LLM bruker maskinlæring for å forbedre relevansen av søkeresultater ved å sortere dem fra mest relevant. Ved bruk av Azure AI Search gjøres omrangering automatisk for deg ved hjelp av en semantisk omrangering. Et eksempel på hvordan omrangering fungerer ved nærmeste naboer:
 
 ```python
 # Finn de mest lignende dokumentene
@@ -181,29 +181,29 @@ for i in range(3):
         print(f"Index {index} not found in DataFrame")
 ```
 
-## Å sette det hele sammen
+## Sette det hele sammen
 
-Det siste steget er å legge til vår LLM i prosessen for å kunne få svar som er forankret i våre data. Vi kan implementere det som følger:
+Det siste steget er å legge LLM vår inn i miksen for å kunne få svar som er forankret i våre data. Vi kan implementere det på følgende måte:
 
 ```python
 user_input = "what is a perceptron?"
 
 def chatbot(user_input):
-    # Konverter spørsmålet til en spørringsvektor
+    # Konverter spørsmålet til en spørrevektor
     query_vector = create_embeddings(user_input)
 
     # Finn de mest lignende dokumentene
     distances, indices = nbrs.kneighbors([query_vector])
 
-    # legg til dokumenter til spørringen for å gi kontekst
+    # legg til dokumenter i spørsmålet for å gi kontekst
     history = []
     for index in indices[0]:
         history.append(flattened_df['chunks'].iloc[index])
 
-    # kombiner historikken og brukerinnputten
+    # kombiner historikken og brukerens input
     history.append(user_input)
 
-    # opprett et melding-objekt
+    # opprett et meldingsobjekt
     messages=[
         {"role": "system", "content": "You are an AI assistant that helps with AI questions."},
         {"role": "user", "content": "\n\n".join(history) }
@@ -211,8 +211,7 @@ def chatbot(user_input):
 
     # bruk Responses API for å generere et svar
     response = client.responses.create(
-        model="gpt-4o-mini",
-        temperature=0.7,
+        model="gpt-5-mini",
         max_output_tokens=800,
         input=messages,
         store=False,
@@ -227,43 +226,43 @@ chatbot(user_input)
 
 ### Evalueringsmetrikker
 
-- Kvalitet på de leverte svarene, som sikrer at de høres naturlige, flytende og menneskelige ut
+- Kvaliteten på leverte svar som sikrer at det høres naturlig, flytende og menneskelig ut
 
-- Forankring av data: evaluere om svaret kom fra de oppgitte dokumentene
+- Forankring av data: evaluere om svaret kom fra de leverte dokumentene
 
-- Relevans: evaluere om svaret stemmer overens og er relatert til det stilte spørsmålet
+- Relevans: evaluere at svaret stemmer overens med og er relatert til det stilte spørsmålet
 
-- Flyt: hvorvidt svaret gir grammatisk mening
+- Flyt - om svaret gir grammatisk mening
 
-## Bruksområder for RAG (Retrieval Augmented Generation) og vektordatabaser
+## Bruksområder for å bruke RAG (Retrieval Augmented Generation) og vektordatabaser
 
 Det finnes mange ulike bruksområder hvor funksjonskall kan forbedre appen din, slik som:
 
-- Spørsmål og svar: forankre firmaets data til en chat som kan brukes av ansatte til å stille spørsmål.
+- Spørsmål og svar: forankre selskapets data til en chat som ansatte kan bruke til å stille spørsmål.
 
-- Anbefalingssystemer: der du kan lage et system som matcher de mest lignende verdiene, f.eks. filmer, restauranter og mye mer.
+- Anbefalingssystemer: hvor du kan lage et system som matcher de mest lignende verdiene, for eksempel filmer, restauranter og mye mer.
 
-- Chatbot-tjenester: du kan lagre chattehistorikk og personliggjøre samtalen basert på brukerdata.
+- Chattjenester: du kan lagre chathistorikk og personalisere samtalen basert på brukerdata.
 
-- Bildesøk basert på vektor-embeddings, nyttig ved bilde- og anomalideteksjon.
+- Bildesøk basert på vektor-embedding, nyttig ved bildeanalyse og avviksdeteksjon.
 
 ## Oppsummering
 
-Vi har dekket grunnleggende områder rundt RAG fra å legge til våre data i applikasjonen, brukerforespørsel og output. For å forenkle opprettelsen av RAG kan du bruke rammeverk som Semantic Kernel, Langchain eller Autogen.
+Vi har dekket de grunnleggende områdene av RAG fra å legge til våre data i applikasjonen, brukerspørsmål og utdata. For å forenkle opprettelse av RAG kan du bruke rammeverk som Semantic Kernel, Langchain eller Autogen.
 
 ## Oppgave
 
-For å fortsette din læring om Retrieval Augmented Generation (RAG) kan du bygge:
+For å fortsette læringen din om Retrieval Augmented Generation (RAG) kan du bygge:
 
-- Lag et front-end for applikasjonen ved å bruke rammeverket du foretrekker
+- Lag et frontend for applikasjonen ved å bruke rammen du foretrekker
 
 - Bruk et rammeverk, enten LangChain eller Semantic Kernel, og gjenskap applikasjonen din.
 
 Gratulerer med å ha fullført leksjonen 👏.
 
-## Læringen stopper ikke her, fortsett reisen
+## Læring stopper ikke her, fortsett reisen
 
-Etter å ha fullført denne leksjonen, sjekk ut vår [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) for å fortsette å styrke din kunnskap om Generativ AI!
+Etter å ha fullført denne leksjonen, sjekk ut vår [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) for å fortsette å heve din kunnskap om Generativ AI!
 
 ---
 

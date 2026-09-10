@@ -1,267 +1,146 @@
 # بناء تطبيقات توليد الصور
 
-[![بناء تطبيقات توليد الصور](../../../translated_images/ar/09-lesson-banner.906e408c741f4411.webp)](https://youtu.be/B5VP0_J7cs8?si=5P3L5o7F_uS_QcG9)
+[![بناء تطبيقات توليد الصور](../../../translated_images/ar/09-lesson-banner.906e408c741f4411.webp)](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)
 
-هناك المزيد في نماذج اللغات الكبيرة بخلاف توليد النصوص. من الممكن أيضًا توليد الصور من أوصاف نصية. وجود الصور كوسيط يمكن أن يكون مفيدًا جدًا في عدد من المجالات مثل التكنولوجيا الطبية، والهندسة المعمارية، والسياحة، وتطوير الألعاب والمزيد. في هذا الفصل، سوف نستعرض نموذجين من أكثر نماذج توليد الصور شهرة، DALL-E وMidjourney.
+هناك أكثر من توليد النصوص في نماذج اللغة الكبيرة. يمكنك أيضًا توليد الصور من الأوصاف النصية. تعد الصور كوسيلة مفيدة عبر مجالات مثل التكنولوجيا الطبية، والهندسة المعمارية، والسياحة، وتطوير الألعاب، والتسويق، وأكثر. في هذا الدرس ننظر إلى نماذج **GPT Image** الحالية ونبني تطبيق توليد الصور.
 
 ## مقدمة
 
-في هذا الدرس، سوف نغطي:
+يسمح توليد الصور بتحويل موجه بلغة طبيعية إلى صورة. في هذا الدرس نعمل مع عائلة نماذج **`gpt-image`** من OpenAI - الجيل الحالي من نماذج الصور المتاحة على **[Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst)** ومنصة OpenAI. هذه النماذج تحل محل نماذج DALL·E القديمة (DALL·E 2/3 نماذج تراثية).
 
-- توليد الصور ولماذا هو مفيد.
-- DALL-E وMidjourney، ما هما، وكيف يعملان.
-- كيف تبني تطبيقًا لتوليد الصور.
+طوال الدرس نستخدم شركة ناشئة تخيلية، **Edu4All**، تبني أدوات تعلم. تريد الفريق توليد رسومات للواجبات ومواد الدراسة.
 
 ## أهداف التعلم
 
-بعد إتمام هذا الدرس، ستتمكن من:
+بحلول نهاية هذا الدرس ستتمكن من:
 
-- بناء تطبيق لتوليد الصور.
-- تحديد حدود لتطبيقك باستخدام الموجهات الفوقية.
-- العمل مع DALL-E وMidjourney.
+- شرح ما هو توليد الصور وأين يكون مفيدًا.
+- فهم عائلة نماذج `gpt-image` وكيف تختلف عن نماذج DALL·E التراثية.
+- بناء تطبيق توليد الصور بلغة بايثون (وTypeScript / .NET).
+- تعديل الصور وتطبيق ضوابط الأمان باستخدام الميتا-موجهات.
 
-## لماذا تبني تطبيق توليد الصور؟
+## ما هو توليد الصور؟
 
-تطبيقات توليد الصور هي طريقة رائعة لاستكشاف قدرات الذكاء الاصطناعي التوليدي. يمكن استخدامها، على سبيل المثال:
+نماذج توليد الصور تنشئ صورًا من موجه نصي. النماذج الحديثة مثل `gpt-image` مبنية على تقنيات المحولات + الانتشار: يتعلم النموذج العلاقة بين النصوص والصور أثناء التدريب، ثم بناءً على الموجه، يقوم بشكل تكراري "بنزع الضوضاء" من ضجيج عشوائي ليشكل صورة تطابق الوصف.
 
-- **تعديل وتوليف الصور**. يمكنك توليد صور لمجموعة متنوعة من الاستخدامات، مثل تعديل الصور وتوليفها.
+اثنتان من عائلات نماذج الصور المعروفة هما:
 
-- **تُطبّق في صناعات متنوعة**. يمكن أيضًا استخدامها لتوليد صور لعدة صناعات مثل التكنولوجيا الطبية، السياحة، تطوير الألعاب والمزيد.
+- **`gpt-image` (OpenAI)** - الجيل الحالي، المستخدم في هذا الدرس. يدعم توليد الصور من النص وتحرير الصور (التلوين مع قناع).
+- **Midjourney** - نموذج شهير تابع لجهة خارجية مع خدمته الخاصة وسير عمل مستند إلى Discord.
 
-## سيناريو: Edu4All
+> نماذج الصور القديمة من OpenAI - **DALL·E 2** و **DALL·E 3** - تراثية. DALL·E 3 لم يعد متاحًا للنشر الجديد، وميزات مثل `create_variation` كانت موجودة فقط في DALL·E 2. استخدم نماذج `gpt-image` للتطبيقات الجديدة.
 
-كجزء من هذا الدرس، سنواصل العمل مع شركتنا الناشئة Edu4All. سيقوم الطلاب بإنشاء صور لتقييماتهم، الصور بالضبط تعتمد على الطلاب، لكن يمكن أن تكون رسومات لحكايتهم الخاصة أو إنشاء شخصية جديدة لقصة ما أو مساعدتهم في تصور أفكارهم ومفاهيمهم.
+### أي نموذج من `gpt-image` يجب أن أستخدم؟
 
-إليك ما يمكن لطلاب Edu4All توليده، على سبيل المثال إذا كانوا يعملون في الصف على المعالم:
+على Microsoft Foundry النماذج التالية متاحة **عموماً:**
 
-![شركة Edu4All الناشئة، درس على المعالم، برج إيفل](../../../translated_images/ar/startup.94d6b79cc4bb3f5a.webp)
+| النموذج | ملاحظات |
+| --- | --- |
+| **`gpt-image-2`** | أحدث وأقوى نموذج للصور - الافتراضي الموصى به. |
+| `gpt-image-1.5` | متاح عموماً؛ جودة قوية بتكلفة أقل. |
+| `gpt-image-1-mini` | متاح عموماً؛ الأسرع / الأقل تكلفة. |
+| `gpt-image-1` | للمعاينة فقط. |
 
-باستخدام موجه مثل
+تحقق دائماً من قائمة نماذج الصور الحالية على [Foundry](https://learn.microsoft.com/azure/ai-foundry/openai/concepts/models?WT.mc_id=academic-105485-koreyst) للمدى والتوافر الإقليمي.
 
-> "كلب بجانب برج إيفل في ضوء شمس الصباح الباكر"
+> **مهم:** نماذج `gpt-image` تعيد الصورة المولدة كـ **base64** (`b64_json`)، وليس كرابط URL. يقوم الكود بفك ترميز سلسلة base64 إلى بايتات ويحفظها - لا يوجد رابط صورة للتحميل.
 
-## ما هو DALL-E وMidjourney؟
+## الإعداد
 
-[DALL-E](https://openai.com/dall-e-2?WT.mc_id=academic-105485-koreyst) و[Midjourney](https://www.midjourney.com/?WT.mc_id=academic-105485-koreyst) هما من أشهر نماذج توليد الصور، يسمحان باستخدام الموجهات لتوليد الصور.
+يمكنك تشغيل الأمثلة ضد **Azure OpenAI في Microsoft Foundry** (عينات `aoai-*`) أو منصة **OpenAI** (عينات `oai-*`).
 
-### DALL-E
+### 1. إنشاء ونشر نموذج
 
-لنبدأ بـ DALL-E، وهو نموذج للذكاء الاصطناعي التوليدي يولد الصور من أوصاف نصية.
+اتبع دليل [إنشاء مورد](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst) لإنشاء مورد Microsoft Foundry، ثم انشر نموذج صور - ينصح بـ **`gpt-image-2`**.
 
-> [DALL-E هو مزيج من نموذجين، CLIP والانتباه المشتت](https://towardsdatascience.com/openais-dall-e-and-clip-101-a-brief-introduction-3a4367280d4e?WT.mc_id=academic-105485-koreyst).
+### 2. تكوين ملف `.env`
 
-- **CLIP**، هو نموذج يولد تمثيلات رقمية (تضمينات) للبيانات من الصور والنصوص.
+```text
+AZURE_OPENAI_ENDPOINT=<your endpoint>
+AZURE_OPENAI_API_KEY=<your key>
+AZURE_OPENAI_DEPLOYMENT="gpt-image-2"
+```
 
-- **الانتباه المشتت**، هو نموذج يولد الصور من التضمينات. يتم تدريب DALL-E على مجموعة بيانات من الصور والنصوص ويمكن استخدامه لتوليد الصور من الأوصاف النصية. على سبيل المثال، يمكن استخدام DALL-E لتوليد صور لقطة ترتدي قبعة، أو كلب ذي موهوك.
+تجد هذه القيم في صفحة **النشر** لموردك في [بوابة Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst).
 
-### Midjourney
+### 3. تثبيت المكتبات
 
-يعمل Midjourney بطريقة مشابهة لـ DALL-E، فهو يولد الصور من الموجهات النصية. يمكن استخدام Midjourney أيضًا لتوليد الصور باستخدام موجهات مثل "قطة في قبعة"، أو "كلب ذو موهوك".
+أنشئ ملف `requirements.txt`:
 
-![صورة مولدة بواسطة Midjourney، حمامة ميكانيكية](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png/440px-Rupert_Breheny_mechanical_dove_eca144e7-476d-4976-821d-a49c408e4f36.png?WT.mc_id=academic-105485-koreyst)
-_حقوق الصورة ويكيبيديا، صورة مولدة بواسطة Midjourney_
+```text
+python-dotenv
+openai
+pillow
+```
 
-## كيف يعمل DALL-E وMidjourney
+ثم أنشئ وفعل بيئة افتراضية وقم بالتثبيت:
 
-أولاً، [DALL-E](https://arxiv.org/pdf/2102.12092.pdf?WT.mc_id=academic-105485-koreyst). DALL-E هو نموذج ذكاء اصطناعي توليدي يعتمد على هندسة المحول مع _محول ذاتي التكرار_.
+```bash
+python3 -m venv venv
+source venv/bin/activate        # ويندوز: venv\Scripts\activate
+pip install -r requirements.txt
+```
 
-يحدد _المحول الذاتي التكرار_ كيفية توليد النموذج للصور من الأوصاف النصية، حيث يولد بكسلًا واحدًا في كل مرة، ثم يستخدم البكسلات المولدة لتوليد البكسل التالي. ويمر ذلك عبر طبقات متعددة في شبكة عصبية حتى تكتمل الصورة.
+## بناء التطبيق
 
-بهذه العملية، يتحكم DALL-E في السمات، والأشياء، والخصائص، وأكثر في الصورة التي يولدها. ومع ذلك، فإن DALL-E 2 و3 يتمتعان بتحكم أكبر في الصورة المولدة.
+أنشئ `app.py` بالكود التالي. يولد صورة ويحفظها كـ PNG.
 
-## بناء أول تطبيق لتوليد الصور خاصتك
+```python
+import os
+import base64
+from openai import AzureOpenAI
+from PIL import Image
+import dotenv
 
-فما الذي يتطلبه بناء تطبيق لتوليد الصور؟ تحتاج إلى المكتبات التالية:
+dotenv.load_dotenv()
 
-- **python-dotenv**، يُنصح بشدة باستخدام هذه المكتبة للاحتفاظ بسرية المفاتيح في ملف _.env_ بعيدًا عن الكود.
-- **openai**، هذه المكتبة ما ستستخدمه للتفاعل مع واجهة برمجة التطبيقات OpenAI.
-- **pillow**، للعمل مع الصور في Python.
-- **requests**، لمساعدتك في إجراء طلبات HTTP.
+# وجه العميل نحو مورد Azure OpenAI الخاص بك (Microsoft Foundry).
+# تتطلب نماذج الصور نسخة حديثة من API - تحقق من مستندات Foundry للنموذج الذي تحتاجه.
+client = AzureOpenAI(
+    api_key=os.environ["AZURE_OPENAI_API_KEY"],
+    api_version="2025-04-01-preview",
+    azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"],
+)
 
-## إنشاء ونشر نموذج Azure OpenAI
+deployment = os.environ["AZURE_OPENAI_DEPLOYMENT"]  # مثال: "gpt-image-2"
 
-إذا لم يتم ذلك بعد، اتبع التعليمات على صفحة [Microsoft Learn](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
-لإنشاء مورد و نموذج Azure OpenAI. اختر **gpt-image-1** كنموذج (نموذج الصور الحالي في Azure OpenAI؛ DALL-E 3 قديم ولم يعد متاحًا للنشر الجديد).
+result = client.images.generate(
+    model=deployment,
+    prompt='Bunny on a horse, holding a lollipop, on a foggy meadow where it grows daffodils',
+    size="1024x1024",   # أيضًا 1536x1024 (أفقي)، 1024x1536 (رأسي)، أو "تلقائي"
+    n=1,
+)
 
-## إنشاء التطبيق
-
-1. أنشئ ملف _.env_ بالمحتوى التالي:
-
-   ```text
-   AZURE_OPENAI_ENDPOINT=<your endpoint>
-   AZURE_OPENAI_API_KEY=<your key>
-   AZURE_OPENAI_DEPLOYMENT="gpt-image-1"
-   ```
-
-   يمكن العثور على هذه المعلومات في بوابة Azure OpenAI Foundry لموردك في قسم "النشرات".
-
-1. اجمع المكتبات المذكورة أعلاه في ملف يُسمى _requirements.txt_ هكذا:
-
-   ```text
-   python-dotenv
-   openai
-   pillow
-   requests
-   ```
-
-1. بعد ذلك، أنشئ بيئة افتراضية وقم بتثبيت المكتبات:
-
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
-   pip install -r requirements.txt
-   ```
-
-   بالنسبة لنظام ويندوز، استخدم الأوامر التالية لإنشاء وتفعيل البيئة الافتراضية:
-
-   ```bash
-   python3 -m venv venv
-   venv\Scripts\activate.bat
-   ```
-
-1. أضف الكود التالي في ملف يُسمى _app.py_:
-
-    ```python
-    import openai
-    import os
-    import requests
-    from PIL import Image
-    import dotenv
-    from openai import OpenAI, AzureOpenAI
-    
-    # استيراد dotenv
-    dotenv.load_dotenv()
-    
-    # تكوين عميل خدمة Azure OpenAI
-    client = AzureOpenAI(
-      azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"],
-      api_key=os.environ['AZURE_OPENAI_API_KEY'],
-      api_version = "2024-10-21"
-      )
-    try:
-        # إنشاء صورة باستخدام واجهة برمجة تطبيقات توليد الصور
-        generation_response = client.images.generate(
-                                prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',
-                                size='1024x1024', n=1,
-                                model=os.environ['AZURE_OPENAI_DEPLOYMENT']
-                              )
-
-        # تعيين الدليل للصورة المخزنة
-        image_dir = os.path.join(os.curdir, 'images')
-
-        # إذا لم يكن الدليل موجودًا، قم بإنشائه
-        if not os.path.isdir(image_dir):
-            os.mkdir(image_dir)
-
-        # تهيئة مسار الصورة (ملاحظة: يجب أن يكون نوع الملف png)
-        image_path = os.path.join(image_dir, 'generated-image.png')
-
-        # استرجاع الصورة المُولّدة
-        image_url = generation_response.data[0].url  # استخراج عنوان URL للصورة من الاستجابة
-        generated_image = requests.get(image_url).content  # تحميل الصورة
-        with open(image_path, "wb") as image_file:
-            image_file.write(generated_image)
-
-        # عرض الصورة في عارض الصور الافتراضي
-        image = Image.open(image_path)
-        image.show()
-
-    # التقاط الاستثناءات
-    except openai.BadRequestError as err:
-        print(err)
-   ```
-
-لنشرح هذا الكود:
-
-- أولًا، نستورد المكتبات التي نحتاجها، بما في ذلك مكتبة OpenAI، مكتبة dotenv، مكتبة requests، ومكتبة Pillow.
-
-  ```python
-  import openai
-  import os
-  import requests
-  from PIL import Image
-  import dotenv
-  ```
-
-- بعد ذلك، نقوم بتحميل المتغيرات البيئية من ملف _.env_.
-
-  ```python
-  # استيراد dotenv
-  dotenv.load_dotenv()
-  ```
-
-- بعد ذلك، نُهيئ عميل خدمة Azure OpenAI
-
-  ```python
-  # احصل على نقطة النهاية والمفتاح من متغيرات البيئة
-  client = AzureOpenAI(
-      azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"],
-      api_key=os.environ['AZURE_OPENAI_API_KEY'],
-      api_version = "2024-10-21"
-      )
-  ```
-
-- بعد ذلك، نقوم بتوليد الصورة:
-
-  ```python
-  # إنشاء صورة باستخدام واجهة برمجة تطبيقات توليد الصور
-  generation_response = client.images.generate(
-                        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',
-                        size='1024x1024', n=1,
-                        model=os.environ['AZURE_OPENAI_DEPLOYMENT']
-                      )
-  ```
-
-  الكود أعلاه يرد بكائن JSON يحتوي على رابط الصورة المولدة. يمكننا استخدام الرابط لتحميل الصورة وحفظها في ملف.
-
-- أخيرًا، نفتح الصورة ونستخدم عارض الصور الافتراضي لعرضها:
-
-  ```python
-  image = Image.open(image_path)
-  image.show()
-  ```
-
-### المزيد من التفاصيل حول توليد الصورة
-
-لنلقي نظرة مفصلة على الكود الذي يولد الصورة:
-
-   ```python
-     generation_response = client.images.generate(
-                               prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',
-                               size='1024x1024', n=1,
-                               model=os.environ['AZURE_OPENAI_DEPLOYMENT']
-                           )
-   ```
-
-- **prompt**، هو الموجه النصي المستخدم لتوليد الصورة. في هذه الحالة، نستخدم الموجه "أرنب على حصان، ممسك بحلوى على عصا، في مرج ضبابي ينمو فيه زنبق الوادي".
-- **size**، هو حجم الصورة التي يتم توليدها. في هذه الحالة، نولد صورة بحجم 1024×1024 بكسل.
-- **n**، هو عدد الصور التي يتم توليدها. في هذه الحالة، نولد صورتين.
-- **temperature**، هو معامل يتحكم في عشوائية مخرجات نموذج الذكاء الاصطناعي التوليدي. حيث تكون القيمة بين 0 و1؛ حيث 0 تعني أن المخرجات حتمية، و1 تعني أن المخرجات عشوائية. القيمة الافتراضية هي 0.7.
-
-هناك المزيد من الأمور التي يمكنك فعلها مع الصور سنغطيها في القسم التالي.
-
-## قدرات إضافية لتوليد الصور
-
-رأيت حتى الآن كيف استطعنا توليد صورة باستخدام بضعة أسطر في Python. ومع ذلك، هناك المزيد الذي يمكنك القيام به مع الصور.
-
-يمكنك أيضًا القيام بما يلي:
-
-- **إجراء تعديلات**. من خلال تقديم صورة موجودة وقناع وموجه نصي، يمكنك تعديل الصورة. على سبيل المثال، يمكنك إضافة شيء لجزء من الصورة. تخيل صورتنا للأرنب، يمكنك إضافة قبعة للأرنب. ذلك يتم بتوفير الصورة، قناعًا (يحدد الجزء الذي سيحدث فيه التغيير) وموجهًا نصيًا يحدد ما يجب عمله. 
-> ملاحظة: هذا غير مدعوم في DALL-E 3.
- 
-هنا مثال باستخدام GPT Image:
-
-   ```python
-   response = client.images.edit(
-       model="gpt-image-1",
-       image=open("sunlit_lounge.png", "rb"),
-       mask=open("mask.png", "rb"),
-       prompt="A sunlit indoor lounge area with a pool containing a flamingo"
-   )
-   image_url = response.data[0].url
-   ```
-
-  الصورة الأساسية ستحتوي فقط على الصالة مع المسبح لكن الصورة النهائية ستحتوي على فلامنغو:
+# نماذج gpt-image تعيد base64 (b64_json)، ليست عنوان URL - فقم بفك ترميزها إلى بايتات.
+image_bytes = base64.b64decode(result.data[0].b64_json)
+
+os.makedirs("images", exist_ok=True)
+image_path = os.path.join("images", "generated-image.png")
+with open(image_path, "wb") as f:
+    f.write(image_bytes)
+
+Image.open(image_path).show()
+```
+
+شغله بالأمر `python app.py`. ستحصل على صورة PNG محفوظة تحت `images/`.
+
+> كل مكالمة إلى `images.generate` تنتج صورة مختلفة لنفس الموجه - نماذج الصور لا تأخذ معامل `temperature` (هذا تحكم لتوليد النصوص). للحصول على تنويع، استدعِ الـ API مجددًا؛ ولتقليل التنويع، اجعل موجهك أكثر تحديدًا.
+
+## تحرير الصور
+
+نماذج `gpt-image` يمكنها **تحرير** صورة موجودة: قدم الصورة، وقناعًا اختياريًا (يحدد المنطقة المراد تغييرها)، وموجهًا يصف التغيير. مثل التوليد، التعديلات تُعاد بصيغة base64.
+
+```python
+result = client.images.edit(
+    model=deployment,
+    image=open("sunlit_lounge.png", "rb"),
+    mask=open("mask.png", "rb"),
+    prompt="A sunlit indoor lounge area with a pool containing a flamingo",
+)
+image_bytes = base64.b64decode(result.data[0].b64_json)
+with open("images/edited-image.png", "wb") as f:
+    f.write(image_bytes)
+```
 
 <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
   <img src="../../../translated_images/ar/sunlit_lounge.a75a0cb61749db0e.webp" style="width: 30%; max-width: 200px; height: auto;">
@@ -269,212 +148,47 @@ _حقوق الصورة ويكيبيديا، صورة مولدة بواسطة Mid
   <img src="../../../translated_images/ar/sunlit_lounge_result.76ae02957c0bbeb8.webp" style="width: 30%; max-width: 200px; height: auto;">
 </div>
 
+## ضبط الحدود باستخدام الميتا-موجهات
 
-- **إنشاء تغييرات**. الفكرة هي أن تأخذ صورة موجودة وتطلب إنشاء تغييرات لها. لإنشاء تغيير، تقدم صورة وموجهًا نصيًا وكودًا مثل:
-
-  ```python
-  response = client.images.create_variation(
-    image=open("bunny-lollipop.png", "rb"),
-    n=1,
-    size="1024x1024"
-  )
-  image_url = response.data[0].url
-  ```
-
-  > ملاحظة، هذا مدعوم فقط على نموذج DALL-E 2 من OpenAI، وليس gpt-image-1
-
-## درجة الحرارة
-
-درجة الحرارة هي معامل يتحكم في عشوائية مخرجات نموذج الذكاء الاصطناعي التوليدي. القيمة بين 0 و1، حيث 0 تعني أن المخرجات حتمية و1 تعني أن المخرجات عشوائية. القيمة الافتراضية هي 0.7.
-
-لنلقي نظرة على مثال لكيفية عمل درجة الحرارة، من خلال تشغيل هذا الموجه مرتين:
-
-> موجه : "أرنب على حصان، ممسك بحلوى على عصا، في مرج ضبابي ينمو فيه زنبق الوادي"
-
-![أرنب على حصان ممسك بحلوى على عصا، النسخة 1](../../../translated_images/ar/v1-generated-image.a295cfcffa3c13c2.webp)
-
-الآن لنشغل نفس الموجه مرة أخرى لنرى أننا لن نحصل على الصورة نفسها مرتين:
-
-![صورة مولدة لأرنب على حصان](../../../translated_images/ar/v2-generated-image.33f55a3714efe61d.webp)
-
-كما ترى، الصور متشابهة لكن ليست نفسها. دعنا نجرب تغيير القيمة إلى 0.1 ونرى ماذا يحدث:
+بمجرد أن تتمكن من توليد الصور، تحتاج إلى ضوابط أمنية لكي لا ينتج تطبيقك محتوى غير آمن أو خارج العلامة التجارية. **الميتا-موجه** هو نص تسبقه على موجه المستخدم لتقييد مخرجات النموذج.
 
 ```python
- generation_response = client.images.generate(
-        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # أدخل نص الموجه الخاص بك هنا
-        size='1024x1024',
-        n=2
-    )
-```
-
-### تغيير درجة الحرارة
-
-لنحاول جعل الرد أكثر حتمية. يمكننا ملاحظة من الصورتين اللتين ولدناهما أن في الأولى يوجد أرنب وفي الثانية حصان، فالصورتان تختلفان كثيرًا.
-
-لذلك، دعنا نغير كودنا ونجعل درجة الحرارة 0، هكذا:
-
-```python
-generation_response = client.images.generate(
-        prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # أدخل نص التعليمات هنا
-        size='1024x1024',
-        n=2,
-        temperature=0
-    )
-```
-
-الآن عند تشغيل هذا الكود، ستحصل على هاتين الصورتين:
-
-- ![درجة الحرارة 0، النسخة 1](../../../translated_images/ar/v1-temp-generated-image.a4346e1d2360a056.webp)
-- ![درجة الحرارة 0، النسخة 2](../../../translated_images/ar/v2-temp-generated-image.871d0c920dbfb0f1.webp)
-
-هنا يمكنك أن ترى بوضوح كيف أن الصور أصبحت أكثر شبهًا ببعضها.
-
-## كيفية تحديد حدود لتطبيقك باستخدام موجهات فوقية
-
-مع العرض التوضيحي لدينا، يمكننا بالفعل توليد صور لعملائنا. لكن علينا إنشاء بعض الحدود لتطبيقنا.
-
-على سبيل المثال، لا نريد توليد صور غير مناسبة للعمل، أو غير مناسبة للأطفال.
-
-يمكننا القيام بذلك باستخدام _الموجهات الفوقية_. الموجهات الفوقية هي موجهات نصية تُستخدم للتحكم في مخرجات نموذج الذكاء الاصطناعي التوليدي. على سبيل المثال، يمكننا استخدامها لضمان أن الصور المولدة آمنة للعمل أو مناسبة للأطفال.
-
-### كيف تعمل؟
-
-الآن، كيف تعمل الموجهات الفوقية؟
-
-الموجهات الفوقية هي موجهات نصية تُستخدم للتحكم في مخرجات نموذج الذكاء الاصطناعي التوليدي، توضع قبل الموجه النصي، وتستخدم للتحكم بالمخرجات وتُدمج في التطبيقات للتحكم بالمخرجات. حيث تُغلف مدخلات الموجه والمدخلات الفوقية في موجه نصي واحد.
-
-مثال على موجه فوقي سيكون كالتالي:
-
-```text
-You are an assistant designer that creates images for children.
-
-The image needs to be safe for work and appropriate for children.
-
-The image needs to be in color.
-
-The image needs to be in landscape orientation.
-
-The image needs to be in a 16:9 aspect ratio.
-
-Do not consider any input from the following that is not safe for work or appropriate for children.
-
-(Input)
-
-```
-
-الآن، لنر كيف يمكننا استخدام الموجهات الفوقية في العرض التوضيحي.
-
-```python
-disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
-
-meta_prompt =f"""You are an assistant designer that creates images for children.
-
-The image needs to be safe for work and appropriate for children.
-
-The image needs to be in color.
-
-The image needs to be in landscape orientation.
-
-The image needs to be in a 16:9 aspect ratio.
-
-Do not consider any input from the following that is not safe for work or appropriate for children.
-{disallow_list}
-"""
-
-prompt = f"{meta_prompt}
-Create an image of a bunny on a horse, holding a lollipop"
-
-# TODO إضافة طلب لإنشاء صورة
-```
-
-من الموجه أعلاه، يمكنك أن ترى كيف أن جميع الصور التي تم إنشاؤها تأخذ بعين الاعتبار الموجه الفوقي.
-
-## المهمة - لنمكن الطلاب
-
-قدمنا Edu4All في بداية هذا الدرس. الآن حان الوقت لتمكين الطلاب من توليد صور لتقييماتهم.
-
-
-سيقوم الطلاب بإنشاء صور لتقييماتهم تحتوي على معالم أثرية، والمعالم التي سيتم اختيارها تعود للطلاب. يُطلب من الطلاب استخدام إبداعهم في هذه المهمة لوضع هذه المعالم في سياقات مختلفة.
-
-## الحل
-
-إليكم أحد الحلول الممكنة:
-
-```python
-import openai
-import os
-import requests
-from PIL import Image
-import dotenv
-from openai import AzureOpenAI
-# استيراد dotenv
-dotenv.load_dotenv()
-
-# الحصول على نقطة النهاية والمفتاح من متغيرات البيئة
-client = AzureOpenAI(
-  azure_endpoint = os.environ["AZURE_OPENAI_ENDPOINT"],
-  api_key=os.environ['AZURE_OPENAI_API_KEY'],
-  api_version = "2024-10-21"
-  )
-
-
-disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language, adult humor, adult jokes, adult situations, adult"
+disallow_list = "swords, violence, blood, gore, nudity, sexual content, adult content, adult themes, adult language"
 
 meta_prompt = f"""You are an assistant designer that creates images for children.
 
 The image needs to be safe for work and appropriate for children.
+The image needs to be in color, in landscape orientation, and in a 16:9 aspect ratio.
 
-The image needs to be in color.
-
-The image needs to be in landscape orientation.
-
-The image needs to be in a 16:9 aspect ratio.
-
-Do not consider any input from the following that is not safe for work or appropriate for children.
+Do not consider any input that is not safe for work or appropriate for children, including:
 {disallow_list}
 """
 
-prompt = f"""{meta_prompt}
-Generate monument of the Arc of Triumph in Paris, France, in the evening light with a small child holding a Teddy looks on.
-"""
-
-try:
-    # إنشاء صورة باستخدام واجهة برمجة تطبيقات توليد الصور
-    generation_response = client.images.generate(
-        prompt=prompt,    # أدخل نص المطالبة هنا
-        size='1024x1024',
-        n=1,
-    )
-    # تعيين الدليل للصورة المخزنة
-    image_dir = os.path.join(os.curdir, 'images')
-
-    # إذا لم يكن الدليل موجودًا، قم بإنشائه
-    if not os.path.isdir(image_dir):
-        os.mkdir(image_dir)
-
-    # تهيئة مسار الصورة (ملاحظة: يجب أن يكون نوع الملف png)
-    image_path = os.path.join(image_dir, 'generated-image.png')
-
-    # استرداد الصورة المولدة
-    image_url = generation_response.data[0].url  # استخراج رابط الصورة من الاستجابة
-    generated_image = requests.get(image_url).content  # تنزيل الصورة
-    with open(image_path, "wb") as image_file:
-        image_file.write(generated_image)
-
-    # عرض الصورة في عارض الصور الافتراضي
-    image = Image.open(image_path)
-    image.show()
-
-# التقاط الاستثناءات
-except openai.BadRequestError as err:
-    print(err)
+prompt = f"{meta_prompt}\nCreate an image of a bunny on a horse, holding a lollipop"
+# مرر `prompt` إلى client.images.generate(...)
 ```
+
+الآن كل صورة تُولد ضمن الحدود التي يحددها الميتا-موجه. اجمع ذلك مع مرشحات المحتوى المدمجة في Microsoft Foundry لتوفير دفاع متعدد الطبقات.
+
+## المهمة - لنسهل على الطلاب
+
+يحتاج طلاب Edu4All لصور لتقييماتهم. ابنِ تطبيقًا يولد صورًا لـ **الآثار** (اختيار الآثار يعود لك) موضوعًا في سياقات مختلفة ومبتكرة - على سبيل المثال، معلم شهير عند غروب الشمس مع طفل يطالع.
+
+جرب بنفسك، ثم قارن مع الحلول المرجعية:
+
+- بايثون (أزور): [aoai-solution.py](../../../09-building-image-applications/python/aoai-solution.py)
+- تطبيق توليد كامل (أزور) بايثون: [aoai-app.py](../../../09-building-image-applications/python/aoai-app.py)
+- بايثون (OpenAI): [oai-app.py](../../../09-building-image-applications/python/oai-app.py)
+- TypeScript (أزور): [typescript/image-generation-app](../../../09-building-image-applications/typescript/image-generation-app)
+- .NET (أزور): [dotnet/notebook-azure-openai.dib](../../../09-building-image-applications/dotnet/notebook-azure-openai.dib)
+
+أيضًا اعمل عبر دفاتر الملاحظات في [python/](../../../09-building-image-applications/python) (`aoai-assignment.ipynb` للأزور، و`oai-assignment.ipynb` لـ OpenAI).
 
 ## عمل رائع! استمر في التعلم
 
-بعد إتمام هذا الدرس، اطلع على [مجموعة تعلم الذكاء الاصطناعي التوليدي](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) لمواصلة تعزيز معرفتك بالذكاء الاصطناعي التوليدي!
+بعد إكمال هذا الدرس، تحقق من [مجموعة تعلم الذكاء الاصطناعي التوليدي](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) لتستمر في تطوير معرفتك بالذكاء الاصطناعي التوليدي!
 
-توجه إلى الدرس 10 حيث سنستعرض كيفية [بناء تطبيقات الذكاء الاصطناعي باستخدام الأكواد المنخفضة](../10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)
+توجه إلى الدرس 10 للاستمرار في التعلم.
 
 ---
 
