@@ -1,10 +1,10 @@
-# Vorbereitung der Transkriptionsdaten
+# Transkriptionsdatenvorbereitung
 
-Die Skripte zur Vorbereitung der Transkriptionsdaten laden YouTube-Videoabschriften herunter und bereiten sie für die Verwendung mit dem Beispiel Semantic Search mit OpenAI-Einbettungen und Funktionen vor.
+Die Skripte zur Vorbereitung der Transkriptionsdaten laden YouTube-Video-Transkripte herunter und bereiten sie für die Verwendung mit dem Beispiel „Semantische Suche mit OpenAI-Embeddings und Funktionen“ vor.
 
-Die Skripte zur Vorbereitung der Transkriptionsdaten wurden auf den neuesten Versionen von Windows 11, macOS Ventura und Ubuntu 22.04 (und höher) getestet.
+Die Skripte zur Vorbereitung der Transkriptionsdaten wurden unter den neuesten Versionen von Windows 11, macOS Ventura und Ubuntu 22.04 (und höher) getestet.
 
-## Erstellen der benötigten Azure OpenAI Service-Ressourcen
+## Erstellen der erforderlichen Azure OpenAI Service-Ressourcen
 
 > [!IMPORTANT]
 > Wir empfehlen, die Azure CLI auf die neueste Version zu aktualisieren, um die Kompatibilität mit OpenAI sicherzustellen.
@@ -13,9 +13,9 @@ Die Skripte zur Vorbereitung der Transkriptionsdaten wurden auf den neuesten Ver
 1. Erstellen Sie eine Ressourcengruppe
 
 > [!NOTE]
-> Für diese Anleitung verwenden wir die Ressourcengruppe mit dem Namen "semantic-video-search" in East US.
-> Sie können den Namen der Ressourcengruppe ändern, aber wenn Sie den Standort der Ressourcen ändern, 
-> prüfen Sie die [Modell-Verfügbarkeitstabelle](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
+> Für diese Anleitung verwenden wir die Ressourcengruppe mit dem Namen „semantic-video-search“ in East US.
+> Sie können den Namen der Ressourcengruppe ändern, aber wenn Sie den Speicherort der Ressourcen ändern,
+> überprüfen Sie die [Modellverfügbarkeitstabelle](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
@@ -38,8 +38,8 @@ az cognitiveservices account keys list --name semantic-video-openai \
 ```
 
 1. Stellen Sie die folgenden Modelle bereit:
-   - `text-embedding-ada-002` Version `2` oder höher, benannt `text-embedding-ada-002`
-   - `gpt-4o-mini` benannt `gpt-4o-mini`
+   - `text-embedding-ada-002` Version `2` oder höher, genannt `text-embedding-ada-002`
+   - `gpt-5-mini`, genannt `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,8 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -66,7 +66,7 @@ az cognitiveservices account deployment create \
 
 ## Umgebungsvariablen
 
-Die folgenden Umgebungsvariablen sind erforderlich, um die Skripte zur Vorbereitung der YouTube-Transkriptionsdaten auszuführen.
+Die folgenden Umgebungsvariablen sind erforderlich, um die Skripte zur Vorbereitung von YouTube-Transkriptionsdaten auszuführen.
 
 ### Unter Windows
 
@@ -80,18 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-<!-- Sie können die Umgebungsvariablen auch in Ihr PowerShell-Profil einfügen.
+<!-- Sie können die Umgebungsvariablen Ihrem PowerShell-Profil hinzufügen.
 
 ```powershell
 $env:AZURE_OPENAI_API_KEY = "<Ihr Azure OpenAI Service API-Schlüssel>"
-$env:AZURE_OPENAI_ENDPOINT = "<Ihr Azure OpenAI Service Endpunkt>"
+$env:AZURE_OPENAI_ENDPOINT = "<Ihr Azure OpenAI Service-Endpunkt>"
 $env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<Ihr Azure OpenAI Service Modellbereitstellungsname>"
-$env:GOOGLE_DEVELOPER_API_KEY = "<Ihr Google Entwickler API-Schlüssel>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<Ihr Google Developer API-Schlüssel>"
 ``` -->
 
 ### Unter Linux und macOS
 
-Es wird empfohlen, die folgenden Exporte zu Ihrer `~/.bashrc`- oder `~/.zshrc`-Datei hinzuzufügen.
+Es wird empfohlen, die folgenden Exporte zu Ihrer `~/.bashrc` oder `~/.zshrc` Datei hinzuzufügen.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -100,22 +100,22 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## Installieren der benötigten Python-Bibliotheken
+## Installation der erforderlichen Python-Bibliotheken
 
-1. Installieren Sie den [Git-Client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), falls noch nicht installiert.
-1. Klonen Sie die Beispielanwendung aus einem `Terminal`-Fenster in Ihren bevorzugten Repository-Ordner.
+1. Installieren Sie den [Git-Client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), falls er noch nicht installiert ist.
+1. Klonen Sie das Beispiel aus einem `Terminal`-Fenster in Ihren bevorzugten Repository-Ordner.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
     ```
 
-1. Navigieren Sie in den Ordner `data_prep`.
+1. Navigieren Sie zum `data_prep`-Ordner.
 
    ```bash
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. Erstellen Sie eine Python-Virtual-Umgebung.
+1. Erstellen Sie eine Python-virtuelle Umgebung.
 
     Unter Windows:
 
@@ -129,7 +129,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     python3 -m venv .venv
     ```
 
-1. Aktivieren Sie die Python-Virtual-Umgebung.
+1. Aktivieren Sie die Python-virtuelle Umgebung.
 
    Unter Windows:
 
@@ -143,7 +143,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    source .venv/bin/activate
    ```
 
-1. Installieren Sie die benötigten Bibliotheken.
+1. Installieren Sie die erforderlichen Bibliotheken.
 
    Unter Windows:
 
@@ -157,7 +157,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## Ausführen der Skripte zur Vorbereitung der YouTube-Transkriptionsdaten
+## Führen Sie die Skripte zur Vorbereitung der YouTube-Transkriptionsdaten aus
 
 ### Unter Windows
 

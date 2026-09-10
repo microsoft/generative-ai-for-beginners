@@ -64,7 +64,7 @@ New `shared/python/` module with:
    - Add JSDoc comments to all JavaScript/TypeScript functions
 
 3. **Testing Framework**
-   - Add pytest configuration and example tests
+   - Add pytest configuration and example tests _(done: pytest config in `pyproject.toml`; example tests for the shared utilities in [`tests/`](../../../tests) run in CI)_
    - Add Jest configuration for JavaScript/TypeScript
 
 ---
@@ -107,13 +107,18 @@ New `shared/python/` module with:
 
 ## 4. API Modernization
 
-### 4.1 Deprecated API Patterns to Update
+### 4.1 Deprecated API Patterns (Migration Completed)
 
-| Old Pattern | New Pattern | Files Affected |
-|-------------|-------------|----------------|
-| `openai.api_type = "azure"` | `AzureOpenAI()` client | Multiple scripts in `08-building-search-applications/` |
-| `openai.ChatCompletion.create()` | `client.chat.completions.create()` | Multiple notebooks |
-| `df.append()` (pandas) | `pd.concat()` | RAG notebook |
+All Python and TypeScript **chat** samples have been migrated from the Chat Completions API to the **Responses API** (`client.responses.create(...)` → `response.output_text`).
+
+| Old Pattern | New Pattern | Status |
+|-------------|-------------|--------|
+| `openai.api_type = "azure"` / `AzureOpenAI()` (chat) | `OpenAI(base_url="<endpoint>/openai/v1/")` (Responses API) | Completed |
+| `openai.ChatCompletion.create()` / `client.chat.completions.create()` | `client.responses.create(input=...)` → `response.output_text` | Completed |
+| `@azure/openai` `OpenAIClient.getChatCompletions()` (TypeScript) | `openai` package `client.responses.create()` → `response.output_text` | Completed |
+| `df.append()` (pandas) | `pd.concat()` | Completed |
+
+> **Note:** Microsoft Foundry Models samples that use the `azure-ai-inference` / `@azure-rest/ai-inference` SDK (`client.complete()`) remain on the Model Inference API, which does not support the Responses API. `AzureOpenAI()` is intentionally retained where still valid (embeddings and image generation).
 
 ### 4.2 New API Features to Demonstrate
 
@@ -122,13 +127,13 @@ New `shared/python/` module with:
    - Function calling with strict schemas
 
 2. **Vision Capabilities**
-   - Image analysis with GPT-4V
+   - Image analysis with GPT-4o (vision)
    - Multi-modal prompts
 
-3. **Assistants API**
+3. **Responses API Built-in Tools** (supersedes the legacy Assistants API)
    - Code interpreter
    - File search
-   - Custom tools
+   - Web search and custom tools
 
 ---
 
@@ -136,7 +141,7 @@ New `shared/python/` module with:
 
 ### 5.1 CI/CD Enhancements
 
-Current workflows handle markdown validation. Recommended additions:
+Implemented in [`.github/workflows/code-quality.yml`](../../../.github/workflows/code-quality.yml): Python linting/formatting (Ruff + Black) is **enforced** on the maintained `shared/` utilities module and runs **advisory** across the rest of the curriculum, plus an advisory ESLint pass for JavaScript/TypeScript. The illustrative baseline was:
 
 ```yaml
 # .github/workflows/code-quality.yml
@@ -169,6 +174,8 @@ jobs:
 
 ### 5.2 Security Scanning
 
+Implemented in [`.github/workflows/security.yml`](../../../.github/workflows/security.yml): CodeQL analysis for Python and JavaScript/TypeScript (on push, pull request, and a weekly schedule) plus a dependency review on pull requests. The illustrative baseline was:
+
 ```yaml
 # .github/workflows/security.yml
 name: Security Scan
@@ -198,7 +205,7 @@ jobs:
 
 ### 6.1 DevContainer Enhancements
 
-Update `.devcontainer/devcontainer.json`:
+Implemented in [`.devcontainer/devcontainer.json`](../../../.devcontainer/devcontainer.json) and [`.devcontainer/post-create.sh`](../../../.devcontainer/post-create.sh): the container now ships Pylance, the Black formatter, Ruff, ESLint, Prettier, and Copilot extensions, enables format-on-save wired to the repo's Black/Prettier config, and installs the developer tooling (`ruff`, `black`, `mypy`, `pytest`) so the [code-quality workflow](../../../.github/workflows/code-quality.yml) can be reproduced locally. The `mcr.microsoft.com/devcontainers/universal` base image already bundles Python and Node, so no extra features are required. The illustrative baseline was:
 
 ```json
 {
@@ -289,16 +296,13 @@ Add examples demonstrating:
 
 ### 9.1 Current Translation Status
 
-| Language | Status |
-|----------|--------|
-| English | Complete |
-| Chinese (Simplified) | Complete |
-| Japanese | Complete |
-| Korean | Complete |
-| Spanish | Partial |
-| Portuguese | Partial |
-| Turkish | Partial |
-| Polish | Partial |
+All translations are **complete** and generated automatically by the [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst), which produces and keeps 50+ language versions of the curriculum in sync with the English source. Translated content lives under `translations/` and localized images under `translated_images/`; the full list of available languages is published at the top of the repository README.
+
+| Aspect | Status |
+|--------|--------|
+| Translation coverage | Complete — 50+ languages, all lessons |
+| Translation method | Automated via [Azure Co-op Translator](https://github.com/Azure/co-op-translator?WT.mc_id=academic-105485-koreyst) |
+| Kept in sync with English source | Yes — regenerated automatically |
 
 ### 9.2 Accessibility Improvements
 
@@ -318,15 +322,15 @@ Add examples demonstrating:
 - [x] Document security guidelines
 
 ### Phase 2: Short-term (Week 3-4)
-- [ ] Update deprecated API patterns
-- [ ] Add type hints to all Python files
-- [ ] Add CI/CD workflows for code quality
-- [ ] Create security scanning workflow
+- [x] Update deprecated API patterns (Chat Completions → Responses API, Python + TypeScript)
+- [ ] Add type hints to all Python files (done for the maintained `shared/` module; lesson samples kept simple)
+- [x] Add CI/CD workflows for code quality
+- [x] Create security scanning workflow
 
 ### Phase 3: Medium-term (Month 2-3)
 - [ ] Add new security lesson
 - [ ] Add production deployment lesson
-- [ ] Improve DevContainer setup
+- [x] Improve DevContainer setup
 - [ ] Add interactive demos
 
 ### Phase 4: Long-term (Month 4+)
@@ -346,6 +350,6 @@ For questions or contributions, please open an issue on the GitHub repository.
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+**Disclaimer**:
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

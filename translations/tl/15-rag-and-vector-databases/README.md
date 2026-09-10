@@ -1,90 +1,90 @@
-# Retrieval Augmented Generation (RAG) at Vector Databases
+# Retrieval Augmented Generation (RAG) at Mga Vector Database
 
-[![Retrieval Augmented Generation (RAG) and Vector Databases](../../../translated_images/tl/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) at Mga Vector Database](../../../translated_images/tl/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
-Sa lesson tungkol sa mga search application, pansamantala nating natutunan kung paano i-integrate ang sarili mong data sa Large Language Models (LLMs). Sa lesson na ito, mas palalalimin pa natin ang mga konsepto ng grounding ng iyong data sa iyong LLM application, ang mekaniks ng proseso at mga pamamaraan para sa pag-iimbak ng data, kabilang ang embeddings at teksto.
+Sa aralin tungkol sa mga aplikasyon ng paghahanap, bahagya nating natutunan kung paano isama ang iyong sariling data sa Malalaking Language Models (LLMs). Sa araling ito, hihimayin pa natin ang mga konsepto ng pag-ground ng iyong data sa iyong aplikasyon ng LLM, ang mekaniks ng proseso, at mga pamamaraan para sa pag-iimbak ng data, kabilang ang mga embeddings at teksto.
 
-> **Darating na Video**
+> **Malapit nang Ilabas ang Video**
 
 ## Panimula
 
-Sa lesson na ito tatalakayin natin ang mga sumusunod:
+Sa araling ito, tatalakayin natin ang mga sumusunod:
 
 - Isang panimula sa RAG, kung ano ito at bakit ito ginagamit sa AI (artificial intelligence).
 
-- Pag-unawa sa kung ano ang mga vector database at paggawa ng isa para sa ating aplikasyon.
+- Pag-unawa kung ano ang mga vector database at paggawa ng isa para sa ating aplikasyon.
 
-- Isang praktikal na halimbawa kung paano i-integrate ang RAG sa isang aplikasyon.
+- Isang praktikal na halimbawa kung paano isasama ang RAG sa isang aplikasyon.
 
-## Mga Layunin sa Pag-aaral
+## Mga Layunin sa Pagkatuto
 
-Pagkatapos makumpleto ang lesson na ito, magagawa mong:
+Pagkatapos makumpleto ang araling ito, magagawa mong:
 
 - Ipaliwanag ang kahalagahan ng RAG sa pagkuha at pagproseso ng data.
 
-- I-set up ang RAG na aplikasyon at i-ground ang iyong data sa isang LLM.
+- I-set up ang aplikasyon ng RAG at i-ground ang iyong data sa isang LLM
 
-- Epektibong integrasyon ng RAG at mga Vector Database sa mga LLM Application.
+- Mabisang pagsasama ng RAG at Mga Vector Database sa Mga Aplikasyon ng LLM.
 
-## Ang Ating Senaryo: pagpapahusay sa ating mga LLM gamit ang sariling data
+## Ang Ating Senaryo: pagpapahusay ng ating mga LLM gamit ang sariling data
 
-Para sa lesson na ito, nais nating magdagdag ng ating sariling mga tala sa education startup, na nagpapahintulot sa chatbot na makakuha ng mas maraming impormasyon tungkol sa iba't ibang paksa. Gamit ang mga tala na mayroon tayo, makakagawa ang mga mag-aaral ng mas mahusay na pag-aaral at mas mauunawaan ang iba't ibang mga paksa, na nagpapadali sa pag-review para sa kanilang mga pagsusulit. Upang likhain ang ating senaryo, gagamitin natin:
+Para sa araling ito, nais nating idagdag ang sariling mga tala sa edukasyong startup, na nagpapahintulot sa chatbot na makakuha ng mas maraming impormasyon tungkol sa iba't ibang paksa. Gamit ang mga tala na mayroon tayo, mas mapag-aaralan ng mga mag-aaral nang mas mabuti at maiintindihan ang iba't ibang paksa, na nagpapadali ng pag-uulit para sa kanilang mga pagsusulit. Para likhain ang ating senaryo, gagamitin natin ang:
 
-- `Azure OpenAI:` ang LLM na gagamitin natin para likhain ang ating chatbot
+- `Azure OpenAI:` ang LLM na gagamitin natin para likhain ang chatbot
 
-- `AI for beginners' lesson on Neural Networks`: ito ang magiging data na i-ground natin sa ating LLM
+- `Aralin ng AI para sa mga baguhan sa Neural Networks` : ito ang magiging data na pag-uugatang ng ating LLM
 
-- `Azure AI Search` at `Azure Cosmos DB:` vector database para i-store ang ating data at gumawa ng search index
+- `Azure AI Search` at `Azure Cosmos DB:` vector database para itago ang ating data at gumawa ng search index
 
-Magagawa ng mga user na gumawa ng practice quizzes mula sa kanilang mga tala, flash cards para sa revision at isa-summarize ito sa mga maikling overview. Para magsimula, tignan muna natin kung ano ang RAG at paano ito gumagana:
+Magagawa ng mga user na gumawa ng mga practice quiz mula sa kanilang mga tala, revision flash cards at buodin ito sa mga maigsi at kontekstuwal na buod. Upang magsimula, tingnan muna natin kung ano ang RAG at paano ito gumagana:
 
 ## Retrieval Augmented Generation (RAG)
 
-Ang isang LLM powered chatbot ay nagpo-process ng mga prompt mula sa user para makabuo ng mga sagot. Ito ay dinisenyo upang maging interactive at nakikipag-ugnayan sa mga user sa malawak na hanay ng mga paksa. Gayunpaman, ang mga sagot nito ay limitado lamang sa kontekstong ibinibigay at sa pangunahin nitong training data. Halimbawa, ang kaalaman ng GPT-4 ay naputol noong Setyembre 2021, ibig sabihin, wala itong kaalaman sa mga pangyayari pagkatapos ng panahong iyon. Bukod dito, ang data na ginamit para i-train ang mga LLM ay hindi kasama ang mga kumpidensyal na impormasyon tulad ng personal na mga tala o manual ng produkto ng isang kumpanya.
+Ang chatbot na pinalakas ng LLM ay nagpoproseso ng mga prompt ng user upang bumuo ng mga sagot. Ito ay dinisenyo upang maging interactive at nakikipag-ugnayan sa mga user sa malawak na hanay ng mga paksa. Gayunpaman, ang mga sagot nito ay limitado sa kontekstong ibinigay at batay sa pundasyong data ng pagsasanay. Halimbawa, ang cutoff ng kaalaman ng GPT-4 ay Setyembre 2021, nangangahulugang kulang ito sa kaalaman tungkol sa mga pangyayaring naganap pagkatapos ng panahong iyon. Bukod dito, ang data na ginamit para sanayin ang mga LLM ay hindi kasama ang mga kumpidensyal na impormasyon tulad ng personal na mga tala o manu-manong gamit ng kumpanya.
 
-### Paano gumagana ang RAG (Retrieval Augmented Generation)
+### Paano Gumagana ang mga RAG (Retrieval Augmented Generation)
 
 ![drawing showing how RAGs work](../../../translated_images/tl/how-rag-works.f5d0ff63942bd3a6.webp)
 
-Halimbawa, nais mong mag-deploy ng isang chatbot na gumagawa ng mga pagsusulit mula sa iyong mga tala, kailangan mo ng koneksyon sa knowledge base. Dito pumapasok ang RAG. Gumagana ang mga RAG ng ganito:
+Ipagpalagay na nais mong mag-deploy ng chatbot na lumilikha ng mga quiz mula sa iyong mga tala, kakailanganin mo ng koneksyon sa knowledge base. Dito pumapasok ang RAG bilang solusyon. Ang mga RAG ay gumagana sa mga sumusunod:
 
-- **Knowledge base:** Bago ang retrieval, kailangang i-ingest at i-preprocess ang mga dokumentong ito, karaniwang hinahati ang malalaking dokumento sa mas maliliit na chunks, kino-convert sila sa text embedding at ini-store sa database.
+- **Knowledge base:** Bago ang retrieval, kailangang ma-ingest at ma-preprocess ang mga dokumentong ito, karaniwang hinahati ang malalaking dokumento sa mas maliliit na bahagi, binabago ito sa text embedding at iniimbak sa database.
 
-- **User Query:** ang user ay nagtatanong
+- **User Query:** nagtatanong ang user ng isang katanungan
 
-- **Retrieval:** Kapag may tanong ang user, kinukuha ng embedding model ang kaugnay na impormasyon mula sa knowledge base para magbigay ng dagdag na konteksto na isasama sa prompt.
+- **Retrieval:** Kapag may tanong ang user, kinukuha ng embedding model ang kaugnay na impormasyon mula sa ating knowledge base upang magbigay ng karagdagang konteksto na isasama sa prompt.
 
-- **Augmented Generation:** pinapaganda ng LLM ang kanyang sagot base sa data na nakuha. Pinapayagan nito ang sagot na hindi lang naka-base sa pre-trained data kundi pati na rin sa kaugnay na impormasyon mula sa naidagdag na konteksto. Ginagamit ang retrieved data para ma-augment ang sagot ng LLM. Pagkatapos nito, ibinabalik ng LLM ang sagot sa tanong ng user.
+- **Augmented Generation:** pinahusay ng LLM ang sagot nito base sa nakuhang data. Pinapayagan nito na ang sagot na mabubuo ay hindi lamang batay sa pre-trained na data kundi pati na rin sa relevanteng impormasyon mula sa dagdag na konteksto. Ginagamit ang nakuha na data upang dagdagan ang mga sagot ng LLM. Pagkatapos, ibinabalik ng LLM ang sagot sa tanong ng user.
 
 ![drawing showing how RAGs architecture](../../../translated_images/tl/encoder-decode.f2658c25d0eadee2.webp)
 
-Ang arkitektura para sa mga RAG ay ipinatutupad gamit ang transformers na binubuo ng dalawang bahagi: encoder at decoder. Halimbawa, kapag may tanong ang user, ang input na teksto ay ini-encode sa mga vectors na kumakatawan sa kahulugan ng mga salita at ang vectors ay i-de decode sa ating document index at bumubuo ng bagong teksto batay sa tanong ng user. Ginagamit ng LLM ang parehong encoder-decoder model para gumawa ng output.
+Ang arkitektura ng mga RAG ay ipinatutupad gamit ang transformers na binubuo ng dalawang bahagi: isang encoder at isang decoder. Halimbawa, kapag nagtatanong ang user, ang input na teksto ay ‘encoded’ sa mga vector na kumakatawan sa kahulugan ng mga salita at ang mga vector ay ‘decoded’ sa index ng dokumento at bumubuo ng bagong teksto base sa tanong ng user. Ginagamit ng LLM ang parehong encoder-decoder model para bumuo ng output.
 
-May dalawang pamamaraan sa pag-implementa ng RAG ayon sa mungkahing papel: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst):
+Dalawang pamamaraan sa pagpapatupad ng RAG ayon sa inilahad na papel: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) ay:
 
-- **_RAG-Sequence_** gamit ang mga retrieved na dokumento para hulaan ang pinakamainam na sagot sa tanong ng user
+- **_RAG-Sequence_** gamit ang nakuha na dokumento upang hulaan ang pinakamahusay na posibleng sagot sa tanong ng user
 
-- **RAG-Token** gamit ang mga dokumento para gumawa ng susunod na token, pagkatapos ay i-retrieve ang mga ito para sagutin ang query ng user
+- **RAG-Token** gamit ang mga dokumento upang bumuo ng susunod na token, pagkatapos ay kunin ang mga ito upang sagutin ang tanong ng user
 
-### Bakit mo gagamitin ang RAG? 
+### Bakit gagamit ng RAG? 
 
-- **Kayamanan ng impormasyon:** Tinitiyak na ang mga sagot sa teksto ay napapanahon at kasalukuyan. Kaya nito pinapahusay ang performance sa mga domain-specific na gawain sa pamamagitan ng pag-access sa internal knowledge base.
+- **Yamang impormasyon:** tinitiyak na ang mga sagot na teksto ay napapanahon at kasalukuyan. Pinapahusay nito ang performans sa mga domain specific tasks sa pamamagitan ng pag-access sa internal na knowledge base.
 
-- Binabawasan ang peke o gawang sagot sa pamamagitan ng paggamit ng **pinapatunayang data** mula sa knowledge base para magbigay ng konteksto sa mga query ng user.
+- Binabawasan ang paggawa ng imbento sa pamamagitan ng paggamit ng **mapapatunayang data** sa knowledge base upang magbigay ng konteksto sa mga tanong ng user.
 
-- Ito ay **cost effective** dahil mas mura ito kumpara sa fine-tuning ng isang LLM.
+- Ito ay **matiwasay na gastusin** dahil mas mura ito kumpara sa pag-fine tune ng LLM.
 
-## Paglikha ng knowledge base
+## Paggawa ng knowledge base
 
-Ang ating aplikasyon ay base sa ating personal na data, ibig sabihin, ang lesson na Neural Network mula sa AI For Beginners na kurikulum.
+Ang ating aplikasyon ay batay sa ating personal na data i.e., ang Aralin sa Neural Network sa kurikulum ng AI Para sa Mga Baguhan.
 
-### Vector Databases
+### Mga Vector Database
 
-Ang vector database, hindi tulad ng tradisyunal na mga database, ay isang espesyal na database na dinisenyo para mag-imbak, mangasiwa at maghanap ng embedded vectors. Iniimbak nito ang numerikal na representasyon ng mga dokumento. Ang paghahati ng data sa mga numerikal na embeddings ay nagpapadali para sa ating AI system na maunawaan at ma-proseso ang data.
+Ang vector database, hindi tulad ng mga tradisyunal na database, ay isang espesyal na database na disenyo para mag-imbak, mag-manage at maghanap ng embedded vectors. Iniimbak nito ang numerikal na representasyon ng mga dokumento. Ang paghahati ng data sa mga numerikal na embedding ay nagpapadali para sa ating AI system na maunawaan at maproseso ang data.
 
-Iniimbak natin ang ating mga embeddings sa vector databases dahil may limitasyon ang mga LLM sa bilang ng tokens na tinatanggap nila bilang input. Dahil hindi mo maipapasa ang buong embeddings sa isang LLM, kailangang hatiin ang mga ito sa chunks at kapag may tanong ang user, ibabalik ang mga embedding na pinakamalapit sa tanong kasama ang prompt. Nakakabawas din ang chunking sa mga gastusin sa bilang ng tokens na ipinapasa sa LLM.
+Iniimbak natin ang ating mga embedding sa vector database dahil may limitasyon ang mga LLM sa bilang ng mga token na tinatanggap bilang input. Dahil hindi mo maipapasa ang buong embedding sa isang LLM, kailangan nating hatiin ito sa mga bahagi at kapag nagtatanong ang user, ibabalik ang mga embedding na pinaka-akma sa tanong kasama ang prompt. Nakakatulong din ang paghahati upang mabawasan ang gastos sa bilang ng token na ipinapadaan sa LLM.
 
-Ilan sa mga kilalang vector databases ay Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant at DeepLake. Maaari kang gumawa ng Azure Cosmos DB model gamit ang Azure CLI gamit ang sumusunod na utos:
+Ilan sa mga kilalang vector database ay ang Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant at DeepLake. Maaari kang gumawa ng Azure Cosmos DB model gamit ang Azure CLI sa pamamagitan ng sumusunod na utos:
 
 ```bash
 az login
@@ -93,9 +93,9 @@ az cosmosdb create -n <cosmos-db-name> -r <resource-group-name>
 az cosmosdb list-keys -n <cosmos-db-name> -g <resource-group-name>
 ```
 
-### Mula sa teksto patungong embeddings
+### Mula sa teksto patungo sa embeddings
 
-Bago natin i-store ang data, kailangang i-convert ito sa vector embeddings bago ito ilagay sa database. Kung gumagawa ka sa malalaking dokumento o mahahabang teksto, maaari mo itong hatiin base sa mga inaasahang query. Pwede itong gawin sa antas ng pangungusap o talata. Dahil kumukuha ng kahulugan ang chunking mula sa mga salitang nakapaligid dito, maaari kang magdagdag ng ibang konteksto sa chunk, halimbawa ay ang pamagat ng dokumento o isama ang ilang teksto bago o pagkatapos ng chunk. Maaari mong chunkin ang data gaya ng sumusunod:
+Bago tayo mag-imbak ng data, kailangan muna itong i-convert sa vector embeddings bago ito maiimbak sa database. Kung nagtatrabaho ka sa malalaki o mahahabang teksto, maaari mong hatiin ito ayon sa mga tanong na inaasahan mo. Maaaring hatiin ang mga ito sa antas ng pangungusap o talata. Dahil ang paghahati ay nagmula sa kahulugan ng mga salita sa paligid, maaari kang magdagdag ng iba pang konteksto sa isang chunk, halimbawa, sa pamamagitan ng pagdagdag ng pamagat ng dokumento o paglakip ng ilang teksto bago o pagkatapos ng chunk. Maaari mong hatiin ang data tulad ng sumusunod:
 
 ```python
 def split_text(text, max_length, min_length):
@@ -109,68 +109,68 @@ def split_text(text, max_length, min_length):
             chunks.append(' '.join(current_chunk))
             current_chunk = []
 
-    # Kung ang huling bahagi ay hindi umabot sa minimum na haba, idagdag pa rin ito
+    # Kung ang huling bahagi ay hindi umabot sa pinakamababang haba, idagdag pa rin ito
     if current_chunk:
         chunks.append(' '.join(current_chunk))
 
     return chunks
 ```
 
-Kapag nakahati na, maaari natin i-embed ang ating teksto gamit ang iba't ibang embedding models. Ilan sa mga modelong pwede mong gamitin ay word2vec, ada-002 mula sa OpenAI, Azure Computer Vision at marami pang iba. Ang pagpili ng modelong gagamitin ay depende sa lenggwahe na ginagamit mo, uri ng content na ie-encode (teksto/larawan/audio), laki ng input na maaaring i-encode at haba ng output embedding.
+Kapag nahati na, maaari nating i-embed ang ating teksto gamit ang iba't ibang embedding model. Ilan sa mga modelong maaaring gamitin ay: word2vec, ada-002 ng OpenAI, Azure Computer Vision at marami pang iba. Ang pagpili ng modelong gagamitin ay depende sa wika na ginagamit mo, uri ng content (teksto/larawan/audio), laki ng input na kaya nitong i-encode at haba ng embedding output.
 
-Halimbawa ng embedded na teksto gamit ang OpenAI na `text-embedding-ada-002` model ay:
+Isang halimbawa ng naka-embed na teksto gamit ang OpenAI na `text-embedding-ada-002` na modelo ay:
 ![an embedding of the word cat](../../../translated_images/tl/cat.74cbd7946bc9ca38.webp)
 
-## Retrieval at Vector Search
+## Pagkuha at Paghahanap gamit ang Vector
 
-Kapag may tanong ang user, kino-convert muna ng retriever ito sa vector gamit ang query encoder, pagkatapos hinahanap nito sa ating document search index ang mga kaugnay na vectors sa dokumento na may kinalaman sa input. Pagkatapos nito, kino-convert nito ang parehong input vector at document vectors pabalik sa teksto at ipinapasa ito sa LLM.
+Kapag nagtatanong ang user, ini-transform ng retriever ito sa vector gamit ang query encoder, pagkatapos ay hahanapin nito sa dokumento sa index ng paghahanap ang mga vector na may kaugnayan sa input. Kapag tapos na, iko-convert nito parehong ang input vector at mga document vector sa teksto at ipapasa ito sa LLM.
 
-### Retrieval
+### Pagkuha (Retrieval)
 
-Nangyayari ang retrieval kapag tinatangka ng sistema na mabilis na hanapin ang mga dokumento mula sa index na tumutugon sa paghahanap. Ang layunin ng retriever ay makuha ang mga dokumento na gagamitin para magbigay ng konteksto at ma-ground ang LLM sa iyong data.
+Nangyayari ang retrieval kapag sinusubukan ng sistema na mabilis mahanap ang mga dokumento mula sa index na tumutugma sa criteria ng paghahanap. Layunin ng retriever na makuha ang mga dokumento na gagamitin upang magbigay ng konteksto at i-ground ang LLM sa iyong data.
 
-May ilang paraan para magsagawa ng paghahanap sa ating database gaya ng:
+Mayroong ilang paraan upang magsagawa ng paghahanap sa ating database katulad ng:
 
-- **Keyword search** - ginagamit para sa text searches
+- **Keyword search** - ginagamit para sa paghahanap sa teksto
 
-- **Vector search** - kino-convert ang mga dokumento mula sa teksto patungo sa vector representations gamit ang embedding models, na nagpapahintulot ng **semantic search** gamit ang kahulugan ng mga salita. Ginagawa ang retrieval sa pamamagitan ng pag-query sa mga dokumento na may vector representations na pinakamalapit sa tanong ng user.
+- **Vector search** - nagko-convert ng mga dokumento mula sa teksto patungong vector representations gamit ang embedding models, na nagpapahintulot ng **semantic search** gamit ang kahulugan ng mga salita. Ang retrieval ay gagawin sa pamamagitan ng pag-query sa mga dokumentong ang vector representation ay pinakamalapit sa tanong ng user.
 
-- **Hybrid** - kombinasyon ng parehong keyword at vector search.
+- **Hybrid** - kumbinasyon ng keyword at vector search.
 
-Isang hamon sa retrieval ang pagkakaroon ng walang katulad na sagot sa query sa database, kaya magbabalik ang sistema ng pinakamainam na impormasyon na kaya nitong kunin, gayunpaman, maaari mong gamitin ang mga taktika tulad ng pagtatakda ng maximum distance para sa relevance o paggamit ng hybrid search na pinagsasama ang keyword at vector search. Sa lesson na ito gagamit tayo ng hybrid search, kombinasyon ng parehong vector at keyword search. I-store natin ang ating data sa isang dataframe na may mga column na naglalaman ng chunks pati na rin ang embeddings.
+Isang hamon sa retrieval ay kapag walang kaparehong sagot sa query sa database, ibabalik ng sistema ang pinakamainam na impormasyong nakuha, subalit maaaring gumamit ng mga taktika tulad ng pagtatakda ng maximum distance para sa relevance o paggamit ng hybrid search na pinagsasama ang keyword at vector search. Sa araling ito gagamit tayo ng hybrid search, isang kumbinasyon ng vector at keyword search. Iimbak natin ang data sa isang dataframe na may mga kolum para sa mga chunks kasama ang embedding.
 
 ### Vector Similarity
 
-Hahanapin ng retriever sa knowledge database ang mga embedding na malapit sa isa't isa, ang pinakamalapit na kapitbahay, dahil ito ay mga tekstong magkatulad. Sa senaryo na nagtatanong ang user, ito muna ay ie-embed pagkatapos ay ie-match sa mga katulad na embeddings. Ang karaniwang sukatan na ginagamit para alamin kung gaano magkakatulad ang iba't ibang vector ay cosine similarity na batay sa anggulo sa pagitan ng dalawang vector.
+Hahanapin ng retriever sa knowledge database ang mga embedding na magkalapit, ang pinakamalapit na kapitbahay, dahil ito ay mga teksto na magkatulad. Kapag nagtanong ang user, unang ni-embed ito at pagkatapos ay tinutugma sa mga magkaparehong embedding. Ang karaniwang sukat na ginagamit upang matukoy kung gaano kasimilar ang dalawang vector ay cosine similarity na batay sa anggulo sa pagitan ng dalawang vector.
 
-Maaari rin nating sukatin ang similarity gamit ang iba pang paraan tulad ng Euclidean distance na ang distansya ay tuwid na linya sa pagitan ng endpoints ng vector at dot product na sumusukat sa kabuuan ng mga produkto ng magkakatugmang elemento ng dalawang vector.
+Maaari rin nating sukatin ang similarity gamit ang ibang alternatibo katulad ng Euclidean distance na siyang tuwid na linya sa pagitan ng mga dulo ng vector at dot product na sumusukat sa kabuuan ng produkto ng mga kaugnay na elemento ng dalawang vector.
 
 ### Search index
 
-Kapag gumagawa ng retrieval, kailangan nating gumawa ng search index para sa ating knowledge base bago tayo magsagawa ng paghahanap. Ang index ay nag-iimbak ng ating mga embeddings at mabilis na makakakuha ng pinaka-katulad na chunks kahit sa malaking database. Maaari nating likhain ang ating index locally gamit ang:
+Kapag gumagawa ng retrieval, kailangan nating bumuo ng search index para sa knowledge base bago tayo magsagawa ng paghahanap. Ang isang index ay nagsasave ng ating mga embedding at mabilis na nakakakuha ng mga pinaka-magkaparehong chunks kahit sa malalaking database. Maaari nating gawin ang ating index nang lokal gamit ang:
 
 ```python
 from sklearn.neighbors import NearestNeighbors
 
 embeddings = flattened_df['embeddings'].to_list()
 
-# Gumawa ng index para sa paghahanap
+# Lumikha ng search index
 nbrs = NearestNeighbors(n_neighbors=5, algorithm='ball_tree').fit(embeddings)
 
-# Para mag-query sa index, maaari mong gamitin ang method na kneighbors
+# Upang mag-query sa index, maaari mong gamitin ang kneighbors method
 distances, indices = nbrs.kneighbors(embeddings)
 ```
 
-### Re-ranking
+### Pag-re-rank
 
-Kapag na-query mo na ang database, maaaring kailanganin mong ayusin ang mga resulta mula sa pinaka-relevant. Gumagamit ang reranking LLM ng Machine Learning para pagandahin ang relevance ng mga resulta sa paghahanap sa pamamagitan ng pag-aayos ng mga ito mula sa pinaka-relevant. Sa paggamit ng Azure AI Search, awtomatiko ang reranking gamit ang semantic reranker. Isang halimbawa kung paano gumagana ang reranking gamit ang nearest neighbours:
+Kapag nag-query ka sa database, maaaring kailanganin mong isalansan ang mga resulta mula sa pinaka-kaugnay. Ang isang reranking LLM ay gumagamit ng Machine Learning upang pagandahin ang kaugnayan ng mga resulta ng paghahanap sa pamamagitan ng pagsasaayos mula sa pinaka-kaugnay. Sa paggamit ng Azure AI Search, awtomatikong ginagawa ang reranking gamit ang semantic reranker. Halimbawa ng pag-re-rank gamit ang nearest neighbours:
 
 ```python
-# Hanapin ang mga dokumentong pinaka-katulad
+# Hanapin ang mga pinakaparehong dokumento
 distances, indices = nbrs.kneighbors([query_vector])
 
 index = []
-# I-print ang mga dokumentong pinaka-katulad
+# I-print ang mga pinakaparehong dokumento
 for i in range(3):
     index = indices[0][i]
     for index in indices[0]:
@@ -181,18 +181,18 @@ for i in range(3):
         print(f"Index {index} not found in DataFrame")
 ```
 
-## Pagsasama-sama ng lahat
+## Pagbubuo ng kabuuan
 
-Ang huling hakbang ay ang pagdagdag ng ating LLM sa proseso upang makakuha ng mga sagot na naka-ground sa ating data. Maaaring ipatupad ito ng ganito:
+Ang huling hakbang ay ang pagdaragdag ng ating LLM sa halo upang makakuha ng mga sagot na naka-ground sa ating data. Maaari natin itong ipatupad tulad ng sumusunod:
 
 ```python
 user_input = "what is a perceptron?"
 
 def chatbot(user_input):
-    # I-convert ang tanong sa isang query vector
+    # I-convert ang tanong sa query vector
     query_vector = create_embeddings(user_input)
 
-    # Hanapin ang mga pinaka-magkakatulad na dokumento
+    # Hanapin ang pinaka-magkakatulad na mga dokumento
     distances, indices = nbrs.kneighbors([query_vector])
 
     # idagdag ang mga dokumento sa query upang magbigay ng konteksto
@@ -211,8 +211,7 @@ def chatbot(user_input):
 
     # gamitin ang Responses API upang gumawa ng sagot
     response = client.responses.create(
-        model="gpt-4o-mini",
-        temperature=0.7,
+        model="gpt-5-mini",
         max_output_tokens=800,
         input=messages,
         store=False,
@@ -223,47 +222,47 @@ def chatbot(user_input):
 chatbot(user_input)
 ```
 
-## Pagsusuri sa ating aplikasyon
+## Pagsusuri ng ating aplikasyon
 
-### Mga Sukatan sa Pagsusuri
+### Mga Sukatan ng Pagsusuri
 
-- Kalidad ng mga sagot na ibinibigay na tinitiyak na natural, tuloy-tuloy at parang tao ang dating
+- Kalidad ng mga sagot na ibinigay, na tinitiyak na ito ay natural, malinis magsalita at parang tao
 
-- Groundedness ng data: sinusuri kung ang sagot ay nagmula sa mga ibinigay na dokumento
+- Kakatakan ng data: pagsusuri kung ang sagot ay nagmula sa ibinigay na mga dokumento
 
-- Relevance: sinusuri kung ang sagot ay tumutugma at may kinalaman sa tanong na itinatanong
+- Kaugnayan: pagsusuri kung ang sagot ay tumutugma at may kaugnayan sa tanong na tinanong
 
-- Fluency - kung ang sagot ay tama ang grammar at may sentido
+- Daloy ng pagsasalita - kung ang sagot ay grammatikal na makatwiran
 
-## Mga Gamit ng RAG (Retrieval Augmented Generation) at vector databases
+## Mga Gamit ng RAG (Retrieval Augmented Generation) at mga vector database
 
-Maraming iba’t ibang gamit kung saan makakatulong ang function calls para mapabuti ang iyong app tulad ng:
+Maraming mga iba't ibang gamit kung saan mapapabuti ng function calls ang iyong app katulad ng:
 
-- Question and Answering: pag-ground ng data ng iyong kumpanya sa isang chat na maaaring gamitin ng mga empleyado para magtanong.
+- Tanong at Sagot: paga-ground ng data ng iyong kumpanya para sa chat na magagamit ng mga empleyado sa pagtatanong.
 
-- Recommendation Systems: kung saan makakalikha ka ng system na nagmamatch ng pinaka-katulad na mga halaga gaya ng mga pelikula, restawran at marami pang iba.
+- Recommendation Systems: kung saan maaari kang gumawa ng sistema na tumutugma sa pinakakahawig na mga halaga halimbawa mga pelikula, mga restawran at marami pa.
 
-- Chatbot services: maaari mong i-store ang chat history at i-personalize ang usapan base sa data ng user.
+- Serbisyo ng chatbot: maaari kang mag-imbak ng kasaysayan ng chat at personalisahin ang pag-uusap base sa data ng user.
 
-- Paghahanap ng larawan base sa vector embeddings, kapaki-pakinabang sa image recognition at anomaly detection.
+- Paghahanap ng larawan base sa vector embeddings, kapaki-pakinabang sa pagkilala ng larawan at pagtuklas ng anomalya.
 
 ## Buod
 
-Napag-aralan natin ang mga pangunahing bahagi ng RAG mula sa pagdagdag ng data sa aplikasyon, query ng user at output. Para mapadali ang paggawa ng RAG, maaari mong gamitin ang mga frameworks gaya ng Semantic Kernel, Langchain o Autogen.
+Natakpan natin ang mga pangunahing bahagi ng RAG mula sa pagdagdag ng ating data sa aplikasyon, ang query ng user at output. Upang mapadali ang paggawa ng RAG, maaari mong gamitin ang mga framework tulad ng Semanti Kernel, Langchain o Autogen.
 
 ## Takdang-Aralin
 
-Para ipagpatuloy ang pag-aaral ng Retrieval Augmented Generation (RAG) maaari kang gumawa ng:
+Para ipagpatuloy ang iyong pag-aaral sa Retrieval Augmented Generation (RAG), maaari kang bumuo ng:
 
 - Gumawa ng front-end para sa aplikasyon gamit ang framework na iyong napili
 
-- Gamitin ang isang framework, alinman sa LangChain o Semantic Kernel, at muling likhain ang iyong aplikasyon.
+- Gamitin ang isang framework, alinman sa LangChain o Semantic Kernel, at gawin muli ang iyong aplikasyon.
 
-Binabati kita sa pagkumpleto ng lesson 👏.
+Binabati kita sa pagkumpleto ng aralin 👏.
 
-## Hindi dito nagtatapos ang pag-aaral, ipagpatuloy ang Paglalakbay
+## Hindi dito nagtatapos ang pagkatuto, ipagpatuloy ang Paglalakbay
 
-Pagkatapos makumpleto ang lesson na ito, bisitahin ang aming [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) upang ipagpatuloy ang paghasa ng iyong kaalaman sa Generative AI!
+Pagkatapos makumpleto ang araling ito, tingnan ang aming [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) upang ipagpatuloy ang pag-level up ng iyong kaalaman sa Generative AI!
 
 ---
 

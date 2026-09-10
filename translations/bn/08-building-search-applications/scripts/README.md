@@ -1,34 +1,34 @@
 # ট্রান্সক্রিপশন ডেটা প্রস্তুতি
 
-ট্রান্সক্রিপশন ডেটা প্রস্তুতি স্ক্রিপ্টগুলি YouTube ভিডিও ট্রান্সক্রিপ্ট ডাউনলোড করে এবং সেগুলি Semantic Search with OpenAI Embeddings and Functions নমুনার সাথে ব্যবহারের জন্য প্রস্তুত করে।
+ট্রান্সক্রিপশন ডেটা প্রস্তুতি স্ক্রিপ্টগুলি ইউটিউব ভিডিও ট্রান্সক্রিপ্ট ডাউনলোড করে এবং সেম্যানটিক সার্চ উইথ ওপেনএআই এমবেডিংস এবং ফাংশনস নমুনার সাথে ব্যবহারের জন্য প্রস্তুত করে।
 
-ট্রান্সক্রিপশন ডেটা প্রস্তুতি স্ক্রিপ্টগুলি সর্বশেষ রিলিজ Windows 11, macOS Ventura এবং Ubuntu 22.04 (এবং তার উপরের) এ পরীক্ষা করা হয়েছে।
+ট্রান্সক্রিপশন ডেটা প্রস্তুতি স্ক্রিপ্টগুলি সর্বশেষ রিলিজ উইন্ডোজ ১১, ম্যাকওএস ভেন্টুরা এবং উবুন্টু ২২.০৪ (এবং ওপরে) তে পরীক্ষা করা হয়েছে।
 
 ## প্রয়োজনীয় Azure OpenAI সার্ভিস রিসোর্স তৈরি করুন
 
 > [!IMPORTANT]
-> আমরা পরামর্শ দিই Azure CLI সর্বশেষ সংস্করণে আপডেট করার যাতে OpenAI এর সঙ্গে সামঞ্জস্য নিশ্চিত হয়
+> আমরা সুপারিশ করি আপনি Azure CLI সর্বশেষ সংস্করণে আপডেট করুন যাতে OpenAI এর সাথে সামঞ্জস্যতা নিশ্চিত হয়
 > দেখুন [ডকুমেন্টেশন](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
-1. একটি রিসোর্স গ্রুপ তৈরি করুন
+১. একটি রিসোর্স গ্রুপ তৈরি করুন
 
 > [!NOTE]
-> এই নির্দেশাবলীতে আমরা East US-এ "semantic-video-search" নামে রিসোর্স গ্রুপ ব্যবহার করছি।
-> আপনি রিসোর্স গ্রুপের নাম পরিবর্তন করতে পারেন, কিন্তু যখন রিসোর্সের অবস্থান পরিবর্তন করবেন,
-> [মডেল উপলব্ধতার টেবিলটি](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst) পরীক্ষা করুন।
+> এই নির্দেশাবলীতে আমরা "semantic-video-search" নামক রিসোর্স গ্রুপটি East US-এ ব্যবহার করছি।
+> আপনি রিসোর্স গ্রুপের নাম পরিবর্তন করতে পারেন, কিন্তু রিসোর্সের অবস্থান পরিবর্তন করার সময়,
+> [মডেল উপলব্ধতা টেবিল](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst) পরীক্ষা করুন।
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. একটি Azure OpenAI সার্ভিস রিসোর্স তৈরি করুন।
+২. একটি Azure OpenAI সার্ভিস রিসোর্স তৈরি করুন।
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. এই অ্যাপ্লিকেশনে ব্যবহারের জন্য এন্ডপয়েন্ট এবং কী পেতে
+৩. এই অ্যাপ্লিকেশনে ব্যবহার করার জন্য এন্ডপয়েন্ট ও কী পান
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -37,9 +37,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
-1. নিম্নলিখিত মডেলগুলি ডেপ্লয় করুন:
-   - `text-embedding-ada-002` সংস্করণ `2` বা বড়, যা `text-embedding-ada-002` নামে আছে
-   - `gpt-4o-mini` নামে `gpt-4o-mini`
+৪. নিম্নলিখিত মডেলগুলি ডিপ্লয় করুন:
+   - `text-embedding-ada-002` সংস্করণ `2` বা বড়, যার নাম `text-embedding-ada-002`
+   - `gpt-5-mini` যার নাম `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,8 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -64,14 +64,14 @@ az cognitiveservices account deployment create \
 
 - [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) বা বড়
 
-## পরিবেশ পরিবর্তনশীলসমূহ
+## পরিবেশ পরিবর্তনশীল
 
-YouTube ট্রান্সক্রিপশন ডেটা প্রস্তুতি স্ক্রিপ্ট রান করার জন্য নিম্নলিখিত পরিবেশ পরিবর্তনশীলগুলির প্রয়োজন।
+YouTube ট্রান্সক্রিপশন ডেটা প্রস্তুতি স্ক্রিপ্ট চালানোর জন্য নিম্নলিখিত পরিবেশ পরিবর্তনশীল প্রয়োজন।
 
-### Windows-এ
+### উইন্ডোজে
 
-আপনার `user` পরিবেশ পরিবর্তনশীলগুলিতে এগুলি যোগ করার পরামর্শ দিচ্ছি।
-`Windows Start` > `Edit the system environment variables` > `Environment Variables` > [USER] এর জন্য `User variables` > `New`.
+আপনার `user` পরিবেশ পরিবর্তনশীলগুলিতে এই পরিবর্তনশীলগুলি যোগ করার পরামর্শ দেওয়া হয়।
+`Windows Start` > `Edit the system environment variables` > `Environment Variables` > [USER] এর জন্য `User variables` > `New`।
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -80,7 +80,7 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-<!-- আপনি পরিবেশ পরিবর্তনশীলগুলি আপনার PowerShell প্রোফাইলে যোগ করতে পারেন।
+<!-- আপনি আপনার PowerShell প্রোফাইলে পরিবেশ পরিবর্তনশীল যোগ করতে পারেন।
 
 ```powershell
 $env:AZURE_OPENAI_API_KEY = "<your Azure OpenAI Service API key>"
@@ -89,9 +89,9 @@ $env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<your Azure OpenAI Service model depl
 $env:GOOGLE_DEVELOPER_API_KEY = "<your Google developer API key>"
 ``` -->
 
-### Linux এবং macOS-এ
+### লিনাক্স এবং ম্যাকওএস-এ
 
-আপনার `~/.bashrc` অথবা `~/.zshrc` ফাইলে নিচের এক্সপোর্টগুলি যোগ করার পরামর্শ দিচ্ছি।
+নিম্নলিখিত এক্সপোর্টগুলি আপনার `~/.bashrc` বা `~/.zshrc` ফাইলে যোগ করার পরামর্শ দেওয়া হয়।
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -100,72 +100,72 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## প্রয়োজনীয় Python লাইব্রেরি ইনস্টল করুন
+## প্রয়োজনীয় পাইথন লাইব্রেরি ইনস্টল করুন
 
-1. যদি পূর্বে ইনস্টল না থাকে তবে [git ক্লায়েন্ট](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) ইনস্টল করুন।
-1. একটি `Terminal` উইন্ডো থেকে, নমুনাটি আপনার পছন্দসই রিপো ফোল্ডারে ক্লোন করুন।
+১. [git ক্লায়েন্ট](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) ইনস্টল করুন যদি ইতিমধ্যে ইনস্টল করা না থাকে।
+২. একটি `Terminal` উইন্ডো থেকে নমুনাটি আপনার পছন্দসই রেপো ফোল্ডারে ক্লোন করুন।
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
     ```
 
-1. `data_prep` ফোল্ডারে যান।
+৩. `data_prep` ফোল্ডারে যান।
 
    ```bash
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. একটি Python ভার্চুয়াল পরিবেশ তৈরি করুন।
+৪. একটি পাইথন ভার্চুয়াল পরিবেশ তৈরি করুন।
 
-    Windows-এ:
+    উইন্ডোজে:
 
     ```powershell
     python -m venv .venv
     ```
 
-    macOS এবং Linux-এ:
+    ম্যাকওএস এবং লিনাক্সে:
 
     ```bash
     python3 -m venv .venv
     ```
 
-1. Python ভার্চুয়াল পরিবেশ সক্রিয় করুন।
+৫. পাইথন ভার্চুয়াল পরিবেশ সক্রিয় করুন।
 
-   Windows-এ:
+   উইন্ডোজে:
 
    ```powershell
    .venv\Scripts\activate
    ```
 
-   macOS এবং Linux-এ:
+   ম্যাকওএস এবং লিনাক্সে:
 
    ```bash
    source .venv/bin/activate
    ```
 
-1. প্রয়োজনীয় লাইব্রেরিগুলি ইনস্টল করুন।
+৬. প্রয়োজনীয় লাইব্রেরি ইনস্টল করুন।
 
-   Windows-এ:
+   উইন্ডোজে:
 
    ```powershell
    pip install -r requirements.txt
    ```
 
-   macOS এবং Linux-এ:
+   ম্যাকওএস এবং লিনাক্সে:
 
    ```bash
    pip3 install -r requirements.txt
    ```
 
-## YouTube ট্রান্সক্রিপশন ডেটা প্রস্তুতি স্ক্রিপ্টগুলি চালান
+## YouTube ট্রান্সক্রিপশন ডেটা প্রস্তুতি স্ক্রিপ্ট চালান
 
-### Windows-এ
+### উইন্ডোজে
 
 ```powershell
 .\transcripts_prepare.ps1
 ```
 
-### macOS এবং Linux-এ
+### ম্যাকওএস এবং লিনাক্সে
 
 ```bash
 ./transcripts_prepare.sh

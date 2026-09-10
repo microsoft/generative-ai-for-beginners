@@ -1,29 +1,29 @@
 ![Generatiivinen tekoäly aloittelijoille](../../translated_images/fi/repo-thumbnailv4-fixed.11f1ce6a85d01461.webp)
 
-### 21 oppituntia, jotka opettavat kaiken tarvittavan generatiivisten tekoälysovellusten rakentamisen aloittamiseen
+### 21 oppituntia, jotka opettavat kaiken tarpeellisen generatiivisten tekoälysovellusten rakentamisen aloittamiseen
 
 [![GitHub-lisenssi](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)
 [![GitHub-yhteistyökumppanit](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
 [![GitHub-ongelmat](https://img.shields.io/github/issues/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/issues/?WT.mc_id=academic-105485-koreyst)
-[![GitHub-vetopyynnöt](https://img.shields.io/github/issues-pr/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/pulls/?WT.mc_id=academic-105485-koreyst)
-[![Vetopyynnöt tervetulleita](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com?WT.mc_id=academic-105485-koreyst)
+[![GitHub-pyynnöt](https://img.shields.io/github/issues-pr/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/pulls/?WT.mc_id=academic-105485-koreyst)
+[![PR:t tervetulleita](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com?WT.mc_id=academic-105485-koreyst)
 
-[![GitHub-tarkkailijat](https://img.shields.io/github/watchers/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Watch)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/watchers/?WT.mc_id=academic-105485-koreyst)
-[![GitHub-haarat](https://img.shields.io/github/forks/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/network/?WT.mc_id=academic-105485-koreyst)
-[![GitHub-tähdet](https://img.shields.io/github/stars/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/stargazers/?WT.mc_id=academic-105485-koreyst)
+[![GitHub-seuraajat](https://img.shields.io/github/watchers/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Seuraa)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/watchers/?WT.mc_id=academic-105485-koreyst)
+[![GitHub-forkit](https://img.shields.io/github/forks/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/network/?WT.mc_id=academic-105485-koreyst)
+[![GitHub-tähdet](https://img.shields.io/github/stars/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Tähti)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/stargazers/?WT.mc_id=academic-105485-koreyst)
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
 ### 🌐 Monikielinen tuki
 
-#### Tuetut GitHub Actionin kautta (automaattinen ja aina ajan tasalla)
+#### Tuettu GitHub Actionin kautta (automaattinen & aina ajan tasalla)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
 [Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](./README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Khmer](../km/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
 > **Haluatko mieluummin kloonata paikallisesti?**
 >
-> Tämä arkisto sisältää yli 50 kielen käännöstä, mikä kasvattaa merkittävästi latauskokoa. Jos haluat kloonata ilman käännöksiä, käytä harvaa checkoutia:
+> Tämä repositorio sisältää yli 50 käännöstä, mikä lisää merkittävästi lataustiedoston kokoa. Kloonaa ilman käännöksiä käyttämällä sparse checkout -toimintoa:
 >
 > **Bash / macOS / Linux:**
 > ```bash
@@ -44,94 +44,94 @@
 
 # Generatiivinen tekoäly aloittelijoille (versio 3) - Kurssi
 
-Opi generatiivisten tekoälysovellusten rakentamisen perusteet Microsoft Cloud Advocates -tiimimme 21 oppitunnin kattavalla kurssilla.
+Opi generatiivisten tekoälysovellusten perustukset Microsoft Cloud Advocatesin 21 oppitunnin kattavasta kurssista.
 
 ## 🌱 Aloittaminen
 
-Tässä kurssissa on 21 oppituntia. Jokainen oppitunti käsittelee omaa aihettaan, voit aloittaa mistä tahansa!
+Tässä kurssissa on 21 oppituntia. Jokainen oppitunti käsittelee omaa aihettaan, joten aloita mistä haluat!
 
-Oppitunnit on nimetty joko "Opi" oppitunneiksi, joissa selitetään generatiivisen tekoälyn käsite, tai "Rakenna" -oppitunneiksi, joissa selitetään käsite ja koodiesimerkkejä sekä **Python**- että **TypeScript**-kielillä, kun mahdollista.
+Oppitunnit on merkitty joko "Opi"-oppitunneiksi, jotka selittävät generatiivisen tekoälyn käsitteitä, tai "Rakenna"-oppitunneiksi, jotka sisältävät sekä käsitteen selityksen että koodiesimerkkejä **Pythonilla** ja **TypeScriptilä** missä mahdollista.
 
-.NET-kehittäjille suosittelemme tutustumaan [Generative AI for Beginners (.NET Edition)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst) -kurssiin!
+.NET-kehittäjille suosittelemme tutustumaan [Generatiivinen tekoäly aloittelijoille (.NET Edition)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)!
 
-Jokainen oppitunti sisältää myös "Jatka oppimista" -osion, jossa on lisäoppimistyökaluja.
+Jokaisessa oppitunnissa on myös "Jatka oppimista" -osio lisäopiskelumateriaaleineen.
 
 ## Mitä tarvitset
-### Tämän kurssin koodin suorittamiseen voit käyttää joko:
+### Kurssin koodin suorittamiseen voit käyttää joko:
  - [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **Oppitunnit:** "aoai-assignment"
- - [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) - **Oppitunnit:** "githubmodels" (GitHub Models poistuu käytöstä heinäkuun 2026 lopussa - käytä sen sijaan Microsoft Foundry Modelsia)
+ - [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) - **Oppitunnit:** "githubmodels" (GitHub Models poistuu käytöstä heinäkuun 2026 lopussa - käytä Microsoft Foundry Modelsia sen sijaan)
  - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **Oppitunnit:** "oai-assignment"
- - [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) - Suorita mallit täysin offline-tilassa omalla laitteellasi, ei vaadi pilvitilausta
+ - [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) - Suorita mallit täysin offline-tilassa omalla laitteellasi, pilvitilaus ei vaadita
+   
+- Perustiedot Pythonista tai TypeScriptistä ovat hyödyllisiä - \*Täydellisille aloittelijoille tutustu näihin [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) ja [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst) kursseihin
+- GitHub-tili, jotta voit [forkata tämän koko repositorion](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) omalle GitHub-tilillesi
 
-- Perustiedot Pythonista tai TypeScriptistä ovat hyödyllisiä - \*Täydellisille aloittelijoille tutustu näihin [Python](https://aka.ms/genai-beginners/python?WT.mc_id=academic-105485-koreyst) ja [TypeScript](https://aka.ms/genai-beginners/typescript?WT.mc_id=academic-105485-koreyst) -kursseihin
-- GitHub-tili, jotta voit [forkata tämän kokonaisen arkiston](https://aka.ms/genai-beginners/github?WT.mc_id=academic-105485-koreyst) omaan GitHub-tiliisi
+Olemme luoneet **[Kurssin asennus](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** -oppitunnin auttamaan kehitysympäristön pystyttämisessä.
 
-Olemme luoneet **[Kurssin aloitus](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)** -oppitunnin auttaaksemme sinua kehitysympäristösi perustamisessa.
+Älä unohda [tähtää (🌟) tätä repositoriota](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst), jotta löydät sen helpommin myöhemmin.
 
-Älä unohda [tähdätä (🌟) tätä arkistoa](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) löytääksesi sen helpommin myöhemmin.
+## 🧠 Valmis käyttöönottoon?
 
-## 🧠 Valmis julkaisuun?
-
-Jos etsit edistyneempiä koodiesimerkkejä, tutustu [generatiivisen tekoälyn koodiesimerkkikokoelmaamme](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) sekä **Python**- että **TypeScript**-kielillä.
+Jos etsit edistyneempiä koodiesimerkkejä, tutustu [Generatiivisen tekoälyn koodiesimerkkikokoelmaamme](https://aka.ms/genai-beg-code?WT.mc_id=academic-105485-koreyst) sekä **Pythonilla** että **TypeScriptillä**.
 
 ## 🗣️ Tapaa muita oppijoita, saa tukea
 
-Liity [viralliselle Microsoft Foundry Discord -palvelimelle](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) tapaamaan ja verkostoitumaan muiden tämän kurssin opiskelijoiden kanssa ja saadaksesi tukea.
+Liity [viralliselle Microsoft Foundry Discord -palvelimelle](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) tapaamaan ja verkostoitumaan muiden kurssin opiskelijoiden kanssa ja saadaksesi tukea.
 
-Esitä kysymyksiä tai jaa tuotepalautetta [Microsoft Foundry Developer Forumissa](https://aka.ms/azureaifoundry/forum) GitHubissa.
+Esitä kysymyksiä tai jaa palautetta tuotteesta [Microsoft Foundry Developer Forumilla](https://aka.ms/azureaifoundry/forum) GitHubissa.
 
-## 🚀 Rakennatko startupia?
+## 🚀 Rakentamassa startupia?
 
-Vieraile [Microsoft for Startups](https://www.microsoft.com/startups) -sivustolla saadaksesi tietoa Azure-luottokorttien avulla rakentamisen aloittamisesta tänään.
+Käy osoitteessa [Microsoft for Startups](https://www.microsoft.com/startups?WT.mc_id=academic-105485-koreyst) saadaksesi tietoa Azure-luotoista ja aloittaaksesi rakentamisen jo tänään.
 
 ## 🙏 Haluatko auttaa?
 
-Onko sinulla ehdotuksia tai löysitkö kirjoitus- tai koodivirheitä? [Luo issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) tai [Luo pull pyyntö](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
+Onko sinulla ehdotuksia tai oletko löytänyt kirjoitus- tai koodivirheitä? [Luo issue](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) tai [Luo pull-pyyntö](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
 
-## 📂 Jokaisessa oppitunnissa on:
+## 📂 Jokainen oppitunti sisältää:
 
-- Lyhyt videoesittely aiheesta
-- Kirjallinen opetus README-tiedostossa
-- Python- ja TypeScript-koodiesimerkit, jotka tukevat Azure OpenAI:ta ja OpenAI API:ta
+- Lyhyen videoesittelyn aiheesta
+- Kirjatun oppitunnin README-tiedostossa
+- Python- ja TypeScript-koodiesimerkkejä, jotka tukevat Azure OpenAI:ta ja OpenAI API:a
 - Linkkejä lisäresursseihin oppimisen jatkamiseksi
 
 ## 🗃️ Oppitunnit
 
-| #   | **Oppitunnin linkki**                                                                                                                              | **Kuvaus**                                                                                   | **Video**                                                               | **Lisäoppiminen**                                                           |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| 00  | [Kurssin aloitus](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                                    | **Opi:** Kuinka perustetaan kehitysympäristö                                            | Video tulossa pian                                                       | [Lue lisää](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 01  | [Johdatus generatiiviseen tekoälyyn ja LLM:iin](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)                              | **Opi:** Ymmärrä, mitä generatiivinen tekoäly on ja miten suuret kielimallit (LLM) toimivat | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst) | [Lue lisää](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 02  | [Tutki ja vertaile eri LLM:ejä](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)                              | **Opi:** Kuinka valita oikea malli käyttötapaukseesi                                  | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)  | [Lue lisää](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 03  | [Generatiivisen tekoälyn vastuullinen käyttö](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)                      | **Opi:** Kuinka rakentaa generatiivisia tekoälysovelluksia vastuullisesti              | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Lue lisää](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| #   | **Oppitunnin linkki**                                                                                                            | **Kuvaus**                                                                                        | **Video**                                                      | **Lisäoppiminen**                                                    |
+| --- | ------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------ |
+| 00  | [Kurssin asennus](./00-course-setup/README.md?WT.mc_id=academic-105485-koreyst)                                                        | **Opi:** Kuinka perustat kehitysympäristösi                                                  | Video tulossa pian                                              | [Lue lisää](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 01  | [Johdanto Generatiiviseen tekoälyyn ja LLM-malleihin](./01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst)             | **Opi:** Ymmärrys, mitä generatiivinen tekoäly on ja miten suuret kielimallit toimivat         | [Video](https://aka.ms/gen-ai-lesson-1-gh?WT.mc_id=academic-105485-koreyst)          | [Lue lisää](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)     |
+| 02  | [Eri LLM-mallien tutkiminen ja vertailu](./02-exploring-and-comparing-different-llms/README.md?WT.mc_id=academic-105485-koreyst)         | **Opi:** Kuinka valita oikea malli käyttötarkoitukseesi                                    | [Video](https://aka.ms/gen-ai-lesson2-gh?WT.mc_id=academic-105485-koreyst)           | [Lue lisää](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)     |
 
-| 04  | [Ymmärtäen Prompt Engineeringin perusteet](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)             | **Opiskele:** Käytännön paras käytäntö Prompt Engineeringissä                               | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 05  | [Edistyneiden kehotteiden luominen](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                                | **Opiskele:** Kuinka soveltaa prompt engineering -tekniikoita, jotka parantavat kehotteidesi tulosta. | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 06  | [Tekstin generointisovellusten rakentaminen](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Rakenna:** Tekstin generointisovellus käyttäen Azure OpenAI / OpenAI APIa                   | [Video](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 07  | [Chat-sovellusten rakentaminen](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Rakenna:** Tekniikoita chat-sovellusten tehokkaaseen rakentamiseen ja integrointiin.        | [Video](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 08  | [Hakusovellusten rakentaminen vektoridatabasen avulla](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Rakenna:** Hakusovellus, joka käyttää upotuksia datan hakemiseen.                           | [Video](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 09  | [Kuvagenerointisovellusten rakentaminen](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                        | **Rakenna:** Kuvagenerointisovellus                                                        | [Video](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 10  | [Low Code AI -sovellusten rakentaminen](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                       | **Rakenna:** Generatiivinen AI-sovellus käyttäen Low Code -työkaluja                        | [Video](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 11  | [Ulkoisten sovellusten integrointi Function Callingilla](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **Rakenna:** Mikä on function calling ja sen käyttötarpeet sovelluksissa                     | [Video](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 12  | [UX:n suunnittelu AI-sovelluksille](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Opiskele:** Kuinka soveltaa UX-suunnitteluperiaatteita Generative AI -sovellusten kehityksessä | [Video](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 13  | [Generatiivisten AI-sovellusten suojaaminen](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                         | **Opiskele:** Uhkat ja riskit AI-järjestelmille ja menetelmät näiden suojaamiseksi.          | [Video](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 14  | [Generatiivisen AI-sovelluksen elinkaari](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)           | **Opiskele:** Työkalut ja mittarit LLM-elinkaaren ja LLMOpsin hallintaan                     | [Video](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 15  | [Retrieval Augmented Generation (RAG) ja vektoridatabaset](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)        | **Rakenna:** Sovellus, joka käyttää RAG-kehystä upotusten hakemiseen vektoridatabasesta      | [Video](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 16  | [Avoimen lähdekoodin mallit ja Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                    | **Rakenna:** Sovellus käyttäen avoimen lähdekoodin malleja, jotka ovat saatavilla Hugging Facessa | [Video](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 17  | [AI-agentit](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                       | **Rakenna:** Sovellus, joka hyödyntää AI-agenttikehystä                                      | [Video](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 18  | [LLM:ien hienosäätö](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Opiskele:** Mitä, miksi ja miten LLM:ien hienosäätö tehdään                               | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 19  | [Pienten kielimallien (SLM) käyttäminen](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Opiskele:** Pienten kielimallien rakentamisen edut                                        | Video tulossa pian | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 20  | [Mistral-mallien käyttäminen](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Opiskele:** Mistral-perhemallien ominaisuudet ja erot                                   | Video tulossa pian | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
-| 21  | [Meta-mallien käyttäminen](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Opiskele:** Meta-perhemallien ominaisuudet ja erot                                      | Video tulossa pian | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 03  | [Generatiivisen tekoälyn vastuullinen käyttö](./03-using-generative-ai-responsibly/README.md?WT.mc_id=academic-105485-koreyst)               | **Opettele:** Kuinka rakentaa generatiivisen tekoälyn sovelluksia vastuullisesti                     | [Video](https://aka.ms/gen-ai-lesson3-gh?WT.mc_id=academic-105485-koreyst)  | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 04  | [Keinoälykehotteiden perusteiden ymmärtäminen](./04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)                | **Opettele:** Käytännön keinoälykehotteiden parhaat käytännöt                                       | [Video](https://aka.ms/gen-ai-lesson4-gh?WT.mc_id=academic-105485-koreyst)  | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 05  | [Edistyneiden keinoälykehotteiden luominen](./05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)                                | **Opettele:** Kuinka soveltaa keinoälykehotteiden tekniikoita, jotka parantavat kehotteiden tuloksia | [Video](https://aka.ms/gen-ai-lesson5-gh?WT.mc_id=academic-105485-koreyst)  | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 06  | [Tekstintuotantosovellusten rakentaminen](./06-text-generation-apps/README.md?WT.mc_id=academic-105485-koreyst)                                | **Rakenna:** Tekstinluontisovellus käyttäen Azure OpenAI / OpenAI API                              | [Video](https://aka.ms/gen-ai-lesson6-gh?WT.mc_id=academic-105485-koreyst)  | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 07  | [Chat-sovellusten rakentaminen](./07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)                                     | **Rakenna:** Tekniikoita chat-sovellusten tehokkaaseen rakentamiseen ja integrointiin.             | [Video](https://aka.ms/gen-ai-lessons7-gh?WT.mc_id=academic-105485-koreyst) | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 08  | [Hakusovellusten rakentaminen vektoritietokantoihin](./08-building-search-applications/README.md?WT.mc_id=academic-105485-koreyst)              | **Rakenna:** Hakusovellus, joka käyttää upotuksia datan etsintään                                  | [Video](https://aka.ms/gen-ai-lesson8-gh?WT.mc_id=academic-105485-koreyst)  | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 09  | [Kuvantuotantosovellusten rakentaminen](./09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst)                           | **Rakenna:** Kuvantuotantosovellus                                                                | [Video](https://aka.ms/gen-ai-lesson9-gh?WT.mc_id=academic-105485-koreyst)  | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 10  | [Low Code -tekoälysovellusten rakentaminen](./10-building-low-code-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                  | **Rakenna:** Generatiivinen tekoälysovellus Low Code -työkaluilla                                 | [Video](https://aka.ms/gen-ai-lesson10-gh?WT.mc_id=academic-105485-koreyst) | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 11  | [Ulkopuolisten sovellusten integrointi toimintokutsujen avulla](./11-integrating-with-function-calling/README.md?WT.mc_id=academic-105485-koreyst) | **Rakenna:** Mitä toimintokutsu on ja sen käyttötapaukset sovelluksissa                           | [Video](https://aka.ms/gen-ai-lesson11-gh?WT.mc_id=academic-105485-koreyst) | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 12  | [Käyttökokemuksen suunnittelu tekoälysovelluksiin](./12-designing-ux-for-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)            | **Opettele:** Kuinka soveltaa UX-suunnitteluperiaatteita generatiivisten tekoälysovellusten kehityksessä | [Video](https://aka.ms/gen-ai-lesson12-gh?WT.mc_id=academic-105485-koreyst) | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 13  | [Generatiivisten tekoälysovellusten suojaaminen](./13-securing-ai-applications/README.md?WT.mc_id=academic-105485-koreyst)                      | **Opettele:** Tekoälyjärjestelmien uhkat ja riskit sekä menetelmät näiden suojaamiseen             | [Video](https://aka.ms/gen-ai-lesson13-gh?WT.mc_id=academic-105485-koreyst) | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 14  | [Generatiivisen tekoälysovelluksen elinkaaren hallinta](./14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)  | **Opettele:** Työkalut ja mittarit LLM-elinkaaren ja LLMOpsin hallintaan                           | [Video](https://aka.ms/gen-ai-lesson14-gh?WT.mc_id=academic-105485-koreyst) | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 15  | [Hakuavusteinen generointi (RAG) ja vektoritietokannat](./15-rag-and-vector-databases/README.md?WT.mc_id=academic-105485-koreyst)                | **Rakenna:** Sovellus, joka käyttää RAG-viitekehystä hakemaan upotuksia vektoritietokannoista     | [Video](https://aka.ms/gen-ai-lesson15-gh?WT.mc_id=academic-105485-koreyst) | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 16  | [Avoimen lähdekoodin mallit ja Hugging Face](./16-open-source-models/README.md?WT.mc_id=academic-105485-koreyst)                                | **Rakenna:** Sovellus, joka käyttää Hugging Facessa saatavilla olevia avoimen lähdekoodin malleja | [Video](https://aka.ms/gen-ai-lesson16-gh?WT.mc_id=academic-105485-koreyst) | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 17  | [Tekoälyagentit](./17-ai-agents/README.md?WT.mc_id=academic-105485-koreyst)                                                                     | **Rakenna:** Sovellus, joka käyttää tekoälyagenttikehystä                                        | [Video](https://aka.ms/gen-ai-lesson17-gh?WT.mc_id=academic-105485-koreyst) | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 18  | [LLM-mallien hienosäätö](./18-fine-tuning/README.md?WT.mc_id=academic-105485-koreyst)                                                            | **Opettele:** Mitä, miksi ja kuinka LLM-malleja hienosäädetään                                  | [Video](https://aka.ms/gen-ai-lesson18-gh?WT.mc_id=academic-105485-koreyst) | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 19  | [Pienten kielimallien käyttö](./19-slm/README.md?WT.mc_id=academic-105485-koreyst)                                                              | **Opettele:** Pienten kielimallien käytön edut                                                | Video tulossa pian | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 20  | [Mistral-mallien käyttö](./20-mistral/README.md?WT.mc_id=academic-105485-koreyst)                                                                | **Opettele:** Mistral-malliperheen ominaisuudet ja erot                                        | Video tulossa pian | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
+| 21  | [Meta-mallien käyttö](./21-meta/README.md?WT.mc_id=academic-105485-koreyst)                                                                      | **Opettele:** Meta-malliperheen ominaisuudet ja erot                                          | Video tulossa pian | [Lisätietoja](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) |
 
 ### 🌟 Erityiskiitokset
 
-Erityiskiitos [**John Azizille**](https://www.linkedin.com/in/john0isaac/) kaikista GitHub Actions -toiminnoista ja työnkuluista
+Erityiskiitos [**John Azizille**](https://www.linkedin.com/in/john0isaac/) kaikista GitHub-toiminnoista ja työnkuluista
 
-[**Bernhard Merklelle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) avainpanoksesta jokaiseen oppituntiin oppimiskokemuksen ja koodin parantamiseksi. 
+[**Bernhard Merklelle**](https://www.linkedin.com/in/bernhard-merkle-738b73/) merkittävistä panoksista jokaisella oppitunnilla oppimiskokemuksen ja koodin parantamiseksi.
 
-## 🎒 Muut kurssit
+## 🎒 Muita kursseja
 
-Tiimimme tuottaa myös muita kursseja! Tutustu:
+Tiimimme tuottaa muitakin kursseja! Tutustu:
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -144,20 +144,20 @@ Tiimimme tuottaa myös muita kursseja! Tutustu:
 [![AZD aloittelijoille](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI aloittelijoille](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP aloittelijoille](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![AI-agentit aloittelijoille](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Tekoälyagentit aloittelijoille](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### Generatiivisen AI:n sarja
-[![Generatiivinen AI aloittelijoille](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![Generatiivinen AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
-[![Generatiivinen AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
+### Generatiivisen tekoälyn sarja
+[![Generatiivinen tekoäly aloittelijoille](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Generatiivinen tekoäly (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 
+[![Generative AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### Keskeinen oppimateriaali
+### Keskeinen oppiminen
 [![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -176,11 +176,11 @@ Tiimimme tuottaa myös muita kursseja! Tutustu:
 
 ## Apua saamaan
 
-Jos jäät jumiin tai sinulla on kysyttävää tekoälysovellusten rakentamisesta. Liity oppijoiden ja kokeneiden kehittäjien keskusteluihin MCP:stä. Se on kannustava yhteisö, jossa kysymykset ovat tervetulleita ja tieto jaetaan vapaasti.
+Jos jäät jumiin tai sinulla on kysymyksiä tekoälysovellusten rakentamisesta. Liity muihin oppijoihin ja kokeneisiin kehittäjiin keskusteluissa liittyen MCP:hen. Se on tukevainen yhteisö, jossa kysymykset ovat tervetulleita ja tietoa jaetaan vapaasti.
 
 [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG)
 
-Jos sinulla on palautetta tuotteesta tai virheitä rakentaessasi, käy:
+Jos sinulla on tuotepalautetta tai virheitä rakentamisen aikana, käy:
 
 [![Microsoft Foundry Developer Forum](https://img.shields.io/badge/GitHub-Microsoft_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 

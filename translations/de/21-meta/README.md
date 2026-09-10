@@ -1,61 +1,61 @@
-# Arbeiten mit den Meta Family Modellen 
+# Arbeiten mit den Meta-Familienmodellen 
 
 ## Einführung 
 
 Diese Lektion behandelt: 
 
-- Erkundung der beiden Hauptmodelle der Meta-Familie - Llama 3.1 und Llama 3.2 
+- Erkundung der zwei Hauptmodelle der Meta-Familie – Llama 3.1 und Llama 3.2 
 - Verständnis der Anwendungsfälle und Szenarien für jedes Modell 
-- Codebeispiel, das die einzigartigen Eigenschaften jedes Modells zeigt 
+- Codebeispiel zur Darstellung der einzigartigen Eigenschaften jedes Modells 
 
 
-## Die Meta Familie der Modelle 
+## Die Meta-Familie von Modellen 
 
-In dieser Lektion werden wir 2 Modelle der Meta-Familie oder "Llama-Herde" erkunden – Llama 3.1 und Llama 3.2.
+In dieser Lektion werden wir 2 Modelle aus der Meta-Familie oder „Llama-Herde“ erkunden – Llama 3.1 und Llama 3.2.
 
-Diese Modelle gibt es in verschiedenen Varianten und sie sind im [Microsoft Foundry Models Katalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) verfügbar.
+Diese Modelle gibt es in verschiedenen Varianten und sie sind im [Microsoft Foundry Models-Katalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) verfügbar.
 
-> **Hinweis:** GitHub Models wird Ende Juli 2026 eingestellt. Hier finden Sie weitere Details zur Verwendung von [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst), um mit AI-Modellen zu prototypisieren.
+> **Hinweis:** GitHub Models wird Ende Juli 2026 eingestellt. Hier finden Sie weitere Informationen zur Verwendung von [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) zum Prototyping mit KI-Modellen.
 
 Modellvarianten: 
-- Llama 3.1 - 70B Instruct 
-- Llama 3.1 - 405B Instruct 
-- Llama 3.2 - 11B Vision Instruct 
-- Llama 3.2 - 90B Vision Instruct 
+- Llama 3.1 – 70B Instruct 
+- Llama 3.1 – 405B Instruct 
+- Llama 3.2 – 11B Vision Instruct 
+- Llama 3.2 – 90B Vision Instruct 
 
-*Hinweis: Llama 3 ist ebenfalls in Microsoft Foundry Models verfügbar, wird in dieser Lektion jedoch nicht behandelt*
+*Hinweis: Llama 3 ist ebenfalls in Microsoft Foundry Models verfügbar, wird in dieser Lektion jedoch nicht behandelt* 
 
 ## Llama 3.1 
 
-Mit 405 Milliarden Parametern gehört Llama 3.1 in die Kategorie der Open-Source-LLMs. 
+Mit 405 Milliarden Parametern gehört Llama 3.1 zur Kategorie der Open-Source-LLMs. 
 
-Das Modell ist ein Upgrade gegenüber der früheren Version Llama 3 und bietet: 
+Das Modell ist eine Weiterentwicklung der früheren Version Llama 3 und bietet: 
 
-- Größeres Kontextfenster - 128k Tokens vs. 8k Tokens 
-- Mehr maximale Ausgabetokens - 4096 vs. 2048 
-- Bessere Mehrsprachigkeitsunterstützung - durch eine Erhöhung der Trainings-Tokens 
+- Größeres Kontextfenster – 128k Tokens vs. 8k Tokens 
+- Größere maximale Ausgabetokenanzahl – 4096 vs. 2048 
+- Bessere Mehrsprachigkeit – durch erhöhte Anzahl an Trainings-Tokens 
 
-Diese ermöglichen es Llama 3.1, komplexere Anwendungsfälle beim Erstellen von GenAI-Anwendungen zu bewältigen, einschließlich: 
-- Native Funktionsaufrufe - die Fähigkeit, externe Tools und Funktionen außerhalb des LLM-Workflows aufzurufen
-- Bessere RAG-Leistung - bedingt durch das größere Kontextfenster 
-- Generierung synthetischer Daten - die Möglichkeit, effektive Daten für Aufgaben wie Feinabstimmung zu erstellen 
+Diese Verbesserungen ermöglichen es Llama 3.1, komplexere Anwendungsfälle bei der Entwicklung von GenAI-Anwendungen zu bewältigen, darunter: 
+- Native Funktionsaufrufe – die Fähigkeit, externe Werkzeuge und Funktionen außerhalb des LLM-Workflows aufzurufen 
+- Bessere RAG-Leistung – durch das größere Kontextfenster 
+- Synthetische Datenerzeugung – die Fähigkeit, effektive Daten für Aufgaben wie Feintuning zu erzeugen 
 
 ### Native Funktionsaufrufe 
 
-Llama 3.1 wurde so feinabgestimmt, dass es Funktion- oder Tool-Aufrufe effektiver ausführen kann. Es verfügt außerdem über zwei eingebaute Werkzeuge, die das Modell basierend auf der Benutzereingabe als notwendig erkennen kann. Diese Werkzeuge sind: 
+Llama 3.1 wurde darauf feinjustiert, Funktions- oder Werkzeugaufrufe effektiver zu machen. Es verfügt außerdem über zwei integrierte Werkzeuge, die das Modell aufgrund des Benutzerprompts als nötig erkennen kann. Diese Werkzeuge sind: 
 
-- **Brave Search** - Kann für aktuelle Informationen wie Wetter durch eine Websuche verwendet werden 
-- **Wolfram Alpha** - Kann für komplexere mathematische Berechnungen verwendet werden, sodass eigene Funktionen nicht geschrieben werden müssen. 
+- **Brave Search** – Kann verwendet werden, um aktuelle Informationen wie Wetterdaten durch eine Websuche zu erhalten 
+- **Wolfram Alpha** – Kann für komplexere mathematische Berechnungen genutzt werden, sodass das Schreiben eigener Funktionen nicht notwendig ist. 
 
-Sie können auch eigene benutzerdefinierte Werkzeuge erstellen, die das LLM aufrufen kann. 
+Sie können auch Ihre eigenen benutzerdefinierten Werkzeuge erstellen, die das LLM aufrufen kann. 
 
 Im folgenden Codebeispiel: 
 
 - Definieren wir die verfügbaren Werkzeuge (brave_search, wolfram_alpha) im Systemprompt. 
 - Senden eine Benutzeranfrage, die nach dem Wetter in einer bestimmten Stadt fragt. 
-- Das LLM antwortet mit einem Tool-Aufruf an das Brave Search Tool, der so aussehen wird `<|python_tag|>brave_search.call(query="Stockholm weather")` 
+- Das LLM wird mit einem Werkzeugaufruf an das Brave Search Tool antworten, der so aussehen wird `<|python_tag|>brave_search.call(query="Stockholm weather")` 
 
-*Hinweis: Dieses Beispiel führt nur den Tool-Aufruf aus, wenn Sie die Ergebnisse erhalten möchten, müssen Sie ein kostenloses Konto auf der Brave API-Seite anlegen und die Funktion selbst definieren.*
+*Hinweis: Dieses Beispiel führt nur den Werkzeugaufruf aus. Wenn Sie die Ergebnisse erhalten möchten, müssen Sie ein kostenloses Konto auf der Brave API-Seite anlegen und die Funktion selbst definieren.*
 
 ```python 
 import os
@@ -98,13 +98,13 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2 
 
-Trotz der Tatsache, dass es sich um ein LLM handelt, ist eine Einschränkung von Llama 3.1 seine fehlende Multimodalität. Das heißt, die Unfähigkeit, unterschiedliche Eingabetypen wie Bilder als Eingabeaufforderungen zu nutzen und darauf zu antworten. Diese Fähigkeit ist eines der Hauptmerkmale von Llama 3.2. Zu den weiteren Merkmalen gehören: 
+Trotz der Zugehörigkeit zu den LLMs hat Llama 3.1 eine Einschränkung: die fehlende Multimodalität. Also die Unfähigkeit, verschiedene Eingabearten wie Bilder als Prompts zu verwenden und darauf zu reagieren. Diese Fähigkeit ist eine der Hauptmerkmale von Llama 3.2. Zu den Features gehören außerdem: 
 
-- Multimodalität - kann sowohl Text- als auch Bildaufforderungen auswerten 
-- Klein- bis Mittelgroße Varianten (11B und 90B) - bieten flexible Bereitstellungsoptionen, 
-- Nur Text Varianten (1B und 3B) - ermöglichen die Bereitstellung auf Edge / Mobilgeräten und bieten geringe Latenz 
+- Multimodalität – Fähigkeit, sowohl Text- als auch Bildprompts zu verarbeiten 
+- Kleine bis mittelgroße Varianten (11B und 90B) – bietet flexible Bereitstellungsoptionen 
+- Nur-Text-Varianten (1B und 3B) – ermöglichen die Bereitstellung auf Edge-/Mobilgeräten mit niedriger Latenz 
 
-Die Multimodalitätsunterstützung stellt einen großen Fortschritt in der Welt der Open-Source-Modelle dar. Das folgende Codebeispiel nimmt sowohl ein Bild- als auch ein Textprompt, um eine Analyse des Bildes von Llama 3.2 90B zu erhalten. 
+Die multimodale Unterstützung stellt einen großen Fortschritt in der Welt der Open-Source-Modelle dar. Das folgende Codebeispiel nimmt sowohl ein Bild als auch einen Textprompt auf, um eine Analyse des Bildes durch Llama 3.2 90B zu erhalten. 
 
 
 ### Multimodale Unterstützung mit Llama 3.2
@@ -122,7 +122,7 @@ from azure.ai.inference.models import (
 )
 from azure.core.credentials import AzureKeyCredential
 
-# Holen Sie diese von der Seite „Übersicht“ Ihres Microsoft Foundry-Projekts
+# Holen Sie diese von der Übersichtsseite Ihres Microsoft Foundry-Projekts
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Llama-3.2-90B-Vision-Instruct"
@@ -155,9 +155,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Lernen endet hier nicht, setze die Reise fort
+## Das Lernen endet hier nicht, setzen Sie die Reise fort
 
-Nach Abschluss dieser Lektion, sehen Sie sich unsere [Generative AI Learning Sammlung](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) an, um Ihr Wissen über Generative KI weiter zu vertiefen!
+Nach Abschluss dieser Lektion schauen Sie sich unsere [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) an, um Ihr Wissen über Generative KI weiter auszubauen!
 
 ---
 

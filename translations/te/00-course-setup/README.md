@@ -1,51 +1,51 @@
-# ఈ కోర్సుతో మొదలయ్యే విధానం
+# ఈ కోర్సుతో ప్రారంభించటం
 
-మీరు ఈ కోర్సును ప్రారంభించి, Generative AI తో మీరు ఏం సృష్టించగలరో చూడటానికి మేము చాలా ఉత్సాహంగా ఉన్నాము!
+మీరు ఈ కోర్సును ప్రారంభించి, జనరేటివ్ AI తో మీరు నిర్మించేందుకు ఉత్తేజితం అవ్వదలచుకున్నది చూడటానికి మేము చాలా ఉత్సాహంగా ఉన్నాము!
 
-మీ విజయం కోసం, ఈ పేజీ సెటప్ దశలు, సాంకేతిక అవసరాలు, మరియు సహాయం అవసరమైతే ఎక్కడ పొందగలరో వివరిస్తుంది.
+మీ విజయం కోసం, ఈ పేజీ సెటప్ దశలు, సాంకేతిక అవసరాలు మరియు అవసరమైతే సహాయం పొందే ప్రదేశాలను అందిస్తుంది.
 
 ## సెటప్ దశలు
 
-ఈ కోర్సును ప్రారంభించడానికి, మీరు క్రింది దశలను పూర్తి చేయాలి.
+ఈ కోర్సును ప్రారంభించేందుకు, మీరు క్రింది దశలను పూర్తి చేయాలి.
 
 ### 1. ఈ రిపోను ఫోర్క్ చేయండి
 
-[ఈ మొత్తం రిపోను ఫోర్క్ చేయండి](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) మీ స్వంత GitHub ఖాతాకు, తద్వారా మీరు ఏ కోడ్ ను మార్చి ఛాలెంజ్‌లు పూర్తి చేయవచ్చు. మీరు కూడా [ఈ రిపోకు స్టార్ (🌟) కూడా ఇవ్వొచ్చు](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst) దీనిని మరియు సంబంధించిన రిపోల‌ను తేలికగా కనుగొనేందుకు.
+మీ స్వంత GitHub ఖాతాకు [ఈ మొత్తం రిపోను ఫోర్క్ చేయండి](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst), తద్వారా మీరు ఏ కోడ్‌లోనైనా మార్పులు చేయగలరు మరియు ఛాలెంజ్‌లను పూర్తి చేయవచ్చు. మీరు దీన్ని మరియు సంబంధిత రిపోల్ని సులభంగా కనుగొనడానికి కూడా [స్టార్ (🌟) చేయవచ్చు](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars?WT.mc_id=academic-105485-koreyst).
 
-### 2. కోడ్‌స్పేస్ సృష్టించండి
+### 2. కోడ్స్‌పేస్‌ను సృష్టించండి
 
-కోడ్ నడపేప్పుడు ఏ డిపెండెన్సీ సమస్యలు రాకుండా ఉండేందుకు, ఈ కోర్సును [GitHub Codespaces](https://github.com/features/codespaces?WT.mc_id=academic-105485-koreyst) లో నడపడం సిఫార్సు చేస్తాము.
+కోడ్ నడపేటప్పుడు ఏదైనా డిపెండెన్సీ సమస్యలు ఎదురవకుండా ఉండేందుకు, ఈ కోర్సును [GitHub Codespaces](https://github.com/features/codespaces?WT.mc_id=academic-105485-koreyst)లో నడపటం మేము సిఫార్సు చేస్తాము.
 
-మీ ఫోర్క్ లో: **Code -> Codespaces -> New on main**
+మీ ఫోర్క్‌లో: **Code -> Codespaces -> New on main**
 
 ![Dialog showing buttons to create a codespace](../../../translated_images/te/who-will-pay.4c0609b1c7780f44.webp)
 
 #### 2.1 సీక్రెట్ జోడించండి
 
-1. ⚙️ గేర్ ఐకాన్ -> కమాండ్ పెలెట్ -> Codespaces : Manage user secret -> Add a new secret.
-2. పేరు OPENAI_API_KEY, మీ కీని పేస్ట్ చేసి, సేవ్ చేయండి.
+1. ⚙️ గేర్ ఐకాన్ -> కమాండ్ పాలెట్ -> Codespaces : మేనేజ్ యూజర్ సీక్రెట్ -> కొత్త సీక్రెట్ జోడించండి.
+2. పేరు OPENAI_API_KEY, మీ కీను పేస్ట్ చేసి, సేవ్ చేయండి.
 
-### 3. తర్వాత ఏమిటీ?
+### 3. తర్వాత ఏమి?
 
-| నేను ఏమి చేయాలనుకుంటున్నాను... | వెళ్ళే స్థలం...                                                     |
+| నేను చేయాలనుకుంటున్నది…         | వెళ్లండి…                                                                 |
 |---------------------|-------------------------------------------------------------------------|
-| పాఠం 1 ప్రారంభించండి      | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
-| ఆఫ్‌లైన్‌లో పని చేయండి        | [`setup-local.md`](02-setup-local.md)                                   |
-| LLM ప్రొవైడర్ సెటప్ చేయండి | [`providers.md`](03-providers.md)                                        |
-| ఇతర విద్యార్థులను కలుసుకోండి | [మా Discord లో చేరాలంటే](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
+| లెసన్ 1 ప్రారంభించండి          | [`01-introduction-to-genai`](../01-introduction-to-genai/README.md)     |
+| ఆఫ్లైన్‌లో పని చేయండి           | [`setup-local.md`](02-setup-local.md)                                   |
+| LLM ప్రొవైడర్ సెటప్ చేయండి       | [`providers.md`](03-providers.md)                                        |
+| ఇతర అభ్యసనకర్తలతో కలిసేవారు     | [మా డిస్కోర్డ్‌లో చేరండి](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)   |
 
 ## సమస్య పరిష్కారం
 
 
-| లక్షణం                                   | పరిష్కారం                                                             |
-|-------------------------------------------|-----------------------------------------------------------------|
-| కంటైనర్ బిల్డ్ 10 నిమిషాలకంటే ఎక్కువ సమయం తీసుకుంటున్నది            | **Codespaces ➜ “Rebuild Container”**                            |
-| `python: command not found`               | టెర్మినల్ జతచేయబడలేదు; **+** పై క్లిక్ చేసి *bash* ఎంచుకోండి                   |
-| OpenAI నుండి `401 Unauthorized`            | తప్పు లేదా కాలపరిమితి వచ్చిన `OPENAI_API_KEY`                                |
-| VS Code “Dev container mounting…” చూపిస్తోంది   | బ్రౌజర్ టాబ్‌ను రీఫ్రెష్ చేయండి - Codespaces కొన్నిసార్లు కనెక్షన్ పోతుంది   |
-| నోట్‌బుక్ కర్నెల్ లేదు                   | నోట్‌బుక్ మెనూ ➜ **Kernel ▸ Select Kernel ▸ Python 3**           |
+| లక్షణం                                    | పరిష్కారం                                                              |
+|-------------------------------------------|------------------------------------------------------------------------|
+| కంటైనర్ నిర్మాణం 10 నిమిషాలు గడిచినా ఉండటం  | **Codespaces ➜ “Rebuild Container”**                                    |
+| `python: command not found`               | టెర్మినల్ అంటిచేయలేదు; క్లిక్ చేయండి **+** ➜ *bash*                      |
+| OpenAI నుండి `401 Unauthorized`           | తప్పు / కాలం పూర్తయిన `OPENAI_API_KEY`                                  |
+| VS Code "Dev container mounting…" చూపిస్తే | బ్రౌజర్ ట్యాబ్ రిఫ్రెష్ చేయండి — Codespaces కొన్ని సార్లు కనెక్షన్ కోల్పోతుంది | // 
+| నోట్బుక్ కర్నల్ గాయపడింది              | నోట్బుక్ మెనూ ➜ **Kernel ▸ Select Kernel ▸ Python 3**                     |
 
-   యూనిక్స్-ఆధారిత సిస్టమ్స్:
+   యూనిక్స్ ఆధారిత వ్యవస్థలు:
 
    ```bash
    touch .env
@@ -57,68 +57,68 @@
    echo . > .env
    ```
 
-3. **`.env` ఫైల్ ను సవరించండి**: `.env` ఫైల్ ను టెక్స్ట్ ఎడిటర్ లో (ఉదాహరణకు, VS Code, Notepad++, లేదా ఏదైనా ఎడిటర్) తెరిచి, దిగువ లైన్లను జోడించండి, ప్లేస్‌హోల్డర్ల స్థానంలో మీ అసలు Microsoft Foundry Models ఎండ్‌పాయింట్ మరియు కీ ని చేర్చండి (వివరాలకు [`providers.md`](03-providers.md) చూడండి):
+3. **`.env` ఫైల్‌ను సవరించండి**: ఒక టెక్స్ట్ ఎడిటర్ లో `.env` ఫైల్‌ను తెరవండి (ఉదా: VS Code, Notepad++ లేదా ఏదైనా ఎడిటర్). ఫైల్‌లో క్రింది లైన్లను జోడించండి, మీరు మీ అసలు Microsoft Foundry Models ఎండ్‌పాయింట్ మరియు కీని ప్లేస్‌హోల్డర్స్ తో మార్చండి (పొందే విధానమును చూడటానికి [`providers.md`](03-providers.md) చూడండి):
 
-   > **గమనిక:** GitHub Models (మరియు దాని `GITHUB_TOKEN` వేరియబుల్) జూలై 2026 ముగింపుకి రిటైర్ అవుతుంది. దాని బదులు [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) ఉపయోగించండి.
+   > **గమనిక:** GitHub Models (మరియు దాని `GITHUB_TOKEN` వేరియబుల్) జూలై 2026 చివరికి రిటైర్ అవుతోుంటుంది. దేనికంటే [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) ఉపయోగించండి.
 
    ```env
    AZURE_INFERENCE_ENDPOINT=your_foundry_endpoint_here
    AZURE_INFERENCE_CREDENTIAL=your_foundry_api_key_here
    ```
 
-4. **ఫైల్ సేవ్ చేయండి**: మార్పులు సేవ్ చేసి, టెక్స్ట్ ఎడిటర్ ను మూసివేయండి.
+4. **ఫైల్‌ను సేవ్ చేయండి**: మార్పులను సేవ్ చేసి టెక్స్ట్ ఎడిటర్‌ను మూసివేయండి.
 
-5. **`python-dotenv` ని ఇన్‌స్టాల్ చేయండి**: మీరు ఇంకా చేయకపోతే, `.env` ఫైల్ నుండి ఎన్విరాన్‌మెంట్ వేరియబుల్స్ ను మీ Python అప్లికేషన్ లో లోడ్ చేయడానికి `python-dotenv` ప్యాకేజీని ఇన్‌స్టాల్ చేయాలి. దీన్ని `pip` ద్వారా ఇన్‌స్టాల్ చేయవచ్చు:
+5. **`python-dotenv` ఇన్‌స్టాల్ చేయండి**: మీరు ఇప్పటి వరకు చేయలేదు అయితే, `.env` ఫైల్ నుండి పర్యావరణ వేరియబుల్స్ ను మీ Python అప్లికేషన్‌లో లోడ్ చేయడానికి `python-dotenv` ప్యాకేజ్‌ను ఇన్‌స్టాల్ చేయాలి. దీన్ని `pip` ఉపయోగించి ఇన్‌స్టాల్ చేయవచ్చు:
 
    ```bash
    pip install python-dotenv
    ```
 
-6. **మీ Python స్క్రిప్ట్ లో ఎన్విరాన్‌మెంట్ వేరియబుల్స్ ను లోడ్ చేయండి**: మీ Python స్క్రిప్ట్ లో `python-dotenv` ప్యాకేజీ ఉపయోగించి `.env` ఫైల్ నుండి ఎన్విరాన్‌మెంట్ వేరియబుల్స్ ను లోడ్ చేయండి:
+6. **మీ Python స్క్రిప్ట్‌లో పర్యావరణ వేరియబుల్స్‌ను లోడ్ చేయండి**: మీ Python స్క్రిప్ట్‌లో `.env` ఫైల్ నుండి వేరియబుల్స్ ను లోడ్ చేయడానికి `python-dotenv` ప్యాకేజ్ ను ఉపయోగించండి:
 
    ```python
    from dotenv import load_dotenv
    import os
 
-   # .env ఫైల్ నుండి వాతావరణ చరాలు లోడ్ చేయండి
+   # .env ఫైల్ నుండి వాతావరణ వేరియబుల్స్ లోడ్ చేయండి
    load_dotenv()
 
-   # Microsoft Foundry Models వేరియబుల్స్‌కు அணுகండి
+   # Microsoft Foundry Models వేరియబుల్స్‌కి pristum అవ్వండి
    endpoint = os.getenv("AZURE_INFERENCE_ENDPOINT")
    token = os.getenv("AZURE_INFERENCE_CREDENTIAL")
 
    print(endpoint)
    ```
 
-అంతే! మీరు విజయవంతంగా `.env` ఫైల్ సృష్టించి, Microsoft Foundry Models క్రెడెన్షియల్స్ జోడించి వాటిని Python అప్లికేషన్ లో లోడ్ చేసుకున్నారు.
+అంతే! మీరు విజయవంతంగా `.env` ఫైల్ సృష్టించి, Microsoft Foundry Models యొక్క క్రెడెన్షియల్స్ జోడించి, వాటిని మీ Python అప్లికేషన్‌లో లోడ్ చేశారు.
 
-## మీ కంప్యూటర్ లో లోకల్ గా ఎలా నడపాలి
+## మీ కంప్యూటర్‌లో స్థానికంగా ఎలా నడిపెయ్యాలి
 
-కోడ్ ను మీ కంప్యూటర్ లో లోకల్ గా నడపడానికి, మీరు [Python ఇన్‌స్టాల్ చేయాలి](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) అని ఉంటుంది.
+కోడ్‌ను మీ కంప్యూటర్‌లో స్థానికంగా నడపడానికి, మీకు [Python ఇన్స్టాల్ చేసిన వర్షన్](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) ఉండాలి.
 
-తరువాత, రిపోజిటరీ ఉపయోగించడానికి, దాన్ని క్లోన్ చేయాలి:
+ఆపై రిపాజిటరీని క్లోన్ చేయాలి:
 
 ```shell
 git clone https://github.com/microsoft/generative-ai-for-beginners
 cd generative-ai-for-beginners
 ```
 
-అన్ని ఫైల్స్ డౌన్‌లోడ్ అయిన తర్వాత, మీరు ప్రారంభించవచ్చు!
+మీ వద్ద అన్నీ సరిగ్గా ఉన్న తర్వాత, మీరు ప్రారంభించవచ్చు!
 
 ## ఐచ్ఛిక దశలు
 
-### మినీకాండాను ఇన్‌స్టాల్ చేయడం
+### మినికోండా ఇన్‌స్టాలేషన్
 
-[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) అనేది [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python మరియు కొన్ని ప్యాకేజీలను ఇన్‌స్టాల్ చేయడానికి తేలికపాటి ఇన్‌స్టాలర్.
-Conda స్వతంత్రంగా ఒక ప్యాకేజ్ మేనేజర్, ఇది విభిన్న Python [**వర్చువల్ ఎన్విరాన్‌మెంట్స్**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) మరియు ప్యాకేజీలను సులభంగా సెటప్ చేయడం మరియు మారడానికి సహాయపడుతుంది. ఇది `pip` ద్వారా అందుబాటులో లేని ప్యాకేజీలను కూడా ఇన్‌స్టాల్ చేయడానికి ఉపయోగపడుతుంది.
+[Miniconda](https://conda.io/en/latest/miniconda.html?WT.mc_id=academic-105485-koreyst) అనేది [Conda](https://docs.conda.io/en/latest?WT.mc_id=academic-105485-koreyst), Python మరియు కొన్ని ప్యాకేజీలు ఇన్‌స్టాల్ చేసుకోవడానికి లైట్ వెయిట్ ఇన్‌స్టాలర్.
+Conda స్వయంగా ఒక ప్యాకేజ్ మేనేజర్, ఇది వివిధ Python [**వర్చువల్ ఎన్విరాన్మెంట్స్**](https://docs.python.org/3/tutorial/venv.html?WT.mc_id=academic-105485-koreyst) మరియు ప్యాకేజీల మధ్య సులువుగా సెటప్ చేయడంలో మరియు మార్చుకోవడంలో సహాయపడుతుంది. ఇది `pip` ద్వారా అందుబాటులో లేనివి ఇన్స్టాల్ చేసుకోవడంలో ఉపయోగపడుతుంది.
 
-మీరు [MiniConda ఇన్‌స్టాలేషన్ గైడ్](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) ను అనుసరించవచ్చు.
+మీరు [MiniConda ఇన్స్టాలేషన్ గైడ్](https://docs.anaconda.com/free/miniconda/#quick-command-line-install?WT.mc_id=academic-105485-koreyst) ని అనుసరించి సెట్ అప్ చేసుకోవచ్చు.
 
-Miniconda ఇన్‌స్టాల్ చేసిన తర్వాత, మీరు రిపోజిటరీని క్లోన్ చేయాలి (ఇప్పటికే చేయకపోతే):
+Miniconda ఇన్‌స్టాలేషన్ చేసిన తర్వాత, మీరు రిపాజిటరీని (ఇంకా చేయలేదు అయితే) [క్లోన్](https://github.com/microsoft/generative-ai-for-beginners/fork?WT.mc_id=academic-105485-koreyst) చేయాలి
 
-తరువాత, మీరు ఒక వర్చువల్ ఎన్విరాన్‌మెంట్ సృష్టించాలి. Conda తో దీ‌ని చేయడానికి, కొత్త ఎన్విరాన్‌మెంట్ ఫైల్ (_environment.yml_) సృష్టించండి. మీరు Codespaces అనుసరిస్తుంటే, దీన్ని `.devcontainer` డైరెక్టరీ లో, అర్ధం `.devcontainer/environment.yml` లో సృష్టించండి.
+తదుపరి, మీరు వర్చువల్ ఎన్విరాన్మెంట్ సృష్టించాలి. Condaతో ఇది చేయడానికి, కొత్త ఎన్విరాన్మెంట్ ఫైల్ (_environment.yml_) సృష్టించండి. మీరు Codespaces ను అనుసరించి ఉంటే, ఇది `.devcontainer` డైరెక్టరీలో, అంటే `.devcontainer/environment.yml` లో సృష్టించండి.
 
-మీ ఎన్విరాన్‌మెంట్ ఫైల్‌ను క్రింది కత్తెర‌తో నింపండి:
+మీ ఎన్విరాన్మెంట్ ఫైల్ ను క్రింద చూపించిన స్నిపెట్‌తో నింపండి:
 
 ```yml
 name: <environment-name>
@@ -134,38 +134,38 @@ dependencies:
       - azure-ai-ml
 ```
 
-మీరు conda ఉపయోగించేటప్పుడు దోషాలు వస్తున్నాయంటే, మీరు క్రింది కమాండ్ ను టెర్మినల్ లో నేరుగా అమలు చేసి Microsoft AI లైబ్రరీలను మాన్యువల్ గా ఇన్‌స్టాల్ చేయవచ్చు.
+మీరు Conda ఉపయోగిస్తూ errors వస్తున్నట్లయితే, క్రింది కమాండ్‌ను టెర్మినల్‌లో ఉపయోగించి Microsoft AI లైబ్రరీలను మాన్యువీగా ఇన్‌స్టాల్ చేయవచ్చు.
 
 ```
 conda install -c microsoft azure-ai-ml
 ```
 
-ఎన్విరాన్‌మెంట్ ఫైల్ మనకు అవసరమైన డిపెండెన్సీలను పేర్కొంటుంది. `<environment-name>` అనేది మీరు మీ Conda ఎన్విరాన్‌మెంట్ కి ఇవ్వాలనుకునే పేరు, మరియు `<python-version>` అనేది మీరు ఉపయోగించాలనుకునే Python వెర్షన్, ఉదాహరణకు, `3` అనేది Python తాజా ప్రధాన వెర్షన్.
+ఎన్విరాన్మెంట్ ఫైల్ మనకు అవసరమైన డిపెండెన్సీలను స్పెసిఫై చేస్తుంది. `<environment-name>` అనేది మీరు మీ Conda ఎన్విరాన్మెంట్‌కు కేటాయించాలనుకునే పేరు, మరియు `<python-version>` అనేది మీరు ఉపయోగించదలచుకున్న Python వెర్షన్, ఉదా: `3` అనేది Python యొక్క తాజా ప్రధాన వెర్షన్.
 
-ఈ దశ పూర్తి అయిన తర్వాత, కింది ఆదేశాలను మీ కమాండ్ లైన్/టెర్మినల్ లో నడపడం ద్వారా మీ Conda ఎన్విరాన్‌మెంట్ సృష్టించవచ్చు.
+అది పూర్తయ్యాక, మీ కమాండ్ లైన్/టెర్మినల్‌లో క్రింది కమాండ్లు అమలు చేసి మీ Conda ఎన్విరాన్మెంట్‌ను సృష్టించండి
 
 ```bash
-conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer ఉపపథం కేవలం Codespace సెట్టింగ్స్‌కు అమలు అవుతుంది
+conda env create --name ai4beg --file .devcontainer/environment.yml # .devcontainer ఉప మార్గం కేవలం Codespace అమరికలకు మాత్రమే వర్తిస్తుంది
 conda activate ai4beg
 ```
 
-ఏదైనా సమస్యలుంటే [Conda ఎన్విరాన్‌మెంట్ గైడ్](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) ను చూడండి.
+ఏదైనా సమస్యలు ఎదురైతే, [Conda ఎన్విరాన్మెంట్స్ గైడ్](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?WT.mc_id=academic-105485-koreyst) చూడండి.
 
-### Python మద్దతు విస్తరణతో Visual Studio Code ఉపయోగించడం
+### Visual Studio Codeలో Python సపోర్ట్ ఎక్స్‌టెన్షన్‌తో ఉపయోగించడం
 
-ఈ కోర్సు కోసం, [Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) ఎడిటర్ ను [Python మద్దతు విస్తరణ](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) తో ఉపయోగించమని మేము సిఫారసు చేస్తాము. ఇది చచ్చిక సిఫారసు కానీ తప్పనిసరి కాదు.
+ఈ కోర్సుకు, మేము [Visual Studio Code (VS Code)](https://code.visualstudio.com/?WT.mc_id=academic-105485-koreyst) ఎడిటర్‌ను, [Python సపోర్ట్ ఎక్స్‌టెన్షన్](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst)తో అమర్చుకోవడం సిఫార్సు చేస్తాము. ఇది అయినప్పటికీ, కఠిన అవసరం కాకుండా సిఫార్సు మాత్రమే.
 
-> **గమనిక**: కోర్సు రిపోజిటరీని VS Code లో తెరిచినప్పుడే, మీరు ప్రాజెక్టును కంటైనర్ లో సెటప్ చేసుకోవచ్చు. దీని కారణం కోర్సు రిపోజిటరీలో ఉండే [ప్రత్యేక `.devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) డైరెక్టరీ.
+> **గమనిక**: కోర్సు రిపాజిటరీని VS Codeలో తెరిచినప్పుడు, ప్రాజెక్ట్‌ను కంటైనర్‌లో సెటప్ చేసుకోవడానికి అవకాశం ఉంటుంది. ఇది కోర్సు రిపాజిటరీలో ఉన్న [ప్రత్యేక `.devcontainer`](https://code.visualstudio.com/docs/devcontainers/containers?itemName=ms-python.python&WT.mc_id=academic-105485-koreyst) డైరెక్టరీ కారణంగా జరుగుతుంది. దీనిపై మరింత తర్వాత తెలిపిస్తాము.
 
-> **గమనిక**: మీరు రిపోజిటరీని క్లోన్ చేసి VS Code లో తెరిచిన వెంటనే, అది మీరు Python మద్దతు విస్తరణని ఇన్‌స్టాల్ చేయమని సూచిస్తుంది.
+> **గమనిక**: మీరు రిపాజిటరీని క్లోన్ చేసి VS Codeలో తెరిచిన తర్వాత, అది ఆటోమేటిక్‌గా Python సపోర్ట్ ఎక్స్‌టెన్షన్ ఇన్‌స్టాల్ చేయమని సూచిస్తుంది.
 
-> **గమనిక**: VS Code మీరు రిపోజిటరీను కంటైనర్ లో తిరిగి తెరవమని సూచించినా, మీరు లొకల్‌లో ఇన్‌స్టాల్ చేసిన Python వర్షన్ ఉపయోగించేందుకు ఈ సూచనను తిరస్కరించండి.
+> **గమనిక**: VS Code మీరు రిపాజిటరీని కంటైనర్‌లో పునఃప్రారంభించమని సూచిస్తే, మీరు స్థానికంగా ఇన్‌స్టాల్ చేసిన Pythonను ఉపయోగించాలనుకుంటే అటువంటి అభ్యర్థనను నిరాకరించండి.
 
-### బ్రౌజర్‌లో Jupyter ఉపయోగించడం
+### బ్రౌజర్‌లో Jupyter ను ఉపయోగించడం
 
-మీరు ప్రాజెక్టుపై [Jupyter వాతావరణం](https://jupyter.org?WT.mc_id=academic-105485-koreyst) కూడా బ్రౌజర్‌లోనే పనిచేయవచ్చు. క్లాసిక్ Jupyter మరియు [Jupyter Hub](https://jupyter.org/hub?WT.mc_id=academic-105485-koreyst) తాను ఆటో-కంప్లీషన్, కోడ్ హైలైట్ వంటి ఫీచర్లు కలిగిన మంచి డెవలప్‌మెంట్ వాతావరణం అందిస్తాయి.
+మీరు ప్రాజెక్టుపై బ్రౌజర్‌లోనే [Jupyter వాతావరణం](https://jupyter.org?WT.mc_id=academic-105485-koreyst) ఉపయోగించి పని చేయవచ్చు. క్లాసిక్ Jupyter మరియు [Jupyter Hub](https://jupyter.org/hub?WT.mc_id=academic-105485-koreyst) రెండు స్వాగతకరమైన అభివృద్ధి వాతావరణాన్ని అందిస్తాయి, ఆటో-కంప్లీషన్, కోడ్ హైలైటింగ్ వంటి ఫీచర్లతో.
 
-లొకల్‌లో Jupyter మొదలుపెట్టాలంటే, టెర్మినల్/కమాండ్ లైన్ కి వెళ్ళి, కోర్సు డైరెక్టరీ లోకి వెళ్లి, క్రింది ఆదేశాన్ని అమలు చేయండి:
+స్థానికంగా Jupyter ను ప్రారంభించడానికి, టెర్మినల్/కమాండ్ లైన్ లోకి వెళ్లి, కోర్స్ డైరెక్టరీకి పోయి క్రింద అమలు చేయండి:
 
 ```bash
 jupyter notebook
@@ -177,59 +177,59 @@ jupyter notebook
 jupyterhub
 ```
 
-దీని ఫలితంగా ఒక Jupyter ఇన్‌స్టాన్స్ ప్రారంభమవుతుంది, దాని యాక్సెస్ URL కమాండ్ లైన్ విండో లో చూపబడుతుంది.
+ఇది Jupyter ఇన్‌స్టెన్స్ ప్రారంభిస్తుంది మరియు ప్రవేశించడానికి URL ను కమాండ్ లైన్ విండోలో చూపిస్తుంది.
 
-మీరు URL ని యాక్సెస్ చేసిన తర్వాత, కోర్సు అవుట్‌లైన్ కనిపిస్తుంది మరియు ఏ `*.ipynb` ఫైల్ కి వెళ్లవచ్చు. ఉదాహరణకు, `08-building-search-applications/python/oai-solution.ipynb`.
+URLకి ప్రవేశించిన తర్వాత, మీరు కోర్సు అవుట్‌లైన్ చూసి `*.ipynb` ఫైల్‌లకు వెళ్లగలుగుతారు. ఉదా: `08-building-search-applications/python/oai-solution.ipynb`.
 
-### కంటైనర్ లో నడపడం
+### కంటైనర్‌లో నడపటం
 
-మీ కంప్యూటర్ లేదా కోడ్‌స్పేస్ లో అన్నిటినీ బదులుగా [కంటైనర్](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>) ఉపయోగించవచ్చు. కోర్సు రిపోలో ప్రత్యేక `.devcontainer` ఫోల్డర్ వలన VS Code ప్రాజెక్టును ఒక కంటైనర్ లో సెట్ చేయగలుగుతుంది. Codespaces వెలుపల, ఇది Docker ఇన్‌స్టాల్ చేయాలని అవసరం, ఇది కొంత పని కావచ్చు, కాబట్టి కేవలం కంటైనర్లతో పట్ల అనుభవం ఉన్న వారికే మేము సిఫారసు చేస్తాము.
+మీ కంప్యూటరులో లేదా Codespace లో అన్ని సెటప్ చేసుకోవడం బదులు, మీరు [కంటైనర్](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>) ఉపయోగించవచ్చు. కోర్సు రిపాజిటరీలో ప్రత్యేక `.devcontainer` ఫోల్డర్ వల్ల VS Code ప్రాజెక్ట్‌ను కంటైనర్‌లో సెటప్ చేయగలదు. Codespaces కాకుండా, దీని కోసం Docker ఇన్‌స్టాల్ చేయాలి, ఇది కొంత చింతం కలిగించే పని, కాబట్టి కేవలం కంటైనర్లలో అనుభవం ఉన్నవారికి మాత్రమే మేము సిఫార్సు చేస్తాము.
 
-GitHub Codespaces ఉపయోగించినప్పుడు మీ API కీలు సురక్షితంగా ఉంచుకోవడానికి Codespace Secrets వాడటం ఉత్తమ మార్గం. దయచేసి మరింత సమాచారం కోసం [Codespaces సీక్రెట్స్ మేనేజ్‌మెంట్](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) గైడ్ ని అనుసరించండి.
+GitHub Codespaces ఉపయోగించేటప్పుడు మీ API కీలు సురక్షితంగా ఉంచటానికి ఉత్తమ మార్గాలలో ఒకటి కోడ్స్‌పేస్ సీక్రెట్లు ఉపయోగించడం. దీనిపై మరింత తెలుసుకోవడానికి [Codespaces సీక్రెట్స్ మేనేజ్‌మెంట్](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) గైడ్‌ను అనుసరించండి.
 
 
 ## పాఠాలు మరియు సాంకేతిక అవసరాలు
 
-ఈ కోర్సులో 6 భావన పాఠాలు మరియు 6 కోడింగ్ పాఠాలు ఉన్నాయి.
+ఈ కోర్సులో జనరేటివ్ AI భావనలను వివరిస్తూ "Learn" పాఠాలు మరియు సాధ్యమైన చోట్ల **Python** మరియు **TypeScript** లో చేతితో రాసిన కోడ్ ఉదాహరణలతో "Build" పాఠాలు ఉన్నాయి.
 
-కోడింగ్ పాఠాల కోసం, మేము Azure OpenAI సర్వీస్ ఉపయోగిస్తున్నాము. ఈ కోడ్ నడపడానికి Azure OpenAI సర్వీస్ మరియు API కీ యాక్సెస్ ఉండాలి. యాక్సెస్ పొందడానికి మీరు [ఈ అప్లికేషన్ పూర్తి చేయాలి](https://azure.microsoft.com/products/ai-services/openai-service?WT.mc_id=academic-105485-koreyst).
+కోడింగ్ పాఠాల కోసం, మేము Microsoft Foundry లో Azure OpenAI ఉపయోగిస్తాము. మీకు Azure సబ్‌స్క్రిప్షన్ మరియు API కీ అవసరం. యాక్సెస్ ఓపెన్ - అప్లికేషన్ అవసరం లేదు - కాబట్టి మీరు [Microsoft Foundry రిసోర్సును సృష్టించి మోడల్‌ను డిప్లాయ్ చేయండి](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst) మీ ఎండ్‌పాయింట్ మరియు కీ కోసం.
 
-మీ అప్లికేషన్ ప్రక్రియ జరుగుతున్నప్పుడు, ప్రతి కోడింగ్ పాఠం తో కూడిన `README.md` ఫైల్‌లో కోడ్ మరియు అవుట్‌పుట్లను చూడవచ్చు.
+ప్రతి కోడింగ్ పాఠంలో కూడా కోడ్ మరియు ఫలితాలను నడిపి చూడకుండానే చూడగలిగే `README.md` ఫైల్ ఉంటుంది.
 
-## Azure OpenAI సర్వీస్ మొదటిసారి ఉపయోగించేటప్పుడు
+## Azure OpenAI సేవను తొలిసారిగా ఉపయోగించడం
 
-మీరు Azure OpenAI సర్వీస్ తో మొదటిసారి పని చేస్తున్నట్లయితే, దయచేసి ఈ గైడ్ అనుసరించండి [Azure OpenAI సర్వీస్ రిసోర్స్ సృష్టించడం మరియు డిప్లాయ్ చేయడం](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
+Azure OpenAI సేవతో మీరు తొలిసారిగా పని చేయనున్నట్లయితే, దీన్ని సృష్టించి డిప్లాయ్ చేయడానికి ఈ గైడ్‌ను అనుసరించండి: [create and deploy an Azure OpenAI Service resource.](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal&WT.mc_id=academic-105485-koreyst)
 
-## OpenAI API మొదటిసారి ఉపయోగించేటప్పుడు
+## OpenAI APIని తొలిసారిగా ఉపయోగించడం
 
-మీరు OpenAI API తో మొదటిసారి పని చేస్తున్నట్లయితే, దయచేసి ఈ గైడ్ అనుసరించండి [ఇంటర్‌ఫేస్ సృష్టించడం మరియు ఉపయోగించడం](https://platform.openai.com/docs/quickstart?context=pythont&WT.mc_id=academic-105485-koreyst)
+OpenAI APIతో తొలిసారిగా పనిచేస్తున్నట్లయితే, [create and use the Interface](https://platform.openai.com/docs/quickstart?context=pythont&WT.mc_id=academic-105485-koreyst) గైడ్‌ను అనుసరించండి.
 
-## ఇతర అభ్యసనార్థులను కలుసుకుందాం
+## ఇతర అభ్యసనకర్తలతో కలవడం
 
-మేము అధికారిక [AI కమ్యూనిటీ Discord సర్వర్](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst) లో ఇతర అభ్యసనార్థులను కలుసుకునేందుకు ఛానెల్స్ సృష్టించాము. ఇది Generative AI లో మెరుగుపడాలనుకునే ఒరిగిన భావమున్న వ్యాపారవేత్తలు, బిల్డర్స్, విద్యార్థులు మరియు ఇతరుల నెట్వర్కింగ్ కోసం గొప్ప మార్గం.
+మేము మా అధికారిక [AI Community Discord సర్వర్](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)లో ఇతర అభ్యసనకర్తలతో కలవటానికి ఛానల్స్ సృష్టించాము. ఇది ఇతర మానసిక స్థితిలో ఉన్న వ్యాపారులు, బిల్డర్లు, విద్యార్థులు మరియు జనరేటివ్ AIలో స్థాయిని పెంచుకోవాలనుకునేవారితో నెట్‌వర్క్ చేయడానికి గొప్ప మార్గం.
 
-[![Join discord channel](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
+[![డిస్కోర్డ్ ఛానెల్‌లో చేరండి](https://dcbadge.limes.pink/api/server/ByRwuEEgH4)](https://aka.ms/genai-discord?WT.mc_id=academic-105485-koreyst)
 
-ప్రాజెక్ట్ టీమ్ కూడా ఈ Discord సర్వర్ లో ఉండి అభ్యసనార్థులకు సహాయం అందిస్తారు.
+ప్రాజెక్ట్ టీమ్ కూడా ఈ డిస్కోర్డ్ సర్వర్‌లో ఉంటుంది మరియు ఏదైనా అభ్యసనకర్తలకు సహాయం చేస్తుంది.
 
-## సహాయం చేయండి
+## సహకారం చేయండి
 
-ఈ కోర్సు ఓపెన్-సోర్స్ ప్రాజెక్ట్. మీరు ఏ అభివృద్ధులు లేదా సమస్యలు గమనిస్తే, దయచేసి [పుల్ రిక్వెస్ట్](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) సృష్టించండి లేదా [GitHub ఇష్యూ](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) నమోదు చేయండి.
+ఈ కోర్సు ఓపెన్-సోర్స్ ప్రయత్నం. మీరు మెరుగుదలలు లేదా సమస్యలను చూడగలిగితే, దయచేసి [పుల్ రిక్వెస్ట్](https://github.com/microsoft/generative-ai-for-beginners/pulls?WT.mc_id=academic-105485-koreyst) సృష్టించండి లేదా [GitHub ఇషూ](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst) లాగ్ చేయండి.
 
-ప్రాజెక్ట్ టీమ్ అన్ని కాంట్రిబ్యూషన్లను ట్రాక్ చేస్తుంది. Generative AI లో మీ కెరీర్ నిర్మించడానికి ఓపెన్ సోర్స్ కి తోడ్పడటం అద్భుతమైన మార్గం.
+ప్రాజెక్ట్ టీమ్ అన్ని సహకారాలను ట్రాక్ చేస్తుంది. ఓపెన్ సోర్స్‌కు సహకరించడం జనరేటివ్ AIలో మీ వృత్తి నిర్మాణానికి అద్భుత మార్గం.
 
-ఎక్కువ భాగం కాంట్రిబ్యూషన్లు మీరు కాంట్రిబ్యూటర్ లైసెన్స్ అగ్రిమెంట్ (CLA) కి అంగీకరిస్తున్నారని మరియు మీ కాంట్రిబ్యూషన్ వాడకం హక్కులను మాకు ఇచ్చేదిగా ప్రకటిస్తున్నారని అవసరం. వివరాలకు [CLA, Contributor License Agreement వెబ్‌సైట్](https://cla.microsoft.com?WT.mc_id=academic-105485-koreyst) చూడండి.
+చాలా సహకారాలు మీరు మీరు చేసిన సహకారాన్ని ఉపయోగించుకునే హక్కు కలిగి ఉన్నారు మరియు నిజంగా హక్కులు వినియోగదారులకు ఇవ్వడాన్ని ప్రకటించే Contributor License Agreement (CLA)కు ఒప్పందం కావాల్సి ఉంటుంది. వివరాలకు, [CLA, Contributor License Agreement వెబ్‌సైట్](https://cla.microsoft.com?WT.mc_id=academic-105485-koreyst) చూడండి.
 
-ముఖ్యమైన విషయం: ఈ రీపో లోని టెక్స్ట్ అనువాదం చేయేప్పుడు, దయచేసి మీకున్న భాషలోనే అనువాదం చేయండి మరియు యంత్ర అనువాదం వాడకండి. మనం అనువాదాలను కమ్యూనిటీ ద్వారా విశ్లేషిస్తాము, కనుక మీరు ప్రావీణ్యం ఉన్న భాషల్లోనే స్వచ్ఛందంగా మాత్రమే అనువదించాలి.
-
-మీరు పుల్ రిక్వెస్ట్ సమర్పించినప్పుడు, CLA-బాట్ మీకు CLA అందజేయాల్సిన అవసరం ఉందో లేదో నిర్ణయించి, PR ని సరైన లేబుల్ లేదా వ్యాఖ్యతో అలంకరించుతుంది. బాట్ ఇచ్చే సూచనలను అనుసరించండి. మీరు ఈ ప్రక్రియను ఒక్కసారి మాత్రమే చేయాలి, అన్ని రిపోస్ కొరకు ఉపయోగించే CLAకి.
+ముఖ్యమైన ముద్రణ: ఈ రిపోలో టెక్స్ట్ అనువదించేటప్పుడు, దయచేసి యంత్ర అనువాదాన్ని ఉపయోగించకండి. మేము అనువాదాలను కమ్యూనిటీ ద్వారా ధ్రువీకరిస్తాము, కాబట్టి మీరు నైపుణ్యం ఉన్న భాషల్లో మీరు మాత్రమే అనువాదానికి ఎటువంటి సహాయం అందించాలని భావించండి.
 
 
-ఈ ప్రాజెక్ట్ [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst) ను అంగీకరించింది. మరింత సమాచారం కోసం Code of Conduct FAQ చదవండి లేదా ఏదైన అదనపు ప్రశ్నలు లేదా వ్యాఖ్యల కోసం [Email opencode](opencode@microsoft.com) ను సంప్రదించండి.
+మీరు ఒక పుల్ రిక్వెస్ట్ సమర్పించినప్పుడు, CLA-బాట్ స్వయంచాలకంగా మీరు CLA అందించాల్సిన అవసరం ఉందో లేదో నిర్ణయించి PR ని సరిగ్గా అలంకరించుతుంది (ఉదా: లేబుల్, వ్యాఖ్య). బాట్ ఇచ్చే సూచనలను అనుసరించండి. మా CLA ఉపయోగించే అన్ని రిపోజిటరీలలో ఇది మీరు ఒక్కసారి మాత్రమే చేయాలి.
 
-## ప్రారంభిద్దాం
+ఈ ప్రాజెక్టు [Microsoft ఓపెన్ సోర్స్ కోడ్ ఆఫ్ కండక్ట్](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst) ను అనుసరించింది. మరింత సమాచారం కోసం కోడ్ ఆఫ్ కండక్ట్ FAQ ని చదవండి లేదా అదనపు ప్రశ్నలు లేదా వ్యాఖ్యల కోసం [Email opencode](opencode@microsoft.com) ని సంప్రదించండి.
 
-ఇప్పుడు మీరు ఈ కోర్సును పూర్తి చేయడానికి అవసరమైన దశలను పూర్తి చేసుకున్నందున, [జనరేటివ్ AI మరియు LLM లకు పరిచయం](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst) ద్వారా ప్రారంభిద్దాం.
+## బాగుందడి దాద్దాం
+
+మీరు కోర్సును పూర్తి చేయడానికి అవసరమైన దశలను జరిగినందున, ఇపుడు [జెనరేటివ్ AI మరియు LLM ల పరిచయాన్ని](../01-introduction-to-genai/README.md?WT.mc_id=academic-105485-koreyst) పొందడం ద్వారా ప్రారంభిద్దాం.
 
 ---
 

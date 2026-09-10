@@ -1,20 +1,20 @@
 # Подготовка данных транскрипции
 
-Скрипты подготовки данных транскрипции загружают расшифровки видео с YouTube и подготавливают их для использования с примером Semantic Search с помощью OpenAI Embeddings и Functions.
+Скрипты подготовки данных транскрипции загружают транскрипты видео с YouTube и подготавливают их для использования с примером Semantic Search с OpenAI Embeddings и функциями.
 
-Скрипты подготовки данных транскрипции были протестированы на последних выпусках Windows 11, macOS Ventura и Ubuntu 22.04 (и новее).
+Скрипты подготовки данных транскрипции были протестированы на последних версиях Windows 11, macOS Ventura и Ubuntu 22.04 (и выше).
 
 ## Создание необходимых ресурсов Azure OpenAI Service
 
 > [!IMPORTANT]
 > Рекомендуем обновить Azure CLI до последней версии для обеспечения совместимости с OpenAI
-> Смотрите [Документацию](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
+> См. [Документацию](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Создайте группу ресурсов
 
 > [!NOTE]
-> В этих инструкциях мы используем группу ресурсов с именем "semantic-video-search" в регионе East US.
-> Вы можете изменить имя группы ресурсов, но при изменении местоположения ресурсов,
+> В этих инструкциях используется группа ресурсов с именем "semantic-video-search" в регионе East US.
+> Вы можете изменить имя группы ресурсов, но при изменении местоположения ресурсов
 > проверьте [таблицу доступности моделей](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
@@ -39,7 +39,7 @@ az cognitiveservices account keys list --name semantic-video-openai \
 
 1. Разверните следующие модели:
    - `text-embedding-ada-002` версии `2` или выше, с именем `text-embedding-ada-002`
-   - `gpt-4o-mini` с именем `gpt-4o-mini`
+   - `gpt-5-mini` с именем `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,8 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -62,16 +62,16 @@ az cognitiveservices account deployment create \
 
 ## Необходимое программное обеспечение
 
-- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) или выше
+- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) или новее
 
 ## Переменные окружения
 
-Для запуска скриптов подготовки данных транскрипции YouTube требуются следующие переменные окружения.
+Для работы скриптов подготовки данных транскрипции YouTube необходимы следующие переменные окружения.
 
-### В Windows
+### Для Windows
 
-Рекомендуется добавить переменные в переменные окружения пользователя `user`.
-`Windows Start` > `Изменить системные переменные окружения` > `Переменные среды` > `Переменные пользователя` для [USER] > `Создать`.
+Рекомендуется добавить переменные в переменные окружения `user`.
+`Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` для [USER] > `New`.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -83,15 +83,15 @@ GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 <!-- Вы можете добавить переменные окружения в профиль PowerShell.
 
 ```powershell
-$env:AZURE_OPENAI_API_KEY = "<ваш ключ API Azure OpenAI Service>"
-$env:AZURE_OPENAI_ENDPOINT = "<ваша конечная точка Azure OpenAI Service>"
+$env:AZURE_OPENAI_API_KEY = "<ключ Azure OpenAI Service API>"
+$env:AZURE_OPENAI_ENDPOINT = "<конечная точка Azure OpenAI Service>"
 $env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<имя развертывания модели Azure OpenAI Service>"
-$env:GOOGLE_DEVELOPER_API_KEY = "<ваш ключ API разработчика Google>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<ключ API разработчика Google>"
 ``` -->
 
-### В Linux и macOS
+### Для Linux и macOS
 
-Рекомендуется добавить следующие экспорты в ваш файл `~/.bashrc` или `~/.zshrc`.
+Рекомендуется добавить следующие экспорты в файл `~/.bashrc` или `~/.zshrc`.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -102,8 +102,8 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## Установка необходимых библиотек Python
 
-1. Установите [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), если он еще не установлен.
-1. С окна `Terminal` клонируйте пример в предпочитаемую папку репозитория.
+1. Установите [git-клиент](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), если он ещё не установлен.
+1. В окне `Terminal` склонируйте пример в выбранную папку репозитория.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -117,13 +117,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Создайте виртуальное окружение Python.
 
-    В Windows:
+    Для Windows:
 
     ```powershell
     python -m venv .venv
     ```
 
-    В macOS и Linux:
+    Для macOS и Linux:
 
     ```bash
     python3 -m venv .venv
@@ -131,13 +131,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Активируйте виртуальное окружение Python.
 
-   В Windows:
+   Для Windows:
 
    ```powershell
    .venv\Scripts\activate
    ```
 
-   В macOS и Linux:
+   Для macOS и Linux:
 
    ```bash
    source .venv/bin/activate
@@ -145,27 +145,27 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. Установите необходимые библиотеки.
 
-   В Windows:
+   Для Windows:
 
    ```powershell
    pip install -r requirements.txt
    ```
 
-   В macOS и Linux:
+   Для macOS и Linux:
 
    ```bash
    pip3 install -r requirements.txt
    ```
 
-## Запуск скриптов подготовки данных транскрипции YouTube
+## Запуск скриптов подготовки данных транскрипции с YouTube
 
-### В Windows
+### Для Windows
 
 ```powershell
 .\transcripts_prepare.ps1
 ```
 
-### В macOS и Linux
+### Для macOS и Linux
 
 ```bash
 ./transcripts_prepare.sh

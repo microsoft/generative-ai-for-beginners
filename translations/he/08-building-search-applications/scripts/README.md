@@ -1,10 +1,10 @@
 # הכנת נתוני תמלול
 
-סקריפטי הכנת נתוני התמלול מורידים תמלולים של סרטוני YouTube ומכינים אותם לשימוש עם דוגמת החיפוש הסמנטי עם הטמעות OpenAI ופונקציות.
+סקריפטים להכנת נתוני תמלול מורידים תמלולים של סרטוני YouTube ומכינים אותם לשימוש עם הדוגמה של חיפוש סמנטי עם OpenAI Embeddings ופונקציות.
 
-סקריפטי הכנת נתוני התמלול נבדקו בגרסאות האחרונות של Windows 11, macOS Ventura ו-Ubuntu 22.04 (ומעלה).
+סקריפטים להכנת נתוני תמלול נבדקו על הגרסאות האחרונות של Windows 11, macOS Ventura ו-Ubuntu 22.04 (ומעלה).
 
-## צור משאבים נדרשים של שירות Azure OpenAI
+## יצירת משאבי Azure OpenAI Service הנדרשים
 
 > [!IMPORTANT]
 > אנו ממליצים לעדכן את Azure CLI לגרסה האחרונה כדי להבטיח תאימות עם OpenAI
@@ -14,14 +14,14 @@
 
 > [!NOTE]
 > להוראות אלו אנו משתמשים בקבוצת המשאבים בשם "semantic-video-search" באזור East US.
-> ניתן לשנות את שם קבוצת המשאבים, אך כאשר משנים את מיקום המשאבים,
+> ניתן לשנות את שם קבוצת המשאבים, אך כאשר משנים את המיקום של המשאבים,
 > בדוק את [טבלת זמינות הדגמים](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst).
 
 ```console
 az group create --name semantic-video-search --location eastus
 ```
 
-1. צור משאב שירות Azure OpenAI.
+1. צור משאב Azure OpenAI Service.
 
 ```console
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
@@ -38,8 +38,8 @@ az cognitiveservices account keys list --name semantic-video-openai \
 ```
 
 1. פרוס את הדגמים הבאים:
-   - `text-embedding-ada-002` גרסה `2` או גבוהה יותר, בשם `text-embedding-ada-002`
-   - `gpt-4o-mini` בשם `gpt-4o-mini`
+   - `text-embedding-ada-002` גרסה `2` ומעלה, בשם `text-embedding-ada-002`
+   - `gpt-5-mini` בשם `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,8 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -62,16 +62,16 @@ az cognitiveservices account deployment create \
 
 ## תוכנה נדרשת
 
-- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) או גרסה גבוהה יותר
+- [Python 3.9](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) ומעלה
 
 ## משתני סביבה
 
-משתני הסביבה הבאים נדרשים להפעלת סקריפטי הכנת נתוני התמלול של YouTube.
+משתני הסביבה הבאים נדרשים להרצת הסקריפטים להכנת נתוני התמלול של YouTube.
 
 ### ב-Windows
 
 מומלץ להוסיף את המשתנים למשתני הסביבה של `user`.
-`Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` בשביל [USER] > `New`.
+`Windows Start` > `Edit the system environment variables` > `Environment Variables` > `User variables` עבור [USER] > `New`.
 
 ```text
 AZURE_OPENAI_API_KEY  \<your Azure OpenAI Service API key>
@@ -83,15 +83,15 @@ GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 <!-- ניתן להוסיף את משתני הסביבה לפרופיל PowerShell שלך.
 
 ```powershell
-$env:AZURE_OPENAI_API_KEY = "<מפתח API של שירות Azure OpenAI שלך>"
-$env:AZURE_OPENAI_ENDPOINT = "<נקודת הקצה של שירות Azure OpenAI שלך>"
-$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<שם פריסת המודל של שירות Azure OpenAI שלך>"
-$env:GOOGLE_DEVELOPER_API_KEY = "<מפתח API של מפתח Google שלך>"
+$env:AZURE_OPENAI_API_KEY = "<your Azure OpenAI Service API key>"
+$env:AZURE_OPENAI_ENDPOINT = "<your Azure OpenAI Service endpoint>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<your Azure OpenAI Service model deployment name>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<your Google developer API key>"
 ``` -->
 
-### ב-Linux ו-macOS
+### בלינוקס וב-macOS
 
-מומלץ להוסיף את הייצוא הבא לקובץ `~/.bashrc` או `~/.zshrc` שלך.
+מומלץ להוסיף את הייצוא הבא לקובץ `~/.bashrc` או `~/.zshrc`.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -100,9 +100,9 @@ export AZURE_OPENAI_MODEL_DEPLOYMENT_NAME=<your Azure OpenAI Service model deplo
 export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 ```
 
-## התקן את ספריות הפייתון הנדרשות
+## התקנת הספריות הנדרשות בפייתון
 
-1. התקן את [לקוח git](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) אם הוא לא מותקן כבר.
+1. התקן את [git client](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) אם הוא לא מותקן כבר.
 1. מחלון `Terminal`, שכפל את הדוגמה לתיקיית הריפו המועדפת עליך.
 
     ```bash
@@ -115,7 +115,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    cd semanic-search-openai-embeddings-functions/src/data_prep
    ```
 
-1. צור סביבה וירטואלית של פייתון.
+1. צור סביבה וירטואלית לפייתון.
 
     ב-Windows:
 
@@ -123,13 +123,13 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
     python -m venv .venv
     ```
 
-    ב-macOS ו-Linux:
+    ב-macOS ולינוקס:
 
     ```bash
     python3 -m venv .venv
     ```
 
-1. הפעל את הסביבה הווירטואלית של פייתון.
+1. הפעל את הסביבה הוירטואלית של פייתון.
 
    ב-Windows:
 
@@ -137,7 +137,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    .venv\Scripts\activate
    ```
 
-   ב-macOS ו-Linux:
+   ב-macOS ולינוקס:
 
    ```bash
    source .venv/bin/activate
@@ -145,27 +145,27 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 1. התקן את הספריות הנדרשות.
 
-   ב-windows:
+   ב-Windows:
 
    ```powershell
    pip install -r requirements.txt
    ```
 
-   ב-macOS ו-Linux:
+   ב-macOS ולינוקס:
 
    ```bash
    pip3 install -r requirements.txt
    ```
 
-## הפעל את סקריפטי הכנת נתוני התמלול של YouTube
+## הרצת סקריפטי הכנת נתוני התמלול של YouTube
 
-### ב-windows
+### ב-Windows
 
 ```powershell
 .\transcripts_prepare.ps1
 ```
 
-### ב-macOS ו-Linux
+### ב-macOS ולינוקס
 
 ```bash
 ./transcripts_prepare.sh

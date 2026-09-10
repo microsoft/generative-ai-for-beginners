@@ -4,58 +4,58 @@
 
 Ši pamoka apims: 
 
-- Dvejų pagrindinių Meta šeimos modelių - Llama 3.1 ir Llama 3.2 - tyrinėjimą 
-- Kiekvieno modelio naudojimo atvejų ir scenarijų supratimą 
-- Kodo pavyzdį, demonstruojantį kiekvieno modelio unikalių savybių panaudojimą 
+- Du pagrindinius Meta šeimos modelius – Llama 3.1 ir Llama 3.2 
+- Supratimą apie kiekvieno modelio panaudojimo atvejus ir scenarijus 
+- Kodo pavyzdį, parodantį kiekvieno modelio unikalius bruožus 
 
 
 ## Meta šeimos modeliai 
 
-Šioje pamokoje išnagrinėsime 2 modelius iš Meta šeimos arba „Llama Herd“ - Llama 3.1 ir Llama 3.2.
+Šioje pamokoje nagrinėsime 2 modelius iš Meta šeimos arba „Llama Herd“ – Llama 3.1 ir Llama 3.2.
 
 Šie modeliai yra įvairių variantų ir yra prieinami [Microsoft Foundry Models kataloge](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
 
-> **Pastaba:** GitHub Models bus uždaromas 2026 metų liepos pabaigoje. Čia rasite daugiau informacijos apie [Microsoft Foundry Models](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst), skirtų AI modelių prototipavimui.
+> **Pastaba:** GitHub Models bus nutrauktas 2026 m. liepos pabaigoje. Daugiau informacijos apie [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) naudojimą AI modelių prototipavimui rasite čia.
 
 Modelių variantai: 
-- Llama 3.1 - 70B Instrukcija 
-- Llama 3.1 - 405B Instrukcija 
-- Llama 3.2 - 11B Vision Instrukcija 
-- Llama 3.2 - 90B Vision Instrukcija 
+- Llama 3.1 – 70B Instruct 
+- Llama 3.1 – 405B Instruct 
+- Llama 3.2 – 11B Vision Instruct 
+- Llama 3.2 – 90B Vision Instruct 
 
-*Pastaba: Llama 3 taip pat yra prieinamas Microsoft Foundry Models, bet ši pamoka jo neapims*
+*Pastaba: Llama 3 taip pat yra Microsoft Foundry Models kataloge, tačiau ši pamoka jo neapims*
 
 ## Llama 3.1 
 
-Turėdamas 405 milijardus parametrų, Llama 3.1 patenka į atviro kodo LLM kategoriją. 
+Turint 405 milijardus parametrų, Llama 3.1 patenka į atvirojo kodo LLM kategoriją. 
 
 Modelis yra ankstesnio Llama 3 leidimo atnaujinimas, siūlantis: 
 
-- Didesnį konteksto langą - 128 tūkst. žetonų priešingai nei 8 tūkst. žetonų 
-- Didesnį maksimalų išvesties žetonų skaičių - 4096 prieš 2048 
-- Geresnę daugiakalbę paramą - dėl padidėjusio treniravimo žetonų skaičiaus 
+- Didesnį konteksto langą – 128 tūkst. žetonų prieš 8 tūkst. žetonų 
+- Didesnį Maksimalų Išvesties Žetonų skaičių – 4096 prieš 2048 
+- Geresnę daugiakalbę palaikymą – dėl padidinto mokymo žetonų kiekio 
 
-Tai leidžia Llama 3.1 tvarkyti sudėtingesnius naudojimo atvejus, kuriant GenAI programas, įskaitant: 
-- Vietinį funkcijų kvietimą - galimybę kviesti išorinius įrankius ir funkcijas už LLM darbo eigos ribų
-- Geresnį RAG veikimą - dėl didesnio konteksto lango 
-- Sintetinį duomenų generavimą - galimybę kurti efektyvius duomenis užduotims, tokioms kaip tobulinimas 
+Tai leidžia Llama 3.1 spręsti sudėtingesnius panaudojimo atvejus kuriant GenAI programas, įskaitant: 
+- Vietinį funkcijų kvietimą – galimybę iškviesti išorines priemones ir funkcijas už LLM darbo eigą 
+- Geresnį RAG našumą – dėl didesnio konteksto lango 
+- Sintetinį duomenų generavimą – galimybę kurti efektyvius duomenis tokioms užduotims kaip tobulinimas 
 
 ### Vietinis funkcijų kvietimas 
 
-Llama 3.1 buvo tobulinamas, kad efektyviau atliktų funkcijų ar įrankių kvietimus. Taip pat turi du įmontuotus įrankius, kuriuos modelis gali atpažinti kaip reikalingus naudoti pagal vartotojo užklausą. Šie įrankiai yra: 
+Llama 3.1 buvo tobulinamas, kad veiksmingiau atliktų funkcijų ar priemonių kvietimus. Jis taip pat turi dvi integruotas priemones, kurias modelis gali atpažinti, kad reikia naudoti pagal vartotojo užklausą. Šios priemonės yra: 
 
-- **Brave Search** - galima naudoti norint gauti aktualią informaciją, pavyzdžiui, orą atliekant interneto paiešką 
-- **Wolfram Alpha** - galima naudoti sudėtingesniems matematikos skaičiavimams, todėl nereikia rašyti savo funkcijų. 
+- **Brave Search** – gali būti naudojama norint gauti naujausią informaciją, pvz., orų prognozę, atliekant interneto paiešką 
+- **Wolfram Alpha** – gali būti naudojama sudėtingesniems matematiniams skaičiavimams, todėl nereikia rašyti savo funkcijų. 
 
-Taip pat galite sukurti savo individualius įrankius, kuriuos LLM gali kviesti. 
+Taip pat galite sukurti savo pasirinktas priemones, kurias LLM gali iškviesti. 
 
 Žemiau pateiktame kodo pavyzdyje: 
 
-- Sistemos užklausoje apibrėžiame prieinamus įrankius (brave_search, wolfram_alpha). 
+- Apibrėžiame prieinamas priemones (brave_search, wolfram_alpha) sistemos užklausoje. 
 - Išsiunčiame vartotojo užklausą, kuri klausia apie orą tam tikrame mieste. 
-- LLM atsakys įrankio kvietimu į Brave Search įrankį, kuris atrodys taip `<|python_tag|>brave_search.call(query="Stockholm weather")` 
+- LLM atsakys naudodamas funkcijos kvietimą į Brave Search priemonę, kuris atrodys taip `<|python_tag|>brave_search.call(query="Stockholm weather")` 
 
-*Pastaba: šis pavyzdys tik atlieka įrankio kvietimą, jei norite gauti rezultatus, turėsite sukurti nemokamą paskyrą Brave API puslapyje ir apibrėžti pačią funkciją.
+*Pastaba: šis pavyzdys tik atlieka funkcijos kvietimą, jei norite gauti rezultatus, turėsite sukurti nemokamą paskyrą Brave API puslapyje ir apibrėžti funkciją patys.*
 
 ```python 
 import os
@@ -63,7 +63,7 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import AssistantMessage, SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-# Gaukite juos iš savo Microsoft Foundry projekto puslapio „Apžvalga“
+# Gaukite juos iš savo Microsoft Foundry projekto „Apžvalgos“ puslapio
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Meta-Llama-3.1-405B-Instruct"
@@ -98,13 +98,13 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2 
 
-Nors Llama 3.1 yra LLM, vienas iš jos trūkumų yra multimodalumo stoka. Tai reiškia, kad ji negali naudoti skirtingų įvesties tipų, tokių kaip vaizdai kaip užklausos, ir teikti atsakymus. Ši galimybė yra viena pagrindinių Llama 3.2 funkcijų. Šios funkcijos taip pat apima: 
+Nors Llama 3.1 yra LLM, viena iš jo ribotumų yra multimodališkumo trūkumas. Tai reiškia, kad negalima naudoti skirtingų įvesties tipų, tokių kaip vaizdai, kaip užklausos ir pateikti atsakymus. Ši galimybė yra viena pagrindinių Llama 3.2 funkcijų. Šios funkcijos taip pat apima: 
 
-- Multimodalumą - gebėjimą vertinti tiek teksto, tiek vaizdų užklausas 
-- Mažų ir vidutinių dydžių variantai (11B ir 90B) - tai suteikia lankstumo diegimo galimybėms, 
-- Tik tekstiniai variantai (1B ir 3B) - leidžia modelį diegti krašte / mobiliuosiuose įrenginiuose ir suteikia mažą delsą 
+- Multimodališkumą – gebėjimą įvertinti tiek teksto, tiek vaizdų užklausas 
+- Mažo ir vidutinio dydžio variantus (11B ir 90B) – tai suteikia lankstumo diegimo galimybes, 
+- Tik teksto variantus (1B ir 3B) – tai leidžia modelį diegti periferiniuose / mobiliuosiuose įrenginiuose ir užtikrina mažą vėlavimą 
 
-Multimodalinė parama yra didelis žingsnis atvirojo kodo modelių pasaulyje. Žemiau pateiktas kodo pavyzdys priima tiek vaizdą, tiek teksto užklausą, norint gauti Llama 3.2 90B vaizdo analizę. 
+Multimodalinė parama reiškia didelį žingsnį atvirojo kodo modelių pasaulyje. Žemiau pateiktas kodo pavyzdys naudoja tiek vaizdą, tiek teksto užklausą, kad gautų analizę iš Llama 3.2 90B. 
 
 
 ### Multimodalinė parama su Llama 3.2
@@ -122,7 +122,7 @@ from azure.ai.inference.models import (
 )
 from azure.core.credentials import AzureKeyCredential
 
-# Gautus iš savo Microsoft Foundry projekto „Apžvalgos“ puslapio
+# Gaukite juos iš jūsų Microsoft Foundry projekto „Apžvalga“ puslapio
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 model_name = "Llama-3.2-90B-Vision-Instruct"
@@ -155,9 +155,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Mokymasis čia nesibaigia, tęskite kelionę
+## Mokymasis nesibaigia čia, tęskite kelionę
 
-Baigę šią pamoką, apsilankykite mūsų [Generatyvios AI mokymosi kolekcijoje](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), kad toliau keltumėte savo žinias apie Generatyviąją AI!
+Baigę šią pamoką, peržiūrėkite mūsų [Generatyvinio AI mokymosi kolekciją](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), kad toliau gilintumėte savo žinias apie generatyvinį dirbtinį intelektą!
 
 ---
 

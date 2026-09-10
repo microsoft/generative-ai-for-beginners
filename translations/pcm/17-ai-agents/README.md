@@ -1,62 +1,62 @@
 [![Open Source Models](../../../translated_images/pcm/17-lesson-banner.a5b918fb0920e4e6.webp)](https://youtu.be/yAXVW-lUINc?si=bOtW9nL6jc3XJgOM)
 
-## Introdukshon
+## Introduction
 
-AI Agents na one kain beta tins wey don dey for Generative AI, wey dey make Large Language Models (LLMs) move from just assistant dem go become agent wey fit do tins. AI Agent frameworks dey help developers build apps wey dey give LLMs chance to use tools and manage how tins dey go. Dem frameworks sef dey make e clear say, so users and developers fit dey watch wetin LLMs plan to do and make experience better.
+AI Agents na one kain beta development for Generative AI, wey dey enable Large Language Models (LLMs) to change from assistants come be agents wey fit take actions. AI Agent frameworks dey help developers make applications wey fit give LLMs access to tools and state management. These frameworks still dey improve how people fit see wetin LLMs plan to do, make users and developers fit monitor am well, so e go beta the experience wey dem get.
 
-Dis lesson go cover dis kind tins:
+Dis lesson go cover dis kain tins:
 
-- Make una sabi wetin AI Agent mean - Wetin be AI Agent exactly?
-- Look different AI Agent Frameworks dem five - Wetin make dem different?
-- How to use AI Agents for different kain work - When we suppose use AI Agents?
+- Understand wetin AI Agent be - Wetin AI Agent really mean?
+- Check five different AI Agent Frameworks - Wetin make dem special?
+- How to use these AI Agents for different case dem - Wen person suppose use AI Agents?
 
 ## Learning goals
 
-After you finish dis lesson, you go fit:
+After you don take dis lesson, you go fit:
 
-- Talk wetin AI Agents be and how dem fit take work.
-- Get sense about the differences wey dey for some popular AI Agent Frameworks, and how dem dey different.
-- Understand how AI Agents dey work so you fit build apps with dem.
+- Explain wetin AI Agents be and how person fit use dem.
+- Understand the difference between some popular AI Agent Frameworks, and how dem different.
+- Understand how AI Agents dey work to fit build applications with dem.
 
 ## Wetin be AI Agents?
 
-AI Agents na one beta field for the world of Generative AI. With this kain beta thing dey come sometimes confusion about terms and how e dey work. To make am easy and cover majority of the tools wey dey call themselves AI Agents, we go use dis definition:
+AI Agents na very exciting area for Generative AI world. But sometimes e dey cause small confusion about the terms and how dem dey use am. To make am simple and cover most tools wey dey call themselves AI Agents, we go use this definition:
 
 AI Agents dey allow Large Language Models (LLMs) to do work by giving dem access to **state** and **tools**.
 
 ![Agent Model](../../../translated_images/pcm/what-agent.21f2893bdfd01e6a.webp)
 
-Make we explain dis terms:
+Make we define these tins:
 
-**Large Language Models** - Na dis one be di models wey we dey talk about throughout this course like GPT-3.5, GPT-4, Llama-2, and others.
+**Large Language Models** - Na these models we dey talk about for this course like GPT-5, GPT-4o, and Llama 3.3, and others.
 
-**State** - Na the context wey di LLM dey work inside. Di LLM dey use wetin e don do before and wetin dey happen now to guide how e go take decide di next tins for action. AI Agent Frameworks dey help developers manage dis context well well.
+**State** - Na the context wey LLM dey work inside. LLM dey use the past actions and the current context to decide wetin e go do next. AI Agent Frameworks dey help developers manage this context well-well.
 
-**Tools** - To finish di work wey user request and wey LLM plan, di LLM need access to tools. Examples na database, API, external app or even another LLM!
+**Tools** - To fit complete the work wey user ask and LLM plan to do, LLM need access to tools. Some examples of tools na database, API, external application, or even another LLM!
 
-Dis definitions go help you get beta understanding as we go look how dem dey put am to work. Make we check small different AI Agent frameworks:
+These definitions go help you understand well as we dey see how dem dey implement am. Make we look some different AI Agent frameworks:
 
 ## LangChain Agents
 
-[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) na di way wey dem implement di tins wey we define above.
+[LangChain Agents](https://python.langchain.com/docs/how_to/#agents?WT.mc_id=academic-105485-koreyst) na the way dem take implement the definitions we talk before.
 
-To manage di **state** , e dey use one built-in function wey dem call `AgentExecutor`. E dey accept di `agent` wey define and di `tools` wey e fit use.
+To manage the **state**, e dey use one built-in function wey dem call `AgentExecutor`. E dey accept the `agent` wey dem define and the `tools` wey e fit use.
 
-Di `Agent Executor` sef dey save di chat history to fit show di context of di chat.
+`Agent Executor` still dey keep chat history so e fit provide the chat context.
 
 ![Langchain Agents](../../../translated_images/pcm/langchain-agents.edcc55b5d5c43716.webp)
 
-LangChain get [catalog of tools](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) wey you fit put inside your app make di LLM get access to. Dem tools na community and LangChain team make.
+LangChain get one [catalog of tools](https://integrations.langchain.com/tools?WT.mc_id=academic-105485-koreyst) wey you fit import for your application so the LLM fit use am. Na community and LangChain team be the makers of these tools.
 
-You fit define dis tools and pass am go `Agent Executor`.
+You fit define these tools and give am to `Agent Executor`.
 
-Visibility na important one when we dey talk AI Agents. E important for app developers to sabi which tool LLM dey use and why.. So for dat, LangChain team develop LangSmith.
+Visibility na beta part when we dey talk about AI Agents. E important make application developer dem understand which tool LLM dey use and why e dey use am. For that one, LangChain team make LangSmith.
 
 ## AutoGen
 
-The next AI Agent framework we go talk about na [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). AutoGen main focus na conversations. Agents fit **talk** and fit **customize**.
+The next AI Agent framework we go talk about na [AutoGen](https://microsoft.github.io/autogen/?WT.mc_id=academic-105485-koreyst). The main matter for AutoGen na conversations. Agents fit both **talk** and **customize** well.
 
-**Conversable -** LLMs fit start and continue talk with another LLM to finish task. Dem dey create `AssistantAgents` and give dem special system messages.
+**Conversable -** LLM fit start and continue talk with another LLM to complete task. This one dey happen by creating `AssistantAgents` and dem dey give dem special system message.
 
 ```python
 
@@ -64,7 +64,7 @@ autogen.AssistantAgent( name="Coder", llm_config=llm_config, ) pm = autogen.Assi
 
 ```
 
-**Customizable** - Agents no be only LLMs, dem fit be user or tool tu. As developer, you fit define `UserProxyAgent` wey go dey interact with user for feedback to finish task. Dis feedback fit make task continue or stop.
+**Customizable** - Agents no be only LLM, dem fit be user or tools too. As developer, you fit define `UserProxyAgent` wey go dey interact with user to get feedback for task completion. This feedback fit make task continue or stop.
 
 ```python
 user_proxy = UserProxyAgent(name="user_proxy")
@@ -72,9 +72,9 @@ user_proxy = UserProxyAgent(name="user_proxy")
 
 ### State and Tools
 
-To manage state, assistant Agent dey create Python code to finish di task.
+To change and manage state, assistant Agent dey generate Python code to complete the work.
 
-Dis na example of how e dey waka:
+Example for how e dey work:
 
 ![AutoGen](../../../translated_images/pcm/autogen.dee9a25a45fde584.webp)
 
@@ -84,7 +84,7 @@ Dis na example of how e dey waka:
 system_message="For weather related tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done."
 ```
 
-Dis system message dey guide dis LLM which functions e go focus for task. Remember, AutoGen fit get multiple defined AssistantAgents wey get different system messages.
+Dis system message dey guide dis specific LLM on which functions e suppose use for im work. Remember say for AutoGen, you fit get many different AssistantAgents with different system messages.
 
 #### Chat Start from User
 
@@ -93,9 +93,9 @@ user_proxy.initiate_chat( chatbot, message="I am planning a trip to NYC next wee
 
 ```
 
-Dis message from user_proxy (Human) na wetin go start Agent process to check which functions e suppose execute.
+Dis message from user_proxy (Human) na im go start the process for Agent to check the possible functions wey e fit execute.
 
-#### Function dey Execute
+#### Function Execute
 
 ```bash
 chatbot (to user_proxy):
@@ -106,23 +106,23 @@ chatbot (to user_proxy):
 
 ```
 
-After initial chat finish processing, Agent go send suggested tool to call. For dis case na function wey dem call `get_weather`. Based on your config, dis function fit automatically run or Agent fit run am based on user talk.
+After the first chat don process, Agent go send suggestion to call tool. For this case, na function `get_weather`. Depending on how you configure am, this function fit auto run and the Agent fit read am or e fit run based on user input.
 
-You fit find list of [AutoGen code samples](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) to sabi more how to start to build.
+You fit find list of [AutoGen code samples](https://microsoft.github.io/autogen/docs/Examples/?WT.mc_id=academic-105485-koreyst) to learn more and start building.
 
 ## Microsoft Agent Framework
 
-[Microsoft Agent Framework](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst) na open-source SDK from Microsoft wey dem use to build AI Agents and multi-agent systems for both **Python** and **.NET**. E join strength from two previous Microsoft projects — enterprise features of **Semantic Kernel** and multi-agent orchestration of **AutoGen** — into one framework wey Microsoft support. If you dey start new agent project now, dis na di best choice after AutoGen.
+[Microsoft Agent Framework](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst) na Microsoft's open-source SDK to build AI Agents and multi-agent systems for both **Python** and **.NET**. E join two Microsoft projects together — enterprise features of **Semantic Kernel** and multi-agent orchestration of **AutoGen** — into one framework wey dem dey support well. If you dey start new agent project now, na this one dem recommend pass AutoGen.
 
-Di framework fit handle from single **chat agent** reach complex **multi-agent workflows**, and e fit integrate well well with Microsoft Foundry, Azure OpenAI, and OpenAI. E dey also get built-in observability through OpenTelemetry so you fit trace exactly wetin your agents dey do.
+The framework fit handle from one **chat agent** reach **complex multi-agent workflows**, e dey connect directly with Microsoft Foundry, Azure OpenAI, and OpenAI. E get built-in observability with OpenTelemetry so you fit trace exactly wetin your agents dey do.
 
 ### State and Tools
 
-**State** - Di framework dey manage conversation context for you through **threads**. Agent dey keep record of message history (user requests, tool calls, and results), so each turn dey build on top previous one. Threads fit save make conversation fit pause and continue later.
+**State** - Framework dey manage conversation context for you through **threads**. Agent dey keep message history (user requests, tool calls, and results), so each turn dey build on top previous ones. Threads fit still dey saved, so conversation fit pause and continue later.
 
-**Tools** - You dey give agent tools by passing plain Python functions. If parameters get type annotation e go automatically become schema so model go sabi how and when to call am (function calling). Framework also support Model Context Protocol (MCP) servers and hosted tools like code interpreter.
+**Tools** - You fit give agent tools by passing simple Python functions. Type-annotated parameters go automatically change to schema, so model go sabi how and when to call dem (function calling). Framework still support Model Context Protocol (MCP) servers and hosted tools like code interpreter.
 
-Here be example of single agent with custom tool:
+Example of one single agent with custom tool:
 
 ```python
 import asyncio
@@ -154,14 +154,14 @@ async def main():
 asyncio.run(main())
 ```
 
-To connect to Azure OpenAI for Microsoft Foundry instead, just pass your endpoint and credentials to client:
+To connect to Azure OpenAI for Microsoft Foundry, just pass your endpoint and credentials to client:
 
 ```python
 from azure.identity.aio import AzureCliCredential
 from agent_framework.openai import OpenAIChatClient
 
 client = OpenAIChatClient(
-    model="my-gpt-4o-deployment",
+    model="my-gpt-5-mini-deployment",
     azure_endpoint="https://my-resource.openai.azure.com",
     credential=AzureCliCredential(),
 )
@@ -169,19 +169,19 @@ client = OpenAIChatClient(
 
 ### Multi-agent workflows
 
-Di framework sabi well well to dey manage several agents together. For example, you fit run agents one after another (each one dey pass im context to the next) or run many agents side by side then combine results:
+The way framework show beta pass na when e dey orchestrate many agents together. For example, you fit run agents one after another (each one pass context give the next) or run many agents for same time and combine their results:
 
 ```python
 from agent_framework.orchestrations import SequentialBuilder, ConcurrentBuilder
 
-# Make agents run one after the oda, carry di conversation gist go along di chain
+# Make agents run one after di oda, carry di conversation context go along di chain
 sequential = SequentialBuilder(participants=[researcher, writer, editor]).build()
 
-# Scatter to agents for parallel, den put all dia answers together
+# Spread agents to run for same time, den gather dem responses together
 concurrent = ConcurrentBuilder(participants=[analyst_a, analyst_b, analyst_c]).build()
 ```
 
-To install di framework and start:
+To install the framework and start:
 
 ```bash
 pip install agent-framework-core
@@ -190,57 +190,57 @@ pip install agent-framework-openai       # OpenAI and Azure OpenAI
 pip install agent-framework-foundry      # Microsoft Foundry
 ```
 
-You fit explore more for [Microsoft Agent Framework repository](https://github.com/microsoft/agent-framework?WT.mc_id=academic-105485-koreyst) and [official documentation](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst).
+You fit learn more for [Microsoft Agent Framework repository](https://github.com/microsoft/agent-framework?WT.mc_id=academic-105485-koreyst) and [official documentation](https://learn.microsoft.com/agent-framework/?WT.mc_id=academic-105485-koreyst).
 
 ## Taskweaver
 
-Next agent framework we go check na [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). People dey call am "code-first" agent because e no dey work only with `strings`, e fit work with DataFrames for Python. Dis one beta well for data analysis and generation work. E fit be like to make graphs and charts or generate random numbers.
+The next agent framework we go check na [Taskweaver](https://microsoft.github.io/TaskWeaver/?WT.mc_id=academic-105485-koreyst). Dem dey call am "code-first" agent because e no just work with `strings`; e fit also work with DataFrames for Python. This one dey very useful for data analysis and generating tasks like making graphs and charts or create random numbers.
 
 ### State and Tools
 
-To manage conversation state, TaskWeaver dey use `Planner`. Na LLM wey dey take request from users and plan out the tasks wey e suppose finish.
+To manage conversation state, TaskWeaver dey use concept wey dem call `Planner`. `Planner` na LLM wey take user request and plan the tasks wey need to finish to complete the request.
 
-To finish tasks, `Planner` fit use tools wey dem dey call `Plugins`. Dis fit be Python classes or code interpreter. Dem plugins dey save as embeddings so LLM fit find correct plugin easy.
+To finish the tasks, `Planner` dey get access to collection of tools wey dem call `Plugins`. These fit be Python classes or general code interpreter. These plugins dey stored as embeddings so LLM fit find correct plugin well.
 
 ![Taskweaver](../../../translated_images/pcm/taskweaver.da8559999267715a.webp)
 
-Dis na example of plugin wey dey handle anomaly detection:
+Example of one plugin wey fit do anomaly detection:
 
 ```python
 class AnomalyDetectionPlugin(Plugin): def __call__(self, df: pd.DataFrame, time_col_name: str, value_col_name: str):
 ```
 
-Di code go check before e run am. Another thing to manage context for Taskweaver na `experience`. Experience go allow context of conversation to dey saved well for long time inside YAML file. You fit configure am make LLM improve on some tasks over time as e dey see old conversations.
+Code go check well before e run. Another beta feature for managing context for Taskweaver na `experience`. Experience dey allow make conversation context save for long term inside YAML file. You fit configure am so the LLM go improve over time on some tasks if e dey see past conversation.
 
 ## JARVIS
 
-Last agent framework we go check na [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file&WT.mc_id=academic-105485-koreyst). Wetin make JARVIS special be say e dey use LLM to manage `state` of conversation and di `tools` na other AI models. Each AI model specialize for certain task like object detection, transcription or image captioning.
+Last agent framework we go look na [JARVIS](https://github.com/microsoft/JARVIS?tab=readme-ov-file&WT.mc_id=academic-105485-koreyst). Wetin make JARVIS special na say e use LLM to manage the `state` of conversation and the `tools` na other AI models. Each AI model na specialized model wey fit do certain task like object detection, transcription or image captioning.
 
 ![JARVIS](../../../translated_images/pcm/jarvis.762ddbadbd1a3a33.webp)
 
-Di LLM, wey be general purpose model, na im dey receive request from user and identify the task and any data or arguments wey e need to finish am.
+The LLM, wey be general purpose model, go receive request from user and identify the particular task and any arguments/data wey needed to complete the task.
 
 ```python
 [{"task": "object-detection", "id": 0, "dep": [-1], "args": {"image": "e1.jpg" }}]
 ```
 
-Di LLM go format di request so di specialized AI model go fit understand am, like JSON. After AI model don give answer based on task, LLM go receive di response.
+Then the LLM go format the request the way specialized AI model fit understand, like JSON. After AI model don return its prediction based on task, LLM go receive the response.
 
-If many models dey needed to finish the task, e go also interpret responses from those models before e come put am together to give answer to user.
+If many models need to work to finish the task, LLM go also interpret response from all those models before e join dem to generate answer for user.
 
-Example below show how e dey work when user request description and count of objects wey dey photo:
+Example below show how e go work when user ask for description and count of objects for picture:
 
 ## Assignment
 
-To continue your AI Agents learning, you fit build with Microsoft Agent Framework:
+To continue your learning about AI Agents, you fit build with Microsoft Agent Framework:
 
-- App wey go simulate business meeting with different departments for education startup.
-- Create system messages to guide LLMs make dem sabi different personas and wahala dem get, and make user fit pitch new product idea.
-- LLM go generate follow-up questions from each department to improve and make pitch and product idea beta
+- One application wey go simulate business meeting with different departments for education startup.
+- Create system messages wey go guide LLMs to understand different personas and priorities, and make user fit pitch new product idea.
+- Then make LLM generate follow-up questions from each department to refine and improve the pitch and product idea.
 
-## Learning no stop here, continue your Journey
+## Learning no stop here, continue di Journey
 
-After you don finish dis lesson, check our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to keep leveling up your Generative AI knowledge!
+After you finish this lesson, check our [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to continue to upgrade your Generative AI knowledge!
 
 ---
 

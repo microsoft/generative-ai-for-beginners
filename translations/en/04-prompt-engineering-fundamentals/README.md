@@ -24,8 +24,8 @@ By the end of this lesson we will be able to:
 
 ## Key Terms
 
-Prompt Engineering: The practice of designing and refining inputs to guide AI models toward producing desired outputs.  
-Tokenization: The process of converting text into smaller units, called tokens, that a model can understand and process.  
+Prompt Engineering: The practice of designing and refining inputs to guide AI models toward producing desired outputs.
+Tokenization: The process of converting text into smaller units, called tokens, that a model can understand and process.
 Instruction-Tuned LLMs: Large Language Models (LLMs) that have been fine-tuned with specific instructions to improve their response accuracy and relevance.
 
 ## Learning Sandbox
@@ -34,8 +34,8 @@ Prompt engineering is currently more art than science. The best way to improve o
 
 The Jupyter Notebook accompanying this lesson provides a _sandbox_ environment where you can try out what you learn - as you go or as part of the code challenge at the end. To execute the exercises, you will need:
 
-1. **An Azure OpenAI API key** - the service endpoint for a deployed LLM.  
-2. **A Python Runtime** - in which the Notebook can be executed.  
+1. **An Azure OpenAI API key** - the service endpoint for a deployed LLM.
+2. **A Python Runtime** - in which the Notebook can be executed.
 3. **Local Env Variables** - _complete the [SETUP](./../00-course-setup/02-setup-local.md?WT.mc_id=academic-105485-koreyst) steps now to get ready_.
 
 The notebook comes with _starter_ exercises - but you are encouraged to add your own _Markdown_ (description) and _Code_ (prompt requests) sections to try out more examples or ideas - and build your intuition for prompt design.
@@ -70,13 +70,13 @@ Define it and explain why it is needed.
 
 We started this lesson by defining **Prompt Engineering** as the process of _designing and optimizing_ text inputs (prompts) to deliver consistent and quality responses (completions) for a given application objective and model. We can think of this as a 2-step process:
 
-- _designing_ the initial prompt for a given model and objective  
+- _designing_ the initial prompt for a given model and objective
 - _refining_ the prompt iteratively to improve the quality of the response
 
 This is necessarily a trial-and-error process that requires user intuition and effort to get optimal results. So why is it important? To answer that question, we first need to understand three concepts:
 
-- _Tokenization_ = how the model "sees" the prompt  
-- _Base LLMs_ = how the foundation model "processes" a prompt  
+- _Tokenization_ = how the model "sees" the prompt
+- _Base LLMs_ = how the foundation model "processes" a prompt
 - _Instruction-Tuned LLMs_ = how the model can now see "tasks"
 
 ### Tokenization
@@ -91,7 +91,7 @@ To get an intuition for how tokenization works, try tools like the [OpenAI Token
 
 Once a prompt is tokenized, the primary function of the ["Base LLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) (or Foundation model) is to predict the token in that sequence. Since LLMs are trained on massive text datasets, they have a good sense of the statistical relationships between tokens and can make that prediction with some confidence. Note that they don't understand the _meaning_ of the words in the prompt or token; they just see a pattern they can "complete" with their next prediction. They can continue predicting the sequence till terminated by user intervention or some pre-established condition.
 
-Want to see how prompt-based completion works? Enter the above prompt into the Azure OpenAI Studio [_Chat Playground_](https://oai.azure.com/playground?WT.mc_id=academic-105485-koreyst) with the default settings. The system is configured to treat prompts as requests for information - so you should see a completion that satisfies this context.
+Want to see how prompt-based completion works? Enter the above prompt into the [Microsoft Foundry playground](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) with the default settings. The system is configured to treat prompts as requests for information - so you should see a completion that satisfies this context.
 
 But what if the user wanted to see something specific that met some criteria or task objective? This is where _instruction-tuned_ LLMs come into the picture.
 
@@ -123,7 +123,7 @@ Now that we know how prompts are processed by LLMs, let's talk about _why_ we ne
 
 Let's see this in action in the OpenAI or Azure OpenAI Playground:
 
-- Use the same prompt with different LLM deployments (e.g, OpenAI, Azure OpenAI, Hugging Face) - did you see the variations?  
+- Use the same prompt with different LLM deployments (e.g, OpenAI, Azure OpenAI, Hugging Face) - did you see the variations?
 - Use the same prompt repeatedly with the _same_ LLM deployment (e.g., Azure OpenAI playground) - how did these variations differ?
 
 ### Fabrications Example
@@ -133,7 +133,9 @@ In this course, we use the term **"fabrication"** to reference the phenomenon wh
 Want to get a sense of how fabrications work? Think of a prompt that instructs the AI to generate content for a non-existent topic (to ensure it is not found in the training dataset). For example - I tried this prompt:
 
 > **Prompt:** generate a lesson plan on the Martian War of 2076.
+
 A web search showed me that there were fictional accounts (e.g., television series or books) on Martian wars - but none in 2076. Commonsense also tells us that 2076 is _in the future_ and thus, cannot be associated with a real event.
+
 
 So what happens when we run this prompt with different LLM providers?
 
@@ -196,7 +198,7 @@ Let's start with the basic prompt: a text input sent to the model with no other 
 
 ### Complex Prompt
 
-Now let's add context and instructions to that basic prompt. The [Chat Completion API](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt?WT.mc_id=academic-105485-koreyst) lets us construct a complex prompt as a collection of _messages_ with:
+Now let's add context and instructions to that basic prompt. The [Chat Completion API](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/chatgpt?WT.mc_id=academic-105485-koreyst) lets us construct a complex prompt as a collection of _messages_ with:
 
 - Input/output pairs reflecting _user_ input and _assistant_ response.
 - System message setting the context for assistant behavior or personality.
@@ -204,9 +206,9 @@ Now let's add context and instructions to that basic prompt. The [Chat Completio
 The request is now in the form below, where the _tokenization_ effectively captures relevant information from context and conversation. Now, changing the system context can be as impactful on the quality of completions, as the user inputs provided.
 
 ```python
-response = openai.chat.completions.create(
-    model="gpt-3.5-turbo",
-    messages=[
+response = client.responses.create(
+    model="gpt-5-mini",
+    input=[
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": "Who won the world series in 2020?"},
         {"role": "assistant", "content": "The Los Angeles Dodgers won the World Series in 2020."},
@@ -273,6 +275,7 @@ Another technique for using primary content is to provide _cues_ rather than exa
 | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0              | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history. <br/>**Summarize This**                                       | Jupiter is the largest planet in our Solar System and the fifth one from the Sun. It is a gas giant with a mass 1/1000th of the Sun's, but it is heavier than all the other planets combined. Ancient civilizations have known about Jupiter for a long time, and it is easily visible in the night sky.. |
 | 1              | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history. <br/>**Summarize This** <br/> What we learned is that Jupiter | is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets combined. It is easily visible to the naked eye and has been known since ancient times.                        |
+
 | 2              | Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined. Jupiter is one of the brightest objects visible to the naked eye in the night sky, and has been known to ancient civilizations since before recorded history. <br/>**Summarize This** <br/> Top 3 Facts We Learned:         | 1. Jupiter is the fifth planet from the Sun and the largest in the Solar System. <br/> 2. It is a gas giant with a mass one-thousandth that of the Sun...<br/> 3. Jupiter has been visible to the naked eye since ancient times ...                                                                       |
 |                |                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                                                                                                                                                                                                                                                           |
 
@@ -286,7 +289,7 @@ Finally, the real value of templates lies in the ability to create and publish _
 
 ## Supporting Content
 
-If we think about prompt construction as having an instruction (task) and a target (primary content), then _secondary content_ is like additional context we provide to **influence the output in some way**. It could be tuning parameters, formatting instructions, topic taxonomies, etc. that can help the model _tailor_ its response to suit the desired user objectives or expectations.
+If we think about prompt construction as having an instruction (task) and a target (primary content), then _secondary content_ is like additional context we provide to **influence the output in some way**. It could be tuning parameters, formatting instructions, topic taxonomies etc. that can help the model _tailor_ its response to suit the desired user objectives or expectations.
 
 For example: Given a course catalog with extensive metadata (name, description, level, metadata tags, instructor etc.) on all the available courses in the curriculum:
 
@@ -325,7 +328,7 @@ Prompt Engineering is a trial-and-error process so keep three broad guiding fact
 
 ## Best Practices
 
-Now let's look at common best practices that are recommended by [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api?WT.mc_id=academic-105485-koreyst) and [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices?WT.mc_id=academic-105485-koreyst) practitioners.
+Now let's look at common best practices that are recommended by [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api?WT.mc_id=academic-105485-koreyst) and [Azure OpenAI](https://learn.microsoft.com/azure/ai-foundry/openai/concepts/prompt-engineering#best-practices?WT.mc_id=academic-105485-koreyst) practitioners.
 
 | What                              | Why                                                                                                                                                                                                                                               |
 | :-------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -374,26 +377,26 @@ For our assignment, we'll be using a Jupyter Notebook with exercises you can com
 
 You're all set to run the exercises. Note that there are no _right and wrong_ answers here - just exploring options by trial-and-error and building intuition for what works for a given model and application domain.
 
-_For this reason there are no Code Solution segments in this lesson. Instead, the Notebook will have Markdown cells titled "My Solution:" that shows one example output for reference._
+_For this reason there are no Code Solution segments in this lesson. Instead, the Notebook will have Markdown cells titled "My Solution:" that show one example output for reference._
 
  <!--
 LESSON TEMPLATE:
 Wrap the section with a summary and resources for self-guided learning.
 -->
 
-## Knowledge check
+## Knowledge Check
 
 Which of the following is a good prompt following some reasonable best practices?
 
 1. Show me an image of red car
-2. Show me an image of red car of make Volvo and model XC90 parked by a cliff with the sun setting
-3. Show me an image of red car of make Volvo and model XC90
+2. Show me an image of a red car of make Volvo and model XC90 parked by a cliff with the sun setting
+3. Show me an image of a red car of make Volvo and model XC90
 
 A: 2, it's the best prompt as it provides details on "what" and goes into specifics (not just any car but a specific make and model) and it also describes the overall setting. 3 is next best as it also contains a lot of description.
 
 ## 🚀 Challenge
 
-See if you can leverage the "cue" technique with the prompt: Complete the sentence "Show me an image of red car of make Volvo and ". What does it respond with, and how would you improve it?
+See if you can leverage the "cue" technique with the prompt: Complete the sentence "Show me an image of a red car of make Volvo and ". What does it respond with, and how would you improve it?
 
 ## Great Work! Continue Your Learning
 

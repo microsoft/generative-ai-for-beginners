@@ -1,134 +1,130 @@
-# ဘေးရှာဖွေရေးလျှောက်လွှာများဆောက်လုပ်ခြင်း
+# ရှာဖွေရေးလျှောက်လွှာများ တည်ဆောက်ခြင်း
 
-[![Introduction to Generative AI and Large Language Models](../../../translated_images/my/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
+[![Generative AI နှင့် အကြီးစားစာလုံးမော်ဒယ်များအတွက် နိဒါန်း](../../../translated_images/my/08-lesson-banner.8fff48c566dad08a.webp)](https://youtu.be/W0-nzXjOjr0?si=GcsqiTTvd7RKbo7V)
 
-> > _ဤသင်ခန်းစာ၏ ဗီဒီယိုကိုကြည့်ရန် အပေါ်မှဓာတ်ပုံကိုနှိပ်ပါ_
+> > _ဒီသင်ခန်းစာ၏ ဗီဒီယိုကိုကြည့်ရန် ပုံကိုနှိပ်ပါ_
 
-LLM များသည် စကားပြောစက်များနှင့် စာသားဖန်တီးခြင်းထက်ပို၍ ရှိသည်။ Embeddings ကို အသုံးပြု၍ ဘေးရှာဖွေရေးလျှောက်လွှာများ ဆောက်လုပ်နိုင်ပါသည်။ Embeddings တွင် ဒေတာ၏ နံပါတ်ပြ အထမ်းဆောင်မှုများ ဖြစ်ပြီး vectors ဟုလည်း သိကြသည်။ ဒါကို ဒေတာအတွက် အဓိပ္ပါယ်ဆိုင်ရာ ဘေးရှာဖွေရေးအတွက် အသုံးပြုနိုင်ပါသည်။
+LLM များသည် စကားပြောစက်များနှင့် စာသားထုတ်လုပ်ခြင်းထက်ပိုပြီး ရှိသည်။ Embeddings ကို အသုံးပြု၍ ရှာဖွေရေးလျှောက်လွှာများကိုလည်း တည်ဆောက်နိုင်ပါသည်။ Embeddings သည် ဒေတာ၏ နံပါတ်လက္ခဏာဆိုင်ရာ ဖော်ပြချက်ဖြစ်ပြီး ဗက်တာများဟုလည်း သိရှိကြပြီး ဒေတာအတွက်မြန်ဆန်စွာ semantic ရှာဖွေရေးအတွက် အသုံးပြုနိုင်ပါသည်။
 
-ဤသင်ခန်းစာတွင် ကျွန်ုပ်တို့ပညာရေး စတတ်အပ် အဖွဲ့အစည်းအတွက် ဘေးရှာဖွေရေးလျှောက်လွှာတစ်ခု ဆောက်လုပ်ပြမည်ဖြစ်သည်။ ကျွန်ုပ်တို့ စတတ်အပ်သည် ဖွံ့ဖြိုးတိုးတက်နေသောနိုင်ငံများရှိ ကျောင်းသားများကို အခမဲ့ပညာပေးသည့် အကျိုးပြုအဖွဲ့အစည်းတစ်ခုဖြစ်သည်။ ကျွန်ုပ်တို့ စတတ်အပ်တွင် AI အကြောင်းသင်ယူနိုင်ရန် ကျောင်းသားများအသုံးပြုနိုင်သော YouTube ဗီဒီယိုများစွာ ပါရှိသည်။ ကျွန်ုပ်တို့ စတတ်အပ်သည် ကျောင်းသားများကို စကားမေးပြီး YouTube ဗီဒီယိုများကို ရှာဖွေဖို့ အခွင့်အလမ်းပေးသည့် ဘေးရှာဖွေရေး လျှောက်လွှာတစ်ခု ဆောက်လုပ်လိုသည်။
+ဒီသင်ခန်းစာတွင် ကျွန်တော်တို့ပညာရေး စတားတပ်အတွက် ရှာဖွေရေးလျှောက်လွှာ တစ်ခုတည်ဆောက်မည်ဖြစ်သည်။ ကျွန်တော်တို့စတားတပ်သည် တိုးတက်လာနေသောနိုင်ငံများမှ ကျောင်းသား/သူများ အတွက် အခမဲ့ပညာရေးပေးသော အကျိုးပြုအဖွဲ့အစည်းတစ်ခုဖြစ်သည်။ ကျွန်တော်တို့စတားတပ်တွင် AI ကိုလေ့လာနိုင်ရန် အတွက် သင်ကြားမှု YouTube ဗီဒီယိုများ အမျိုးမျိုးရှိသည်။ ကျွန်တော်တို့စတားတပ်သည် ကျောင်းသားများက မေးခွန်း ရိုက်ထည့်ခြင်းဖြင့် YouTube ဗီဒီယိုရှာဖွေရေး လျှောက်လွှာတစ်ခုတည်ဆောက်လိုသည်။
 
-ဥပမာ၊ ကျောင်းသားတစ်ယောက်က 'Jupyter Notebooks ဆိုတာဘာလဲ?' သို့မဟုတ် 'Azure ML ဆိုတာဘာလဲ?' ဟူသော မေးခွန်းများ ရိုက်ထည့်နိုင်ပြီး၊ ဤဘေးရှာဖွေရေးလျှောက်လွှာက မေးခွန်းနှင့်သက်ဆိုင်သော YouTube ဗီဒီယိုစာရင်းကို ပြန်ပေးမည်ဖြစ်ပြီး အကောင်းဆုံးမှာ မေးခွန်းအဖြေ ရှိသော ဗီဒီယိုအပိုင်းသို့ ချိတ်ဆက်ထားသောလင့်ခ်ကိုလည်း ပြန်ပေးမည်ဖြစ်သည်။
+ဥပမာ၊ ကျောင်းသားတစ်ဦးသည် 'Jupyter Notebooks ဆိုတာ ဘာလဲ?' သို့မဟုတ် 'Azure ML ဆိုတာဘာလဲ' ဟူ၍ ရိုက်ထည့်နိုင်ပြီး ရှာဖွေရေးလျှောက်လွှာသည် မေးခွန်းနှင့် သက်ဆိုင်သော YouTube ဗီဒီယိုစာရင်းများကို ပြန်လည်ပေးပို့ပါသည်။ ထို့အပြင် ရှာဖွေရေးလျှောက်လွှာမှာ မေးခွန်းဖြေချက်တွေ့ရှိရာ ဗီဒီယိုအပိုင်းမှာ တိုက်ရိုက်လင့်ခ်ကိုလည်း ပြန်ပေးပို့ပါသည်။
 
-## မှတ်ချက်
+## နိဒါန်း
 
-ဤသင်ခန်းစာတွင် ကျွန်ုပ်တို့ ဖော်ပြမည့်အကြောင်းအရာများမှာ-
+ဒီသင်ခန်းစာတွင် ကျွန်တော်တို့ ပြုလုပ်မည့်အရာများမှာ -
 
-- Semantic နှင့် Keyword search ကြားကွာခြားချက်။
-- Text Embeddings ဆိုသည့်အကြောင်း။
-- Text Embeddings Index ဖန်တီးခြင်း။
+- Semantic နှင့် Keyword ရှာဖွေရေးကွာခြားချက်။
+- Text Embeddings ဆိုတာဘာလဲ။
+- Text Embeddings Index ကိုဖန်တီးခြင်း။
 - Text Embeddings Index တွင် ရှာဖွေရေး။
 
 ## သင်ယူရမည့် ရည်မှန်းချက်များ
 
-ဤသင်ခန်းစာပြီးဆုံးပါက-
+ဒီသင်ခန်းစာ ပြီးစီးပြီးနောက် သင်သည် အောက်ပါအရာများကို ပြုလုပ်နိုင်မှာဖြစ်သည်။
 
-- semantic နှင့် keyword search များ၏ ကွာခြားချက်ကို ပြောပြနိုင်မည်။
-- Text Embeddings များအား ရှင်းရွင်းဖော်ပြနိုင်မည်။
-- Embeddings အသုံးပြု၍ ဒေတာရှာဖွေရေး လျှောက်လွှာတစ်ခု ဖန်တီးနိုင်မည်။
+- Semantic နှင့် keyword ရှာဖွေရေး တို့၏ ကွာခြားချက်ကို ရှင်းပြနိုင်မည်။
+- Text Embeddings များဆိုတာ သော့လှမ်းလို့ ရှင်းပြနိုင်မည်။
+- Embeddings ကို အသုံးပြုကာ ဒေတာရှာဖွေရာတွင် လျှောက်လွှာ တစ်ခုကို ဖန်တီးနိုင်မည်။
 
-## ဘယ်ကြောင့် ဘေးရှာဖွေရေးလျှောက်လွှာ ဆောက်လုပ်သနည်း?
+## ရှာဖွေရေး လျှောက်လွှာ တည်ဆောက်ရခြင်း အကြောင်းရင်း
 
-ဘေးရှာဖွေရေးလျှောက်လွှာ တစ်ခု ဆောက်လုပ်ခြင်းဖြင့် Embeddings ကို ဒေတာရှာဖွေရေးအတွက် အသုံးပြုနည်း လေ့လာ လိုက်ပါမည်။ ကျောင်းသားများ အချက်အလက်များကို မြန်မြန်ဆန်ဆန် ရှာတွေ့နိုင်ရန်လည်း လျှောက်လွှာတစ်ခု ဖန်တီးရမည်ဖြစ်သည်။
+ရှာဖွေရေးလျှောက်လွှာ တစ်ခု တည်ဆောက်ခြင်းဖြင့် Embeddings အသုံးပြုပြီး ဒေတာရှာဖွေရေးကို နားလည်သဘော ပိုမိုကောင်းမွန်စေနိုင်သည်။ ထို့အပြင် ကျောင်းသားများအတွက် အမြန်ဆုံး အချက်အလက် ရှာဖွေရေး လျှောက်လွှာတစ်ခု တည်ဆောက်နည်းကိုလည်း သင်ယူနိုင်ပါသည်။
 
-သင်ခန်းစာတွင် Microsoft [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) YouTube ချန်နယ်၏ transcript များအတွက် Embedding Index ပါဝင်သည်။ AI Show သည် AI နှင့် machine learning ကို သင်ကြားပေးသော YouTube ချန်နယ်ဖြစ်သည်။ Embedding Index တွင် ၂၀၂၃ ခုနှစ် အောက်တိုဘာလအထိ YouTube transcript စာသားများအတွက် Embeddings များ ပါရှိသည်။ သင်သည် ထို Embedding Index ကို အသုံးပြုပြီး ကျွန်ုပ်တို့ စတတ်အပ်အတွက် ဘေးရှာဖွေရေးလျှောက်လွှာတစ်ခု ဖန်တီးမည်ဖြစ်သည်။ ဤလျှောက်လွှာသည် မေးခွန်းနှင့် သက်ဆိုင်သော ဗီဒီယိုအပိုင်းသို့ Direct Link ကို ပြန်ပေးသည်။ အကောင်းဆုံးကျောင်းသားများ လိုအပ်သည့် အချက်အလက်များကို အလျင်အမြန် ရှာတွေ့နိုင်စေသည်။
+သင်ခန်းစာတွင် Microsoft [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) YouTube ချန်နယ်အတွက် YouTube transcript များ၏ Embedding Index ပါဝင်သည်။ AI Show သည် AI နှင့် machine learning ပညာပေးတဲ့ YouTube ချန်နယ်တစ်ခုဖြစ်သည်။ Embedding Index မှာ ၂၀၂၃ အောက်တိုဘာအထိ YouTube transcript များအတွက် Embeddings များပါဝင်သည့် စုစည်းမှုဖြစ်သည်။ သင်သည် ဒီ Embedding Index ကို အသုံးပြုကာ ကျွန်တော်တို့စတားတပ်အတွက် ရှာဖွေရေး လျှောက်လွှာ တည်ဆောက်မှာဖြစ်သည်။ ရှာဖွေရေး လျှောက်လွှာမှာ မေးခွန်းဖြေကြားမှုရှိရာ ဗီဒီယိုအပိုင်းကို တိုက်ရိုက်လင့်ခ် လည်း ပြန်ပေးပို့ပါသည်။ ကျောင်းသားများ အချက်အလက် ဘာသာရှာဖွေရန် စျေးနူန်းမြန်သာစေသည်။
 
-နောက်ထပ် ဥပမာအနေနှင့် 'can you use rstudio with azure ml?' ဆိုသောမေးခွန်းအတွက် semantic query ဖြစ်သည်။ YouTube url တွင် timestamp ပါရှိ၍ မေးခွန်းဖြေရာ ဗီဒီယိုအပိုင်းသို့ တိုက်ရိုက် သွားရောက်နိုင်သည်။
+အောက်မှာ 'can you use rstudio with azure ml?' ဆိုတဲ့ မေးခွန်းအတွက် semantic query ဥပမာပါ။ YouTube URL ကိုကြည့်ပါ၊ URL ထဲတွင် မေးခွန်းဖြေစာရင်းပါသော ဗီဒီယိုအပိုင်းသို့ ချိန်ညှိထားမှုရှိသည်။
 
 ![Semantic query for the question "can you use rstudio with Azure ML"](../../../translated_images/my/query-results.bb0480ebf025fac6.webp)
 
 ## Semantic search ဆိုတာဘာလဲ?
 
-အခု သင်အံ့သြနိင်တာက semantic search ဆိုတာဘာလဲဆိုတာဖြစ်နိုင်သည်။ Semantic search ဆိုသည်မှာ query တွင် အသုံးပြုထားသော အသုံးအနှုန်းများ၏ အဓိပ္ပါယ်ကို အသုံးပြုကာ သက်ဆိုင်ရာ ဖြေရှင်းချက်များကို ပြန်ပေးသည့် ရှာဖွေရေးနည်းပညာဖြစ်သည်။
+ယခု သင်စဉ်းစားမည့်အရာမှာ semantic search ဆိုတာဘာလဲဆိုတာဖြစ်သည်။ Semantic search သည် မေးခွန်းထဲ စကားလုံးများ၏ အဓိပ္ပာယ်ကို အသုံးပြုကာ သက်ဆိုင်သော ရလဒ်များပြန်လည်ပေးသည့် ရှာဖွေရေးနည်းပညာဖြစ်သည်။
 
-ဤမှာ semantic search ဥပမာတစ်ခုရှိသည်။ မော်တော်ကား ဝယ်ယူရန် မျှော်မှန်းနေသောသူတစ်ဦးရှိသည်ဟု ယူဆပါက၊ “my dream car” ဟု ရှာဖွေမည်ဆိုပါက semantic search သည် “အိပ်မက်ဖြစ်စေသောကား” မဟုတ်ဘဲ “စိတ်ကြိုက်” ကား ဝယ်လိုသည်ဟု နားလည်သည်။ Semantic search သည် ရည်ရွယ်ချက်ကို နားလည်ကာ သက်ဆိုင်ရာ ရလဒ်များပြန်ပေးမည်ဖြစ်သည်။ Keyword search သည် အနိူင်ဖြစ်သည်ဟုသတ်မှတ်၍ အခါအားလျော်စွာ သက်ဆိုင်မှုမရှိသော ရလဒ်များ ပြန်လာနိုင်သည်။
+Semantic search ဥပမာတစ်ခုကို ပြပါရစို့။ သင်မော်တော်ကားဝယ်လိုသောအခါ 'my dream car' ဟု ရှာဖွေပါက semantic search သည် သင်ကားတွင် `အိပ်မက်` မျှော်မှန်းနေခြင်းမဟုတ်ပဲ သင့်အကြိုက်ဆုံးကားကို ဝယ်လိုသည်ဟု နားလည်လိမ့်မည်။ Semantic search သည် သင့်ရည်ရွယ်ချက်ကို နားလည်ပြီး သက်ဆိုင်ရာရလဒ်ကို ပြန်ပေးသည်။ တခြားနည်းမှာ `keyword search` ဖြစ်ပြီး literally ကားအိပ်မက်များကိုသာ ရှာဖွေသဖြင့် မသက်ဆိုင်ဘဲ ရလဒ်များပေါ်လာခြင်း ဖြစ်တတ်သည်။
 
 ## Text Embeddings ဆိုတာဘာလဲ?
 
-[Text embeddings](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst) သည် [ဘာသာစကား သဘာဝလုပ်ငန်းဂဏန်း](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst) တွင် အသုံးပြုသော စာသား ကိုယ်စားပြုနည်းဖြစ်သည်။ Text embeddings သည် စာသားများ၏ Semantic နံပါတ်ဆိုင်ရာ ကိုယ်စားပြုမှုများပါသည်။ Embeddings များသည် ကွန်ပြူတာ များအတွက် နားလည်ရန် လွယ်ကူစေရန် ဒေတာကို ကိုယ်စားပြုထုတ်ပေးသည်။ Text embeddings ဖန်တီးခြင်းအတွက် မော်ဒယ်များစွာရှိသော်လည်း ဤသင်ခန်းစာတွင် OpenAI Embedding Model ကို အသုံးပြု၍ Embeddings ထုတ်လုပ်သည့် နည်းကို ဦးစားပေး လေ့လာမည်။
+[Text embeddings](https://en.wikipedia.org/wiki/Word_embedding?WT.mc_id=academic-105485-koreyst) သည် [ဘာသာစကား သဘာဝ ထုတ်လုပ်မှု](https://en.wikipedia.org/wiki/Natural_language_processing?WT.mc_id=academic-105485-koreyst) မှာ အသုံးပြုသည့် စာသားကို ဖော်ပြပုံနည်းတစ်ခုဖြစ်သည်။ Text embeddings သည် စာသား၏ semantic နံပါတ်ဖော်ပြချက်ဖြစ်သည်။ Embeddings တွင် ဒေတာကို စက်များနားလည်ရလွယ်ကူသော ပုံစံဖြင့် ကိုယ်စားပြုသည်။ Text embeddings ဖန်တီးရန် မော်ဒယ်များစွာရှိပါသေးသည်။ ဒါပေမယ့် ဒီသင်ခန်းစာတွင် OpenAI Embedding Model အသုံးပြုပြီး Embedding များ ဖန်တီးပုံကို အာရုံစိုက် သင်ယူမည်။
 
-ဥပမာအားဖြင့် AI Show YouTube ချန်နယ်ရှိ episode တစ်ခုမှ transcript စာသားမှာ အောက်ပါအတိုင်းဖြစ်သည်-
+ဥပမာအနေနှင့် AI Show YouTube ချန်နယ်၏ အပိုင်းတစ်ခုမှ transcript ထဲရှိ စာသားကိုစဉ်းစားပါစို့။
 
 ```text
 Today we are going to learn about Azure Machine Learning.
 ```
 
-
-ကျွန်ုပ်တို့သည် ဤစာသားကို OpenAI Embedding API သို့ ပေးပို့ပြီး ၁၅၃၆နံပါတ်ပါဝင်သော vector တစ်ခု ရရှိမည်ဖြစ်သည်။ Vector ထဲရှိ နံပါတ်တစ်ခုချင်းစီသည် စာသား၏ အသေးစိတ် အချက်အလက်တစ်ခုကို ကိုယ်စားပြုပြီး သုံးသပ်နိုင်သည်။ တိကျမှုအတွက် ဤမှာ vector ၏ ပထမ ၁၀ နံပါတ်ကိုသာ ဖော်ပြထားသည်။
+ကျွန်တော်တို့ဒီစာသားကို OpenAI Embedding API မှတဆင့် ပေးပို့မည်ဖြစ်ပြီး ၁၅၃၆ ဂဏန်းပါသော embedding vector တစ်ခုကို ပြန်လည်ရရှိမည်။ ဗက်တာတစ်ခု၏ ဂဏန်းတစ်ခုစီသည် စာသား၏ အချက်အလက် အပိုင်းအခြားတစ်ချို့ကို ကိုယ်စားပြုသည်။ ရှင်းလင်းစေရန် ဗက်တာ၏ ပထမ ၁၀ ဂဏန်းကို ပြထားသည်။
 
 ```python
 [-0.006655829958617687, 0.0026128944009542465, 0.008792596869170666, -0.02446001023054123, -0.008540431968867779, 0.022071078419685364, -0.010703742504119873, 0.003311325330287218, -0.011632772162556648, -0.02187200076878071, ...]
 ```
 
+## Embedding index ကို မည်သို့ ဖန်တီးမည်နည်း?
 
-## Embedding index ကို မည်ကဲ့သို့ ဖန်တီးထားသနည်း?
+ဒီသင်ခန်းစာအတွက် Embedding index ကို Python script များအစုလိုက် အသုံးပြုပြီး ဖန်တီးခဲ့သည်။ Scripts များနှင့် လမ်းညွှန်ချက်များကို ဒီသင်ခန်းစာ၏ 'scripts' ဖောဒါအတွင်းရှိ [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) တွင် ရှာဖွေနိုင်သည်။ ဒီသင်ခန်းစာ ပြီးစီးရန် Scripts မလိုအပ်ပါသည်။ အဲဒါကြောင့် Embedding Index ကို ကြိုတင်ထည့်ပေးထားသည်။
 
-ဤသင်ခန်းစာအတွက် Embedding index ကို Python script များ စဉ်ဆက်မပြတ် အသုံးပြု၍ ဖန်တီးထားသည်။ Script များနှင့် အသုံးပြုနည်း ညွှန်ကြားချက်များကို ဤသင်ခန်းစာ အတွင်းရှိ 'scripts' ဖိုင်တွဲအောက်ရှိ [README](./scripts/README.md?WT.mc_id=academic-105485-koreyst) မှာ တွေ့ရမည်ဖြစ်သည်။ သင်ဤသင်ခန်းစာကို ပြီးမြောက်ရန်အတွက် script များကို မရောလျှောက် နှစ်သက်စွာ မသွားရောက် မဖွင့်ဆောင်ခွင့်မရှိသေးပါ၊ အခြားနေရာတွင်ရရှိထားသည့် Embedding Index ကိုသာ အသုံးပြုလျက်ရှိသည်။
+Scripts များမှ ပြုလုပ်သော လုပ်ဆောင်ချက်များမှာ -
 
-ဤ script များက ပြုလုပ်သော လုပ်ဆောင်ချက်များမှာ-
+၁။ [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) playlist အတွင်းရှိ YouTube ဗီဒီယိုတစ်ခုချင်းစီ၏ transcript ကို ဒေါင်းလုဒ် ခြင်း။
+၂။ [OpenAI Functions](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst) ကို အသုံးပြုကာ YouTube transcript ၏ ပထမ ၃ မိနစ်အတွင်းမှ မိန့်ခွန်းပြောသူ အမည်ကို ထုတ်ယူရန် ကြိုးပမ်းခြင်း။ မိန့်ခွန်းပြောသူ အမည်ကို embedding_index_3m.json အဖြစ် Embedding Index ထဲသိမ်းဆည်းခြင်း။
+၃။ Transcript စာသားကို **၃ မိနစ်စာ စာသားဗဟိုများသို့** ခွဲခြားခြင်း။ segment တစ်ခုစီတွင် နောက် segment မှ စကား ၂၀ ကျော်ကို ထပ်တိုးထည့်သွင်းပြီး Embedding ပြတ်ခြင်းမရှိစေရန်နှင့် ရှာဖွေရေးအချိုးအဆ အတိုးပေးရန်။
+၄။ Segment တစ်ခုစီကို OpenAI Chat API မှတဆင့် ၆၀ စကားလုံးစာ အကျဉ်းချုပ် ပြုလုပ်၍ Embedding Index embedding_index_3m.json တွင် သိမ်းဆည်းခြင်း။
+၅။ အဆုံးဆုံးတွင် Segment စာသားများကို OpenAI Embedding API သို့ ပေးပို့ခြင်း။ Embedding API က ၁၅၃၆ ဂဏန်းပါသော Vector ကို ပြန်ပေးပြီး Semantic အဓိပ္ပာယ်ကို ကိုယ်စားပြုသည်။ Segment နှင့် OpenAI Embedding vector ကို Embedding Index embedding_index_3m.json တွင် သိမ်းဆည်းခြင်း။
 
-၁။ [AI Show](https://www.youtube.com/playlist?list=PLlrxD0HtieHi0mwteKBOfEeOYf0LJU4O1) playlist အတွက် YouTube ဗီဒီယို တစ်ခုချင်းစီ၏ transcript ကို ဒေါင်းလုတ်ရယူသည်။
-၂။ [OpenAI Functions](https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling?WT.mc_id=academic-105485-koreyst) ကို အသုံးပြု၍ YouTube transcript ၏ ပထမ ၃ မိနစ်အတွင်း ပါသည့် စကားပြောသူ အမည်ကို ဖော်ထုတ်ရန် ကြိုးပမ်းသည်။ ဗီဒီယိုတစ်ခုချင်းစီ၏ စကားပြောသူအမည်ကို Embedding Index `embedding_index_3m.json` တွင်သိမ်းဆည်းထားသည်။
-၃။ Transcript စာသားကို **၃ မိနစ်စာ ပိုင်းခြားချက်များတွင်ပိုင်းခွဲ**သည်။ ပိုင်းခြားချက်တိုင်းသည် နောက်ပိုင်းပိုင်းခြားချက်၏ စာလုံး ၂၀ အနီးအနားမှ ကွက်လပ်ဖြတ်ထားခြင်းရှိသည်။ ၎င်းက နောက်ပိုင်းအပိုင်းက ဒေတာဖြတ်ခြင်းမဖြစ်စေရန်နှင့် ရှာဖွေရေးအတွက် ပိုမိုကောင်းမွန်သော ပတ်ဝန်းကျင်ပုံစံကို ဖန်တီးရန်ဖြစ်သည်။
-၄။ တစ်ခုချင်းစီသော စာသားပိုင်းခြားကို OpenAI Chat API သို့ ပေးပို့ပြီး စာသားကို ၆၀ စကားလုံး သို့ စုပေါင်းချုပ်နိင်မှု ပြုလုပ်သည်။ ဆက်တင်ကိုလည်း Embedding Index `embedding_index_3m.json` တွင်သိမ်းဆည်းထားသည်။
-၅။ နောက်ဆုံးတွင် အဆိုပါ စာသားပိုင်းခြားကို OpenAI Embedding API သို့ ပေးပို့သည်။ Embedding API မှ ၁၅၃၆ ကိန်းဂဏန်းပါရှိသော vector ကို ပြန်ပေးသည်။ ဤ vector သည် စာသားပိုင်းခြား၏ အဓိပ္ပါယ်ဆိုင်ရာ ကိုယ်စားပြုမှု ဖြစ်သည်။ စာသားပိုင်းခြားနှင့် OpenAI Embedding vector ကို Embedding Index `embedding_index_3m.json` တွင် သိမ်းဆည်းထားသည်။
+### Vector ဒေတာဘေ့(စ်)
 
-### Vector Database များ
+သင်ခန်းစာလွယ်ကူစေရန် Embedding Index ကို JSON ဖိုင် embedding_index_3m.json အနေဖြင့် သိမ်းဆည်းပြီး Pandas DataFrame သို့ လုပ်ဆောင်ထားသည်။ ပြီးတော့ အသေးစိတ်ထုတ်လုပ်မှုတွင် Embedding Index ကို [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst), [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst), [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme?WT.mc_id=academic-105485-koreyst), [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst) ကဲ့သို့သော vector database များတွင် သိမ်းဆည်းမည်ဖြစ်ပါသည်။
 
-သင်ခန်းစာ အလွယ်တကူ ဖြစ်စေရန် Embedding Index ကို `embedding_index_3m.json` ဟူသော JSON ဖိုင်တွင်သိမ်းဆည်းကာ Pandas DataFrame တွင် ဖတ်ယူထားသည်။ သို့သော် ထုတ်လုပ်မှုတွင် Embedding Index ကို vector database များဖြစ်သည့် [Azure Cognitive Search](https://learn.microsoft.com/training/modules/improve-search-results-vector-search?WT.mc_id=academic-105485-koreyst), [Redis](https://cookbook.openai.com/examples/vector_databases/redis/readme?WT.mc_id=academic-105485-koreyst), [Pinecone](https://cookbook.openai.com/examples/vector_databases/pinecone/readme?WT.mc_id=academic-105485-koreyst), [Weaviate](https://cookbook.openai.com/examples/vector_databases/weaviate/readme?WT.mc_id=academic-105485-koreyst) စသည့် service များတွင် သိမ်းဆည်းထားသည်။
+## cosine similarity ကိုနားလည်ခြင်း
 
-## cosine similarity ကို နားလည်ခြင်း
+Text embeddings ကိုသင်ယူပြီးနောက်မှာ အဆိုပါ embeddings အသုံးပြုပြီး cosine similarity အသုံးပြုကာ မေးခွန်းတစ်ခုနှင့် အလားတူဆုံး embedding ကို ရှာဖွေခြင်းကိုလေ့လာပါမည်။
 
-Text embeddings များကို သင်ယူပြီးနောက် ဘယ်လို အသုံးပြုကာ ဒေတာရှာဖွေရမည်နှင့် ထူးခြားပြီး ပို၍ ဆန်ဆန်သော embedding များ ရှာဖွေရန် cosine similarity ကို ဘယ်လိုသုံးရမည်ဆိုင်ရာကို ကုန်ဆုံးခြင်းဖြစ်သည်။
+### cosine similarity ဆိုတာဘာလဲ?
 
-### cosine similarity ဆိုတာ ဘာလဲ?
+Cosine similarity သည် vector နှစ်ခုကြား ဆွဲဆန့်ထောင့်၏ ကိုဇိုင်းတန်ဖိုးကို တိုင်းတာခြင်းဖြစ်သည်။ အဲဒါကို `nearest neighbor search` ဟုလည်း ခေါ်သည်။ Cosine similarity ရှာဖွေမှုက လုပ်ဖို့ Query စာသားကို OpenAI Embedding API ဖြင့် vectorize ပြုလုပ်ရမည်။ ထို့နောက် ကျွန်တော်တို့ Embedding Index ထဲရှိ vector တစ်ခုချင်းစီနှင့် Query vector ကြား cosine similarity ကိုတွက်ချက်မည်။ Embedding Index တွင် YouTube transcript စာသား segment တစ်ခုစီအတွက် vector ရှိပြီးလာမည်ဖြစ်သည်။ နောက်ဆုံးတွင် cosine similarity အရ အမြင့်ဆုံး ထိပ်တန်း segment များကို အဆင့်ခင်းပြသမည်။
 
-Cosine similarity သည် vector နှစ်ခုကြား တွဲဖက်ဆင်ခြင်းအတိုင်းအတာဖြစ်ပြီး `nearest neighbor search` ဟုလည်း ခေါ်ဆိုကြသည်။ cosine similarity ရှာဖွေရေး လုပ်ရန် query စာသားကို OpenAI Embedding API ဖြင့် _vectorize_ ပြုလုပ်ရမည်။ ထို့နောက် query vector နှင့် Embedding Index ရှိ vectors တစ်ခုချင်းဆီအကြား cosine similarity ကိုတွက်ချက်ရမည်။ 기억ပါ၊ Embedding Index တွင် YouTube transcript စာသားပိုင်းခြားတစ်ခုချင်းစီအတွက် vector ရှိသည်။ နောက်ဆုံး cosine similarity အဆင့်အတန်းဖြင့် ရလဒ်များကို စီစဉ်ပြီး cosine similarity မြင့်သော စာသားပိုင်းခြားများသည် query နှင့် အနီးဆုံး ပုံစံဖြစ်သည်။
+သင်္ချာနည်းဖြင့် cosine similarity သည် multidimensional ရှိ vector နှစ်ခုကြား ထောင့်တစ်ခု၏ ကိုဇိုင်းကို တိုင်းတာသည်။ size ကြောင့် Euclidean မီတာစားမ်းများနည်းပညာဖြင့် Document နှစ်ခုသည် ဝေးလွန်းပါကလည်း သဘောတူ angle မွနည်းခြင်းကြောင့် ရလဒ်မှာ cosine similarity သာ  အထက်တန်းရှိနိုင်သည်။ Cosine similarity နည်းနိဒါန်း/နိယာမများအတွက် [Cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-koreyst) ကိုကြည့်နိုင်ပါသည်။
 
-သင်္ချာပညာနည်းမှာ cosine similarity သည် multidimensional အာကာသရှိ vector နှစ်ခုကြား ထောင့်ခွာခြားမှု၏ cosine ကိုတိုင်းတာသည်။ ဤတိုင်းတာသည် အကျိုးရှိသည်၊ အကယ်၍ ဒေတာနှစ်ခု Euclidean ခြားနားမှုကြောင့် ဝေးလွန်းနေပါက size မတူပေမယ့် ထောင့်ကဏ္ဍများနားတွင် ပိုမိုနီးစပ်၍ ကျော်ကြားသော cosine similarity ရရှိနိုင်ပါသည်။ cosine similarity သင်္ချာအချက်အလက်များကို [Cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity?WT.mc_id=academic-105485-koreyst) တွင် ဖတ်ရှုနိုင်သည်။
+## မိမိ၏ ပထမဆုံး ရှာဖွေရေးလျှောက်လွှာ တည်ဆောက်ခြင်း
 
-## သင့်ပထမဆုံး ဘေးရှာဖွေရေးလျှောက်လွှာ ဆောက်လုပ်ခြင်း
+နောက်တစ်ဆင့်မှာ Embeddings ကူညီပေးသော ရှာဖွေရေး လျှောက်လွှာ တည်ဆောက်နည်းကို သင်ယူမှာ ဖြစ်သည်။ ရှာဖွေရေး လျှောက်လွှာက ကျောင်းသားများ အတွက် မေးခွန်း ရိုက်ထည့်ခြင်းဖြင့် ဗီဒီယိုရှာဖွေခွင့်ပေးမည်။ ဗီဒီယိုစာရင်းများကို မေးခွန်းနှင့် သက်ဆိုင်မှုရှိသောအတိုင်း ပြန်ပေးပြီး မေးခွန်းဖြေချက် ပါဝင်သော ဗီဒီယိုအပိုင်းကိုလည်း တိုက်ရိုက် လင့်ခ်ပေးမည်။
 
-နောက်တစ်ခုမှာ Embeddings ကို အသုံးပြုပြီး ဘေးရှာဖွေရေးလျှောက်လွှာ တစ်ခု ဆောက်လုပ်နည်းကို သင်ယူ မည်ဖြစ်သည်။ ဤလိုက်လျောညီမှုလျှောက်လွှာက ကျောင်းသားများ၏ မေးခွန်းတစ်ခုရိုက်ထည့်ခြင်းဖြင့် ဗီဒီယိုရှာဖွေလုပ်နိုင်စေမည်ဖြစ်သည်။ လျှောက်လွှာသည် မေးခွန်းနှင့်သက်ဆိုင်သော ဗီဒီယိုစာရင်းများ ဖော်ပြမည်ဖြစ်ပြီး မေးခွန်းဖြေရာ ဗီဒီယိုအပိုင်းသို့ ချိတ်ဆက်ထားသော လင့်ခ်ကိုလည်း ပြန်ပေးမည်ဖြစ်သည်။
+ဒီ ဖြေရှင်းနည်းကို Windows 11, macOS, Ubuntu 22.04 သုံးပြီး Python 3.10 သို့မဟုတ်နောက်ကျော ဗားရှင်းဖြင့် ဖန်တီးစွမ်းဆောင်စေတာဖြစ်သည်။ Python ကို [python.org](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) မှ ဒေါင်းလုပ်လုပ်နိုင်ပါသည်။
 
-ဤ ဖြေရှင်းချက်သည် Windows 11, macOS, နှင့် Ubuntu 22.04 ပတ်ဝန်းကျင်များတွင် Python 3.10 သို့မဟုတ် 그 이상의 ကူးစောင်းဖြင့် စမ်းသပ်ထားသည်။ Python ကို [python.org](https://www.python.org/downloads/?WT.mc_id=academic-105485-koreyst) မှ ဒေါင်းလုပ်ထုတ်နိုင်ပါသည်။
+## အလုပ်အပ် - ကျောင်းသားများအတွက် ရှာဖွေရေးလျှောက်လွှာ တည်ဆောက်ခြင်း
 
-## ကြိုးစားမှု - ကျောင်းသားများအတွက် ဘေးရှာဖွေရေးလျှောက်လွှာ ဆောက်လုပ်ခြင်း
+ဒီသင်ခန်းစာအစပိုင်းတွင် ကျွန်တော်တို့ စတားတပ်ကို မိတ်ဆက်ခဲ့သည်။ ယခု ကျောင်းသားများအား သူတို့၏ စမ်းသပ်ချက်များအတွက် ရှာဖွေရေး လျှောက်လွှာ တည်ဆောက်ခွင့် ပေးပါမည်။
 
-ဤသင်ခန်းစာအစပိုင်းတွင် ကျွန်ုပ်တို့ စတတ်အပ်အဖွဲ့အစည်းကို မိတ်ဆက်ခဲ့သည်။ ယခု အခါ ကျောင်းသားများအတွက် သင်ခန်းစာစာမေးပွဲများအတွက် ဘေးရှာဖွေရေးလျှောက်လွှာတစ်ခုမှာ ဖန်တီးပေးချိန်ဖြစ်သည်။
+ဒီအလုပ်အပ်မှာ Azure OpenAI Services များ ဖန်တီးပေးရမည် ဖြစ်သည်။ Azure subscription လိုအပ်ပြီး အောက်ပါ Azure OpenAI Services များ ဖန်တီးသွားပါမည်။
 
-ဤလုပ်ငန်းဆောင်တာတွင် ဘေးရှာဖွေရေးလျှောက်လွှာ တည်ဆောက်ရန် အသုံးပြုမည့် Azure OpenAI Services များကို တည်ဆောက်မည်ဖြစ်သည်။ အောက်ပါ Azure OpenAI Services အား တည်ဆောက်ရမည်ဖြစ်ပြီး အဆိုပါလုပ်ငန်းဆောင်တာကို ပြီးမြောက်ရန် Azure subscription လိုအပ်မည်ဖြစ်သည်။
+### Azure Cloud Shell ဖြင့် စတင်ခြင်း
 
-### Azure Cloud Shell စတင်ခြင်း
+၁။ [Azure portal](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) သို့ စာရင်းဝင်ပါ။
+၂။ Azure portal ထဲက ထိပ်ညာဘက်မှ Cloud Shell icon ကို နှိပ်ပါ။
+၃။ Environment အမျိုးအစားအဖြစ် **Bash** ကို ရွေးချယ်ပါ။
 
-၁။ [Azure portal](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) တွင် စာရင်းဝင်ပါ။
-၂။ Azure portal ၏ ညာဘက်အထက်ဆုံးတွင် Cloud Shell သင်္ကေတကို နှိပ်ပါ။
-၃။ ပတ်ဝန်းကျင်အမျိုးအစား အဖြစ် **Bash** ကို ရွေးပါ။
+#### Resource group တည်ဆောက်ခြင်း
 
-#### resource group တည်ဆောက်ခြင်း
-
-> ဤညွှန်ကြားချက်များတွင် East US တွင် "semantic-video-search" ဟူသော resource group ကို အသုံးပြုထားသည်။
-> resource group အမည်ကို ပြောင်းလဲနိုင်သော်လည်း resource များတည်နေရာပြောင်းရာတွင်
-> [မော်ဒယ်ရရှိနိုင်မှုဇယား](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst) ကို စစ်ဆေးပါ။
+> ဤညွှန်ကြားချက်များတွင် "semantic-video-search" ဟူသော East US ရှိ resource group ကို အသုံးပြုခဲ့သည်။
+> သင် resource group အမည်ကို ပြောင်းလဲနိုင်သော်လည်း တည်နေရာ ပြောင်းလဲရလျှင်,
+> [model availability table](https://aka.ms/oai/models?WT.mc_id=academic-105485-koreyst) ကို စစ်ဆေးပါ။
 
 ```shell
 az group create --name semantic-video-search --location eastus
 ```
 
-
 #### Azure OpenAI Service resource တည်ဆောက်ခြင်း
 
-Azure Cloud Shell မှ အောက်ပါ command ကို အသုံးပြုပြီး Azure OpenAI Service resource တစ်ခုဖန်တီးပါ။
+Azure Cloud Shell မှ အောက်ပါ command ဖြင့် Azure OpenAI Service resource တည်ဆောက်ပါ။
 
 ```shell
 az cognitiveservices account create --name semantic-video-openai --resource-group semantic-video-search \
     --location eastus --kind OpenAI --sku s0
 ```
 
+#### ဒီလျှောက်လွှာတွင် အသုံးပြုရန် endpoint နှင့် keys ရယူခြင်း
 
-#### ဤလျှောက်လွှာတွင် အသုံးပြုရန် endpoint နှင့် keys ရယူခြင်း
-
-Azure Cloud Shell ထဲမှ အောက်ပါ command များကို run လုပ်၍ Azure OpenAI Service resource အတွက် endpoint နှင့် keys များ ရယူပါ။
+Azure Cloud Shell မှ အောက်ပါ command များကို ပြေး၍ Azure OpenAI Service resource ၏ endpoint နှင့် keys ကို ရယူပါ။
 
 ```shell
 az cognitiveservices account show --name semantic-video-openai \
@@ -137,10 +133,9 @@ az cognitiveservices account keys list --name semantic-video-openai \
    --resource-group semantic-video-search | jq -r .key1
 ```
 
+#### OpenAI Embedding model ကို တပ်ဆင်ခြင်း
 
-#### OpenAI Embedding မော်ဒယ် တပ်ဆင်ခြင်း
-
-Azure Cloud Shell မှ အောက်ပါ command ဖြင့် OpenAI Embedding မော်ဒယ် တပ်ဆင်ပါ။
+Azure Cloud Shell မှ အောက်ပါ command ဖြင့် OpenAI Embedding model ကို တပ်ဆင်ပါ။
 
 ```shell
 az cognitiveservices account deployment create \
@@ -153,20 +148,19 @@ az cognitiveservices account deployment create \
     --sku-capacity 100 --sku-name "Standard"
 ```
 
+## ဖြေရှင်းနည်း
 
-## ဖြေရှင်းချက်
+GitHub Codespaces တွင်ရှိသော [solution notebook](./python/aoai-solution.ipynb?WT.mc_id=academic-105485-koreyst) ကိုဖွင့်ပြီး Jupyter Notebook ကို လမ်းညွှန်ချက်အတိုင်း လိုက်နာပါ။
 
-GitHub Codespaces တွင်ရှိသော [solution notebook](./python/aoai-solution.ipynb?WT.mc_id=academic-105485-koreyst) ကို ဖွင့်၍ Jupyter Notebook အတွင်း ညွှန်ကြားချက်များအတိုင်း ဆောင်ရွက်ပါ။
-
-Notebook ကို run လုပ်သောအခါ query ရိုက်ထည့်ရန် ပြတင်းပေါ်တက်မည်။ ရိုက်ရန် input box ကို အောက်ပါအတိုင်း မြင်ရမည်ဖြစ်သည်။
+notebook ကို run လုပ်သောအခါ မေးခွန်းတစ်ခုရိုက်ရန်  ဖိတ်ခေါ်မည်။ input box သည် အောက်ပါအတိုင်း ဖြစ်ပါမည်။
 
 ![Input box for the user to input a query](../../../translated_images/my/notebook-search.1e320b9c7fcbb0bc.webp)
 
-## အံ့သြစရာ ကောင်းပါပြီ! သင်ယူမှု ဆက်လက်လုပ်ဆောင်ပါ
+## ကောင်းမွန်သော အလုပ်လုပ်ဆောင်မှု! သင့်သင်ယူမှုကို ဆက်လက်လုပ်ဆောင်ပါ
 
-ဤသင်ခန်းစာပြီးဆုံးပြီးနောက် ကျွန်ုပ်တို့၏ [Generative AI သင်ယူမှု စုစည်းမှု](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ကို လေ့လာပြီး Generative AI ကျွမ်းကျင်မှုပိုမိုမြှင့်တင်ပါ!
+ဒီသင်ခန်းစာ အပြီး သင်၏ Generative AI သတင်းအချက်အလက်များကို အဆင့်မြှင့်ရန် ကျွန်တော်တို့ရဲ့ [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ကို ကြည့်ရှုပါ။
 
-သင်ခန်းစာ ၉ သို့ သွားပါ။ ဤနေရာတွင် [ပုံဖန်တီးခြင်းလျှောက်လွှာများ ဆောက်လုပ်နည်း](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst) ကို ကြည့်ရှုသင်ယူမည် ဖြစ်သည်!
+Lesson 9 သို့သွား၍ [ပုံဓာတ်ပုံ ထုတ်လုပ်မှု လျှောက်လွှာများ တည်ဆောက်ခြင်း](../09-building-image-applications/README.md?WT.mc_id=academic-105485-koreyst) ကို လေ့လာကြည့်ပါ။
 
 ---
 

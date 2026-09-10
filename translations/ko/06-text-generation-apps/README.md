@@ -1,117 +1,117 @@
 # 텍스트 생성 애플리케이션 구축
 
-[![Building Text Generation Applications](../../../translated_images/ko/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![텍스트 생성 애플리케이션 구축](../../../translated_images/ko/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
-> _(위 이미지를 클릭하여 이 강의의 비디오를 시청하세요)_
+> _(위 이미지를 클릭하여 본 수업 동영상 보기)_
 
-이 커리큘럼을 통해 지금까지 프롬프트 같은 핵심 개념과 "프롬프트 엔지니어링"이라는 하나의 전공 분야까지 살펴보았습니다. ChatGPT, Office 365, Microsoft Power Platform 등 상호작용할 수 있는 많은 도구들이 어떤 작업을 수행하기 위해 프롬프트를 사용하는 방식을 지원합니다.
+지금까지 이 커리큘럼을 통해 프롬프트와 "프롬프트 엔지니어링"이라는 분야 같은 핵심 개념들을 보셨습니다. ChatGPT, Office 365, Microsoft Power Platform 등과 같이 많은 도구들은 무언가를 수행하기 위해 프롬프트를 사용할 수 있도록 지원합니다.
 
-앱에 이러한 경험을 추가하려면 프롬프트, 완료(Completion)와 같은 개념을 이해하고 작업할 라이브러리를 선택해야 합니다. 바로 이 장에서 그 내용을 배우게 될 것입니다.
+앱에 이러한 경험을 추가하려면 프롬프트, 완료(Completion)와 같은 개념을 이해하고 작업할 라이브러리를 선택해야 합니다. 이번 장에서 정확히 이 내용을 배울 것입니다.
 
 ## 소개
 
-이 장에서는 다음을 배우게 됩니다:
+이 장에서 여러분은:
 
-- openai 라이브러리와 그 핵심 개념에 대해 알아봅니다.
-- openai를 사용하여 텍스트 생성 애플리케이션을 구축합니다.
-- 텍스트 생성 앱을 구축하기 위해 프롬프트(prompt), 온도(temperature), 토큰(tokens)과 같은 개념을 사용하는 방법을 이해합니다.
+- openai 라이브러리와 그 핵심 개념에 대해 배웁니다.
+- openai를 사용하여 텍스트 생성 앱을 만듭니다.
+- 텍스트 생성 앱을 만들기 위해 프롬프트, 온도, 토큰과 같은 개념을 사용하는 방법을 이해합니다.
 
 ## 학습 목표
 
-이 강의가 끝나면 다음을 할 수 있게 됩니다:
+이 수업이 끝나면 여러분은:
 
 - 텍스트 생성 앱이 무엇인지 설명할 수 있습니다.
-- openai를 사용하여 텍스트 생성 앱을 구축할 수 있습니다.
-- 앱을 구성하여 더 많거나 적은 토큰을 사용하고 온도를 변경하여 다양한 출력을 생성할 수 있습니다.
+- openai를 사용하여 텍스트 생성 앱을 만들 수 있습니다.
+- 출력의 다양성을 위해 더 많거나 적은 토큰을 사용하고 온도를 변경하도록 앱을 구성할 수 있습니다.
 
-## 텍스트 생성 앱이란 무엇인가요?
+## 텍스트 생성 앱이란?
 
-일반적으로 앱을 구축할 때 다음과 같은 인터페이스를 가집니다:
+일반적으로 앱을 만들 때는 다음과 같은 인터페이스를 갖춥니다:
 
-- 명령어 기반. 콘솔 앱은 명령어를 입력하면 작업을 수행하는 전형적인 앱입니다. 예를 들어 `git`은 명령어 기반 앱입니다.
-- 사용자 인터페이스(UI). 일부 앱은 버튼을 클릭하고, 텍스트를 입력하고, 옵션을 선택하는 그래픽 사용자 인터페이스(GUI)를 가지고 있습니다.
+- 명령 기반. 콘솔 앱은 명령을 입력하고 작업을 수행하는 전형적인 앱입니다. 예를 들어 `git`은 명령 기반 앱입니다.
+- 사용자 인터페이스(UI). 일부 앱은 버튼 클릭, 텍스트 입력, 옵션 선택 등이 가능한 그래픽 사용자 인터페이스(GUI)를 갖고 있습니다.
 
 ### 콘솔 및 UI 앱의 한계
 
-명령어를 타이핑하는 명령어 기반 앱과 비교해봅시다:
+명령을 입력하는 명령 기반 앱과 비교하면:
 
-- <strong>제한적입니다</strong>. 지원하는 명령어만 입력할 수 있습니다.
-- **특정 언어에 종속적입니다**. 일부 앱은 여러 언어를 지원하지만 기본적으로 특정 언어에 맞춰 제작됩니다. 물론 더 많은 언어를 추가할 수 있습니다.
+- <strong>한정적입니다</strong>. 앱에서 지원하는 명령만 입력할 수 있습니다.
+- **언어 의존적입니다**. 일부 앱은 여러 언어를 지원하지만 기본적으로 특정 언어를 위해 만들어져 있으며 추가 언어 지원도 가능합니다.
 
 ### 텍스트 생성 앱의 장점
 
 그렇다면 텍스트 생성 앱은 어떻게 다를까요?
 
-텍스트 생성 앱에서는 더 큰 유연성이 있습니다. 정해진 명령어나 특정 입력 언어에 제한되지 않고 자연어를 사용하여 앱과 상호작용할 수 있습니다. 또 다른 장점은 이미 방대한 텍스트 자료에 대해 학습된 데이터 소스와 상호작용하게 된다는 점입니다. 반면 전통적인 앱은 데이터베이스 내 정보에 제한될 수 있습니다.
+텍스트 생성 앱에서는 더 많은 유연성이 있습니다. 미리 정해진 명령이나 특정 입력 언어에 제한받지 않고 자연어를 사용하여 앱과 상호작용할 수 있습니다. 또 다른 장점은, 전통적인 앱이 데이터베이스의 내용에 제한될 수 있는 것과 달리, 이미 방대한 자료에 대해 학습된 데이터 소스와 상호작용한다는 점입니다.
 
-### 텍스트 생성 앱으로 무엇을 만들 수 있나요?
+### 텍스트 생성 앱으로 무엇을 만들 수 있을까요?
 
-많은 것을 만들 수 있습니다. 예를 들어:
+여러 가지를 만들 수 있습니다. 예를 들어:
 
-- <strong>챗봇</strong>. 회사와 제품에 관한 질문에 답하는 챗봇이 좋은 예입니다.
-- <strong>도우미</strong>. LLM은 텍스트 요약, 텍스트에서 인사이트 얻기, 이력서 등 텍스트 생성에 매우 유용합니다.
-- **코드 어시스턴트**. 사용하는 언어 모델에 따라, 코드를 작성하는 데 도움을 주는 어시스턴트를 만들 수 있습니다. 예를 들어 GitHub Copilot, ChatGPT 같은 제품을 활용할 수 있습니다.
+- <strong>챗봇</strong>. 회사와 제품 등에 관한 질문에 답하는 챗봇이 좋은 예입니다.
+- <strong>도우미</strong>. LLM은 텍스트 요약, 텍스트에서 인사이트 추출, 이력서와 같은 텍스트 생성에 매우 유용합니다.
+- **코드 어시스턴트**. 사용하는 언어 모델에 따라 코드를 작성하도록 돕는 코딩 어시스턴트를 만들 수 있습니다. 예를 들어 GitHub Copilot과 ChatGPT 등이 있습니다.
 
-## 어떻게 시작할 수 있을까요?
+## 어떻게 시작할 수 있나요?
 
-보통 LLM과 통합하는 방법은 다음 두 가지 접근법을 포함합니다:
+LLM과 통합할 방법을 찾아야 하며, 일반적으로 다음 두 가지 접근법이 있습니다:
 
-- API 사용. 프롬프트를 포함한 웹 요청을 만들고 생성된 텍스트를 반환받습니다.
-- 라이브러리 사용. 라이브러리는 API 호출을 캡슐화하여 사용을 쉽게 만듭니다.
+- API 사용. 프롬프트를 포함한 웹 요청을 보내 생성된 텍스트를 받는 방식입니다.
+- 라이브러리 사용. 라이브러리는 API 호출을 캡슐화하여 더 쉽게 사용할 수 있도록 합니다.
 
 ## 라이브러리/SDK
 
-LLM과 작업할 때 잘 알려진 몇 가지 라이브러리가 있습니다:
+LLM과 작업할 때 잘 알려진 몇 가지 라이브러리들이 있습니다:
 
-- **openai**: 이 라이브러리는 모델에 쉽게 연결하고 프롬프트를 전송할 수 있도록 해줍니다.
+- **openai**. 이 라이브러리를 사용하면 모델과 쉽게 연결하고 프롬프트를 보낼 수 있습니다.
 
-또 더 높은 수준에서 동작하는 라이브러리도 있습니다:
+그리고 다음과 같은 더 상위 수준의 라이브러리도 있습니다:
 
-- **Langchain**: Langchain은 잘 알려져 있으며 Python을 지원합니다.
-- **Semantic Kernel**: Semantic Kernel은 Microsoft에서 만든 라이브러리로 C#, Python, Java를 지원합니다.
+- **Langchain**. 잘 알려져 있으며 Python을 지원합니다.
+- **Semantic Kernel**. Microsoft에서 만든 라이브러리로 C#, Python, Java를 지원합니다.
 
-## openai를 사용한 첫 앱
+## openai를 사용한 첫 번째 앱
 
-첫 번째 앱을 어떻게 만들지, 필요한 라이브러리와 요구사항 등을 살펴보겠습니다.
+첫 번째 앱을 어떻게 만드는지, 필요한 라이브러리는 무엇인지, 얼마나 필요한지 등을 살펴봅시다.
 
-### openai 설치
+### openai 설치하기
 
-OpenAI 혹은 Azure OpenAI와 상호작용하는 라이브러리는 많습니다. C#, Python, JavaScript, Java 등 다양한 프로그래밍 언어도 사용할 수 있습니다. 여기서는 `openai` Python 라이브러리를 사용하기로 하였고, `pip`로 설치할 것입니다.
+OpenAI 또는 Azure OpenAI와 상호작용하기 위해 많은 라이브러리가 있습니다. C#, Python, JavaScript, Java 등 다양한 프로그래밍 언어를 사용할 수 있습니다. 우리는 `openai` Python 라이브러리를 사용하기로 했으므로 `pip`로 설치합니다.
 
 ```bash
 pip install openai
 ```
 
-### 리소스 생성
+### 리소스 생성하기
 
 다음 단계를 수행해야 합니다:
 
-- Azure에서 계정을 만듭니다 [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- Azure OpenAI에 접근 권한을 얻습니다. [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) 에서 접근 신청을 합니다.
+- Azure 계정 생성하기 [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
+- Azure OpenAI 접근 권한 획득하기. [https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) 에서 접근 요청을 합니다.
 
   > [!NOTE]
-  > 작성 시점 기준으로 Azure OpenAI 접근 권한 신청이 필요합니다.
+  > 작성 시점 기준으로 Azure OpenAI 접근을 신청해야 합니다.
 
-- Python 설치 <https://www.python.org/>
-- Azure OpenAI 서비스 리소스를 생성해야 합니다. [리소스 생성 가이드](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst)를 참조하세요.
+- Python 설치하기 <https://www.python.org/>
+- Azure OpenAI 서비스 리소스 생성하기. [리소스 생성 가이드](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst)를 참고하세요.
 
 ### API 키 및 엔드포인트 찾기
 
-이제 `openai` 라이브러리에서 사용할 API 키를 알려줘야 합니다. Azure OpenAI 리소스의 "Keys and Endpoint" 섹션으로 가서 "Key 1" 값을 복사하세요.
+지금부터는 `openai` 라이브러리에 어떤 API 키를 사용할지 알려줘야 합니다. API 키를 찾으려면 Azure OpenAI 리소스의 "키 및 엔드포인트" 섹션으로 가서 "키 1" 값을 복사합니다.
 
-![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+![Azure 포털에서 키 및 엔드포인트 리소스 블레이드](https://learn.microsoft.com/azure/ai-foundry/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-이 정보를 복사했으면 라이브러리가 이를 사용하도록 설정해봅시다.
+정보를 복사했으면, 이제 라이브러리가 이를 사용하도록 지시합시다.
 
 > [!NOTE]
-> API 키를 코드와 분리하는 것이 좋습니다. 환경 변수를 사용하면 됩니다.
+> API 키를 코드와 분리하는 것이 좋습니다. 환경 변수를 사용해 할 수 있습니다.
 >
-> - 환경 변수 `OPENAI_API_KEY` 를 API 키로 설정하세요.
+> - 환경 변수 `OPENAI_API_KEY` 에 API 키를 설정합니다.
 >   `export OPENAI_API_KEY='sk-...'`
 
 ### Azure 구성 설정
 
-Azure OpenAI (현재 Microsoft Foundry 포함)를 사용하는 경우 설정 방법은 다음과 같습니다. 표준 `OpenAI` 클라이언트를 Azure OpenAI `/openai/v1/` 엔드포인트에 연결하여 Responses API를 사용하며 `api_version`이 필요 없습니다:
+Azure OpenAI(현재 Microsoft Foundry의 일부)를 사용한다면 다음과 같이 설정합니다. 표준 `OpenAI` 클라이언트를 Azure OpenAI `/openai/v1/` 엔드포인트에 지정하여 사용하며, Responses API와 작동하고 `api_version`이 필요 없습니다:
 
 ```python
 import os
@@ -123,50 +123,50 @@ client = OpenAI(
 )
 ```
 
-위 구성은 다음을 설정합니다:
+위 코드에서는 다음을 설정합니다:
 
-- `api_key`: Azure 포털이나 Microsoft Foundry 포털에서 찾은 API 키.
-- `base_url`: Foundry 리소스 엔드포인트에 `/openai/v1/`가 추가된 URL. 안정적인 v1 엔드포인트는 OpenAI 및 Azure OpenAI에서 `api_version` 관리 없이 작동합니다.
+- `api_key`, Azure 포털 또는 Microsoft Foundry 포털에서 찾은 API 키입니다.
+- `base_url`, `/openai/v1/`가 붙은 Foundry 리소스 엔드포인트입니다. 안정적인 v1 엔드포인트는 OpenAI 및 Azure OpenAI에서 `api_version` 관리 없이 작동합니다.
 
-> [!NOTE] > `os.environ`은 환경 변수를 읽는 방법입니다. 이를 사용해 `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT` 같은 환경 변수를 읽을 수 있습니다. 이 환경 변수들은 터미널에 설정하거나 `dotenv` 같은 라이브러리로 설정하세요.
+> [!NOTE] > `os.environ`은 환경 변수를 읽습니다. `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT` 같은 환경 변수를 터미널에서 설정하거나 `dotenv` 같은 라이브러리를 사용해 설정할 수 있습니다.
 
-## 텍스트 생성
+## 텍스트 생성하기
 
-텍스트를 생성하는 방법은 Responses API의 `responses.create` 메서드를 사용하는 것입니다. 예시는 다음과 같습니다:
+텍스트를 생성하는 방법은 Responses API의 `responses.create` 메서드를 사용하는 것입니다. 다음은 예제입니다:
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
 
 response = client.responses.create(
-    model="gpt-4o-mini",  # 이것은 당신의 모델 배포 이름입니다
+    model="gpt-5-mini",  # 이것은 당신의 모델 배포 이름입니다
     input=prompt,
     store=False,
 )
 print(response.output_text)
 ```
 
-위 코드에서는 응답을 생성하고 사용할 모델과 프롬프트를 전달합니다. 그런 다음 `response.output_text`로 생성된 텍스트를 출력합니다.
+위 코드에서는 응답을 생성하고 원하는 모델과 프롬프트를 전달합니다. 그리고 `response.output_text`를 통해 생성된 텍스트를 출력합니다.
 
-### 다중 대화(turn) 지원
+### 다중 대화(turn) 처리
 
-Responses API는 싱글턴 텍스트 생성뿐 아니라 다중 턴 챗봇에도 적합합니다 - 대화를 쌓기 위해 `input`에 메시지 목록을 제공합니다:
+Responses API는 단일 회차 텍스트 생성과 다중 회차 챗봇 모두에 적합합니다 - `input`에 메시지 목록을 제공하여 대화를 구성합니다:
 
 ```python
 from openai import OpenAI
 
 client = OpenAI(api_key="sk-...")
 
-response = client.responses.create(model="gpt-4o-mini", input="Hello world", store=False)
+response = client.responses.create(model="gpt-5-mini", input="Hello world", store=False)
 print(response.output_text)
 ```
 
-이 기능에 대한 자세한 내용은 다음 챕터에서 다룹니다.
+이 기능에 대한 자세한 내용은 다음 장에서 다룹니다.
 
 ## 연습 - 첫 번째 텍스트 생성 앱 만들기
 
-이제 openai 설치 및 설정법을 배웠으니 첫 텍스트 생성 앱을 만들어 봅시다. 다음 단계를 따르세요:
+openai 설정과 구성 방법을 배웠으니, 이제 첫 번째 텍스트 생성 앱을 빌드할 차례입니다. 단계별로 따라하세요:
 
-1. 가상 환경을 만들고 openai를 설치합니다:
+1. 가상환경을 만들고 openai를 설치합니다:
 
    ```bash
    python -m venv venv
@@ -175,12 +175,12 @@ print(response.output_text)
    ```
 
    > [!NOTE]
-   > Windows를 사용하는 경우 `source venv/bin/activate` 대신 `venv\Scripts\activate`를 입력하세요.
+   > 윈도우를 사용하는 경우 `source venv/bin/activate` 대신 `venv\Scripts\activate`를 입력하세요.
 
    > [!NOTE]
-   > Azure OpenAI 키를 찾으려면 [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) 에서 `Open AI`를 검색하고 `Open AI 리소스`를 선택한 후 `Keys and Endpoint`에서 `Key 1` 값을 복사하세요.
+   > Azure OpenAI 키는 [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) 에서 `Open AI`를 검색, `Open AI 리소스` 선택 후 `키 및 엔드포인트`에서 `키 1` 값을 복사하여 찾으세요.
 
-1. _app.py_ 파일을 생성하고 다음 코드를 작성하세요:
+1. _app.py_ 파일을 만들고 다음 코드를 넣으세요:
 
    ```python
    import os
@@ -203,9 +203,9 @@ print(response.output_text)
    ```
 
    > [!NOTE]
-   > Azure가 아닌 일반 OpenAI를 사용하는 경우 `client = OpenAI(api_key="<OpenAI 키로 교체>")` (base_url 없음)로 사용하고, 배포 이름 대신 `gpt-4o-mini` 같은 모델 이름을 전달하세요.
+   > Azure가 아닌 일반 OpenAI 사용 시, `client = OpenAI(api_key="<여기에 OpenAI 키 입력>")` (base_url 제외)를 사용하고 배포 이름 대신 모델 이름 예: `gpt-5-mini`를 전달하세요.
 
-   다음과 같은 출력이 예상됩니다:
+   다음과 유사한 출력이 있어야 합니다:
 
    ```output
     very unhappy _____.
@@ -213,25 +213,25 @@ print(response.output_text)
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## 다양한 유형의 프롬프트, 용도별로
+## 다양한 유형의 프롬프트, 다양한 용도
 
-이제 프롬프트를 사용해 텍스트 생성하는 방법을 봤습니다. 심지어 수정하여 다양한 유형의 텍스트를 생성할 수도 있는 프로그램이 준비되었습니다.
+이제 프롬프트로 텍스트를 생성하는 방법을 알게 되었습니다. 수정하고 변경하여 다양한 유형의 텍스트를 생성할 수 있는 프로그램도 완성했습니다.
 
-프롬프트는 여러 작업에 사용할 수 있습니다. 예를 들어:
+프롬프트는 여러 가지 작업에 사용할 수 있습니다. 예를 들어:
 
-- **텍스트 생성**: 예를 들어 시를 생성하거나 퀴즈용 질문을 만들 수 있습니다.
-- **정보 조회**: 프롬프트를 통해 '웹 개발에서 CORS가 무엇인가?' 같은 정보를 찾을 수 있습니다.
-- **코드 생성**: 이메일 검증 정규식 생성 등 코드를 생성할 수 있으며, 전체 웹 앱 같은 프로그램도 만들 수 있습니다.
+- **특정 유형의 텍스트 생성**. 예를 들어 시, 퀴즈 질문 등을 생성할 수 있습니다.
+- **정보 조회**. 예를 들어 '웹 개발에서 CORS는 무엇을 의미하나요?' 같은 정보를 찾는 데 프롬프트를 사용할 수 있습니다.
+- **코드 생성**. 이메일 검증에 사용하는 정규 표현식을 만들거나 전체 프로그램, 웹 앱을 생성할 수도 있습니다.
 
-## 좀 더 실용적인 사용 사례: 레시피 생성기
+## 좀 더 실용적인 예: 레시피 생성기
 
-집에 재료가 있고 무언가 요리하고 싶다고 상상해봅시다. 그러려면 레시피가 필요합니다. 레시피를 찾기 위해 검색 엔진을 사용할 수도 있고, LLM을 활용할 수도 있습니다.
+집에 재료가 있고 요리를 하고 싶다고 가정해보세요. 그럴 때 필요한 것이 레시피입니다. 레시피를 찾는 방법으로 검색 엔진을 사용하거나 LLM을 사용할 수 있습니다.
 
-다음과 같은 프롬프트를 작성할 수 있습니다:
+프롬프트를 다음과 같이 작성할 수 있습니다:
 
-> "닭고기, 감자, 당근이 포함된 요리 레시피 5개를 보여주세요. 각 레시피마다 사용된 모든 재료를 나열해주세요."
+> "다음 재료로 만든 요리 5가지 레시피를 보여주세요: 닭고기, 감자, 당근. 각 레시피에 사용된 모든 재료를 나열하세요"
 
-위 프롬프트에 대해 다음과 유사한 응답을 받을 수 있습니다:
+위 프롬프트를 주면 다음과 비슷한 응답을 받을 수 있습니다:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -295,16 +295,16 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-이 결과는 훌륭하며 무엇을 요리할지 알 수 있습니다. 이때 유용할 수 있는 개선점은:
+결과가 아주 좋아서 무엇을 요리할지 알 수 있습니다. 이 시점에서 유용할 수 있는 개선사항은:
 
-- 싫어하거나 알레르기가 있는 재료를 필터링하는 것.
-- 집에 없는 재료를 위해 쇼핑 리스트를 생성하는 것.
+- 싫어하거나 알레르기가 있는 재료 필터링하기
+- 집에 모든 재료가 없을 경우 쇼핑 목록 생성하기
 
-위 경우를 위해 다음과 같은 추가 프롬프트를 작성해봅시다:
+위 사례를 위해 추가 프롬프트를 넣어봅니다:
 
-> "마늘 알레르기가 있어 마늘이 들어간 레시피는 제외해 주세요. 대신 다른 재료로 대체하시고, 집에 닭고기, 감자, 당근이 있다고 가정해 레시피에 필요한 쇼핑 리스트도 작성해 주세요."
+> "마늘은 알레르기가 있어서 제외하고 대신 다른 재료로 대체해 주세요. 또한, 닭고기, 감자, 당근은 이미 집에 있으니 쇼핑 목록도 만들어 주세요."
 
-그러면 다음과 같은 새 결과를 받게 됩니다:
+이제 새로운 결과를 받게 됩니다:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -371,20 +371,20 @@ Shopping List:
 - Pepper
 ```
 
-이것이 마늘이 들어가지 않은 다섯 가지 레시피이며, 이미 집에 있는 재료를 고려한 쇼핑 리스트도 포함되어 있습니다.
+마늘이 포함되지 않은 5가지 레시피와 이미 집에 있는 재료를 고려한 쇼핑 목록입니다.
 
 ## 연습 - 레시피 생성기 만들기
 
-시나리오를 따라 해 보았으니 이제 이를 코드로 작성해봅시다. 다음 단계를 따르세요:
+시나리오를 살펴봤으니, 이제 매칭되는 코드를 작성해봅니다. 다음 단계를 따라 하세요:
 
-1. 기존 _app.py_ 파일을 출발점으로 사용하세요
+1. 기존 _app.py_ 파일을 시작점으로 사용합니다.
 1. `prompt` 변수를 찾아 다음 코드로 변경하세요:
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   코드를 실행하면 다음과 유사한 출력을 볼 수 있습니다:
+   지금 코드를 실행하면 다음과 비슷한 출력이 나타납니다:
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -396,9 +396,9 @@ Shopping List:
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > 참고: LLM은 비결정적이므로 실행할 때마다 결과가 다를 수 있습니다.
+   > 참고로, LLM은 비결정론적이므로 실행할 때마다 결과가 달라질 수 있습니다.
 
-   좋아요, 이제 개선 방법을 봅시다. 코드를 유연하게 만들어 재료와 레시피 수를 변경할 수 있도록 만들고 싶습니다.
+   좋습니다. 이제 개선할 방법을 살펴봅시다. 코드를 유연하게 만들어 재료와 레시피 수 모두 변경할 수 있도록 할 것입니다.
 
 1. 다음과 같이 코드를 변경합시다:
 
@@ -407,11 +407,11 @@ Shopping List:
 
    ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
 
-   # 레시피 수를 재료와 함께 프롬프트에 보간합니다
+   # 재료와 함께 프롬프트에 레시피 수를 보간합니다
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   테스트 실행 코드는 다음과 비슷할 수 있습니다:
+   테스트 실행용 코드는 다음과 같을 수 있습니다:
 
    ```output
    No of recipes (for example, 5): 3
@@ -422,13 +422,13 @@ Shopping List:
    -Strawberry milk: milk, strawberries, sugar, vanilla extract
    ```
 
-### 필터 및 쇼핑 리스트 추가로 개선하기
+### 필터 및 쇼핑 목록 추가로 개선하기
 
-이제 사용자의 입력에 따라 레시피 수와 재료를 조정할 수 있는 유연한 레시피 생성 앱이 완성되었습니다.
+이제 레시피를 생성할 수 있는 작동하는 앱이 생겼고, 사용자가 레시피 수와 재료를 입력하여 유연하게 작동합니다.
 
-추가 개선을 위해 다음을 추가하고 싶습니다:
+더 개선하려면 다음을 추가할 것입니다:
 
-- **재료 필터링**: 싫어하거나 알레르기가 있는 재료를 걸러내고 싶습니다. 이를 위해 기존 프롬프트 끝에 필터 조건을 추가할 수 있습니다:
+- **재료 필터링**. 싫어하거나 알레르기가 있는 재료를 걸러낼 수 있어야 합니다. 기존 프롬프트 끝에 필터 조건을 추가하여 달성할 수 있습니다:
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -436,9 +436,9 @@ Shopping List:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  위 코드에서는 `prompt` 끝에 `{filter}`를 추가하고 사용자로부터 필터 값을 받습니다.
+  위 코드에서 끝에 `{filter}`를 추가하고 사용자로부터 필터 값을 입력받습니다.
 
-  예를 들면 다음과 같습니다:
+  프로그램 실행 시 예시 입력은 다음과 같을 수 있습니다:
 
   ```output
   No of recipes (for example, 5): 3
@@ -505,14 +505,14 @@ Shopping List:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  보시다시피 우유가 들어간 모든 레시피는 필터링 되었지만, 유당불내증이라면 치즈가 들어간 레시피까지 필터링해야 할 수도 있으므로 명확한 필터링이 필요합니다.
+  보시다시피 우유가 들어간 레시피는 걸러졌습니다. 하지만 유당불내증이라면 치즈가 들어간 레시피도 걸러야 하므로 명확한 필터링이 필요합니다.
 
 
-- **쇼핑 목록 작성**. 집에 이미 있는 것을 고려하여 쇼핑 목록을 작성하고자 합니다.
+- **장보기 목록 작성하기**. 집에 이미 있는 것을 고려하여 장보기 목록을 작성하고자 합니다.
 
-  이 기능을 위해 모든 것을 한 번의 프롬프트로 해결할 수도 있고 두 개의 프롬프트로 나눌 수도 있습니다. 후자의 방식을 시도해 보겠습니다. 여기서는 추가 프롬프트를 넣는 것을 제안하지만, 이를 위해 이전 프롬프트의 결과를 이후 프롬프트의 컨텍스트로 추가해야 합니다.
+  이 기능을 위해 모든 것을 한 번의 프롬프트로 해결할 수도 있고, 두 개의 프롬프트로 나눌 수도 있습니다. 후자의 방법을 시도해 봅시다. 여기서는 추가 프롬프트를 제안하지만, 이를 위해서는 이전 프롬프트의 결과를 이후 프롬프트에 컨텍스트로 추가해야 합니다.
 
-  첫 번째 프롬프트의 결과를 출력하는 코드 부분을 찾아 아래 코드를 그 밑에 추가하세요:
+  첫 번째 프롬프트의 결과를 출력하는 코드 부분을 찾아 아래 코드를 추가하세요:
 
   ```python
   old_prompt_result = response.output_text
@@ -526,7 +526,7 @@ Shopping List:
   print(response.output_text)
   ```
 
-  다음 사항에 주목하세요:
+  다음 사항을 참고하세요:
 
   1. 첫 번째 프롬프트의 결과를 새로운 프롬프트에 추가하여 새 프롬프트를 구성합니다:
 
@@ -534,13 +534,13 @@ Shopping List:
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  1. 새 요청을 만들되 첫 번째 프롬프트에서 요청한 토큰 수를 고려하며 이번에는 `max_output_tokens`를 1200으로 설정합니다.
+  1. 새로운 요청을 하지만 첫 번째 프롬프트에서 요청한 토큰 수를 고려하여 이번에는 `max_output_tokens`를 1200으로 설정합니다.
 
      ```python
      response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
      ```
 
-     이 코드를 실행하면 이제 다음과 같은 출력이 나옵니다:
+     이 코드를 실행하면 다음과 같은 출력이 나타납니다:
 
      ```output
      No of recipes (for example, 5): 2
@@ -556,17 +556,17 @@ Shopping List:
 
 ## 설정 개선하기
 
-지금까지의 코드는 작동하지만, 더 개선할 수 있는 몇 가지 조정 사항이 있습니다. 해야 할 일은 다음과 같습니다:
+지금까지는 작동하는 코드지만, 좀 더 개선하기 위한 조정 사항이 있습니다. 우리가 해야 할 몇 가지 작업은 다음과 같습니다:
 
-- **코드에서 비밀 정보 분리하기**, 예를 들어 API 키 같은 경우. 비밀 정보는 코드 내에 있어서는 안 되며 안전한 위치에 저장되어야 합니다. 비밀 정보를 코드에서 분리하기 위해 환경 변수와 `python-dotenv` 같은 라이브러리를 사용하여 파일에서 로드할 수 있습니다. 코드 예시는 다음과 같습니다:
+- **코드에서 비밀 정보 분리하기**, API 키처럼. 비밀 정보는 코드에 포함되지 말아야 하며 안전한 위치에 저장되어야 합니다. 비밀 정보를 코드에서 분리하기 위해 환경 변수와 `python-dotenv`와 같은 라이브러리를 사용하여 파일에서 로드할 수 있습니다. 코드에서 어떻게 보이는지 확인해보겠습니다:
 
-  1. 다음 내용을 포함하는 `.env` 파일을 만듭니다:
+  1. 다음 내용을 가진 `.env` 파일을 만듭니다:
 
      ```bash
      OPENAI_API_KEY=sk-...
      ```
 
-     > 참고로, Microsoft Foundry에서 Azure OpenAI를 사용할 경우 다음 환경 변수를 설정해야 합니다:
+     > 참고로, Microsoft Foundry의 Azure OpenAI를 사용할 경우 다음 환경 변수를 설정해야 합니다:
 
      ```bash
      AZURE_OPENAI_API_KEY=<replace>
@@ -574,7 +574,7 @@ Shopping List:
      AZURE_OPENAI_API_VERSION=2024-10-21
      ```
 
-     코드에서는 다음과 같이 환경 변수를 로드할 수 있습니다:
+     코드에서는 환경 변수를 다음과 같이 로드합니다:
 
      ```python
      import os
@@ -586,17 +586,17 @@ Shopping List:
      client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
      ```
 
-- **토큰 길이에 대하여**. 생성하려는 텍스트에 필요한 토큰 수를 고려해야 합니다. 토큰은 비용이 발생하므로 가능한 한 토큰 사용을 경제적으로 해야 합니다. 예를 들어, 프롬프트를 다르게 표현하여 토큰 수를 줄일 수 있나요?
+- **토큰 길이에 대해 한마디**. 생성할 텍스트에 필요한 토큰 수를 고려해야 합니다. 토큰은 비용이 발생하므로 가능하면 토큰 사용을 경제적으로 해야 합니다. 예를 들어 프롬프트를 적절히 구성하여 토큰 수를 줄일 수 있나요?
 
-  사용하는 토큰 수를 바꾸려면 `max_output_tokens` 매개변수를 사용할 수 있습니다. 예를 들어, 100 토큰을 사용하려면 다음과 같이 합니다:
+  토큰 수를 변경하려면 `max_output_tokens` 매개변수를 사용할 수 있습니다. 예를 들어 100 토큰을 사용하려면 다음과 같이 합니다:
 
   ```python
   response = client.responses.create(model=deployment, input=prompt, max_output_tokens=100, store=False)
   ```
 
-- **온도 실험하기**. 지금까지 온도에 대해 언급하지 않았지만, 프로그램 성능에 중요한 요소입니다. 온도가 높을수록 출력이 더 무작위적입니다. 반대로 온도가 낮을수록 출력이 더 예측 가능합니다. 출력에서 변화를 원하느냐에 따라 설정하세요.
+- **온도 실험하기**. 온도라는 개념은 지금까지 언급하지 않았지만, 프로그램 성능에 중요한 컨텍스트입니다. 온도 값이 높을수록 출력이 더 무작위적이고, 낮을수록 예측 가능해집니다. 출력에서 변화를 원하시는지 생각해보세요.
 
-  온도를 바꾸려면 `temperature` 매개변수를 사용합니다. 예를 들어, 온도를 0.5로 설정하려면 다음과 같이 합니다:
+  온도를 변경하려면 `temperature` 매개변수를 사용하세요. 예를 들어 0.5의 온도를 원하면 다음과 같이 합니다:
 
   ```python
   response = client.responses.create(model=deployment, input=prompt, temperature=0.5, store=False)
@@ -604,21 +604,27 @@ Shopping List:
 
   > 참고로 1.0에 가까울수록 출력이 더 다양해집니다.
 
+- **추론 모델은 `temperature`를 사용하지 않습니다**. 이는 2026년의 중요한 변화입니다. Microsoft Foundry에서 현재 사용되는 비폐기 모델들은 추론 모델 (GPT-5 계열, o-시리즈)이며, 이들은 `temperature`나 `top_p` (또한 `max_tokens` 대신 `max_output_tokens`)를 지원하지 않습니다. `gpt-5-mini`에 `temperature`를 전달하면 "지원하지 않는 매개변수" 오류가 발생합니다. 따라서 위 온도 예제를 시도하려면 샘플링 제어를 아직 지원하는 모델—예를 들어 [Microsoft Foundry 모델 카탈로그](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst)의 오픈 Llama 모델 `Llama-3.3-70B-Instruct` 같은 모델을 사용하세요. GPT-5 같은 추론 모델의 경우 출력 제어는 다음 방식으로 합니다:
+  - **프롬프트 엔지니어링** - 명확한 지시, 예제, 구조화된 출력 (레슨 [04 - Prompt Engineering](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst) 참조)이 샘플링 제어 기능을 대신합니다.
+  - **추론 제어** - 추론 노력 및 장황함과 같은 매개변수들은 추론 깊이와 지연 및 비용의 균형을 맞춥니다.
+
+  요약하자면: `temperature`/`top_p`는 아직 많은 모델(Llama, Mistral, Phi, GPT-4.x 계열—단 GPT-4.x는 폐기 중)에 유효하지만, 추론 모델인 GPT-5 쪽은 프롬프트 엔지니어링과 추론 제어 방향으로 나아가고 있습니다.
+
 ## 과제
 
-이번 과제에서는 무엇을 만들지 선택할 수 있습니다.
+이번 과제에서는 원하는 것을 만들 수 있습니다.
 
 다음은 몇 가지 제안입니다:
 
-- 레시피 생성기 앱을 더 개선해 보세요. 온도 값과 프롬프트를 조정하며 실험해 보세요.
-- "스터디 버디"를 만들어 보세요. 이 앱은 예를 들어 Python 같은 주제에 대해 질문에 답변할 수 있어야 합니다. “Python에서 특정 주제란 무엇인가요?”와 같은 프롬프트나 “특정 주제에 대한 코드를 보여 주세요” 같은 프롬프트가 있을 수 있습니다.
-- 역사 봇을 만들어 역사를 생생하게 재현하세요. 봇에게 특정 역사적 인물 역할을 맡기고 그 인물의 삶과 시기에 대해 질문하세요.
+- 레시피 생성기 앱을 좀 더 개선해 보세요. 온도 값을 조정하고 프롬프트를 변경해 어떤 결과가 나오는지 살펴보세요.
+- "스터디 버디"를 만들어 보세요. 예를 들어 Python 주제에 대한 질문에 답할 수 있어야 하며, "Python의 특정 주제란 무엇인가요?" 또는 "특정 주제 코드를 보여주세요" 같은 프롬프트를 사용할 수 있습니다.
+- 역사 봇을 만들어 역사를 생생하게 표현해 보세요. 봇에게 특정 역사적 인물을 연기하도록 지시하고 그 인물의 삶과 시대에 대해 질문해 보세요.
 
-## 해답
+## 솔루션
 
 ### 스터디 버디
 
-아래는 시작용 프롬프트입니다. 이것을 어떻게 사용하고 원하는 대로 조정할 수 있는지 확인해 보세요.
+아래는 시작 프롬프트입니다. 어떻게 사용하는지 보고 원하는 대로 조정해보세요.
 
 ```text
 - "You're an expert on the Python language
@@ -642,23 +648,23 @@ Shopping List:
    Tell me about your greatest accomplishments, in 300 words"
 ```
 
-## 지식 점검
+## 지식 확인
 
 온도 개념은 무엇을 하나요?
 
-1. 출력이 얼마나 무작위적인지를 제어합니다.
-1. 응답 크기를 제어합니다.
-1. 사용된 토큰 수를 제어합니다.
+1. 출력이 얼마나 무작위적인지 조절합니다.
+1. 응답이 얼마나 큰지 조절합니다.
+1. 얼마나 많은 토큰을 사용하는지 조절합니다.
 
 ## 🚀 도전 과제
 
-과제를 진행할 때 온도를 0, 0.5, 1로 다양하게 설정해 보세요. 0은 가장 덜 변하며 1은 가장 변동성이 많습니다. 어떤 값이 앱에 가장 적합한지 확인하세요.
+과제를 진행할 때 온도를 다양하게 설정해 보세요. 0, 0.5, 1로 설정해 보세요. 0은 가장 변화가 적고 1은 가장 변화가 큽니다. 앱에 가장 잘 맞는 값은 무엇인가요?
 
-## 훌륭합니다! 학습을 계속하세요
+## 잘 하셨어요! 학습을 계속하세요
 
-이 수업을 마친 후에는 [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)을 확인하여 생성 AI 지식을 계속 향상하세요!
+이번 레슨을 완료한 후에는 [Generative AI 학습 컬렉션](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst)을 확인하여 생성적 AI 지식을 계속 향상하세요!
 
-7강으로 가서 [채팅 애플리케이션 구축 방법](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)도 살펴보세요!
+7과로 이동하여 [채팅 애플리케이션 만들기](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)를 살펴보세요!
 
 ---
 

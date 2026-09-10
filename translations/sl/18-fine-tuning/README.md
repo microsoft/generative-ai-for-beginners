@@ -1,103 +1,143 @@
-[![Odprtokodni modeli](../../../translated_images/sl/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
+[![Open Source Models](../../../translated_images/sl/18-lesson-banner.f30176815b1a5074.webp)](https://youtu.be/6UAwhL9Q-TQ?si=5jJd8yeQsCfJ97em)
 
-# Natančna prilagoditev vašega LLM
+# Natančna nastavitev vašega LLM
 
-Uporaba velikih jezikovnih modelov za izdelavo generativnih AI aplikacij prinaša nove izzive. Ključna težava je zagotavljanje kakovosti odzivov (natančnost in relevantnost) v vsebini, ki jo model generira za dano uporabniško zahtevo. V prejšnjih lekcijah smo obravnavali tehnike, kot so oblikovanje pozivov in generacija, dopolnjena z iskanjem, ki poskušajo rešiti problem z _modifikacijo vhodnega poziva_ v obstoječ model.
+Uporaba velikih jezikovnih modelov za gradnjo generativnih AI aplikacij prinaša nove izzive. Ključno vprašanje je zagotavljanje kakovosti odziva (natančnost in relevantnost) v vsebini, ki jo model ustvari za določen uporabniški zahtevek. V prejšnjih lekcijah smo obravnavali tehnike, kot sta inženiring pozivov in generacija z izboljšavo pridobivanja, ki skušajo rešiti problem z _modifikacijo vhodnega poziva_ za obstoječi model.
 
-V današnji lekciji bomo razpravljali o tretji tehniki, **natančni prilagoditvi**, ki poskuša izziv rešiti z _ponovnim usposabljanjem samega modela_ z dodatnimi podatki. Poglobimo se v podrobnosti.
+V današnji lekciji bomo obravnavali tretjo tehniko, **natančno nastavitev (fine-tuning)**, ki skuša izziv rešiti z _ponovnim usposabljanjem samega modela_ z dodatnimi podatki. Poglobili se bomo v podrobnosti.
 
 ## Cilji učenja
 
-Ta lekcija uvaja koncept natančne prilagoditve za vnaprej naučene jezikovne modele, raziskuje prednosti in izzive tega pristopa ter nudi napotke, kdaj in kako uporabiti natančno prilagoditev za izboljšanje zmogljivosti vaših generativnih AI modelov.
+Ta lekcija uvaja koncept natančne nastavitve za vnaprej usposobljene jezikovne modele, raziskuje prednosti in izzive tega pristopa ter ponuja smernice o tem, kdaj in kako uporabiti natančno nastavitev za izboljšanje zmogljivosti vaših generativnih AI modelov.
 
 Ob koncu te lekcije boste lahko odgovorili na naslednja vprašanja:
 
-- Kaj je natančna prilagoditev za jezikovne modele?
-- Kdaj in zakaj je natančna prilagoditev koristna?
-- Kako lahko natančno prilagodim vnaprej naučen model?
-- Kakšne so omejitve natančne prilagoditve?
+- Kaj je natančna nastavitev za jezikovne modele?
+- Kdaj in zakaj je natančna nastavitev koristna?
+- Kako lahko natančno nastavim vnaprej usposobljen model?
+- Kakšne so omejitve natančne nastavitve?
 
 Ste pripravljeni? Začnimo.
 
-## Ilustriran vodnik
+## Ilustriran vodič
 
-Želite najprej dobiti celoten pregled tega, kar bomo pokrili? Oglejte si ta ilustriran vodnik, ki opisuje učni proces za to lekcijo - od učenja osnovnih pojmov in motivacije za natančno prilagajanje do razumevanja procesa in najboljših praks za izvedbo naloge natančne prilagoditve. To je fascinantna tema za raziskovanje, zato ne pozabite obiskati strani [Viri](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) za dodatne povezave, ki bodo podprle vašo samostojno učno pot!
+Želite dobiti splošen pregled tega, kar bomo obravnavali, preden se poglobite? Oglejte si ta ilustrirani vodič, ki opisuje pot učenja za to lekcijo - od učenja osnovnih konceptov in motivacije za natančno nastavitev do razumevanja postopka in najboljših praks za izvedbo naloge natančne nastavitve. To je fascinantna tema za raziskovanje, zato ne pozabite obiskati strani z [viri](./RESOURCES.md?WT.mc_id=academic-105485-koreyst) za dodatne povezave, ki podpirajo vaše samostojno učenje!
 
-![Ilustriran vodnik za natančno prilagajanje jezikovnih modelov](../../../translated_images/sl/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
+![Ilustrirani vodič za natančno nastavitev jezikovnih modelov](../../../translated_images/sl/18-fine-tuning-sketchnote.11b21f9ec8a70346.webp)
 
-## Kaj je natančna prilagoditev za jezikovne modele?
+## Kaj je natančna nastavitev za jezikovne modele?
 
-Po definiciji so veliki jezikovni modeli _vnaprej naučeni_ na velikih količinah besedil, pridobljenih iz različnih virov, vključno z internetom. Kot smo se naučili v prejšnjih lekcijah, potrebujemo tehnike, kot sta _oblikovanje pozivov_ in _generacija, dopolnjena z iskanjem_, za izboljšanje kakovosti odzivov modela na uporabnikova vprašanja ("pozive").
+Po definiciji so veliki jezikovni modeli _vnaprej usposobljeni_ na velikih količinah besedil, pridobljenih iz različnih virov, vključno z internetom. Kot smo se naučili v prejšnjih lekcijah, potrebujemo tehnike, kot sta _inženiring pozivov_ in _generacija z izboljšavo pridobivanja_, da izboljšamo kakovost odzivov modela na vprašanja uporabnika ("pozive").
 
-Ena priljubljena tehnika oblikovanja pozivov vključuje usmerjanje modela z več navodili, kaj se pričakuje v odgovoru, bodisi z zagotavljanjem _navodil_ (izrecna usmeritev) bodisi z _dajanjem nekaj primerov_ (implicitna usmeritev). To imenujemo _učenje z nekaj primeri_, vendar ima dve omejitvi:
+Priljubljena tehnika inženiringa pozivov vključuje dajanje modelu več navodil o tem, kaj se pričakuje v odgovoru, bodisi s posredovanjem _navodil_ (izrecna usmeritev) ali _dajanjem nekaj primerov_ (neizrecna usmeritev). To imenujemo _učenje z nekaj primeri_, vendar ima dve omejitvi:
 
-- Omejitve glede števila tokenov modela lahko omejijo število primerov, ki jih lahko podate, in zmanjšajo učinkovitost.
-- Stroški tokenov modela lahko povzročijo visoke stroške pri dodajanju primerov vsakemu pozivu in omejijo prilagodljivost.
+- Omejitve modelnih tokenov lahko omejijo število primerov, ki jih lahko navedete, in omejijo učinkovitost.
+- Stroški tokenov modela lahko povzročijo visoke stroške dodajanja primerov v vsak poziv in omejijo prilagodljivost.
 
-Natančna prilagoditev je pogosta praksa v sistemih strojnega učenja, kjer vzamemo vnaprej naučen model in ga ponovno usposobimo z novimi podatki, da izboljšamo njegovo zmogljivost pri določeni nalogi. V kontekstu jezikovnih modelov lahko natančno prilagodimo vnaprej naučen model _z izbrano zbirko primerov za določeno nalogo ali področje uporabe_, da ustvarimo **prilagojen model**, ki je lahko natančnejši in bolj relevanten za to specifično nalogo ali področje. Dodatna prednost natančne prilagoditve je, da lahko zmanjša število primerov, potrebnih za učenje z nekaj primeri - s tem zmanjša porabo tokenov in s tem povezane stroške.
+Natančna nastavitev je pogosta praksa v sistemih strojnega učenja, kjer vzamemo vnaprej usposobljen model in ga ponovno usposobimo z novimi podatki, da izboljšamo njegovo zmogljivost za določeno nalogo. V kontekstu jezikovnih modelov lahko natančno nastavimo vnaprej usposobljen model _z izbranim naborom primerov za določeno nalogo ali domeno uporabe_, da ustvarimo **prilagojen model**, ki je lahko bolj natančen in relevanten za to nalogo ali domeno. Vedeti dodatna korist natančne nastavitve je, da lahko zmanjša število primerov, potrebnih za učenje z nekaj primeri - kar zmanjša uporabo tokenov in povezane stroške.
 
-## Kdaj in zakaj naj bi modele natančno prilagajali?
+## Kdaj in zakaj naj natančno nastavimo modele?
 
-V _tem_ kontekstu, ko govorimo o natančni prilagoditvi, mislimo na **nadzorovano** natančno prilagoditev, kjer se ponovno usposabljanje izvaja z **dodajanjem novih podatkov**, ki niso bili del prvotnega učnega nabora. To se razlikuje od nenadzorovane natančne prilagoditve, kjer je model ponovno usposobljen na originalnih podatkih, a z drugačnimi hiperparametri.
+V _tem_ kontekstu, ko govorimo o natančni nastavitvi, se nanašamo na **nadzorovano** natančno nastavitev, kjer se ponovno usposabljanje izvaja z **dodajanjem novih podatkov**, ki niso bili del izvornega nabora podatkov za usposabljanje. To se razlikuje od nenadzorovanega pristopa k natančni nastavitvi, kjer je model ponovno usposobljen na izvirnih podatkih, vendar z drugačnimi hiperparametri.
 
-Glavna stvar, ki si jo morate zapomniti, je, da je natančna prilagoditev napredna tehnika, ki zahteva določeno stopnjo strokovnosti, da dosežete želene rezultate. Če je izvedena napačno, morda ne bo prinesla pričakovanih izboljšav in lahko celo poslabša zmogljivost modela za vaše ciljno področje.
+Ključna stvar, ki si jo je treba zapomniti, je, da je natančna nastavitev napredna tehnika, ki zahteva določeno stopnjo strokovnega znanja za dosego želenih rezultatov. Če je izvedena nepravilno, morda ne bo prinesla pričakovanih izboljšav in lahko celo poslabša delovanje modela za ciljno domeno.
 
-Torej, preden se naučite "kako" natančno prilagoditi jezikovne modele, morate vedeti "zakaj" bi morali izbrati to pot in "kdaj" začeti postopek natančne prilagoditve. Začnite z zastavljanjem naslednjih vprašanj:
+Zato, preden se naučite "kako" natančno nastaviti jezikovne modele, morate vedeti "zakaj" bi morali iti po tej poti in "kdaj" začeti proces natančne nastavitve. Začnite z zastavljanjem teh vprašanj:
 
-- **Primer uporabe**: Kakšen je vaš _primer uporabe_ za natančno prilagoditev? Kateri vidik trenutnega vnaprej naučenega modela želite izboljšati?
-- **Alternativa**: Ste poskusili _druge tehnike_ za dosego želenih rezultatov? Uporabite jih za ustvarjanje primerjalne osnovne točke.
-  - Oblikovanje pozivov: Poskusite tehnike, kot je učenje z nekaj primeri z relevantnimi odzivi na pozive. Ocenite kakovost odgovorov.
-  - Generacija, dopolnjena z iskanjem: Poskusite dopolniti pozive z iskalnimi rezultati iz vaših podatkov. Ocenite kakovost odgovorov.
-- **Stroški**: Ste ugotovili stroške natančne prilagoditve?
-  - Prilagodljivost - ali je vnaprej naučeni model na voljo za natančno prilagoditev?
-  - Napor - za pripravo učnih podatkov, ocenjevanje in izboljševanje modela.
-  - Računalniški viri - za izvajanje nalog natančne prilagoditve in za nameščanje prilagojenega modela.
-  - Podatki - dostop do dovolj kakovostnih primerov za vpliv natančne prilagoditve
-- **Koristi**: Ste preverili koristi natančne prilagoditve?
-  - Kakovost - ali je prilagojeni model presegel osnovo?
-  - Stroški - ali zmanjša porabo tokenov z poenostavitvijo pozivov?
-  - Razširljivost - ali lahko osnovni model uporabite za nova področja?
+- **Primer uporabe:** Kakšen je vaš _primer uporabe_ za natančno nastavitev? Kateri vidik trenutnega vnaprej usposobljenega modela želite izboljšati?
+- **Alternativne metode:** Ste poskusili _druge tehnike_ za dosego želenih rezultatov? Uporabite jih, da ustvarite osnovno primerjavo.
+  - Inženiring pozivov: Poskusite tehnike, kot je učenje z nekaj primeri z relevantnimi odgovori na pozive. Ocenite kakovost odgovorov.
+  - Generacija z izboljšavo pridobivanja: Poskusite dopolniti pozive z rezultati poizvedb, pridobljenimi z iskanjem v vaših podatkih. Ocenite kakovost odgovorov.
+- **Stroški:** Ste določili stroške natančne nastavitve?
+  - Prilagodljivost - ali je vnaprej usposobljen model na voljo za natančno nastavitev?
+  - Prizadevanje - za pripravo podatkov za usposabljanje, ocenjevanje in izboljševanje modela.
+  - Računalniški viri - za izvajanje nalog natančne nastavitve in nameščanje natančno nastavljenega modela.
+  - Podatki - dostop do dovolj kakovostnih primerov za vpliv natančne nastavitve.
+- **Koristi:** Ste potrdili koristi natančne nastavitve?
+  - Kakovost - ali je natančno nastavljen model presegel osnovno raven?
+  - Stroški - ali zmanjšuje uporabo tokenov s poenostavitvijo pozivov?
+  - Razširljivost - ali lahko osnovni model uporabite za nove domene?
 
-Z odgovori na ta vprašanja bi morali lahko odločiti, ali je natančna prilagoditev prava pot za vaš primer. Idealno je, če je pristop veljaven le, če koristi odtehtajo stroške. Ko se odločite napredovati, je čas, da razmislite, _kako_ lahko natančno prilagodite vnaprej naučen model.
+Z odgovori na ta vprašanja bi morali vedeti, ali je natančna nastavitev pravi pristop za vaš primer uporabe. Idealno je, da je pristop veljaven samo, če koristi presegajo stroške. Ko se odločite nadaljevati, je čas, da premislite, _kako_ lahko natančno nastavite vnaprej usposobljen model.
 
-Želite več vpogledov v postopek odločanja? Oglejte si [Natančna prilagoditev ali ne](https://www.youtube.com/watch?v=0Jo-z-MFxJs)
+Želite pridobiti več vpogledov v proces odločanja? Oglejte si [Natančna nastavitev ali ne](https://www.youtube.com/watch?v=0Jo-z-MFxJs)
 
-## Kako lahko natančno prilagodimo vnaprej naučen model?
+## Kako lahko natančno nastavimo vnaprej usposobljen model?
 
-Za natančno prilagoditev vnaprej naučenega modela potrebujete:
+Za natančno nastavitev vnaprej usposobljenega modela potrebujete:
 
-- vnaprej naučen model za natančno prilagoditev
-- podatkovni niz za natančno prilagoditev
-- učno okolje za izvajanje naloge natančne prilagoditve
-- gostiteljsko okolje za nameščanje prilagojenega modela
+- vnaprej usposobljen model za natančno nastavitev
+- nabor podatkov za uporabo pri natančni nastavitvi
+- okolje za usposabljanje, v katerem boste izvajali nalogo natančne nastavitve
+- gostiteljsko okolje za nameščanje natančno nastavljenega modela
 
-## Natančna prilagoditev v praksi
+## Natančna nastavitev na Microsoft Foundry
 
-> **Opomba:** Model `gpt-35-turbo` / `gpt-3.5-turbo`, na katerega se sklicujejo nekateri spodnji tutoriali, je upokojeni za tako inferenco kot natančno prilagoditev. Če danes začenjate novo nalogo natančne prilagoditve, ciljate na trenutno podprt model, na primer `gpt-4o-mini` ali `gpt-4.1-mini`. Oglejte si [Seznam modelov za natančno prilagoditev](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure?WT.mc_id=academic-105485-koreyst#fine-tuning-models) za trenutno ponudbo natančno prilagodljivih modelov. Koncepti in koraki v teh tutorialih so še vedno uporabni.
+[Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) je mesto, kjer danes natančno nastavljate, nameščate in upravljate prilagojene modele na Azure (združuje prej Azure OpenAI Studio in Azure AI Studio). Pred začetkom naloge je koristno razumeti izbire, ki jih Foundry ponuja – in najboljše prakse, ki jih platforma priporoča. Pod pokrovom uporablja Foundry **LoRA (low-rank adaptation)** za učinkovito natančno nastavitev modelov, kar omogoča hitrejše in cenovno ugodnejše usposabljanje, kot če bi ponastavili vse uteži.
 
-Naslednji viri nudijo tutoriale korak za korakom, ki vas skozi primer vodijo z izbranim modelom in skrbno izbranim podatkovnim nizom. Za delo s temi tutoriali potrebujete račun pri določenem ponudniku ter dostop do ustreznega modela in podatkovnih nizov.
+### Korak 1: Izberite metodo usposabljanja
 
-| Ponudnik    | Tutorial                                                                                                                                                                     | Opis                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| OpenAI       | [Kako natančno prilagoditi klepetalne modele](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst) | Naučite se natančno prilagoditi model `gpt-35-turbo` za specifično področje ("pomoč pri receptih") z pripravo učnih podatkov, izvajanjem naloge natančne prilagoditve in uporabo prilagojenega modela za inferenco.                                                                                                                                                                                                               |
-| Azure OpenAI | [Tutorial za natančno prilagoditev GPT 3.5 Turbo](https://learn.microsoft.com/azure/ai-services/openai/tutorials/fine-tune?tabs=python-new%2Ccommand-line&WT.mc_id=academic-105485-koreyst) | Naučite se natančno prilagoditi model `gpt-35-turbo-0613` **na Azure** z ukrepi ustvarjanja in nalaganja učnih podatkov, izvajanjem naloge natančne prilagoditve. Uporabite in namestite nov model.                                                                                                                                                                                                                                 |
-| Hugging Face | [Natančna prilagoditev LLM-jev z Hugging Face](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                       | Ta blog vodi skozi natančno prilagoditev _odprtega LLM-ja_ (npr: `CodeLlama 7B`) z uporabo knjižnice [transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) & [Transformer Reinforcement Learning (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst) z odprtimi [podatkovnimi nizi](https://huggingface.co/docs/datasets/index?WT.mc_id=academic-105485-koreyst) na Hugging Face.               |
-|              |                                                                                                                                                                              |                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| 🤗 AutoTrain | [Natančna prilagoditev LLM-jev z AutoTrain](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                               | AutoTrain (ali AutoTrain Advanced) je pythonova knjižnica, ki jo je razvil Hugging Face in omogoča natančno prilagoditev za različne naloge, vključno z natančno prilagoditvijo LLM-jev. AutoTrain je rešitev brez kode, prilagoditev pa je mogoča v vašem oblaku, na Hugging Face Spaces ali lokalno. Podpira spletni GUI, CLI in učenje preko yaml konfiguracijskih datotek.                                                             |
-|              |                                                                                                                                                                              |                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| 🦥 Unsloth | [Natančna prilagoditev LLM-jev z Unsloth](https://github.com/unslothai/unsloth?WT.mc_id=academic-105485-koreyst)                                                               | Unsloth je odprtokodni okvir, ki podpira natančno prilagoditev LLM-jev in okrepljeno učenje (RL). Unsloth poenostavlja lokalno učenje, ocenjevanje in nameščanje s pripravljenimi [zvezki](https://github.com/unslothai/notebooks?WT.mc_id=academic-105485-koreyst). Podpira tudi pretvorbo besedila v govor (TTS), BERT in multimodalne modele. Za začetek preberite njihov korak-po-korak [Vodnik za natančno prilagoditev LLM-jev](https://docs.unsloth.ai/get-started/fine-tuning-llms-guide). |
-|              |                                                                                                                                                                              |                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+Foundry podpira tri tehnike natančne nastavitve. **Začnite z SFT** - pokriva najs širši nabor scenarijev.
+
+| Tehnika | Kaj počne | Kdaj jo uporabiti |
+| --- | --- | --- |
+| **Nadzorovana natančna nastavitev (SFT)** | Usposablja na parih vhod/izhoda, da se model nauči proizvajati želene odgovore. | Privzeta za večino nalog: specializacija domene, zmogljivost naloge, slog in ton, sledenje navodilom ter jezikovna prilagoditev. |
+| **Neposredna optimizacija preferenc (DPO)** | Uči se na podlagi parov _prednostnih proti nepripravnim_ odgovorov za uskladitev rezultatov s človeškimi preferencami. | Izboljšanje kakovosti odgovorov, varnosti in usklajenosti, kadar imate primerjalne povratne informacije. |
+| **Okrepljena natančna nastavitev (RFT)** | Uporablja nagrajevalne signale od _ocenjevalcev_ za optimizacijo kompleksnih vedenj z okrepljenim učenjem. | Objektivne, močno premišljene domene (matematika, kemija, fizika) s jasnimi pravimi/napačnimi odgovori. Zahteva več strokovnega znanja o strojni inteligenci. |
+
+### Korak 2: Izberite raven usposabljanja
+
+Foundry vam omogoča izbiro, kako in kje se izvaja usposabljanje:
+
+- **Standard** – usposablja v regiji vašega vira in zagotavlja rezidentnost podatkov. Uporabite, kadar morajo podatki ostati znotraj določene regije.
+- **Globalno** – cenejše in hitrejše v čakalni vrsti, saj izkorišča kapacitete izven vaše regije (podatki in uteži se kopirajo v regijo usposabljanja). Dobra izbira, ko rezidentnost podatkov ni zahteva.
+- **Razvijalec** – najnižji stroški, uporablja neaktivne kapacitete brez zagotovil o latenci/SLA-ju (naloge se lahko prekinejo in nadaljujejo). Idealno za eksperimentiranje.
+
+### Korak 3: Izberite osnovni model
+
+Modeli, ki jih je mogoče natančno nastaviti, vključujejo OpenAI `gpt-4o-mini`, `gpt-4o`, `gpt-4.1`, `gpt-4.1-mini` in `gpt-4.1-nano` (SFT; družina 4o/4.1 podpira tudi DPO), modele za razmišljanje `o4-mini` in `gpt-5` (RFT), ter odprtokodne modele, kot so `Ministral-3B`, `Qwen-32B`, `Llama-3.3-70B-Instruct` in `gpt-oss-20b` (SFT na Foundry virov). Vedno preverite aktualni [Seznam modelov za natančno nastavitev](https://learn.microsoft.com/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure?WT.mc_id=academic-105485-koreyst) za podprte metode, regije in razpoložljivost.
+
+> Foundry ponuja dve modaliteti: **brez strežnika** (cenik glede na porabo, brez upravljanja kvote GPU, OpenAI in izbrani modeli) in **upravljani računalniški viri** (prinesite svoje VM-je prek Azure Machine Learning za najs širok nabor modelov). Večina naj začne z brez strežnika.
+
+### Najboljše prakse Foundry
+
+- **Najprej baza.** Izmerite osnovni model z inženiringom pozivov in RAG _preden_ ga natančno nastavite, da dokažete napredek.
+- **Začnite majhno, nato razširite.** Začnite s 50-100 visokokakovostnimi primeri za potrditev pristopa, nato povečajte na 500+ za proizvodnjo. Kakovost premaga količino - odstranite nizkokakovostne primere.
+- **Pravilno oblikujte podatke.** Datoteke za usposabljanje in preverjanje morajo biti JSONL, UTF-8 **z BOM**, manjše od 512 MB, z uporabo formata sporočil za chat completions. Vedno vključite datoteko za preverjanje, da lahko spremljate preučeno prileganje.
+- **Ohranjajte sistemski poziv pri inferenci.** Uporabite isti sistemski poziv, kot ste ga uporabili med usposabljanjem, ko kličete model.
+- **Ocenjujte kontrolne točke - ne nameščajte slepo zadnje.** Foundry hrani zadnje tri epoh kot kontrolne točke za namestitev; izberite tisto, ki se najbolje generalizira, tako da spremljate `train_loss` / `valid_loss` in natančnost tokenov.
+- **Izmerite stroške tokenov skupaj s kakovostjo** pri primerjavi natančno nastavljenega modela z osnovnim.
+- **Iterirajte z neprekinjeno natančno nastavitvijo.** Lahko natančno nastavite že natančno nastavljen model z novimi podatki (podprto za OpenAI modele).
+- **Bodite pozorni na stroške gostovanja.** Izdelek prilagojen model zaračunava na uro, neaktiven izdelek pa se odstrani po 15 dneh - počistite, česar ne potrebujete.
+
+Sledite celovitemu vodniku v [Prilagodite model z natančno nastavitvijo](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/fine-tuning?WT.mc_id=academic-105485-koreyst) in si oglejte vodiče za [DPO](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/fine-tuning-direct-preference-optimization?WT.mc_id=academic-105485-koreyst) in [RFT](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/reinforcement-fine-tuning?WT.mc_id=academic-105485-koreyst), ko boste pripravljeni na druge tehnike.
+
+## Natančna nastavitev v praksi
+
+Naslednji viri ponujajo korak-po-koraku vodiče, ki vas vodijo skozi resnični primer na trenutno podprt model z izbranim naborom podatkov. Za delo z njimi potrebujete račun pri določenem ponudniku ter dostop do ustreznega modela in podatkovnih nizov.
+
+| Ponudnik     | Vodič                                                                                                                                                                        | Opis                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| OpenAI       | [Kako natančno nastaviti modele za pogovor](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_finetune_chat_models.ipynb?WT.mc_id=academic-105485-koreyst) | Naučite se natančno nastaviti nedavni OpenAI model za klepet za specifično domeno ("pomočnik za recepte") s pripravo podatkov za usposabljanje, izvedbo naloge natančne nastavitve in uporabo natančno nastavljenega modela za sklepanje.                                                                                                                                                                                          |
+| Microsoft Foundry | [Prilagodite model z natančno nastavitvijo](https://learn.microsoft.com/azure/ai-foundry/openai/tutorials/fine-tune?WT.mc_id=academic-105485-koreyst) | Naučite se natančno nastaviti trenutno podprt model, kot je `gpt-4.1-mini`, **na Azure** z Microsoft Foundry: pripravite in naložite podatke za usposabljanje in preverjanje, zaženite nalogo natančne nastavitve, nato namestite in uporabite nov model.                                                                                                                                                                             |
+
+| Hugging Face | [Fino nastavljanje LLM-ov z Hugging Face](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl?WT.mc_id=academic-105485-koreyst)                                               | Ta blog zapis vas vodi skozi fino nastavljanje _odprtega LLM-ja_ (npr.: `CodeLlama 7B`) z uporabo knjižnice [transformers](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) in [Transformer Reinforcement Learning (TRL)](https://huggingface.co/docs/trl/index?WT.mc_id=academic-105485-koreyst) z odprtimi [nabori podatkov](https://huggingface.co/docs/datasets/index?WT.mc_id=academic-105485-koreyst) na Hugging Face. |
+|              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| 🤗 AutoTrain | [Fino nastavljanje LLM-ov z AutoTrain](https://github.com/huggingface/autotrain-advanced/?WT.mc_id=academic-105485-koreyst)                                                         | AutoTrain (ali AutoTrain Advanced) je python knjižnica, ki jo je razvil Hugging Face in omogoča fino nastavljanje za številne različne naloge, vključno s fino nastavitvijo LLM-ov. AutoTrain je rešitev brez kode in fino nastavljanje lahko izvedete v svojem oblaku, na Hugging Face Spaces ali lokalno. Podpira tako spletni GUI, CLI in usposabljanje preko yaml konfiguracijskih datotek.                                                                               |
+|              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| 🦥 Unsloth | [Fino nastavljanje LLM-ov z Unsloth](https://github.com/unslothai/unsloth?WT.mc_id=academic-105485-koreyst)                                                         | Unsloth je odprtokodni okvir, ki podpira fino nastavljanje LLM-ov in učenje z okrepitvijo (RL). Unsloth poenostavlja lokalno usposabljanje, ocenjevanje in uvajanje z že pripravljenimi [zvezki](https://github.com/unslothai/notebooks?WT.mc_id=academic-105485-koreyst). Prav tako podpira pretvorbo besedila v govor (TTS), BERT in multimodalne modele. Za začetek preberite njihov korak-po-korak [Vodnik za fino nastavljanje LLM-ov](https://docs.unsloth.ai/get-started/fine-tuning-llms-guide).                                                                          |
+|              |                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 ## Naloga
 
-Izberite enega izmed zgornjih tutorialov in ga prehodite. _Morda bomo v tem repozitoriju ustvarili različico teh tutorialov v Jupyter Notesnikih za referenco. Za najnovejše različice pa prosim uporabljajte neposredno izvirne vire_.
+Izberite enega od zgornjih vodičev in ga prehodite. _Morda bomo v tem repozitoriju za referenco ustvarili različico teh vodičev v Jupyter Notebooks. Prosimo, uporabite izvirne vire za najnovejše različice_.
 
 ## Odlično delo! Nadaljujte z učenjem.
 
-Po opravljeni lekciji si oglejte našo [Zbirko za učenje generativne umetne inteligence](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), da nadaljujete z nadgrajevanjem svojega znanja o generativni AI!
+Po zaključku te lekcije si oglejte našo [Generativno AI zbirko za učenje](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), da nadaljujete z nadgrajevanjem svojega znanja o Generativni AI!
 
-Čestitke!! Zaključili ste zadnjo lekcijo serije v2 tega tečaja! Ne prenehajte z učenjem in ustvarjanjem. \*\*Oglejte si stran z [VIRI](RESOURCES.md?WT.mc_id=academic-105485-koreyst) za seznam dodatnih priporočil prav za to temo.
+Čestitamo!! Zaključili ste zadnjo lekcijo iz serije v2 tega tečaja! Ne prenehajte z učenjem in ustvarjanjem. \*\*Oglejte si stran [VIRI](RESOURCES.md?WT.mc_id=academic-105485-koreyst) za seznam dodatnih predlogov ravno za to temo.
 
-Naša serija lekcij v1 je bila prav tako posodobljena z več nalogami in koncepti. Vzemite si minuto za obnovo znanja – in prosimo [delite svoja vprašanja in povratne informacije](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst), da nam pomagate izboljšati te lekcije za skupnost.
+Naša serija lekcij v1 je prav tako posodobljena z več nalogami in koncepti. Vzemite si trenutek za osvežitev znanja - in prosimo, [delite svoja vprašanja in povratne informacije](https://github.com/microsoft/generative-ai-for-beginners/issues?WT.mc_id=academic-105485-koreyst), da nam pomagate izboljšati te lekcije za skupnost.
 
 ---
 

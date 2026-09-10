@@ -1,82 +1,82 @@
-# Metin Üretim Uygulamaları Geliştirme
+# Metin Üretme Uygulamaları Oluşturma
 
-[![Metin Üretim Uygulamaları Geliştirme](../../../translated_images/tr/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Metin Üretme Uygulamaları Oluşturma](../../../translated_images/tr/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
-> _(Bu dersin videosunu görüntülemek için yukarıdaki resme tıklayın)_
+> _(Dersi izlemek için yukarıdaki resme tıklayın)_
 
-Bu eğitim müfredatı boyunca gördünüz ki istemler gibi temel kavramlar ve hatta "istem mühendisliği" adı verilen bir disiplin var. ChatGPT, Office 365, Microsoft Power Platform gibi etkileşim kurabileceğiniz birçok araç, bir şeyi başarmak için istemler kullanmanızı destekliyor.
+Bu müfredat boyunca şimdiye kadar istemler gibi temel kavramları ve hatta "istem mühendisliği" diye adlandırılan bir disiplini gördünüz. ChatGPT, Office 365, Microsoft Power Platform gibi etkileşimde bulunabileceğiniz birçok araç, bir şeyi başarmak için istemleri kullanmanızı destekler.
 
-Böyle bir deneyimi bir uygulamaya eklemek için istemler, tamamlamalar gibi kavramları anlamanız ve çalışmak için bir kütüphane seçmeniz gerekir. İşte bu bölümde tam olarak öğreneceğiniz şey budur.
+Böyle bir deneyimi bir uygulamaya ekleyebilmeniz için istemler, tamamlamalar gibi kavramları anlamanız ve çalışmak için bir kütüphane seçmeniz gerekir. Tam olarak bu, bu bölümde öğreneceğiniz şeydir.
 
 ## Giriş
 
 Bu bölümde şunları yapacaksınız:
 
-- openai kütüphanesini ve temel kavramlarını öğrenmek.
-- openai kullanarak bir metin üretim uygulaması geliştirmek.
-- İstem, sıcaklık ve tokenlar gibi kavramları kullanarak bir metin üretim uygulaması geliştirmeyi anlamak.
+- openai kütüphanesi ve temel kavramları hakkında bilgi edinin.
+- openai kullanarak bir metin oluşturma uygulaması oluşturun.
+- Metin oluşturma uygulaması yapmak için istem, sıcaklık ve tokenlar gibi kavramların nasıl kullanılacağını anlayın.
 
 ## Öğrenme hedefleri
 
-Dersin sonunda şunları yapabileceksiniz:
+Bu dersin sonunda şunları yapabilecek duruma geleceksiniz:
 
-- Metin üretim uygulamasının ne olduğunu açıklamak.
-- openai kullanarak bir metin üretim uygulaması geliştirmek.
-- Daha fazla veya daha az token kullanmak ve ayrıca çıktıyı çeşitlendirmek için sıcaklığı değiştirmek üzere uygulamanızı yapılandırmak.
+- Metin oluşturma uygulamasının ne olduğunu açıklayın.
+- openai kullanarak bir metin oluşturma uygulaması geliştirin.
+- Uygulamanızın daha fazla veya daha az token kullanacak şekilde yapılandırılmasını sağlayın ve değişken çıktı için sıcaklığı değiştirin.
 
-## Metin üretim uygulaması nedir?
+## Metin oluşturma uygulaması nedir?
 
-Normalde bir uygulama geliştirdiğinizde aşağıdaki gibi bir arayüzü olur:
+Normalde bir uygulama oluşturduğunuzda şöyle bir arayüze sahiptir:
 
-- Komut tabanlı. Konsol uygulamaları tipik olarak bir komut yazdığınız ve bir görevi gerçekleştirdiği uygulamalardır. Örneğin, `git` komut tabanlı bir uygulamadır.
-- Kullanıcı arayüzü (UI). Bazı uygulamalar, düğmelere tıklama, metin girme, seçenekleri seçme gibi işlemler yapabileceğiniz grafiksel kullanıcı arayüzlerine (GUI) sahiptir.
+- Komut tabanlı. Konsol uygulamaları tipik olarak bir komut yazdığınız ve görevi gerçekleştirdiği uygulamalardır. Örneğin, `git` komut tabanlı bir uygulamadır.
+- Kullanıcı arayüzü (UI). Bazı uygulamalarda düğmelere tıklamanız, metin girmeniz, seçenekleri seçmeniz gibi grafiksel kullanıcı arayüzleri (GUI) vardır.
 
 ### Konsol ve UI uygulamaları sınırlıdır
 
-Bir komut tabanlı uygulamayla karşılaştırın, bir komut yazarsınız:
+Bir komut tabanlı uygulama ile karşılaştırın, komut yazdığınızda:
 
-- **Sınırlıdır**. Sadece uygulamanın desteklediği komutları yazabilirsiniz, herhangi bir komutu yazamazsınız.
-- **Dile özgü**. Bazı uygulamalar birçok dili destekler, ama varsayılan olarak uygulama belirli bir dil için geliştirilir, dil desteği ekleyebilseniz bile.
+- **Sınırlıdır**. Her komutu yazamazsınız, sadece uygulamanın desteklediği komutları kullanabilirsiniz.
+- **Dil spesifik**. Bazı uygulamalar birçok dili destekler, ancak varsayılan olarak uygulama belirli bir dil için oluşturulmuştur, ek dil desteği ekleyebilirsiniz.
 
-### Metin üretim uygulamalarının faydaları
+### Metin oluşturma uygulamalarının faydaları
 
-Peki metin üretim uygulaması nasıl farklıdır?
+Peki metin oluşturma uygulaması nasıl farklıdır?
 
-Metin üretim uygulamasında daha fazla esnekliğiniz vardır, belirli komut setleri veya belirli bir girdi dili ile sınırlı değilsiniz. Bunun yerine doğal dili kullanarak uygulama ile etkileşim kurabilirsiniz. Ayrıca başka bir fayda, geleneksel uygulamanın veritabanındaki bilgilerle sınırlı olabileceği yerde, zaten büyük bir bilgi külliyatı üzerinde eğitilmiş bir veri kaynağıyla etkileşimde olmanızdır.
+Bir metin oluşturma uygulamasında daha fazla esnekliğiniz vardır, önceden belirlenmiş komutlarla veya belirli bir giriş diliyle sınırlı değilsiniz. Bunun yerine, doğal dili kullanarak uygulamayla etkileşime geçebilirsiniz. Bir diğer avantaj ise; zaten geniş bir bilgi dizisini öğrenmiş bir veri kaynağı ile etkileşimdesiniz, oysa geleneksel bir uygulama veri tabanındaki bilgilerle sınırlı olabilir.
 
-### Metin üretim uygulamasıyla neler yapabilirim?
+### Metin oluşturma uygulaması ile ne yapabilirim?
 
 Birçok şey yapabilirsiniz. Örneğin:
 
 - **Bir sohbet botu**. Şirketiniz ve ürünleri hakkında soruları yanıtlayan bir sohbet botu iyi bir eşleşme olabilir.
-- **Yardımcı**. LLM'ler (Büyük Dil Modelleri) metin özetleme, metinden içgörü çıkarma, özgeçmiş gibi metinler üretme gibi görevlerde harikadır.
-- **Kod asistanı**. Kullandığınız dil modeline bağlı olarak size kod yazmada yardımcı olan bir kod asistanı geliştirebilirsiniz. Örneğin, GitHub Copilot veya ChatGPT gibi ürünler kod yazmanıza yardımcı olabilir.
+- **Yardımcı**. LLM'ler metin özetlemek, metinden içgörü almak, özgeçmiş gibi metinler üretmek gibi konularda çok iyidir.
+- **Kod asistanı**. Kullandığınız dil modeline bağlı olarak, kod yazmanıza yardımcı olan bir kod asistanı oluşturabilirsiniz. Örneğin, GitHub Copilot ve ChatGPT gibi ürünleri kullanabilirsiniz.
 
 ## Nasıl başlayabilirim?
 
-Genelde bir LLM ile entegrasyon sağlamak için aşağıdaki iki yaklaşım olur:
+Genellikle LLM ile entegre olmak için aşağıdaki iki yöntemden biri gerekir:
 
-- Bir API kullanmak. Burada isteğinizi prompt ile oluşturup oluşturulan metni geri alırsınız.
+- Bir API kullanmak. Burada isteminizle web isteği oluşturur ve oluşturulan metni alırsınız.
 - Bir kütüphane kullanmak. Kütüphaneler API çağrılarını kapsüller ve kullanımı kolaylaştırır.
 
 ## Kütüphaneler/SDK'lar
 
-LLM'lerle çalışmak için iyi bilinen birkaç kütüphane vardır:
+LLM'lerle çalışmak için bazı bilinen kütüphaneler şunlardır:
 
 - **openai**, bu kütüphane modelinize kolayca bağlanmayı ve istem göndermeyi sağlar.
 
-Daha yüksek seviyede çalışan kütüphaneler ise:
+Daha üst düzeyde çalışan kütüphaneler de vardır:
 
 - **Langchain**. Langchain iyi bilinir ve Python'u destekler.
-- **Semantic Kernel**. Semantic Kernel Microsoft tarafından geliştirilmiş C#, Python ve Java dillerini destekleyen bir kütüphanedir.
+- **Semantic Kernel**. Semantic Kernel Microsoft'un C#, Python ve Java dillerini destekleyen bir kütüphanesidir.
 
 ## openai kullanarak ilk uygulama
 
-İlk uygulamamızı nasıl oluşturacağımıza, hangi kütüphanelerin gerektiğine, ne kadarının gerekli olduğuna bakalım.
+İlk uygulamamızı nasıl oluşturacağımızı, hangi kütüphanelere ihtiyaç duyacağımızı ve ne kadarının gerekli olduğunu görelim.
 
-### openai kurulum
+### openai yükleyin
 
-OpenAI veya Azure OpenAI ile etkileşim için birçok kütüphane vardır. C#, Python, JavaScript, Java gibi birçok programlama dilini kullanmak mümkündür. Biz `openai` Python kütüphanesini seçtik, bu yüzden `pip` ile kuracağız.
+OpenAI veya Azure OpenAI ile etkileşim için birçok kütüphane vardır. C#, Python, JavaScript, Java gibi birçok programlama dili de kullanılabilir. Biz `openai` Python kütüphanesini seçtik, bu yüzden `pip` ile yükleyeceğiz.
 
 ```bash
 pip install openai
@@ -84,34 +84,34 @@ pip install openai
 
 ### Bir kaynak oluşturun
 
-Şu adımları yapmalısınız:
+Şu adımları gerçekleştirmelisiniz:
 
 - Azure'da bir hesap oluşturun [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- Azure OpenAI erişimi alın. [https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) adresinden erişim talep edin.
+- Azure OpenAI erişimi edinin. [https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) adresine gidin ve erişim isteyin.
 
   > [!NOTE]
-  > Yazım esnasında, Azure OpenAI için erişim başvurusu yapmanız gerekmektedir.
+  > Yazım tarihi itibarıyla Azure OpenAI erişimi için başvurmanız gerekmektedir.
 
 - Python yükleyin <https://www.python.org/>
-- Azure OpenAI Hizmet kaynağı oluşturun. Kaynak oluşturma hakkında rehbere bakabilirsiniz [https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- Azure OpenAI Servis kaynağı oluşturduğunuzdan emin olun. Kaynak oluşturma rehberine buradan bakabilirsiniz: [kaynak oluşturma](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
 ### API anahtarı ve uç noktayı bulun
 
-Artık `openai` kütüphanesine hangi API anahtarını kullanacağını belirtmeniz gerekir. Azure OpenAI kaynağınızın "Keys and Endpoint" bölümüne gidip "Key 1" değerini kopyalayın.
+Şu anda, `openai` kütüphanenize hangi API anahtarını kullanacağını söylemeniz gerekir. API anahtarınızı bulmak için Azure OpenAI kaynağınızın "Anahtarlar ve Uç Nokta" bölümüne gidin ve "Anahtar 1" değerini kopyalayın.
 
-![Azure Portal'da Keys and Endpoint kaynak ekranı](https://learn.microsoft.com/azure/ai-services/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+![Azure Portal’da Anahtarlar ve Uç Nokta kaynağı](https://learn.microsoft.com/azure/ai-foundry/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-Artık bu bilgiyi kopyaladığınıza göre, kütüphanelere bunu kullanmasını söyleyelim.
+Bu bilgileri kopyaladıktan sonra, kütüphanelere bunları kullanmasını söyleyelim.
 
 > [!NOTE]
-> API anahtarınızı koddan ayırmak faydalıdır. Bunu ortam değişkenleri kullanarak yapabilirsiniz.
+> API anahtarınızı kodunuzdan ayrı tutmak faydalıdır. Bunu ortam değişkenleri kullanarak yapabilirsiniz.
 >
-> - Ortam değişkeni `OPENAI_API_KEY` değerini API anahtarınız olarak ayarlayın.
+> - `OPENAI_API_KEY` ortam değişkenini API anahtarınız olarak ayarlayın.
 >   `export OPENAI_API_KEY='sk-...'`
 
-### Azure yapılandırması ayarlama
+### Azure yapılandırmasını ayarlama
 
-Azure OpenAI kullanıyorsanız (şimdi Microsoft Foundry'nin parçası), yapılandırmayı şu şekilde ayarlayın. Azure OpenAI `/openai/v1/` uç noktasına işaret eden standart `OpenAI` istemcisini kullanıyoruz, bu Responses API ile çalışır ve `api_version` gerekmez:
+Azure OpenAI (şimdi Microsoft Foundry'nin bir parçası) kullanıyorsanız, yapılandırmayı şöyle ayarlarsınız. Standart `OpenAI` istemcisini Azure OpenAI `/openai/v1/` uç noktasına yönlendiriyoruz; bu, Responses API ile çalışır ve `api_version` gerekmez:
 
 ```python
 import os
@@ -123,50 +123,50 @@ client = OpenAI(
 )
 ```
 
-Yukarıda şunları yapıyoruz:
+Yukarıda şunları ayarlıyoruz:
 
 - `api_key`, bu Azure Portal veya Microsoft Foundry portalında bulunan API anahtarınızdır.
-- `base_url`, bu Foundry kaynak uç noktanızdır ve sonuna `/openai/v1/` eklenmiştir. Stabil v1 uç noktası OpenAI ve Azure OpenAI arasında `api_version` yönetimi olmadan çalışır.
+- `base_url`, bu Foundry kaynak uç noktasıdır ve `/openai/v1/` eklenmiştir. Kararlı v1 uç noktası OpenAI ve Azure OpenAI arasında `api_version` yönetimine gerek kalmadan çalışır.
 
-> [!NOTE] > `os.environ` ortam değişkenlerini okur. Bunu `AZURE_OPENAI_API_KEY` ve `AZURE_OPENAI_ENDPOINT` gibi ortam değişkenlerini okumak için kullanabilirsiniz. Bu ortam değişkenlerini terminalinizde veya `dotenv` gibi bir kütüphane kullanarak ayarlayın.
+> [!NOTE] > `os.environ` ortam değişkenlerini okur. `AZURE_OPENAI_API_KEY` ve `AZURE_OPENAI_ENDPOINT` gibi ortam değişkenlerini okumak için kullanabilirsiniz. Bu ortam değişkenlerini terminalde veya `dotenv` gibi kütüphane ile ayarlayın.
 
 ## Metin üretme
 
-Metin üretmenin yolu, `responses.create` yöntemi aracılığıyla Responses API kullanmaktır. İşte bir örnek:
+Metin üretmek için `responses.create` yöntemiyle Responses API’yi kullanırsınız. İşte bir örnek:
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
 
 response = client.responses.create(
-    model="gpt-4o-mini",  # bu sizin model dağıtım adınızdır
+    model="gpt-5-mini",  # bu sizin model dağıtım adınızdır
     input=prompt,
     store=False,
 )
 print(response.output_text)
 ```
 
-Yukarıdaki kodda, bir cevap oluşturuyoruz ve kullanmak istediğimiz modeli ve istemi (prompt) geçiriyoruz. Sonra `response.output_text` ile üretilen metni yazdırıyoruz.
+Yukarıdaki kodda, bir yanıt oluşturuyoruz ve kullanmak istediğimiz modeli ve istemi geçiriyoruz. Sonra `response.output_text` üzerinden oluşturulan metni yazdırıyoruz.
 
 ### Çok turlu sohbetler
 
-Responses API, hem tek turlu metin üretimine hem de çok turlu chatbotlara uygundur - `input` içinde bir mesajlar listesi vererek bir sohbet oluşturabilirsiniz:
+Responses API, tek tur metin oluşturma ve çok turlu sohbet botları için uygundur - `input` parametresine mesaj listesi vererek bir konuşma oluşturuyorsunuz:
 
 ```python
 from openai import OpenAI
 
 client = OpenAI(api_key="sk-...")
 
-response = client.responses.create(model="gpt-4o-mini", input="Hello world", store=False)
+response = client.responses.create(model="gpt-5-mini", input="Hello world", store=False)
 print(response.output_text)
 ```
 
-Bu işlev hakkında daha fazlası yaklaşan bir bölümde.
+Bu işlevselliğin detaylarını sonraki bir bölümde göreceğiz.
 
-## Alıştırma - ilk metin üretim uygulamanız
+## Alıştırma - ilk metin oluşturma uygulamanız
 
-openai'nin nasıl kurulup yapılandırılacağını öğrendik, şimdi ilk metin üretim uygulamanızı oluşturma zamanı. Uygulamanızı oluşturmak için şu adımları izleyin:
+Artık openai’yı nasıl kurulup yapılandıracağımızı öğrendiğimize göre, ilk metin oluşturma uygulamanızı oluşturalım. Uygulamanızı oluşturmak için şu adımları izleyin:
 
-1. Bir sanal ortam oluşturun ve openai yükleyin:
+1. Sanal bir ortam oluşturun ve openai yükleyin:
 
    ```bash
    python -m venv venv
@@ -178,9 +178,9 @@ openai'nin nasıl kurulup yapılandırılacağını öğrendik, şimdi ilk metin
    > Windows kullanıyorsanız `source venv/bin/activate` yerine `venv\Scripts\activate` yazın.
 
    > [!NOTE]
-   > Azure OpenAI anahtarınızı bulmak için [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) sitesine gidin, `Open AI` araması yapın, `Open AI resource` seçin, ardından `Keys and Endpoint` ve `Key 1` değerini kopyalayın.
+   > Azure OpenAI anahtarınızı bulmak için [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) adresine gidin, `Open AI` araması yapın, `Open AI kaynağı` seçin, `Anahtarlar ve Uç Nokta`ya gidin ve `Anahtar 1` değerini kopyalayın.
 
-1. _app.py_ dosyasını oluşturun ve içine aşağıdaki kodu yazın:
+1. Bir _app.py_ dosyası oluşturun ve içine şu kodu yazın:
 
    ```python
    import os
@@ -195,7 +195,7 @@ openai'nin nasıl kurulup yapılandırılacağını öğrendik, şimdi ilk metin
    # tamamlayıcı kodunuzu ekleyin
    prompt = "Complete the following: Once upon a time there was a"
 
-   # Responses API'sini kullanarak bir istek yapın
+   # Responses API kullanarak bir istek yapın
    response = client.responses.create(model=deployment_name, input=prompt, store=False)
 
    # yanıtı yazdırın
@@ -203,9 +203,9 @@ openai'nin nasıl kurulup yapılandırılacağını öğrendik, şimdi ilk metin
    ```
 
    > [!NOTE]
-   > Salt OpenAI (Azure değil) kullanıyorsanız `client = OpenAI(api_key="<OpenAI anahtarınız ile değiştirin>")` (base_url olmadan) kullanın ve model adı olarak dağıtım adı yerine `gpt-4o-mini` gibi bir model verin.
+   > Sadece OpenAI (Azure değil) kullanıyorsanız, `client = OpenAI(api_key="<OpenAI anahtarınız ile değiştirin>")` (base_url olmadan) kullanın ve deployment ismi yerine `gpt-5-mini` gibi model adı verin.
 
-   Aşağıdaki gibi bir çıktı görmelisiniz:
+   Şu çıktıyı görmelisiniz:
 
    ```output
     very unhappy _____.
@@ -213,25 +213,25 @@ openai'nin nasıl kurulup yapılandırılacağını öğrendik, şimdi ilk metin
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## Farklı türde istemler, farklı işler için
+## Farklı işler için farklı istem türleri
 
-Artık bir istem kullanarak nasıl metin oluşturulacağını gördünüz. Hatta modifiye edip farklı türde metinler üretebileceğiniz çalışan bir programınız var.
+Artık bir istem kullanarak metin üretmeyi gördünüz. Değiştirip farklı türde metinler oluşturabileceğiniz bir programınız var.
 
-İstemler çeşitli görevler için kullanılabilir. Örneğin:
+İstemler her türlü görev için kullanılabilir. Örneğin:
 
-- **Bir tür metin üretme**. Örneğin, şiir, sınav soruları vb. üretebilirsiniz.
-- **Bilgi arama**. 'Web geliştirmede CORS ne demek?' gibi bilgiler için istemler kullanabilirsiniz.
-- **Kod üretme**. İstemlerle örneğin e-postaları doğrulamak için kullanılan düzenli ifade veya bütünüyle bir program (web uygulaması gibi) üretebilirsiniz.
+- **Bir tür metin oluşturma**. Örneğin, şiir, quiz soruları oluşturabilirsiniz.
+- **Bilgi arama**. Örneğin "Web geliştirmede CORS ne anlama gelir?" gibi bilgiler için istem kullanabilirsiniz.
+- **Kod oluşturma**. İstemler kullanarak kod oluşturabilirsiniz, örneğin e-posta doğrulayan bir düzenli ifade geliştirme ya da bir web uygulaması gibi tüm bir program yazma.
 
-## Daha pratik bir kullanım: tarif üretici
+## Daha pratik bir örnek: tarif oluşturucu
 
-Evde malzemeleriniz olduğunu ve yemek yapmak istediğinizi hayal edin. Bunun için bir tarife ihtiyacınız var. Tarif bulmak için bir arama motoru kullanabilir veya bir LLM kullanabilirsiniz.
+Evde malzemeleriniz var ve bir şey pişirmek istiyorsunuz. Bunun için tarif gerekir. Tarif bulmak için arama motoru kullanabilir ya da LLM kullanabilirsiniz.
 
-Aşağıdaki gibi bir istem yazabilirsiniz:
+Örneğin şu istemi yazabilirsiniz:
 
-> "Aşağıdaki malzemelere sahip bir yemek için 5 tarif göster: tavuk, patates ve havuç. Her tarif için kullanılan tüm malzemeleri listele"
+> "Aşağıdaki malzemelerle yapılacak yemek için 5 tarif göster: tavuk, patates ve havuç. Her tarif için kullanılan tüm malzemeleri listele"
 
-Yukarıdaki istemle benzer bir yanıt alabilirsiniz:
+Yukarıdaki istem verildiğinde şöyle bir yanıt gelebilir:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -295,16 +295,16 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-Bu sonuç çok güzel, ne pişireceğimi biliyorum. Şimdi faydalı olabilecek geliştirmeler şunlar olabilir:
+Sonuç harika, ne pişireceğimi biliyorum. Bu aşamada faydalı olacak iyileştirmeler şunlar olabilir:
 
-- Sevmediğim veya alerjim olan malzemelerin filtrelenmesi.
-- Evde olmayan malzemeler için alışveriş listesi oluşturulması.
+- Sevmediğim veya alerjim olan malzemeleri filtreleme.
+- Evde olmayan malzemeler için alışveriş listesi oluşturma.
 
-Yukarıdaki durumlar için ek bir istem ekleyelim:
+Bu durumlar için ek bir istem ekleyelim:
 
-> "Lütfen sarımsak içeren tarifleri çıkar çünkü alerjim var ve yerine başka şey koy. Ayrıca, evde halihazırda tavuk, patates ve havuç olduğunu hesaba katarak tarifler için alışveriş listesi oluştur."
+> "Sarımsak alerjim olduğu için tariflerden çıkar ve yerine başka bir şey koy. Ayrıca, evde zaten tavuk, patates ve havuç olduğunu göz önüne alarak tarifler için bir alışveriş listesi hazırla."
 
-İşte yeni sonuç:
+Şimdi yeni bir sonuç alırsınız, yani:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -371,20 +371,20 @@ Shopping List:
 - Pepper
 ```
 
-İşte sarımsak içermeyen beş tarif ve evdeki malzemelere göre bir alışveriş listeniz var.
+Bu, sarımsak içermeyen beş tarif ve evde olanlara göre oluşturulmuş bir alışveriş listesidir.
 
-## Alıştırma - tarif üretici yapma
+## Alıştırma - tarif oluşturucu yapın
 
-Bir senaryoyu oynadık, şimdi bu senaryoya uygun kod yazalım. Bunu yapmak için şu adımları izleyin:
+Senaryoyu oynadığımıza göre, bunu kodla uygulayalım. Şu adımları izleyin:
 
-1. Mevcut _app.py_ dosyasını başlangıç noktası olarak kullanın
-1. `prompt` değişkenini bulun ve kodunu aşağıdaki gibi değiştirin:
+1. Var olan _app.py_ dosyasını başlangıç noktası olarak kullanın.
+1. `prompt` değişkenini bulun ve kodunu şu şekilde değiştirin:
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   Şu an kodu çalıştırırsanız aşağıdakine benzer bir çıktı görmelisiniz:
+   Şimdi kodu çalıştırırsanız, şu çıktıyı görmelisiniz:
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -396,9 +396,9 @@ Bir senaryoyu oynadık, şimdi bu senaryoya uygun kod yazalım. Bunu yapmak içi
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > NOT: LLM'niz deterministik değildir, bu yüzden programı her çalıştırdığınızda farklı sonuçlar alabilirsiniz.
+   > NOT: LLM'ler deterministik değildir, bu yüzden her çalıştırmada farklı sonuçlar alabilirsiniz.
 
-   Harika, şimdi nasıl geliştirebileceğimize bakalım. Geliştirmek için kodun esnek olmasını isteriz, böylece hem tarif sayısı hem de malzemeler geliştirilebilir ve değiştirilebilir.
+   Harika, işleri nasıl geliştirebileceğimize bakalım. Daha esnek olması için malzeme ve tarif sayısının değiştirilebilmesini istiyoruz.
 
 1. Kodu şu şekilde değiştirelim:
 
@@ -407,11 +407,11 @@ Bir senaryoyu oynadık, şimdi bu senaryoya uygun kod yazalım. Bunu yapmak içi
 
    ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
 
-   # tarif sayısını, bir malzemeler istemine yerleştiriniz
+   # tarif sayısını, talimata ve malzemelere yerleştiriniz
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   Test çalışması için kod şöyle görünebilir:
+   Kodu test çalıştırması yapmak şöyle görünebilir:
 
    ```output
    No of recipes (for example, 5): 3
@@ -422,13 +422,13 @@ Bir senaryoyu oynadık, şimdi bu senaryoya uygun kod yazalım. Bunu yapmak içi
    -Strawberry milk: milk, strawberries, sugar, vanilla extract
    ```
 
-### Filtre ve alışveriş listesi ekleyerek geliştirme
+### Filtre ve alışveriş listesi ekleyerek geliştir
 
-Şimdi kullanıcıdan tarif sayısı ve kullanılan malzemeleri alarak tarifler oluşturabilen çalışan ve esnek bir uygulamamız var.
+Şimdi malzeme ve tarif sayısını kullanıcı girdisine bağlı olarak değiştirebilen çalışan bir uygulamamız var.
 
-Daha da geliştirmek için şunları eklemek istiyoruz:
+Daha da geliştirmek için şu özellikleri eklemek istiyoruz:
 
-- **Malzeme filtreleme**. Sevmediğiniz veya alerjiniz olan malzemeleri filtreleyebilmek istiyoruz. Bunu yapmak için mevcut istemimizi düzenleyip sonuna şöyle bir filtre şartı ekleyebiliriz:
+- **Malzemeleri filtreleme**. Sevmediğimiz veya alerjimiz olan malzemeleri filtreleyebilmek istiyoruz. Bunu yapmak için istemimizi değiştirip sonuna şu filtre koşulunu ekleyebiliriz:
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -436,9 +436,9 @@ Daha da geliştirmek için şunları eklemek istiyoruz:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  Yukarıda, istemin sonuna `{filter}` ekliyoruz ve ayrıca kullanıcıdan filtre değerini alıyoruz.
+  Yukarıda, istemin sonuna `{filter}` ekliyoruz ve aynı zamanda kullanıcıdan filtre değerini alıyoruz.
 
-  Program çalıştırılırken örnek bir girdi şöyle olabilir:
+  Programı çalıştırırken örnek giriş şöyle görünebilir:
 
   ```output
   No of recipes (for example, 5): 3
@@ -505,14 +505,14 @@ Daha da geliştirmek için şunları eklemek istiyoruz:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  Gördüğünüz gibi, içeriğinde süt olan tarifler filtrelenmiş. Ama laktoz intoleransınız varsa peynir içeren tarifleri de filtrelemek isteyebilirsiniz, bu nedenle net olmak gerekir.
+  Gördüğünüz gibi, içinde süt olan tarifler filtrelenmiş. Ancak laktoz intoleransınız varsa, peynir içeren tarifleri de filtrelemek isteyebilirsiniz, bu yüzden açık olunması gerekir.
 
 
-- **Bir alışveriş listesi oluşturun**. Evde zaten sahip olduklarımızı göz önünde bulundurarak bir alışveriş listesi oluşturmak istiyoruz.
+- **Bir alışveriş listesi oluşturun**. Evde zaten nelerimiz olduğunu göz önünde bulundurarak bir alışveriş listesi oluşturmak istiyoruz.
 
-  Bu işlevsellik için her şeyi tek bir istemde çözmeye çalışabiliriz veya bunu iki isteme bölebiliriz. İkinci yaklaşımı deneyelim. Burada ek bir istem eklemeyi öneriyoruz, ancak bunun çalışması için, önceki istemin sonucunu sonraki isteme bağlam olarak eklememiz gerekiyor.
+  Bu işlevsellik için her şeyi tek bir istemde çözmeyi deneyebiliriz ya da bunu iki isteme bölebiliriz. İkinci yaklaşımı deneyelim. Burada ek bir istem eklemeyi öneriyoruz, ancak bunun işlemesi için ilk istemin sonucunu ikinci isteğe bağlamamız gerekiyor.
 
-  İlk istemin sonucunu yazdıran kod bölümünü bulun ve aşağıdaki kodu altına ekleyin:
+  İlk istemden çıkan sonucu yazdıran kod kısmını bulun ve altına aşağıdaki kodu ekleyin:
 
   ```python
   old_prompt_result = response.output_text
@@ -526,15 +526,15 @@ Daha da geliştirmek için şunları eklemek istiyoruz:
   print(response.output_text)
   ```
 
-  Şu noktalara dikkat edin:
+  Şunlara dikkat edin:
 
-  1. İlk istemin sonucunu yeni isteme ekleyerek yeni bir istem oluşturuyoruz:
+  1. İlk istemden gelen sonucu yeni isteme ekleyerek yeni bir istem oluşturuyoruz:
 
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  1. Yeni bir istek yapıyoruz ama ilk istemde istediğimiz token sayısını da dikkate alıyoruz, bu yüzden bu sefer `max_output_tokens` değerini 1200 olarak belirtiyoruz.
+  1. Yeni bir istek yapıyoruz, ancak ilk istemde sorduğumuz token sayısını da göz önünde bulundurarak bu sefer `max_output_tokens` değerini 1200 olarak belirtiyoruz.
 
      ```python
      response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
@@ -556,9 +556,9 @@ Daha da geliştirmek için şunları eklemek istiyoruz:
 
 ## Kurulumunuzu geliştirin
 
-Şimdiye kadar elimizde çalışan bir kod var, ancak işleri daha da geliştirmek için yapmamız gereken bazı ayarlamalar var. Yapmamız gereken bazı şeyler şunlardır:
+Şimdiye kadar elimizde çalışan bir kod var, ancak işi daha da iyileştirmek için bazı düzenlemeler yapmalıyız. Yapmamız gereken bazı şeyler şunlar:
 
-- **API anahtarı gibi gizli bilgileri koddan ayırın**. Gizli bilgiler kodda olmamalı ve güvenli bir yerde saklanmalıdır. Gizli bilgileri koddan ayırmak için ortam değişkenleri kullanabilir ve `python-dotenv` gibi kütüphanelerle bu bilgileri bir dosyadan yükleyebilirsiniz. Kodda bu şöyle görünebilir:
+- **Koddan gizli bilgileri ayırın**, örneğin API anahtarı. Gizli bilgiler koda ait olmayıp güvenli bir yerde saklanmalıdır. Gizli bilgileri koddan ayırmak için ortam değişkenlerini ve `python-dotenv` gibi bir dosyadan yüklemeye yarayan kütüphaneleri kullanabiliriz. Bu kodda şöyle görünür:
 
   1. Aşağıdaki içeriğe sahip bir `.env` dosyası oluşturun:
 
@@ -566,7 +566,7 @@ Daha da geliştirmek için şunları eklemek istiyoruz:
      OPENAI_API_KEY=sk-...
      ```
 
-     > Not, Microsoft Foundry'deki Azure OpenAI için bunun yerine şu ortam değişkenlerini ayarlamanız gerekir:
+     > Not: Microsoft Foundry'de Azure OpenAI kullanırken aşağıdaki ortam değişkenlerini ayarlamanız gerekir:
 
      ```bash
      AZURE_OPENAI_API_KEY=<replace>
@@ -574,7 +574,7 @@ Daha da geliştirmek için şunları eklemek istiyoruz:
      AZURE_OPENAI_API_VERSION=2024-10-21
      ```
 
-     Kodda ortam değişkenlerini şöyle yüklersiniz:
+     Koddaki ortam değişkenlerini şöyle yüklersiniz:
 
      ```python
      import os
@@ -586,39 +586,45 @@ Daha da geliştirmek için şunları eklemek istiyoruz:
      client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
      ```
 
-- **Token uzunluğuna dair bir not**. Metni oluşturmak için kaç token gerektiğini düşünmeliyiz. Tokenler maliyetlidir, bu yüzden mümkün olduğunda kullandığımız token sayısında tasarruf etmeye çalışmalıyız. Örneğin, prompt'u daha az token kullanacak şekilde ifade edebilir miyiz?
+- **Token uzunluğuna dair bir not**. Üretmek istediğimiz metnin kaç token gerektirdiğini dikkate almalıyız. Tokenlar maliyetlidir, bu yüzden mümkünse token kullanımını ekonomik yapmalıyız. Örneğin, istemi daha az token kullanacak şekilde ifade edebilir miyiz?
 
-  Kullanılan token sayısını değiştirmek için `max_output_tokens` parametresini kullanabilirsiniz. Örneğin, 100 token kullanmak istiyorsanız şöyle yaparsınız:
+  Kullanılan token sayısını değiştirmek için `max_output_tokens` parametresini kullanabilirsiniz. Örneğin, 100 token kullanmak isterseniz:
 
   ```python
   response = client.responses.create(model=deployment, input=prompt, max_output_tokens=100, store=False)
   ```
 
-- **Sıcaklık ile denemeler yapmak**. Sıcaklıktan daha önce bahsetmedik ancak programımızın nasıl çalıştığı açısından önemli bir bağlamdır. Sıcaklık değeri arttıkça çıktı daha rastgele olur. Düşük sıcaklık değeri ise çıktıyı daha öngörülebilir yapar. Çıktınızda varyasyon isteyip istemediğinizi düşünün.
+- **Temperature ile denemeler yapmak**. Temperature'dan daha önce bahsetmedik ancak program performansımız için önemli bir bağlamdır. Temperature değeri ne kadar yüksekse çıktı o kadar rastgele olur. Tam tersine low temperature değeri çıktı daha öngörülebilir yapar. Çıktınızda varyasyon isteyip istemediğinizi düşünün.
 
-  Sıcaklığı değiştirmek için `temperature` parametresini kullanabilirsiniz. Örneğin, 0.5 sıcaklığı kullanmak isterseniz şöyle yaparsınız:
+  Temperature parametresini değiştirmek için `temperature` parametresini kullanabilirsiniz. Örneğin, 0.5 temperature kullanmak isterseniz:
 
   ```python
   response = client.responses.create(model=deployment, input=prompt, temperature=0.5, store=False)
   ```
 
-  > Not, 1.0'a ne kadar yakınsa çıktı o kadar çeşitli olur.
+  > Not: 1.0'a ne kadar yakınsa çıktı o kadar çeşitli olur.
+
+- **Akıl yürütme modelleri `temperature` kullanmaz**. Bu, 2026 için önemli bir değişikliktir. Microsoft Foundry'deki mevcut, kullanımda olan modeller **akıl yürütme modelleridir** (GPT-5 ailesi, o-serisi) - ve bu modeller **`temperature` veya `top_p` (veya `max_tokens`; bunun yerine `max_output_tokens` kullanın) desteklemez. `gpt-5-mini` modeline `temperature` gönderirseniz "parameter not supported" hatası alırsınız. Yukarıdaki temperature örneğini denemek için, hala örnekleme kontrolünü destekleyen bir modele yönelmelisiniz - örneğin Microsoft Foundry model kataloğundaki [open Llama modeli](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) olan `Llama-3.3-70B-Instruct`, Foundry Models / Azure AI Inference endpoint üzerinden çağrılır (tıpkı `githubmodels-*` örneklerindeki gibi). GPT-5 gibi akıl yürütme modellerinde çıktı farklı şekilde yönlendirilir:
+  - **İstem mühendisliği** - açık talimatlar, örnekler ve yapılandırılmış çıktı (bkz: ders [04 - İstem Mühendisliği](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)) örnekleme ayarlarının yaptığı işi yapar.
+  - **Akıl yürütme kontrolleri** - akıl yürütme çabası/detay parametreleri derinlik ile gecikme ve maliyeti dengeler.
+
+  Özetle: `temperature`/`top_p` birçok modelde (Llama, Mistral, Phi ve GPT-4.x ailesi - ancak GPT-4.x eskimekte) hala geçerlidir, ancak yönelim GPT-5 gibi akıl yürütme modellerinde istem mühendisliği + akıl yürütme kontrolüne doğru kaymaktadır.
 
 ## Ödev
 
-Bu ödev için ne yapacağınıza siz karar verebilirsiniz.
+Bu ödev için ne yapacağınızı seçebilirsiniz.
 
 İşte bazı öneriler:
 
-- Tarif oluşturucu uygulamasını daha da geliştirin. Sıcaklık değerleri ve istemlerle oynayarak neler yapabileceğinizi görün.
-- Bir "çalışma arkadaşı" yapın. Bu uygulama, örneğin Python hakkında soruları yanıtlayabilmeli. "Python'da belirli bir konu nedir?" gibi istemler olabilir ya da "Bana belirli bir konu için kod göster" gibi istemler olabilir.
-- Tarih botu yapın, tarihi canlandırın, bota belirli bir tarihi karakteri oynatın ve hayatı ve zamanı hakkında sorular sorun.
+- Tarif oluşturucu uygulamasını daha da geliştirmek için oynayın. Temperature değerleri ve istemlerle ne çıkarabileceğinize bakın.
+- Bir "çalışma arkadaşı" oluşturun. Bu uygulama, örneğin Python hakkında soruları yanıtlayabilmeli; "Python'da belirli bir konu nedir?" gibi istemler içerebilir veya belirli bir konu için kod gösteren bir istem olabilir.
+- Tarih botu, tarihi canlandırın, bota belirli bir tarihi karakteri canlandırması talimatını verin ve hayatı ve dönemi hakkında sorular sorun.
 
 ## Çözüm
 
 ### Çalışma arkadaşı
 
-Aşağıda başlangıç için bir istem var, nasıl kullanabileceğinizi ve zevkinize göre nasıl değiştirebileceğinizi görün.
+Aşağıda başlangıç için bir istem var, nasıl kullanabileceğinizi ve isteğinizi nasıl ayarlayabileceğinizi görün.
 
 ```text
 - "You're an expert on the Python language
@@ -633,7 +639,7 @@ Aşağıda başlangıç için bir istem var, nasıl kullanabileceğinizi ve zevk
 
 ### Tarih botu
 
-Kullanabileceğiniz bazı istemler şunlardır:
+Kullanabileceğiniz bazı istemler şunlar:
 
 ```text
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
@@ -644,21 +650,21 @@ Kullanabileceğiniz bazı istemler şunlardır:
 
 ## Bilgi testi
 
-Sıcaklık kavramı ne işe yarar?
+Temperature kavramı ne işe yarar?
 
 1. Çıktının ne kadar rastgele olduğunu kontrol eder.
-1. Cevabın ne kadar büyük olduğunu kontrol eder.
+1. Yanıtın ne kadar büyük olduğunu kontrol eder.
 1. Kaç token kullanıldığını kontrol eder.
 
-## 🚀 Meydan Okuma
+## 🚀 Meydan okuma
 
-Ödev üzerinde çalışırken sıcaklığı değiştirin, 0, 0.5 ve 1 olarak ayarlamayı deneyin. 0 en az varyasyonlu, 1 ise en çok varyasyonlu. Uygulamanız için hangi değer en iyi sonuç veriyor?
+Ödev üzerinde çalışırken temperature değerini değiştirerek 0, 0.5 ve 1 yapmayı deneyin. Unutmayın, 0 en az varyasyonlu, 1 ise en çok varyasyonlu değerdir. Sizin uygulamanız için en iyi değer hangisidir?
 
-## Harika İş! Öğrenmeye Devam Et
+## Harika İş! Öğrenmeye Devam Edin
 
-Bu dersi tamamladıktan sonra, Generatif Yapay Zeka bilginizi artırmaya devam etmek için [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) koleksiyonumuza göz atın!
+Bu dersi tamamladıktan sonra, Generative AI bilginizi ilerletmeye devam etmek için [Generative AI Öğrenme koleksiyonumuzu](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) inceleyin!
 
-7. Derse gidin; burada [chat uygulamalarının nasıl inşa edileceğine](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst) bakacağız!
+Devamında, [sohbet uygulamaları nasıl oluşturulur](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst) konusuna baktığımız 7. derse geçin!
 
 ---
 

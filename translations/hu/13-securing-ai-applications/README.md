@@ -1,152 +1,172 @@
-# Generatív AI alkalmazások biztonságának megőrzése
+# Generatív mesterséges intelligencia alkalmazásainak biztonságossá tétele
 
-[![Generatív AI alkalmazások biztonságának megőrzése](../../../translated_images/hu/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
+[![Generatív mesterséges intelligencia alkalmazásainak biztonságossá tétele](../../../translated_images/hu/13-lesson-banner.14103e36b4bbf173.webp)](https://youtu.be/m0vXwsx5DNg?si=TYkr936GMKz15K0L)
 
 ## Bevezetés
 
-Ebben a leckében szó lesz:
+Ez a lecke a következőket fogja áttekinteni:
 
-- A biztonságról az AI rendszerek kontextusában.
-- Az AI rendszereket érintő gyakori kockázatokról és fenyegetésekről.
-- Az AI rendszerek biztonságának megőrzésére szolgáló módszerekről és szempontokról.
+- A biztonság kérdése az MI rendszerek kontextusában.
+- Az MI rendszereket fenyegető gyakori kockázatok és veszélyek.
+- Módszerek és megfontolások az MI rendszerek biztonságossá tételéhez.
 
 ## Tanulási célok
 
-A lecke elvégzése után megérted:
+A lecke elvégzése után meg fogja érteni:
 
-- Az AI rendszereket érintő fenyegetéseket és kockázatokat.
-- Az AI rendszerek biztonságának megőrzésére szolgáló gyakori módszereket és gyakorlatokat.
-- Hogyan előzheted meg a nem várt eredményeket és a felhasználói bizalom csökkenését biztonsági tesztelés alkalmazásával.
+- Az MI rendszerek ellen irányuló fenyegetéseket és kockázatokat.
+- Az MI rendszerek biztonságossá tételének gyakori módszereit és gyakorlatát.
+- Hogyan segíthet a biztonsági tesztelés az előre nem látott eredmények és a felhasználói bizalom csökkenésének megelőzésében.
 
-## Mit jelent a biztonság a generatív AI kontextusában?
+## Mit jelent a biztonság a generatív MI kontextusában?
 
-Ahogy a mesterséges intelligencia (AI) és a gépi tanulás (ML) technológiái egyre inkább formálják életünket, elengedhetetlen, hogy ne csak az ügyféladatokat, hanem magukat az AI rendszereket is megvédjük. Az AI/ML egyre gyakrabban támogatja a nagy értékű döntéshozatali folyamatokat olyan iparágakban, ahol a rossz döntések súlyos következményekkel járhatnak.
+Mivel a mesterséges intelligencia (MI) és a gépi tanulás (ML) technológiái egyre inkább alakítják életünket, létfontosságú, hogy ne csak az ügyféladatokat, hanem magukat az MI rendszereket is megvédjük. Az MI/ML egyre gyakrabban támogatja a magas értékű döntéshozatali folyamatokat olyan iparágakban, ahol a rossz döntés súlyos következményekkel járhat.
 
-Íme néhány kulcsfontosságú szempont:
+Íme néhány kulcspont, amit figyelembe kell venni:
 
-- **AI/ML hatása**: Az AI/ML jelentős hatással van a mindennapi életre, ezért elengedhetetlen ezek védelme.
-- **Biztonsági kihívások**: Az AI/ML hatása megfelelő figyelmet igényel, hogy megvédjük az AI-alapú termékeket a kifinomult támadásoktól, legyenek azok trollok vagy szervezett csoportok által végrehajtottak.
-- **Stratégiai problémák**: A technológiai iparnak proaktívan kell kezelnie a stratégiai kihívásokat, hogy hosszú távon biztosítsa az ügyfelek biztonságát és az adatok védelmét.
+- **MI/ML hatása**: Az MI/ML jelentős hatással van a mindennapi életre, így azok védelme létfontosságúvá vált.
+- **Biztonsági kihívások**: Az MI/ML hatása megfelelő figyelmet igényel annak érdekében, hogy megvédjük az MI-alapú termékeket a kifinomult támadásoktól, akár trolloktól, akár szervezett csoportoktól.
+- **Stratégiai problémák**: A technológiai ipar proaktívan kell kezelje a stratégiai kihívásokat, hogy hosszú távon biztosítsa az ügyfelek biztonságát és az adatok védelmét.
 
-Ezenkívül a gépi tanulási modellek nagyrészt képtelenek megkülönböztetni a rosszindulatú bemenetet a jóindulatú, szokatlan adatoktól. Az edzéshez használt adatok jelentős része nem ellenőrzött, moderálatlan, nyilvános adatbázisokból származik, amelyekhez harmadik felek is hozzájárulhatnak. A támadóknak nem kell feltörniük az adatbázisokat, ha szabadon hozzájárulhatnak hozzájuk. Idővel az alacsony megbízhatóságú rosszindulatú adatok magas megbízhatóságú, megbízható adatokká válhatnak, ha az adatszerkezet/formátum helyes marad.
+Ezenkívül a gépi tanulási modellek nagyrészt képtelenek megkülönböztetni a rosszindulatú bemenetet a jószándékú rendellenes adatoktól. A képzési adatok jelentős része nem válogatott, nem moderált, nyilvános adatforrásokból származik, amelyekhez harmadik felek is hozzájárulhatnak. A támadóknak nem kell feltörniük az adatbázisokat, ha szabadon hozzáférhetnek ezekhez. Idővel az alacsony bizalommal bíró rosszindulatú adatok magas bizalmú, megbízható adatokká válnak, ha az adatstruktúra/formázás helyes marad.
 
-Ezért kritikus fontosságú biztosítani a modellek döntéseihez használt adattárolók integritását és védelmét.
+Ezért kritikus fontosságú biztosítani az adatok integritását és védelmét, amelyeket a modelljei a döntéshozatalhoz használnak.
 
-## Az AI fenyegetéseinek és kockázatainak megértése
+## Az MI fenyegetéseinek és kockázatainak megértése
 
-Az AI és a kapcsolódó rendszerek tekintetében az adatmérgezés ma a legjelentősebb biztonsági fenyegetés. Az adatmérgezés akkor következik be, amikor valaki szándékosan megváltoztatja az AI edzéséhez használt információkat, hibás működést okozva. Ez a szabványosított észlelési és enyhítési módszerek hiánya, valamint a nem megbízható vagy nem ellenőrzött nyilvános adatbázisokra való támaszkodás miatt történik. Az adatintegritás fenntartása és a hibás edzési folyamat megelőzése érdekében elengedhetetlen az adatok eredetének és származásának nyomon követése. Ellenkező esetben az „amit beviszel, azt kapod” régi mondás igaz marad, ami a modell teljesítményének romlásához vezet.
+Az MI és kapcsolódó rendszerek biztonsága kapcsán az adatmérgezés a legjelentősebb fenyegetés ma. Az adatmérgezés azt jelenti, hogy valaki szándékosan megváltoztatja az MI tanításához használt információkat, ami hibákat eredményez. Ennek oka a szabványosított felismerési és mérséklési módszerek hiánya, valamint az, hogy megbízhatatlan vagy nem válogatott nyilvános adatbázisokból képzik a modelleket. Az adat integritásának fenntartása és a torz képzési folyamat elkerülése érdekében létfontosságú nyomon követni az adatok származását és eredetét. Ellenkező esetben az ismert mondás: „szemét be, szemét ki” érvényesül, ami a modell teljesítményének romlását eredményezi.
 
-Íme néhány példa arra, hogyan befolyásolhatja az adatmérgezés a modelleket:
+Íme példák arra, hogyan hat az adatmérgezés a modelljeire:
 
-1. **Címke megfordítása**: Egy bináris osztályozási feladatban egy támadó szándékosan megfordítja az edzési adatok egy kis részének címkéit. Például a jóindulatú mintákat rosszindulatúként címkézik, ami miatt a modell helytelen társításokat tanul.\
-   **Példa**: Egy spam szűrő, amely manipulált címkék miatt tévesen osztályozza a legitim e-maileket spamként.
-2. **Jellemző mérgezés**: Egy támadó finoman módosítja az edzési adatok jellemzőit, hogy elfogultságot vezessen be vagy félrevezesse a modellt.\
-   **Példa**: Jelentéktelen kulcsszavak hozzáadása termékleírásokhoz, hogy manipulálják az ajánlórendszereket.
-3. **Adat injekció**: Rosszindulatú adatok bejuttatása az edzési készletbe, hogy befolyásolják a modell viselkedését.\
-   **Példa**: Hamis felhasználói vélemények bevezetése, hogy torzítsák az érzelemelemzés eredményeit.
-4. **Hátsó ajtós támadások**: Egy támadó rejtett mintát (hátsó ajtót) helyez el az edzési adatokban. A modell megtanulja felismerni ezt a mintát, és rosszindulatúan viselkedik, amikor aktiválják.\
-   **Példa**: Egy arcfelismerő rendszer, amely hátsó ajtós képekkel edzett, és egy adott személyt tévesen azonosít.
+1. **Címke megfordítása**: Egy bináris osztályozási feladatban a támadó szándékosan megfordítja a tanító adatok kis része címkéit. Például jóindulatú mintákat jelöl meg rosszindulatúként, így a modell helytelen összefüggéseket tanul meg.\
+   **Példa**: Egy spam szűrő, amely manipulált címkék miatt jogos e-maileket minősít spamekként.
+2. **Jellemzőmérgezés**: Egy támadó finoman módosítja a tanító adatok jellemzőit, hogy elfogultságot vezessen be vagy megtévessze a modellt.\
+   **Példa**: Lényegtelen kulcsszavak hozzáadása termékleírásokhoz az ajánlórendszerek befolyásolására.
+3. **Adat beillesztése**: Rosszindulatú adatok befecskendezése a tanító adatkészletbe a modell viselkedésének befolyásolására.\
+   **Példa**: Hamis felhasználói értékelések bevezetése az érzéselemzési eredmények eltorzítására.
+4. **Hátsóajtó támadások**: Egy támadó egy rejtett mintát (hátsóajtót) helyez el a tanító adatokban. A modell megtanulja felismerni ezt a mintát és rosszindulatúan viselkedik, amikor aktiválják.\
+   **Példa**: Egy arcfelismerő rendszer, amely hátsóajtós képekkel tanították, és tévesen azonosít be egy adott személyt.
 
-A MITRE Corporation létrehozta az [ATLAS-t (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), amely egy tudásbázis az AI rendszerek elleni valós támadások során alkalmazott taktikákról és technikákról.
+A MITRE Corporation létrehozta az [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst) tudásbázist a valós támadások során alkalmazott taktikákról és technikákról az MI rendszerek esetében.
 
-> Az AI-alapú rendszerekben egyre több sebezhetőség jelenik meg, mivel az AI beépítése növeli a meglévő rendszerek támadási felületét a hagyományos kibertámadásokon túl. Az ATLAS-t azért fejlesztettük ki, hogy felhívjuk a figyelmet ezekre az egyedi és folyamatosan fejlődő sebezhetőségekre, mivel a globális közösség egyre inkább beépíti az AI-t különböző rendszerekbe. Az ATLAS a MITRE ATT&CK® keretrendszer mintájára készült, és taktikái, technikái, valamint eljárásai (TTP-k) kiegészítik az ATT&CK-ban találhatókat.
+> Egyre több sérülékenység jelenik meg az MI-alapú rendszerekben, mivel az MI integrációja kibővíti a meglévő rendszerek támadási felületét a hagyományos kiberbiztonsági támadásokon túl. Az ATLAS-t azért fejlesztettük ki, hogy növeljük a tudatosságot ezekről az egyedi és fejlődő sérülékenységekről, mivel a globális közösség egyre több rendszert integrál MI-vel. Az ATLAS a MITRE ATT&CK® keretrendszere alapján készült, és taktikái, technikái és eljárásai (TTP-k) kiegészítik az ATT&CK-ot.
 
-Hasonlóan a MITRE ATT&CK® keretrendszerhez, amelyet széles körben használnak a hagyományos kiberbiztonságban fejlett fenyegetés-emulációs forgatókönyvek tervezésére, az ATLAS könnyen kereshető TTP-ket kínál, amelyek segítenek jobban megérteni és felkészülni a feltörekvő támadások elleni védekezésre.
+Hasonlóan a MITRE ATT&CK® keretrendszerhez, amelyet széles körben használnak a hagyományos kiberbiztonságban fejlett fenyegetés szimulációk tervezéséhez, az ATLAS egy könnyen kereshető TTP-készletet nyújt, amely segíthet jobban megérteni és felkészülni az újonnan felmerülő támadások elleni védekezésre.
 
-Ezenkívül az Open Web Application Security Project (OWASP) létrehozott egy "[Top 10 listát](https://llmtop10.com/?WT.mc_id=academic-105485-koreyst)" a LLM-eket használó alkalmazásokban található legkritikusabb sebezhetőségekről. A lista kiemeli az olyan fenyegetések kockázatait, mint az említett adatmérgezés, valamint másokat, például:
+Ezenkívül az Open Web Application Security Project (OWASP) létrehozott egy "[Top 10 listát](https://llmtop10.com/?WT.mc_id=academic-105485-koreyst)" a legkritikusabb sérülékenységekről, amelyek LLM-eket alkalmazó alkalmazásokban fordulnak elő. A lista kiemeli az olyan fenyegetéseket, mint a fent említett adatmérgezés, valamint mások, például:
 
-- **Prompt Injection**: egy technika, amelyben a támadók gondosan megfogalmazott bemenetekkel manipulálják a Nagy Nyelvi Modelleket (LLM), hogy azok a szándékolt viselkedésen kívül működjenek.
-- **Ellátási lánc sebezhetőségek**: Az LLM-eket használó alkalmazások összetevői és szoftverei, például Python modulok vagy külső adatbázisok, maguk is kompromittálódhatnak, ami váratlan eredményeket, bevezetett elfogultságokat és akár az alapvető infrastruktúrában lévő sebezhetőségeket is okozhat.
-- **Túlzott támaszkodás**: Az LLM-ek hibásak lehetnek, és hajlamosak „hallucinálni”, pontatlan vagy nem biztonságos eredményeket adva. Számos dokumentált esetben az emberek az eredményeket készpénznek vették, ami nem szándékolt negatív következményekhez vezetett a való világban.
+- **Prompt befecskendezés**: olyan technika, ahol a támadók gondosan megtervezett bemenetekkel manipulálják a Nagy Nyelvi Modellt (LLM), hogy az eltérjen eredeti működésétől.
+- **Ellátási lánc sérülékenységek**: Az LLM által használt alkalmazások komponensei és szoftverei, például Python modulok vagy külső adatbázisok, maguk is kompromittálódhatnak, ami váratlan eredményekhez, bevezetett torzításokhoz és az alapinfrastruktúra sérülékenységeihez vezethet.
+- **Túlzott támaszkodás**: Az LLM-ek tévedhetnek és hajlamosak lehetnek hallucinációkra, pontatlan vagy nem biztonságos eredményeket adva. Több dokumentált esetben az emberek szó szerint vették az eredményeket, ami nem szándékolt negatív következményekhez vezetett a valós életben.
 
-A Microsoft Cloud Advocate Rod Trent írt egy ingyenes e-könyvet, [Must Learn AI Security](https://github.com/rod-trent/OpenAISecurity/tree/main/Must_Learn/Book_Version?WT.mc_id=academic-105485-koreyst), amely mélyen belemerül ezekbe és más feltörekvő AI fenyegetésekbe, és átfogó útmutatást nyújt arról, hogyan lehet a legjobban kezelni ezeket a helyzeteket.
+Rod Trent, a Microsoft Cloud Advocate-ja írt egy ingyenes e-könyvet, a [Must Learn AI Security](https://github.com/rod-trent/OpenAISecurity/tree/main/Must_Learn/Book_Version?WT.mc_id=academic-105485-koreyst)-t, amely mélyrehatóan foglalkozik ezekkel és más, felmerülő MI fenyegetésekkel, valamint átfogó útmutatást nyújt ezen helyzetek kezeléséhez.
 
-## Biztonsági tesztelés AI rendszerek és LLM-ek számára
+## Biztonsági tesztelés MI rendszerek és LLM-ek számára
 
-A mesterséges intelligencia (AI) számos területet és iparágat átalakít, új lehetőségeket és előnyöket kínálva a társadalom számára. Azonban az AI jelentős kihívásokat és kockázatokat is jelent, mint például az adatvédelem, az elfogultság, a magyarázhatóság hiánya és a potenciális visszaélés. Ezért elengedhetetlen, hogy az AI rendszerek biztonságosak és felelősségteljesek legyenek, azaz megfeleljenek az etikai és jogi normáknak, és megbízhatóak legyenek a felhasználók és érintettek számára.
+A mesterséges intelligencia (MI) különböző területeket és iparágakat alakít át, új lehetőségeket és előnyöket kínálva a társadalom számára. Ugyanakkor az MI jelentős kihívásokat és kockázatokat is hordoz, mint például az adatvédelem, elfogultság, magyarázhatatlanság hiánya és a potenciális rossz felhasználás. Ezért létfontosságú biztosítani, hogy az MI rendszerek biztonságosak és felelősségteljesek legyenek, azaz megfeleljenek etikai és jogi normáknak, továbbá megbízhatóak legyenek a felhasználók és érdekelt felek számára.
 
-A biztonsági tesztelés az AI rendszer vagy LLM biztonságának értékelésének folyamata, amely során azonosítják és kihasználják azok sebezhetőségeit. Ezt a fejlesztők, felhasználók vagy harmadik fél által megbízott auditorok végezhetik, a tesztelés céljától és terjedelmétől függően. Az AI rendszerek és LLM-ek leggyakoribb biztonsági tesztelési módszerei a következők:
+A biztonsági tesztelés az MI rendszerek vagy LLM-ek biztonságának értékelése, sérülékenységeik feltérképezésével és kihasználásával. Ezt fejlesztők, felhasználók vagy harmadik fél auditálók végezhetik, a tesztelés céljától és terjedelmétől függően. A leggyakoribb biztonsági tesztelési módszerek MI rendszerek és LLM-ek esetében:
 
-- **Adattisztítás**: Ez az érzékeny vagy személyes információk eltávolításának vagy anonimizálásának folyamata az AI rendszer vagy LLM edzési adataiból vagy bemenetéből. Az adattisztítás segíthet megelőzni az adatvesztést és a rosszindulatú manipulációt azáltal, hogy csökkenti a bizalmas vagy személyes adatok kitettségét.
-- **Adverzárius tesztelés**: Ez az adverzárius példák generálásának és alkalmazásának folyamata az AI rendszer vagy LLM bemenetére vagy kimenetére, hogy értékeljék annak robusztusságát és ellenállóképességét az adverzárius támadásokkal szemben. Az adverzárius tesztelés segíthet az AI rendszer vagy LLM sebezhetőségeinek és gyengeségeinek azonosításában és enyhítésében, amelyeket a támadók kihasználhatnak.
-- **Modell ellenőrzés**: Ez az AI rendszer vagy LLM modellparamétereinek vagy architektúrájának helyességének és teljességének ellenőrzési folyamata. A modell ellenőrzés segíthet a modell lopásának észlelésében és megelőzésében azáltal, hogy biztosítja a modell védelmét és hitelesítését.
-- **Kimenet ellenőrzés**: Ez az AI rendszer vagy LLM kimenetének minőségének és megbízhatóságának ellenőrzési folyamata. A kimenet ellenőrzés segíthet a rosszindulatú manipuláció észlelésében és kijavításában azáltal, hogy biztosítja a kimenet következetességét és pontosságát.
+- **Adattisztítás**: Ez a folyamat érzékeny vagy privát adatok eltávolítását vagy anonimizálását jelenti az MI rendszer vagy LLM képzési adataiból vagy bemeneteiből. Az adattisztítás segít megelőzni az adat kiszivárgását és a rosszindulatú manipulációt azáltal, hogy csökkenti a bizalmas vagy személyes adatok kitettségét.
+- **Ellenséges tesztelés**: Ez a folyamat ellenséges példák generálását és alkalmazását jelenti az MI rendszer vagy LLM bemenetén vagy kimenetén annak robusztusságának és ellenálló képességének értékelésére azokkal a támadásokkal szemben, amelyek az ellenségek által alkalmazhatók. Az ellenséges tesztelés segíthet feltárni és mérsékelni az MI rendszer vagy LLM sérülékenységeit és gyengeségeit.
+- **Modell ellenőrzés**: Ez a folyamat az MI rendszer vagy LLM modellparamétereinek vagy architektúrájának helyességének és teljességének ellenőrzése. A modell ellenőrzés segít megelőzni a modell lopását azáltal, hogy biztosítja a modell védelmét és hitelesítését.
+- **Kimenet validálás**: Ez a folyamat az MI rendszer vagy LLM kimenetének minőségének és megbízhatóságának validálását jelenti. A kimenet validálás segít felismerni és javítani a rosszindulatú manipulációt azáltal, hogy ellenőrzi a kimenet konzisztenciáját és pontosságát.
 
-Az OpenAI, az AI rendszerek egyik vezetője, egy sor _biztonsági értékelést_ állított fel a red teaming hálózati kezdeményezés részeként, amelynek célja az AI rendszerek kimenetének tesztelése, hogy hozzájáruljon az AI biztonságához.
+Az OpenAI, az MI rendszerek vezető szereplője, létrehozott egy sor _biztonsági értékelést_ a vörös csapat hálózati kezdeményezés részeként, amelynek célja az MI rendszerek kimenetének tesztelése az MI biztonságának előmozdítása érdekében.
 
-> Az értékelések egyszerű kérdezz-felelek tesztektől összetettebb szimulációkig terjedhetnek. Konkrét példaként itt vannak az OpenAI által kidolgozott mintavizsgálatok, amelyek az AI viselkedését több szempontból értékelik:
+> Az értékelések egyszerű kérdés-felelet tesztektől bonyolultabb szimulációkig terjedhetnek. Íme néhány mintaértékelés, amelyet az OpenAI fejlesztett az MI viselkedésének különböző szempontokból történő vizsgálatához:
 
 #### Meggyőzés
 
-- [MakeMeSay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_say/readme.md?WT.mc_id=academic-105485-koreyst): Mennyire jól tud egy AI rendszer rávenni egy másik AI rendszert, hogy kimondjon egy titkos szót?
-- [MakeMePay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_pay/readme.md?WT.mc_id=academic-105485-koreyst): Mennyire jól tud egy AI rendszer meggyőzni egy másik AI rendszert, hogy pénzt adományozzon?
-- [Ballot Proposal](https://github.com/openai/evals/tree/main/evals/elsuite/ballots/readme.md?WT.mc_id=academic-105485-koreyst): Mennyire jól tud egy AI rendszer befolyásolni egy másik AI rendszer támogatását egy politikai javaslat iránt?
+- [MakeMeSay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_say/readme.md?WT.mc_id=academic-105485-koreyst): Milyen jól tud egy MI rendszer megtéveszteni egy másik MI rendszert, hogy kimondjon egy titkos szót?
+- [MakeMePay](https://github.com/openai/evals/tree/main/evals/elsuite/make_me_pay/readme.md?WT.mc_id=academic-105485-koreyst): Milyen hatékonyan győz meg egy MI rendszer egy másik MI rendszert, hogy adományozzon pénzt?
+- [Ballot Proposal](https://github.com/openai/evals/tree/main/evals/elsuite/ballots/readme.md?WT.mc_id=academic-105485-koreyst): Milyen jól tud egy MI rendszer befolyásolni egy másik MI rendszert egy politikai javaslat támogatására?
 
 #### Steganográfia (rejtett üzenetküldés)
 
-- [Steganography](https://github.com/openai/evals/tree/main/evals/elsuite/steganography/readme.md?WT.mc_id=academic-105485-koreyst): Mennyire jól tud egy AI rendszer titkos üzeneteket átadni anélkül, hogy egy másik AI rendszer észrevenné?
-- [Text Compression](https://github.com/openai/evals/tree/main/evals/elsuite/text_compression/readme.md?WT.mc_id=academic-105485-koreyst): Mennyire jól tud egy AI rendszer üzeneteket tömöríteni és visszafejteni, hogy lehetővé tegye titkos üzenetek rejtését?
-- [Schelling Point](https://github.com/openai/evals/blob/main/evals/elsuite/schelling_point/README.md?WT.mc_id=academic-105485-koreyst): Mennyire jól tud egy AI rendszer koordinálni egy másik AI rendszerrel közvetlen kommunikáció nélkül?
+- [Steganography](https://github.com/openai/evals/tree/main/evals/elsuite/steganography/readme.md?WT.mc_id=academic-105485-koreyst): Mennyire jól tud egy MI rendszer titkos üzeneteket továbbítani anélkül, hogy egy másik MI rendszer észrevenné?
+- [Text Compression](https://github.com/openai/evals/tree/main/evals/elsuite/text_compression/readme.md?WT.mc_id=academic-105485-koreyst): Mennyire hatékonyan tud egy MI rendszer üzeneteket tömöríteni és kibontani, lehetővé téve a titkos üzenetek elrejtését?
+- [Schelling Point](https://github.com/openai/evals/blob/main/evals/elsuite/schelling_point/README.md?WT.mc_id=academic-105485-koreyst): Milyen jól tud egy MI rendszer együttműködni egy másik MI rendszerrel anélkül, hogy közvetlenül kommunikálnának?
 
-### AI Biztonság
+### MI biztonság
 
-Elengedhetetlen, hogy megvédjük az AI rendszereket a rosszindulatú támadásoktól, visszaélésektől vagy nem szándékolt következményektől. Ez magában foglalja az AI rendszerek biztonságának, megbízhatóságának és hitelességének biztosítását, például:
+Elengedhetetlen, hogy megvédjük az MI rendszereket a rosszindulatú támadásoktól, helytelen felhasználástól vagy nem szándékolt következményektől. Ez magában foglalja az MI rendszerek biztonságának, megbízhatóságának és hitelességének garantálását, többek között:
 
-- Az AI modellek edzéséhez és futtatásához használt adatok és algoritmusok védelme
-- Az AI rendszerek jogosulatlan hozzáférésének, manipulációjának vagy szabotázsának megelőzése
-- Az AI rendszerekben lévő elfogultság, diszkrimináció vagy etikai problémák észlelése és enyhítése
-- Az AI döntések és cselekvések elszámoltathatóságának, átláthatóságának és magyarázhatóságának biztosítása
-- Az AI rendszerek céljainak és értékeinek összehangolása az emberek és a társadalom céljaival és értékeivel
+- Az adatok és algoritmusok védelmét, amelyeket az MI modellek képzéséhez és futtatásához használnak
+- Az MI rendszerek jogosulatlan hozzáférése, manipulációja vagy szabotálása elleni védekezést
+- Az elfogultság, diszkrimináció vagy etikai kérdések felismerését és mérséklését az MI rendszerekben
+- Az MI döntések és cselekedetek elszámoltathatóságának, átláthatóságának és magyarázhatóságának biztosítását
+- Az MI rendszerek céljainak és értékeinek összehangolását az emberekével és a társadaloméval
 
-Az AI biztonság fontos az AI rendszerek és adatok integritásának, elérhetőségének és titkosságának biztosítása érdekében. Az AI biztonságának kihívásai és lehetőségei közé tartozik:
+Az MI biztonság kulcsfontosságú az MI rendszerek és adatok integritásának, elérhetőségének és bizalmasságának biztosításában. Az MI biztonság néhány kihívása és lehetősége:
 
-- Lehetőség: Az AI beépítése a kiberbiztonsági stratégiákba, mivel kulcsszerepet játszhat a fenyegetések azonosításában és a válaszidők javításában. Az AI segíthet automatizálni és kiegészíteni a kibertámadások, például adathalászat, rosszindulatú programok vagy zsarolóprogramok észlelését és enyhítését.
-- Kihívás: Az AI-t az ellenfelek is használhatják kifinomult támadások indítására, például hamis vagy félrevezető tartalom generálására
-A valós fenyegetések szimulálása ma már standard gyakorlatnak számít az ellenállóképes mesterséges intelligencia rendszerek építésében, amely során hasonló eszközöket, taktikákat és eljárásokat alkalmaznak a rendszerek kockázatainak azonosítására és a védők reakcióinak tesztelésére.
+- Lehetőség: Az MI beépítése a kiberbiztonsági stratégiákba, mivel kulcsszerepet játszhat a fenyegetések azonosításában és a válaszidők javításában. Az MI segíthet automatizálni és kiegészíteni a kiber támadások, például phishing, rosszindulatú szoftverek vagy zsarolóvírusok felismerését és mérséklését.
+- Kihívás: Az MI ellenségek által is felhasználható kifinomult támadások indításához, például hamis vagy félrevezető tartalom generálására, felhasználók megszemélyesítésére vagy MI rendszerek sérülékenységeinek kihasználására. Ezért az MI fejlesztőinek egyedülálló felelőssége olyan rendszerek tervezése, amelyek robusztusak és ellenállók a visszaélésekkel szemben.
 
-> Az AI red teaming gyakorlata kibővült, és már nemcsak a biztonsági sebezhetőségek feltárását foglalja magában, hanem más rendszerhibák vizsgálatát is, például potenciálisan káros tartalmak generálását. Az AI rendszerek új kockázatokkal járnak, és a red teaming kulcsfontosságú ezeknek az új kockázatoknak a megértésében, mint például a prompt injection és a megalapozatlan tartalmak előállítása. - [Microsoft AI Red Team building future of safer AI](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
+### Adatvédelem
+
+Az LLM-ek veszélyt jelenthetnek az általuk használt adatok magánéletére és biztonságára. Például az LLM-ek potenciálisan megjegyezhetik és kiszivárogtathatják a képzési adatok érzékeny információit, például személyes neveket, címeket, jelszavakat vagy hitelkártyaszámokat. Manipulálhatók vagy támadhatók is rosszindulatú szereplők által, akik ki akarják használni sérülékenységeiket vagy elfogultságaikat. Ezért fontos felismerni ezeket a kockázatokat, és megfelelő intézkedéseket tenni az LLM-ekkel használt adatok védelmére. Számos lépést tehet, hogy megvédje az LLM-ekkel használt adatokat. Ezek a lépések a következők:
+
+- **Az adat megosztás mennyiségének és típusának korlátozása az LLM-ekkel**: Csak a szükséges és releváns adatokat ossza meg a tervezett célokra, és kerülje az érzékeny, bizalmas vagy személyes adatok megosztását. A felhasználóknak érdemes anonimániálniuk vagy titkosítaniuk az LLM-ekkel megosztott adatokat, például azonosításra alkalmas információk eltávolításával vagy elfedésével, illetve biztonságos kommunikációs csatornák használatával.
+- **Az LLM-ek által generált adatok ellenőrzése**: Mindig ellenőrizze az LLM-ek által létrehozott kimenetek pontosságát és minőségét, hogy biztos legyen benne, hogy nem tartalmaznak nem kívánt vagy nem megfelelő információkat.
+- **Adatsértések vagy incidensek jelentése és riasztása**: Legyen éber az LLM-ek gyanús vagy rendellenes viselkedéseire, például releváns nélküli, pontatlan, sértő vagy káros szövegek generálására. Ez jelezheti adatsértés vagy biztonsági incidens jelenlétét.
+
+Az adatbiztonság, adatkormányzás és megfelelőség kritikus minden olyan szervezet számára, amely ki akarja aknázni az adatok és az MI erejét többfelhős környezetben. Az összes adat védelme és kezelése összetett és sokrétű feladat. Különböző típusú adatokat (strukturált, strukturálatlan és MI által generált adatokat) kell védenie és kezelnie több helyszínen, különféle felhők között, figyelembe véve a meglévő és jövőbeni adatbiztonsági, kormányzási és MI szabályozásokat. Az adatok védelméhez érdemes néhány bevált gyakorlatot és óvintézkedést alkalmazni, például:
+
+- Használjon felhőalapú szolgáltatásokat vagy platformokat, amelyek adatvédelmi és adatbiztonsági jellemzőket kínálnak.
+- Használjon adatminőség-ellenőrző és validációs eszközöket az adatok hibáinak, inkonzisztenciáinak vagy rendellenességeinek felderítésére.
+- Alkalmazzon adatkezelési és etikai keretrendszereket, hogy az adatok felelősségteljes és átlátható módon kerüljenek felhasználásra.
+
+### A valós fenyegetések szimulálása - MI vörös csapat
+
+
+A valós fenyegetések szimulálása ma már szabványos gyakorlatnak számít ellenálló AI rendszerek építésében, hasonló eszközök, taktikák, eljárások alkalmazásával a rendszerek kockázatainak feltérképezésére és a védekezők reagálásának tesztelésére.
+
+> Az AI red teaming gyakorlata kibővült és tágabb jelentést kapott: nem csak a biztonsági sebezhetőségek feltérképezését fedi le, hanem más rendszerhibák, például rosszindulatú tartalom generálásának vizsgálatát is. Az AI rendszerek új kockázatokkal járnak, és a red teaming kulcsfontosságú ezen új kockázatok megértésében, mint például a prompt befecskendezés és a megalapozatlan tartalom előállítása. - [Microsoft AI Red Team építi a biztonságosabb AI jövőjét](https://www.microsoft.com/security/blog/2023/08/07/microsoft-ai-red-team-building-future-of-safer-ai/?WT.mc_id=academic-105485-koreyst)
 
 [![Útmutató és források a red teaminghez](../../../translated_images/hu/13-AI-red-team.642ed54689d7e8a4.webp)]()
 
-Az alábbiakban bemutatjuk azokat a kulcsfontosságú felismeréseket, amelyek formálták a Microsoft AI Red Team programját.
+Az alábbiakban a Microsoft AI Red Team programját alakító legfontosabb felismerések olvashatók.
 
-1. **Az AI Red Teaming kiterjesztett hatóköre:**
-   Az AI red teaming most már magában foglalja mind a biztonsági, mind a Felelős AI (RAI) eredményeket. Hagyományosan a red teaming a biztonsági aspektusokra összpontosított, a modellt vektorként kezelve (pl. az alapmodell ellopása). Az AI rendszerek azonban új biztonsági sebezhetőségeket vezetnek be (pl. prompt injection, mérgezés), amelyek különös figyelmet igényelnek. A biztonságon túl az AI red teaming a méltányossági kérdéseket (pl. sztereotipizálás) és a káros tartalmakat (pl. erőszak dicsőítése) is vizsgálja. Ezeknek a problémáknak a korai azonosítása lehetővé teszi a védelmi beruházások prioritásának meghatározását.
+1. **Az AI red teaming tágabb körű alkalmazása:**
+   Az AI red teaming ma már magában foglalja mind a biztonsági, mind a Felelős AI (RAI) eredményeket. Hagyományosan a red teaming a biztonsági aspektusokra összpontosított, a modellt támadási vektorként kezelve (pl. az alapmodell ellopása). Azonban az AI rendszerek új típusú biztonsági sebezhetőségeket vezetnek be (pl. prompt befecskendezés, mérgezés), amelyek különös figyelmet igényelnek. A biztonságon túl az AI red teaming a méltányossági problémákat (pl. sztereotípiák) és a káros tartalmakat (pl. az erőszak dicsőítése) is vizsgálja. E problémák korai felismerése lehetővé teszi a védekezési befektetések priorizálását.
 2. **Rosszindulatú és jóindulatú hibák:**
-   Az AI red teaming a hibákat mind rosszindulatú, mind jóindulatú szempontból vizsgálja. Például, amikor a Bing új verzióját teszteljük, nemcsak azt vizsgáljuk, hogyan tudják rosszindulatú támadók aláásni a rendszert, hanem azt is, hogyan találkozhatnak hétköznapi felhasználók problémás vagy káros tartalommal. A hagyományos biztonsági red teaming főként rosszindulatú szereplőkre összpontosít, míg az AI red teaming szélesebb körű személyiségeket és potenciális hibákat vesz figyelembe.
+   Az AI red teaming figyelembe veszi a hibákat mind rosszindulatú, mind jóindulatú nézőpontból. Például a Bing új verziójának red teamingje során nem csak azt vizsgáljuk, hogyan lehet rosszindulatú támadókkal megkerülni a rendszert, hanem azt is, hogyan találkozhatnak a normál felhasználók problémás vagy káros tartalommal. A hagyományos biztonsági red teaminggel ellentétben, ami főként rosszindulatú szereplőkre fókuszál, az AI red teaming szélesebb körű személyiségtípusokat és potenciális hibákat vesz figyelembe.
 3. **Az AI rendszerek dinamikus természete:**
-   Az AI alkalmazások folyamatosan fejlődnek. A nagy nyelvi modell alkalmazások esetében a fejlesztők alkalmazkodnak a változó követelményekhez. A folyamatos red teaming biztosítja az állandó éberséget és az alkalmazkodást az újonnan felmerülő kockázatokhoz.
+   Az AI alkalmazások folyamatosan fejlődnek. Nagy nyelvi modell alkalmazások esetén a fejlesztők alkalmazkodnak a változó követelményekhez. A folyamatos red teaming biztosítja a kockázatok folyamatos figyelemmel kísérését és az alkalmazkodást.
 
-Az AI red teaming nem mindenre kiterjedő megoldás, és kiegészítő mozgásként kell tekinteni más kontrollok mellett, mint például a [szerepkör-alapú hozzáférés-vezérlés (RBAC)](https://learn.microsoft.com/azure/ai-services/openai/how-to/role-based-access-control?WT.mc_id=academic-105485-koreyst) és átfogó adatkezelési megoldások. Célja, hogy kiegészítse egy olyan biztonsági stratégiát, amely a biztonságos és felelős AI megoldások alkalmazására összpontosít, figyelembe véve a magánélet és a biztonság szempontjait, miközben törekszik minimalizálni az elfogultságokat, káros tartalmakat és félretájékoztatást, amelyek alááshatják a felhasználói bizalmat.
+Az AI red teaming nem mindenre kiterjedő, és kiegészítő mozgásként kell tekinteni más kontrollok, például a [szerepalapú hozzáférés-ellenőrzés (RBAC)](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/role-based-access-control?WT.mc_id=academic-105485-koreyst) és átfogó adatkezelési megoldások mellett. Az a célja, hogy kiegészítse az olyan biztonsági stratégiát, amely biztonságos és felelős AI megoldások alkalmazására fókuszál, amelyek figyelembe veszik a magánélet és biztonság védelmét, miközben minimalizálják az elfogultságokat, káros tartalmakat és félretájékoztatást, amelyek alááshatják a felhasználók bizalmát.
 
-Íme néhány további olvasnivaló, amely segíthet jobban megérteni, hogyan segíthet a red teaming az AI rendszerek kockázatainak azonosításában és enyhítésében:
+Az alábbiakban további olvasnivalókat talál, amelyek segíthetnek jobban megérteni, hogyan segíthet a red teaming az AI rendszerek kockázatainak azonosításában és mérséklésében:
 
-- [Red teaming tervezése nagy nyelvi modellek (LLM-ek) és alkalmazásaik számára](https://learn.microsoft.com/azure/ai-services/openai/concepts/red-teaming?WT.mc_id=academic-105485-koreyst)
-- [Mi az OpenAI Red Teaming Network?](https://openai.com/blog/red-teaming-network?WT.mc_id=academic-105485-koreyst)
-- [AI Red Teaming - Kulcsfontosságú gyakorlat a biztonságosabb és felelősebb AI megoldások építéséhez](https://rodtrent.substack.com/p/ai-red-teaming?WT.mc_id=academic-105485-koreyst)
-- MITRE [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), egy tudásbázis a mesterséges intelligencia rendszerek elleni valós támadások során alkalmazott taktikákról és technikákról.
+- [Red teaming tervezése nagy nyelvi modellekhez (LLM-ek) és alkalmazásaikhoz](https://learn.microsoft.com/azure/ai-foundry/openai/concepts/red-teaming?WT.mc_id=academic-105485-koreyst)
+- [Mi az az OpenAI Red Teaming Network?](https://openai.com/blog/red-teaming-network?WT.mc_id=academic-105485-koreyst)
+- [AI Red Teaming – kulcsfontosságú gyakorlat a biztonságosabb és felelősségteljesebb AI megoldások építéséhez](https://rodtrent.substack.com/p/ai-red-teaming?WT.mc_id=academic-105485-koreyst)
+- MITRE [ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)](https://atlas.mitre.org/?WT.mc_id=academic-105485-koreyst), az ellenségek által valós AI rendszer-támadásokban használt taktikák és technikák tudásbázisa.
 
 ## Tudásellenőrzés
 
-Mi lehet egy jó megközelítés az adatintegritás fenntartására és a visszaélések megelőzésére?
+Mi lehet egy jó megközelítés az adat integritásának megőrzésére és a visszaélések megelőzésére?
 
-1. Erős szerepkör-alapú kontrollok alkalmazása az adathozzáférés és adatkezelés terén  
-1. Az adatok címkézésének megvalósítása és auditálása az adatok félreértelmezésének vagy visszaélésének megelőzése érdekében  
-1. Biztosítsa, hogy AI infrastruktúrája támogatja a tartalomszűrést  
+1. Erős szerepalapú kontrollok az adathozzáférés és adatkezelés terén
+1. Az adatcímkézés megvalósítása és auditálása az adat félrevezető vagy visszaélésének megelőzésére
+1. Biztosítani, hogy AI infrastruktúrád támogassa a tartalomszűrést
 
-A:1, Bár mindhárom nagyszerű ajánlás, azzal, hogy biztosítja a megfelelő adathozzáférési jogosultságok kiosztását a felhasználóknak, nagyban hozzájárulhat az LLM-ek által használt adatok manipulációjának és félreértelmezésének megelőzéséhez.
+Válasz: 1. Bár mind a három nagyszerű ajánlás, a megfelelő adathozzáférési jogosultságok kiosztása a felhasználóknak nagyban segít megakadályozni az LLM-ek által használt adatok manipulálását és félrevezetését.
 
 ## 🚀 Kihívás
 
-Olvasson többet arról, hogyan [kormányozhatja és védheti az érzékeny információkat](https://learn.microsoft.com/training/paths/purview-protect-govern-ai/?WT.mc_id=academic-105485-koreyst) az AI korában.
+Olvass tovább arról, hogyan [szabályozhatod és védheted az érzékeny információkat](https://learn.microsoft.com/training/paths/purview-protect-govern-ai/?WT.mc_id=academic-105485-koreyst) az AI korszakában.
 
-## Nagyszerű munka, folytassa a tanulást
+## Szép munka, folytasd a tanulást
 
-A lecke befejezése után tekintse meg [Generatív AI tanulási gyűjteményünket](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy tovább fejlessze generatív AI ismereteit!
+A leckéhez kapcsolódóan nézd meg a [Generatív AI tanulási gyűjteményünket](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), hogy tovább fejleszd a generatív AI ismereteidet!
 
-Lépjen tovább a 14. leckére, ahol [a Generatív AI alkalmazás életciklusát](../14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst) fogjuk megvizsgálni!
+Lépj a 14. leckére, ahol megvizsgáljuk a [generatív AI alkalmazás életciklusát](../14-the-generative-ai-application-lifecycle/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
-**Felelősség kizárása**:  
-Ez a dokumentum az [Co-op Translator](https://github.com/Azure/co-op-translator) AI fordítási szolgáltatás segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Jogi nyilatkozat**:
+Ez a dokumentum az AI fordítási szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár az pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén professzionális emberi fordítást javasolunk. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely ebből a fordításból ered.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

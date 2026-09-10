@@ -1,90 +1,90 @@
-# Hakua täydentävä generointi (RAG) ja vektoritietokannat
+# Hakuavusteinen generointi (RAG) ja vektoritietokannat
 
-[![Hakua täydentävä generointi (RAG) ja vektoritietokannat](../../../translated_images/fi/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Hakuavusteinen generointi (RAG) ja vektoritietokannat](../../../translated_images/fi/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
-Hakusovellusten oppitunnissa opimme lyhyesti, miten omia tietoja voi integroida suurten kielimallien (LLM) käyttöön. Tässä oppitunnissa sukelletaan syvemmälle tietojesi jalkauttamiseen LLM-sovelluksessasi, prosessin mekanismeihin sekä menetelmiin tiedon tallentamiseksi, mukaan lukien upotukset ja teksti.
+Hakusovellusten oppitunnissa opimme lyhyesti, kuinka omat tietosi integroidaan suurten kielimallien (LLM) kanssa. Tässä oppitunnissa syvennymme enemmän konseptiin siitä, miten tieto perustetaan LLM-sovellukseen, prosessin mekaniikkaan sekä tallennusmenetelmiin, jotka sisältävät sekä upotukset että tekstin.
 
-> **Video pian tulossa**
+> **Video tulossa pian**
 
 ## Johdanto
 
-Tässä oppitunnissa käsittelemme seuraavia aiheita:
+Tässä oppitunnissa käsittelemme seuraavaa:
 
-- Johdanto RAGiin, mitä se on ja miksi sitä käytetään tekoälyssä (AI).
+- Johdanto RAG:iin, mitä se on ja miksi sitä käytetään tekoälyssä (artificial intelligence).
 
-- Mikä on vektoritietokanta ja miten sellainen luodaan sovellukseemme.
+- Ymmärrystä siitä, mitä vektoritietokannat ovat ja miten luoda sellainen sovellukseemme.
 
-- Käytännön esimerkki RAGin integroimisesta sovellukseen.
+- Käytännön esimerkki siitä, kuinka RAG integroidaan sovellukseen.
 
 ## Oppimistavoitteet
 
-Tässä oppitunnissa opit:
+Oppitunnin suorittamisen jälkeen osaat:
 
-- Selittämään RAGin merkityksen tiedonhankinnassa ja käsittelyssä.
+- Selittää RAG:n merkityksen tiedon haussa ja käsittelyssä.
 
-- Miten RAG-sovellus asennetaan ja kuinka tieto jalkautetaan LLMiin.
+- Määrittää RAG-sovellus ja perustaa tietosi LLM:ään.
 
-- Miten RAG ja vektoritietokannat integroidaan tehokkaasti LLM-sovelluksiin.
+- Tehokkaasti integroida RAG ja vektoritietokannat LLM-sovelluksissa.
 
-## Tilanteemme: omien tietojen lisääminen LLM:iin
+## Tilanteemme: LLM-malliemme parantaminen omilla tiedoillamme
 
-Tässä oppitunnissa haluamme lisätä omat muistiinpanomme koulutusstartuppiin, jotta chatbot saa enemmän tietoa eri aiheista. Muistiinpanojen avulla oppijat voivat opiskella paremmin ja ymmärtää eri aihepiirejä, mikä helpottaa kokeisiin valmistautumista. Tilanteen luomiseksi käytämme seuraavia komponentteja:
+Tässä oppitunnissa haluamme lisätä omat muistiinpanomme koulutuksesta startupissa, mikä mahdollistaa chatbotin saavan lisää tietoa eri aiheista. Muistiinpanojen avulla oppijat voivat opiskella paremmin ja ymmärtää eri aiheita, mikä helpottaa kokeisiin valmistautumista. Luoamme tilanteen seuraavasti:
 
 - `Azure OpenAI:` LLM, jota käytämme chatbotin luomiseen
 
-- `AI for beginners' Neural Networks -oppitunti`: tieto, johon LLM perustuu
+- `AI for beginners' neural networks -opetus:` tieto, johon fundamenttaamme LLM:ämme
 
-- `Azure AI Search` ja `Azure Cosmos DB:` vektoritietokanta tietojen tallentamiseen ja hakuhakemiston luomiseen
+- `Azure AI Search` ja `Azure Cosmos DB:` vektoritietokanta tietojen tallentamiseen ja hakemisto hakemiseen
 
-Käyttäjät voivat luoda harjoituskyselyitä muistiinpanoistaan, kerrata muistikorttien avulla ja tiivistää tiedot ytimekkäiksi yhteenvetoiksi. Aloitetaan katsomalla, mitä RAG on ja miten se toimii:
+Käyttäjät voivat luoda harjoitustehtäviä muistiinpanoistaan, kertauskortteja sekä tiivistelmiä. Aloitetaan katsomalla, mitä RAG on ja miten se toimii:
 
-## Hakua täydentävä generointi (RAG)
+## Hakuavusteinen generointi (RAG)
 
-LLM-pohjainen chatbot käsittelee käyttäjän kehotteita vastauksien luomiseksi. Se on suunniteltu vuorovaikutteiseksi ja keskustelee käyttäjien kanssa monista eri aiheista. Sen vastaukset rajoittuvat kuitenkin annettuun kontekstiin ja peruskoulutustietoihin. Esimerkiksi GPT-4:llä tiedon katkaisupäivä on syyskuu 2021, eli se ei tunne tätä ajanjakson jälkeen tapahtuneita asioita. Lisäksi LLMien koulutuksessa ei käytetä luottamuksellista tietoa, kuten henkilökohtaisia muistiinpanoja tai yrityksen tuotemanuaalia.
+LLM-pohjainen chatbot käsittelee käyttäjän kehotteita luodakseen vastauksia. Se on suunniteltu olemaan vuorovaikutteinen ja keskustelee käyttäjän kanssa monista aiheista. Sen vastaukset kuitenkin rajoittuvat annettuun kontekstiin ja perustietokoulutusdataan. Esimerkiksi GPT-4 tietopäivitys päättyy syyskuuhun 2021, eli se ei tiedä tapahtumista tämän ajankohdan jälkeen. Lisäksi LLM:ien koulutuksessa ei käytetä luottamuksellisia tietoja kuten henkilökohtaisia muistiinpanoja tai yrityksen käyttöohjeita.
 
-### Miten RAGit (Hakua täydentävä generointi) toimivat
+### Kuinka RAG (Hakuavusteinen generointi) toimii
 
-![kuva havainnollistaa miten RAG toimii](../../../translated_images/fi/how-rag-works.f5d0ff63942bd3a6.webp)
+![kuvaus siitä, miten RAG toimii](../../../translated_images/fi/how-rag-works.f5d0ff63942bd3a6.webp)
 
-Kuvittele haluavasi ottaa käyttöön chatbotin, joka luo kyselyitä muistiinpanoistasi. Tarvitset yhteyden tietopohjaan. Tässä RAG astuu kuvaan. RAGit toimivat seuraavasti:
+Oletetaan, että haluat ottaa käyttöön chatbotin, joka luo kyselyitä muistiinpanoistasi, tarvitset yhteyden tietopohjaan. Tässä RAG tulee avuksi. RAG toimii seuraavasti:
 
-- **Tietopohja:** Ennen hakua asiakirjat täytyy tuoda järjestelmään ja esikäsitellä, tyypillisesti pilkkomalla suuret asiakirjat pienempiin osiin, muuntamalla ne tekstimuotoisiksi upotuksiksi ja tallentamalla ne tietokantaan.
+- **Tietopohja:** Ennen hakua nämä asiakirjat täytyy syöttää ja esikäsitellä, tyypillisesti jakamalla suuret asiakirjat pienempiin osiin, muuntamalla ne tekstimuotoisiksi upotuksiksi ja tallentamalla tietokantaan.
 
 - **Käyttäjän kysely:** käyttäjä esittää kysymyksen
 
-- **Haku:** Kun käyttäjä kysyy, upotusmalli hakee tietopohjasta oleellista tietoa lisäkontekstiksi, joka liitetään kehotteeseen.
+- **Hakeminen:** Kun käyttäjä esittää kysymyksen, upotusmalli hakee asiaankuuluvat tiedot tietopohjastamme antaakseen lisää kontekstia, joka sisällytetään kehotteeseen.
 
-- **Täydennetty generointi:** LLM parantaa vastaustaan haetun tiedon perusteella. Näin vastaus ei perustu vain esikoulutettuun tietoon, vaan myös lisätyn kontekstin tarjoamaan relevanssiin. Haettu tieto auttaa LLMia täydentämään vastauksia. LLM palauttaa käyttäjän kyselyyn vastauksen.
+- **Laajennettu generointi:** LLM parantaa vastaustaan haettujen tietojen perusteella. Tämä mahdollistaa sen, että vastaus ei perustu vain esikoulutettuun dataan, vaan myös lisättyyn kontekstiin. Haettua dataa käytetään LLM:n vastausten rikastamiseen. LLM palauttaa vastauksen käyttäjän kysymykseen.
 
-![kuva havainnollistaa RAG-arkkitehtuuria](../../../translated_images/fi/encoder-decode.f2658c25d0eadee2.webp)
+![kuvaus RAG-arkkitehtuurista](../../../translated_images/fi/encoder-decode.f2658c25d0eadee2.webp)
 
-RAGin arkkitehtuurissa on kaksi osaa: enkooderi ja dekooderi, jotka toteutetaan transformer-mallilla. Esimerkiksi kun käyttäjä esittää kysymyksen, syötetty teksti enkoodataan vektoreiksi, jotka sisältävät sanojen merkityksen. Vektorit dekoodataan dokumenttihakemistoon ja niistä generoidaan teksti käyttäjän kyselyn perusteella. LLM käyttää molempia malleja vastauksen luomiseen.
+RAG-arkkitehtuuri toteutetaan käyttämällä transformereita, jotka koostuvat kahdesta osasta: enkooderista ja dekooderista. Esimerkiksi kun käyttäjä esittää kysymyksen, syötetty teksti "enkoodataan" vektoreiksi jotka sieppaavat sanojen merkityksen, ja nämä vektorit "dekoodataan" dokumenttihakemistoon ja ne tuottavat uutta tekstiä käyttäjän kyselyn perusteella. LLM käyttää sekä enkooderi-dekooderimallia tuloksen luomiseen.
 
-Kaksi lähestymistapaa RAGin toteutukseen ehdotetun artikkelin [Retrieval-Augmented Generation for Knowledge intensive NLP Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) mukaan ovat:
+Kaksi lähestymistapaa RAG:n toteuttamiseen ehdotetun tutkimuspaperin mukaan: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) ovat:
 
-- **_RAG-Sequence_** käyttää haettuja dokumentteja parhaan mahdollisen vastauksen ennustamiseen käyttäjän kyselyyn
+- **_RAG-Sequence_** käyttää haettuja dokumentteja ennustaakseen parhaan mahdollisen vastauksen käyttäjän kyselyyn
 
-- **RAG-Token** käyttää dokumentteja seuraavan tokenin generointiin ja hakee ne seuraavaan tokenin generointiin luodakseen vastauksen käyttäjän kyselyyn
+- **RAG-Token** käyttää dokumentteja seuraavan tokenin generointiin, sitten hakee ne uudelleen vastatakseen käyttäjän kyselyyn
 
-### Miksi käyttää RAGia?
+### Miksi käyttää RAG-menetelmää?
 
-- **Tietorikas:** varmistaa, että tekstivastaukset ovat ajan tasalla ja ajankohtaisia. Parantaa suorituskykyä erityisalojen tehtävissä hyödyntämällä sisäistä tietokantaa.
+- **Tietorikkaus:** varmistaa, että tekstivastaukset ovat ajan tasalla ja nykyisiä. Parantaa siten suorituskykyä domain-spesifeillä tehtävillä hyödyntämällä sisäistä tietopohjaa.
 
-- Vähentää sepittämistä käyttämällä **todennettavissa olevaa dataa** tietopohjassa tarjoamaan kontekstia käyttäjän kysymyksiin.
+- Vähentää keksittyjen tietojen määrää käyttämällä **varmistettavaa dataa** tietopohjassa kontekstina käyttäjän kyselyihin.
 
-- On **kustannustehokas**, koska tulee halvemmaksi kuin LLM:n hienosäätö.
+- On **kustannustehokas**, koska se on edullisempaa kuin LLM:n hienosäätö.
 
 ## Tietopohjan luominen
 
-Sovelluksemme perustuu henkilökohtaiseen dataan, eli AI For Beginners -koulutuksen Neural Network -oppituntiin.
+Sovelluksemme perustuu henkilökohtaiseen dataamme eli AI for Beginners -kurssin Neuroverkot-osion tietoon.
 
 ### Vektoritietokannat
 
-Vektoritietokanta on erikoistunut tietokanta, joka tallentaa, hallinnoi ja hakee upotettuja vektoreita. Se tallentaa asiakirjojen numeeriset esitykset. Tietojen pilkkominen numeerisiin upotuksiin helpottaa tekoälyjärjestelmämme tiedon ymmärtämistä ja käsittelyä.
+Vektoritietokanta on erikoistunut tietokanta, joka on suunniteltu tallentamaan, hallitsemaan ja hakemaan upotettuja vektoreita. Se tallentaa asiakirjojen numeeriset esitykset. Datan pilkkominen numeerisiksi upotuksiksi helpottaa tekoälyjärjestelmää ymmärtämään ja käsittelemään dataa.
 
-Tallennamme upotuksemme vektoritietokantoihin, sillä LLM:illä on rajallinen määrä input-tokeneita. Koska kaikkea upotusta ei voi syöttää kerralla, ne täytyy pilkkoa osiin. Kun käyttäjä kysyy, ne upotukset, jotka vastaavat kysymystä parhaiten, palautetaan yhdessä kehotteen kanssa. Pilkkominen myös pienentää tokenien kokonaismäärää ja näin kustannuksia.
+Tallennamme upotukset vektoritietokantoihin, koska LLM:illä on rajoitus hyväksymiensä tokenien määrässä. Koska koko dataa ei voi syöttää kerralla, joudumme jakamaan sen osiin, ja kun käyttäjä esittää kysymyksen, vastaavia upotuksia palautetaan kehotteen kanssa. Osissa jakaminen myös pienentää kuluja tokenien määrän vähentymisen kautta.
 
-Suosittuja vektoritietokantoja ovat mm. Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant ja DeepLake. Voit luoda Azure Cosmos DB -mallin Azure CLI:n avulla seuraavalla komennolla:
+Suosittuja vektoritietokantoja ovat esimerkiksi Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant ja DeepLake. Voit luoda Azure Cosmos DB -mallin Azure CLI:llä seuraavalla komennolla:
 
 ```bash
 az login
@@ -95,7 +95,7 @@ az cosmosdb list-keys -n <cosmos-db-name> -g <resource-group-name>
 
 ### Tekstistä upotuksiin
 
-Ennen tietojen tallentamista tulee muuntaa ne vektoriupotuksiksi. Jos käsittelet suuria asiakirjoja tai pitkiä tekstejä, voit pilkkoa ne odotettujen kyselyiden mukaan. Pilkkominen voi tapahtua lause- tai kappaletasoilla. Koska pilkotut osat saavat merkityksensä ympäröivistä sanoista, voit lisätä myös muuta kontekstia, kuten asiakirjan otsikon tai tekstiä ennen tai jälkeen pilkotun osan. Voit pilkkoa datan esimerkiksi näin:
+Ennen datan tallennusta meidän täytyy muuntaa se vektorimuotoisiksi upotuksiksi. Jos käsittelet suuria asiakirjoja tai pitkiä tekstejä, voit jakaa ne osiin odotettavien kyselyjen mukaan. Jakaminen voi tapahtua lause- tai kappaletasolla. Koska osiin jako perustuu sanojen ympärillä olevaan merkitykseen, voit lisätä osaan myös muuta kontekstia, esimerkiksi lisätä asiakirjan otsikon tai tekstin ennen tai jälkeen osan. Voit jakaa datan seuraavasti:
 
 ```python
 def split_text(text, max_length, min_length):
@@ -109,45 +109,45 @@ def split_text(text, max_length, min_length):
             chunks.append(' '.join(current_chunk))
             current_chunk = []
 
-    # Jos viimeinen palanen ei saavuttanut vähimmäispituutta, lisää se silti
+    # Jos viimeinen palanen ei saavuttanut minimipituutta, lisää se kuitenkin
     if current_chunk:
         chunks.append(' '.join(current_chunk))
 
     return chunks
 ```
 
-Pilkottuasi osat voit upottaa tekstisi eri upotusmalleilla. Joitakin malleja ovat mm. word2vec, OpenAI:n ada-002, Azure Computer Vision ja monet muut. Mallin valinta riippuu käyttämästäsi kielestä, sisällön tyypistä (teksti/kuvat/audio), tuetusta syötteen koosta sekä upotuksen pituudesta.
+Kun data on pilkottu, voimme upottaa tekstin eri upotusmalleja käyttäen. Mallit voivat olla esimerkiksi word2vec, OpenAI:n ada-002, Azure Computer Vision ja monet muut. Mallin valintaan vaikuttavat käytettävät kielet, koodattavan sisällön tyyppi (teksti/kuvat/audio), sisäänmenon koko ja upotuksen pituus.
 
-Esimerkki upotetusta tekstistä käyttäen OpenAI:n `text-embedding-ada-002` -mallia:
-![sanalla kissa esitetty upotus](../../../translated_images/fi/cat.74cbd7946bc9ca38.webp)
+Esimerkki tekstin upotuksesta OpenAI:n `text-embedding-ada-002` mallilla:
+![sanan cat upotus](../../../translated_images/fi/cat.74cbd7946bc9ca38.webp)
 
-## Haku ja vektorihaut
+## Haku ja vektorihaku
 
-Kun käyttäjä kysyy kysymyksen, hakumalli muuntaa sen vektoriksi kyselyenkooderilla, jonka jälkeen se hakee asiakirjahakemiston relevantteja vektoreita, jotka liittyvät syötteeseen. Tämän jälkeen sekä syötevektori että asiakirjavektorit muunnetaan tekstiksi ja syötetään LLM:lle.
+Kun käyttäjä esittää kysymyksen, hakija muuntaa sen vektoriksi käyttäen kyselyn enkooderia, sitten etsii dokumenttihakemistostamme asiaankuuluvia vektoreita asiakirjoista, jotka liittyvät syötteeseen. Kun haku on tehty, se muuntaa sekä syötteen että dokumenttivektorit tekstiksi ja syöttää ne LLM:ään.
 
 ### Haku
 
-Haku tapahtuu, kun järjestelmä etsii nopeasti indeksoiduista asiakirjoista hakuvaatimukset täyttäviä dokumentteja. Hakijan tavoitteena on löytää asiakirjat, joita käytetään LLM:n kontekstin muodostamiseen ja tiedon jalkauttamiseen.
+Haku tapahtuu, kun järjestelmä yrittää löytää mahdollisimman nopeasti hakemiston asiakirjat, jotka täyttävät hakuehdot. Hakijan tavoitteena on saada asiakirjat, joita käytetään kontekstin tarjoamiseen ja LLM:n perustamiseen datallasi.
 
-Hakua voidaan suorittaa monin tavoin tietokannassamme, esimerkiksi:
+Hakua voidaan suorittaa useilla tavoilla tietokannassamme, kuten:
 
-- **Avainsanahaku** - käytetään tekstihakuihin
+- **Avainsanahaku** – käytetään tekstihakuihin
 
-- **Vektorihaku** - muuntaa dokumentit tekstistä vektoriedustuksiin upotusmallien avulla, jolloin haussa hyödynnetään sanojen merkitystä eli **semanttista hakua**. Haku suoritetaan kyselyn vektoriedustusten perusteella löytämällä dokumentit, joiden vektorit ovat lähimpänä käyttäjän kysymystä.
+- **Vektorihaku** – muuntaa asiakirjat tekstistä vektoriesityksiksi upotusmalleilla, mahdollistaen **semanttisen haun**, jossa haetaan sanojen merkityksen perusteella. Haku tehdään kyselyn kanssa lähimpien vektoriesitysten asiakirjoihin.
 
-- **Hybridihakua** - yhdistelmää avainsana- ja vektorihakua.
+- **Hybridi** – yhdistelmä avainsana- ja vektorihakua.
 
-Haaste hakemisessa on, jos tietokannoista ei löydy vastausta, järjestelmä tarjoaa parhaan saatavilla olevan tiedon. Tällöin voi auttaa esimerkiksi maksimi-etäisyyden asettaminen relevanssille tai hybridihaun hyödyntäminen. Tässä oppitunnissa käytämme hybridihakua, joka yhdistää vektori- ja avainsanahaun. Tallennamme datan dataframeen, jossa on sarakkeissa sekä pilkotut osat että niihin liittyvät upotukset.
+Haasteena haussa on, jos tietokannasta ei löydy vastausta vastaavaa sisältöä, järjestelmä palauttaa parhaimman mahdollisen tiedon. Voit käyttää tekniikoita esim. asettamalla maksimietäisyyden relevanssille tai käyttäen hybridihakua, joka yhdistää avainsana- ja vektorihakuja. Tässä oppitunnissa käytämme hybridihakua. Tallennamme tietomme dataframeen, jonka sarakkeissa on sekä osat että upotukset.
 
 ### Vektoriläheisyys
 
-Hakumalli etsii tietopohjasta lähimpänä olevia upotuksia, eli vektoreita, jotka ovat tekstiltään samankaltaisia. Käyttäjän kysely enkoodataan ensin ja etsitään sitten vastaavat läheiset upotukset. Usein käytetty mittari on kosiniläheisyys, joka perustuu kahden vektorin väliseen kulmaan.
+Hakija etsii tietokannasta lähekkäisiä upotuksia eli lähimmän naapurin, koska ne ovat samankaltaisia tekstejä. Kun käyttäjä kysyy kysymyksen, se ensin upotetaan ja sitten etsitään samankaltaisia upotuksia. Yleinen mittaus samankaltaisuudelle on kosiniläheisyys, joka perustuu kahden vektorin väliseen kulmaan.
 
-Vaihtoehtoisia läheisyysmittareita ovat Euclidean-etäisyys, joka mittaa suoran linjan kahden vektorin päätepisteen välillä, sekä pistekertolasku (dot product), joka laskee vastaavien elementtien tulon summan.
+Voimme mitata samankaltaisuutta myös muilla tavoilla, kuten euklidisella etäisyydellä, joka mittaa suoraa viivaa vektoripäiden välillä, tai pistetulolla, joka mittaa kahden vektorin vastaavien alkioiden tulojen summan.
 
 ### Hakemisto
 
-Hakua varten täytyy rakentaa hakemisto tietopohjalle. Hakemisto tallentaa upotukset ja pystyy nopeasti palauttamaan samankaltaisimmat osat suuressa tietokannassa. Voimme luoda hakemistomme paikallisesti esimerkiksi seuraavasti:
+Hakua varten tarvitsemme hakemiston tietopohjallemme ennen haun suorittamista. Hakemisto tallentaa upotuksemme ja pystyy nopeasti hakemaan samankaltaisimmat osat, vaikka tietokanta olisi suuri. Voimme luoda hakemiston paikallisesti seuraavasti:
 
 ```python
 from sklearn.neighbors import NearestNeighbors
@@ -157,20 +157,20 @@ embeddings = flattened_df['embeddings'].to_list()
 # Luo hakemisto
 nbrs = NearestNeighbors(n_neighbors=5, algorithm='ball_tree').fit(embeddings)
 
-# Indeksin kyselyyn voit käyttää kneighbors-metodia
+# Kyselyä varten voit käyttää kneighbors-metodia
 distances, indices = nbrs.kneighbors(embeddings)
 ```
 
-### Järjestäminen uudelleen (re-ranking)
+### Tulosten uudelleenjärjestely
 
-Kun olet hakenut tietokannasta, sinun täytyy ehkä järjestellä tulokset relevanssin mukaan. Uudelleenjärjestelyssä LLM hyödyntää koneoppimista parantaakseen hakutulosten relevanssia järjestämällä ne parhaista huonoimpiin. Azure AI Search -palvelussa uudelleenjärjestely tapahtuu automaattisesti semanttisella uudelleenjärjestäjällä. Esimerkki uudelleenjärjestelystä lähimpien naapureiden avulla:
+Kun olet hakenut tietokannasta, saatat haluta järjestää tulokset relevanssin mukaan. Uudelleenjärjestely LLM käyttää koneoppimista parantaakseen hakutulosten relevanssia järjestämällä ne merkityksellisimmästä vähiten merkitykselliseen. Azure AI Search suorittaa uudelleenjärjestelyn automaattisesti semanttisen uudelleenjärjestäjän avulla. Esimerkki uudelleenjärjestelystä lähimpien naapureiden avulla:
 
 ```python
-# Etsi samankaltaisimmat asiakirjat
+# Etsi eniten samankaltaiset asiakirjat
 distances, indices = nbrs.kneighbors([query_vector])
 
 index = []
-# Tulosta samankaltaisimmat asiakirjat
+# Tulosta eniten samankaltaiset asiakirjat
 for i in range(3):
     index = indices[0][i]
     for index in indices[0]:
@@ -181,9 +181,9 @@ for i in range(3):
         print(f"Index {index} not found in DataFrame")
 ```
 
-## Kaikki yhteen
+## Kaiken yhdistäminen
 
-Viimeinen vaihe on lisätä LLM mukaan, jotta saamme vastauksia, jotka perustuvat tietoomme. Voimme toteuttaa sen seuraavasti:
+Viimeinen vaihe on lisätä LLM mukaan, jotta saamme vastauksia, jotka perustuvat dataamme. Toteutus voi olla seuraava:
 
 ```python
 user_input = "what is a perceptron?"
@@ -195,7 +195,7 @@ def chatbot(user_input):
     # Etsi samankaltaisimmat dokumentit
     distances, indices = nbrs.kneighbors([query_vector])
 
-    # lisää dokumentit kyselyyn tarjotaksesi kontekstia
+    # lisää dokumentteja kyselyyn kontekstin tarjoamiseksi
     history = []
     for index in indices[0]:
         history.append(flattened_df['chunks'].iloc[index])
@@ -209,10 +209,9 @@ def chatbot(user_input):
         {"role": "user", "content": "\n\n".join(history) }
     ]
 
-    # käytä Responses-rajapintaa vastauksen luomiseen
+    # käytä Responses API:ta vastauksen luomiseen
     response = client.responses.create(
-        model="gpt-4o-mini",
-        temperature=0.7,
+        model="gpt-5-mini",
         max_output_tokens=800,
         input=messages,
         store=False,
@@ -227,43 +226,43 @@ chatbot(user_input)
 
 ### Arviointimittarit
 
-- Vastauksien laatu, että ne kuulostavat luonnollisilta, sujuvilta ja inhimillisiltä
+- Vastauksien laatu: varmistetaan, että se kuulostaa luonnolliselta, sujuvalta ja ihmismäiseltä
 
-- Tiedon jalkauttaminen: arvioidaan, tuleeko vastaus annetusta dokumentaatiosta
+- Dataperustaisuus: arvioidaan vastausten perustuvan toimitettuihin asiakirjoihin
 
-- Relevanssi: arvioidaan, vastaako vastaus kysymykseen ja liittyykö siihen
+- Relevanssi: arvioidaan vastausten vastaavan ja liittyvän esitettyyn kysymykseen
 
-- Sujuvuus - arvioidaan, onko vastaus kieliopillisesti järkevä
+- Sujuvuus: arvioidaan, onko vastaus kieliopillisesti järkevä
 
-## Käyttötapaukset RAGille (Hakua täydentävä generointi) ja vektoritietokannoille
+## RAG:n ja vektoritietokantojen käyttötilanteet
 
-On monia eri käyttötapauksia, joissa funktiokutsut voivat parantaa sovellustasi kuten:
+Monet eri käyttötapaukset hyödyntävät toimintokutsuja parantaakseen sovellusta, kuten:
 
-- Kysymys-vastausjärjestelmät: oman yritystiedon jalkauttaminen keskusteluun, jota työntekijät voivat käyttää kysymyksiin.
+- Kysymys- ja vastausjärjestelmät: yrityksen datan perustaminen chat-keskusteluun, jota työntekijät voivat käyttää kysymyksiin.
 
-- Suositusjärjestelmät: voit luoda järjestelmän, joka vastaa samankaltaisimpiin arvoihin, esim. elokuvat, ravintolat ja paljon muuta.
+- Suositusjärjestelmät: joissa luodaan järjestelmä, joka löytää samankaltaisimmat arvot esimerkiksi elokuville, ravintoloille ja muille.
 
-- Chatbot-palvelut: voit tallentaa keskusteluhistorian ja personoida keskustelun käyttäjätiedon perusteella.
+- Chatbot-palvelut: voit tallentaa keskusteluhistorian ja personoida keskustelua käyttäjädatan perusteella.
 
-- Kuvahaku vektoriupotusten perusteella, hyödyllinen kuvantunnistuksessa ja poikkeavuuksien havaitsemisessa.
+- Kuvahaku vektoriupotusten perusteella, hyödyllistä kuvantunnistuksessa ja poikkeavuuksien havaitsemisessa.
 
 ## Yhteenveto
 
-Olemme käsitelleet RAGin keskeiset osa-alueet: datan lisääminen sovellukseen, käyttäjän kyselyn käsittelyn ja ulostulon. RAGin luomisen helpottamiseksi voit käyttää kehyksiä, kuten Semanti Kernel, Langchain tai Autogen.
+Olemme käsitelleet RAG:n perusalueet datan lisäämisestä sovellukseen, käyttäjän kyselyn ja tuottamisen. RAG:n luomisen helpottamiseksi voit käyttää kehyksiä kuten Semantic Kernel, LangChain tai Autogen.
 
 ## Tehtävä
 
-Jatka RAGin oppimista rakentamalla:
+Jatka oppimista Hakuavusteisesta generoinnista (RAG) rakentamalla:
 
-- Etupään sovellus käyttämällä valitsemaasi kehystä
+- Luo käyttöliittymä sovellukselle valitsemallasi kehys
 
-- Hyödynnä kehystä, joko LangChain tai Semantic Kernel, ja rakenna sovelluksesi uudestaan.
+- Hyödynnä kehystä, joko LangChainia tai Semantic Kernelia, ja rakenna sovelluksesi uudelleen.
 
 Onnittelut oppitunnin suorittamisesta 👏.
 
 ## Oppiminen ei lopu tähän, jatka matkaa
 
-Oppitunnin jälkeen tutustu [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) -kokoelmaan jatkaaksesi generatiivisen AI:n osaamisen kartuttamista!
+Oppitunnin jälkeen tutustu [Generative AI Learning -kokoelmaamme](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) syventääksesi generatiivisen tekoälyn osaamistasi!
 
 ---
 

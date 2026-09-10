@@ -1,54 +1,54 @@
 # Suuren kielimallin (LLM) tarjoajan valinta ja konfigurointi 🔑
 
-Tehtäviä **voidaan** myös määrittää toimimaan yhtä tai useampaa suuren kielimallin (LLM) käyttöönottoa vastaan tuetun palveluntarjoajan kautta, kuten OpenAI, Azure tai Hugging Face. Ne tarjoavat _isännöidyn päätepisteen_ (API), johon voimme ohjelmallisesti käyttää oikeilla tunnistetiedoilla (API-avain tai token). Tässä kurssissa käsittelemme näitä palveluntarjoajia:
+Tehtävät **voidaan** lisäksi määrittää toimimaan yhtä tai useampaa Suuren Kielimallin (LLM) käyttöönottoa vastaan tuetun palveluntarjoajan kautta, kuten OpenAI, Azure tai Hugging Face. Nämä tarjoavat _isännöidyn päätepisteen_ (API), johon voimme ohjelmallisesti päästä käsiksi oikeilla tunnuksilla (API-avain tai token). Tässä kurssissa käsittelemme näitä palveluntarjoajia:
 
- - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) monipuolisilla malleilla, mukaan lukien ydinsarja GPT.
- - [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst) OpenAI-malleille, joissa painotetaan yritysvalmiutta
- - [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) yhdellä päätepisteellä ja API-avaimella satojen mallien käyttöön OpenAI:lta, Meta:lta, Mistralilta, Cohere:lta, Microsoftilta ja muilta (korvaa GitHub Modelsin, joka poistuu käytöstä heinäkuun 2026 lopussa)
- - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) avoimen lähdekoodin malleille ja inferenssipalvelimelle
- - [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) tai [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst), jos mieluummin ajat malleja täysin offline-tilassa omalla laitteellasi ilman pilvitilausta
+ - [OpenAI](https://platform.openai.com/docs/models?WT.mc_id=academic-105485-koreyst) monipuolisilla malleilla, mukaan lukien GPT-sarjan ydintä.
+ - [Azure OpenAI](https://learn.microsoft.com/azure/ai-foundry/openai/?WT.mc_id=academic-105485-koreyst) OpenAI-malleihin keskittyen yritystason valmiuteen
+ - [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) yhdellä päätepisteellä ja API-avaimella satoihin malleihin OpenAI:lta, Metalta, Mistralilta, Cohere:lta, Microsoftilta ja muilta (korvaa GitHub Models -palvelun, joka poistuu käytöstä heinäkuun 2026 lopussa)
+ - [Hugging Face](https://huggingface.co/docs/hub/index?WT.mc_id=academic-105485-koreyst) avoimen lähdekoodin malleihin ja päättelypalvelimeen
+ - [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) tai [Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst), jos haluat mieluummin ajaa malleja täysin offline-tilassa omalla laitteellasi ilman pilvitilausta
 
-**Näihin harjoituksiin tarvitset omat tilisi**. Tehtävät ovat valinnaisia, joten voit päättää määrittää yhden, kaikki tai ei yhtäkään palveluntarjoajista kiinnostuksesi mukaan. Vinkkejä rekisteröitymiseen:
+**Tarvitset omat tilit näitä harjoituksia varten**. Tehtävät ovat valinnaisia, joten voit päättää määrittää yhden, kaikki tai ei yhtään tarjoajaa mielenkiintosi mukaan. Tässä ohjeita rekisteröitymiseen:
 
-| Rekisteröityminen | Hinta | API-avain | Playground | Kommentit |
+| Rekisteröityminen | Hinta | API-avain | Harjoitusalue | Kommentit |
 |:---|:---|:---|:---|:---|
-| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Hinnoittelu](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Projektikohtainen](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [No-Code, Web](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Useita malleja saatavilla |
-| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Hinnoittelu](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart?WT.mc_id=academic-105485-koreyst) | [Pääsy on haettava etukäteen](https://learn.microsoft.com/azure/ai-services/openai/?WT.mc_id=academic-105485-koreyst)|
-| [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) | [Hinnoittelu](https://azure.microsoft.com/pricing/details/ai-foundry/?WT.mc_id=academic-105485-koreyst) | [Projektin yleiskatsaus](https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) | [Foundry Playground](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) | Ilmainen taso saatavilla; yksi päätepiste + avain monille mallipalveluille |
-| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Hinnoittelu](https://huggingface.co/pricing) | [Käyttöoikeustunnukset](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chatissa on rajoitettu määrä malleja](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
-| [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) | Ilmainen (käyttää omaa laitetta) | Ei vaadita | [Paikallinen CLI/SDK](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) | Täysin offline, OpenAI-yhteensopiva päätepiste |
+| [OpenAI](https://platform.openai.com/signup?WT.mc_id=academic-105485-koreyst)| [Hinnoittelu](https://openai.com/pricing#language-models?WT.mc_id=academic-105485-koreyst)| [Projektipohjainen](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst) | [Ei-koodia, Verkkopalvelu](https://platform.openai.com/playground?WT.mc_id=academic-105485-koreyst) | Useita malleja käytettävissä |
+| [Azure](https://aka.ms/azure/free?WT.mc_id=academic-105485-koreyst)| [Hinnoittelu](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/?WT.mc_id=academic-105485-koreyst)| [SDK:n pika-aloitus](https://learn.microsoft.com/azure/ai-foundry/openai/quickstart?WT.mc_id=academic-105485-koreyst)| [Studio-pika-aloitus](https://learn.microsoft.com/azure/ai-foundry/openai/quickstart?WT.mc_id=academic-105485-koreyst) |  [Pääsyyn on haettava etukäteen](https://learn.microsoft.com/azure/ai-foundry/openai/?WT.mc_id=academic-105485-koreyst)|
+| [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) | [Hinnoittelu](https://azure.microsoft.com/pricing/details/ai-foundry/?WT.mc_id=academic-105485-koreyst) | [Projektin yleiskatsaus](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) | [Foundry Harjoitusalue](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) | Ilmainen kerros; yksi päätepiste + avain monille mallitarjoajille |
+| [Hugging Face](https://huggingface.co/join?WT.mc_id=academic-105485-koreyst) | [Hinnoittelu](https://huggingface.co/pricing) | [Käyttötunnukset](https://huggingface.co/docs/hub/security-tokens?WT.mc_id=academic-105485-koreyst) | [Hugging Chat](https://huggingface.co/chat/?WT.mc_id=academic-105485-koreyst)| [Hugging Chatissa on rajattu malli valikoima](https://huggingface.co/chat/models?WT.mc_id=academic-105485-koreyst) |
+| [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) | Ilmainen (ajetaan omalla laitteella) | Ei vaadita | [Paikallinen CLI/SDK](https://learn.microsoft.com/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) | Täysin offline, OpenAI-yhteensopiva päätepiste |
 | | | | | |
 
-Seuraa alla olevia ohjeita tämän repositorion _konfiguroimiseksi_ eri palveluntarjoajille. Tehtävät, jotka vaativat tietyn palveluntarjoajan, sisältävät tiedostonimessään yhden näistä tageista:
+Seuraa alla olevia ohjeita tämän repositorion _konfiguroimiseksi_ eri palveluntarjoajien käyttöä varten. Tehtävissä, jotka vaativat tietyn tarjoajan, tiedostonimessä on jokin näistä tunnisteista:
 
 - `aoai` - vaatii Azure OpenAI -päätepisteen ja avaimen
 - `oai` - vaatii OpenAI-päätepisteen ja avaimen
 - `hf` - vaatii Hugging Face -tokenin
 - `githubmodels` - vaatii Microsoft Foundry Models -päätepisteen ja avaimen (GitHub Models poistuu käytöstä heinäkuun 2026 lopussa)
 
-Voit määrittää yhden, ei yhtäkään tai kaikki palveluntarjoajat. Liittyvät tehtävät vain antavat virheen, jos tunnistetiedot puuttuvat.
+Voit määrittää yhden, ei yhtään tai kaikki palveluntarjoajat. Liittyvät tehtävät tuottavat virheen, jos tunnuksia puuttuu.
 
-## Luo `.env` tiedosto
+## Luo `.env`-tiedosto
 
-Oletamme, että olet jo lukenut yllä olevat ohjeet, rekisteröitynyt asianmukaiselle palveluntarjoajalle ja saanut tarvittavat todennustiedot (API_KEY tai token). Azure OpenAI:n kohdalla oletamme myös, että sinulla on voimassa oleva käyttöönotto Azure OpenAI -palvelusta (päätepiste) ja vähintään yksi GPT-malli käyttöönotettuna chat-kompletioon.
+Oletamme, että olet jo lukenut yllä olevan ohjeistuksen ja rekisteröitynyt asianmukaisen palveluntarjoajan käyttäjäksi sekä hankkinut vaaditut todennustiedot (API_KEY tai token). Azure OpenAI:n tapauksessa oletamme, että sinulla on myös voimassa oleva käyttöönotto Azure OpenAI -palvelusta (päätepiste), jossa vähintään yksi GPT-malli on otettu käyttöön chat-kompletiota varten.
 
-Seuraava vaihe on määrittää **paikalliset ympäristömuuttujat** seuraavasti:
+Seuraava vaihe on konfiguroida **paikalliset ympäristömuuttujasi** seuraavasti:
 
-1. Etsi juurikansiosta tiedosto nimeltä `.env.copy`, jonka sisältö on jotakuinkin tällainen:
+1. Etsi juurikansiosta `.env.copy`-tiedosto, jonka sisältö pitäisi olla suunnilleen tällainen:
 
    ```bash
-   # OpenAI-tarjoaja
+   # OpenAI-palveluntarjoaja
    OPENAI_API_KEY='<add your OpenAI API key here>'
 
    ## Azure OpenAI Microsoft Foundryssa
    ## (Azure OpenAI -palvelu on nyt osa Microsoft Foundrya: https://ai.azure.com)
-   AZURE_OPENAI_API_VERSION='2024-10-21' # Oletus asetettu! (nykyinen vakaa GA API -versio)
+   AZURE_OPENAI_API_VERSION='2024-10-21' # Oletus on asetettu! (nykyinen vakaa GA API -versio)
    AZURE_OPENAI_API_KEY='<add your Foundry resource key here>'
    AZURE_OPENAI_ENDPOINT='<add your Foundry resource endpoint here, e.g. https://<resource-name>.openai.azure.com>'
-   AZURE_OPENAI_DEPLOYMENT='<add your chat completion model deployment name here, e.g. gpt-4o-mini>'
+   AZURE_OPENAI_DEPLOYMENT='<add your chat completion model deployment name here, e.g. gpt-5-mini>'
    AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='<add your embeddings model deployment name here, e.g. text-embedding-3-small>'
 
-   ## Microsoft Foundryn mallit (monitarjoajainen malliluettelo, korvaa GitHub-mallit, jotka poistuvat käytöstä heinäkuun 2026 lopussa)
+   ## Microsoft Foundryn mallit (monipalveluntarjoajan malliluettelo, korvaa GitHubin mallit, jotka poistuvat käytöstä heinäkuun 2026 lopussa)
    AZURE_INFERENCE_ENDPOINT='<add your Microsoft Foundry project endpoint here>'
    AZURE_INFERENCE_CREDENTIAL='<add your Microsoft Foundry Models API key here>'
 
@@ -56,96 +56,96 @@ Seuraava vaihe on määrittää **paikalliset ympäristömuuttujat** seuraavasti
    HUGGING_FACE_API_KEY='<add your HuggingFace API or token here>'
    ```
 
-2. Kopioi tuo tiedosto nimelle `.env` alla olevalla komennolla. Tämä tiedosto on _gitignore:n_ listalla, jotta salaisuudet pysyvät turvassa.
+2. Kopioi tämä tiedosto nimellä `.env` alla olevalla komennolla. Tämä tiedosto on _gitignore:n_ piirissä, joten salaisuudet pysyvät turvassa.
 
    ```bash
    cp .env.copy .env
    ```
 
-3. Täytä arvot (korvaa oikean puolen paikkamerkit) seuraavan osion ohjeiden mukaan.
+3. Täytä arvot (korvaa paikkamerkit merkkijonon oikealla puolella `=`) seuraavassa osiossa kuvatulla tavalla.
 
-4. (Valinnainen) Jos käytät GitHub Codespacesia, voit tallentaa ympäristömuuttujat _Codespaces-salaisuuksina_ tähän repositorioon liittyen. Tällöin paikallisen .env -tiedoston asennusta ei välttämättä tarvita. **Huomaa kuitenkin, että tämä vaihtoehto toimii vain GitHub Codespacesin kanssa.** Sinun tulee silti määrittää .env tiedosto, jos käytät Docker Desktopia.
+4. (Valinnainen) Jos käytät GitHub Codespacesia, voit tallentaa ympäristömuuttujat _Codespacesin salaisuuksina_, jotka liitetään tähän repositorioon. Tällöin paikallista .env-tiedostoa ei tarvitse määrittää. **Huomioi kuitenkin, että tämä toiminto toimii vain GitHub Codespacesissa.** Docker Desktopin käyttäjien on silti määritettävä .env-tiedosto.
 
-## Täytä `.env` tiedosto
+## Täytä `.env`-tiedosto
 
-Katsotaanpa nopeasti muuttujien nimiä ymmärtääksemme, mitä ne tarkoittavat:
+Katsotaanpa nopeasti ympäristömuuttujien nimiä, jotta ymmärrämme mitä ne tarkoittavat:
 
 | Muuttuja  | Kuvaus  |
 | :--- | :--- |
-| HUGGING_FACE_API_KEY | Tämä on käyttäjän käyttöoikeustunnus, jonka olet määrittänyt profiilissasi |
-| OPENAI_API_KEY | Tämä on valtuutusavain palvelun käyttämiseen ei-Azure OpenAI -päätteillä |
-| AZURE_OPENAI_API_KEY | Tämä on kyseisen palvelun valtuutusavain |
-| AZURE_OPENAI_ENDPOINT | Tämä on käyttöön otettu päätepiste Azure OpenAI -resurssissa |
-| AZURE_OPENAI_DEPLOYMENT | Tämä on _tekstin generoinnin_ mallin käyttöönoton päätepiste |
-| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | Tämä on _tekstin upotusten_ mallin käyttöönoton päätepiste |
-| AZURE_INFERENCE_ENDPOINT | Tämä on Microsoft Foundry -projektisi päätepiste, käytetään Microsoft Foundry Modelsissa |
-| AZURE_INFERENCE_CREDENTIAL | Tämä on API-avain Microsoft Foundry -projektille |
+| HUGGING_FACE_API_KEY | Käyttäjän käyttöoikeustunnus, jonka asetat profiilissasi |
+| OPENAI_API_KEY | Autentikointiavain palvelun käyttämiseksi ei-Azure OpenAI -päätepisteissä |
+| AZURE_OPENAI_API_KEY | Autentikointiavain kyseisen palvelun käyttöön |
+| AZURE_OPENAI_ENDPOINT | Azure OpenAI -resurssin käyttöönotettu päätepiste |
+| AZURE_OPENAI_DEPLOYMENT | _Tekstin generointi_ mallin käyttöönoton päätepiste |
+| AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | _Tekstin upotusten_ mallin käyttöönoton päätepiste |
+| AZURE_INFERENCE_ENDPOINT | Microsoft Foundry -projektisi päätepiste, jota käytetään Microsoft Foundry Malien kanssa |
+| AZURE_INFERENCE_CREDENTIAL | API-avain Microsoft Foundry -projektiisi |
 | | |
 
-Huom: Viimeiset kaksi Azure OpenAI -muuttujaa kuvaavat oletusmallia chat-kompletiota (tekstin generointia) ja vektorihakua (upotuksia) varten. Niiden asennusohjeet löytyvät asiaankuuluvista tehtävistä.
+Huom: Viimeiset kaksi Azure OpenAI -muuttujaa vastaavat oletusmallia chat-kompletioon (tekstin generointi) ja vektorihakuihin (upotukset). Niiden määrittäminen tapahtuu asiaankuuluvissa tehtävissä.
 
 ## Konfiguroi Azure OpenAI: Portaalista
 
-> **Huom:** Azure OpenAI Service on nyt osa [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst). Resurssit ja käyttöönotot näkyvät edelleen Azure Portaalissa, mutta päivittäinen mallien hallinta (käyttöönottaminen, playground, monitorointi) tapahtuu Foundry-portaalissa entisen itsenäisen "Azure OpenAI Studion" sijaan.
+> **Huom:** Azure OpenAI-palvelu on nyt osa [Microsoft Foundry -palvelua](https://ai.azure.com?WT.mc_id=academic-105485-koreyst). Resurssit ja käyttöönotot näkyvät edelleen Azure-portaalissa, mutta päivittäinen mallien hallinta (käyttöönotot, harjoitusalue, seuranta) tapahtuu Foundry-portaalissa vanhan itsenäisen "Azure OpenAI Studion" sijaan.
 
-Azure OpenAI -päätepiste ja avain löytyvät [Azure Portaalista](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), joten aloitetaan sieltä.
+Azure OpenAI:n päätepisteen ja avaimen löydät [Azure-portaalista](https://portal.azure.com?WT.mc_id=academic-105485-koreyst), aloitetaan siis sieltä.
 
-1. Mene [Azure Portaaliin](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
-1. Klikkaa vasemman sivupalkin **Avain ja päätepiste** -valintaa.
-1. Klikkaa **Näytä avaimet** - sinun pitäisi nähdä seuraavaa: AVAIN 1, AVAIN 2 ja Päätepiste.
-1. Käytä AVAIN 1 arvoa AZURE_OPENAI_API_KEY muuttujassa
-1. Käytä Päätepiste-arvoa AZURE_OPENAI_ENDPOINT muuttujassa
+1. Mene [Azure-portaaliin](https://portal.azure.com?WT.mc_id=academic-105485-koreyst)
+1. Napsauta vasemman laidan valikosta **Keys and Endpoint**
+1. Napsauta **Näytä avaimet** - näet arvot, kuten KEY 1, KEY 2 ja Endpoint
+1. Käytä KEY 1 -arvoa `AZURE_OPENAI_API_KEY`-muuttujassa
+1. Käytä Endpoint-arvoa `AZURE_OPENAI_ENDPOINT`-muuttujassa
 
-Seuraavaksi tarvitsemme käyttöönoton päätepisteet erityisille malleille.
+Seuraavaksi tarvitsemme käyttöönotettujen mallien päätepisteet.
 
-1. Klikkaa vasemman sivupalkin **Mallien käyttöönotot** Azure OpenAI -resurssissa.
-1. Kohdesivulla klikkaa **Siirry Microsoft Foundry portaalille** (tai **Hallinnoi käyttöönottoja**, resurssityypistä riippuen)
+1. Napsauta vasemman laidan valikosta **Mallien käyttöönotot** kyseiselle Azure OpenAI -resurssille.
+1. Kohdesivulla napsauta **Siirry Microsoft Foundry -portaaliin** (tai **Manage Deployments**, riippuen resurssityypistä)
 
-Tämä vie Microsoft Foundry -portaaliin, josta löydämme muut tarvittavat arvot, kuten alla on kuvattu.
+Tämä vie sinut Microsoft Foundry -portaaliin, josta löydämme muut arvot alla kuvatusti.
 
-## Konfiguroi Azure OpenAI: Microsoft Foundry portaalista
+## Konfiguroi Azure OpenAI: Microsoft Foundry -portaalista
 
-1. Siirry [Microsoft Foundry portaaliin](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) **resurssiltasi** kuten yllä kuvattu.
-1. Klikkaa vasemman sivupalkin **Käyttöönotot** -välilehteä nähdäksesi käytössä olevat mallit.
-1. Jos haluamaasi mallia ei ole otettu käyttöön, käytä **Ota malli käyttöön** käynnistääksesi sen malliluettelosta.
-1. Tarvitset _tekstin generointimallin_ – suosittelemme: **gpt-4o-mini**
-1. Tarvitset _tekstin upotusmallin_ – suosittelemme **text-embedding-3-small**
+1. Siirry [Microsoft Foundry -portaalille](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) **resurssiltasi** yllä olevien ohjeiden mukaan.
+1. Klikkaa vasemman laidan välilehteä **Deployments** nähdäksesi nykyiset mallikäyttöönotot.
+1. Jos haluamasi malli ei ole käytössä, ota se käyttöön käyttämällä **Deploy model** toimintoa mallikatalogista ([mallikatalogi](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst)).
+1. Tarvitset _tekstin generointi_ mallin - suosittelemme: **gpt-5-mini**
+1. Tarvitset _tekstin upotus_ mallin - suosittelemme **text-embedding-3-small**
 
-Päivitä ympäristömuuttujat vastaamaan käytettyä _Käyttöönoton nimeä_. Se on tavallisesti mallin nimi, ellei sitä ole erikseen muutettu. Esimerkiksi:
+Päivitä nyt ympäristömuuttujat vastaamaan _Käyttöönoton nimeä_, jota käytit. Se on tyypillisesti sama kuin mallin nimi, ellei sitä ole erikseen muutettu. Esimerkkinä voi olla:
 
 ```bash
-AZURE_OPENAI_DEPLOYMENT='gpt-4o-mini'
+AZURE_OPENAI_DEPLOYMENT='gpt-5-mini'
 AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='text-embedding-3-small'
 ```
 
-**Älä unohda tallentaa .env-tiedostoa lopuksi**. Voit nyt sulkea tiedoston ja palata muistiinpanojen suoritusohjeisiin.
+**Muista tallentaa .env-tiedosto lopuksi**. Voit nyt sulkea tiedoston ja siirtyä eteenpäin ohjeisiin muistiokansion ajamiseksi.
 
 ## Konfiguroi OpenAI: Profiilista
 
-OpenAI API-avaimesi löytyy [OpenAI-tililtäsi](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Jos sinulla ei ole sellaista, voit rekisteröityä tilille ja luoda API-avaimen. Saatuasi avaimen, voit lisätä sen `OPENAI_API_KEY` muuttujaan `.env` tiedostossa.
+OpenAI API -avaimesi löytyy [OpenAI-tililtäsi](https://platform.openai.com/api-keys?WT.mc_id=academic-105485-koreyst). Jos sinulla ei ole avainta, voit rekisteröityä tilille ja luoda API-avaimen. Saatuasi avaimen voit täyttää `OPENAI_API_KEY`-muuttujan `.env`-tiedostossa.
 
 ## Konfiguroi Hugging Face: Profiilista
 
-Hugging Face -tokenisi löytyy profiilistasi kohdasta [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Älä julkaise tai jaa näitä julkisesti. Luo sen sijaan uusi token tätä projektia varten ja kopioi se `.env` tiedostoon `HUGGING_FACE_API_KEY` muuttujaksi. _Huom:_ Tämä ei teknisesti ole API-avain, mutta sitä käytetään autentikointiin, joten pidämme nimeämiskäytännön johdonmukaisena.
+Hugging Face -tokenisi löytyy profiilistasi kohdasta [Access Tokens](https://huggingface.co/settings/tokens?WT.mc_id=academic-105485-koreyst). Älä julkaise tai jaa näitä julkisesti. Sen sijaan luo uusi token tätä projektia varten ja kopioi se `.env`-tiedostoon `HUGGING_FACE_API_KEY`-muuttujaan. _Huom:_ Tämä ei teknisesti ole API-avain, mutta sitä käytetään autentikointiin, joten pidämme nimeämiskäytännön johdonmukaisena.
 
 ## Konfiguroi Microsoft Foundry Models: Portaalista
 
-> **Huom:** GitHub Models poistuu käytöstä heinäkuun 2026 lopussa. Microsoft Foundry Models on suora korvaaja, tarjoten saman ilmaisen kokeiltavan malliluettelon ja Azure AI Inference SDK / OpenAI SDK -kokemuksen.
+> **Huom:** GitHub Models poistuu käytöstä heinäkuun 2026 lopussa. Microsoft Foundry Models on suora korvaaja, tarjoten saman ilmaisen kokeilukatalogin ja Azure AI Inference SDK / OpenAI SDK -kokemuksen.
 
 1. Mene [Microsoft Foundryyn](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) ja luo (tai avaa) Foundry-projekti.
-1. Selaa [malliluetteloa](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) ja ota malli käyttöön, esimerkiksi `gpt-4o-mini`.
-1. Projektin **Yleiskatsaus** -sivulla kopioi **päätepiste** ja **API-avain**.
-1. Käytä päätepisteen arvoa `AZURE_INFERENCE_ENDPOINT` ja avaimen arvoa `AZURE_INFERENCE_CREDENTIAL` muuttujina `.env` tiedostossasi.
+1. Selaa [mallikatalogia](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) ja ota malli käyttöön, esimerkiksi `gpt-5-mini`.
+1. Projektin **Overview**-sivulla kopioi **päätepiste** ja **API-avain**.
+1. Käytä päätepistettä `AZURE_INFERENCE_ENDPOINT` ja avainta `AZURE_INFERENCE_CREDENTIAL` muuttujissa omassa `.env`-tiedostossasi.
 
-## Offline / Paikalliset palveluntarjoajat
+## Offline- tai paikalliset tarjoajat
 
-Jos et halua käyttää pilvitilausta lainkaan, voit ajaa yhteensopivia avoimia malleja suoraan omalla laitteellasi:
+Jos et halua käyttää lainkaan pilvitilausta, voit ajaa yhteensopivia avoimia malleja suoraan omalla laitteellasi:
 
-- **[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst)** - Microsoftin laitteella suoritettava runtime. Se valitsee automaattisesti parhaan suoritusympäristön (NPU, GPU tai CPU) ja tarjoaa OpenAI-yhteensopivan päätepisteen, joten voit käyttää suurinta osaa tämän kurssin esimerkkikoodista vähäisin muutoksin. Katso [Foundry Local -dokumentaatio](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) aloittaaksesi tai asenna komennolla `winget install Microsoft.FoundryLocal` (Windows) / `brew install microsoft/foundrylocal/foundrylocal` (macOS).
-- **[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst)** - suosittu vaihtoehto ajaa avoimia malleja kuten Llama, Phi, Mistral ja Gemma paikallisesti.
+- **[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst)** - Microsoftin laitekohtainen ajonaikainen ympäristö. Se valitsee automaattisesti parhaimman suoritinlaitteen (NPU, GPU, tai CPU) ja tarjoaa OpenAI-yhteensopivan päätepisteen, joten voit käyttää suurinta osaa tämän kurssin esimerkkikoodista vähin muutoksin. Katso [Foundry Local -dokumentaatiota](https://learn.microsoft.com/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst) aloittaaksesi, tai asenna komennolla `winget install Microsoft.FoundryLocal` (Windows) / `brew install microsoft/foundrylocal/foundrylocal` (macOS).
+- **[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst)** - suosittu vaihtoehto avoimien mallien kuten Llama, Phi, Mistral ja Gemma paikalliseen ajamiseen.
 
 
-Katso [Oppitunti 19: Rakentaminen SLM:ien avulla](../19-slm/README.md?WT.mc_id=academic-105485-koreyst) käytännön esimerkkejä varten, joissa käytetään molempia vaihtoehtoja.
+Katso [Oppitunti 19: Rakentaminen SLM:illä](../19-slm/README.md?WT.mc_id=academic-105485-koreyst) käytännön esimerkkejä molempien vaihtoehtojen käyttämiseen.
 
 ---
 

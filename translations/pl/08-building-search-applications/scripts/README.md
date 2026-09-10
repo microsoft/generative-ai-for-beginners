@@ -1,13 +1,13 @@
 # Przygotowanie danych transkrypcji
 
-Skrypty do przygotowania danych transkrypcji pobierają transkrypcje wideo z YouTube i przygotowują je do użycia z przykładem Semantic Search with OpenAI Embeddings and Functions.
+Skrypty do przygotowania danych transkrypcyjnych pobierają transkrypcje z filmów YouTube i przygotowują je do użycia z przykładem Semantic Search z OpenAI Embeddings i Functions.
 
-Skrypty do przygotowania danych transkrypcji zostały przetestowane na najnowszych wersjach Windows 11, macOS Ventura oraz Ubuntu 22.04 (i nowszych).
+Skrypty do przygotowania danych transkrypcyjnych były testowane na najnowszych wersjach Windows 11, macOS Ventura oraz Ubuntu 22.04 (i wyższych).
 
 ## Utwórz wymagane zasoby usługi Azure OpenAI
 
 > [!IMPORTANT]
-> Zalecamy aktualizację Azure CLI do najnowszej wersji, aby zapewnić zgodność z OpenAI
+> Zalecamy zaktualizowanie Azure CLI do najnowszej wersji, aby zapewnić kompatybilność z OpenAI
 > Zobacz [Dokumentację](https://learn.microsoft.com/cli/azure/update-azure-cli?WT.mc_id=academic-105485-koreyst)
 
 1. Utwórz grupę zasobów
@@ -28,7 +28,7 @@ az cognitiveservices account create --name semantic-video-openai --resource-grou
     --location eastus --kind OpenAI --sku s0
 ```
 
-1. Uzyskaj punkt końcowy i klucze do użytku w tym zastosowaniu
+1. Pobierz punkt końcowy i klucze do użycia w tej aplikacji
 
 ```console
 az cognitiveservices account show --name semantic-video-openai \
@@ -38,8 +38,8 @@ az cognitiveservices account keys list --name semantic-video-openai \
 ```
 
 1. Wdróż następujące modele:
-   - `text-embedding-ada-002` w wersji `2` lub wyższej, o nazwie `text-embedding-ada-002`
-   - `gpt-4o-mini` o nazwie `gpt-4o-mini`
+   - `text-embedding-ada-002` w wersji `2` lub wyższej, nazwany `text-embedding-ada-002`
+   - `gpt-5-mini` nazwany `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
@@ -53,8 +53,8 @@ az cognitiveservices account deployment create \
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name gpt-4o-mini \
-    --model-name gpt-4o-mini \
+    --deployment-name gpt-5-mini \
+    --model-name gpt-5-mini \
     --model-format OpenAI \
     --sku-capacity 100 \
     --sku-name "Standard"
@@ -66,7 +66,7 @@ az cognitiveservices account deployment create \
 
 ## Zmienne środowiskowe
 
-Do uruchomienia skryptów do przygotowania danych transkrypcji z YouTube wymagane są następujące zmienne środowiskowe.
+Do uruchomienia skryptów przygotowujących dane transkrypcji YouTube wymagane są następujące zmienne środowiskowe.
 
 ### Na Windows
 
@@ -80,18 +80,18 @@ AZURE_OPENAI_MODEL_DEPLOYMENT_NAME \<your Azure OpenAI Service model deployment 
 GOOGLE_DEVELOPER_API_KEY = \<your Google developer API key>
 ```
 
-<!-- Możesz dodać zmienne środowiskowe do profilu PowerShell.
+<!-- Możesz dodać zmienne środowiskowe do swojego profilu PowerShell.
 
 ```powershell
 $env:AZURE_OPENAI_API_KEY = "<twój klucz API usługi Azure OpenAI>"
 $env:AZURE_OPENAI_ENDPOINT = "<twój punkt końcowy usługi Azure OpenAI>"
-$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<nazwa wdrożenia modelu usługi Azure OpenAI>"
-$env:GOOGLE_DEVELOPER_API_KEY = "<twój klucz API dewelopera Google>"
+$env:AZURE_OPENAI_MODEL_DEPLOYMENT_NAME = "<twoja nazwa wdrożenia modelu usługi Azure OpenAI>"
+$env:GOOGLE_DEVELOPER_API_KEY = "<twój klucz API developera Google>"
 ``` -->
 
 ### Na Linux i macOS
 
-Zalecamy dodanie następujących eksportów do pliku `~/.bashrc` lub `~/.zshrc`.
+Zalecamy dodanie poniższych eksportów do pliku `~/.bashrc` lub `~/.zshrc`.
 
 ```bash
 export AZURE_OPENAI_API_KEY=<your Azure OpenAI Service API key>
@@ -102,8 +102,8 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
 
 ## Instalacja wymaganych bibliotek Pythona
 
-1. Zainstaluj [git klienta](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst) jeśli jeszcze go nie masz.
-1. W oknie `Terminal` sklonuj przykład do wybranego folderu repozytorium.
+1. Zainstaluj [klient git](https://git-scm.com/downloads?WT.mc_id=academic-105485-koreyst), jeśli nie jest jeszcze zainstalowany.
+1. Z okna `Terminal` sklonuj przykład do preferowanego folderu repozytorium.
 
     ```bash
     git clone https://github.com/gloveboxes/semanic-search-openai-embeddings-functions.git
@@ -157,7 +157,7 @@ export GOOGLE_DEVELOPER_API_KEY=<your Google developer API key>
    pip3 install -r requirements.txt
    ```
 
-## Uruchom skrypty do przygotowania danych transkrypcji z YouTube
+## Uruchom skrypty przygotowujące dane transkrypcji YouTube
 
 ### Na Windows
 

@@ -3,58 +3,58 @@
 [![Prompt Engineering Fundamentals](../../../translated_images/pcm/04-lesson-banner.a2c90deba7fedacd.webp)](https://youtu.be/GElCu2kUlRs?si=qrXsBvXnCW12epb8)
 
 ## Introduction
-Dis module dey cover beta mata dem and ways wey you fit take create correct prompts for generative AI models. Di way wey you write your prompt give LLM still matter. If you craft di prompt well well, e fit bring better answer. But wetin di word _prompt_ and _prompt engineering_ mean exactly? And how I fit better di prompt _input_ wey I dey send go LLM? Na dis kain question we go try answer for dis chapter and di next one.
+Dis module dey cover beta ideas and methods wey you fit use create correct prompts for generative AI models. How you write your prompt to LLM matter too. If you sabi arrange prompt well, e go bring better answer. But wetin prompt and prompt engineering mean? How I fit improve di prompt input wey I dey send go LLM? Dem na di questions wey we go try answer for dis chapter plus di next one.
 
-_Generative AI_ fit create new tins (like text, images, audio, code dem) based on wetin pesin ask. E dey do dis one using _Large Language Models_ like OpenAI GPT ("Generative Pre-trained Transformer") series wey dem train for natural language and code use.
+_Generative AI_ fit create new content (e.g., text, pictures, audio, code etc.) wen person ask am. E dey do dis with _Large Language Models_ like OpenAI GPT ("Generative Pre-trained Transformer") series wey dem train to sabi natural language plus code.
 
-Now people fit yarn with these models using normal talk like chat, no need to be tech guru or get training. Di models dey _prompt-based_ - pesin go send text input (prompt) then e go bring AI answer (completion). Dem fit still dey "chat with AI" many times, dey change prompt till di answer sweet dem.
+People fit now use these models like for chat, no need technical skill or training. Di models na _prompt-based_ - people send text input (prompt) then dem go get AI answer (completion). Dem fit still talk with AI many times, dey change prompt make answer match wetin dem want.
 
-"Prompts" don be main _programming interface_ for generative AI apps, wey dey tell di models wetin dem gats do and fit affect how better di answer go be. "Prompt Engineering" na field wey dey grow fast wey focus on _design and optimization_ of prompts to give constant and better answers for many people.
+"Prompts" don become main _programming interface_ for generative AI apps, wey dey tell models wetin dem go do and fit affect how correct the answers go be. "Prompt Engineering" na field wey dey grow quick wey dey focus on _design and optimization_ of prompts to bring better and steady answers.
 
 ## Learning Goals
 
-For dis lesson, we go learn wetin Prompt Engineering be, why e important, and how we fit create better prompts for a model and application wey we want use am for. We go sabi main ideas and beta ways for prompt engineering - and we go see one Jupyter Notebooks "sandbox" place wey we fit test these things for real life examples.
+For dis lesson, we go sabi wetin Prompt Engineering be, why e important, and how we fit do better prompts for one model plus purpose. We go understand core ideas and beta ways for prompt engineering - plus see interactive Jupyter Notebooks "sandbox" where we fit try use these ideas for real examples.
 
-By di end of dis lesson, we go fit:
+By end of dis lesson we go fit:
 
-1. Talk wetin prompt engineering be and why e dey important.
-2. Explain di parts of prompt and how dem dey use am.
+1. Explain wetin prompt engineering be and why e matter.
+2. Talk di parts of prompt and how dem dey use am.
 3. Learn beta ways and techniques for prompt engineering.
-4. Use di techniques we learn for real examples, using OpenAI endpoint.
+4. Use di techniques for real examples, with OpenAI endpoint.
 
 ## Key Terms
 
-Prompt Engineering: Di work of designing and improving inputs to guide AI models make dem give correct output.
-Tokenization: Di way wey dem dey turn text into small small parts, wey model fit understand and work with.
-Instruction-Tuned LLMs: Big Language Models (LLMs) wey dem don train finish with special instructions to make dem answer better and correct.
+Prompt Engineering: Na how person dey design and fine-tune inputs to make AI models give correct output.
+Tokenization: Na how text dey break into small parts (tokens) wey model fit understand and process.
+Instruction-Tuned LLMs: Large Language Models (LLMs) wey dem don fine-tune with instructions to make dem answer better and correct.
 
 ## Learning Sandbox
 
-Prompt engineering still dey more like art pass science for this time. Beta way to improve na to _practice more_ and use trial-and-error wey join application knowledge with correct techniques and model tweaks.
+Prompt engineering still be more like art than science. Best way to sabi am na to _practice more_ and try anyhow combination of your experience with di codes and methods.
 
-Di Jupyter Notebook wey come with dis lesson dey give one _sandbox_ place wey you fit try wetin you learn - as you dey do am or as part of code challenge at di end. To run di exercise, you go need:
+The Jupyter Notebook wey join dis lesson na _sandbox_ place wey you fit try wetin you dey learn - anytime or for di code challenge at end. To run di exercises, you need:
 
-1. **Azure OpenAI API key** - di service link for deployed LLM.
-2. **Python Runtime** - to run di Notebook.
-3. **Local Env Variables** - _finish di [SETUP](./../00-course-setup/02-setup-local.md?WT.mc_id=academic-105485-koreyst) steps now make you ready_.
+1. **An Azure OpenAI API key** - na di service endpoint for deployed LLM.
+2. **A Python Runtime** - wey go run di Notebook.
+3. **Local Env Variables** - _finish di [SETUP](./../00-course-setup/02-setup-local.md?WT.mc_id=academic-105485-koreyst) steps make you ready_.
 
-Di notebook get _starter_ exercises - but you fit add your own _Markdown_ (description) and _Code_ (prompt requests) parts to try more examples or ideas - and make your sense about prompt design better.
+Di notebook get _starter_ exercises - but you fit add your own _Markdown_ (description) and _Code_ (prompt requests) parts to try more ideas and sabi prompt design more.
 
 ## Illustrated Guide
 
-You wan see the full koko of wetin dis lesson go teach before you start? Look this illustrated guide, e go give you beta understanding of main topic dem and wetin you suppose keep for mind. Di lesson roadmap go carry you from to sabi di main ideas and challenges till we fix dem with correct prompt engineering ways and beta practice. Make you know say "Advanced Techniques" section for this guide na about contents wey dey di _next_ chapter inside dis course.
+You want first see di whole idea wey dis lesson go talk before you start? Look this illustrated guide, e go show you di main topics plus important takeaways to think about. Di lesson roadmap go carry you from core ideas and wahala to how to use prompt engineering techniques to solve am. Note say "Advanced Techniques" for dis guide na for di _next_ chapter.
 
 ![Illustrated Guide to Prompt Engineering](../../../translated_images/pcm/04-prompt-engineering-sketchnote.d5f33336957a1e4f.webp)
 
 ## Our Startup
 
-Now, make we talk how _dis topic_ dey relate to our startup mission of [bring AI innovation to education](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst). We want build AI-powered apps for _personalized learning_ - so make we think how different people wey go use di app fit "design" prompts:
+Now, make we yarn how _dis topic_ relate to our startup aim to [bring AI innovation to education](https://educationblog.microsoft.com/2023/06/collaborating-to-bring-ai-innovation-to-education?WT.mc_id=academic-105485-koreyst). We wan build AI apps for _personalized learning_ - so make we think how different people wey dey use our app fit "design" prompts:
 
-- **Administrators** fit ask AI to _check curriculum data find where dem never cover well_. AI fit summarize or show result with code.
-- **Educators** fit ask AI to _create lesson plan for particular audience and topic_. AI fit build the correct plan for given format.
-- **Students** fit ask AI to _teach dem hard subject_. AI fit direct students with lessons, hints & examples wey fit their level.
+- **Administrators** fit ask AI to _analyze curriculum data to find coverage gaps_. AI fit summarize or draw am with code.
+- **Educators** fit ask AI to _make lesson plan for certain audience and topic_. AI fit build personalized plan with correct format.
+- **Students** fit ask AI to _teach dem difficult subject_. AI fit guide students with lessons, hints & examples based on their level.
 
-Na just small part be dat. Check [Prompts For Education](https://github.com/microsoft/prompts-for-edu/tree/main?WT.mc_id=academic-105485-koreyst) - na open-source prompt library wey education experts arrange - to get more idea of wetin fit happen! _Try run some of dem for sandbox or OpenAI Playground make you see wetin go happen!_
+Na just small part of wetin AI fit do. Check [Prompts For Education](https://github.com/microsoft/prompts-for-edu/tree/main?WT.mc_id=academic-105485-koreyst) - na open source prompts library wey education experts prepare - to get better idea of wetin e fit do! _Try run some for di sandbox or OpenAI Playground to see wetin go happen!_
 
 <!--
 LESSON TEMPLATE:
@@ -68,76 +68,76 @@ Define it and explain why it is needed.
 
 ## Wetin be Prompt Engineering?
 
-We start dis lesson by to define **Prompt Engineering** as di work of _designing and optimizing_ text inputs (prompts) to give constant and beta answers (completions) for one application goal and model. We fit see am like 2-step process:
+We start dis lesson by talk say **Prompt Engineering** na how person dey _design and optimize_ text inputs (prompts) to get steady and correct responses (completions) wey fit di application aim and model. We fit see am as 2-step process:
 
-- _designing_ di first prompt for one model and goal
-- _refining_ di prompt many times to improve di answer quality
+- _designing_ di first prompt for model and aim
+- _refining_ di prompt many times to make answer better
 
-Dis one na trial-and-error wey need user sense and wahala to get best results. So why e important? Before we fit answer, make we first understand three tins:
+Dis na trial-and-error way wey need person sense and work to get best results. So why e dey important? To answer dis, we first need sabi 3 concepts:
 
-- _Tokenization_ = how model dey "see" di prompt
-- _Base LLMs_ = how di foundation model "process" di prompt
-- _Instruction-Tuned LLMs_ = how di model fit now see "tasks"
+- _Tokenization_ = how model "see" di prompt
+- _Base LLMs_ = how di foundation model "process" prompt
+- _Instruction-Tuned LLMs_ = how model fit see "tasks"
 
 ### Tokenization
 
-One LLM dey see prompts as _sequence of tokens_ where different models (or model versions) fit tokenize di same prompt different different ways. Since LLMs dey train with tokens (no be raw text), how dem tokenize prompt go affect how better di generated answer go be.
+One LLM dey see prompts as _sequence of tokens_ where different models fit tokenize same prompt different ways. Since LLMs train on tokens, how prompt get tokenize fit affect answer quality.
 
-To sabi how tokenization take work, try tools like [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) wey dem show below. Copy your prompt come - then see how e turn tokens, watch how whitespace and punctuation dem dey handle. Note say dis one show older LLM (GPT-3) - so if you try with new model e fit be different.
+To sabi tokenization, try tools like [OpenAI Tokenizer](https://platform.openai.com/tokenizer?WT.mc_id=academic-105485-koreyst) wey e show below. Copy your prompt - and see how e turn to tokens, notice how whitespace and punctuation dey handled. Dis example show older LLM (GPT-3) - so newer model fit show difference.
 
 ![Tokenization](../../../translated_images/pcm/04-tokenizer-example.e71f0a0f70356c5c.webp)
 
 ### Idea: Foundation Models
 
-Once prompt don tokenize, main work for ["Base LLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) (or Foundation model) na to predict di next token for dat sequence. Since LLMs train for plenty text data, dem sabi well how tokens dey relate and fit predict wit confidence. But dem no understand di _meaning_ of words inside prompt or token; dem just see pattern wey dem fit "complete" with next prediction. Dem fit continue predict till user stop am or condition reach.
+Once prompt tokenize, main job of ["Base LLM"](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) (Foundation model) na to predict next token for dat sequence. Since LLMs train on big text data, dem sabi beta the relation between tokens and fit predict them well. Dem no too sabi di _meaning_ of prompt; na pattern dem dey complete. Dem go continue till user stop am or other condition reach.
 
-You want see how prompt-based completion dey work? Put di prompt up for [Microsoft Foundry playground](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) with default settings. Di system go treat prompt as request for info - so you go see completion wey match di context.
+You want see how prompt-based completion dey work? Put di prompt for [Microsoft Foundry playground](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) with default settings. System treat prompt as information request - so you go see completion wey fit dis context.
 
-But if user want see something wey follow specific criteria or task? Na there _instruction-tuned_ LLMs enter matter.
+But if user want see something specific wey meet criteria or goal? Na here _instruction-tuned_ LLMs enter.
 
 ![Base LLM Chat Completion](../../../translated_images/pcm/04-playground-chat-base.65b76fcfde0caa67.webp)
 
 ### Idea: Instruction Tuned LLMs
 
-[Instruction Tuned LLM](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) start with foundation model, then dem fine-tune am with examples or input/output pairs (like many-turn "messages") wey get instruction clear - and AI response try follow dat instruction.
+[Instruction Tuned LLM](https://blog.gopenai.com/an-introduction-to-base-and-instruction-tuned-large-language-models-8de102c785a6?WT.mc_id=academic-105485-koreyst) start with foundation model then fine-tune am using examples or input/output pairs (like multi-turn "messages") wey get clear instructions and AI reply dey try follow instruction.
 
-E use techniques like Reinforcement Learning with Human Feedback (RLHF) wey fit train model to _follow instructions_ and _learn from feedback_ so dat response go better fit real application and user need.
+E use Reinforcement Learning with Human Feedback (RLHF) to train model to _follow instructions_ and _learn from feedback_ so e go give better answers for real use, plus match user goals.
 
-Make we try am - go back to prompt up, but change _system message_ to dis instruction:
+Make we try am - use di first prompt but change _system message_ to:
 
-> _Summarize content wey you get for second-grade student. Make result one paragraph wit 3-5 bullet points._
+> _Summarize content you get for second-grade student. Make answer one paragraph with 3-5 bullet points._
 
-See how result now aligned with di goal and format? Educator fit use dis answer direct for slides for that class.
+See how answer dey follow wetin dem want? Teacher fit just use am for class slides.
 
 ![Instruction Tuned LLM Chat Completion](../../../translated_images/pcm/04-playground-chat-instructions.b30bbfbdf92f2d05.webp)
 
 ## Why we need Prompt Engineering?
 
-Now we sabi how LLMs dey process prompts, make we talk why prompt engineering matter. Di answer na say current LLMs get plenty wahala wey dey make _reliable and constant completions_ hard to achieve if person no try for prompt design and optimization. Like for example:
+Now we sabi how LLMs dey process prompts, make we talk why we need prompt engineering. E good because current LLMs get challenges wey make _steady correct answers_ hard without good prompt build and tune. For example:
 
-1. **Model responses no dey sure sure.** Di _same prompt_ fit produce different answers with different models or versions. E fit even bring different results for _same model_ anytime. _Prompt engineering fit help reduce these differences with better protection_.
+1. **Model answers fit dey random.** _Same prompt_ fit get different answers with different models or model versions. E fit even give different answers with _same model_ anytime. _Prompt engineering fit help reduce these wahala with better guardrails_.
 
-1. **Models fit make up answers.** Models train with _big but limited_ data, so dem no get info on tins wey no dey di training. So dem fit create answers wey no true, make up, or even contradict facts. _Prompt engineering fit help users find and stop those fake tori, by for example asking AI for citations or reasoning_.
+1. **Models fit make up answers.** Dem train with _big but limited_ data, so dem no sabi everything. Sometimes dem go give wrong, imaginary, or contradictory answer. _Prompt engineering fit help check and reduce dis, like dey ask AI for sources or logic_.
 
-1. **Model ability go different.** Newer model or generation get better ability but e still get own kain wahala and cost. _Prompt engineering fit help make best practice and workflow wey go hide these differences and fit model one by one well without stress_.
+1. **Model abilities fit change.** New models get better skills but also new wahala and cost. _Prompt engineering fit help make best ways that fit any model, hide differences, and work well as e large_.
 
-Make we see am for OpenAI or Azure OpenAI Playground:
+Make we try for OpenAI or Azure OpenAI Playground:
 
-- Use same prompt with different LLM deployments (OpenAI, Azure OpenAI, Hugging Face) - yu see differences?
-- Use same prompt many times with _same_ LLM deployment (Azure OpenAI playground) - how those differences them change?
+- Use same prompt for different LLM deployments (OpenAI, Azure OpenAI, Hugging Face) - you see differences?
+- Use same prompt many times with _same_ LLM (Azure OpenAI playground) - how e differ?
 
 ### Fabrications Example
 
-For dis course, we dey use **"fabrication"** to mean when LLMs sometimes produce wrong info because of their training or other limit. You fit don hear people dey call am _"hallucinations"_ for popular article or research papers. But we like make dem call am _"fabrication"_ to no make person think say machine dey get human feeling or trait. E still support [Responsible AI guidelines](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst) with better term wey no offends or no fit exclude anybody.
+For dis course, we dey use **"fabrication"** to mean say sometimes LLMs dey produce wrong info because dem training or other limits. Some people dey call am _"hallucinations"_, but we prefer _"fabrication"_ to no make am look like machine get human feelings. E also fit help follow [Responsible AI guidelines](https://www.microsoft.com/ai/responsible-ai?WT.mc_id=academic-105485-koreyst) plus remove offensive or no-inclusive words.
 
-You wan understand how fabrication dey work? Think prompt wey tell AI to generate content for topic wey no dey (make sure e no dey training data). For example - I try dis prompt:
+You want try understand how fabrication dey work? Imagine prompt wey tell AI make e create content on topic wey no dey for training data. I try dis prompt:
 
-> **Prompt:** generate lesson plan on di Martian War of 2076.
+> **Prompt:** generate a lesson plan on the Martian War of 2076.
 
-I search web, I see say fictional tori (like TV series or books) dey about Martian wars - but none for 2076. Common sense too talk say 2076 na _future_ so e no possible to really happen.
+Web search show say people get fake stories for Martian wars (like TV shows, books) but no one talk about 2076. Common sense tell us 2076 na future so e no fit be real event.
 
 
-So wetin dey happen when we run dis prompt wit different LLM providers?
+So wetin dey happen wen we run dis prompt wit different LLM providers?
 
 > **Response 1**: OpenAI Playground (GPT-35)
 
@@ -151,63 +151,63 @@ So wetin dey happen when we run dis prompt wit different LLM providers?
 
 ![Response 3](../../../translated_images/pcm/04-fabrication-huggingchat.faf82a0a51278956.webp)
 
-As we expect, each model (or version of model) dey produce small small different responses because of stochastic behavior and variation for how model fit do tins. For example, one model dey target 8th grade porpople while the other dey think say e be high-school student. But all the three models generate responses wey fit make person wey no sabi believe say the event really happen.
+As we bin expect, each model (or model version) dey produce small different response because of stochastic behavior and model capability variations. For example, one model dey target 8th grade audience while di other dey assume say na high-school student. But all di three models generate response wey fit convince pesin wey no sabi anything sef say the event na real.
 
-Prompt engineering techniques like _metaprompting_ and _temperature configuration_ fit reduce model fabrication small small. New prompt engineering _architectures_ still dey add new tools and techniques well well inside the prompt flow, to help reduce or stop some of these effects.
+Prompt engineering techniques like _metaprompting_ and _temperature configuration_ fit reduce model fabrication small. New prompt engineering _architectures_ sef dey add new tools and teknik join the prompt flow well well, to help stop or reduce some of dis wahala dem.
 
 ## Case Study: GitHub Copilot
 
-Make we close dis section by reason how prompt engineering dey used for real-life solutions by looking one Case Study: [GitHub Copilot](https://github.com/features/copilot?WT.mc_id=academic-105485-koreyst).
+Make we con close dis section by feel how prompt engineering dey used for real-world solution by looking one Case Study: [GitHub Copilot](https://github.com/features/copilot?WT.mc_id=academic-105485-koreyst).
 
-GitHub Copilot na your "AI Pair Programmer" - e dey convert text prompts go code completions and e dey inside your development environment (like Visual Studio Code) to make user experience smooth. As e dey inside the series of blogs below, the first version na based on the OpenAI Codex model - but engineers quickly know say dem need to fine-tune the model and develop beta prompt engineering techniques to improve code quality. For July, dem [unveil better AI model wey pass Codex](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst) to give faster suggestions.
+GitHub Copilot na your "AI Pair Programmer" - e dey convert text prompts to code completions and e dey inside your development environment (like Visual Studio Code) to make user experience smooth. As e dey show for di blog series below, di first version based on OpenAI Codex model - engineers quick quick sabi say dem gats fine-tune the model and create better prompt engineering teknik to make code better. For July, dem [comot one better AI model wey pass Codex](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst) for even faster suggestion dem.
 
-Read the posts in order, to follow their learning journey.
+Read di posts dem for order, so you fit follow how dem learn.
 
-- **May 2023** | [GitHub Copilot dey improve for how e dey understand your Code](https://github.blog/2023-05-17-how-github-copilot-is-getting-better-at-understanding-your-code/?WT.mc_id=academic-105485-koreyst)
-- **May 2023** | [Inside GitHub: How dem dey work wit di LLMs behind GitHub Copilot](https://github.blog/2023-05-17-inside-github-working-with-the-llms-behind-github-copilot/?WT.mc_id=academic-105485-koreyst).
-- **Jun 2023** | [How to write better prompts for GitHub Copilot](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/?WT.mc_id=academic-105485-koreyst).
-- **Jul 2023** | [.. GitHub Copilot go beyond Codex wit better AI model](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst)
+- **May 2023** | [GitHub Copilot dey better for understanding your code](https://github.blog/2023-05-17-how-github-copilot-is-getting-better-at-understanding-your-code/?WT.mc_id=academic-105485-koreyst)
+- **May 2023** | [Inside GitHub: How di LLMs behind GitHub Copilot dey work](https://github.blog/2023-05-17-inside-github-working-with-the-llms-behind-github-copilot/?WT.mc_id=academic-105485-koreyst).
+- **Jun 2023** | [How to write better prompt for GitHub Copilot](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/?WT.mc_id=academic-105485-koreyst).
+- **Jul 2023** | [.. GitHub Copilot go beyond Codex wit improved AI model](https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/?WT.mc_id=academic-105485-koreyst)
 - **Jul 2023** | [Developer Guide to Prompt Engineering and LLMs](https://github.blog/2023-07-17-prompt-engineering-guide-generative-ai-llms/?WT.mc_id=academic-105485-koreyst)
 - **Sep 2023** | [How to build enterprise LLM app: Lessons from GitHub Copilot](https://github.blog/2023-09-06-how-to-build-an-enterprise-llm-application-lessons-from-github-copilot/?WT.mc_id=academic-105485-koreyst)
 
-You fit still browse their [Engineering blog](https://github.blog/category/engineering/?WT.mc_id=academic-105485-koreyst) for more posts like [this one](https://github.blog/2023-09-27-how-i-used-github-copilot-chat-to-build-a-reactjs-gallery-prototype/?WT.mc_id=academic-105485-koreyst) wey show how dem dey _apply_ these models and techniques to drive real-world apps.
+You fit still waka go their [Engineering blog](https://github.blog/category/engineering/?WT.mc_id=academic-105485-koreyst) for more post like [dis one](https://github.blog/2023-09-27-how-i-used-github-copilot-chat-to-build-a-reactjs-gallery-prototype/?WT.mc_id=academic-105485-koreyst) wey show how these models and teknik dem dey _apply_ for real-world application dem.
 
 ---
 
 <!--
 LESSON TEMPLATE:
-This unit go cover core concept #2.
-Reinforce the concept wit examples and references.
+This unit suppose cover core concept #2.
+Reinforce di concept wit examples and references.
 
 CONCEPT #2:
 Prompt Design.
-Illustrated wit examples.
+Illustrated wit example.
 -->
 
 ## Prompt Construction
 
-We don see why prompt engineering important - now make we understand how people dey _construct_ prompts so we fit check different techniques to make prompt design beta.
+We don see why prompt engineering important - now make we understand how prompts dey _construct_ so we fit evaluate different teknik dem to design prompt wey go work well well.
 
 ### Basic Prompt
 
-Make we start wit basic prompt: na text wey you send to model without any other context. Here na example – wen we send first few words of US national anthem to OpenAI [Completion API](https://platform.openai.com/docs/api-reference/completions?WT.mc_id=academic-105485-koreyst) e quickly _complete_ the response wit next few lines, to show basic prediction behaviour.
+Make we start with basic prompt: na text input wey you send to the model without any other context. Example be say - wen we send di first few words of US national anthem to OpenAI [Completion API](https://platform.openai.com/docs/api-reference/completions?WT.mc_id=academic-105485-koreyst) e go instantly _complete_ the response wit di next few lines, to show basic prediction behavior.
 
 | Prompt (Input)     | Completion (Output)                                                                                                                        |
 | :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------- |
-| Oh say can you see | E dey sound like say you dey start sing the lyrics to "The Star-Spangled Banner," wey be national anthem of United States. The full lyrics be ... |
+| Oh say can you see | E sound like you dey start the lyrics to "The Star-Spangled Banner," di national anthem of United States. The full lyrics na ...             |
 
 ### Complex Prompt
 
-Now make we add context and instructions to that basic prompt. The [Chat Completion API](https://learn.microsoft.com/azure/ai-services/openai/how-to/chatgpt?WT.mc_id=academic-105485-koreyst) give us chance to build complex prompt like collection of _messages_ with:
+Now make we add context and instructions to dat basic prompt. Di [Chat Completion API](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/chatgpt?WT.mc_id=academic-105485-koreyst) make we build complex prompt as collection of _messages_ wit:
 
-- Input/output pairs wey represent _user_ input and _assistant_ response.
-- System message wey provide context for how assistant go behave or e personality.
+- Input/output pairs wey show _user_ input and _assistant_ response.
+- System message wey set the context for assistant behavior or personality.
 
-The request now dey for form wey _tokenization_ fit catch better info from context and conversation. So, to change system context fit really affect how good the completions be, as user inputs wey you give.
+Di request now dey form wey be like dis, where _tokenization_ dey catch relevant info from context and conversation. Now, if you change system context e fit affect how good di completions go be, just like di user inputs wey you provide.
 
 ```python
 response = client.responses.create(
-    model="gpt-4o-mini",
+    model="gpt-5-mini",
     input=[
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": "Who won the world series in 2020?"},
@@ -219,92 +219,92 @@ response = client.responses.create(
 
 ### Instruction Prompt
 
-For examples wey dey above, user prompt na simple text wey fit be request for info. Wit _instruction_ prompts, we fit use dat text to explain task well well, so AI go get beta guide. Here na example:
+For di example wey dey top, di user prompt na simple text query wey fit mean say na request for information. But wit _instruction_ prompts, we fit use dat text come talk the task well well to guide AI better. Example like dis:
 
 | Prompt (Input)                                                                                                                                                                                                                         | Completion (Output)                                                                                                        | Instruction Type    |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------- | :------------------ |
-| Write description of Civil War                                                                                                                                                                                                   | _dem return simple paragraph_                                                                                              | Simple              |
-| Write description of Civil War. Give key dates and events and explain why dem important                                                                                                                                     | _dem return paragraph plus list of key dates with explanation_                                             | Complex             |
-| Write description of Civil War in 1 paragraph. Give 3 bullet points wit key dates and why dem important. Give 3 more bullet points wit key historical figures and wetin dem do. Return output as JSON file | _dem return plenty details inside text box, format as JSON wey you fit copy-paste to file and check am_ | Complex. Formatted. |
+| Write a description of the Civil War                                                                                                                                                                                                   | _e return simple paragraph_                                                                                               | Simple              |
+| Write a description of the Civil War. Provide key dates and events and describe their significance                                                                                                                                     | _e return paragraph follow by list of key event dates with descriptions_                                                  | Complex             |
+| Write a description of the Civil War in 1 paragraph. Provide 3 bullet points with key dates and their significance. Provide 3 more bullet points with key historical figures and their contributions. Return the output as a JSON file | _e return more details body inside text box, wey dem format as JSON so you fit copy-paste put for file and validate_       | Complex. Formatted. |
 
 ## Primary Content
 
-For examples wey dey above, prompt still dey open ended well well, so LLM fit choose which part of e pre-trained data e go use. Wit _primary content_ design pattern, input text dey divide into two parts:
+For di example dem wey dey top, di prompt still dey open-ended, make LLM decide which part of im pre-trained dataset suppose relate. Wit _primary content_ design pattern, input text dey chop into two parts:
 
 - instruction (action)
-- important content (wey go affect action)
+- relevant content (wey go affect di action)
 
-Here na example wey instruction na "summarize dis in 2 sentences".
+Example be say instruction na "summarize this in 2 sentences".
 
 | Prompt (Input)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Completion (Output)                                                                                                                                                                                                                                                                             |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Jupiter na fifth planet from the Sun and e be di largest for Solar System. E be gas giant wey get mass wey be one-thousandth of Sun, but two-and-a-half times dat of all other planets for Solar System join. Jupiter be one of di brightest tins wey person fit see for night sky, and people don sabi am since long before. E get name after Roman god Jupiter.[19] Wen you dey look am from Earth, Jupiter fit dey bright to cast shadow, and e be di third-brightest natural tin for night sky after Moon and Venus. <br/> **Summarize this in 2 short sentences** | Jupiter, di fifth planet from Sun, na di largest for Solar System and e dey known as one of di brightest tins inside the night sky. E name after Roman god Jupiter, na gas giant wey mass na two-and-a-half times that of all other planets for Solar System join. |
+| Jupiter na fifth planet from Sun and di largest for Solar System. E be gas giant wey mass na one-thousandth of Sun, but e heavy pass all other planets for Solar System put together two-and-a-half times. Jupiter na one of di brightest objects wey person fit see with eye for night sky, and ancient people sabi am since before dem start record history. E get name from Roman god Jupiter.[19] Wen person dey look am from Earth, e fit dey bright wella so e fit cast shadow wey you fit see,[20] and on average e be di third-brightest natural object for night sky after Moon and Venus. <br/> **Summarize this in 2 short sentences** | Jupiter, di fifth planet from Sun, na di largest for Solar System and e dey known as one of di brightest thing for night sky. E get name from Roman god Jupiter, e be gas giant wey get mass wey pass all other planets for Solar System put together two-and-a-half times.                    |
 
-The primary content fit dey use different ways to give beta instructions:
+Di primary content segment fit use in plenty different way to make instruction dem strong:
 
-- **Examples** - instead of to tell model wetin to do wit direct instruction, give am examples make e fit know the pattern.
-- **Cues** - after instruction, put "cue" wey go prepare the completion, guide model go beta response.
-- **Templates** - na repeatable 'recipes' for prompts wit placeholders (variables) wey you fit change wit specific data for particular use case.
+- **Examples** - instead of telling model wetin to do wit clear instruction, give am examples of wetin to do make e fit find di pattern.
+- **Cues** - follow instruction wit "cue" wey go prime di completion, to guide model go better response.
+- **Templates** - na repeatable 'recipes' for prompts wit placeholders (variables) wey you fit customize wit data for specific case dem.
 
-Make we check dis tins for action.
+Make we try dem for action.
 
 ### Using Examples
 
-Dis na way wey you use primary content to "feed model" some examples of output you want for instruction, then make e sabi the pattern for the output. Based on how many examples you give, you fit do zero-shot prompting, one-shot prompting, few-shot prompting etc.
+Dis na way wey you dey use primary content to "feed the model" some examples of di output wey you want for one instruction, and make e find di pattern for di output you want. Based on how many examples we provide, we fit do zero-shot prompting, one-shot prompting, few-shot prompting and others.
 
-The prompt now get three parts:
+Di prompt now get three parts:
 
 - Task description
-- Some examples of output wey you want
-- The start of new example (wey become implied task description)
+- Some examples of di output wey dem want
+- Di start of new example (wey fit be implicit task description)
 
 | Learning Type | Prompt (Input)                                                                                                                                        | Completion (Output)         |
 | :------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------- |
 | Zero-shot     | "The Sun is Shining". Translate to Spanish                                                                                                            | "El Sol está brillando".    |
 | One-shot      | "The Sun is Shining" => ""El Sol está brillando". <br> "It's a Cold and Windy Day" =>                                                                 | "Es un día frío y ventoso". |
-| Few-shot      | Player run bases => Baseball <br/> Player hit an ace => Tennis <br/> Player hit six => Cricket <br/> Player make slam-dunk => | Basketball                  |
+| Few-shot      | The player ran the bases => Baseball <br/> The player hit an ace => Tennis <br/> The player hit a six => Cricket <br/> The player made a slam-dunk => | Basketball                  |
 |               |                                                                                                                                                       |                             |
 
-Note say for zero-shot prompting, we need put instruction clearly ("Translate to Spanish"), but for one-shot prompting example, e dey implied. The few-shot example show say if you add more examples, model fit get better guess without extra instructions.
+See how for zero-shot prompting we gats give clear instruction ("Translate to Spanish"), but for one-shot prompting example e just dey inferred. Di few-shot example show how if you add more examples e help model make better inference without any instruction again.
 
 ### Prompt Cues
 
-Another way to use primary content na to give _cues_ instead of examples. For this one, you dey push model small bit to better direction by _starting am off_ wit part wey show how the response suppose be format. Model go then "take the cue" to continue like dat.
+Another way to use primary content na to give _cues_ no be examples. For dis one, we dey give model small push to di correct direction by _starting am_ wit small part wey show di response format wey we want. Model go "take di cue" go continue like dat.
 
 | Number of Cues | Prompt (Input)                                                                                                                                                                                                                                                                                                                                                                                                                                               | Completion (Output)                                                                                                                                                                                                                                                                                       |
 | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 0              | Jupiter na fifth planet from Sun and e largest for Solar System. E be gas giant wey mass na one-thousandth of Sun, but two-and-a-half times all other planets join. Jupiter na one of brightest tins wey naked eye fit see for night sky, dem sabi am since before history. <br/>**Summarize This**                                       | Jupiter na biggest planet for our Solar System and e dey fifth from Sun. E be gas giant wey mass na 1/1000 of Sun own, but e heavy pass all other planets join. Ancient people don sabi Jupiter long time, and e dey easy to see for night sky. |
-| 1              | Jupiter na fifth planet from Sun and e largest for Solar System. E be gas giant wey mass na one-thousandth of Sun, but two-and-a-half times all other planets join. Jupiter na one of brightest tins wey naked eye fit see for night sky, dem sabi am since before history. <br/>**Summarize This** <br/> Wetin we learn be say Jupiter | na fifth planet from Sun and biggest for Solar System. E be gas giant wey mass na one-thousandth of Sun but two-and-a-half times all other planets join. E easy to see with naked eye and people don sabi am since ancient times. |
+| 0              | Jupiter na fifth planet from Sun and di largest for Solar System. E be gas giant wey mass na one-thousandth of Sun, but e heavy pass all other planets for Solar System put together two-and-a-half times. Jupiter na one of di brightest objects wey person fit see with eye for night sky, and ancient people sabi am since before dem start record history. <br/>**Summarize This**                                       | Jupiter na di largest planet for our Solar System and di fifth one from Sun. E be gas giant wey get mass 1/1000th of Sun, but e heavy pass all other planets totol. Ancient people don sabi Jupiter for long time, and e easy to see for night sky..                   |
+| 1              | Jupiter na fifth planet from Sun and di largest for Solar System. E be gas giant wey mass na one-thousandth of Sun, but e heavy pass all other planets for Solar System put together two-and-a-half times. Jupiter na one of di brightest objects wey person fit see with eye for night sky, and ancient people sabi am since before dem start record history. <br/>**Summarize This** <br/> Wetin we learn be say Jupiter | na fifth planet from Sun and di largest for Solar System. E be gas giant wey mass na one-thousandth of Sun, but e heavy pass all planets join. E dey easy to see with eye and people don sabi am since long time.                                      |
 
-| 2              | Jupiter na di fif pikin wey dey from di Sun and di biggest for di Solar System. E be gas giant wey get mass one-thousandth wey be sun, but e get two and haaf times wey all di oda planets for di Solar System join. Jupiter na one of di brightest tins wey person fit see with naked eye for night sky, and e don dey known since ancient civilization before history begin record. <br/>**Summarize This** <br/> Top 3 Facts We Learn:         | 1. Jupiter na di fif pikin wey dey from di Sun and di biggest for di Solar System. <br/> 2. E be gas giant wey get mass one-thousandth wey be sun...<br/> 3. Jupiter don dey visible to naked eye since ancient times ...                                                                       |
+| 2              | Jupiter na di fifth planet from Sun an di biggest for Solar System. E be gas giant with mass wey be one-thousandth dat of di Sun, but e big pass two-an-half times all di oda planets for di Solar System put together. Jupiter na one of di brightest tins we fit see with naked eye for night sky, an ancient people don sabi am since before recorded history. <br/>**Summarize This** <br/> Top 3 Facts We Learn:         | 1. Jupiter na di fifth planet from Sun an di biggest for di Solar System. <br/> 2. E be gas giant with mass wey be one-thousandth dat of di Sun...<br/> 3. Jupiter don dey visible to naked eye since ancient times ...                                                                       |
 |                |                                                                                                                                                                                                                                                                                                                                                                                                                                                              |                                                                                                                                                                                                                                                                                                           |
 
 ### Prompt Templates
 
-Prompt template na _pre-defined recipe for prompt_ wey fit store and reuse anytime, to make user experience consistent for big plenty. For ground ground, na collection of prompt example like [this one from OpenAI](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst) wey get interactive prompt parts (user and system messages) and API-driven request format - to support reuse.
+Prompt template na _pre-defined recipe for prompt_ wey fit store an use again anytime, to help make user experience good well well for big scale. For simple form, e just be collection of prompt examples like [dis one from OpenAI](https://cookbook.openai.com/examples/gpt4-1_prompting_guide?WT.mc_id=academic-105485-koreyst) wey get both interactive prompt parts (user and system messages) and di API-driven request format - to support reuse.
 
-For im more complex form like [this example from LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst), e get _placeholders_ wey fit replace with data from different sources (user input, system context, external data sources etc.) to make prompt dynamically. Dis one allow us create library of reusable prompts wey fit drive consistent user experiences **programmatically** for big scale.
+For more complex form like [dis example from LangChain](https://python.langchain.com/docs/concepts/prompt_templates/?WT.mc_id=academic-105485-koreyst) e get _placeholders_ wey fit change with data from different sources (user input, system context, external data sources etc.) to create prompt on di go. Dis let us build library of reusable prompts wey fit help make user experience **programmatically** good well well for big scale.
 
-Last last, real value for templates dey for the ability to create and publish _prompt libraries_ for vertical application domains - where di prompt template don now _optimized_ to reflect application-specific context or examples wey go make di responses more correct and sharp for the special user audience. The [Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst) repository na good example for dis approach, wey dey gather library of prompt for education domain with focus on key objectives like lesson planning, curriculum design, student tutoring etc.
+At last, di true value of templates na di power to create and share _prompt libraries_ for specific application areas - wey di prompt template now _optimized_ to match di application-specific context or examples wey make di responses relevant and correct for di user target. Di [Prompts For Edu](https://github.com/microsoft/prompts-for-edu?WT.mc_id=academic-105485-koreyst) repository na beta example for dis approach, wey dey collect library of prompts for education area with focus on main goals like lesson planning, curriculum design, student tutoring etc.
 
 ## Supporting Content
 
-If we think about prompt construction as instruction (task) and target (main content), then _secondary content_ na like extra context wey we provide to **influence output in some way**. E fit be tuning parameters, formatting instructions, topic taxonomies etc. wey fit help model _tailor_ im response to fit the wanted user objectives or expectations.
+If we think prompt construction get instruction (task) and target (main content), then _secondary content_ na like extra context wey we give to **influence di output somehow**. E fit be tuning parameters, formatting instructions, topic taxonomies etc. wey fit help model _tailor_ im response to match wetin user want or expect.
 
-For example: If we get course catalog with plenty metadata (name, description, level, metadata tags, instructor etc.) on all di courses wey dey for curriculum:
+For example: Given course catalog with plenty metadata (name, description, level, metadata tags, instructor etc.) for all courses wey dey curriculum:
 
-- we fit define instruction to "summarize the course catalog for Fall 2023"
-- we fit use di main content to give some examples of di wanted output
-- we fit use di secondary content to show di top 5 "tags" wey dey important.
+- we fit define instruction to "summarize course catalog for Fall 2023"
+- we fit use primary content to show some examples of wetin output suppose be
+- we fit use secondary content to identify top 5 "tags" wey matter.
 
-Now, di model fit provide summary for the format wey di examples show - but if result get many tags, e fit put priority for di 5 tags wey secondary content talk.
+Now, di model fit provide summary in di format wey di examples show - but if result get many tags, e fit put first 5 tags wey secondary content identify.
 
 ---
 
 <!--
 LESSON TEMPLATE:
 Dis unit suppose cover core concept #1.
-Make concept strong with examples and references.
+Reinforce di concept with examples and references.
 
 CONCEPT #3:
 Prompt Engineering Techniques.
@@ -314,70 +314,70 @@ Show am with some exercises.
 
 ## Prompting Best Practices
 
-Now we sabi how prompts fit _constructed_, we fit start to think how to _design_ dem to show best practices. We fit divide am for two parts - get correct _mindset_ and apply correct _techniques_.
+Now we sabi how prompts fit _constructed_, we fit start dey think how to _design_ dem to show best practices. We fit break am into two parts - get correct _mindset_ and use correct _techniques_.
 
 ### Prompt Engineering Mindset
 
-Prompt Engineering na trial-and-error process so keep three big guiding tins for mind:
+Prompt Engineering na trial-and-error process so keep three big guiding factors for mind:
 
-1. **Domain Understanding Matters.** Response accuracy and relevance depend on di _domain_ wey di application or user dey operate. Use your intuition and domain expertise to **customize techniques** well well. For example, define _domain-specific personalities_ for your system prompts, or use _domain-specific templates_ for your user prompts. Give secondary content wey reflect domain-specific contexts, or use _domain-specific cues and examples_ to lead model to familiar usage patterns.
+1. **Domain Understanding Matter.** Response accuracy and relevance na function of _domain_ wey di application or user dey operate. Use your intuition and domain knowledge to **customize techniques** well well. For example, define _domain-specific personalities_ for your system prompts, or use _domain-specific templates_ for user prompts. Provide secondary content wey show domain-specific context, or use _domain-specific cues and examples_ to guide model to familiar usage.
 
-2. **Model Understanding Matters.** We sabi say models dey stochastic by nature. But model fit get difference based on training data dem use (pre-trained knowledge), di capabilities dem get (e.g., via API or SDK) and di kind content dem optimized for (e.g, code vs. images vs. text). Understand strengths and limits of di model wey you dey use, and use that knowledge to _prioritize tasks_ or build _customized templates_ wey fit di model capability well well.
+2. **Model Understanding Matter.** We sabi say models dey stochastic by nature. But model fit differ based on training dataset (pre-trained knowledge), capabilities wey e get (like API or SDK) and content type e optimize for (code vs images vs text). Understand model strength and limits wey you dey use, and use dat knowledge to _prioritize tasks_ or make _custom templates_ wey optimize model ability.
 
-3. **Iteration & Validation Matters.** Models dey improve fast, plus techniques for prompt engineering dey improve. As domain expert, you fit get your own context or criteria _your_ specific application, wey no fit apply to general community. Use prompt engineering tools & techniques to "jump start" prompt construction, then iterate and validate results with your own intuition and domain expertise. Record your insights and build **knowledge base** (e.g, prompt libraries) wey others fit use as baseline for faster improvements later.
+3. **Iteration & Validation Matter.** Models dey change fast, so techniques for prompt engineering too. As domain expert, you fit get other context or criteria for _your_ specific app, wey no fit work for broader community. Use prompt engineering tools & techniques to quick start prompt building, then iterate and check results with your own intuition and knowledge. Write down your insights and make **knowledge base** (like prompt libraries) wey other people fit use as new base for faster work later.
 
 ## Best Practices
 
-Now make we look common best practices wey [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api?WT.mc_id=academic-105485-koreyst) and [Azure OpenAI](https://learn.microsoft.com/azure/ai-services/openai/concepts/prompt-engineering#best-practices?WT.mc_id=academic-105485-koreyst) practitioners recommend.
+Now make we look common best practices wey [OpenAI](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api?WT.mc_id=academic-105485-koreyst) and [Azure OpenAI](https://learn.microsoft.com/azure/ai-foundry/openai/concepts/prompt-engineering#best-practices?WT.mc_id=academic-105485-koreyst) people recommend.
 
 | Wetin                              | Why                                                                                                                                                                                                                                               |
 | :-------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Check latest models.               | New generation models fit get better features and quality - but dem fit charge more. Check dem to see impact before decision to migrate.                                                                                                       |
-| Separate instructions & context   | Check if your model/provider get _delimiters_ to show instructions, main and secondary content clear. This fit help models put weights correct for tokens.                                                                                       |
-| Be specific and clear             | Give plenty details about context, outcome, length, format, style etc. This go improve quality and consistency of responses. Keep recipes for reusable templates.                                                                              |
-| Be descriptive, use examples      | Models fit respond better if you "show and tell". Start with `zero-shot` where you give instruction (no examples) then try `few-shot` to improve, give small examples of wanted output. Use analogies.                                        |
-| Use cues to jumpstart completions | Make e head to desired outcome by giving some beginning words or phrases to start response.                                                                                                                |
-| Double Down                       | Sometimes you go need repeat your matter to model. Give instruction before and after main content, use instruction plus cue etc. Iterate and validate to see wetin work.                                                                       |
-| Order Matters                     | How you arrange information for model fit change output, even for learning examples, because of recency bias. Try different way to find best.                                                                                                   |
-| Give model “out”                  | Make model get _fallback_ completion response if e no fit complete task for any reason. This kin reduce chances say model go create wrong or fake responses.                                                                                        |
+| Evaluate latest models.           | New model generations fit get better features and quality - but e fit also cost pass before. Check dem well, then decide if you wan migrate.                                                                                                    |
+| Separate instructions & context   | Check if model/provider get _delimiters_ to separate instructions, primary and secondary content clear. Dis fit help models assign correct weight to tokens.                                                                                 |
+| Be specific and clear             | Give more detail about context, outcome, length, format, style etc. Dis go make response better and consistent. Keep recipes safe in reusable templates.                                                                                      |
+| Be descriptive, use examples      | Models fit respond well if you "show and tell" style. Start with `zero-shot` where you just give instruction (no examples), then try `few-shot` to improve with small examples of output wey you want. Use analogies.                           |
+| Use cues to jumpstart completions | Push am to desired output by giving some first words or phrases wey e fit use as start point for response.                                                                                                                                    |
+| Double Down                       | Sometimes you need to repeat to model. Put instructions before and after primary content, use instruction and cue, etc. Check and test to see which one work.                                                                                 |
+| Order Matters                     | Order wey you show info to model fit affect output, even for learning examples, because model remember recent info better. Try different ways to see which one best.                                                                          |
+| Give model “out”                   | Give model fallback response if e no fit do task. Dis fit reduce chance say model go lie or make up answer.                                                                                                                                     |
 |                                   |                                                                                                                                                                                                                                                   |
 
-As with any best practice, remember say _your mileage fit differ_ based on model, task and domain. Use these as beginning, then improve to find wetin work best for you. Always check your prompt engineering process as new models and tools show, focus on scalability and quality.
+Like any best practice, remember say _your mileage fit differ_ based on model, task and domain. Use these as start point, then try and find wetin best for you. Always check prompt engineering process again when new models and tools show, make sure process fit scale and answer pass well.
 
 <!--
 LESSON TEMPLATE:
-Dis unit suppose get code challenge if e fit happen
+Dis unit suppose get code challenge if e fit
 
 CHALLENGE:
-Link to Jupyter Notebook wey get code comments only for instructions (code sections empty).
+Link to Jupyter Notebook wey get only code comments for instruction (code sections empty).
 
 SOLUTION:
-Link to copy of dat Notebook with filled prompts and run, showing one example output.
+Link to copy of dat Notebook wey prompts don fill and run, show how one example fit be.
 -->
 
 ## Assignment
 
-Congrats! You reach end of lesson! Na time to test some of those concepts and techniques with real examples!
+Congrats! You reach end of lesson! Time don come to test some of those concepts and techniques with real examples!
 
-For our assignment, we go use Jupyter Notebook with exercises wey you fit do interactive. You fit also add your own Markdown and Code cells to explore ideas and techniques by yourself.
+For our assignment, we go use Jupyter Notebook with exercises wey you fit work on interactively. You fit also add your own Markdown and Code cells for Notebook to explore ideas and techniques on your own.
 
-### For start, fork the repo, then
+### To start, fork di repo, then
 
-- (Recommended) Launch GitHub Codespaces
-- (Alternatively) Clone the repo to your local device and use am with Docker Desktop
-- (Alternatively) Open the Notebook for your preferred runtime environment.
+- (Recommended) Start GitHub Codespaces
+- (Alternatively) Clone repo down to your local device and use with Docker Desktop
+- (Alternatively) Open Notebook with your preferred Notebook runtime.
 
 ### Next, set your environment variables
 
-- Copy `.env.copy` file for repo root to `.env` and fill `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT` and `AZURE_OPENAI_DEPLOYMENT` values. Come back to [Learning Sandbox section](#learning-sandbox) to learn how.
+- Copy `.env.copy` file for repo root to `.env` and fill `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_DEPLOYMENT`. Come back to [Learning Sandbox section](#learning-sandbox) to learn how.
 
-### Next, open Jupyter Notebook
+### Then, open Jupyter Notebook
 
-- Choose runtime kernel. If you use option 1 or 2, just pick default Python 3.10.x kernel wey dev container get.
+- Pick runtime kernel. If you dey use option 1 or 2, just select default Python 3.10.x kernel wey dev container provide.
 
-You ready to run exercises. No _right or wrong_ answer here - na trial and error and build intuition for wetin work for given model and application domain.
+You ready to run exercises now. Note say no _right or wrong_ answer here - na just to explore options by trial-and-error and build intuition for wetin work for model and app domain.
 
-_Because of dis reason, no Code Solution segments dey for lesson. Instead, the Notebook go get Markdown cells called "My Solution:" wey show one example output as reference._
+_Because of dis, no Code Solution part dey for dis lesson. Instead, Notebook go get Markdown cells named "My Solution:" wey go show one example output for reference._
 
  <!--
 LESSON TEMPLATE:
@@ -386,23 +386,23 @@ Wrap section with summary and resources for self-guided learning.
 
 ## Knowledge check
 
-Which one be good prompt wey follow reasonable best practices?
+Which of these prompt be good one wey follow correct best practices?
 
 1. Show me image of red car
-2. Show me image of red car wey be make Volvo and model XC90 parked by cliff with sun setting
+2. Show me image of red car wey be make Volvo an model XC90 wey park near cliff with sun dey set
 3. Show me image of red car wey be make Volvo and model XC90
 
-A: 2 na di best prompt because e give details on "wetin" and get specifics (no be any car but specific make and model) and e still describe where e dey. 3 na next best because e still get plenty description.
+A: 2, e best prompt because e give details on "wetin" and e go into specifics (no be any car but specific make and model) an e still describe overall setting. 3 na next best because e still get plenty description.
 
 ## 🚀 Challenge
 
-Try use "cue" technique with prompt: Complete di sentence "Show me an image of red car of make Volvo and ". Wetin e go respond? How you go improve am?
+Try use "cue" technique with prompt: Complete sentence "Show me image of red car wey be make Volvo and ". Wetin e go respond? How you go make am better?
 
-## Great Work! Continue Your Learning
+## Great Work! Continue your Learning
 
-Want learn more about different Prompt Engineering concepts? Go [continued learning page](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) to find other better resources on this.
+Want learn more about different Prompt Engineering concepts? Go [continued learning page](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) find other beta resources about dis topic.
 
-Go Lesson 5 where we go dey look [advanced prompting techniques](../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)!
+Go Lesson 5 where we go see [advanced prompting techniques](../05-advanced-prompts/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
