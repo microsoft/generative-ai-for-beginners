@@ -352,7 +352,7 @@
       "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
       "source_file": "05-advanced-prompts/README.md",
       "language_code": "vi",
-      "failure_date": "2026-07-16T18:31:04+00:00",
+      "failure_date": "2026-09-10T00:25:39+00:00",
       "status": "failed",
       "error_type": "TranslationContentFilterError",
       "error_message": "Provider blocked markdown translation at prompt 1/2 because finish_reason was 'content_filter'.",

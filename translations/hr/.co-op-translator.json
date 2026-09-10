@@ -156,8 +156,8 @@
     "language_code": "hr"
   },
   "08-building-search-applications/scripts/README.md": {
-    "original_hash": "31a230186a79713aa423f4dd6b20e139",
-    "translation_date": "2026-07-14T11:29:17+00:00",
+    "original_hash": "d4946101ee3024782ed4fd24f7ad89fb",
+    "translation_date": "2026-09-10T00:30:13+00:00",
     "source_file": "08-building-search-applications/scripts/README.md",
     "language_code": "hr"
   },
@@ -358,21 +358,10 @@
       "original_hash": "a48fc288183d6c459408f4cb608a53b1",
       "source_file": "CHANGELOG.md",
       "language_code": "hr",
-      "failure_date": "2026-07-17T15:01:41+00:00",
+      "failure_date": "2026-09-10T00:29:53+00:00",
       "status": "failed",
       "error_type": "TranslationIncompleteError",
-      "error_message": "Markdown translation remained incomplete for chunk 1.1.1 of 'CHANGELOG.md', and the chunk could not be split further.",
-      "translator_version": "0.20.0",
-      "failure_policy_version": 1
-    },
-    "08-building-search-applications/scripts/README.md": {
-      "original_hash": "d4946101ee3024782ed4fd24f7ad89fb",
-      "source_file": "08-building-search-applications/scripts/README.md",
-      "language_code": "hr",
-      "failure_date": "2026-07-17T15:22:20+00:00",
-      "status": "failed",
-      "error_type": "TranslationIncompleteError",
-      "error_message": "Markdown translation remained incomplete for chunk 1 of 'README.md', and the chunk could not be split further.",
+      "error_message": "Markdown translation remained incomplete for chunk 1.1.2 of 'CHANGELOG.md', and the chunk could not be split further.",
       "translator_version": "0.20.0",
       "failure_policy_version": 1
     }
