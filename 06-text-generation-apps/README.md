@@ -12,7 +12,7 @@ For you to add such an experience to an app, you need to understand concepts lik
 
 In this chapter, you will:
 
-- Learn about the openai library and it's core concepts.
+- Learn about the openai library and its core concepts.
 - Build a text generation app using openai.
 - Understand how to use concepts like prompt, temperature, and tokens to build a text generation app.
 

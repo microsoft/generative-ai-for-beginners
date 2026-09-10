@@ -6,7 +6,7 @@
 
 Now that we've seen how we can build text-generation apps, let's look into chat applications.
 
-Chat applications have become integrated into our daily lives, offering more than just a means of casual conversation. They're integral parts of customer service, technical support, and even sophisticated advisory systems. It's likely that you've gotten some help from a chat application not too long ago. As we integrate more advanced technologies like generative AI into these platforms, the complexity increases and so does the challenges.
+Chat applications have become integrated into our daily lives, offering more than just a means of casual conversation. They're integral parts of customer service, technical support, and even sophisticated advisory systems. It's likely that you've gotten some help from a chat application not too long ago. As we integrate more advanced technologies like generative AI into these platforms, the complexity increases and so do the challenges.
 
 Some questions we need to be answered are:
 
@@ -116,7 +116,7 @@ Whether a user has visual, auditory, motor, or cognitive impairments, a well-des
 
 Imagine a chat application that understands your company's jargon and anticipates the specific queries its user base commonly has. There are a couple of approaches worth mentioning:
 
-- **Leveraging DSL models**. DSL stands for domain specific language. You can leverage a so called DSL model trained on a specific domain to understand it's concepts and scenarios.
+- **Leveraging DSL models**. DSL stands for domain specific language. You can leverage a so called DSL model trained on a specific domain to understand its concepts and scenarios.
 - **Apply fine-tuning**. Fine-tuning is the process of further training your model with specific data.
 
 ## Customization: Using a DSL
