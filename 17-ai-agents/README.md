@@ -154,6 +154,35 @@ async def main():
 asyncio.run(main())
 ```
 
+**MCP tools** - `get_weather` is a function you wrote, so the agent can only do what your own code does. To give it a capability you did not implement, such as searching the web, connect it to a Model Context Protocol (MCP) server. The server publishes its tools with descriptions and input schemas, `MCPStreamableHTTPTool` turns them into agent tools, and the model decides during the run whether and when to call them. This example uses [Keenable](https://keenable.ai), a hosted web search server that is free to use without an account and is rate limited per IP:
+
+```python
+import asyncio
+
+from agent_framework import Agent, MCPStreamableHTTPTool
+from agent_framework.openai import OpenAIChatClient
+
+
+async def main():
+    async with MCPStreamableHTTPTool(
+        name="web",
+        url="https://api.keenable.ai/mcp",
+    ) as web:
+        agent = Agent(
+            client=OpenAIChatClient(),
+            instructions="You are a research assistant. Search the web when you need current information and cite your sources.",
+            tools=[web],
+        )
+
+        response = await agent.run("What is new in the latest Microsoft Agent Framework release?")
+        print(response)
+
+
+asyncio.run(main())
+```
+
+The `async with` block connects to the server, discovers its tools (`search_web_pages` and `fetch_page_content`) and closes the connection when the agent is done. When you run it, the reply is based on the pages the agent searched and read rather than on the model's training data alone, and a question the model can answer by itself usually completes without a tool call. MCP support needs the `mcp` package next to the framework (`pip install mcp`). Your query and any URLs the agent fetches are sent to the server, so use it with public information. See [MCP tools in Agent Framework](https://learn.microsoft.com/agent-framework/agents/tools/local-mcp-tools?WT.mc_id=academic-105485-koreyst) for local servers and authentication options.
+
 To connect to Azure OpenAI in Microsoft Foundry instead, pass your endpoint and credentials to the client:
 
 ```python
