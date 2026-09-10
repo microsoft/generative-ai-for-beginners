@@ -358,10 +358,10 @@
       "original_hash": "a48fc288183d6c459408f4cb608a53b1",
       "source_file": "CHANGELOG.md",
       "language_code": "uk",
-      "failure_date": "2026-07-17T07:16:14+00:00",
+      "failure_date": "2026-09-10T00:54:21+00:00",
       "status": "failed",
       "error_type": "TranslationIncompleteError",
-      "error_message": "Markdown translation remained incomplete for chunk 1.1.1 of 'CHANGELOG.md', and the chunk could not be split further.",
+      "error_message": "Markdown translation remained incomplete for chunk 1.1.2 of 'CHANGELOG.md', and the chunk could not be split further.",
       "translator_version": "0.20.0",
       "failure_policy_version": 1
     }
