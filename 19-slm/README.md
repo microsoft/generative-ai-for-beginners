@@ -149,7 +149,7 @@ Microsoft Foundry Models is the most direct way. You can quickly access the Phi-
 
 **Microsoft Foundry**
 
-Or if we want to use the vision and MoE models, you can use Microsoft Foundry to complete the call. If you are interested, you can read the Phi-3 Cookbook to learn how to call Phi-3/3.5 Instruct, Vision, MoE through Microsoft Foundry [Click this link](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst)
+Or if we want to use the vision and MoE models, you can use Microsoft Foundry to complete the call. If you are interested, you can read the Phi-3 Cookbook to learn how to call Phi-3/3.5 Instruct, Vision, MoE through Microsoft Foundry [Click this link](https://github.com/microsoft/PhiCookBook/blob/main/md/02.QuickStart/AzureAIFoundry_QuickStart.md?WT.mc_id=academic-105485-koreyst)
 
 
 **NVIDIA NIM**
@@ -345,7 +345,6 @@ In addition to ONNX Runtime, Ollama, and Foundry Local reference methods, we can
 ## More
 
 We have learned the basics of Phi-3/3.5 Family, but to learn more about SLM we need more knowledge. You can find the answers in the Phi-3 Cookbook. If you want to learn more, please visit the [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst).
-
 
 
 
