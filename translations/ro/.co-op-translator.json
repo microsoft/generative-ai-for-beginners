@@ -324,8 +324,8 @@
     "language_code": "ro"
   },
   "CHANGELOG.md": {
-    "original_hash": "1bfb1a7b89d85d2620424c5198aaf23c",
-    "translation_date": "2026-07-14T01:51:21+00:00",
+    "original_hash": "a48fc288183d6c459408f4cb608a53b1",
+    "translation_date": "2026-09-10T01:00:50+00:00",
     "source_file": "CHANGELOG.md",
     "language_code": "ro"
   },
@@ -352,19 +352,6 @@
     "translation_date": "2025-07-09T06:56:03+00:00",
     "source_file": "SECURITY.md",
     "language_code": "ro"
-  },
-  "__translation_failures__": {
-    "CHANGELOG.md": {
-      "original_hash": "a48fc288183d6c459408f4cb608a53b1",
-      "source_file": "CHANGELOG.md",
-      "language_code": "ro",
-      "failure_date": "2026-07-16T22:05:10+00:00",
-      "status": "failed",
-      "error_type": "TranslationIncompleteError",
-      "error_message": "Markdown translation remained incomplete for chunk 1.1.1 of 'CHANGELOG.md', and the chunk could not be split further.",
-      "translator_version": "0.20.0",
-      "failure_policy_version": 1
-    }
   },
   "docs/ENHANCED_FEATURES_ROADMAP.md": {
     "original_hash": "0bb72722f59786041b413e365a7c8eb7",

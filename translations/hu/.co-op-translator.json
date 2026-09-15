@@ -270,8 +270,8 @@
     "language_code": "hu"
   },
   "18-fine-tuning/README.md": {
-    "original_hash": "6a0fb87288327c90e063d6ec621ceae2",
-    "translation_date": "2026-07-14T18:37:24+00:00",
+    "original_hash": "9b13dc4c27b0a2ccc689bc7a9ede237d",
+    "translation_date": "2026-09-10T00:41:20+00:00",
     "source_file": "18-fine-tuning/README.md",
     "language_code": "hu"
   },
@@ -356,17 +356,6 @@
       "status": "failed",
       "error_type": "TranslationIncompleteError",
       "error_message": "Markdown translation remained incomplete for chunk 1.2.2 of 'CHANGELOG.md', and the chunk could not be split further.",
-      "translator_version": "0.20.0",
-      "failure_policy_version": 1
-    },
-    "18-fine-tuning/README.md": {
-      "original_hash": "9b13dc4c27b0a2ccc689bc7a9ede237d",
-      "source_file": "18-fine-tuning/README.md",
-      "language_code": "hu",
-      "failure_date": "2026-07-17T23:35:46+00:00",
-      "status": "failed",
-      "error_type": "TranslationIncompleteError",
-      "error_message": "Markdown translation remained incomplete for chunk 2 of 'README.md', and the chunk could not be split further.",
       "translator_version": "0.20.0",
       "failure_policy_version": 1
     }

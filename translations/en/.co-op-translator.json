@@ -294,8 +294,8 @@
     "language_code": "en"
   },
   "20-mistral/README.md": {
-    "original_hash": "fec8c0070389f47e413e3d423562f071",
-    "translation_date": "2026-03-06T10:13:53+00:00",
+    "original_hash": "b57886440bb27329c75e5199a38e984e",
+    "translation_date": "2026-09-10T00:21:01+00:00",
     "source_file": "20-mistral/README.md",
     "language_code": "en"
   },
@@ -358,21 +358,10 @@
       "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
       "source_file": "05-advanced-prompts/README.md",
       "language_code": "en",
-      "failure_date": "2026-07-16T10:12:02+00:00",
+      "failure_date": "2026-09-10T00:21:52+00:00",
       "status": "failed",
       "error_type": "TranslationContentFilterError",
       "error_message": "Provider blocked markdown translation at prompt 1/2 because finish_reason was 'content_filter'.",
-      "translator_version": "0.20.0",
-      "failure_policy_version": 1
-    },
-    "20-mistral/README.md": {
-      "original_hash": "b57886440bb27329c75e5199a38e984e",
-      "source_file": "20-mistral/README.md",
-      "language_code": "en",
-      "failure_date": "2026-07-16T10:08:35+00:00",
-      "status": "failed",
-      "error_type": "TranslationIncompleteError",
-      "error_message": "Markdown translation remained incomplete for chunk 1 of 'README.md', and the chunk could not be split further.",
       "translator_version": "0.20.0",
       "failure_policy_version": 1
     }
