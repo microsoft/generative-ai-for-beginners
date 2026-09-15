@@ -85,7 +85,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Install ESLint
         run: npm install --no-save eslint@8 @typescript-eslint/parser @typescript-eslint/eslint-plugin
