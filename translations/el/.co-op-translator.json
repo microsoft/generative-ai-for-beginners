@@ -323,6 +323,12 @@
     "source_file": "AGENTS.md",
     "language_code": "el"
   },
+  "CHANGELOG.md": {
+    "original_hash": "a48fc288183d6c459408f4cb608a53b1",
+    "translation_date": "2026-09-15T18:23:09+00:00",
+    "source_file": "CHANGELOG.md",
+    "language_code": "el"
+  },
   "CODE_OF_CONDUCT.md": {
     "original_hash": "c06b12caf3c901eb3156e3dd5b0aea56",
     "translation_date": "2025-07-09T05:45:19+00:00",
@@ -346,19 +352,6 @@
     "translation_date": "2025-07-09T06:53:41+00:00",
     "source_file": "SECURITY.md",
     "language_code": "el"
-  },
-  "__translation_failures__": {
-    "CHANGELOG.md": {
-      "original_hash": "a48fc288183d6c459408f4cb608a53b1",
-      "source_file": "CHANGELOG.md",
-      "language_code": "el",
-      "failure_date": "2026-07-16T16:49:39+00:00",
-      "status": "failed",
-      "error_type": "TranslationIncompleteError",
-      "error_message": "Markdown translation remained incomplete for chunk 1.1.2 of 'CHANGELOG.md', and the chunk could not be split further.",
-      "translator_version": "0.20.0",
-      "failure_policy_version": 1
-    }
   },
   "docs/ENHANCED_FEATURES_ROADMAP.md": {
     "original_hash": "0bb72722f59786041b413e365a7c8eb7",
