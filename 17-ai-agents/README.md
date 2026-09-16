@@ -181,7 +181,7 @@ async def main():
 asyncio.run(main())
 ```
 
-The `async with` block connects to the server, discovers its tools (`search_web_pages` and `fetch_page_content`) and closes the connection when the agent is done. When you run it, the reply is based on the pages the agent searched and read rather than on the model's training data alone, and a question the model can answer by itself usually completes without a tool call. MCP support needs the `mcp` package next to the framework (`pip install mcp`). Your query and any URLs the agent fetches are sent to the server, so use it with public information. See [MCP tools in Agent Framework](https://learn.microsoft.com/agent-framework/agents/tools/local-mcp-tools?WT.mc_id=academic-105485-koreyst) for local servers and authentication options.
+The `async with` block connects to the server, discovers its tools (`search_web_pages` and `fetch_page_content`) and closes the connection when the agent is done. When you run it, the reply is based on the pages the agent searched and read rather than on the model's training data alone, and a question the model can answer by itself usually completes without a tool call. MCP support needs the `mcp` package next to the framework (`pip install mcp`). When the agent does call a tool, your query and any URLs it fetches are sent to the server, so use it with public information. See [MCP tools in Agent Framework](https://learn.microsoft.com/agent-framework/agents/tools/local-mcp-tools?WT.mc_id=academic-105485-koreyst) for local servers and authentication options.
 
 To connect to Azure OpenAI in Microsoft Foundry instead, pass your endpoint and credentials to the client:
 
