@@ -1,0 +1,44 @@
+name: Assign translation triage
+
+on:
+  issues:
+    types: [opened, edited, labeled, reopened]
+  # Metadata only: never check out or execute pull request code.
+  pull_request_target:
+    types: [opened, edited, labeled, reopened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: translation-triage-${{ github.event.issue.number || github.event.pull_request.number }}
+  cancel-in-progress: false
+
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Add translation triage assignee
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        with:
+          script: |
+            const assignee = 'skytin1004';
+            // Read current metadata so delayed events do not route stale titles or labels.
+            const params = { ...context.repo, issue_number: context.issue.number };
+            const { data: item } = await github.rest.issues.get(params);
+            if (item.state !== 'open') return;
+            const tagged = /\[(?:i18n|translation)\]/i.test(item.title);
+            const labeled = item.labels.some(label =>
+              ['i18n', 'translation'].includes(label.name.toLowerCase())
+            );
+            if (!tagged && !labeled) return;
+            if (item.assignees.some(user => user.login.toLowerCase() === assignee)) return;
+            // Add, rather than replace, so existing maintainers remain assigned.
+            const { data: updated } = await github.rest.issues.addAssignees({
+              ...params, assignees: [assignee]
+            });
+            if (!updated.assignees.some(user => user.login.toLowerCase() === assignee)) {
+              core.setFailed(`GitHub did not assign @${assignee}. Check assignment eligibility and workflow permissions.`);
+            }
