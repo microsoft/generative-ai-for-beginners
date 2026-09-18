@@ -159,7 +159,6 @@ Upang mapanatili ang mataas na kalidad ng performance ng isang app, mahalagang s
 | **User Satisfaction Metrics** | Sinusukat ang perception ng user sa application. Kadalasang kinukuha sa pamamagitan ng mga survey.                     | Gaano kadalas ang pagkuha ng feedback ng user? Paano ka mag-aadjust base rito? |
 | **Error Rate**                | Ang rate kung saan nagkakamali ang model sa pag-intindi o output.                                                    | Anong mga estratehiya ang may plano kang gamitin para mabawasan ang error rate? |
 | **Retraining Cycles**         | Ang dalas kung kailan ang model ay ina-update upang isama ang bagong data at insight.                                  | Gaano kadalas mo ire-retrain ang model? Ano ang mga trigger ng retraining cycle? |
-
 | **Pag-detect ng Anomalya**         | Mga kasangkapan at teknik para tuklasin ang mga kakaibang pattern na hindi naaayon sa inaasahang kilos.                        | Paano ka tutugon sa mga anomalya?                                        |
 
 ### Pagpapatupad ng Mga Responsableng Praktis sa AI sa Mga Chat Application

@@ -159,7 +159,6 @@ Uygulamanın yüksek performansını korumak için, temel metrikler ve dikkate a
 | **Kullanıcı Memnuniyeti Metrikleri** | Kullanıcının uygulamaya yönelik algısı, genellikle anketlerle ölçülür.                                              | Kullanıcı geri bildirimlerini ne sıklıkla toplayacaksınız? Buna göre nasıl uyum sağlarsınız? |
 | **Hata Oranı**               | Modelin anlama veya çıktı verirken yaptığı hata oranı.                                                                    | Hata oranlarını azaltmak için hangi stratejilere sahipsiniz?              |
 | **Tekrar Eğitim Döngüleri** | Modelin yeni veri ve bilgilerle güncellenme sıklığı.                                                                      | Modeli ne sıklıkla tekrar eğiteceksiniz? Tekrar eğitim döngüsünü ne tetikler? |
-
 | **Anomali Tespiti**         | Beklenen davranışa uymayan olağandışı kalıpları tanımlamak için araçlar ve teknikler.                        | Anomalilere nasıl tepki vereceksiniz?                                        |
 
 ### Sohbet Uygulamalarında Sorumlu Yapay Zeka Uygulamalarının Yürütülmesi

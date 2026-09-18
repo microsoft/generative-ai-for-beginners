@@ -159,7 +159,6 @@ Para manter o alto desempenho de uma aplicação, é essencial acompanhar métri
 | **Métricas de Satisfação do Usuário** | Mede a percepção do usuário sobre a aplicação. Frequentemente coletadas por meio de pesquisas.                    | Com que frequência coletará feedback dos usuários? Como adaptará com base nele? |
 | **Taxa de Erro**              | A taxa com que o modelo comete erros de compreensão ou saída.                                                       | Quais estratégias você tem para reduzir taxas de erro?           |
 | **Ciclos de Re-treinamento** | A frequência com que o modelo é atualizado para incorporar novos dados e insights.                                  | Com que frequência você re-treinará o modelo? O que desencadeia um ciclo de re-treinamento? |
-
 | **Detecção de Anomalias**   | Ferramentas e técnicas para identificar padrões incomuns que não estão de acordo com o comportamento esperado.           | Como você responderá às anomalias?                                           |
 
 ### Implementando Práticas de IA Responsável em Aplicativos de Chat

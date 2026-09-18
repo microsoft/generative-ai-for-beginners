@@ -159,7 +159,6 @@ Aby zachować wysoką jakość działania aplikacji, należy śledzić kluczowe 
 | **Metryki satysfakcji użytkownika** | Mierzą percepcję użytkownika względem aplikacji. Często zbierane przez ankiety.                                         | Jak często będziesz zbierać opinie użytkowników? Jak się do nich dostosujesz? |
 | **Wskaźnik błędów**           | Wskaźnik błędów modelu w rozumieniu lub generowaniu odpowiedzi.                                                        | Jakie strategie masz na zmniejszenie liczby błędów?                       |
 | **Cykl retreningu**           | Częstotliwość, z jaką model jest aktualizowany, aby uwzględnić nowe dane i wnioski.                                     | Jak często będziesz ponownie trenować model? Co wyzwala cykl retreningu? |
-
 | **Wykrywanie anomalii**         | Narzędzia i techniki identyfikujące nietypowe wzorce, które nie odpowiadają oczekiwanym zachowaniom.                        | Jak zareagujesz na anomalie?                                        |
 
 ### Wdrażanie odpowiedzialnych praktyk AI w aplikacjach czatu

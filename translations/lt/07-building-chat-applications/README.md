@@ -159,7 +159,6 @@ Norint palaikyti aukštos kokybės programėlės veikimą, būtina stebėti pagr
 | **Vartotojo pasitenkinimo rodikliai** | Matuoja vartotojo požiūrį į programėlę. Dažnai renkama apklausų būdu.                                                | Kaip dažnai rinksite vartotojų atsiliepimus? Kaip prisitaikysite pagal juos? |
 | **Klaidų dažnis**             | Modelio klaidų suprantant arba kuriant išvestį dažnis.                                                               | Kokias strategijas turite klaidų dažnio mažinimui?             |
 | **Permokymo ciklai**          | Dažnis, kuriuo modelis atnaujinamas, įtraukiant naujus duomenis ir įžvalgas.                                          | Kaip dažnai perkursite modelį? Kas inicijuoja modelio perkūrimą?  |
-
 | **Anomalijų nustatymas**    | Įrankiai ir technikos nustatyti neįprastus modelius, kurie nesilaiko numatytos elgsenos.                                   | Kaip reaguosite į anomalijas?                                            |
 
 ### Atsakingos dirbtinio intelekto praktikos įgyvendinimas pokalbių programėlėse

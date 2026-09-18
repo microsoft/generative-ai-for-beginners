@@ -159,7 +159,6 @@ For at opretholde applikationens høje ydelseskvalitet er det essentielt at hold
 | **Brugertilfredshedsmålinger** | Måler brugerens opfattelse af applikationen. Ofte indsamlet gennem undersøgelser.                                      | Hvor ofte vil du indsamle brugerfeedback? Hvordan vil du tilpasse dig ud fra denne? |
 | **Fejlrate**                | Raten, hvor modellen laver fejl i forståelse eller output.                                                             | Hvilke strategier har du for at reducere fejlrater?                     |
 | **Omtræningscyklusser**     | Hyppigheden, hvormed modellen opdateres for at indarbejde nye data og indsigt.                                         | Hvor ofte vil du omtræne modellen? Hvad udløser en omtræningscyklus?    |
-
 | **Anomali-registrering**     | Værktøjer og teknikker til at identificere usædvanlige mønstre, der ikke stemmer overens med forventet adfærd.                    | Hvordan vil du reagere på anomalier?                                      |
 
 ### Implementering af Ansvarlige AI-praksiser i Chatapplikationer

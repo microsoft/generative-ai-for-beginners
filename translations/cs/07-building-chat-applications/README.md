@@ -159,7 +159,6 @@ Aby bylo možné udržet vysokou kvalitu výkonu aplikace, je nezbytné sledovat
 | **Metriky spokojenosti uživatelů** | Měří vnímání aplikace uživatelem, často zaznamenávané prostřednictvím průzkumů.                             | Jak často budete sbírat zpětnou vazbu? Jak se podle ní přizpůsobíte?  |
 | **Míra chybovosti**          | Míra, s jakou model dělá chyby při porozumění nebo generování výstupu.                                       | Jaké strategie máte na snížení chybovosti?              |
 | **Cyklus přeškolování**      | Frekvence, s jakou je model aktualizován pro začlenění nových dat a poznatků.                                 | Jak často budete model přeškolovat? Co spouští cyklus přeškolování? |
-
 | **Detekce anomálií**         | Nástroje a techniky pro identifikaci neobvyklých vzorců, které neodpovídají očekávanému chování.                        | Jak budete reagovat na anomálie?                                        |
 
 ### Implementace odpovědných praktik AI v chatovacích aplikacích

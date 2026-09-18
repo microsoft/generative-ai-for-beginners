@@ -159,7 +159,6 @@ Para manter o desempenho de alta qualidade de uma aplicação, é essencial acom
 | **Métricas de Satisfação do Utilizador** | Mede a perceção do utilizador sobre a aplicação. Frequentemente capturadas através de inquéritos.              | Com que frequência recolherá feedback dos utilizadores? Como irá adaptar-se com base nisso? |
 | **Taxa de Erro**              | A taxa com que o modelo comete erros na compreensão ou saída.                                                      | Que estratégias tem para reduzir as taxas de erro?                |
 | **Ciclos de Re-treinamento** | A frequência com que o modelo é atualizado para incorporar novos dados e insights.                                | Com que frequência fará re-treinamento do modelo? O que desencadeará um ciclo de re-treinamento? |
-
 | **Detecção de Anomalias**     | Ferramentas e técnicas para identificar padrões invulgares que não se conformam com o comportamento esperado.               | Como irá responder às anomalias?                                           |
 
 ### Implementar Práticas de IA Responsável em Aplicações de Chat

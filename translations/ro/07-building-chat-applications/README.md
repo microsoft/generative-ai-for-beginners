@@ -159,7 +159,6 @@ Pentru a menține performanța de înaltă calitate a unei aplicații, este esen
 | **Metrici de satisfacție a utilizatorului** | Măsoară percepția utilizatorului asupra aplicației. Deseori capturate prin sondaje.                                   | Cât de des vei colecta feedback de la utilizatori? Cum te vei adapta pe baza acestuia?   |
 | **Rata erorilor**            | Rata la care modelul face greșeli în înțelegere sau în rezultat.                                                       | Ce strategii ai pentru a reduce rata erorilor?                       |
 | **Cicluri de reantrenare**  | Frecvența cu care modelul este actualizat pentru a include date și informații noi.                                   | Cât de des vei reantrena modelul? Ce declanșează un ciclu de reantrenare?               |
-
 | **Detectarea Anomaliilor**         | Instrumente și tehnici pentru identificarea tiparelor neobișnuite care nu corespund comportamentului așteptat.                        | Cum veți răspunde la anomalii?                                        |
 
 ### Implementarea practicilor de Inteligență Artificială Responsabilă în aplicațiile de chat

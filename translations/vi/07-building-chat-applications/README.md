@@ -159,7 +159,6 @@ Phần này nêu ra các tiêu chí cho ứng dụng trò chuyện “chất lư
 | **Chỉ số hài lòng người dùng** | Đo lường cảm nhận của người dùng về ứng dụng. Thường thu thập qua khảo sát.                                             | Bạn thu thập phản hồi người dùng bao lâu một lần? Bạn sẽ điều chỉnh dựa trên phản hồi thế nào? |
 | **Tỷ lệ lỗi**                 | Tỷ lệ mà mô hình mắc sai lầm trong việc hiểu hoặc tạo đầu ra.                                                             | Bạn có chiến lược nào để giảm tỷ lệ lỗi?                           |
 | **Chu kỳ huấn luyện lại**     | Tần suất mô hình được cập nhật để tích hợp dữ liệu và kiến thức mới.                                                    | Bạn huấn luyện lại mô hình bao lâu một lần? Điều gì kích hoạt chu kỳ huấn luyện lại? |
-
 | **Phát Hiện Dị Thường**    | Công cụ và kỹ thuật để nhận diện các mẫu bất thường không phù hợp với hành vi mong đợi.                       | Bạn sẽ phản ứng như thế nào với các dị thường?                              |
 
 ### Triển Khai Các Thực Hành Trí Tuệ Nhân Tạo Có Trách Nhiệm Trong Ứng Dụng Chat

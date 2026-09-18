@@ -159,7 +159,6 @@ Na udržanie vysokokvalitného výkonu aplikácie je dôležité sledovať kľú
 | **Metriky spokojnosti používateľov** | Meria vnímanie aplikácie používateľmi, často zaznamenávané prostredníctvom prieskumov.                                  | Ako často budete zbierať spätnú väzbu od používateľov? Ako sa podľa nej prispôsobíte? |
 | **Miera chýb**              | Miera, s akou model robí chyby pri porozumení alebo výstupe.                                                            | Aké stratégie máte na zníženie chybovosti?                           |
 | **Cykly retrénovania**      | Frekvencia, s akou sa model aktualizuje, aby zahrnul nové dáta a poznatky.                                              | Ako často budete model retrénovať? Čo spúšťa retréning?              |
-
 | **Detekcia anomálií**         | Nástroje a techniky na identifikáciu neobvyklých vzorov, ktoré nezodpovedajú očakávanému správaniu.                  | Ako budete reagovať na anomálie?                                         |
 
 ### Implementácia zodpovedných AI praktík v chatových aplikáciách

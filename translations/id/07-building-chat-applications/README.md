@@ -159,7 +159,6 @@ Untuk menjaga kinerja aplikasi agar berkualitas tinggi, sangat penting melacak m
 | **Metrik Kepuasan Pengguna**| Mengukur persepsi pengguna terhadap aplikasi. Biasanya diambil melalui survei.                                         | Seberapa sering Anda mengumpulkan umpan balik pengguna? Bagaimana Anda beradaptasi berdasarkan itu? |
 | **Tingkat Kesalahan**        | Tingkat di mana model membuat kesalahan dalam pemahaman atau keluaran.                                                  | Strategi apa yang Anda miliki untuk mengurangi tingkat kesalahan?      |
 | **Siklus Pelatihan Ulang**  | Frekuensi model diperbarui untuk memasukkan data dan wawasan baru.                                                     | Seberapa sering Anda melakukan pelatihan ulang? Apa yang memicu siklus pelatihan ulang? |
-
 | **Deteksi Anomali**         | Alat dan teknik untuk mengidentifikasi pola tidak biasa yang tidak sesuai dengan perilaku yang diharapkan.                        | Bagaimana Anda akan merespons anomali?                                        |
 
 ### Menerapkan Praktik AI yang Bertanggung Jawab dalam Aplikasi Chat

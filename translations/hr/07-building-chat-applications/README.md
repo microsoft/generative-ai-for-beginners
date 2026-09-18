@@ -159,7 +159,6 @@ Za održavanje visokih performansi aplikacije važno je pratiti ključne metrike
 | **Metrike zadovoljstva korisnika** | Mjeri percepciju korisnika o aplikaciji. Često se prikuplja putem anketa.                                            | Koliko često ćete prikupljati povratne informacije korisnika? Kako ćete se prilagođavati na temelju njih? |
 | **Stopa pogrešaka**            | Stopa kojom model griješi u razumijevanju ili ishodu.                                                                  | Koje strategije imate za smanjenje stope pogrešaka?                       |
 | **Ciklus ponovnog treniranja** | Učestalost kojom se model ažurira za uključivanje novih podataka i saznanja.                                           | Koliko često ćete ponovo trenirati model? Što pokreće ciklus ponovnog treniranja? |
-
 | **Otkrivanje anomalija**         | Alati i tehnike za prepoznavanje neuobičajenih obrazaca koji se ne pridržavaju očekivanog ponašanja.                        | Kako ćete reagirati na anomalije?                                        |
 
 ### Provođenje odgovorne AI prakse u chat aplikacijama

@@ -159,7 +159,6 @@ For å opprettholde høy ytelse i en applikasjon er det viktig å holde oversikt
 | **Brukertilfredshet**        | Måler brukerens oppfatning av applikasjonen. Ofte innhentet gjennom undersøkelser.                                   | Hvor ofte vil du samle inn brukerfeedback? Hvordan vil du tilpasse deg basert på den? |
 | **Feilrate**                 | Hvor ofte modellen gjør feil i forståelse eller output.                                                              | Hvilke strategier har du for å redusere feilrater?            |
 | **Omtrentingssykluser**      | Hyppigheten modellen oppdateres for å inkludere nye data og innsikter.                                                | Hvor ofte vil du omskolere modellen? Hva utløser en ny opplæringssyklus? |
-
 | **Avviksdeteksjon**         | Verktøy og teknikker for å identifisere uvanlige mønstre som ikke samsvarer med forventet oppførsel.                        | Hvordan vil du svare på avvik?                                        |
 
 ### Implementering av Ansvarlige AI-praksiser i Chat-applikasjoner

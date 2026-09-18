@@ -159,7 +159,6 @@ Ahhoz, hogy egy alkalmazás megbízhatóan magas teljesítményt nyújtson, elen
 | **Felhasználói elégedettségi mérőszámok** | A felhasználó észlelését méri az alkalmazásról. Gyakran felmérésekből származik.                                              | Milyen gyakran gyűjtesz visszajelzést? Hogyan alkalmazkodsz ehhez? |
 | **Hibaarány**                | A modell hibáinak aránya az értelmezés vagy a kimenet során.                                                                 | Milyen stratégiáid vannak a hibaarány csökkentésére?             |
 | **Újraképzési ciklusok**     | Milyen gyakran frissítik a modellt új adatok és ismeretek integrálására.                                                     | Milyen gyakran újraképezed a modellt? Mi indítja el az újraképzési ciklust? |
-
 | **Anomália-észlelés**         | Olyan eszközök és technikák, amelyek szokatlan mintákat azonosítanak, amelyek nem felelnek meg a várható viselkedésnek.                        | Hogyan reagálsz az anomáliákra?                                        |
 
 ### Felelős MI-gyakorlatok megvalósítása csevegőalkalmazásokban

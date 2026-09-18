@@ -159,7 +159,6 @@ Pour maintenir la performance de haute qualité d’une application, il est esse
 | **Métriques de satisfaction utilisateur** | Mesure la perception de l’application par les utilisateurs. Souvent recueillie par des enquêtes.                   | À quelle fréquence recueillerez-vous les retours utilisateurs ? Comment vous adapterez-vous ? |
 | **Taux d’erreur**             | Le taux auquel le modèle fait des erreurs dans la compréhension ou la sortie.                                         | Quelles stratégies avez-vous pour réduire les taux d’erreur ?        |
 | **Cycles de réentraînement** | La fréquence à laquelle le modèle est mis à jour pour incorporer de nouvelles données et insights.                   | À quelle fréquence réentrainerez-vous le modèle ? Qu’est-ce qui déclenche un cycle de réentraînement ? |
-
 | **Détection d'anomalies**         | Outils et techniques pour identifier les motifs inhabituels qui ne correspondent pas au comportement attendu.                        | Comment répondrez-vous aux anomalies ?                                        |
 
 ### Mise en œuvre de pratiques d'IA responsable dans les applications de chat

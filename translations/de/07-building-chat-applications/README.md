@@ -159,7 +159,6 @@ Um die hochwertige Leistung einer Anwendung aufrechtzuerhalten, ist es entscheid
 | **Benutzerzufriedenheitsmetriken** | Misst die Wahrnehmung der Anwendung durch den Nutzer. Wird oft durch Umfragen erfasst.                              | Wie oft sammeln Sie Nutzerfeedback? Wie passen Sie sich daran an?   |
 | **Fehlerrate**              | Die Rate, mit der das Modell Fehler im Verständnis oder der Ausgabe macht.                                              | Welche Strategien haben Sie zur Reduzierung der Fehlerraten?        |
 | **Retrainingszyklen**       | Die Häufigkeit, mit der das Modell aktualisiert wird, um neue Daten und Erkenntnisse einzubeziehen.                     | Wie oft trainieren Sie das Modell neu? Was löst einen Retrainingszyklus aus? |
-
 | **Anomalieerkennung**         | Werkzeuge und Techniken zur Identifizierung ungewöhnlicher Muster, die nicht dem erwarteten Verhalten entsprechen.        | Wie werden Sie auf Anomalien reagieren?                                  |
 
 ### Implementierung verantwortungsvoller KI-Praktiken in Chat-Anwendungen
