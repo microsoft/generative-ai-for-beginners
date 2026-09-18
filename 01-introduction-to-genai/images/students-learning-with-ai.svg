@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Five students gathered around a monitor showing an AI learning assistant">
+  <title>Five students learning together with an AI assistant</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef4ff"/>
+      <stop offset="100%" stop-color="#e3ecfb"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b3a6b"/>
+      <stop offset="100%" stop-color="#2b5ea8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- decorative background shapes -->
+  <circle cx="150" cy="120" r="70" fill="#d5e3fa"/>
+  <circle cx="1060" cy="150" r="95" fill="#d5e3fa"/>
+  <circle cx="980" cy="60" r="34" fill="#c6d9f7"/>
+  <rect x="60" y="430" width="120" height="120" rx="28" fill="#d5e3fa"/>
+
+  <!-- desk -->
+  <rect x="0" y="500" width="1200" height="22" rx="11" fill="#c3b099"/>
+  <rect x="0" y="522" width="1200" height="108" fill="#f4f7fd"/>
+
+  <!-- monitor -->
+  <rect x="380" y="150" width="440" height="300" rx="22" fill="#0f2545"/>
+  <rect x="398" y="168" width="404" height="252" rx="12" fill="url(#screen)"/>
+  <rect x="560" y="450" width="80" height="40" fill="#0f2545"/>
+  <rect x="500" y="486" width="200" height="18" rx="9" fill="#0f2545"/>
+
+  <!-- screen content: chat conversation -->
+  <rect x="424" y="200" width="196" height="30" rx="15" fill="#5b8fd9"/>
+  <rect x="424" y="244" width="150" height="30" rx="15" fill="#5b8fd9"/>
+  <rect x="580" y="292" width="196" height="30" rx="15" fill="#8fd6c2"/>
+  <rect x="620" y="336" width="156" height="30" rx="15" fill="#8fd6c2"/>
+  <rect x="424" y="380" width="120" height="18" rx="9" fill="#3f6fb5"/>
+
+  <!-- sparkles -->
+  <path d="M846 120 l14 34 34 14 -34 14 -14 34 -14 -34 -34 -14 34 -14 z" fill="#ffc83d"/>
+  <path d="M906 196 l9 21 21 9 -21 9 -9 21 -9 -21 -21 -9 21 -9 z" fill="#ffc83d"/>
+  <path d="M330 116 l9 21 21 9 -21 9 -9 21 -9 -21 -21 -9 21 -9 z" fill="#ffc83d"/>
+
+  <!-- students: simple flat figures, three on the left -->
+  <g>
+    <!-- student 1 -->
+    <path d="M150 500 v-70 a62 62 0 0 1 124 0 v70 z" fill="#7b5ea7"/>
+    <circle cx="212" cy="342" r="46" fill="#c58c62"/>
+    <path d="M166 336 a46 46 0 0 1 92 0 q-46 -26 -92 0 z" fill="#3a2a22"/>
+  </g>
+  <g>
+    <!-- student 2 -->
+    <path d="M250 500 v-82 a66 66 0 0 1 132 0 v82 z" fill="#2f7d63"/>
+    <circle cx="316" cy="322" r="48" fill="#8d5524"/>
+    <path d="M268 318 a48 48 0 0 1 96 0 q-48 -28 -96 0 z" fill="#241a14"/>
+  </g>
+  <g>
+    <!-- student 3 -->
+    <path d="M330 500 v-62 a58 58 0 0 1 116 0 v62 z" fill="#d2694b"/>
+    <circle cx="388" cy="358" r="44" fill="#f0c49b"/>
+    <path d="M344 354 a44 44 0 0 1 88 0 q-44 -26 -88 0 z" fill="#5b3a1e"/>
+  </g>
+
+  <!-- students: two on the right -->
+  <g>
+    <!-- student 4 -->
+    <path d="M760 500 v-64 a58 58 0 0 1 116 0 v64 z" fill="#2b5ea8"/>
+    <circle cx="818" cy="356" r="44" fill="#e0ac69"/>
+    <path d="M774 352 a44 44 0 0 1 88 0 q-44 -26 -88 0 z" fill="#2c1d12"/>
+  </g>
+  <g>
+    <!-- student 5 -->
+    <path d="M850 500 v-78 a64 64 0 0 1 128 0 v78 z" fill="#c9a227"/>
+    <circle cx="914" cy="328" r="47" fill="#6b4226"/>
+    <path d="M867 324 a47 47 0 0 1 94 0 q-47 -28 -94 0 z" fill="#1f1510"/>
+  </g>
+
+  <!-- books on the desk -->
+  <rect x="140" y="470" width="120" height="14" rx="5" fill="#e06c4f"/>
+  <rect x="150" y="484" width="120" height="14" rx="5" fill="#3f6fb5"/>
+  <rect x="960" y="476" width="110" height="12" rx="5" fill="#2f7d63"/>
+  <rect x="950" y="488" width="110" height="12" rx="5" fill="#ffc83d"/>
+</svg>

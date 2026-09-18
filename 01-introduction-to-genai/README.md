@@ -34,7 +34,7 @@ Our startup team is aware we’ll not be able to achieve this goal without lever
 
 Generative AI is expected to revolutionize the way we learn and teach today, with students having at their disposal virtual teachers 24 hours a day who provide vast amounts of information and examples, and teachers able to leverage innovative tools to assess their students and give feedback.
 
-![Five young students looking at a monitor - image by DALLE2](./images/students-by-DALLE2.png?WT.mc_id=academic-105485-koreyst)
+![Five students gathered around a monitor, learning together with an AI assistant - illustration](./images/students-learning-with-ai.png?WT.mc_id=academic-105485-koreyst)
 
 To start, let’s define some basic concepts and terminology we’ll be using throughout the curriculum.
 
