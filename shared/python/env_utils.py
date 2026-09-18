@@ -26,7 +26,7 @@ def get_required_env(var_name: str, description: str | None = None) -> str:
         >>> api_key = get_required_env("OPENAI_API_KEY", "OpenAI API authentication")
     """
     value = os.getenv(var_name)
-    if not value:
+    if not value or not value.strip():
         desc_part = f" ({description})" if description else ""
         raise ValueError(
             f"Missing required environment variable: {var_name}{desc_part}. "
@@ -57,7 +57,7 @@ def validate_env_vars(*var_names: str) -> dict[str, str]:
 
     for var_name in var_names:
         value = os.getenv(var_name)
-        if not value:
+        if not value or not value.strip():
             missing.append(var_name)
         else:
             values[var_name] = value
@@ -83,6 +83,6 @@ def get_env_with_default(var_name: str, default: str) -> str:
         The value of the environment variable or the default.
 
     Example:
-        >>> model = get_env_with_default("MODEL_NAME", "gpt-4o")
+        >>> model = get_env_with_default("AZURE_OPENAI_DEPLOYMENT", "gpt-5-mini")
     """
     return os.getenv(var_name, default)

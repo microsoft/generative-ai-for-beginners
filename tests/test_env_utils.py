@@ -26,6 +26,12 @@ def test_get_required_env_empty_raises(monkeypatch):
         get_required_env("EMPTY_VAR")
 
 
+def test_get_required_env_whitespace_only_raises(monkeypatch):
+    monkeypatch.setenv("WHITESPACE_VAR", "   ")
+    with pytest.raises(ValueError, match="WHITESPACE_VAR"):
+        get_required_env("WHITESPACE_VAR")
+
+
 def test_get_required_env_includes_description(monkeypatch):
     monkeypatch.delenv("NEEDS_DESC", raising=False)
     with pytest.raises(ValueError, match="OpenAI authentication"):
@@ -47,6 +53,13 @@ def test_validate_env_vars_reports_all_missing(monkeypatch):
     message = str(exc_info.value)
     assert "VAR_X" in message
     assert "VAR_Y" in message
+
+
+def test_validate_env_vars_rejects_whitespace_only(monkeypatch):
+    monkeypatch.setenv("VAR_A", "valid")
+    monkeypatch.setenv("VAR_B", "  ")
+    with pytest.raises(ValueError, match="VAR_B"):
+        validate_env_vars("VAR_A", "VAR_B")
 
 
 def test_get_env_with_default_uses_default(monkeypatch):
