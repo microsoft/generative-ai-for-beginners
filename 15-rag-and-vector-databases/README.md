@@ -22,9 +22,9 @@ After completing this lesson, you will be able to:
 
 - Explain the significance of RAG in data retrieval and processing.
 
-- Setup RAG application and ground your data to an LLM
+- Set up a RAG application and ground your data in an LLM
 
-- Effective integration of RAG and Vector Databases in LLM Applications.
+- Effectively integrate RAG and vector databases in LLM applications.
 
 ## Our Scenario: enhancing our LLMs with our own data
 
@@ -36,7 +36,7 @@ For this lesson, we want to add our own notes into the education startup, which 
 
 - `Azure AI Search` and `Azure Cosmos DB:` vector database to store our data and create a search index
 
-Users will be able to create practice quizzes from their notes, revision flash cards and summarize it to concise overviews. To get started, let us look at what is RAG and how works:
+Users will be able to create practice quizzes from their notes, revision flash cards and summarize them into concise overviews. To get started, let us look at what RAG is and how it works:
 
 ## Retrieval Augmented Generation (RAG)
 
@@ -56,9 +56,9 @@ Suppose you want to deploy a chatbot that creates quizzes from your notes, you w
 
 - **Augmented Generation:** the LLM enhances its response based on the data retrieved. It allows the response generated to be not only based on pre-trained data but also relevant information from the added context. The retrieved data is used to augment the LLM's responses. The LLM then returns an answer to the user's question.
 
-![drawing showing how RAGs architecture](images/encoder-decode.png?WT.mc_id=academic-105485-koreyst)
+![Diagram showing RAG architecture](images/encoder-decode.png?WT.mc_id=academic-105485-koreyst)
 
-The architecture for RAGs is implemented using transformers consisting of two parts: an encoder and a decoder. For example, when a user asks a question, the input text 'encoded' into vectors capturing the meaning of words and the vectors are 'decoded' into our document index and generates new text based on the user query. The LLM uses both an encoder-decoder model to generate the output.
+The architecture for RAG is implemented using transformers consisting of two parts: an encoder and a decoder. For example, when a user asks a question, the input text is encoded into vectors capturing the meaning of words, the vectors are matched against the document index, and the model generates new text based on the user query. The LLM uses an encoder-decoder model to generate the output.
 
 Two approaches when implementing RAG according to the proposed paper: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) are:
 
@@ -76,13 +76,13 @@ Two approaches when implementing RAG according to the proposed paper: [Retrieval
 
 ## Creating a knowledge base
 
-Our application is based on our personal data i.e., the Neural Network lesson on AI For Beginners curriculum.
+Our application is based on our personal data, i.e., the Neural Network lesson from the AI for Beginners curriculum.
 
 ### Vector Databases
 
 A vector database, unlike traditional databases, is a specialized database designed to store, manage and search embedded vectors. It stores numerical representations of documents. Breaking down data to numerical embeddings makes it easier for our AI system to understand and process the data.
 
-We store our embeddings in vector databases as LLMs have a limit of the number of tokens they accept as input. As you cannot pass the entire embeddings to an LLM, we will need to break them down into chunks and when a user asks a question, the embeddings most like the question will be returned together with the prompt. Chunking also reduces costs on the number of tokens passed through an LLM.
+We store our embeddings in vector databases as LLMs have a limit of the number of tokens they accept as input. As you cannot pass the entire embeddings to an LLM, we will need to break them down into chunks and when a user asks a question, the embeddings most similar to the question will be returned together with the prompt. Chunking also reduces costs on the number of tokens passed through an LLM.
 
 Some popular vector databases include Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant and DeepLake. You can create an Azure Cosmos DB model using Azure CLI with the following command:
 
@@ -141,9 +141,9 @@ A challenge with retrieval comes in when there is no similar response to the que
 
 ### Vector Similarity
 
-The retriever will search through the knowledge database for embeddings that are close together, the closest neighbour, as they are texts that are similar. In the scenario a user asks a query, it is first embedded then matched with similar embeddings. The common measurement that is used to find how similar different vectors are is cosine similarity which is based on the angle between two vectors.
+The retriever will search through the knowledge database for embeddings that are close together—the nearest neighbors—as they represent texts that are similar. In this scenario, when a user submits a query, it is first embedded and then matched with similar embeddings. The most common measurement used to compare vector similarity is cosine similarity, which is based on the angle between two vectors.
 
-We can measure similarity using other alternatives we can use are Euclidean distance which is the straight line between vector endpoints and dot product which measures the sum of the products of corresponding elements of two vectors.
+Other metrics we can use to measure similarity include Euclidean distance, which is the straight line between vector endpoints, and dot product, which measures the sum of the products of corresponding elements in two vectors.
 
 ### Search index
 
@@ -236,7 +236,7 @@ chatbot(user_input)
 
 ## Use Cases for using RAG (Retrieval Augmented Generation) and vector databases
 
-There are many different use cases where function calls can improve your app like:
+There are many different use cases where RAG can improve your app, such as:
 
 - Question and Answering: grounding your company data to a chat that can be used by employees to ask questions.
 
@@ -248,7 +248,7 @@ There are many different use cases where function calls can improve your app lik
 
 ## Summary
 
-We have covered the fundamental areas of RAG from adding our data to the application, the user query and output. To simplify creation of RAG, you can use frameworks such as Semanti Kernel, Langchain or Autogen.
+We have covered the fundamental areas of RAG from adding our data to the application, the user query and output. To simplify creation of RAG, you can use frameworks such as Semantic Kernel, LangChain or AutoGen.
 
 ## Assignment
 
