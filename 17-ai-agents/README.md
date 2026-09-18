@@ -167,6 +167,66 @@ client = OpenAIChatClient(
 )
 ```
 
+### Try a remote MCP tool
+
+With a local function such as `get_weather`, you define the tool's inputs yourself. With **Model Context Protocol (MCP)**, a server supplies tool descriptions and input schemas, and the framework turns them into callable tools. You can inspect and call those tools before giving them to an agent.
+
+This optional exercise uses [Parallel Search MCP](https://docs.parallel.ai/integrations/mcp/search-mcp) to search the public web and extract page text over Streamable HTTP. Its anonymous endpoint requires no Parallel account or API key; free access is rate limited. Running the example sends its search query, requested URL, objectives, and session identifier to Parallel. Use public information, not secrets or private documents.
+
+In your Python environment, install the framework and its optional MCP dependency:
+
+```bash
+python -m pip install agent-framework-core "mcp>=1.24,<2"
+```
+
+Save the following as `parallel-mcp-example.py` and run `python parallel-mcp-example.py`. It calls the tools directly, so no model credentials or model API calls are needed.
+
+```python
+import asyncio
+from uuid import uuid4
+
+from agent_framework import MCPStreamableHTTPTool
+
+
+async def main():
+    # Reuse one identifier for the related search and fetch calls.
+    session_id = str(uuid4())
+    async with MCPStreamableHTTPTool(
+        name="parallel-search",
+        url="https://search.parallel.ai/mcp",
+        load_prompts=False,
+        request_timeout=60,
+        # Use the text payload once; the server also returns it as structured content.
+        parse_tool_results=lambda result: "\n".join(
+            content.text for content in result.content if content.type == "text"
+        ),
+    ) as web:
+        print("Available tools:", [tool.name for tool in web.functions])
+
+        search = await web.call_tool(
+            "web_search",
+            objective="Find Microsoft's introduction to AI agents.",
+            search_queries=["Microsoft Learn what are AI agents"],
+            session_id=session_id,
+        )
+        print(search)
+
+        page = await web.call_tool(
+            "web_fetch",
+            urls=["https://learn.microsoft.com/agent-framework/"],
+            objective="Explain what Agent Framework does.",
+            session_id=session_id,
+        )
+        print(page)
+
+
+asyncio.run(main())
+```
+
+The output lists `web_search` and `web_fetch`, followed by search results and page excerpts. Results can change as the web changes. Compare the tool descriptions and required inputs, then inspect the returned source URLs. If the service returns a rate-limit error, wait before trying again.
+
+The `async with` block initializes the connection, discovers the tools, and closes the connection when finished. To use the same connection with the agent above, pass `tools=[web]` when creating the agent inside that block. The agent can then choose to call the tools during its work, sending its chosen queries, URLs, and context to Parallel. Your model provider still requires its own credentials and may charge for model calls. Remove `web` from the agent's tools to disable that access. See the [framework's MCP guide](https://learn.microsoft.com/agent-framework/agents/tools/local-mcp-tools?WT.mc_id=academic-105485-koreyst) for more options.
+
 ### Multi-agent workflows
 
 Where the framework really stands out is orchestrating several agents together. For example, you can run agents one after another (each passing its context to the next) or fan out to several agents in parallel and aggregate their results:
