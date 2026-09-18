@@ -159,7 +159,6 @@ För att upprätthålla en applikations högkvalitativa prestanda är det viktig
 | **Användartillfredsställelse-mått** | Mäter användarens uppfattning av applikationen. Samlas ofta in genom enkäter.                                         | Hur ofta ska du samla in användarfeedback? Hur ska du anpassa dig efter den? |
 | **Felrate**                  | Frekvensen av fel som modellen gör i förståelse eller output.                                                          | Vilka strategier har du för att minska felfrekvensen?                 |
 | **Omkörningscykler**         | Hur ofta modellen uppdateras för att inkludera ny data och insikter.                                                  | Hur ofta ska du omträna modellen? Vad utlöser en omkörningscykel?     |
-
 | **Anomalidetektion**         | Verktyg och tekniker för att identifiera ovanliga mönster som inte följer förväntat beteende.                        | Hur kommer du att hantera anomalier?                                        |
 
 ### Implementera ansvarsfulla AI-praxis i chattapplikationer

@@ -159,7 +159,6 @@ Untuk mengekalkan prestasi aplikasi yang berkualiti tinggi, adalah penting untuk
 | **Metrik Kepuasan Pengguna**| Mengukur persepsi pengguna terhadap aplikasi. Selalunya dikumpul melalui tinjauan.                                    | Berapa kerap anda akan mengumpul maklum balas pengguna? Bagaimana anda akan menyesuaikan berdasarkan maklum balas itu? |
 | **Kadar Kesilapan**          | Kadar model membuat kesilapan dalam pemahaman atau output.                                                             | Apakah strategi anda untuk mengurangkan kadar kesilapan?             |
 | **Kitaran Latihan Semula**   | Kekerapan model dikemas kini untuk memasukkan data dan pengetahuan baru.                                              | Berapa kerap anda akan melatih semula model? Apakah pencetus kitaran latihan semula? |
-
 | **Pengesanan Anomali**         | Alat dan teknik untuk mengenal pasti corak luar biasa yang tidak mematuhi tingkah laku yang dijangkakan.                  | Bagaimana anda akan bertindak balas terhadap anomali?                         |
 
 ### Melaksanakan Amalan AI Bertanggungjawab dalam Aplikasi Chat

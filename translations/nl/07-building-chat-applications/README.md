@@ -159,7 +159,6 @@ Om de hoge kwaliteit van prestaties van een applicatie te waarborgen, is het ess
 | **Gebruikerstevredenheid Metrics** | Meet de perceptie van de gebruiker van de applicatie. Wordt vaak vastgelegd via enquêtes.                            | Hoe vaak verzamel je gebruikersfeedback? Hoe pas je je daarop aan?|
 | **Foutpercentage**           | Het percentage fouten dat het model maakt in begrip of output                                                         | Welke strategieën heb je om foutpercentages te verminderen?       |
 | **Hertrainingscycli**        | De frequentie waarmee het model wordt bijgewerkt met nieuwe data en inzichten                                         | Hoe vaak hertrain je het model? Wat veroorzaakt een hertrainingscyclus? |
-
 | **Anomaliedetectie**         | Hulpmiddelen en technieken voor het identificeren van ongebruikelijke patronen die niet overeenkomen met verwacht gedrag.                        | Hoe ga je reageren op anomalieën?                                        |
 
 ### Implementatie van Verantwoorde AI-praktijken in Chatapplicaties

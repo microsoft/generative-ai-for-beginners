@@ -42,7 +42,7 @@
     "language_code": "ru"
   },
   "04-prompt-engineering-fundamentals/README.md": {
-    "original_hash": "d858903bcad65dac632e1669475254cb",
+    "original_hash": "aa6b9b2fbd3bffa792be8d836a92008a",
     "translation_date": "2026-07-17T12:56:22+00:00",
     "source_file": "04-prompt-engineering-fundamentals/README.md",
     "language_code": "ru"
@@ -96,7 +96,7 @@
     "language_code": "ru"
   },
   "07-building-chat-applications/README.md": {
-    "original_hash": "0517cf9ab4f1283fdffe3adcd675ec33",
+    "original_hash": "7f40b095c40001cdbcb73463233657c8",
     "translation_date": "2026-07-17T12:52:43+00:00",
     "source_file": "07-building-chat-applications/README.md",
     "language_code": "ru"
@@ -352,11 +352,11 @@
       "original_hash": "a48fc288183d6c459408f4cb608a53b1",
       "source_file": "CHANGELOG.md",
       "language_code": "ru",
-      "failure_date": "2026-07-17T13:32:11+00:00",
+      "failure_date": "2026-09-15T16:30:04+00:00",
       "status": "failed",
       "error_type": "TranslationIncompleteError",
-      "error_message": "Markdown translation remained incomplete for chunk 1.1.2 of 'CHANGELOG.md', and the chunk could not be split further.",
-      "translator_version": "0.20.0",
+      "error_message": "Markdown translation remained incomplete for chunk 1.1.1 of 'CHANGELOG.md', and the chunk could not be split further.",
+      "translator_version": "0.20.1",
       "failure_policy_version": 1
     }
   },

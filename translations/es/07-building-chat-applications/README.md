@@ -159,7 +159,6 @@ Para mantener un rendimiento de alta calidad en una aplicación, es esencial hac
 | **Métricas de satisfacción del usuario** | Mide la percepción del usuario sobre la aplicación. A menudo capturada a través de encuestas.                          | ¿Con qué frecuencia recopilarás retroalimentación del usuario? ¿Cómo te adaptarás en base a ella? |
 | **Tasa de error**               | La tasa en la cual el modelo comete errores en comprensión o salida.                                                    | ¿Qué estrategias tienes para reducir las tasas de error?           |
 | **Ciclos de reentrenamiento**  | La frecuencia con que el modelo es actualizado para incorporar nuevos datos e insights.                               | ¿Con qué frecuencia reentrenarás el modelo? ¿Qué desencadena un ciclo de reentrenamiento? |
-
 | **Detección de anomalías**   | Herramientas y técnicas para identificar patrones inusuales que no se ajustan al comportamiento esperado.              | ¿Cómo responderás a las anomalías?                                       |
 
 ### Implementando prácticas de IA responsable en aplicaciones de chat

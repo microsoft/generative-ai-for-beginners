@@ -159,7 +159,6 @@ Laadukkaan sovelluksen suorituskyvyn ylläpitämiseksi on tärkeää seurata kes
 | **Käyttäjätyytyväisyysmittarit** | Mittaa käyttäjän käsitystä sovelluksesta. Usein kerätään kyselyillä.                                              | Kuinka usein keräät käyttäjäpalautetta? Miten mukautat sen perusteella? |
 | **Virheiden määrä**            | Mallin tekemien virheiden määrä ymmärtämisessä tai vastauksissa.                                                 | Mitä strategioita sinulla on virheiden vähentämiseksi?       |
 | **Uudelleenkoulutussyklit**   | Kuinka usein mallia päivitetään uusilla tiedoilla ja näkemyksillä.                                               | Kuinka usein uudelleenkoulutat mallin? Mikä käynnistää uudelleenkoulutussyklin? |
-
 | **Poikkeavuuksien tunnistus** | Työkaluja ja tekniikoita epätavallisten mallien tunnistamiseen, jotka eivät vastaa odotettua käyttäytymistä.                  | Kuinka vastaat poikkeavuuksiin?                                          |
 
 ### Vastuullisten tekoälykäytäntöjen toteuttaminen chat-sovelluksissa

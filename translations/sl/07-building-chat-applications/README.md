@@ -159,7 +159,6 @@ Za vzdrževanje visokokakovostne zmogljivosti aplikacije je bistveno spremljati 
 | **Metrike zadovoljstva uporabnika** | Meri zaznavo uporabnika o aplikaciji. Pogosto zajeta preko anket.                                                   | Kako pogosto boste zbirali povratne informacije uporabnikov? Kako se boste prilagajali na podlagi tega? |
 | **Stopnja napak**   | Stopnja, pri kateri model dela napake pri razumevanju ali izhodu.                                                    | Katere strategije imate za znižanje stopnje napak?             |
 | **Cikli ponovnega treniranja** | Pogostost, s katero se model posodablja z vključevanjem novih podatkov in vpogledov.                             | Kako pogosto boste ponovno trenirali model? Kaj sproži cikel ponovnega treniranja? |
-
 | **Odkrivanje anomalij**         | Orodja in tehnike za prepoznavanje nenavadnih vzorcev, ki ne ustrezajo pričakovanemu vedenju.                        | Kako boste odgovorili na anomalije?                                        |
 
 ### Izvajanje praks odgovorne umetne inteligence v klepetalnih aplikacijah

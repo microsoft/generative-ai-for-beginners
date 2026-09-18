@@ -159,7 +159,6 @@ Per mantenere alte prestazioni dell'applicazione, è essenziale monitorare metri
 | **Metriche di soddisfazione utente** | Misura la percezione dell'utente sull'applicazione. Spesso raccolte tramite sondaggi.                                   | Con quale frequenza raccoglierai feedback utente? Come ti adatterai in base a esso? |
 | **Tasso di errore**           | Il tasso con cui il modello commette errori nella comprensione o nell'output.                                           | Quali strategie hai in atto per ridurre i tassi di errore?                |
 | **Cicli di riaddestramento** | La frequenza con cui il modello viene aggiornato per incorporare nuovi dati e approfondimenti.                          | Quanto spesso riaddestrerai il modello? Cosa innesca un ciclo di riaddestramento? |
-
 | **Rilevamento Anomalie**    | Strumenti e tecniche per identificare schemi insoliti che non si conformano al comportamento previsto.                 | Come risponderai alle anomalie?                                         |
 
 ### Implementare Pratiche di AI Responsabile nelle Applicazioni di Chat

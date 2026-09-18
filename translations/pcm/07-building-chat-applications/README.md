@@ -159,7 +159,6 @@ To keep app performance high, you need to check key metrics and things to consid
 | **User Satisfaction Metrics** | How users see the app. You fit collect this through surveys                                     | How often you go collect user feedback? How you go take adjust? |
 | **Error Rate**                | How much model dey make mistakes for understanding or generating output                                                 | What ways you get to reduce error?               |
 | **Retraining Cycles**         | How often model dey update with new data and knowledge                                    | How often you go retrain model? Wetin go make you start retrain?   |
-
 | **Anomaly Detection**         | Tools and techniques for identifying unusual patterns wey no follow wetin dem expect.                        | How you go take respond to anomalies?                                        |
 
 ### How to Take Put Responsible AI Practices for Chat Applications

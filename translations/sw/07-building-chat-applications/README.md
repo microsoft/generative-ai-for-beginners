@@ -159,7 +159,6 @@ Ili kudumisha utendaji wa ubora wa juu wa programu, ni muhimu kufuatilia viashir
 | **Viashiria vya Kuridhika kwa Mtumiaji** | Hupima mtazamo wa mtumiaji juu ya programu. Mara nyingi hukusanywa kupitia tafiti.                                     | Utakusanya maoni ya mtumiaji mara ngapi? Utabadilikaje kulingana na hayo? |
 | **Kiwango cha Makosa**      | Kiwango ambacho mfano hufanya makosa katika kuelewa au kutoa matokeo.                                                | Ni mikakati gani uliyo nayo kupunguza kiwango cha makosa?         |
 | **Mizunguko ya Mafunzo upya** | Mara ngapi mfano unasasishwa ili kujumuisha data mpya na maarifa mapya.                                               | Mara ngapi utasubiria kufunza upya mfano? Nini kinaanzisha mzunguko mpya wa kufunza? |
-
 | **Uchunguzi wa Mambo Yasiyo ya Kawaida** | Vifaa na mbinu za kubaini mifumo isiyo ya kawaida ambayo haifuati tabia inayotegemewa. | Utajibu vipi kwa mambo yasiyo ya kawaida? |
 
 ### Kutekeleza Mazoezi ya AI yenye Uwajibikaji katika Programu za Chat

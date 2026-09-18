@@ -159,7 +159,6 @@ Rakenduse kõrgekvaliteedilise jõudluse tagamiseks on oluline jälgida võtmem�
 | **Kasutajate rahulolu mõõdikud** | Mõõdab kasutaja tajutud kogemust rakendusega. Sageli kogutakse küsitluste kaudu.                                        | Kui sageli kogute kasutajate tagasisidet? Kuidas kohandute selle põhjal? |
 | **Vigade määr**              | Sagedus, mil mudel teeb mõistmis- või väljundvigu.                                                                     | Millised strateegiad teil on vigade määra vähendamiseks?       |
 | **Ülekoolituskorrad**       | Kui sageli mudelit uuendatakse uute andmete ja teadmistega kohandamiseks.                                              | Kui tihti treenite mudelit uuesti? Mis käivitab uusõppe tsükli?|
-
 | **Anomaaliate tuvastamine** | Tööriistad ja tehnikad ebatavaliste mustrite tuvastamiseks, mis ei vasta oodatud käitumisele.                        | Kuidas reageerite anomaaliatele?                                        |
 
 ### Vastutustundliku tehisintellekti tavade rakendamine vestlusrakendustes
