@@ -138,6 +138,8 @@ We hope to use Phi-3/3.5 in different scenarios. Next, we will use Phi-3/3.5 bas
 
 > **Note:** GitHub Models is retiring at the end of July 2026. [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) is the direct replacement.
 
+> **Note:** The entire Phi-3/3.5 family (Instruct, Vision, and MoE variants) was retired from the Microsoft Foundry Models catalog on 2025-08-30. Use `Phi-4` (Instruct) or `Phi-4-mini-instruct` there instead — the Phi-3/3.5 examples below still work via Hugging Face, Ollama, ONNX Runtime, and NVIDIA NIM.
+
 Microsoft Foundry Models is the most direct way. You can quickly access the Phi-3/3.5-Instruct model through the Foundry model catalog. Combined with the Azure AI Inference SDK / OpenAI SDK, you can access the API through code to complete the Phi-3/3.5-Instruct call. You can also test different effects through the Playground.
 
 - Demo: Comparison of the effects of Phi-3-mini and Phi-3.5-mini in Chinese scenarios

@@ -17,6 +17,8 @@ These models come in different variants and are available in the [Microsoft Foun
 
 > **Note:** GitHub Models is retiring at the end of July 2026. Here are more details on using [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) to prototype with AI models.
 
+> **Note:** The specific model versions this lesson was originally written against (Llama 3.1 405B Instruct, Llama 3.2 11B/90B Vision Instruct) have since been retired from the Microsoft Foundry Models catalog. The code examples below use `Llama-3.3-70B-Instruct` and `Llama-4-Scout-17B-16E-Instruct`, their current successors, so they still run today.
+
 Model Variants: 
 - Llama 3.1 - 70B Instruct 
 - Llama 3.1 - 405B Instruct 
@@ -66,7 +68,8 @@ from azure.core.credentials import AzureKeyCredential
 # Get these from your Microsoft Foundry project's "Overview" page
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
-model_name = "Meta-Llama-3.1-405B-Instruct"
+# Meta-Llama-3.1-405B-Instruct was retired from Microsoft Foundry on 2026-06-13; using its current successor
+model_name = "Llama-3.3-70B-Instruct"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -125,7 +128,9 @@ from azure.core.credentials import AzureKeyCredential
 # Get these from your Microsoft Foundry project's "Overview" page
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
-model_name = "Llama-3.2-90B-Vision-Instruct"
+# Llama-3.2-90B-Vision-Instruct was retired from Microsoft Foundry on 2026-06-13 with no replacement listed;
+# using Llama-4-Scout-17B-16E-Instruct, Meta's current natively multimodal model, instead
+model_name = "Llama-4-Scout-17B-16E-Instruct"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,

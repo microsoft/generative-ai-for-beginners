@@ -17,8 +17,7 @@ if (!endpoint) {
    you need a model supporting tools. The following compatible models are
    available in the Microsoft Foundry Models catalog:
 
-   Cohere: Cohere-command-r-08-2024, Cohere-command-r-plus-08-2024
-   Mistral AI: Mistral-large-2411, Mistral-small-2503
+   Mistral AI: Mistral-medium-2505, Mistral-small-2503
    OpenAI: gpt-5-mini, gpt-4o-mini, gpt-4o, gpt-4.1, gpt-4.1-mini */
 const modelName = "gpt-5-mini";
 
