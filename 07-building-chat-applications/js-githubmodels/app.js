@@ -19,7 +19,7 @@ if (!endpoint) {
    available in the Microsoft Foundry Models catalog:
 
    Meta: Llama-3.3-70B-Instruct, Llama-4-Scout-17B-16E-Instruct
-   Mistral AI: Mistral-medium-2505, Mistral-small-2503, Codestral-2501, Ministral-3B
+   Mistral AI: mistral-medium-3-5, mistral-small-4-119b-2603, Codestral-2501, ministral-ministral-4b-instruct
    OpenAI: gpt-5-mini, gpt-4o-mini, gpt-4o, gpt-4.1, gpt-4.1-mini
    Microsoft: Phi-4, Phi-4-mini-instruct, Phi-4-multimodal-instruct, Phi-4-reasoning */
 const modelName = "gpt-5-mini";

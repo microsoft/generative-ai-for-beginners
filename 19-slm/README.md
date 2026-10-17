@@ -151,7 +151,7 @@ Microsoft Foundry Models now provides the Phi-4 successors. Use `Phi-4` or `Phi-
 
 **Microsoft Foundry**
 
-Or if we want to use the vision and MoE models, you can use Microsoft Foundry to complete the call. If you are interested, you can read the Phi-3 Cookbook to learn how to call Phi-3/3.5 Instruct, Vision, MoE through Microsoft Foundry [Click this link](https://github.com/microsoft/PhiCookBook/blob/main/md/02.QuickStart/AzureAIFoundry_QuickStart.md?WT.mc_id=academic-105485-koreyst)
+If you want to use vision (multimodal) models in the cloud, use the currently available `Phi-4-multimodal-instruct` through Microsoft Foundry instead of the retired Phi-3/3.5 Vision models; for text tasks use `Phi-4` or `Phi-4-mini-instruct`. The Phi-3.5 MoE model has been retired from Microsoft Foundry, so use the other options described in this lesson (for example Hugging Face) if you want to experiment with it. If you are interested, you can read the Phi Cookbook to learn how to call Phi models through Microsoft Foundry [Click this link](https://github.com/microsoft/PhiCookBook/blob/main/md/02.QuickStart/AzureAIFoundry_QuickStart.md?WT.mc_id=academic-105485-koreyst)
 
 
 **NVIDIA NIM**
