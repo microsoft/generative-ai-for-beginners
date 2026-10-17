@@ -1,117 +1,117 @@
-# Construirea aplicațiilor de generare a textului
+# Construirea aplicațiilor de generare text
 
-[![Construirea aplicațiilor de generare a textului](../../../translated_images/ro/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Construirea aplicațiilor de generare text](../../../translated_images/ro/06-lesson-banner.a5c629f990a636c8.webp?WT.mc_id=academic-105485-koreyst)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
-> _(Click pe imaginea de mai sus pentru a viziona videoclipul acestei lecții)_
+> _(Faceți clic pe imaginea de mai sus pentru a viziona videoclipul acestei lecții)_
 
-Până acum, în cadrul acestui curriculum, ai văzut că există concepte de bază precum prompturile și chiar o disciplină întreagă numită "ingineria prompturilor". Multe instrumente cu care poți interacționa, cum ar fi ChatGPT, Office 365, Microsoft Power Platform și altele, te susțin folosind prompturi pentru a realiza ceva.
+Ați văzut până acum în cadrul acestui curriculum că există concepte de bază precum prompturile și chiar o disciplină întreagă numită „ingineria prompturilor”. Multe instrumente cu care puteți interacționa, cum ar fi ChatGPT, Office 365, Microsoft Power Platform și altele, vă susțin folosind prompturi pentru a realiza ceva.
 
-Pentru a adăuga o astfel de experiență într-o aplicație, trebuie să înțelegi concepte precum prompturi, completări și să alegi o bibliotecă cu care să lucrezi. Exact asta vei învăța în acest capitol.
+Pentru a adăuga o astfel de experiență într-o aplicație, trebuie să înțelegeți concepte precum prompturile, completările și să alegeți o bibliotecă cu care să lucrați. Exact asta veți învăța în acest capitol.
 
 ## Introducere
 
-În acest capitol, vei:
+În acest capitol, veți:
 
-- Învăța despre biblioteca openai și conceptele sale de bază.
-- Construi o aplicație de generare a textului folosind openai.
-- Înțelege cum să folosești concepte precum prompt, temperature și tokens pentru a construi o aplicație de generare a textului.
+- Înțelege biblioteca openai și conceptele sale de bază.
+- Construi o aplicație de generare text folosind openai.
+- Înțelege cum să folosești concepte precum prompt, temperatura și token-urile pentru a construi o aplicație de generare text.
 
-## Obiectivele de învățare
+## Obiective de învățare
 
-La sfârșitul acestei lecții, vei fi capabil să:
+La finalul acestei lecții, veți putea:
 
-- Explici ce este o aplicație de generare a textului.
-- Construiești o aplicație de generare a textului folosind openai.
-- Configurezi aplicația să utilizeze mai mulți sau mai puțini tokens și să schimbi temperatura, pentru un rezultat variat.
+- Explica ce este o aplicație de generare text.
+- Construi o aplicație de generare text folosind openai.
+- Configura aplicația pentru a folosi mai multe sau mai puține token-uri și, de asemenea, pentru a schimba temperatura, pentru un rezultat variat.
 
-## Ce este o aplicație de generare a textului?
+## Ce este o aplicație de generare text?
 
-De obicei, când construiești o aplicație aceasta are un fel de interfață ca urmează:
+De obicei, când construiești o aplicație, aceasta are un fel de interfață, cum ar fi următoarele:
 
-- Bazată pe comenzi. Aplicațiile de consolă sunt aplicații tipice în care tastezi o comandă și aceasta execută o sarcină. De exemplu, `git` este o aplicație bazată pe comenzi.
+- Bazată pe comandă. Aplicațiile console sunt aplicații tipice în care tastezi o comandă și aceasta execută o sarcină. De exemplu, `git` este o aplicație bazată pe comandă.
 - Interfață de utilizator (UI). Unele aplicații au interfețe grafice de utilizator (GUI) unde apeși butoane, introduci text, selectezi opțiuni și altele.
 
-### Aplicațiile de consolă și UI sunt limitate
+### Aplicațiile console și UI sunt limitate
 
-Compară cu o aplicație bazată pe comenzi unde tastezi o comandă:
+Compară cu o aplicație bazată pe comandă în care tastezi o comandă:
 
-- **Este limitată**. Nu poți introduce orice comandă, doar cele pe care aplicația le suportă.
-- **Limbaj specific**. Unele aplicații suportă multe limbi, dar în mod implicit aplicația este construită pentru un anumit limbaj, chiar dacă poți adăuga suport pentru altele.
+- **Este limitată**. Nu poți să tastezi orice comandă, ci doar pe cele pe care aplicația le suportă.
+- **Specifică limbajului**. Unele aplicații suportă multe limbi, dar implicit aplicația este construită pentru un limbaj specific, chiar dacă poți adăuga suport pentru mai multe limbi.
 
-### Beneficiile aplicațiilor de generare a textului
+### Beneficiile aplicațiilor de generare text
 
-Atunci, cum este diferită o aplicație de generare a textului?
+Deci, cum este o aplicație de generare text diferită?
 
-Într-o aplicație de generare a textului, ai mai multă flexibilitate, nu ești limitat la un set de comenzi sau la un limbaj de intrare specific. În schimb, poți folosi limbajul natural pentru a interacționa cu aplicația. Un alt beneficiu este că interacționezi deja cu o sursă de date care a fost antrenată pe un vast corpus de informații, pe când o aplicație tradițională ar putea fi limitată la ce conține o bază de date.
+Într-o aplicație de generare text, ai mai multă flexibilitate, nu ești limitat la un set de comenzi sau un limbaj de intrare specific. În schimb, poți folosi limbajul natural pentru a interacționa cu aplicația. Un alt beneficiu este că deja interacționezi cu o sursă de date care a fost antrenată pe un vast corpus de informații, pe când o aplicație tradițională poate fi limitată la ceea ce conține o bază de date.
 
-### Ce pot construi cu o aplicație de generare a textului?
+### Ce pot construi cu o aplicație de generare text?
 
-Poți construi multe lucruri. De exemplu:
+Sunt multe lucruri pe care le poți construi. De exemplu:
 
-- **Un chatbot**. Un chatbot care răspunde la întrebări despre subiecte, cum ar fi compania ta și produsele ei ar putea fi o potrivire bună.
-- **Asistent**. LLM-urile sunt grozave la lucruri precum rezumarea textului, extragerea de informații din text, generarea de texte precum CV-uri și altele.
-- **Asistent de cod**. În funcție de modelul de limbaj pe care îl folosești, poți construi un asistent de cod care să te ajute să scrii cod. De exemplu, poți folosi un produs precum GitHub Copilot precum și ChatGPT pentru a te ajuta să scrii cod.
+- **Un chatbot**. Un chatbot care răspunde la întrebări despre subiecte, cum ar fi compania ta și produsele sale, ar putea fi o alegere bună.
+- **Asistent**. Modelele LLM sunt excelente la lucruri precum rezumarea textului, obținerea de informații din text, generarea de texte precum CV-uri și altele.
+- **Asistent de cod**. În funcție de modelul de limbaj utilizat, poți construi un asistent care te ajută să scrii cod. De exemplu, poți folosi un produs precum GitHub Copilot, precum și ChatGPT, pentru a te ajuta să scrii cod.
 
 ## Cum pot începe?
 
-Ei bine, trebuie să găsești o cale de a te integra cu un LLM, ceea ce de obicei presupune următoarele două abordări:
+Ei bine, trebuie să găsești o modalitate de a te integra cu un LLM, ceea ce implică de obicei următoarele două abordări:
 
-- Folosește un API. Aici construiești cereri web cu promptul tău și primești înapoi text generat.
-- Folosește o bibliotecă. Bibliotecile ajută la încapsularea apelurilor API și le fac mai ușor de folosit.
+- Folosește un API. Aici construiești cereri web cu promptul tău și primești text generat înapoi.
+- Folosește o bibliotecă. Bibliotecile ajută la încapsularea apelurilor API și le fac mai ușor de utilizat.
 
 ## Biblioteci/SDK-uri
 
-Există câteva biblioteci bine cunoscute pentru lucrul cu LLM-uri cum ar fi:
+Există câteva biblioteci cunoscute pentru lucrul cu LLM-uri, cum ar fi:
 
-- **openai**, această bibliotecă face ușor să te conectezi la modelul tău și să trimiți prompturi.
+- **openai**, această bibliotecă face ușoară conectarea la modelul tău și trimiterea de prompturi.
 
-Apoi există biblioteci care operează la un nivel mai înalt, cum ar fi:
+Apoi există biblioteci care operează la un nivel mai înalt, precum:
 
 - **Langchain**. Langchain este bine cunoscut și suportă Python.
-- **Semantic Kernel**. Semantic Kernel este o bibliotecă de la Microsoft care suportă limbajele C#, Python și Java.
+- **Semantic Kernel**. Semantic Kernel este o bibliotecă Microsoft care suportă limbajele C#, Python și Java.
 
 ## Prima aplicație folosind openai
 
 Să vedem cum putem construi prima noastră aplicație, ce biblioteci avem nevoie, cât este necesar și așa mai departe.
 
-### Instalarea openai
+### Instalează openai
 
-Există multe biblioteci pentru interacțiunea cu OpenAI sau Azure OpenAI. Este posibil să folosești și numeroase limbaje de programare precum C#, Python, JavaScript, Java și altele. Am ales să folosim biblioteca Python `openai`, așa că vom folosi `pip` pentru a o instala.
+Există multe biblioteci pentru interacționarea cu OpenAI sau Azure OpenAI. Este posibil să folosești diverse limbaje de programare precum C#, Python, JavaScript, Java și altele. Am ales să folosim biblioteca Python `openai`, așa că vom folosi `pip` pentru instalare.
 
 ```bash
 pip install openai
 ```
 
-### Crearea unui resource
+### Creează un resource
 
-Trebuie să realizezi următorii pași:
+Trebuie să parcurgi următorii pași:
 
 - Creează un cont pe Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
 - Obține acces la Azure OpenAI. Mergi la [https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) și solicită acces.
 
   > [!NOTE]
-  > La momentul scrierii, trebuie să aplici pentru acces la Azure OpenAI.
+  > La momentul scrierii, trebuie să aplici pentru accesul la Azure OpenAI.
 
 - Instalează Python <https://www.python.org/>
-- Ai creat un resource Azure OpenAI Service. Vezi acest ghid despre cum să [creezi un resource](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- Creează un resource Azure OpenAI Service. Vezi acest ghid pentru [cum să creezi un resource](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
-### Găsirea cheii API și a endpoint-ului
+### Găsește cheia API și endpoint-ul
 
-În acest moment, trebuie să spui bibliotecii `openai` ce cheie API să folosească. Pentru a găsi cheia API, mergi în secțiunea "Keys and Endpoint" a resursei tale Azure OpenAI și copiază valoarea "Key 1".
+În acest moment, trebuie să spui bibliotecii tale `openai` ce cheie API să folosească. Pentru a găsi cheia API, mergi la secțiunea „Keys and Endpoint” a resursei tale Azure OpenAI și copiază valoarea „Key 1”.
 
-![Cheile și endpoint-ul resursei în Azure Portal](https://learn.microsoft.com/azure/ai-foundry/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-foundry/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-Acum că ai copiat această informație, să instruim bibliotecile să o folosească.
+Acum că ai această informație copiată, să instruim bibliotecile să o folosească.
 
 > [!NOTE]
-> Merită să separi cheia API de codul tău. Poți face asta folosind variabile de mediu.
+> Merită să separi cheia ta API de codul tău. Poți face asta folosind variabile de mediu.
 >
-> - Setează variabila de mediu `OPENAI_API_KEY` cu cheia ta API.
+> - Setează variabila de mediu `OPENAI_API_KEY` la cheia ta API.
 >   `export OPENAI_API_KEY='sk-...'`
 
-### Configurare Azure
+### Configurează Azure
 
-Dacă folosești Azure OpenAI (acum parte din Microsoft Foundry), iată cum configurezi. Folosim clientul standard `OpenAI` indicat către endpoint-ul Azure OpenAI `/openai/v1/`, care funcționează cu Responses API și nu necesită `api_version`:
+Dacă folosești Azure OpenAI (acum parte din Microsoft Foundry), iată cum configurezi setarea. Folosim clientul standard `OpenAI` orientat către endpoint-ul Azure OpenAI `/openai/v1/`, care funcționează cu Responses API și nu necesită `api_version`:
 
 ```python
 import os
@@ -126,30 +126,30 @@ client = OpenAI(
 Mai sus setăm următoarele:
 
 - `api_key`, aceasta este cheia ta API găsită în Azure Portal sau portalul Microsoft Foundry.
-- `base_url`, acesta este endpoint-ul resursei tale Foundry cu `/openai/v1/` adăugat la final. Endpoint-ul stabil v1 funcționează atât pentru OpenAI cât și pentru Azure OpenAI fără managementul `api_version`.
+- `base_url`, aceasta este endpoint-ul resursei tale Foundry cu `/openai/v1/` adăugat. Endpoint-ul stabil v1 funcționează atât pentru OpenAI cât și pentru Azure OpenAI fără management de `api_version`.
 
-> [!NOTE] > `os.environ` citește variabilele de mediu. Poți să îl folosești pentru a citi variabilele de mediu precum `AZURE_OPENAI_API_KEY` și `AZURE_OPENAI_ENDPOINT`. Setează aceste variabile în terminalul tău sau folosind o bibliotecă precum `dotenv`.
+> [!NOTE] > `os.environ` citește variabilele de mediu. Poți folosi această funcție pentru a citi variabile de mediu ca `AZURE_OPENAI_API_KEY` și `AZURE_OPENAI_ENDPOINT`. Setează aceste variabile în terminalul tău sau folosind o bibliotecă precum `dotenv`.
 
-## Generare de text
+## Generează text
 
-Modul de a genera text este să folosești Responses API prin metoda `responses.create`. Iată un exemplu:
+Modalitatea de a genera text este să folosești Responses API prin metoda `responses.create`. Iată un exemplu:
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
 
 response = client.responses.create(
-    model="gpt-5-mini",  # acesta este numele implementării modelului tău
+    model="gpt-5-mini",  # this is your model deployment name
     input=prompt,
     store=False,
 )
 print(response.output_text)
 ```
 
-În codul de mai sus, creăm un răspuns și trecem modelul pe care vrem să îl folosim și promptul. Apoi afișăm textul generat prin `response.output_text`.
+În codul de mai sus, creăm un răspuns și transmitem modelul dorit și promptul. Apoi afișăm textul generat prin `response.output_text`.
 
-### Conversații multi-turn
+### Conversații cu mai multe tururi
 
-Responses API este bine potrivit atât pentru generarea de text single-turn cât și pentru chatboți multi-turn - furnizezi o listă de mesaje în `input` pentru a construi o conversație:
+Responses API este potrivit atât pentru generarea textului cu un singur tur, cât și pentru chatbots cu mai multe tururi - oferi o listă de mesaje în `input` pentru a construi o conversație:
 
 ```python
 from openai import OpenAI
@@ -160,11 +160,11 @@ response = client.responses.create(model="gpt-5-mini", input="Hello world", stor
 print(response.output_text)
 ```
 
-Mai multe despre această funcționalitate în capitole viitoare.
+Mai multe despre această funcționalitate într-un capitol viitor.
 
 ## Exercițiu - prima ta aplicație de generare text
 
-Acum că am învățat cum să configurăm și să configurăm openai, este timpul să construim prima ta aplicație de generare a textului. Urmează acești pași pentru a-ți construi aplicația:
+Acum că am învățat cum să configurăm și să folosim openai, e timpul să construiești prima ta aplicație de generare text. Pentru a-ți construi aplicația, urmează acești pași:
 
 1. Creează un mediu virtual și instalează openai:
 
@@ -175,12 +175,12 @@ Acum că am învățat cum să configurăm și să configurăm openai, este timp
    ```
 
    > [!NOTE]
-   > Dacă folosești Windows tastează `venv\Scripts\activate` în loc de `source venv/bin/activate`.
+   > Dacă folosești Windows, tastează `venv\Scripts\activate` în loc de `source venv/bin/activate`.
 
    > [!NOTE]
-   > Găsește cheia Azure OpenAI mergând la [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst), caută `Open AI`, selectează `Open AI resource` și apoi selectează `Keys and Endpoint` și copiază valoarea `Key 1`.
+   > Găsește cheia ta Azure OpenAI mergând la [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst), caută `Open AI` și selectează `Open AI resource` apoi selectează `Keys and Endpoint` și copiază valoarea `Key 1`.
 
-1. Creează un fișier _app.py_ și pune următorul cod:
+1. Creează un fișier _app.py_ și pune următorul cod în el:
 
    ```python
    import os
@@ -192,20 +192,20 @@ Acum că am învățat cum să configurăm și să configurăm openai, este timp
    )
    deployment_name = "<deployment name>"
 
-   # adaugă codul tău de completare
+   # add your completion code
    prompt = "Complete the following: Once upon a time there was a"
 
-   # fă o cerere folosind API-ul Răspunsuri
+   # make a request using the Responses API
    response = client.responses.create(model=deployment_name, input=prompt, store=False)
 
-   # afișează răspunsul
+   # print response
    print(response.output_text)
    ```
 
    > [!NOTE]
-   > Dacă folosești OpenAI simplu (nu Azure), folosește `client = OpenAI(api_key="<înlocuiește această valoare cu cheia ta OpenAI>")` (fără `base_url`) și treci un nume de model precum `gpt-5-mini` în loc de un nume de deployment.
+   > Dacă folosești OpenAI simplu (nu Azure), folosește `client = OpenAI(api_key="<replace this value with your OpenAI key>")` (fără `base_url`) și oferă un nume de model precum `gpt-5-mini` în loc de numele unui deployment.
 
-   Ar trebui să vezi un rezultat similar cu următorul:
+   Ar trebui să vezi o ieșire similară cu aceasta:
 
    ```output
     very unhappy _____.
@@ -213,25 +213,25 @@ Acum că am învățat cum să configurăm și să configurăm openai, este timp
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## Tipuri diferite de prompturi, pentru lucruri diferite
+## Tipuri diferite de prompt-uri, pentru lucruri diferite
 
-Acum ai văzut cum să generezi text folosind un prompt. Ai chiar un program funcțional pe care îl poți modifica pentru a genera tipuri diferite de text.
+Acum ai văzut cum să generezi text folosind un prompt. Ai chiar și un program funcțional pe care îl poți modifica și schimba pentru a genera tipuri diferite de text.
 
-Prompturile pot fi folosite pentru tot felul de sarcini. De exemplu:
+Prompturile pot fi folosite pentru diverse sarcini. De exemplu:
 
-- **Generarea unui tip de text**. De exemplu, poți genera un poem, întrebări pentru un quiz etc.
-- **Căutarea informațiilor**. Poți folosi prompturi pentru a căuta informații, cum ar fi exemplul: 'Ce înseamnă CORS în dezvoltarea web?'.
-- **Generarea de cod**. Poți folosi prompturi pentru a genera cod, de exemplu dezvoltând o expresie regulată folosită pentru validarea email-urilor sau, de ce nu, să generezi un program întreg, precum o aplicație web?
+- **Generează un tip de text**. De exemplu, poți genera o poezie, întrebări pentru un quiz etc.
+- **Caută informații**. Poți folosi prompturi pentru a căuta informații precum exemplul „Ce înseamnă CORS în dezvoltarea web?”.
+- **Generează cod**. Poți folosi prompturi pentru a genera cod, de exemplu pentru a crea o expresie regulată folosită pentru validarea email-urilor sau de ce nu să generezi un program întreg, cum ar fi o aplicație web?
 
-## Un caz de utilizare mai practic: un generator de rețete
+## Un caz de utilizare mai practic: generator de rețete
 
-Imaginează-ți că ai ingrediente acasă și vrei să gătești ceva. Pentru asta, ai nevoie de o rețetă. O modalitate de a găsi rețete este să folosești un motor de căutare sau ai putea folosi un LLM pentru asta.
+Imaginează-ți că ai ingrediente acasă și vrei să gătești ceva. Pentru asta, ai nevoie de o rețetă. Un mod de a găsi rețete este să folosești un motor de căutare sau ai putea folosi un LLM să facă asta.
 
 Ai putea scrie un prompt astfel:
 
-> "Arată-mi 5 rețete pentru un fel de mâncare cu următoarele ingrediente: pui, cartofi și morcovi. Pentru fiecare rețetă, listează toate ingredientele folosite"
+> „Arată-mi 5 rețete pentru un fel de mâncare cu următoarele ingrediente: pui, cartofi și morcovi. Pentru fiecare rețetă, listează toate ingredientele folosite”
 
-Având promptul de mai sus, s-ar putea să primești un răspuns similar cu:
+Având promptul de mai sus, s-ar putea să primești un răspuns asemănător cu:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -295,16 +295,16 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-Acest rezultat este grozav, știu ce să gătesc. În acest punct, ce ar putea fi îmbunătățiri utile sunt:
+Acest rezultat este grozav, știu ce să gătesc. În acest punct, ce ar putea fi îmbunătățit util este:
 
 - Filtrarea ingredientelor pe care nu le plac sau la care sunt alergic.
-- Generarea unei liste de cumpărături, în caz că nu am toate ingredientele acasă.
+- Generarea unei liste de cumpărături, în cazul în care nu am toate ingredientele acasă.
 
 Pentru cazurile de mai sus, să adăugăm un prompt suplimentar:
 
-> "Te rog elimină rețetele cu usturoi deoarece sunt alergic și înlocuiește-l cu altceva. De asemenea, te rog să generezi o listă de cumpărături pentru rețete, ținând cont că am deja acasă pui, cartofi și morcovi."
+> „Te rog elimină rețetele cu usturoi deoarece sunt alergic și înlocuiește-le cu altceva. De asemenea, te rog să produci o listă de cumpărături pentru rețete, tinând cont că am deja pui, cartofi și morcovi acasă.”
 
-Acum ai un nou rezultat, anume:
+Acum ai un rezultat nou, și anume:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -371,20 +371,20 @@ Shopping List:
 - Pepper
 ```
 
-Aceasta sunt cele cinci rețete, fără usturoi menționat și ai, de asemenea, o listă de cumpărături ținând cont de ce ai deja acasă.
+Aceasta sunt cele cinci rețete, fără nici o mențiune de usturoi și ai și o listă de cumpărături, ținând cont de ce ai deja acasă.
 
 ## Exercițiu - construiește un generator de rețete
 
-Acum că am jucat un scenariu, să scriem cod care să corespundă scenariului demonstrat. Pentru asta, urmează acești pași:
+Acum că am jucat un scenariu, să scriem cod care să se potrivească cu scenariul demonstrat. Pentru asta, urmează acești pași:
 
-1. Folosește fișierul _app.py_ existent ca punct de plecare
-1. Găsește variabila `prompt` și schimbă codul ei cu următorul:
+1. Folosește fișierul existent _app.py_ ca punct de plecare
+1. Localizează variabila `prompt` și schimbă codul ei cu următorul:
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   Dacă acum rulezi codul, ar trebui să vezi un rezultat similar cu:
+   Dacă rulezi acum codul, ar trebui să vezi o ieșire similară cu:
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -396,22 +396,22 @@ Acum că am jucat un scenariu, să scriem cod care să corespundă scenariului d
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > NOTĂ, LLM-ul tău este nedeterminist, deci poți obține rezultate diferite de fiecare dată când rulezi programul.
+   > NOTĂ, LLM-ul tău este nedeterminist, deci s-ar putea să obții rezultate diferite de fiecare dată când rulezi programul.
 
-   Grozav, să vedem cum putem îmbunătăți lucrurile. Pentru a îmbunătăți, vrem să ne asigurăm că codul este flexibil, astfel încât ingredientele și numărul rețetelor să poată fi ajustate și schimbate.
+   Grozav, să vedem cum putem îmbunătăți lucrurile. Pentru asta vrem ca codul să fie flexibil, astfel încât ingredientele și numărul de rețete să poată fi îmbunătățite și schimbate.
 
-1. Să schimbăm codul astfel:
+1. Hai să schimbăm codul în următorul mod:
 
    ```python
    no_recipes = input("No of recipes (for example, 5): ")
 
    ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
 
-   # interpolați numărul de rețete în prompt și ingrediente
+   # interpolate the number of recipes into the prompt an ingredients
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   Folosind codul pentru un test de rulare, ar putea arăta așa:
+   Rulând codul pentru test, ar putea arăta așa:
 
    ```output
    No of recipes (for example, 5): 3
@@ -422,13 +422,13 @@ Acum că am jucat un scenariu, să scriem cod care să corespundă scenariului d
    -Strawberry milk: milk, strawberries, sugar, vanilla extract
    ```
 
-### Îmbunătățește adăugând filtrare și listă de cumpărături
+### Îmbunătățire prin adăugarea filtrului și a listei de cumpărături
 
-Acum avem o aplicație funcțională capabilă să genereze rețete și este flexibilă deoarece se bazează pe inputuri de la utilizator, atât privind numărul de rețete cât și ingredientele folosite.
+Acum avem o aplicație funcțională capabilă să producă rețete și este flexibilă deoarece se bazează pe input-uri de la utilizator, atât privind numărul de rețete, cât și ingredientele folosite.
 
-Pentru a o îmbunătăți mai mult, vrem să adăugăm următoarele:
+Pentru a o îmbunătăți, vrem să adăugăm următoarele:
 
-- **Filtrarea ingredientelor**. Vrem să putem filtra ingredientele care nu ne plac sau la care suntem alergici. Pentru a realiza această modificare, putem edita promptul nostru existent și să adăugăm o condiție de filtrare la finalul său astfel:
+- **Filtrare ingrediente**. Vrem să putem filtra ingredientele pe care nu le plac sau la care suntem alergici. Pentru această modificare, putem edita promptul existent și să adăugăm o condiție de filtrare la final, astfel:
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -436,9 +436,9 @@ Pentru a o îmbunătăți mai mult, vrem să adăugăm următoarele:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  Mai sus, adăugăm `{filter}` la finalul promptului și capturăm și valoarea filtrului de la utilizator.
+  Mai sus, adăugăm `{filter}` la sfârșitul promptului și de asemenea capturăm valoarea filtrului de la utilizator.
 
-  Un exemplu de input rulând programul poate arăta acum astfel:
+  Un exemplu de input la rularea programului poate acum arăta astfel:
 
   ```output
   No of recipes (for example, 5): 3
@@ -505,14 +505,13 @@ Pentru a o îmbunătăți mai mult, vrem să adăugăm următoarele:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  După cum poți vedea, orice rețetă cu lapte a fost filtrată. Dar dacă ești intolerant la lactoză, poate dorești să filtrezi și rețetele cu brânză, așa că trebuie să fie clar.
+  După cum vezi, orice rețete cu lapte au fost filtrate. Dar, dacă ești intolerant la lactoză, poate dorești să filtrezi și rețetele cu brânză, așa că este nevoie să fii clar.
 
+- **Produ listă de cumpărături**. Vrem să producem o listă de cumpărături, ținând cont de ceea ce avem deja acasă.
 
-- **Produ ună listă de cumpărături**. Dorim să producem o listă de cumpărături, ținând cont de ceea ce avem deja acasă.
+  Pentru această funcționalitate, am putea încerca să rezolvăm totul într-un singur prompt sau să împărțim în două prompturi. Să încercăm a doua abordare. Aici sugerăm să adăugăm un prompt suplimentar, dar pentru ca acesta să funcționeze, trebuie să adăugăm rezultatul primului prompt ca context la promptul următor.
 
-  Pentru această funcționalitate, am putea încerca fie să rezolvăm totul într-o singură solicitare (prompt), fie să o împărțim în două solicitări. Să încercăm a doua abordare. Aici sugerăm adăugarea unei solicitări suplimentare, dar pentru ca asta să funcționeze, trebuie să adăugăm rezultatul primei solicitări ca context pentru a doua.
-
-  Localizează partea din cod care afișează rezultatul primei solicitări și adaugă codul următor dedesubt:
+  Localizează partea din cod care afișează rezultatul primului prompt și adaugă următorul cod dedesubt:
 
   ```python
   old_prompt_result = response.output_text
@@ -521,26 +520,26 @@ Pentru a o îmbunătăți mai mult, vrem să adăugăm următoarele:
   new_prompt = f"{old_prompt_result} {prompt}"
   response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
 
-  # afișează răspunsul
+  # print response
   print("Shopping list:")
   print(response.output_text)
   ```
 
   Observă următoarele:
 
-  1. Construim o solicitare nouă prin adăugarea rezultatului primei solicitări la noua solicitare:
+  1. Construim un prompt nou adăugând rezultatul primului prompt la promptul nou:
 
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  1. Facem o solicitare nouă, dar ținând cont și de numărul de tokeni ceruți în prima solicitare, așa că de data aceasta spunem că `max_output_tokens` este 1200.
+  1. Facem o cerere nouă, dar ținând cont și de numărul de token-uri cerut în primul prompt, deci de această dată spunem că `max_output_tokens` este 1200.
 
      ```python
      response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
      ```
 
-     Testând acest cod, ajungem acum la următorul rezultat:
+     Rulând acest cod, ajungem acum la următorul rezultat:
 
      ```output
      No of recipes (for example, 5): 2
@@ -556,17 +555,17 @@ Pentru a o îmbunătăți mai mult, vrem să adăugăm următoarele:
 
 ## Îmbunătățește-ți configurația
 
-Ceea ce avem până acum este un cod care funcționează, dar există unele ajustări pe care ar trebui să le facem pentru a îmbunătăți și mai mult lucrurile. Ceva ce ar trebui să facem este:
+Ceea ce avem până acum este un cod care funcționează, dar există unele ajustări pe care ar trebui să le facem pentru a îmbunătăți lucrurile în continuare. Unele lucruri pe care ar trebui să le facem sunt:
 
-- **Separă secretele de cod**, cum ar fi cheia API. Secretele nu trebuie să fie în cod și ar trebui stocate într-un loc sigur. Pentru a separa secretele de cod, putem folosi variabile de mediu și biblioteci precum `python-dotenv` pentru a le încărca dintr-un fișier. Iată cum ar arăta asta în cod:
+- **Separați secretele de cod**, cum ar fi cheia API. Secretele nu aparțin codului și trebuie stocate într-un loc sigur. Pentru a separa secretele de cod, putem folosi variabile de mediu și biblioteci precum `python-dotenv` pentru a le încărca dintr-un fișier. Iată cum ar arăta asta în cod:
 
-  1. Creează un fișier `.env` cu următorul conținut:
+  1. Creați un fișier `.env` cu următorul conținut:
 
      ```bash
      OPENAI_API_KEY=sk-...
      ```
 
-     > Atenție, pentru Azure OpenAI în Microsoft Foundry, trebuie să setezi următoarele variabile de mediu în schimb:
+     > Notă, pentru Azure OpenAI în Microsoft Foundry, trebuie să setați următoarele variabile de mediu în schimb:
 
      ```bash
      AZURE_OPENAI_API_KEY=<replace>
@@ -574,7 +573,7 @@ Ceea ce avem până acum este un cod care funcționează, dar există unele ajus
      AZURE_OPENAI_API_VERSION=2024-10-21
      ```
 
-     În cod, ai încărca variabilele de mediu în felul următor:
+     În cod, ați încărca variabilele de mediu astfel:
 
      ```python
      import os
@@ -586,45 +585,45 @@ Ceea ce avem până acum este un cod care funcționează, dar există unele ajus
      client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
      ```
 
-- **Un cuvânt despre lungimea tokenilor**. Ar trebui să luăm în considerare câți tokeni avem nevoie să generăm textul dorit. Tokenii costă bani, așa că, pe cât posibil, ar trebui să încercăm să fim economi cu numărul de tokeni folosiți. De exemplu, putem formula promptul astfel încât să folosim mai puțini tokeni?
+- **Un cuvânt despre lungimea token-urilor**. Ar trebui să luăm în considerare câte token-uri avem nevoie pentru a genera textul dorit. Token-urile costă bani, deci, pe cât posibil, ar trebui să încercăm să fim economici cu numărul de token-uri pe care îl folosim. De exemplu, putem formula promptul astfel încât să folosim mai puține token-uri?
 
-  Pentru a modifica tokenii utilizați, poți folosi parametrul `max_output_tokens`. De exemplu, dacă vrei să folosești 100 de tokeni, ai face:
+  Pentru a schimba numărul de token-uri folosite, puteți utiliza parametrul `max_output_tokens`. De exemplu, dacă doriți să folosiți 100 de token-uri, ați face:
 
   ```python
   response = client.responses.create(model=deployment, input=prompt, max_output_tokens=100, store=False)
   ```
 
-- **Experimentarea cu temperatura**. Temperatura este ceva ce nu am menționat până acum, dar este un context important pentru cum funcționează programul nostru. Cu cât valoarea temperaturii este mai mare, cu atât rezultatul este mai aleatoriu. În schimb, cu cât valoarea temperaturii este mai mică, cu atât rezultatul este mai predictibil. Gândește-te dacă dorești variație în output sau nu.
+- **Experimentarea cu temperatura**. Temperatura este ceva despre care nu am menționat până acum, dar este un context important pentru cum performează programul nostru. Cu cât valoarea temperaturii este mai mare, cu atât rezultatul este mai aleatoriu. În schimb, cu cât valoarea temperaturii este mai mică, cu atât rezultatul este mai previzibil. Luați în considerare dacă doriți variație în output sau nu.
 
-  Pentru a modifica temperatura, poți folosi parametrul `temperature`. De exemplu, dacă vrei să folosești o temperatură de 0.5, ai face:
+  Pentru a modifica temperatura, puteți utiliza parametrul `temperature`. De exemplu, dacă doriți să folosiți o temperatură de 0.5, ați face:
 
   ```python
   response = client.responses.create(model=deployment, input=prompt, temperature=0.5, store=False)
   ```
 
-  > Atenție, cu cât valoarea este mai aproape de 1.0, cu atât output-ul este mai variat.
+  > Notă, cu cât este mai aproape de 1.0, cu atât outputul devine mai variat.
 
-- **Modelele de raționament nu folosesc `temperature`**. Aceasta este o schimbare importantă pentru 2026. Modelele actuale, ne-deprecated, din Microsoft Foundry sunt **modele de raționament** (familia GPT-5, seria o) - și **nu suportă `temperature` sau `top_p`** (nici `max_tokens`; folosește `max_output_tokens`). Dacă trimiți `temperature` către `gpt-5-mini`, vei primi o eroare "parameter not supported". Așadar, pentru a încerca exemplul de temperatură de mai sus, direcționează-l către un model care încă suportă controlurile sampling-ului - de exemplu un model open **Llama** cum ar fi `Llama-3.3-70B-Instruct` din [catalogul de modele Microsoft Foundry](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst), apelat prin endpoint-ul Foundry Models / Azure AI Inference (în același mod ca sample-urile `githubmodels-*`). Pentru modelele de raționament ca GPT-5, output-ul se controlează diferit:
-  - **Ingineria prompturilor** - instrucțiuni clare, exemple și output structurat (vezi lecția [04 - Ingineria Prompturilor](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)) fac munca pe care odată o făceau setările sampling-ului.
-  - **Controlul raționamentului** - parametri precum efortul de raționament/verbozitatea echilibrează adâncimea raționamentului cu latența și costul.
+- **Modelele de raționament nu folosesc `temperature`**. Aceasta este o schimbare importantă în 2026. Modelele actuale, neînvechite din Microsoft Foundry sunt **modele de raționament** (familia GPT-5, o-series) - și **nu suportă `temperature` sau `top_p`** (nici `max_tokens`; folosiți `max_output_tokens`). Dacă trimiteți `temperature` la `gpt-5-mini` veți primi o eroare "parametru nesuportat". Așadar, pentru a încerca exemplul cu temperatura de mai sus, îndreptați-l spre un model care încă suportă controale de sampling - de exemplu un model deschis **Llama** precum `Llama-3.3-70B-Instruct` din [catalogul de modele Microsoft Foundry](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst), apelat prin Foundry Models / Azure AI Inference endpoint (în același mod ca și mostrele `githubmodels-*`). Pentru modelele de raționament precum GPT-5, direcționați outputul altfel:
+  - **Prompt engineering** - instrucțiuni clare, exemple și output structurat (vedeți lecția [04 - Prompt Engineering](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)) fac munca pe care butoanele de sampling obișnuiau să o facă.
+  - **Controale de raționament** - parametri precum efortul/verbositatea raționamentului echilibrează adâncimea raționamentului cu latența și costul.
 
-  Pe scurt: `temperature`/`top_p` sunt în continuare valabile pentru multe modele (Llama, Mistral, Phi și familia GPT-4.x - deși GPT-4.x este în proces de deprecere), dar direcția de dezvoltare este ingineria prompturilor + controlul raționamentului pe modelele de raționament precum GPT-5.
+  Pe scurt: `temperature`/`top_p` sunt încă valide pe multe modele (Llama, Mistral, Phi, și familia GPT-4.x - deși GPT-4.x este în curs de depreciere), dar direcția este prompt engineering + controale de raționament pe modelele de raționament ca GPT-5.
 
-## Sarcină
+## Tema
 
-Pentru această sarcină, poți alege ce să construiești.
+Pentru această temă, puteți alege ce să construiți.
 
 Iată câteva sugestii:
 
-- Ajustează aplicația generatorului de rețete pentru a o îmbunătăți și mai mult. Experimentează cu valori ale temperaturii și prompturile pentru a vedea ce poți obține.
-- Construiește un "partener de studiu". Această aplicație ar trebui să poată răspunde la întrebări despre un subiect, de exemplu Python, ai putea avea prompturi de genul "Ce este un anumit subiect în Python?", sau un prompt care să spună, arată-mi cod pentru un anumit subiect etc.
-- Bot de istorie, fă istoria să prindă viață, instruiește botul să interpreteze un anumit personaj istoric și pune-i întrebări despre viața și vremurile acestuia.
+- Ajustați aplicația generator de rețete pentru a o îmbunătăți în continuare. Experimentați cu valorile de temperatură și cu prompturile pentru a vedea ce puteți obține.
+- Construiți un „asistent de studiu”. Această aplicație ar trebui să poată răspunde la întrebări despre un subiect, de exemplu Python; ați putea avea prompturi precum "Ce este un anumit subiect în Python?", sau un prompt care spune, arată-mi cod pentru un anumit subiect etc.
+- Bot de istorie, faceți istoria să prindă viață, instruiți botul să joace rolul unui anumit personaj istoric și întrebați-l despre viața și timpurile sale.
 
 ## Soluție
 
-### Partener de studiu
+### Asistent de studiu
 
-Mai jos este un prompt de pornire, vezi cum îl poți folosi și ajusta după preferințe.
+Mai jos este un prompt de start, vedeți cum îl puteți folosi și ajusta după preferințe.
 
 ```text
 - "You're an expert on the Python language
@@ -639,7 +638,7 @@ Mai jos este un prompt de pornire, vezi cum îl poți folosi și ajusta după pr
 
 ### Bot de istorie
 
-Iată câteva prompturi pe care ai putea să le folosești:
+Iată câteva prompturi pe care le-ați putea folosi:
 
 ```text
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
@@ -652,19 +651,19 @@ Iată câteva prompturi pe care ai putea să le folosești:
 
 Ce face conceptul de temperatură?
 
-1. Controlează cât de aleatoriu este output-ul.
+1. Controlează cât de aleatoriu este outputul.
 1. Controlează cât de mare este răspunsul.
-1. Controlează câți tokeni sunt folosiți.
+1. Controlează câte token-uri sunt folosite.
 
 ## 🚀 Provocare
 
-Când lucrezi la sarcină, încearcă să variezi temperatura, setând-o la 0, 0.5 și 1. Ține minte că 0 este cea mai puțin variată, iar 1 este cea mai variată. Ce valoare funcționează cel mai bine pentru aplicația ta?
+Când lucrați la temă, încercați să variați temperatura, setați-o la 0, 0.5 și 1. Amintiți-vă că 0 este cel mai puțin variat și 1 este cel mai variat. Ce valoare funcționează cel mai bine pentru aplicația dvs.?
 
-## Bravo! Continuă să înveți
+## Treabă grozavă! Continuați să învățați
 
-După ce ai terminat această lecție, consultă colecția noastră [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) pentru a-ți continua creșterea în cunoștințe despre AI generativ!
+După ce ați terminat această lecție, verificați colecția noastră [Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) pentru a continua să vă dezvoltați cunoștințele despre AI generativ!
 
-Mergi la Lecția 7 unde vom vedea cum să [construim aplicații chat](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Mergeți la Lecția 7 unde vom vedea cum să [construiți aplicații de chat](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
