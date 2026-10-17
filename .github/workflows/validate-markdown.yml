@@ -1,56 +1,37 @@
 name: Validate Markdown
 
 on:
-  # Trigger the workflow on pull request
   pull_request:
-    branches: 
+    branches:
       - main
     paths:
       - '**.md'
       - '**.ipynb'
       - '!translations/**'
       - '!translated_images/**'
+      - '.github/workflows/validate-markdown.yml'
 
 permissions:
   contents: read
-  pull-requests: write
 
 jobs:
-  check-broken-paths:
-    name: Check Broken Relative Paths
+  validate-markdown:
+    name: ${{ matrix.name }}
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - name: Check broken Paths
-        id: check-broken-paths
-        uses: john0isaac/action-check-markdown@c255625e4ae89924a5f39a440a22e51fcc9f5893 # v1.3.1
-        with:
-          command: check_broken_paths
-          directory: ./
-          guide-url: 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-  check-paths-tracking:
-    if: ${{ always() }}
-    needs: check-broken-paths
-    name: Check Paths Have Tracking
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - name: Run Check paths tracking
-        id: check-paths-tracking
-        uses: john0isaac/action-check-markdown@c255625e4ae89924a5f39a440a22e51fcc9f5893 # v1.3.1
-        with:
-          command: check_paths_tracking
-          directory: ./
-          guide-url: 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-  check-urls-tracking:
-    if: ${{ always() }}
-    needs: check-paths-tracking
-    name: Check URLs Have Tracking
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Check Broken Relative Paths
+            command: check_broken_paths
+          - name: Check Paths Have Tracking
+            command: check_paths_tracking
+          - name: Check URLs Have Tracking
+            command: check_urls_tracking
+          - name: Check URLs Don't Have Locale
+            command: check_urls_locale
+          - name: Check Broken URLs
+            command: check_broken_urls
     steps:
       - name: Checkout Repo
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -61,46 +42,33 @@ jobs:
         run: |
           mapfile -d '' -t files < <(git diff --name-only -z --diff-filter=ACMR "${{ github.event.pull_request.base.sha }}"..."${{ github.event.pull_request.head.sha }}" -- '**.md' '**.ipynb' ':(exclude)translations/**' ':(exclude)translated_images/**')
           if [ ${#files[@]} -eq 0 ]; then
-            echo "has_files=false" >> "$GITHUB_OUTPUT"
-            exit 0
+            if git diff --quiet "${{ github.event.pull_request.base.sha }}"..."${{ github.event.pull_request.head.sha }}" -- .github/workflows/validate-markdown.yml; then
+              echo "has_files=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            files=(CONTRIBUTING.md)
           fi
           printf '%s\0' "${files[@]}" > changed_markdown_files.txt
           echo "has_files=true" >> "$GITHUB_OUTPUT"
-      - name: Run Check URLs tracking
+      - name: Setup Python
+        if: steps.changed-markdown-files.outputs.has_files == 'true'
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.11'
+      - name: Install markdown-checker
         if: steps.changed-markdown-files.outputs.has_files == 'true'
         run: |
           python -m pip install --upgrade pip
-          python -m pip install markdown-checker
+          python -m pip install markdown-checker==1.2.1
+      - name: Run markdown check
+        if: steps.changed-markdown-files.outputs.has_files == 'true'
+        env:
+          CHECK_COMMAND: ${{ matrix.command }}
+        run: |
           mapfile -d '' -t files < changed_markdown_files.txt
-          markdown-checker -f check_urls_tracking --guide-url 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md' "${files[@]}"
-  check-urls-locale:
-    if: ${{ always() }}
-    needs: check-urls-tracking
-    name: Check URLs Don't Have Locale
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - name: Run Check URLs Country Locale
-        id: check-urls-locale
-        uses: john0isaac/action-check-markdown@c255625e4ae89924a5f39a440a22e51fcc9f5893 # v1.3.1
-        with:
-          command: check_urls_locale
-          directory: ./
-          guide-url: 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-  check-broken-urls:
-    if: ${{ always() }}
-    name: Check Broken URLs
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - name: Run Check Broken URLs
-        id: check-broken-urls
-        uses: john0isaac/action-check-markdown@c255625e4ae89924a5f39a440a22e51fcc9f5893 # v1.3.1
-        with:
-          command: check_broken_urls
-          directory: ./
-          guide-url: 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          status=0
+          markdown-checker --func "$CHECK_COMMAND" --guide-url 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md' "${files[@]}" || status=$?
+          if [ -f comment.md ]; then
+            cat comment.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+          exit "$status"
