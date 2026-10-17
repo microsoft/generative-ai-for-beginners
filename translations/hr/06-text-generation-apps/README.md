@@ -1,69 +1,69 @@
 # Izrada aplikacija za generiranje teksta
 
-[![Izrada aplikacija za generiranje teksta](../../../translated_images/hr/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Izrada aplikacija za generiranje teksta](../../../translated_images/hr/06-lesson-banner.a5c629f990a636c8.webp?WT.mc_id=academic-105485-koreyst)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
-> _(Kliknite na gornju sliku da pogledate video ovog poglavlja)_
+> _(Kliknite na sliku iznad za prikaz video lekcije)_
 
-Do sada ste kroz ovaj kurikulum vidjeli da postoje osnovni koncepti poput promptova i čak cijela disciplina nazvana "prompt inženjering". Mnogi alati s kojima možete komunicirati poput ChatGPT-a, Office 365, Microsoft Power Platforme i drugih, podržavaju korištenje promptova za ostvarivanje nečega.
+Do sada ste kroz ovaj nastavni program vidjeli da postoje osnovni koncepti poput upita (prompts) i čak cijela disciplina zvana „inženjering upita“. Mnogi alati s kojima možete komunicirati poput ChatGPT-a, Office 365, Microsoft Power Platform i drugih, podržavaju korištenje upita za postizanje nečega.
 
-Da biste takvo iskustvo dodali aplikaciji, morate razumjeti koncepte poput promptova, dovršetaka i odabrati biblioteku za rad. Upravo to ćete naučiti u ovom poglavlju.
+Da biste takvo iskustvo dodali svojoj aplikaciji, morate razumjeti koncepte poput upita, dovršenja (completions) i odabrati biblioteku za rad. Točno to ćete naučiti u ovom poglavlju.
 
 ## Uvod
 
-U ovom poglavlju ćete:
+U ovom poglavlju naučit ćete:
 
 - Naučiti o biblioteci openai i njezinim osnovnim konceptima.
-- Izgraditi aplikaciju za generiranje teksta koristeći openai.
-- Razumjeti kako koristiti koncepte poput prompta, temperature i tokena za izradu aplikacije za generiranje teksta.
+- Izraditi aplikaciju za generiranje teksta koristeći openai.
+- Razumjeti kako koristiti koncepte poput upita, temperature i tokena za izgradnju aplikacije za generiranje teksta.
 
 ## Ciljevi učenja
 
-Na kraju ove lekcije, moći ćete:
+Na kraju ove lekcije moći ćete:
 
 - Objasniti što je aplikacija za generiranje teksta.
-- Izgraditi aplikaciju za generiranje teksta koristeći openai.
-- Konfigurirati svoju aplikaciju da koristi više ili manje tokena te također promijeniti temperaturu za raznolike izlaze.
+- Izraditi aplikaciju za generiranje teksta koristeći openai.
+- Konfigurirati svoju aplikaciju za korištenje više ili manje tokena, te promijeniti temperaturu za raznolik rezultat.
 
 ## Što je aplikacija za generiranje teksta?
 
-Obično, kad izrađujete aplikaciju, ona ima neki oblik sučelja poput sljedećeg:
+Obično, kada izrađujete aplikaciju, ona ima neku vrstu sučelja poput sljedećeg:
 
-- Bazirano na naredbama. Konzolne aplikacije su tipične aplikacije u koje upisujete naredbu i one izvršavaju zadatak. Na primjer, `git` je aplikacija bazirana na naredbama.
-- Korisničko sučelje (UI). Neke aplikacije imaju grafička korisnička sučelja (GUI) gdje klikate tipke, unosite tekst, birate opcije i slično.
+- Temeljeno na komandama. Konzolne aplikacije su tipične aplikacije u kojima upisujete naredbu i ona izvršava zadatak. Primjerice, `git` je aplikacija temeljena na komandama.
+- Korisničko sučelje (UI). Neke aplikacije imaju grafička korisnička sučelja (GUI) gdje klikate gumbe, unosite tekst, birate opcije i slično.
 
 ### Konzolne i UI aplikacije su ograničene
 
-Usporedite to s aplikacijom baziranom na naredbama u koju upisujete naredbu:
+Usporedite to s aplikacijom temeljnom na komandama gdje upisujete naredbu:
 
-- **Ograničeno je**. Ne možete upisivati bilo koju naredbu, samo one koje aplikacija podržava.
-- **Specifično za jezik**. Neke aplikacije podržavaju mnoge jezike, no prema zadanim postavkama aplikacija je izrađena za određeni jezik, iako se može dodati podrška za dodatne jezike.
+- **Ograničeno je**. Ne možete upisati bilo koju naredbu, samo one koje aplikacija podržava.
+- **Specifično za jezik**. Neke aplikacije podržavaju više jezika, ali po defaultu su izrađene za određeni jezik, iako možete dodati podršku za više jezika.
 
 ### Prednosti aplikacija za generiranje teksta
 
 Pa kako je aplikacija za generiranje teksta drugačija?
 
-U aplikaciji za generiranje teksta imate veću fleksibilnost, niste ograničeni na skup naredbi ili specifični ulazni jezik. Umjesto toga, koristite prirodni jezik za interakciju s aplikacijom. Druga prednost je što već radite s izvorom podataka koji je treniran na ogromnom korpusu informacija, dok tradicionalna aplikacija možda ima ograničenja u bazi podataka.
+U aplikaciji za generiranje teksta imate veću fleksibilnost, niste ograničeni na skup naredbi ili specifični ulazni jezik. Umjesto toga koristite prirodni jezik za interakciju s aplikacijom. Još jedna prednost je što u većini slučajeva već komunicirate s podatkovnim izvorom koji je treniran na ogromnom korpusu informacija, dok bi tradicionalna aplikacija mogla biti ograničena na ono što se nalazi u bazi podataka.
 
 ### Što mogu izraditi s aplikacijom za generiranje teksta?
 
-Možete napraviti mnogo stvari. Primjerice:
+Mnogo toga se može izraditi. Na primjer:
 
-- **Chatbot**. Chatbot koji odgovara na pitanja o temama poput vaše tvrtke i njezinih proizvoda mogao bi biti dobar izbor.
-- **Pomoćnik**. LLM-ovi su odlični u stvarima poput sažimanja teksta, dobivanja uvida iz teksta, stvaranja tekstova poput životopisa i slično.
-- **Pomoćnik za kod**. Ovisno o modelu jezika koji koristite, možete izraditi pomoćnika za kod koji pomaže pri pisanju koda. Na primjer, možete koristiti proizvode poput GitHub Copilot i ChatGPT za pomoć pri pisanju koda.
+- **Chatbot**. Chatbot koji odgovara na pitanja o temama, poput vaše tvrtke i njenih proizvoda, može biti dobar izbor.
+- **Pomoćnik**. Veliki jezični modeli (LLM) su izvrsni za stvari poput sažimanja teksta, izvlačenja uvida iz teksta, proizvodnju teksta poput životopisa i slično.
+- **Asistent za kodiranje**. Ovisno o jezičnom modelu koji koristite, možete izraditi asistenta za kodiranje koji vam pomaže pisati kod. Na primjer, možete koristiti proizvode poput GitHub Copilot-a kao i ChatGPT za pomoć pri pisanju koda.
 
-## Kako mogu započeti?
+## Kako mogu početi?
 
-Pa, morate pronaći način da se povežete s LLM-om što obično podrazumijeva sljedeća dva pristupa:
+Pa, trebate pronaći način kako se integrirati s velikim jezičnim modelom (LLM), što obično uključuje sljedeća dva pristupa:
 
-- Koristiti API. Tu sastavljate web zahtjeve sa svojim promptom i dobivate generirani tekst nazad.
-- Koristiti biblioteku. Biblioteke pomažu enkapsulirati API pozive i olakšavaju njihovo korištenje.
+- Koristiti API. Ovdje sastavljate web zahtjeve sa svojim upitom i dobivate generirani tekst natrag.
+- Koristiti biblioteku. Biblioteke pomažu enkapsulirati API pozive i čine ih lakšim za korištenje.
 
 ## Biblioteke/SDK-ovi
 
-Postoji nekoliko poznatih biblioteka za rad s LLM-ovima poput:
+Postoje neke dobro poznate biblioteke za rad s LLM-ovima poput:
 
-- **openai**, ova biblioteka olakšava povezivanje s vašim modelom i slanje promptova.
+- **openai**, ova biblioteka olakšava povezivanje s vašim modelom i slanje upita.
 
 Zatim postoje biblioteke koje rade na višoj razini poput:
 
@@ -72,46 +72,46 @@ Zatim postoje biblioteke koje rade na višoj razini poput:
 
 ## Prva aplikacija koristeći openai
 
-Pogledajmo kako možemo napraviti prvu aplikaciju, koje biblioteke trebamo, koliko je potrebno i slično.
+Pogledajmo kako možemo izraditi našu prvu aplikaciju, koje biblioteke trebamo, koliko je potrebno i tako dalje.
 
-### Instalirajte openai
+### Instalacija openai
 
-Postoji mnogo biblioteka za interakciju s OpenAI ili Azure OpenAI. Moguće je koristiti različite programske jezike poput C#, Python, JavaScript, Java i druge. Odabrali smo koristiti Python biblioteku `openai`, pa ćemo instalirati pomoću `pip` alata.
+Postoji mnogo biblioteka za interakciju s OpenAI ili Azure OpenAI. Moguće je koristiti različite programske jezike kao što su C#, Python, JavaScript, Java i drugi. Mi smo odabrali koristiti Python biblioteku `openai`, pa ćemo koristiti `pip` za instalaciju.
 
 ```bash
 pip install openai
 ```
 
-### Kreirajte resurs
+### Kreiranje resursa
 
-Morate napraviti sljedeće korake:
+Trebate izvršiti sljedeće korake:
 
 - Kreirajte račun na Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- Dobite pristup Azure OpenAI. Idite na [https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) i zatražite pristup.
+- Dobijte pristup Azure OpenAI. Posjetite [https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) i zatražite pristup.
 
   > [!NOTE]
-  > U trenutku pisanja, potrebno je podnijeti zahtjev za pristup Azure OpenAI.
+  > U trenutku pisanja ovog materijala, morate podnijeti zahtjev za pristup Azure OpenAI.
 
 - Instalirajte Python <https://www.python.org/>
-- Napravite Azure OpenAI Service resurs. Pogledajte vodič kako [kreirati resurs](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- Kreirajte Azure OpenAI Service resurs. Pogledajte ovaj vodič za [kako kreirati resurs](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
-### Pronađite API ključ i endpoint
+### Pronađite API ključ i krajnju točku
 
-Sada trebate reći vašoj `openai` biblioteci koji API ključ koristiti. Da pronađete vaš API ključ, idite u odjeljak "Keys and Endpoint" vašeg Azure OpenAI resursa i kopirajte vrijednost "Key 1".
+U ovom trenutku trebate svojoj biblioteci `openai` reći koji API ključ koristi. Da biste pronašli svoj API ključ, idite u odjeljak "Keys and Endpoint" vašeg Azure OpenAI resursa i kopirajte vrijednost "Key 1".
 
-![Keys and Endpoint resource blade u Azure Portal](https://learn.microsoft.com/azure/ai-foundry/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+![Ključevi i resurs "endpoint" na Azure Portal](https://learn.microsoft.com/azure/ai-foundry/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-Sada kad imate ove podatke kopirane, uputimo biblioteke da ih koriste.
+Sad kad imate ove podatke kopirane, uputimo biblioteke da ih koriste.
 
 > [!NOTE]
-> Vrijedi odvojiti vaš API ključ od vašeg koda. To možete učiniti koristeći varijable okruženja.
+> Vrijedi razdvojiti svoj API ključ od koda. To možete učiniti korištenjem varijabli okruženja.
 >
-> - Postavite varijablu okruženja `OPENAI_API_KEY` na vaš API ključ.
+> - Postavite varijablu okruženja `OPENAI_API_KEY` na svoj API ključ.
 >   `export OPENAI_API_KEY='sk-...'`
 
 ### Postavljanje konfiguracije za Azure
 
-Ako koristite Azure OpenAI (sada dio Microsoft Foundry), evo kako postaviti konfiguraciju. Koristimo standardnog `OpenAI` klijenta usmjerenog na Azure OpenAI `/openai/v1/` endpoint, koji radi s Responses API-jem i ne treba `api_version`:
+Ako koristite Azure OpenAI (sada dio Microsoft Foundry), evo kako postaviti konfiguraciju. Koristimo standardni `OpenAI` klijent usmjeren na Azure OpenAI `/openai/v1/` endpoint, koji radi s Responses API-jem i ne zahtijeva `api_version`:
 
 ```python
 import os
@@ -123,33 +123,33 @@ client = OpenAI(
 )
 ```
 
-Gore smo postavili sljedeće:
+Gore postavljamo sljedeće:
 
-- `api_key`, to je vaš API ključ pronađen u Azure portalu ili Microsoft Foundry portalu.
-- `base_url`, to je endpoint Foundry resursa uz dodatak `/openai/v1/`. Stabilni v1 endpoint radi za OpenAI i Azure OpenAI bez potrebe za upravljanjem `api_version`.
+- `api_key`, to je vaš API ključ koji se nalazi u Azure Portalu ili Microsoft Foundry portalu.
+- `base_url`, to je vaša Foundry adresa resursa s dodatkom `/openai/v1/`. Stabilni v1 endpoint radi na OpenAI i Azure OpenAI bez potrebe za upravljanjem `api_version`.
 
-> [!NOTE] > `os.environ` čita varijable okruženja. Možete ga koristiti za dohvaćanje varijabli poput `AZURE_OPENAI_API_KEY` i `AZURE_OPENAI_ENDPOINT`. Postavite ove varijable u vašem terminalu ili koristeći biblioteku poput `dotenv`.
+> [!NOTE] > `os.environ` čita varijable okruženja. Možete ga koristiti za čitanje varijabli okruženja poput `AZURE_OPENAI_API_KEY` i `AZURE_OPENAI_ENDPOINT`. Postavite te varijable u vašem terminalu ili koristite biblioteku poput `dotenv`.
 
 ## Generiranje teksta
 
-Način generiranja teksta je korištenje Responses API-ja putem metode `responses.create`. Evo primjera:
+Način generiranja teksta je korištenjem Responses API-a putem metode `responses.create`. Evo primjera:
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
 
 response = client.responses.create(
-    model="gpt-5-mini",  # ovo je ime vaše implementacije modela
+    model="gpt-5-mini",  # this is your model deployment name
     input=prompt,
     store=False,
 )
 print(response.output_text)
 ```
 
-U gornjem kodu stvaramo odgovor i prosljeđujemo model koji želimo koristiti i prompt. Zatim ispisujemo generirani tekst preko `response.output_text`.
+U gornjem kodu kreiramo odgovor i prosljeđujemo model koji želimo koristiti i upit (prompt). Zatim ispisujemo generirani tekst putem `response.output_text`.
 
-### Višerundni razgovori
+### Višekratni razgovori
 
-Responses API je prikladan za generiranje teksta u jednoj rundi, kao i za višerundne chatbotove – pružate popis poruka u `input` da izgradite razgovor:
+Responses API je dobro prilagođen za generiranje teksta u jednom koraku kao i za višekratne razgovore s chatbotom - prosljeđujete listu poruka u `input` da izgradite konverzaciju:
 
 ```python
 from openai import OpenAI
@@ -162,9 +162,9 @@ print(response.output_text)
 
 Više o ovoj funkcionalnosti u nadolazećem poglavlju.
 
-## Vježba – vaša prva aplikacija za generiranje teksta
+## Vježba - vaša prva aplikacija za generiranje teksta
 
-Sada kada smo naučili kako postaviti i konfigurirati openai, vrijeme je da napravite svoju prvu aplikaciju za generiranje teksta. Za izradu aplikacije slijedite ove korake:
+Sad kad smo naučili kako postaviti i konfigurirati openai, vrijeme je da izradite svoju prvu aplikaciju za generiranje teksta. Da biste izradili svoju aplikaciju, slijedite ove korake:
 
 1. Kreirajte virtualno okruženje i instalirajte openai:
 
@@ -178,9 +178,9 @@ Sada kada smo naučili kako postaviti i konfigurirati openai, vrijeme je da napr
    > Ako koristite Windows, upišite `venv\Scripts\activate` umjesto `source venv/bin/activate`.
 
    > [!NOTE]
-   > Pronađite svoj Azure OpenAI ključ tako da odete na [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst), potražite `Open AI`, odaberete `Open AI resource`, zatim `Keys and Endpoint` i kopirate vrijednost `Key 1`.
+   > Pronađite svoj Azure OpenAI ključ tako da odete na [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) i potražite `Open AI`, zatim odaberite `Open AI resource` i potom odaberite `Keys and Endpoint` i kopirajte vrijednost `Key 1`.
 
-1. Napravite datoteku _app.py_ i stavite sljedeći kod:
+1. Kreirajte datoteku _app.py_ i upišite sljedeći kod:
 
    ```python
    import os
@@ -192,20 +192,20 @@ Sada kada smo naučili kako postaviti i konfigurirati openai, vrijeme je da napr
    )
    deployment_name = "<deployment name>"
 
-   # dodajte svoj kod dovršetka
+   # add your completion code
    prompt = "Complete the following: Once upon a time there was a"
 
-   # napravite zahtjev koristeći Responses API
+   # make a request using the Responses API
    response = client.responses.create(model=deployment_name, input=prompt, store=False)
 
-   # ispišite odgovor
+   # print response
    print(response.output_text)
    ```
 
    > [!NOTE]
-   > Ako koristite obični OpenAI (ne Azure), upotrijebite `client = OpenAI(api_key="<zamijenite ovo vašim OpenAI ključem>")` (bez `base_url`) i proslijedite naziv modela poput `gpt-5-mini` umjesto imena deploymenta.
+   > Ako koristite obični OpenAI (ne Azure), koristite `client = OpenAI(api_key="<replace this value with your OpenAI key>")` (bez `base_url`) i navedite ime modela poput `gpt-5-mini` umjesto imena deploymenta.
 
-   Trebali biste vidjeti rezultat poput sljedećeg:
+   Trebali biste dobiti izlaz poput sljedećeg:
 
    ```output
     very unhappy _____.
@@ -213,25 +213,25 @@ Sada kada smo naučili kako postaviti i konfigurirati openai, vrijeme je da napr
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## Različite vrste promptova, za različite zadatke
+## Različite vrste upita za različite stvari
 
-Sada ste vidjeli kako generirati tekst koristeći prompt. Čak imate program koji radi i koji možete mijenjati i prilagođavati za generiranje različitih tipova teksta.
+Sad ste vidjeli kako generirati tekst koristeći upit. Zapravo imate program koji radi i koji možete mijenjati da generira različite vrste teksta.
 
-Promptovi se mogu koristiti za sve vrste zadataka. Primjerice:
+Upiti se mogu koristiti za razne zadatke. Na primjer:
 
-- **Generiranje vrste teksta**. Na primjer, možete generirati pjesmu, pitanja za kviz i slično.
-- **Pretraživanje informacija**. Možete koristiti promptove za traženje informacija poput primjera "Što znači CORS u web razvoju?".
-- **Generiranje koda**. Možete koristiti promptove za generiranje koda, na primjer za razvoj regularnog izraza koji provjerava e-mailove ili za generiranje cijelog programa, poput web aplikacije.
+- **Generiranje vrste teksta**. Na primjer, možete generirati pjesmu, pitanja za kviz itd.
+- **Traženje informacija**. Možete koristiti upite za pretraživanje informacija poput primjera 'Što znači CORS u web razvoju?'.
+- **Generiranje koda**. Možete koristiti upite za generiranje koda, primjerice razvijanje regularnog izraza za provjeru emailova ili zašto ne generirati cijelu aplikaciju, poput web aplikacije?
 
 ## Praktičniji primjer: generator recepata
 
-Zamislite da imate sastojke kod kuće i želite nešto skuhati. Za to vam treba recept. Jedan način za pronalaženje recepata je korištenje tražilice, a drugi je korištenje LLM-a.
+Zamislite da imate sastojke kod kuće i želite nešto skuhati. Za to vam treba recept. Jedan od načina pronalaska recepata je korištenje tražilice ili možete koristiti LLM.
 
-Možete napisati prompt ovako:
+Mogli biste napisati upit ovako:
 
-> "Pokaži mi 5 recepata za jelo sa sljedećim sastojcima: piletina, krumpir i mrkva. Za svaki recept navedite sve korištene sastojke"
+> "Prikaži mi 5 recepata za jelo s sljedećim sastojcima: piletina, krumpir i mrkva. Za svaki recept navedite sve korištene sastojke"
 
-S obzirom na ovaj prompt, mogli biste dobiti odgovor sličan ovom:
+Na temelju gore navedenog upita mogli biste dobiti odgovor sličan ovome:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -295,16 +295,16 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-Ovaj rezultat je dobar, znam što kuhati. U ovom trenutku, korisna poboljšanja mogla bi biti:
+Ovaj rezultat je odličan, sada znam što skuhati. U ovom trenutku, korisna poboljšanja bi mogla biti:
 
 - Filtriranje sastojaka koje ne volim ili na koje sam alergičan.
-- Izrada popisa za kupovinu, u slučaju da nemam sve sastojke kod kuće.
+- Proizvesti popis za kupovinu, u slučaju da nemam sve sastojke kod kuće.
 
-Za ove slučajeve, dodajmo dodatni prompt:
+Za ove slučajeve dodajmo dodatni upit:
 
-> "Molim ukloni recepte koji sadrže češnjak jer sam alergičan i zamijeni ga nečim drugim. Također, molim napravi popis za kupovinu za recepte, uzimajući u obzir da već imam piletinu, krumpir i mrkvu kod kuće."
+> "Molim ukloni recepte s češnjakom jer sam alergičan i zamijeni ga nečim drugim. Također, molim napravi popis za kupovinu za recepte s obzirom da već imam piletinu, krumpir i mrkvu kod kuće."
 
-Sada imate novi rezultat, a to je:
+Sada imate novi rezultat, naime:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -371,20 +371,20 @@ Shopping List:
 - Pepper
 ```
 
-To su vaši pet recepata bez češnjaka, a uz to imate i popis za kupovinu uzimajući u obzir što već imate kod kuće.
+To je vaših pet recepata, bez spominjanja češnjaka, i imate i popis za kupovinu s obzirom na to što već imate kod kuće.
 
-## Vježba – izradite generator recepata
+## Vježba - izradite generator recepata
 
-Sada kad smo prikazali scenarij, napišimo kod koji odgovara ovom scenariju. Za to slijedite ove korake:
+Sad kad smo odglumili scenario, napišimo kod koji odgovara demonstriranom scenariju. Da biste to učinili, slijedite ove korake:
 
-1. Koristite postojeću datoteku _app.py_ kao polaznu točku
-1. Pronađite varijablu `prompt` i promijenite njezin kod na sljedeći:
+1. Koristite postojeću datoteku _app.py_ kao polazište
+1. Pronađite varijablu `prompt` i promijenite njezin kod u sljedeći:
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   Ako sada pokrenete kod, trebali biste vidjeti rezultat sličan ovome:
+   Ako sada pokrenete kod, trebali biste vidjeti izlaz sličan ovom:
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -396,22 +396,22 @@ Sada kad smo prikazali scenarij, napišimo kod koji odgovara ovom scenariju. Za 
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > NAPOMENA, vaš LLM je nedeterministički, tako da možete dobiti različite rezultate svaki put kad pokrenete program.
+   > NAPOMENA, vaš LLM je nedeterminističan, pa možete dobiti različite rezultate svaki put kada pokrenete program.
 
-   Super, pogledajmo kako možemo poboljšati stvari. Za poboljšanje želimo osigurati fleksibilnost koda, tako da se sastojci i broj recepata mogu jednostavno mijenjati.
+   Odlično, pogledajmo kako poboljšati stvari. Za poboljšanje želimo napraviti kod fleksibilnim, tako da se sastojci i broj recepata mogu mijenjati i prilagođavati.
 
-1. Izmijenimo kod na sljedeći način:
+1. Promijenimo kod na sljedeći način:
 
    ```python
    no_recipes = input("No of recipes (for example, 5): ")
 
    ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
 
-   # interpolirajte broj recepata u upit i sastojke
+   # interpolate the number of recipes into the prompt an ingredients
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   Ispitivanje koda moglo bi izgledati ovako:
+   Testiranje koda može izgledati ovako:
 
    ```output
    No of recipes (for example, 5): 3
@@ -422,13 +422,13 @@ Sada kad smo prikazali scenarij, napišimo kod koji odgovara ovom scenariju. Za 
    -Strawberry milk: milk, strawberries, sugar, vanilla extract
    ```
 
-### Poboljšanje dodavanjem filtera i popisa za kupovinu
+### Poboljšanje dodavanjem filtra i popisa za kupovinu
 
-Sada imamo radnu aplikaciju koja može proizvodi recepte i fleksibilna je jer se oslanja na unos korisnika, kako na broj recepata tako i na korištene sastojke.
+Sad imamo funkcionalnu aplikaciju koja može proizvoditi recepte i fleksibilna je jer se oslanja na unos korisnika, i za broj recepata i za sastojke.
 
-Da bismo je dodatno poboljšali, želimo dodati sljedeće:
+Za daljnje poboljšanje želimo dodati sljedeće:
 
-- **Filtriranje sastojaka**. Želimo moći filtrirati sastojke koje ne volimo ili na koje smo alergični. Za tu promjenu možemo urediti postojeći prompt i na kraj dodati uvjet filtera ovako:
+- **Filtriranje sastojaka**. Želimo moći filtrirati sastojke koje ne volimo ili na koje smo alergični. Da bismo to postigli, možemo urediti postojeći upit i na kraj dodati uvjet filtra ovako:
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -436,9 +436,9 @@ Da bismo je dodatno poboljšali, želimo dodati sljedeće:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  Gore dodajemo `{filter}` na kraj prompta i također dohvaćamo vrijednost filtera od korisnika.
+  Gore dodajemo `{filter}` na kraj upita i također dohvaćamo vrijednost filtra od korisnika.
 
-  Primjer unosa pri pokretanju programa sada može izgledati ovako:
+  Primjer unosa prilikom pokretanja programa sada može izgledati ovako:
 
   ```output
   No of recipes (for example, 5): 3
@@ -505,14 +505,13 @@ Da bismo je dodatno poboljšali, želimo dodati sljedeće:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  Kao što možete vidjeti, recepti s mlijekom su filtrirani. No, ako ste netolerantni na laktozu, možda ćete htjeti filtrirati i recepte s sirom, pa je važno biti precizan.
+  Kao što vidite, svi su recepti koji sadrže mlijeko filtrirani. Ali, ako ste netolerantni na laktozu, možda ćete željeti filtrirati i recepte sa sirom, pa treba biti jasan.
 
+- **Proizvodnja popisa za kupovinu**. Želimo napraviti popis za kupovinu uzimajući u obzir ono što već imamo kod kuće.
 
-- **Napravi popis za kupovinu**. Želimo napraviti popis za kupovinu, uzimajući u obzir što već imamo kod kuće.
+  Za ovu funkcionalnost mogli bismo pokušati riješiti sve u jednom upitu ili bismo mogli podijeliti na dva upita. Pokušajmo s drugim pristupom. Ovdje predlažemo dodati dodatni upit, ali da to funkcionira, potrebno je dodati rezultat prvog upita kao kontekst za drugi upit.
 
-  Za ovu funkcionalnost, mogli bismo pokušati riješiti sve u jednom promptu ili to podijeliti u dva prompta. Pokušajmo drugi pristup. Ovdje predlažemo dodavanje dodatnog prompta, ali da bi to funkcioniralo, trebamo dodati rezultat prvog prompta kao kontekst drugom promptu.
-
-  Pronađi dio u kodu koji ispisuje rezultat iz prvog prompta i dodaj sljedeći kod ispod:
+  Pronađite dio koda koji ispisuje rezultat iz prvog upita i dodajte sljedeći kod ispod:
 
   ```python
   old_prompt_result = response.output_text
@@ -521,26 +520,26 @@ Da bismo je dodatno poboljšali, želimo dodati sljedeće:
   new_prompt = f"{old_prompt_result} {prompt}"
   response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
 
-  # ispiši odgovor
+  # print response
   print("Shopping list:")
   print(response.output_text)
   ```
 
-  Obrati pažnju na sljedeće:
+  Obratite pažnju na sljedeće:
 
-  1. Kreiramo novi prompt dodavanjem rezultata iz prvog prompta u novi prompt:
+  1. Kreiramo novi upit tako da dodajemo rezultat iz prvog upita u novi upit:
 
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  1. Napravimo novi zahtjev, pri čemu također razmatramo broj tokena koje smo tražili u prvom promptu, pa ovoga puta kažemo `max_output_tokens` je 1200.
+  1. Radimo novi zahtjev, ali uzimajući u obzir broj tokena koje smo tražili u prvom upitu, pa sada kažemo da je `max_output_tokens` 1200.
 
      ```python
      response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
      ```
 
-     Izvršavajući ovaj kod, sada dobivamo sljedeći izlaz:
+     Pokretanjem ovog koda dolazimo do sljedećeg izlaza:
 
      ```output
      No of recipes (for example, 5): 2
@@ -554,19 +553,19 @@ Da bismo je dodatno poboljšali, želimo dodati sljedeće:
      -Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice
      ```
 
-## Poboljšaj svoju postavu
+## Poboljšajte svoju postavku
 
-Dosad imamo kod koji radi, ali postoje neka poboljšanja koja bismo trebali napraviti da stvari dodatno unaprijedimo. Neke stvari koje trebamo učiniti su:
+Ono što do sada imamo je kod koji radi, ali postoje neke dorade koje bismo trebali napraviti kako bismo dodatno poboljšali stvari. Neke stvari koje bismo trebali napraviti su:
 
-- **Odvoji tajne od koda**, poput API ključa. Tajne ne pripadaju u kod i trebale bi se čuvati na sigurnom mjestu. Da bismo odvojili tajne od koda, možemo koristiti varijable okoline i biblioteke poput `python-dotenv` za učitavanje iz datoteke. Evo kako bi to izgledalo u kodu:
+- **Odvojite tajne od koda**, poput API ključa. Tajne ne pripadaju u kod i trebaju se čuvati na sigurnom mjestu. Da bismo tajne odvojili od koda, možemo koristiti varijable okoline i biblioteke poput `python-dotenv` za učitavanje iz datoteke. Evo kako bi to izgledalo u kodu:
 
-  1. Kreiraj `.env` datoteku sa sljedećim sadržajem:
+  1. Kreirajte datoteku `.env` sa sljedećim sadržajem:
 
      ```bash
      OPENAI_API_KEY=sk-...
      ```
 
-     > Napomena, za Azure OpenAI u Microsoft Foundry, morate umjesto toga postaviti sljedeće varijable okoline:
+     > Napomena, za Azure OpenAI u Microsoft Foundry, trebate postaviti sljedeće varijable okoline umjesto toga:
 
      ```bash
      AZURE_OPENAI_API_KEY=<replace>
@@ -574,7 +573,7 @@ Dosad imamo kod koji radi, ali postoje neka poboljšanja koja bismo trebali napr
      AZURE_OPENAI_API_VERSION=2024-10-21
      ```
 
-     U kodu, varijable okoline biste učitali na sljedeći način:
+     U kodu biste učitali varijable okoline ovako:
 
      ```python
      import os
@@ -586,45 +585,45 @@ Dosad imamo kod koji radi, ali postoje neka poboljšanja koja bismo trebali napr
      client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
      ```
 
-- **Riječ o duljini tokena**. Trebali bismo razmotriti koliko tokena trebamo za generiranje željenog teksta. Tokeni koštaju novac, pa bismo tamo gdje je moguće trebali biti štedljivi s brojem tokena koje koristimo. Na primjer, možemo li oblikovati prompt tako da koristimo manje tokena?
+- **Riječ o duljini tokena**. Trebali bismo razmotriti koliko tokena trebamo za generiranje željenog teksta. Tokeni koštaju, pa bismo gdje je moguće trebali biti ekonomični s brojem korištenih tokena. Na primjer, možemo li formulirati prompt tako da upotrijebimo manje tokena?
 
-  Da promijeniš broj korištenih tokena, možeš koristiti parametar `max_output_tokens`. Na primjer, ako želiš koristiti 100 tokena, napravio bi to ovako:
+  Za promjenu korištenih tokena možete koristiti parametar `max_output_tokens`. Na primjer, ako želite koristiti 100 tokena, napravili biste ovako:
 
   ```python
   response = client.responses.create(model=deployment, input=prompt, max_output_tokens=100, store=False)
   ```
 
-- **Eksperimentiranje s temperaturom**. Temperatura je nešto što do sada nismo spominjali, ali je važan kontekst za performanse našeg programa. Što je vrijednost temperature viša, izlaz je nasumičniji. Obrnuto, što je temperatura niža, izlaz je predvidljiviji. Razmisli želiš li varijaciju u izlazu ili ne.
+- **Eksperimentiranje s temperaturom**. Temperatura je nešto o čemu dosad nismo govorili, ali je važan kontekst za performanse našeg programa. Što je vrijednost temperature viša, to će rezultat biti nasumičniji. Suprotno, što je temperatura niža, to je izlaz predvidljiviji. Razmislite želite li varijaciju u vašem izlazu ili ne.
 
-  Da promijeniš temperaturu, možeš koristiti parametar `temperature`. Na primjer, ako želiš koristiti temperaturu od 0.5, napravio bi to ovako:
+  Za promjenu temperature, možete koristiti parametar `temperature`. Na primjer, ako želite koristiti temperaturu 0,5, učinili biste ovako:
 
   ```python
   response = client.responses.create(model=deployment, input=prompt, temperature=0.5, store=False)
   ```
 
-  > Napomena, što je bliže 1.0, izlaz je raznovrsniji.
+  > Napomena, što je bliže 1.0, to je izlaz raznovrsniji.
 
-- **Razložni modeli ne koriste `temperature`**. Ovo je važan pomak za 2026. Trenutni modeli koji nisu zastarjeli na Microsoft Foundry su **razložni modeli** (obitelj GPT-5, o-serija) - i oni **ne podržavaju `temperature` ili `top_p`** (kao ni `max_tokens`; koristi `max_output_tokens`). Ako pošalješ `temperature` modelu `gpt-5-mini`, dobit ćeš grešku "parameter not supported". Dakle, za isprobati primjer temperature gore, usmjeri ga na model koji još podržava kontrole uzorkovanja - na primjer otvoreni **Llama** model poput `Llama-3.3-70B-Instruct` iz [Microsoft Foundry kataloga modela](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst), pozvan preko Foundry Models / Azure AI Inference endpointa (na isti način kao uzorci `githubmodels-*`). Za razložne modele poput GPT-5, izlaz se usmjerava drugačije:
-  - **Prompt inženjering** - jasne upute, primjeri i strukturirani izlaz (vidi lekciju [04 - Prompt Engineering](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)) rade posao koji su ranije radile kontrole uzorkovanja.
-  - **Kontrole razmišljanja** - parametri poput truda/verbositeta razmišljanja balansiraju dubinu razmišljanja s latencijom i cijenom.
+- **Modeli zaključivanja ne koriste `temperature`**. Ovo je važan pomak u 2026. Trenutni, ne-deprekirani modeli u Microsoft Foundry su **modeli zaključivanja** (GPT-5 obitelj, o-serija) - i oni **ne podržavaju `temperature` ni `top_p`** (niti `max_tokens`; koristite `max_output_tokens`). Ako pošaljete `temperature` na `gpt-5-mini` dobit ćete grešku "parameter not supported". Dakle, da isprobate primjer s temperaturom gore, usmjerite ga na model koji još podržava kontrole uzorkovanja - na primjer otvoreni **Llama** model poput `Llama-3.3-70B-Instruct` iz [Microsoft Foundry kataloga modela](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst), pozvan putem Foundry Models / Azure AI Inference endpointa (na isti način kao i `githubmodels-*` primjeri). Za modele zaključivanja poput GPT-5, upravljate izlazom drugačije:
+  - **Prompt inženjering** - jasne upute, primjeri i strukturirani izlaz (pogledajte lekciju [04 - Prompt Engineering](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)) rade posao koji su nekad radili kontroleri uzorkovanja.
+  - **Kontrole zaključivanja** - parametri poput napora/riječitosti zaključivanja balansiraju dubinu zaključivanja protiv latencije i troška.
 
-  Ukratko: `temperature`/`top_p` su još uvijek važeći za mnoge modele (Llama, Mistral, Phi i obitelj GPT-4.x - iako se GPT-4.x ukida), ali smjer razvoja su prompt inženjering + kontrole razmišljanja na razloznim modelima poput GPT-5.
+  Ukratko: `temperature`/`top_p` su i dalje važeći na mnogim modelima (Llama, Mistral, Phi i GPT-4.x obitelj - iako GPT-4.x biva deprikirana), ali smjer kretanja je prompt inženjering + kontrole zaključivanja na modelima zaključivanja kao što je GPT-5.
 
 ## Zadatak
 
-Za ovaj zadatak možeš izabrati što ćeš napraviti.
+Za ovaj zadatak možete odabrati što ćete napraviti.
 
 Evo nekoliko prijedloga:
 
-- Doradi aplikaciju za generator recepata kako bi je dodatno unaprijedio. Igraj se s vrijednostima temperature i promptovima da vidiš što možeš smisliti.
-- Napravi "školskog partnera". Ova aplikacija bi trebala moći odgovarati na pitanja o nekoj temi, na primjer Python, gdje možeš imati promptove poput "Što je određena tema u Pythonu?", ili prompt koji kaže, pokaži mi kod za određenu temu itd.
-- Povijesni bot, učini povijest živom, uputi bota da glumi određeni povijesni lik i postavljaj mu pitanja o njegovom životu i vremenu.
+- Doradite aplikaciju za generiranje recepata kako biste je dodatno poboljšali. Igrajte se s vrijednostima temperature i promptovima da vidite što možete smisliti.
+- Izradite "studijskog prijatelja". Ta aplikacija treba moći odgovarati na pitanja o nekoj temi, na primjer Python; mogli biste imati promptove kao "Što je određena tema u Pythonu?", ili prompt koji kaže, pokaži mi kod za određenu temu itd.
+- Povijesni bot, učinite povijest živom, naredite botu da glumi određenu povijesnu osobu i postavljajte mu pitanja o njegovom životu i vremenu.
 
 ## Rješenje
 
-### Školski partner
+### Studijski prijatelj
 
-Ispod je početni prompt, pogledaj kako ga možeš koristiti i prilagoditi svojem ukusu.
+Ispod je početni prompt, pogledajte kako ga možete koristiti i prilagoditi po želji.
 
 ```text
 - "You're an expert on the Python language
@@ -639,7 +638,7 @@ Ispod je početni prompt, pogledaj kako ga možeš koristiti i prilagoditi svoje
 
 ### Povijesni bot
 
-Evo nekoliko promptova koje možeš koristiti:
+Evo nekoliko promptova koje biste mogli koristiti:
 
 ```text
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
@@ -650,21 +649,21 @@ Evo nekoliko promptova koje možeš koristiti:
 
 ## Provjera znanja
 
-Što radi pojam temperatura?
+Što radi koncept temperature?
 
 1. Kontrolira koliko je izlaz nasumičan.
-1. Kontrolira koliko je odgovor velik.
+1. Kontrolira koliko je odgovor opsežan.
 1. Kontrolira koliko se tokena koristi.
 
 ## 🚀 Izazov
 
-Dok radiš na zadatku, pokušaj mijenjati temperaturu, postavi je na 0, 0.5 i 1. Sjeti se da je 0 najmanje varijabilna, a 1 najviše. Koja vrijednost ti najbolje odgovara za tvoju aplikaciju?
+Dok radite na zadatku, pokušajte mijenjati temperaturu, postavite ju na 0, 0.5 i 1. Sjetite se da je 0 najmanje varijabilno, a 1 najviše. Koja vrijednost najbolje funkcionira za vašu aplikaciju?
 
-## Odlično! Nastavi sa učenjem
+## Sjajan rad! Nastavite svoje učenje
 
-Nakon što završiš ovu lekciju, pogledaj našu [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) da nastaviš podizati svoje znanje o Generativnoj AI!
+Nakon što završite ovu lekciju, pogledajte našu [kolekciju učenja o Generativnoj AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) da nastavite usavršavati svoje znanje o Generativnoj AI!
 
-Kreni na Lekciju 7 gdje ćemo pogledati kako [graditi chat aplikacije](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Idite na Lekciju 7 gdje ćemo pogledati kako [izgraditi chat aplikacije](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
