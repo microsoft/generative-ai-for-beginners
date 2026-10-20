@@ -193,13 +193,19 @@ def validate_url(url: str, require_https: bool = True) -> str:
 
     # Basic URL pattern. An optional ":port" is allowed so local model servers
     # (e.g. http://localhost:11434, http://127.0.0.1:1234/v1) validate correctly.
+    # The port is restricted to ASCII digits and checked against the valid TCP
+    # range below, matching what standard-library URL parsing accepts.
     if require_https:
-        pattern = r"^https://[a-zA-Z0-9.-]+(?::\d{1,5})?(?:/[^\s]*)?$"
-        if not re.match(pattern, url):
+        match = re.match(r"^https://[a-zA-Z0-9.-]+(?::([0-9]{1,5}))?(?:/[^\s]*)?$", url)
+        if not match:
             raise ValueError(f"Invalid HTTPS URL: {url}")
     else:
-        pattern = r"^https?://[a-zA-Z0-9.-]+(?::\d{1,5})?(?:/[^\s]*)?$"
-        if not re.match(pattern, url):
+        match = re.match(r"^https?://[a-zA-Z0-9.-]+(?::([0-9]{1,5}))?(?:/[^\s]*)?$", url)
+        if not match:
             raise ValueError(f"Invalid URL: {url}")
+
+    port = match.group(1)
+    if port is not None and int(port) > 65535:
+        raise ValueError(f"Invalid port in URL: {url}")
 
     return url
