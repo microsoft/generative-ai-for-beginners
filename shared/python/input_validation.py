@@ -138,8 +138,11 @@ def sanitize_prompt_input(value: str, max_length: int = 1000, strict: bool = Fal
         # In strict mode, only allow safe characters
         sanitized = re.sub(r"[^\w\s,.\'\"-?!@#$%&*()+=:;]", "", sanitized, flags=re.UNICODE)
 
-    # Normalize whitespace
-    sanitized = re.sub(r"\s+", " ", sanitized)
+    # Normalize line endings and collapse runs of spaces to a single space, but
+    # preserve the newlines and tabs deliberately kept above so multi-line and
+    # tab-indented prompt input keeps its structure.
+    sanitized = sanitized.replace("\r\n", "\n").replace("\r", "\n")
+    sanitized = re.sub(r" {2,}", " ", sanitized)
     sanitized = sanitized.strip()
 
     if len(sanitized) > max_length:
