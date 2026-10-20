@@ -86,6 +86,18 @@ class TestSanitizePromptInput:
         with pytest.raises(ValueError, match="invalid characters"):
             sanitize_prompt_input("{{a}}")
 
+    def test_preserves_newlines(self):
+        assert sanitize_prompt_input("line one\nline two") == "line one\nline two"
+
+    def test_preserves_tabs(self):
+        assert sanitize_prompt_input("col1\tcol2") == "col1\tcol2"
+
+    def test_collapses_runs_of_spaces(self):
+        assert sanitize_prompt_input("a    b") == "a b"
+
+    def test_normalizes_windows_line_endings(self):
+        assert sanitize_prompt_input("a\r\nb") == "a\nb"
+
 
 class TestValidateEmail:
     def test_valid_email_lowercased(self):
