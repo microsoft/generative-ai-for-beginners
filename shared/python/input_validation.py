@@ -191,13 +191,14 @@ def validate_url(url: str, require_https: bool = True) -> str:
     """
     url = url.strip()
 
-    # Basic URL pattern
+    # Basic URL pattern. An optional ":port" is allowed so local model servers
+    # (e.g. http://localhost:11434, http://127.0.0.1:1234/v1) validate correctly.
     if require_https:
-        pattern = r"^https://[a-zA-Z0-9.-]+(?:/[^\s]*)?$"
+        pattern = r"^https://[a-zA-Z0-9.-]+(?::\d{1,5})?(?:/[^\s]*)?$"
         if not re.match(pattern, url):
             raise ValueError(f"Invalid HTTPS URL: {url}")
     else:
-        pattern = r"^https?://[a-zA-Z0-9.-]+(?:/[^\s]*)?$"
+        pattern = r"^https?://[a-zA-Z0-9.-]+(?::\d{1,5})?(?:/[^\s]*)?$"
         if not re.match(pattern, url):
             raise ValueError(f"Invalid URL: {url}")
 
