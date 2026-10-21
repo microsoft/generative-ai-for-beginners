@@ -138,7 +138,9 @@ We hope to use Phi-3/3.5 in different scenarios. Next, we will use Phi-3/3.5 bas
 
 > **Note:** GitHub Models is retiring at the end of July 2026. [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) is the direct replacement.
 
-Microsoft Foundry Models is the most direct way. You can quickly access the Phi-3/3.5-Instruct model through the Foundry model catalog. Combined with the Azure AI Inference SDK / OpenAI SDK, you can access the API through code to complete the Phi-3/3.5-Instruct call. You can also test different effects through the Playground.
+> **Note:** The entire Phi-3/3.5 family (Instruct, Vision, and MoE variants) was retired from the Microsoft Foundry Models catalog on 2025-08-30. Use `Phi-4` (Instruct) or `Phi-4-mini-instruct` there instead — the Phi-3/3.5 examples below still work via Hugging Face, Ollama, ONNX Runtime, and NVIDIA NIM.
+
+Microsoft Foundry Models now provides the Phi-4 successors. Use `Phi-4` or `Phi-4-mini-instruct` instead of the retired Phi-3/3.5 models when following the cloud API examples.
 
 - Demo: Comparison of the effects of Phi-3-mini and Phi-3.5-mini in Chinese scenarios
 
@@ -149,7 +151,7 @@ Microsoft Foundry Models is the most direct way. You can quickly access the Phi-
 
 **Microsoft Foundry**
 
-Or if we want to use the vision and MoE models, you can use Microsoft Foundry to complete the call. If you are interested, you can read the Phi-3 Cookbook to learn how to call Phi-3/3.5 Instruct, Vision, MoE through Microsoft Foundry [Click this link](https://github.com/microsoft/PhiCookBook/blob/main/md/02.QuickStart/AzureAIFoundry_QuickStart.md?WT.mc_id=academic-105485-koreyst)
+If you want to use vision (multimodal) models in the cloud, use the currently available `Phi-4-multimodal-instruct` through Microsoft Foundry instead of the retired Phi-3/3.5 Vision models; for text tasks use `Phi-4` or `Phi-4-mini-instruct`. The Phi-3.5 MoE model has been retired from Microsoft Foundry, so use the other options described in this lesson (for example Hugging Face) if you want to experiment with it. If you are interested, you can read the Phi Cookbook to learn how to call Phi models through Microsoft Foundry [Click this link](https://github.com/microsoft/PhiCookBook/blob/main/md/02.QuickStart/AzureAIFoundry_QuickStart.md?WT.mc_id=academic-105485-koreyst)
 
 
 **NVIDIA NIM**
