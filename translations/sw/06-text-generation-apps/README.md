@@ -1,82 +1,82 @@
-# Kujenga Programu za Uundaji wa Maandishi
+# Kujenga Programu za Uzalishaji wa Maandishi
 
-[![Kujenga Programu za Uundaji wa Maandishi](../../../translated_images/sw/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Kujenga Programu za Uzalishaji wa Maandishi](../../../translated_images/sw/06-lesson-banner.a5c629f990a636c8.webp?WT.mc_id=academic-105485-koreyst)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
-> _(Bofya picha iliyo juu ili kuona video ya somo hili)_
+> _(Bonyeza picha hapo juu kutazama video ya somo hili)_
 
-Umeona hadi sasa kupitia mitaala hii kwamba kuna dhana msingi kama vile maagizo (prompts) na hata ujuzi mzima unaoitwa "ufunda wa maagizo" (prompt engineering). Zana nyingi unazoweza kutumia kama ChatGPT, Office 365, Microsoft Power Platform na zaidi, zinakuwezesha kutumia maagizo kufanikisha jambo fulani.
+Umeona hadi sasa katika mtaala huu kwamba kuna dhana kuu kama vile prompts na hata taaluma nzima inayoitwa "ufundi wa prompts". Zana nyingi unazoweza kuingiliana nazo kama ChatGPT, Office 365, Microsoft Power Platform na zaidi, zinakuunga mkono kutumia prompts kufanya jambo fulani.
 
-Ili kuongeza uzoefu kama huo kwenye programu, unahitaji kuelewa dhana kama maagizo, ukamilishaji na kuchagua maktaba ya kufanya nayo kazi. Hiyo kabisa ndilo utakalojifunza katika sura hii.
+Ili kuongeza uzoefu kama huo kwenye programu, unahitaji kuelewa dhana kama prompts, completions na kuchagua maktaba ya kufanya nayo kazi. Hiyo ndio hasa utaijifunza katika sura hii.
 
 ## Utangulizi
 
 Katika sura hii, utajifunza:
 
-- Jifunze kuhusu maktaba ya openai na dhana zake za msingi.
-- Jenga programu ya uundaji wa maandishi ukitumia openai.
-- Elewa jinsi ya kutumia dhana kama maagizo, joto, na tokeni kujenga programu ya uundaji wa maandishi.
+- Kujifunza kuhusu maktaba ya openai na dhana zake kuu.
+- Kujenga programu ya uzalishaji wa maandishi kwa kutumia openai.
+- Kuelewa jinsi ya kutumia dhana kama prompt, temperature, na tokens kujenga programu ya uzalishaji wa maandishi.
 
-## Malengo ya Kujifunza
+## Malengo ya kujifunza
 
-Mwisho wa somo hili, utaweza:
+Mwisho wa somo hili, utakuwa na uwezo wa:
 
-- Eleza ni nini programu ya uundaji wa maandishi.
-- Jenga programu ya uundaji wa maandishi ukitumia openai.
-- Sanidi programu yako kutumia tokeni nyingi zaidi au chache na pia badilisha joto ili upate matokeo mbalimbali.
+- Eleza ni nini programu ya uzalishaji wa maandishi.
+- Kujenga programu ya uzalishaji wa maandishi kwa kutumia openai.
+- Sanidi programu yako kutumia tokens zaidi au kidogo na pia badilisha temperature, kwa kupata matokeo tofauti.
 
-## Ni nini programu ya uundaji wa maandishi?
+## Programu ya uzalishaji wa maandishi ni nini?
 
-Kawaida unapo jenga programu huwa na aina fulani ya kiolesura kama ifuatavyo:
+Kwa kawaida unapojenga programu ina aina fulani ya kiolesura kama ifuatavyo:
 
-- Inayotegemea amri. Programu za console ni programu za kawaida ambapo unaandika amri na hufanya kazi fulani. Kwa mfano, `git` ni programu inayotegemea amri.
-- Kiolesura cha mtumiaji (UI). Baadhi ya programu zina kiolesura cha picha (GUIs) ambapo una bonyeza vitufe, ingiza maandishi, chagua chaguzi na zaidi.
+- Imegusa amri. Programu za koni ni programu za kawaida ambapo unaandika amri na ifanye kazi. Kwa mfano, `git` ni programu ya aina hii ya amri.
+- Kiolesura cha mtumiaji (UI). Baadhi ya programu zina kiolesura cha mtumiaji cha picha (GUIs) ambapo unabonyeza vifungo, kuingiza maandishi, kuchagua chaguzi na zaidi.
 
-### Programu za console na UI zina mipaka
+### Programu za Koni na UI zina mipaka
 
-Linganisha na programu inayotegemea amri ambapo unaandika amri:
+Linganisha na programu ya amri ambapo unaandika amri:
 
-- **Ina mipaka**. Huwezi kuandika amri yoyote ile, ni zile tu programu inaunga mkono.
-- **Lugha maalum**. Baadhi ya programu zinaunga mkono lugha nyingi, lakini kwa kawaida programu imetengenezwa kwa lugha fulani, hata kama unaweza kuongeza msaada wa lugha zaidi.
+- **Ina mipaka**. Huwezi tu kuandika amri yoyote, ni zile tu ambazo programu inaunga mkono.
+- **Lugha maalum**. Baadhi ya programu zinaunga mkono lugha nyingi, lakini kwa kawaida programu imejengwa kwa lugha maalum, hata kama unaweza kuongeza msaada wa lugha zaidi.
 
-### Faida za programu za uundaji wa maandishi
+### Manufaa ya programu za uzalishaji wa maandishi
 
-Basi je, programu ya uundaji wa maandishi ni tofauti vipi?
+Basi, programu ya uzalishaji wa maandishi ni tofauti vipi?
 
-Katika programu ya uundaji wa maandishi, una uhuru zaidi, huna mipaka ya amri maalum wala lugha maalum ya kuingiza. Badala yake, unaweza kutumia lugha ya asili kuingiliana na programu. Faida nyingine ni kwamba tayari unakutana na chanzo cha data kilichofunzwa na makusanyo makubwa ya taarifa, wakati programu ya kawaida inaweza kuwa na mipaka kuhusu inayo katika hifadhidata.
+Katika programu ya uzalishaji wa maandishi, una uhuru zaidi, huna mipaka kwa seti ya amri au lugha maalum ya kuingiza. Badala yake, unaweza kutumia lugha ya asili kuingiliana na programu. Faida nyingine ni kwamba tayari unaingiliana na chanzo cha data ambacho kimefundishwa kwenye maudhui makubwa ya taarifa, huku programu ya kawaida inaweza kuwa na mipaka kwa kile kilicho kwenye hifadhidata.
 
-### Naweza kujenga nini kwa kutumia programu ya uundaji wa maandishi?
+### Nini ninaweza kujenga kwa programu ya uzalishaji wa maandishi?
 
 Kuna mambo mengi unayoweza kujenga. Kwa mfano:
 
-- **Chatbot**. Chatbot inayojibu maswali kuhusu mada, kama kampuni yako na bidhaa zake inaweza kuwa chaguo zuri.
-- **Msaidizi**. LLM ni zuri kwa mambo kama muhtasari wa maandishi, kupata maarifa kutoka maandishi, kuandika maandishi kama wasifu na zaidi.
-- **Msaidizi wa nambari (Code assistant)**. Kutegemea mfano wa lugha unaotumia, unaweza kujenga msaidizi wa nambari anayekusaidia kuandika msimbo. Kwa mfano, unaweza kutumia bidhaa kama GitHub Copilot pamoja na ChatGPT kusaidia kuandika msimbo.
+- **Boti ya mazungumzo**. Boti ya mazungumzo inayojibu maswali kuhusu mada, kama kampuni yako na bidhaa zake inaweza kuwa chaguo zuri.
+- **Msaidizi**. LLMs ni mzuri katika mambo kama vile kufupisha maandishi, kupata maarifa kutoka kwenye maandishi, kuzalisha maandishi kama wasifu na zaidi.
+- **Msaidizi wa msimbo**. Kutegemea mfano wa lugha unayotumia, unaweza kujenga msaidizi wa msimbo anayekusaidia kuandika msimbo. Kwa mfano, unaweza kutumia bidhaa kama GitHub Copilot pamoja na ChatGPT kusaidia kuandika msimbo.
 
-## Ninaanza vipi?
+## Ninawezaje kuanza?
 
-Vizuri, unahitaji njia ya kuunganishwa na LLM ambayo kawaida inajumuisha mbinu mbili zifuatazo:
+Vizuri, unahitaji kupata njia ya kuunganishwa na LLM ambayo kwa kawaida inajumuisha njia mbili zifuatazo:
 
-- Tumia API. Hapa unaunda maombi ya mtandao kwa kutumia agizo lako na kurudiwa maandishi yaliyoandaliwa.
-- Tumia maktaba. Maktaba husaidia kufungasha mwito wa API na kuufanya kuwa rahisi kutumia.
+- Tumia API. Hapa unaunda maombi ya wavuti kwa kutumia prompt yako na kupata maandishi yaliyozalishwa.
+- Tumia maktaba. Maktaba husaidia kufunga miito ya API na kufanya iwe rahisi kutumia.
 
 ## Maktaba/SDKs
 
-Kuna maktaba kadhaa maarufu kwa kufanya kazi na LLM kama:
+Kuna maktaba maarufu kadhaa za kufanya kazi na LLMs kama:
 
-- **openai**, maktaba hii hufanya iwe rahisi kuungana na mfano wako na kutuma maagizo.
+- **openai**, maktaba hii inafanya iwe rahisi kuungana na mfano wako na kutuma prompts.
 
 Kisha kuna maktaba zinazofanya kazi kwa kiwango cha juu kama:
 
 - **Langchain**. Langchain ni maarufu na inaunga mkono Python.
 - **Semantic Kernel**. Semantic Kernel ni maktaba ya Microsoft inayounga mkono lugha za C#, Python, na Java.
 
-## Programu ya kwanza ukitumia openai
+## Programu ya kwanza kwa kutumia openai
 
-Tutaona jinsi ya kujenga programu yetu ya kwanza, maktaba tunazohitaji, kiasi kinachohitajika na kadhalika.
+Tuwone jinsi tunavyoweza kujenga programu yetu ya kwanza, maktaba tunazohitaji, kiasi kinachohitajika na kadhalika.
 
 ### Sakinisha openai
 
-Kuna maktaba nyingi za kuingiliana na OpenAI au Azure OpenAI. Inawezekana kutumia lugha mbalimbali za programu kama C#, Python, JavaScript, Java na zaidi. Tumetumia maktaba ya Python `openai`, hivyo tutatumia `pip` kuiweka.
+Kuna maktaba nyingi huko kwa kuingiliana na OpenAI au Azure OpenAI. Inawezekana kutumia lugha mbalimbali za programu kama C#, Python, JavaScript, Java na zaidi. Tumechagua kutumia maktaba ya Python ya `openai`, kwa hivyo tutatumia `pip` kuisakinisha.
 
 ```bash
 pip install openai
@@ -87,31 +87,31 @@ pip install openai
 Unahitaji kufanya hatua zifuatazo:
 
 - Unda akaunti kwenye Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- Pata ruhusa ya Azure OpenAI. Tembelea [https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) na omba ruhusa.
+- Pata upatikanaji wa Azure OpenAI. Nenda [https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) na omba upatikanaji.
 
   > [!NOTE]
-  > Wakati wa kuandika, unahitaji kuomba ruhusa ya Azure OpenAI.
+  > Wakati wa kuandika, unahitaji kuomba upatikanaji wa Azure OpenAI.
 
 - Sakinisha Python <https://www.python.org/>
-- Kuwa umeunda rasilimali ya Azure OpenAI Service. Angalia mwongozo huu wa jinsi ya [kuunda rasilimali](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- Kuwa umeunda rasilimali ya Azure OpenAI Service. Tazama mwongozo huu kuhusu jinsi ya [kuunda rasilimali](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
-### Pata ufunguo wa API na njia ya kuunganishwa
+### Tafuta API key na endpoint
 
-Sasa, unahitaji kumwambia maktaba yako ya `openai` ni ufunguo gani wa API utakaotumia. Ili kupata ufunguo wako wa API, nenda kwenye sehemu ya "Keys and Endpoint" ya rasilimali yako ya Azure OpenAI na nakili thamani ya "Key 1".
+Hivi sasa, unahitaji kusema maktaba yako ya `openai` ni funguo gani za API itumie. Ili kupata funguo za API, nenda kwenye sehemu ya "Keys and Endpoint" ya rasilimali yako ya Azure OpenAI nakili thamani ya "Key 1".
 
-![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-foundry/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+![Blade ya funguo na endpoint katika Azure Portal](https://learn.microsoft.com/azure/ai-foundry/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-Sasa baada ya kupata taarifa hii, tuelekeze maktaba ziitumi.
+Sasa ume nakili taarifa hii, hebu tuiamuru maktaba kuitumia.
 
 > [!NOTE]
-> Inafaa kutenganisha ufunguo wako wa API na msimbo wako. Unaweza kufanya hivyo kwa kutumia mazingira ya mazingira (environment variables).
+> Inafaa kutenga funguo yako ya API kutoka kwenye msimbo wako. Unaweza kufanya hivyo kwa kutumia vigezo vya mazingira.
 >
-> - Weka thamani ya mazingira `OPENAI_API_KEY` kwa ufunguo wako wa API.
+> - Weka kigezo cha mazingira `OPENAI_API_KEY` kuwa funguo yako ya API.
 >   `export OPENAI_API_KEY='sk-...'`
 
-### Sanidi usanidi Azure
+### Sanidi mipangilio Azure
 
-Ikiwa unatumia Azure OpenAI (sasa sehemu ya Microsoft Foundry), hapa ni jinsi unavyosaidia usanidi. Tunatumia mteja halisi `OpenAI` unaoelekezwa kwenye pini ya Azure OpenAI `/openai/v1/`, inayofanya kazi na API ya Majibu na haidingi `api_version`:
+Ikiwa unatumia Azure OpenAI (sasa sehemu ya Microsoft Foundry), hapa jinsi unavyosanidi mipangilio. Tunatumia mteja wa kawaida wa `OpenAI` unaolenga kwenye endpoint ya Azure OpenAI `/openai/v1/`, unaofanya kazi na Responses API na hauhitaji `api_version`:
 
 ```python
 import os
@@ -123,33 +123,33 @@ client = OpenAI(
 )
 ```
 
-Juu hapa tunaweka yafuatayo:
+Juu tunaseti yafuatayo:
 
-- `api_key`, huu ni ufunguo wako wa API uliopatikana kwenye Azure Portal au portal ya Microsoft Foundry.
-- `base_url`, ni mwisho wa rasilimali yako Foundry ukiambatanisha `/openai/v1/`. Pini imara ya v1 hufanya kazi kwa OpenAI na Azure OpenAI bila usimamizi wa `api_version`.
+- `api_key`, hii ni funguo yako ya API iliyo katika Azure Portal au Microsoft Foundry portal.
+- `base_url`, hii ni endpoint ya rasilimali ya Foundry iliyoongezwa na `/openai/v1/`. Endpoint thabiti ya v1 hufanya kazi kwa OpenAI na Azure OpenAI bila usimamizi wa `api_version`.
 
-> [!NOTE] > `os.environ` huchukua thamani za mazingira. Unaweza kuitumia kusoma mazingira kama `AZURE_OPENAI_API_KEY` na `AZURE_OPENAI_ENDPOINT`. Weka thamani hizi za mazingira kwenye terminal yako au kwa kutumia maktaba kama `dotenv`.
+> [!NOTE] > `os.environ` husoma vigezo vya mazingira. Unaweza kuitumia kusoma vigezo vya mazingira kama `AZURE_OPENAI_API_KEY` na `AZURE_OPENAI_ENDPOINT`. Weka vigezo hivi vya mazingira kwenye terminali yako au kwa kutumia maktaba kama `dotenv`.
 
 ## Tengeneza maandishi
 
-Njia ya kutengeneza maandishi ni kutumia API ya Majibu kupitia njia ya `responses.create`. Hapa kuna mfano:
+Njia ya kutengeneza maandishi ni kutumia Responses API kupitia njia ya `responses.create`. Hapa kuna mfano:
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
 
 response = client.responses.create(
-    model="gpt-5-mini",  # huu ndio jina la usambazaji wa mfano wako
+    model="gpt-5-mini",  # this is your model deployment name
     input=prompt,
     store=False,
 )
 print(response.output_text)
 ```
 
-Katika msimbo huo hapo juu, tunaunda jibu na kuingiza mfano tunayotaka kutumia na agizo. Kisha tuna chapisha maandishi yaliyotengenezwa kupitia `response.output_text`.
+Katika msimbo huu wa juu, tunaunda jibu na tunapita mfano tunayotaka kutumia na prompt. Kisha tunachapisha maandishi yaliyozalishwa kupitia `response.output_text`.
 
-### Mazungumzo ya mzunguko wengi
+### Mazungumzo yenye duru nyingi
 
-API ya Majibu inafaa vizuri kwa uundaji wa maandishi wa zamu moja na pia chatbots za mzunguko mingi - unatoa orodha ya ujumbe katika `input` kujenga mazungumzo:
+Responses API inafaa kwa uzalishaji wa maandishi wa duru moja na pia boti za mazungumzo yenye duru nyingi - unatoa orodha ya ujumbe katika `input` kujenga mazungumzo:
 
 ```python
 from openai import OpenAI
@@ -160,13 +160,13 @@ response = client.responses.create(model="gpt-5-mini", input="Hello world", stor
 print(response.output_text)
 ```
 
-Zaidi juu ya kazi hii katika sura ijayo.
+Zaidi kuhusu kipengele hiki katika sura inayokuja.
 
-## Zoefu - programu yako ya kwanza ya uundaji wa maandishi
+## Zoefu - programu yako ya kwanza ya uzalishaji wa maandishi
 
-Sasa tunapo jifunza jinsi ya kusanidi na usanidi openai, ni wakati wa kujenga programu yako ya kwanza ya uundaji wa maandishi. Kufanya hivyo, fuata hatua hizi:
+Sasa tunapoijua jinsi ya kusanidi na kuandaa openai, ni wakati wa kujenga programu yako ya kwanza ya uzalishaji wa maandishi. Ili kujenga programu yako, fuata hatua hizi:
 
-1. Unda mazingira halisi (virtual environment) na sakinisha openai:
+1. Unda mazingira ya mtumiaji na sakinisha openai:
 
    ```bash
    python -m venv venv
@@ -178,9 +178,9 @@ Sasa tunapo jifunza jinsi ya kusanidi na usanidi openai, ni wakati wa kujenga pr
    > Ikiwa unatumia Windows andika `venv\Scripts\activate` badala ya `source venv/bin/activate`.
 
    > [!NOTE]
-   > Pata ufunguo wako wa Azure OpenAI kwa kwenda [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) kisha tafuta `Open AI` na chagua `Open AI resource` kisha chagua `Keys and Endpoint` na nakili thamani ya `Key 1`.
+   > Tafuta funguo yako ya Azure OpenAI kwa kwenda [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) na tafuta `Open AI` kisha chagua `Open AI resource` kisha chagua `Keys and Endpoint` nakili thamani ya `Key 1`.
 
-1. Unda faili _app.py_ na uweke msimbo huu:
+1. Unda faili _app.py_ na uteupe msimbo ufuatao:
 
    ```python
    import os
@@ -192,20 +192,20 @@ Sasa tunapo jifunza jinsi ya kusanidi na usanidi openai, ni wakati wa kujenga pr
    )
    deployment_name = "<deployment name>"
 
-   # ongeza msimbo wako wa kukamilisha
+   # add your completion code
    prompt = "Complete the following: Once upon a time there was a"
 
-   # fanya ombi kwa kutumia API za Majibu
+   # make a request using the Responses API
    response = client.responses.create(model=deployment_name, input=prompt, store=False)
 
-   # chapisha jibu
+   # print response
    print(response.output_text)
    ```
 
    > [!NOTE]
-   > Ikiwa unatumia OpenAI wa kawaida (si Azure), tumia `client = OpenAI(api_key="<badilisha thamani hii kwa ufunguo wako wa OpenAI>")` (bila `base_url`) na toa jina la mfano kama `gpt-5-mini` badala ya jina la utoaji.
+   > Ikiwa unatumia OpenAI wa kawaida (sio Azure), tumia `client = OpenAI(api_key="<replace this value with your OpenAI key>")` (bila `base_url`) na pita jina la mfano kama `gpt-5-mini` badala ya jina la deployment.
 
-   Utakuwa unaona matokeo kama ifuatavyo:
+   Utapaswa kuona matokeo kama ifuatavyo:
 
    ```output
     very unhappy _____.
@@ -213,25 +213,25 @@ Sasa tunapo jifunza jinsi ya kusanidi na usanidi openai, ni wakati wa kujenga pr
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## Aina tofauti za maagizo, kwa mambo tofauti
+## Aina tofauti za prompts, kwa mambo tofauti
 
-Sasa umeona jinsi ya kutengeneza maandishi kwa kutumia agizo. Hata una programu inayotembea na unayoweza kubadilisha ili kupata aina tofauti za maandishi.
+Sasa umeona jinsi ya kutengeneza maandishi kwa kutumia prompt. Hata una programu inayoendesha ambayo unaweza kubadilisha na kugeuza kuzalisha aina tofauti za maandishi.
 
-Maagizo yanaweza kutumika kwa kazi mbalimbali. Kwa mfano:
+Prompts zinaweza kutumika kwa aina zote za kazi. Kwa mfano:
 
-- **Tengeneza aina ya maandishi**. Kwa mfano, unaweza kuunda shairi, maswali kwa mtihani n.k.
-- **Tafuta taarifa**. Unaweza kutumia maagizo kutafuta taarifa kama mfano huu 'CORS inamaanisha nini katika maendeleo ya wavuti?'.
-- **Tengeneza msimbo**. Unaweza kutumia maagizo kutengeneza msimbo, kwa mfano kuunda regex ya kuthibitisha barua pepe au kwa nini si kuzalisha programu yote, kama programu ya wavuti?
+- **Zalisha aina ya maandishi**. Kwa mfano, unaweza kuzalisha shairi, maswali kwa quiz nk.
+- **Tafuta taarifa**. Unaweza kutumia prompts kutafuta taarifa kama mfano huu 'CORS ina maana gani katika uzinduaji wa wavuti?'.
+- **Zalisha msimbo**. Unaweza kutumia prompts kuzalisha msimbo, kwa mfano kuunda regex ya kutathmini barua pepe au kwanini usizalishe programu nzima, kama programu ya wavuti?
 
-## Mfano wa matumizi wa vitendo: kizalishaji cha mapishi
+## Mfano wa matumizi ya vitendo: kizalishaji cha mapishi
 
-Fikiria una viungo nyumbani na unataka kupika kitu. Kwa hilo, unahitaji mapishi. Njia moja ya kupata mapishi ni kutumia mtambo wa kutafuta au unaweza kutumia LLM kufanya hivyo.
+Fikiria una rasilimali nyumbani na unataka kupika kitu. Kwa hilo, unahitaji mapishi. Njia ya kupata mapishi ni kutumia injini ya utafutaji au unaweza kutumia LLM kufanya hivyo.
 
-Unaweza kuandika agizo kama ifuatavyo:
+Unaweza kuandika prompt kama ifuatavyo:
 
-> "Nioneshie mapishi 5 ya chakula chenye viungo vifuatavyo: kuku, viazi, na karoti. Kwa kila mapishi, orodhesha viungo vyote vilivyotumika"
+> "Nionyeshe mapishi 5 ya chakula chenye viambato vifuatavyo: kuku, viazi, na karoti. Kwa kila mapishi, orodhesha viambato vyote vilivyotumika"
 
-Kutokana na agizo hapo juu, unaweza kupata jibu kama hii:
+Kutokana na prompt ya juu, unaweza kupata majibu kama haya:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -295,14 +295,14 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-Matokeo haya ni mazuri, najua nini kupika. Sasa, mabadiliko yanayoweza kuwa na msaada ni:
+Matokeo haya ni mazuri, najua nini kupika. Hivi sasa, maboresho yanayoweza kusaidia ni:
 
-- Kuchuja viungo ambavyo sipendi au nina mzio navyo.
-- Tengeneza orodha ya manunuzi, endapo sina viungo vyote nyumbani.
+- Kutenganisha viambato nisivyopenda au ambavyo nina mzio navyo.
+- Tengeneza orodha ya kununua, iwapo sina viambato vyote nyumbani.
 
-Kwa hali hizi, tutaongeza agizo la ziada:
+Kwa hali hizi, tukaeongeza prompt ya ziada:
 
-> "Tafadhali toa mapishi yenye vitunguu nusu kama nina mzio na badilisha na kitu kingine. Pia, tafadhali tengeneza orodha ya manunuzi kwa mapishi, ukizingatia kuwa tayari nina kuku, viazi na karoti nyumbani."
+> "Tafadhali ondoa mapishi yenye kitunguu saumu kwani nina mzio na badilisha na kitu kingine. Pia, tafadhali tengeneza orodha ya kununua kwa mapishi hayo, ukizingatia kwamba tayari nina kuku, viazi na karoti nyumbani."
 
 Sasa una matokeo mapya, yaani:
 
@@ -371,20 +371,20 @@ Shopping List:
 - Pepper
 ```
 
-Haya ni mapishi yako matano, bila vitunguu na pia una orodha ya manunuzi ikizingatia unavyo viungo nyumbani.
+Hayo ni mapishi yako matano, bila kutaja kitunguu saumu na pia una orodha ya kununua ukizingatia unavyo vitu tayari nyumbani.
 
 ## Zoefu - jenga kizalishaji cha mapishi
 
-Sasa tumetumia mfano, andika msimbo kuendana na mfano huu. Kufanya hivyo, fuata hatua hizi:
+Sasa tunapojua jinsi ya kucheza hali ya tukio, wacha tuandike msimbo kuendana na tukio lililoonyeshwa. Kwa kufanya hivyo, fuata hatua hizi:
 
-1. Tumia faili lililopo la _app.py_ kama msingi
-1. Tafuta mabadiliko ya `prompt` na badilisha msimbo wake kama ifuatavyo:
+1. Tumia faili lililotumika la _app.py_ kama chanzo
+1. Tafuta kichujio cha `prompt` na badilisha msimbo wake kama ifuatavyo:
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   Ikiwa utaendesha msimbo sasa, utapata matokeo kama haya:
+   Ukikimbiza msimbo sasa, unapaswa kuona matokeo kama ifuatavyo:
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -396,22 +396,22 @@ Sasa tumetumia mfano, andika msimbo kuendana na mfano huu. Kufanya hivyo, fuata 
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > KUMBUKA, LLM yako si ya kudhibitiwa kwa hakika, hivyo matokeo yanaweza kutofautiana kila unapoendesha programu.
+   > KUMBUKA, LLM yako haina utabiri thabiti, hivyo unaweza kupata matokeo tofauti kila mara unapotumia programu.
 
-   Vizuri, tuchunguze jinsi ya kuboresha mambo. Ili kuboresha, tunataka msimbo uwe rahisi kubadilishwa, viungo na idadi ya mapishi ziweze kurekebishwa.
+   Nzuri, tutaone jinsi ya kuboresha mambo. Ili kuboresha mambo, tunataka kuhakikisha msimbo ni rahisi kubadilika, hivyo viambato na idadi ya mapishi vinaweza kuboreshwa na kubadilishwa.
 
-1. Badilisha msimbo kama ifuatavyo:
+1. Tabadilisha msimbo kwa njia ifuatayo:
 
    ```python
    no_recipes = input("No of recipes (for example, 5): ")
 
    ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
 
-   # weka idadi ya mapishi katika maelekezo na viungo
+   # interpolate the number of recipes into the prompt an ingredients
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   Kuendesha msimbo kama jaribio, unaweza kufanya hivi:
+   Kuendesha msimbo huu kama jaribio, unaweza kuona ifuatavyo:
 
    ```output
    No of recipes (for example, 5): 3
@@ -422,13 +422,13 @@ Sasa tumetumia mfano, andika msimbo kuendana na mfano huu. Kufanya hivyo, fuata 
    -Strawberry milk: milk, strawberries, sugar, vanilla extract
    ```
 
-### Boreshaji kwa kuongeza kichujio na orodha ya manunuzi
+### Boreshwa kwa kuongeza kichujio na orodha ya kununua
 
-Sasa tuna programu inayofanya kazi ya kuunda mapishi na ni rahisi kwa sababu inategemea viingilio kutoka kwa mtumiaji, sehemu ya idadi ya mapishi na pia viungo vilivyotumika.
+Sasa tuna programu inayofanya kazi ya kuzalisha mapishi na ni rahisi kubadilika kwa kuwa inategemea maingizo kutoka kwa mtumiaji, kwa idadi ya mapishi lakini pia viambato vilivyotumika.
 
-Ili kurekebisha zaidi, tunataka kuongeza yafuatayo:
+Ili kuboresha zaidi, tunataka kuongeza yafuatayo:
 
-- **Chuja viungo**. Tunataka kuwa na uwezo wa kuchuja viungo ambavyo hatupendi au tuna mzio navyo. Ili kufanya hivyo, tunaweza kuhariri agizo letu lililopo na kuongeza sharti la chujio mwishoni kama ifuatavyo:
+- **Chuja viambato**. Tunataka kuweza kuchuja viambato visivyopendwa au vyenye mzio. Ili kufanya mabadiliko haya, tunaweza kuhariri prompt yetu na kuongeza sharti la kuchuja mwishoni kama ifuatavyo:
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -436,9 +436,9 @@ Ili kurekebisha zaidi, tunataka kuongeza yafuatayo:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  Juu hapa, tunaongeza `{filter}` mwishoni mwa agizo na pia tunapata thamani ya chujio kutoka kwa mtumiaji.
+  Juu, tunaongeza `{filter}` mwishoni mwa prompt na pia tunakamata thamani ya kichujio kutoka kwa mtumiaji.
 
-  Mfano wa kuendesha programu sasa unaweza kuwa kama ifuatavyo:
+  Mfano wa kuendesha programu sasa unaweza kuonekana kama ifuatavyo:
 
   ```output
   No of recipes (for example, 5): 3
@@ -505,14 +505,13 @@ Ili kurekebisha zaidi, tunataka kuongeza yafuatayo:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  Kama unavyoona, mapishi yote yenye maziwa yametolewa. Lakini, ikiwa una intoleransi ya lactose, unaweza pia kutaka kuchuja mapishi yenye jibini, hivyo kuna haja ya kuwa wazi zaidi.
+  Kama unavyoona, mapishi yote yenye maziwa yametolewa. Lakini, kama una ugumu wa kufagia maziwa, unaweza kutaka pia kuchuja mapishi yenye jibini, hivyo inahitaji kuwa wazi.
 
+- **Tengeneza orodha ya kununua**. Tunataka kutengeneza orodha ya kununua, tukizingatia kile already tunacho nyumbani.
 
-- **Tengeneza orodha ya ununuzi**. Tunataka kutengeneza orodha ya ununuzi, tukiangalia kile tulicho nacho tayari nyumbani.
+  Kwa kipengele hiki, tunaweza kujaribu kutatua kila kitu katika prompt moja au kuzitenga katika prompts mbili. Hebu jaribu njia ya pili. Hapa tunapendekeza kuongeza prompt ya ziada, lakini ili ifanye kazi, tunahitaji kuongeza matokeo ya prompt ya kwanza kama muktadha kwa prompt ya pili.
 
-  Kwa ajili ya utendaji huu, tunaweza kujaribu kutatua kila kitu kwa papo moja au tunaweza kuigawanya katika maprompt mawili. Tujaribu njia ya mwisho. Hapa tunapendekeza kuongeza prompt nyingine, lakini ili ifanye kazi, tunahitaji kuongeza matokeo ya prompt ya kwanza kama muktadha kwa prompt ya pili.
-
-  Tafuta sehemu katika msimbo inayochapisha matokeo kutoka kwa prompt ya kwanza na ongeza msimbo ufuatao hapo chini:
+  Tafuta sehemu ya msimbo inayochapisha matokeo kutoka kwa prompt ya kwanza na ongeza msimbo ufuatao chini yake:
 
   ```python
   old_prompt_result = response.output_text
@@ -521,26 +520,26 @@ Ili kurekebisha zaidi, tunataka kuongeza yafuatayo:
   new_prompt = f"{old_prompt_result} {prompt}"
   response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
 
-  # chapisha mwitikio
+  # print response
   print("Shopping list:")
   print(response.output_text)
   ```
 
   Kumbuka yafuatayo:
 
-  1. Tunajenga prompt mpya kwa kuongeza matokeo kutoka kwa prompt ya kwanza kwenye prompt mpya:
+  1. Tunaunda prompt mpya kwa kuongeza matokeo ya prompt ya kwanza kwenye prompt mpya:
 
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  1. Tunafanya ombi jipya, lakini pia tukiwa na kuzingatia idadi ya tokeni tuliyoomba kwenye prompt ya kwanza, kwa hivyo wakati huu tunasema `max_output_tokens` ni 1200.
+  1. Tunatuma ombi jipya, lakini pia tukizingatia idadi ya tokens tuliyoomba katika prompt ya kwanza, kwa mara hii tunasema `max_output_tokens` ni 1200.
 
      ```python
      response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
      ```
 
-     Tunapotumia msimbo huu, sasa tunapata matokeo yafuatayo:
+     Kuendesha msimbo huu sasa tunapata matokeo yafuatayo:
 
      ```output
      No of recipes (for example, 5): 2
@@ -554,19 +553,19 @@ Ili kurekebisha zaidi, tunataka kuongeza yafuatayo:
      -Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice
      ```
 
-## Boresha usanidi wako
+## Boreshaji la usanidi wako
 
-Kile tulicho nacho mpaka sasa ni msimbo unaofanya kazi, lakini kuna marekebisho kadhaa tunapaswa kufanya ili kuboresha zaidi. Baadhi ya mambo tunapaswa kufanya ni:
+Kile tulichonacho hadi sasa ni msimbo unaofanya kazi, lakini kuna marekebisho kadhaa tunayopaswa kufanya kuboresha mambo zaidi. Baadhi ya mambo tunayopaswa kufanya ni:
 
-- **Tenganisha siri kutoka kwenye msimbo**, kama funguo za API. Siri hazipaswi kuwekwa ndani ya msimbo na zinapaswa kuhifadhiwa mahali salama. Ili kutenganisha siri na msimbo, tunaweza kutumia vinasaba vya mazingira na maktaba kama `python-dotenv` kuzisoma kutoka kwenye faili. Hivi ndivyo inavyoweza kuonekana kwenye msimbo:
+- **Tenganisha siri na msimbo**, kama vile ufunguo wa API. Siri hazipaswi kuwepo kwenye msimbo na zinapaswa kuhifadhiwa mahali salama. Kutenganisha siri na msimbo, tunaweza kutumia vigezo vya mazingira na maktaba kama `python-dotenv` kuvipakia kutoka kwenye faili. Hivi ndivyo itakavyokuwa kwenye msimbo:
 
-  1. Unda faili `.env` yenye yaliyomo yafuatayo:
+  1. Tengeneza faili `.env` yenye yaliyomo kama yafuatavyo:
 
      ```bash
      OPENAI_API_KEY=sk-...
      ```
 
-     > Kumbuka, kwa Azure OpenAI katika Microsoft Foundry, unahitaji kuweka vinasaba vya mazingira vifuatavyo badala yake:
+     > Kumbuka, kwa Azure OpenAI katika Microsoft Foundry, unapaswa kuweka vigezo vya mazingira vifuatavyo badala yake:
 
      ```bash
      AZURE_OPENAI_API_KEY=<replace>
@@ -574,7 +573,7 @@ Kile tulicho nacho mpaka sasa ni msimbo unaofanya kazi, lakini kuna marekebisho 
      AZURE_OPENAI_API_VERSION=2024-10-21
      ```
 
-     Katika msimbo, utawala vinasaba vya mazingira hivi kwa njia ifuatayo:
+     Katika msimbo, utapakia vigezo vya mazingira kama ifuatavyo:
 
      ```python
      import os
@@ -586,45 +585,45 @@ Kile tulicho nacho mpaka sasa ni msimbo unaofanya kazi, lakini kuna marekebisho 
      client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
      ```
 
-- **Neno kuhusu urefu wa tokeni**. Tunapaswa kuzingatia ni tokeni ngapi tunahitaji kuzalisha maandishi tunayoyataka. Tokeni zinagharimu pesa, kwa hivyo pale inapowezekana, tunapaswa kujitahidi kuwa na uhifadhi katika idadi ya tokeni tunazotumia. Kwa mfano, tunaweza kupanga prompt ili itumie tokeni chache?
+- **Neno kuhusu urefu wa tokeni**. Tunapaswa kuzingatia ni tokeni ngapi tunazohitaji kuzalisha maandishi tunayoyataka. Tokeni zinagharimu pesa, hivyo inapowezekana, tunapaswa kutumia tokeni kwa uangalifu. Kwa mfano, tunaweza kuweka maelekezo kwa njia ambayo tutatumia tokeni chache?
 
-  Kubadilisha tokeni zinazotumika, unaweza kutumia parameter `max_output_tokens`. Kwa mfano, ikiwa unataka kutumia tokeni 100, ungefanya:
+  Kubadilisha idadi ya tokeni zinazotumika, unaweza kutumia kiparameta cha `max_output_tokens`. Kwa mfano, ukitaka kutumia tokeni 100, utafanya hivi:
 
   ```python
   response = client.responses.create(model=deployment, input=prompt, max_output_tokens=100, store=False)
   ```
 
-- **Jaribu na joto (temperature)**. Joto ni jambo ambalo hatujawahi kulitaja hadi sasa lakini ni muktadha muhimu kwa jinsi programu yetu inavyofanya kazi. Thamani ya juu ya joto hufanya matokeo kuwa ya bahati zaidi. Kinyume chake, thamani ya chini ya joto hufanya matokeo kuwa yanayotabirika zaidi. Fikiria kama unataka mabadiliko katika matokeo yako au la.
+- **Kujaribu joto la matumizi**. Joto ni jambo ambalo hatujalizungumzia hadi sasa lakini ni muktadha muhimu kwa jinsi programu yetu inavyofanya kazi. Joto juu zaidi husababisha matokeo kuwa ya kubahatisha zaidi. Kinyume chake, joto la chini husababisha matokeo kuwa ya kutabirika zaidi. Fikiria kama unataka utofauti katika matokeo yako au la.
 
-  Kubadilisha joto, unaweza kutumia parameter ya `temperature`. Kwa mfano, ikiwa unataka kutumia joto la 0.5, ungefanya:
+  Kubadilisha joto, unaweza kutumia kiparameta cha `temperature`. Kwa mfano, ukitaka kutumia joto la 0.5, utafanya hivi:
 
   ```python
   response = client.responses.create(model=deployment, input=prompt, temperature=0.5, store=False)
   ```
 
-  > Kumbuka, kadri unavyokaribia 1.0, ndivyo matokeo yanavyobadilika zaidi.
+  > Kumbuka, kadri unavyokaribia 1.0, ndivyo matokeo yanavyokuwa na utofauti zaidi.
 
-- **Modeli za kufikiri hazitumi `temperature`**. Hii ni mabadiliko muhimu ya mwaka 2026. Modeli za sasa, zisizotumika tena Microsoft Foundry ni **modeli za kufikiri** (familia ya GPT-5, mfululizo o) - na hazitumi `temperature` au `top_p` (wala `max_tokens`; tumia `max_output_tokens`). Ikiwa utatumia `temperature` kwa `gpt-5-mini` utapata kosa la "parameter haitegemezwi". Hivyo jaribu mfano wa joto hapo juu kwa kutumia modeli inayounga mkono udhibiti wa sampuli - kwa mfano modeli ya wazi ya **Llama** kama `Llama-3.3-70B-Instruct` kutoka kwenye [katalogi ya modeli ya Microsoft Foundry](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst), inayopatikana kupitia Foundry Models / Azure AI Inference endpoint (sawa na sampuli za `githubmodels-*`). Kwa modeli za kufikiri kama GPT-5, unadhibiti matokeo kwa njia tofauti:
-  - **Uhandisi wa prompt** - maelekezo wazi, mifano, na muundo wa matokeo (angalia somo [04 - Prompt Engineering](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)) hufanya kazi ambayo vipimo vya sampuli vilifanya awali.
-  - **Udhibiti wa fikira** - vigezo kama juhudi ya kufikiri/kubwa wa maelezo hutenganisha kina cha fikira dhidi ya muda wa majibu na gharama.
+- **Mifano ya uelewa haituzii `temperature`**. Huu ni mwelekeo muhimu wa mwaka 2026. Mifano ya sasa, isiyotumika tena Microsoft Foundry ni **mifano ya uelewa** (familia ya GPT-5, mfululizo wa o-series) - na **haitumii `temperature` au `top_p`** (pamoja na `max_tokens`; tumia `max_output_tokens`). Ukitumia `temperature` kwenye `gpt-5-mini` utapata kosa la "kiparameta hakitumiki". Kwa hivyo kupima mfano wa joto ulio juu, tumia mfano ambao bado una mkazo wa manyanyaso ya sampuli - kwa mfano mfano wazi wa **Llama** kama `Llama-3.3-70B-Instruct` kutoka kwenye [katalogi ya mifano ya Microsoft Foundry](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst), unaopatikana kupitia Foundry Models / Azure AI Inference endpoint (kwa njia ile ile ya sampuli za `githubmodels-*`). Kwa mifano ya uelewa kama GPT-5, unafanikisha matokeo kwa njia tofauti:
+  - **Uhandisi wa maelekezo** - maagizo wazi, mifano, na matokeo yenye muundo (tazama somo [04 - Prompt Engineering](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)) hufanya kazi ambayo vigezo vya sampuli vilifanya hapo awali.
+  - **Udhibiti wa uelewa** - vigezo kama jitihada ya uelewa/uwelezaji huweka usawa kati ya kina cha mantiki dhidi ya ucheleweshaji na gharama.
 
-  Kwa kifupi: `temperature`/`top_p` bado ni halali kwenye modeli nyingi (Llama, Mistral, Phi, na familia ya GPT-4.x - ingawa GPT-4.x inaachwa), lakini mwelekeo wa maendeleo ni uhandisi wa prompt + udhibiti wa fikira kwenye modeli za kufikiri kama GPT-5.
+  Kwa ufupi: `temperature`/`top_p` bado vina manufaa kwenye mifano mingi (Llama, Mistral, Phi, na familia ya GPT-4.x - ingawa GPT-4.x inazidi kuachwa), lakini mwelekeo ni uhandisi wa maelekezo + udhibiti wa uelewa kwenye mifano ya uelewa kama GPT-5.
 
-## Kazi
+## Kazi ya Nyumbani
 
-Kwa kazi hii, unaweza kuchagua kile cha kujenga.
+Kwa kazi hii ya nyumbani, unaweza kuchagua kile cha kujenga.
 
-Hapa kuna mapendekezo:
+Haya ni mapendekezo:
 
-- Rekebisha programu ya mtengenezaji wa mapishi ili kuiboresha zaidi. Jaribu thamani za joto na prompt kuona unachoweza kuja nacho.
-- Tengeneza "mwenzi wa kusomea". Programu hii inapaswa kuwa na uwezo wa kujibu maswali kuhusu mada kama Python, unaweza kuwa na prompt kama "Nini mada fulani katika Python?", au unaweza kuwa na prompt inayosema, nionyeshe msimbo kwa mada fulani nk.
-- Roboti wa historia, fanya historia iwe hai, amuru roboti acheze kama mhusika wa kihistoria fulani na umwulize maswali kuhusu maisha yake na nyakati zake.
+- Rekebisha programu ya jenereta ya mapishi kuboresha zaidi. Jaribu kutumia thamani tofauti za joto, na maelekezo ili kuona unachoweza kupata.
+- Tengeneza "mwenzi wa kusoma". Programu hii inapaswa kuwaze uwezo wa kujibu maswali kuhusu mada fulani kama Python, unaweza kuwa na maelekezo kama "Nini mada fulani katika Python?", au unaweza kuwa na maelekezo yanayosema, nionyeshe msimbo wa mada fulani nk.
+- Bot wa historia, fanya historia iwe hai, elekeza bot kucheza kama mhusika fulani wa kihistoria na umuulize maswali kuhusu maisha yake na nyakati zake.
 
 ## Suluhisho
 
-### Mwenzi wa kusomea
+### Mwenzi wa Kusoma
 
-Hapo chini ni prompt ya kuanzia, tazama jinsi unavyoweza kuitumia na kuibadilisha mpaka uyapende.
+Hapo chini ni maelekezo ya kuanzia, tazama jinsi unavyoweza kuyatumia na kuyarekebisha kama unavyopenda.
 
 ```text
 - "You're an expert on the Python language
@@ -637,9 +636,9 @@ Hapo chini ni prompt ya kuanzia, tazama jinsi unavyoweza kuitumia na kuibadilish
     - exercise in code with solutions"
 ```
 
-### Roboti wa historia
+### Bot wa Historia
 
-Hapa kuna prompt ambazo unaweza kutumia:
+Haya ni maelekezo unaweza kutumia:
 
 ```text
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
@@ -648,23 +647,23 @@ Hapa kuna prompt ambazo unaweza kutumia:
    Tell me about your greatest accomplishments, in 300 words"
 ```
 
-## Kagua maarifa
+## Ukaguzi wa Maarifa
 
-Nini maana ya dhana ya joto (temperature)?
+Kazi gani dhana ya joto hufanya?
 
-1. Inadhibiti jinsi matokeo yanavyokuwa ya bahati.
-1. Inadhibiti ukubwa wa jibu.
-1. Inadhibiti ni tokeni ngapi zinatumiwa.
+1. Hudhibiti jinsi matokeo yanavyokuwa ya kubahatisha.
+1. Hudhibiti ukubwa wa jibu.
+1. Hudhibiti idadi ya tokeni zinazotumika.
 
 ## 🚀 Changamoto
 
-Unapofanya kazi kwenye kazi, jaribu kubadilisha joto, jaribu kulifanya 0, 0.5, na 1. Kumbuka 0 ni tofauti kidogo na 1 ni tofauti zaidi. Ni thamani gani inafanya kazi vizuri zaidi kwa programu yako?
+Unapofanya kazi ya nyumbani, jaribu kubadilisha joto, jaribu kuziweka 0, 0.5, na 1. Kumbuka kuwa 0 ni tofauti kidogo zaidi na 1 ni tofauti zaidi kabisa. Ni thamani gani inafaa zaidi kwa programu yako?
 
 ## Kazi Nzuri! Endelea Kujifunza
 
-Baada ya kumaliza somo hili, angalia [Mkusanyiko wa Mafunzo ya AI ya Kizazi kipya](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili uendelee kuongeza maarifa yako ya AI ya Kizazi kipya!
+Baada ya kumaliza somo hili, tembelea [Mkusanyiko wa Kujifunza AI ya Kizazi](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) ili kuendeleza maarifa yako ya AI ya Kizazi!
 
-Nenda kwenye Somo la 7 ambapo tutatazama jinsi ya [kujenga programu za mazungumzo](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Nenda Somo la 7 ambapo tutaangalia jinsi ya [kujenga programu za mazungumzo](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 

@@ -1,20 +1,20 @@
 # Tvorba aplikací pro generování textu
 
-[![Tvorba aplikací pro generování textu](../../../translated_images/cs/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Tvorba aplikací pro generování textu](../../../translated_images/cs/06-lesson-banner.a5c629f990a636c8.webp?WT.mc_id=academic-105485-koreyst)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
-> _(Klikněte na obrázek výše pro zhlédnutí videa této lekce)_
+> _(Klikněte na obrázek výše pro zobrazení videa této lekce)_
 
-Zatím jste v tomto kurzu viděli, že existují základní koncepty jako promptování a dokonce celá disciplína zvaná „prompt engineering“. Mnoho nástrojů, se kterými můžete komunikovat, jako ChatGPT, Office 365, Microsoft Power Platform a další, podporuje použití promptů k dosažení určitého cíle.
+Dosud jste v tomto kurikulu viděli, že existují základní pojmy, jako jsou prompty, a dokonce celá disciplína zvaná "prompt engineering". Mnoho nástrojů, se kterými můžete interagovat, jako ChatGPT, Office 365, Microsoft Power Platform a další, vás podporuje v použití promptů k dosažení určitého výsledku.
 
-Abychom mohli takovou zkušenost přidat do aplikace, je potřeba pochopit koncepty jako prompty, completions a zvolit knihovnu, se kterou budeme pracovat. To přesně se naučíte v této kapitole.
+Abychom do aplikace přidali takovou zkušenost, musíte pochopit pojmy jako prompty, dokončení a vybrat knihovnu, se kterou budete pracovat. To je přesně to, co se v této kapitole naučíte.
 
 ## Úvod
 
-V této kapitole se naučíte:
+V této kapitole:
 
-- Seznámit se s knihovnou openai a jejími základními koncepty.
-- Vytvořit aplikaci pro generování textu pomocí openai.
-- Pochopit, jak používat koncepty jako prompt, temperature a tokens k tvorbě aplikace pro generování textu.
+- Naučíte se o knihovně openai a jejích základních pojmech.
+- Vytvoříte aplikaci pro generování textu s využitím openai.
+- Pochopíte, jak používat pojmy jako prompt, teplota a tokeny k vytvoření aplikace pro generování textu.
 
 ## Cíle učení
 
@@ -22,61 +22,61 @@ Na konci této lekce budete schopni:
 
 - Vysvětlit, co je aplikace pro generování textu.
 - Vytvořit aplikaci pro generování textu pomocí openai.
-- Nastavit aplikaci tak, aby používala více či méně tokenů a také změnit teplotu pro rozmanitější výstup.
+- Konfigurovat vaši aplikaci tak, aby používala více či méně tokenů a také změnit teplotu pro různorodý výstup.
 
 ## Co je aplikace pro generování textu?
 
-Obvykle když vytváříte aplikaci, má nějaké uživatelské rozhraní, například:
+Obvykle, když vytváříte aplikaci, má nějaké uživatelské rozhraní jako následující:
 
-- Na příkazové bázi. Konzolové aplikace jsou typické aplikace, kde zadáváte příkaz a aplikace vykoná úkol. Například `git` je aplikace na příkazové bázi.
+- Na příkazové bázi. Konzolové aplikace jsou typické aplikace, kde napíšete příkaz a ten vykoná úkol. Například `git` je aplikace na příkazové bázi.
 - Uživatelské rozhraní (UI). Některé aplikace mají grafické uživatelské rozhraní (GUI), kde klikáte na tlačítka, zadáváte text, vybíráte možnosti a další.
 
-### Konzolové a UI aplikace mají omezení
+### Konzolové a UI aplikace jsou omezené
 
 Porovnejte to s aplikací na příkazové bázi, kde zadáváte příkaz:
 
-- **Je omezená**. Nemůžete zadávat jakýkoliv příkaz, pouze ty, které aplikace podporuje.
-- **Jazykově specifická**. Některé aplikace podporují mnoho jazyků, ale výchozí aplikace je vytvořená pro konkrétní jazyk, i když můžete přidat podporu dalších.
+- **Je omezená**. Nemůžete jen tak zadat libovolný příkaz, pouze ty, které aplikace podporuje.
+- **Specifická pro jazyk**. Některé aplikace podporují mnoho jazyků, ale aplikace je ve výchozím nastavení vytvořena pro konkrétní jazyk, i když můžete přidat podporu dalších jazyků.
 
 ### Výhody aplikací pro generování textu
 
-Jak se tedy aplikace pro generování textu liší?
+Jak se tedy liší aplikace pro generování textu?
 
-V aplikaci pro generování textu máte větší flexibilitu, nejste omezeni na sadu příkazů ani konkrétní vstupní jazyk. Místo toho můžete použít přirozený jazyk k interakci s aplikací. Další výhodou je, že již komunikujete se zdrojem dat, který byl vytrénován na rozsáhlém korpusu informací, zatímco tradiční aplikace může být omezená tím, co je v databázi.
+V aplikaci pro generování textu máte větší flexibilitu, nejste omezeni na sadu příkazů nebo konkrétní vstupní jazyk. Místo toho můžete používat přirozený jazyk pro interakci s aplikací. Další výhodou je, že již komunikujete se zdrojem dat, který byl vytrénován na rozsáhlém korpusu informací, zatímco tradiční aplikace může být omezená na data v databázi.
 
-### Co mohu vytvořit pomocí aplikace pro generování textu?
+### Co mohu vytvořit s aplikací pro generování textu?
 
-Můžete vytvořit mnoho věcí, například:
+Existuje mnoho věcí, které můžete vytvořit. Například:
 
-- **Chatbota**. Chatbot odpovídající na otázky o tématech, jako je vaše firma a její produkty, může být dobrou volbou.
-- **Pomocníka**. Velké jazykové modely (LLM) jsou skvělé na věci jako shrnutí textu, získání poznatků z textu, tvorbu textů jako životopisy a další.
-- **Asistenta kódu**. V závislosti na použitém jazykovém modelu můžete vytvořit asistenta, který vám pomůže psát kód. Například můžete použít produkt jako GitHub Copilot i ChatGPT pro pomoc s psaním kódu.
+- **Chatbot**. Chatbot odpovídající na otázky o tématech, jako je vaše firma a její produkty, by mohl být vhodný.
+- **Pomocník**. LLM jsou skvělé při sumarizaci textu, získávání poznatků z textu, tvorbě textů jako životopisy a další.
+- **Asistent pro kód**. Podle použitého jazykového modelu můžete vytvořit asistenta pro psaní kódu. Například můžete použít produkt jako GitHub Copilot či ChatGPT pro pomoc s psaním kódu.
 
-## Jak začít?
+## Jak mohu začít?
 
-Potřebujete najít způsob, jak se integrovat s LLM, což obvykle znamená tyto dvě možnosti:
+Potřebujete najít způsob, jak integrovat LLM, což obvykle zahrnuje následující dvě metody:
 
-- Použití API. V tomto případě vytváříte webové požadavky s vaším promptem a získáváte generovaný text zpět.
-- Použití knihovny. Knihovny pomáhají zapouzdřit API volání a usnadňují jejich použití.
+- Použít API. Zde sestavujete webové požadavky s vaším promptem a dostáváte zpět generovaný text.
+- Použít knihovnu. Knihovny pomáhají zapouzdřit volání API a usnadňují jejich použití.
 
 ## Knihovny/SDK
 
-Existuje několik známých knihoven pro práci s LLM, například:
+Existuje několik známých knihoven pro práci s LLM, jako jsou:
 
-- **openai**, tato knihovna zjednodušuje připojení k vašemu modelu a odesílání promptů.
+- **openai**, tato knihovna usnadňuje připojení k vašemu modelu a odesílání promptů.
 
-Pak jsou zde knihovny operující na vyšší úrovni, jako například:
+Dále jsou tu knihovny, které operují na vyšší úrovni, například:
 
-- **Langchain**. Langchain je známý a podporuje Python.
+- **Langchain**. Langchain je dobře známý a podporuje Python.
 - **Semantic Kernel**. Semantic Kernel je knihovna od Microsoftu podporující jazyky C#, Python a Java.
 
 ## První aplikace s openai
 
-Podívejme se, jak můžeme vytvořit naši první aplikaci, jaké knihovny potřebujeme, kolik je třeba a tak dále.
+Podívejme se, jak můžeme vytvořit naši první aplikaci, jaké knihovny potřebujeme, kolik je toho zapotřebí, a tak dále.
 
 ### Instalace openai
 
-Existuje mnoho knihoven pro práci s OpenAI nebo Azure OpenAI. Je možné použít mnoho programovacích jazyků jako C#, Python, JavaScript, Java a další. Rozhodli jsme se použít knihovnu `openai` pro Python, takže ji nainstalujeme pomocí `pip`.
+Existuje mnoho knihoven pro interakci s OpenAI nebo Azure OpenAI. Je možné použít různé programovací jazyky jako C#, Python, JavaScript, Java a další. Zvolili jsme knihovnu `openai` pro Python, takže ji nainstalujeme pomocí `pip`.
 
 ```bash
 pip install openai
@@ -86,32 +86,32 @@ pip install openai
 
 Musíte provést následující kroky:
 
-- Vytvořit účet na Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- Získat přístup k Azure OpenAI. Přejděte na [https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) a požádejte o přístup.
+- Vytvořit účet na Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst)].
+- Získat přístup k Azure OpenAI. Jděte na [https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) a požádejte o přístup.
 
   > [!NOTE]
-  > V době psaní je potřeba požádat o přístup do Azure OpenAI.
+  > V době psaní je potřeba požádat o přístup k Azure OpenAI.
 
 - Nainstalovat Python <https://www.python.org/>
-- Vytvořit Azure OpenAI službu. Viz průvodce, jak [vytvořit zdroj](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- Vytvořit zdroj služby Azure OpenAI. Podívejte se na tento návod, jak [vytvořit zdroj](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
-### Najděte API klíč a endpoint
+### Najít klíč API a koncový bod
 
-Teď musíte knihovně `openai` říct, jaký API klíč má použít. Pro nalezení API klíče přejděte do sekce "Keys and Endpoint" ve vašem Azure OpenAI zdroji a zkopírujte hodnotu „Key 1“.
+V tuto chvíli musíte své knihovně `openai` sdělit, který klíč API použít. Chcete-li najít svůj klíč API, přejděte do sekce „Klíče a koncový bod“ vašeho Azure OpenAI zdroje a zkopírujte hodnotu „Klíč 1“.
 
-![Klíče a endpoint zdroje v Azure Portálu](https://learn.microsoft.com/azure/ai-foundry/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+![Klíče a koncový bod v Azure Portalu](https://learn.microsoft.com/azure/ai-foundry/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-Nyní když máte tuto informaci zkopírovanou, nastavme knihovny, aby ji používaly.
+Nyní, když máte tyto informace zkopírované, nastavme knihovnám, aby je používaly.
 
 > [!NOTE]
-> Stojí za to oddělit váš API klíč od kódu. Můžete to udělat pomocí proměnných prostředí.
+> Je vhodné oddělit klíč API od vašeho kódu. Lze to provést pomocí proměnných prostředí.
 >
-> - Nastavte proměnnou prostředí `OPENAI_API_KEY` na váš API klíč.
+> - Nastavte proměnnou prostředí `OPENAI_API_KEY` na svůj klíč API.
 >   `export OPENAI_API_KEY='sk-...'`
 
-### Nastavení konfigurace pro Azure
+### Nastavení konfigurace Azure
 
-Pokud používáte Azure OpenAI (nyní součást Microsoft Foundry), zde je nastavení konfigurace. Používáme standardního klienta `OpenAI` směřujícího na endpoint Azure OpenAI `/openai/v1/`, který pracuje s Responses API a nevyžaduje `api_version`:
+Pokud používáte Azure OpenAI (nyní součást Microsoft Foundry), takto nastavíte konfiguraci. Používáme standardního klienta `OpenAI` směřujícího na koncový bod Azure OpenAI `/openai/v1/`, který pracuje s Responses API a nevyžaduje žádné `api_version`:
 
 ```python
 import os
@@ -123,33 +123,33 @@ client = OpenAI(
 )
 ```
 
-Výše nastavujeme následující:
+Výše nastavujeme:
 
-- `api_key`, což je váš API klíč nalezený v Azure Portal nebo portálu Microsoft Foundry.
-- `base_url`, což je endpoint vašeho Foundry zdroje s připojeným `/openai/v1/`. Stabilní v1 endpoint funguje napříč OpenAI a Azure OpenAI bez správy `api_version`.
+- `api_key`, což je váš klíč API nalezený v Azure Portalu nebo Microsoft Foundry portálu.
+- `base_url`, což je váš Foundry resource endpoint s připojeným `/openai/v1/`. Stabilní v1 endpoint funguje napříč OpenAI a Azure OpenAI bez správy `api_version`.
 
-> [!NOTE] > `os.environ` čte proměnné prostředí. Můžete ji použít k načtení proměnných prostředí jako `AZURE_OPENAI_API_KEY` a `AZURE_OPENAI_ENDPOINT`. Nastavte tyto proměnné prostředí v terminálu nebo pomocí knihovny jako `dotenv`.
+> [!NOTE] > `os.environ` čte proměnné prostředí. Můžete ji použít pro čtení proměnných prostředí jako jsou `AZURE_OPENAI_API_KEY` a `AZURE_OPENAI_ENDPOINT`. Nastavte tyto proměnné prostředí ve vašem terminálu nebo pomocí knihovny jako je `dotenv`.
 
 ## Generování textu
 
-Způsob generování textu je použití Responses API přes metodu `responses.create`. Zde je příklad:
+Text generujete pomocí Responses API přes metodu `responses.create`. Zde je příklad:
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
 
 response = client.responses.create(
-    model="gpt-5-mini",  # toto je název nasazení vašeho modelu
+    model="gpt-5-mini",  # this is your model deployment name
     input=prompt,
     store=False,
 )
 print(response.output_text)
 ```
 
-Ve výše uvedeném kódu vytvoříme odpověď, zadáme model, který chceme použít, a prompt. Pak vypíšeme generovaný text přes `response.output_text`.
+Ve výše uvedeném kódu vytváříme odpověď a předáváme model, který chceme použít, a prompt. Poté vytiskneme generovaný text přes `response.output_text`.
 
 ### Vícekolové konverzace
 
-Responses API je vhodné pro generování textu jednorázově i pro vícekolové chatboty - poskytnete seznam zpráv v `input` pro vytvoření konverzace:
+Responses API je vhodné jak pro generování textu v jednom kole, tak pro vícekolové chatboty - poskytujete seznam zpráv ve `input` k vytvoření konverzace:
 
 ```python
 from openai import OpenAI
@@ -160,11 +160,11 @@ response = client.responses.create(model="gpt-5-mini", input="Hello world", stor
 print(response.output_text)
 ```
 
-Více o této funkčnosti v následující kapitole.
+O této funkci více v následující kapitole.
 
 ## Cvičení - vaše první aplikace pro generování textu
 
-Teď, když jsme se naučili, jak nastavit a konfigurovat openai, je čas vytvořit vaši první aplikaci pro generování textu. Postupujte podle těchto kroků:
+Teď, když jsme si ukázali, jak nastavit a konfigurovat openai, je čas vytvořit vaši první aplikaci pro generování textu. Postupujte podle těchto kroků:
 
 1. Vytvořte virtuální prostředí a nainstalujte openai:
 
@@ -175,12 +175,12 @@ Teď, když jsme se naučili, jak nastavit a konfigurovat openai, je čas vytvo�
    ```
 
    > [!NOTE]
-   > Pokud používáte Windows, zadejte `venv\Scripts\activate` místo `source venv/bin/activate`.
+   > Pokud používáte Windows, napište `venv\Scripts\activate` místo `source venv/bin/activate`.
 
    > [!NOTE]
-   > Najděte svůj Azure OpenAI klíč na [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst), vyhledejte `Open AI`, vyberte `Open AI resource` a poté `Keys and Endpoint` a zkopírujte hodnotu `Key 1`.
+   > Najděte si svůj Azure OpenAI klíč na [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst), vyhledejte `Open AI`, vyberte `Open AI resource`, poté klikněte na `Keys and Endpoint` a zkopírujte hodnotu `Key 1`.
 
-1. Vytvořte soubor _app.py_ a vložte do něj následující kód:
+2. Vytvořte soubor _app.py_ a vložte do něj následující kód:
 
    ```python
    import os
@@ -192,20 +192,20 @@ Teď, když jsme se naučili, jak nastavit a konfigurovat openai, je čas vytvo�
    )
    deployment_name = "<deployment name>"
 
-   # přidejte svůj dokončovací kód
+   # add your completion code
    prompt = "Complete the following: Once upon a time there was a"
 
-   # proveďte požadavek pomocí Responses API
+   # make a request using the Responses API
    response = client.responses.create(model=deployment_name, input=prompt, store=False)
 
-   # vytiskněte odpověď
+   # print response
    print(response.output_text)
    ```
 
    > [!NOTE]
-   > Pokud používáte čisté OpenAI (ne Azure), použijte `client = OpenAI(api_key="<nahraďte tuto hodnotu vaším OpenAI klíčem>")` (bez `base_url`) a jako model zadejte název modelu například `gpt-5-mini` místo názvu nasazení.
+   > Pokud používáte čisté OpenAI (ne Azure), použijte `client = OpenAI(api_key="<replace this value with your OpenAI key>")` (bez `base_url`) a předávejte název modelu jako `gpt-5-mini` místo jména nasazení.
 
-   Měli byste vidět výstup podobný následujícímu:
+   Měli byste vidět výstup jako následující:
 
    ```output
     very unhappy _____.
@@ -213,25 +213,25 @@ Teď, když jsme se naučili, jak nastavit a konfigurovat openai, je čas vytvo�
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## Různé typy promptů pro různé účely
+## Různé typy promptů pro různé úkoly
 
-Nyní jste viděli, jak generovat text pomocí promptu. Dokonce máte spuštěný program, který můžete upravovat a měnit tak, aby generoval různé typy textu.
+Nyní jste viděli, jak generovat text pomocí promptu. Dokonce máte běžící program, který můžete upravovat a měnit pro generování různých typů textů.
 
 Prompty lze použít pro různé úkoly. Například:
 
-- **Generování určitého typu textu**. Například generovat báseň, otázky do kvízu atd.
-- **Vyhledávání informací**. Můžete použít prompty k vyhledání informací, například „Co znamená CORS ve webovém vývoji?“.
-- **Generování kódu**. Můžete použít prompty k generování kódu, například vytvoření regulárního výrazu pro validaci emailů nebo třeba generování celé aplikace jako webové aplikace.
+- **Generovat typ textu**. Například můžete generovat báseň, otázky pro kvíz atd.
+- **Vyhledávat informace**. Můžete použít prompty k vyhledávání informací, například "Co znamená CORS ve vývoji webu?".
+- **Generovat kód**. Pomocí promptů můžete generovat kód, například vyvíjet regulární výraz na validaci emailů, nebo proč ne vytvořit celý program, například webovou aplikaci?
 
 ## Praktický případ: generátor receptů
 
-Představte si, že máte doma ingredience a chcete něco uvařit. K tomu potřebujete recept. Jeden způsob, jak najít recepty, je použít vyhledávač nebo můžete použít LLM.
+Představte si, že máte doma suroviny a chcete něco uvařit. K tomu potřebujete recept. Jak najít recepty? Můžete použít vyhledávač nebo LLM.
 
-Můžete napsat prompt třeba takto:
+Můžete napsat prompt například takto:
 
-> „Ukáž mi 5 receptů na jídlo s následujícími ingrediencemi: kuře, brambory a mrkev. U každého receptu vyjmenuj všechny použité ingredience.“
+> "Ukaž mi 5 receptů na jídlo s těmito ingrediencemi: kuře, brambory a mrkev. U každého receptu uveď všechny použité ingredience."
 
-Na základě výše uvedeného promptu můžete získat odpověď podobnou:
+Na základě tohoto promptu můžete obdržet odpověď podobnou této:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -295,14 +295,14 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-Tento výsledek je skvělý, vím, co uvařit. V tuto chvíli by mohly být užitečné následující vylepšení:
+Tento výsledek je skvělý, vím, co uvařit. V tomto bodě by byly užitečné následující vylepšení:
 
-- Odfiltrování ingrediencí, které nemám rád nebo jsem na ně alergický.
-- Vytvoření nákupního seznamu, pokud doma nemám všechny ingredience.
+- Filtrování ingrediencí, které nemám rád nebo na které jsem alergický.
+- Vytvoření nákupního seznamu, pokud některé ingredience doma nemám.
 
-Pro výše uvedené případy přidáme další prompt:
+Pro uvedené případy přidáme další prompt:
 
-> „Prosím odstraň recepty s česnekem, protože jsem na něj alergický, a nahraď je něčím jiným. Také prosím vytvoř nákupní seznam pro recepty, vezmeme-li v úvahu, že doma už mám kuře, brambory a mrkev.“
+> "Prosím odstraň recepty s česnekem, protože jsem na něj alergický, a nahraď je něčím jiným. Také prosím vytvoř nákupní seznam pro recepty, přičemž zohledni, že doma už mám kuře, brambory a mrkev."
 
 Nyní máte nový výsledek, konkrétně:
 
@@ -371,20 +371,20 @@ Shopping List:
 - Pepper
 ```
 
-To jsou vaše pět receptů bez česneku a také nákupní seznam s ohledem na to, co už máte doma.
+To jsou vaše pět receptů, bez česneku a také máte nákupní seznam vzhledem k tomu, co už doma máte.
 
 ## Cvičení - vytvořte generátor receptů
 
-Nyní když jsme provedli scénář, napišme kód odpovídající demonstrovanému scénáři. Postupujte podle těchto kroků:
+Nyní, když máme scénář vysvětlený, pojďme napsat kód odpovídající uvedenému scénáři. Postupujte podle těchto kroků:
 
-1. Použijte stávající soubor _app.py_ jako výchozí bod
+1. Použijte existující soubor _app.py_ jako výchozí bod
 1. Najděte proměnnou `prompt` a změňte její kód na následující:
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   Pokud nyní kód spustíte, měli byste vidět výstup podobný:
+   Pokud nyní spustíte kód, měli byste vidět výstup podobný:
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -396,22 +396,22 @@ Nyní když jsme provedli scénář, napišme kód odpovídající demonstrovan�
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > POZNÁMKA: váš LLM je nedeterministický, takže můžete dostat pokaždé jiný výsledek.
+   > POZNÁMKA: váš LLM není deterministický, proto můžete po každém spuštění programu získat jiné výsledky.
 
-   Skvělé, podívejme se, jak to můžeme zlepšit. Chceme, aby byl kód flexibilní, takže ingredience i počet receptů by měly být snadno měnitelné.
+   Skvěle, podíváme se, jak věci zlepšit. Abychom zlepšili věci, chceme, aby byl kód flexibilní, takže ingredience i počet receptů budou možné upravovat a měnit.
 
-1. Změňme kód následovně:
+1. Změňme kód takto:
 
    ```python
    no_recipes = input("No of recipes (for example, 5): ")
 
    ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
 
-   # interpolovat počet receptů do promptu a ingrediencí
+   # interpolate the number of recipes into the prompt an ingredients
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   Testovací spuštění kódu může vypadat takto:
+   Testovací spuštění kódu by mohlo vypadat takto:
 
    ```output
    No of recipes (for example, 5): 3
@@ -424,11 +424,11 @@ Nyní když jsme provedli scénář, napišme kód odpovídající demonstrovan�
 
 ### Vylepšení přidáním filtru a nákupního seznamu
 
-Nyní máme funkční aplikaci na generování receptů a je flexibilní, protože spoléhá na vstupy od uživatele, jak v počtu receptů, tak v použitých ingrediencích.
+Nyní máme funkční aplikaci, která dokáže vytvářet recepty, a je flexibilní, protože závisí na vstupu uživatele, jak v počtu receptů, tak i v použitých ingrediencích.
 
 Pro další zlepšení chceme přidat následující:
 
-- **Filtrovat ingredience**. Chceme mít možnost vyřadit ingredience, které nemáme rádi nebo na které jsme alergičtí. Pro tuto změnu můžeme upravit náš existující prompt a přidat podmínku filtru na konec takto:
+- **Filtrovat ingredience**. Chceme mít možnost filtrovat ingredience, které nemáme rádi nebo na které jsme alergičtí. K tomu upravíme náš stávající prompt a přidáme na jeho konec podmínku filtru, například takto:
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -438,7 +438,7 @@ Pro další zlepšení chceme přidat následující:
 
   Výše přidáváme `{filter}` na konec promptu a také zachytáváme hodnotu filtru od uživatele.
 
-  Příklad vstupu při spuštění programu může vypadat takto:
+  Příklad vstupu při běhu programu může nyní vypadat takto:
 
   ```output
   No of recipes (for example, 5): 3
@@ -505,14 +505,13 @@ Pro další zlepšení chceme přidat následující:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  Jak vidíte, všechny recepty obsahující mléko byly odfiltrovány. Ale pokud jste laktózově intolerantní, mohli byste chtít také vyfiltrovat recepty se sýrem, takže je potřeba být jasný.
+  Jak vidíte, všechny recepty obsahující mléko byly odfiltrovány. Pokud jste však laktózově intolerantní, můžete chtít odfiltrovat i recepty se sýrem, takže je potřeba být jasný.
 
+- **Vytvořit nákupní seznam**. Chceme vytvořit nákupní seznam s ohledem na to, co už doma máme.
 
-- **Vytvořte nákupní seznam**. Chceme vytvořit nákupní seznam s ohledem na to, co už máme doma.
+  Pro tuto funkci můžeme zkusit vyřešit vše v jednom promptu, nebo to rozdělit do dvou promptů. Zkusme druhý přístup. Navrhujeme přidat další prompt, ale k tomu, aby to fungovalo, musíme přidat výsledek prvního promptu jako kontext do druhého promptu.
 
-  Pro tuto funkci bychom mohli buď zkusit vyřešit vše v jednom promptu, nebo to rozdělit do dvou promptů. Zkusme ten druhý přístup. Zde navrhujeme přidat další prompt, ale aby to fungovalo, musíme výsledek prvního promptu přidat jako kontext do druhého promptu.
-
-  Najděte část v kódu, která vypisuje výsledek z prvního promptu, a přidejte níže následující kód:
+  Najděte místo v kódu, kde se tiskne výsledek z prvního promptu, a přidejte níže následující kód:
 
   ```python
   old_prompt_result = response.output_text
@@ -521,26 +520,26 @@ Pro další zlepšení chceme přidat následující:
   new_prompt = f"{old_prompt_result} {prompt}"
   response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
 
-  # vytisknout odpověď
+  # print response
   print("Shopping list:")
   print(response.output_text)
   ```
 
   Všimněte si následujícího:
 
-  1. Vytváříme nový prompt tak, že přidáme výsledek z prvního promptu do nového promptu:
+  1. Vytváříme nový prompt tak, že připojujeme výsledek z prvního promptu k novému promptu:
 
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  1. Vytvoříme nový požadavek, ale zároveň zohledňujeme počet tokenů, o které jsme žádali v prvním promptu, takže tentokrát nastavujeme `max_output_tokens` na 1200.
+  2. Požadujeme novou žádost, ale bereme v úvahu počet tokenů z prvního promptu, takže tentokrát nastavujeme `max_output_tokens` na 1200.
 
      ```python
      response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
      ```
 
-     Po spuštění tohoto kódu dostaneme následující výstup:
+     Vyzkoušením tohoto kódu nyní dostáváme následující výstup:
 
      ```output
      No of recipes (for example, 5): 2
@@ -554,11 +553,11 @@ Pro další zlepšení chceme přidat následující:
      -Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice
      ```
 
-## Vylepšete své nastavení
+## Vylepšete své prostředí
 
-Co zatím máme, je funkční kód, ale existují některé úpravy, které by měly věci dále zlepšit. Některé věci, které bychom měli udělat, jsou:
+Co zatím máme, je kód, který funguje, ale existují nějaké úpravy, které bychom měli udělat, aby to bylo ještě lepší. Některé věci, které bychom měli udělat, jsou:
 
-- **Oddělte tajné klíče od kódu**, například API klíč. Tajné údaje nepatří do kódu a měly by být uloženy na bezpečném místě. Pro oddělení tajných klíčů od kódu můžeme použít proměnné prostředí a knihovny jako `python-dotenv`, které je načítají ze souboru. Takto by to v kódu vypadalo:
+- **Oddělit tajné údaje od kódu**, jako je API klíč. Tajné údaje nepatří do kódu a měly by být uloženy na bezpečném místě. Pro oddělení tajných údajů od kódu můžeme použít proměnné prostředí a knihovny jako `python-dotenv` pro jejich načtení ze souboru. Takto by to v kódu vypadalo:
 
   1. Vytvořte soubor `.env` s následujícím obsahem:
 
@@ -566,7 +565,7 @@ Co zatím máme, je funkční kód, ale existují některé úpravy, které by m
      OPENAI_API_KEY=sk-...
      ```
 
-     > Poznámka, pro Azure OpenAI v Microsoft Foundry je místo toho potřeba nastavit následující proměnné prostředí:
+     > Poznámka, pro Azure OpenAI v Microsoft Foundry je třeba místo toho nastavit následující proměnné prostředí:
 
      ```bash
      AZURE_OPENAI_API_KEY=<replace>
@@ -574,7 +573,7 @@ Co zatím máme, je funkční kód, ale existují některé úpravy, které by m
      AZURE_OPENAI_API_VERSION=2024-10-21
      ```
 
-     V kódu byste načítali proměnné prostředí takto:
+     V kódu byste proměnné prostředí načetli takto:
 
      ```python
      import os
@@ -586,7 +585,7 @@ Co zatím máme, je funkční kód, ale existují některé úpravy, které by m
      client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
      ```
 
-- **Slovo o délce tokenů**. Měli bychom zvážit, kolik tokenů potřebujeme k vygenerování požadovaného textu. Tokeny něco stojí, takže tam, kde je to možné, bychom měli snažit se být ekonomičtí s jejich počtem. Můžeme například formulovat prompt tak, abychom mohli použít méně tokenů?
+- **Slovo o délce tokenů**. Měli bychom zvážit, kolik tokenů potřebujeme k vygenerování požadovaného textu. Tokeny něco stojí, takže kde je to možné, měli bychom se snažit šetřit počtem použitých tokenů. Například, můžeme prompt formulovat tak, abychom použili méně tokenů?
 
   Pro změnu počtu použitých tokenů můžete použít parametr `max_output_tokens`. Například pokud chcete použít 100 tokenů, uděláte to takto:
 
@@ -594,7 +593,7 @@ Co zatím máme, je funkční kód, ale existují některé úpravy, které by m
   response = client.responses.create(model=deployment, input=prompt, max_output_tokens=100, store=False)
   ```
 
-- **Experimentování s teplotou**. Teplota je něco, o čem jsme zatím nemluvili, ale je to důležitý kontext pro výkon našeho programu. Čím vyšší hodnota teploty, tím náhodnější bude výstup. Naopak čím nižší hodnota teploty, tím předvídatelnější výstup bude. Zvažte, zda chcete mít ve výstupu variace, nebo ne.
+- **Experimentování s teplotou**. Teplota je něco, o čem jsme zatím nemluvili, ale je to důležitý parametr pro to, jak náš program funguje. Čím vyšší je hodnota teploty, tím náhodnější bude výstup. Naopak, čím nižší je hodnota teploty, tím předvídatelnější bude výstup. Zvažte, zda chcete mít ve výstupu variabilitu nebo ne.
 
   Pro změnu teploty můžete použít parametr `temperature`. Například pokud chcete použít teplotu 0,5, uděláte to takto:
 
@@ -602,29 +601,29 @@ Co zatím máme, je funkční kód, ale existují některé úpravy, které by m
   response = client.responses.create(model=deployment, input=prompt, temperature=0.5, store=False)
   ```
 
-  > Poznámka, čím blíže je hodnota k 1,0, tím je výstup různorodější.
+  > Poznámka, čím blíže k 1,0, tím rozmanitější bude výstup.
 
-- **Modely pro odvozování nepoužívají `temperature`**. Toto je důležitá změna pro rok 2026. Aktuální, nepřestárlé modely v Microsoft Foundry jsou **modely pro odvozování** (rodina GPT-5, o-series) - a ty **nepodporují `temperature` ani `top_p`** (ani `max_tokens`; místo toho používejte `max_output_tokens`). Pokud pošlete `temperature` do `gpt-5-mini`, dostanete chybu "parameter not supported". Pro vyzkoušení příkladu s teplotou výše použijte model, který ještě podporuje řízení vzorkování - například otevřený model **Llama** jako `Llama-3.3-70B-Instruct` z [Microsoft Foundry katalogu modelů](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst), volaný pomocí Foundry Models / Azure AI Inference endpointu (stejným způsobem jako vzorky `githubmodels-*`). U modelů pro odvozování jako GPT-5 se výstup řídí jinak:
-  - **Inženýrství promptů** - jasné instrukce, příklady a strukturovaný výstup (viz lekce [04 - Prompt Engineering](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)) zastanou práci, kterou dříve dělala nastavení vzorkování.
-  - **Řízení odvozování** - parametry jako snaha o odvozování/verbosity vyvažují hloubku odvozování vůči latenci a nákladům.
+- **Modely pro uvažování nepoužívají `temperature`**. Jedná se o důležitý posun v roce 2026. Současné, nepřestárlé modely v Microsoft Foundry jsou **modely pro uvažování** (rodina GPT-5, řada o) - a **nepodporují `temperature` ani `top_p`** (ani `max_tokens`; použijte `max_output_tokens`). Pokud pošlete `temperature` na `gpt-5-mini`, obdržíte chybu „parameter not supported“. Takže pro vyzkoušení výše uvedeného příkladu s teplotou zvolte model, který stále podporuje ovládání vzorkování – například otevřený model **Llama** jako `Llama-3.3-70B-Instruct` z [katalogu modelů Microsoft Foundry](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst), volaný přes endpoint Foundry Models / Azure AI Inference (stejně jako vzorky `githubmodels-*`). U modelů pro uvažování jako GPT-5 se výstup řídí jinak:
+  - **Řízení promptem** - jasné instrukce, příklady a strukturovaný výstup (viz lekce [04 - Prompt Engineering](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)) dělají práci, kterou dříve dělala ovládání vzorkování.
+  - **Ovládání rozumování** - parametry jako úsilí o rozumování/verbóznost vyvažují hloubku rozumování proti latenci a nákladům.
 
-  Stručně: `temperature`/`top_p` jsou stále platné u mnoha modelů (Llama, Mistral, Phi a rodina GPT-4.x - ačkoli GPT-4.x je ve fázi vyřazování), ale směřování je inženýrství promptů + řízení odvozování u modelů pro odvozování jako GPT-5.
+  Stručně: `temperature`/`top_p` jsou stále platné u mnoha modelů (Llama, Mistral, Phi a rodina GPT-4.x - i když GPT-4.x je na ústupu), ale směr je prompt engineering + ovládání rozumování u rozumových modelů jako GPT-5.
 
 ## Zadání
 
-Pro toto zadání si můžete vybrat, co postavíte.
+Pro toto zadání si můžete vybrat, co chcete postavit.
 
-Zde jsou některé návrhy:
+Zde je několik návrhů:
 
-- Vylepšete aplikaci generátoru receptů, zkuste si hrát s hodnotami teploty a prompty, abyste zjistili, co můžete vytvořit.
-- Vytvořte „studijního kamaráda“. Tato aplikace by měla být schopná odpovídat na otázky k určitému tématu, například Python, můžete mít prompty jako „Co je určitý pojem v Pythonu?“ nebo prompt, který říká, ukaž mi kód pro určitý pojem atd.
-- Historický bot, oživte historii, nařiďte botovi, aby hrál určitou historickou osobu a ptejte se ho na otázky o jeho životě a době.
+- Vylepšete aplikaci generátoru receptů. Hrajte si s hodnotami teploty a s prompty, abyste zjistili, co vám může vygenerovat.
+- Vytvořte "studijního kamaráda". Tato aplikace by měla být schopna odpovídat na otázky týkající se určitého tématu, například Pythonu, můžete mít prompty jako "Co je určitý koncept v Pythonu?" nebo třeba prompt, který říká, ukaž mi kód pro dané téma atd.
+- Historický bot, oživte historii, nařiďte botovi, aby hrál určitou historickou postavu a ptejte se ho na otázky o jejím životě a době.
 
 ## Řešení
 
 ### Studijní kamarád
 
-Níže je počáteční prompt, podívejte se, jak ho můžete použít a upravit podle svých představ.
+Níže je startovní prompt, podívejte se, jak jej můžete použít a upravit podle svého gusta.
 
 ```text
 - "You're an expert on the Python language
@@ -639,7 +638,7 @@ Níže je počáteční prompt, podívejte se, jak ho můžete použít a upravi
 
 ### Historický bot
 
-Zde jsou některé prompty, které byste mohli používat:
+Zde je několik promptů, které můžete použít:
 
 ```text
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
@@ -654,17 +653,17 @@ Co dělá koncept teploty?
 
 1. Řídí, jak náhodný je výstup.
 1. Řídí, jak velká je odpověď.
-1. Řídí, kolik tokenů se použije.
+1. Řídí, kolik tokenů je použito.
 
 ## 🚀 Výzva
 
-Při práci na zadání zkuste měnit teplotu, nastavte ji na 0, 0,5 a 1. Pamatujte, že 0 znamená nejmenší variabilitu a 1 největší. Jaká hodnota funguje nejlépe pro vaši aplikaci?
+Při práci na zadání zkuste měnit teplotu, nastavte ji na 0, 0,5 a 1. Pamatujte, že 0 je nejméně variabilní a 1 nejvíce. Která hodnota funguje nejlépe pro vaši aplikaci?
 
 ## Skvělá práce! Pokračujte ve vzdělávání
 
-Po dokončení této lekce si prohlédněte naši [kolekci vzdělávání o Generativní AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), kde můžete dál vylepšovat své znalosti Generativní AI!
+Po dokončení této lekce se podívejte na naši [kolekci pro učení Generative AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), abyste dále rozšiřovali své znalosti o generativní AI!
 
-Přejděte do Lekce 7, kde se podíváme, jak [stavět chatovací aplikace](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Přejděte na lekci 7, kde se podíváme, jak [vytvářet chatovací aplikace](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
