@@ -1,82 +1,82 @@
 # Tworzenie aplikacji do generowania tekstu
 
-[![Tworzenie aplikacji do generowania tekstu](../../../translated_images/pl/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Tworzenie aplikacji do generowania tekstu](../../../translated_images/pl/06-lesson-banner.a5c629f990a636c8.webp?WT.mc_id=academic-105485-koreyst)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
-> _(Kliknij powyższy obraz, aby obejrzeć wideo z tej lekcji)_
+> _(Kliknij powyższy obraz, aby obejrzeć film z tej lekcji)_
 
-Do tej pory widziałeś w tym programie, że istnieją podstawowe pojęcia, takie jak podpowiedzi (prompts) oraz całe zagadnienie zwane "inżynierią podpowiedzi". Wiele narzędzi, z którymi możesz się komunikować, jak ChatGPT, Office 365, Microsoft Power Platform i inne, wspiera cię w korzystaniu z podpowiedzi, aby osiągnąć cel.
+Do tej pory w tym programie nauczania widziałeś, że istnieją podstawowe pojęcia, takie jak prompt i nawet cała dziedzina zwana "inżynierią promptów". Wiele narzędzi, z którymi możesz się komunikować, takich jak ChatGPT, Office 365, Microsoft Power Platform i inne, wspiera używanie promptów do wykonania czegoś.
 
-Aby dodać takie doświadczenie do aplikacji, musisz zrozumieć takie pojęcia jak podpowiedzi, odpowiedzi oraz wybrać bibliotekę do współpracy. Dokładnie tego nauczysz się w tym rozdziale.
+Aby dodać takie doświadczenie do aplikacji, musisz zrozumieć pojęcia takie jak prompt, completions (uzupełnienia) i wybrać bibliotekę do pracy. Dokładnie tego nauczysz się w tym rozdziale.
 
 ## Wprowadzenie
 
-W tym rozdziale:
+W tym rozdziale dowiesz się:
 
 - Poznasz bibliotekę openai i jej podstawowe pojęcia.
-- Zbudujesz aplikację do generowania tekstu przy użyciu openai.
-- Zrozumiesz jak używać pojęć takich jak prompt, temperatura i tokeny do tworzenia aplikacji generujących tekst.
+- Zbudujesz aplikację do generowania tekstu wykorzystując openai.
+- Zrozumiesz, jak używać pojęć takich jak prompt, temperatura i tokeny do tworzenia aplikacji generującej tekst.
 
 ## Cele nauki
 
-Po zakończeniu tej lekcji będziesz potrafił:
+Pod koniec tej lekcji będziesz potrafił:
 
 - Wyjaśnić, czym jest aplikacja do generowania tekstu.
-- Zbudować aplikację do generowania tekstu za pomocą openai.
-- Skonfigurować swoją aplikację tak, aby korzystała z większej lub mniejszej liczby tokenów oraz zmieniać temperaturę, dla uzyskania zróżnicowanych wyników.
+- Zbudować aplikację do generowania tekstu używając openai.
+- Skonfigurować aplikację, aby używała więcej lub mniej tokenów oraz zmieniać temperaturę, dla uzyskania różnorodnych wyników.
 
-## Czym jest aplikacja do generowania tekstu?
+## Co to jest aplikacja do generowania tekstu?
 
-Zazwyczaj gdy tworzysz aplikację, ma ona jakiś interfejs, na przykład taki:
+Zwykle, gdy tworzysz aplikację, ma ona pewien interfejs, na przykład taki jak poniżej:
 
-- Komendowy. Aplikacje konsolowe to typowe aplikacje, w których wpisujesz polecenie, a aplikacja wykonuje zadanie. Na przykład, `git` jest aplikacją opartą na poleceniach.
+- Opierający się na poleceniach. Aplikacje konsolowe to typowe aplikacje, gdzie wpisujesz polecenie, a ono wykonuje zadanie. Na przykład `git` to aplikacja oparta na poleceniach.
 - Interfejs użytkownika (UI). Niektóre aplikacje mają graficzne interfejsy użytkownika (GUI), gdzie klikasz przyciski, wpisujesz tekst, wybierasz opcje i więcej.
 
-### Aplikacje konsolowe i UI mają ograniczenia
+### Aplikacje konsolowe i UI są ograniczone
 
-Porównaj to do aplikacji opartej na poleceniach, gdzie wpisujesz polecenie:
+Porównaj to z aplikacją opartą na poleceniu, gdzie wpisujesz komendę:
 
-- **To jest ograniczone**. Nie możesz wpisywać dowolnych poleceń, tylko te, które aplikacja obsługuje.
-- **Specyficzne dla języka**. Niektóre aplikacje obsługują wiele języków, ale domyślnie aplikacja jest zbudowana pod konkretny język, nawet jeśli możesz dodać więcej języków.
+- **To jest ograniczone**. Nie możesz wpisać dowolnego polecenia, tylko te, które aplikacja obsługuje.
+- **Specyficzne dla języka**. Niektóre aplikacje obsługują wiele języków, ale domyślnie aplikacja jest zbudowana dla konkretnego języka, nawet jeśli można dodać więcej języków.
 
 ### Zalety aplikacji do generowania tekstu
 
 Czym więc różni się aplikacja do generowania tekstu?
 
-W aplikacji generującej tekst masz więcej elastyczności, nie jesteś ograniczony do zestawu poleceń lub konkretnego języka wejściowego. Zamiast tego możesz używać języka naturalnego do interakcji z aplikacją. Kolejną zaletą jest to, że już pracujesz z źródłem danych trenowanym na ogromnym korpusie informacji, podczas gdy tradycyjna aplikacja może być ograniczona do tego, co jest w bazie danych.
+W aplikacji do generowania tekstu masz więcej elastyczności, nie jesteś ograniczony do zestawu poleceń ani do konkretnego języka wejściowego. Możesz używać naturalnego języka do interakcji z aplikacją. Kolejną korzyścią jest to, że już korzystasz z źródła danych, które zostało wytrenowane na ogromnym korpusie informacji, podczas gdy tradycyjna aplikacja może mieć ograniczenia co do zawartości bazy danych.
 
-### Co mogę stworzyć z aplikacją do generowania tekstu?
+### Co można stworzyć za pomocą aplikacji do generowania tekstu?
 
-Możesz zbudować wiele rzeczy. Na przykład:
+Można zbudować wiele rzeczy. Na przykład:
 
-- **Chatbota**. Chatbot odpowiadający na pytania dotyczące tematów, na przykład twojej firmy i jej produktów, może być dobrym pomysłem.
-- **Pomocnika**. LLM świetnie radzi sobie z takimi zadaniami jak streszczanie tekstu, uzyskiwanie wniosków z tekstu, generowanie tekstów typu CV i inne.
-- **Asystenta kodu**. W zależności od używanego modelu językowego, możesz stworzyć asystenta kodu pomagającego pisać kod. Na przykład, możesz użyć produktów takich jak GitHub Copilot oraz ChatGPT, które pomagają pisać kod.
+- **Chatbot**. Chatbot odpowiadający na pytania na temat takich tematów jak twoja firma i jej produkty może być dobrym wyborem.
+- **Pomocnik**. Duże modele językowe (LLM) świetnie radzą sobie z zadaniami takimi jak podsumowywanie tekstów, uzyskiwanie wglądu z tekstów, tworzenie tekstów typu CV i wiele innych.
+- **Asystent kodu**. W zależności od modelu językowego, którego używasz, możesz zbudować asystenta kodu, który pomoże ci pisać kod. Na przykład możesz używać produktów takich jak GitHub Copilot oraz ChatGPT, aby pomóc w pisaniu kodu.
 
 ## Jak zacząć?
 
-Musisz znaleźć sposób na integrację z LLM, co zwykle sprowadza się do dwóch podejść:
+Musisz znaleźć sposób na integrację z dużym modelem językowym (LLM), co zwykle oznacza dwie metody:
 
-- Użycie API. Tutaj tworzysz zapytania sieciowe z twoją podpowiedzią i otrzymujesz wygenerowany tekst.
-- Użycie biblioteki. Biblioteki pomagają enkapsulować wywołania API i ułatwiają ich użycie.
+- Korzystać z API. Tutaj tworzy się zapytania sieciowe z twoim promptem i otrzymujesz wygenerowany tekst w odpowiedzi.
+- Korzystać z biblioteki. Biblioteki ułatwiają wywoływanie API i sprawiają, że są prostsze w użyciu.
 
 ## Biblioteki/SDK
 
-Istnieje kilka znanych bibliotek do pracy z LLM, takich jak:
+Istnieje kilka dobrze znanych bibliotek do pracy z LLM, takich jak:
 
-- **openai**, ta biblioteka ułatwia połączenie z modelem i wysyłanie podpowiedzi.
+- **openai**, ta biblioteka ułatwia połączenie z Twoim modelem i wysyłanie promptów.
 
 Następnie są biblioteki działające na wyższym poziomie, takie jak:
 
-- **Langchain**. Langchain jest znany i obsługuje Pythona.
-- **Semantic Kernel**. Semantic Kernel to biblioteka Microsoftu obsługująca języki C#, Python oraz Java.
+- **Langchain**. Langchain jest dobrze znanym narzędziem i wspiera Python.
+- **Semantic Kernel**. Semantic Kernel to biblioteka Microsoftu wspierająca języki C#, Python i Java.
 
-## Pierwsza aplikacja z użyciem openai
+## Pierwsza aplikacja korzystająca z openai
 
-Zobaczmy, jak zbudować naszą pierwszą aplikację, jakie biblioteki są potrzebne, ile to zajmuje i tak dalej.
+Zobaczmy, jak zbudować naszą pierwszą aplikację, jakich bibliotek potrzebujemy, ile to wymaga i tak dalej.
 
 ### Instalacja openai
 
-Istnieje wiele bibliotek do interakcji z OpenAI lub Azure OpenAI. Można używać różnych języków programowania, takich jak C#, Python, JavaScript, Java i więcej. My wybraliśmy bibliotekę `openai` w Pythonie, więc użyjemy `pip`, aby ją zainstalować.
+Istnieje wiele bibliotek do interakcji z OpenAI lub Azure OpenAI. Można używać wielu języków programowania takich jak C#, Python, JavaScript, Java i więcej. My wybraliśmy bibliotekę `openai` dla Pythona, więc użyjemy `pip` do jej instalacji.
 
 ```bash
 pip install openai
@@ -84,34 +84,34 @@ pip install openai
 
 ### Utwórz zasób
 
-Wykonaj następujące kroki:
+Musisz wykonać następujące kroki:
 
-- Załóż konto na Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- Uzyskaj dostęp do Azure OpenAI. Wejdź na [https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) i złóż wniosek o dostęp.
+- Utwórz konto na Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
+- Uzyskaj dostęp do Azure OpenAI. Przejdź do [https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) i złóż wniosek o dostęp.
 
   > [!NOTE]
-  > W momencie pisania, konieczne jest złożenie wniosku o dostęp do Azure OpenAI.
+  > W momencie pisania tego tekstu, aby korzystać z Azure OpenAI, trzeba złożyć wniosek o dostęp.
 
 - Zainstaluj Pythona <https://www.python.org/>
-- Utwórz zasób Azure OpenAI Service. Zobacz ten poradnik, jak [utworzyć zasób](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- Utworzyłeś zasób Azure OpenAI Service. Zobacz ten przewodnik, jak [utworzyć zasób](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
 ### Znajdź klucz API i punkt końcowy
 
-W tym momencie musisz powiedzieć swojej bibliotece `openai`, którego klucza API używać. Aby znaleźć klucz API, przejdź do sekcji "Klucze i punkt końcowy" zasobu Azure OpenAI i skopiuj wartość "Klucz 1".
+Na tym etapie musisz podać swojej bibliotece `openai`, jaki klucz API ma używać. Aby znaleźć swój klucz API, przejdź do sekcji "Keys and Endpoint" w zasobie Azure OpenAI i skopiuj wartość "Key 1".
 
 ![Klucze i punkt końcowy zasobu w Azure Portal](https://learn.microsoft.com/azure/ai-foundry/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-Teraz, gdy masz skopiowaną tę informację, wskażemy bibliotekom, aby z niej korzystały.
+Gdy już skopiujesz te informacje, poinstruuj biblioteki, aby ich używały.
 
 > [!NOTE]
-> Warto oddzielić swój klucz API od kodu. Można to zrobić za pomocą zmiennych środowiskowych.
+> Warto oddzielić swój klucz API od kodu. Możesz to zrobić, używając zmiennych środowiskowych.
 >
 > - Ustaw zmienną środowiskową `OPENAI_API_KEY` na swój klucz API.
 >   `export OPENAI_API_KEY='sk-...'`
 
 ### Konfiguracja Azure
 
-Jeśli używasz Azure OpenAI (obecnie część Microsoft Foundry), oto jak skonfigurować ustawienia. Używamy standardowego klienta `OpenAI` skierowanego do punktu końcowego Azure OpenAI `/openai/v1/`, który działa z Responses API i nie wymaga `api_version`:
+Jeśli używasz Azure OpenAI (obecnie w Microsoft Foundry), tak konfigurujesz ustawienia. Używamy standardowego klienta `OpenAI` skierowanego na punkt końcowy Azure OpenAI `/openai/v1/`, który działa z Responses API i nie wymaga `api_version`:
 
 ```python
 import os
@@ -123,33 +123,33 @@ client = OpenAI(
 )
 ```
 
-Powyżej ustawiamy:
+Powyżej ustawiamy następujące:
 
-- `api_key`, jest to twój klucz API znaleziony w portalu Azure lub Microsoft Foundry.
-- `base_url`, to Twój punkt końcowy zasobu Foundry z dodanym `/openai/v1/`. Stabilny punkt końcowy v1 działa zarówno z OpenAI, jak i Azure OpenAI bez potrzeby zarządzania `api_version`.
+- `api_key`, to Twój klucz API znaleziony w Azure Portal lub w portalu Microsoft Foundry.
+- `base_url`, to punkt końcowy zasobu Foundry z dołączonym `/openai/v1/`. Stabilny punkt końcowy v1 działa w OpenAI i Azure OpenAI bez zarządzania `api_version`.
 
-> [!NOTE] > `os.environ` odczytuje zmienne środowiskowe. Możesz go użyć do odczytu zmiennych środowiskowych, takich jak `AZURE_OPENAI_API_KEY` i `AZURE_OPENAI_ENDPOINT`. Ustaw te zmienne środowiskowe w terminalu lub za pomocą biblioteki takiej jak `dotenv`.
+> [!NOTE] > `os.environ` odczytuje zmienne środowiskowe. Możesz jej użyć do odczytywania zmiennych środowiskowych takich jak `AZURE_OPENAI_API_KEY` i `AZURE_OPENAI_ENDPOINT`. Ustaw te zmienne środowiskowe w terminalu lub użyj biblioteki takiej jak `dotenv`.
 
 ## Generowanie tekstu
 
-Sposobem na generowanie tekstu jest użycie Responses API poprzez metodę `responses.create`. Oto przykład:
+Aby generować tekst, używamy Responses API poprzez metodę `responses.create`. Oto przykład:
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
 
 response = client.responses.create(
-    model="gpt-5-mini",  # to jest nazwa wdrożenia twojego modelu
+    model="gpt-5-mini",  # this is your model deployment name
     input=prompt,
     store=False,
 )
 print(response.output_text)
 ```
 
-W powyższym kodzie tworzymy odpowiedź i przekazujemy model, który chcemy użyć oraz podpowiedź (prompt). Następnie wypisujemy wygenerowany tekst przez `response.output_text`.
+W powyższym kodzie tworzymy odpowiedź, przekazujemy model, którego chcemy użyć oraz prompt. Następnie drukujemy wygenerowany tekst za pomocą `response.output_text`.
 
 ### Konwersacje wieloetapowe
 
-Responses API dobrze nadaje się zarówno do generowania tekstu jednokrotnego, jak i do wieloetapowych chatbotów – podajesz listę wiadomości w `input` aby zbudować rozmowę:
+Responses API jest dobrze dopasowane zarówno do generowania tekstu jednokrokowego, jak i wieloetapowych chatbotów – dostarczasz listę wiadomości w `input`, aby budować rozmowę:
 
 ```python
 from openai import OpenAI
@@ -162,9 +162,9 @@ print(response.output_text)
 
 Więcej o tej funkcjonalności w nadchodzącym rozdziale.
 
-## Ćwiczenie - twoja pierwsza aplikacja do generowania tekstu
+## Ćwiczenie – twoja pierwsza aplikacja do generowania tekstu
 
-Teraz, gdy nauczyliśmy się jak skonfigurować i ustawić openai, czas zbudować twoją pierwszą aplikację do generowania tekstu. Aby to zrobić, wykonaj następujące kroki:
+Teraz, gdy nauczyliśmy się jak konfigurować openai, czas zbudować twoją pierwszą aplikację do generowania tekstu. Wykonaj te kroki:
 
 1. Utwórz środowisko wirtualne i zainstaluj openai:
 
@@ -178,9 +178,9 @@ Teraz, gdy nauczyliśmy się jak skonfigurować i ustawić openai, czas zbudowa�
    > Jeśli używasz Windows, wpisz `venv\Scripts\activate` zamiast `source venv/bin/activate`.
 
    > [!NOTE]
-   > Znajdź swój klucz Azure OpenAI przechodząc na [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst), wyszukaj `Open AI`, wybierz zasób `Open AI` i następnie `Keys and Endpoint`, skopiuj wartość `Key 1`.
+   > Znajdź swój klucz Azure OpenAI, przechodząc do [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) i wyszukując `Open AI`, wybierz `Open AI resource`, potem wybierz `Keys and Endpoint` i skopiuj wartość `Key 1`.
 
-1. Utwórz plik _app.py_ i wpisz w nim poniższy kod:
+1. Utwórz plik _app.py_ i wklej w nim następujący kod:
 
    ```python
    import os
@@ -192,20 +192,20 @@ Teraz, gdy nauczyliśmy się jak skonfigurować i ustawić openai, czas zbudowa�
    )
    deployment_name = "<deployment name>"
 
-   # dodaj swój kod do ukończenia
+   # add your completion code
    prompt = "Complete the following: Once upon a time there was a"
 
-   # wykonaj żądanie za pomocą API Odpowiedzi
+   # make a request using the Responses API
    response = client.responses.create(model=deployment_name, input=prompt, store=False)
 
-   # wydrukuj odpowiedź
+   # print response
    print(response.output_text)
    ```
 
    > [!NOTE]
-   > Jeśli używasz zwykłego OpenAI (nie Azure), użyj `client = OpenAI(api_key="<wstaw swój klucz OpenAI>")` (bez `base_url`) i podaj nazwę modelu, np. `gpt-5-mini` zamiast nazwy wdrożenia.
+   > Jeśli używasz zwykłego OpenAI (nie Azure), użyj `client = OpenAI(api_key="<replace this value with your OpenAI key>")` (bez `base_url`) i przekaż nazwę modelu, na przykład `gpt-5-mini`, zamiast nazwy deploymentu.
 
-   Powinieneś zobaczyć wynik podobny do tego:
+   Powinieneś zobaczyć wynik podobny do poniższego:
 
    ```output
     very unhappy _____.
@@ -213,25 +213,25 @@ Teraz, gdy nauczyliśmy się jak skonfigurować i ustawić openai, czas zbudowa�
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## Różne typy podpowiedzi do różnych zastosowań
+## Różne typy promptów, dla różnych zadań
 
-Teraz widzisz, jak generować tekst z użyciem podpowiedzi. Masz nawet działający program, który możesz modyfikować i zmieniać, by generować różne typy tekstów.
+Teraz widzisz, jak generować tekst za pomocą promptu. Masz nawet program działający, który możesz modyfikować, by generował różne typy tekstu.
 
-Podpowiedzi można używać do najróżniejszych zadań. Na przykład:
+Promptów można używać do wielu zadań. Na przykład:
 
-- **Generowanie danego typu tekstu**. Na przykład, możesz wygenerować wiersz, pytania do quizu itp.
-- **Wyszukiwanie informacji**. Możesz używać podpowiedzi, by szukać informacji, jak w przykładzie 'Co oznacza CORS w tworzeniu stron?'
-- **Generowanie kodu**. Możesz generować kod, na przykład napisać wyrażenie regularne do walidacji adresów e-mail lub nawet całe programy, np. aplikację webową.
+- **Generowanie rodzaju tekstu**. Na przykład możesz wygenerować wiersz, pytania do quizu itd.
+- **Wyszukiwanie informacji**. Możesz używać promptów do wyszukiwania informacji, na przykład zapytanie „Co oznacza CORS w rozwoju stron internetowych?”.
+- **Generowanie kodu**. Możesz używać promptów do generowania kodu, na przykład tworzenia wyrażenia regularnego do walidacji emaili albo generowania całej aplikacji, np. aplikacji webowej.
 
-## Bardziej praktyczny przykład: generator przepisów
+## Bardziej praktyczny przypadek użycia: generator przepisów
 
-Wyobraź sobie, że masz w domu składniki i chcesz coś ugotować. Do tego potrzebujesz przepisu. Możesz użyć wyszukiwarki lub LLM do tego celu.
+Wyobraź sobie, że masz w domu składniki i chcesz coś ugotować. Do tego potrzebujesz przepisu. Możesz skorzystać z wyszukiwarki lub użyć dużego modelu językowego (LLM).
 
-Możesz napisać podpowiedź tak:
+Możesz napisać prompt w ten sposób:
 
-> "Pokaż mi 5 przepisów na potrawę z następujących składników: kurczak, ziemniaki i marchew. Dla każdego przepisu wypisz wszystkie użyte składniki"
+> "Pokaż mi 5 przepisów na danie ze składników: kurczak, ziemniaki i marchew. Dla każdego przepisu wypisz wszystkie użyte składniki."
 
-Na powyższą podpowiedź możesz otrzymać odpowiedź podobną do:
+Na ten prompt możesz otrzymać odpowiedź podobną do:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -295,16 +295,16 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-To świetny wynik, wiem, co ugotować. Na tym etapie przydatne mogą być:
+To świetny wynik, wiem, co ugotować. Przydałyby się teraz ulepszenia takie jak:
 
 - Filtrowanie składników, których nie lubię lub na które jestem uczulony.
-- Sporządzenie listy zakupów, jeśli nie mam wszystkich składników w domu.
+- Wygenerowanie listy zakupów na wypadek, gdybym nie miał wszystkich składników w domu.
 
-Dla powyższych przypadków dodajmy kolejną podpowiedź:
+Na powyższe potrzeby dodajmy dodatkowy prompt:
 
-> "Proszę usuń przepisy z czosnkiem, bo jestem uczulony i zamień je na coś innego. Proszę też wygeneruj listę zakupów dla tych przepisów, biorąc pod uwagę, że mam już w domu kurczaka, ziemniaki i marchew."
+> "Usuń proszę przepisy z czosnkiem, ponieważ jestem uczulony i zastąp go czymś innym. Proszę również o wygenerowanie listy zakupów na te przepisy, uwzględniając, że mam już w domu kurczaka, ziemniaki i marchew."
 
-Teraz masz nowy wynik, mianowicie:
+Otrzymasz teraz następujący efekt:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -371,20 +371,20 @@ Shopping List:
 - Pepper
 ```
 
-To twoje pięć przepisów, bez wymienionego czosnku, oraz lista zakupów uwzględniająca to, co masz w domu.
+To twoje pięć przepisów, bez czosnku, a także lista zakupów z uwzględnieniem składników, które masz w domu.
 
-## Ćwiczenie - zbuduj generator przepisów
+## Ćwiczenie – zbuduj generator przepisów
 
-Po rozegraniu scenariusza napiszmy kod odpowiadający pokazanej sytuacji. Aby to zrobić, wykonaj następujące kroki:
+Po odegraniu scenariusza, napiszmy kod realizujący ten scenariusz. Wykonaj następujące kroki:
 
-1. Użyj istniejącego pliku _app.py_ jako punktu wyjścia
+1. Użyj istniejącego pliku _app.py_ jako punktu wyjścia.
 1. Znajdź zmienną `prompt` i zmień jej kod na następujący:
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   Jeśli teraz uruchomisz kod, powinieneś zobaczyć wynik podobny do:
+   Jeśli uruchomisz teraz ten kod, powinieneś otrzymać wynik podobny do:
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -396,22 +396,22 @@ Po rozegraniu scenariusza napiszmy kod odpowiadający pokazanej sytuacji. Aby to
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > UWAGA, Twój LLM jest niedeterministyczny, więc możesz otrzymać różne wyniki za każdym razem, gdy uruchomisz program.
+   > UWAGA, twój LLM działa niedeterministycznie, więc możesz za każdym razem uzyskiwać różne wyniki.
 
-   Świetnie, zobaczmy, jak można to ulepszyć. Aby to zrobić, chcemy, by kod był elastyczny, tak aby składniki i liczba przepisów mogły być zmieniane.
+   Świetnie, zobaczmy, jak możemy to poprawić. Aby ulepszyć aplikację, chcemy, aby była elastyczna, aby można było wprowadzać i zmieniać liczbę przepisów oraz składniki.
 
-1. Zmień kod w następujący sposób:
+1. Zmieńmy kod w następujący sposób:
 
    ```python
    no_recipes = input("No of recipes (for example, 5): ")
 
    ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
 
-   # wstaw liczbę przepisów do podpowiedzi i składników
+   # interpolate the number of recipes into the prompt an ingredients
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   Wywołanie testowe kodu może wyglądać tak:
+   Kod testowy może wyglądać tak:
 
    ```output
    No of recipes (for example, 5): 3
@@ -424,11 +424,11 @@ Po rozegraniu scenariusza napiszmy kod odpowiadający pokazanej sytuacji. Aby to
 
 ### Ulepszenie przez dodanie filtra i listy zakupów
 
-Mamy teraz działającą aplikację, która potrafi generować przepisy i jest elastyczna, ponieważ zależy od danych wejściowych użytkownika, zarówno liczby przepisów, jak i używanych składników.
+Teraz mamy działającą aplikację zdolną generować przepisy i jest elastyczna, ponieważ opiera się na danych wejściowych użytkownika, zarówno liczbie przepisów, jak i używanych składnikach.
 
-Aby ulepszyć ją dalej, chcemy dodać:
+Aby to udoskonalić, chcemy dodać:
 
-- **Filtrowanie składników**. Chcemy móc filtrować składniki, których nie lubimy lub na które mamy uczulenie. Aby to osiągnąć, możemy edytować istniejącą podpowiedź i dodać warunek filtru na jej końcu, tak jak poniżej:
+- **Filtrowanie składników**. Chcemy móc filtrować składniki, których nie lubimy lub na które jesteśmy uczuleni. Aby to zrobić, możemy edytować nasz prompt i dodać na końcu warunek filtra w taki sposób:
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -436,9 +436,9 @@ Aby ulepszyć ją dalej, chcemy dodać:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  Powyżej dodaliśmy `{filter}` na końcu podpowiedzi i także przechwytujemy wartość filtru od użytkownika.
+  Tutaj dodajemy `{filter}` na koniec promptu i także pobieramy wartość filtra od użytkownika.
 
-  Przykładowe uruchomienie programu może teraz wyglądać tak:
+  Przykładowe wejście przy uruchomieniu programu może wyglądać tak:
 
   ```output
   No of recipes (for example, 5): 3
@@ -505,14 +505,13 @@ Aby ulepszyć ją dalej, chcemy dodać:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  Jak widzisz, przepisy zawierające mleko zostały odfiltrowane. Jednak jeśli masz nietolerancję laktozy, możesz chcieć również odfiltrować przepisy z serem, dlatego ważne jest jasne określenie.
+  Jak widzisz, wszystkie przepisy zawierające mleko zostały odfiltrowane. Ale jeśli jesteś nietolerancyjny na laktozę, możesz chcieć odfiltrować też przepisy z serem, więc trzeba to jasno określić.
 
+- **Generowanie listy zakupów**. Chcemy wygenerować listę zakupów, biorąc pod uwagę składniki, które już mamy w domu.
 
-- **Stwórz listę zakupów**. Chcemy stworzyć listę zakupów, biorąc pod uwagę to, co już mamy w domu.
+  W tej funkcjonalności możemy spróbować rozwiązać wszystko w jednym prompt lub rozdzielić na dwa prompt. Spróbujmy drugiego podejścia. Proponujemy dodać dodatkowy prompt, ale aby to zadziałało, musimy przekazać wynik pierwszego promptu jako kontekst do drugiego.
 
-  Dla tej funkcjonalności możemy spróbować rozwiązać wszystko w jednym promptcie lub podzielić to na dwa promptty. Spróbujmy podejścia drugiego. Tutaj sugerujemy dodanie dodatkowego promptu, ale aby to zadziałało, musimy dodać wynik pierwszego promptu jako kontekst do drugiego promptu.
-
-  Zlokalizuj część w kodzie, która wyświetla wynik z pierwszego promptu i dodaj poniższy kod poniżej:
+  Znajdź w kodzie miejsce, gdzie wyświetlany jest wynik pierwszego promptu i dodaj poniższy kod poniżej:
 
   ```python
   old_prompt_result = response.output_text
@@ -521,12 +520,12 @@ Aby ulepszyć ją dalej, chcemy dodać:
   new_prompt = f"{old_prompt_result} {prompt}"
   response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
 
-  # wydrukuj odpowiedź
+  # print response
   print("Shopping list:")
   print(response.output_text)
   ```
 
-  Zwróć uwagę na następujące rzeczy:
+  Zwróć uwagę na następujące:
 
   1. Tworzymy nowy prompt, dodając wynik z pierwszego promptu do nowego promptu:
 
@@ -534,13 +533,13 @@ Aby ulepszyć ją dalej, chcemy dodać:
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  1. Wykonujemy nowe zapytanie, ale również uwzględniając liczbę tokenów, o które prosiliśmy w pierwszym promptcie, więc tym razem ustawiamy `max_output_tokens` na 1200.
+  1. Wywołujemy nowe żądanie, ale także biorąc pod uwagę liczbę tokenów z pierwszego promptu, więc tym razem ustawiamy `max_output_tokens` na 1200.
 
      ```python
      response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
      ```
 
-     Testując ten kod, otrzymujemy następujące wyjście:
+     Testując ten kod, uzyskamy następujący wynik:
 
      ```output
      No of recipes (for example, 5): 2
@@ -554,11 +553,11 @@ Aby ulepszyć ją dalej, chcemy dodać:
      -Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice
      ```
 
-## Ulepsz swój setup
+## Ulepsz swoją konfigurację
 
-To, co mamy do tej pory, to kod, który działa, ale są pewne poprawki, które powinniśmy wprowadzić, aby go jeszcze ulepszyć. Oto kilka rzeczy, które powinniśmy zrobić:
+To, co mamy do tej pory, to działający kod, ale są pewne zmiany, które powinniśmy wprowadzić, aby jeszcze bardziej ulepszyć sprawy. Oto kilka rzeczy, które powinniśmy zrobić:
 
-- **Oddziel sekrety od kodu**, np. klucz API. Sekrety nie powinny znajdować się w kodzie i powinny być przechowywane w bezpiecznym miejscu. Aby oddzielić sekrety od kodu, możemy użyć zmiennych środowiskowych oraz bibliotek takich jak `python-dotenv`, które ładują je z pliku. Oto jak to mogłoby wyglądać w kodzie:
+- **Oddziel tajemnice od kodu**, takich jak klucz API. Tajemnice nie powinny znajdować się w kodzie i powinny być przechowywane w bezpiecznym miejscu. Aby oddzielić tajemnice od kodu, możemy użyć zmiennych środowiskowych oraz bibliotek takich jak `python-dotenv` do wczytywania ich z pliku. Oto jak to może wyglądać w kodzie:
 
   1. Utwórz plik `.env` z następującą zawartością:
 
@@ -566,7 +565,7 @@ To, co mamy do tej pory, to kod, który działa, ale są pewne poprawki, które 
      OPENAI_API_KEY=sk-...
      ```
 
-     > Uwaga, dla Azure OpenAI w Microsoft Foundry musisz zamiast tego ustawić następujące zmienne środowiskowe:
+     > Uwaga, dla Azure OpenAI w Microsoft Foundry zamiast tego należy ustawić następujące zmienne środowiskowe:
 
      ```bash
      AZURE_OPENAI_API_KEY=<replace>
@@ -574,7 +573,7 @@ To, co mamy do tej pory, to kod, który działa, ale są pewne poprawki, które 
      AZURE_OPENAI_API_VERSION=2024-10-21
      ```
 
-     W kodzie zmienne środowiskowe ładujesz w ten sposób:
+     W kodzie zmienne środowiskowe załadujesz w następujący sposób:
 
      ```python
      import os
@@ -586,17 +585,17 @@ To, co mamy do tej pory, to kod, który działa, ale są pewne poprawki, które 
      client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
      ```
 
-- **Kilka słów o długości tokenów**. Powinniśmy rozważyć, ile tokenów potrzeba, aby wygenerować pożądany tekst. Tokeny kosztują, więc tam, gdzie to możliwe, powinniśmy starać się oszczędzać ich ilość. Na przykład, czy możemy sformułować prompt w taki sposób, aby użyć mniej tokenów?
+- **Kilka słów na temat długości tokenów**. Powinniśmy rozważyć, ile tokenów potrzebujemy, aby wygenerować pożądany tekst. Tokeny kosztują, więc tam, gdzie to możliwe, powinniśmy starać się oszczędzać liczbę używanych tokenów. Na przykład, czy możemy sformułować zapytanie tak, aby użyć mniej tokenów?
 
-  Aby zmienić liczbę używanych tokenów, możesz użyć parametru `max_output_tokens`. Na przykład, jeśli chcesz użyć 100 tokenów, zrób tak:
+  Aby zmienić liczbę używanych tokenów, możesz użyć parametru `max_output_tokens`. Na przykład, jeśli chcesz użyć 100 tokenów, zrobisz to tak:
 
   ```python
   response = client.responses.create(model=deployment, input=prompt, max_output_tokens=100, store=False)
   ```
 
-- **Eksperymentowanie z temperaturą**. Temperatura to coś, o czym dotąd nie wspomnieliśmy, ale to ważny kontekst dla działania naszego programu. Im wyższa wartość temperatury, tym bardziej losowy będzie rezultat wyjściowy. Natomiast im niższa wartość temperatury, tym bardziej przewidywalny będzie rezultat. Zastanów się, czy chcesz, aby twój wynik był zróżnicowany, czy nie.
+- **Eksperymentowanie z temperaturą**. Temperatura to coś, o czym dotychczas nie wspominaliśmy, a jest to ważny kontekst tego, jak działa nasz program. Im wyższa wartość temperatury, tym bardziej losowy będzie wynik. Natomiast im niższa wartość, tym bardziej przewidywalny będzie wynik. Zastanów się, czy chcesz mieć zmienność w swoim wyniku, czy nie.
 
-  Aby zmienić temperaturę, możesz użyć parametru `temperature`. Na przykład, jeśli chcesz zastosować temperaturę 0,5, zrób tak:
+  Aby zmienić temperaturę, możesz użyć parametru `temperature`. Na przykład, jeśli chcesz użyć temperatury 0,5, zrobisz to tak:
 
   ```python
   response = client.responses.create(model=deployment, input=prompt, temperature=0.5, store=False)
@@ -604,27 +603,27 @@ To, co mamy do tej pory, to kod, który działa, ale są pewne poprawki, które 
 
   > Uwaga, im bliżej 1.0, tym bardziej zróżnicowany jest wynik.
 
-- **Modele rozumowania nie używają `temperature`**. To ważna zmiana na 2026 rok. Aktualne, niewycofane modele w Microsoft Foundry to **modele rozumowania** (rodzina GPT-5, seria o) - i one **nie wspierają `temperature` ani `top_p`** (ani `max_tokens`; używaj `max_output_tokens`). Jeśli wyślesz `temperature` do `gpt-5-mini`, otrzymasz błąd "parameter not supported". Aby wypróbować powyższy przykład z temperaturą, skieruj zapytanie do modelu, który wciąż wspiera kontrolę próbkowania - na przykład do otwartego modelu **Llama** takiego jak `Llama-3.3-70B-Instruct` z [katalogu modeli Microsoft Foundry](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst), wywoływanego przez punkt końcowy Foundry Models / Azure AI Inference (tak samo jak próbki `githubmodels-*`). W przypadku modeli rozumowania jak GPT-5, sterowanie wynikiem odbywa się inaczej:
-  - **Inżynieria promptów** - jasne instrukcje, przykłady i ustrukturyzowany wynik (zobacz lekcję [04 - Prompt Engineering](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)) zastępują działanie pokręteł do próbkowania.
-  - **Kontrole rozumowania** - parametry takie jak wysiłek rozumowania/werbalność wymieniają głębokość rozumowania na opóźnienie i koszt.
+- **Modele rozumowania nie używają `temperature`**. To ważna zmiana na rok 2026. Obecne, nieprzestarzałe modele w Microsoft Foundry to **modele rozumowania** (rodzina GPT-5, seria o) - i **nie obsługują `temperature` ani `top_p`** (ani `max_tokens`; użyj `max_output_tokens`). Jeśli wyślesz `temperature` do `gpt-5-mini`, otrzymasz błąd "parameter not supported". Aby więc wypróbować powyższy przykład z temperaturą, wskaż model, który nadal obsługuje kontrolki próbkowania - na przykład otwarty model **Llama** taki jak `Llama-3.3-70B-Instruct` z [katalogu modeli Microsoft Foundry](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst), wywoływany poprzez punkt końcowy Foundry Models / Azure AI Inference (tak samo jak próbki `githubmodels-*`). Dla modeli rozumowania, takich jak GPT-5, kierujesz wyniki inaczej:
+  - **Inżynieria podpowiedzi** - jasne instrukcje, przykłady i uporządkowany output (zobacz lekcję [04 - Prompt Engineering](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)) zastępują to, co kiedyś robiły pokrętła próbkowania.
+  - **Kontrole rozumowania** - parametry takie jak wysiłek rozumowania/werbalność balansują głębokość rozumowania z latencją i kosztami.
 
-  W skrócie: `temperature`/`top_p` są nadal ważne w wielu modelach (Llama, Mistral, Phi oraz rodzina GPT-4.x - chociaż GPT-4.x jest wycofywany), ale kierunkiem rozwoju jest inżynieria promptów + kontrola rozumowania w modelach rozumowania jak GPT-5.
+  W skrócie: `temperature`/`top_p` nadal są ważne dla wielu modeli (Llama, Mistral, Phi oraz rodzina GPT-4.x - chociaż GPT-4.x jest przestarzały), ale przyszłość to inżynieria podpowiedzi + kontrole rozumowania dla modeli rozumowania takich jak GPT-5.
 
 ## Zadanie
 
-Na to zadanie możesz wybrać, co zbudujesz.
+W tym zadaniu możesz wybrać, co zbudować.
 
-Oto kilka sugestii:
+Oto kilka propozycji:
 
-- Dopracuj aplikację generatora przepisów, aby jeszcze ją ulepszyć. Eksperymentuj z wartościami temperatury i promptami, aby zobaczyć, co uda ci się wymyślić.
-- Zbuduj "towarzysza nauki". Ta aplikacja powinna potrafić odpowiadać na pytania o dany temat, na przykład Python, możesz mieć prompt "Co to jest dany temat w Pythonie?", albo prompt "Pokaż mi kod na dany temat" itd.
-- Bot historyczny, ożyw historię, nakaz botowi grać określoną postać historyczną i zadawaj mu pytania o jej życie i czasy.
+- Popraw generator przepisów, aby jeszcze bardziej go ulepszyć. Eksperymentuj z wartościami temperatury i podpowiedziami, aby zobaczyć, co możesz stworzyć.
+- Zbuduj "kolegę do nauki". Ta aplikacja powinna umieć odpowiadać na pytania na dany temat, na przykład Python; możesz mieć podpowiedzi takie jak "Czym jest dany temat w Pythonie?" lub możesz mieć podpowiedź "pokaż mi kod dotyczący danego tematu" itp.
+- Bot historyczny, ożyw historię, poleć botowi odgrywać postać historyczną i zadawaj pytania dotyczące jego życia i czasów.
 
 ## Rozwiązanie
 
-### Towarzysz nauki
+### Kolega do nauki
 
-Poniżej jest prompt startowy, zobacz, jak możesz go użyć i dostosować do swoich potrzeb.
+Poniżej znajduje się przykładowa podpowiedź startowa, zobacz, jak możesz jej użyć i dopasować do swoich potrzeb.
 
 ```text
 - "You're an expert on the Python language
@@ -639,7 +638,7 @@ Poniżej jest prompt startowy, zobacz, jak możesz go użyć i dostosować do sw
 
 ### Bot historyczny
 
-Oto kilka promptów, których możesz użyć:
+Oto kilka podpowiedzi, których możesz użyć:
 
 ```text
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
@@ -652,19 +651,19 @@ Oto kilka promptów, których możesz użyć:
 
 Co robi parametr temperatura?
 
-1. Kontroluje, jak losowy jest wynik wyjściowy.
-1. Kontroluje, jak długa jest odpowiedź.
+1. Kontroluje, jak losowy jest wynik.
+1. Kontroluje, jak duża jest odpowiedź.
 1. Kontroluje, ile tokenów jest używanych.
 
 ## 🚀 Wyzwanie
 
-Podczas wykonywania zadania, spróbuj różnych wartości temperatury: ustaw 0, 0,5 i 1. Pamiętaj, że 0 to najmniej zróżnicowany wynik, a 1 to najbardziej. Która wartość działa najlepiej w twojej aplikacji?
+Pracując nad zadaniem, spróbuj zmieniać temperaturę, ustaw ją na 0, 0.5 i 1. Pamiętaj, że 0 oznacza najmniejszą zmienność, a 1 największą. Jaka wartość działa najlepiej dla Twojej aplikacji?
 
 ## Świetna robota! Kontynuuj naukę
 
-Po ukończeniu tej lekcji sprawdź naszą [kolekcję do nauki Generative AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby dalej rozwijać swoją wiedzę na temat Sztucznej Inteligencji generatywnej!
+Po ukończeniu tej lekcji sprawdź naszą [kolekcję nauki Generative AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby dalej poszerzać swoją wiedzę o Generative AI!
 
-Przejdź do Lekcji 7, gdzie omówimy, jak [budować aplikacje czatowe](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Przejdź do Lekcji 7, gdzie zobaczymy, jak [tworzyć aplikacje czatu](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
