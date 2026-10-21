@@ -1,82 +1,82 @@
 # Teksto generavimo programų kūrimas
 
-[![Teksto generavimo programų kūrimas](../../../translated_images/lt/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Teksto generavimo programų kūrimas](../../../translated_images/lt/06-lesson-banner.a5c629f990a636c8.webp?WT.mc_id=academic-105485-koreyst)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
-> _(Paspauskite paveikslėlį aukščiau, kad peržiūrėtumėte šios pamokos vaizdo įrašą)_
+> _(Spustelėkite aukščiau esantį vaizdą, kad peržiūrėtumėte pamokos vaizdo įrašą)_
 
-Iki šiol peržiūrėdami šį mokymo planą matėte pagrindines sąvokas, tokias kaip užklausos (prompts) ir net visą discipliną, vadinamą „užklausų inžinerija“. Daugelis įrankių, su kuriais galite bendrauti, kaip ChatGPT, Office 365, Microsoft Power Platform ir kt., leidžia jums naudoti užklausas siekiant atlikti tam tikrą veiksmą.
+Iki šiol šiame mokymo plane matėte pagrindines koncepcijas, tokias kaip užklausos, ir net visą discipliną, vadinamą „užklausų inžinerija“. Daugelis įrankių, su kuriais galite bendrauti, kaip ChatGPT, Office 365, Microsoft Power Platform ir kt., palaiko jus naudodami užklausas tam, kad pasiektumėte tam tikrą tikslą.
 
-Norint pridėti tokią patirtį prie programos, jums reikia suprasti tokias sąvokas kaip užklausos, užbaigimai ir pasirinkti biblioteką darbui. Būtent to jūs išmoksite šiame skyriuje.
+Kad pridėtumėte tokią patirtį programai, turite suprasti tokias sąvokas kaip užklausos, užbaigimai ir pasirinkti biblioteką darbui su jomis. Būtent to ir išmoksite šiame skyriuje.
 
 ## Įvadas
 
 Šiame skyriuje jūs:
 
-- Sužinosite apie openai biblioteką ir jos pagrindines sąvokas.
+- Sužinosite apie openai biblioteką ir jos pagrindines koncepcijas.
 - Sukursite teksto generavimo programą naudodami openai.
-- Suprasite, kaip naudoti tokias sąvokas kaip užklausa, temperatūra ir žetonai, kad sukurtumėte teksto generavimo programą.
+- Suprasite, kaip naudoti tokius konceptus kaip užklausa, temperatūra ir žetonai kuriant teksto generavimo programą.
 
 ## Mokymosi tikslai
 
-Pamokos pabaigoje jūs galėsite:
+Po šios pamokos jūs galėsite:
 
 - Paaiškinti, kas yra teksto generavimo programa.
-- Sukurti teksto generavimo programą naudodami openai.
-- Konfigūruoti savo programą naudoti daugiau ar mažiau žetonų ir taip pat keisti temperatūrą, kad gautumėte įvairų rezultatą.
+- Sukurti teksto generavimo programą naudojant openai.
+- Konfigūruoti programą naudoti daugiau ar mažiau žetonų ir keisti temperatūrą, kad gautumėte įvairų rezultatą.
 
 ## Kas yra teksto generavimo programa?
 
 Paprastai, kai kuriate programą, ji turi tam tikrą sąsają, pavyzdžiui, tokią:
 
-- Komandų pagrindu. Konsolės programos yra tipinės programos, kuriose įvedate komandą ir ji atlieka užduotį. Pavyzdžiui, „git“ yra komandų pagrindu veikianti programa.
-- Vartotojo sąsaja (UI). Kai kurios programos turi grafinę vartotojo sąsają (GUI), kurioje spaudote mygtukus, įvedate tekstą, renkatės parinktis ir pan.
+- Komandų pagrindu. Konsolės programos yra tipinės programos, kuriose įvedate komandą ir ji atlieka užduotį. Pavyzdžiui, `git` yra komandų pagrindo programa.
+- Vartotojo sąsają (UI). Kai kurios programos turi grafines vartotojo sąsajas (GUI), kuriose galite spustelėti mygtukus, įvesti tekstą, pasirinkti parinktis ir pan.
 
-### Konsolės ir vartotojo sąsajos programos yra ribotos
+### Konsolės ir UI programų ribotumas
 
-Palyginkite tai su komandine programa, kur įvedate komandą:
+Palyginkite tai su komandine programa, kurioje įvedate komandą:
 
-- **Ji yra ribota**. Negalite įvesti bet kokios komandos, tik tų, kurias programa palaiko.
-- **Kalbai specifinė**. Kai kurios programos palaiko daugelį kalbų, bet pagal numatytuosius nustatymus programa skirta konkrečiai kalbai, nors galite pridėti papildomą kalbų palaikymą.
+- **Ji yra ribota**. Negalite tiesiog įvesti bet kurios komandos, tik tų, kurias programa palaiko.
+- **Kalbos specifinė**. Kai kurios programos palaiko daug kalbų, bet pagal nutylėjimą programa yra sukurta konkrečiai kalbai, net jei galima pridėti daugiau kalbų palaikymo.
 
 ### Teksto generavimo programų privalumai
 
-Taigi kuo skiriasi teksto generavimo programa?
+O kaip gi teksto generavimo programa skiriasi?
 
-Teksto generavimo programoje turite daugiau lankstumo, nesate apriboti komandomis ar konkrečia įvesties kalba. Vietoje to galite naudoti natūralią kalbą bendrauti su programa. Kitas privalumas yra tas, kad jūs jau bendraujate su duomenų šaltiniu, kuris buvo apmokytas didžiuliu informacijos korpusu, o tradicinė programa gali būti ribota tuo, kas yra duomenų bazėje.
+Teksto generavimo programose turite daugiau lankstumo – nesate apriboti komandų rinkiniu ar konkrečia įvesties kalba. Vietoje to galite naudoti natūralią kalbą, kad bendrautumėte su programa. Kitas privalumas yra tai, kad jau bendraujate su duomenų šaltiniu, kuris buvo apmokytas didžiule informacijos apimtimi, o tradicinė programa gali būti ribojama duomenų bazės turiniu.
 
-### Ką galima sukurti su teksto generavimo programa?
+### Ką galiu sukurti su teksto generavimo programa?
 
-Galite sukurti daugybę dalykų. Pavyzdžiui:
+Galite sukurti daugybę dalykų, pavyzdžiui:
 
-- **Pokalbiai robotas (chatbot)**. Pokalbių robotas, atsakantis į klausimus apie temą, pavyzdžiui, jūsų įmonę ir jos produktus, gali būti puikus sprendimas.
-- **Pagalbininkas**. Dideli kalbos modeliai puikiai tinka tokioms užduotims kaip teksto santraukos, įžvalgų gavimas iš teksto, teksto generavimas, pvz., gyvenimo aprašymai ir pan.
-- **Kodo pagalbininkas**. Priklausomai nuo naudojamo kalbos modelio, galite sukurti kodo pagalbininką, kuris padės rašyti kodą. Pavyzdžiui, galite naudoti produktus kaip GitHub Copilot taip pat kaip ChatGPT kodo rašymo pagalbai.
+- **Pokalbį vykdantį robotą (chatbot)**. Chatbotas, atsakantis į klausimus apie temas, tokias kaip jūsų įmonė ir jos produktai, galėtų būti puikus pasirinkimas.
+- **Pagalbą teikiančią programą**. Dideli kalbos modeliai (LLMs) puikiai tinka užduotims, kaip teksto santraukų darymas, teksto analizė, tekstų, pavyzdžiui, gyvenimo aprašymų, kūrimas ir kt.
+- **Kodo pagalbininką**. Priklausomai nuo naudojamo kalbos modelio, galite sukurti kodo pagalbininką, kuris padėtų rašyti kodą. Pavyzdžiui, galite naudoti produktus kaip GitHub Copilot ar ChatGPT kodui rašyti.
 
 ## Kaip pradėti?
 
-Turite rasti būdą, kaip integruotis su dideliu kalbos modeliu (LLM), kuris įprastai apima šiuos du požiūrius:
+Jums reikia rasti būdą, kaip integruotis su LLM, kuris paprastai apima šiuos du būdus:
 
-- Naudoti API. Čia jūs kūrėte internetinius užklausimus su savo užklausa ir gaunate sugeneruotą tekstą atgal.
-- Naudoti biblioteką. Bibliotekos padeda apjungti API iškvietimus ir padaryti juos lengviau naudojamus.
+- Naudoti API. Čia jūs sudarote interneto užklausas su savo užklausa ir gaunate sugeneruotą tekstą.
+- Naudoti biblioteką. Bibliotekos padeda apjungti API kvietimus ir palengvina jų naudojimą.
 
 ## Bibliotekos/SDK
 
-Yra keletas gerai žinomų bibliotekų darbui su LLM, tokių kaip:
+Yra kelios gerai žinomos bibliotekos darbui su LLM, tokios kaip:
 
-- **openai**, ši biblioteka leidžia lengvai prisijungti prie savo modelio ir siųsti užklausas.
+- **openai**, ši biblioteka leidžia lengvai prisijungti prie jūsų modelio ir siųsti užklausas.
 
-Yra taip pat bibliotekų, veikiančių aukštesniame lygyje, kaip:
+Taip pat yra bibliotekų, veikiančių aukštesniu lygiu, pavyzdžiui:
 
-- **Langchain**. Langchain yra žinoma ir palaiko Python.
-- **Semantic Kernel**. Semantic Kernel yra Microsoft biblioteka, palaikanti C#, Python ir Java kalbas.
+- **Langchain**. Langchain yra gerai žinoma ir palaiko Python.
+- **Semantic Kernel**. Semantic Kernel yra Microsoft biblioteka, palaikanti kalbas C#, Python ir Java.
 
 ## Pirmoji programa naudojant openai
 
-Pažiūrėkime, kaip galime sukurti savo pirmąją programą, kokių bibliotekų reikia ir kokių nustatymų reikia.
+Pažiūrėkime, kaip galime sukurti pirmąją programą, kokių bibliotekų reikia, kiek jos reikalingos ir pan.
 
 ### Įdiekite openai
 
-Yra daug bibliotekų, kurios leidžia bendrauti su OpenAI arba Azure OpenAI. Taip pat galima naudoti įvairias programavimo kalbas, tokias kaip C#, Python, JavaScript, Java ir kt. Mes pasirinkome naudoti `openai` Python biblioteką, todėl įdiegsime ją per `pip`.
+Yra daug bibliotekų, skirtų bendravimui su OpenAI arba Azure OpenAI. Gali būti naudojamos įvairios programavimo kalbos, tokios kaip C#, Python, JavaScript, Java ir kt. Pasirinkome naudoti `openai` Python biblioteką, todėl naudosime `pip` ją įdiegti.
 
 ```bash
 pip install openai
@@ -86,32 +86,32 @@ pip install openai
 
 Turite atlikti šiuos veiksmus:
 
-- Sukurkite paskyrą Azure svetainėje [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- Gaukitės prieigą prie Azure OpenAI. Eikite į [https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) ir paprašykite prieigos.
+- Sukurkite paskyrą Azure [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
+- Gaukite prieigą prie Azure OpenAI. Eikite į [https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) ir paprašykite prieigos.
 
   > [!NOTE]
-  > Rašymo metu reikia kreiptis dėl prieigos prie Azure OpenAI.
+  > Šio teksto rašymo metu turite pateikti prašymą gauti prieigą prie Azure OpenAI.
 
 - Įdiekite Python <https://www.python.org/>
-- Sukurkite Azure OpenAI paslaugos resursą. Peržiūrėkite šią instrukciją, kaip [sukurti resursą](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- Sukurkite Azure OpenAI Service resursą. Peržiūrėkite šį vadovą, kaip [sukurti resursą](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
-### Suraskite API raktą ir endpoint'ą
+### Suraskite API raktą ir galutinį tašką
 
-Dabar turite nurodyti savo `openai` bibliotekai, kurį API raktą naudoti. Norėdami rasti API raktą, eikite į „Keys and Endpoint“ skiltį savo Azure OpenAI resurse ir nukopijuokite „Key 1“ reikšmę.
+Šiuo metu turite pasakyti savo `openai` bibliotekai, kurį API raktą naudoti. Norėdami rasti API raktą, eikite į „Raktai ir galiniai taškai“ skyrių savo Azure OpenAI resurse ir nukopijuokite „Raktas 1“ reikšmę.
 
-![Keys and Endpoint resurso skydelis Azure portale](https://learn.microsoft.com/azure/ai-foundry/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+![Raktų ir galinių taškų skydelis Azure portale](https://learn.microsoft.com/azure/ai-foundry/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
-Dabar, kai turite šią informaciją, leiskite bibliotekoms ja naudotis.
+Dabar, kai turite šią informaciją nukopijuotą, nurodykime bibliotekoms ją naudoti.
 
 > [!NOTE]
-> Vertinga atskirti savo API raktą nuo kodo. Tai galite padaryti naudodami aplinkos kintamuosius.
+> Rekomenduojama API raktą atskirti nuo kodo. Tai galite padaryti naudodami aplinkos kintamuosius.
 >
 > - Nustatykite aplinkos kintamąjį `OPENAI_API_KEY` su savo API raktu.
 >   `export OPENAI_API_KEY='sk-...'`
 
 ### Azure konfigūracijos nustatymas
 
-Jei naudojate Azure OpenAI (dabar Microsoft Foundry dalis), štai kaip nustatyti konfigūraciją. Mes naudojame standartinį `OpenAI` klientą, nukreiptą į Azure OpenAI `/openai/v1/` endpoint'ą, kuris veikia su Responses API ir nereikalauja `api_version`:
+Jei naudojate Azure OpenAI (dabar Microsoft Foundry dalis), štai kaip nustatyti konfigūraciją. Naudojame standartinį `OpenAI` klientą, nukreiptą į Azure OpenAI `/openai/v1/` galinį tašką, kuris veikia su Responses API ir nereikalauja `api_version`:
 
 ```python
 import os
@@ -123,33 +123,33 @@ client = OpenAI(
 )
 ```
 
-Aukščiau nustatome šiuos parametrus:
+Viršuje nustatome šiuos parametrus:
 
 - `api_key`, tai jūsų API raktas, rastas Azure portale arba Microsoft Foundry portale.
-- `base_url`, tai jūsų Foundry resurso endpoint'as su pridėtu `/openai/v1/`. Stabilus v1 endpoint'as veikia tiek OpenAI, tiek Azure OpenAI be `api_version` valdymo.
+- `base_url`, tai jūsų Foundry resurso galinis taškas su pridėtu `/openai/v1/`. Stabilus v1 galinis taškas veikia tiek su OpenAI, tiek su Azure OpenAI be `api_version` valdymo.
 
-> [!NOTE] > `os.environ` skaito aplinkos kintamuosius. Galite jį naudoti skaityti tokius kintamuosius kaip `AZURE_OPENAI_API_KEY` ir `AZURE_OPENAI_ENDPOINT`. Nustatykite šiuos aplinkos kintamuosius terminale arba naudodami biblioteką kaip `dotenv`.
+> [!NOTE] > `os.environ` skaito aplinkos kintamuosius. Galite jį naudoti, norėdami nuskaityti aplinkos kintamuosius kaip `AZURE_OPENAI_API_KEY` ir `AZURE_OPENAI_ENDPOINT`. Nustatykite šiuos aplinkos kintamuosius savo terminale ar naudodami biblioteką, pvz., `dotenv`.
 
 ## Teksto generavimas
 
-Teksto generavimui naudojama Responses API per metodą `responses.create`. Štai pavyzdys:
+Tekstą generuoti galima naudoti Responses API per `responses.create` metodą. Štai pavyzdys:
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
 
 response = client.responses.create(
-    model="gpt-5-mini",  # tai jūsų modelio diegimo pavadinimas
+    model="gpt-5-mini",  # this is your model deployment name
     input=prompt,
     store=False,
 )
 print(response.output_text)
 ```
 
-Aukščiau esančiame kode sukuriame atsakymą ir perduodame modelį, kurį norime naudoti, bei užklausą (prompt). Tada išvedame sugeneruotą tekstą per `response.output_text`.
+Aukščiau esančiame kode sukuriame atsakymą ir perduodame norimą naudoti modelį bei užklausą. Tada išvedame sugeneruotą tekstą per `response.output_text`.
 
-### Daugiaerių pokalbių užbaigimas (multi-turn conversations)
+### Daugiapereiniai pokalbiai
 
-Responses API puikiai tinka tiek vieno posūkio teksto generavimui, tiek daugiaerių pokalbių robotams – pateikiate pranešimų sąrašą `input`, kad sukurtumėte pokalbį:
+Responses API puikiai tinka tiek vieno užklausos teksto generavimui, tiek daugiapereiniams chatbotams – pateikiate pranešimų sąrašą `input`, kad sukurtumėte pokalbį:
 
 ```python
 from openai import OpenAI
@@ -160,11 +160,11 @@ response = client.responses.create(model="gpt-5-mini", input="Hello world", stor
 print(response.output_text)
 ```
 
-Daugiau apie šią funkciją bus ateinančiame skyriuje.
+Daugiau apie šią funkciją bus kitame skyriuje.
 
-## Pratimai – jūsų pirmoji teksto generavimo programa
+## Užduotis – jūsų pirmoji teksto generavimo programa
 
-Dabar, kai išmokome nustatyti ir konfigūruoti openai, laikas sukurti jūsų pirmąją teksto generavimo programą. Norėdami ją sukurti, vadovaukitės šiais žingsniais:
+Dabar, kai išmokome nustatyti ir konfigūruoti openai, laikas sukurti savo pirmąją teksto generavimo programą. Štai ko reikia imtis:
 
 1. Sukurkite virtualią aplinką ir įdiekite openai:
 
@@ -175,12 +175,12 @@ Dabar, kai išmokome nustatyti ir konfigūruoti openai, laikas sukurti jūsų pi
    ```
 
    > [!NOTE]
-   > Jei naudojate Windows, įrašykite `venv\Scripts\activate` vietoje `source venv/bin/activate`.
+   > Jei naudojate Windows, rašykite `venv\Scripts\activate` vietoje `source venv/bin/activate`.
 
    > [!NOTE]
-   > Raskite savo Azure OpenAI raktą eidami į [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) ir ieškokite `Open AI`, pasirinkite `Open AI resource`, tada `Keys and Endpoint` ir nukopijuokite `Key 1` reikšmę.
+   > Suraskite savo Azure OpenAI raktą eidami į [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst), raskite `Open AI`, pasirinkite `Open AI resource`, tada pasirinkite `Keys and Endpoint` ir nukopijuokite `Key 1` reikšmę.
 
-1. Sukurkite _app.py_ failą ir įrašykite jame šį kodą:
+1. Sukurkite failą _app.py_ ir įrašykite jame šį kodą:
 
    ```python
    import os
@@ -192,18 +192,18 @@ Dabar, kai išmokome nustatyti ir konfigūruoti openai, laikas sukurti jūsų pi
    )
    deployment_name = "<deployment name>"
 
-   # pridėkite savo užpildymo kodą
+   # add your completion code
    prompt = "Complete the following: Once upon a time there was a"
 
-   # atlikite užklausą naudodami Responses API
+   # make a request using the Responses API
    response = client.responses.create(model=deployment_name, input=prompt, store=False)
 
-   # atspausdinkite atsakymą
+   # print response
    print(response.output_text)
    ```
 
    > [!NOTE]
-   > Jei naudojate paprastą OpenAI (ne Azure), naudokite `client = OpenAI(api_key="<pakeiskite šia reikšme savo OpenAI raktą>")` (be `base_url`) ir nurodykite modelio pavadinimą, pvz., `gpt-5-mini` vietoje diegimo pavadinimo.
+   > Jei naudojate paprastą OpenAI (ne Azure), naudokite `client = OpenAI(api_key="<replace this value with your OpenAI key>")` (be `base_url`) ir perduokite modelio pavadinimą kaip `gpt-5-mini` vietoje diegimo pavadinimo.
 
    Turėtumėte pamatyti tokį rezultatą:
 
@@ -213,25 +213,25 @@ Dabar, kai išmokome nustatyti ir konfigūruoti openai, laikas sukurti jūsų pi
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## Skirtingi užklausų tipai, skirti skirtingiems dalykams
+## Skirtingų tipų užklausos – skirtingiems tikslams
 
-Dabar matėte, kaip sugeneruoti tekstą naudojant užklausą. Jūs netgi turite programą, kurią galite modifikuoti ir keisti siekiant generuoti skirtingų tipų tekstą.
+Dabar matėte, kaip generuoti tekstą naudojant užklausą. Netgi turite veikiantį programą, kurią galite modifikuoti ir keisti, kad generuotumėte skirtingus tekstus.
 
 Užklausos gali būti naudojamos įvairioms užduotims. Pavyzdžiui:
 
-- **Generuoti tam tikro tipo tekstą**. Pavyzdžiui, galite sugeneruoti eilėraštį, klausimus viktorinai ir pan.
-- **Ieškoti informacijos**. Galite naudoti užklausas informacijos paieškai, pvz., „Ką reiškia CORS interneto kūrime?“.
-- **Generuoti kodą**. Galite naudoti užklausas kodo generavimui, pvz., sukurti reguliarią išraišką el. pašto patikrinimui ar kodą visai programai, kaip interneto programai.
+- **Generuoti tekstų tipą**. Pavyzdžiui, galite sugeneruoti eilėraštį, klausimus viktorinai ir kt.
+- **Ieškoti informacijos**. Galite naudoti užklausas informacijai ieškoti, pavyzdžiui, „Ką reiškia CORS interneto kūrime?“.
+- **Generuoti kodą**. Galite naudoti užklausas kuriant kodą, pavyzdžiui, kurti reguliarios išraiškos šabloną elektroniniams laiškams tikrinti ar kodą visai programai, pavyzdžiui, žiniatinklio programai.
 
 ## Praktinis pavyzdys: receptų generatorius
 
-Įsivaizduokite, kad turite ingredientų namuose ir norite ką nors pagaminti. Tam jums reikia recepto. Receptus galite rasti naudodami paieškos variklį arba galite naudoti LLM.
+Įsivaizduokite, kad namuose turite ingredientų ir norite ką nors pagaminti. Tam reikia recepto. Receptų galite ieškoti naudodami paieškos variklį arba pasitelkti LLM.
 
-Galite sukurti užklausą, pavyzdžiui:
+Galite sukurti tokią užklausą:
 
-> "Parodykite 5 receptus patiekalui su šiais ingredientais: vištiena, bulvės ir morkos. Kiekvienam receptui pateikite visus naudojamus ingredientus."
+> „Pateikite 5 receptus patiekalui su šiais ingredientais: vištiena, bulvės, morkos. Kiekvienam receptui išvardinkite visus ingredientus.“
 
-Gavę tokią užklausą, galite gauti panašų atsakymą:
+Gavęs aukščiau pateiktą užklausą, galite gauti panašų atsakymą:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -295,16 +295,16 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-Šis rezultatas puikus – žinau, ką gaminti. Tokiu atveju naudinga būtų atlikti:
+Šis rezultatas puikus, žinau, ką gaminti. Šiuo momentu būtų naudinga patobulinimai:
 
-- Išfiltruoti ingredientus, kurių nemėgstu ar kuriems esu alergiškas.
-- Paruošti pirkinių sąrašą, jei namuose neturiu visų ingredientų.
+- Filtruoti ingredientus, kurių nemėgstu arba kuriems esu alergiškas.
+- Sudaryti pirkinių sąrašą, jei namuose neturiu visų ingredientų.
 
-Tokiais atvejais pridėkime papildomą užklausą:
+Tokiu atveju pridėkime papildomą užklausą:
 
-> "Prašau pašalinti receptus su česnakais, nes esu alergiškas, ir pakeisti juos kažkuo kitu. Taip pat prašau paruošti pirkinių sąrašą receptams, atsižvelgiant į tai, kad namuose jau turiu vištieną, bulves ir morkas."
+> „Prašau pašalinti receptus su česnaku, nes esu alergiškas, ir pakeisti jį kažkuo kitu. Taip pat sudarykite pirkinių sąrašą receptams, atsižvelgiant į tai, kad namuose jau turiu vištieną, bulves ir morkas.“
 
-Dabar turite naują rezultatą:
+Dabar turite naują rezultatą, t. y.:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -371,20 +371,20 @@ Shopping List:
 - Pepper
 ```
 
-Štai jūsų penki receptai, kuriuose nėra česnakų, ir taip pat pirkinių sąrašas, atsižvelgiant į tai, ką jau turite namuose.
+Tai jūsų penki receptai, be česnako ir su pirkinių sąrašu, atsižvelgiant į turimus ingredientus.
 
-## Pratimai – sukurkite receptų generatorių
+## Užduotis – sukurkite receptų generatorių
 
-Dabar, kai įsivaizdavome situaciją, parašykime kodą, atitinkantį šį scenarijų. Vadovaukitės šiais žingsniais:
+Dabar, kai apžaidėme scenarijų, parašykime kodą, atitinkantį šį scenarijų. Štai ką daryti:
 
-1. Naudokite esamą _app.py_ failą kaip pradžios tašką
-1. Suraskite kintamąjį `prompt` ir pakeiskite jo kodą tokiu:
+1. Naudokite esamą _app.py_ failą kaip pradinį tašką
+1. Suraskite kintamąjį `prompt` ir pakeiskite jo kodą taip:
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   Paleidę kodą turėtumėte matyti panašų rezultatą:
+   Jei dabar paleisite kodą, turėtumėte matyti panašų rezultatą:
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -396,9 +396,9 @@ Dabar, kai įsivaizdavome situaciją, parašykime kodą, atitinkantį šį scena
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > PASTABA, jūsų LLM elgiasi ne nuspėjamai, todėl kiekvieną kartą paleidus programą galite gauti skirtingus rezultatus.
+   > PAŽYMA, jūsų LLM nėra determinuotas, todėl kiekvieną kartą paleidus programą gali būti skirtingi rezultatai.
 
-   Puiku, pažiūrėkime, kaip galime tai patobulinti. Norėdami pagerinti, norime užtikrinti, kad kodas būtų lanksčiai keičiamas, t.y. būtų galima keisti ingredientus ir receptų skaičių.
+   Puiku, pažiūrėkime, kaip galime patobulinti dalykus. Norėdami tobulinti, norime, kad kodas būtų lankstus, kad būtų galima pakeisti ingredientus ir receptų skaičių.
 
 1. Pakeiskime kodą taip:
 
@@ -407,11 +407,11 @@ Dabar, kai įsivaizdavome situaciją, parašykime kodą, atitinkantį šį scena
 
    ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
 
-   # įterpti receptų skaičių į užklausą ir ingredientus
+   # interpolate the number of recipes into the prompt an ingredients
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   Testo paleidimas galėtų atrodyti taip:
+   Šį kodą išbandyti galėtų atrodyti taip:
 
    ```output
    No of recipes (for example, 5): 3
@@ -422,13 +422,13 @@ Dabar, kai įsivaizdavome situaciją, parašykime kodą, atitinkantį šį scena
    -Strawberry milk: milk, strawberries, sugar, vanilla extract
    ```
 
-### Patobulinkite pridėdami filtrą ir pirkinių sąrašą
+### Tobulinkite pridėdami filtrą ir pirkinių sąrašą
 
-Dabar turime veikiančią programą, galinčią generuoti receptus, ir ji yra lanksti, nes remiasi vartotojo įvedamais duomenimis, tiek receptų skaičiumi, tiek ingredientais.
+Dabar turime veikiančią programą, kuri gali generuoti receptus ir yra lanksti, nes remiasi naudotojo pateiktomis įėjimo reikšmėmis – tiek receptų kiekiu, tiek ingredientais.
 
-Norėdami dar labiau patobulinti, pridėsime šiuos dalykus:
+Norėdami toliau patobulinti, pridėkime šiuos dalykus:
 
-- **Filtravimas iš ingredientų**. Norime galėti filtruoti ingredientus, kurių nemėgstame arba kuriems esame alergiški. Norėdami tai pasiekti, galime redaguoti savo esamą užklausą ir pabaigoje pridėti filtro sąlygą, pvz.:
+- **Filtruoti ingredientus**. Norime galėti filtruoti ingredientus, kurių nemėgstame arba kuriems esame alergiški. Tam pakeitimui galime redaguoti esamą užklausą ir pridėti filtravimo sąlygą pabaigoje, kaip čia:
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -436,9 +436,9 @@ Norėdami dar labiau patobulinti, pridėsime šiuos dalykus:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  Aukščiau mes pridėjome `{filter}` į užklausos pabaigą ir taip pat paimame filtro reikšmę iš vartotojo.
+  Aukščiau pabaigoje užklausos pridėjome `{filter}` ir taip pat surenkame filtro reikšmę iš naudotojo.
 
-  Tarkime, programos paleidimo pavyzdys dabar galėtų atrodyti taip:
+  Pavyzdinė programos paleidimo įvestis dabar gali atrodyti taip:
 
   ```output
   No of recipes (for example, 5): 3
@@ -505,14 +505,13 @@ Norėdami dar labiau patobulinti, pridėsime šiuos dalykus:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  Kaip matote, receptai, kuriuose yra pieno, buvo filtruojami. Bet jei esate laktozės netolerantas, galite norėti filtruoti receptus su sūriu, todėl svarbu būti aiškiam.
+  Kaip matote, visi receptai su pienu išfiltruoti. Tačiau jei esate laktozės netolerantas, galbūt norėsite filtruoti ir sūrio turinčius receptus, tad aiškumas yra svarbus.
 
+- **Sukurti pirkinių sąrašą**. Norime sudaryti pirkinių sąrašą atsižvelgiant į tai, ką jau turime namuose.
 
-- **Sukurkite pirkinių sąrašą**. Norime sukurti pirkinių sąrašą, atsižvelgiant į tai, ką jau turime namuose.
+  Šiai funkcijai galime bandyti išspręsti viską vienoje užklausoje arba padalinti į dvi užklausas. Pabandykime antrą būdą. Čia siūlome pridėti papildomą užklausą, bet tam, kad ji veiktų, turime pridėti pirmos užklausos rezultatą kaip kontekstą antrai užklausoje.
 
-  Šiai funkcijai galime pabandyti išspręsti viską vienu užklausimu arba padalinti į du užklausimus. Pabandykime pastarąjį metodą. Čia siūlome pridėti papildomą užklausimą, tačiau tam, kad tai veiktų, reikia pridėti pirmojo užklausimo rezultatą kaip kontekstą antrajam užklausimui.
-
-  Suraskite kodo vietą, kur išvedamas pirmojo užklausimo rezultatas ir pridėkite žemiau šį kodą:
+  Suraskite kodo dalį, kuri išveda pirmos užklausos rezultatą, ir po ja pridėkite šį kodą:
 
   ```python
   old_prompt_result = response.output_text
@@ -521,26 +520,26 @@ Norėdami dar labiau patobulinti, pridėsime šiuos dalykus:
   new_prompt = f"{old_prompt_result} {prompt}"
   response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
 
-  # atspausdinti atsakymą
+  # print response
   print("Shopping list:")
   print(response.output_text)
   ```
 
-  Atkreipkite dėmesį į tai:
+  Atkreipkite dėmesį į šiuos dalykus:
 
-  1. Kuriame naują užklausimą pridėdami pirmojo užklausimo rezultatą prie naujo užklausimo:
+  1. Kuriame naują užklausą pridėdami pirmos užklausos rezultatą prie naujos užklausos:
 
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  1. Atliekame naują užklausą, bet taip pat atsižvelgiame į pirmojo užklausimo užklausytų žetonų skaičių, todėl šį kartą nurodome `max_output_tokens` kaip 1200.
+  1. Darome naują užklausą, taip pat atsižvelgdamas į žetonų skaičių, kurį prašėme pirmoje užklausoje, todėl šįkart nustatome `max_output_tokens` 1200.
 
      ```python
      response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
      ```
 
-     Paleidus šį kodą, gauname šį rezultatą:
+     Išbandę šį kodą dabar gauname tokį rezultatą:
 
      ```output
      No of recipes (for example, 5): 2
@@ -554,11 +553,11 @@ Norėdami dar labiau patobulinti, pridėsime šiuos dalykus:
      -Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice
      ```
 
-## Pagerinkite savo aplinką
+## Patobulinkite savo aplinką
 
-Turiu kodą, kuris veikia, bet yra keletas patobulinimų, kuriuos turėtume atlikti toliau. Kai ką turėtume padaryti:
+Tai, ką turime iki šiol, yra veikiantis kodas, tačiau yra keletas patobulinimų, kuriuos turėtume atlikti, kad dar labiau pagerintume situaciją. Kai kurios dalykai, kuriuos turėtume padaryti:
 
-- **Atskirkite slaptažodžius nuo kodo**, pvz., API raktą. Slaptažodžiai nepriklauso kodui ir turėtų būti saugomi saugioje vietoje. Norint atskirti slaptažodžius nuo kodo, galime naudoti aplinkos kintamuosius ir bibliotekas kaip `python-dotenv`, kad juos įkeltume iš failo. Štai kaip tai atrodytų kode:
+- **Atskirti slaptažodžius nuo kodo**, pavyzdžiui, API raktą. Slaptažodžiai neturi būti įrašyti į kodą ir turėtų būti saugomi saugioje vietoje. Norėdami atskirti slaptažodžius nuo kodo, galime naudoti aplinkos kintamuosius ir tokias bibliotekas kaip `python-dotenv`, kad juos užkrauti iš failo. Štai kaip tai atrodytų kode:
 
   1. Sukurkite `.env` failą su šiuo turiniu:
 
@@ -566,7 +565,7 @@ Turiu kodą, kuris veikia, bet yra keletas patobulinimų, kuriuos turėtume atli
      OPENAI_API_KEY=sk-...
      ```
 
-     > Pastaba: „Azure OpenAI“ „Microsoft Foundry“ reikėtų nustatyti šiuos aplinkos kintamuosius:
+     > Pastaba, Azure OpenAI Microsoft Foundry atveju turite nustatyti šiuos aplinkos kintamuosius vietoj to:
 
      ```bash
      AZURE_OPENAI_API_KEY=<replace>
@@ -574,7 +573,7 @@ Turiu kodą, kuris veikia, bet yra keletas patobulinimų, kuriuos turėtume atli
      AZURE_OPENAI_API_VERSION=2024-10-21
      ```
 
-     Kode aplinkos kintamuosius įkeltumėte taip:
+     Kode aplinkos kintamuosius užkrautumėte taip:
 
      ```python
      import os
@@ -586,45 +585,45 @@ Turiu kodą, kuris veikia, bet yra keletas patobulinimų, kuriuos turėtume atli
      client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
      ```
 
-- **Žodis apie žetonų ilgį**. Turėtume apsvarstyti, kiek žetonų mums reikia norimam tekstui sugeneruoti. Žetonai kainuoja pinigus, todėl, jei įmanoma, turėtume būti ekonomiški naudodami žetonų skaičių. Pavyzdžiui, ar galime užklausą suformuluoti taip, kad naudotume mažiau žetonų?
+- **Žodis apie žetonų ilgį**. Turėtume apsvarstyti, kiek žetonų mums reikia sugeneruoti norimą tekstą. Žetonai kainuoja pinigus, todėl, kur galima, turėtume stengtis taupyti naudojamų žetonų skaičių. Pavyzdžiui, ar galime suformuluoti užklausą taip, kad naudotume mažiau žetonų?
 
-  Norėdami pakeisti naudojamų žetonų skaičių, galite naudoti `max_output_tokens` parametrą. Pavyzdžiui, jei norite naudoti 100 žetonų, darykite taip:
+  Norėdami pakeisti naudojamų žetonų skaičių, galite naudoti parametrą `max_output_tokens`. Pavyzdžiui, jei norite naudoti 100 žetonų, darykite taip:
 
   ```python
   response = client.responses.create(model=deployment, input=prompt, max_output_tokens=100, store=False)
   ```
 
-- **Eksperimentavimas su temperatūra**. Temperatūra yra kažkas, apie ką dar nepaminėjome, bet tai svarbus kontekstas, kaip veikia mūsų programa. Kuo didesnė temperatūra, tuo labiau atsitiktinis bus rezultatas. Atvirkščiai, kuo mažesnė temperatūra, tuo nuspėjamesnis bus rezultatas. Pagalvokite, ar norite gauti įvairų rezultatą, ar ne.
+- **Eksperimentavimas su temperatūra**. Temperatūra yra dalykas, apie kurį iki šiol nekalbėjome, bet ji yra svarbus programos veikimo kontekstas. Kuo aukštesnė temperatūros reikšmė, tuo atsitiktinesnis bus rezultatas. Atvirkščiai – kuo žemesnė temperatūra, tuo labiau prognozuojamas bus rezultatas. Apsvarstykite, ar norite variacijų savo rezultate, ar ne.
 
-  Norėdami keisti temperatūrą, galite naudoti `temperature` parametrą. Pavyzdžiui, jei norite naudoti temperatūrą 0.5, darykite taip:
+  Norėdami pakeisti temperatūrą, galite naudoti parametrą `temperature`. Pavyzdžiui, jei norite temperatūrą nustatyti 0.5, darykite taip:
 
   ```python
   response = client.responses.create(model=deployment, input=prompt, temperature=0.5, store=False)
   ```
 
-  > Pastaba: kuo arčiau 1.0, tuo įvairesnis bus rezultatas.
+  > Pastaba, kuo arčiau 1.0, tuo įvairesnis bus rezultatas.
 
-- **Racionalumo modeliai nenaudoja `temperature`**. Tai svarbus 2026 metų pasikeitimas. Dabartiniai, nepasenusieji modeliai Microsoft Foundry yra **racionalumo modeliai** (GPT-5 šeima, o serija) – ir jie **nenaudoją `temperature` ar `top_p`** (nei `max_tokens`; naudokite `max_output_tokens`). Jei siųsite `temperature` modeliui `gpt-5-mini`, gausite klaidą „parametras nepalaikomas“. Todėl, norint išbandyti aukščiau pateiktą temperatūros pavyzdį, naudokite modelį, kuris vis dar palaiko atrankos valdiklius – pavyzdžiui, atvirą **Llama** modelį, kaip `Llama-3.3-70B-Instruct` iš [Microsoft Foundry modelių katalogo](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst), iškviečiamą per Foundry Models / Azure AI Inference galinį tašką (taip pat kaip `githubmodels-*` pavyzdžiai). Racionalumo modeliams, kaip GPT-5, išvestį valdote kitaip:
-  - **Užklausų inžinerija** – aiškios instrukcijos, pavyzdžiai ir struktūruotas išvestis (žr. pamoką [04 - Prompt Engineering](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)) atlieka darbą, kurį anksčiau darė atrankos valdikliai.
-  - **Racionalumo valdikliai** – parametrai kaip racionalumo pastangos/žodžių gausa subalansuoja racionalumo gylį su delsos laiku ir kaina.
+- **Reasoning modeliai nenaudoja `temperature`**. Tai svarbus 2026 metų pokytis. Dabartiniai, nepasenę Microsoft Foundry modeliai yra **reasoning modeliai** (GPT-5 šeima, o-serija) – ir jie **nesupportina `temperature` ar `top_p`** (taip pat ir `max_tokens`; naudokite `max_output_tokens`). Jei siųsite `temperature` į `gpt-5-mini`, gausite klaidą "parametras nepalaikomas". Taigi norėdami išbandyti aukščiau pateiktą temperatūros pavyzdį, pasirinkite modelį, kuris vis dar palaiko sampling valdiklius – pavyzdžiui, atvirą **Llama** modelį `Llama-3.3-70B-Instruct` iš [Microsoft Foundry modelių katalogo](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst), kuris kviečiamas per Foundry Models / Azure AI Inference galinį tašką (taip pat kaip `githubmodels-*` pavyzdžiai). Reasoning modeliams, pvz., GPT-5, išvestį kontroliuojame kitaip:
+  - **Promptų inžinerija** – aiškios instrukcijos, pavyzdžiai ir struktūrizuotas išvesties formatas (žiūrėkite pamoką [04 - Prompt Engineering](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)) atlieka darbą, kurį anksčiau atlikdavo sampling nustatymai.
+  - **Reasoning valdikliai** – parametrai, tokie kaip reasoning pastangos/verbališkumas, keičia reasoning gylį pagal delsą ir kainą.
 
-  Trumpai: `temperature`/`top_p` vis dar galioja daugeliui modelių (Llama, Mistral, Phi ir GPT-4.x šeimai – nors GPT-4.x yra atsisakoma), tačiau kryptis yra užklausų inžinerija + racionalumo valdikliai racionalumo modeliams kaip GPT-5.
+  Apibendrinant: `temperature`/`top_p` vis dar galioja daugelyje modelių (Llama, Mistral, Phi ir GPT-4.x šeimoje – nors GPT-4.x ir nyksta), bet kryptis juda link promptų inžinerijos ir reasoning valdiklių reasoning modeliuose kaip GPT-5.
 
 ## Užduotis
 
-Šiai užduočiai galite pasirinkti, ką sukurti.
+Šiai užduočiai galite pasirinkti, ką norite sukurti.
 
 Štai keletas pasiūlymų:
 
-- Patobulinkite receptų generatoriaus programėlę. Eksperimentuokite su temperatūros reikšmėmis ir užklausomis bei pažiūrėkite, ką galite išgauti.
-- Sukurkite "mokymosi draugą". Ši programa turėtų galėti atsakyti į klausimus apie tam tikrą temą, pavyzdžiui, Python, galėtumėte turėti užklausas kaip „Kas yra tam tikra tema Python?“ arba užklausą, kurioje būtų prašoma parodyti kodo pavyzdžių tam tikrai temai.
-- Istorijos botas, padarykite istoriją gyvą, nurodykite botui vaidinti tam tikrą istorinį veikėją ir klauskite jo apie jo gyvenimą ir laikus.
+- Patobulinkite receptų generatoriaus programėlę. Eksperimentuokite su temperatūros reikšmėmis ir užklausomis, pažiūrėkite, ką galite sukurti.
+- Sukurkite „studijų draugą“. Ši programėlė turėtų gebėti atsakyti į klausimus apie tam tikrą temą, pavyzdžiui, Python. Galite naudoti užklausas, pavyzdžiui, „Kas yra tam tikra tema Python?“, arba paprašyti parodyti kodo pavyzdžių tam tikrai temai.
+- Istorijos robotas, padarykite istoriją gyvą, nurodykite robotui vaidinti tam tikrą istorinį veikėją ir užduokite jam klausimų apie jo gyvenimą ir laikmetį.
 
 ## Sprendimas
 
-### Mokymosi draugas
+### Studijų draugas
 
-Žemiau pateikiama pradinė užklausa, pažiūrėkite, kaip ją naudoti ir tobulinti.
+Žemiau pateiktas pradinės užklausos pavyzdys, pažiūrėkite, kaip galite jį naudoti ir pritaikyti pagal savo norą.
 
 ```text
 - "You're an expert on the Python language
@@ -637,7 +636,7 @@ Turiu kodą, kuris veikia, bet yra keletas patobulinimų, kuriuos turėtume atli
     - exercise in code with solutions"
 ```
 
-### Istorijos botas
+### Istorijos robotas
 
 Štai keletas užklausų, kurias galite naudoti:
 
@@ -652,19 +651,19 @@ Turiu kodą, kuris veikia, bet yra keletas patobulinimų, kuriuos turėtume atli
 
 Ką daro temperatūros sąvoka?
 
-1. Ji valdo, kiek atsitiktinis yra rezultatas.
-1. Ji valdo, koks didelis yra atsakymas.
-1. Ji valdo, kiek žetonų naudojama.
+1. Ji kontroliuoja, kiek atsakymas yra atsitiktinis.
+1. Ji kontroliuoja, kokio ilgio yra atsakymas.
+1. Ji kontroliuoja, kiek žetonų yra naudojama.
 
 ## 🚀 Iššūkis
 
-Dirbdami prie užduoties, pabandykite keisti temperatūrą, nustatykite ją į 0, 0.5 ir 1. Atminkite, kad 0 yra mažiausiai įvairus, o 1 – labiausiai. Kokia reikšmė geriausiai tinka jūsų programai?
+Dirbdami su užduotimi, pamėginkite keisti temperatūrą, nustatykite ją kaip 0, 0.5 ir 1. Atminkite, kad 0 yra mažiausiai įvairu, o 1 – labiausiai. Kuri reikšmė geriausiai tinka jūsų programėlei?
 
-## Puikiai padirbėta! Tęskite mokymąsi
+## Puikus darbas! Tęskite mokymąsi
 
-Baigę šią pamoką, apsilankykite mūsų [Generatyvinio AI mokymosi kolekcijoje](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), kad toliau gilintumėte savo generatyvinio AI žinias!
+Užbaigus šią pamoką, peržiūrėkite mūsų [Generatyviosios AI mokymosi kolekciją](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), kad toliau gilintumėte žinias apie generatyviąją AI!
 
-Eikite į 7 pamoką, kurioje apžvelgsime, kaip [kurti pokalbių programas](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Eikite į 7-ąją pamoką, kur aptarsime, kaip [kurti pokalbių programėles](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 
