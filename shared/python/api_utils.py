@@ -22,7 +22,8 @@ def make_safe_request(
         url: The URL to request.
         method: HTTP method (GET, POST, etc.).
         timeout: Request timeout in seconds.
-        retries: Number of retry attempts.
+        retries: Number of attempts. At least one request is always made,
+                 even when this value is zero or negative.
         **kwargs: Additional arguments to pass to requests.
 
     Returns:
@@ -37,7 +38,9 @@ def make_safe_request(
     """
     last_exception: Exception | None = None
 
-    for attempt in range(retries):
+    # Always make at least one attempt: a non-positive ``retries`` must not
+    # silently skip the request and fall through to the generic error below.
+    for attempt in range(max(1, retries)):
         try:
             response = requests.request(method=method, url=url, timeout=timeout, **kwargs)
             response.raise_for_status()

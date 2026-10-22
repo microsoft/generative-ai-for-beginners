@@ -43,6 +43,32 @@ class TestMakeSafeRequest:
             make_safe_request("https://example.com", retries=3)
         assert calls["count"] == 3
 
+    def test_non_positive_retries_still_makes_one_attempt(self, monkeypatch):
+        calls = {"count": 0}
+
+        def fake_request(method, url, timeout, **kwargs):
+            calls["count"] += 1
+            raise RequestException("boom")
+
+        monkeypatch.setattr("shared.python.api_utils.requests.request", fake_request)
+        # retries=0 must attempt the request once and surface the real error,
+        # not skip the request and raise the generic "Request failed".
+        with pytest.raises(RequestException, match="boom"):
+            make_safe_request("https://example.com", retries=0)
+        assert calls["count"] == 1
+
+    def test_single_attempt_makes_exactly_one_request(self, monkeypatch):
+        calls = {"count": 0}
+
+        def fake_request(method, url, timeout, **kwargs):
+            calls["count"] += 1
+            raise RequestException("boom")
+
+        monkeypatch.setattr("shared.python.api_utils.requests.request", fake_request)
+        with pytest.raises(RequestException, match="boom"):
+            make_safe_request("https://example.com", retries=1)
+        assert calls["count"] == 1
+
 
 class TestCreateOpenAIClient:
     def test_missing_key_raises_value_error(self, monkeypatch):
