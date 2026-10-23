@@ -4,7 +4,7 @@
 
     * [English](/)
     * [Simplified Chinese](/translations/zh-CN/)
-    * [Traditional Chinese](/translations/zh-TW/)
+    * [Traditional Chinese (Taiwan)](/translations/zh-TW/)
     * [Portuguese (Brazil)](/translations/pt-BR/)
     * [Portuguese (Portugal)](/translations/pt-PT/)
     * [Japanese](/translations/ja/)
