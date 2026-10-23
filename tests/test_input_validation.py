@@ -86,6 +86,14 @@ class TestSanitizePromptInput:
         with pytest.raises(ValueError, match="invalid characters"):
             sanitize_prompt_input("{{a}}")
 
+    def test_strict_mode_removes_angle_brackets(self):
+        result = sanitize_prompt_input("<img src=x onerror=alert(1)>", strict=True)
+        assert result == "img src=x onerror=alert(1)"
+
+    def test_strict_mode_keeps_the_listed_punctuation(self):
+        text = "Hello, world! (ok) a-b: c; d? e=f and/or 50% #1 @me $5 & 'q' \"q\" 2*3+1"
+        assert sanitize_prompt_input(text, strict=True) == text
+
 
 class TestValidateEmail:
     def test_valid_email_lowercased(self):
