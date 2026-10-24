@@ -24,6 +24,10 @@
       relativePath: true,
       auto2top: true,
       loadNavbar: 'docs/_navbar.md',
+      alias: {
+        // Use the shared navigation instead of generated translated navbars.
+        '/.*/docs/_navbar.md': '/docs/_navbar.md',
+      },
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
