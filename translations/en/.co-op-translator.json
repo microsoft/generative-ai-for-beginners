@@ -72,8 +72,8 @@
     "language_code": "en"
   },
   "06-text-generation-apps/README.md": {
-    "original_hash": "bc1399ef83bb3226723a6f2bc7e30cc4",
-    "translation_date": "2026-07-16T10:16:03+00:00",
+    "original_hash": "3e3f0ba2e6aadac88b9b626ca410e0b7",
+    "translation_date": "2026-10-21T20:59:32+00:00",
     "source_file": "06-text-generation-apps/README.md",
     "language_code": "en"
   },
@@ -288,8 +288,8 @@
     "language_code": "en"
   },
   "19-slm/README.md": {
-    "original_hash": "26ec4b144d4756359f666a15e2e8c3b7",
-    "translation_date": "2026-07-16T10:27:29+00:00",
+    "original_hash": "7f635e1bbed1a578e2775f9c87e0115b",
+    "translation_date": "2026-10-21T20:58:41+00:00",
     "source_file": "19-slm/README.md",
     "language_code": "en"
   },
@@ -342,8 +342,8 @@
     "language_code": "en"
   },
   "README.md": {
-    "original_hash": "bc44817dcd8facb678cee32946cfd5fa",
-    "translation_date": "2026-07-16T10:07:32+00:00",
+    "original_hash": "722301548b4ecb613be06490a41de2b0",
+    "translation_date": "2026-10-21T20:57:06+00:00",
     "source_file": "README.md",
     "language_code": "en"
   },
@@ -358,11 +358,11 @@
       "original_hash": "b2651fb16bcfbc62b8e518751ed90fdb",
       "source_file": "05-advanced-prompts/README.md",
       "language_code": "en",
-      "failure_date": "2026-09-10T00:21:52+00:00",
+      "failure_date": "2026-10-21T20:57:46+00:00",
       "status": "failed",
       "error_type": "TranslationContentFilterError",
       "error_message": "Provider blocked markdown translation at prompt 1/2 because finish_reason was 'content_filter'.",
-      "translator_version": "0.20.0",
+      "translator_version": "0.23.1",
       "failure_policy_version": 1
     }
   },
