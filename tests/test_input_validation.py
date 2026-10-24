@@ -113,3 +113,28 @@ class TestValidateUrl:
     def test_garbage_raises(self):
         with pytest.raises(ValueError):
             validate_url("not a url")
+
+    def test_https_url_with_port(self):
+        assert validate_url("https://internal:8443/health") == "https://internal:8443/health"
+
+    def test_local_model_server_with_port(self):
+        assert (
+            validate_url("http://localhost:11434/api/generate", require_https=False)
+            == "http://localhost:11434/api/generate"
+        )
+
+    def test_ip_with_port(self):
+        assert validate_url("http://127.0.0.1:1234/v1", require_https=False) == (
+            "http://127.0.0.1:1234/v1"
+        )
+
+    def test_out_of_range_port_raises(self):
+        with pytest.raises(ValueError):
+            validate_url("https://internal:65536/health")
+        with pytest.raises(ValueError):
+            validate_url("http://localhost:99999/v1", require_https=False)
+
+    def test_non_ascii_digit_port_raises(self):
+        # A port made of Arabic-Indic digits must not pass; only ASCII digits are valid.
+        with pytest.raises(ValueError):
+            validate_url("http://localhost:٩٩٩/v1", require_https=False)
