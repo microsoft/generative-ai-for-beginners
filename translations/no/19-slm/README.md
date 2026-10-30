@@ -70,7 +70,7 @@ Bias er et kjent problem i LLM-er, hovedsakelig på grunn av naturen til trening
 
 **Inferens**
 
-Den reduserte størrelsen på SLM-er gir dem en betydelig fordel i form av inferenshastighet, noe som tillater rask generering av utdata på lokal maskinvare uten behov for omfattende parallellbehandling. I kontrast krever LLM-er, på grunn av sin størrelse og kompleksitet, ofte betydelige parallellberegningsressurser for å oppnå akseptable inferenstider. Tilstedeværelsen av flere samtidige brukere senker ytterligere LLM-ers responstid, spesielt ved storskala utrulling.
+Den reduserte størrelsen på SLM-er gir dem en betydelig fordel i form av inferenshastighet, noe som tillater rask generering av utdata på lokal maskinvare uten behov for omfattende parallellbehandling. I kontrast krever LLM-er, på grunn av sin størrelse og kompleksitet, ofte betydelige parallellberegningsressurser for å oppnå akseptable inferenstider. Tilstedeværelsen av flere samtidige brukere øker ytterligere LLM-ers responstid, spesielt ved storskala utrulling.
 
 Oppsummert, selv om både LLM-er og SLM-er deler en grunnleggende basis i maskinlæring, skiller de seg betydelig hva gjelder modellstørrelse, ressursbehov, kontekstuell forståelse, utsatthet for bias og inferenshastighet. Disse forskjellene gjenspeiler deres respektive egnethet for ulike bruksområder, der LLM-er er mer allsidige, men ressurskrevende, mens SLM-er tilbyr mer domene-spesifikk effektivitet med redusert beregningsbehov.
 
@@ -186,7 +186,7 @@ Hugging Face Transformers er et kraftig bibliotek designet for naturlig språkpr
 5. **Fellesskap og ressurser**: Hugging Face har et levende fellesskap og omfattende dokumentasjon, opplæringsprogrammer og veiledninger for å hjelpe brukere komme i gang og utnytte biblioteket best mulig.
 [offisiell dokumentasjon](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) eller deres [GitHub-repositorium](https://github.com/huggingface/transformers?WT.mc_id=academic-105485-koreyst).
 
-Dette er den mest brukte metoden, men den krever også GPU-akselerasjon. Scenarioer som Vision og MoE krever mye beregninger, som vil være veldig tregt på CPU hvis de ikke er kvantifisert.
+Dette er den mest brukte metoden, men den krever også GPU-akselerasjon. Scenarioer som Vision og MoE krever mye beregninger, som vil være veldig tregt på CPU hvis modellene ikke er kvantiserte.
 
 
 - Demo: Bruke Transformer for å kalle Phi-3.5-Instruct [Klikk på denne lenken](./python/phi35-instruct-demo.ipynb?WT.mc_id=academic-105485-koreyst)

@@ -156,7 +156,7 @@ model isimleri, güncellenmiş sağlayıcı rehberliği ve yeni geliştirici den
   DevContainer, testler) ve güncel gerçekleri yansıtacak şekilde güncellendi (çeviriler, Azure Co-op Translator tarafından otomatik olarak üretilmektedir; Assistants API, Responses API ile değiştirilmiştir).
 
 
-
+### Düzeltildi
 
 - **`shared/python/input_validation.py`** — `validate_text_input(allow_empty=True)` artık sadece boşluk içeren girdi için "çok kısa" hatası vermek yerine boş bir dize döndürüyor (bu, `None` durumu ile tutarlıdır). Yeni test paketi tarafından bulundu ve kapsandı.
   

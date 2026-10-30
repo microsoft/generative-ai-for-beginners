@@ -186,7 +186,7 @@ Hugging Face Transformers er et kraftfuldt bibliotek designet til naturlig sprog
 5. **Fællesskab og ressourcer**: Hugging Face har et levende fællesskab og omfattende dokumentation, tutorials og vejledninger til at hjælpe brugere i gang og få mest muligt ud af biblioteket.
 [officiel dokumentation](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) eller deres [GitHub-repository](https://github.com/huggingface/transformers?WT.mc_id=academic-105485-koreyst).
 
-Dette er den mest almindeligt anvendte metode, men den kræver også GPU-acceleration. Scenarier såsom Vision og MoE kræver trods alt mange beregninger, som vil være meget langsomme på CPU, hvis de ikke er kvantificerede.
+Dette er den mest almindeligt anvendte metode, men den kræver også GPU-acceleration. Scenarier såsom Vision og MoE kræver trods alt mange beregninger, som vil være meget langsomme på CPU, hvis modellerne ikke er kvantiserede.
 
 
 - Demo: Brug af Transformer til at kalde Phi-3.5-Instruct [Klik på dette link](./python/phi35-instruct-demo.ipynb?WT.mc_id=academic-105485-koreyst)
