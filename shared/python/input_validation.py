@@ -135,8 +135,8 @@ def sanitize_prompt_input(value: str, max_length: int = 1000, strict: bool = Fal
         sanitized = re.sub(pattern, "", sanitized, flags=re.IGNORECASE | re.DOTALL)
 
     if strict:
-        # In strict mode, only allow safe characters
-        sanitized = re.sub(r"[^\w\s,.\'\"-?!@#$%&*()+=:;]", "", sanitized, flags=re.UNICODE)
+        # In strict mode, only allow safe characters (the hyphen is escaped, not a range)
+        sanitized = re.sub(r"[^\w\s,.\'\"\-/?!@#$%&*()+=:;]", "", sanitized, flags=re.UNICODE)
 
     # Normalize line endings and collapse runs of spaces to a single space, but
     # preserve the newlines and tabs deliberately kept above so multi-line and
