@@ -22,7 +22,7 @@ After completing this lesson, you will be able to:
 
 - Explain the significance of RAG in data retrieval and processing.
 
-- Set up a RAG application and ground your data in an LLM
+- Set up a RAG application and ground an LLM with your data
 
 - Effectively integrate RAG and vector databases in LLM applications.
 
@@ -36,7 +36,7 @@ For this lesson, we want to add our own notes into the education startup, which 
 
 - `Azure AI Search` and `Azure Cosmos DB:` vector database to store our data and create a search index
 
-Users will be able to create practice quizzes from their notes, revision flash cards and summarize them into concise overviews. To get started, let us look at what RAG is and how it works:
+Users will be able to create practice quizzes and revision flashcards from their notes and summarize those notes into concise overviews. To get started, let us look at what RAG is and how it works:
 
 ## Retrieval Augmented Generation (RAG)
 
@@ -58,7 +58,7 @@ Suppose you want to deploy a chatbot that creates quizzes from your notes, you w
 
 ![Diagram showing RAG architecture](images/encoder-decode.png?WT.mc_id=academic-105485-koreyst)
 
-The architecture for RAG is implemented using transformers consisting of two parts: an encoder and a decoder. For example, when a user asks a question, the input text is encoded into vectors capturing the meaning of words, the vectors are matched against the document index, and the model generates new text based on the user query. The LLM uses an encoder-decoder model to generate the output.
+RAG combines a retriever with a generator: the query is converted into a vector, matched against the document index to find relevant text chunks, and those chunks are supplied as context to an LLM, which generates the response. The retriever and generator may use different models; RAG does not require an encoder-decoder transformer.
 
 Two approaches when implementing RAG according to the proposed paper: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) are:
 
@@ -82,7 +82,7 @@ Our application is based on our personal data, i.e., the Neural Network lesson f
 
 A vector database, unlike traditional databases, is a specialized database designed to store, manage and search embedded vectors. It stores numerical representations of documents. Breaking down data to numerical embeddings makes it easier for our AI system to understand and process the data.
 
-We store our embeddings in vector databases as LLMs have a limit of the number of tokens they accept as input. As you cannot pass the entire embeddings to an LLM, we will need to break them down into chunks and when a user asks a question, the embeddings most similar to the question will be returned together with the prompt. Chunking also reduces costs on the number of tokens passed through an LLM.
+Because LLMs have a limit on the number of input tokens, we split documents into chunks before embedding them. When a user asks a question, the embeddings most similar to the query identify the relevant text chunks, which are returned with the prompt. Chunking also reduces the number of tokens passed to the LLM and therefore can reduce costs.
 
 Some popular vector databases include Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant and DeepLake. You can create an Azure Cosmos DB model using Azure CLI with the following command:
 
