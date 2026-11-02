@@ -1,11 +1,18 @@
+<!-- _navbar.md -->
+
 * Odaberite jezik
 
-    * [English](../../../../../../..)
-    * [Simplified Chinese](../../../../../../../translations/zh)
-    * [Traditional Chinese](../../../../../../../translations/tw)
-    * [Portuguese](../../../../../../../translations/pt)
-    * [Japanese](../../../../../../../translations/ja)
-    * [Korean](../../../../../../../translations/ko)
+    * [English](../../..)
+    * [Simplified Chinese](../../zh-CN)
+    * [Traditional Chinese (Taiwan)](../../zh-TW)
+    * [Portuguese (Brazil)](../../pt-BR)
+    * [Portuguese (Portugal)](../../pt-PT)
+    * [Japanese](../../ja)
+    * [Korean](../../ko)
 
-**Odricanje od odgovornosti**:  
-Ovaj dokument je preveden korištenjem AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo postići točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni ljudski prijevod. Ne snosimo odgovornost za bilo kakva nesporazume ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Napomena**:
+Ovaj dokument je preveden korištenjem AI prevoditeljskog servisa [Co-op Translator](https://github.com/Azure/co-op-translator). Iako težimo točnosti, imajte na umu da automatski prijevodi mogu sadržavati greške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za važne informacije preporuča se profesionalni ljudski prijevod. Nismo odgovorni za bilo kakva nesporazumevanja ili pogrešne interpretacije koje proizlaze iz korištenja ovog prijevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
