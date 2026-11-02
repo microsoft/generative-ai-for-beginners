@@ -1,82 +1,82 @@
-# Tekstintuotantosovellusten rakentaminen
+# Tekstintuottosovellusten rakentaminen
 
-[![Tekstintuotantosovellusten rakentaminen](../../../translated_images/fi/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Tekstintuottosovellusten rakentaminen](../../../translated_images/fi/06-lesson-banner.a5c629f990a636c8.webp?WT.mc_id=academic-105485-koreyst)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
-> _(Napsauta yllä olevaa kuvaa nähdäksesi tämän oppitunnin videon)_
+> _(Klikkaa yllä olevaa kuvaa nähdäksesi tämän oppitunnin videon)_
 
-Olet tähän mennessä nähnyt tämän opetussuunnitelman kautta, että on olemassa ydinkäsitteitä kuten kehotteet ja jopa kokonainen ala nimeltä "prompt engineering". Monet työkalut, joiden kanssa voit olla vuorovaikutuksessa kuten ChatGPT, Office 365, Microsoft Power Platform ja muut, tukevat sinua käyttämään kehotteita jonkin saavuttamiseksi.
+Olet nähnyt tähän mennessä tämän opetussuunnitelman kautta, että on olemassa ydinperiaatteita kuten kehotteet ja jopa kokonainen ala nimeltä "kehotteiden suunnittelu". Monet työkalut, joiden kanssa voit olla vuorovaikutuksessa kuten ChatGPT, Office 365, Microsoft Power Platform ja monet muut, tukevat sinua käyttämään kehotteita jonkin saavuttamiseksi.
 
-Jotta voit lisätä tällaisen kokemuksen sovellukseen, sinun täytyy ymmärtää käsitteitä kuten kehotteet, täydennykset ja valita kirjasto, jonka kanssa työskennellä. Juuri tämän opit tässä luvussa.
+Jos haluat lisätä tällaisen käyttökokemuksen sovellukseen, sinun täytyy ymmärtää käsitteet kuten kehotteet, täydennykset ja valita käytettävä kirjasto. Juuri tätä opit tässä luvussa.
 
 ## Johdanto
 
-Tässä luvussa sinä:
+Tässä luvussa opit:
 
-- Opit openai-kirjastosta ja sen ydinkäsitteistä.
-- Rakennat tekstintuotantosovelluksen käyttäen openai:ta.
-- Ymmärrät, miten käyttää käsitteitä kuten kehotteet, lämpötila (temperature) ja tokenit tekstintuotantosovelluksen rakentamiseen.
+- Openai-kirjastosta ja sen ydinperiaatteista.
+- Rakentamaan tekstintuottosovelluksen käyttäen openai-kirjastoa.
+- Ymmärtämään, kuinka käyttää käsitteitä kuten kehotteet, lämpötila ja tokenit tekstintuottosovelluksen rakentamiseksi.
 
 ## Oppimistavoitteet
 
-Oppitunnin lopussa osaat:
+Tämän oppitunnin lopussa osaat:
 
-- Selittää, mitä tekstintuotantosovellus on.
-- Rakentaa tekstintuotantosovelluksen käyttäen openai:ta.
-- Määrittää sovelluksesi käyttämään enemmän tai vähemmän tokeneita ja muuttaa myös lämpötilaa vaihtelevamman tuloksen saavuttamiseksi.
+- Selittää, mikä tekstintuottosovellus on.
+- Rakentaa tekstintuottosovelluksen käyttäen openai-kirjastoa.
+- Määrittää sovelluksesi käyttämään enemmän tai vähemmän tokeneita sekä säätää lämpötilaa, vaihtelevan tuloksen saamiseksi.
 
-## Mikä on tekstintuotantosovellus?
+## Mikä on tekstintuottosovellus?
 
-Yleensä kun rakennat sovelluksen, siinä on jonkinlainen käyttöliittymä, kuten seuraava:
+Tavallisesti kun rakennat sovellusta, siinä on jonkinlainen käyttöliittymä kuten alla:
 
 - Komentopohjainen. Konsolisovellukset ovat tyypillisiä sovelluksia, joissa kirjoitat komennon ja se suorittaa tehtävän. Esimerkiksi `git` on komentopohjainen sovellus.
-- Käyttöliittymä (UI). Joissakin sovelluksissa on graafiset käyttöliittymät (GUI), joissa klikkaat painikkeita, syötät tekstiä, valitset vaihtoehtoja ja muuta.
+- Käyttöliittymä (UI). Joissakin sovelluksissa on graafisia käyttöliittymiä (GUI), joissa napsautat painikkeita, syötät tekstiä, valitset vaihtoehtoja ja muuta.
 
 ### Konsoli- ja käyttöliittymäsovellukset ovat rajallisia
 
 Vertaa sitä komentopohjaiseen sovellukseen, jossa kirjoitat komennon:
 
-- **Se on rajallinen.** Et voi kirjoittaa mitä tahansa komentoa, vain ne, joita sovellus tukee.
-- **Kielikohtainen.** Joissakin sovelluksissa tuetaan monia kieliä, mutta oletuksena sovellus on rakennettu tietylle kielelle, vaikka voit lisätä tukea useammille kielille.
+- **Se on rajallinen**. Et voi kirjoittaa mitä tahansa komentoa, ainoastaan niitä, joita sovellus tukee.
+- **Kieleen sidottu**. Jotkin sovellukset tukevat monia kieliä, mutta oletuksena sovellus on rakennettu tietylle kielelle, vaikka voit lisätä muitakin kieliä.
 
-### Tekstintuotantosovellusten edut
+### Tekstintuottosovellusten edut
 
-Miten tekstintuotantosovellus sitten eroaa?
+Miten sitten tekstintuottosovellus eroaa?
 
-Tekstintuotantosovelluksessa sinulla on enemmän joustavuutta, et ole rajoitettu joukkoon komentoja tai tiettyyn syötekieleen. Sen sijaan voit käyttää luonnollista kieltä vuorovaikutukseen sovelluksen kanssa. Toinen etu on, että olet jo vuorovaikutuksessa tietolähteen kanssa, joka on koulutettu valtavalla informaatioaineistolla, kun taas perinteinen sovellus voi olla rajoittunut tietokannan sisältöön.
+Tekstintuottosovelluksessa sinulla on enemmän joustavuutta, et ole sidottu joukkoon komentoja tai tiettyyn syötekieleen. Sen sijaan voit käyttää luonnollista kieltä ollaksesi vuorovaikutuksessa sovelluksen kanssa. Toinen etu on se, että olet jo vuorovaikutuksessa datalähteen kanssa, joka on koulutettu valtavalla tietomäärällä, kun taas perinteinen sovellus voi olla rajallinen suhteessa tietokannan sisältöön.
 
-### Mitä voin rakentaa tekstintuotantosovelluksella?
+### Mitä voin rakentaa tekstintuottosovelluksella?
 
 Voit rakentaa monenlaisia asioita. Esimerkiksi:
 
-- **Chatbotin.** Chatbot, joka vastaa kysymyksiin aiheista kuten yrityksestäsi ja sen tuotteista, voisi olla hyvä sovellus.
-- **Avustajan.** LLM:t ovat erinomaisia tehtävissä kuten tekstin tiivistäminen, tekstistä saatavien tietojen poimiminen, tekstin tuottaminen kuten CV:t ja muuta.
-- **Koodiavustajan.** Riippuen käyttämästäsi kielimallista, voit rakentaa koodiavustajan, joka auttaa sinua kirjoittamaan koodia. Voit esimerkiksi käyttää GitHub Copilot -tuotetta sekä ChatGPT:tä koodin kirjoittamisen avuksi.
+- **Chatbotin**. Chatbot, joka vastaa aiheisiin liittyviin kysymyksiin, kuten yrityksestäsi ja sen tuotteista, voisi olla hyvä valinta.
+- **Avustajan**. Suuret kielimallit (LLM) ovat hyviä asioissa kuten tekstin tiivistäminen, insightien saaminen tekstistä, tekstin tuottaminen kuten ansioluettelot ja muuta.
+- **Koodiavustajan**. Käyttämästäsi kielimallista riippuen voit rakentaa koodiavustajan, joka auttaa sinua kirjoittamaan koodia. Esimerkiksi voit käyttää tuotetta kuten GitHub Copilot sekä ChatGPT:tä koodin kirjoituksessa.
 
-## Kuinka pääsen alkuun?
+## Miten pääsen alkuun?
 
-Sinun täytyy löytää tapa integroitua LLM:ään, mikä yleensä tarkoittaa kahta tapaa:
+Sinun täytyy löytää tapa integroitua LLM:ään, joka yleensä käsittää seuraavat kaksi lähestymistapaa:
 
-- Käyttää API:a. Tässä rakennat web-pyyntöjä kehotteesi kanssa ja saat takaisin tuotettua tekstiä.
-- Käyttää kirjastoa. Kirjastot auttavat kapseloimaan API-kutsut ja tekevät niistä helpompia käyttää.
+- Käyttää APIa. Tässä sinun täytyy rakentaa web-pyyntöjä kehotteellasi ja saat takaisin tuotetun tekstin.
+- Käyttää kirjastoa. Kirjastot auttavat kapseloimaan API-kutsut ja tekevät niiden käytöstä helpompaa.
 
 ## Kirjastot/SDK:t
 
-On olemassa muutama tunnettu kirjasto, joilla työskennellä LLM:ien kanssa, kuten:
+On muutamia hyvin tunnettuja kirjastoja LLM:ien kanssa työskentelyyn kuten:
 
-- **openai**, tämä kirjasto tekee malliin yhdistämisestä ja kehotteiden lähettämisestä helppoa.
+- **openai**, tämä kirjasto helpottaa mallisi yhdistämistä ja kehotteiden lähettämistä.
 
-Sitten on kirjastoja, jotka toimivat korkeamalla tasolla, kuten:
+Sitten on kirjastoja, jotka toimivat korkeamalla tasolla kuten:
 
-- **Langchain**. Langchain on tunnettu ja tukee Pythonia.
+- **Langchain**. Langchain on hyvin tunnettu ja tukee Pythonia.
 - **Semantic Kernel**. Semantic Kernel on Microsoftin kirjasto, joka tukee kieliä C#, Python ja Java.
 
-## Ensimmäinen sovellus käyttäen openai:ta
+## Ensimmäinen sovellus openai-kirjastolla
 
-Katsotaan, miten rakennamme ensimmäisen sovelluksemme, mitä kirjastoja tarvitsemme, kuinka paljon tarvitaan ja niin edelleen.
+Katsotaan, miten voimme rakentaa ensimmäisen sovelluksemme, mitä kirjastoja tarvitsemme, kuinka paljon on tarpeen ja muuta.
 
 ### Asenna openai
 
-On monia kirjastoja OpenAI:n tai Azure OpenAI:n kanssa vuorovaikutukseen. On mahdollista käyttää lukuisia ohjelmointikieliä, kuten C#, Python, JavaScript, Java ja muut. Me olemme päättäneet käyttää `openai` Python-kirjastoa, joten käytämme `pip`-paketinhallintaa sen asentamiseen.
+On monia kirjastoja OpenAI:n tai Azure OpenAI:n kanssa kommunikointiin. On myös mahdollista käyttää useita ohjelmointikieliä kuten C#, Python, JavaScript, Java ja muita. Olemme valinneet käyttää `openai` Python-kirjastoa, joten käytämme `pip` sen asentamiseen.
 
 ```bash
 pip install openai
@@ -84,34 +84,34 @@ pip install openai
 
 ### Luo resurssi
 
-Sinun pitää suorittaa seuraavat vaiheet:
+Sinun täytyy suorittaa seuraavat vaiheet:
 
-- Luo tili Azureen osoitteessa [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-- Hanki pääsy Azure OpenAI:hin. Mene osoitteeseen [https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) ja pyydä pääsyä.
+- Luo tili Azuren [https://azure.microsoft.com/free/](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
+- Hanki pääsy Azure OpenAI:hin. Siirry [https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai](https://learn.microsoft.com/azure/ai-foundry/openai/overview#how-do-i-get-access-to-azure-openai?WT.mc_id=academic-105485-koreyst) ja pyydä pääsyä.
 
   > [!NOTE]
-  > Kirjoitushetkellä sinun tulee hakea pääsyä Azure OpenAI:hin.
+  > Kirjoitushetkellä sinun pitää hakea pääsyä Azure OpenAI:hin.
 
 - Asenna Python <https://www.python.org/>
-- Luo Azure OpenAI Service -resurssi. Katso ohjeesta, kuinka [luoda resurssi](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
+- Luo Azure OpenAI -palveluresurssi. Katso tämä opastus siitä, miten [luoda resurssi](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal?WT.mc_id=academic-105485-koreyst).
 
-### Löydä API-avain ja päätepiste
+### Etsi API-avain ja päätepiste
 
-Tällä hetkellä sinun täytyy kertoa `openai`-kirjastolle, mikä API-avain käytetään. Löytääksesi API-avaimesi, mene Azure OpenAI -resurssisi "Avain ja päätepiste" -osioon ja kopioi "Avain 1" arvo.
+Tässä vaiheessa sinun täytyy kertoa `openai` -kirjastollesi, mitä API-avainta käyttää. Löytääksesi API-avaimesi, siirry Azure OpenAI -resurssisi "Avaimet ja päätepiste" -osioon ja kopioi "Avain 1" -arvo.
 
-![Avain ja päätepiste resurssilapussa Azure-portaalissa](https://learn.microsoft.com/azure/ai-foundry/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
+![Avaimet ja päätepiste resurssin näkymä Azure-portaalissa](https://learn.microsoft.com/azure/ai-foundry/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
 Nyt kun sinulla on tämä tieto kopioituna, ohjataan kirjastot käyttämään sitä.
 
 > [!NOTE]
-> On suositeltavaa erottaa API-avain koodista. Voit tehdä niin käyttämällä ympäristömuuttujia.
+> On suositeltavaa erottaa API-avain koodistasi. Voit tehdä sen käyttämällä ympäristömuuttujia.
 >
 > - Aseta ympäristömuuttuja `OPENAI_API_KEY` API-avaimeksi.
 >   `export OPENAI_API_KEY='sk-...'`
 
-### Azure-konfiguraation asettaminen
+### Azure-konfiguraation asetukset
 
-Jos käytät Azure OpenAI:ta (nyt osa Microsoft Foundrya), näin asetat konfiguraation. Käytämme standardia `OpenAI`-asiakasta osoitettuna Azure OpenAI `/openai/v1/` -päätepisteeseen, joka toimii Responses API:n kanssa eikä tarvitse `api_version`-asetusta:
+Jos käytät Azure OpenAI:ta (nykyisin osa Microsoft Foundryä), näin asetat konfiguraation. Käytämme tavallista `OpenAI` -asiakasta osoitettuna Azure OpenAI -`/openai/v1/` -päätepisteeseen, joka toimii Responses API:n kanssa eikä vaadi `api_version`:a:
 
 ```python
 import os
@@ -126,30 +126,30 @@ client = OpenAI(
 Yllä asetamme seuraavat:
 
 - `api_key`, tämä on API-avaimesi, joka löytyy Azure-portaalista tai Microsoft Foundry -portaalista.
-- `base_url`, tämä on Foundry-resurssisi päätepiste, johon on lisätty `/openai/v1/`. Vakaa v1-päätepiste toimii OpenAI:n ja Azure OpenAI:n kanssa ilman `api_version`-hallintaa.
+- `base_url`, tämä on Foundry-resurssisi päätepiste, johon on lisätty `/openai/v1/`. Vakaasti toimiva v1-päätepiste toimii sekä OpenAI:n että Azure OpenAI:n kanssa ilman `api_version` hallintaa.
 
-> [!NOTE] > `os.environ` lukee ympäristömuuttujia. Voit käyttää sitä lukemaan esimerkiksi ympäristömuuttujia `AZURE_OPENAI_API_KEY` ja `AZURE_OPENAI_ENDPOINT`. Aseta nämä ympäristömuuttujat terminaalissasi tai käytä kirjastoa kuten `dotenv`.
+> [!NOTE] > `os.environ` lukee ympäristömuuttujia. Voit käyttää sitä lukemaan ympäristömuuttujia kuten `AZURE_OPENAI_API_KEY` ja `AZURE_OPENAI_ENDPOINT`. Aseta nämä ympäristömuuttujat terminaalissasi tai käyttämällä kirjastoa kuten `dotenv`.
 
 ## Tekstin generointi
 
-Tekstin generoiminen tapahtuu Responses API:lla metodin `responses.create` avulla. Tässä esimerkki:
+Tekstin syntetisoimiseen käytetään Responses APIa `responses.create` -menetelmän kautta. Tässä esimerkki:
 
 ```python
 prompt = "Complete the following: Once upon a time there was a"
 
 response = client.responses.create(
-    model="gpt-5-mini",  # tämä on mallisi käyttöönoton nimi
+    model="gpt-5-mini",  # this is your model deployment name
     input=prompt,
     store=False,
 )
 print(response.output_text)
 ```
 
-Yllä olevassa koodissa luomme vastauksen ja annamme käytettävän mallin sekä kehotteen. Sitten tulostamme tuotetun tekstin `response.output_text` kautta.
+Yllä olevassa koodissa luomme vastauksen ja annamme mallin, jota haluamme käyttää, sekä kehotteen. Sitten tulostamme generoidun tekstin käyttäen `response.output_text`.
 
-### Monikierroskeskustelut
+### Monivuorovaikutteiset keskustelut
 
-Responses API sopii hyvin sekä yksikkökierroksen tekstintuotantoon että monikierroksisiin chatbotteihin — annat `input`-kenttään viestilistan keskustelun rakentamiseksi:
+Responses API soveltuu hyvin sekä yksittäisten vuorojen tekstin generoimiseen että monivuorovaikutteisiin chatbotteihin - annat listan viesteistä `input` muodossa keskustelun rakentamiseksi:
 
 ```python
 from openai import OpenAI
@@ -162,9 +162,9 @@ print(response.output_text)
 
 Lisää tästä toiminnallisuudesta seuraavassa luvussa.
 
-## Harjoitus - ensimmäinen tekstintuotantosovelluksesi
+## Harjoitus – ensimmäinen tekstintuottosovelluksesi
 
-Nyt kun olemme oppineet asentamaan ja konfiguroimaan openai:n, on aika rakentaa ensimmäinen tekstintuotantosovelluksesi. Rakentaaksesi sovelluksen, seuraa näitä vaiheita:
+Nyt kun olemme oppineet, miten openai asennetaan ja konfiguroidaan, on aika rakentaa ensimmäinen tekstintuottosovelluksesi. Noudata näitä ohjeita:
 
 1. Luo virtuaaliympäristö ja asenna openai:
 
@@ -175,12 +175,12 @@ Nyt kun olemme oppineet asentamaan ja konfiguroimaan openai:n, on aika rakentaa 
    ```
 
    > [!NOTE]
-   > Jos käytät Windowsia, kirjoita `venv\Scripts\activate` sen sijaan, että käytät `source venv/bin/activate`.
+   > Jos käytät Windowsia, kirjoita `venv\Scripts\activate` sijasta `source venv/bin/activate`.
 
    > [!NOTE]
-   > Löydä Azure OpenAI -avaimesi siirtymällä osoitteeseen [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst), etsi `Open AI`, valitse `Open AI resource` ja sitten `Keys and Endpoint` ja kopioi `Key 1` arvo.
+   > Etsi Azure OpenAI -avaimesi siirtymällä [https://portal.azure.com/](https://portal.azure.com/?WT.mc_id=academic-105485-koreyst) ja etsi `Open AI`, valitse `Open AI resource` ja sitten `Keys and Endpoint` ja kopioi `Key 1` arvo.
 
-1. Luo _app.py_-tiedosto ja lisää siihen seuraava koodi:
+1. Luo tiedosto _app.py_ ja lisää siihen seuraava koodi:
 
    ```python
    import os
@@ -192,20 +192,20 @@ Nyt kun olemme oppineet asentamaan ja konfiguroimaan openai:n, on aika rakentaa 
    )
    deployment_name = "<deployment name>"
 
-   # lisää lopetuskoodisi
+   # add your completion code
    prompt = "Complete the following: Once upon a time there was a"
 
-   # tee pyyntö Responses API:lla
+   # make a request using the Responses API
    response = client.responses.create(model=deployment_name, input=prompt, store=False)
 
-   # tulosta vastaus
+   # print response
    print(response.output_text)
    ```
 
    > [!NOTE]
-   > Jos käytät tavallista OpenAI:ta (et Azurea), käytä `client = OpenAI(api_key="<korvaa tämä OpenAI-avaimellasi>")` (ei `base_url`) ja anna mallin nimeksi esimerkiksi `gpt-5-mini` käyttöönoton nimen sijaan.
+   > Jos käytät tavallista OpenAI:ta (et Azurea), käytä `client = OpenAI(api_key="<replace this value with your OpenAI key>")` (ei `base_url`) ja anna mallin nimi kuten `gpt-5-mini` käyttöön deployment-nimen sijaan.
 
-   Näet tulosteen, joka on esimerkiksi seuraava:
+   Näet ulostulon, joka näyttää plan seuraavalta:
 
    ```output
     very unhappy _____.
@@ -213,25 +213,25 @@ Nyt kun olemme oppineet asentamaan ja konfiguroimaan openai:n, on aika rakentaa 
    Once upon a time there was a very unhappy mermaid.
    ```
 
-## Erilaisia kehotteita eri asioihin
+## Eri tyyppiset kehotteet eri tarkoituksiin
 
-Nyt kun tiedät, miten generoida tekstiä kehotteen avulla. Sinulla on jopa ohjelma käynnissä, jota voit muuttaa ja säätää tuottamaan erilaisia tekstityyppejä.
+Nyt olet nähnyt, miten teksti generoidaan kehotteen avulla. Sinulla on jopa toimiva ohjelma käynnissä, jota voit muokata ja vaihtaa tuottamaan erilaisia tekstityyppejä.
 
-Kehotteita voi käyttää monenlaisiin tehtäviin. Esimerkiksi:
+Kehotteita voi käyttää moniin tehtäviin. Esimerkiksi:
 
-- **Tuottaa tietyn tyyppistä tekstiä.** Voit esimerkiksi tuottaa runon, kysymyksiä visaan jne.
-- **Hakea tietoa.** Voit käyttää kehotteita tiedon hakemiseen, kuten esimerkissä 'Mitä CORS tarkoittaa web-kehityksessä?'.
-- **Tuottaa koodia.** Voit käyttää kehotteita koodin tuottamiseen, esimerkiksi säännöllisen lausekkeen kehittämiseen sähköpostien validointiin tai miksei tuottaa koko ohjelma, kuten web-sovellus?
+- **Tuottaa tietynlaista tekstiä**. Voit esimerkiksi tuottaa runon, kysymyksiä tietovisaan jne.
+- **Tiedon etsiminen**. Voit käyttää kehotteita etsiäksesi tietoa kuten esimerkkikysymys: 'Mitä CORS tarkoittaa web-kehityksessä?'.
+- **Koodin generointi**. Voit käyttää kehotteita koodin tuottamiseen, esimerkiksi säännöllisen lausekkeen kehittämiseen sähköpostien validointiin tai miksei koko ohjelman, kuten web-sovelluksen generointiin?
 
-## Käytännöllisempi käyttötapaus: reseptin luoja
+## Käytännön esimerkki: reseptigeneraattori
 
-Kuvittele, että sinulla on aineksia kotona ja haluat kokata jotakin. Tarvitset siihen reseptin. Tavan löytää reseptejä on käyttää hakukonetta tai voit käyttää LLM:ää siihen.
+Kuvittele, että sinulla on aineksia kotona ja haluat laittaa jotain ruokaa. Tarvitset reseptin. Reseptien löytämiseen voit käyttää hakukonetta tai voit käyttää LLM:ää.
 
 Voisit kirjoittaa kehotteen näin:
 
-> "Näytä minulle 5 reseptiä ruualle, jossa on seuraavat ainekset: kana, perunat ja porkkanat. Listaa jokaisen reseptin kaikki käytetyt ainekset"
+> "Näytä 5 reseptiä ruoalle, jossa on seuraavat ainekset: kana, perunat ja porkkanat. Per resepti, listaa kaikki käytetyt ainekset."
 
-Edellä mainitun kehotteen perusteella saatat saada vastauksen, joka näyttää tältä:
+Edellä mainitun kehotteen perusteella voit saada vastauksen, joka on tällainen:
 
 ```output
 1. Roasted Chicken and Vegetables:
@@ -295,14 +295,14 @@ Ingredients:
 - 1 teaspoon dried oregano
 ```
 
-Tämä tulos on loistava, tiedän mitä kokata. Tässä vaiheessa hyödyllisiä parannuksia voisivat olla:
+Tämä tulos on mahtava, tiedän mitä laittaa. Tässä vaiheessa hyödyllisiä parannuksia voisivat olla:
 
-- Suodattaa pois aineksia, joista en pidä tai joille olen allerginen.
-- Tuottaa ostoslista, jos en omista kaikkia aineksia kotona.
+- Suodattaa pois ainekset, joista en pidä tai joita olen allerginen.
+- Tuottaa ostoslista siltä varalta, että minulla ei ole kaikkia aineksia kotona.
 
-Edellä mainitut tapaukset huomioiden lisäämme lisäkehotteen:
+Yllä mainittuihin tarkoituksiin lisätään lisäkehotte:
 
-> "Poista receptit, joissa on valkosipulia, sillä olen allerginen, ja korvaa ne jollakin muulla. Lisäksi tee ostoslista resepteistä, ottaen huomioon, että minulla on jo kanaa, perunoita ja porkkanoita kotona."
+> "Ole hyvä ja poista reseptit, joissa on valkosipulia, koska olen allerginen ja korvaa se jollain muulla. Laadi myös ostoslista resepteistä ottaen huomioon, että minulla on jo kotona kana, perunat ja porkkanat."
 
 Nyt sinulla on uusi tulos, nimittäin:
 
@@ -371,20 +371,20 @@ Shopping List:
 - Pepper
 ```
 
-Siinä ovat viisi reseptiäsi ilman valkosipulia ja myös ostoslista ottaen huomioon jo olemassa olevat kotitarvikkeet.
+Tässä ovat viisi reseptiä ilman valkosipulia sekä ostoslista, kun otetaan huomioon jo olemassa olevat ainekset kotona.
 
-## Harjoitus - rakenna reseptin luoja
+## Harjoitus – rakenna reseptigeneraattori
 
-Nyt kun olemme käyneet skenaarion läpi, kirjoitetaan koodi vastaamaan tätä esimerkkitapausta. Toimi seuraavasti:
+Nyt kun olemme pelanneet läpi skenaarion, kirjoitetaan koodi, joka vastaa demonstroitua skenaariota. Tee näin:
 
-1. Käytä olemassa olevaa _app.py_-tiedostoa lähtökohtana
-1. Etsi muuttuja `prompt` ja muuta sen koodi seuraavaan:
+1. Käytä olemassa olevaa _app.py_-tiedostoa lähtökohtana.
+1. Etsi `prompt` muuttuja ja vaihda sen koodi seuraavaan:
 
    ```python
    prompt = "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
    ```
 
-   Jos ajat koodia nyt, sinun tulisi nähdä tuloste, joka näyttää tältä:
+   Jos ajat koodin nyt, sinun pitäisi nähdä tulos, joka on lähempänä tällaista:
 
    ```output
    -Chicken Stew with Potatoes and Carrots: 3 tablespoons oil, 1 onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 bay leaf, 1 thyme sprig, 1/2 teaspoon salt, 1/4 teaspoon black pepper, 1 1/2 cups chicken broth, 1/2 cup dry white wine, 2 tablespoons chopped fresh parsley, 2 tablespoons unsalted butter, 1 1/2 pounds boneless, skinless chicken thighs, cut into 1-inch pieces
@@ -396,9 +396,9 @@ Nyt kun olemme käyneet skenaarion läpi, kirjoitetaan koodi vastaamaan tätä e
    -Chicken, Potato, and Carrot Curry: 1 tablespoon vegetable oil, 1 large onion, chopped, 2 cloves garlic, minced, 1 carrot, peeled and chopped, 1 potato, peeled and chopped, 1 teaspoon ground coriander, 1 teaspoon ground cumin, 1/2 teaspoon ground turmeric, 1/2 teaspoon ground ginger, 1/4 teaspoon cayenne pepper, 2 cups chicken broth, 1/2 cup dry white wine, 1 (15-ounce) can chickpeas, drained and rinsed, 1/2 cup raisins, 1/2 cup chopped fresh cilantro
    ```
 
-   > HUOM, LLM:si ei ole deterministinen, joten voit saada eri tuloksia joka kerta kun ajat ohjelmaa.
+   > HUOMIO, LLM:si ei ole deterministinen, joten saatat saada eri tuloksia joka kerta ohjelmaa suorittaessasi.
 
-   Hienoa, katsotaan miten voimme parantaa asioita. Parantaaksemme haluamme tehdä koodista joustavan, jotta aineksia ja reseptien määrää voi muuttaa ja säätää.
+   Hienoa, katsotaan kuinka voimme parantaa asioita. Parantamiseksi haluamme varmistaa, että koodi on joustava, jotta ainesosia ja reseptien määrää voidaan muuttaa ja parantaa.
 
 1. Muutetaan koodia seuraavasti:
 
@@ -407,11 +407,11 @@ Nyt kun olemme käyneet skenaarion läpi, kirjoitetaan koodi vastaamaan tätä e
 
    ingredients = input("List of ingredients (for example, chicken, potatoes, and carrots): ")
 
-   # interpoloida reseptien määrä kehotteeseen ja ainesosiin
+   # interpolate the number of recipes into the prompt an ingredients
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   Koekäyttö voisi näyttää tältä:
+   Koodin testiajo voisi näyttää tältä:
 
    ```output
    No of recipes (for example, 5): 3
@@ -422,13 +422,13 @@ Nyt kun olemme käyneet skenaarion läpi, kirjoitetaan koodi vastaamaan tätä e
    -Strawberry milk: milk, strawberries, sugar, vanilla extract
    ```
 
-### Paranna lisäämällä suodatus ja ostoslista
+### Paranna lisäämällä suodatin ja ostoslista
 
-Meillä on nyt toimiva sovellus, joka pystyy tuottamaan reseptejä, ja se on joustava, koska se perustuu käyttäjän syötteisiin, sekä reseptien määrään että käytettyihin aineksiin.
+Meillä on nyt toimiva sovellus, joka pystyy tuottamaan reseptejä ja se on joustava, koska se perustuu käyttäjän syötteisiin, sekä reseptien määrän että käytettyjen ainesten osalta.
 
-Jatko-ominaisuutena haluamme lisätä:
+Parantaaksemme sitä lisää, haluamme lisätä seuraavat ominaisuudet:
 
-- **Suodattaa pois ainekset.** Haluamme pystyä suodattamaan pois aineksia, joista emme pidä tai joille olemme allergisia. Tämän muutoksen tekemiseksi voimme muokata nykyistä kehotettamme lisäämällä loppuun suodatusehdon näin:
+- **Suodata pois ainekset**. Haluamme pystyä suodattamaan pois ainekset, joista emme pidä tai joille olemme allergisia. Tämä tehdään muokkaamalla kehotetta ja lisäämällä siihen suodatusehto loppuun, vaikka näin:
 
   ```python
   filter = input("Filter (for example, vegetarian, vegan, or gluten-free): ")
@@ -436,9 +436,9 @@ Jatko-ominaisuutena haluamme lisätä:
   prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used, no {filter}"
   ```
 
-  Yllä lisäämme `{filter}` kehotteen loppuun ja otamme myös talteen suodatusarvon käyttäjältä.
+  Yllä lisätään `{filter}` kehotteen loppuun ja keräämme myös suodatusarvon käyttäjältä.
 
-  Ohjelman ajon esimerkkisyöte voi nyt näyttää tältä:
+  Esimerkki ohjelman suorittamisesta voi nyt näyttää tältä:
 
   ```output
   No of recipes (for example, 5): 3
@@ -505,14 +505,13 @@ Jatko-ominaisuutena haluamme lisätä:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  Kuten näet, kaikki reseptit, joissa on maito, on suodatettu pois. Mutta jos olet laktoosi-intolerantti, saatat haluta myös suodattaa juustoa sisältävät reseptit, joten asian pitää olla selkeä.
+  Kuten näet, reseptit, joissa on maitoa, on suodatettu pois. Mutta jos olet laktoosi-intolerantti, saatat haluta suodattaa myös reseptit, joissa on juustoa, joten täytyy olla selkeä.
 
+- **Tuota ostoslista**. Haluamme tuottaa ostoslistan ottaen huomioon, mitä meillä jo on kotona.
 
-- **Tee ostoslista**. Haluamme tehdä ostoslistan ottaen huomioon, mitä meillä jo on kotona.
+  Tätä varten voisimme yrittää ratkaista kaiken yhdessä kehotteessa tai jakaa sen kahteen kehotteeseen. Kokeillaan jälkimmäistä. Tässä ehdotetaan lisäkehotteen lisäämistä, mutta siihen tarvitsemme ensimmäisen kehotteen tuloksen kontekstiksi toiselle kehotteelle.
 
-  Tätä toimintoa varten voisimme joko yrittää ratkaista kaiken yhdellä kehotteella tai voisimme jakaa sen kahteen kehotteeseen. Kokeillaan jälkimmäistä lähestymistapaa. Tässä ehdotamme lisättyä kehotetta, mutta sen toimimiseksi meidän täytyy lisätä ensimmäisen kehotteen tulos toisen kehotteen kontekstiksi.
-
-  Etsi koodista kohta, joka tulostaa ensimmäisen kehotteen tuloksen, ja lisää seuraava koodi sen alle:
+  Etsi koodista osa, joka tulostaa ensimmäisen kehotteen tuloksen ja lisää seuraava koodi sen alle:
 
   ```python
   old_prompt_result = response.output_text
@@ -521,26 +520,26 @@ Jatko-ominaisuutena haluamme lisätä:
   new_prompt = f"{old_prompt_result} {prompt}"
   response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
 
-  # tulosta vastaus
+  # print response
   print("Shopping list:")
   print(response.output_text)
   ```
 
   Huomioi seuraavat asiat:
 
-  1. Rakennamme uuden kehotteen lisäämällä ensimmäisen kehotteen tuloksen uuteen kehotteeseen:
+  1. Rakennamme uuden kehotteen lisäämällä ensimmäisen kehotteen tuloksen uuden kehotteen yhteyteen:
 
      ```python
      new_prompt = f"{old_prompt_result} {prompt}"
      ```
 
-  1. Teemme uuden pyynnön, mutta otamme myös huomioon ensimmäisessä kehotteessa pyytämämme tokenien määrän, joten tällä kertaa asetamme `max_output_tokens` arvoksi 1200.
+  1. Teemme uuden pyynnön, ottaen kuitenkin huomioon ensimmäisessä kehotteessa pyydetyt tokenit, joten tällä kertaa sanomme `max_output_tokens` olevan 1200.
 
      ```python
      response = client.responses.create(model=deployment_name, input=new_prompt, max_output_tokens=1200, store=False)
      ```
 
-     Kun kokeilemme tätä koodia, saamme nyt seuraavan tulosteen:
+     Kun ajat tämän koodin, saat nyt seuraavan ulostulon:
 
      ```output
      No of recipes (for example, 5): 2
@@ -554,19 +553,19 @@ Jatko-ominaisuutena haluamme lisätä:
      -Flour, baking powder, baking soda, salt, sugar, egg, buttermilk, butter, apple, nutmeg, cinnamon, allspice
      ```
 
-## Paranna asennustasi
+## Paranna asetuksiasi
 
-Tähän asti meillä on toimiva koodi, mutta on joitain säätöjä, joita meidän pitäisi tehdä parantaaksemme tilannetta entisestään. Joitakin asioita, jotka meidän tulisi tehdä, ovat:
+Se, mitä meillä on tähän mennessä, on toimivaa koodia, mutta joitakin säätöjä kannattaa tehdä parantaaksemme asioita edelleen. Joitakin asioita, jotka meidän kannattaa tehdä, ovat:
 
-- **Erottele salaisuudet koodista**, kuten API-avain. Salaisuudet eivät kuulu koodiin ja ne pitäisi säilyttää turvallisessa paikassa. Erotellaksemme salaisuudet koodista, voimme käyttää ympäristömuuttujia ja kirjastoja kuten `python-dotenv` ladata ne tiedostosta. Tässä on esimerkki koodista:
+- **Erottele salaisuudet koodista**, kuten API-avain. Salaisuudet eivät kuulu koodiin ja ne tulisi säilyttää turvallisessa paikassa. Erotellaksemme salaisuudet koodista voimme käyttää ympäristömuuttujia ja kirjastoja kuten `python-dotenv` ladataksemme ne tiedostosta. Tässä on, miltä se näyttäisi koodissa:
 
-  1. Luo `.env` -tiedosto seuraavalla sisällöllä:
+  1. Luo tiedosto `.env` seuraavalla sisällöllä:
 
      ```bash
      OPENAI_API_KEY=sk-...
      ```
 
-     > Huomaa, että Azure OpenAI:ssa Microsoft Foundryssa sinun täytyy asettaa seuraavat ympäristömuuttujat sijaan:
+     > Huomaa, että Azure OpenAI:ssa Microsoft Foundryssa sinun täytyy sen sijaan asettaa seuraavat ympäristömuuttujat:
 
      ```bash
      AZURE_OPENAI_API_KEY=<replace>
@@ -574,7 +573,7 @@ Tähän asti meillä on toimiva koodi, mutta on joitain säätöjä, joita meid�
      AZURE_OPENAI_API_VERSION=2024-10-21
      ```
 
-     Koodissa lataat ympäristömuuttujat näin:
+     Koodissa voit ladata ympäristömuuttujat näin:
 
      ```python
      import os
@@ -586,45 +585,45 @@ Tähän asti meillä on toimiva koodi, mutta on joitain säätöjä, joita meid�
      client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
      ```
 
-- **Sana token-pituudesta**. Meidän tulisi harkita, kuinka monta tokenia tarvitsemme halutun tekstin luomiseen. Tokenit maksavat rahaa, joten missä mahdollista meidän tulisi olla säästäväisiä käyttämissämme tokeneissa. Voimmeko esimerkiksi muotoilla kehotteen niin, että voimme käyttää vähemmän tokeneja?
+- **Sana tokeneiden pituudesta**. Meidän tulisi pohtia, kuinka monta tokenia tarvitsemme haluamamme tekstin luomiseen. Tokenit maksavat rahaa, joten missä mahdollista meidän tulee pyrkiä käyttämään tokenien määrää taloudellisesti. Voimmeko esimerkiksi muotoilla kehotteen niin, että voimme käyttää vähemmän tokeneita?
 
-  Muuttaaksesi käytettyjen tokenien määrää, voit käyttää `max_output_tokens` parametriä. Esimerkiksi, jos haluat käyttää 100 tokenia, teet näin:
+  Tokeneiden määrää voit muuttaa käyttämällä parametria `max_output_tokens`. Jos haluat esimerkiksi käyttää 100 tokenia, tekisit näin:
 
   ```python
   response = client.responses.create(model=deployment, input=prompt, max_output_tokens=100, store=False)
   ```
 
-- **Kokeile lämpötilaa**. Lämpötila on jotain, mitä emme ole tähän asti maininneet, mutta se on tärkeä konteksti ohjelmamme toiminnalle. Mitä korkeampi lämpötilan arvo on, sitä satunnaisempi tuloste on. Päinvastoin, mitä matalampi lämpötila on, sitä ennakoitavampi tulos on. Mieti haluatko vaihtelua tulosteeseesi vai et.
+- **Kokeile lämpötilaa**. Lämpötila on asia, josta emme ole tähän mennessä puhuneet, mutta se on tärkeä konteksti ohjelmamme suorituskyvylle. Mitä korkeampi lämpötilan arvo on, sitä satunnaisempi on tulos. Vastaavasti mitä matalampi lämpötila on, sitä ennustettavampi tulos on. Mieti, haluatko vaihtelua tulokseesi vai et.
 
-  Muuttaaksesi lämpötilaa, voit käyttää `temperature` parametria. Esimerkiksi, jos haluat käyttää lämpötilaa 0.5, teet näin:
+  Voit muuttaa lämpötilaa käyttämällä parametria `temperature`. Jos haluat lämpötilaksi 0.5, tekisit näin:
 
   ```python
   response = client.responses.create(model=deployment, input=prompt, temperature=0.5, store=False)
   ```
 
-  > Huomaa, mitä lähempänä arvo on 1.0, sitä moninaisempi tuloste on.
+  > Huomaa, lähemmäs arvoa 1.0 mentäessä tulos on entistä vaihtelevampi.
 
-- **Päättelymallit eivät käytä `temperature`-parametria**. Tämä on tärkeä muutos vuodelle 2026. Nykyiset ei-vanhentuneet Microsoft Foundryn mallit ovat **päättelymalleja** (GPT-5 perhe, o-sarja) - ja ne **eivät tue `temperature`- tai `top_p`-parametreja** (eivätkä `max_tokens`; käytä `max_output_tokens`). Jos lähetät `temperature`-parametrin mallille `gpt-5-mini`, saat virheilmoituksen "parameter not supported". Joten kokeillaksesi yllä olevaa lämpötilaesimerkkiä, osoita se mallille, joka vielä tukee otantakontrolleja - esimerkiksi avoimelle **Llama**-mallille kuten `Llama-3.3-70B-Instruct` Microsoft Foundryn malliluettelosta ([Microsoft Foundry model catalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst)), jota kutsutaan Foundry Models / Azure AI Inference rajapinnan kautta (kuten `githubmodels-*` esimerkeissä). Päättelymalleilla kuten GPT-5 ohjaat tulosta eri tavalla:
-  - **Kehoteoptimointi** - selkeät ohjeet, esimerkit ja jäsennelty tuloste (katso oppitunti [04 - Prompt Engineering](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)) tekevät työn, jota otantapolkimet aiemmin tekivät.
-  - **Päättelykontrollit** - parametrit kuten päättelyponnistus/puhdas ilmaisu käyvät kauppaa päättelyn syvyyden ja viiveen sekä kustannusten kesken.
+- **Päättelymalleissa ei käytetä `temperature`**. Tämä on tärkeä muutos vuodelle 2026. Tällä hetkellä Microsoft Foundryn nykyiset, ei vanhentuneet mallit ovat **päättelymalleja** (GPT-5 -perhe, o-sarja) - ja ne **eivät tue `temperature` tai `top_p`** (eivätkä myöskään `max_tokens`; käytä `max_output_tokens`). Jos lähetät `temperature` osoitteeseen `gpt-5-mini`, saat virheen "parametri ei tuettu". Joten kokeillaksesi yllä olevaa lämpötilaesimerkkiä, osoita se mallille, joka edelleen tukee otannan säätimiä - esimerkiksi avoimelle **Llama**-mallille, kuten `Llama-3.3-70B-Instruct` Microsoft Foundryn malliluettelosta [Microsoft Foundry model catalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst), jota kutsutaan Foundry Models / Azure AI Inference -päätepisteen kautta (samalla tavalla kuin `githubmodels-*` -esimerkeissä). Päättelymalleissa kuten GPT-5 outputia ohjataan eri tavalla:
+  - **Prompt-suunnittelu** - selkeät ohjeet, esimerkit ja jäsennelty output (katso oppitunti [04 - Prompt Engineering](../04-prompt-engineering-fundamentals/README.md?WT.mc_id=academic-105485-koreyst)) hoitavat sen, mitä ottosäätimet aiemmin tekivät.
+  - **Päättelyn säätimet** - parametrit kuten päättelyn vaivannäkö/pitkäpuheisuus vaihtavat päättelyn syvyyden latenssin ja kustannusten kanssa.
 
-  Lyhyesti: `temperature`/`top_p` ovat edelleen käytössä monissa malleissa (Llama, Mistral, Phi ja GPT-4.x perhe - vaikka GPT-4.x on vanhentumassa), mutta suunta on kohti kehotteiden optimointia + päättelykontrolleja päättelymalleissa kuten GPT-5.
+  Lyhyesti: `temperature`/`top_p` ovat edelleen voimassa monissa malleissa (Llama, Mistral, Phi ja GPT-4.x -perhe - vaikka GPT-4.x on vanhentumassa), mutta suunta on prompt-suunnittelussa + päättelysäätimissä päättelymalleissa kuten GPT-5.
 
 ## Tehtävä
 
-Tässä tehtävässä voit valita mitä rakennat.
+Tässä tehtävässä voit valita, mitä rakennat.
 
 Tässä on joitakin ehdotuksia:
 
-- Muokkaa reseptigeneraattorisovellusta parantaaksesi sitä edelleen. Kokeile lämpötila-arvoja ja kehotteita nähdäksesi, mitä saat aikaiseksi.
-- Rakenna "opiskeluystävä". Tämän sovelluksen tulisi pystyä vastaamaan kysymyksiin jostakin aiheesta, esimerkiksi Pythonista. Voisit käyttää kehotteita kuten "Mikä on tietty aihe Pythonissa?", tai kehotetta, joka sanoo, näytä minulle koodi tietystä aiheesta yms.
-- Historia-botti, herätä historia eloon, ohjaa bottia esiintymään tiettynä historiallisena hahmona ja kysy siitä kysymyksiä sen elämästä ja ajoista.
+- Hienosäädä reseptigeneraattorisovellusta parantaaksesi sitä edelleen. Kokeile lämpötilan arvoja ja kehotteita nähdäksesi, mitä saat aikaan.
+- Rakenna "opiskelukaveri". Tämän sovelluksen tulisi pystyä vastaamaan kysymyksiin tietystä aiheesta, esimerkiksi Pythonista. Voit käyttää kehotteita kuten "Mikä on tietty aihe Pythonissa?" tai kehotetta, joka sanoo, näytä minulle koodi tietystä aiheesta jne.
+- Historia-botti, tuo historia eloon, ohjaa bottia esittämään tiettyä historiallista henkilöä ja kysy sille kysymyksiä sen elämästä ja ajasta.
 
 ## Ratkaisu
 
-### Opiskeluystävä
+### Opiskelukaveri
 
-Alla on aloituskehotus, katso miten voit käyttää sitä ja muokata mieleiseksesi.
+Alla on aloituskehote, katso miten voit käyttää sitä ja hienosäätää sitä mieleiseksesi.
 
 ```text
 - "You're an expert on the Python language
@@ -639,7 +638,7 @@ Alla on aloituskehotus, katso miten voit käyttää sitä ja muokata mieleisekse
 
 ### Historia-botti
 
-Tässä muutamia kehotteita, joita voisit käyttää:
+Tässä on joitakin kehotteita, joita voisit käyttää:
 
 ```text
 - "You are Abe Lincoln, tell me about yourself in 3 sentences, and respond using grammar and words like Abe would have used"
@@ -648,23 +647,23 @@ Tässä muutamia kehotteita, joita voisit käyttää:
    Tell me about your greatest accomplishments, in 300 words"
 ```
 
-## Tietotarkastus
+## Tietotarkistus
 
-Mitä lämpötila-konsepti tekee?
+Mitä lämpötila-käsite tekee?
 
-1. Se ohjaa, kuinka satunnainen tulos on.
-1. Se ohjaa, kuinka iso vastaus on.
-1. Se ohjaa, kuinka monta tokenia käytetään.
+1. Se säätelee, kuinka satunnainen tulos on.
+1. Se säätelee, kuinka pitkä vastaus on.
+1. Se säätelee, kuinka monta tokenia käytetään.
 
 ## 🚀 Haaste
 
-Työskennellessäsi tehtävän parissa, yritä vaihdella lämpötilaa, kokeile asettaa se arvoihin 0, 0.5 ja 1. Muista, että 0 on vähiten vaihteleva ja 1 eniten. Mikä arvo sopii parhaiten sovellukseesi?
+Työskennellessäsi tehtävän parissa, yritä vaihdella lämpötilaa, kokeile asettaa se arvoihin 0, 0.5 ja 1. Muista, että 0 on vähiten vaihteleva ja 1 eniten. Mikä arvo toimii parhaiten sovelluksessasi?
 
 ## Hienoa työtä! Jatka oppimista
 
-Kun olet suorittanut tämän oppitunnin, tutustu [Generative AI Learning -kokoelmaamme](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kehittääksesi generatiivisen tekoälyn osaamistasi edelleen!
+Kun olet suorittanut tämän oppitunnin, tutustu [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) -kokoelmaamme jatkaaksesi Generatiivisen tekoälyn osaamisesi kehittämistä!
 
-Siirry oppitunnille 7, jossa tarkastelemme, kuinka [rakentaa chat-sovelluksia](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
+Siirry oppitunnille 7, jossa tarkastelemme, miten [rakentaa chat-sovelluksia](../07-building-chat-applications/README.md?WT.mc_id=academic-105485-koreyst)!
 
 ---
 

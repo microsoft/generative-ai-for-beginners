@@ -4,58 +4,64 @@
 
 Pelajaran ini akan membahas: 
 
-- Menjelajahi dua model utama keluarga Meta - Llama 3.1 dan Llama 3.2 
+- Menjelajahi dua model utama keluarga Meta - Llama 3.1 dan Llama 3.2, serta alternatif yang saat ini tersedia yang digunakan dalam contoh kode (Llama 3.3 dan Llama 4) 
 - Memahami kasus penggunaan dan skenario untuk setiap model 
 - Contoh kode untuk menunjukkan fitur unik dari setiap model 
 
 
 ## Keluarga Model Meta 
 
-Dalam pelajaran ini, kita akan mengeksplorasi 2 model dari keluarga Meta atau "Llama Herd" - Llama 3.1 dan Llama 3.2.
+Dalam pelajaran ini, kita akan menjelajahi 2 model dari keluarga Meta atau "Llama Herd" - Llama 3.1 dan Llama 3.2. Contoh kode yang dapat dijalankan menggunakan Llama 3.3 dan Llama 4, yang saat ini merupakan alternatif yang tersedia dalam katalog Microsoft Foundry Models.
 
-Model-model ini datang dalam berbagai varian dan tersedia di [Microsoft Foundry Models catalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
+Model-model ini hadir dalam berbagai varian dan tersedia dalam [katalog Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
 
-> **Catatan:** GitHub Models akan dihentikan pada akhir Juli 2026. Berikut adalah detail lebih lanjut tentang menggunakan [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) untuk membuat prototipe dengan model AI.
+> **Catatan:** GitHub Models akan dihentikan pada akhir Juli 2026. Berikut adalah rincian lebih lanjut tentang menggunakan [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) untuk prototipe dengan model AI.
 
-Varian Model: 
-- Llama 3.1 - 70B Instruct 
-- Llama 3.1 - 405B Instruct 
-- Llama 3.2 - 11B Vision Instruct 
-- Llama 3.2 - 90B Vision Instruct 
+> **Catatan:** Versi model spesifik yang awalnya digunakan untuk pelajaran ini (Llama 3.1 70B/405B Instruct, Llama 3.2 11B/90B Vision Instruct) telah dihentikan dari katalog Microsoft Foundry Models. Contoh kode di bawah menggunakan `Llama-3.3-70B-Instruct` dan `Llama-4-Scout-17B-16E-Instruct` sebagai alternatif yang saat ini tersedia dalam katalog Microsoft Foundry Models, sehingga masih dapat dijalankan hari ini.
 
-*Catatan: Llama 3 juga tersedia di Microsoft Foundry Models tetapi tidak akan dibahas dalam pelajaran ini*
+Varian Model (seperti yang awalnya dibahas dalam pelajaran ini): 
+- Llama 3.1 - 70B Instruct (dihentikan) 
+- Llama 3.1 - 405B Instruct (dihentikan) 
+- Llama 3.2 - 11B Vision Instruct (dihentikan) 
+- Llama 3.2 - 90B Vision Instruct (dihentikan) 
+
+Alternatif yang saat ini tersedia yang digunakan dalam contoh kode: 
+- Llama 3.3 - 70B Instruct (`Llama-3.3-70B-Instruct`) 
+- Llama 4 Scout - 17B 16E Instruct (`Llama-4-Scout-17B-16E-Instruct`) 
+
+*Catatan: Varian Llama 3 yang dibahas di atas dipertahankan untuk konteks historis dan tidak lagi tersedia dalam Microsoft Foundry Models.*
 
 ## Llama 3.1 
 
-Dengan 405 Miliar Parameter, Llama 3.1 termasuk ke dalam kategori LLM sumber terbuka. 
+Dengan 405 Miliar Parameter, Llama 3.1 termasuk dalam kategori LLM sumber terbuka. 
 
-Model ini merupakan peningkatan dari rilis sebelumnya Llama 3 dengan menawarkan: 
+Model ini adalah peningkatan dari rilis sebelumnya Llama 3 dengan menawarkan: 
 
-- Jendela konteks yang lebih besar - 128k token dibandingkan 8k token 
-- Maksimum Token Output yang lebih besar - 4096 dibandingkan 2048 
-- Dukungan Multibahasa yang lebih baik - karena peningkatan token pelatihan 
+- Jendela konteks lebih besar - 128k token vs 8k token 
+- Maksimum Token Output lebih besar - 4096 vs 2048 
+- Dukungan Multibahasa lebih baik - karena peningkatan token pelatihan 
 
-Ini memungkinkan Llama 3.1 menangani kasus penggunaan yang lebih kompleks saat membangun aplikasi GenAI termasuk: 
+Ini memungkinkan Llama 3.1 untuk menangani kasus penggunaan yang lebih kompleks saat membangun aplikasi GenAI termasuk: 
 - Pemanggilan Fungsi Native - kemampuan untuk memanggil alat dan fungsi eksternal di luar alur kerja LLM
-- Kinerja RAG yang lebih baik - karena jendela konteks yang lebih besar 
-- Pembuatan Data Sintetis - kemampuan untuk membuat data efektif untuk tugas seperti fine-tuning 
+- Kinerja RAG lebih baik - karena jendela konteks yang lebih besar 
+- Generasi Data Sintetis - kemampuan untuk membuat data efektif untuk tugas seperti penyempurnaan 
 
 ### Pemanggilan Fungsi Native 
 
-Llama 3.1 telah disetel agar lebih efektif dalam melakukan pemanggilan fungsi atau alat. Model ini juga memiliki dua alat bawaan yang dapat diidentifikasi oleh model untuk digunakan berdasarkan prompt dari pengguna. Alat-alat ini adalah: 
+Llama 3.1 telah disesuaikan agar lebih efektif dalam membuat panggilan fungsi atau alat. Model ini juga memiliki dua alat bawaan yang dapat dikenali model sebagai yang perlu digunakan berdasarkan prompt dari pengguna. Alat-alat ini adalah: 
 
-- **Brave Search** - Dapat digunakan untuk mendapatkan informasi terkini seperti cuaca dengan melakukan pencarian web 
-- **Wolfram Alpha** - Dapat digunakan untuk perhitungan matematika yang lebih kompleks sehingga menulis fungsi sendiri tidak diperlukan. 
+- **Brave Search** - Dapat digunakan untuk mendapatkan informasi terbaru seperti cuaca dengan melakukan pencarian web 
+- **Wolfram Alpha** - Dapat digunakan untuk perhitungan matematika yang lebih kompleks sehingga tidak perlu menulis fungsi sendiri. 
 
-Anda juga dapat membuat alat kustom sendiri yang dapat dipanggil oleh LLM. 
+Anda juga dapat membuat alat khusus sendiri yang dapat dipanggil oleh LLM. 
 
 Dalam contoh kode di bawah ini: 
 
-- Kita mendefinisikan alat yang tersedia (brave_search, wolfram_alpha) dalam prompt sistem. 
-- Mengirim prompt pengguna yang menanyakan tentang cuaca di kota tertentu. 
-- LLM akan merespons dengan pemanggilan alat ke alat Brave Search yang akan terlihat seperti ini `<|python_tag|>brave_search.call(query="Stockholm weather")` 
+- Kami mendefinisikan alat yang tersedia (brave_search, wolfram_alpha) dalam prompt sistem. 
+- Mengirim prompt pengguna yang menanyakan tentang cuaca di suatu kota. 
+- LLM akan merespons dengan panggilan alat ke alat Brave Search yang akan terlihat seperti ini `<|python_tag|>brave_search.call(query="Stockholm weather")` 
 
-*Catatan: Contoh ini hanya membuat pemanggilan alat, jika ingin mendapatkan hasilnya, Anda perlu membuat akun gratis di halaman API Brave dan mendefinisikan fungsi itu sendiri.*
+*Catatan: Contoh ini hanya membuat panggilan alat, jika Anda ingin mendapatkan hasilnya, Anda perlu membuat akun gratis di halaman Brave API dan mendefinisikan fungsinya sendiri.
 
 ```python 
 import os
@@ -63,10 +69,12 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import AssistantMessage, SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-# Dapatkan ini dari halaman "Overview" proyek Microsoft Foundry Anda
+# Get these from your Microsoft Foundry project's "Overview" page
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
-model_name = "Meta-Llama-3.1-405B-Instruct"
+# Meta-Llama-3.1-405B-Instruct was retired from Microsoft Foundry on 2026-06-13 with no replacement listed;
+# using Llama-3.3-70B-Instruct, a currently available alternative, instead
+model_name = "Llama-3.3-70B-Instruct"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -98,13 +106,13 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2 
 
-Meskipun merupakan LLM, salah satu keterbatasan Llama 3.1 adalah kurangnya multimodalitas. Artinya, ketidakmampuan menggunakan berbagai jenis input seperti gambar sebagai prompt dan memberikan respons. Kemampuan ini adalah salah satu fitur utama Llama 3.2. Fitur-fitur ini juga meliputi: 
+Meskipun merupakan LLM, salah satu keterbatasan Llama 3.1 adalah kurangnya multimodalitas. Yaitu, ketidakmampuan menggunakan jenis input yang berbeda seperti gambar sebagai prompt dan memberikan respons. Kemampuan ini adalah salah satu fitur utama dari Llama 3.2. Fitur-fitur ini juga meliputi: 
 
 - Multimodalitas - memiliki kemampuan untuk mengevaluasi prompt teks dan gambar 
-- Variasi ukuran kecil hingga sedang (11B dan 90B) - memberikan opsi penyebaran yang fleksibel, 
-- Variasi hanya teks (1B dan 3B) - memungkinkan model digunakan pada perangkat edge / mobile dan menyediakan latensi rendah 
+- Variasi ukuran kecil hingga sedang (11B dan 90B) - ini memberikan opsi deploy yang fleksibel, 
+- Variasi hanya teks (1B dan 3B) - ini memungkinkan model di-deploy di perangkat edge / mobile dan menyediakan latensi rendah 
 
-Dukungan multimodal mewakili langkah besar di dunia model sumber terbuka. Contoh kode di bawah ini menggunakan prompt gambar dan teks untuk mendapatkan analisis gambar dari Llama 3.2 90B. 
+Dukungan multimodal mewakili langkah besar di dunia model sumber terbuka. Contoh kode di bawah ini menerima prompt gambar dan teks untuk mendapatkan analisis gambar. Karena Llama 3.2 90B Vision Instruct telah dihentikan, contoh tersebut menggunakan `Llama-4-Scout-17B-16E-Instruct`, alternatif multimodal bawaan yang saat ini tersedia. 
 
 
 ### Dukungan Multimodal dengan Llama 3.2
@@ -122,10 +130,12 @@ from azure.ai.inference.models import (
 )
 from azure.core.credentials import AzureKeyCredential
 
-# Dapatkan ini dari halaman "Ikhtisar" proyek Microsoft Foundry Anda
+# Get these from your Microsoft Foundry project's "Overview" page
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
-model_name = "Llama-3.2-90B-Vision-Instruct"
+# Llama-3.2-90B-Vision-Instruct was retired from Microsoft Foundry on 2026-06-13 with no replacement listed;
+# using Llama-4-Scout-17B-16E-Instruct, a currently available natively multimodal alternative, instead
+model_name = "Llama-4-Scout-17B-16E-Instruct"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -155,9 +165,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Pembelajaran tidak berhenti di sini, lanjutkan perjalanan Anda
+## Pembelajaran tidak berhenti di sini, lanjutkan perjalanan
 
-Setelah menyelesaikan pelajaran ini, lihat koleksi [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk terus meningkatkan pengetahuan Generative AI Anda!
+Setelah menyelesaikan pelajaran ini, lihat [koleksi Pembelajaran AI Generatif](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk terus meningkatkan pengetahuan AI Generatif Anda!
 
 ---
 

@@ -20,11 +20,11 @@ Tässä oppitunnissa käsittelemme seuraavaa:
 
 Oppitunnin suorittamisen jälkeen osaat:
 
-- Selittää RAG:n merkityksen tiedon haussa ja käsittelyssä.
+- Selitä RAG:n merkitys tiedonhankinnassa ja käsittelyssä.
 
-- Määrittää RAG-sovellus ja perustaa tietosi LLM:ään.
+- Ota RAG-sovellus käyttöön ja tue LLM-tallasi datallasi.
 
-- Tehokkaasti integroida RAG ja vektoritietokannat LLM-sovelluksissa.
+- Integroi RAG ja vektoritietokannat tehokkaasti LLM-sovelluksissa.
 
 ## Tilanteemme: LLM-malliemme parantaminen omilla tiedoillamme
 
@@ -36,7 +36,7 @@ Tässä oppitunnissa haluamme lisätä omat muistiinpanomme koulutuksesta startu
 
 - `Azure AI Search` ja `Azure Cosmos DB:` vektoritietokanta tietojen tallentamiseen ja hakemisto hakemiseen
 
-Käyttäjät voivat luoda harjoitustehtäviä muistiinpanoistaan, kertauskortteja sekä tiivistelmiä. Aloitetaan katsomalla, mitä RAG on ja miten se toimii:
+Käyttäjät voivat luoda harjoituskyselyitä ja kertaustuotteita muistiinpanoistaan sekä tiivistää nuo muistiinpanot ytimekkäiksi yhteenvetoiksi. Aloittaaksemme katsotaan, mitä RAG on ja miten se toimii:
 
 ## Hakuavusteinen generointi (RAG)
 
@@ -56,9 +56,9 @@ Oletetaan, että haluat ottaa käyttöön chatbotin, joka luo kyselyitä muistii
 
 - **Laajennettu generointi:** LLM parantaa vastaustaan haettujen tietojen perusteella. Tämä mahdollistaa sen, että vastaus ei perustu vain esikoulutettuun dataan, vaan myös lisättyyn kontekstiin. Haettua dataa käytetään LLM:n vastausten rikastamiseen. LLM palauttaa vastauksen käyttäjän kysymykseen.
 
-![kuvaus RAG-arkkitehtuurista](../../../translated_images/fi/encoder-decode.f2658c25d0eadee2.webp)
+![Kaavio, joka näyttää RAG-arkkitehtuurin](../../../translated_images/fi/encoder-decode.f2658c25d0eadee2.webp?WT.mc_id=academic-105485-koreyst)
 
-RAG-arkkitehtuuri toteutetaan käyttämällä transformereita, jotka koostuvat kahdesta osasta: enkooderista ja dekooderista. Esimerkiksi kun käyttäjä esittää kysymyksen, syötetty teksti "enkoodataan" vektoreiksi jotka sieppaavat sanojen merkityksen, ja nämä vektorit "dekoodataan" dokumenttihakemistoon ja ne tuottavat uutta tekstiä käyttäjän kyselyn perusteella. LLM käyttää sekä enkooderi-dekooderimallia tuloksen luomiseen.
+RAG yhdistää haun ja generoinnin: kysely muunnetaan vektoriksi, joka vastataan dokumenttihakemistoon löytääkseen asiaankuuluvat tekstikappaleet, ja nämä kappaleet annetaan kontekstiksi suuressa kielenmallissa (LLM), joka tuottaa vastauksen. Hakija ja generointi voivat käyttää eri malleja; RAG ei vaadi enkooderi-dekooderi-transformeria.
 
 Kaksi lähestymistapaa RAG:n toteuttamiseen ehdotetun tutkimuspaperin mukaan: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) ovat:
 
@@ -76,13 +76,13 @@ Kaksi lähestymistapaa RAG:n toteuttamiseen ehdotetun tutkimuspaperin mukaan: [R
 
 ## Tietopohjan luominen
 
-Sovelluksemme perustuu henkilökohtaiseen dataamme eli AI for Beginners -kurssin Neuroverkot-osion tietoon.
+Sovelluksemme perustuu henkilötietoihimme, eli Neural Network -oppituntiin AI for Beginners -opetussuunnitelmasta.
 
 ### Vektoritietokannat
 
 Vektoritietokanta on erikoistunut tietokanta, joka on suunniteltu tallentamaan, hallitsemaan ja hakemaan upotettuja vektoreita. Se tallentaa asiakirjojen numeeriset esitykset. Datan pilkkominen numeerisiksi upotuksiksi helpottaa tekoälyjärjestelmää ymmärtämään ja käsittelemään dataa.
 
-Tallennamme upotukset vektoritietokantoihin, koska LLM:illä on rajoitus hyväksymiensä tokenien määrässä. Koska koko dataa ei voi syöttää kerralla, joudumme jakamaan sen osiin, ja kun käyttäjä esittää kysymyksen, vastaavia upotuksia palautetaan kehotteen kanssa. Osissa jakaminen myös pienentää kuluja tokenien määrän vähentymisen kautta.
+Koska LLM:illä on rajoitus syötetokeneiden määrälle, jaamme asiakirjat paloihin ennen niiden upottamista. Kun käyttäjä esittää kysymyksen, upotukset, jotka ovat samankaltaisimpia kyselyn kanssa, tunnistavat asiaankuuluvat tekstin palat, jotka palautetaan kehotteen mukana. Pilkkominen myös vähentää LLM:lle toimitettavien tokenien määrää ja voi siten vähentää kustannuksia.
 
 Suosittuja vektoritietokantoja ovat esimerkiksi Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant ja DeepLake. Voit luoda Azure Cosmos DB -mallin Azure CLI:llä seuraavalla komennolla:
 
@@ -141,9 +141,9 @@ Haasteena haussa on, jos tietokannasta ei löydy vastausta vastaavaa sisältöä
 
 ### Vektoriläheisyys
 
-Hakija etsii tietokannasta lähekkäisiä upotuksia eli lähimmän naapurin, koska ne ovat samankaltaisia tekstejä. Kun käyttäjä kysyy kysymyksen, se ensin upotetaan ja sitten etsitään samankaltaisia upotuksia. Yleinen mittaus samankaltaisuudelle on kosiniläheisyys, joka perustuu kahden vektorin väliseen kulmaan.
+Noutaja hakee tietokannasta upotuksia, jotka ovat lähekkäin toisiaan — lähimmät naapurit — koska ne edustavat samanlaisia tekstejä. Tässä tapauksessa, kun käyttäjä lähettää kyselyn, se upotetaan ensin ja yhdistetään sitten samankaltaisiin upotuksiin. Yleisin mittari vektoreiden samankaltaisuuden vertaamiseen on kosini-samankaltaisuus, joka perustuu kahden vektorin väliseen kulmaan.
 
-Voimme mitata samankaltaisuutta myös muilla tavoilla, kuten euklidisella etäisyydellä, joka mittaa suoraa viivaa vektoripäiden välillä, tai pistetulolla, joka mittaa kahden vektorin vastaavien alkioiden tulojen summan.
+Muita mittareita, joita voimme käyttää samankaltaisuuden mittaamiseen, ovat Euclidean etäisyys, joka on suora viiva vektorien päätepisteiden välillä, ja pistetulo, joka mittaa kahden vektorin vastaavien alkioiden tulosten summan.
 
 ### Hakemisto
 
@@ -236,7 +236,7 @@ chatbot(user_input)
 
 ## RAG:n ja vektoritietokantojen käyttötilanteet
 
-Monet eri käyttötapaukset hyödyntävät toimintokutsuja parantaakseen sovellusta, kuten:
+On monia eri käyttötapauksia, joissa RAG voi parantaa sovellustasi, kuten:
 
 - Kysymys- ja vastausjärjestelmät: yrityksen datan perustaminen chat-keskusteluun, jota työntekijät voivat käyttää kysymyksiin.
 
@@ -248,7 +248,7 @@ Monet eri käyttötapaukset hyödyntävät toimintokutsuja parantaakseen sovellu
 
 ## Yhteenveto
 
-Olemme käsitelleet RAG:n perusalueet datan lisäämisestä sovellukseen, käyttäjän kyselyn ja tuottamisen. RAG:n luomisen helpottamiseksi voit käyttää kehyksiä kuten Semantic Kernel, LangChain tai Autogen.
+Olemme käsitelleet RAGin perusalueet datan lisäämisestä sovellukseen, käyttäjän kyselyn ja tulosteen osalta. RAGin luomisen yksinkertaistamiseksi voit käyttää kehyksiä kuten Semantic Kernel, LangChain tai AutoGen.
 
 ## Tehtävä
 

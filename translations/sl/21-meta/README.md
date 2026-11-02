@@ -1,61 +1,67 @@
-# Gradnja z modeli Meta družine 
+# Gradnja z Meta družinskimi modeli 
 
 ## Uvod 
 
-Ta lekcija bo obravnavala: 
+Ta lekcija bo zajemala: 
 
-- Raziskovanje dveh glavnih Meta družinskih modelov - Llama 3.1 in Llama 3.2 
+- Pregled dveh glavnih Meta družinskih modelov - Llama 3.1 in Llama 3.2, plus trenutno razpoložljive alternative, uporabljene v primerih kode (Llama 3.3 in Llama 4) 
 - Razumevanje primerov uporabe in scenarijev za vsak model 
-- Primer kode, ki prikazuje edinstvene lastnosti vsakega modela 
+- Primer kode, ki pokaže edinstvene funkcije vsakega modela 
 
 
 ## Meta družina modelov 
 
-V tej lekciji bomo raziskali 2 modela iz Meta družine ali "Llama črede" - Llama 3.1 in Llama 3.2.
+V tej lekciji bomo raziskali 2 modela iz Meta družine ali "črede Llama" - Llama 3.1 in Llama 3.2. Različice primerljive kode uporabljajo Llama 3.3 in Llama 4, ki so trenutno razpoložljive alternative v katalogu Microsoft Foundry Models.
 
-Ti modeli so na voljo v različnih različicah in so na voljo v [Microsoft Foundry Models katalogu](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
+Ti modeli so na voljo v različnih variantah in so dostopni v [Microsoft Foundry Models katalogu](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
 
-> **Opomba:** GitHub modeli se bodo prenehali uporabljati konec julija 2026. Tukaj so podrobnosti o uporabi [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) za prototipiranje z AI modeli.
+> **Opomba:** GitHub modeli se upokojijo konec julija 2026. Tukaj so podrobnosti o uporabi [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) za prototipiranje z AI modeli.
 
-Različice modelov: 
-- Llama 3.1 - 70B Instruct 
-- Llama 3.1 - 405B Instruct 
-- Llama 3.2 - 11B Vision Instruct 
-- Llama 3.2 - 90B Vision Instruct 
+> **Opomba:** Specifične verzije modelov, na katerih je ta lekcija prvotno temeljila (Llama 3.1 70B/405B Instruct, Llama 3.2 11B/90B Vision Instruct), so bile medtem upokojene iz Microsoft Foundry Models kataloga. Primeri kode spodaj uporabljajo `Llama-3.3-70B-Instruct` in `Llama-4-Scout-17B-16E-Instruct` kot trenutno razpoložljive alternative v katalogu Microsoft Foundry Models, tako da še vedno delujejo danes.
 
-*Opomba: Llama 3 je na voljo tudi v Microsoft Foundry Models, a ne bo obravnavan v tej lekciji*
+Variacije modelov (kot so bile prvotno zajete v tej lekciji): 
+- Llama 3.1 - 70B Instruct (upokojen) 
+- Llama 3.1 - 405B Instruct (upokojen) 
+- Llama 3.2 - 11B Vision Instruct (upokojen) 
+- Llama 3.2 - 90B Vision Instruct (upokojen) 
+
+Trenutno razpoložljive alternative, uporabljene v primerih kode: 
+- Llama 3.3 - 70B Instruct (`Llama-3.3-70B-Instruct`) 
+- Llama 4 Scout - 17B 16E Instruct (`Llama-4-Scout-17B-16E-Instruct`) 
+
+*Opomba: Zgoraj obravnavane variante Llama 3 so ohranjene za zgodovinski kontekst in niso več na voljo v Microsoft Foundry Models.*
 
 ## Llama 3.1 
 
-Z 405 milijardami parametrov spada Llama 3.1 v kategorijo odprtokodnih velikih jezikovnih modelov. 
+Z 405 milijardami parametrov spada Llama 3.1 v kategorijo odprtokodnih LLM. 
 
-Model je nadgradnja prej izdanega Llama 3 z izboljšavami: 
+Model je nadgradnja prej izdane različice Llama 3 z: 
 
-- Večje kontekstno okno - 128k tokenov v primerjavi z 8k tokeni 
-- Večje največje število izhodnih tokenov - 4096 v primerjavi z 2048 
-- Boljša večjezična podpora - zaradi povečanja števila učnih tokenov 
+- Večjim kontekstnim oknom - 128k tokenov proti 8k tokenov 
+- Večjo maksimalno dolžino izhodnih tokenov - 4096 proti 2048 
+- Boljšo večjezično podporo - zaradi povečanja trening tokenov 
 
-To omogoča Llama 3.1, da obravnava bolj kompleksne primere uporabe pri gradnji GenAI aplikacij, vključno z: 
-- Nativno klicanje funkcij - možnost klicanja zunanjih orodij in funkcij zunaj delovnega toka LLM
-- Boljšimi RAG zmogljivostmi - zaradi večjega kontekstnega okna 
-- Generiranjem sintetičnih podatkov - možnost ustvarjanja učinkovitih podatkov za naloge, kot je fino prilagajanje 
+To omogoča Llama 3.1 obravnavo bolj zapletenih primerov uporabe pri gradnji GenAI aplikacij, vključno z: 
+- Nativnim klicem funkcij - sposobnost klicanja zunanjih orodij in funkcij izven LLM delovnega toka
+- Boljšo zmogljivost RAG - zaradi večjega kontekstnega okna 
+- Generiranjem sintetičnih podatkov - sposobnost ustvarjanja učinkovitih podatkov za naloge, kot je fino nastavljanje 
 
-### Nativno klicanje funkcij 
+### Nativni klic funkcij 
 
-Llama 3.1 je fino prilagojen, da je učinkovitejši pri klicanju funkcij ali orodij. Ima tudi dve vgrajeni orodji, ki jih model lahko prepozna kot potrebni uporabi glede na uporabniški poziv. Ti orodji sta: 
+Llama 3.1 je bolje fino nastavljena za učinkovito izvajanje klicev funkcij ali orodij. Ima tudi dve vgrajeni orodji, ki jih lahko model prepozna kot potrebna za uporabo glede na uporabniški poziv. Ta orodja sta: 
 
-- **Brave Search** - lahko se uporablja za pridobitev aktualnih informacij, kot je vreme, s spletnim iskanjem 
-- **Wolfram Alpha** - lahko se uporablja za kompleksnejše matematične izračune, tako da ni potrebno pisati lastnih funkcij. 
+- **Brave Search** - lahko se uporablja za pridobivanje ažurnih informacij, npr. vremenske napovedi z izvedbo spletnega iskanja 
+- **Wolfram Alpha** - lahko se uporablja za bolj kompleksne matematične izračune, zato ni treba pisati lastnih funkcij. 
 
-Prav tako lahko ustvarite lastna prilagojena orodja, ki jih lahko LLM kliče. 
+Prav tako lahko ustvarite svoja lastna orodja, ki jih lahko LLM kliče. 
 
-V spodnjem primer kode: 
+V primeru kode spodaj: 
 
-- Določimo na voljo orodji (brave_search, wolfram_alpha) v sistemskem pozivu. 
-- Pošljemo uporabniški poziv, ki sprašuje o vremenu v določenem mestu. 
-- LLM bo odgovoril s klicem orodja Brave Search, ki bo izgledal takole `<|python_tag|>brave_search.call(query="Stockholm weather")` 
+- Določimo na voljo orodja (brave_search, wolfram_alpha) v sistemskem pozivu. 
+- Pošljemo uporabniški poziv, ki vpraša o vremenu v določenem mestu. 
+- LLM bo odgovoril s klicem orodja Brave Search, ki bo izgledal tako `<|python_tag|>brave_search.call(query="Stockholm weather")` 
 
-*Opomba: Ta primer samo naredi klic orodja, če želite dobiti rezultate, boste morali ustvariti brezplačen račun na strani Brave API in definirati funkcijo samega klica.
+*Opomba: Ta primer samo naredi klic orodja, če želite dobiti rezultate, morate ustvariti brezplačen račun na Brave API strani in definirati funkcijo samega klica.
 
 ```python 
 import os
@@ -63,10 +69,12 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import AssistantMessage, SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-# Pridobite jih s strani "Pregled" vašega Microsoft Foundry projekta
+# Get these from your Microsoft Foundry project's "Overview" page
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
-model_name = "Meta-Llama-3.1-405B-Instruct"
+# Meta-Llama-3.1-405B-Instruct was retired from Microsoft Foundry on 2026-06-13 with no replacement listed;
+# using Llama-3.3-70B-Instruct, a currently available alternative, instead
+model_name = "Llama-3.3-70B-Instruct"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -98,13 +106,13 @@ print(response.choices[0].message.content)
 
 ## Llama 3.2 
 
-Kljub temu, da je LLM, je ena omejitev Llama 3.1 njegova pomanjkljivost multimodalnosti. To pomeni, da ni sposoben uporabljati različnih vrst vhodov, kot so slike za pozive in podajati odgovore. Ta sposobnost je ena glavnih lastnosti Llama 3.2. Te lastnosti vključujejo tudi: 
+Kljub temu, da je LLM, ena pomanjkljivost Llama 3.1 je pomanjkanje multimodalnosti. To pomeni, da ne more uporabljati različnih vrst vhodov, kot so slike kot pozivi in zagotavljati odzivov. Ta zmogljivost je ena glavnih funkcij Llama 3.2. Te funkcije vključujejo tudi: 
 
-- Multimodalnost - ima sposobnost ocene tako besedilnih kot slikovnih pozivov 
-- Majhne do srednje velikosti različice (11B in 90B) - to nudi fleksibilne možnosti namestitve, 
-- Samo besedilne različice (1B in 3B) - to omogoča namestitev modela na edge / mobilne naprave in zagotavlja nizko zakasnitev 
+- Multimodalnost - ima sposobnost ocenjevanja tako besedilnih kot slikovnih pozivov 
+- Majhne do srednje velike različice (11B in 90B) - to omogoča prilagodljive možnosti nameščanja, 
+- Samo besedilne različice (1B in 3B) - to omogoča nameščanje modela na robnih / mobilnih napravah in zagotavlja nizko zakasnitev 
 
-Podpora multimodalnosti predstavlja velik korak v svetu odprtokodnih modelov. Spodnji primer kode uporabi tako sliko kot besedilni poziv za pridobitev analize slike iz Llama 3.2 90B. 
+Multimodalna podpora predstavlja velik korak v svetu odprtokodnih modelov. Primer kode spodaj uporablja tako sliko kot tekstovni poziv za pridobitev analize slike. Ker je Llama 3.2 90B Vision Instruct upokojen, primer uporablja `Llama-4-Scout-17B-16E-Instruct`, trenutno na voljo nativno multimodalno alternativo. 
 
 
 ### Multimodalna podpora z Llama 3.2
@@ -122,10 +130,12 @@ from azure.ai.inference.models import (
 )
 from azure.core.credentials import AzureKeyCredential
 
-# Pridobite jih na strani "Pregled" vašega projekta Microsoft Foundry
+# Get these from your Microsoft Foundry project's "Overview" page
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
-model_name = "Llama-3.2-90B-Vision-Instruct"
+# Llama-3.2-90B-Vision-Instruct was retired from Microsoft Foundry on 2026-06-13 with no replacement listed;
+# using Llama-4-Scout-17B-16E-Instruct, a currently available natively multimodal alternative, instead
+model_name = "Llama-4-Scout-17B-16E-Instruct"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -155,9 +165,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## Učenje se tukaj ne ustavi, nadaljujte pot
+## Učenje tukaj ne preneha, nadaljujte pot
 
-Po zaključku te lekcije si oglejte našo [Zbirko za učenje Generativne umetne inteligence](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), da nadaljujete nadgrajevanje svojega znanja o Generativni umetni inteligenci!
+Po zaključku te lekcije si oglejte našo [kolekcijo učenja o generativni umetni inteligenci](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), da nadaljujete z nadgradnjo svojega znanja o generativni umetni inteligenci!
 
 ---
 

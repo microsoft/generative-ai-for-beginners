@@ -1,90 +1,90 @@
-# Retrieval Augmented Generation (RAG) dan Basis Data Vektor
+# Generasi Ditingkatkan dengan Pengambilan (RAG) dan Basis Data Vektor
 
-[![Retrieval Augmented Generation (RAG) dan Basis Data Vektor](../../../translated_images/id/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Generasi Ditingkatkan dengan Pengambilan (RAG) dan Basis Data Vektor](../../../translated_images/id/15-lesson-banner.ac49e59506175d4f.webp?WT.mc_id=academic-105485-koreyst)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
-Dalam pelajaran aplikasi pencarian, kita secara singkat mempelajari cara mengintegrasikan data Anda sendiri ke dalam Large Language Models (LLMs). Dalam pelajaran ini, kita akan membahas lebih dalam tentang konsep membumikan data Anda dalam aplikasi LLM, mekanisme prosesnya, dan metode penyimpanan data, termasuk embedding dan teks.
+Dalam pelajaran aplikasi pencarian, kita sedikit mempelajari bagaimana mengintegrasikan data Anda sendiri ke dalam Model Bahasa Besar (LLM). Dalam pelajaran ini, kita akan mendalami lebih jauh konsep dasar data Anda dalam aplikasi LLM Anda, mekanika prosesnya, dan metode penyimpanan data, termasuk baik embeddings maupun teks.
 
 > **Video Segera Hadir**
 
 ## Pendahuluan
 
-Dalam pelajaran ini kita akan membahas hal-hal berikut:
+Dalam pelajaran ini kita akan membahas hal berikut:
 
-- Pengenalan RAG, apa itu dan mengapa digunakan dalam AI (kecerdasan buatan).
+- Pengantar tentang RAG, apa itu dan mengapa digunakan dalam AI (kecerdasan buatan).
 
-- Memahami apa itu basis data vektor dan membuat satu untuk aplikasi kita.
+- Memahami apa itu basis data vektor dan membuatnya untuk aplikasi kita.
 
-- Contoh praktis bagaimana mengintegrasikan RAG ke dalam aplikasi.
+- Contoh praktis tentang cara mengintegrasikan RAG ke dalam aplikasi.
 
 ## Tujuan Pembelajaran
 
-Setelah menyelesaikan pelajaran ini, Anda akan mampu:
+Setelah menyelesaikan pelajaran ini, Anda akan dapat:
 
 - Menjelaskan pentingnya RAG dalam pengambilan dan pemrosesan data.
 
-- Menyiapkan aplikasi RAG dan membumikan data Anda ke LLM
+- Menyiapkan aplikasi RAG dan mendasar LLM dengan data Anda
 
-- Integrasi efektif RAG dan Basis Data Vektor dalam Aplikasi LLM.
+- Mengintegrasikan RAG dan basis data vektor secara efektif dalam aplikasi LLM.
 
-## Skenario Kami: meningkatkan LLM kami dengan data kami sendiri
+## Skenario Kita: meningkatkan LLM kita dengan data kita sendiri
 
-Untuk pelajaran ini, kami ingin menambahkan catatan kami sendiri ke startup pendidikan, yang memungkinkan chatbot mendapatkan lebih banyak informasi tentang berbagai subjek. Dengan menggunakan catatan yang kami miliki, pembelajar akan dapat belajar lebih baik dan memahami berbagai topik, sehingga lebih mudah untuk mengulang pelajaran sebelum ujian. Untuk membuat skenario kami, kami akan menggunakan:
+Untuk pelajaran ini, kita ingin menambahkan catatan kita sendiri ke startup pendidikan, yang memungkinkan chatbot mendapatkan lebih banyak informasi tentang berbagai subjek. Dengan menggunakan catatan yang kita miliki, pelajar dapat belajar lebih baik dan memahami berbagai topik, sehingga lebih mudah untuk mengulang pelajaran untuk ujian mereka. Untuk membuat skenario kita, kita akan menggunakan:
 
-- `Azure OpenAI:` LLM yang akan kami gunakan untuk membuat chatbot kami
+- `Azure OpenAI:` LLM yang akan kita gunakan untuk membuat chatbot kita
 
-- `Pelajaran AI untuk pemula tentang Jaringan Saraf`: ini akan menjadi data yang membumikan LLM kami
+- `AI for beginners' lesson on Neural Networks`: ini akan menjadi data yang menjadi dasar LLM kita
 
-- `Azure AI Search` dan `Azure Cosmos DB:` basis data vektor untuk menyimpan data kami dan membuat indeks pencarian
+- `Azure AI Search` dan `Azure Cosmos DB:` basis data vektor untuk menyimpan data dan membuat indeks pencarian
 
-Pengguna akan dapat membuat kuis latihan dari catatan mereka, kartu flash pengulangan dan meringkasnya menjadi rangkuman singkat. Untuk memulai, mari kita lihat apa itu RAG dan bagaimana cara kerjanya:
+Pengguna dapat membuat kuis latihan dan flashcard revisi dari catatan mereka serta meringkas catatan tersebut menjadi ikhtisar yang ringkas. Untuk memulai, mari kita lihat apa itu RAG dan bagaimana cara kerjanya:
 
-## Retrieval Augmented Generation (RAG)
+## Generasi Ditingkatkan dengan Pengambilan (RAG)
 
-Chatbot bertenaga LLM memproses prompt pengguna untuk menghasilkan respons. Dirancang untuk interaktif dan berinteraksi dengan pengguna pada berbagai topik. Namun, responsnya terbatas pada konteks yang diberikan dan data pelatihan dasarnya. Misalnya, GPT-4 memiliki batas pengetahuan sampai September 2021, artinya, tidak mengetahui kejadian setelah periode tersebut. Selain itu, data yang digunakan untuk melatih LLM mengecualikan informasi rahasia seperti catatan pribadi atau manual produk perusahaan.
+Chatbot yang didukung oleh LLM memproses prompt pengguna untuk menghasilkan respons. Dirancang untuk interaktif dan berinteraksi dengan pengguna pada berbagai topik. Namun, responsnya terbatas pada konteks yang diberikan dan data pelatihan dasarnya. Sebagai contoh, batas pengetahuan GPT-4 adalah September 2021, artinya, ia tidak memiliki pengetahuan tentang kejadian yang terjadi setelah periode tersebut. Selain itu, data yang digunakan untuk melatih LLM tidak mencakup informasi rahasia seperti catatan pribadi atau manual produk perusahaan.
 
-### Cara kerja RAG (Retrieval Augmented Generation)
+### Bagaimana RAG (Generasi Ditingkatkan dengan Pengambilan) bekerja
 
-![gambar yang menunjukkan cara kerja RAG](../../../translated_images/id/how-rag-works.f5d0ff63942bd3a6.webp)
+![gambar yang menunjukkan cara kerja RAG](../../../translated_images/id/how-rag-works.f5d0ff63942bd3a6.webp?WT.mc_id=academic-105485-koreyst)
 
-Misalkan Anda ingin menerapkan chatbot yang membuat kuis dari catatan Anda, Anda memerlukan koneksi ke basis pengetahuan. Di sinilah RAG berperan. RAG bekerja sebagai berikut:
+Misalkan Anda ingin menerapkan chatbot yang membuat kuis dari catatan Anda, Anda membutuhkan koneksi ke basis pengetahuan. Di sinilah RAG berperan. RAG bekerja sebagai berikut:
 
-- **Basis pengetahuan:** Sebelum pengambilan, dokumen ini perlu dimasukkan dan diproses sebelumnya, biasanya dengan memecah dokumen besar menjadi potongan-potongan kecil, mengubahnya menjadi embedding teks dan menyimpannya dalam basis data.
+- **Basis pengetahuan:** Sebelum pengambilan, dokumen ini perlu diproses dan dipersiapkan, biasanya dengan memecah dokumen besar menjadi bagian-bagian kecil, mengubahnya menjadi embedding teks, dan menyimpannya di basis data.
 
-- **Query pengguna:** pengguna mengajukan pertanyaan
+- **Pertanyaan Pengguna:** pengguna mengajukan pertanyaan
 
-- **Pengambilan:** Ketika pengguna mengajukan pertanyaan, model embedding mengambil informasi relevan dari basis pengetahuan kita untuk menyediakan konteks tambahan yang akan dimasukkan ke dalam prompt.
+- **Pengambilan:** Ketika pengguna mengajukan pertanyaan, model embedding mengambil informasi relevan dari basis pengetahuan untuk memberikan konteks tambahan yang akan dimasukkan ke prompt.
 
-- **Generasi bertambah:** LLM meningkatkan responsnya berdasarkan data yang diambil. Ini memungkinkan respons yang dihasilkan tidak hanya berdasarkan data pra-latih tetapi juga informasi relevan dari konteks tambahan. Data yang diambil digunakan untuk memperkaya respons LLM. LLM kemudian mengembalikan jawaban atas pertanyaan pengguna.
+- **Generasi Ditingkatkan:** LLM meningkatkan responsnya berdasarkan data yang diambil. Ini memungkinkan respons yang dihasilkan tidak hanya didasarkan pada data pelatihan tetapi juga informasi relevan dari konteks tambahan. Data yang diambil digunakan untuk meningkatkan respons LLM. LLM kemudian mengembalikan jawaban untuk pertanyaan pengguna.
 
-![gambar yang menunjukkan arsitektur RAG](../../../translated_images/id/encoder-decode.f2658c25d0eadee2.webp)
+![Diagram yang menunjukkan arsitektur RAG](../../../translated_images/id/encoder-decode.f2658c25d0eadee2.webp?WT.mc_id=academic-105485-koreyst)
 
-Arsitektur RAG diimplementasikan menggunakan transformer yang terdiri dari dua bagian: encoder dan decoder. Misalnya, ketika pengguna mengajukan pertanyaan, teks input 'diencode' menjadi vektor yang menangkap makna kata dan vektor tersebut 'didecode' ke indeks dokumen kita dan menghasilkan teks baru berdasarkan query pengguna. LLM menggunakan model encoder-decoder untuk menghasilkan output.
+RAG menggabungkan pengambil dengan generator: pertanyaan diubah menjadi vektor, dicocokkan dengan indeks dokumen untuk menemukan bagian teks relevan, dan bagian itu disediakan sebagai konteks ke LLM, yang menghasilkan respons. Pengambil dan generator dapat menggunakan model berbeda; RAG tidak memerlukan transformer encoder-decoder.
 
-Dua pendekatan dalam mengimplementasikan RAG menurut paper yang diusulkan: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) adalah:
+Dua pendekatan saat mengimplementasikan RAG menurut makalah yang diusulkan: [Retrieval-Augmented Generation for Knowledge intensive NLP (pemrosesan bahasa alami) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) adalah:
 
-- **_RAG-Sequence_** menggunakan dokumen yang diambil untuk memprediksi jawaban terbaik untuk query pengguna
+- **_RAG-Sequence_** menggunakan dokumen yang diambil untuk memprediksi jawaban terbaik untuk pertanyaan pengguna
 
-- **RAG-Token** menggunakan dokumen untuk menghasilkan token berikutnya, kemudian mengambil dokumen tersebut untuk menjawab query pengguna
+- **RAG-Token** menggunakan dokumen untuk menghasilkan token berikutnya, kemudian mengambilnya untuk menjawab pertanyaan pengguna
 
-### Mengapa Anda menggunakan RAG? 
+### Mengapa Anda menggunakan RAG?
 
-- **Kekayaan informasi:** memastikan respons teks adalah terkini dan up to date. Oleh karena itu, meningkatkan kinerja pada tugas spesifik domain dengan mengakses basis pengetahuan internal.
+- **Kekayaan informasi:** memastikan respons teks mutakhir dan terbaru. Oleh karena itu, meningkatkan kinerja pada tugas domain spesifik dengan mengakses basis pengetahuan internal.
 
-- Mengurangi fabrikasi dengan memanfaatkan **data yang dapat diverifikasi** dalam basis pengetahuan untuk memberikan konteks pada query pengguna.
+- Mengurangi fabrikasi dengan menggunakan **data yang dapat diverifikasi** dalam basis pengetahuan untuk memberikan konteks pada pertanyaan pengguna.
 
-- **Biaya efektif** karena lebih ekonomis dibandingkan melakukan fine-tuning LLM
+- Ini **hemat biaya** karena lebih ekonomis dibandingkan melakukan fine-tuning pada LLM
 
 ## Membuat basis pengetahuan
 
-Aplikasi kita berdasarkan pada data pribadi kita yaitu pelajaran Jaringan Saraf pada kurikulum AI Untuk Pemula.
+Aplikasi kita didasarkan pada data pribadi kita, yaitu pelajaran Neural Network dari kurikulum AI untuk Pemula.
 
 ### Basis Data Vektor
 
-Basis data vektor, berbeda dengan basis data tradisional, adalah basis data khusus yang dirancang untuk menyimpan, mengelola dan mencari embedded vektor. Ini menyimpan representasi numerik dari dokumen. Memecah data menjadi embedding numerik memudahkan sistem AI kami untuk memahami dan memproses data.
+Basis data vektor, berbeda dengan basis data tradisional, adalah basis data khusus yang dirancang untuk menyimpan, mengelola, dan mencari vektor embedding. Basis data ini menyimpan representasi numerik dokumen. Memecah data menjadi embedding numerik memudahkan sistem AI kita memahami dan memproses data.
 
-Kami menyimpan embedding kami dalam basis data vektor karena LLM memiliki batas jumlah token yang mereka terima sebagai input. Karena Anda tidak bisa melewatkan seluruh embedding ke LLM, kita perlu memecahnya menjadi potongan kecil dan ketika pengguna mengajukan pertanyaan, embedding yang paling mirip dengan pertanyaan akan dikembalikan bersama dengan prompt. Pemecahan juga mengurangi biaya dari jumlah token yang diteruskan ke LLM.
+Karena LLM memiliki batas jumlah token input, kita memecah dokumen menjadi potongan sebelum membuat embedding. Ketika pengguna mengajukan pertanyaan, embedding yang paling mirip dengan query mengidentifikasi potongan teks relevan, yang dikembalikan bersama prompt. Pemecahan potongan juga mengurangi jumlah token yang diteruskan ke LLM dan karenanya dapat mengurangi biaya.
 
-Beberapa basis data vektor populer termasuk Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant dan DeepLake. Anda dapat membuat model Azure Cosmos DB menggunakan Azure CLI dengan perintah berikut:
+Beberapa basis data vektor populer termasuk Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant, dan DeepLake. Anda dapat membuat model Azure Cosmos DB menggunakan Azure CLI dengan perintah berikut:
 
 ```bash
 az login
@@ -95,7 +95,7 @@ az cosmosdb list-keys -n <cosmos-db-name> -g <resource-group-name>
 
 ### Dari teks ke embedding
 
-Sebelum kita menyimpan data, kita harus mengubahnya menjadi embedding vektor terlebih dahulu sebelum disimpan di basis data. Jika Anda bekerja dengan dokumen besar atau teks panjang, Anda dapat memecahnya berdasarkan query yang Anda perkirakan. Pemecahan dapat dilakukan pada tingkat kalimat, atau tingkat paragraf. Karena pemecahan mengambil makna dari kata-kata di sekitarnya, Anda dapat menambahkan konteks lain ke sebuah potongan, contohnya, dengan menambahkan judul dokumen atau menyertakan beberapa teks sebelum atau sesudah potongan tersebut. Anda dapat memecah data sebagai berikut:
+Sebelum kita menyimpan data, kita perlu mengubahnya menjadi embedding vektor sebelum disimpan di basis data. Jika Anda bekerja dengan dokumen besar atau teks panjang, Anda bisa memecahnya berdasarkan pertanyaan yang diharapkan. Pemecahan potongan bisa dilakukan di tingkat kalimat, atau tingkat paragraf. Karena pemecahan potongan mengambil makna dari kata-kata di sekitarnya, Anda bisa menambahkan konteks lain ke potongan, misalnya dengan menambahkan judul dokumen atau memasukkan teks sebelum atau sesudah potongan. Anda bisa memecah data seperti berikut:
 
 ```python
 def split_text(text, max_length, min_length):
@@ -109,68 +109,68 @@ def split_text(text, max_length, min_length):
             chunks.append(' '.join(current_chunk))
             current_chunk = []
 
-    # Jika potongan terakhir tidak mencapai panjang minimum, tetap tambahkan
+    # If the last chunk didn't reach the minimum length, add it anyway
     if current_chunk:
         chunks.append(' '.join(current_chunk))
 
     return chunks
 ```
 
-Setelah dipotong, kita bisa menyematkan teks kita menggunakan berbagai model embedding. Beberapa model yang dapat digunakan meliputi: word2vec, ada-002 oleh OpenAI, Azure Computer Vision dan banyak lagi. Memilih model yang digunakan tergantung pada bahasa yang Anda gunakan, jenis konten yang dikodekan (teks/gambar/audio), ukuran input yang dapat dikodekan dan panjang keluaran embedding.
+Setelah dipotong, kita bisa memasukkan teks kita ke dalam berbagai model embedding. Beberapa model yang bisa Anda gunakan antara lain: word2vec, ada-002 oleh OpenAI, Azure Computer Vision, dan banyak lagi. Pemilihan model untuk digunakan akan bergantung pada bahasa yang Anda gunakan, jenis konten yang dikodekan (teks/gambar/audio), ukuran input yang dapat dikodekan, dan panjang output embedding.
 
-Contoh teks embedding menggunakan model `text-embedding-ada-002` dari OpenAI adalah:
-![embedding kata cat](../../../translated_images/id/cat.74cbd7946bc9ca38.webp)
+Contoh teks embedding menggunakan model `text-embedding-ada-002` OpenAI adalah:
+![embedding dari kata cat](../../../translated_images/id/cat.74cbd7946bc9ca38.webp?WT.mc_id=academic-105485-koreyst)
 
 ## Pengambilan dan Pencarian Vektor
 
-Ketika pengguna mengajukan pertanyaan, retriever mengubahnya menjadi sebuah vektor menggunakan query encoder, kemudian mencari melalui indeks pencarian dokumen kita untuk vektor yang relevan dalam dokumen yang terkait dengan masukan. Setelah selesai, ia mengonversi baik vektor input dan vektor dokumen menjadi teks dan melewatkannya melalui LLM.
+Ketika pengguna mengajukan pertanyaan, pengambil mengubahnya menjadi vektor menggunakan pengkode query, kemudian mencari di indeks pencarian dokumen kita untuk vektor relevan di dokumen yang terkait dengan input. Setelah selesai, ia mengubah vektor input dan vektor dokumen menjadi teks dan meneruskannya ke LLM.
 
 ### Pengambilan
 
-Pengambilan terjadi ketika sistem mencoba dengan cepat menemukan dokumen dari indeks yang memenuhi kriteria pencarian. Tujuan retriever adalah mendapatkan dokumen yang akan digunakan untuk memberikan konteks dan membumikan LLM pada data Anda.
+Pengambilan terjadi ketika sistem berusaha dengan cepat menemukan dokumen dari indeks yang memenuhi kriteria pencarian. Tujuan pengambil adalah memperoleh dokumen yang akan digunakan untuk memberikan konteks dan mendasar LLM pada data Anda.
 
 Ada beberapa cara melakukan pencarian dalam basis data kita seperti:
 
 - **Pencarian kata kunci** - digunakan untuk pencarian teks
 
-- **Pencarian vektor** - mengubah dokumen dari teks ke representasi vektor menggunakan model embedding, memungkinkan **pencarian semantik** menggunakan makna kata. Pengambilan akan dilakukan dengan meng-query dokumen yang representasi vektornya paling dekat dengan pertanyaan pengguna.
+- **Pencarian vektor** - mengubah dokumen dari teks menjadi representasi vektor menggunakan model embedding, memungkinkan pencarian **semantik** menggunakan arti kata. Pengambilan dilakukan dengan mengajukan pertanyaan pada dokumen yang representasi vektornya paling dekat dengan pertanyaan pengguna.
 
-- **Hibrida** - gabungan dari pencarian kata kunci dan vektor.
+- **Hibrida** - kombinasi antara pencarian kata kunci dan vektor.
 
-Tantangan pengambilan muncul ketika tidak ada respons serupa di basis data, sistem kemudian akan mengembalikan informasi terbaik yang bisa didapat, namun Anda bisa menggunakan taktik seperti mengatur jarak maksimum untuk relevansi atau menggunakan pencarian hibrida yang menggabungkan kata kunci dan pencarian vektor. Dalam pelajaran ini kita akan menggunakan pencarian hibrida, kombinasi pencarian vektor dan kata kunci. Kita akan menyimpan data ke dalam dataframe dengan kolom yang berisi potongan serta embedding.
+Tantangan pada pengambilan muncul ketika tidak ada respons serupa untuk query dalam basis data, sistem akan mengembalikan informasi terbaik yang bisa didapat, namun Anda bisa menggunakan taktik seperti mengatur jarak maksimum untuk relevansi atau menggunakan pencarian hibrida yang mengombinasikan pencarian kata kunci dan vektor. Dalam pelajaran ini kita akan menggunakan pencarian hibrida, kombinasi pencarian vektor dan kata kunci. Kita akan menyimpan data ke dalam dataframe dengan kolom yang berisi potongan serta embedding.
 
-### Kemiripan Vektor
+### Kesamaan Vektor
 
-Retriever akan mencari di basis pengetahuan embedding yang berdekatan, tetangga terdekat, karena teks tersebut mirip. Dalam skenario pengguna mengajukan query, query tersebut pertama di-embed lalu dicocokkan dengan embedding serupa. Pengukuran umum yang digunakan untuk mengetahui seberapa mirip vektor yang berbeda adalah kemiripan kosinus (cosine similarity) yang berdasarkan sudut antara dua vektor.
+Pengambil akan mencari di database pengetahuan embedding yang berdekatan—tetangga terdekat—karena mereka mewakili teks yang mirip. Dalam skenario ini, saat pengguna mengajukan query, query tersebut terlebih dahulu di-embedding, kemudian dicocokkan dengan embedding serupa. Pengukuran yang paling umum digunakan untuk membandingkan kesamaan vektor adalah cosine similarity, yang didasarkan pada sudut antara dua vektor.
 
-Kita dapat mengukur kemiripan menggunakan alternatif lain seperti jarak Euclidean yaitu garis lurus antara ujung vektor dan dot product yang mengukur jumlah hasil perkalian elemen-elemen yang bersesuaian dari dua vektor.
+Metode lain yang bisa kita gunakan untuk mengukur kesamaan termasuk jarak Euclidean, yaitu garis lurus antara titik ujung vektor, dan dot product, yang mengukur jumlah produk elemen-elemen yang bersesuaian dalam dua vektor.
 
 ### Indeks pencarian
 
-Saat melakukan pengambilan, kita perlu membangun indeks pencarian untuk basis pengetahuan sebelum melakukan pencarian. Indeks akan menyimpan embedding kita dan dapat dengan cepat mengambil potongan serupa meskipun dalam basis data yang besar. Kita dapat membuat indeks secara lokal menggunakan:
+Saat melakukan pengambilan, kita perlu membangun indeks pencarian untuk basis pengetahuan sebelum pencarian dilakukan. Indeks akan menyimpan embedding dan dapat dengan cepat mengambil potongan paling mirip bahkan di basis data yang besar. Kita bisa membuat indeks secara lokal menggunakan:
 
 ```python
 from sklearn.neighbors import NearestNeighbors
 
 embeddings = flattened_df['embeddings'].to_list()
 
-# Buat indeks pencarian
+# Create the search index
 nbrs = NearestNeighbors(n_neighbors=5, algorithm='ball_tree').fit(embeddings)
 
-# Untuk menanyakan indeks, Anda dapat menggunakan metode kneighbors
+# To query the index, you can use the kneighbors method
 distances, indices = nbrs.kneighbors(embeddings)
 ```
 
-### Penyusunan ulang peringkat (Re-ranking)
+### Penyusunan ulang peringkat
 
-Setelah Anda melakukan query ke basis data, Anda mungkin perlu mengurutkan hasil dari yang paling relevan. LLM reranking memanfaatkan Machine Learning untuk meningkatkan relevansi hasil pencarian dengan mengurutkannya dari yang paling relevan. Menggunakan Azure AI Search, penyusunan ulang peringkat dilakukan otomatis menggunakan semantic reranker. Contoh cara kerja reranking dengan tetangga terdekat:
+Setelah Anda mengajukan query ke basis data, Anda mungkin perlu mengurutkan hasil dari yang paling relevan. LLM penyusun ulang peringkat memanfaatkan Pembelajaran Mesin untuk meningkatkan relevansi hasil pencarian dengan mengurutkannya dari yang paling relevan. Dengan Azure AI Search, penyusunan ulang peringkat dilakukan secara otomatis menggunakan penyusun ulang semantic. Contoh cara kerja penyusunan ulang peringkat menggunakan tetangga terdekat:
 
 ```python
-# Temukan dokumen yang paling mirip
+# Find the most similar documents
 distances, indices = nbrs.kneighbors([query_vector])
 
 index = []
-# Cetak dokumen yang paling mirip
+# Print the most similar documents
 for i in range(3):
     index = indices[0][i]
     for index in indices[0]:
@@ -181,35 +181,35 @@ for i in range(3):
         print(f"Index {index} not found in DataFrame")
 ```
 
-## Menyatukan semuanya
+## Menggabungkan semuanya
 
-Langkah terakhir adalah menambahkan LLM kita sehingga dapat memberikan respons yang dibumikan pada data kita. Kita dapat mengimplementasikannya sebagai berikut:
+Langkah terakhir adalah menambahkan LLM kita ke dalam campuran agar bisa mendapatkan respons yang didasarkan pada data kita. Kita dapat mengimplementasikannya sebagai berikut:
 
 ```python
 user_input = "what is a perceptron?"
 
 def chatbot(user_input):
-    # Ubah pertanyaan menjadi vektor kueri
+    # Convert the question to a query vector
     query_vector = create_embeddings(user_input)
 
-    # Temukan dokumen yang paling mirip
+    # Find the most similar documents
     distances, indices = nbrs.kneighbors([query_vector])
 
-    # tambahkan dokumen ke kueri untuk memberikan konteks
+    # add documents to query  to provide context
     history = []
     for index in indices[0]:
         history.append(flattened_df['chunks'].iloc[index])
 
-    # gabungkan riwayat dan masukan pengguna
+    # combine the history and the user input
     history.append(user_input)
 
-    # buat objek pesan
+    # create a message object
     messages=[
         {"role": "system", "content": "You are an AI assistant that helps with AI questions."},
         {"role": "user", "content": "\n\n".join(history) }
     ]
 
-    # gunakan API Respon untuk menghasilkan respons
+    # use the Responses API to generate a response
     response = client.responses.create(
         model="gpt-5-mini",
         max_output_tokens=800,
@@ -224,45 +224,45 @@ chatbot(user_input)
 
 ## Mengevaluasi aplikasi kita
 
-### Metode Evaluasi
+### Metrik Evaluasi
 
-- Kualitas respons yang diberikan memastikan terdengar alami, lancar dan seperti manusia
+- Kualitas respons yang diberikan, memastikan terdengar alami, lancar, dan seperti manusia
 
-- Groundedness data: mengevaluasi apakah respons berasal dari dokumen yang diberikan
+- Keterdasaran data: mengevaluasi apakah respons berasal dari dokumen yang diberikan
 
-- Relevansi: mengevaluasi apakah respons cocok dan terkait dengan pertanyaan yang diajukan
+- Relevansi: mengevaluasi apakah respons sesuai dan terkait dengan pertanyaan yang diajukan
 
-- Kelancaran - apakah respons masuk akal secara gramatikal
+- Kelancaran - apakah respons masuk akal secara tata bahasa
 
-## Kasus Penggunaan untuk menggunakan RAG (Retrieval Augmented Generation) dan basis data vektor
+## Kasus Penggunaan untuk menggunakan RAG (Generasi Ditingkatkan dengan Pengambilan) dan basis data vektor
 
-Ada banyak kasus penggunaan berbeda dimana panggilan fungsi dapat meningkatkan aplikasi Anda seperti:
+Ada banyak kasus penggunaan berbeda di mana RAG dapat meningkatkan aplikasi Anda, seperti:
 
-- Tanya Jawab: membumikan data perusahaan Anda ke chat yang dapat digunakan oleh karyawan untuk mengajukan pertanyaan.
+- Tanya Jawab: mendasar data perusahaan Anda ke dalam chat yang dapat digunakan oleh karyawan untuk mengajukan pertanyaan.
 
-- Sistem Rekomendasi: dimana Anda dapat membuat sistem yang mencocokkan nilai paling mirip misalnya film, restoran dan lain-lain.
+- Sistem Rekomendasi: di mana Anda dapat membuat sistem yang mencocokkan nilai paling mirip misalnya film, restoran, dan banyak lagi.
 
-- Layanan chatbot: Anda dapat menyimpan riwayat chat dan mempersonalisasi percakapan berdasarkan data pengguna.
+- Layanan chatbot: Anda dapat menyimpan riwayat obrolan dan mempersonalisasi percakapan berdasarkan data pengguna.
 
-- Pencarian gambar berbasis embedding vektor, berguna saat melakukan pengenalan gambar dan deteksi anomali.
+- Pencarian gambar berdasarkan embedding vektor, berguna saat melakukan pengenalan gambar dan deteksi anomali.
 
 ## Ringkasan
 
-Kita telah membahas area dasar RAG mulai dari penambahan data ke aplikasi, query pengguna sampai output. Untuk mempermudah pembuatan RAG, Anda dapat menggunakan kerangka kerja seperti Semanti Kernel, Langchain atau Autogen.
+Kita telah membahas area fundamental RAG dari menambahkan data kita ke aplikasi, pertanyaan pengguna hingga keluaran. Untuk mempermudah pembuatan RAG, Anda dapat menggunakan kerangka kerja seperti Semantic Kernel, LangChain atau AutoGen.
 
 ## Tugas
 
-Untuk melanjutkan pembelajaran Retrieval Augmented Generation (RAG) Anda dapat membangun:
+Untuk melanjutkan pembelajaran Anda tentang Generasi Ditingkatkan dengan Pengambilan (RAG) Anda dapat membangun:
 
-- Bangun front-end untuk aplikasi menggunakan framework pilihan Anda
+- Membangun front-end untuk aplikasi menggunakan kerangka kerja pilihan Anda
 
-- Manfaatkan framework, baik LangChain atau Semantic Kernel, lalu buat ulang aplikasi Anda.
+- Memanfaatkan kerangka kerja, baik LangChain atau Semantic Kernel, dan membuat ulang aplikasi Anda.
 
-Selamat telah menyelesaikan pelajaran ini 👏.
+Selamat telah menyelesaikan pelajaran 👏.
 
-## Pembelajaran tidak berhenti di sini, teruskan Perjalanan Anda
+## Pembelajaran tidak berhenti di sini, lanjutkan Perjalanan
 
-Setelah menyelesaikan pelajaran ini, lihat koleksi [Generative AI Learning](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) kami untuk terus meningkatkan pengetahuan Anda tentang Generative AI!
+Setelah menyelesaikan pelajaran ini, lihat koleksi [Pembelajaran AI Generatif kami](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) untuk terus meningkatkan pengetahuan AI Generatif Anda!
 
 ---
 

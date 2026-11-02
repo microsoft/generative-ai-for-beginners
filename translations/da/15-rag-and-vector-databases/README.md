@@ -20,11 +20,11 @@ I denne lektion vil vi dække følgende:
 
 Efter at have gennemført denne lektion vil du kunne:
 
-- Forklare betydningen af RAG i dataindhentning og behandling.
+- Forklar betydningen af RAG i datahentning og -behandling.
 
-- Opsætte en RAG-applikation og forankre dine data til en LLM.
+- Opsæt en RAG-applikation og funder en LLM med dine data
 
-- Effektiv integration af RAG og vektordatabaser i LLM-applikationer.
+- Integrer effektivt RAG og vektordatabaser i LLM-applikationer.
 
 ## Vores scenario: forbedring af vores LLMs med vores egne data
 
@@ -36,7 +36,7 @@ Til denne lektion ønsker vi at tilføje vores egne noter til uddannelsesstartup
 
 - `Azure AI Search` og `Azure Cosmos DB:` vektordatabaser til at gemme vores data og oprette en søgeindeks
 
-Brugere vil kunne lave øvequizzer ud fra deres noter, repetitionsflashcards og opsummere det til korte oversigter. For at komme i gang, lad os se på hvad RAG er, og hvordan det virker:
+Brugere vil kunne oprette øve-quizzer og repetitionsflashcards ud fra deres noter og opsummere disse noter til præcise oversigter. For at komme i gang, lad os se på, hvad RAG er, og hvordan det fungerer:
 
 ## Retrieval Augmented Generation (RAG)
 
@@ -56,9 +56,9 @@ Forestil dig, at du vil udrulle en chatbot, der laver quizzer ud fra dine noter;
 
 - **Forstærket generering:** LLM'en forbedrer sit svar baseret på de hentede data. Det tillader, at det genererede svar ikke kun bygger på forudtrænede data men også relevant information fra den tilføjede kontekst. De hentede data bruges til at forstærke LLM’ens svar. LLM’en returnerer derefter et svar til brugerens spørgsmål.
 
-![illustration der viser hvordan RAGs arkitektur fungerer](../../../translated_images/da/encoder-decode.f2658c25d0eadee2.webp)
+![Diagram, der viser RAG-arkitektur](../../../translated_images/da/encoder-decode.f2658c25d0eadee2.webp?WT.mc_id=academic-105485-koreyst)
 
-Arkitekturen for RAGs implementeres ved hjælp af transformere bestående af to dele: en encoder og en decoder. For eksempel, når en bruger stiller et spørgsmål, bliver inputteksten 'kodet' til vektorer, der fanger betydningen af ordene, og vektorerne bliver 'afkodet' til vores dokumentindeks og genererer ny tekst baseret på brugerens forespørgsel. LLM bruger både en encoder-decoder-model til at generere output.
+RAG kombinerer en søger med en generator: forespørgslen konverteres til en vektor, matches mod dokumentindekset for at finde relevante tekstafsnit, og disse afsnit leveres som kontekst til en LLM, som genererer svaret. Søgeren og generatoren kan bruge forskellige modeller; RAG kræver ikke en encoder-decoder transformer.
 
 To tilgange til implementering af RAG ifølge den foreslåede artikel: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) er:
 
@@ -76,13 +76,13 @@ To tilgange til implementering af RAG ifølge den foreslåede artikel: [Retrieva
 
 ## Oprettelse af en vidensbase
 
-Vores applikation er baseret på vores personlige data, dvs. lektionen om neurale netværk i AI For Beginners pensum.
+Vores applikation er baseret på vores personlige data, dvs. Neural Network-lektionen fra AI for Beginners-kurset.
 
 ### Vektordatabaser
 
 En vektordatabase, i modsætning til traditionelle databaser, er en specialiseret database designet til at gemme, håndtere og søge i indlejrede vektorer. Den gemmer numeriske repræsentationer af dokumenter. At bryde data ned til numeriske embeddings gør det nemmere for vores AI-system at forstå og behandle dataene.
 
-Vi gemmer vores embeddings i vektordatabaser, da LLMs har en begrænsning på antallet af tokens, de kan acceptere som input. Da du ikke kan give hele embeddings til en LLM, skal vi bryde dem ned i bidder, og når en bruger stiller et spørgsmål, bliver de embeddings, der mest ligner spørgsmålet, returneret sammen med prompten. Bidbrydning reducerer også omkostninger ved antallet af tokens, der sendes gennem en LLM.
+Fordi LLM'er har en grænse for antallet af input-token, deler vi dokumenter op i bidder, før vi embedder dem. Når en bruger stiller et spørgsmål, identificerer de embeddings, der er mest lig query'en, de relevante tekstbidder, som returneres med prompten. Opdeling i bidder reducerer også antallet af tokens, der sendes til LLM'en, og kan derfor reducere omkostningerne.
 
 Nogle populære vektordatabaser inkluderer Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant og DeepLake. Du kan oprette en Azure Cosmos DB-model ved hjælp af Azure CLI med følgende kommando:
 
@@ -141,9 +141,9 @@ En udfordring ved indhentning opstår, når der ikke findes noget lignende svar 
 
 ### Vektorsimilitet
 
-Retrieveren vil søge gennem vidensdatabasen efter embeddings, der er tæt på hinanden, den nærmeste nabo, da de er tekster, der ligner hinanden. I scenariet med et brugerforespørgsel bliver det først embedded og derefter matchet med lignende embeddings. Den almindelige måling, der bruges til at finde, hvor ens forskellige vektorer er, er cosine similarity, som baseres på vinklen mellem to vektorer.
+Retrieveren vil søge gennem vidensdatabasen efter indlejringer, der ligger tæt på hinanden—de nærmeste naboer—da de repræsenterer tekster, der ligner hinanden. I dette scenarie, når en bruger indsender en forespørgsel, bliver den først indlejret og derefter matchet med lignende indlejringer. Det mest almindelige mål, der bruges til at sammenligne vektorlignende, er cosinuslignende, som er baseret på vinklen mellem to vektorer.
 
-Vi kan måle lighed ved hjælp af andre alternativer som for eksempel Euclidean distance, som er den lige linje mellem vektorendepunkter, og dot product, som måler summen af produkterne af tilsvarende elementer i to vektorer.
+Andre metrikker, vi kan bruge til at måle lighed, inkluderer euklidisk afstand, som er den lige linje mellem vektorendepunkter, og prikprodukt, som måler summen af produkterne af tilsvarende elementer i to vektorer.
 
 ### Søgeindeks
 
@@ -236,7 +236,7 @@ chatbot(user_input)
 
 ## Brugstilfælde for brug af RAG (Retrieval Augmented Generation) og vektordatabaser
 
-Der findes mange forskellige brugstilfælde, hvor funktionskald kan forbedre din app, som for eksempel:
+Der er mange forskellige brugssituationer, hvor RAG kan forbedre din app, for eksempel:
 
 - Spørgsmål og svar: forankring af virksomhedens data til en chat, der kan bruges af medarbejdere til at stille spørgsmål.
 
@@ -248,7 +248,7 @@ Der findes mange forskellige brugstilfælde, hvor funktionskald kan forbedre din
 
 ## Resumé
 
-Vi har dækket de fundamentale områder af RAG fra tilføjelse af vores data til applikationen, brugerforespørgslen og outputtet. For at forenkle oprettelsen af RAG kan du bruge frameworks såsom Semantic Kernel, Langchain eller Autogen.
+Vi har dækket de grundlæggende områder af RAG fra tilføjelse af vores data til applikationen, brugerforespørgslen og output. For at forenkle oprettelsen af RAG kan du bruge frameworks som Semantic Kernel, LangChain eller AutoGen.
 
 ## Opgave
 
