@@ -169,16 +169,11 @@ Once you have queried the database, you might need to sort the results from the 
 # Find the most similar documents
 distances, indices = nbrs.kneighbors([query_vector])
 
-index = []
-# Print the most similar documents
-for i in range(3):
-    index = indices[0][i]
-    for index in indices[0]:
-        print(flattened_df['chunks'].iloc[index])
-        print(flattened_df['path'].iloc[index])
-        print(flattened_df['distances'].iloc[index])
-    else:
-        print(f"Index {index} not found in DataFrame")
+# Print the three most similar documents with their distance to the question
+for distance, index in zip(distances[0][:3], indices[0][:3]):
+    print(flattened_df['chunks'].iloc[index])
+    print(flattened_df['path'].iloc[index])
+    print(distance)
 ```
 
 ## Bringing it all together
