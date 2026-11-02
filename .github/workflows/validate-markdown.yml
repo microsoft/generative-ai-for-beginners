@@ -60,6 +60,27 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install markdown-checker==1.2.1
+      - name: Test checker isolation
+        if: matrix.command == 'check_broken_paths'
+        run: |
+          test_dir="$(mktemp -d)"
+          trap 'rm -rf "$test_dir"' EXIT
+          cat > "$test_dir/pyproject.toml" <<'EOF'
+          [tool.markdown-checker]
+          extensions = [".never"]
+          EOF
+          cat > "$test_dir/--probe.md" <<'EOF'
+          [missing](./does-not-exist.md)
+          EOF
+          cd "$test_dir"
+          set +e
+          markdown-checker --isolated --func check_broken_paths -- --probe.md
+          status=$?
+          set -e
+          if [ "$status" -ne 1 ]; then
+            echo "Expected the isolated checker to report the broken path, got exit $status"
+            exit 1
+          fi
       - name: Run markdown check
         if: steps.changed-markdown-files.outputs.has_files == 'true'
         env:
@@ -67,7 +88,7 @@ jobs:
         run: |
           mapfile -d '' -t files < changed_markdown_files.txt
           status=0
-          markdown-checker --func "$CHECK_COMMAND" --guide-url 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md' "${files[@]}" || status=$?
+          markdown-checker --isolated --func "$CHECK_COMMAND" --guide-url 'https://github.com/microsoft/generative-ai-for-beginners/blob/main/CONTRIBUTING.md' -- "${files[@]}" || status=$?
           if [ -f comment.md ]; then
             cat comment.md >> "$GITHUB_STEP_SUMMARY"
           fi
