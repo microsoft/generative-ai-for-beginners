@@ -65,9 +65,7 @@ In the code example below:
 
 ```python 
 import os
-from azure.ai.inference import ChatCompletionsClient
-from azure.ai.inference.models import AssistantMessage, SystemMessage, UserMessage
-from azure.core.credentials import AzureKeyCredential
+from openai import OpenAI
 
 # Get these from your Microsoft Foundry project's "Overview" page
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
@@ -76,9 +74,11 @@ endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 # using Llama-3.3-70B-Instruct, a currently available alternative, instead
 model_name = "Llama-3.3-70B-Instruct"
 
-client = ChatCompletionsClient(
-    endpoint=endpoint,
-    credential=AzureKeyCredential(token),
+# The OpenAI client points at the Microsoft Foundry OpenAI-compatible /openai/v1/ endpoint,
+# which serves OpenAI models as well as models like Llama, Mistral, and Phi.
+client = OpenAI(
+    base_url=f"{endpoint.rstrip('/')}/openai/v1/",
+    api_key=token,
 )
 
 
@@ -94,12 +94,12 @@ You are a helpful assistant<|eot_id|>
 """
 
 messages = [
-    SystemMessage(content=tool_prompt),
-    UserMessage(content="What is the weather in Stockholm?"),
+    {"role": "system", "content": tool_prompt},
+    {"role": "user", "content": "What is the weather in Stockholm?"},
 
 ]
 
-response = client.complete(messages=messages, model=model_name)
+response = client.chat.completions.create(messages=messages, model=model_name)
 
 print(response.choices[0].message.content)
 ```
@@ -118,17 +118,9 @@ The multimodal support represents a big step in the world of open source models.
 ### Multimodal Support with Llama 3.2
 
 ```python 
+import base64
 import os
-from azure.ai.inference import ChatCompletionsClient
-from azure.ai.inference.models import (
-    SystemMessage,
-    UserMessage,
-    TextContentItem,
-    ImageContentItem,
-    ImageUrl,
-    ImageDetailLevel,
-)
-from azure.core.credentials import AzureKeyCredential
+from openai import OpenAI
 
 # Get these from your Microsoft Foundry project's "Overview" page
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
@@ -137,27 +129,36 @@ endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 # using Llama-4-Scout-17B-16E-Instruct, a currently available natively multimodal alternative, instead
 model_name = "Llama-4-Scout-17B-16E-Instruct"
 
-client = ChatCompletionsClient(
-    endpoint=endpoint,
-    credential=AzureKeyCredential(token),
+# The OpenAI client points at the Microsoft Foundry OpenAI-compatible /openai/v1/ endpoint,
+# which serves OpenAI models as well as models like Llama, Mistral, and Phi.
+client = OpenAI(
+    base_url=f"{endpoint.rstrip('/')}/openai/v1/",
+    api_key=token,
 )
 
-response = client.complete(
+# Images are sent as a base64-encoded data URL inside the user message
+with open("sample.jpg", "rb") as image_file:
+    image_data = base64.b64encode(image_file.read()).decode("utf-8")
+
+response = client.chat.completions.create(
     messages=[
-        SystemMessage(
-            content="You are a helpful assistant that describes images in details."
-        ),
-        UserMessage(
-            content=[
-                TextContentItem(text="What's in this image?"),
-                ImageContentItem(
-                    image_url=ImageUrl.load(
-                        image_file="sample.jpg",
-                        image_format="jpg",
-                        detail=ImageDetailLevel.LOW)
-                ),
+        {
+            "role": "system",
+            "content": "You are a helpful assistant that describes images in details.",
+        },
+        {
+            "role": "user",
+            "content": [
+                {"type": "text", "text": "What's in this image?"},
+                {
+                    "type": "image_url",
+                    "image_url": {
+                        "url": f"data:image/jpeg;base64,{image_data}",
+                        "detail": "low",
+                    },
+                },
             ],
-        ),
+        },
     ],
     model=model_name,
 )

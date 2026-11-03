@@ -62,7 +62,7 @@ In your fork: **Code -> Codespaces -> New on main**
    > **Note:** GitHub Models (and its `GITHUB_TOKEN` variable) is retiring at the end of July 2026. Use [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) instead.
 
    ```env
-   AZURE_INFERENCE_ENDPOINT=your_foundry_endpoint_here
+   AZURE_INFERENCE_ENDPOINT=https://<resource-name>.services.ai.azure.com
    AZURE_INFERENCE_CREDENTIAL=your_foundry_api_key_here
    ```
 
