@@ -49,7 +49,7 @@ The next step is to configure your **local environment variables** as follows:
    AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT='<add your embeddings model deployment name here, e.g. text-embedding-3-small>'
 
    ## Microsoft Foundry Models (multi-provider model catalog, replaces GitHub Models, which retires end of July 2026)
-   AZURE_INFERENCE_ENDPOINT='<add your Microsoft Foundry project endpoint here>'
+   AZURE_INFERENCE_ENDPOINT='<add your Microsoft Foundry resource endpoint here, e.g. https://<resource-name>.services.ai.azure.com>'
    AZURE_INFERENCE_CREDENTIAL='<add your Microsoft Foundry Models API key here>'
 
    ## Hugging Face
@@ -78,7 +78,7 @@ Let's take a quick look at the variable names to understand what they represent:
 | AZURE_OPENAI_ENDPOINT | This is the deployed endpoint for an Azure OpenAI resource |
 | AZURE_OPENAI_DEPLOYMENT | This is the _text generation_ model deployment endpoint |
 | AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT | This is the _text embeddings_ model deployment endpoint |
-| AZURE_INFERENCE_ENDPOINT | This is the endpoint for your Microsoft Foundry project, used for Microsoft Foundry Models |
+| AZURE_INFERENCE_ENDPOINT | This is the base endpoint of your Microsoft Foundry resource (e.g. `https://<resource-name>.services.ai.azure.com`), used for Microsoft Foundry Models. The samples append `/openai/v1/` to it |
 | AZURE_INFERENCE_CREDENTIAL | This is the API key for your Microsoft Foundry project |
 | | |
 
@@ -130,12 +130,12 @@ Your Hugging Face token can be found in your profile under [Access Tokens](https
 
 ## Configure Microsoft Foundry Models: From Portal
 
-> **Note:** GitHub Models is retiring at the end of July 2026. Microsoft Foundry Models is the direct replacement, offering the same free-to-try model catalog and Azure AI Inference SDK / OpenAI SDK experience.
+> **Note:** GitHub Models is retiring at the end of July 2026. Microsoft Foundry Models is the direct replacement, offering the same free-to-try model catalog. The samples call it with the standard OpenAI SDK through the Foundry OpenAI-compatible `/openai/v1/` endpoint (the beta Azure AI Inference SDK has been retired).
 
 1. Go to [Microsoft Foundry](https://ai.azure.com?WT.mc_id=academic-105485-koreyst) and create (or open) a Foundry project.
 1. Browse the [model catalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) and deploy a model, for example `gpt-5-mini`.
 1. On the project's **Overview** page, copy the **endpoint** and **API key**.
-1. Use the endpoint value for `AZURE_INFERENCE_ENDPOINT` and the key value for `AZURE_INFERENCE_CREDENTIAL` in your `.env` file.
+1. Use the key value for `AZURE_INFERENCE_CREDENTIAL` and the resource's base URL for `AZURE_INFERENCE_ENDPOINT` in your `.env` file - just `https://<resource-name>.services.ai.azure.com`, without any `/models` or `/api/projects/...` suffix. The samples append `/openai/v1/` to it and use the `openai` SDK, so the same endpoint works for OpenAI models (e.g. `gpt-5-mini`) and other catalog models (e.g. `Llama-3.3-70B-Instruct`).
 
 ## Offline / Local Providers
 

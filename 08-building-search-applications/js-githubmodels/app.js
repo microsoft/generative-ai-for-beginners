@@ -1,6 +1,4 @@
-import ModelClient from "@azure-rest/ai-inference";
-import { isUnexpected } from "@azure-rest/ai-inference";
-import { AzureKeyCredential } from "@azure/core-auth";
+import OpenAI from "openai";
 
 // SECURITY: Validate required environment variables
 // Get these from your Microsoft Foundry project's "Overview" page
@@ -15,12 +13,11 @@ if (!endpoint) {
     throw new Error("AZURE_INFERENCE_ENDPOINT environment variable is required. Please set it before running this application.");
 }
 
-/* By using the Azure AI Inference SDK, you can easily experiment with different models
+/* Because Microsoft Foundry serves models through the same OpenAI-compatible
+   /openai/v1/ endpoint, you can easily experiment with different models
    by modifying the value of `modelName` in the code below. For this code sample
-   you need an embedding model. The following embedding models are
-   available in the Microsoft Foundry Models catalog:
+   you need an embedding model deployed in your Foundry resource, for example:
 
-   Cohere: Cohere-embed-v3-english, Cohere-embed-v3-multilingual
    OpenAI: text-embedding-3-small, text-embedding-3-large */
 const modelName = "text-embedding-3-small";
 
@@ -45,20 +42,19 @@ function cosineSimilarity(vector1, vector2) {
 export async function main() {
     let carEmbedding, vehicleEmbedding, birdEmbedding
 
-    const client = new ModelClient(endpoint, new AzureKeyCredential(token));
-
-    const response = await client.path("/embeddings").post({
-        body: {
-            input: ["Car", "Vehicle", "Bird"],
-            model: modelName
-        }
+    // The OpenAI client points at the Microsoft Foundry OpenAI-compatible /openai/v1/ endpoint.
+    const client = new OpenAI({
+        apiKey: token,
+        baseURL: `${endpoint.replace(/\/$/, "")}/openai/v1/`,
     });
 
-    if (isUnexpected(response)) {
-        throw response.body.error;
-    }
+    // The SDK throws on non-2xx responses, so no manual status check is needed.
+    const response = await client.embeddings.create({
+        input: ["Car", "Vehicle", "Bird"],
+        model: modelName
+    });
 
-    for (const item of response.body.data) {
+    for (const item of response.data) {
         const { embedding, index } = item;  // Destructure item for cleaner code
         const length = embedding.length;
 
@@ -82,7 +78,7 @@ export async function main() {
         
     }
 
-    console.log(response.body.usage);
+    console.log(response.usage);
     console.log(carEmbedding)
     const scoreCarWithVehicle = cosineSimilarity(carEmbedding, vehicleEmbedding);
     console.log("Comparing - Car vs Vehicle...: ", scoreCarWithVehicle.toFixed(7));

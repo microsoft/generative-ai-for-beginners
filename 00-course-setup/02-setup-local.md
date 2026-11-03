@@ -166,7 +166,7 @@ Here's a step-by-step guide on how to create a `.env` file for Python and add yo
 3. **Edit the `.env` File**: Open the `.env` file in a text editor (e.g., VS Code, Notepad++, or any other editor). Add the following lines to the file, replacing the placeholders with your actual Microsoft Foundry project endpoint and API key:
 
    ```env
-   AZURE_INFERENCE_ENDPOINT=your_foundry_endpoint_here
+   AZURE_INFERENCE_ENDPOINT=https://<resource-name>.services.ai.azure.com
    AZURE_INFERENCE_CREDENTIAL=your_foundry_api_key_here
    ```
 
