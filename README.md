@@ -59,7 +59,7 @@ Each lesson also includes a "Keep Learning" section with additional learning too
 ## What You Need
 ### To run the code of this course, you can use either: 
  - [Azure OpenAI Service](https://aka.ms/genai-beginners/azure-open-ai?WT.mc_id=academic-105485-koreyst) - **Lessons:** "aoai-assignment"
- - [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) - **Lessons:** "githubmodels" (GitHub Models is retiring at the end of July 2026 - use Microsoft Foundry Models instead)
+ - [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) - **Lessons:** "githubmodels" (GitHub Models was retired at the end of July 2026 - use Microsoft Foundry Models instead)
  - [OpenAI API](https://aka.ms/genai-beginners/open-ai?WT.mc_id=academic-105485-koreyst) - **Lessons:** "oai-assignment" 
  - [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) - Run models fully offline on your own device, no cloud subscription required
    

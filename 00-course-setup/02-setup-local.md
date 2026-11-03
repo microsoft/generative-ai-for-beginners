@@ -141,7 +141,7 @@ Once you access the URL, you should see the course outline and be able to naviga
 Keeping your API keys safe and secure is important when building any type of application. We recommend not to store any API keys directly in your code. Committing those details to a public repository could result in security issues and even unwanted costs if used by a bad actor.
 Here's a step-by-step guide on how to create a `.env` file for Python and add your Microsoft Foundry Models credentials:
 
-> **Note:** GitHub Models (and its `GITHUB_TOKEN` variable) is retiring at the end of July 2026. This guide uses [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) instead. Prefer to work fully offline? See [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst).
+> **Note:** GitHub Models (and its `GITHUB_TOKEN` variable) was retired at the end of July 2026. This guide uses [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) instead. Prefer to work fully offline? See [Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst).
 
 1. **Navigate to Your Project Directory**: Open your terminal or command prompt and navigate to your project's root directory where you want to create the `.env` file.
 

@@ -59,7 +59,7 @@ In your fork: **Code -> Codespaces -> New on main**
 
 3. **Edit the `.env` File**: Open the `.env` file in a text editor (e.g., VS Code, Notepad++, or any other editor). Add the following lines to the file, replacing the placeholders with your actual Microsoft Foundry Models endpoint and key (see [`providers.md`](03-providers.md) for how to get these):
 
-   > **Note:** GitHub Models (and its `GITHUB_TOKEN` variable) is retiring at the end of July 2026. Use [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) instead.
+   > **Note:** GitHub Models (and its `GITHUB_TOKEN` variable) was retired at the end of July 2026. Use [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) instead.
 
    ```env
    AZURE_INFERENCE_ENDPOINT=your_foundry_endpoint_here

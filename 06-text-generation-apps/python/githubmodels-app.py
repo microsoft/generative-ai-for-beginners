@@ -4,7 +4,7 @@ from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
 # Get these from your Microsoft Foundry project's "Overview" page
-# (GitHub Models is retiring end of July 2026 - see https://ai.azure.com/catalog/models)
+# (GitHub Models was retired at the end of July 2026 - see https://ai.azure.com/catalog/models)
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
 
