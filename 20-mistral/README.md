@@ -12,29 +12,33 @@ This lesson will cover:
 In this lesson, we will explore 3 different Mistral models: 
 **Mistral Large**, **Mistral Small** and **Mistral Nemo**. 
 
-Each of these models is available free on [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst). The code in this notebook will be using these models to run the code.
+Mistral Large and Mistral Small are available on [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) and are billed pay-as-you-go to your Azure subscription. Mistral NeMo is no longer offered on Foundry, so this lesson only uses its tokenizer, which runs locally without an API call.
 
-> **Note:** GitHub Models is retiring at the end of July 2026. Here are more details on using [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) to prototype with AI models. 
+> **Note:** GitHub Models was retired at the end of July 2026, so this lesson uses Microsoft Foundry Models. Here are more details on using [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) to prototype with AI models. 
 
 
-## Mistral Large 2 (2407)
-Mistral Large 2 is currently the flagship model from Mistral and is designed for enterprise use. 
+## Mistral Large 3
+Mistral Large 3 is currently the flagship model from Mistral and is designed for enterprise use. On Microsoft Foundry it is available with the model ID `Mistral-Large-3`.
 
-The model is an upgrade to the original Mistral Large by offering 
--  Larger Context Window - 128k vs 32k 
--  Better performance on Math and Coding Tasks - 76.9% average accuracy vs 60.4% 
--  Increased multilingual performance - languages include: English, French, German, Spanish, Italian, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Arabic, and Hindi.
+> **Note:** Earlier versions of this lesson used Mistral Large 2 (`Mistral-large-2407`). That model and its successor `Mistral-large-2411` have been retired from Microsoft Foundry, so the samples now use Mistral Large 3.
+
+Compared to earlier Mistral Large versions, the model offers
+-  Larger Context Window - up to 256k tokens
+-  Open weights under the Apache 2.0 License, using a sparse Mixture-of-Experts (MoE) architecture
+-  Strong multilingual performance - languages include: English, French, German, Spanish, Italian, Portuguese, Dutch, Russian, Chinese, Japanese, Korean, Arabic, and Hindi.
 
 With these features, Mistral Large excels at 
 - *Retrieval Augmented Generation (RAG)* - due to the larger context window
 - *Function Calling* - this model has native function calling which allows integration with external tools and APIs. These calls can be made both in parallel or one after another in a sequential order. 
 - *Code Generation* - this model excels on Python, Java, TypeScript and C++ generation. 
 
-### RAG Example using Mistral Large 2 
+### RAG Example using Mistral Large 3 
 
-In this example, we are using Mistral Large 2 to run a RAG pattern over a text document. The question is written in Korean and asks about the author's activities before college. 
+In this example, we are using Mistral Large 3 to run a RAG pattern over a text document. The question is written in Korean and asks about the author's activities before college. 
 
-It uses Cohere Embeddings Model to create embeddings of the text document as well as the question. For this sample, it uses the faiss Python package as a vector store. 
+It uses the Cohere Embed v4 model (`embed-v-4-0`) to create embeddings of the text document as well as the question. For this sample, it uses the faiss Python package as a vector store. 
+
+The samples call Microsoft Foundry Models with the `openai` Python package (`pip install openai`) through the Foundry resource's OpenAI-compatible `/openai/v1/` endpoint. 
 
 The prompt sent to the Mistral model includes both the questions and the retrieved chunks that are similar to the question. The Model then provides a natural language response. 
 
@@ -48,19 +52,22 @@ import numpy as np
 import faiss
 import os
 
-from azure.ai.inference import ChatCompletionsClient
-from azure.ai.inference.models import SystemMessage, UserMessage
-from azure.core.credentials import AzureKeyCredential
-from azure.ai.inference import EmbeddingsClient
+from openai import OpenAI
 
 # Get these from your Microsoft Foundry project's "Overview" page
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
-model_name = "Mistral-large"
+model_name = "Mistral-Large-3"
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
-client = ChatCompletionsClient(
-    endpoint=endpoint,
-    credential=AzureKeyCredential(token),
+# The openai SDK uses the Foundry resource's OpenAI-compatible /openai/v1/ route.
+# This works whether your endpoint is the resource URL, ends in /models, or is a project endpoint.
+# e.g. https://<resource>.services.ai.azure.com/models -> https://<resource>.services.ai.azure.com/openai/v1/
+resource_url = endpoint.split("/api/projects")[0].split("/models")[0].split("/openai")[0].rstrip("/")
+base_url = f"{resource_url}/openai/v1/"
+
+client = OpenAI(
+    base_url=base_url,
+    api_key=token,
 )
 
 response = requests.get('https://raw.githubusercontent.com/run-llama/llama_index/main/docs/docs/examples/data/paul_graham/paul_graham_essay.txt')
@@ -70,14 +77,10 @@ chunk_size = 2048
 chunks = [text[i:i + chunk_size] for i in range(0, len(text), chunk_size)]
 len(chunks)
 
-embed_model_name = "cohere-embed-v3-multilingual" 
+embed_model_name = "embed-v-4-0" # Cohere Embed v4
 
-embed_client = EmbeddingsClient(
-        endpoint=endpoint,
-        credential=AzureKeyCredential(token)
-)
-
-embed_response = embed_client.embed(
+# The same client is used to create embeddings
+embed_response = client.embeddings.create(
     input=chunks,
     model=embed_model_name
 )
@@ -97,7 +100,7 @@ index.add(text_embeddings)
 
 question = "저자가 대학에 오기 전에 주로 했던 두 가지 일은 무엇이었나요?"
 
-question_embedding = embed_client.embed(
+question_embedding = client.embeddings.create(
     input=[question],
     model=embed_model_name
 )
@@ -119,10 +122,10 @@ Answer:
 """
 
 
-chat_response = client.complete(
+chat_response = client.chat.completions.create(
     messages=[
-        SystemMessage(content="You are a helpful assistant."),
-        UserMessage(content=prompt),
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": prompt},
     ],
     temperature=1.0,
     top_p=1.0,
@@ -145,6 +148,8 @@ Mistral Small is great for:
 - Applications where frequent requests are made due to its cost effectiveness 
 - Low latency code tasks like review and code suggestions 
 
+> **Note:** The original `Mistral-small` model has been retired from Microsoft Foundry. The samples use `mistral-small-2503` (Mistral Small 3.1). Models are retired over time, so check the [Foundry model retirement schedule](https://learn.microsoft.com/azure/foundry/openai/concepts/model-retirement-schedule?WT.mc_id=academic-105485-koreyst) and use the newest Mistral Small available in your Foundry catalog if this one has been retired.
+
 ## Comparing Mistral Small and Mistral Large 
 
 To show differences in latency between Mistral Small and Large, run the below cells. 
@@ -154,19 +159,26 @@ You should see a difference in response times between 3-5 seconds. Also note the
 ```python 
 
 import os 
+from openai import OpenAI
+
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
-model_name = "Mistral-small"
+model_name = "mistral-small-2503"
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
-client = ChatCompletionsClient(
-    endpoint=endpoint,
-    credential=AzureKeyCredential(token),
+# Point the openai SDK at the Foundry resource's /openai/v1/ route
+# e.g. https://<resource>.services.ai.azure.com/models -> https://<resource>.services.ai.azure.com/openai/v1/
+resource_url = endpoint.split("/api/projects")[0].split("/models")[0].split("/openai")[0].rstrip("/")
+base_url = f"{resource_url}/openai/v1/"
+
+client = OpenAI(
+    base_url=base_url,
+    api_key=token,
 )
 
-response = client.complete(
+response = client.chat.completions.create(
     messages=[
-        SystemMessage(content="You are a helpful coding assistant."),
-        UserMessage(content="Can you write a Python function to the fizz buzz test?"),
+        {"role": "system", "content": "You are a helpful coding assistant."},
+        {"role": "user", "content": "Can you write a Python function to the fizz buzz test?"},
     ],
     temperature=1.0,
     top_p=1.0,
@@ -181,23 +193,26 @@ print(response.choices[0].message.content)
 ```python 
 
 import os
-from azure.ai.inference import ChatCompletionsClient
-from azure.ai.inference.models import SystemMessage, UserMessage
-from azure.core.credentials import AzureKeyCredential
+from openai import OpenAI
 
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
-model_name = "Mistral-large"
+model_name = "Mistral-Large-3"
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 
-client = ChatCompletionsClient(
-    endpoint=endpoint,
-    credential=AzureKeyCredential(token),
+# Point the openai SDK at the Foundry resource's /openai/v1/ route
+# e.g. https://<resource>.services.ai.azure.com/models -> https://<resource>.services.ai.azure.com/openai/v1/
+resource_url = endpoint.split("/api/projects")[0].split("/models")[0].split("/openai")[0].rstrip("/")
+base_url = f"{resource_url}/openai/v1/"
+
+client = OpenAI(
+    base_url=base_url,
+    api_key=token,
 )
 
-response = client.complete(
+response = client.chat.completions.create(
     messages=[
-        SystemMessage(content="You are a helpful coding assistant."),
-        UserMessage(content="Can you write a Python function to the fizz buzz test?"),
+        {"role": "system", "content": "You are a helpful coding assistant."},
+        {"role": "user", "content": "Can you write a Python function to the fizz buzz test?"},
     ],
     temperature=1.0,
     top_p=1.0,
@@ -211,7 +226,7 @@ print(response.choices[0].message.content)
 
 ## Mistral NeMo
 
-Compared to the other two models discussed in this lesson, Mistral NeMo is the only free model with an Apache2 License. 
+Mistral NeMo is an open model released under the Apache 2.0 License. 
 
 It is viewed as an upgrade to the earlier open source LLM from Mistral, Mistral 7B. 
 
@@ -228,10 +243,12 @@ Some other features of the NeMo model are:
 
 In this sample, we will look at how Mistral NeMo handles tokenization compared to Mistral Large. 
 
-Both samples take the same prompt but you should see that NeMo returns fewer tokens than Mistral Large. 
+Both samples take the same prompt. Mistral NeMo introduced the Tekken tokenizer, which needs fewer tokens than the older SentencePiece tokenizer used by earlier Mistral Large versions. Mistral Large 3 now uses Tekken as well, so you should see both samples return the same number of tokens. 
+
+> **Note:** Mistral NeMo is no longer offered in the Microsoft Foundry model catalog. The tokenizer samples below run locally with the `mistral-common` package, which downloads each model's tokenizer file from Hugging Face, so they don't need a model deployment or API key.
 
 ```bash
-pip install mistral-common
+pip install "mistral-common[hf-hub]"
 ```
 
 ```python 
@@ -246,11 +263,11 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Load Mistral tokenizer
+# Load the Mistral tokenizer from Hugging Face
 
-model_name = "open-mistral-nemo"
+model_name = "mistralai/Mistral-Nemo-Instruct-2407"
 
-tokenizer = MistralTokenizer.from_model(model_name)
+tokenizer = MistralTokenizer.from_hf_hub(model_name)
 
 # Tokenize a list of messages
 tokenized = tokenizer.encode_chat_completion(
@@ -302,11 +319,11 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Load Mistral tokenizer
+# Load the Mistral tokenizer from Hugging Face
 
-model_name = "mistral-large-latest"
+model_name = "mistralai/Mistral-Large-3-675B-Instruct-2512"
 
-tokenizer = MistralTokenizer.from_model(model_name)
+tokenizer = MistralTokenizer.from_hf_hub(model_name)
 
 # Tokenize a list of messages
 tokenized = tokenizer.encode_chat_completion(
