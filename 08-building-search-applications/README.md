@@ -141,9 +141,9 @@ From the Azure Cloud Shell, run the following command to deploy the OpenAI Embed
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name text-embedding-ada-002 \
-    --model-name text-embedding-ada-002 \
-    --model-version "2"  \
+    --deployment-name text-embedding-3-small \
+    --model-name text-embedding-3-small \
+    --model-version "1"  \
     --model-format OpenAI \
     --sku-capacity 100 --sku-name "Standard"
 ```
