@@ -20,7 +20,7 @@ if (!endpoint) {
 
    OpenAI: gpt-5, gpt-5-mini
    Meta: Llama-3.3-70B-Instruct, Llama-4-Scout-17B-16E-Instruct
-   Mistral AI: mistral-medium-3-5, mistral-small-4-119b-2603, Codestral-2501, ministral-ministral-4b-instruct
+   Mistral AI: Mistral-Large-3, mistral-small-2503 (see lesson 20)
    Microsoft: Phi-4, Phi-4-mini-instruct, Phi-4-multimodal-instruct, Phi-4-reasoning
 
    This sample uses the Responses API, which is the recommended API for OpenAI models.

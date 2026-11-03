@@ -423,7 +423,6 @@ Ok, so we created `functions` variables and a corresponding Python function, how
       model=deployment,
       tool_choice="auto",
       tools=functions,
-      temperature=0,
       store=False,
          )  # get a new response from the model where it can see the function response
 

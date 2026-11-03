@@ -18,7 +18,7 @@ if (!endpoint) {
    available in the Microsoft Foundry Models catalog:
 
    OpenAI: gpt-5, gpt-5-mini
-   Mistral AI: mistral-medium-3-5, mistral-small-4-119b-2603
+   Mistral AI: Mistral-Large-3, mistral-small-2503 (see lesson 20)
 
    This sample uses the Responses API, which is the recommended API for OpenAI models.
    For non-OpenAI models, use `client.chat.completions.create(...)` with
