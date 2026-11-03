@@ -243,12 +243,12 @@ Some other features of the NeMo model are:
 
 In this sample, we will look at how Mistral NeMo handles tokenization compared to Mistral Large. 
 
-Both samples take the same prompt but you should see that NeMo returns fewer tokens than Mistral Large. 
+Both samples take the same prompt. Mistral NeMo introduced the Tekken tokenizer, which needs fewer tokens than the older SentencePiece tokenizer used by earlier Mistral Large versions. Mistral Large 3 now uses Tekken as well, so you should see both samples return the same number of tokens. 
 
-> **Note:** Mistral NeMo is no longer offered in the Microsoft Foundry model catalog. The tokenizer samples below run locally with the `mistral-common` package, so they don't need a model deployment or API key.
+> **Note:** Mistral NeMo is no longer offered in the Microsoft Foundry model catalog. The tokenizer samples below run locally with the `mistral-common` package, which downloads each model's tokenizer file from Hugging Face, so they don't need a model deployment or API key.
 
 ```bash
-pip install mistral-common
+pip install "mistral-common[hf-hub]"
 ```
 
 ```python 
@@ -263,11 +263,11 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Load Mistral tokenizer
+# Load the Mistral tokenizer from Hugging Face
 
-model_name = "open-mistral-nemo"
+model_name = "mistralai/Mistral-Nemo-Instruct-2407"
 
-tokenizer = MistralTokenizer.from_model(model_name)
+tokenizer = MistralTokenizer.from_hf_hub(model_name)
 
 # Tokenize a list of messages
 tokenized = tokenizer.encode_chat_completion(
@@ -319,11 +319,11 @@ from mistral_common.protocol.instruct.tool_calls import (
 )
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 
-# Load Mistral tokenizer
+# Load the Mistral tokenizer from Hugging Face
 
-model_name = "mistral-large-latest"
+model_name = "mistralai/Mistral-Large-3-675B-Instruct-2512"
 
-tokenizer = MistralTokenizer.from_model(model_name)
+tokenizer = MistralTokenizer.from_hf_hub(model_name)
 
 # Tokenize a list of messages
 tokenized = tokenizer.encode_chat_completion(

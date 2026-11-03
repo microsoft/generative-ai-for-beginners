@@ -8,4 +8,4 @@ openai>=1.12.0
 tiktoken
 azure-ai-inference
 scikit-learn
-mistral-common
+mistral-common[hf-hub]
