@@ -12,9 +12,9 @@ This lesson will cover:
 In this lesson, we will explore 3 different Mistral models: 
 **Mistral Large**, **Mistral Small** and **Mistral Nemo**. 
 
-Each of these models is available free on [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst). The code in this notebook will be using these models to run the code.
+Mistral Large and Mistral Small are available on [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) and are billed pay-as-you-go to your Azure subscription. Mistral NeMo is no longer offered on Foundry, so this lesson only uses its tokenizer, which runs locally without an API call.
 
-> **Note:** GitHub Models is retiring at the end of July 2026. Here are more details on using [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) to prototype with AI models. 
+> **Note:** GitHub Models was retired at the end of July 2026, so this lesson uses Microsoft Foundry Models. Here are more details on using [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) to prototype with AI models. 
 
 
 ## Mistral Large 3
