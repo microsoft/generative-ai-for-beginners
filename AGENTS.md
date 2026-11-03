@@ -8,7 +8,7 @@ This repository contains a comprehensive 21-lesson curriculum teaching Generativ
 - Python 3.9+ with libraries: `openai`, `python-dotenv`, `tiktoken`, `pandas`, `numpy`, `matplotlib`
 - TypeScript/JavaScript with Node.js and libraries: `openai` (Azure OpenAI and Microsoft Foundry Models, both via the `/openai/v1/` endpoint)
 - The beta `azure-ai-inference` (Python) / `@azure-rest/ai-inference` (JS) SDK was retired on 2026-08-26; do not use it - use the `openai` SDK against the Foundry `/openai/v1/` endpoint instead
-- Azure OpenAI Service, OpenAI API, and Microsoft Foundry Models (GitHub Models is retiring end of July 2026)
+- Azure OpenAI Service, OpenAI API, and Microsoft Foundry Models (GitHub Models was retired at the end of July 2026)
 - Jupyter Notebooks for interactive learning
 - Dev Containers for consistent development environment
 
@@ -83,7 +83,7 @@ All lessons requiring API access use environment variables defined in `.env`:
 - `AZURE_OPENAI_API_VERSION` - API version (default: `2024-10-21`)
 - `HUGGING_FACE_API_KEY` - For Hugging Face models
 - `AZURE_INFERENCE_ENDPOINT` - Microsoft Foundry resource base URL (e.g. `https://<resource-name>.services.ai.azure.com`, no `/models` suffix) for the multi-provider model catalog; samples append `/openai/v1/` and use the `openai` SDK
-- `AZURE_INFERENCE_CREDENTIAL` - Microsoft Foundry Models API key (replaces the retiring `GITHUB_TOKEN`)
+- `AZURE_INFERENCE_CREDENTIAL` - Microsoft Foundry Models API key (replaces the retired `GITHUB_TOKEN`)
 - `AZURE_INFERENCE_CHAT_MODEL` - A non-reasoning model (e.g. `Llama-3.3-70B-Instruct`) used by the `temperature` examples, since reasoning models don't support sampling controls
 
 ### Model conventions (important)
