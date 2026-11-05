@@ -30,6 +30,14 @@ Whenever you are submitting any changes to the Generative AI for Beginners repos
 * If you are submitting a translation, please create one PR for all the translated files as we don't accept partial translations for the content
 * If you are submitting a typo or documentation fix, you can combine modifications to a single PR where suitable
 
+## Editorial scope and third-party products
+
+This curriculum focuses on Microsoft technologies and vendor-neutral open standards. Contributions should serve a clear educational purpose and must not be primarily intended to introduce or promote a third-party commercial product, hosted service, model router, SDK, MCP server, or other vendor-specific offering.
+
+Open-source software and third-party dependencies may be referenced when they are necessary to explain an open standard or interoperability scenario, are presented neutrally, and are not centered on a vendor's product or hosted endpoint. If your proposed contribution includes a vendor-specific product or service, open an issue and obtain maintainer approval before submitting a pull request.
+
+Contributors must disclose any relevant employment, ownership, sponsorship, or other affiliation with a product or service referenced in their contribution. Do not include unsupported pricing, performance, security, privacy, or comparative claims. Runnable examples must not transmit learner data or perform public actions through an external third-party service by default.
+
 ## General Guidance for writing
 
 - Ensure that all your URLs are wrapped in square brackets followed by a parenthesis with no extra spaces around them or inside them `[]()`.
