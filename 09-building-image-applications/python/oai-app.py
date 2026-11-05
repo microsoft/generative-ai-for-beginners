@@ -20,7 +20,7 @@ client = OpenAI(api_key=api_key)
 try:
     # Create an image by using the image generation API
     generation_response = client.images.generate(
-        model="gpt-image-1",
+        model="gpt-image-2",  # gpt-image-1 is being retired on 2026-10-23; gpt-image-2 is the recommended replacement (microsoft/generative-ai-for-beginners#1378)
         prompt='Bunny on horse, holding a lollipop, on a foggy meadow where it grows daffodils',    # Enter your prompt text here
         size='1024x1024',
         n=1
