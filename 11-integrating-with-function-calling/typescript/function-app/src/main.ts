@@ -61,6 +61,8 @@ const getCurrentWeatherTool = {
   type: "function" as const,
   name: "findWeather",
   description: "Get the current weather in a given location",
+  // Strict mode needs every property in `required` and `additionalProperties: false`; `unit` is optional here.
+  strict: false,
   parameters: {
     type: "object",
     properties: {
@@ -84,7 +86,7 @@ async function main() {
     // The Responses API is served from the Azure OpenAI (Microsoft Foundry) v1 endpoint.
     const client = new OpenAI({
       apiKey: azureApiKey,
-      baseURL: `${endpoint.replace(/\/$/, '')}/openai/v1/`,
+      baseURL: `${endpoint!.replace(/\/$/, '')}/openai/v1/`,
     });
     const deploymentName = process.env.AZURE_OPENAI_DEPLOYMENT || "gpt-5-mini";
 
