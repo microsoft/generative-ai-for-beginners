@@ -66,7 +66,8 @@ get_speaker_name = {
                 "description": "The speaker names.",
             }
         },
-        "required": ["speaker_name"],
+        "required": ["speakers"],
+        "additionalProperties": False,
     },
 }
 
