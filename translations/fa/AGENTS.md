@@ -209,7 +209,7 @@ jupyter notebook
 - GitHub Actions برای اعتبارسنجی مارک‌داون
 - بازبینی جامعه برای محتوای آموزشی
 
-## راهنمای درخواست کشش (Pull Request)
+## راهنمای Pull Request (Pull Request)
 
 ### قبل از ارسال
 
