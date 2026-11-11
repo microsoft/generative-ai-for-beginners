@@ -20,7 +20,7 @@
 
 ![Dialog showing buttons to create a codespace](../../../translated_images/fa/who-will-pay.4c0609b1c7780f44.webp)
 
-#### 2.1 اضافه کردن یک راز
+#### 2.1 افزودن یک کلید محرمانه (Secret)
 
 1. ⚙️ آیکون چرخ‌دنده -> Command Palette -> Codespaces : Manage user secret -> Add a new secret.
 2. نام را OPENAI_API_KEY بگذارید، کلید خود را الصاق کنید، ذخیره کنید.
@@ -183,9 +183,9 @@ jupyterhub
 
 ### اجرای داخل کانتینر
 
-راه دیگر راه‌اندازی همه چیز روی کامپیوتر یا Codespace استفاده از [کانتینر](../../../00-course-setup/<https:/en.wikipedia.org/wiki/Containerization_(computing)?WT.mc_id=academic-105485-koreyst>) است. پوشه خاص `.devcontainer` در مخزن دوره امکان راه‌اندازی پروژه داخل کانتینر توسط VS Code را فراهم می‌کند. خارج از Codespaces، این نیاز به نصب Docker دارد و کمی کار می‌برد، پس فقط به کسانی که تجربه کار با کانتینر دارند توصیه می‌شود.
+راه دیگر راه‌اندازی همه چیز روی کامپیوتر یا Codespace استفاده از [کانتینر (Container)](https://en.wikipedia.org/wiki/Containerization_(computing)) است. پوشه خاص `.devcontainer` در مخزن دوره امکان راه‌اندازی پروژه داخل کانتینر توسط VS Code را فراهم می‌کند. خارج از Codespaces، این نیاز به نصب Docker دارد و کمی کار می‌برد، پس فقط به کسانی که تجربه کار با کانتینر دارند توصیه می‌شود.
 
-یکی از بهترین روش‌ها برای امن نگه داشتن کلیدهای API هنگام استفاده از GitHub Codespaces، استفاده از رازهای Codespace است. لطفاً راهنمای [مدیریت رازهای Codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) را دنبال کنید.
+یکی از بهترین روش‌ها برای امن نگه داشتن کلیدهای API هنگام استفاده از GitHub Codespaces، استفاده از Secrets در Codespace است. لطفاً راهنمای [مدیریت Secrets در Codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces?WT.mc_id=academic-105485-koreyst) را دنبال کنید.
 
 
 ## درس‌ها و نیازهای فنی
@@ -223,7 +223,7 @@ jupyterhub
 مهم: هنگام ترجمه متن در این مخزن، لطفاً مطمئن شوید که از ترجمه ماشینی استفاده نمی‌کنید. ما ترجمه‌ها را توسط جامعه بررسی می‌کنیم، بنابراین فقط برای زبان‌هایی که مسلط هستید داوطلب ترجمه شوید.
 
 
-وقتی یک درخواست کشش ارسال می‌کنید، ربات CLA به‌طور خودکار تعیین می‌کند که آیا نیاز به ارائه CLA دارید و PR را به‌طور مناسب تزیین می‌کند (مثلاً برچسب، نظر). به سادگی دستورالعمل‌های ارائه شده توسط ربات را دنبال کنید. شما فقط یکبار در تمام مخازنی که از CLA ما استفاده می‌کنند، باید این کار را انجام دهید.
+وقتی یک Pull Request ارسال می‌کنید، ربات CLA به‌طور خودکار تعیین می‌کند که آیا نیاز به ارائه CLA دارید و PR را به‌طور مناسب تزیین می‌کند (مثلاً برچسب، نظر). به سادگی دستورالعمل‌های ارائه شده توسط ربات را دنبال کنید. شما فقط یکبار در تمام مخازنی که از CLA ما استفاده می‌کنند، باید این کار را انجام دهید.
 
 این پروژه [کد رفتار منبع باز مایکروسافت](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst) را پذیرفته است. برای اطلاعات بیشتر، به پرسش‌های متداول کد رفتار مراجعه کنید یا با [ایمیل opencode](opencode@microsoft.com) برای سوالات یا نظرات اضافی تماس بگیرید.
 
