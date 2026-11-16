@@ -166,15 +166,11 @@ def parse_json_vtt_transcript(vtt, metadata):
 
                 text = current_text + " "
 
-                # reset the segment_begin_time
-                seg_begin_seconds = None
-                seg_finish_seconds = None
+                # the caption that ended the segment begins the next one
+                seg_begin_seconds = current_seconds
+                seg_finish_seconds = seg_begin_seconds + SEGMENT_LENGTH_MINUTES * 60
 
                 current_token_length = len(tokenizer.encode(text))
-
-        # The last caption may itself have started a new segment
-        if seg_begin_seconds is None:
-            seg_begin_seconds = current_seconds
 
         # Append the last text segment to the last segment in segments dictionary.
         # A segment can begin at second 0, and only a segment of this video may
