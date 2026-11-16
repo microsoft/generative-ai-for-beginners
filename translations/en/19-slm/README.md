@@ -24,7 +24,7 @@ SLMs are trained on vast amounts of text data. During training, they learn the p
 
 The development of SLMs aligns with the increasing need for models that can be deployed in resource-constrained environments, such as mobile devices or edge computing platforms, where full-scale LLMs may be impractical due to their heavy resource demands. By focusing on efficiency, SLMs balance performance with accessibility, enabling broader application across various domains.
 
-![slm](../../../translated_images/en/slm.4058842744d0444a.webp)
+![slm](../../../translated_images/en/slm.4058842744d0444a.webp?WT.mc_id=academic-105485-koreyst)
 
 ## Learning Objectives
 
@@ -130,7 +130,7 @@ We can use the Phi-3/3.5 Family model based on different scenarios. Unlike LLM, 
 
 We hope to use Phi-3/3.5 in different scenarios. Next, we will use Phi-3/3.5 based on different scenarios.
 
-![phi3](../../../translated_images/en/phi3.655208c3186ae381.webp)
+![phi3](../../../translated_images/en/phi3.655208c3186ae381.webp?WT.mc_id=academic-105485-koreyst)
 
 ### Inference via Cloud APIs
 
@@ -138,18 +138,20 @@ We hope to use Phi-3/3.5 in different scenarios. Next, we will use Phi-3/3.5 bas
 
 > **Note:** GitHub Models is retiring at the end of July 2026. [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) is the direct replacement.
 
-Microsoft Foundry Models is the most direct way. You can quickly access the Phi-3/3.5-Instruct model through the Foundry model catalog. Combined with the Azure AI Inference SDK / OpenAI SDK, you can access the API through code to complete the Phi-3/3.5-Instruct call. You can also test different effects through the Playground.
+> **Note:** The entire Phi-3/3.5 family (Instruct, Vision, and MoE variants) was retired from the Microsoft Foundry Models catalog on 2025-08-30. Use `Phi-4` (Instruct) or `Phi-4-mini-instruct` there instead — the Phi-3/3.5 examples below still work via Hugging Face, Ollama, ONNX Runtime, and NVIDIA NIM.
+
+Microsoft Foundry Models now provides the Phi-4 successors. Use `Phi-4` or `Phi-4-mini-instruct` instead of the retired Phi-3/3.5 models when following the cloud API examples.
 
 - Demo: Comparison of the effects of Phi-3-mini and Phi-3.5-mini in Chinese scenarios
 
-![phi3](../../../translated_images/en/gh1.126c6139713b622b.webp)
+![phi3](../../../translated_images/en/gh1.126c6139713b622b.webp?WT.mc_id=academic-105485-koreyst)
 
-![phi35](../../../translated_images/en/gh2.07d7985af66f178d.webp)
+![phi35](../../../translated_images/en/gh2.07d7985af66f178d.webp?WT.mc_id=academic-105485-koreyst)
 
 
 **Microsoft Foundry**
 
-Or if we want to use the vision and MoE models, you can use Microsoft Foundry to complete the call. If you are interested, you can read the Phi-3 Cookbook to learn how to call Phi-3/3.5 Instruct, Vision, MoE through Microsoft Foundry [Click this link](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst)
+If you want to use vision (multimodal) models in the cloud, use the currently available `Phi-4-multimodal-instruct` through Microsoft Foundry instead of the retired Phi-3/3.5 Vision models; for text tasks use `Phi-4` or `Phi-4-mini-instruct`. The Phi-3.5 MoE model has been retired from Microsoft Foundry, so use the other options described in this lesson (for example Hugging Face) if you want to experiment with it. If you are interested, you can read the Phi Cookbook to learn how to call Phi models through Microsoft Foundry [Click this link](https://github.com/microsoft/PhiCookBook/blob/main/md/02.QuickStart/AzureAIFoundry_QuickStart.md?WT.mc_id=academic-105485-koreyst)
 
 
 **NVIDIA NIM**
@@ -159,7 +161,6 @@ In addition to the cloud-based Microsoft Foundry Models catalog, you can also us
 Here are some key features of NVIDIA NIM:
 
 - **Ease of Deployment:** NIM allows for the deployment of AI models with a single command, making it straightforward to integrate into existing workflows.
-
 - **Optimized Performance:** It leverages NVIDIA’s pre-optimized inference engines, such as TensorRT and TensorRT-LLM, to ensure low latency and high throughput.
 - **Scalability:** NIM supports autoscaling on Kubernetes, enabling it to handle varying workloads effectively.
 - **Security and Control:** Organizations can maintain control over their data and applications by self-hosting NIM microservices on their own managed infrastructure.

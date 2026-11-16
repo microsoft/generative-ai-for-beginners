@@ -20,11 +20,11 @@ Dans cette leçon, nous aborderons les points suivants :
 
 Après avoir terminé cette leçon, vous serez capable de :
 
-- Expliquer l'importance de RAG dans la récupération et le traitement des données.
+- Expliquez l'importance de RAG dans la récupération et le traitement des données.
 
-- Configurer une application RAG et ancrer vos données à un LLM
+- Configurez une application RAG et ancrez un LLM avec vos données
 
-- Intégrer efficacement RAG et les bases de données vectorielles dans les applications LLM.
+- Intégrez efficacement RAG et les bases de données vectorielles dans les applications LLM.
 
 ## Notre scénario : enrichir nos LLMs avec nos propres données
 
@@ -36,7 +36,7 @@ Pour cette leçon, nous souhaitons ajouter nos propres notes dans la startup éd
 
 - `Azure AI Search` et `Azure Cosmos DB :` base de données vectorielle pour stocker nos données et créer un index de recherche
 
-Les utilisateurs pourront créer des quiz pratiques à partir de leurs notes, des flashcards de révision et les résumer en synthèses concises. Pour commencer, regardons ce qu'est RAG et comment cela fonctionne :
+Les utilisateurs pourront créer des quiz d'entraînement et des fiches de révision à partir de leurs notes et résumer ces notes en synthèses concises. Pour commencer, voyons ce qu'est RAG et comment cela fonctionne :
 
 ## Génération augmentée par récupération (RAG)
 
@@ -56,9 +56,9 @@ Supposons que vous souhaitez déployer un chatbot qui crée des quiz à partir d
 
 - **Génération augmentée :** le LLM améliore sa réponse en fonction des données récupérées. Cela permet à la réponse générée de ne pas seulement être basée sur les données pré-entraînées, mais aussi sur les informations pertinentes du contexte ajouté. Les données récupérées sont utilisées pour augmenter les réponses du LLM. Le LLM renvoie alors une réponse à la question de l'utilisateur.
 
-![dessin montrant l'architecture des RAG](../../../translated_images/fr/encoder-decode.f2658c25d0eadee2.webp)
+![Diagram montrant l'architecture RAG](../../../translated_images/fr/encoder-decode.f2658c25d0eadee2.webp?WT.mc_id=academic-105485-koreyst)
 
-L'architecture des RAG est implémentée à l'aide de transformateurs composés de deux parties : un encodeur et un décodeur. Par exemple, lorsqu'un utilisateur pose une question, le texte d'entrée est « encodé » en vecteurs capturant le sens des mots, et les vecteurs sont « décodés » dans notre index de documents pour générer un nouveau texte basé sur la requête utilisateur. Le LLM utilise un modèle encodeur-décodeur pour générer la sortie.
+RAG combine un récupérateur avec un générateur : la requête est convertie en vecteur, mise en correspondance avec l’index de documents pour trouver des extraits de texte pertinents, et ces extraits sont fournis en contexte à un LLM, qui génère la réponse. Le récupérateur et le générateur peuvent utiliser des modèles différents ; RAG ne nécessite pas un transformeur encodeur-décodeur.
 
 Deux approches pour implémenter RAG selon l'article proposé : [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) sont :
 
@@ -76,13 +76,13 @@ Deux approches pour implémenter RAG selon l'article proposé : [Retrieval-Augme
 
 ## Création d'une base de connaissances
 
-Notre application est basée sur nos données personnelles, c’est-à-dire la leçon sur les réseaux neuronaux dans le programme AI For Beginners.
+Notre application est basée sur nos données personnelles, c’est-à-dire la leçon sur les réseaux neuronaux du programme AI for Beginners.
 
 ### Bases de données vectorielles
 
 Une base de données vectorielle, contrairement aux bases de données traditionnelles, est une base spécialisée conçue pour stocker, gérer et rechercher des vecteurs embarqués. Elle stocke des représentations numériques des documents. Décomposer les données en embeddings numériques facilite la compréhension et le traitement des données par notre système IA.
 
-Nous stockons nos embeddings dans des bases de données vectorielles car les LLM ont une limite du nombre de tokens qu'ils acceptent en entrée. Comme vous ne pouvez pas passer tous les embeddings à un LLM, nous devons les diviser en morceaux, et lorsqu'un utilisateur pose une question, les embeddings les plus similaires à la question seront renvoyés avec le prompt. Le découpement réduit aussi les coûts du nombre de tokens passés dans un LLM.
+Parce que les LLM ont une limite sur le nombre de jetons d'entrée, nous découpons les documents en morceaux avant de les intégrer. Lorsqu'un utilisateur pose une question, les intégrations les plus similaires à la requête identifient les morceaux de texte pertinents, qui sont retournés avec l'invite. Le découpage réduit également le nombre de jetons transmis au LLM et peut donc réduire les coûts.
 
 Certaines bases de données vectorielles populaires incluent Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant et DeepLake. Vous pouvez créer un modèle Azure Cosmos DB en utilisant Azure CLI avec la commande suivante :
 
@@ -141,9 +141,9 @@ Un défi avec la récupération survient quand il n'y a pas de réponse similair
 
 ### Similarité vectorielle
 
-Le récupérateur cherchera dans la base de connaissances les embeddings qui sont proches, le voisin le plus proche, car ce sont des textes similaires. Dans le scénario où un utilisateur pose une question, elle est d'abord embarquée puis associée à des embeddings similaires. La mesure courante utilisée pour trouver la similarité entre différents vecteurs est la similarité cosinus, basée sur l'angle entre deux vecteurs.
+Le récupérateur recherchera dans la base de données de connaissances des embeddings qui sont proches les uns des autres — les voisins les plus proches — car ils représentent des textes similaires. Dans ce scénario, lorsqu'un utilisateur soumet une requête, celle-ci est d'abord convertie en embedding puis mise en correspondance avec des embeddings similaires. La mesure la plus courante utilisée pour comparer la similarité entre vecteurs est la similarité cosinus, qui est basée sur l'angle entre deux vecteurs.
 
-D'autres alternatives pour mesurer la similarité comprennent la distance euclidienne qui est la ligne droite entre les points finaux des vecteurs et le produit scalaire qui mesure la somme des produits des éléments correspondants de deux vecteurs.
+D'autres métriques que nous pouvons utiliser pour mesurer la similarité incluent la distance euclidienne, qui est la ligne droite entre les points de terminaison des vecteurs, et le produit scalaire, qui mesure la somme des produits des éléments correspondants dans deux vecteurs.
 
 ### Index de recherche
 
@@ -166,19 +166,14 @@ distances, indices = nbrs.kneighbors(embeddings)
 Une fois que vous avez interrogé la base de données, vous pourriez avoir besoin de trier les résultats selon leur pertinence. Un LLM de réordonnancement utilise l'apprentissage automatique pour améliorer la pertinence des résultats de recherche en les ordonnant de la plus pertinente à la moins pertinente. Avec Azure AI Search, le réordonnancement est fait automatiquement pour vous à l'aide d'un reranker sémantique. Un exemple de fonctionnement du réordonnancement utilisant les plus proches voisins :
 
 ```python
-# Trouver les documents les plus similaires
+# Find the most similar documents
 distances, indices = nbrs.kneighbors([query_vector])
 
-index = []
-# Imprimer les documents les plus similaires
-for i in range(3):
-    index = indices[0][i]
-    for index in indices[0]:
-        print(flattened_df['chunks'].iloc[index])
-        print(flattened_df['path'].iloc[index])
-        print(flattened_df['distances'].iloc[index])
-    else:
-        print(f"Index {index} not found in DataFrame")
+# Print the three most similar documents with their distance to the question
+for distance, index in zip(distances[0][:3], indices[0][:3]):
+    print(flattened_df['chunks'].iloc[index])
+    print(flattened_df['path'].iloc[index])
+    print(distance)
 ```
 
 ## Tout assembler
@@ -236,7 +231,7 @@ chatbot(user_input)
 
 ## Cas d'utilisation pour RAG (Génération augmentée par récupération) et bases de données vectorielles
 
-Il existe de nombreux cas où les appels de fonction peuvent améliorer votre application, tels que :
+Il existe de nombreux cas d'utilisation différents où RAG peut améliorer votre application, tels que :
 
 - Questions-réponses : ancrer les données de votre entreprise dans un chat que les employés peuvent utiliser pour poser des questions.
 
@@ -248,7 +243,7 @@ Il existe de nombreux cas où les appels de fonction peuvent améliorer votre ap
 
 ## Résumé
 
-Nous avons couvert les zones fondamentales de RAG, depuis l'ajout de nos données à l'application, la requête utilisateur et la sortie. Pour simplifier la création de RAG, vous pouvez utiliser des frameworks tels que Semantic Kernel, Langchain ou Autogen.
+Nous avons couvert les domaines fondamentaux de RAG, depuis l'ajout de nos données à l'application, la requête utilisateur, jusqu'à la sortie. Pour simplifier la création de RAG, vous pouvez utiliser des frameworks tels que Semantic Kernel, LangChain ou AutoGen.
 
 ## Exercice
 
