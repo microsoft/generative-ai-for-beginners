@@ -3,7 +3,7 @@ import { AzureKeyCredential } from "@azure/core-auth";
 
 // SECURITY: Validate required environment variables
 // Get these from your Microsoft Foundry project's "Overview" page
-// (GitHub Models is retiring end of July 2026 - see https://ai.azure.com/catalog/models)
+// (GitHub Models was retired at the end of July 2026 - see https://ai.azure.com/catalog/models)
 const token = process.env["AZURE_INFERENCE_CREDENTIAL"];
 if (!token) {
     throw new Error("AZURE_INFERENCE_CREDENTIAL environment variable is required. Please set it before running this application.");

@@ -136,7 +136,7 @@ We hope to use Phi-3/3.5 in different scenarios. Next, we will use Phi-3/3.5 bas
 
 **Microsoft Foundry Models**
 
-> **Note:** GitHub Models is retiring at the end of July 2026. [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) is the direct replacement.
+> **Note:** GitHub Models was retired at the end of July 2026. [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) is the direct replacement.
 
 > **Note:** The entire Phi-3/3.5 family (Instruct, Vision, and MoE variants) was retired from the Microsoft Foundry Models catalog on 2025-08-30. Use `Phi-4` (Instruct) or `Phi-4-mini-instruct` there instead — the Phi-3/3.5 examples below still work via Hugging Face, Ollama, ONNX Runtime, and NVIDIA NIM.
 
