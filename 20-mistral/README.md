@@ -62,7 +62,10 @@ token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 # The openai SDK uses the Foundry resource's OpenAI-compatible /openai/v1/ route.
 # This works whether your endpoint is the resource URL, ends in /models, or is a project endpoint.
 # e.g. https://<resource>.services.ai.azure.com/models -> https://<resource>.services.ai.azure.com/openai/v1/
-resource_url = endpoint.split("/api/projects")[0].split("/models")[0].split("/openai")[0].rstrip("/")
+from urllib.parse import urlsplit
+
+parsed_endpoint = urlsplit(endpoint)
+resource_url = f"{parsed_endpoint.scheme}://{parsed_endpoint.netloc}"
 base_url = f"{resource_url}/openai/v1/"
 
 client = OpenAI(
