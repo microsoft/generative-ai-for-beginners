@@ -2,14 +2,14 @@
 
 ## סקירת פרויקט
 
-מאגר זה מכיל תוכנית לימודים מקיפה של 21 שיעורים המלמדים יסודות אינטיליגנציה מלאכותית גנרטיבית ופיתוח אפליקציות. הקורס מיועד למתחילים ומכסה הכל מרעיונות בסיסיים ועד בניית אפליקציות מוכנות לייצור.
+מאגר זה מכיל תוכנית לימודים מקיפה של 21 שיעורים המלמדים יסודות Generative AI ופיתוח אפליקציות. הקורס מיועד למתחילים ומכסה הכל מרעיונות בסיסיים ועד בניית אפליקציות מוכנות לייצור(production-ready).
 
 **טכנולוגיות מרכזיות:**
 - Python 3.9+ עם הספריות: `openai`, `python-dotenv`, `tiktoken`, `azure-ai-inference`, `pandas`, `numpy`, `matplotlib`
 - TypeScript/JavaScript עם Node.js והספריות: `openai` (Azure OpenAI דרך נקודת הקצה v1 + Responses API), `@azure-rest/ai-inference` (Microsoft Foundry Models)
 - שירות Azure OpenAI, OpenAI API, ומודלים של Microsoft Foundry (GitHub Models מפסיקים לפעול בסוף יולי 2026)
 - מחברות Jupyter ללמידה אינטראקטיבית
-- מיכלי פיתוח לסביבת פיתוח עקבית
+- Dev Containers (סביבות פיתוח ממוכלות) לסביבת פיתוח עקבית
 
 **מבנה המאגר:**
 - 21 תיקיות שיעורים ממוספרים (00-21) שמכילות קבצי README, דוגמאות קוד, ומשימות
@@ -58,17 +58,17 @@ cd 06-text-generation-apps/typescript/recipe-app
 npm install
 ```
 
-### התקנת מיכל פיתוח (מומלץ)
+### הגדרת סביבת פיתוח ממוכלת (Dev Container Setup - מומלץ)
 
 המאגר כולל תצורת `.devcontainer` ל-GitHub Codespaces או ל-VS Code Dev Containers:
 
 1. פתח את המאגר ב-GitHub Codespaces או ב-VS Code עם תוסף Dev Containers
-2. מיכל הפיתוח יפעל אוטומטית:
-   - יתקין תלותיות Python מתוך `requirements.txt`
-   - יריץ סקריפט אחרי יצירה (`.devcontainer/post-create.sh`)
-   - יקים את ליבת Jupyter
+2. הסביבה הממוכלת (Dev Container) תבצע אוטומטית:
+   - התקנת תלויות Python מתוך requirements.txt
+   - הרצת סקריפט post-create (מתוך .devcontainer/post-create.sh)
+   - הגדרת ליבת (kernel) של Jupyter
 
-## זרימת עבודה לפיתוח
+## תהליך פיתוח (Development Workflow)
 
 ### משתני סביבה
 
@@ -78,18 +78,17 @@ npm install
 - `AZURE_OPENAI_API_KEY` - ל-Azure OpenAI ב-Microsoft Foundry (שירות Azure OpenAI הוא חלק מ-Microsoft Foundry כעת: https://ai.azure.com)
 - `AZURE_OPENAI_ENDPOINT` - כתובת נקודת הקצה ל-Azure OpenAI (נקודת קצה של Foundry resource)
 - `AZURE_OPENAI_DEPLOYMENT` - שם פריסת מודל השלמת שיחה (ברירת מחדל בקורס: `gpt-5-mini`)
-- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` - שם פריסת מודל האנשה (ברירת מחדל בקורס: `text-embedding-3-small`)
+- `AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT` -שם פריסת מודל ה-Embeddings (ברירת המחדל בקורס: text-embedding-3-small)
 - `AZURE_OPENAI_API_VERSION` - גרסת API (ברירת מחדל: `2024-10-21`)
 - `HUGGING_FACE_API_KEY` - למודלים של Hugging Face
 - `AZURE_INFERENCE_ENDPOINT` - נקודת קצה למודלים של Microsoft Foundry (קטלוג מודלים מרובה ספקים)
 - `AZURE_INFERENCE_CREDENTIAL` - מפתח API למודלים של Microsoft Foundry (מחליף את `GITHUB_TOKEN` שמפסיק לפעול)
-- `AZURE_INFERENCE_CHAT_MODEL` - מודל לא-מנתח (למשל `Llama-3.3-70B-Instruct`) המשמש בדוגמאות עם `temperature`, כי מודלים מנתחים אינם תומכים בשליטה בדגימה
+- `AZURE_INFERENCE_CHAT_MODEL` - מודל שאינו מודל-היסק (non-reasoning, למשל Llama-3.3-70B-Instruct) המשמש בדוגמאות המציגות שימוש ב-temperature, מכיוון שמודלי היסק אינם תומכים בבקרות דגימה (sampling controls)
+### מוסכמות מודל (Model conventions - חשוב)
 
-### קונבנציות מודלים (חשוב)
-
-- **מודל השיחה ברירת המחדל הוא `gpt-5-mini`** - מודל **מנתח** עדכני ולא מיושן. החל מ-2026, מודלי "מיני" ותיקי-הטמפרטורה (`gpt-4o-mini`, `gpt-4.1-mini`) מתבטלים, לכן תוכנית הלימודים מתאחדת סביב משפחת GPT-5.
-- **מודלים מנתחים אינם מקבלים `temperature` ו-`top_p`**, ומעדיפים שימוש ב-`max_output_tokens` (Responses API) / `max_completion_tokens` (השלמות שיחה) במקום `max_tokens`. אל תוסיף `temperature`/`top_p`/`max_tokens` לדוגמאות שמפעילות את `gpt-5-mini`.
-- **כדי להדגים את `temperature`**, דוגמאות משתמשות במודל **Llama** (`Llama-3.3-70B-Instruct`) דרך נקודת קצה Microsoft Foundry Models (`AZURE_INFERENCE_CHAT_MODEL`). נהל מודלים מנתחים עם הנדסת פרומפט + בקרות ניתוח במקום כפתורי דגימה.
+- **מודל השיחה ברירת המחדל הוא `gpt-5-mini`** - מודל **היסק** עדכני ולא מיושן. החל מ-2026, מודלי "מיני" ותיקי-הטמפרטורה (`gpt-4o-mini`, `gpt-4.1-mini`) מתבטלים, לכן תוכנית הלימודים מתאחדת סביב משפחת GPT-5.
+- **מודלי היסק אינם מקבלים `temperature` ו-`top_p`**, ומעדיפים שימוש ב-`max_output_tokens` (Responses API) / `max_completion_tokens` (השלמות שיחה) במקום `max_tokens`. אל תוסיף `temperature`/`top_p`/`max_tokens` לדוגמאות שמפעילות את `gpt-5-mini`.
+- **כדי להדגים את `temperature`**, דוגמאות משתמשות במודל **Llama** (`Llama-3.3-70B-Instruct`) דרך נקודת קצה Microsoft Foundry Models (`AZURE_INFERENCE_CHAT_MODEL`). כוונו מודלי היסק בעזרת הנדסת פרומפטים (prompt engineering) ובקרות היסק (reasoning controls) במקום בעזרת פרמטרי דגימה (sampling knobs).
 - **כיוונון עדין (שיעור 18)** משתמש ב-`gpt-4.1-mini`: GPT-5 תומך רק בכיוונון עדין עם חיזוק (RFT), לא בכיוונון עדין מפוקח (SFT) שמוצג שם.
 - שיעורים 20 (Mistral) ו-21 (Meta) שומרים על `temperature`/`max_tokens` מכיוון שהם ממוקדים במודלים Mistral/Llama התומכים בכך.
 
@@ -149,11 +148,11 @@ jupyter notebook
 - השתמש ב-`nodemon` לפיתוח עם טעינה מחדש אוטומטית
 - בנייה לפני הריצה: `npm run build` ואז `npm start`
 
-### קונבנציות כלליות
+### מוסכמות כלליות
 
 - שמור על דוגמאות קוד פשוטות וחינוכיות
 - כלל הערות שמסבירות מושגים מרכזיים
-- כל קוד של שיעור צריך להיות עצמאי והרציונלי
+- הקוד של כל שיעור צריך להיות עצמאי וניתן להרצה בפני עצמו (self-contained)
 - השתמש בשמות עקביים: קידומת `aoai-` ל-Azure OpenAI, `oai-` ל-OpenAI API, `githubmodels-` ל-Microsoft Foundry Models (קידומת ישנה מימי GitHub Models)
 
 ## הנחיות לתיעוד
@@ -234,7 +233,7 @@ jupyter notebook
 ### דרישות תרומה
 
 - חתום על Microsoft CLA (אוטומטי בהגשה ראשונה)
-- פצל את המאגר לחשבון שלך לפני ביצוע שינויים
+- יצירת עותק (Fork) של המאגר לחשבון שלכם לפני ביצוע שינויים
 - כל PR לשינוי לוגי אחד (אל תשלב תיקונים לא קשורים)
 - שמור את ה-PR ממוקדים וקטנים ככל האפשר
 
