@@ -115,7 +115,7 @@ Despite being an LLM, one limitation of Llama 3.1 is its lack of multimodality. 
 The multimodal support represents a big step in the world of open source models. The code example below takes both an image and text prompt to get an analysis of the image. Because Llama 3.2 90B Vision Instruct has been retired, the example uses `Llama-4-Scout-17B-16E-Instruct`, a currently available natively multimodal alternative. 
 
 
-### Multimodal Support with Llama 3.2
+### Multimodal Support (Llama 3.2 concept; example uses `Llama-4-Scout-17B-16E-Instruct`)
 
 ```python 
 import base64
@@ -144,7 +144,7 @@ response = client.chat.completions.create(
     messages=[
         {
             "role": "system",
-            "content": "You are a helpful assistant that describes images in details.",
+            "content": "You are a helpful assistant that describes images in detail.",
         },
         {
             "role": "user",

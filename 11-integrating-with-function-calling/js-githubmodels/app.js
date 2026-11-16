@@ -106,7 +106,7 @@ export async function main() {
     });
 
     let input = [
-        { role: "system", content: "You an assistant that helps users find flight and hotel information." },
+        { role: "system", content: "You are an assistant that helps users find flight and hotel information." },
         { role: "user", content: "I'm interested in going to Miami and staying in a hotel." },
         // { role: "user", content: "I'm interested in going to Seattle. Are there flights to Denver?" },
     ];
