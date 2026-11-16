@@ -7,3 +7,4 @@ python-dotenv==1.2.4
 openai>=1.66.0
 tiktoken
 scikit-learn
+mistral-common[hf-hub]
