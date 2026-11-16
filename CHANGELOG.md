@@ -5,6 +5,23 @@ All notable changes to the Generative AI for Beginners curriculum are documented
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Because this is a
 learning curriculum rather than a versioned software package, entries are grouped by date.
 
+## [2026-11-03] — Migrate off the retired Azure AI Inference SDK
+
+### Changed
+
+- The beta `azure-ai-inference` (Python) / `@azure-rest/ai-inference` (JS) SDK was
+  [retired on 2026-08-26](https://learn.microsoft.com/azure/foundry/foundry-models/concepts/endpoints?WT.mc_id=academic-105485-koreyst).
+  The Microsoft Foundry Models samples in lessons 04, 06, 07, 08, 11, and 21 (`githubmodels-*` and
+  `js-githubmodels`) now use the stable `openai` SDK against the Foundry `/openai/v1/` endpoint:
+  `client.responses.create()` for `gpt-5-mini`, and `client.chat.completions.create()` for the
+  Llama `temperature` demos and lesson 21's Llama models. The lesson 11 JS tool-calling sample now uses
+  Responses API `function_call` / `function_call_output` items.
+- `AZURE_INFERENCE_ENDPOINT` is now the Foundry resource base URL
+  (`https://<resource-name>.services.ai.azure.com`, no `/models` suffix); samples append `/openai/v1/`.
+- Dropped `azure-ai-inference` from `requirements.txt`, `pyproject.toml`, and the dev container
+  environment, and `@azure-rest/ai-inference` / `@azure/core-auth` from the root and
+  `js-githubmodels` `package.json` files. Raised the Python `openai` floor to `>=1.66.0` (Responses API).
+
 ## [2026-07-16] — Content Validation + Lesson 09 Image Assets
 
 ### Changed

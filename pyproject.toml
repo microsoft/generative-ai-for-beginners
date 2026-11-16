@@ -21,10 +21,9 @@ classifiers = [
 ]
 
 dependencies = [
-    "openai>=1.0.0",
+    "openai>=1.66.0",
     "python-dotenv>=1.0.0",
     "requests>=2.31.0",
-    "azure-ai-inference>=1.0.0b1",
     "tiktoken>=0.5.0",
 ]
 

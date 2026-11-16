@@ -118,7 +118,7 @@ All Python and TypeScript **chat** samples have been migrated from the Chat Comp
 | `@azure/openai` `OpenAIClient.getChatCompletions()` (TypeScript) | `openai` package `client.responses.create()` → `response.output_text` | Completed |
 | `df.append()` (pandas) | `pd.concat()` | Completed |
 
-> **Note:** Microsoft Foundry Models samples that use the `azure-ai-inference` / `@azure-rest/ai-inference` SDK (`client.complete()`) remain on the Model Inference API, which does not support the Responses API. `AzureOpenAI()` is intentionally retained where still valid (embeddings and image generation).
+> **Note:** The beta `azure-ai-inference` / `@azure-rest/ai-inference` SDK (`client.complete()`) was retired on 2026-08-26. Microsoft Foundry Models samples now use the `openai` SDK against the Foundry `/openai/v1/` endpoint: `client.responses.create()` for OpenAI models such as `gpt-5-mini`, and `client.chat.completions.create()` for non-OpenAI models (e.g. Llama) and the `temperature` demos. `AzureOpenAI()` is intentionally retained where still valid (embeddings and image generation).
 
 ### 4.2 New API Features to Demonstrate
 
