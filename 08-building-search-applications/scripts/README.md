@@ -38,16 +38,16 @@ az cognitiveservices account keys list --name semantic-video-openai \
 ```
 
 1. Deploy the following models:
-   - `text-embedding-ada-002` version `2` or greater, named `text-embedding-ada-002`
+   - `text-embedding-3-small` version `1`, named `text-embedding-3-small`
    - `gpt-5-mini` named `gpt-5-mini`
 
 ```console
 az cognitiveservices account deployment create \
     --name semantic-video-openai \
     --resource-group  semantic-video-search \
-    --deployment-name text-embedding-ada-002 \
-    --model-name text-embedding-ada-002 \
-    --model-version "2"  \
+    --deployment-name text-embedding-3-small \
+    --model-name text-embedding-3-small \
+    --model-version "1"  \
     --model-format OpenAI \
     --scale-settings-scale-type "Standard"
 az cognitiveservices account deployment create \
