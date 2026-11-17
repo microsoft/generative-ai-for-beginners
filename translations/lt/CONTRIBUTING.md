@@ -1,128 +1,143 @@
-# Prisidėjimas
+# Dalyvavimas
 
-Šis projektas kviečia prisidėti ir teikti pasiūlymus. Dauguma indėlių reikalauja, kad sutiktumėte su Contributor License Agreement (CLA), patvirtinančiu, jog turite teisę ir iš tikrųjų suteikiate mums teisę naudoti jūsų indėlį. Daugiau informacijos rasite <https://cla.microsoft.com>.
+Šis projektas džiaugiasi prisidėjimais ir pasiūlymais. Daugumai prisidėjimų reikalinga
+sutikti su Bendradarbiautojo licencijos sutartimi (CLA), kurioje patvirtinate, kad turite teisę,
+ir iš tiesų suteikiate mums teises naudoti jūsų prisidėjimą. Daugiau informacijos rasite
+<https://cla.microsoft.com>.
 
-> Svarbu: verčiant tekstą šiame repozitoriume, prašome nenaudoti automatinio vertimo. Vertimus tikrins bendruomenė, tad savanoriaukite tik toms kalboms, kurias gerai mokate.
+> Svarbu: verčiant tekstą šiame saugykloje, prašome nenaudoti mašininio vertimo. Vertimus patikrins bendruomenė, todėl prašome savanoriauti tik vertimams kalbomis, kuriose esate įgudę.
 
-Kai pateikiate pull request, CLA-bot automatiškai nustatys, ar reikia pateikti CLA, ir atitinkamai pažymės PR (pvz., etikete, komentaru). Tiesiog vykdykite boto pateiktas instrukcijas. Tai reikės padaryti tik vieną kartą visuose repozitoriumuose, naudojančiuose mūsų CLA.
+Kai pateikiate pull request, CLA-botas automatiškai nustatys, ar jums reikia
+pateikti CLA ir tinkamai pažymės PR (pvz., etikete ar komentaru). Tiesiog vykdykite
+bot'o nurodymus. Tai reikės padaryti tik vieną kartą visuose mūsų CLA naudojančiuose saugyklose.
 
 ## Elgesio kodeksas
 
-Šis projektas laikosi [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst).
-Daugiau informacijos rasite [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst) arba kreipkitės el. paštu [opencode@microsoft.com](mailto:opencode@microsoft.com), jei turite papildomų klausimų ar komentarų.
+Šis projektas priėmė [Microsoft atviro kodo elgesio kodeksą](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst).
+Daugiau informacijos rasite [Elgesio kodekso DUK](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst) arba susisiekite su [opencode@microsoft.com](mailto:opencode@microsoft.com) dėl papildomų klausimų ar komentarų.
 
-## Klausimai ar problemos?
+## Klausimas ar problema?
 
-Prašome nerašyti GitHub issue bendriems pagalbos klausimams, nes GitHub sąrašas skirtas funkcijų užklausoms ir klaidų pranešimams. Taip lengviau sekti tikras problemas ar klaidas iš kodo ir atskirti bendrą diskusiją nuo tikrojo kodo.
+Prašome neatidaryti GitHub problemų bendrosioms pagalbos užklausoms, nes GitHub sąrašas yra skirtas funkcijų prašymams ir klaidų pranešimams. Taip galime lengviau sekti tikras problemas ar klaidas kode ir išlaikyti bendrą diskusiją atskirą nuo tikrojo kodo.
 
-## Rašybos klaidos, problemos, klaidos ir indėliai
+## Rašybos klaidos, problemos, klaidos ir prisidėjimai
 
-Kai teikiate pakeitimus į Generative AI for Beginners repozitoriumą, laikykitės šių rekomendacijų.
+Kai pateikiate bet kokius pakeitimus Generative AI for Beginners saugykloje, prašome laikytis šių rekomendacijų.
 
-* Visada forkinkite repozitoriumą į savo paskyrą prieš darydami pakeitimus
-* Nekombinuokite kelių pakeitimų į vieną pull request. Pavyzdžiui, klaidų pataisymus ir dokumentacijos atnaujinimus teikite atskirais PR
-* Jei jūsų pull request rodo susijungimo konfliktus, įsitikinkite, kad jūsų vietinis main atitinka pagrindinį repozitoriumą prieš darydami pakeitimus
-* Jei teikiate vertimą, sukurkite vieną PR visiems išverstiems failams, nes nepriimame dalinių vertimų
-* Jei teikiate rašybos ar dokumentacijos pataisymą, galite sujungti pakeitimus į vieną PR, jei tai tinkama
+* Visada forkuokite saugyklą į savo paskyrą prieš darydami pakeitimus
+* Nekomplektuokite kelių pakeitimų į vieną pull request. Pavyzdžiui, atskirai pateikite klaidų taisymus ir dokumentacijos atnaujinimus
+* Jei jūsų pull request rodo susijungimo konfliktus, įsitikinkite, kad atnaujinote savo vietinę main šaką taip, kad ji atspindėtų pagrindinę saugyklą prieš darydami pakeitimus
+* Jei pateikiate vertimą, prašome sukurti vieną PR visiems išverstiems failams, nes nepriimame dalinių vertimų turiniui
+* Jei pataisote rašybos klaidą ar dokumentaciją, galite, jei tinka, sujungti pakeitimus į vieną PR
 
-## Bendros rašymo gairės
+## Redakcijos apimtis ir trečiųjų šalių produktai
 
-- Įsitikinkite, kad visi jūsų URL yra apgaubti kvadratiniais skliaustais, po kurių eina skliaustai be papildomų tarpų `[](../..)`.
-- Įsitikinkite, kad bet kuri reliatyvi nuoroda (t.y. nuorodos į kitus failus ar aplankus repozitoriume) prasideda nuo `./`, nurodančio failą ar aplanką dabartiniame darbiname kataloge, arba `../`, nurodančio failą ar aplanką tėviniame kataloge.
-- Įsitikinkite, kad bet kuri reliatyvi nuoroda turi sekimo ID (t.y. `?` arba `&` ir tada `wt.mc_id=` arba `WT.mc_id=`) pabaigoje.
-- Įsitikinkite, kad bet kuris URL iš šių domenų _github.com, microsoft.com, visualstudio.com, aka.ms, ir azure.com_ turi sekimo ID (t.y. `?` arba `&` ir tada `wt.mc_id=` arba `WT.mc_id=`) pabaigoje.
-- Įsitikinkite, kad jūsų nuorodose nėra šalies lokalės (pvz., `/en-us/` ar `/en/`).
-- Įsitikinkite, kad visi paveikslėliai saugomi `./images` aplanke.
-- Įsitikinkite, kad paveikslėliai turi aprašomuosius pavadinimus, naudojant angliškus simbolius, skaičius ir brūkšnelius pavadinime.
+Ši programa skirta Microsoft technologijoms ir tiekėjams neutraliesiems atviro standarto sprendimams. Prisidėjimai turi turėti aiškų mokomąjį tikslą ir neturi būti pirminiai tam, kad būtų pristatytas ar reklamintas trečiosios šalies komercinis produktas, talpinama paslauga, modelių maršrutizatorius, SDK, MCP serveris ar kitas tiekėjo pasiūlymas.
 
-## GitHub darbo eigos
+Atviro kodo programinė įranga ir trečiųjų šalių priklausomybės gali būti minima, kai jos būtinos paaiškinti atvirą standartą ar sąveikos scenarijų, pateikiamos neutraliai ir nėra skiriamos vien tik tiekėjo produktui ar prieglobos galiniam taškui. Jei jūsų siūlomas prisidėjimas apima tiekėjo produktą ar paslaugą, atidarykite klausimą ir gaukite prižiūrėtojo patvirtinimą prieš pateikdami pull request.
 
-Kai pateikiate pull request, bus paleistos keturios skirtingos darbo eigos, kurios patikrins aukščiau išvardintas taisykles.
-Tiesiog vykdykite čia pateiktas instrukcijas, kad sėkmingai praeitumėte patikrinimus.
+Dalyviai privalo atskleisti bet kokius susijusius darbo santykius, nuosavybę, rėmimą ar kitokį ryšį su produku ar paslauga, paminėta jų prisidėjime. Neįtraukite nepagrįstų kainų, veikimo, saugumo, privatumo ar palyginamųjų teiginių. Veikiantys pavyzdžiai pagal nutylėjimą neturi perduoti mokymosi duomenų ar atlikti viešų veiksmų per išorinę trečiosios šalies paslaugą.
 
-- [Check Broken Relative Paths](../..)
-- [Check Paths Have Tracking](../..)
-- [Check URLs Have Tracking](../..)
-- [Check URLs Don't Have Locale](../..)
+## Bendrosios rašymo gairės
 
-### Check Broken Relative Paths
+- Užtikrinkite, kad visi jūsų URL būtų įtraukti į kvadratines skliausteles, po kurių eina skliaustai be tarpų aplink arba viduje jų `[]()`.
+- Užtikrinkite, kad bet kuris santykinis ryšys (t.y. ryšiai į kitus failus ir aplankus saugykloje) prasidėtų `./`, nurodančiu failą ar aplanką dabartinėje darbinėje aplanko vietoje, arba `../`, nurodančiu failą ar aplanką tėviniame darbinės vietos aplanke.
+- Užtikrinkite, kad bet kuris santykinis ryšys (t.y. ryšiai į kitus failus ir aplankus saugykloje) turi turėti sekimo ID (t.y. `?` arba `&`, po kurių eina `wt.mc_id=` arba `WT.mc_id=`) gale.
+- Užtikrinkite, kad bet kuris URL iš šių domenų _github.com, microsoft.com, visualstudio.com, aka.ms, ir azure.com_ turi turėti sekimo ID (t.y. `?` arba `&`, po kurių eina `wt.mc_id=` arba `WT.mc_id=`) gale.
+- Užtikrinkite, kad jūsų nuorodos neturėtų šalies specifinio lokalės žymėjimo (t.y. `/en-us/` arba `/en/`).
+- Užtikrinkite, kad visi paveikslėliai būtų saugomi `./images` aplanke.
+- Užtikrinkite, kad paveikslėliai turėtų aprašomuosius pavadinimus, naudodami anglų kalbos simbolius, skaičius ir brūkšnelius savo paveikslėlio pavadinime.
 
-Ši darbo eiga užtikrina, kad visi reliatyvūs keliai jūsų failuose veikia.
-Šis repozitoriumas publikuojamas GitHub pages, todėl reikia būti labai atidiems rašant nuorodas, kad jos nukreiptų į teisingą vietą.
+## GitHub darbo procesai
 
-Norėdami įsitikinti, kad jūsų nuorodos veikia tinkamai, naudokite VS code ir patikrinkite jas.
+Kai pateikiate pull request, bus paleisti keturi skirtingi darbo procesai, patikrinantys ankstesnes taisykles.
+Tiesiog vykdykite čia išvardytas instrukcijas, kad pereitumėte darbo proceso patikrinimus.
 
-Pavyzdžiui, užvedus pelę ant nuorodos, VS code pasiūlys ją atidaryti paspaudus **ctrl + click**
+- [Patikrinti sugadintus santykinius kelius](#check-broken-relative-paths)
+- [Patikrinti, ar keliai turi sekimą](#check-paths-have-tracking)
+- [Patikrinti, ar URL turi sekimą](#check-urls-have-tracking)
+- [Patikrinti, ar URL neturi lokalės](#check-urls-dont-have-locale)
 
-![VS code follow links screenshot](../../translated_images/lt/vscode-follow-link.85520ab6a1237adc.webp)
+### Patikrinti sugadintus santykinius kelius
 
-Jei paspausite nuorodą ir ji neveikia lokaliai, tikrai sukels darbo eigos klaidą ir neveiks GitHub.
+Šis darbo procesas užtikrina, kad bet kuris santykinis kelias jūsų failuose veikia.
+Ši saugykla yra išdėstyta GitHub tinklalapiuose, todėl turite būti labai atsargūs rašydami nuorodas, kurios viską sujungia, kad niekas nebūtų nukreiptas klaidingai.
 
-Norėdami ištaisyti šią problemą, rašykite nuorodą su VS code pagalba.
+Kad įsitikintumėte, jog jūsų nuorodos veikia, tiesiog naudokite VS kodą, kad tai patikrintumėte.
 
-Kai rašote `./` arba `../`, VS code pasiūlys pasirinkti iš galimų variantų pagal tai, ką įvedėte.
+Pvz., kai užvedate pelės žymeklį ant bet kurios nuorodos savo failuose, jums bus pasiūlyta sekti nuorodą paspaudžiant **ctrl + click**
 
-![VS code select relative path screenshot](../../translated_images/lt/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
+![VS code follow links screenshot](../../translated_images/lt/vscode-follow-link.85520ab6a1237adc.webp?WT.mc_id=academic-105485-koreyst "Ekrano nuotrauka iš vs code, pasiūlanti sekti nuorodą, kai užvedate pelės žymeklį ant nuorodos.")
 
-Sekite kelią paspaudę norimą failą ar aplanką ir būsite tikri, kad kelias nėra sugadintas.
+Jei paspausite nuorodą ir ji neveikia vietoje, tada tikrai darbo procesas bus įjungtas ir ji neveiks GitHub.
 
-Kai pridėsite teisingą reliatyvų kelią, išsaugokite ir išsiųskite pakeitimus – darbo eiga vėl bus paleista, kad patikrintų jūsų pakeitimus.
-Jei praeisite patikrinimą, viskas gerai.
+Norėdami išspręsti šią problemą, pabandykite rašyti nuorodą naudodamiesi VS kodu.
 
-### Check Paths Have Tracking
+Kai įvedate `./` arba `../`, VS kodas pasiūlys pasirinkti iš galimų variantų pagal tai, ką įvedėte.
 
-Ši darbo eiga užtikrina, kad bet kuris reliatyvus kelias turi sekimą.
-Šis repozitoriumas publikuojamas GitHub pages, todėl reikia sekti judėjimą tarp skirtingų failų ir aplankų.
+![VS code select relative path screenshot](../../translated_images/lt/vscode-select-relative-path.3804eb73c3a9e5f2.webp?WT.mc_id=academic-105485-koreyst "Ekrano nuotrauka iš vs code, pasiūlanti pasirinkti santykinį kelią iš iškylančio sąrašo.")
 
-Norėdami įsitikinti, kad jūsų reliatyvūs keliai turi sekimą, tiesiog patikrinkite, ar pabaigoje yra tekstas `?wt.mc_id=`.
-Jei jis pridėtas prie jūsų reliatyvių kelių, praeisite patikrinimą.
+Sekite kelią spustelėdami norimą failą ar aplanką ir būsite tikri, kad jūsų kelias nėra sulaužytas.
 
-Jei ne, galite gauti šią klaidą.
+Kai pridėsite teisingą santykinį kelią, išsaugokite ir įkelkite savo pakeitimus, darbo procesas vėl bus įjungtas patikrinti jūsų pakeitimus.
+Jei patikrinimą išlaikysite, viskas tvarkoje.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/lt/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
+### Patikrinti, ar keliai turi sekimą
 
-Norėdami ištaisyti šią problemą, atidarykite failo kelią, kurį pažymėjo darbo eiga, ir pridėkite sekimo ID reliatyvių kelių pabaigoje.
+Šis darbo procesas užtikrina, kad bet kuris santykinis kelias turi sekimą.
+Ši saugykla yra paskelbta GitHub tinklalapiuose, todėl turime sekti judėjimą tarp skirtingų failų ir aplankų.
 
-Kai pridėsite sekimo ID, išsaugokite ir išsiųskite pakeitimus – darbo eiga vėl bus paleista, kad patikrintų jūsų pakeitimus.
-Jei praeisite patikrinimą, viskas gerai.
-
-### Check URLs Have Tracking
-
-Ši darbo eiga užtikrina, kad bet kuris interneto URL turi sekimą.
-Šis repozitoriumas prieinamas visiems, todėl reikia sekti prieigą, kad žinotume, iš kur ateina srautas.
-
-Norėdami įsitikinti, kad jūsų URL turi sekimą, tiesiog patikrinkite, ar pabaigoje yra tekstas `?wt.mc_id=`.
-Jei jis pridėtas prie jūsų URL, praeisite patikrinimą.
+Kad įsitikintumėte, jog jūsų santykiniai keliai turi sekimą, tiesiog patikrinkite šį tekstą `?wt.mc_id=` kelio pabaigoje.
+Jei jis pridėtas prie jūsų santykinių kelių, patikrą praeisite.
 
 Jei ne, galite gauti šią klaidą.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/lt/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
+![GitHub check paths missing tracking comment screenshot](../../translated_images/lt/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp?WT.mc_id=academic-105485-koreyst "Ekrano nuotrauka iš github komentaro, rodanti, kad trūksta sekimo santykiniuose keliuose")
 
-Norėdami ištaisyti šią problemą, atidarykite failo kelią, kurį pažymėjo darbo eiga, ir pridėkite sekimo ID URL pabaigoje.
+Norėdami išspręsti šią problemą, atidarykite darbo proceso pažymėtą failo kelią ir pridėkite sekimo ID prie santykinių kelių pabaigos.
 
-Kai pridėsite sekimo ID, išsaugokite ir išsiųskite pakeitimus – darbo eiga vėl bus paleista, kad patikrintų jūsų pakeitimus.
-Jei praeisite patikrinimą, viskas gerai.
+Kai pridėsite sekimo ID, išsaugokite ir įkelkite pakeitimus, darbo procesas vėl bus įjungtas patikrinti jūsų pakeitimus.
+Jei patikrinimą išlaikysite, viskas tvarkoje.
 
-### Check URLs Don't Have Locale
+### Patikrinti, ar URL turi sekimą
 
-Ši darbo eiga užtikrina, kad bet kuris interneto URL neturi šalies lokalės.
-Šis repozitoriumas prieinamas visiems pasaulyje, todėl reikia neįtraukti šalies lokalės į URL.
+Šis darbo procesas užtikrina, kad bet kuris interneto URL turi sekimą.
+Ši saugykla yra prieinama visiems, todėl turite užtikrinti prieigos sekimą, kad žinotumėte, iš kur ateina srautas.
 
-Norėdami įsitikinti, kad jūsų URL neturi šalies lokalės, tiesiog patikrinkite, ar nėra teksto `/en-us/` ar `/en/` ar kitos kalbos lokalės URL.
-Jei nėra, praeisite patikrinimą.
+Kad įsitikintumėte, jog jūsų URL turi sekimą, tiesiog patikrinkite šį tekstą `?wt.mc_id=` URL pabaigoje.
+Jei jis pridėtas prie jūsų URL, patikrą praeisite.
 
 Jei ne, galite gauti šią klaidą.
 
-![GitHub check country locale comment screenshot](../../translated_images/lt/github-check-country-locale-comment.2f4fe93228161dee.webp)
+![GitHub check urls missing tracking comment screenshot](../../translated_images/lt/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp?WT.mc_id=academic-105485-koreyst "Ekrano nuotrauka iš github komentaro, rodanti, kad trūksta sekimo URL")
 
-Norėdami ištaisyti šią problemą, atidarykite failo kelią, kurį pažymėjo darbo eiga, ir pašalinkite šalies lokalę iš URL.
+Norėdami išspręsti šią problemą, atidarykite darbo proceso pažymėtą failo kelią ir pridėkite sekimo ID prie URL pabaigos.
 
-Kai pašalinsite šalies lokalę, išsaugokite ir išsiųskite pakeitimus – darbo eiga vėl bus paleista, kad patikrintų jūsų pakeitimus.
-Jei praeisite patikrinimą, viskas gerai.
+Kai pridėsite sekimo ID, išsaugokite ir įkelkite pakeitimus, darbo procesas vėl bus įjungtas patikrinti jūsų pakeitimus.
+Jei patikrinimą išlaikysite, viskas tvarkoje.
 
-Sveikiname! Susisieksime su jumis kuo greičiau ir pateiksime atsiliepimą apie jūsų indėlį.
+### Patikrinti, ar URL neturi lokalės
+
+Šis darbo procesas užtikrina, kad bet kuris interneto URL neturi šalies specifinio lokalės žymėjimo.
+Ši saugykla yra prieinama visiems pasaulyje, todėl turite užtikrinti, kad URL nepatektų jūsų šalies lokalės.
+
+Kad įsitikintumėte, jog URL neturi šalies lokalės, patikrinkite, ar nėra šio teksto `/en-us/` arba `/en/` ar bet kuri kita kalbos lokalė URL bet kurioje vietoje.
+Jei tai nerasta jūsų URL, patikrą praeisite.
+
+Jei yra, galite gauti šią klaidą.
+
+![GitHub check country locale comment screenshot](../../translated_images/lt/github-check-country-locale-comment.2f4fe93228161dee.webp?WT.mc_id=academic-105485-koreyst "Ekrano nuotrauka iš github komentaro, rodanti pridėtą šalies lokalę į URL")
+
+Norėdami išspręsti šią problemą, atidarykite darbo proceso pažymėtą failo kelią ir pašalinkite šalies lokalę iš URL.
+
+Kai pašalinsite šalies lokalę, išsaugokite ir įkelkite pakeitimus, darbo procesas vėl bus įjungtas patikrinti jūsų pakeitimus.
+Jei patikrinimą išlaikysite, viskas tvarkoje.
+
+Sveikiname! Mes su jumis susisieksime kuo greičiau su atsiliepimais apie jūsų prisidėjimą.
 
 ---
 
-**Atsakomybės atsisakymas**:  
-Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojame profesionalų žmogaus vertimą. Mes neatsakome už nesusipratimus ar neteisingą interpretavimą, kilusį dėl šio vertimo naudojimo.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Atsakomybės apribojimas**:
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojama naudoti profesionalų žmogiškąjį vertimą. Mes neatsakome už jokius nesusipratimus ar neteisingą interpretaciją, kilusią naudojantis šiuo vertimu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
