@@ -73,7 +73,7 @@ client = OpenAI(
     api_key=token,
 )
 
-response = requests.get('https://raw.githubusercontent.com/run-llama/llama_index/main/docs/docs/examples/data/paul_graham/paul_graham_essay.txt')
+response = requests.get('https://raw.githubusercontent.com/run-llama/llama_index/main/docs/examples/data/paul_graham/paul_graham_essay.txt')
 text = response.text
 
 chunk_size = 2048
