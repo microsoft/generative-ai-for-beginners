@@ -25,7 +25,7 @@ export async function main() {
       size: "1024x1024",
     });
 
-    for (const image of imageGenerations.data) {
+    for (const image of imageGenerations.data ?? []) {
       // gpt-image models return the image as base64 (b64_json), not a URL
       const buffer = Buffer.from(image.b64_json ?? "", "base64");
       fs.writeFileSync("generated-image.png", buffer);
