@@ -20,11 +20,11 @@ Tässä oppitunnissa käsittelemme seuraavaa:
 
 Oppitunnin suorittamisen jälkeen osaat:
 
-- Selittää RAG:n merkityksen tiedon haussa ja käsittelyssä.
+- Selitä RAG:n merkitys tiedonhakussa ja -käsittelyssä.
 
-- Määrittää RAG-sovellus ja perustaa tietosi LLM:ään.
+- Luo RAG-sovellus ja yhdistä LLM dataasi.
 
-- Tehokkaasti integroida RAG ja vektoritietokannat LLM-sovelluksissa.
+- Integroi RAG ja vektorivarastot tehokkaasti LLM-sovelluksissa.
 
 ## Tilanteemme: LLM-malliemme parantaminen omilla tiedoillamme
 
@@ -36,7 +36,7 @@ Tässä oppitunnissa haluamme lisätä omat muistiinpanomme koulutuksesta startu
 
 - `Azure AI Search` ja `Azure Cosmos DB:` vektoritietokanta tietojen tallentamiseen ja hakemisto hakemiseen
 
-Käyttäjät voivat luoda harjoitustehtäviä muistiinpanoistaan, kertauskortteja sekä tiivistelmiä. Aloitetaan katsomalla, mitä RAG on ja miten se toimii:
+Käyttäjät voivat luoda harjoitusvisa- ja kertausmuistikortteja muistiinpanoistaan sekä tiivistää muistiinpanot ytimekkäiksi yhteenvetoiksi. Aloittaaksemme katsotaan, mitä RAG on ja miten se toimii:
 
 ## Hakuavusteinen generointi (RAG)
 
@@ -56,9 +56,9 @@ Oletetaan, että haluat ottaa käyttöön chatbotin, joka luo kyselyitä muistii
 
 - **Laajennettu generointi:** LLM parantaa vastaustaan haettujen tietojen perusteella. Tämä mahdollistaa sen, että vastaus ei perustu vain esikoulutettuun dataan, vaan myös lisättyyn kontekstiin. Haettua dataa käytetään LLM:n vastausten rikastamiseen. LLM palauttaa vastauksen käyttäjän kysymykseen.
 
-![kuvaus RAG-arkkitehtuurista](../../../translated_images/fi/encoder-decode.f2658c25d0eadee2.webp)
+![Kaavio, joka näyttää RAG-arkkitehtuurin](../../../translated_images/fi/encoder-decode.f2658c25d0eadee2.webp?WT.mc_id=academic-105485-koreyst)
 
-RAG-arkkitehtuuri toteutetaan käyttämällä transformereita, jotka koostuvat kahdesta osasta: enkooderista ja dekooderista. Esimerkiksi kun käyttäjä esittää kysymyksen, syötetty teksti "enkoodataan" vektoreiksi jotka sieppaavat sanojen merkityksen, ja nämä vektorit "dekoodataan" dokumenttihakemistoon ja ne tuottavat uutta tekstiä käyttäjän kyselyn perusteella. LLM käyttää sekä enkooderi-dekooderimallia tuloksen luomiseen.
+RAG yhdistää hakijan ja generaattorin: kysely muutetaan vektoriksi, joka vastataan dokumentti-indeksiin etsiäkseen relevantteja tekstinpaloja, ja nämä palat annetaan kontekstiksi LLM:lle, joka tuottaa vastauksen. Hakija ja generaattori voivat käyttää eri malleja; RAG ei vaadi kooderi-dekooderi-transformeria.
 
 Kaksi lähestymistapaa RAG:n toteuttamiseen ehdotetun tutkimuspaperin mukaan: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) ovat:
 
@@ -76,13 +76,13 @@ Kaksi lähestymistapaa RAG:n toteuttamiseen ehdotetun tutkimuspaperin mukaan: [R
 
 ## Tietopohjan luominen
 
-Sovelluksemme perustuu henkilökohtaiseen dataamme eli AI for Beginners -kurssin Neuroverkot-osion tietoon.
+Sovelluksemme perustuu omiin tietoihimme, eli Neural Network -oppituntiin AI for Beginners -opetussuunnitelmasta.
 
 ### Vektoritietokannat
 
 Vektoritietokanta on erikoistunut tietokanta, joka on suunniteltu tallentamaan, hallitsemaan ja hakemaan upotettuja vektoreita. Se tallentaa asiakirjojen numeeriset esitykset. Datan pilkkominen numeerisiksi upotuksiksi helpottaa tekoälyjärjestelmää ymmärtämään ja käsittelemään dataa.
 
-Tallennamme upotukset vektoritietokantoihin, koska LLM:illä on rajoitus hyväksymiensä tokenien määrässä. Koska koko dataa ei voi syöttää kerralla, joudumme jakamaan sen osiin, ja kun käyttäjä esittää kysymyksen, vastaavia upotuksia palautetaan kehotteen kanssa. Osissa jakaminen myös pienentää kuluja tokenien määrän vähentymisen kautta.
+Koska LLM:illä on rajoitus syötetokenien määrälle, jaamme asiakirjat osiin ennen niiden upottamista. Kun käyttäjä esittää kysymyksen, upotukset, jotka ovat kyselyä vastaavimpia, tunnistavat asiaankuuluvat tekstiosiot, jotka palautetaan kehotteen mukana. Osittaminen myös vähentää LLM:lle välitettävien tokenien määrää ja voi näin ollen vähentää kustannuksia.
 
 Suosittuja vektoritietokantoja ovat esimerkiksi Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant ja DeepLake. Voit luoda Azure Cosmos DB -mallin Azure CLI:llä seuraavalla komennolla:
 
@@ -141,9 +141,9 @@ Haasteena haussa on, jos tietokannasta ei löydy vastausta vastaavaa sisältöä
 
 ### Vektoriläheisyys
 
-Hakija etsii tietokannasta lähekkäisiä upotuksia eli lähimmän naapurin, koska ne ovat samankaltaisia tekstejä. Kun käyttäjä kysyy kysymyksen, se ensin upotetaan ja sitten etsitään samankaltaisia upotuksia. Yleinen mittaus samankaltaisuudelle on kosiniläheisyys, joka perustuu kahden vektorin väliseen kulmaan.
+Haku suoritetaan tietokannassa löytämällä upotuksia, jotka ovat lähekkäin—lähimmät naapurit—koska ne edustavat samankaltaisia tekstejä. Tässä tilanteessa, kun käyttäjä lähettää kyselyn, se upotetaan ensin ja sitten vastataan samankaltaisiin upotuksiin. Yleisin vektoreiden samankaltaisuuden mittausmenetelmä on kosinin samankaltaisuus, joka perustuu kahden vektorin väliseen kulmaan.
 
-Voimme mitata samankaltaisuutta myös muilla tavoilla, kuten euklidisella etäisyydellä, joka mittaa suoraa viivaa vektoripäiden välillä, tai pistetulolla, joka mittaa kahden vektorin vastaavien alkioiden tulojen summan.
+Muita mittareita, joita voimme käyttää samankaltaisuuden mittaamiseen, ovat Euklidinen etäisyys, joka on suora viiva vektorin päiden välillä, ja pistetulo, joka mittaa kahden vektorin vastaavien alkioiden tulojen summan.
 
 ### Hakemisto
 
@@ -166,19 +166,14 @@ distances, indices = nbrs.kneighbors(embeddings)
 Kun olet hakenut tietokannasta, saatat haluta järjestää tulokset relevanssin mukaan. Uudelleenjärjestely LLM käyttää koneoppimista parantaakseen hakutulosten relevanssia järjestämällä ne merkityksellisimmästä vähiten merkitykselliseen. Azure AI Search suorittaa uudelleenjärjestelyn automaattisesti semanttisen uudelleenjärjestäjän avulla. Esimerkki uudelleenjärjestelystä lähimpien naapureiden avulla:
 
 ```python
-# Etsi eniten samankaltaiset asiakirjat
+# Find the most similar documents
 distances, indices = nbrs.kneighbors([query_vector])
 
-index = []
-# Tulosta eniten samankaltaiset asiakirjat
-for i in range(3):
-    index = indices[0][i]
-    for index in indices[0]:
-        print(flattened_df['chunks'].iloc[index])
-        print(flattened_df['path'].iloc[index])
-        print(flattened_df['distances'].iloc[index])
-    else:
-        print(f"Index {index} not found in DataFrame")
+# Print the three most similar documents with their distance to the question
+for distance, index in zip(distances[0][:3], indices[0][:3]):
+    print(flattened_df['chunks'].iloc[index])
+    print(flattened_df['path'].iloc[index])
+    print(distance)
 ```
 
 ## Kaiken yhdistäminen
@@ -236,7 +231,7 @@ chatbot(user_input)
 
 ## RAG:n ja vektoritietokantojen käyttötilanteet
 
-Monet eri käyttötapaukset hyödyntävät toimintokutsuja parantaakseen sovellusta, kuten:
+On monia erilaisia käyttötapauksia, joissa RAG voi parantaa sovellustasi, esimerkiksi:
 
 - Kysymys- ja vastausjärjestelmät: yrityksen datan perustaminen chat-keskusteluun, jota työntekijät voivat käyttää kysymyksiin.
 
@@ -248,7 +243,7 @@ Monet eri käyttötapaukset hyödyntävät toimintokutsuja parantaakseen sovellu
 
 ## Yhteenveto
 
-Olemme käsitelleet RAG:n perusalueet datan lisäämisestä sovellukseen, käyttäjän kyselyn ja tuottamisen. RAG:n luomisen helpottamiseksi voit käyttää kehyksiä kuten Semantic Kernel, LangChain tai Autogen.
+Olemme käsitelleet RAG:n perustavanlaatuiset osa-alueet datan lisäämisestä sovellukseen, käyttäjän kyselyyn ja outputtiin. RAG:n luomisen yksinkertaistamiseksi voit käyttää kehyksiä, kuten Semantic Kernel, LangChain tai AutoGen.
 
 ## Tehtävä
 
