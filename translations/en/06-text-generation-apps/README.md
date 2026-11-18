@@ -1,12 +1,12 @@
 # Building Text Generation Applications
 
-[![Building Text Generation Applications](../../../translated_images/en/06-lesson-banner.a5c629f990a636c8.webp)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
+[![Building Text Generation Applications](../../../translated_images/en/06-lesson-banner.a5c629f990a636c8.webp?WT.mc_id=academic-105485-koreyst)](https://youtu.be/0Y5Luf5sRQA?si=t_xVg0clnAI4oUFZ)
 
-> _(Click the image above to watch the video of this lesson)_
+> _(Click the image above to view video of this lesson)_
 
-So far, you have seen in this curriculum core concepts like prompts and even an entire discipline called "prompt engineering." Many tools you can interact with, such as ChatGPT, Office 365, Microsoft Power Platform, and more, support you using prompts to accomplish tasks.
+You've seen so far through this curriculum that there are core concepts like prompts and even a whole discipline called "prompt engineering". Many tools you can interact with like ChatGPT, Office 365, Microsoft Power Platform and more, support you using prompts to accomplish something.
 
-To add such an experience to an app, you need to understand concepts like prompts, completions, and choose a library to work with. That's exactly what you'll learn in this chapter.
+For you to add such an experience to an app, you need to understand concepts like prompts, completions and choose a library to work with. That's exactly what you'll learn in this chapter.
 
 ## Introduction
 
@@ -22,46 +22,46 @@ At the end of this lesson, you'll be able to:
 
 - Explain what a text generation app is.
 - Build a text generation app using openai.
-- Configure your app to use more or fewer tokens and also change the temperature for varied output.
+- Configure your app to use more or less tokens and also change the temperature, for a varied output.
 
 ## What is a text generation app?
 
-Usually, when you build an app, it has some kind of interface like the following:
+Normally when you build an app it has some kind of interface like the following:
 
-- Command-based. Console apps are typical apps where you type a command, and it carries out a task. For example, `git` is a command-based app.
-- User interface (UI). Some apps have graphical user interfaces (GUIs) where you click buttons, input text, select options, and more.
+- Command-based. Console apps are typical apps where you type a command and it carries out a task. For example, `git` is a command-based app.
+- User interface (UI). Some apps have graphical user interfaces (GUIs) where you click buttons, input text, select options and more.
 
 ### Console and UI apps are limited
 
 Compare it to a command-based app where you type a command:
 
 - **It's limited**. You can't just type any command, only the ones that the app supports.
-- **Language specific**. Some apps support many languages, but by default, the app is built for a specific language, even if you can add more language support.
+- **Language specific**. Some apps support many languages, but by default the app is built for a specific language, even if you can add more language support.
 
 ### Benefits of text generation apps
 
 So how is a text generation app different?
 
-In a text generation app, you have more flexibility; you're not limited to a set of commands or a specific input language. Instead, you can use natural language to interact with the app. Another benefit is that you're already interacting with a data source that has been trained on a vast corpus of information, whereas a traditional app might be limited to what's in a database.
+In a text generation app, you have more flexibility, you're not limited to a set of commands or a specific input language. Instead, you can use natural language to interact with the app. Another benefit is that you're already interacting with a data source that has been trained on a vast corpus of information, whereas a traditional app might be limited on what's in a database.
 
 ### What can I build with a text generation app?
 
 There are many things you can build. For example:
 
-- **A chatbot**. A chatbot answering questions about topics, like your company and its products, could be a good match.
-- **Helper**. LLMs are great at things like summarizing text, deriving insights from text, producing text like resumes, and more.
+- **A chatbot**. A chatbot answering questions about topics, like your company and its products could be a good match.
+- **Helper**. LLMs are great at things like summarizing text, getting insights from text, producing text like resumes and more.
 - **Code assistant**. Depending on the language model you use, you can build a code assistant that helps you write code. For example, you can use a product like GitHub Copilot as well as ChatGPT to help you write code.
 
 ## How can I get started?
 
-Well, you need to find a way to integrate with an LLM, which usually entails the following two approaches:
+Well, you need to find a way to integrate with an LLM which usually entails the following two approaches:
 
 - Use an API. Here you're constructing web requests with your prompt and get generated text back.
 - Use a library. Libraries help encapsulate the API calls and make them easier to use.
 
 ## Libraries/SDKs
 
-There are a few well-known libraries for working with LLMs like:
+There are a few well known libraries for working with LLMs like:
 
 - **openai**, this library makes it easy to connect to your model and send in prompts.
 
@@ -72,11 +72,11 @@ Then there are libraries that operate on a higher level like:
 
 ## First app using openai
 
-Let's see how we can build our first app, what libraries we need, how much is required, and so on.
+Let's see how we can build our first app, what libraries we need, how much is required and so on.
 
 ### Install openai
 
-There are many libraries out there for interacting with OpenAI or Azure OpenAI. It's possible to use numerous programming languages as well like C#, Python, JavaScript, Java, and more. We've chosen to use the `openai` Python library, so we'll use `pip` to install it.
+There are many libraries out there for interacting with OpenAI or Azure OpenAI. It's possible to use numerous programming languages as well like C#, Python, JavaScript, Java and more. We've chosen to use the `openai` Python library, so we'll use `pip` to install it.
 
 ```bash
 pip install openai
@@ -97,7 +97,7 @@ You need to carry out the following steps:
 
 ### Locate API key and endpoint
 
-At this point, you need to tell your `openai` library what API key to use. To find your API key, go to the "Keys and Endpoint" section of your Azure OpenAI resource and copy the "Key 1" value.
+At this point, you need to tell your `openai` library what API key to use. To find your API key, go to "Keys and Endpoint" section of your Azure OpenAI resource and copy the "Key 1" value.
 
 ![Keys and Endpoint resource blade in Azure Portal](https://learn.microsoft.com/azure/ai-foundry/openai/media/quickstarts/endpoint.png?WT.mc_id=academic-105485-koreyst)
 
@@ -111,7 +111,7 @@ Now that you have this information copied, let's instruct the libraries to use i
 
 ### Setup configuration Azure
 
-If you're using Azure OpenAI (now part of Microsoft Foundry), here's how you set up configuration. We use the standard `OpenAI` client pointed at the Azure OpenAI `/openai/v1/` endpoint, which works with the Responses API and needs no `api_version`:
+If you're using Azure OpenAI (now part of Microsoft Foundry), here's how you setup configuration. We use the standard `OpenAI` client pointed at the Azure OpenAI `/openai/v1/` endpoint, which works with the Responses API and needs no `api_version`:
 
 ```python
 import os
@@ -164,7 +164,7 @@ More on this functionality in an upcoming chapter.
 
 ## Exercise - your first text generation app
 
-Now that we have learned how to set up and configure openai, it's time to build your first text generation app. To build your app, follow these steps:
+Now that we learned how to set up and configure openai, it's time to build your first text generation app. To build your app, follow these steps:
 
 1. Create a virtual environment and install openai:
 
@@ -219,15 +219,15 @@ Now you've seen how to generate text using a prompt. You even have a program up 
 
 Prompts can be used for all sorts of tasks. For example:
 
-- **Generate a type of text**. For example, you can generate a poem, questions for a quiz, etc.
+- **Generate a type of text**. For example, you can generate a poem, questions for a quiz etc.
 - **Lookup information**. You can use prompts to look for information like the following example 'What does CORS mean in web development?'.
 - **Generate code**. You can use prompts to generate code, for example developing a regular expression used to validate emails or why not generate an entire program, like a web app?
 
 ## A more practical use case: a recipe generator
 
-Imagine you have ingredients at home and you want to cook something. For that, you need a recipe. One way to find recipes is to use a search engine or you could use an LLM to do so.
+Imagine you have ingredients at home and you want to cook something. For that, you need a recipe. A way to find recipes is to use a search engine or you could use an LLM to do so.
 
-You could write a prompt like this:
+You could write a prompt like so:
 
 > "Show me 5 recipes for a dish with the following ingredients: chicken, potatoes, and carrots. Per recipe, list all the ingredients used"
 
@@ -411,7 +411,7 @@ Now that we have played out a scenario, let's write code to match the demonstrat
    prompt = f"Show me {no_recipes} recipes for a dish with the following ingredients: {ingredients}. Per recipe, list all the ingredients used"
    ```
 
-   Taking the code for a test run could look like this:
+   Taking the code for a test run, could look like this:
 
    ```output
    No of recipes (for example, 5): 3
@@ -424,7 +424,7 @@ Now that we have played out a scenario, let's write code to match the demonstrat
 
 ### Improve by adding filter and shopping list
 
-We now have a working app capable of producing recipes and it is flexible as it relies on inputs from the user, both on the number of recipes but also the ingredients used.
+We now have a working app capable of producing recipes and it's flexible as it relies on inputs from the user, both on the number of recipes but also the ingredients used.
 
 To further improve it, we want to add the following:
 
@@ -438,7 +438,7 @@ To further improve it, we want to add the following:
 
   Above, we add `{filter}` to the end of the prompt and we also capture the filter value from the user.
 
-  An example input of running the program can now look like this:
+  An example input of running the program can now look like so:
 
   ```output
   No of recipes (for example, 5): 3
@@ -505,8 +505,7 @@ To further improve it, we want to add the following:
   5. Add to soup and simmer for an additional 5 minutes, or until soup has thickened.
   ```
 
-  As you can see, any recipes with milk in them have been filtered out. But, if you're lactose intolerant, you might want to filter out recipes with cheese in them as well, so there's a need to be clear.
-
+  As you can see, any recipes with milk in it has been filtered out. But, if you're lactose intolerant, you might want to filter out recipes with cheese in them as well, so there's a need to be clear.
 
 - **Produce a shopping list**. We want to produce a shopping list, considering what we already have at home.
 

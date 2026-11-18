@@ -1,61 +1,67 @@
-# בנייה עם דגמי משפחת Meta
+# בנייה עם דגמי משפחת Meta  
 
-## מבוא
+## מבוא  
 
-שיעור זה יכסה:
+שיעור זה יכסה:  
 
-- חקירת שני הדגמים המרכזיים ממשפחת Meta - Llama 3.1 ו-Llama 3.2
-- הבנת השימושים והתסריטים לכל דגם
-- דוגמת קוד להדגמת התכונות הייחודיות של כל דגם
+- חקירת שני הדגמים העיקריים ממשפחת Meta - Llama 3.1 ו-Llama 3.2, בנוסף לחלופות הזמינות כיום המשמשות בדוגמאות הקוד (Llama 3.3 ו-Llama 4)  
+- הבנת מקרי השימוש והתסריטים עבור כל דגם  
+- דוגמת קוד להדגמת התכונות הייחודיות של כל דגם  
 
 
-## משפחת דגמי Meta
+## משפחת הדגמים של Meta  
 
-בשיעור זה, נחקור שני דגמים ממשפחת Meta או "עדר Llama" - Llama 3.1 ו-Llama 3.2.
+בשיעור זה נחפור בשני דגמים ממשפחת Meta או "עדר ה-Llama" - Llama 3.1 ו-Llama 3.2. דוגמאות הקוד הניתנות להרצה משתמשות ב-Llama 3.3 ו-Llama 4, שהן החלופות הזמינות כיום בקטלוג דגמי Microsoft Foundry.  
 
-דגמים אלו מגיעים בגרסאות שונות וזמינים ב[קטלוג דגמי Microsoft Foundry](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
+דגמים אלה מגיעים בגרסאות שונות וזמינות ב[קטלוג דגמי Microsoft Foundry](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).  
 
-> **הערה:** GitHub Models מפסיקה פעילות בסוף יולי 2026. להלן פרטים נוספים על שימוש ב-[Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) לבניית אב טיפוס עם דגמי AI.
+> **הערה:** GitHub Models מופסק בסוף יולי 2026. להלן פרטים נוספים על שימוש ב-[Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) לפרוטוטייפ עם דגמי AI.  
 
-גרסאות הדגם:
-- Llama 3.1 - 70 מיליארד הוראות
-- Llama 3.1 - 405 מיליארד הוראות
-- Llama 3.2 - 11 מיליארד הוראות חזון
-- Llama 3.2 - 90 מיליארד הוראות חזון
+> **הערה:** הגרסאות הספציפיות של הדגמים עליהן נכתב שיעור זה במקור (Llama 3.1 70B/405B Instruct, Llama 3.2 11B/90B Vision Instruct) פורשו מאז מקטלוג דגמי Microsoft Foundry. דוגמאות הקוד למטה משתמשות ב-`Llama-3.3-70B-Instruct` ו-`Llama-4-Scout-17B-16E-Instruct` כחלופות הזמינות כיום בקטלוג דגמי Microsoft Foundry, ולכן עדיין רצות היום.  
 
-*הערה: Llama 3 זמינה גם ב-Microsoft Foundry Models אך לא תיכלל בשיעור זה*
+וריאציות דגם (כמו שנדונו במקור בשיעור זה):  
+- Llama 3.1 - 70B Instruct (פורש)  
+- Llama 3.1 - 405B Instruct (פורש)  
+- Llama 3.2 - 11B Vision Instruct (פורש)  
+- Llama 3.2 - 90B Vision Instruct (פורש)  
 
-## Llama 3.1
+חלופות זמינות כיום המשמשות בדוגמאות הקוד:  
+- Llama 3.3 - 70B Instruct (`Llama-3.3-70B-Instruct`)  
+- Llama 4 Scout - 17B 16E Instruct (`Llama-4-Scout-17B-16E-Instruct`)  
 
-עם 405 מיליארד פרמטרים, Llama 3.1 משתייכת לקטגוריית ה-LLM קוד פתוח.
+*הערה: וריאציות Llama 3 שנדונו לעיל נשמרות לצורך הקשר היסטורי ואינן זמינות עוד ב-Microsoft Foundry Models.*  
 
-הדגם הוא שדרוג לשחרור הקודם Llama 3 ומציע:
+## Llama 3.1  
 
-- חלון הקשר גדול יותר - 128k טוקנים לעומת 8k טוקנים
-- כמות מקסימלית גדולה יותר של טוקני פלט - 4096 לעומת 2048
-- תמיכה רב-לשונית טובה יותר - בשל גידול בכמות הטוקנים לאימון
+עם 405 מיליארד פרמטרים, Llama 3.1 משתייך לקטגוריית ה-LLM בקוד פתוח.  
 
-זה מאפשר ל-Llama 3.1 לטפל במקרים מורכבים יותר בעת בניית יישומי GenAI כולל:
-- קריאת פונקציות מקורית - היכולת לקרוא לכלים ופונקציות חיצוניות מחוץ לזרימת עבודה של ה-LLM
-- ביצועי RAG טובים יותר - בזכות חלון ההקשר הגבוה יותר
-- יצירת נתונים סינתטיים - היכולת ליצור נתונים יעילים למשימות כמו כיוונון מדויק
+הדגם הוא שדרוג לשחרור מוקדם יותר Llama 3 בכך שהוא מציע:  
 
-### קריאת פונקציות מקורית
+- חלון הקשר גדול יותר - 128k טוקנים מול 8k טוקנים  
+- מקסימום פלט גדול יותר - 4096 מול 2048  
+- תמיכה רב-לשונית משופרת - בזכות העלייה בכמות הטוקנים לאימון  
 
-ל-Llama 3.1 בוצע כיוונון מדויק כדי להיות יעילה יותר בביצוע קריאות לפונקציות או כלים. יש לו גם שני כלים מובנים שהדגם מזהה כשיש צורך להשתמש בהם בהתאם לפקודה מהמשתמש. כלים אלו הם:
+אלה מאפשרים ל-Llama 3.1 להתמודד עם מקרי שימוש מסובכים יותר בבניית אפליקציות GenAI כולל:  
+- קריאה לפונקציות מקוריות - היכולת לקרוא לכלים ופונקציות חיצוניים מחוץ לזרימת העבודה של ה-LLM  
+- ביצועי RAG טובים יותר - בזכות חלון הקשר גבוה יותר  
+- יצירת נתונים סינתטיים - היכולת לייצר נתונים אפקטיביים עבור משימות כמו כוונון מדויק  
 
-- **Brave Search** - ניתן להשתמש לקבלת מידע מעודכן כמו מזג האוויר באמצעות חיפוש אינטרנטי
-- **Wolfram Alpha** - ניתן להשתמש לחישובים מתמטיים מורכבים כך שאין צורך לכתוב פונקציות בעצמך.
+### קריאה לפונקציות מקוריות  
 
-ניתן גם ליצור כלים מותאמים אישית שה-LLM יכול לקרוא להם.
+Llama 3.1 עובר כוונון עדין כדי להיות יעיל יותר בקריאות לפונקציות או לכלים. יש לו גם שני כלים מובנים שהדגם יכול לזהות כדרושים לשימוש בהתבסס על ההנחיה מהמשתמש. כלים אלה הם:  
 
-בדוגמת הקוד למטה:
+- **Brave Search** - ניתן להשתמש בו לקבלת מידע עדכני כמו מזג האוויר על ידי ביצוע חיפוש באינטרנט  
+- **Wolfram Alpha** - ניתן להשתמש בו עבור חישובים מתמטיים מורכבים יותר ולכן לא נדרש לכתוב פונקציות משלך.  
 
-- אנו מגדירים את הכלים הזמינים (brave_search, wolfram_alpha) במערכת הפקודה.
-- שולחים פקודה משתמש שמבקשת מידע על מזג האוויר בעיר מסוימת.
-- ה-LLM יגיב עם קריאת כלי לכלי Brave Search, שתיראה כך `<|python_tag|>brave_search.call(query="Stockholm weather")`
+אפשר גם ליצור כלים מותאמים אישית שה-LLM יכול לקרוא להם.  
 
-*הערה: הדוגמה עושה רק את קריאת הכלי, אם תרצו לקבל את התוצאות, תצטרכו ליצור חשבון בחינם בדף ה-API של Brave ולהגדיר את הפונקציה עצמה.
+בדוגמת הקוד למטה:  
+
+- הגדרנו את הכלים הזמינים (brave_search, wolfram_alpha) בפירוט מערכת.  
+- שלחנו הנחיית משתמש השואלת על מזג האוויר בעיר מסוימת.  
+- ה-LLM יענה בקריאת כלי לכלי Brave Search שתיראה כך `<|python_tag|>brave_search.call(query="Stockholm weather")`  
+
+*הערה: דוגמה זו מבצעת רק את קריאת הכלי, אם ברצונך לקבל את התוצאות, תצטרך ליצור חשבון חינמי בדף ה-API של Brave ולהגדיר את הפונקציה עצמה.  
 
 ```python 
 import os
@@ -63,10 +69,12 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import AssistantMessage, SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-# קבל את אלה מדף "סקירה כללית" של פרויקט Foundry של Microsoft שלך
+# Get these from your Microsoft Foundry project's "Overview" page
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
-model_name = "Meta-Llama-3.1-405B-Instruct"
+# Meta-Llama-3.1-405B-Instruct was retired from Microsoft Foundry on 2026-06-13 with no replacement listed;
+# using Llama-3.3-70B-Instruct, a currently available alternative, instead
+model_name = "Llama-3.3-70B-Instruct"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -96,18 +104,18 @@ response = client.complete(messages=messages, model=model_name)
 print(response.choices[0].message.content)
 ```
 
-## Llama 3.2
+## Llama 3.2  
 
-למרות שזוהי LLM, מגבלה של Llama 3.1 היא חוסר הרב-מודליות. כלומר, חוסר היכולת להשתמש בסוגי קלט שונים כמו תמונות כפירומטים ולהגיב בהתאם. יכולת זו היא אחת התכונות המרכזיות של Llama 3.2. תכונות נוספות כוללות:
+למרות שהוא LLM, מגבלה של Llama 3.1 היא חוסר המולטימודליות שלו. כלומר, חוסר היכולת להשתמש בסוגי קלט שונים כמו תמונות כהנחיות ולספק תגובות. יכולת זו היא אחת התכונות המרכזיות של Llama 3.2. תכונות אלו כוללות גם:  
 
-- רב-מודליות - היכולת להעריך גם טקסט וגם תמונות כפירומטים
-- גרסאות בגדלים קטנים עד בינוניים (11B ו-90B) - מספקות אפשרויות פריסה גמישות,
-- גרסאות טקסט בלבד (1B ו-3B) - מאפשרות פריסה במכשירים קצה / מובייל ומספקות השהייה נמוכה
+- מולטימודליות - יש לו היכולת להעריך גם טקסט וגם הנחיות תמונה  
+- וריאציות בגודל קטן עד בינוני (11B ו-90B) - זה מספק אפשרויות פריסה גמישות,  
+- וריאציות טקסט בלבד (1B ו-3B) - זה מאפשר לפרוס את הדגם על התקנים קצה / מובייל ומספק זמן השהייה נמוך  
 
-התמיכה הרב-מודלית מייצגת צעד משמעותי בעולם הדגמים בקוד פתוח. דוגמת הקוד למטה מקבלת גם תמונה וגם פקודת טקסט לקבלת ניתוח של התמונה מ-Llama 3.2 90B.
+התמיכה המולטימודלית מהווה צעד גדול בעולם הדגמים בקוד פתוח. דוגמת הקוד למטה מקבלת גם הנחיה של תמונה וגם טקסט כדי לקבל ניתוח התמונה. כיוון ש-Llama 3.2 90B Vision Instruct פורש, הדוגמה משתמשת ב-`Llama-4-Scout-17B-16E-Instruct`, חלופה מולטימודלית זמינה באופן טבעי.  
 
 
-### תמיכה רב-מודלית עם Llama 3.2
+### תמיכה מולטימודלית עם Llama 3.2  
 
 ```python 
 import os
@@ -122,10 +130,12 @@ from azure.ai.inference.models import (
 )
 from azure.core.credentials import AzureKeyCredential
 
-# קבל אותם מדף "סקירה כללית" של פרויקט Microsoft Foundry שלך
+# Get these from your Microsoft Foundry project's "Overview" page
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
-model_name = "Llama-3.2-90B-Vision-Instruct"
+# Llama-3.2-90B-Vision-Instruct was retired from Microsoft Foundry on 2026-06-13 with no replacement listed;
+# using Llama-4-Scout-17B-16E-Instruct, a currently available natively multimodal alternative, instead
+model_name = "Llama-4-Scout-17B-16E-Instruct"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -155,9 +165,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## הלמידה לא תיפסק כאן, המשך את המסע
+## הלמידה לא נעצרת כאן, המשך את המסלול  
 
-לאחר סיום שיעור זה, בדוק את [אוסף הלמידה של AI גנרטיבי שלנו](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) כדי להמשיך ולהרחיב את הידע שלך ב-AI גנרטיבי!
+לאחר סיום שיעור זה, בדוק את [אוסף הלמידה של Generative AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) כדי להמשיך ולשדרג את הידע שלך ב-Generative AI!  
 
 ---
 

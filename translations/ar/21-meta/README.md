@@ -4,26 +4,32 @@
 
 ستغطي هذه الدرس:
 
-- استكشاف النموذجين الرئيسيين لعائلة ميتا - Llama 3.1 و Llama 3.2
-- فهم حالات الاستخدام والسيناريوهات لكل نموذج
-- مثال كود يوضح الميزات الفريدة لكل نموذج
+- استكشاف نموذجَي عائلة ميتا الرئيسيين - Llama 3.1 و Llama 3.2، بالإضافة إلى البدائل المتوفرة حاليًا المستخدمة في عينات الشيفرة (Llama 3.3 و Llama 4)  
+- فهم حالات الاستخدام والسيناريوهات لكل نموذج  
+- عينة شيفرة لعرض الميزات الفريدة لكل نموذج 
 
 
 ## عائلة نماذج ميتا
 
-في هذا الدرس، سوف نستكشف نموذجين من عائلة ميتا أو "قطيع اللاما" - Llama 3.1 و Llama 3.2.
+في هذا الدرس، سنستكشف نموذجين من عائلة ميتا أو "قطيع اللاما" - لاما 3.1 ولاما 3.2. تستخدم أمثلة الكود القابلة للتشغيل لاما 3.3 ولاما 4، اللذين هما بدائل متوفرة حالياً في كتالوج نماذج Microsoft Foundry.
 
 تتوفر هذه النماذج في نسخ مختلفة وهي متاحة في [كتالوج نماذج Microsoft Foundry](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
 
 > **ملاحظة:** نماذج GitHub ستتوقف في نهاية يوليو 2026. إليكم المزيد من التفاصيل حول استخدام [نماذج Microsoft Foundry](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) للنماذج الأولية مع نماذج الذكاء الاصطناعي.
 
-نسخ النماذج:
-- Llama 3.1 - 70B مع تعليمات
-- Llama 3.1 - 405B مع تعليمات
-- Llama 3.2 - 11B رؤية مع تعليمات
-- Llama 3.2 - 90B رؤية مع تعليمات
+> **ملحوظة:** تم كتابة هذه الدرس بالأصل مقابل إصدارات النموذج المحددة (Llama 3.1 70B/405B Instruct, Llama 3.2 11B/90B Vision Instruct) التي تم إيقافها منذ ذلك الحين من كتالوج نماذج مايكروسوفت فاوندرّي. تستخدم أمثلة الكود أدناه `Llama-3.3-70B-Instruct` و `Llama-4-Scout-17B-16E-Instruct` كبدائل متوفرة حالياً في كتالوج نماذج مايكروسوفت فاوندرّي، لذا فهي لا تزال تعمل حتى اليوم.
 
-*ملاحظة: Llama 3 متوفر أيضاً في نماذج Microsoft Foundry لكنه لن يُغطي في هذا الدرس*
+نُسخ النماذج (كما تم تغطيتها في هذا الدرس في الأصل): 
+- لاما 3.1 - 70B إنستركت (متوقف) 
+- لاما 3.1 - 405B إنستركت (متوقف) 
+- لاما 3.2 - 11B فيجن إنستركت (متوقف) 
+- لاما 3.2 - 90B فيجن إنستركت (متوقف) 
+
+البدائل المتاحة حالياً المستخدمة في أمثلة التعليمات البرمجية: 
+- ليما 3.3 - 70 مليار تعليم (`Llama-3.3-70B-Instruct`) 
+- ليما 4 سكاوت - 17 مليار 16 تعليق تعليم (`Llama-4-Scout-17B-16E-Instruct`) 
+
+*ملاحظة: تُحتفظ بإصدارات لاما 3 التي تمت مناقشتها أعلاه للسياق التاريخي ولم تعد متاحة في نماذج مايكروسوفت فاوندري.*
 
 ## Llama 3.1
 
@@ -63,10 +69,12 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import AssistantMessage, SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-# احصل على هذه من صفحة "نظرة عامة" في مشروع Microsoft Foundry الخاص بك
+# Get these from your Microsoft Foundry project's "Overview" page
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
-model_name = "Meta-Llama-3.1-405B-Instruct"
+# Meta-Llama-3.1-405B-Instruct was retired from Microsoft Foundry on 2026-06-13 with no replacement listed;
+# using Llama-3.3-70B-Instruct, a currently available alternative, instead
+model_name = "Llama-3.3-70B-Instruct"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -104,7 +112,7 @@ print(response.choices[0].message.content)
 - نسخ صغيرة إلى متوسطة الحجم (11B و 90B) - توفر خيارات نشر مرنة،
 - نسخ النص فقط (1B و 3B) - تتيح نشر النموذج على الأجهزة الطرفية / المحمولة وتوفر زمن استجابة منخفض
 
-يمثل الدعم المتعدد الأنماط خطوة كبيرة في عالم النماذج مفتوحة المصدر. يأخذ مثال الشيفرة أدناه كل من صورة ونصًا للحصول على تحليل للصورة من Llama 3.2 90B.
+دعم الأنماط المتعددة يمثل خطوة كبيرة في عالم النماذج المفتوحة المصدر. يأخذ مثال الكود أدناه صورة ونصًا للتوجيه للحصول على تحليل للصورة. نظرًا لأنه تم إيقاف Llama 3.2 90B Vision Instruct، يستخدم المثال `Llama-4-Scout-17B-16E-Instruct`، وهو بديل متعدد الأنماط متاح حاليًا بشكل أصلي. 
 
 
 ### دعم متعدد الأنماط مع Llama 3.2
@@ -122,10 +130,12 @@ from azure.ai.inference.models import (
 )
 from azure.core.credentials import AzureKeyCredential
 
-# احصل على هذه من صفحة "نظرة عامة" لمشروع Microsoft Foundry الخاص بك
+# Get these from your Microsoft Foundry project's "Overview" page
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
-model_name = "Llama-3.2-90B-Vision-Instruct"
+# Llama-3.2-90B-Vision-Instruct was retired from Microsoft Foundry on 2026-06-13 with no replacement listed;
+# using Llama-4-Scout-17B-16E-Instruct, a currently available natively multimodal alternative, instead
+model_name = "Llama-4-Scout-17B-16E-Instruct"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,

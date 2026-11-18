@@ -1,126 +1,143 @@
-# Contribuir
+# Contribuyendo
 
-Este proyecto acepta contribuciones y sugerencias. La mayoría de las contribuciones requieren que aceptes un Acuerdo de Licencia de Contribuidor (CLA) declarando que tienes el derecho y realmente nos otorgas los derechos para usar tu contribución. Para más detalles, visita <https://cla.microsoft.com>.
+Este proyecto recibe contribuciones y sugerencias con gusto. La mayoría de las contribuciones requieren que usted
+acepte un Acuerdo de Licencia de Contribuidor (CLA) declarando que tiene el derecho de,
+y de hecho otorga, los derechos para que usemos su contribución. Para más detalles, visite
+<https://cla.microsoft.com>.
 
-> Importante: al traducir texto en este repositorio, asegúrate de no usar traducción automática. Verificaremos las traducciones a través de la comunidad, así que por favor solo ofrece traducciones en idiomas que domines.
+> Importante: al traducir texto en este repositorio, por favor asegúrese de no usar traducción automática. Verificaremos las traducciones a través de la comunidad, así que por favor ofrézcase solo para traducir en idiomas que domine bien.
 
-Cuando envíes una solicitud de extracción, un bot de CLA determinará automáticamente si necesitas proporcionar un CLA y decorará la PR apropiadamente (por ejemplo, etiqueta, comentario). Simplemente sigue las instrucciones que te dé el bot. Solo tendrás que hacer esto una vez para todos los repositorios que usan nuestro CLA.
+Cuando envíe una solicitud de extracción, un CLA-bot determinará automáticamente si necesita
+proporcionar un CLA y adornará el PR adecuadamente (por ejemplo, etiqueta, comentario). Simplemente siga las
+instrucciones proporcionadas por el bot. Solo necesitará hacer esto una vez en todos los repositorios que usan nuestro CLA.
 
 ## Código de Conducta
 
-Este proyecto ha adoptado el [Código de Conducta de Código Abierto de Microsoft](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst).  
-Para más información, lee las [Preguntas Frecuentes sobre el Código de Conducta](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst) o contacta a [opencode@microsoft.com](mailto:opencode@microsoft.com) con cualquier pregunta o comentario adicional.
+Este proyecto ha adoptado el [Código de Conducta de Código Abierto de Microsoft](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst).
+Para más información lea las [Preguntas Frecuentes sobre el Código de Conducta](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst) o contacte a [opencode@microsoft.com](mailto:opencode@microsoft.com) con cualquier pregunta o comentario adicional.
 
-## ¿Pregunta o problema?
+## ¿Pregunta o Problema?
 
-Por favor, no abras issues en GitHub para preguntas generales de soporte, ya que la lista de GitHub debe usarse para solicitudes de características y reportes de errores. De esta forma podemos rastrear más fácilmente problemas o bugs reales en el código y mantener la discusión general separada del código en sí.
+Por favor, no abra incidencias en GitHub para preguntas generales de soporte, ya que la lista de GitHub debe usarse para solicitudes de características e informes de errores. De esta manera podemos rastrear más fácilmente los problemas o errores reales del código y mantener la discusión general separada del código en sí.
 
-## Errores tipográficos, problemas, bugs y contribuciones
+## Errores tipográficos, problemas, fallos y contribuciones
 
-Cada vez que envíes cambios al repositorio Generative AI for Beginners, sigue estas recomendaciones:
+Siempre que envíe cambios al repositorio Generative AI for Beginners, por favor siga estas recomendaciones.
 
-* Siempre haz un fork del repositorio a tu propia cuenta antes de hacer tus modificaciones  
-* No combines múltiples cambios en una sola solicitud de extracción. Por ejemplo, envía correcciones de bugs y actualizaciones de documentación en PRs separadas  
-* Si tu pull request muestra conflictos de merge, asegúrate de actualizar tu rama main local para que sea un reflejo del repositorio principal antes de hacer tus modificaciones  
-* Si envías una traducción, crea una sola PR con todos los archivos traducidos, ya que no aceptamos traducciones parciales del contenido  
-* Si envías una corrección de error tipográfico o de documentación, puedes combinar modificaciones en una sola PR cuando sea adecuado  
+* Siempre bifurque el repositorio a su propia cuenta antes de hacer sus modificaciones
+* No combine múltiples cambios en una sola solicitud de extracción. Por ejemplo, envíe cualquier corrección de errores y actualizaciones de documentación usando PRs separados
+* Si su solicitud de extracción muestra conflictos de fusión, asegúrese de actualizar su main local para reflejar exactamente lo que está en el repositorio main antes de hacer sus modificaciones
+* Si está enviando una traducción, por favor cree una sola PR para todos los archivos traducidos, ya que no aceptamos traducciones parciales del contenido
+* Si está enviando una corrección tipográfica o de documentación, puede combinar modificaciones en una única PR cuando sea apropiado
+
+## Alcance editorial y productos de terceros
+
+Este currículo se centra en tecnologías Microsoft y estándares abiertos neutrales respecto a proveedores. Las contribuciones deben tener un propósito educativo claro y no deben estar destinadas principalmente a introducir o promover un producto comercial de terceros, servicio alojado, modelo, enrutador, SDK, servidor MCP u otra oferta específica de un proveedor.
+
+El software de código abierto y las dependencias de terceros pueden ser referenciados cuando sean necesarios para explicar un estándar abierto o un escenario de interoperabilidad, se presenten de forma neutral y no estén centrados en un producto o punto de enlace alojado de un proveedor. Si su contribución propuesta incluye un producto o servicio específico de un proveedor, abra una incidencia y obtenga aprobación del mantenedor antes de enviar una solicitud de extracción.
+
+Los contribuyentes deben divulgar cualquier relación laboral, propiedad, patrocinio u otra afiliación relevante con un producto o servicio mencionado en su contribución. No incluya reclamaciones sin soporte sobre precios, rendimiento, seguridad, privacidad o comparativas. Los ejemplos ejecutables no deben transmitir datos del alumno ni realizar acciones públicas a través de un servicio externo de terceros por defecto.
 
 ## Guía general para escribir
 
-- Asegúrate de que todas tus URLs estén entre corchetes seguidos de paréntesis sin espacios extras alrededor o dentro `[](../..)`.  
-- Asegúrate de que cualquier enlace relativo (es decir, enlaces a otros archivos y carpetas en el repositorio) comience con `./` refiriéndose a un archivo o carpeta en el directorio actual o con `../` refiriéndose a un archivo o carpeta en un directorio padre.  
-- Asegúrate de que cualquier enlace relativo tenga un ID de seguimiento (es decir, `?` o `&` seguido de `wt.mc_id=` o `WT.mc_id=`) al final.  
-- Asegúrate de que cualquier URL de los siguientes dominios _github.com, microsoft.com, visualstudio.com, aka.ms, y azure.com_ tenga un ID de seguimiento (es decir, `?` o `&` seguido de `wt.mc_id=` o `WT.mc_id=`) al final.  
-- Asegúrate de que tus enlaces no contengan locales específicos de país (es decir, `/en-us/` o `/en/`).  
-- Asegúrate de que todas las imágenes estén almacenadas en la carpeta `./images`.  
-- Asegúrate de que las imágenes tengan nombres descriptivos usando caracteres en inglés, números y guiones en el nombre.  
+- Asegúrese de que todos sus URLs estén entre corchetes seguidos por paréntesis sin espacios adicionales alrededor o dentro de ellos `[]()`.
+- Asegúrese de que cualquier enlace relativo (es decir, enlaces a otros archivos y carpetas en el repositorio) comience con un `./` que se refiere a un archivo o carpeta ubicada en el directorio de trabajo actual o un `../` que se refiere a un archivo o carpeta ubicada en un directorio de trabajo padre.
+- Asegúrese de que cualquier enlace relativo (es decir, enlaces a otros archivos y carpetas en el repositorio) tenga un ID de seguimiento (es decir, `?` o `&` luego `wt.mc_id=` o `WT.mc_id=`) al final.
+- Asegúrese de que cualquier URL de los siguientes dominios _github.com, microsoft.com, visualstudio.com, aka.ms y azure.com_ tenga un ID de seguimiento (es decir, `?` o `&` luego `wt.mc_id=` o `WT.mc_id=`) al final.
+- Asegúrese de que sus enlaces no tengan localidad específica de país en ellos (es decir, `/en-us/` o `/en/`).
+- Asegúrese de que todas las imágenes estén almacenadas en la carpeta `./images`.
+- Asegúrese de que las imágenes tengan nombres descriptivos usando caracteres en inglés, números y guiones en el nombre de su imagen.
 
 ## Flujos de trabajo de GitHub
 
-Cuando envíes una solicitud de extracción, se activarán cuatro flujos de trabajo diferentes para validar las reglas anteriores.  
-Simplemente sigue las instrucciones listadas aquí para pasar las verificaciones del flujo de trabajo.
+Cuando envíe una solicitud de extracción, se activarán cuatro flujos de trabajo diferentes para validar las reglas anteriores.
+Simplemente siga las instrucciones listadas aquí para pasar las verificaciones del flujo de trabajo.
 
-- [Verificar rutas relativas rotas](../..)  
-- [Verificar que las rutas tengan seguimiento](../..)  
-- [Verificar que las URLs tengan seguimiento](../..)  
-- [Verificar que las URLs no tengan locale](../..)  
+- [Verificar rutas relativas rotas](#check-broken-relative-paths)
+- [Verificar que las rutas tengan seguimiento](#check-paths-have-tracking)
+- [Verificar que las URLs tengan seguimiento](#check-urls-have-tracking)
+- [Verificar que las URLs no tengan localidad](#check-urls-dont-have-locale)
 
 ### Verificar rutas relativas rotas
 
-Este flujo de trabajo asegura que cualquier ruta relativa en tus archivos funcione correctamente.  
-Este repositorio se despliega en GitHub pages, por lo que debes tener mucho cuidado al escribir los enlaces que conectan todo para no dirigir a nadie al lugar equivocado.
+Este flujo de trabajo asegura que cualquier ruta relativa en sus archivos funcione.
+Este repositorio está desplegado en GitHub Pages, por lo que debe tener mucho cuidado al escribir los enlaces que enlazan todo para no dirigir a nadie al lugar equivocado.
 
-Para asegurarte de que tus enlaces funcionen correctamente, simplemente usa VS Code para verificarlo.
+Para asegurarse de que sus enlaces funcionan correctamente simplemente use VS Code para verificar eso.
 
-Por ejemplo, cuando pases el cursor sobre cualquier enlace en tus archivos, se te sugerirá seguir el enlace presionando **ctrl + clic**
+Por ejemplo, cuando pase el cursor sobre cualquier enlace en sus archivos se le mostrará la opción de seguir el enlace presionando **ctrl + click**
 
-![Captura de pantalla de VS code para seguir enlaces](../../translated_images/es/vscode-follow-link.85520ab6a1237adc.webp)
+![Captura de pantalla de VS Code siguiendo enlaces](../../translated_images/es/vscode-follow-link.85520ab6a1237adc.webp?WT.mc_id=academic-105485-koreyst "Captura de pantalla del aviso de VS Code para seguir un enlace cuando pasa el cursor sobre un enlace.")
 
-Si haces clic en un enlace y no funciona localmente, seguramente activará el flujo de trabajo y no funcionará en GitHub.
+Si hace clic en un enlace y no funciona localmente, seguramente activará el flujo de trabajo y no funcionará en GitHub.
 
-Para solucionar este problema, intenta escribir el enlace con la ayuda de VS Code.
+Para solucionar este problema, intente escribir el enlace con la ayuda de VS Code.
 
-Cuando escribas `./` o `../`, VS Code te sugerirá opciones disponibles según lo que hayas escrito.
+Cuando escriba `./` o `../`, VS Code le sugerirá opciones disponibles según lo que escribió.
 
-![Captura de pantalla de VS code para seleccionar ruta relativa](../../translated_images/es/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
+![Captura de pantalla de VS Code seleccionando ruta relativa](../../translated_images/es/vscode-select-relative-path.3804eb73c3a9e5f2.webp?WT.mc_id=academic-105485-koreyst "Captura de pantalla del aviso de VS Code para seleccionar ruta relativa desde una lista desplegable.")
 
-Sigue la ruta haciendo clic en el archivo o carpeta deseada y así te asegurarás de que tu ruta no esté rota.
+Siga la ruta haciendo clic en el archivo o carpeta deseada y así tendrá la seguridad de que su ruta no está rota.
 
-Una vez que agregues la ruta relativa correcta, guarda y sube tus cambios; el flujo de trabajo se activará nuevamente para verificar tus cambios.  
-Si pasas la verificación, estarás listo para continuar.
+Una vez agregue la ruta relativa correcta, guarde y haga push de sus cambios, el flujo de trabajo se activará nuevamente para verificar sus cambios.
+Si pasa la verificación, entonces está listo para continuar.
 
 ### Verificar que las rutas tengan seguimiento
 
-Este flujo de trabajo asegura que cualquier ruta relativa tenga seguimiento.  
-Este repositorio se despliega en GitHub pages, por lo que necesitamos rastrear el movimiento entre los diferentes archivos y carpetas.
+Este flujo de trabajo asegura que cualquier ruta relativa tenga un seguimiento incluido.
+Este repositorio está desplegado en GitHub Pages, por lo que necesitamos rastrear el movimiento entre los diferentes archivos y carpetas.
 
-Para asegurarte de que tus rutas relativas tengan seguimiento, simplemente verifica que tengan el texto `?wt.mc_id=` al final de la ruta.  
-Si está agregado a tus rutas relativas, pasarás esta verificación.
+Para asegurarse de que sus rutas relativas tengan seguimiento, simplemente verifique que el texto `?wt.mc_id=` esté al final de la ruta.
+Si está añadido a sus rutas relativas, pasará esta verificación.
 
-Si no, podrías recibir el siguiente error.
+Si no, puede recibir el siguiente error.
 
-![Captura de pantalla del comentario de GitHub sobre rutas sin seguimiento](../../translated_images/es/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
+![Captura de pantalla de comentario de GitHub verificando rutas sin seguimiento](../../translated_images/es/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp?WT.mc_id=academic-105485-koreyst "Captura de pantalla de comentario de GitHub que muestra rutas relativas sin seguimiento")
 
-Para solucionar este problema, abre la ruta del archivo que el flujo de trabajo indicó y agrega el ID de seguimiento al final de las rutas relativas.
+Para solucionar este problema, intente abrir la ruta del archivo que resaltó el flujo de trabajo y agregue el ID de seguimiento al final de las rutas relativas.
 
-Una vez que agregues el ID de seguimiento, guarda y sube tus cambios; el flujo de trabajo se activará nuevamente para verificar tus cambios.  
-Si pasas la verificación, estarás listo para continuar.
+Una vez agregado el ID de seguimiento, guarde y haga push de sus cambios, el flujo de trabajo se activará nuevamente para verificar sus cambios.
+Si pasa la verificación, entonces está listo para continuar.
 
 ### Verificar que las URLs tengan seguimiento
 
-Este flujo de trabajo asegura que cualquier URL web tenga seguimiento.  
-Este repositorio está disponible para todos, por lo que debes asegurarte de rastrear el acceso para saber de dónde proviene el tráfico.
+Este flujo de trabajo asegura que cualquier URL web tenga un seguimiento incluido.
+Este repositorio está disponible para todos, por lo que debe asegurarse de rastrear el acceso para saber de dónde viene el tráfico.
 
-Para asegurarte de que tus URLs tengan seguimiento, simplemente verifica que tengan el texto `?wt.mc_id=` al final de la URL.  
-Si está agregado a tus URLs, pasarás esta verificación.
+Para asegurarse de que sus URLs tengan seguimiento, simplemente verifique que el texto `?wt.mc_id=` esté al final de la URL.
+Si está añadido a sus URLs, pasará esta verificación.
 
-Si no, podrías recibir el siguiente error.
+Si no, puede recibir el siguiente error.
 
-![Captura de pantalla del comentario de GitHub sobre URLs sin seguimiento](../../translated_images/es/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
+![Captura de pantalla de comentario de GitHub verificando URLs sin seguimiento](../../translated_images/es/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp?WT.mc_id=academic-105485-koreyst "Captura de pantalla de comentario de GitHub que muestra URLs sin seguimiento")
 
-Para solucionar este problema, abre la ruta del archivo que el flujo de trabajo indicó y agrega el ID de seguimiento al final de las URLs.
+Para solucionar este problema, intente abrir la ruta del archivo que resaltó el flujo de trabajo y agregue el ID de seguimiento al final de las URLs.
 
-Una vez que agregues el ID de seguimiento, guarda y sube tus cambios; el flujo de trabajo se activará nuevamente para verificar tus cambios.  
-Si pasas la verificación, estarás listo para continuar.
+Una vez agregado el ID de seguimiento, guarde y haga push de sus cambios, el flujo de trabajo se activará nuevamente para verificar sus cambios.
+Si pasa la verificación, entonces está listo para continuar.
 
-### Verificar que las URLs no tengan locale
+### Verificar que las URLs no tengan localidad
 
-Este flujo de trabajo asegura que cualquier URL web no tenga locales específicos de país.  
-Este repositorio está disponible para todo el mundo, por lo que debes asegurarte de no incluir el locale de tu país en las URLs.
+Este flujo de trabajo asegura que cualquier URL web no tenga una localidad específica de país en ella.
+Este repositorio está disponible para todo el mundo, por lo que debe asegurarse de no incluir la localidad de su país en las URLs.
 
-Para asegurarte de que tus URLs no tengan locales de país, simplemente verifica que no contengan el texto `/en-us/` o `/en/` o cualquier otro locale de idioma en cualquier parte de la URL.  
-Si no está presente en tus URLs, pasarás esta verificación.
+Para asegurarse de que sus URLs no tengan la localidad del país, simplemente verifique que no esté presente el texto `/en-us/` o `/en/` o cualquier otra localidad de idioma en la URL.
+Si no está presente en sus URLs, pasará esta verificación.
 
-Si no, podrías recibir el siguiente error.
+Si está presente, puede recibir el siguiente error.
 
-![Captura de pantalla del comentario de GitHub sobre locales de país en URLs](../../translated_images/es/github-check-country-locale-comment.2f4fe93228161dee.webp)
+![Captura de pantalla de comentario de GitHub verificando localidad de país en URLs](../../translated_images/es/github-check-country-locale-comment.2f4fe93228161dee.webp?WT.mc_id=academic-105485-koreyst "Captura de pantalla de comentario de GitHub que muestra localidad de país añadida a URLs")
 
-Para solucionar este problema, abre la ruta del archivo que el flujo de trabajo indicó y elimina el locale de país de las URLs.
+Para solucionar este problema, intente abrir la ruta del archivo que resaltó el flujo de trabajo y elimine la localidad del país de las URLs.
 
-Una vez que elimines el locale de país, guarda y sube tus cambios; el flujo de trabajo se activará nuevamente para verificar tus cambios.  
-Si pasas la verificación, estarás listo para continuar.
+Una vez eliminada la localidad del país, guarde y haga push de sus cambios, el flujo de trabajo se activará nuevamente para verificar sus cambios.
+Si pasa la verificación, entonces está listo para continuar.
 
-¡Felicidades! Nos pondremos en contacto contigo lo antes posible con comentarios sobre tu contribución.
+¡Felicidades! Nos pondremos en contacto con usted lo antes posible con comentarios sobre su contribución.
 
-**Aviso legal**:  
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por la precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o inexactitudes. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda la traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas derivadas del uso de esta traducción.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Descargo de responsabilidad**:
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por la precisión, tenga en cuenta que las traducciones automatizadas pueden contener errores o inexactitudes. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional humana. No somos responsables de cualquier malentendido o interpretación errónea que surja del uso de esta traducción.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

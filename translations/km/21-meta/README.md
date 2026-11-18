@@ -1,61 +1,67 @@
-# ការសាងសង់ជាមួយម៉ូដែលគ្រួសារមេតា 
+# ការសង់ជាមួយគំរូគ្រួសារ Meta  
 
-## ការណែនាំ 
+## ការណែនាំ  
 
-មេរៀននេះនឹងគ្របដណ្តប់: 
+មេរៀននេះនឹងគ្របដណ្តប់ ៖ 
 
-- ការត្រៀមទូទៅពីម៉ូដែលគ្រួសារមេតា២សំណុំចម្បង - Llama 3.1 និង Llama 3.2 
-- ការយល់ដឹងអំពីករណីប្រើប្រាស់ និងស្ថានភាពសម្រាប់ម៉ូដែលនីមួយៗ 
-- ឧទាហរណ៍កូដដើម្បីបង្ហាញលក្ខណៈពិសេសរបស់ម៉ូដែលនីមួយៗ 
+- ការស្វែងយល់ពីគំរូគ្រួសារ Meta សំខាន់ៗពីរជាមួយ Llama 3.1 និង Llama 3.2 បូករួមជាមួយជម្រើសដែលមានស្រាប់គឺ Llama 3.3 និង Llama 4 ដែលប្រើក្នុងឧទាហរណ៍កូដ  
+- ការយល់ដឹងពីករណីប្រើប្រាស់ និងសេចក្តីលម្អិតសម្រាប់គំរូទាំងអស់  
+- ឧទាហរណ៍កូដដើម្បីបង្ហាញលក្ខណៈពិសេសដោយឡែកនៃគំរូនីមួយៗ  
 
 
-## ក្រុមម៉ូដែលគ្រួសារមេតា 
+## គ្រួសារ Meta នៃគំរូ  
 
-នៅក្នុងមេរៀននេះ សូមយើងរុករកម៉ូដែល ២ ពីគ្រួសារមេតា ឬ "Llama Herd" គឺ Llama 3.1 និង Llama 3.2។
+ក្នុងមេរៀននេះ យើងនឹងស្វែងយល់ពីគំរូពីរ ពីគ្រួសារ Meta ឬ "ក្រុម Llama" គឺ Llama 3.1 និង Llama 3.2។ ឧទាហរណ៍កូដដែលអាចរត់បាន ប្រើ Llama 3.3 និង Llama 4 ដែលជាជម្រើសដែលមានស្រាប់ក្នុងកាតាឡុកគំរូ Microsoft Foundry។  
 
-ម៉ូដែលទាំងនេះមានរាងខុសគ្នា និងមានលក់ក្នុង [Microsoft Foundry Models catalog](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst)។
+គំរូទាំងនេះ មាននៅក្នុងបម្រើជាច្រើន និងអាចរកបាននៅក្នុង [កាតាឡុកគំរូ Microsoft Foundry](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst)។  
 
-> **សម្គាល់៖** GitHub Models នឹងបញ្ចប់ដំណើរការនៅចុងខែ֊កក្កដា ២០២៦។ នេះជាលម្អិតបន្ថែមអំពីការប្រើប្រាស់ [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) ដើម្បីសាកល្បងជាមួយម៉ូដែល AI។
+> **ចំណាំ៖** GitHub Models នឹងផ្អាកនៅចុងខែកក្កដាឆ្នាំ ២០២៦។ នេះជារបាយការណ៍លម្អិតបន្ថែមស្ដីពីការប្រើប្រាស់ [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) ដើម្បីបង្កើតម៉ូឌែល AI ។  
 
-ប្រភេទម៉ូដែល: 
-- Llama 3.1 - 70B Instruct 
-- Llama 3.1 - 405B Instruct 
-- Llama 3.2 - 11B Vision Instruct 
-- Llama 3.2 - 90B Vision Instruct 
+> **ចំណាំ៖** រូបមន្តម៉ូឌែលដែលបានសរសេរជាលើកដំបូងសម្រាប់មេរៀននេះ (Llama 3.1 70B/405B Instruct, Llama 3.2 11B/90B Vision Instruct) ត្រូវបានផ្អាកចេញពីកាតាឡុកគំរូ Microsoft Foundry។ ឧទាហរណ៍កូដខាងក្រោមប្រើ `Llama-3.3-70B-Instruct` និង `Llama-4-Scout-17B-16E-Instruct` ជាជម្រើសដែលមានស្រាប់ក្នុងកាតាឡុកគំរូ Microsoft Foundry ដូច្នេះវានៅតែអាចដំណើរការបាននៅថ្ងៃនេះ។  
 
-*សម្គាល់៖ Llama 3 ក៏មានផ្តល់មានក្នុង Microsoft Foundry Models ដែរ ប៉ុន្តែមិនត្រូវបានគ្របដណ្តប់ក្នុងមេរៀននេះទេ*
+រូបមន្តម៉ូឌែល (ដូចបានគ្របដណ្តប់នៅលើក្នុងមេរៀននេះ)៖  
+- Llama 3.1 - 70B Instruct (បានផ្អាក)  
+- Llama 3.1 - 405B Instruct (បានផ្អាក)  
+- Llama 3.2 - 11B Vision Instruct (បានផ្អាក)  
+- Llama 3.2 - 90B Vision Instruct (បានផ្អាក)  
 
-## Llama 3.1 
+ជម្រើសដែលមានស្រាប់ដែលប្រើក្នុងឧទាហរណ៍កូដ៖  
+- Llama 3.3 - 70B Instruct (`Llama-3.3-70B-Instruct`)  
+- Llama 4 Scout - 17B 16E Instruct (`Llama-4-Scout-17B-16E-Instruct`)  
 
-ជាមួយនឹង ៤០៥ ពានប៉ារ៉ាម៉ែត្រ Llama 3.1 ចូលទៅក្នុងប្រភេទ LLM open source ។ 
+*ចំណាំ៖ រូបមន្ត Llama 3 ដែលបានពិភាក្សាខាងលើ ត្រូវបានរក្សាទុកសម្រាប់បរិបទប្រវត្តិសាស្ត្រនិងគ្មាននៅក្នុង Microsoft Foundry Models ទៀតទេ។*  
 
-ម៉ូដែលនេះជាការអាប់ដេតពីការចេញផ្សាយ Llama 3 មុន ដោយផ្តល់: 
+## Llama 3.1  
 
-- បង្អួចនៃcontext ធំជាង - ១២៨,០០០ token ប្រឆាំងនឹង ៨,០០០ token 
-- លេខបញ្ចេញចាប់ Token អតិបរមាធំជាង - ៤០៩៦ ភាគនៃ ២០៤៨ 
-- គាំទ្រភាសាច្រើនល្អជាង - ដោយសារការកើនឡើងនៃ training tokens 
+ក្នុងចំណោម ៤០៥ ពាន់លានពាក្យ (Parameters) Llama 3.1 ត្រូវបានថែមស្ថានភាពជាក្រុម LLM ប្រភពរ open source។  
 
-អ្នកអាចប្រើ Llama 3.1 ក្នុងករណីប្រើប្រាស់រឹងមាំពេលសាងសង់កម្មវិធី GenAI រួមមាន: 
-- Native Function Calling - សមត្ថភាពក្នុងការហៅឧបករណ៍ និងមុខពិសេសខាងក្រៅ workflow LLM
-- ប្រសិទ្ធភាព RAG ល្អជាង - ដោយសារបង្អួច context ខ្ពស់
-- ការបង្កើតទិន្នន័យសំណុំ - សមត្ថភាពបង្កើតទិន្នន័យមានប្រសិទ្ធភាពសម្រាប់ការប្រតិបត្តិ fine-tuning
+គំរូនេះជាបំណែលបន្ថែមពីការបញ្ចេញ Llama 3 មុននេះ ដោយផ្តល់ជូន៖  
 
-### Native Function Calling 
+- បង្អួច context លេខៈ ១២៨k tokens ប្រៀបធៀបនឹង ៨k tokens  
+- ចំនួន tokens លទ្ធផលអតិបរមា ៤០៩៦ ប្រៀបធៀបនឹង ២០៤៨   
+- ការគាំទ្រជាភាសាច្រៀងខ្ពស់បំផុត - ដោយសារតែបន្ថែម tokens សម្រាប់ហ្វឹកហាត់  
 
-Llama 3.1 ត្រូវបានលុបបំបាត់ឱ្យមានប្រសិទ្ធភាពក្នុងការហៅមុខងារ ឬឧបករណ៍។ វាក៏មានឧបករណ៍ពីរដែលទេពទេពអាចកំណត់ថាត្រូវបានប្រើប្រាស់ដោយផ្អែកទៅលើការបញ្ចូលពីអ្នកប្រើ។ ឧបករណ៍ទាំងនេះមាន: 
+អ្នកនឹងអាចប្រើ Llama 3.1 ដើម្បីដោះស្រាយករណីប្រើប្រាស់ស្មុគស្មាញនៅក្នុងការបង្កើតកម្មវិធី GenAI រួមមាន៖  
+- ការហៅមុខងារជាដើម - សមត្ថភាពក្នុងការហៅឧបករណ៍ និងមុខងារចេញពីលំហកម្មវិធី LLM  
+- ការសម្រួល RAG ប្រសើរជាងមុន - ដោយសារបង្អួច context ខ្ពស់  
+- ការបង្កើតទិន្នន័យស៊ីនថិតិច - សមត្ថភាពក្នុងការបង្កើតទិន្នន័យមានប្រសិទ្ធភាពសម្រាប់ភារកិច្ចដូចជាការប្រឹងប្រែងជំរុញ  
 
-- **Brave Search** - អាចប្រើស្វែងរកព័ត៌មានថ្មីៗដូចជាគ្រោះអាកាសធាតុ តាមការស្វែងរកវែបសាយ 
-- **Wolfram Alpha** - អាចប្រើសម្រាប់គណិតវិទ្យាដែលស្មុគស្មាញ ដូច្នេះមិនចាំបាច់សរសេរមុខងាររបស់អ្នកទេ។ 
+### ការហៅមុខងារជាដើម  
 
-អ្នកក៏អាចបង្កើតឧបករណ៍ផ្ទាល់ខ្លួនដែល LLM អាចហៅបាន។
+Llama 3.1 ត្រូវបានបង្កើតបន្ថែមឡើងសម្រាប់ការប្រើប្រាស់ហៅមុខងារ ឬឧបករណ៍បានមានប្រសិទ្ធភាពកាន់តែខ្ពស់។ វានៅមានឧបករណ៍ពីរចាក់បញ្ចូលនៅក្នុងដែលគំរូអាចសម្គាល់ថាត្រូវប្រើពិចារណាចេញពី prompt ពីអ្នកប្រើ។ ឧបករណ៍ទាំងនេះគឺ៖  
 
-នៅក្នុងឧទាហរណ៍កូដខាងក្រោម: 
+- **Brave Search** - អាចប្រើស្វែងរកព័ត៌មានទាន់សម័យដូចជាអាកាសធាតុ ដោយបញ្ចូលការស្វែងរកតាមវេបសាយ  
+- **Wolfram Alpha** - អាចប្រើសំរាប់គណនា​គណិតវិទ្យាស្មុគស្មាញ ដូច្នេះមិនចាំបាច់សរសេរមុខងារផ្ទាល់ខ្លួនទេ។  
 
-- យើងកំណត់ឧបករណ៍ដែលមាន (brave_search, wolfram_alpha) នៅក្នុង system prompt។ 
-- ផ្ញើសំណួរពីអ្នកប្រើដែលសួរអំពីអាកាសធាតុក្នុងទីក្រុងណាមួយ។ 
-- LLM នឹងឆ្លើយតបជាមួយការហៅឧបករណ៍ទៅឧបករណ៍ Brave Search ដែលនឹងបង្ហាញដូចជា `<|python_tag|>brave_search.call(query="Stockholm weather")` 
+អ្នកក៏អាចបង្កើតឧបករណ៍ផ្ទាល់ខ្លួនដែល LLM អាចហៅបានផងដែរ។  
 
-*សម្គាល់៖ ឧទាហរណ៍នេះគ្រាន់តែធ្វើការហៅឧបករណ៍ប៉ុណ្ណោះ ប្រសិនបើអ្នកចង់បានលទ្ធផល អ្នកត្រូវបង្កើតគណនីឥតគិតថ្លៃនៅទំព័រ Brave API និងកំណត់មុខងារផ្ទាល់ខ្លួន។*
+ក្នុងឧទាហរណ៍កូដខាងក្រោម៖  
+
+- យើងកំណត់ឧបករណ៍ដែលមានស្រាប់ (brave_search, wolfram_alpha) នៅក្នុង prompt ប្រព័ន្ធ។  
+- ផ្ញើ prompt អ្នកប្រើសួរអំពីអាកាសធាតុក្នុងទីក្រុងមួយច្បាស់លាស់។  
+- LLM នឹងឆ្លើយបញ្ចេញការហៅឧបករណ៍ទៅកាន់ឧបករណ៍ Brave Search ដែលនឹងមើលទៅដូចជា `<|python_tag|>brave_search.call(query="Stockholm weather")`  
+
+*ចំណាំ៖ ឧទាហរណ៍នេះគ្រាន់តែធ្វើការហៅឧបករណ៍ បើអ្នកចង់ទទួលបានលទ្ធផល អ្នកត្រូវបង្កើតគណនីដោយឥតគិតថ្លៃនៅផែនទី Brave API ហើយកំណត់មុខងារផ្ទាល់ខ្លួន។  
 
 ```python 
 import os
@@ -63,10 +69,12 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import AssistantMessage, SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-# ទាញយកវាទៅពីទំព័រ "ទិដ្ឋភាពទូទៅ" នៃគម្រោង Microsoft Foundry របស់អ្នក
+# Get these from your Microsoft Foundry project's "Overview" page
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
-model_name = "Meta-Llama-3.1-405B-Instruct"
+# Meta-Llama-3.1-405B-Instruct was retired from Microsoft Foundry on 2026-06-13 with no replacement listed;
+# using Llama-3.3-70B-Instruct, a currently available alternative, instead
+model_name = "Llama-3.3-70B-Instruct"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -96,18 +104,18 @@ response = client.complete(messages=messages, model=model_name)
 print(response.choices[0].message.content)
 ```
 
-## Llama 3.2 
+## Llama 3.2  
 
-ទោះបីជាមានជាគ្រឿង LLM ក៏ដោយ កំណត់ចំនួនមួយនៃ Llama 3.1 គឺមិនមានបច្ចេកទេស multimodality។ មានន័យថា មិនអាចប្រើប្រភេទការបញ្ចូលផ្សេងៗដូចជារូបភាពជាសញ្ញាឬផ្តល់ចម្លើយ។ សមត្ថភាពនេះគឺជាលក្ខណៈសំខាន់មួយនៃ Llama 3.2។ លក្ខណៈទាំងនេះរួមមាន: 
+ទោះបីជាជា LLM ក៏ដោយ ខ្សោយមួយរបស់ Llama 3.1 គឺការខ្វះលទ្ធភាពមូលដ្ឋានមួយឈ្មោះម៉ុលទីម៉ូដាល។ គឺ ឯកភាពរបស់វាដែលមិនអាចប្រើប្រភេទការបញ្ចូលផ្សេងៗគ្នាទេ ដូចជារូបភាពជារូបមន្ត ហើយផ្តល់ការឆ្លើយតបបាន។ សមត្ថភាពនេះជាលក្ខណៈសំខាន់មួយរបស់ Llama 3.2។ លក្ខណៈទាំងនេះរួមមាន៖  
 
-- Multimodality - មានសមត្ថភាពវាយតម្លៃទាំងអត្ថបទ និងសញ្ញារូបភាព 
-- ការប្រែប្រួលទំហំតូចទៅមធ្យម (11B និង 90B) - ផ្តល់ជម្រើសដាក់ឧបករណ៍ដោយបត់បែន, 
-- ការប្រែប្រួលអត្ថបទតែប៉ុណ្ណោះ (1B និង 3B) - អនុញ្ញាតឱ្យម៉ូដែលត្រូវបានដាក់លើឧបករណ៍ edge / ឧបករណ៍ចល័ត ហើយផ្តល់ latency ទាប 
+- ម៉ុលទីម៉ូដាល - មានសមត្ថភាពវាយតម្លៃទាំង prompt ខ្លឹមសារ និងរូបភាព  
+- ការបម្លែងទំហំតូចរហូតមធ្យម (11B និង 90B) - ផ្តល់ជម្រើសប្រើប្រាស់បតអាចបត់បែនបាន  
+- ការបម្លែងតែក្នុងខ្លឹមសារ (1B និង 3B) - អនុញ្ញាតឲ្យគំរូត្រូវបានដាក់នៅលើឧបករណ៍ edge / ទូរស័ព្ទចល័ត និងផ្តល់ការឆ្លើយតបបន្ទាន់ទាប  
 
-ការគាំទ្រ multimodal គឺជាចំណុចវិនិយោគដ៏ធំមួយនៅក្នុងពិភពម៉ូដែល open source។ ឧទាហរណ៍កូដខាងក្រោមយកទាំងរូបភាព និងអត្ថបទជាសញ្ញា ដើម្បីទទួលបានការវិភាគពី Llama 3.2 90B។ 
+ការគាំទ្រម៉ុលទីម៉ូដាលនេះតំណាងឱ្យជាប្រភេទជំហានធំមួយក្នុងពិភពគំរូប្រភពចំហ។ ឧទាហរណ៍កូដខាងក្រោមទទួលទាំងរូបភាពនិង prompt ខ្លឹមសារ ដើម្បីទទួលបានការវិភាគរូបភាព។ ដោយសារ Llama 3.2 90B Vision Instruct ត្រូវបានផ្អាក ឧទាហរណ៍នេះប្រើ `Llama-4-Scout-17B-16E-Instruct` ដែលជាជម្រើសមានស្រាប់ និងគាំទ្រម៉ូលទីម៉ូដាលដោយដើម។  
 
 
-### ការគាំទ្រ Multimodal ជាមួយ Llama 3.2
+### ការគាំទ្រម៉ុលទីម៉ូដាលជាមួយ Llama 3.2  
 
 ```python 
 import os
@@ -122,10 +130,12 @@ from azure.ai.inference.models import (
 )
 from azure.core.credentials import AzureKeyCredential
 
-# ទទួលបានទាំងនេះពី​ទំព័រ "ទិដ្ឋភាពទូទៅ" នៃគoproject Microsoft Foundry របស់អ្នក
+# Get these from your Microsoft Foundry project's "Overview" page
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
-model_name = "Llama-3.2-90B-Vision-Instruct"
+# Llama-3.2-90B-Vision-Instruct was retired from Microsoft Foundry on 2026-06-13 with no replacement listed;
+# using Llama-4-Scout-17B-16E-Instruct, a currently available natively multimodal alternative, instead
+model_name = "Llama-4-Scout-17B-16E-Instruct"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -155,9 +165,9 @@ response = client.complete(
 print(response.choices[0].message.content)
 ```
 
-## ការសិក្សាមិនបញ្ឈប់នៅទីនេះ បន្តដំណើរការ 
+## ការរៀនមិនឈប់នៅទីនេះ ត្រូវបន្តដំណើរ  
 
-បន្ទាប់ពីបញ្ចប់មេរៀននេះ សូមពិនិត្យមើល [Generative AI Learning collection](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) របស់យើង ដើម្បីបន្តបង្កើនចំណេះដឹង AI យ៉ាងមានប្រសិទ្ធភាព!
+បន្ទាប់ពីបញ្ចប់មេរៀននេះ សូមពិនិត្យមើល [ការប្រមូលផ្តុំការសិក្សា Generative AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) របស់យើង ដើម្បីបន្តកម្ដៅចំណេះដឹង Generative AI របស់អ្នក!  
 
 ---
 

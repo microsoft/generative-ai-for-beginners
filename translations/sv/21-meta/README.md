@@ -4,26 +4,32 @@
 
 Denna lektion kommer att täcka: 
 
-- Utforska de två huvudmodellerna i Meta-familjen - Llama 3.1 och Llama 3.2 
-- Förstå användningsområden och scenarier för varje modell 
-- Kodexempel som visar varje modells unika funktioner 
+- Utforska de två huvudsakliga Meta-familjsmodellerna - Llama 3.1 och Llama 3.2, plus de för närvarande tillgängliga alternativen som används i kodexemplen (Llama 3.3 och Llama 4) 
+- Förstå användningsfall och scenarier för varje modell 
+- Kodexempel som visar de unika funktionerna i varje modell 
 
 
 ## Meta Family av modeller 
 
-I denna lektion kommer vi att utforska 2 modeller från Meta-familjen eller "Llama Herd" - Llama 3.1 och Llama 3.2.
+I den här lektionen kommer vi att utforska 2 modeller från Meta-familjen eller "Llama Herd" - Llama 3.1 och Llama 3.2. De körbara kodexemplen använder Llama 3.3 och Llama 4, som för närvarande är tillgängliga alternativ i Microsoft Foundry Models-katalogen.
 
 Dessa modeller finns i olika varianter och är tillgängliga i [Microsoft Foundry Models-katalogen](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst).
 
 > **Notera:** GitHub Models fasas ut i slutet av juli 2026. Här finns mer information om att använda [Microsoft Foundry Models](https://learn.microsoft.com/azure/ai-foundry/model-inference/overview?WT.mc_id=academic-105485-koreyst) för att prototypa med AI-modeller.
 
-Modellvarianter: 
-- Llama 3.1 - 70B Instruct 
-- Llama 3.1 - 405B Instruct 
-- Llama 3.2 - 11B Vision Instruct 
-- Llama 3.2 - 90B Vision Instruct 
+> **Notera:** De specifika modellversioner som denna lektion ursprungligen skrevs för (Llama 3.1 70B/405B Instruct, Llama 3.2 11B/90B Vision Instruct) har sedan dess tagits bort från Microsoft Foundry Models-katalogen. Kodexemplen nedan använder `Llama-3.3-70B-Instruct` och `Llama-4-Scout-17B-16E-Instruct` som för närvarande tillgängliga alternativ i Microsoft Foundry Models-katalogen, så de fungerar fortfarande idag.
 
-*Notera: Llama 3 finns också i Microsoft Foundry Models men kommer inte att täckas i denna lektion*
+Modellvarianter (som ursprungligen behandlades i denna lektion): 
+- Llama 3.1 - 70B Instruct (pensionerad) 
+- Llama 3.1 - 405B Instruct (pensionerad) 
+- Llama 3.2 - 11B Vision Instruct (pensionerad) 
+- Llama 3.2 - 90B Vision Instruct (pensionerad) 
+
+För närvarande tillgängliga alternativ som används i kodexemplen: 
+- Llama 3.3 - 70B Instruktion (`Llama-3.3-70B-Instruct`) 
+- Llama 4 Scout - 17B 16E Instruktion (`Llama-4-Scout-17B-16E-Instruct`) 
+
+*Obs: De Llama 3-varianter som nämns ovan bevaras för historisk kontext och är inte längre tillgängliga i Microsoft Foundry Models.*
 
 ## Llama 3.1 
 
@@ -63,10 +69,12 @@ from azure.ai.inference import ChatCompletionsClient
 from azure.ai.inference.models import AssistantMessage, SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
-# Hämta dessa från din Microsoft Foundry-projekts "Översikt"-sida
+# Get these from your Microsoft Foundry project's "Overview" page
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
-model_name = "Meta-Llama-3.1-405B-Instruct"
+# Meta-Llama-3.1-405B-Instruct was retired from Microsoft Foundry on 2026-06-13 with no replacement listed;
+# using Llama-3.3-70B-Instruct, a currently available alternative, instead
+model_name = "Llama-3.3-70B-Instruct"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,
@@ -104,7 +112,7 @@ Trots att det är en LLM, är en begränsning med Llama 3.1 dess brist på multi
 - Mindre till medelstora storleksvarianter (11B och 90B) - detta ger flexibla distributionsalternativ, 
 - Endast text-varianter (1B och 3B) - detta gör att modellen kan distribueras på edge / mobila enheter och ger låg latens 
 
-Det multimodala stödet representerar ett stort steg i världen av open source-modeller. Kodexemplet nedan tar både en bild och en textprompt för att få en analys av bilden från Llama 3.2 90B. 
+Det multimodala stödet representerar ett stort steg i världen av öppen källkod-modeller. Kodexemplet nedan tar både en bild och en textprompt för att få en analys av bilden. Eftersom Llama 3.2 90B Vision Instruct har pensionerats, använder exemplet `Llama-4-Scout-17B-16E-Instruct`, ett för närvarande tillgängligt inhemskt multimodalt alternativ. 
 
 
 ### Multimodalt stöd med Llama 3.2
@@ -122,10 +130,12 @@ from azure.ai.inference.models import (
 )
 from azure.core.credentials import AzureKeyCredential
 
-# Hämta dessa från din Microsoft Foundry-projekts "Översikt"-sida
+# Get these from your Microsoft Foundry project's "Overview" page
 token = os.environ["AZURE_INFERENCE_CREDENTIAL"]
 endpoint = os.environ["AZURE_INFERENCE_ENDPOINT"]
-model_name = "Llama-3.2-90B-Vision-Instruct"
+# Llama-3.2-90B-Vision-Instruct was retired from Microsoft Foundry on 2026-06-13 with no replacement listed;
+# using Llama-4-Scout-17B-16E-Instruct, a currently available natively multimodal alternative, instead
+model_name = "Llama-4-Scout-17B-16E-Instruct"
 
 client = ChatCompletionsClient(
     endpoint=endpoint,

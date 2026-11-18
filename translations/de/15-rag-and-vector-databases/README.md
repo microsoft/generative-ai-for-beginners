@@ -20,11 +20,11 @@ In dieser Lektion behandeln wir Folgendes:
 
 Nach Abschluss dieser Lektion können Sie:
 
-- Die Bedeutung von RAG bei der Datenabfrage und -verarbeitung erklären.
+- Erklären Sie die Bedeutung von RAG bei der Datenabfrage und -verarbeitung.
 
-- Eine RAG-Anwendung einrichten und Ihre Daten in ein LLM einbinden.
+- Richten Sie eine RAG-Anwendung ein und stützen Sie ein LLM auf Ihre Daten.
 
-- RAG und Vektor-Datenbanken effektiv in LLM-Anwendungen integrieren.
+- Integrieren Sie RAG und Vektordatenbanken effektiv in LLM-Anwendungen.
 
 ## Unser Szenario: Unsere LLMs mit eigenen Daten verbessern
 
@@ -36,7 +36,7 @@ Für diese Lektion möchten wir eigene Notizen in das Bildungs-Startup einfügen
 
 - `Azure AI Search` und `Azure Cosmos DB:` Vektor-Datenbank zum Speichern unserer Daten und Erstellen eines Suchindexes
 
-Nutzer können Übungsquiz aus ihren Notizen erstellen, Lernkarten zum Wiederholen anfertigen und diese zu kurzen Übersichten zusammenfassen. Um zu beginnen, schauen wir uns an, was RAG ist und wie es funktioniert:
+Benutzer werden in der Lage sein, Übungsquizze und Wiederholungskarten aus ihren Notizen zu erstellen und diese Notizen in prägnante Übersichten zusammenzufassen. Um zu beginnen, schauen wir uns an, was RAG ist und wie es funktioniert:
 
 ## Retrieval Augmented Generation (RAG)
 
@@ -56,9 +56,9 @@ Angenommen, Sie möchten einen Chatbot bereitstellen, der Quiz aus Ihren Notizen
 
 - **Erweiterte Generierung:** Das LLM verbessert seine Antwort basierend auf den abgerufenen Daten. Dadurch basiert die Antwort nicht nur auf vortrainierten Daten, sondern auch auf relevanten Informationen aus dem hinzugefügten Kontext. Die abgerufenen Daten werden genutzt, um die Antworten des LLM zu ergänzen. Das LLM gibt dann eine Antwort auf die Nutzerfrage zurück.
 
-![Zeichnung zeigt Architektur von RAGs](../../../translated_images/de/encoder-decode.f2658c25d0eadee2.webp)
+![Diagramm zeigt RAG-Architektur](../../../translated_images/de/encoder-decode.f2658c25d0eadee2.webp?WT.mc_id=academic-105485-koreyst)
 
-Die Architektur von RAGs wird mit Transformern umgesetzt, die aus zwei Teilen bestehen: einem Encoder und einem Decoder. Wenn zum Beispiel ein Nutzer eine Frage stellt, wird der Eingabetext in Vektoren 'kodiert', die die Bedeutungen der Wörter erfassen; diese Vektoren werden dann im Dokumentenindex 'dekodiert' und generieren neuen Text basierend auf der Nutzeranfrage. Das LLM verwendet ein Encoder-Decoder-Modell, um die Ausgabe zu erzeugen.
+RAG kombiniert einen Retriever mit einem Generator: Die Abfrage wird in einen Vektor umgewandelt, mit dem Dokumentenindex abgeglichen, um relevante Textabschnitte zu finden, und diese Abschnitte werden einem LLM als Kontext zur Verfügung gestellt, das die Antwort generiert. Der Retriever und der Generator können unterschiedliche Modelle verwenden; RAG erfordert keinen Encoder-Decoder-Transformer.
 
 Zwei Ansätze zur Implementierung von RAG gemäß der vorgeschlagenen Studie: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) sind:
 
@@ -76,13 +76,13 @@ Zwei Ansätze zur Implementierung von RAG gemäß der vorgeschlagenen Studie: [R
 
 ## Erstellen einer Wissensdatenbank
 
-Unsere Anwendung basiert auf unseren persönlichen Daten, d.h. der Lektion über Neuronale Netze aus dem Curriculum „KI für Einsteiger“.
+Unsere Anwendung basiert auf unseren persönlichen Daten, d.h. der Lektion über neuronale Netzwerke aus dem AI for Beginners Lehrplan.
 
 ### Vektor-Datenbanken
 
 Eine Vektor-Datenbank ist im Gegensatz zu traditionellen Datenbanken eine spezialisierte Datenbank, die darauf ausgelegt ist, eingebettete Vektoren zu speichern, zu verwalten und zu durchsuchen. Sie speichert numerische Repräsentationen von Dokumenten. Die Zerlegung von Daten in numerische Embeddings erleichtert es unserem KI-System, die Daten zu verstehen und zu verarbeiten.
 
-Wir speichern unsere Embeddings in Vektor-Datenbanken, da LLMs eine Begrenzung der Anzahl der Tokens haben, die sie als Eingabe akzeptieren. Da man nicht alle Embeddings an ein LLM übergeben kann, müssen wir sie in Abschnitte unterteilen, und wenn ein Nutzer eine Frage stellt, werden die Embeddings, die der Frage am ähnlichsten sind, zusammen mit der Anfrage zurückgegeben. Die Chunkbildung reduziert außerdem die Kosten für die Anzahl der durch das LLM geleiteten Tokens.
+Da LLMs eine Begrenzung der Eingabetoken haben, teilen wir Dokumente vor dem Einbetten in Abschnitte auf. Wenn ein Nutzer eine Frage stellt, identifizieren die den Suchanfragen am ähnlichsten Embeddings die relevanten Textabschnitte, die zusammen mit dem Prompt zurückgegeben werden. Das Aufteilen in Abschnitte reduziert auch die Anzahl der Tokens, die an das LLM übergeben werden, und kann somit die Kosten senken.
 
 Einige beliebte Vektor-Datenbanken sind Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant und DeepLake. Sie können ein Azure Cosmos DB-Modell mit Azure CLI mit folgendem Befehl erstellen:
 
@@ -141,9 +141,9 @@ Eine Herausforderung beim Abruf entsteht, wenn keine ähnliche Antwort in der Da
 
 ### Vektorähnlichkeit
 
-Der Retriever durchsucht die Wissensdatenbank nach Embeddings, die nah beieinander liegen, den nächsten Nachbar, da es sich um ähnliche Texte handelt. Im Szenario wird die Nutzeranfrage zuerst eingebettet und dann mit ähnlichen Embeddings abgeglichen. Die häufig verwendete Messgröße zur Ermittlung der Ähnlichkeit von Vektoren ist die Kosinusähnlichkeit, die auf dem Winkel zwischen zwei Vektoren basiert.
+Der Retriever sucht in der Wissensdatenbank nach Einbettungen, die nahe beieinander liegen – den nächsten Nachbarn –, da diese Texte darstellen, die ähnlich sind. In diesem Szenario wird bei einer Benutzeranfrage diese zuerst eingebettet und dann mit ähnlichen Einbettungen abgeglichen. Die am häufigsten verwendete Messgröße zur Bewertung der Vektorähnlichkeit ist die Kosinusähnlichkeit, die auf dem Winkel zwischen zwei Vektoren basiert.
 
-Alternativ können auch andere Maße verwendet werden, wie die euklidische Distanz, welche die Gerade zwischen den Vektorendpunkten misst, und das Skalarprodukt, das die Summe der Produkte entsprechender Elemente zweier Vektoren bewertet.
+Andere Metriken, die wir zur Messung der Ähnlichkeit verwenden können, umfassen die euklidische Distanz, die die gerade Linie zwischen den Endpunkten von Vektoren ist, und das Skalarprodukt, das die Summe der Produkte entsprechender Elemente in zwei Vektoren misst.
 
 ### Suchindex
 
@@ -166,19 +166,14 @@ distances, indices = nbrs.kneighbors(embeddings)
 Nach der Abfrage der Datenbank müssen die Ergebnisse eventuell von der relevantesten abwärts sortiert werden. Ein Re-Ranking-LLM verwendet Machine Learning, um die Relevanz der Suchergebnisse zu verbessern, indem sie von der relevantesten geordnet werden. Mit Azure AI Search erfolgt das Re-Ranking automatisch mit einem semantischen Re-Ranker. Ein Beispiel, wie das Re-Ranking mit nächsten Nachbarn funktioniert:
 
 ```python
-# Finde die ähnlichsten Dokumente
+# Find the most similar documents
 distances, indices = nbrs.kneighbors([query_vector])
 
-index = []
-# Drucke die ähnlichsten Dokumente
-for i in range(3):
-    index = indices[0][i]
-    for index in indices[0]:
-        print(flattened_df['chunks'].iloc[index])
-        print(flattened_df['path'].iloc[index])
-        print(flattened_df['distances'].iloc[index])
-    else:
-        print(f"Index {index} not found in DataFrame")
+# Print the three most similar documents with their distance to the question
+for distance, index in zip(distances[0][:3], indices[0][:3]):
+    print(flattened_df['chunks'].iloc[index])
+    print(flattened_df['path'].iloc[index])
+    print(distance)
 ```
 
 ## Alles zusammenführen
@@ -236,7 +231,7 @@ chatbot(user_input)
 
 ## Anwendungsfälle für RAG (Retrieval Augmented Generation) und Vektor-Datenbanken
 
-Es gibt viele Anwendungsfälle, in denen Funktionsaufrufe Ihre App verbessern können, wie z.B.:
+Es gibt viele verschiedene Anwendungsfälle, in denen RAG Ihre App verbessern kann, wie zum Beispiel:
 
 - Frage- und Antwortsysteme: Ihre Unternehmensdaten an einen Chat binden, der von Mitarbeitern zur Fragestellung genutzt werden kann.
 
@@ -248,7 +243,7 @@ Es gibt viele Anwendungsfälle, in denen Funktionsaufrufe Ihre App verbessern k�
 
 ## Zusammenfassung
 
-Wir haben die grundlegenden Bereiche von RAG behandelt, vom Hinzufügen unserer Daten zur Anwendung, der Nutzeranfrage bis zur Ausgabe. Zur Vereinfachung der Erstellung von RAG können Sie Frameworks wie Semantic Kernel, Langchain oder Autogen verwenden.
+Wir haben die grundlegenden Bereiche von RAG behandelt, vom Hinzufügen unserer Daten zur Anwendung über die Benutzeranfrage bis hin zur Ausgabe. Um die Erstellung von RAG zu vereinfachen, können Sie Frameworks wie Semantic Kernel, LangChain oder AutoGen verwenden.
 
 ## Aufgabe
 

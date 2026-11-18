@@ -1,118 +1,143 @@
 # Contributing
 
-This project welcomes contributions and suggestions. Most contributions require you to agree to a Contributor License Agreement (CLA) confirming that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit <https://cla.microsoft.com>.
+This project welcomes contributions and suggestions. Most contributions require you to
+agree to a Contributor License Agreement (CLA) declaring that you have the right to,
+and actually do, grant us the rights to use your contribution. For details, visit
+<https://cla.microsoft.com>.
 
-> Important: when translating text in this repo, please make sure not to use machine translation. We will verify translations through the community, so please only volunteer for translations in languages you are proficient in.
+> Important: when translating text in this repo, please ensure that you do not use machine translation. We will verify translations via the community, so please only volunteer for translations in languages where you are proficient.
 
-When you submit a pull request, a CLA-bot will automatically check whether you need to provide a CLA and will label or comment on the PR accordingly. Just follow the instructions from the bot. You only need to do this once across all repositories using our CLA.
+When you submit a pull request, a CLA-bot will automatically determine whether you need
+to provide a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the
+instructions provided by the bot. You will only need to do this once across all repositories using our CLA.
 
 ## Code of Conduct
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst).  
-For more information, read the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any questions or comments.
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/?WT.mc_id=academic-105485-koreyst).
+For more information read the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/?WT.mc_id=academic-105485-koreyst) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## Question or Problem?
 
-Please do not open GitHub issues for general support questions, as the GitHub issues list should be used for feature requests and bug reports. This helps us track actual issues or bugs in the code more easily and keeps general discussions separate from code-related topics.
+Please do not open GitHub issues for general support questions as the GitHub list should be used for feature requests and bug reports. This way we can more easily track actual issues or bugs from the code and keep the general discussion separate from the actual code.
 
 ## Typos, Issues, Bugs and contributions
 
-When submitting any changes to the Generative AI for Beginners repository, please follow these recommendations:
+Whenever you are submitting any changes to the Generative AI for Beginners repository, please follow these recommendations.
 
-* Always fork the repository to your own account before making changes  
-* Do not combine multiple changes in one pull request. For example, submit bug fixes and documentation updates as separate PRs  
-* If your pull request shows merge conflicts, update your local main branch to match the main repository before making changes  
-* If you are submitting a translation, please create one PR for all translated files, as partial translations are not accepted  
-* If you are submitting a typo or documentation fix, you can combine related changes into a single PR where appropriate
+* Always fork the repository to your own account before making your modifications
+* Do not combine multiple changes to one pull request. For example, submit any bug fix and documentation updates using separate PRs
+* If your pull request shows merge conflicts, make sure to update your local main to be a mirror of what's in the main repository before making your modifications
+* If you are submitting a translation, please create one PR for all the translated files as we don't accept partial translations for the content
+* If you are submitting a typo or documentation fix, you can combine modifications to a single PR where suitable
+
+## Editorial scope and third-party products
+
+This curriculum focuses on Microsoft technologies and vendor-neutral open standards. Contributions should serve a clear educational purpose and must not be primarily intended to introduce or promote a third-party commercial product, hosted service, model router, SDK, MCP server, or other vendor-specific offering.
+
+Open-source software and third-party dependencies may be referenced when they are necessary to explain an open standard or interoperability scenario, are presented neutrally, and are not centered on a vendor's product or hosted endpoint. If your proposed contribution includes a vendor-specific product or service, open an issue and obtain maintainer approval before submitting a pull request.
+
+Contributors must disclose any relevant employment, ownership, sponsorship, or other affiliation with a product or service referenced in their contribution. Do not include unsupported pricing, performance, security, privacy, or comparative claims. Runnable examples must not transmit learner data or perform public actions through an external third-party service by default.
 
 ## General Guidance for writing
 
-- Make sure all your URLs are enclosed in square brackets followed immediately by parentheses with no extra spaces inside or around them `[](../..)`.  
-- Ensure any relative link (links to other files or folders in the repo) starts with `./` for files or folders in the current directory, or `../` for those in a parent directory.  
-- Make sure any relative link includes a tracking ID (i.e., `?` or `&` followed by `wt.mc_id=` or `WT.mc_id=`) at the end.  
-- Ensure URLs from the following domains _github.com, microsoft.com, visualstudio.com, aka.ms, and azure.com_ include a tracking ID at the end.  
-- Avoid including country-specific locale codes in your links (e.g., `/en-us/` or `/en/`).  
-- Store all images in the `./images` folder.  
-- Use descriptive image names with English letters, numbers, and dashes.
+- Ensure that all your URLs are wrapped in square brackets followed by a parenthesis with no extra spaces around them or inside them `[]()`.
+- Ensure that any relative link (i.e. links to other files and folders in the repository) starts with a `./` referring to a file or a folder located in the current working directory or a `../` referring to a file or a folder located in a parent working directory.
+- Ensure that any relative link (i.e. links to other files and folders in the repository) has a tracking ID (i.e. `?` or `&` then `wt.mc_id=` or `WT.mc_id=`) at the end of it.
+- Ensure that any URL from the following domains _github.com, microsoft.com, visualstudio.com, aka.ms, and azure.com_ has a tracking ID (i.e. `?` or `&` then `wt.mc_id=` or `WT.mc_id=`) at the end of it.
+- Ensure that your links don't have country specific locale in them (i.e. `/en-us/` or `/en/`).
+- Ensure that all images are stored in the `./images` folder.
+- Ensure that the images have descriptive names using English characters, numbers, and dashes in the name of your image.
 
 ## GitHub Workflows
 
-When you submit a pull request, four workflows will run to validate the rules above.  
-Just follow the instructions here to pass the workflow checks.
+When you submit a pull request, four different workflows will be triggered to validate the previous rules.
+Simply follow the instructions listed here to pass the workflow checks.
 
-- [Check Broken Relative Paths](../..)  
-- [Check Paths Have Tracking](../..)  
-- [Check URLs Have Tracking](../..)  
-- [Check URLs Don't Have Locale](../..)
+- [Check Broken Relative Paths](#check-broken-relative-paths)
+- [Check Paths Have Tracking](#check-paths-have-tracking)
+- [Check URLs Have Tracking](#check-urls-have-tracking)
+- [Check URLs Don't Have Locale](#check-urls-dont-have-locale)
 
 ### Check Broken Relative Paths
 
-This workflow verifies that all relative paths in your files work correctly.  
-Since this repo is deployed to GitHub Pages, you need to be careful when typing links to avoid directing users to the wrong place.
+This workflow ensures that any relative path in your files is working.
+This repository is deployed to GitHub pages so you need to be very careful when you type the links that glue everything together to not direct anyone to the wrong place.
 
-To check your links, simply use VS Code.  
-For example, when you hover over a link, you can press **ctrl + click** to follow it.
+To make sure that your links are working properly simply use VS code to check that.
 
-![VS code follow links screenshot](../../translated_images/en/vscode-follow-link.85520ab6a1237adc.webp)
+For example, when you hover over any link in your files you will be prompted to follow the link by pressing on **ctrl + click**
 
-If a link doesn’t work locally, it will likely fail the workflow check on GitHub as well.
+![VS code follow links screenshot](../../translated_images/en/vscode-follow-link.85520ab6a1237adc.webp?WT.mc_id=academic-105485-koreyst "Screenshot from vs code prompt to follow a link when you hover over a link.")
 
-To fix this, type the link with VS Code’s help.  
-When you type `./` or `../`, VS Code will suggest available options based on what you typed.
+If you click on a link and it's not working locally then, surely it will trigger the workflow and won't work on GitHub.
 
-![VS code select relative path screenshot](../../translated_images/en/vscode-select-relative-path.3804eb73c3a9e5f2.webp)
+To fix this issue, try to type the link with the help of VS code.
 
-Click on the desired file or folder to ensure your path is correct.
+When you type `./` or `../` VS code will prompt you to choose from the available options according to what you typed.
 
-After updating the relative path, save and push your changes. The workflow will run again to verify your fix.  
-If you pass, you’re good to go.
+![VS code select relative path screenshot](../../translated_images/en/vscode-select-relative-path.3804eb73c3a9e5f2.webp?WT.mc_id=academic-105485-koreyst "Screenshot from vs code prompt to select relative path from a pop up list.")
+
+Follow the path by clicking on the desired file or folder and you will be sure that your path is not broken.
+
+Once you add the correct relative path, save, and push your changes the workflow will be triggered again to verify your changes.
+If you pass the check then you are good to go.
 
 ### Check Paths Have Tracking
 
-This workflow checks that all relative paths include tracking information.  
-Since this repo is deployed to GitHub Pages, we need to track navigation between files and folders.
+This workflow ensures that any relative path has tracking in it.
+This repository is deployed to GitHub pages so we need to track the movement between the different files and folders.
 
-To pass, make sure your relative paths end with `?wt.mc_id=` or similar tracking text.  
-If missing, you may see an error like this:
+To make sure your relative paths have tracking in them simply check for the following text `?wt.mc_id=` at the end of the path.
+If it's appended to your relative paths then you will pass this check.
 
-![GitHub check paths missing tracking comment screenshot](../../translated_images/en/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp)
+If not, you may get the following error.
 
-To fix it, open the file the workflow flagged and add the tracking ID to the end of the relative paths.
+![GitHub check paths missing tracking comment screenshot](../../translated_images/en/github-check-paths-missing-tracking-comment.880d4afe03e898ff.webp?WT.mc_id=academic-105485-koreyst "Screenshot from github comment that shows missing tracking from relative paths")
 
-Save and push your changes. The workflow will run again to verify.  
-If you pass, you’re good to go.
+To fix this issue, try to open the file path that the workflow highlighted and add the tracking ID to the end of the relative paths.
+
+Once you add the tracking ID, save, and push your changes the workflow will be triggered again to verify your changes.
+If you pass the check then you are good to go.
 
 ### Check URLs Have Tracking
 
-This workflow ensures all web URLs include tracking information.  
-Since this repo is public, tracking helps us understand where traffic comes from.
+This workflow ensures that any web URL has tracking in it.
+This repository is available to everyone so you need to make sure to track the access to know from where the traffic is coming.
 
-To pass, make sure URLs end with `?wt.mc_id=` or similar tracking text.  
-If missing, you may see an error like this:
+To make sure your URLs have tracking in them simply check for the following text `?wt.mc_id=` at the end of the URL.
+If it's appended to your URLs then you will pass this check.
 
-![GitHub check urls missing tracking comment screenshot](../../translated_images/en/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp)
+If not, you may get the following error.
 
-To fix it, open the flagged file and add the tracking ID to the URLs.
+![GitHub check urls missing tracking comment screenshot](../../translated_images/en/github-check-urls-missing-tracking-comment.1bd00d20b24a1e2e.webp?WT.mc_id=academic-105485-koreyst "Screenshot from github comment that shows missing tracking from urls")
 
-Save and push your changes. The workflow will run again to verify.  
-If you pass, you’re good to go.
+To fix this issue, try to open the file path that the workflow highlighted and add the tracking ID to the end of the URLs.
+
+Once you add the tracking ID, save, and push your changes the workflow will be triggered again to verify your changes.
+If you pass the check then you are good to go.
 
 ### Check URLs Don't Have Locale
 
-This workflow checks that URLs do not include country-specific locale codes.  
-Since this repo is global, URLs should not contain locale segments like `/en-us/` or `/en/`.
+This workflow ensures that any web URL doesn't have country specific locale in it.
+This repository is available to everyone around the world so you need to make sure not to include your country's locale in URLs.
 
-To pass, make sure your URLs do not include any language or country locale anywhere.  
-If present, you may see an error like this:
+To make sure your URLs don't have country locale in them simply check for the following text `/en-us/` or `/en/` or any other language locale anywhere in the URL.
+If it's not present in your URLs then you will pass this check.
 
-![GitHub check country locale comment screenshot](../../translated_images/en/github-check-country-locale-comment.2f4fe93228161dee.webp)
+If not, you may get the following error.
 
-To fix it, open the flagged file and remove the locale from the URLs.
+![GitHub check country locale comment screenshot](../../translated_images/en/github-check-country-locale-comment.2f4fe93228161dee.webp?WT.mc_id=academic-105485-koreyst "Screenshot from github comment that shows added country locale to urls")
 
-Save and push your changes. The workflow will run again to verify.  
-If you pass, you’re good to go.
+To fix this issue, try to open the file path that the workflow highlighted and remove the country locale from the URLs.
 
-Congratulations! We will get back to you as soon as possible with feedback on your contribution.
+Once you remove the country locale, save, and push your changes the workflow will be triggered again to verify your changes.
+If you pass the check then you are good to go.
 
-**Disclaimer**:  
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+Congratulations! We will get back to you as soon as possible with feedback about your contribution.
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Disclaimer**:
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
