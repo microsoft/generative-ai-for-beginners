@@ -1,90 +1,90 @@
 # Retrieval Augmented Generation (RAG) a vektorové databázy
 
-[![Retrieval Augmented Generation (RAG) a vektorové databázy](../../../translated_images/sk/15-lesson-banner.ac49e59506175d4f.webp)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
+[![Retrieval Augmented Generation (RAG) a vektorové databázy](../../../translated_images/sk/15-lesson-banner.ac49e59506175d4f.webp?WT.mc_id=academic-105485-koreyst)](https://youtu.be/4l8zhHUBeyI?si=BmvDmL1fnHtgQYkL)
 
-V lekcii vyhľadávacích aplikácií sme si stručne ukázali, ako integrovať vlastné dáta do veľkých jazykových modelov (LLM). V tejto lekcii sa podrobnejšie pozrieme na koncept ukotvenia vašich dát vo vašej LLM aplikácii, mechaniku procesu a metódy ukladania dát, vrátane embeddingov a textu.
+V lekcii o vyhľadávacích aplikáciách sme sa stručne naučili, ako integrovať vlastné dáta do veľkých jazykových modelov (LLM). V tejto lekcii sa bližšie pozrieme na koncept základania vašich dát v aplikácii LLM, mechaniku procesu a metódy ukladania dát, vrátane vektorových reprezentácií a textu.
 
 > **Video čoskoro k dispozícii**
 
 ## Úvod
 
-V tejto lekcii sa budeme venovať nasledovnému:
+V tejto lekcii sa budeme venovať nasledujúcemu:
 
-- Úvod do RAG, čo to je a prečo sa používa v AI (umelá inteligencia).
+- Úvode do RAG, čo to je a prečo sa používa v AI (umelej inteligencii).
 
-- Pochopenie, čo sú to vektorové databázy a vytvorenie jednej pre našu aplikáciu.
+- Pochopeniu, čo sú vektorové databázy a vytvoreniu jednej pre našu aplikáciu.
 
-- Praktický príklad, ako integrovať RAG do aplikácie.
+- Praktickému príkladu, ako integrovať RAG do aplikácie.
 
 ## Ciele učenia
 
-Po absolvovaní tejto lekcie budete schopní:
+Po dokončení tejto lekcie budete schopní:
 
-- Vysvetliť význam RAG pri získavaní a spracovaní dát.
+- Vysvetliť význam RAG v získavaní a spracovaní dát.
 
-- Nastaviť RAG aplikáciu a zakotviť vaše dáta do LLM
+- Nastaviť RAG aplikáciu a zakotviť LLM pomocou vašich dát.
 
-- Efektívna integrácia RAG a vektorových databáz v LLM aplikáciách.
+- Efektívne integrovať RAG a vektorové databázy v LLM aplikáciách.
 
-## Náš scenár: rozšírenie našich LLM o vlastné dáta
+## Náš scenár: vylepšenie našich LLM pomocou vlastných dát
 
-Pre túto lekciu chceme pridať vlastné poznámky do vzdelávacieho startupu, čo umožní chatbotovi získať viac informácií o rôznych témach. Používateľom to umožní lepšie sa učiť a porozumieť rôznym témam, čo im uľahčí prípravu na skúšky. Pre vytvorenie nášho scenára použijeme:
+Pre túto lekciu chceme pridať vlastné poznámky do vzdelávacieho startupu, čo umožní chatbotovi získať viac informácií o rôznych predmetoch. Použitím našich poznámok budú študenti schopní lepšie študovať a pochopiť rôzne témy, čím sa im uľahčí príprava na skúšky. Na vytvorenie nášho scenára použijeme:
 
 - `Azure OpenAI:` LLM, ktorý použijeme na vytvorenie nášho chatbota
 
-- `Lekcia AI pre začiatočníkov o neurónových sieťach:` to budú dáta, na ktorých zakotvíme náš LLM
+- `AI for beginners' lesson on Neural Networks`: toto budú dáta, na ktorých zakotvíme náš LLM
 
-- `Azure AI Search` a `Azure Cosmos DB:` vektorová databáza na uloženie našich dát a vytvorenie vyhľadávacieho indexu
+- `Azure AI Search` a `Azure Cosmos DB:` vektorovú databázu na uloženie našich dát a vytvorenie vyhľadávacieho indexu
 
-Používatelia budú môcť vytvárať cvičné kvízy zo svojich poznámok, opakovacie kartičky a zhrnúť ich do stručných prehľadov. Pre začiatok si pozrime, čo je RAG a ako funguje:
+Používatelia budú môcť vytvárať cvičné kvízy a kartičky na opakovanie zo svojich poznámok a zhrnúť tieto poznámky do stručných prehľadov. Poďme najskôr pozrieť, čo je RAG a ako funguje:
 
 ## Retrieval Augmented Generation (RAG)
 
-Chatbot poháňaný LLM spracováva používateľské požiadavky na generovanie odpovedí. Je navrhnutý tak, aby bol interaktívny a komunikoval s používateľmi o širokej škále tém. Jeho odpovede sú však obmedzené kontextom, ktorý mu bol poskytnutý, a základnými trénovacími dátami. Napríklad vedomosti GPT-4 majú hranicu v septembri 2021, čo znamená, že postráda znalosti o udalostiach po tomto období. Navyše, dáta použité na trénovanie LLM nezahŕňajú dôverné informácie ako osobné poznámky alebo príručky spoločnosti.
+Chatbot poháňaný LLM spracúva používateľské dotazy na generovanie odpovedí. Je navrhnutý tak, aby bol interaktívny a komunikoval s používateľmi na širokú škálu tém. Jeho odpovede sú však obmedzené na kontext, ktorý mu bol poskytnutý, a na základné tréningové dáta. Napríklad, znalosti GPT-4 sú obmedzené k septembru 2021, čo znamená, že nepozná udalosti po tomto dátume. Okrem toho dáta použité na tréning LLM nezahŕňajú dôverné informácie, ako sú osobné poznámky alebo firemný príručný manuál.
 
 ### Ako fungujú RAG (Retrieval Augmented Generation)
 
-![kresba zobrazujúca, ako fungujú RAG](../../../translated_images/sk/how-rag-works.f5d0ff63942bd3a6.webp)
+![diagram ukazujúci, ako fungujú RAG](../../../translated_images/sk/how-rag-works.f5d0ff63942bd3a6.webp?WT.mc_id=academic-105485-koreyst)
 
-Predstavme si, že chcete nasadiť chatbota, ktorý tvorí kvízy z vašich poznámok, budete potrebovať spojenie s databázou poznatkov. Tu prichádza na scénu RAG. RAG funguje nasledovne:
+Predstavte si, že chcete nasadiť chatbota, ktorý tvorí kvízy zo svojich poznámok; potrebujete pripojenie k databáze znalostí. Tu prichádza na pomoc RAG. RAG funguje nasledovne:
 
-- **Databáza poznatkov:** Pred vyhľadávaním je potrebné dokumenty ingestovať a predspracovať, typicky rozložiť veľké dokumenty na menšie časti, transformovať ich do textového embeddingu a uložiť do databázy.
+- **Databáza znalostí:** Pred vyhľadávaním je potrebné tieto dokumenty spracovať a predbežne pripraviť, zvyčajne rozdelením veľkých dokumentov na menšie časti, premenou na textové vektorové reprezentácie a uložením do databázy.
 
-- **Používateľský dopyt:** používateľ položí otázku
+- **Používateľský dotaz:** používateľ položí otázku.
 
-- **Vyhľadávanie:** Keď používateľ položí otázku, model embeddingu vyhľadá relevantné informácie z databázy poznatkov, aby poskytol viac kontextu, ktorý bude zapracovaný do promptu.
+- **Vyhľadávanie:** Keď používateľ položí otázku, embedding model vyhľadá relevantné informácie v databáze znalostí, ktoré poskytnú viac kontextu, ktorý bude začlenený do promptu.
 
-- **Rozšírená generácia:** LLM vylepší svoju odpoveď na základe získaných dát. Umožňuje, aby odpoveď nebola založená len na predtrénovaných dátach, ale aj na relevantných informáciách z pridaného kontextu. Získané dáta sa používajú na rozšírenie odpovedí LLM. LLM následne vráti odpoveď na otázku používateľa.
+- **Rozšírená generácia:** LLM vylepšuje svoju odpoveď na základe získaných dát. Umožňuje, aby odpoveď bola založená nielen na predtrénovaných dátach, ale aj na relevantných informáciách z pridaného kontextu. Vráti odpoveď na otázku používateľa.
 
-![kresba zobrazujúca architektúru RAG](../../../translated_images/sk/encoder-decode.f2658c25d0eadee2.webp)
+![Diagram zobrazujúci architektúru RAG](../../../translated_images/sk/encoder-decode.f2658c25d0eadee2.webp?WT.mc_id=academic-105485-koreyst)
 
-Architektúra RAG je implementovaná pomocou transformátorov pozostávajúcich z dvoch častí: enkodéra a dekodéra. Napríklad, keď používateľ položí otázku, vstupný text sa "enkóduje" do vektorov zachytávajúcich význam slov a vektory sa "dekódujú" do nášho dokumentového indexu a generujú nový text na základe používateľskej otázky. LLM používa model enkódér-dekódér na generovanie výstupu.
+RAG kombinuje vyhľadávač (retriever) a generátor: dotaz sa prevedie na vektor, porovná sa s indexom dokumentov, aby sa našli relevantné textové časti, ktoré sa poskytnú ako kontext LLM, ktorý vytvorí odpoveď. Vyhľadávač a generátor môžu používať rôzne modely; RAG nevyžaduje encoder-decoder transformer.
 
-Podľa navrhovaného článku: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) sú dva prístupy implementácie RAG:
+Dva prístupy k implementácii RAG podľa navrhovaného článku: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) sú:
 
-- **_RAG-Sequence_** používa získané dokumenty na predikciu najlepšej možnej odpovede na používateľský dopyt
+- **_RAG-Sequence_** využíva vyhľadané dokumenty na predpovedanie najlepšej odpovede na používateľský dotaz.
 
-- **RAG-Token** používa dokumenty na generovanie nasledujúceho tokenu, potom ich znovu vyhľadáva na odpoveď na otázku používateľa
+- **RAG-Token** používa dokumenty na generovanie ďalšieho tokenu, potom ich vyhľadáva pre odpoveď na dotaz používateľa.
 
-### Prečo používať RAG?
+### Prečo používať RAG? 
 
-- **Bohatosť informácií:** zabezpečuje, že textové odpovede sú aktuálne a súčasné. Tým zlepšuje výkon v špecifických doménach prístupom k internej databáze poznatkov.
+- **Bohatosť informácií:** zabezpečuje, že textové odpovede sú aktuálne a aktuálne. Tým zlepšuje výkon na úlohách špecifických pre doménu prístupom k vnútornej databáze znalostí.
 
-- Znižuje tvorbu nepravdivých informácií využitím **verifikovateľných dát** v databáze poznatkov na poskytnutie kontextu používateľským dopytom.
+- Znižuje vymýšľanie odpovedí využitím **overiteľných dát** v databáze znalostí ako kontext k otázkam používateľov.
 
-- Je **nákladovo efektívny**, pretože je výhodnejší v porovnaní s doladením LLM
+- Je **nákladovo efektívny**, pretože je lacnejší v porovnaní s dolaďovaním LLM.
 
-## Vytvorenie databázy poznatkov
+## Vytvorenie databázy znalostí
 
-Naša aplikácia je založená na našich osobných dátach, tj. lekcii o neurónových sieťach z kurzu AI pre začiatočníkov.
+Naša aplikácia je založená na osobných dátach, konkrétne na lekcii o neurónových sieťach z kurikula AI pre začiatočníkov.
 
 ### Vektorové databázy
 
-Vektorová databáza na rozdiel od tradičných databáz je špecializovaná databáza navrhnutá na ukladanie, správu a vyhľadávanie vložených vektorov. Ukladá číselné reprezentácie dokumentov. Rozdelením dát na číselné embeddingy sa nášmu AI systému uľahčí pochopenie a spracovanie dát.
+Vektorová databáza, na rozdiel od tradičných databáz, je špecializovaná databáza na ukladanie, správu a vyhľadávanie vložených vektorov. Ukladá číselné reprezentácie dokumentov. Rozkladanie dát na číselné reprezentácie uľahčuje nášmu AI systému pochopenie a spracovanie dát.
 
-Embeddingy ukladajúme do vektorových databáz, pretože LLM má limit počtu tokenov, ktoré ako vstup akceptuje. Keďže nemôžete poslať celé embeddingy do LLM, je potrebné ich rozdeliť na časti a keď používateľ položí otázku, vrátia sa embeddingy najviac relevantné k otázke spolu s promptom. Chunking tiež znižuje náklady na počet tokenov zaslaných cez LLM.
+Pretože LLM majú limit na počet vstupných tokenov, dokumenty rozdeľujeme na časti pred ich embeddingom. Keď používateľ položí otázku, embeddingy najpodobnejšie dotazu identifikujú relevantné textové časti, ktoré sa vrátia spolu s promptom. Chunkovanie tiež znižuje počet tokenov predaných LLM a teda môže znižovať náklady.
 
-Medzi populárne vektorové databázy patria Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant a DeepLake. Môžete vytvoriť model Azure Cosmos DB pomocou Azure CLI nasledujúcim príkazom:
+Niektoré populárne vektorové databázy sú Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant a DeepLake. Môžete vytvoriť model Azure Cosmos DB pomocou Azure CLI s nasledujúcim príkazom:
 
 ```bash
 az login
@@ -95,7 +95,7 @@ az cosmosdb list-keys -n <cosmos-db-name> -g <resource-group-name>
 
 ### Od textu k embeddingom
 
-Predtým, ako uložíme naše dáta, musíme ich konvertovať do vektorových embeddingov skôr, než ich uložíme do databázy. Ak pracujete s veľkými dokumentmi alebo dlhými textami, môžete ich rozdeliť podľa očakávaných dopytov. Chunkovať je možné na úrovni viet alebo odsekov. Keďže chunkovanie vyvodzuje význam zo slov v okolí, môžete pridať ďalší kontext do chunku, napríklad pridaním nadpisu dokumentu alebo zaradením textu pred alebo za chunk. Dáta môžete chunkovať takto:
+Pred uložením dát ich treba previesť na vektorové embeddingy. Ak pracujete s veľkými dokumentmi alebo dlhými textami, môžete ich rozdeliť podľa očakávaných dotazov. Chunkovanie môže byť na úrovni viet alebo odsekov. Keďže význam časti vyplýva zo slov okolo nej, môžete pridať ďalší kontext napríklad názov dokumentu alebo nejaký text pred alebo po danej časti. Dáta môžete členiť takto:
 
 ```python
 def split_text(text, max_length, min_length):
@@ -109,107 +109,102 @@ def split_text(text, max_length, min_length):
             chunks.append(' '.join(current_chunk))
             current_chunk = []
 
-    # Ak posledný blok nedosiahol minimálnu dĺžku, pridaj ho napriek tomu
+    # If the last chunk didn't reach the minimum length, add it anyway
     if current_chunk:
         chunks.append(' '.join(current_chunk))
 
     return chunks
 ```
 
-Po rozdelení môžeme potom vložiť náš text pomocou rôznych embedding modelov. Niektoré modely, ktoré môžete použiť, sú: word2vec, ada-002 od OpenAI, Azure Computer Vision a mnoho ďalších. Výber modelu závisí od jazykov, ktoré používate, od typu obsahu kódovaného (text/obrázky/audio), veľkosti vstupu, ktorý dokáže kódovať a dĺžky výstupu embeddingu.
+Po rozdelení môžeme text vložiť pomocou rôznych modelov embeddingu. Niektoré modely sú word2vec, ada-002 od OpenAI, Azure Computer Vision a mnohé ďalšie. Výber modelu závisí od používaných jazykov, typu kódovaného obsahu (text/obrázky/audio), veľkosti vstupu a dĺžky výstupu embeddingu.
 
-Príklad embeddingu textu pomocou modelu OpenAI `text-embedding-ada-002` je:
-![embedding slova mačka](../../../translated_images/sk/cat.74cbd7946bc9ca38.webp)
+Príklad embedded textu pomocou modelu `text-embedding-ada-002` od OpenAI je:
+![embedding slova mačka](../../../translated_images/sk/cat.74cbd7946bc9ca38.webp?WT.mc_id=academic-105485-koreyst)
 
-## Vyhľadávanie a vektorové hľadanie
+## Vyhľadávanie a vektorové vyhľadávanie
 
-Keď používateľ položí otázku, vyhľadávač ju premení na vektor pomocou query enkodéra, potom prehľadá náš index dokumentov pre relevantné vektory v dokumente, ktoré súvisia s vstupom. Po nájdení ich konvertuje na text a posiela do LLM.
+Keď používateľ položí otázku, vyhľadávač ju premení na vektor pomocou query encoderu a potom vyhľadá v indexe dokumentov relevantné vektory súvisiace s dotazom. Po nájdení konvertuje vstupný vektor a vektory dokumentov späť na text a pošle ich do LLM.
 
 ### Vyhľadávanie
 
-Vyhľadávanie nastáva, keď sa systém snaží rýchlo nájsť dokumenty z indexu, ktoré vyhovujú kritériám vyhľadávania. Cieľom vyhľadávača je získať dokumenty, ktoré budú slúžiť na poskytnutie kontextu a ukotvenie LLM na vaše dáta.
+Vyhľadávanie nastáva, keď systém rýchlo hľadá dokumenty v indexe spĺňajúce kritériá vyhľadávania. Cieľom vyhľadávača je získať dokumenty, ktoré poskytnú kontext a zakotvia LLM vo vašich dátach.
 
 Existuje niekoľko spôsobov, ako vyhľadávať v našej databáze, napríklad:
 
-- **Vyhľadávanie podľa kľúčových slov** - používané pre textové vyhľadávania
+- **Vyhľadávanie podľa kľúčových slov** - používa sa pre textové vyhľadávanie
 
-- **Vektorové vyhľadávanie** - prevádza dokumenty z textu do vektorových reprezentácií pomocou embedding modelov, čo umožňuje **sémantické vyhľadávanie** pomocou významu slov. Vyhľadávanie prebieha dotazovaním dokumentov, ktorých vektorové reprezentácie sú najbližšie k otázke používateľa.
+- **Vektorové vyhľadávanie** - konvertuje dokumenty z textu na vektorové reprezentácie pomocou embedding modelov, čo umožňuje **sémantické vyhľadávanie** podľa významu slov. Vyhľadávanie prebieha tak, že sa hľadajú dokumenty s najbližšími vektorovými reprezentáciami k používateľskej otázke.
 
-- **Hybridné** - kombinácia vyhľadávania podľa kľúčových slov a vektorového vyhľadávania.
+- **Hybridné** - kombinácia vyhľadávania podľa kľúčových slov a vektorov.
 
-Výzvou pri vyhľadávaní je situácia, keď v databáze nie je podobná odpoveď na dopyt, systém potom vráti najlepšie dostupné informácie, no môžete použiť taktiky ako nastavenie maximálnej vzdialenosti pre relevantnosť alebo použiť hybridné vyhľadávanie kombinujúce kľúčové slová a vektory. V tejto lekcii použijeme hybridné vyhľadávanie, teda kombináciu vektorového a kľúčového vyhľadávania. Dáta uložíme do dataframe s stĺpcami obsahujúcimi chunky a embeddingy.
+Výzvou pri vyhľadávaní je, keď v databáze neexistuje podobná odpoveď na dotaz, systém vráti najlepšie dostupné informácie. Môžete však použiť taktiky ako nastavenie maximálnej vzdialenosti pre relevantnosť alebo hybridné vyhľadávanie. V tejto lekcii použijeme hybridné vyhľadávanie s kombináciou vektorového a kľúčového vyhľadávania. Dáta uložíme do dátového rámca (dataframe) so stĺpcami obsahujúcimi časti textu aj embeddingy.
 
 ### Vektorová podobnosť
 
-Vyhľadávač bude hľadať v databáze poznatkov embeddingy, ktoré sú navzájom blízko, najbližší sused, keďže ide o podobné texty. V scenári, keď používateľ položí otázku, tá najprv bude vložená do embeddingu a následne sa porovná s podobnými embeddingami. Bežným meradlom na určenie podobnosti vektorov je kosínusová podobnosť, založená na uhle medzi dvoma vektormi.
+Vyhľadávač bude prehľadávať databázu znalostí a hľadať embeddingy, ktoré sú spolu blízko — najbližších susedov — pretože predstavujú podobné texty. Keď používateľ zadá dotaz, ten sa najskôr embeduje a potom sa zhoduje s podobnými embeddingami. Najčastejšie používaným meradlom podobnosti vektorov je kosínusová podobnosť, založená na uhle medzi dvoma vektormi.
 
-Môžeme merať podobnosť aj inými alternatívami, ako sú Eukleidovská vzdialenosť, čo je priamka medzi koncovými bodmi vektorov, a skalárny súčin, ktorý meria súčet súčinov zodpovedajúcich sa elementov dvoch vektorov.
+Iné metriky na meranie podobnosti sú napríklad euklidovská vzdialenosť - priama línia medzi koncovými bodmi vektorov, a skalárny súčin (dot product), ktorý meria súčet súčinu zodpovedajúcich prvkov v dvoch vektoroch.
 
-### Index vyhľadávania
+### Index pre vyhľadávanie
 
-Pri vyhľadávaní musíme pred vyhľadávaním vybudovať index pre našu databázu poznatkov. Index bude uchovávať naše embeddingy a môže rýchlo vyhľadať najpodobnejšie chunky aj vo veľkej databáze. Index si môžeme vytvoriť lokálne pomocou:
+Pred vykonaním vyhľadávania potrebujeme vytvoriť index pre našu databázu znalostí. Index uloží naše embeddingy a rýchlo vyhľadá najpodobnejšie časti textu aj vo veľkej databáze. Index môžeme vytvoriť lokálne pomocou:
 
 ```python
 from sklearn.neighbors import NearestNeighbors
 
 embeddings = flattened_df['embeddings'].to_list()
 
-# Vytvorte vyhľadávací index
+# Create the search index
 nbrs = NearestNeighbors(n_neighbors=5, algorithm='ball_tree').fit(embeddings)
 
-# Na dotazovanie indexu môžete použiť metódu kneighbors
+# To query the index, you can use the kneighbors method
 distances, indices = nbrs.kneighbors(embeddings)
 ```
 
-### Pretriedenie výsledkov
+### Pretriedenie výsledkov (Re-ranking)
 
-Po vykonaní vyhľadávania môže byť potrebné zoradiť výsledky od najrelevantnejších. Pretriediace LLM využíva strojové učenie na zvýšenie relevantnosti výsledkov usporiadaním od najrelevantnejších. Pri použití Azure AI Search je pretriedenie automatické pomocou sémantického pretriediaceho modulu. Príklad fungovania pretriedenia pomocou najbližších susedov:
+Po vyhľadaní v databáze možno budete chcieť zoradiť výsledky podľa relevantnosti od najrelevantnejších. Pretriedenie LLM využíva strojové učenie na zlepšenie relevantnosti výsledkov zoradením od najpodstatnejších. Pri Azure AI Search sa pretriedenie vykonáva automaticky pomocou sémantického pretriediaceho mechanizmu. Príklad, ako pretriedenie funguje pomocou najbližších susedov:
 
 ```python
-# Nájsť najpodobnejšie dokumenty
+# Find the most similar documents
 distances, indices = nbrs.kneighbors([query_vector])
 
-index = []
-# Vytlačiť najpodobnejšie dokumenty
-for i in range(3):
-    index = indices[0][i]
-    for index in indices[0]:
-        print(flattened_df['chunks'].iloc[index])
-        print(flattened_df['path'].iloc[index])
-        print(flattened_df['distances'].iloc[index])
-    else:
-        print(f"Index {index} not found in DataFrame")
+# Print the three most similar documents with their distance to the question
+for distance, index in zip(distances[0][:3], indices[0][:3]):
+    print(flattened_df['chunks'].iloc[index])
+    print(flattened_df['path'].iloc[index])
+    print(distance)
 ```
 
-## Zhrnutie všetkého
+## Spojenie všetkého dohromady
 
-Posledným krokom je pridať náš LLM do procesu, aby sme mohli získavať odpovede ukotvené na našich dátach. Môžeme ho implementovať nasledovne:
+Posledným krokom je pridanie nášho LLM do procesu, aby sme získali odpovede založené na našich dátach. Môžeme ho implementovať nasledovne:
 
 ```python
 user_input = "what is a perceptron?"
 
 def chatbot(user_input):
-    # Preveďte otázku na vektor dotazu
+    # Convert the question to a query vector
     query_vector = create_embeddings(user_input)
 
-    # Nájdite najpodobnejšie dokumenty
+    # Find the most similar documents
     distances, indices = nbrs.kneighbors([query_vector])
 
-    # pridajte dokumenty k dotazu na poskytnutie kontextu
+    # add documents to query  to provide context
     history = []
     for index in indices[0]:
         history.append(flattened_df['chunks'].iloc[index])
 
-    # skombinujte históriu a vstup používateľa
+    # combine the history and the user input
     history.append(user_input)
 
-    # vytvorte objekt správy
+    # create a message object
     messages=[
         {"role": "system", "content": "You are an AI assistant that helps with AI questions."},
         {"role": "user", "content": "\n\n".join(history) }
     ]
 
-    # použite API odpovedí na vygenerovanie odpovede
+    # use the Responses API to generate a response
     response = client.responses.create(
         model="gpt-5-mini",
         max_output_tokens=800,
@@ -224,45 +219,45 @@ chatbot(user_input)
 
 ## Hodnotenie našej aplikácie
 
-### Metódy hodnotenia
+### Hodnotiace metriky
 
-- Kvalita dodaných odpovedí, aby zneli prirodzene, plynule a ľudsky
+- Kvalita odpovedí, zabezpečujúca, že znejú prirodzene, plynulo a ľudsky.
 
-- Ukotvenie dát: hodnotenie, či odpoveď vyšla zo dodaných dokumentov
+- Zakotvenosť dát: hodnotenie, či odpoveď pochádza zo zaslaných dokumentov.
 
-- Relevantnosť: hodnotenie, či odpoveď zodpovedá a súvisí s položenou otázkou
+- Relevantnosť: hodnotenie, či odpoveď súvisí a zodpovedá otázke.
 
-- Plynulosť - či odpoveď dáva gramaticky zmysel
+- Plynulosť: či odpoveď dáva gramaticky zmysel.
 
-## Príklady využitia RAG (Retrieval Augmented Generation) a vektorových databáz
+## Použitie RAG (Retrieval Augmented Generation) a vektorových databáz
 
-Existuje mnoho rôznych prípadov použitia, kde funkčné volania môžu zlepšiť vašu aplikáciu, napríklad:
+Existuje mnoho prípadov použitia, kde RAG môže zlepšiť vašu aplikáciu, napríklad:
 
-- Otázky a odpovede: ukotvuje dáta vašej spoločnosti do chatbota, ktorý môžu používať zamestnanci na kladenie otázok.
+- Otázky a odpovede: zakotvenie firemných dát do chatu, ktorý môžu používatelia používať na kladenie otázok.
 
-- Odporúčacie systémy: kde môžete vytvoriť systém vyhľadávajúci najpodobnejšie hodnoty, napr. filmy, reštaurácie a mnoho ďalších.
+- Odporúčacie systémy: vytvorenie systému, ktorý zhromažďuje najpodobnejšie hodnoty, napríklad filmy, reštaurácie a iné.
 
-- Chatbot služby: môžete ukladať históriu chatu a personalizovať konverzáciu na základe dát používateľa.
+- Chatbotové služby: uloženie histórie chatov a personalizácia rozhovoru na základe používateľských dát.
 
 - Vyhľadávanie obrázkov na základe vektorových embeddingov, užitočné pri rozpoznávaní obrázkov a detekcii anomálií.
 
 ## Zhrnutie
 
-Prebrali sme základné oblasti RAG od pridania našich dát do aplikácie, cez používateľský dopyt až po výstup. Na zjednodušenie vytvorenia RAG môžete použiť rámce ako Semantic Kernel, Langchain alebo Autogen.
+Prešli sme základné oblasti RAG od pridávania dát do aplikácie po používateľský dotaz a výstup. Na zjednodušenie tvorby RAG môžete použiť rámce ako Semantic Kernel, LangChain alebo AutoGen.
 
 ## Zadanie
 
-Pre pokračovanie vo vašom učení Retrieval Augmented Generation (RAG) môžete vytvoriť:
+Na pokračovanie učenia Retrieval Augmented Generation (RAG) môžete vybudovať:
 
-- Vytvorte front-end aplikácie pomocou rámca podľa vášho výberu
+- Front-end pre aplikáciu pomocou vami zvoleného rámca
 
-- Využite rámec, či už LangChain alebo Semantic Kernel, a znovu vytvorte vašu aplikáciu.
+- Vyžiť rámec, buď LangChain alebo Semantic Kernel, a znovu vytvoriť vašu aplikáciu.
 
-Blahoželáme k dokončeniu lekcie 👏.
+Gratulujeme k dokončeniu lekcie 👏.
 
-## Učenie sa tu nekončí, pokračujte na ďalšej ceste
+## Učenie nekončí, pokračujte v ceste
 
-Po absolvovaní tejto lekcie si pozrite našu [kolekciu pre Generatívnu AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst), aby ste naďalej zvyšovali svoje znalosti v oblasti Generatívnej AI!
+Po dokončení tejto lekcie si pozrite našu [kolekciu učenia Generatívnej AI](https://aka.ms/genai-collection?WT.mc_id=academic-105485-koreyst) a pokračujte vo zvyšovaní vašich znalostí Generatívnej AI!
 
 ---
 

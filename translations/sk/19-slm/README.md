@@ -1,193 +1,194 @@
 # Úvod do malých jazykových modelov pre generatívnu AI pre začiatočníkov
-Generatívna AI je fascinujúca oblasť umelej inteligencie, ktorá sa zameriava na tvorbu systémov schopných generovať nový obsah. Tento obsah môže byť od textu a obrázkov až po hudbu a dokonca celé virtuálne prostredia. Jednou z najvzrušujúcejších aplikácií generatívnej AI je oblasť jazykových modelov.
+Generatívna AI je fascinujúca oblasť umelej inteligencie, ktorá sa zameriava na vytváranie systémov schopných generovať nový obsah. Tento obsah môže zahŕňať texty, obrázky, hudbu až po celé virtuálne prostredia. Jednou z najzaujímavejších aplikácií generatívnej AI sú jazykové modely.
 
-## Čo sú to malé jazykové modely?
+## Čo sú malé jazykové modely?
 
-Malý jazykový model (SLM) predstavuje zmenšenú variantu veľkého jazykového modelu (LLM), využívajúcu mnohé architektonické princípy a techniky veľkých modelov, pričom má výrazne nižšiu výpočtovú náročnosť. 
+Malý jazykový model (SLM) predstavuje zmenšenú variantu veľkého jazykového modelu (LLM), ktorý využíva mnohé architektonické princípy a techniky LLM, pričom má výrazne zníženú výpočtovú náročnosť. 
 
-SLM sú podmnožinou jazykových modelov navrhnutých na generovanie textu podobného ľudskému prejavu. Na rozdiel od ich väčších prototypov, ako je GPT-4, sú SLM kompaktnejšie a efektívnejšie, čo ich robí ideálnymi pre aplikácie, kde sú výpočtové zdroje obmedzené. Napriek menšej veľkosti však dokážu vykonávať rôzne úlohy. Typicky sú SLM konštruované kompresiou alebo destiláciou LLM, s cieľom zachovať podstatnú časť pôvodnej funkcionality a jazykových schopností modelu. Táto redukcia veľkosti modelu znižuje celkovú zložitosť, vďaka čomu sú SLM efektívnejšie z hľadiska použitia pamäte aj výpočtových požiadaviek. Napriek týmto optimalizáciám môžu SLM vykonávať široké spektrum úloh spracovania prirodzeného jazyka (NLP):
+SLM sú podskupinou jazykových modelov navrhnutých na generovanie textu podobného ľudskému. Na rozdiel od ich väčších protějškov, ako je GPT-4, sú SLM kompaktnejšie a efektívnejšie, čo ich robí ideálnymi pre aplikácie s obmedzenými výpočtovými zdrojmi. Napriek menšej veľkosti môžu stále vykonávať rôzne úlohy. Typicky sa SLM vytvárajú kompresiou alebo destiláciou LLM s cieľom zachovať značnú časť pôvodnej funkčnosti a lingvistických schopností modelu. Táto zmena veľkosti modelu znižuje jeho celkovú zložitosť, takže SLM sú efektívnejšie z hľadiska použitia pamäte aj výpočtových požiadaviek. Napriek týmto optimalizáciám môžu SLM vykonávať širokú škálu úloh spracovania prirodzeného jazyka (NLP):
 
-- Generovanie textu: Vytváranie koherentných a kontextovo relevantných viet alebo odsekov.
-- Dokončovanie textu: Predpovedanie a dokončovanie viet na základe daného podnetu.
-- Preklad: Prevod textu z jedného jazyka do druhého.
-- Zhrnutie: Skracovanie dlhých textov na kratšie, ľahšie stráviteľné súhrny.
+- Generovanie textu: tvorba zmysluplných a kontextovo relevantných viet či odsekov.
+- Dokončovanie textu: predikcia a doplnenie viet na základe daného vstupu.
+- Preklad: konverzia textu z jedného jazyka do druhého.
+- Zhrnutie: skrátenie dlhých textov do kratších, ľahšie stráviteľných súhrnov.
 
-Aj keď s určitými kompromismi vo výkonu alebo hĺbke porozumenia v porovnaní s väčšími modelmi.
+Hoci s určitými kompromismi vo výkone alebo hĺbke porozumenia v porovnaní s väčšími modelmi.
 
 ## Ako malé jazykové modely fungujú?
 SLM sa trénujú na obrovských množstvách textových dát. Počas tréningu sa učia vzory a štruktúry jazyka, čo im umožňuje generovať text, ktorý je gramaticky správny a kontextovo vhodný. Tréningový proces zahŕňa:
 
-- Zber dát: Zhromažďovanie veľkých datasetov textu z rôznych zdrojov.
-- Predspracovanie: Čistenie a organizovanie dát, aby boli vhodné na tréning.
-- Tréning: Použitie algoritmov strojového učenia na naučenie modelu, ako rozumieť a generovať text.
-- Doladenie: Upravovanie modelu na zlepšenie jeho výkonu v konkrétnych úlohách.
+- Zber dát: zhromažďovanie veľkých datasetov textu z rôznych zdrojov.
+- Predspracovanie: čistenie a organizovanie dát na vhodnosť na tréning.
+- Tréning: použitie strojového učenia na naučenie modelu porozumieť a generovať text.
+- Doladenie: úprava modelu na zlepšenie výkonu v konkrétnych úlohách.
 
-Vývoj SLM korešponduje so zvyšujúcou sa potrebou modelov, ktoré je možné nasadiť v prostrediach s obmedzenými zdrojmi, ako sú mobilné zariadenia alebo edge computing platformy, kde by plnohodnotné LLM mohli byť nepraktické kvôli ich vysokým nárokom na zdroje. Zameraním sa na efektívnosť SLM vyvažujú výkon a dostupnosť, čím umožňujú širšie použitie naprieč rôznymi oblasťami.
+Vývoj SLM zodpovedá rastúcej potrebe modelov, ktoré môžu byť nasadené v prostrediach s obmedzenými zdrojmi, ako sú mobilné zariadenia alebo edge computing platformy, kde by plnohodnotné LLM mohli byť nepraktické kvôli svojim vysokým nárokom. Zameraním na efektívnosť SLM vyvažujú výkon s prístupnosťou, čo umožňuje širšiu aplikáciu v rôznych oblastiach.
 
-![slm](../../../translated_images/sk/slm.4058842744d0444a.webp)
+![slm](../../../translated_images/sk/slm.4058842744d0444a.webp?WT.mc_id=academic-105485-koreyst)
 
 ## Ciele učenia
 
-V tejto lekcii sa snažíme predstaviť znalosti o SLM a spojiť ich s Microsoft Phi-3 na štúdium rôznych scenárov v oblasti textového obsahu, videnia a MoE.
+V tejto lekcii sa snažíme predstaviť vedomosti o SLM a skombinovať ich s Microsoft Phi-3 na naučenie sa rôznych scenárov v textovom obsahu, videní a MoE.
 
-Na konci tejto lekcie by ste mali vedieť odpovedať na nasledujúce otázky:
+Na konci tejto lekcie by ste mali byť schopní odpovedať na nasledujúce otázky:
 
 - Čo je SLM?
 - Aký je rozdiel medzi SLM a LLM?
 - Čo je rodina Microsoft Phi-3/3.5?
-- Ako vykonať inferenciu s rodinou Microsoft Phi-3/3.5?
+- Ako spustiť inferenciu s rodinou Microsoft Phi-3/3.5?
 
-Pripravení? Poďme začať.
+Pripravení? Poďme na to.
 
 ## Rozdiely medzi veľkými jazykovými modelmi (LLM) a malými jazykovými modelmi (SLM)
 
-Oba, LLM aj SLM, sú postavené na základných princípoch pravdepodobnostného strojového učenia, nasledujú podobné prístupy v architektonickom dizajne, metódach tréningu, procesoch generovania dát a technikách hodnotenia modelov. Avšak niekoľko kľúčových faktorov odlišuje tieto dva typy modelov.
+LLM aj SLM sú postavené na základných princípoch pravdepodobnostného strojového učenia, nasledujú podobné prístupy v ich architektúre, metódach tréningu, procesoch generovania dát a technikách hodnotenia modelov. Avšak niekoľko kľúčových faktorov tieto dva typy modelov odlišuje.
 
 ## Aplikácie malých jazykových modelov
 
-SLM nachádzajú široké využitie, vrátane:
+SLM majú široké spektrum využitia, vrátane:
 
-- Chatboty: Poskytovanie zákazníckej podpory a interakcia s užívateľmi konverzačným spôsobom.
-- Tvorba obsahu: Pomoc spisovateľom pri generovaní nápadov alebo dokonca pri tvorbe celých článkov.
-- Vzdelávanie: Pomoc študentom pri písaní úloh alebo učení sa nových jazykov.
-- Dostupnosť: Vytváranie nástrojov pre ľudí so zdravotným postihnutím, ako sú systémy prevodu textu na reč.
+- Chatboty: poskytovanie zákazníckej podpory a interakcia s používateľmi cez konverzačné rozhranie.
+- Tvorba obsahu: asistovanie spisovateľom pri generovaní nápadov alebo písaní článkov.
+- Vzdelávanie: pomoc študentom pri písaní a učení sa novým jazykom.
+- Prístupnosť: vytváranie nástrojov pre osoby so zdravotným postihnutím, napríklad systémy na prevod textu na reč.
 
 **Veľkosť**
   
-Hlavný rozdiel medzi LLM a SLM spočíva v rozsahu modelov. LLM, ako ChatGPT (GPT-4), môžu obsahovať odhadovaných 1,76 bilióna parametrov, zatiaľ čo open-source SLM ako Mistral 7B sú navrhnuté s výrazne menším počtom parametrov – približne 7 miliárd. Tento rozdiel je primárne spôsobený rozdielmi v architektúre modelu a tréningových procesoch. Napríklad ChatGPT využíva mechanizmus seba-pozornosti v rámci encoder-decoder architektúry, zatiaľ čo Mistral 7B používa sliding window attention, ktorý umožňuje efektívnejší tréning v decode-only modeli. Táto architektonická variabilita má hlboký vplyv na zložitosť a výkon týchto modelov.
+Hlavný rozdiel medzi LLM a SLM spočíva v rozsahu modelov. LLM, ako je ChatGPT (GPT-4), môže obsahovať odhadovaných 1,76 bilióna parametrov, zatiaľ čo open-source SLM, ako napríklad Mistral 7B, sú navrhnuté s výrazne menším počtom parametrov – približne 7 miliárd. Tento rozdiel je primárne spôsobený architektúrou modelu a procesmi tréningu. Napríklad ChatGPT používa mechanizmus seba-pozornosti v rámci encoder-decoder štruktúry, zatiaľ čo Mistral 7B využíva sliding window attention, čo umožňuje efektívnejší tréning v rámci decoder-only modelu. Táto architektonická odlišnosť má významný dopad na zložitosť a výkon modelov.
 
 **Porozumenie**
 
-SLM sú zvyčajne optimalizované pre výkon v špecifických doménach, vďaka čomu sú vysoko špecializované, ale potenciálne obmedzené vo svojej schopnosti poskytovať široké kontextové porozumenie naprieč viacerými vednými oblasťami. Naopak, LLM sa snažia simulovať ľudskú inteligenciu na komplexnejšej úrovni. Trénované na obrovských, rozmanitých datasetoch, LLM sú navrhnuté na kvalitný výkon v rôznych oblastiach, čo ponúka väčšiu všestrannosť a prispôsobivosť. Preto sú LLM vhodnejšie pre širšiu škálu downstream úloh, ako sú spracovanie prirodzeného jazyka a programovanie.
+SLM sú typicky optimalizované na výkon v špecifických oblastiach, čo ich robí vysoko špecializovanými, ale potenciálne obmedzenými v schopnosti poskytovať všeobecné kontextové porozumenie v rôznych oblastiach vedomostí. Naproti tomu LLM sa snažia simulovať ľudskú inteligenciu na komplexnejšej úrovni. Sú trénované na obrovských, rozmanitých dátach a sú navrhnuté tak, aby dobre fungovali v mnohých oblastiach, ponúkajúc väčšiu všestrannosť a prispôsobivosť. Preto sú LLM vhodnejšie pre širšiu škálu následných úloh, ako sú spracovanie prirodzeného jazyka a programovanie.
 
 **Výpočty**
 
-Tréning a nasadenie LLM sú procesy náročné na zdroje, často vyžadujúce významnú výpočtovú infraštruktúru, vrátane veľkých GPU klastrov. Napríklad tréning modelu ako ChatGPT od základu môže vyžadovať tisíce GPU počas dlhých období. Naopak, SLM, vzhľadom na menší počet parametrov, sú dostupnejšie z hľadiska výpočtových zdrojov. Modely ako Mistral 7B je možné trénovať a používať na lokálnych počítačoch vybavených stredne výkonnými GPU, hoci samotný tréning stále vyžaduje niekoľko hodín na viacerých GPU.
+Tréning a nasadenie LLM sú veľmi náročné na zdroje, často vyžadujú rozsiahlu výpočtovú infraštruktúru vrátane veľkých GPU klastrov. Napríklad trénovanie modelu ako ChatGPT od začiatku môže vyžadovať tisíce GPU počas dlhých časových období. Naopak, SLM, vzhľadom na menší počet parametrov, sú dostupnejšie z hľadiska výpočtových zdrojov. Modely ako Mistral 7B je možné trénovať a spúšťať na lokálnych zariadeniach so strednými GPU možnosťami, hoci tréning stále vyžaduje niekoľko hodín na viacerých GPU.
 
-**Predsudky**
+**Predpojatosť**
 
-Predsudky sú známy problém u LLM, primárne kvôli povahy tréningových dát. Tieto modely často používajú surové, otvorene dostupné dáta z internetu, ktoré môžu podreprezentovať alebo nesprávne zobrazovať určité skupiny, zavádzať chybné označenie alebo odrážať jazykové predsudky ovplyvnené dialektmi, geografickými variantmi a gramatickými pravidlami. Okrem toho zložitosť architektúry LLM môže nevedome zhoršiť predsudky, ktoré nemusia byť bez starostlivého doladenia ľahko viditeľné. Na druhej strane, SLM, trénované na obmedzenejších, doménovo špecifických datasetoch, sú inherentne menej náchylné na takéto predsudky, hoci nie sú proti nim imúnne.
+Predpojatosť je známy problém LLM, spôsobený najmä povahou tréningových dát. Tieto modely často používajú nespracované, voľne dostupné dáta z internetu, ktoré môžu nedostatočne alebo chybne reprezentovať určité skupiny, zavádzať nesprávne označenia alebo odzrkadľovať jazykové predpojatosťi vyplývajúce z dialektov, geografických variácií či gramatických pravidiel. Okrem toho zložitosť architektúry LLM môže nevhodne zvyšovať predpojatosť, ktorá zostáva nepovšimnutá bez opatrného doladenia. Naopak, SLM, ktoré sú trénované na obmedzenejších, doménovo špecifických datasetoch, sú prirodzene menej náchylné na takéto predsudky, hoci im nie sú úplne imúnne.
 
 **Inferencia**
 
-Menšia veľkosť SLM im poskytuje výraznú výhodu v rýchlosti inferencie, čo im umožňuje efektívne generovať výstupy na lokálnom hardvéri bez potreby rozsiahleho paralelného spracovania. Naopak, LLM kvôli svojej veľkosti a zložitosti často vyžadujú značné paralelné výpočtové zdroje na dosiahnutie prijateľných časov inferencie. Prítomnosť viacerých súbežných užívateľov ešte ďalej spomaľuje reakčné časy LLM, najmä pri nasadení vo veľkom meradle.
+Menšia veľkosť SLM im poskytuje významnú výhodu v rýchlosti inferencie, čo im umožňuje efektívne generovať výstupy na lokálnom hardvéri bez potreby rozsiahleho paralelného spracovania. Naopak, LLM vzhľadom na veľkosť a náročnosť často vyžadujú značné paralelné výpočtové zdroje na dosiahnutie prijateľných časov inferencie. Prítomnosť viacerých súbežných používateľov ešte viac spomaľuje reakčné časy LLM, najmä pri nasadení vo veľkom meradle.
 
-Zhrnuté, oba LLM a SLM majú spoločný základ v strojovom učení, ale výrazne sa líšia veľkosťou modelu, požiadavkami na zdroje, rozsahom kontextového porozumenia, náchylnosťou na predsudky a rýchlosťou inferencie. Tieto rozdiely odrážajú ich vhodnosť pre rôzne použitia, pričom LLM sú univerzálnejšie, ale náročnejšie na zdroje, a SLM ponúkajú efektívnosť v konkrétnych doménach s nižšími výpočtovými nárokmi.
+Zhrnuté, oba LLM aj SLM zdieľajú základný základ v strojovom učení, no výrazne sa líšia vo veľkosti modelu, požiadavkách na zdroje, kontextuálnom porozumení, náchylnosti na predpojatosť a rýchlosti inferencie. Tieto rozdiely odrážajú ich vhodnosť pre rôzne použitia, pričom LLM sú všestrannejšie, ale náročnejšie na zdroje, a SLM ponúkajú špecifickú efektivitu s nižšími výpočtovými požiadavkami.
 
 ***Poznámka: V tejto lekcii predstavíme SLM na príklade Microsoft Phi-3 / 3.5.***
 
 ## Predstavenie rodiny Phi-3 / Phi-3.5
 
-Rodina Phi-3 / 3.5 sa primárne zameriava na scenáre aplikácií v texte, vidění a agentovi (MoE):
+Rodina Phi-3 / 3.5 sa primárne zameriava na scenáre aplikácií v texte, videní a Agent (MoE):
 
 ### Phi-3 / 3.5 Instruct
 
-Hlavne pre generovanie textu, dokončovanie rozhovorov a extrakciu informácií z obsahu, atď.
+Hlavne pre generovanie textu, dokončenie chatu a extrakciu informácií z obsahu a podobne.
 
 **Phi-3-mini**
 
-Jazykový model s 3,8 miliardami parametrov je dostupný na Microsoft Foundry, Hugging Face a Ollama. Modely Phi-3 výrazne prekonávajú jazykové modely rovnakej alebo väčšej veľkosti na kľúčových benchmarkoch (viď čísla benchmarkov nižšie, vyššie čísla znamenajú lepšie výsledky). Phi-3-mini prekonáva modely dvojnásobnej veľkosti, zatiaľ čo Phi-3-small a Phi-3-medium prekonávajú väčšie modely, vrátane GPT-3.5.
+Jazykový model s 3,8 miliardami parametrov je dostupný na Microsoft Foundry, Hugging Face a Ollama. Modely Phi-3 výrazne prekračujú výkon jazykových modelov rovnakej alebo väčšej veľkosti na kľúčových benchmarkoch (pozri čísla benchmarkov nižšie, vyššie čísla sú lepšie). Phi-3-mini prekonáva modely dvojnásobnej veľkosti, zatiaľ čo Phi-3-small a Phi-3-medium prekonávajú väčšie modely, vrátane GPT-3.5.
 
 **Phi-3-small & medium**
 
-S iba 7 miliardami parametrov Phi-3-small prekonáva GPT-3.5T v rôznych jazykových, logických, kódovacích a matematických benchmarkoch.
+S 7 miliardami parametrov Phi-3-small prekonáva GPT-3.5T v rôznych testoch jazyka, uvažovania, kódovania a matematiky.
 
-Phi-3-medium s 14 miliardami parametrov pokračuje v tomto trende a prekonáva Gemini 1.0 Pro.
+Phi-3-medium s 14 miliardami parametrov pokračuje v trende a prekonáva Gemini 1.0 Pro.
 
 **Phi-3.5-mini**
 
-Môžeme ho považovať za upgrade Phi-3-mini. Hoci počet parametrov zostáva nezmenený, zlepšuje schopnosť podpory viacerých jazykov (podporuje 20+ jazykov: arabčina, čínština, čeština, dánčina, holandčina, angličtina, finčina, francúzština, nemčina, hebrejčina, maďarčina, taliančina, japončina, kórejčina, norčina, poľština, portugalčina, ruština, španielčina, švédčina, thajčina, turečtina, ukrajinčina) a pridáva silnejšiu podporu pre dlhý kontext.
+Môžeme ho považovať za upgrade Phi-3-mini. Parametre zostávajú nezmenené, no vylepšuje schopnosť podporovať viacero jazykov (podpora viac ako 20 jazykov: arabčina, čínština, čeština, dánčina, holandčina, angličtina, fínčina, francúzština, nemčina, hebrejčina, maďarčina, taliančina, japončina, kórejčina, norčina, poľština, portugalčina, ruština, španielčina, švédčina, thajčina, turečtina, ukrajinčina) a pridáva silnejšiu podporu pre dlhý kontext.
 
 Phi-3.5-mini s 3,8 miliardami parametrov prekonáva jazykové modely rovnakej veľkosti a je porovnateľný s modelmi dvojnásobnej veľkosti.
 
 ### Phi-3 / 3.5 Vision
 
-Môžeme považovať Instruct model Phi-3/3.5 za schopnosť Phi porozumieť, zatiaľ čo Vision dáva Phi oči na pochopenie sveta.
+Môžeme si predstaviť model Instruct Phi-3/3.5 ako schopnosť Phi porozumieť, a Vision je to, čo dáva Phi oči na porozumenie sveta.
 
 
 **Phi-3-Vision**
 
-Phi-3-vision, s len 4,2 miliardami parametrov, pokračuje v tomto trende a prekonáva väčšie modely ako Claude-3 Haiku a Gemini 1.0 Pro V v úlohách všeobecného vizuálneho uvažovania, OCR a porozumenia tabuliek a diagramov.
+Phi-3-vision, s iba 4,2 miliardami parametrov, pokračuje v trende a prekonáva väčšie modely ako Claude-3 Haiku a Gemini 1.0 Pro V v úlohách všeobecného vizuálneho uvažovania, OCR a porozumenia tabuliek a diagramov.
 
 
 **Phi-3.5-Vision**
 
-Phi-3.5-Vision je tiež upgrade Phi-3-Vision, pridávajúci podporu pre viacero obrázkov. Môžete ho považovať za zlepšenie vo videní – nielen že vidíte obrázky, ale aj videá.
+Phi-3.5-Vision je tiež upgrade Phi-3-Vision, pridáva podporu viacerých obrázkov. Môžete ho vnímať ako vylepšené videnie, nielenže vidí obrázky, ale aj videá.
 
-Phi-3.5-vision prekonáva väčšie modely ako Claude-3.5 Sonnet a Gemini 1.5 Flash naprieč úlohami OCR, porozumenia tabuliek a grafov a je porovnateľný v úlohách všeobecného vizuálneho uvažovania. Podporuje vstup viacerých snímok, teda rozumie a uvažuje na základe viacerých vstupných obrázkov.
+Phi-3.5-vision prekonáva väčšie modely ako Claude-3.5 Sonnet a Gemini 1.5 Flash v úlohách OCR, porozumenia tabuliek a grafov, a je porovnateľný v úlohách všeobecného vizuálneho uvažovania. Podporuje viacnásobný vstup snímok, teda vykonáva uvažovanie na viacerých vstupných obrázkoch.
 
 
 ### Phi-3.5-MoE
 
-***Mixture of Experts (MoE)*** umožňuje modelom byť predtrénované s oveľa menším výpočtovým výkonom, čo znamená, že môžete dramaticky zväčšiť veľkosť modelu alebo datasetu pri rovnakom výpočtovom rozpočte ako pri hustých modeloch. Konkrétne, MoE model by mal dosiahnuť rovnakú kvalitu ako jeho hustý protějšok oveľa rýchlejšie počas predtréningu.
+***Mixture of Experts (MoE)*** umožňuje, aby modely boli predtrénované pri oveľa nižšom výpočtovom zaťažení, čo znamená, že môžete dramaticky zväčšiť veľkosť modelu alebo datasetu s rovnakým výpočtovým rozpočtom ako hustý (dense) model. Konkrétne, MoE model by mal dosiahnuť rovnakú kvalitu ako jeho hustý ekvivalent oveľa rýchlejšie počas predtrénovania.
 
-Phi-3.5-MoE obsahuje 16x3,8 miliardových expertných modulov. Phi-3.5-MoE s iba 6,6 miliardami aktívnych parametrov dosahuje úroveň uvažovania, porozumenia jazyka a matematiky porovnateľnú s oveľa väčšími modelmi.
+Phi-3.5-MoE pozostáva zo 16 modulov expertov s 3,8 miliardami parametrov každý. Phi-3.5-MoE s iba 6,6 miliardami aktívnych parametrov dosahuje podobnú úroveň uvažovania, porozumenia jazyka a matematiky ako oveľa väčšie modely.
 
-Model rodiny Phi-3/3.5 môžeme používať na rôzne scenáre. Na rozdiel od LLM môžete nasadiť Phi-3/3.5-mini alebo Phi-3/3.5-Vision na edge zariadeniach.
+Modely z rodiny Phi-3/3.5 môžeme využívať na základe rôznych scenárov. Na rozdiel od LLM je možné nasadiť Phi-3/3.5-mini alebo Phi-3/3.5-Vision na edge zariadeniach.
 
 
 ## Ako používať modely rodiny Phi-3/3.5
 
-Chceme používať Phi-3/3.5 v rôznych scenároch. Nasledujúca časť ukáže použitie Phi-3/3.5 v závislosti od scenára.
+Dúfame, že využijeme Phi-3/3.5 v rôznych scenároch. V nasledujúcom texte ukážeme, ako využiť Phi-3/3.5 na rôzne situácie.
 
-![phi3](../../../translated_images/sk/phi3.655208c3186ae381.webp)
+![phi3](../../../translated_images/sk/phi3.655208c3186ae381.webp?WT.mc_id=academic-105485-koreyst)
 
 ### Inferencia cez cloudové API
 
 **Microsoft Foundry Models**
 
-> **Poznámka:** GitHub Models bude ukončený koncom júla 2026. [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) je priama náhrada.
+> **Poznámka:** GitHub Models končí na konci júla 2026. [Microsoft Foundry Models](https://ai.azure.com/catalog/models?WT.mc_id=academic-105485-koreyst) sú jeho priamou náhradou.
 
-Microsoft Foundry Models je najpriamejšia cesta. Rýchlo získate prístup k modelu Phi-3/3.5-Instruct cez katalóg Foundry modelov. V kombinácii s Azure AI Inference SDK / OpenAI SDK môžete pristupovať k API cez kód a vykonať volanie Phi-3/3.5-Instruct. Môžete tiež testovať rôzne výsledky cez Playground.
+> **Poznámka:** Celá rodina Phi-3/3.5 (Instruct, Vision a MoE varianty) bola stiahnutá z katalógu Microsoft Foundry Models dňa 30. 8. 2025. Používajte tam namiesto nich `Phi-4` (Instruct) alebo `Phi-4-mini-instruct` — príklady Phi-3/3.5 nižšie stále fungujú cez Hugging Face, Ollama, ONNX Runtime a NVIDIA NIM.
 
-- Demo: Porovnanie účinkov Phi-3-mini a Phi-3.5-mini v čínskych scénach
+Microsoft Foundry Models teraz poskytuje nástupcov Phi-4. Používajte `Phi-4` alebo `Phi-4-mini-instruct` namiesto stiahnutých Phi-3/3.5 modelov, keď nasledujete príklady cloud API.
 
-![phi3](../../../translated_images/sk/gh1.126c6139713b622b.webp)
+- Demo: Porovnanie efektov Phi-3-mini a Phi-3.5-mini v čínskych scenároch
 
-![phi35](../../../translated_images/sk/gh2.07d7985af66f178d.webp)
+![phi3](../../../translated_images/sk/gh1.126c6139713b622b.webp?WT.mc_id=academic-105485-koreyst)
+
+![phi35](../../../translated_images/sk/gh2.07d7985af66f178d.webp?WT.mc_id=academic-105485-koreyst)
 
 
 **Microsoft Foundry**
 
-Ak chcete používať modely vision a MoE, môžete ich taktiež volať cez Microsoft Foundry. Ak máte záujem, môžete si prečítať Phi-3 Cookbook, ktorý vysvetľuje, ako volat Phi-3/3.5 Instruct, Vision, MoE cez Microsoft Foundry [Kliknite na tento odkaz](https://github.com/microsoft/Phi-3CookBook/blob/main/md/02.QuickStart/AzureAIStudio_QuickStart.md?WT.mc_id=academic-105485-koreyst)
+Ak chcete používať vision (multimodálne) modely v cloude, používajte aktuálne dostupný `Phi-4-multimodal-instruct` cez Microsoft Foundry namiesto stiahnutých Phi-3/3.5 Vision modelov; pre textové úlohy používajte `Phi-4` alebo `Phi-4-mini-instruct`. Phi-3.5 MoE model bol zozbieraný z Microsoft Foundry, preto použite iné možnosti popísané v tejto lekcii (napr. Hugging Face), ak chcete experimentovať. Ak máte záujem, môžete si prečítať Phi Cookbook, ako volať Phi modely cez Microsoft Foundry [Kliknite na tento odkaz](https://github.com/microsoft/PhiCookBook/blob/main/md/02.QuickStart/AzureAIFoundry_QuickStart.md?WT.mc_id=academic-105485-koreyst)
 
 
 **NVIDIA NIM**
 
-Okrem cloudového katalógu Microsoft Foundry Models môžete tiež použiť [NVIDIA NIM](https://developer.nvidia.com/nim?WT.mc_id=academic-105485-koreyst) na vykonanie súvisiacich volaní. Navštívte NVIDIA NIM pre API volania rodiny Phi-3/3.5. NVIDIA NIM (NVIDIA Inference Microservices) je sada zrýchlených mikroservisov inferencie navrhnutých na efektívne nasadenie AI modelov vo viacerých prostrediach, vrátane cloudov, dátových centier a pracovných staníc.
+Okrem cloudového katalógu Microsoft Foundry Models môžete použiť tiež [NVIDIA NIM](https://developer.nvidia.com/nim?WT.mc_id=academic-105485-koreyst) na dokončenie súvisiacich volaní. Navštívte NVIDIA NIM pre dokončenie API volaní rodiny Phi-3/3.5. NVIDIA NIM (NVIDIA Inference Microservices) je sada akcelerovaných mikroservisov pre inferenciu navrhnutá tak, aby pomohla vývojárom efektívne nasadzovať AI modely v rôznych prostrediach, vrátane cloudu, dátových centier a pracovných staníc.
 
-Tu sú niektoré kľúčové funkcie NVIDIA NIM:
+Tu sú niektoré kľúčové vlastnosti NVIDIA NIM:
 
-- **Jednoduchosť nasadenia:** NIM umožňuje nasadenie AI modelov jediným príkazom, čím je jednoduché ho integrovať do existujúcich pracovných tokov.
+- **Jednoduchosť nasadenia:** NIM umožňuje nasadenie AI modelov jedným príkazom, čo zjednodušuje jeho integráciu do existujúcich pracovných tokov.
+- **Optimalizovaný výkon:** Využíva predoptimalizované vyhodnocovacie enginy NVIDIA, ako sú TensorRT a TensorRT-LLM, aby zabezpečil nízku latenciu a vysoký priepust.
+- **Škálovateľnosť:** NIM podporuje automatické škálovanie na Kubernetes, čo mu umožňuje efektívne zvládať rôzne záťaže.
+- **Bezpečnosť a kontrola:** Organizácie môžu udržiavať kontrolu nad svojimi údajmi a aplikáciami prostredníctvom samo-hostovania NIM mikroservisov na svojej vlastnej spravovanej infraštruktúre.
+- **Štandardné API:** NIM poskytuje priemyselné štandardné API, čo uľahčuje budovanie a integráciu AI aplikácií, ako sú chatboty, AI asistenti a ďalšie.
 
-- **Optimalizovaný výkon:** Využíva predoptimalizované inferenčné motory NVIDIA, ako sú TensorRT a TensorRT-LLM, aby zabezpečil nízku latenciu a vysokú priepustnosť.
-- **Škálovateľnosť:** NIM podporuje automatické škálovanie na Kubernetes, čo mu umožňuje efektívne spracovávať rôzne záťaže.
-- **Bezpečnosť a kontrola:** Organizácie môžu udržiavať kontrolu nad svojimi údajmi a aplikáciami tým, že si sami hosťujú NIM mikroslužby na vlastnej spravovanej infraštruktúre.
-- **Štandardné API:** NIM poskytuje priemyselne štandardné API, čo uľahčuje budovanie a integráciu AI aplikácií, ako sú chatboty, AI asistenti a ďalšie.
+NIM je súčasťou NVIDIA AI Enterprise, ktorý má za cieľ zjednodušiť nasadenie a prevádzku AI modelov a zabezpečiť ich efektívne spúšťanie na GPU NVIDIA.
 
-NIM je súčasťou NVIDIA AI Enterprise, ktorý má za cieľ zjednodušiť nasadenie a operacionalizáciu AI modelov, zabezpečiac ich efektívny beh na NVIDIA GPU.
-
-- Demo: Použitie NVIDIA NIM na volanie Phi-3.5-Vision-API  [[Kliknite na tento odkaz](./python/Phi-3-Vision-Nividia-NIM.ipynb?WT.mc_id=academic-105485-koreyst)]
+- Demo: Použitie NVIDIA NIM na volanie Phi-3.5-Vision-API [[Kliknite na tento odkaz](./python/Phi-3-Vision-Nividia-NIM.ipynb?WT.mc_id=academic-105485-koreyst)]
 
 
-### Spustenie Phi-3/3.5 Lokálne
-Inferencia v súvislosti s Phi-3 alebo akýmkoľvek jazykovým modelom ako GPT-3 označuje proces generovania odpovedí alebo predpovedí na základe vstupu, ktorý dostane. Keď zadáte prompt alebo otázku Phi-3, používa svoj vytrénovaný neurónový sieťový model na odvodenie najpravdepodobnejšej a relevantnej odpovede analýzou vzorcov a vzťahov v dátach, na ktorých bol trénovaný.
+### Spustenie Phi-3/3.5 lokálne
+Inferencia v súvislosti s Phi-3 alebo s akýmkoľvek jazykovým modelom ako GPT-3 sa vzťahuje na proces generovania odpovedí alebo predpovedí na základe prijatého vstupu. Keď zadáte Phi-3 podnet alebo otázku, využije svoj trénovaný neurónový sieťový model na vyvodenie najpravdepodobnejšej a najrelevantnejšej odpovede analyzovaním vzorov a vzťahov v dátach, na ktorých bol trénovaný.
 
 **Hugging Face Transformer**
-Hugging Face Transformers je výkonná knižnica navrhnutá pre spracovanie prirodzeného jazyka (NLP) a ďalšie úlohy strojového učenia. Tu sú niektoré kľúčové body o nej:
+Hugging Face Transformers je výkonná knižnica navrhnutá na spracovanie prirodzeného jazyka (NLP) a ďalšie úlohy strojového učenia. Tu sú niektoré kľúčové body:
 
-1. **Predtrénované modely:** Poskytuje tisíce predtrénovaných modelov, ktoré je možné použiť na rôzne úlohy, ako klasifikácia textu, rozpoznávanie pomenovaných entít, odpovedanie na otázky, sumarizácia, preklad a generovanie textu.
+1. **Predtrénované modely**: Poskytuje tisíce predtrénovaných modelov, ktoré možno použiť na rôzne úlohy, ako sú klasifikácia textu, rozpoznávanie pomenovaných entít, odpovedanie na otázky, zhrnutie, preklad a generovanie textu.
 
-2. **Interoperabilita rámcov:** Knižnica podporuje viacero hlbokých učebných rámcov, vrátane PyTorch, TensorFlow a JAX. To umožňuje trénovať model v jednom rámci a používať ho v inom.
+2. **Interoperabilita rámcov**: Knižnica podporuje viacero rámcov hlbokého učenia, vrátane PyTorch, TensorFlow a JAX. To umožňuje trénovať model v jednom rámci a používať ho v inom.
 
-3. **Multimodálne schopnosti:** Okrem NLP podporuje Hugging Face Transformers aj úlohy v oblasti počítačového videnia (napr. klasifikácia obrázkov, detekcia objektov) a spracovania zvuku (napr. rozpoznávanie reči, klasifikácia zvuku).
+3. **Multimodálne schopnosti**: Okrem NLP Hugging Face Transformers podporuje úlohy v oblasti počítačového videnia (napr. klasifikácia obrázkov, detekcia objektov) a zvukového spracovania (napr. rozpoznávanie reči, klasifikácia audia).
 
-4. **Jednoduchosť používania:** Knižnica ponúka API a nástroje pre ľahké stiahnutie a doladenie modelov, čím je prístupná pre začiatočníkov aj odborníkov.
+4. **Jednoduchosť použitia**: Knižnica ponúka API a nástroje na ľahké sťahovanie a doladenie modelov, takže je prístupná pre začiatočníkov aj expertov.
 
-5. **Komunita a zdroje:** Hugging Face má živú komunitu a rozsiahlu dokumentáciu, návody a príručky, ktoré pomáhajú používateľom začať a využiť knižnicu na maximum.
-[oficiálna dokumentácia](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) alebo ich [GitHub úložisko](https://github.com/huggingface/transformers?WT.mc_id=academic-105485-koreyst).
+5. **Komunita a zdroje**: Hugging Face má živú komunitu a rozsiahlu dokumentáciu, tutoriály a príručky, ktoré pomáhajú používateľom s prvými krokmi a maximálnym využitím knižnice.
+[oficiálna dokumentácia](https://huggingface.co/docs/transformers/index?WT.mc_id=academic-105485-koreyst) alebo ich [GitHub repozitár](https://github.com/huggingface/transformers?WT.mc_id=academic-105485-koreyst).
 
-Toto je najbežnejšie používaná metóda, ale vyžaduje aj GPU akceleráciu. Nakoniec scénare ako Vision a MoE vyžadujú veľa výpočtov, ktoré budú na CPU veľmi pomalé, ak nie sú kvantizované.
+Toto je najčastejšie používaná metóda, ale tiež vyžaduje GPU akceleráciu. Scenáre ako Vision a MoE vyžadujú veľa výpočtov, ktoré budú na CPU veľmi pomalé, ak nebudú kvantizované.
 
 
 - Demo: Použitie Transformer na volanie Phi-3.5-Instruct [Kliknite na tento odkaz](./python/phi35-instruct-demo.ipynb?WT.mc_id=academic-105485-koreyst)
@@ -197,7 +198,7 @@ Toto je najbežnejšie používaná metóda, ale vyžaduje aj GPU akceleráciu. 
 - Demo: Použitie Transformer na volanie Phi-3.5-MoE [Kliknite na tento odkaz](./python/phi35_moe_demo.ipynb?WT.mc_id=academic-105485-koreyst)
 
 **Ollama**
-[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) je platforma navrhnutá tak, aby uľahčila spúšťanie veľkých jazykových modelov (LLM) lokálne na vašom počítači. Podporuje rôzne modely ako Llama 3.1, Phi 3, Mistral a Gemma 2, medzi ďalšími. Platforma zjednodušuje proces tým, že bundluje váhy modelu, konfiguráciu a dáta do jedného balíka, čo umožňuje používateľom jednoduchšie prispôsobiť a vytvoriť vlastné modely. Ollama je dostupná pre macOS, Linux a Windows. Je to skvelý nástroj, ak chcete experimentovať s LLM alebo ich nasadiť bez závislosti na cloudových službách. Ollama je najpriamejší spôsob, stačí vykonať nasledujúci príkaz.
+[Ollama](https://ollama.com/?WT.mc_id=academic-105485-koreyst) je platforma navrhnutá tak, aby uľahčila spúšťanie veľkých jazykových modelov (LLM) lokálne na vašom počítači. Podporuje rôzne modely ako Llama 3.1, Phi 3, Mistral a Gemma 2, medzi inými. Platforma zjednodušuje proces tým, že zabalí váhy modelu, konfiguráciu a dáta do jedného balíka, čo prístupnejšie umožňuje používateľom prispôsobovať a vytvárať vlastné modely. Ollama je dostupná pre macOS, Linux a Windows. Je to skvelý nástroj, ak chcete experimentovať alebo nasadiť LLM bez závislosti od cloudových služieb. Ollama je najpriamejší spôsob, stačí vykonať nasledujúci príkaz.
 
 
 ```bash
@@ -208,7 +209,7 @@ ollama run phi3.5
 
 **Foundry Local**
 
-[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) je offline runtime spoločnosti Microsoft bežiaci priamo na zariadení pre spúšťanie modelov ako Phi úplne na vašom vlastnom hardvéri - nie je potrebný žiadny Azure predplatný plán, API kľúč ani sieťové pripojenie. Automaticky vyberá najlepší dostupný vykonávací poskytovateľ (NPU, GPU alebo CPU) a poskytuje OpenAI-kompatibilný endpoint, takže existujúci kód `openai`/Azure AI Inference SDK môže smerovať naň s minimálnymi zmenami. Viac informácií nájdete v [Foundry Local dokumentácii](https://learn.microsoft.com/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst).
+[Foundry Local](https://foundrylocal.ai?WT.mc_id=academic-105485-koreyst) je Microsoftov offline runtime na zariadení pre spúšťanie modelov ako Phi úplne na vlastnom hardvéri – nie je potrebné predplatné Azure, API kľúč ani sieťové pripojenie. Automaticky vyberá najlepší dostupný vykonávací poskytovateľ (NPU, GPU alebo CPU) a vystavuje OpenAI-kompatibilný endpoint, takže existujúci kód `openai`/Azure AI Inference SDK ho môže použiť s minimálnymi zmenami. Pre začiatok pozrite si [Foundry Local dokumentáciu](https://learn.microsoft.com/azure/ai-foundry/foundry-local/get-started?WT.mc_id=academic-105485-koreyst).
 
 ```bash
 
@@ -236,32 +237,32 @@ print(manager.endpoint, manager.api_key)
 
 **ONNX Runtime pre GenAI**
 
-[ONNX Runtime](https://github.com/microsoft/onnxruntime-genai?WT.mc_id=academic-105485-koreyst) je multiplatformový akcelerátor na inferenciu a trénovanie strojového učenia. ONNX Runtime pre Generačné AI (GENAI) je výkonný nástroj, ktorý vám pomáha efektívne spúšťať modely generačnej AI naprieč rôznymi platformami.
+[ONNX Runtime](https://github.com/microsoft/onnxruntime-genai?WT.mc_id=academic-105485-koreyst) je multiplatformový akcelerátor pre inferenciu a trénovanie strojového učenia. ONNX Runtime pre Generative AI (GENAI) je výkonný nástroj, ktorý vám pomáha efektívne spúšťať generatívne AI modely naprieč rôznymi platformami.
 
 ## Čo je ONNX Runtime?
-ONNX Runtime je open-source projekt, ktorý umožňuje vysokovýkonnú inferenciu modelov strojového učenia. Podporuje modely v štandarde Open Neural Network Exchange (ONNX), čo je štandard pre reprezentáciu modelov strojového učenia. ONNX Runtime inferencia môže umožniť rýchlejšie zákaznícke zážitky a nižšie náklady, podporujúc modely z hlbokých učebných rámcov ako PyTorch a TensorFlow/Keras, rovnako ako klasické knižnice strojového učenia ako scikit-learn, LightGBM, XGBoost a ďalšie. ONNX Runtime je kompatibilný s rôznym hardvérom, ovládačmi a operačnými systémami a poskytuje optimálny výkon využitím hardvérových akcelerátorov tam, kde je to možné, spolu s optimalizáciami a transformáciami grafov.
+ONNX Runtime je open-source projekt, ktorý umožňuje vysoko výkonnú inferenciu modelov strojového učenia. Podporuje modely vo formáte Open Neural Network Exchange (ONNX), ktorý je štandardom na reprezentáciu modelov strojového učenia. Inferencia pomocou ONNX Runtime môže zabezpečiť rýchlejšie používateľské zážitky a nižšie náklady, podporujúc modely z rámcov hlbokého učenia, ako sú PyTorch a TensorFlow/Keras, ako aj klasické knižnice strojového učenia ako scikit-learn, LightGBM, XGBoost atď. ONNX Runtime je kompatibilný s rôznym hardvérom, ovládačmi a operačnými systémami, a poskytuje optimálny výkon využitím hardvérových akcelerátorov spolu s optimalizáciami grafu a transformáciami.
 
-## Čo je Generatívna AI?
-Generatívna AI sa vzťahuje na AI systémy, ktoré dokážu generovať nový obsah, ako text, obrázky alebo hudbu, na základe dát, na ktorých boli trénované. Príklady zahŕňajú jazykové modely ako GPT-3 a modely na generovanie obrázkov ako Stable Diffusion. ONNX Runtime pre GenAI knižnica poskytuje generačný AI cyklus pre ONNX modely, vrátane inferencie s ONNX Runtime, spracovania logitov, vyhľadávania a vzorkovania a správy KV cache.
+## Čo je Generative AI?
+Generative AI sa vzťahuje na AI systémy, ktoré dokážu generovať nový obsah, ako je text, obrázky alebo hudba, na základe dát, na ktorých boli trénované. Príklady zahŕňajú jazykové modely ako GPT-3 a modely na generovanie obrázkov ako Stable Diffusion. Knižnica ONNX Runtime pre GenAI poskytuje generatívnu AI slučku pre ONNX modely, vrátane inferencie pomocou ONNX Runtime, spracovania logitov, vyhľadávania a vzorkovania a správy kešu KV.
 
 ## ONNX Runtime pre GENAI
-ONNX Runtime pre GENAI rozširuje schopnosti ONNX Runtime o podporu modelov generačnej AI. Tu sú niektoré kľúčové vlastnosti:
+ONNX Runtime pre GENAI rozširuje schopnosti ONNX Runtime na podporu generatívnych AI modelov. Tu sú niektoré kľúčové funkcie:
 
-- **Široká podpora platforiem:** Funguje na rôznych platformách vrátane Windows, Linux, macOS, Android a iOS.
-- **Podpora modelov:** Podporuje mnoho populárnych generačných AI modelov, ako LLaMA, GPT-Neo, BLOOM a ďalšie.
-- **Optimalizácia výkonu:** Zahŕňa optimalizácie pre rôzne hardvérové akcelerátory ako NVIDIA GPU, AMD GPU a ďalšie.
-- **Jednoduchosť použitia:** Poskytuje API pre ľahkú integráciu do aplikácií, ktoré umožňujú generovať text, obrázky a iný obsah s minimálnym kódom.
-- Používatelia môžu volať vysokú úroveň metódy generate() alebo spúšťať každú iteráciu modelu v slučke, generujúc jeden token naraz, a voliteľne aktualizovať parametre generovania v rámci slučky.
-- ONNX runtime tiež podporuje greedy/beam hľadanie a TopP, TopK vzorkovanie na generovanie sekvencií tokenov a vstavané spracovanie logitov ako penalizácie opakovania. Môžete tiež ľahko pridať vlastné skórovanie.
+- **Široká podpora platforiem:** Funguje na rôznych platformách, vrátane Windows, Linux, macOS, Android a iOS.
+- **Podpora modelov:** Podporuje mnoho populárnych generatívnych AI modelov, ako sú LLaMA, GPT-Neo, BLOOM a ďalšie.
+- **Optimalizácia výkonu:** Obsahuje optimalizácie pre rôzne hardvérové akcelerátory, ako sú NVIDIA GPU, AMD GPU a ďalšie2.
+- **Jednoduchosť použitia:** Poskytuje API pre jednoduchú integráciu do aplikácií, umožňujúc generovať text, obrázky a iný obsah s minimálnym kódom.
+- Používatelia môžu volať vyššiu metódu generate(), alebo spúšťať každú iteráciu modelu v slučke, generujúc jeden token po jednom, a voliteľne aktualizovať parametre generovania počas slučky.
+- ONNX runtime taktiež podporuje greedy/beam search a TopP, TopK sampling na generovanie sekvencií tokenov a vstavané spracovanie logitov ako penalizácie opakovania. Môžete tiež ľahko pridať vlastné skórovanie.
 
-## Začínáme
-Na začiatok s ONNX Runtime pre GENAI môžete postupovať podľa týchto krokov:
+## Začnite
+Pre začiatok s ONNX Runtime pre GENAI môžete nasledovať tieto kroky:
 
-### Inštalujte ONNX Runtime:
+### Nainštalujte ONNX Runtime:
 ```Python
 pip install onnxruntime
 ```
-### Inštalujte Generatívne AI rozšírenia:
+### Nainštalujte Vylepšenia pre Generatívnu AI:
 ```Python
 pip install onnxruntime-genai
 ```
@@ -338,14 +339,14 @@ while not generator.is_done():
 ```
 
 
-**Iné**
+**Ďalšie**
 
-Okrem referenčných metód ONNX Runtime, Ollama a Foundry Local môžeme tiež dokončiť referenciu kvantitatívnych modelov založených na modelových referenčných metódach poskytovaných rôznymi výrobcami. Napríklad Apple MLX framework s Apple Metal, Qualcomm QNN s NPU, Intel OpenVINO s CPU/GPU a ďalšie. Viac obsahu nájdete aj v [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst).
+Okrem referenčných metód ONNX Runtime, Ollama a Foundry Local môžeme tiež doplniť referenciu kvantitatívnych modelov založených na referenčných metódach modelov poskytnutých rôznymi výrobcami. Napríklad Apple MLX framework s Apple Metal, Qualcomm QNN s NPU, Intel OpenVINO s CPU/GPU atď. Viac obsahu nájdete aj v [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst)
 
 
 ## Viac
 
-Naučili sme sa základy rodiny Phi-3/3.5, ale na učenie sa viac o SLM potrebujeme viac znalostí. Odpovede nájdete v Phi-3 Cookbook. Ak chcete vedieť viac, navštívte prosím [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst).
+Osvojili sme si základy Phi-3/3.5 rodiny, ale na naučenie sa viac o SLM potrebujeme väčšie vedomosti. Odpovede môžete nájsť v Phi-3 Cookbook. Ak chcete vedieť viac, navštívte prosím [Phi-3 Cookbook](https://github.com/microsoft/phi-3cookbook?WT.mc_id=academic-105485-koreyst).
 
 ---
 
