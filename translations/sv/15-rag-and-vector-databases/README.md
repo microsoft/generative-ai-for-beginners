@@ -20,11 +20,11 @@ I denna lektion kommer vi att gå igenom följande:
 
 Efter att ha genomfört denna lektion kommer du att kunna:
 
-- Förklara betydelsen av RAG vid datahämtning och -bearbetning.
+- Förklara betydelsen av RAG vid datahämtning och bearbetning.
 
-- Sätta upp en RAG-applikation och förankra din data till en LLM
+- Sätt upp en RAG-applikation och koppla en LLM till dina data
 
-- Effektiv integration av RAG och vektordatabaser i LLM-applikationer.
+- Integrera effektivt RAG och vektor databaser i LLM-applikationer.
 
 ## Vårt scenario: förbättra våra LLMs med vår egen data
 
@@ -36,7 +36,7 @@ För denna lektion vill vi lägga till våra egna anteckningar i utbildningsstar
 
 - `Azure AI Search` och `Azure Cosmos DB:` vektordatabas för att lagra vår data och skapa ett sökindex
 
-Användare kommer att kunna skapa träningsfrågor från sina anteckningar, repetitionsflashkort och sammanfatta dem till korta översikter. För att komma igång, låt oss titta på vad RAG är och hur det fungerar:
+Användare kommer att kunna skapa övningsquiz och repetitionskort från sina anteckningar samt sammanfatta dessa anteckningar till koncisa översikter. För att komma igång, låt oss titta på vad RAG är och hur det fungerar:
 
 ## Retrieval Augmented Generation (RAG)
 
@@ -56,9 +56,9 @@ Anta att du vill distribuera en chatbot som skapar quiz från dina anteckningar,
 
 - **Förstärkt generering:** LLM förbättrar sitt svar baserat på den hämtade datan. Det gör att svaret inte bara bygger på förtränad data utan även relevant information från tillagd kontext. Den hämtade datan används för att förstärka LLM:s svar. LLM returnerar sedan ett svar på användarens fråga.
 
-![ritning som visar hur RAG-arkitekturen ser ut](../../../translated_images/sv/encoder-decode.f2658c25d0eadee2.webp)
+![Diagram som visar RAG-arkitektur](../../../translated_images/sv/encoder-decode.f2658c25d0eadee2.webp?WT.mc_id=academic-105485-koreyst)
 
-Arkitekturen för RAG implementeras med transformerare bestående av två delar: en kodare och en avkodare. Till exempel när en användare ställer en fråga, "kodas" ingångstexten till vektorer som fångar ordens betydelse, och vektorerna "avkodas" mot vårt dokumentindex och genererar ny text baserat på användarfrågan. LLM använder både en kodar-avkodarmodell för att generera utdata.
+RAG kombinerar en sökare med en generator: frågan konverteras till en vektor, matchas mot dokumentindexet för att hitta relevanta textavsnitt, och dessa avsnitt tillhandahålls som kontext till en LLM, som genererar svaret. Sökaren och generatorn kan använda olika modeller; RAG kräver inte en encoder-decoder-transformer.
 
 Två tillvägagångssätt vid implementering av RAG enligt det föreslagna papperet: [Retrieval-Augmented Generation for Knowledge intensive NLP (natural language processing software) Tasks](https://arxiv.org/pdf/2005.11401.pdf?WT.mc_id=academic-105485-koreyst) är:
 
@@ -76,13 +76,13 @@ Två tillvägagångssätt vid implementering av RAG enligt det föreslagna pappe
 
 ## Skapa en kunskapsbas
 
-Vår applikation baseras på vår personliga data dvs. lektionen Neural Network i AI for Beginners-kurserna.
+Vår applikation är baserad på våra personliga data, dvs. lektionen om neurala nätverk från kursplanen AI för nybörjare.
 
 ### Vektordatabaser
 
 En vektordatabas är till skillnad från traditionella databaser en specialiserad databas designad för att lagra, hantera och söka inbäddade vektorer. Den lagrar numeriska representationer av dokument. Att bryta ner data till numeriska inbäddningar gör det enklare för vårt AI-system att förstå och bearbeta datan.
 
-Vi lagrar våra inbäddningar i vektordatabaser eftersom LLM har en begränsning i hur många token de kan ta emot som input. Eftersom du inte kan skicka hela inbäddningarna till en LLM måste vi dela upp dem i delar och när en användare ställer en fråga kommer de inbäddningar som mest liknar frågan att returneras tillsammans med prompten. Att dela upp data minskar också kostnaderna för antalet token som passerar genom en LLM.
+Eftersom LLM:er har en gräns för antalet inmatningstoken delar vi upp dokument i delar innan vi skapar inbäddningar. När en användare ställer en fråga identifierar inbäddningarna som är mest lika frågan relevanta textdelar, vilka returneras med prompten. Att dela upp i delar minskar också antalet token som skickas till LLM och kan därför minska kostnaderna.
 
 Några populära vektordatabaser inkluderar Azure Cosmos DB, Clarifyai, Pinecone, Chromadb, ScaNN, Qdrant och DeepLake. Du kan skapa en Azure Cosmos DB-modell med Azure CLI med följande kommando:
 
@@ -141,9 +141,9 @@ En utmaning med hämtning uppstår när det inte finns något liknande svar på 
 
 ### Vektorsimilaritet
 
-Hämtaren söker igenom kunskapsdatabasen efter inbäddningar som ligger nära varandra, den närmaste grannen, eftersom det är texter som är lika. I scenariot där en användare ställer en fråga bäddas den först in och matchas sedan med liknande inbäddningar. Den vanliga mätmetoden som används för att avgöra hur lika olika vektorer är kallas cosinuslikhet som baseras på vinkeln mellan två vektorer.
+Återhämtaren kommer att söka igenom kunskapsdatabasen efter inbäddningar som ligger nära varandra—de närmaste grannarna—eftersom de representerar texter som är likartade. I detta scenario, när en användare skickar en fråga, bäddas den först in och matchas sedan med liknande inbäddningar. Den vanligaste mätningen som används för att jämföra vektorsimilitaritet är cosinuslikhet, som baseras på vinkeln mellan två vektorer.
 
-Vi kan mäta likhet med andra alternativ såsom Euklidiskt avstånd vilket är rak linje mellan vektorändpunkter och skalärprodukt som mäter summan av produkterna av motsvarande element i två vektorer.
+Andra mått vi kan använda för att mäta likhet inkluderar Euklidiskt avstånd, vilket är den raka linjen mellan vektorns ändpunkter, och skalärprodukt, som mäter summan av produkterna av motsvarande element i två vektorer.
 
 ### Sökindex
 
@@ -166,19 +166,14 @@ distances, indices = nbrs.kneighbors(embeddings)
 När du har frågat databasen kan det vara nödvändigt att sortera resultaten från mest relevanta. En omdömande LLM använder maskininlärning för att förbättra relevansen av sökresultaten genom att ordna dem från mest relevanta. Med Azure AI Search görs omdömande automatiskt åt dig med en semantisk omdömare. Ett exempel på hur om­dömning fungerar med närmaste grannar:
 
 ```python
-# Hitta de mest liknande dokumenten
+# Find the most similar documents
 distances, indices = nbrs.kneighbors([query_vector])
 
-index = []
-# Skriv ut de mest liknande dokumenten
-for i in range(3):
-    index = indices[0][i]
-    for index in indices[0]:
-        print(flattened_df['chunks'].iloc[index])
-        print(flattened_df['path'].iloc[index])
-        print(flattened_df['distances'].iloc[index])
-    else:
-        print(f"Index {index} not found in DataFrame")
+# Print the three most similar documents with their distance to the question
+for distance, index in zip(distances[0][:3], indices[0][:3]):
+    print(flattened_df['chunks'].iloc[index])
+    print(flattened_df['path'].iloc[index])
+    print(distance)
 ```
 
 ## Att sammanföra allt
@@ -236,7 +231,7 @@ chatbot(user_input)
 
 ## Användningsområden för att använda RAG (Retrieval Augmented Generation) och vektordatabaser
 
-Det finns många olika användningsområden där funktionsanrop kan förbättra din app som:
+Det finns många olika användningsfall där RAG kan förbättra din app, till exempel:
 
 - Frågor och svar: förankra ditt företagsdata i en chatt som anställda kan använda för att ställa frågor.
 
@@ -248,7 +243,7 @@ Det finns många olika användningsområden där funktionsanrop kan förbättra 
 
 ## Sammanfattning
 
-Vi har gått igenom grundläggande områden i RAG från att lägga till vår data i applikationen, användarfrågan och utdata. För att förenkla skapandet av RAG kan du använda ramverk som Semantic Kernel, Langchain eller Autogen.
+Vi har täckt de grundläggande områdena för RAG från att lägga till vår data i applikationen, användarfrågan och utdata. För att förenkla skapandet av RAG kan du använda ramverk som Semantic Kernel, LangChain eller AutoGen.
 
 ## Uppgift
 
