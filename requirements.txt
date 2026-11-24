@@ -1,7 +1,10 @@
 ipywidgets==8.1.9
-numpy==2.4.2
-matplotlib==3.10.8
-pandas==3.0.0
+numpy==2.4.2; python_version < "3.15"
+numpy==2.5.5; python_version >= "3.15"
+matplotlib==3.10.8; python_version < "3.15"
+matplotlib==3.11.2; python_version >= "3.15"
+pandas==3.0.0; python_version < "3.15"
+pandas==3.1.1; python_version >= "3.15"
 tqdm==4.70.1
 python-dotenv==1.2.4
 openai>=1.66.0
