@@ -26,6 +26,6 @@
 		"docsify-to-pdf": "0.0.5"
 	},
 	"dependencies": {
-		"openai": "^7.43.0"
+		"openai": "^7.62.0"
 	}
 }
