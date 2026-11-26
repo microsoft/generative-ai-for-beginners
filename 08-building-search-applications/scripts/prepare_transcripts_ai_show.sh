@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # This script will process the transcripts
 # 1. Download the transcripts from YouTube
